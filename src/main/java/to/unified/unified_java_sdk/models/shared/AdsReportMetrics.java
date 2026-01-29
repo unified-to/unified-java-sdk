@@ -4,14 +4,13 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -20,40 +19,35 @@ public class AdsReportMetrics {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ad")
-    private Optional<? extends PropertyAdsReportMetricsAd> ad;
+    private PropertyAdsReportMetricsAd ad;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("campaign")
-    private Optional<? extends PropertyAdsReportMetricsCampaign> campaign;
+    private PropertyAdsReportMetricsCampaign campaign;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group")
-    private Optional<? extends PropertyAdsReportMetricsGroup> group;
+    private PropertyAdsReportMetricsGroup group;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
-    private Optional<? extends AdsReportMetricsType> type;
+    private AdsReportMetricsType type;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
-    private Optional<Double> value;
+    private Double value;
 
     @JsonCreator
     public AdsReportMetrics(
-            @JsonProperty("ad") Optional<? extends PropertyAdsReportMetricsAd> ad,
-            @JsonProperty("campaign") Optional<? extends PropertyAdsReportMetricsCampaign> campaign,
-            @JsonProperty("group") Optional<? extends PropertyAdsReportMetricsGroup> group,
-            @JsonProperty("type") Optional<? extends AdsReportMetricsType> type,
-            @JsonProperty("value") Optional<Double> value) {
-        Utils.checkNotNull(ad, "ad");
-        Utils.checkNotNull(campaign, "campaign");
-        Utils.checkNotNull(group, "group");
-        Utils.checkNotNull(type, "type");
-        Utils.checkNotNull(value, "value");
+            @JsonProperty("ad") @Nullable PropertyAdsReportMetricsAd ad,
+            @JsonProperty("campaign") @Nullable PropertyAdsReportMetricsCampaign campaign,
+            @JsonProperty("group") @Nullable PropertyAdsReportMetricsGroup group,
+            @JsonProperty("type") @Nullable AdsReportMetricsType type,
+            @JsonProperty("value") @Nullable Double value) {
         this.ad = ad;
         this.campaign = campaign;
         this.group = group;
@@ -62,37 +56,28 @@ public class AdsReportMetrics {
     }
     
     public AdsReportMetrics() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<PropertyAdsReportMetricsAd> ad() {
-        return (Optional<PropertyAdsReportMetricsAd>) ad;
+        return Optional.ofNullable(this.ad);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<PropertyAdsReportMetricsCampaign> campaign() {
-        return (Optional<PropertyAdsReportMetricsCampaign>) campaign;
+        return Optional.ofNullable(this.campaign);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<PropertyAdsReportMetricsGroup> group() {
-        return (Optional<PropertyAdsReportMetricsGroup>) group;
+        return Optional.ofNullable(this.group);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<AdsReportMetricsType> type() {
-        return (Optional<AdsReportMetricsType>) type;
+        return Optional.ofNullable(this.type);
     }
 
-    @JsonIgnore
     public Optional<Double> value() {
-        return value;
+        return Optional.ofNullable(this.value);
     }
 
     public static Builder builder() {
@@ -100,70 +85,35 @@ public class AdsReportMetrics {
     }
 
 
-    public AdsReportMetrics withAd(PropertyAdsReportMetricsAd ad) {
-        Utils.checkNotNull(ad, "ad");
-        this.ad = Optional.ofNullable(ad);
-        return this;
-    }
-
-
-    public AdsReportMetrics withAd(Optional<? extends PropertyAdsReportMetricsAd> ad) {
-        Utils.checkNotNull(ad, "ad");
+    public AdsReportMetrics withAd(@Nullable PropertyAdsReportMetricsAd ad) {
         this.ad = ad;
         return this;
     }
 
-    public AdsReportMetrics withCampaign(PropertyAdsReportMetricsCampaign campaign) {
-        Utils.checkNotNull(campaign, "campaign");
-        this.campaign = Optional.ofNullable(campaign);
-        return this;
-    }
 
-
-    public AdsReportMetrics withCampaign(Optional<? extends PropertyAdsReportMetricsCampaign> campaign) {
-        Utils.checkNotNull(campaign, "campaign");
+    public AdsReportMetrics withCampaign(@Nullable PropertyAdsReportMetricsCampaign campaign) {
         this.campaign = campaign;
         return this;
     }
 
-    public AdsReportMetrics withGroup(PropertyAdsReportMetricsGroup group) {
-        Utils.checkNotNull(group, "group");
-        this.group = Optional.ofNullable(group);
-        return this;
-    }
 
-
-    public AdsReportMetrics withGroup(Optional<? extends PropertyAdsReportMetricsGroup> group) {
-        Utils.checkNotNull(group, "group");
+    public AdsReportMetrics withGroup(@Nullable PropertyAdsReportMetricsGroup group) {
         this.group = group;
         return this;
     }
 
-    public AdsReportMetrics withType(AdsReportMetricsType type) {
-        Utils.checkNotNull(type, "type");
-        this.type = Optional.ofNullable(type);
-        return this;
-    }
 
-
-    public AdsReportMetrics withType(Optional<? extends AdsReportMetricsType> type) {
-        Utils.checkNotNull(type, "type");
+    public AdsReportMetrics withType(@Nullable AdsReportMetricsType type) {
         this.type = type;
         return this;
     }
 
-    public AdsReportMetrics withValue(double value) {
-        Utils.checkNotNull(value, "value");
-        this.value = Optional.ofNullable(value);
-        return this;
-    }
 
-
-    public AdsReportMetrics withValue(Optional<Double> value) {
-        Utils.checkNotNull(value, "value");
+    public AdsReportMetrics withValue(@Nullable Double value) {
         this.value = value;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -202,87 +152,46 @@ public class AdsReportMetrics {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends PropertyAdsReportMetricsAd> ad = Optional.empty();
+        private PropertyAdsReportMetricsAd ad;
 
-        private Optional<? extends PropertyAdsReportMetricsCampaign> campaign = Optional.empty();
+        private PropertyAdsReportMetricsCampaign campaign;
 
-        private Optional<? extends PropertyAdsReportMetricsGroup> group = Optional.empty();
+        private PropertyAdsReportMetricsGroup group;
 
-        private Optional<? extends AdsReportMetricsType> type = Optional.empty();
+        private AdsReportMetricsType type;
 
-        private Optional<Double> value = Optional.empty();
+        private Double value;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder ad(PropertyAdsReportMetricsAd ad) {
-            Utils.checkNotNull(ad, "ad");
-            this.ad = Optional.ofNullable(ad);
-            return this;
-        }
-
-        public Builder ad(Optional<? extends PropertyAdsReportMetricsAd> ad) {
-            Utils.checkNotNull(ad, "ad");
+        public Builder ad(@Nullable PropertyAdsReportMetricsAd ad) {
             this.ad = ad;
             return this;
         }
 
-
-        public Builder campaign(PropertyAdsReportMetricsCampaign campaign) {
-            Utils.checkNotNull(campaign, "campaign");
-            this.campaign = Optional.ofNullable(campaign);
-            return this;
-        }
-
-        public Builder campaign(Optional<? extends PropertyAdsReportMetricsCampaign> campaign) {
-            Utils.checkNotNull(campaign, "campaign");
+        public Builder campaign(@Nullable PropertyAdsReportMetricsCampaign campaign) {
             this.campaign = campaign;
             return this;
         }
 
-
-        public Builder group(PropertyAdsReportMetricsGroup group) {
-            Utils.checkNotNull(group, "group");
-            this.group = Optional.ofNullable(group);
-            return this;
-        }
-
-        public Builder group(Optional<? extends PropertyAdsReportMetricsGroup> group) {
-            Utils.checkNotNull(group, "group");
+        public Builder group(@Nullable PropertyAdsReportMetricsGroup group) {
             this.group = group;
             return this;
         }
 
-
-        public Builder type(AdsReportMetricsType type) {
-            Utils.checkNotNull(type, "type");
-            this.type = Optional.ofNullable(type);
-            return this;
-        }
-
-        public Builder type(Optional<? extends AdsReportMetricsType> type) {
-            Utils.checkNotNull(type, "type");
+        public Builder type(@Nullable AdsReportMetricsType type) {
             this.type = type;
             return this;
         }
 
-
-        public Builder value(double value) {
-            Utils.checkNotNull(value, "value");
-            this.value = Optional.ofNullable(value);
-            return this;
-        }
-
-        public Builder value(Optional<Double> value) {
-            Utils.checkNotNull(value, "value");
+        public Builder value(@Nullable Double value) {
             this.value = value;
             return this;
         }
 
         public AdsReportMetrics build() {
-
             return new AdsReportMetrics(
                 ad, campaign, group,
                 type, value);

@@ -4,15 +4,15 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
@@ -24,47 +24,47 @@ public class KmsPage {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("download_url")
-    private Optional<String> downloadUrl;
+    private String downloadUrl;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_children")
-    private Optional<Boolean> hasChildren;
+    private Boolean hasChildren;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
-    private Optional<Boolean> isActive;
+    private Boolean isActive;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
-    private Optional<? extends List<KmsPageMetadata>> metadata;
+    private List<KmsPageMetadata> metadata;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_id")
-    private Optional<String> parentId;
+    private String parentId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("space_id")
-    private Optional<String> spaceId;
+    private String spaceId;
 
 
     @JsonProperty("title")
@@ -77,48 +77,34 @@ public class KmsPage {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
-    private Optional<String> userId;
+    private String userId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("web_url")
-    private Optional<String> webUrl;
+    private String webUrl;
 
     @JsonCreator
     public KmsPage(
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("download_url") Optional<String> downloadUrl,
-            @JsonProperty("has_children") Optional<Boolean> hasChildren,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("is_active") Optional<Boolean> isActive,
-            @JsonProperty("metadata") Optional<? extends List<KmsPageMetadata>> metadata,
-            @JsonProperty("parent_id") Optional<String> parentId,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("space_id") Optional<String> spaceId,
-            @JsonProperty("title") String title,
-            @JsonProperty("type") KmsPageType type,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
-            @JsonProperty("user_id") Optional<String> userId,
-            @JsonProperty("web_url") Optional<String> webUrl) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(downloadUrl, "downloadUrl");
-        Utils.checkNotNull(hasChildren, "hasChildren");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(isActive, "isActive");
-        Utils.checkNotNull(metadata, "metadata");
-        Utils.checkNotNull(parentId, "parentId");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(spaceId, "spaceId");
-        Utils.checkNotNull(title, "title");
-        Utils.checkNotNull(type, "type");
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        Utils.checkNotNull(userId, "userId");
-        Utils.checkNotNull(webUrl, "webUrl");
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("download_url") @Nullable String downloadUrl,
+            @JsonProperty("has_children") @Nullable Boolean hasChildren,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("is_active") @Nullable Boolean isActive,
+            @JsonProperty("metadata") @Nullable List<KmsPageMetadata> metadata,
+            @JsonProperty("parent_id") @Nullable String parentId,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("space_id") @Nullable String spaceId,
+            @JsonProperty("title") @Nonnull String title,
+            @JsonProperty("type") @Nonnull KmsPageType type,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
+            @JsonProperty("user_id") @Nullable String userId,
+            @JsonProperty("web_url") @Nullable String webUrl) {
         this.createdAt = createdAt;
         this.downloadUrl = downloadUrl;
         this.hasChildren = hasChildren;
@@ -128,93 +114,79 @@ public class KmsPage {
         this.parentId = parentId;
         this.raw = raw;
         this.spaceId = spaceId;
-        this.title = title;
-        this.type = type;
+        this.title = Optional.ofNullable(title)
+            .orElseThrow(() -> new IllegalArgumentException("title cannot be null"));
+        this.type = Optional.ofNullable(type)
+            .orElseThrow(() -> new IllegalArgumentException("type cannot be null"));
         this.updatedAt = updatedAt;
         this.userId = userId;
         this.webUrl = webUrl;
     }
     
     public KmsPage(
-            String title,
-            KmsPageType type) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            title, type, Optional.empty(),
-            Optional.empty(), Optional.empty());
+            @Nonnull String title,
+            @Nonnull KmsPageType type) {
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            title, type, null,
+            null, null);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<String> downloadUrl() {
-        return downloadUrl;
+        return Optional.ofNullable(this.downloadUrl);
     }
 
-    @JsonIgnore
     public Optional<Boolean> hasChildren() {
-        return hasChildren;
+        return Optional.ofNullable(this.hasChildren);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isActive() {
-        return isActive;
+        return Optional.ofNullable(this.isActive);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<KmsPageMetadata>> metadata() {
-        return (Optional<List<KmsPageMetadata>>) metadata;
+        return Optional.ofNullable(this.metadata);
     }
 
-    @JsonIgnore
     public Optional<String> parentId() {
-        return parentId;
+        return Optional.ofNullable(this.parentId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @JsonIgnore
     public Optional<String> spaceId() {
-        return spaceId;
+        return Optional.ofNullable(this.spaceId);
     }
 
-    @JsonIgnore
     public String title() {
-        return title;
+        return this.title;
     }
 
-    @JsonIgnore
     public KmsPageType type() {
-        return type;
+        return this.type;
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
-    @JsonIgnore
     public Optional<String> userId() {
-        return userId;
+        return Optional.ofNullable(this.userId);
     }
 
-    @JsonIgnore
     public Optional<String> webUrl() {
-        return webUrl;
+        return Optional.ofNullable(this.webUrl);
     }
 
     public static Builder builder() {
@@ -222,173 +194,89 @@ public class KmsPage {
     }
 
 
-    public KmsPage withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
-
-
-    public KmsPage withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public KmsPage withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public KmsPage withDownloadUrl(String downloadUrl) {
-        Utils.checkNotNull(downloadUrl, "downloadUrl");
-        this.downloadUrl = Optional.ofNullable(downloadUrl);
-        return this;
-    }
 
-
-    public KmsPage withDownloadUrl(Optional<String> downloadUrl) {
-        Utils.checkNotNull(downloadUrl, "downloadUrl");
+    public KmsPage withDownloadUrl(@Nullable String downloadUrl) {
         this.downloadUrl = downloadUrl;
         return this;
     }
 
-    public KmsPage withHasChildren(boolean hasChildren) {
-        Utils.checkNotNull(hasChildren, "hasChildren");
-        this.hasChildren = Optional.ofNullable(hasChildren);
-        return this;
-    }
 
-
-    public KmsPage withHasChildren(Optional<Boolean> hasChildren) {
-        Utils.checkNotNull(hasChildren, "hasChildren");
+    public KmsPage withHasChildren(@Nullable Boolean hasChildren) {
         this.hasChildren = hasChildren;
         return this;
     }
 
-    public KmsPage withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public KmsPage withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public KmsPage withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public KmsPage withIsActive(boolean isActive) {
-        Utils.checkNotNull(isActive, "isActive");
-        this.isActive = Optional.ofNullable(isActive);
-        return this;
-    }
 
-
-    public KmsPage withIsActive(Optional<Boolean> isActive) {
-        Utils.checkNotNull(isActive, "isActive");
+    public KmsPage withIsActive(@Nullable Boolean isActive) {
         this.isActive = isActive;
         return this;
     }
 
-    public KmsPage withMetadata(List<KmsPageMetadata> metadata) {
-        Utils.checkNotNull(metadata, "metadata");
-        this.metadata = Optional.ofNullable(metadata);
-        return this;
-    }
 
-
-    public KmsPage withMetadata(Optional<? extends List<KmsPageMetadata>> metadata) {
-        Utils.checkNotNull(metadata, "metadata");
+    public KmsPage withMetadata(@Nullable List<KmsPageMetadata> metadata) {
         this.metadata = metadata;
         return this;
     }
 
-    public KmsPage withParentId(String parentId) {
-        Utils.checkNotNull(parentId, "parentId");
-        this.parentId = Optional.ofNullable(parentId);
-        return this;
-    }
 
-
-    public KmsPage withParentId(Optional<String> parentId) {
-        Utils.checkNotNull(parentId, "parentId");
+    public KmsPage withParentId(@Nullable String parentId) {
         this.parentId = parentId;
         return this;
     }
 
-    public KmsPage withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public KmsPage withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public KmsPage withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public KmsPage withSpaceId(String spaceId) {
-        Utils.checkNotNull(spaceId, "spaceId");
-        this.spaceId = Optional.ofNullable(spaceId);
-        return this;
-    }
 
-
-    public KmsPage withSpaceId(Optional<String> spaceId) {
-        Utils.checkNotNull(spaceId, "spaceId");
+    public KmsPage withSpaceId(@Nullable String spaceId) {
         this.spaceId = spaceId;
         return this;
     }
 
-    public KmsPage withTitle(String title) {
-        Utils.checkNotNull(title, "title");
-        this.title = title;
-        return this;
-    }
 
-    public KmsPage withType(KmsPageType type) {
-        Utils.checkNotNull(type, "type");
-        this.type = type;
-        return this;
-    }
-
-    public KmsPage withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
+    public KmsPage withTitle(@Nonnull String title) {
+        this.title = Utils.checkNotNull(title, "title");
         return this;
     }
 
 
-    public KmsPage withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public KmsPage withType(@Nonnull KmsPageType type) {
+        this.type = Utils.checkNotNull(type, "type");
+        return this;
+    }
+
+
+    public KmsPage withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
-    public KmsPage withUserId(String userId) {
-        Utils.checkNotNull(userId, "userId");
-        this.userId = Optional.ofNullable(userId);
-        return this;
-    }
 
-
-    public KmsPage withUserId(Optional<String> userId) {
-        Utils.checkNotNull(userId, "userId");
+    public KmsPage withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
     }
 
-    public KmsPage withWebUrl(String webUrl) {
-        Utils.checkNotNull(webUrl, "webUrl");
-        this.webUrl = Optional.ofNullable(webUrl);
-        return this;
-    }
 
-
-    public KmsPage withWebUrl(Optional<String> webUrl) {
-        Utils.checkNotNull(webUrl, "webUrl");
+    public KmsPage withWebUrl(@Nullable String webUrl) {
         this.webUrl = webUrl;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -448,210 +336,109 @@ public class KmsPage {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<String> downloadUrl = Optional.empty();
+        private String downloadUrl;
 
-        private Optional<Boolean> hasChildren = Optional.empty();
+        private Boolean hasChildren;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<Boolean> isActive = Optional.empty();
+        private Boolean isActive;
 
-        private Optional<? extends List<KmsPageMetadata>> metadata = Optional.empty();
+        private List<KmsPageMetadata> metadata;
 
-        private Optional<String> parentId = Optional.empty();
+        private String parentId;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<String> spaceId = Optional.empty();
+        private String spaceId;
 
         private String title;
 
         private KmsPageType type;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
-        private Optional<String> userId = Optional.empty();
+        private String userId;
 
-        private Optional<String> webUrl = Optional.empty();
+        private String webUrl;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder downloadUrl(String downloadUrl) {
-            Utils.checkNotNull(downloadUrl, "downloadUrl");
-            this.downloadUrl = Optional.ofNullable(downloadUrl);
-            return this;
-        }
-
-        public Builder downloadUrl(Optional<String> downloadUrl) {
-            Utils.checkNotNull(downloadUrl, "downloadUrl");
+        public Builder downloadUrl(@Nullable String downloadUrl) {
             this.downloadUrl = downloadUrl;
             return this;
         }
 
-
-        public Builder hasChildren(boolean hasChildren) {
-            Utils.checkNotNull(hasChildren, "hasChildren");
-            this.hasChildren = Optional.ofNullable(hasChildren);
-            return this;
-        }
-
-        public Builder hasChildren(Optional<Boolean> hasChildren) {
-            Utils.checkNotNull(hasChildren, "hasChildren");
+        public Builder hasChildren(@Nullable Boolean hasChildren) {
             this.hasChildren = hasChildren;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder isActive(boolean isActive) {
-            Utils.checkNotNull(isActive, "isActive");
-            this.isActive = Optional.ofNullable(isActive);
-            return this;
-        }
-
-        public Builder isActive(Optional<Boolean> isActive) {
-            Utils.checkNotNull(isActive, "isActive");
+        public Builder isActive(@Nullable Boolean isActive) {
             this.isActive = isActive;
             return this;
         }
 
-
-        public Builder metadata(List<KmsPageMetadata> metadata) {
-            Utils.checkNotNull(metadata, "metadata");
-            this.metadata = Optional.ofNullable(metadata);
-            return this;
-        }
-
-        public Builder metadata(Optional<? extends List<KmsPageMetadata>> metadata) {
-            Utils.checkNotNull(metadata, "metadata");
+        public Builder metadata(@Nullable List<KmsPageMetadata> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-
-        public Builder parentId(String parentId) {
-            Utils.checkNotNull(parentId, "parentId");
-            this.parentId = Optional.ofNullable(parentId);
-            return this;
-        }
-
-        public Builder parentId(Optional<String> parentId) {
-            Utils.checkNotNull(parentId, "parentId");
+        public Builder parentId(@Nullable String parentId) {
             this.parentId = parentId;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder spaceId(String spaceId) {
-            Utils.checkNotNull(spaceId, "spaceId");
-            this.spaceId = Optional.ofNullable(spaceId);
-            return this;
-        }
-
-        public Builder spaceId(Optional<String> spaceId) {
-            Utils.checkNotNull(spaceId, "spaceId");
+        public Builder spaceId(@Nullable String spaceId) {
             this.spaceId = spaceId;
             return this;
         }
 
-
-        public Builder title(String title) {
-            Utils.checkNotNull(title, "title");
-            this.title = title;
+        public Builder title(@Nonnull String title) {
+            this.title = Utils.checkNotNull(title, "title");
             return this;
         }
 
-
-        public Builder type(KmsPageType type) {
-            Utils.checkNotNull(type, "type");
-            this.type = type;
+        public Builder type(@Nonnull KmsPageType type) {
+            this.type = Utils.checkNotNull(type, "type");
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
-
-        public Builder userId(String userId) {
-            Utils.checkNotNull(userId, "userId");
-            this.userId = Optional.ofNullable(userId);
-            return this;
-        }
-
-        public Builder userId(Optional<String> userId) {
-            Utils.checkNotNull(userId, "userId");
+        public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;
         }
 
-
-        public Builder webUrl(String webUrl) {
-            Utils.checkNotNull(webUrl, "webUrl");
-            this.webUrl = Optional.ofNullable(webUrl);
-            return this;
-        }
-
-        public Builder webUrl(Optional<String> webUrl) {
-            Utils.checkNotNull(webUrl, "webUrl");
+        public Builder webUrl(@Nullable String webUrl) {
             this.webUrl = webUrl;
             return this;
         }
 
         public KmsPage build() {
-
             return new KmsPage(
                 createdAt, downloadUrl, hasChildren,
                 id, isActive, metadata,

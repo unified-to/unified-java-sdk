@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateTicketingNoteRequest;
 import to.unified.unified_java_sdk.models.operations.CreateTicketingNoteRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateTicketingNoteResponse;
@@ -67,7 +68,7 @@ public class Note {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateTicketingNoteResponse createTicketingNote(CreateTicketingNoteRequest request) {
+    public CreateTicketingNoteResponse createTicketingNote(@Nonnull CreateTicketingNoteRequest request) {
         RequestOperation<CreateTicketingNoteRequest, CreateTicketingNoteResponse> operation
               = new CreateTicketingNote.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -89,7 +90,7 @@ public class Note {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetTicketingNoteResponse getTicketingNote(GetTicketingNoteRequest request) {
+    public GetTicketingNoteResponse getTicketingNote(@Nonnull GetTicketingNoteRequest request) {
         RequestOperation<GetTicketingNoteRequest, GetTicketingNoteResponse> operation
               = new GetTicketingNote.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -111,7 +112,7 @@ public class Note {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListTicketingNotesResponse listTicketingNotes(ListTicketingNotesRequest request) {
+    public ListTicketingNotesResponse listTicketingNotes(@Nonnull ListTicketingNotesRequest request) {
         RequestOperation<ListTicketingNotesRequest, ListTicketingNotesResponse> operation
               = new ListTicketingNotes.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -133,7 +134,7 @@ public class Note {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchTicketingNoteResponse patchTicketingNote(PatchTicketingNoteRequest request) {
+    public PatchTicketingNoteResponse patchTicketingNote(@Nonnull PatchTicketingNoteRequest request) {
         RequestOperation<PatchTicketingNoteRequest, PatchTicketingNoteResponse> operation
               = new PatchTicketingNote.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -155,7 +156,7 @@ public class Note {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveTicketingNoteResponse removeTicketingNote(RemoveTicketingNoteRequest request) {
+    public RemoveTicketingNoteResponse removeTicketingNote(@Nonnull RemoveTicketingNoteRequest request) {
         RequestOperation<RemoveTicketingNoteRequest, RemoveTicketingNoteResponse> operation
               = new RemoveTicketingNote.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -177,7 +178,7 @@ public class Note {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateTicketingNoteResponse updateTicketingNote(UpdateTicketingNoteRequest request) {
+    public UpdateTicketingNoteResponse updateTicketingNote(@Nonnull UpdateTicketingNoteRequest request) {
         RequestOperation<UpdateTicketingNoteRequest, UpdateTicketingNoteResponse> operation
               = new UpdateTicketingNote.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAtsDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.GetAtsDocumentRequest;
@@ -68,7 +69,7 @@ public class AsyncDocument {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAtsDocumentResponse>} - The async response
      */
-    public CompletableFuture<CreateAtsDocumentResponse> createAtsDocument(CreateAtsDocumentRequest request) {
+    public CompletableFuture<CreateAtsDocumentResponse> createAtsDocument(@Nonnull CreateAtsDocumentRequest request) {
         AsyncRequestOperation<CreateAtsDocumentRequest, CreateAtsDocumentResponse> operation
               = new CreateAtsDocument.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -91,7 +92,7 @@ public class AsyncDocument {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAtsDocumentResponse>} - The async response
      */
-    public CompletableFuture<GetAtsDocumentResponse> getAtsDocument(GetAtsDocumentRequest request) {
+    public CompletableFuture<GetAtsDocumentResponse> getAtsDocument(@Nonnull GetAtsDocumentRequest request) {
         AsyncRequestOperation<GetAtsDocumentRequest, GetAtsDocumentResponse> operation
               = new GetAtsDocument.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -114,7 +115,7 @@ public class AsyncDocument {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAtsDocumentsResponse>} - The async response
      */
-    public CompletableFuture<ListAtsDocumentsResponse> listAtsDocuments(ListAtsDocumentsRequest request) {
+    public CompletableFuture<ListAtsDocumentsResponse> listAtsDocuments(@Nonnull ListAtsDocumentsRequest request) {
         AsyncRequestOperation<ListAtsDocumentsRequest, ListAtsDocumentsResponse> operation
               = new ListAtsDocuments.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -137,7 +138,7 @@ public class AsyncDocument {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAtsDocumentResponse>} - The async response
      */
-    public CompletableFuture<PatchAtsDocumentResponse> patchAtsDocument(PatchAtsDocumentRequest request) {
+    public CompletableFuture<PatchAtsDocumentResponse> patchAtsDocument(@Nonnull PatchAtsDocumentRequest request) {
         AsyncRequestOperation<PatchAtsDocumentRequest, PatchAtsDocumentResponse> operation
               = new PatchAtsDocument.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -160,7 +161,7 @@ public class AsyncDocument {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAtsDocumentResponse>} - The async response
      */
-    public CompletableFuture<RemoveAtsDocumentResponse> removeAtsDocument(RemoveAtsDocumentRequest request) {
+    public CompletableFuture<RemoveAtsDocumentResponse> removeAtsDocument(@Nonnull RemoveAtsDocumentRequest request) {
         AsyncRequestOperation<RemoveAtsDocumentRequest, RemoveAtsDocumentResponse> operation
               = new RemoveAtsDocument.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -183,7 +184,7 @@ public class AsyncDocument {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAtsDocumentResponse>} - The async response
      */
-    public CompletableFuture<UpdateAtsDocumentResponse> updateAtsDocument(UpdateAtsDocumentRequest request) {
+    public CompletableFuture<UpdateAtsDocumentResponse> updateAtsDocument(@Nonnull UpdateAtsDocumentRequest request) {
         AsyncRequestOperation<UpdateAtsDocumentRequest, UpdateAtsDocumentResponse> operation
               = new UpdateAtsDocument.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

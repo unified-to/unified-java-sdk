@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.CommerceSaleschannel;
@@ -30,7 +30,7 @@ public class CreateCommerceSaleschannelRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<CreateCommerceSaleschannelQueryParamFields>> fields;
+    private List<CreateCommerceSaleschannelQueryParamFields> fields;
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
@@ -38,51 +38,45 @@ public class CreateCommerceSaleschannelRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
     @JsonCreator
     public CreateCommerceSaleschannelRequest(
-            CommerceSaleschannel commerceSaleschannel,
-            String connectionId,
-            Optional<? extends List<CreateCommerceSaleschannelQueryParamFields>> fields,
-            Optional<String> raw) {
-        Utils.checkNotNull(commerceSaleschannel, "commerceSaleschannel");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(raw, "raw");
-        this.commerceSaleschannel = commerceSaleschannel;
-        this.connectionId = connectionId;
+            @Nonnull CommerceSaleschannel commerceSaleschannel,
+            @Nonnull String connectionId,
+            @Nullable List<CreateCommerceSaleschannelQueryParamFields> fields,
+            @Nullable String raw) {
+        this.commerceSaleschannel = Optional.ofNullable(commerceSaleschannel)
+            .orElseThrow(() -> new IllegalArgumentException("commerceSaleschannel cannot be null"));
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
         this.raw = raw;
     }
     
     public CreateCommerceSaleschannelRequest(
-            CommerceSaleschannel commerceSaleschannel,
-            String connectionId) {
-        this(commerceSaleschannel, connectionId, Optional.empty(),
-            Optional.empty());
+            @Nonnull CommerceSaleschannel commerceSaleschannel,
+            @Nonnull String connectionId) {
+        this(commerceSaleschannel, connectionId, null,
+            null);
     }
 
-    @JsonIgnore
     public CommerceSaleschannel commerceSaleschannel() {
-        return commerceSaleschannel;
+        return this.commerceSaleschannel;
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<CreateCommerceSaleschannelQueryParamFields>> fields() {
-        return (Optional<List<CreateCommerceSaleschannelQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
@@ -90,9 +84,8 @@ public class CreateCommerceSaleschannelRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
     public static Builder builder() {
@@ -100,27 +93,17 @@ public class CreateCommerceSaleschannelRequest {
     }
 
 
-    public CreateCommerceSaleschannelRequest withCommerceSaleschannel(CommerceSaleschannel commerceSaleschannel) {
-        Utils.checkNotNull(commerceSaleschannel, "commerceSaleschannel");
-        this.commerceSaleschannel = commerceSaleschannel;
+    public CreateCommerceSaleschannelRequest withCommerceSaleschannel(@Nonnull CommerceSaleschannel commerceSaleschannel) {
+        this.commerceSaleschannel = Utils.checkNotNull(commerceSaleschannel, "commerceSaleschannel");
         return this;
     }
+
 
     /**
      * ID of the connection
      */
-    public CreateCommerceSaleschannelRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public CreateCommerceSaleschannelRequest withFields(List<CreateCommerceSaleschannelQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public CreateCommerceSaleschannelRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -128,34 +111,22 @@ public class CreateCommerceSaleschannelRequest {
     /**
      * Fields to return
      */
-    public CreateCommerceSaleschannelRequest withFields(Optional<? extends List<CreateCommerceSaleschannelQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public CreateCommerceSaleschannelRequest withFields(@Nullable List<CreateCommerceSaleschannelQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public CreateCommerceSaleschannelRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
-
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public CreateCommerceSaleschannelRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public CreateCommerceSaleschannelRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -196,75 +167,46 @@ public class CreateCommerceSaleschannelRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<CreateCommerceSaleschannelQueryParamFields>> fields = Optional.empty();
+        private List<CreateCommerceSaleschannelQueryParamFields> fields;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder commerceSaleschannel(CommerceSaleschannel commerceSaleschannel) {
-            Utils.checkNotNull(commerceSaleschannel, "commerceSaleschannel");
-            this.commerceSaleschannel = commerceSaleschannel;
+        public Builder commerceSaleschannel(@Nonnull CommerceSaleschannel commerceSaleschannel) {
+            this.commerceSaleschannel = Utils.checkNotNull(commerceSaleschannel, "commerceSaleschannel");
             return this;
         }
-
 
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<CreateCommerceSaleschannelQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<CreateCommerceSaleschannelQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<CreateCommerceSaleschannelQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
         public CreateCommerceSaleschannelRequest build() {
-
             return new CreateCommerceSaleschannelRequest(
                 commerceSaleschannel, connectionId, fields,
                 raw);

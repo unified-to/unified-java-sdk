@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
 import java.util.Optional;
@@ -22,35 +22,31 @@ public class PropertyCrmEventNote {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
-    private Optional<String> description;
+    private String description;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
-    private Optional<String> title;
+    private String title;
 
     @JsonCreator
     public PropertyCrmEventNote(
-            @JsonProperty("description") Optional<String> description,
-            @JsonProperty("title") Optional<String> title) {
-        Utils.checkNotNull(description, "description");
-        Utils.checkNotNull(title, "title");
+            @JsonProperty("description") @Nullable String description,
+            @JsonProperty("title") @Nullable String title) {
         this.description = description;
         this.title = title;
     }
     
     public PropertyCrmEventNote() {
-        this(Optional.empty(), Optional.empty());
+        this(null, null);
     }
 
-    @JsonIgnore
     public Optional<String> description() {
-        return description;
+        return Optional.ofNullable(this.description);
     }
 
-    @JsonIgnore
     public Optional<String> title() {
-        return title;
+        return Optional.ofNullable(this.title);
     }
 
     public static Builder builder() {
@@ -58,31 +54,17 @@ public class PropertyCrmEventNote {
     }
 
 
-    public PropertyCrmEventNote withDescription(String description) {
-        Utils.checkNotNull(description, "description");
-        this.description = Optional.ofNullable(description);
-        return this;
-    }
-
-
-    public PropertyCrmEventNote withDescription(Optional<String> description) {
-        Utils.checkNotNull(description, "description");
+    public PropertyCrmEventNote withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
-    public PropertyCrmEventNote withTitle(String title) {
-        Utils.checkNotNull(title, "title");
-        this.title = Optional.ofNullable(title);
-        return this;
-    }
 
-
-    public PropertyCrmEventNote withTitle(Optional<String> title) {
-        Utils.checkNotNull(title, "title");
+    public PropertyCrmEventNote withTitle(@Nullable String title) {
         this.title = title;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -114,42 +96,25 @@ public class PropertyCrmEventNote {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> description = Optional.empty();
+        private String description;
 
-        private Optional<String> title = Optional.empty();
+        private String title;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder description(String description) {
-            Utils.checkNotNull(description, "description");
-            this.description = Optional.ofNullable(description);
-            return this;
-        }
-
-        public Builder description(Optional<String> description) {
-            Utils.checkNotNull(description, "description");
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-
-        public Builder title(String title) {
-            Utils.checkNotNull(title, "title");
-            this.title = Optional.ofNullable(title);
-            return this;
-        }
-
-        public Builder title(Optional<String> title) {
-            Utils.checkNotNull(title, "title");
+        public Builder title(@Nullable String title) {
             this.title = title;
             return this;
         }
 
         public PropertyCrmEventNote build() {
-
             return new PropertyCrmEventNote(
                 description, title);
         }

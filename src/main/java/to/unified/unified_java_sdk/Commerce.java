@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceCollectionRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceCollectionRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceCollectionResponse;
@@ -211,7 +212,7 @@ public class Commerce {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCommerceCollectionResponse createCommerceCollection(CreateCommerceCollectionRequest request) {
+    public CreateCommerceCollectionResponse createCommerceCollection(@Nonnull CreateCommerceCollectionRequest request) {
         RequestOperation<CreateCommerceCollectionRequest, CreateCommerceCollectionResponse> operation
               = new CreateCommerceCollection.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -233,7 +234,7 @@ public class Commerce {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCommerceInventoryResponse createCommerceInventory(CreateCommerceInventoryRequest request) {
+    public CreateCommerceInventoryResponse createCommerceInventory(@Nonnull CreateCommerceInventoryRequest request) {
         RequestOperation<CreateCommerceInventoryRequest, CreateCommerceInventoryResponse> operation
               = new CreateCommerceInventory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -255,7 +256,7 @@ public class Commerce {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCommerceItemResponse createCommerceItem(CreateCommerceItemRequest request) {
+    public CreateCommerceItemResponse createCommerceItem(@Nonnull CreateCommerceItemRequest request) {
         RequestOperation<CreateCommerceItemRequest, CreateCommerceItemResponse> operation
               = new CreateCommerceItem.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -277,7 +278,7 @@ public class Commerce {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCommerceItemvariantResponse createCommerceItemvariant(CreateCommerceItemvariantRequest request) {
+    public CreateCommerceItemvariantResponse createCommerceItemvariant(@Nonnull CreateCommerceItemvariantRequest request) {
         RequestOperation<CreateCommerceItemvariantRequest, CreateCommerceItemvariantResponse> operation
               = new CreateCommerceItemvariant.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -299,7 +300,7 @@ public class Commerce {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCommerceLocationResponse createCommerceLocation(CreateCommerceLocationRequest request) {
+    public CreateCommerceLocationResponse createCommerceLocation(@Nonnull CreateCommerceLocationRequest request) {
         RequestOperation<CreateCommerceLocationRequest, CreateCommerceLocationResponse> operation
               = new CreateCommerceLocation.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -321,7 +322,7 @@ public class Commerce {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCommerceReviewResponse createCommerceReview(CreateCommerceReviewRequest request) {
+    public CreateCommerceReviewResponse createCommerceReview(@Nonnull CreateCommerceReviewRequest request) {
         RequestOperation<CreateCommerceReviewRequest, CreateCommerceReviewResponse> operation
               = new CreateCommerceReview.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -343,7 +344,7 @@ public class Commerce {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCommerceSaleschannelResponse createCommerceSaleschannel(CreateCommerceSaleschannelRequest request) {
+    public CreateCommerceSaleschannelResponse createCommerceSaleschannel(@Nonnull CreateCommerceSaleschannelRequest request) {
         RequestOperation<CreateCommerceSaleschannelRequest, CreateCommerceSaleschannelResponse> operation
               = new CreateCommerceSaleschannel.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -365,7 +366,7 @@ public class Commerce {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetCommerceCollectionResponse getCommerceCollection(GetCommerceCollectionRequest request) {
+    public GetCommerceCollectionResponse getCommerceCollection(@Nonnull GetCommerceCollectionRequest request) {
         RequestOperation<GetCommerceCollectionRequest, GetCommerceCollectionResponse> operation
               = new GetCommerceCollection.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -387,7 +388,7 @@ public class Commerce {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetCommerceInventoryResponse getCommerceInventory(GetCommerceInventoryRequest request) {
+    public GetCommerceInventoryResponse getCommerceInventory(@Nonnull GetCommerceInventoryRequest request) {
         RequestOperation<GetCommerceInventoryRequest, GetCommerceInventoryResponse> operation
               = new GetCommerceInventory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -409,7 +410,7 @@ public class Commerce {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetCommerceItemResponse getCommerceItem(GetCommerceItemRequest request) {
+    public GetCommerceItemResponse getCommerceItem(@Nonnull GetCommerceItemRequest request) {
         RequestOperation<GetCommerceItemRequest, GetCommerceItemResponse> operation
               = new GetCommerceItem.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -431,7 +432,7 @@ public class Commerce {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetCommerceItemvariantResponse getCommerceItemvariant(GetCommerceItemvariantRequest request) {
+    public GetCommerceItemvariantResponse getCommerceItemvariant(@Nonnull GetCommerceItemvariantRequest request) {
         RequestOperation<GetCommerceItemvariantRequest, GetCommerceItemvariantResponse> operation
               = new GetCommerceItemvariant.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -453,7 +454,7 @@ public class Commerce {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetCommerceLocationResponse getCommerceLocation(GetCommerceLocationRequest request) {
+    public GetCommerceLocationResponse getCommerceLocation(@Nonnull GetCommerceLocationRequest request) {
         RequestOperation<GetCommerceLocationRequest, GetCommerceLocationResponse> operation
               = new GetCommerceLocation.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -475,7 +476,7 @@ public class Commerce {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetCommerceReviewResponse getCommerceReview(GetCommerceReviewRequest request) {
+    public GetCommerceReviewResponse getCommerceReview(@Nonnull GetCommerceReviewRequest request) {
         RequestOperation<GetCommerceReviewRequest, GetCommerceReviewResponse> operation
               = new GetCommerceReview.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -497,7 +498,7 @@ public class Commerce {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetCommerceSaleschannelResponse getCommerceSaleschannel(GetCommerceSaleschannelRequest request) {
+    public GetCommerceSaleschannelResponse getCommerceSaleschannel(@Nonnull GetCommerceSaleschannelRequest request) {
         RequestOperation<GetCommerceSaleschannelRequest, GetCommerceSaleschannelResponse> operation
               = new GetCommerceSaleschannel.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -519,7 +520,7 @@ public class Commerce {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCommerceCollectionsResponse listCommerceCollections(ListCommerceCollectionsRequest request) {
+    public ListCommerceCollectionsResponse listCommerceCollections(@Nonnull ListCommerceCollectionsRequest request) {
         RequestOperation<ListCommerceCollectionsRequest, ListCommerceCollectionsResponse> operation
               = new ListCommerceCollections.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -541,7 +542,7 @@ public class Commerce {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCommerceInventoriesResponse listCommerceInventories(ListCommerceInventoriesRequest request) {
+    public ListCommerceInventoriesResponse listCommerceInventories(@Nonnull ListCommerceInventoriesRequest request) {
         RequestOperation<ListCommerceInventoriesRequest, ListCommerceInventoriesResponse> operation
               = new ListCommerceInventories.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -563,7 +564,7 @@ public class Commerce {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCommerceItemsResponse listCommerceItems(ListCommerceItemsRequest request) {
+    public ListCommerceItemsResponse listCommerceItems(@Nonnull ListCommerceItemsRequest request) {
         RequestOperation<ListCommerceItemsRequest, ListCommerceItemsResponse> operation
               = new ListCommerceItems.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -585,7 +586,7 @@ public class Commerce {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCommerceItemvariantsResponse listCommerceItemvariants(ListCommerceItemvariantsRequest request) {
+    public ListCommerceItemvariantsResponse listCommerceItemvariants(@Nonnull ListCommerceItemvariantsRequest request) {
         RequestOperation<ListCommerceItemvariantsRequest, ListCommerceItemvariantsResponse> operation
               = new ListCommerceItemvariants.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -607,7 +608,7 @@ public class Commerce {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCommerceLocationsResponse listCommerceLocations(ListCommerceLocationsRequest request) {
+    public ListCommerceLocationsResponse listCommerceLocations(@Nonnull ListCommerceLocationsRequest request) {
         RequestOperation<ListCommerceLocationsRequest, ListCommerceLocationsResponse> operation
               = new ListCommerceLocations.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -629,7 +630,7 @@ public class Commerce {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCommerceReviewsResponse listCommerceReviews(ListCommerceReviewsRequest request) {
+    public ListCommerceReviewsResponse listCommerceReviews(@Nonnull ListCommerceReviewsRequest request) {
         RequestOperation<ListCommerceReviewsRequest, ListCommerceReviewsResponse> operation
               = new ListCommerceReviews.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -651,7 +652,7 @@ public class Commerce {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCommerceSaleschannelsResponse listCommerceSaleschannels(ListCommerceSaleschannelsRequest request) {
+    public ListCommerceSaleschannelsResponse listCommerceSaleschannels(@Nonnull ListCommerceSaleschannelsRequest request) {
         RequestOperation<ListCommerceSaleschannelsRequest, ListCommerceSaleschannelsResponse> operation
               = new ListCommerceSaleschannels.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -673,7 +674,7 @@ public class Commerce {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCommerceCollectionResponse patchCommerceCollection(PatchCommerceCollectionRequest request) {
+    public PatchCommerceCollectionResponse patchCommerceCollection(@Nonnull PatchCommerceCollectionRequest request) {
         RequestOperation<PatchCommerceCollectionRequest, PatchCommerceCollectionResponse> operation
               = new PatchCommerceCollection.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -695,7 +696,7 @@ public class Commerce {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCommerceInventoryResponse patchCommerceInventory(PatchCommerceInventoryRequest request) {
+    public PatchCommerceInventoryResponse patchCommerceInventory(@Nonnull PatchCommerceInventoryRequest request) {
         RequestOperation<PatchCommerceInventoryRequest, PatchCommerceInventoryResponse> operation
               = new PatchCommerceInventory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -717,7 +718,7 @@ public class Commerce {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCommerceItemResponse patchCommerceItem(PatchCommerceItemRequest request) {
+    public PatchCommerceItemResponse patchCommerceItem(@Nonnull PatchCommerceItemRequest request) {
         RequestOperation<PatchCommerceItemRequest, PatchCommerceItemResponse> operation
               = new PatchCommerceItem.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -739,7 +740,7 @@ public class Commerce {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCommerceItemvariantResponse patchCommerceItemvariant(PatchCommerceItemvariantRequest request) {
+    public PatchCommerceItemvariantResponse patchCommerceItemvariant(@Nonnull PatchCommerceItemvariantRequest request) {
         RequestOperation<PatchCommerceItemvariantRequest, PatchCommerceItemvariantResponse> operation
               = new PatchCommerceItemvariant.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -761,7 +762,7 @@ public class Commerce {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCommerceLocationResponse patchCommerceLocation(PatchCommerceLocationRequest request) {
+    public PatchCommerceLocationResponse patchCommerceLocation(@Nonnull PatchCommerceLocationRequest request) {
         RequestOperation<PatchCommerceLocationRequest, PatchCommerceLocationResponse> operation
               = new PatchCommerceLocation.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -783,7 +784,7 @@ public class Commerce {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCommerceReviewResponse patchCommerceReview(PatchCommerceReviewRequest request) {
+    public PatchCommerceReviewResponse patchCommerceReview(@Nonnull PatchCommerceReviewRequest request) {
         RequestOperation<PatchCommerceReviewRequest, PatchCommerceReviewResponse> operation
               = new PatchCommerceReview.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -805,7 +806,7 @@ public class Commerce {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCommerceSaleschannelResponse patchCommerceSaleschannel(PatchCommerceSaleschannelRequest request) {
+    public PatchCommerceSaleschannelResponse patchCommerceSaleschannel(@Nonnull PatchCommerceSaleschannelRequest request) {
         RequestOperation<PatchCommerceSaleschannelRequest, PatchCommerceSaleschannelResponse> operation
               = new PatchCommerceSaleschannel.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -827,7 +828,7 @@ public class Commerce {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCommerceCollectionResponse removeCommerceCollection(RemoveCommerceCollectionRequest request) {
+    public RemoveCommerceCollectionResponse removeCommerceCollection(@Nonnull RemoveCommerceCollectionRequest request) {
         RequestOperation<RemoveCommerceCollectionRequest, RemoveCommerceCollectionResponse> operation
               = new RemoveCommerceCollection.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -849,7 +850,7 @@ public class Commerce {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCommerceInventoryResponse removeCommerceInventory(RemoveCommerceInventoryRequest request) {
+    public RemoveCommerceInventoryResponse removeCommerceInventory(@Nonnull RemoveCommerceInventoryRequest request) {
         RequestOperation<RemoveCommerceInventoryRequest, RemoveCommerceInventoryResponse> operation
               = new RemoveCommerceInventory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -871,7 +872,7 @@ public class Commerce {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCommerceItemResponse removeCommerceItem(RemoveCommerceItemRequest request) {
+    public RemoveCommerceItemResponse removeCommerceItem(@Nonnull RemoveCommerceItemRequest request) {
         RequestOperation<RemoveCommerceItemRequest, RemoveCommerceItemResponse> operation
               = new RemoveCommerceItem.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -893,7 +894,7 @@ public class Commerce {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCommerceItemvariantResponse removeCommerceItemvariant(RemoveCommerceItemvariantRequest request) {
+    public RemoveCommerceItemvariantResponse removeCommerceItemvariant(@Nonnull RemoveCommerceItemvariantRequest request) {
         RequestOperation<RemoveCommerceItemvariantRequest, RemoveCommerceItemvariantResponse> operation
               = new RemoveCommerceItemvariant.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -915,7 +916,7 @@ public class Commerce {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCommerceLocationResponse removeCommerceLocation(RemoveCommerceLocationRequest request) {
+    public RemoveCommerceLocationResponse removeCommerceLocation(@Nonnull RemoveCommerceLocationRequest request) {
         RequestOperation<RemoveCommerceLocationRequest, RemoveCommerceLocationResponse> operation
               = new RemoveCommerceLocation.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -937,7 +938,7 @@ public class Commerce {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCommerceReviewResponse removeCommerceReview(RemoveCommerceReviewRequest request) {
+    public RemoveCommerceReviewResponse removeCommerceReview(@Nonnull RemoveCommerceReviewRequest request) {
         RequestOperation<RemoveCommerceReviewRequest, RemoveCommerceReviewResponse> operation
               = new RemoveCommerceReview.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -959,7 +960,7 @@ public class Commerce {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCommerceSaleschannelResponse removeCommerceSaleschannel(RemoveCommerceSaleschannelRequest request) {
+    public RemoveCommerceSaleschannelResponse removeCommerceSaleschannel(@Nonnull RemoveCommerceSaleschannelRequest request) {
         RequestOperation<RemoveCommerceSaleschannelRequest, RemoveCommerceSaleschannelResponse> operation
               = new RemoveCommerceSaleschannel.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -981,7 +982,7 @@ public class Commerce {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCommerceCollectionResponse updateCommerceCollection(UpdateCommerceCollectionRequest request) {
+    public UpdateCommerceCollectionResponse updateCommerceCollection(@Nonnull UpdateCommerceCollectionRequest request) {
         RequestOperation<UpdateCommerceCollectionRequest, UpdateCommerceCollectionResponse> operation
               = new UpdateCommerceCollection.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1003,7 +1004,7 @@ public class Commerce {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCommerceInventoryResponse updateCommerceInventory(UpdateCommerceInventoryRequest request) {
+    public UpdateCommerceInventoryResponse updateCommerceInventory(@Nonnull UpdateCommerceInventoryRequest request) {
         RequestOperation<UpdateCommerceInventoryRequest, UpdateCommerceInventoryResponse> operation
               = new UpdateCommerceInventory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1025,7 +1026,7 @@ public class Commerce {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCommerceItemResponse updateCommerceItem(UpdateCommerceItemRequest request) {
+    public UpdateCommerceItemResponse updateCommerceItem(@Nonnull UpdateCommerceItemRequest request) {
         RequestOperation<UpdateCommerceItemRequest, UpdateCommerceItemResponse> operation
               = new UpdateCommerceItem.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1047,7 +1048,7 @@ public class Commerce {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCommerceItemvariantResponse updateCommerceItemvariant(UpdateCommerceItemvariantRequest request) {
+    public UpdateCommerceItemvariantResponse updateCommerceItemvariant(@Nonnull UpdateCommerceItemvariantRequest request) {
         RequestOperation<UpdateCommerceItemvariantRequest, UpdateCommerceItemvariantResponse> operation
               = new UpdateCommerceItemvariant.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1069,7 +1070,7 @@ public class Commerce {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCommerceLocationResponse updateCommerceLocation(UpdateCommerceLocationRequest request) {
+    public UpdateCommerceLocationResponse updateCommerceLocation(@Nonnull UpdateCommerceLocationRequest request) {
         RequestOperation<UpdateCommerceLocationRequest, UpdateCommerceLocationResponse> operation
               = new UpdateCommerceLocation.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1091,7 +1092,7 @@ public class Commerce {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCommerceReviewResponse updateCommerceReview(UpdateCommerceReviewRequest request) {
+    public UpdateCommerceReviewResponse updateCommerceReview(@Nonnull UpdateCommerceReviewRequest request) {
         RequestOperation<UpdateCommerceReviewRequest, UpdateCommerceReviewResponse> operation
               = new UpdateCommerceReview.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1113,7 +1114,7 @@ public class Commerce {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCommerceSaleschannelResponse updateCommerceSaleschannel(UpdateCommerceSaleschannelRequest request) {
+    public UpdateCommerceSaleschannelResponse updateCommerceSaleschannel(@Nonnull UpdateCommerceSaleschannelRequest request) {
         RequestOperation<UpdateCommerceSaleschannelRequest, UpdateCommerceSaleschannelResponse> operation
               = new UpdateCommerceSaleschannel.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

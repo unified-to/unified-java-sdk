@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.PatchCrmLeadRequest;
@@ -13,27 +14,39 @@ import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchCrmLeadRequestBuilder {
-
-    private PatchCrmLeadRequest request;
     private final SDKConfiguration sdkConfiguration;
-    private final Headers _headers = new Headers(); 
+    private final Headers _headers = new Headers();
+    private PatchCrmLeadRequest request;
 
     public PatchCrmLeadRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
 
-    public PatchCrmLeadRequestBuilder request(PatchCrmLeadRequest request) {
-        Utils.checkNotNull(request, "request");
-        this.request = request;
+    public PatchCrmLeadRequestBuilder request(@Nonnull PatchCrmLeadRequest request) {
+        this.request = Utils.checkNotNull(request, "request");
         return this;
     }
 
+    private PatchCrmLeadRequest _buildRequest() {
+        return this.request;
+    }
+    
+    public PatchCrmLeadRequestBuilder header(String name, String value) {
+        Utils.checkNotNull(name, "name");
+        Utils.checkNotNull(value, "value");
+        this._headers.add(name, value);
+        return this;
+    }
+
+    /**
+    * Executes the request and returns the response.
+    *
+    * @return The response from the server.
+    */
     public CompletableFuture<PatchCrmLeadResponse> call() {
-        
         AsyncRequestOperation<PatchCrmLeadRequest, PatchCrmLeadResponse> operation
               = new PatchCrmLead.Async(sdkConfiguration, _headers);
-
-        return operation.doRequest(request)
+        return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }
 }

@@ -4,11 +4,11 @@
 package to.unified.unified_java_sdk.models.operations.async;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import java.lang.Integer;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.io.InputStream;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.AccountingJournal;
@@ -21,7 +21,7 @@ public class CreateAccountingJournalResponse implements AsyncResponse {
     /**
      * Successful
      */
-    private Optional<? extends AccountingJournal> accountingJournal;
+    private AccountingJournal accountingJournal;
 
     /**
      * HTTP response content type for this operation
@@ -40,59 +40,52 @@ public class CreateAccountingJournalResponse implements AsyncResponse {
 
     @JsonCreator
     public CreateAccountingJournalResponse(
-            Optional<? extends AccountingJournal> accountingJournal,
-            String contentType,
+            @Nullable AccountingJournal accountingJournal,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(accountingJournal, "accountingJournal");
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
+            @Nonnull HttpResponse<Blob> rawResponse) {
         this.accountingJournal = accountingJournal;
-        this.contentType = contentType;
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
     }
     
     public CreateAccountingJournalResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
-        this(Optional.empty(), contentType, statusCode,
+            @Nonnull HttpResponse<Blob> rawResponse) {
+        this(null, contentType, statusCode,
             rawResponse);
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<AccountingJournal> accountingJournal() {
-        return (Optional<AccountingJournal>) accountingJournal;
+        return Optional.ofNullable(this.accountingJournal);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<Blob> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     public static Builder builder() {
@@ -103,48 +96,38 @@ public class CreateAccountingJournalResponse implements AsyncResponse {
     /**
      * Successful
      */
-    public CreateAccountingJournalResponse withAccountingJournal(AccountingJournal accountingJournal) {
-        Utils.checkNotNull(accountingJournal, "accountingJournal");
-        this.accountingJournal = Optional.ofNullable(accountingJournal);
-        return this;
-    }
-
-
-    /**
-     * Successful
-     */
-    public CreateAccountingJournalResponse withAccountingJournal(Optional<? extends AccountingJournal> accountingJournal) {
-        Utils.checkNotNull(accountingJournal, "accountingJournal");
+    public CreateAccountingJournalResponse withAccountingJournal(@Nullable AccountingJournal accountingJournal) {
         this.accountingJournal = accountingJournal;
         return this;
     }
 
+
     /**
      * HTTP response content type for this operation
      */
-    public CreateAccountingJournalResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
+    public CreateAccountingJournalResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public CreateAccountingJournalResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public CreateAccountingJournalResponse withRawResponse(HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
+    public CreateAccountingJournalResponse withRawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -181,11 +164,11 @@ public class CreateAccountingJournalResponse implements AsyncResponse {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends AccountingJournal> accountingJournal = Optional.empty();
+        private AccountingJournal accountingJournal;
 
         private String contentType;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<Blob> rawResponse;
 
@@ -193,57 +176,39 @@ public class CreateAccountingJournalResponse implements AsyncResponse {
           // force use of static builder() method
         }
 
-
         /**
          * Successful
          */
-        public Builder accountingJournal(AccountingJournal accountingJournal) {
-            Utils.checkNotNull(accountingJournal, "accountingJournal");
-            this.accountingJournal = Optional.ofNullable(accountingJournal);
-            return this;
-        }
-
-        /**
-         * Successful
-         */
-        public Builder accountingJournal(Optional<? extends AccountingJournal> accountingJournal) {
-            Utils.checkNotNull(accountingJournal, "accountingJournal");
+        public Builder accountingJournal(@Nullable AccountingJournal accountingJournal) {
             this.accountingJournal = accountingJournal;
             return this;
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<Blob> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
+        public Builder rawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         public CreateAccountingJournalResponse build() {
-
             return new CreateAccountingJournalResponse(
                 accountingJournal, contentType, statusCode,
                 rawResponse);

@@ -4,12 +4,11 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.io.InputStream;
-import java.lang.Integer;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.ShippingTracking;
@@ -26,7 +25,7 @@ public class GetShippingTrackingResponse implements Response {
     /**
      * Successful
      */
-    private Optional<? extends ShippingTracking> shippingTracking;
+    private ShippingTracking shippingTracking;
 
     /**
      * HTTP response status code for this operation
@@ -40,59 +39,52 @@ public class GetShippingTrackingResponse implements Response {
 
     @JsonCreator
     public GetShippingTrackingResponse(
-            String contentType,
-            Optional<? extends ShippingTracking> shippingTracking,
+            @Nonnull String contentType,
+            @Nullable ShippingTracking shippingTracking,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(shippingTracking, "shippingTracking");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.contentType = contentType;
+            @Nonnull HttpResponse<InputStream> rawResponse) {
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.shippingTracking = shippingTracking;
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
     }
     
     public GetShippingTrackingResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
-        this(contentType, Optional.empty(), statusCode,
+            @Nonnull HttpResponse<InputStream> rawResponse) {
+        this(contentType, null, statusCode,
             rawResponse);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ShippingTracking> shippingTracking() {
-        return (Optional<ShippingTracking>) shippingTracking;
+        return Optional.ofNullable(this.shippingTracking);
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<InputStream> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     public static Builder builder() {
@@ -103,18 +95,8 @@ public class GetShippingTrackingResponse implements Response {
     /**
      * HTTP response content type for this operation
      */
-    public GetShippingTrackingResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
-        return this;
-    }
-
-    /**
-     * Successful
-     */
-    public GetShippingTrackingResponse withShippingTracking(ShippingTracking shippingTracking) {
-        Utils.checkNotNull(shippingTracking, "shippingTracking");
-        this.shippingTracking = Optional.ofNullable(shippingTracking);
+    public GetShippingTrackingResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
 
@@ -122,29 +104,29 @@ public class GetShippingTrackingResponse implements Response {
     /**
      * Successful
      */
-    public GetShippingTrackingResponse withShippingTracking(Optional<? extends ShippingTracking> shippingTracking) {
-        Utils.checkNotNull(shippingTracking, "shippingTracking");
+    public GetShippingTrackingResponse withShippingTracking(@Nullable ShippingTracking shippingTracking) {
         this.shippingTracking = shippingTracking;
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public GetShippingTrackingResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public GetShippingTrackingResponse withRawResponse(HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
+    public GetShippingTrackingResponse withRawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -183,9 +165,9 @@ public class GetShippingTrackingResponse implements Response {
 
         private String contentType;
 
-        private Optional<? extends ShippingTracking> shippingTracking = Optional.empty();
+        private ShippingTracking shippingTracking;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<InputStream> rawResponse;
 
@@ -193,57 +175,39 @@ public class GetShippingTrackingResponse implements Response {
           // force use of static builder() method
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
-            return this;
-        }
-
-
-        /**
-         * Successful
-         */
-        public Builder shippingTracking(ShippingTracking shippingTracking) {
-            Utils.checkNotNull(shippingTracking, "shippingTracking");
-            this.shippingTracking = Optional.ofNullable(shippingTracking);
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
 
         /**
          * Successful
          */
-        public Builder shippingTracking(Optional<? extends ShippingTracking> shippingTracking) {
-            Utils.checkNotNull(shippingTracking, "shippingTracking");
+        public Builder shippingTracking(@Nullable ShippingTracking shippingTracking) {
             this.shippingTracking = shippingTracking;
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<InputStream> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
+        public Builder rawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         public GetShippingTrackingResponse build() {
-
             return new GetShippingTrackingResponse(
                 contentType, shippingTracking, statusCode,
                 rawResponse);

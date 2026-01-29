@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.RepoOrganization;
@@ -30,7 +30,7 @@ public class CreateRepoOrganizationRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<CreateRepoOrganizationQueryParamFields>> fields;
+    private List<CreateRepoOrganizationQueryParamFields> fields;
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
@@ -38,51 +38,45 @@ public class CreateRepoOrganizationRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
     @JsonCreator
     public CreateRepoOrganizationRequest(
-            RepoOrganization repoOrganization,
-            String connectionId,
-            Optional<? extends List<CreateRepoOrganizationQueryParamFields>> fields,
-            Optional<String> raw) {
-        Utils.checkNotNull(repoOrganization, "repoOrganization");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(raw, "raw");
-        this.repoOrganization = repoOrganization;
-        this.connectionId = connectionId;
+            @Nonnull RepoOrganization repoOrganization,
+            @Nonnull String connectionId,
+            @Nullable List<CreateRepoOrganizationQueryParamFields> fields,
+            @Nullable String raw) {
+        this.repoOrganization = Optional.ofNullable(repoOrganization)
+            .orElseThrow(() -> new IllegalArgumentException("repoOrganization cannot be null"));
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
         this.raw = raw;
     }
     
     public CreateRepoOrganizationRequest(
-            RepoOrganization repoOrganization,
-            String connectionId) {
-        this(repoOrganization, connectionId, Optional.empty(),
-            Optional.empty());
+            @Nonnull RepoOrganization repoOrganization,
+            @Nonnull String connectionId) {
+        this(repoOrganization, connectionId, null,
+            null);
     }
 
-    @JsonIgnore
     public RepoOrganization repoOrganization() {
-        return repoOrganization;
+        return this.repoOrganization;
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<CreateRepoOrganizationQueryParamFields>> fields() {
-        return (Optional<List<CreateRepoOrganizationQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
@@ -90,9 +84,8 @@ public class CreateRepoOrganizationRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
     public static Builder builder() {
@@ -100,27 +93,17 @@ public class CreateRepoOrganizationRequest {
     }
 
 
-    public CreateRepoOrganizationRequest withRepoOrganization(RepoOrganization repoOrganization) {
-        Utils.checkNotNull(repoOrganization, "repoOrganization");
-        this.repoOrganization = repoOrganization;
+    public CreateRepoOrganizationRequest withRepoOrganization(@Nonnull RepoOrganization repoOrganization) {
+        this.repoOrganization = Utils.checkNotNull(repoOrganization, "repoOrganization");
         return this;
     }
+
 
     /**
      * ID of the connection
      */
-    public CreateRepoOrganizationRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public CreateRepoOrganizationRequest withFields(List<CreateRepoOrganizationQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public CreateRepoOrganizationRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -128,34 +111,22 @@ public class CreateRepoOrganizationRequest {
     /**
      * Fields to return
      */
-    public CreateRepoOrganizationRequest withFields(Optional<? extends List<CreateRepoOrganizationQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public CreateRepoOrganizationRequest withFields(@Nullable List<CreateRepoOrganizationQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public CreateRepoOrganizationRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
-
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public CreateRepoOrganizationRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public CreateRepoOrganizationRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -196,75 +167,46 @@ public class CreateRepoOrganizationRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<CreateRepoOrganizationQueryParamFields>> fields = Optional.empty();
+        private List<CreateRepoOrganizationQueryParamFields> fields;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder repoOrganization(RepoOrganization repoOrganization) {
-            Utils.checkNotNull(repoOrganization, "repoOrganization");
-            this.repoOrganization = repoOrganization;
+        public Builder repoOrganization(@Nonnull RepoOrganization repoOrganization) {
+            this.repoOrganization = Utils.checkNotNull(repoOrganization, "repoOrganization");
             return this;
         }
-
 
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<CreateRepoOrganizationQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<CreateRepoOrganizationQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<CreateRepoOrganizationQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
         public CreateRepoOrganizationRequest build() {
-
             return new CreateRepoOrganizationRequest(
                 repoOrganization, connectionId, fields,
                 raw);

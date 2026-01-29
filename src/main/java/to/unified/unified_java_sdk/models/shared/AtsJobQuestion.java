@@ -4,14 +4,14 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -21,22 +21,22 @@ public class AtsJobQuestion {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
-    private Optional<String> description;
+    private String description;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
-    private Optional<? extends List<String>> options;
+    private List<String> options;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prompt")
-    private Optional<String> prompt;
+    private String prompt;
 
 
     @JsonProperty("question")
@@ -45,7 +45,7 @@ public class AtsJobQuestion {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required")
-    private Optional<Boolean> required;
+    private Boolean required;
 
 
     @JsonProperty("type")
@@ -53,71 +53,58 @@ public class AtsJobQuestion {
 
     @JsonCreator
     public AtsJobQuestion(
-            @JsonProperty("description") Optional<String> description,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("options") Optional<? extends List<String>> options,
-            @JsonProperty("prompt") Optional<String> prompt,
-            @JsonProperty("question") String question,
-            @JsonProperty("required") Optional<Boolean> required,
-            @JsonProperty("type") AtsJobQuestionType type) {
-        Utils.checkNotNull(description, "description");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(options, "options");
-        Utils.checkNotNull(prompt, "prompt");
-        Utils.checkNotNull(question, "question");
-        Utils.checkNotNull(required, "required");
-        Utils.checkNotNull(type, "type");
+            @JsonProperty("description") @Nullable String description,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("options") @Nullable List<String> options,
+            @JsonProperty("prompt") @Nullable String prompt,
+            @JsonProperty("question") @Nonnull String question,
+            @JsonProperty("required") @Nullable Boolean required,
+            @JsonProperty("type") @Nonnull AtsJobQuestionType type) {
         this.description = description;
         this.id = id;
         this.options = options;
         this.prompt = prompt;
-        this.question = question;
+        this.question = Optional.ofNullable(question)
+            .orElseThrow(() -> new IllegalArgumentException("question cannot be null"));
         this.required = required;
-        this.type = type;
+        this.type = Optional.ofNullable(type)
+            .orElseThrow(() -> new IllegalArgumentException("type cannot be null"));
     }
     
     public AtsJobQuestion(
-            String question,
-            AtsJobQuestionType type) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), question, Optional.empty(),
+            @Nonnull String question,
+            @Nonnull AtsJobQuestionType type) {
+        this(null, null, null,
+            null, question, null,
             type);
     }
 
-    @JsonIgnore
     public Optional<String> description() {
-        return description;
+        return Optional.ofNullable(this.description);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> options() {
-        return (Optional<List<String>>) options;
+        return Optional.ofNullable(this.options);
     }
 
-    @JsonIgnore
     public Optional<String> prompt() {
-        return prompt;
+        return Optional.ofNullable(this.prompt);
     }
 
-    @JsonIgnore
     public String question() {
-        return question;
+        return this.question;
     }
 
-    @JsonIgnore
     public Optional<Boolean> required() {
-        return required;
+        return Optional.ofNullable(this.required);
     }
 
-    @JsonIgnore
     public AtsJobQuestionType type() {
-        return type;
+        return this.type;
     }
 
     public static Builder builder() {
@@ -125,82 +112,47 @@ public class AtsJobQuestion {
     }
 
 
-    public AtsJobQuestion withDescription(String description) {
-        Utils.checkNotNull(description, "description");
-        this.description = Optional.ofNullable(description);
-        return this;
-    }
-
-
-    public AtsJobQuestion withDescription(Optional<String> description) {
-        Utils.checkNotNull(description, "description");
+    public AtsJobQuestion withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
-    public AtsJobQuestion withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public AtsJobQuestion withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public AtsJobQuestion withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public AtsJobQuestion withOptions(List<String> options) {
-        Utils.checkNotNull(options, "options");
-        this.options = Optional.ofNullable(options);
-        return this;
-    }
 
-
-    public AtsJobQuestion withOptions(Optional<? extends List<String>> options) {
-        Utils.checkNotNull(options, "options");
+    public AtsJobQuestion withOptions(@Nullable List<String> options) {
         this.options = options;
         return this;
     }
 
-    public AtsJobQuestion withPrompt(String prompt) {
-        Utils.checkNotNull(prompt, "prompt");
-        this.prompt = Optional.ofNullable(prompt);
-        return this;
-    }
 
-
-    public AtsJobQuestion withPrompt(Optional<String> prompt) {
-        Utils.checkNotNull(prompt, "prompt");
+    public AtsJobQuestion withPrompt(@Nullable String prompt) {
         this.prompt = prompt;
         return this;
     }
 
-    public AtsJobQuestion withQuestion(String question) {
-        Utils.checkNotNull(question, "question");
-        this.question = question;
-        return this;
-    }
 
-    public AtsJobQuestion withRequired(boolean required) {
-        Utils.checkNotNull(required, "required");
-        this.required = Optional.ofNullable(required);
+    public AtsJobQuestion withQuestion(@Nonnull String question) {
+        this.question = Utils.checkNotNull(question, "question");
         return this;
     }
 
 
-    public AtsJobQuestion withRequired(Optional<Boolean> required) {
-        Utils.checkNotNull(required, "required");
+    public AtsJobQuestion withRequired(@Nullable Boolean required) {
         this.required = required;
         return this;
     }
 
-    public AtsJobQuestion withType(AtsJobQuestionType type) {
-        Utils.checkNotNull(type, "type");
-        this.type = type;
+
+    public AtsJobQuestion withType(@Nonnull AtsJobQuestionType type) {
+        this.type = Utils.checkNotNull(type, "type");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -244,17 +196,17 @@ public class AtsJobQuestion {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> description = Optional.empty();
+        private String description;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<? extends List<String>> options = Optional.empty();
+        private List<String> options;
 
-        private Optional<String> prompt = Optional.empty();
+        private String prompt;
 
         private String question;
 
-        private Optional<Boolean> required = Optional.empty();
+        private Boolean required;
 
         private AtsJobQuestionType type;
 
@@ -262,87 +214,42 @@ public class AtsJobQuestion {
           // force use of static builder() method
         }
 
-
-        public Builder description(String description) {
-            Utils.checkNotNull(description, "description");
-            this.description = Optional.ofNullable(description);
-            return this;
-        }
-
-        public Builder description(Optional<String> description) {
-            Utils.checkNotNull(description, "description");
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder options(List<String> options) {
-            Utils.checkNotNull(options, "options");
-            this.options = Optional.ofNullable(options);
-            return this;
-        }
-
-        public Builder options(Optional<? extends List<String>> options) {
-            Utils.checkNotNull(options, "options");
+        public Builder options(@Nullable List<String> options) {
             this.options = options;
             return this;
         }
 
-
-        public Builder prompt(String prompt) {
-            Utils.checkNotNull(prompt, "prompt");
-            this.prompt = Optional.ofNullable(prompt);
-            return this;
-        }
-
-        public Builder prompt(Optional<String> prompt) {
-            Utils.checkNotNull(prompt, "prompt");
+        public Builder prompt(@Nullable String prompt) {
             this.prompt = prompt;
             return this;
         }
 
-
-        public Builder question(String question) {
-            Utils.checkNotNull(question, "question");
-            this.question = question;
+        public Builder question(@Nonnull String question) {
+            this.question = Utils.checkNotNull(question, "question");
             return this;
         }
 
-
-        public Builder required(boolean required) {
-            Utils.checkNotNull(required, "required");
-            this.required = Optional.ofNullable(required);
-            return this;
-        }
-
-        public Builder required(Optional<Boolean> required) {
-            Utils.checkNotNull(required, "required");
+        public Builder required(@Nullable Boolean required) {
             this.required = required;
             return this;
         }
 
-
-        public Builder type(AtsJobQuestionType type) {
-            Utils.checkNotNull(type, "type");
-            this.type = type;
+        public Builder type(@Nonnull AtsJobQuestionType type) {
+            this.type = Utils.checkNotNull(type, "type");
             return this;
         }
 
         public AtsJobQuestion build() {
-
             return new AtsJobQuestion(
                 description, id, options,
                 prompt, question, required,

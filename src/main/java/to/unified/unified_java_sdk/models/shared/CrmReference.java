@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
 import java.util.Optional;
@@ -18,48 +18,42 @@ public class CrmReference {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
-    private Optional<String> name;
+    private String name;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
-    private Optional<String> type;
+    private String type;
 
     @JsonCreator
     public CrmReference(
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("name") Optional<String> name,
-            @JsonProperty("type") Optional<String> type) {
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(name, "name");
-        Utils.checkNotNull(type, "type");
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("name") @Nullable String name,
+            @JsonProperty("type") @Nullable String type) {
         this.id = id;
         this.name = name;
         this.type = type;
     }
     
     public CrmReference() {
-        this(Optional.empty(), Optional.empty(), Optional.empty());
+        this(null, null, null);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<String> name() {
-        return name;
+        return Optional.ofNullable(this.name);
     }
 
-    @JsonIgnore
     public Optional<String> type() {
-        return type;
+        return Optional.ofNullable(this.type);
     }
 
     public static Builder builder() {
@@ -67,44 +61,23 @@ public class CrmReference {
     }
 
 
-    public CrmReference withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
-
-
-    public CrmReference withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public CrmReference withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public CrmReference withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = Optional.ofNullable(name);
-        return this;
-    }
 
-
-    public CrmReference withName(Optional<String> name) {
-        Utils.checkNotNull(name, "name");
+    public CrmReference withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
-    public CrmReference withType(String type) {
-        Utils.checkNotNull(type, "type");
-        this.type = Optional.ofNullable(type);
-        return this;
-    }
 
-
-    public CrmReference withType(Optional<String> type) {
-        Utils.checkNotNull(type, "type");
+    public CrmReference withType(@Nullable String type) {
         this.type = type;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -138,57 +111,32 @@ public class CrmReference {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<String> name = Optional.empty();
+        private String name;
 
-        private Optional<String> type = Optional.empty();
+        private String type;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = Optional.ofNullable(name);
-            return this;
-        }
-
-        public Builder name(Optional<String> name) {
-            Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-
-        public Builder type(String type) {
-            Utils.checkNotNull(type, "type");
-            this.type = Optional.ofNullable(type);
-            return this;
-        }
-
-        public Builder type(Optional<String> type) {
-            Utils.checkNotNull(type, "type");
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
         public CrmReference build() {
-
             return new CrmReference(
                 id, name, type);
         }

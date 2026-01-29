@@ -4,12 +4,11 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.io.InputStream;
-import java.lang.Integer;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.HrisGroup;
@@ -26,7 +25,7 @@ public class PatchHrisGroupResponse implements Response {
     /**
      * Successful
      */
-    private Optional<? extends HrisGroup> hrisGroup;
+    private HrisGroup hrisGroup;
 
     /**
      * HTTP response status code for this operation
@@ -40,59 +39,52 @@ public class PatchHrisGroupResponse implements Response {
 
     @JsonCreator
     public PatchHrisGroupResponse(
-            String contentType,
-            Optional<? extends HrisGroup> hrisGroup,
+            @Nonnull String contentType,
+            @Nullable HrisGroup hrisGroup,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(hrisGroup, "hrisGroup");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.contentType = contentType;
+            @Nonnull HttpResponse<InputStream> rawResponse) {
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.hrisGroup = hrisGroup;
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
     }
     
     public PatchHrisGroupResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
-        this(contentType, Optional.empty(), statusCode,
+            @Nonnull HttpResponse<InputStream> rawResponse) {
+        this(contentType, null, statusCode,
             rawResponse);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<HrisGroup> hrisGroup() {
-        return (Optional<HrisGroup>) hrisGroup;
+        return Optional.ofNullable(this.hrisGroup);
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<InputStream> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     public static Builder builder() {
@@ -103,18 +95,8 @@ public class PatchHrisGroupResponse implements Response {
     /**
      * HTTP response content type for this operation
      */
-    public PatchHrisGroupResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
-        return this;
-    }
-
-    /**
-     * Successful
-     */
-    public PatchHrisGroupResponse withHrisGroup(HrisGroup hrisGroup) {
-        Utils.checkNotNull(hrisGroup, "hrisGroup");
-        this.hrisGroup = Optional.ofNullable(hrisGroup);
+    public PatchHrisGroupResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
 
@@ -122,29 +104,29 @@ public class PatchHrisGroupResponse implements Response {
     /**
      * Successful
      */
-    public PatchHrisGroupResponse withHrisGroup(Optional<? extends HrisGroup> hrisGroup) {
-        Utils.checkNotNull(hrisGroup, "hrisGroup");
+    public PatchHrisGroupResponse withHrisGroup(@Nullable HrisGroup hrisGroup) {
         this.hrisGroup = hrisGroup;
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public PatchHrisGroupResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public PatchHrisGroupResponse withRawResponse(HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
+    public PatchHrisGroupResponse withRawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -183,9 +165,9 @@ public class PatchHrisGroupResponse implements Response {
 
         private String contentType;
 
-        private Optional<? extends HrisGroup> hrisGroup = Optional.empty();
+        private HrisGroup hrisGroup;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<InputStream> rawResponse;
 
@@ -193,57 +175,39 @@ public class PatchHrisGroupResponse implements Response {
           // force use of static builder() method
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
-            return this;
-        }
-
-
-        /**
-         * Successful
-         */
-        public Builder hrisGroup(HrisGroup hrisGroup) {
-            Utils.checkNotNull(hrisGroup, "hrisGroup");
-            this.hrisGroup = Optional.ofNullable(hrisGroup);
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
 
         /**
          * Successful
          */
-        public Builder hrisGroup(Optional<? extends HrisGroup> hrisGroup) {
-            Utils.checkNotNull(hrisGroup, "hrisGroup");
+        public Builder hrisGroup(@Nullable HrisGroup hrisGroup) {
             this.hrisGroup = hrisGroup;
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<InputStream> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
+        public Builder rawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         public PatchHrisGroupResponse build() {
-
             return new PatchHrisGroupResponse(
                 contentType, hrisGroup, statusCode,
                 rawResponse);

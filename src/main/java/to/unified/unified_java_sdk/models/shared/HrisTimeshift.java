@@ -4,16 +4,16 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
@@ -25,27 +25,27 @@ public class HrisTimeshift {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approved_at")
-    private Optional<OffsetDateTime> approvedAt;
+    private OffsetDateTime approvedAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approver_user_id")
-    private Optional<String> approverUserId;
+    private String approverUserId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_id")
-    private Optional<String> companyId;
+    private String companyId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compensation")
-    private Optional<? extends List<HrisCompensation>> compensation;
+    private List<HrisCompensation> compensation;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonProperty("employee_user_id")
@@ -58,32 +58,32 @@ public class HrisTimeshift {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group_id")
-    private Optional<String> groupId;
+    private String groupId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hours")
-    private Optional<Double> hours;
+    private Double hours;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_approved")
-    private Optional<Boolean> isApproved;
+    private Boolean isApproved;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_id")
-    private Optional<String> locationId;
+    private String locationId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonProperty("start_at")
@@ -92,143 +92,114 @@ public class HrisTimeshift {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
     @JsonCreator
     public HrisTimeshift(
-            @JsonProperty("approved_at") Optional<OffsetDateTime> approvedAt,
-            @JsonProperty("approver_user_id") Optional<String> approverUserId,
-            @JsonProperty("company_id") Optional<String> companyId,
-            @JsonProperty("compensation") Optional<? extends List<HrisCompensation>> compensation,
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("employee_user_id") String employeeUserId,
-            @JsonProperty("end_at") OffsetDateTime endAt,
-            @JsonProperty("group_id") Optional<String> groupId,
-            @JsonProperty("hours") Optional<Double> hours,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("is_approved") Optional<Boolean> isApproved,
-            @JsonProperty("location_id") Optional<String> locationId,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("start_at") OffsetDateTime startAt,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(approvedAt, "approvedAt");
-        Utils.checkNotNull(approverUserId, "approverUserId");
-        Utils.checkNotNull(companyId, "companyId");
-        Utils.checkNotNull(compensation, "compensation");
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(employeeUserId, "employeeUserId");
-        Utils.checkNotNull(endAt, "endAt");
-        Utils.checkNotNull(groupId, "groupId");
-        Utils.checkNotNull(hours, "hours");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(isApproved, "isApproved");
-        Utils.checkNotNull(locationId, "locationId");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(startAt, "startAt");
-        Utils.checkNotNull(updatedAt, "updatedAt");
+            @JsonProperty("approved_at") @Nullable OffsetDateTime approvedAt,
+            @JsonProperty("approver_user_id") @Nullable String approverUserId,
+            @JsonProperty("company_id") @Nullable String companyId,
+            @JsonProperty("compensation") @Nullable List<HrisCompensation> compensation,
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("employee_user_id") @Nonnull String employeeUserId,
+            @JsonProperty("end_at") @Nonnull OffsetDateTime endAt,
+            @JsonProperty("group_id") @Nullable String groupId,
+            @JsonProperty("hours") @Nullable Double hours,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("is_approved") @Nullable Boolean isApproved,
+            @JsonProperty("location_id") @Nullable String locationId,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("start_at") @Nonnull OffsetDateTime startAt,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.approvedAt = approvedAt;
         this.approverUserId = approverUserId;
         this.companyId = companyId;
         this.compensation = compensation;
         this.createdAt = createdAt;
-        this.employeeUserId = employeeUserId;
-        this.endAt = endAt;
+        this.employeeUserId = Optional.ofNullable(employeeUserId)
+            .orElseThrow(() -> new IllegalArgumentException("employeeUserId cannot be null"));
+        this.endAt = Optional.ofNullable(endAt)
+            .orElseThrow(() -> new IllegalArgumentException("endAt cannot be null"));
         this.groupId = groupId;
         this.hours = hours;
         this.id = id;
         this.isApproved = isApproved;
         this.locationId = locationId;
         this.raw = raw;
-        this.startAt = startAt;
+        this.startAt = Optional.ofNullable(startAt)
+            .orElseThrow(() -> new IllegalArgumentException("startAt cannot be null"));
         this.updatedAt = updatedAt;
     }
     
     public HrisTimeshift(
-            String employeeUserId,
-            OffsetDateTime endAt,
-            OffsetDateTime startAt) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), employeeUserId,
-            endAt, Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), startAt, Optional.empty());
+            @Nonnull String employeeUserId,
+            @Nonnull OffsetDateTime endAt,
+            @Nonnull OffsetDateTime startAt) {
+        this(null, null, null,
+            null, null, employeeUserId,
+            endAt, null, null,
+            null, null, null,
+            null, startAt, null);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> approvedAt() {
-        return approvedAt;
+        return Optional.ofNullable(this.approvedAt);
     }
 
-    @JsonIgnore
     public Optional<String> approverUserId() {
-        return approverUserId;
+        return Optional.ofNullable(this.approverUserId);
     }
 
-    @JsonIgnore
     public Optional<String> companyId() {
-        return companyId;
+        return Optional.ofNullable(this.companyId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<HrisCompensation>> compensation() {
-        return (Optional<List<HrisCompensation>>) compensation;
+        return Optional.ofNullable(this.compensation);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public String employeeUserId() {
-        return employeeUserId;
+        return this.employeeUserId;
     }
 
-    @JsonIgnore
     public OffsetDateTime endAt() {
-        return endAt;
+        return this.endAt;
     }
 
-    @JsonIgnore
     public Optional<String> groupId() {
-        return groupId;
+        return Optional.ofNullable(this.groupId);
     }
 
-    @JsonIgnore
     public Optional<Double> hours() {
-        return hours;
+        return Optional.ofNullable(this.hours);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isApproved() {
-        return isApproved;
+        return Optional.ofNullable(this.isApproved);
     }
 
-    @JsonIgnore
     public Optional<String> locationId() {
-        return locationId;
+        return Optional.ofNullable(this.locationId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @JsonIgnore
     public OffsetDateTime startAt() {
-        return startAt;
+        return this.startAt;
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
     public static Builder builder() {
@@ -236,179 +207,95 @@ public class HrisTimeshift {
     }
 
 
-    public HrisTimeshift withApprovedAt(OffsetDateTime approvedAt) {
-        Utils.checkNotNull(approvedAt, "approvedAt");
-        this.approvedAt = Optional.ofNullable(approvedAt);
-        return this;
-    }
-
-
-    public HrisTimeshift withApprovedAt(Optional<OffsetDateTime> approvedAt) {
-        Utils.checkNotNull(approvedAt, "approvedAt");
+    public HrisTimeshift withApprovedAt(@Nullable OffsetDateTime approvedAt) {
         this.approvedAt = approvedAt;
         return this;
     }
 
-    public HrisTimeshift withApproverUserId(String approverUserId) {
-        Utils.checkNotNull(approverUserId, "approverUserId");
-        this.approverUserId = Optional.ofNullable(approverUserId);
-        return this;
-    }
 
-
-    public HrisTimeshift withApproverUserId(Optional<String> approverUserId) {
-        Utils.checkNotNull(approverUserId, "approverUserId");
+    public HrisTimeshift withApproverUserId(@Nullable String approverUserId) {
         this.approverUserId = approverUserId;
         return this;
     }
 
-    public HrisTimeshift withCompanyId(String companyId) {
-        Utils.checkNotNull(companyId, "companyId");
-        this.companyId = Optional.ofNullable(companyId);
-        return this;
-    }
 
-
-    public HrisTimeshift withCompanyId(Optional<String> companyId) {
-        Utils.checkNotNull(companyId, "companyId");
+    public HrisTimeshift withCompanyId(@Nullable String companyId) {
         this.companyId = companyId;
         return this;
     }
 
-    public HrisTimeshift withCompensation(List<HrisCompensation> compensation) {
-        Utils.checkNotNull(compensation, "compensation");
-        this.compensation = Optional.ofNullable(compensation);
-        return this;
-    }
 
-
-    public HrisTimeshift withCompensation(Optional<? extends List<HrisCompensation>> compensation) {
-        Utils.checkNotNull(compensation, "compensation");
+    public HrisTimeshift withCompensation(@Nullable List<HrisCompensation> compensation) {
         this.compensation = compensation;
         return this;
     }
 
-    public HrisTimeshift withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
 
-
-    public HrisTimeshift withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public HrisTimeshift withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public HrisTimeshift withEmployeeUserId(String employeeUserId) {
-        Utils.checkNotNull(employeeUserId, "employeeUserId");
-        this.employeeUserId = employeeUserId;
-        return this;
-    }
 
-    public HrisTimeshift withEndAt(OffsetDateTime endAt) {
-        Utils.checkNotNull(endAt, "endAt");
-        this.endAt = endAt;
-        return this;
-    }
-
-    public HrisTimeshift withGroupId(String groupId) {
-        Utils.checkNotNull(groupId, "groupId");
-        this.groupId = Optional.ofNullable(groupId);
+    public HrisTimeshift withEmployeeUserId(@Nonnull String employeeUserId) {
+        this.employeeUserId = Utils.checkNotNull(employeeUserId, "employeeUserId");
         return this;
     }
 
 
-    public HrisTimeshift withGroupId(Optional<String> groupId) {
-        Utils.checkNotNull(groupId, "groupId");
+    public HrisTimeshift withEndAt(@Nonnull OffsetDateTime endAt) {
+        this.endAt = Utils.checkNotNull(endAt, "endAt");
+        return this;
+    }
+
+
+    public HrisTimeshift withGroupId(@Nullable String groupId) {
         this.groupId = groupId;
         return this;
     }
 
-    public HrisTimeshift withHours(double hours) {
-        Utils.checkNotNull(hours, "hours");
-        this.hours = Optional.ofNullable(hours);
-        return this;
-    }
 
-
-    public HrisTimeshift withHours(Optional<Double> hours) {
-        Utils.checkNotNull(hours, "hours");
+    public HrisTimeshift withHours(@Nullable Double hours) {
         this.hours = hours;
         return this;
     }
 
-    public HrisTimeshift withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public HrisTimeshift withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public HrisTimeshift withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public HrisTimeshift withIsApproved(boolean isApproved) {
-        Utils.checkNotNull(isApproved, "isApproved");
-        this.isApproved = Optional.ofNullable(isApproved);
-        return this;
-    }
 
-
-    public HrisTimeshift withIsApproved(Optional<Boolean> isApproved) {
-        Utils.checkNotNull(isApproved, "isApproved");
+    public HrisTimeshift withIsApproved(@Nullable Boolean isApproved) {
         this.isApproved = isApproved;
         return this;
     }
 
-    public HrisTimeshift withLocationId(String locationId) {
-        Utils.checkNotNull(locationId, "locationId");
-        this.locationId = Optional.ofNullable(locationId);
-        return this;
-    }
 
-
-    public HrisTimeshift withLocationId(Optional<String> locationId) {
-        Utils.checkNotNull(locationId, "locationId");
+    public HrisTimeshift withLocationId(@Nullable String locationId) {
         this.locationId = locationId;
         return this;
     }
 
-    public HrisTimeshift withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public HrisTimeshift withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public HrisTimeshift withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public HrisTimeshift withStartAt(OffsetDateTime startAt) {
-        Utils.checkNotNull(startAt, "startAt");
-        this.startAt = startAt;
-        return this;
-    }
 
-    public HrisTimeshift withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
+    public HrisTimeshift withStartAt(@Nonnull OffsetDateTime startAt) {
+        this.startAt = Utils.checkNotNull(startAt, "startAt");
         return this;
     }
 
 
-    public HrisTimeshift withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public HrisTimeshift withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -470,219 +357,116 @@ public class HrisTimeshift {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<OffsetDateTime> approvedAt = Optional.empty();
+        private OffsetDateTime approvedAt;
 
-        private Optional<String> approverUserId = Optional.empty();
+        private String approverUserId;
 
-        private Optional<String> companyId = Optional.empty();
+        private String companyId;
 
-        private Optional<? extends List<HrisCompensation>> compensation = Optional.empty();
+        private List<HrisCompensation> compensation;
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
         private String employeeUserId;
 
         private OffsetDateTime endAt;
 
-        private Optional<String> groupId = Optional.empty();
+        private String groupId;
 
-        private Optional<Double> hours = Optional.empty();
+        private Double hours;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<Boolean> isApproved = Optional.empty();
+        private Boolean isApproved;
 
-        private Optional<String> locationId = Optional.empty();
+        private String locationId;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
         private OffsetDateTime startAt;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder approvedAt(OffsetDateTime approvedAt) {
-            Utils.checkNotNull(approvedAt, "approvedAt");
-            this.approvedAt = Optional.ofNullable(approvedAt);
-            return this;
-        }
-
-        public Builder approvedAt(Optional<OffsetDateTime> approvedAt) {
-            Utils.checkNotNull(approvedAt, "approvedAt");
+        public Builder approvedAt(@Nullable OffsetDateTime approvedAt) {
             this.approvedAt = approvedAt;
             return this;
         }
 
-
-        public Builder approverUserId(String approverUserId) {
-            Utils.checkNotNull(approverUserId, "approverUserId");
-            this.approverUserId = Optional.ofNullable(approverUserId);
-            return this;
-        }
-
-        public Builder approverUserId(Optional<String> approverUserId) {
-            Utils.checkNotNull(approverUserId, "approverUserId");
+        public Builder approverUserId(@Nullable String approverUserId) {
             this.approverUserId = approverUserId;
             return this;
         }
 
-
-        public Builder companyId(String companyId) {
-            Utils.checkNotNull(companyId, "companyId");
-            this.companyId = Optional.ofNullable(companyId);
-            return this;
-        }
-
-        public Builder companyId(Optional<String> companyId) {
-            Utils.checkNotNull(companyId, "companyId");
+        public Builder companyId(@Nullable String companyId) {
             this.companyId = companyId;
             return this;
         }
 
-
-        public Builder compensation(List<HrisCompensation> compensation) {
-            Utils.checkNotNull(compensation, "compensation");
-            this.compensation = Optional.ofNullable(compensation);
-            return this;
-        }
-
-        public Builder compensation(Optional<? extends List<HrisCompensation>> compensation) {
-            Utils.checkNotNull(compensation, "compensation");
+        public Builder compensation(@Nullable List<HrisCompensation> compensation) {
             this.compensation = compensation;
             return this;
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder employeeUserId(String employeeUserId) {
-            Utils.checkNotNull(employeeUserId, "employeeUserId");
-            this.employeeUserId = employeeUserId;
+        public Builder employeeUserId(@Nonnull String employeeUserId) {
+            this.employeeUserId = Utils.checkNotNull(employeeUserId, "employeeUserId");
             return this;
         }
 
-
-        public Builder endAt(OffsetDateTime endAt) {
-            Utils.checkNotNull(endAt, "endAt");
-            this.endAt = endAt;
+        public Builder endAt(@Nonnull OffsetDateTime endAt) {
+            this.endAt = Utils.checkNotNull(endAt, "endAt");
             return this;
         }
 
-
-        public Builder groupId(String groupId) {
-            Utils.checkNotNull(groupId, "groupId");
-            this.groupId = Optional.ofNullable(groupId);
-            return this;
-        }
-
-        public Builder groupId(Optional<String> groupId) {
-            Utils.checkNotNull(groupId, "groupId");
+        public Builder groupId(@Nullable String groupId) {
             this.groupId = groupId;
             return this;
         }
 
-
-        public Builder hours(double hours) {
-            Utils.checkNotNull(hours, "hours");
-            this.hours = Optional.ofNullable(hours);
-            return this;
-        }
-
-        public Builder hours(Optional<Double> hours) {
-            Utils.checkNotNull(hours, "hours");
+        public Builder hours(@Nullable Double hours) {
             this.hours = hours;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder isApproved(boolean isApproved) {
-            Utils.checkNotNull(isApproved, "isApproved");
-            this.isApproved = Optional.ofNullable(isApproved);
-            return this;
-        }
-
-        public Builder isApproved(Optional<Boolean> isApproved) {
-            Utils.checkNotNull(isApproved, "isApproved");
+        public Builder isApproved(@Nullable Boolean isApproved) {
             this.isApproved = isApproved;
             return this;
         }
 
-
-        public Builder locationId(String locationId) {
-            Utils.checkNotNull(locationId, "locationId");
-            this.locationId = Optional.ofNullable(locationId);
-            return this;
-        }
-
-        public Builder locationId(Optional<String> locationId) {
-            Utils.checkNotNull(locationId, "locationId");
+        public Builder locationId(@Nullable String locationId) {
             this.locationId = locationId;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder startAt(OffsetDateTime startAt) {
-            Utils.checkNotNull(startAt, "startAt");
-            this.startAt = startAt;
+        public Builder startAt(@Nonnull OffsetDateTime startAt) {
+            this.startAt = Utils.checkNotNull(startAt, "startAt");
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
         public HrisTimeshift build() {
-
             return new HrisTimeshift(
                 approvedAt, approverUserId, companyId,
                 compensation, createdAt, employeeUserId,

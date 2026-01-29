@@ -4,13 +4,12 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -20,49 +19,42 @@ public class VerificationParameterInput {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputs")
-    private Optional<? extends List<String>> inputs;
+    private List<String> inputs;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
-    private Optional<String> name;
+    private String name;
 
     @JsonCreator
     public VerificationParameterInput(
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("inputs") Optional<? extends List<String>> inputs,
-            @JsonProperty("name") Optional<String> name) {
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(inputs, "inputs");
-        Utils.checkNotNull(name, "name");
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("inputs") @Nullable List<String> inputs,
+            @JsonProperty("name") @Nullable String name) {
         this.id = id;
         this.inputs = inputs;
         this.name = name;
     }
     
     public VerificationParameterInput() {
-        this(Optional.empty(), Optional.empty(), Optional.empty());
+        this(null, null, null);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> inputs() {
-        return (Optional<List<String>>) inputs;
+        return Optional.ofNullable(this.inputs);
     }
 
-    @JsonIgnore
     public Optional<String> name() {
-        return name;
+        return Optional.ofNullable(this.name);
     }
 
     public static Builder builder() {
@@ -70,44 +62,23 @@ public class VerificationParameterInput {
     }
 
 
-    public VerificationParameterInput withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
-
-
-    public VerificationParameterInput withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public VerificationParameterInput withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public VerificationParameterInput withInputs(List<String> inputs) {
-        Utils.checkNotNull(inputs, "inputs");
-        this.inputs = Optional.ofNullable(inputs);
-        return this;
-    }
 
-
-    public VerificationParameterInput withInputs(Optional<? extends List<String>> inputs) {
-        Utils.checkNotNull(inputs, "inputs");
+    public VerificationParameterInput withInputs(@Nullable List<String> inputs) {
         this.inputs = inputs;
         return this;
     }
 
-    public VerificationParameterInput withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = Optional.ofNullable(name);
-        return this;
-    }
 
-
-    public VerificationParameterInput withName(Optional<String> name) {
-        Utils.checkNotNull(name, "name");
+    public VerificationParameterInput withName(@Nullable String name) {
         this.name = name;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -141,57 +112,32 @@ public class VerificationParameterInput {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<? extends List<String>> inputs = Optional.empty();
+        private List<String> inputs;
 
-        private Optional<String> name = Optional.empty();
+        private String name;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder inputs(List<String> inputs) {
-            Utils.checkNotNull(inputs, "inputs");
-            this.inputs = Optional.ofNullable(inputs);
-            return this;
-        }
-
-        public Builder inputs(Optional<? extends List<String>> inputs) {
-            Utils.checkNotNull(inputs, "inputs");
+        public Builder inputs(@Nullable List<String> inputs) {
             this.inputs = inputs;
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = Optional.ofNullable(name);
-            return this;
-        }
-
-        public Builder name(Optional<String> name) {
-            Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
         public VerificationParameterInput build() {
-
             return new VerificationParameterInput(
                 id, inputs, name);
         }

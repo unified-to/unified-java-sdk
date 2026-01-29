@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateKmsCommentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateKmsCommentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateKmsCommentResponse;
@@ -115,7 +116,7 @@ public class Kms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateKmsCommentResponse createKmsComment(CreateKmsCommentRequest request) {
+    public CreateKmsCommentResponse createKmsComment(@Nonnull CreateKmsCommentRequest request) {
         RequestOperation<CreateKmsCommentRequest, CreateKmsCommentResponse> operation
               = new CreateKmsComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -137,7 +138,7 @@ public class Kms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateKmsPageResponse createKmsPage(CreateKmsPageRequest request) {
+    public CreateKmsPageResponse createKmsPage(@Nonnull CreateKmsPageRequest request) {
         RequestOperation<CreateKmsPageRequest, CreateKmsPageResponse> operation
               = new CreateKmsPage.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -159,7 +160,7 @@ public class Kms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateKmsSpaceResponse createKmsSpace(CreateKmsSpaceRequest request) {
+    public CreateKmsSpaceResponse createKmsSpace(@Nonnull CreateKmsSpaceRequest request) {
         RequestOperation<CreateKmsSpaceRequest, CreateKmsSpaceResponse> operation
               = new CreateKmsSpace.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -181,7 +182,7 @@ public class Kms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetKmsCommentResponse getKmsComment(GetKmsCommentRequest request) {
+    public GetKmsCommentResponse getKmsComment(@Nonnull GetKmsCommentRequest request) {
         RequestOperation<GetKmsCommentRequest, GetKmsCommentResponse> operation
               = new GetKmsComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -203,7 +204,7 @@ public class Kms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetKmsPageResponse getKmsPage(GetKmsPageRequest request) {
+    public GetKmsPageResponse getKmsPage(@Nonnull GetKmsPageRequest request) {
         RequestOperation<GetKmsPageRequest, GetKmsPageResponse> operation
               = new GetKmsPage.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -225,7 +226,7 @@ public class Kms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetKmsSpaceResponse getKmsSpace(GetKmsSpaceRequest request) {
+    public GetKmsSpaceResponse getKmsSpace(@Nonnull GetKmsSpaceRequest request) {
         RequestOperation<GetKmsSpaceRequest, GetKmsSpaceResponse> operation
               = new GetKmsSpace.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -247,7 +248,7 @@ public class Kms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListKmsCommentsResponse listKmsComments(ListKmsCommentsRequest request) {
+    public ListKmsCommentsResponse listKmsComments(@Nonnull ListKmsCommentsRequest request) {
         RequestOperation<ListKmsCommentsRequest, ListKmsCommentsResponse> operation
               = new ListKmsComments.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -269,7 +270,7 @@ public class Kms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListKmsPagesResponse listKmsPages(ListKmsPagesRequest request) {
+    public ListKmsPagesResponse listKmsPages(@Nonnull ListKmsPagesRequest request) {
         RequestOperation<ListKmsPagesRequest, ListKmsPagesResponse> operation
               = new ListKmsPages.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -291,7 +292,7 @@ public class Kms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListKmsSpacesResponse listKmsSpaces(ListKmsSpacesRequest request) {
+    public ListKmsSpacesResponse listKmsSpaces(@Nonnull ListKmsSpacesRequest request) {
         RequestOperation<ListKmsSpacesRequest, ListKmsSpacesResponse> operation
               = new ListKmsSpaces.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -313,7 +314,7 @@ public class Kms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchKmsCommentResponse patchKmsComment(PatchKmsCommentRequest request) {
+    public PatchKmsCommentResponse patchKmsComment(@Nonnull PatchKmsCommentRequest request) {
         RequestOperation<PatchKmsCommentRequest, PatchKmsCommentResponse> operation
               = new PatchKmsComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -335,7 +336,7 @@ public class Kms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchKmsPageResponse patchKmsPage(PatchKmsPageRequest request) {
+    public PatchKmsPageResponse patchKmsPage(@Nonnull PatchKmsPageRequest request) {
         RequestOperation<PatchKmsPageRequest, PatchKmsPageResponse> operation
               = new PatchKmsPage.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -357,7 +358,7 @@ public class Kms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchKmsSpaceResponse patchKmsSpace(PatchKmsSpaceRequest request) {
+    public PatchKmsSpaceResponse patchKmsSpace(@Nonnull PatchKmsSpaceRequest request) {
         RequestOperation<PatchKmsSpaceRequest, PatchKmsSpaceResponse> operation
               = new PatchKmsSpace.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -379,7 +380,7 @@ public class Kms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveKmsCommentResponse removeKmsComment(RemoveKmsCommentRequest request) {
+    public RemoveKmsCommentResponse removeKmsComment(@Nonnull RemoveKmsCommentRequest request) {
         RequestOperation<RemoveKmsCommentRequest, RemoveKmsCommentResponse> operation
               = new RemoveKmsComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -401,7 +402,7 @@ public class Kms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveKmsPageResponse removeKmsPage(RemoveKmsPageRequest request) {
+    public RemoveKmsPageResponse removeKmsPage(@Nonnull RemoveKmsPageRequest request) {
         RequestOperation<RemoveKmsPageRequest, RemoveKmsPageResponse> operation
               = new RemoveKmsPage.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -423,7 +424,7 @@ public class Kms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveKmsSpaceResponse removeKmsSpace(RemoveKmsSpaceRequest request) {
+    public RemoveKmsSpaceResponse removeKmsSpace(@Nonnull RemoveKmsSpaceRequest request) {
         RequestOperation<RemoveKmsSpaceRequest, RemoveKmsSpaceResponse> operation
               = new RemoveKmsSpace.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -445,7 +446,7 @@ public class Kms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateKmsCommentResponse updateKmsComment(UpdateKmsCommentRequest request) {
+    public UpdateKmsCommentResponse updateKmsComment(@Nonnull UpdateKmsCommentRequest request) {
         RequestOperation<UpdateKmsCommentRequest, UpdateKmsCommentResponse> operation
               = new UpdateKmsComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -467,7 +468,7 @@ public class Kms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateKmsPageResponse updateKmsPage(UpdateKmsPageRequest request) {
+    public UpdateKmsPageResponse updateKmsPage(@Nonnull UpdateKmsPageRequest request) {
         RequestOperation<UpdateKmsPageRequest, UpdateKmsPageResponse> operation
               = new UpdateKmsPage.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -489,7 +490,7 @@ public class Kms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateKmsSpaceResponse updateKmsSpace(UpdateKmsSpaceRequest request) {
+    public UpdateKmsSpaceResponse updateKmsSpace(@Nonnull UpdateKmsSpaceRequest request) {
         RequestOperation<UpdateKmsSpaceRequest, UpdateKmsSpaceResponse> operation
               = new UpdateKmsSpace.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

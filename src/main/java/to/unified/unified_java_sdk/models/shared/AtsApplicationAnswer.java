@@ -4,11 +4,12 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nonnull;
 import java.lang.Override;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
@@ -23,22 +24,20 @@ public class AtsApplicationAnswer {
 
     @JsonCreator
     public AtsApplicationAnswer(
-            @JsonProperty("answers") List<String> answers,
-            @JsonProperty("question_id") String questionId) {
-        Utils.checkNotNull(answers, "answers");
-        Utils.checkNotNull(questionId, "questionId");
-        this.answers = answers;
-        this.questionId = questionId;
+            @JsonProperty("answers") @Nonnull List<String> answers,
+            @JsonProperty("question_id") @Nonnull String questionId) {
+        this.answers = Optional.ofNullable(answers)
+            .orElseThrow(() -> new IllegalArgumentException("answers cannot be null"));
+        this.questionId = Optional.ofNullable(questionId)
+            .orElseThrow(() -> new IllegalArgumentException("questionId cannot be null"));
     }
 
-    @JsonIgnore
     public List<String> answers() {
-        return answers;
+        return this.answers;
     }
 
-    @JsonIgnore
     public String questionId() {
-        return questionId;
+        return this.questionId;
     }
 
     public static Builder builder() {
@@ -46,17 +45,17 @@ public class AtsApplicationAnswer {
     }
 
 
-    public AtsApplicationAnswer withAnswers(List<String> answers) {
-        Utils.checkNotNull(answers, "answers");
-        this.answers = answers;
+    public AtsApplicationAnswer withAnswers(@Nonnull List<String> answers) {
+        this.answers = Utils.checkNotNull(answers, "answers");
         return this;
     }
 
-    public AtsApplicationAnswer withQuestionId(String questionId) {
-        Utils.checkNotNull(questionId, "questionId");
-        this.questionId = questionId;
+
+    public AtsApplicationAnswer withQuestionId(@Nonnull String questionId) {
+        this.questionId = Utils.checkNotNull(questionId, "questionId");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -96,22 +95,17 @@ public class AtsApplicationAnswer {
           // force use of static builder() method
         }
 
-
-        public Builder answers(List<String> answers) {
-            Utils.checkNotNull(answers, "answers");
-            this.answers = answers;
+        public Builder answers(@Nonnull List<String> answers) {
+            this.answers = Utils.checkNotNull(answers, "answers");
             return this;
         }
 
-
-        public Builder questionId(String questionId) {
-            Utils.checkNotNull(questionId, "questionId");
-            this.questionId = questionId;
+        public Builder questionId(@Nonnull String questionId) {
+            this.questionId = Utils.checkNotNull(questionId, "questionId");
             return this;
         }
 
         public AtsApplicationAnswer build() {
-
             return new AtsApplicationAnswer(
                 answers, questionId);
         }

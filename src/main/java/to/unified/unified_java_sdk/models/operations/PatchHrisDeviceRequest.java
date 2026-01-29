@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.HrisDevice;
@@ -30,7 +30,7 @@ public class PatchHrisDeviceRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<PatchHrisDeviceQueryParamFields>> fields;
+    private List<PatchHrisDeviceQueryParamFields> fields;
 
     /**
      * ID of the Device
@@ -44,63 +44,56 @@ public class PatchHrisDeviceRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
     @JsonCreator
     public PatchHrisDeviceRequest(
-            HrisDevice hrisDevice,
-            String connectionId,
-            Optional<? extends List<PatchHrisDeviceQueryParamFields>> fields,
-            String id,
-            Optional<String> raw) {
-        Utils.checkNotNull(hrisDevice, "hrisDevice");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(raw, "raw");
-        this.hrisDevice = hrisDevice;
-        this.connectionId = connectionId;
+            @Nonnull HrisDevice hrisDevice,
+            @Nonnull String connectionId,
+            @Nullable List<PatchHrisDeviceQueryParamFields> fields,
+            @Nonnull String id,
+            @Nullable String raw) {
+        this.hrisDevice = Optional.ofNullable(hrisDevice)
+            .orElseThrow(() -> new IllegalArgumentException("hrisDevice cannot be null"));
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
-        this.id = id;
+        this.id = Optional.ofNullable(id)
+            .orElseThrow(() -> new IllegalArgumentException("id cannot be null"));
         this.raw = raw;
     }
     
     public PatchHrisDeviceRequest(
-            HrisDevice hrisDevice,
-            String connectionId,
-            String id) {
-        this(hrisDevice, connectionId, Optional.empty(),
-            id, Optional.empty());
+            @Nonnull HrisDevice hrisDevice,
+            @Nonnull String connectionId,
+            @Nonnull String id) {
+        this(hrisDevice, connectionId, null,
+            id, null);
     }
 
-    @JsonIgnore
     public HrisDevice hrisDevice() {
-        return hrisDevice;
+        return this.hrisDevice;
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<PatchHrisDeviceQueryParamFields>> fields() {
-        return (Optional<List<PatchHrisDeviceQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
      * ID of the Device
      */
-    @JsonIgnore
     public String id() {
-        return id;
+        return this.id;
     }
 
     /**
@@ -108,9 +101,8 @@ public class PatchHrisDeviceRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
     public static Builder builder() {
@@ -118,27 +110,17 @@ public class PatchHrisDeviceRequest {
     }
 
 
-    public PatchHrisDeviceRequest withHrisDevice(HrisDevice hrisDevice) {
-        Utils.checkNotNull(hrisDevice, "hrisDevice");
-        this.hrisDevice = hrisDevice;
+    public PatchHrisDeviceRequest withHrisDevice(@Nonnull HrisDevice hrisDevice) {
+        this.hrisDevice = Utils.checkNotNull(hrisDevice, "hrisDevice");
         return this;
     }
+
 
     /**
      * ID of the connection
      */
-    public PatchHrisDeviceRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public PatchHrisDeviceRequest withFields(List<PatchHrisDeviceQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public PatchHrisDeviceRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -146,29 +128,17 @@ public class PatchHrisDeviceRequest {
     /**
      * Fields to return
      */
-    public PatchHrisDeviceRequest withFields(Optional<? extends List<PatchHrisDeviceQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public PatchHrisDeviceRequest withFields(@Nullable List<PatchHrisDeviceQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
+
     /**
      * ID of the Device
      */
-    public PatchHrisDeviceRequest withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = id;
-        return this;
-    }
-
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public PatchHrisDeviceRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
+    public PatchHrisDeviceRequest withId(@Nonnull String id) {
+        this.id = Utils.checkNotNull(id, "id");
         return this;
     }
 
@@ -178,11 +148,11 @@ public class PatchHrisDeviceRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public PatchHrisDeviceRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public PatchHrisDeviceRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -225,71 +195,42 @@ public class PatchHrisDeviceRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<PatchHrisDeviceQueryParamFields>> fields = Optional.empty();
+        private List<PatchHrisDeviceQueryParamFields> fields;
 
         private String id;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder hrisDevice(HrisDevice hrisDevice) {
-            Utils.checkNotNull(hrisDevice, "hrisDevice");
-            this.hrisDevice = hrisDevice;
+        public Builder hrisDevice(@Nonnull HrisDevice hrisDevice) {
+            this.hrisDevice = Utils.checkNotNull(hrisDevice, "hrisDevice");
             return this;
         }
-
 
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<PatchHrisDeviceQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<PatchHrisDeviceQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<PatchHrisDeviceQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * ID of the Device
          */
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = id;
-            return this;
-        }
-
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
+        public Builder id(@Nonnull String id) {
+            this.id = Utils.checkNotNull(id, "id");
             return this;
         }
 
@@ -298,14 +239,12 @@ public class PatchHrisDeviceRequest {
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
         public PatchHrisDeviceRequest build() {
-
             return new PatchHrisDeviceRequest(
                 hrisDevice, connectionId, fields,
                 id, raw);

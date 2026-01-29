@@ -4,10 +4,11 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
 import java.util.Optional;
@@ -22,44 +23,39 @@ public class TaskChangeItem {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("from")
-    private Optional<String> from;
+    private String from;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("to")
-    private Optional<String> to;
+    private String to;
 
     @JsonCreator
     public TaskChangeItem(
-            @JsonProperty("field") String field,
-            @JsonProperty("from") Optional<String> from,
-            @JsonProperty("to") Optional<String> to) {
-        Utils.checkNotNull(field, "field");
-        Utils.checkNotNull(from, "from");
-        Utils.checkNotNull(to, "to");
-        this.field = field;
+            @JsonProperty("field") @Nonnull String field,
+            @JsonProperty("from") @Nullable String from,
+            @JsonProperty("to") @Nullable String to) {
+        this.field = Optional.ofNullable(field)
+            .orElseThrow(() -> new IllegalArgumentException("field cannot be null"));
         this.from = from;
         this.to = to;
     }
     
     public TaskChangeItem(
-            String field) {
-        this(field, Optional.empty(), Optional.empty());
+            @Nonnull String field) {
+        this(field, null, null);
     }
 
-    @JsonIgnore
     public String field() {
-        return field;
+        return this.field;
     }
 
-    @JsonIgnore
     public Optional<String> from() {
-        return from;
+        return Optional.ofNullable(this.from);
     }
 
-    @JsonIgnore
     public Optional<String> to() {
-        return to;
+        return Optional.ofNullable(this.to);
     }
 
     public static Builder builder() {
@@ -67,37 +63,23 @@ public class TaskChangeItem {
     }
 
 
-    public TaskChangeItem withField(String field) {
-        Utils.checkNotNull(field, "field");
-        this.field = field;
-        return this;
-    }
-
-    public TaskChangeItem withFrom(String from) {
-        Utils.checkNotNull(from, "from");
-        this.from = Optional.ofNullable(from);
+    public TaskChangeItem withField(@Nonnull String field) {
+        this.field = Utils.checkNotNull(field, "field");
         return this;
     }
 
 
-    public TaskChangeItem withFrom(Optional<String> from) {
-        Utils.checkNotNull(from, "from");
+    public TaskChangeItem withFrom(@Nullable String from) {
         this.from = from;
         return this;
     }
 
-    public TaskChangeItem withTo(String to) {
-        Utils.checkNotNull(to, "to");
-        this.to = Optional.ofNullable(to);
-        return this;
-    }
 
-
-    public TaskChangeItem withTo(Optional<String> to) {
-        Utils.checkNotNull(to, "to");
+    public TaskChangeItem withTo(@Nullable String to) {
         this.to = to;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -133,49 +115,30 @@ public class TaskChangeItem {
 
         private String field;
 
-        private Optional<String> from = Optional.empty();
+        private String from;
 
-        private Optional<String> to = Optional.empty();
+        private String to;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder field(String field) {
-            Utils.checkNotNull(field, "field");
-            this.field = field;
+        public Builder field(@Nonnull String field) {
+            this.field = Utils.checkNotNull(field, "field");
             return this;
         }
 
-
-        public Builder from(String from) {
-            Utils.checkNotNull(from, "from");
-            this.from = Optional.ofNullable(from);
-            return this;
-        }
-
-        public Builder from(Optional<String> from) {
-            Utils.checkNotNull(from, "from");
+        public Builder from(@Nullable String from) {
             this.from = from;
             return this;
         }
 
-
-        public Builder to(String to) {
-            Utils.checkNotNull(to, "to");
-            this.to = Optional.ofNullable(to);
-            return this;
-        }
-
-        public Builder to(Optional<String> to) {
-            Utils.checkNotNull(to, "to");
+        public Builder to(@Nullable String to) {
             this.to = to;
             return this;
         }
 
         public TaskChangeItem build() {
-
             return new TaskChangeItem(
                 field, from, to);
         }

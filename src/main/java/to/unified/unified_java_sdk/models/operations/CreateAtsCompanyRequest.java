@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.AtsCompany;
@@ -30,7 +30,7 @@ public class CreateAtsCompanyRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<CreateAtsCompanyQueryParamFields>> fields;
+    private List<CreateAtsCompanyQueryParamFields> fields;
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
@@ -38,51 +38,45 @@ public class CreateAtsCompanyRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
     @JsonCreator
     public CreateAtsCompanyRequest(
-            AtsCompany atsCompany,
-            String connectionId,
-            Optional<? extends List<CreateAtsCompanyQueryParamFields>> fields,
-            Optional<String> raw) {
-        Utils.checkNotNull(atsCompany, "atsCompany");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(raw, "raw");
-        this.atsCompany = atsCompany;
-        this.connectionId = connectionId;
+            @Nonnull AtsCompany atsCompany,
+            @Nonnull String connectionId,
+            @Nullable List<CreateAtsCompanyQueryParamFields> fields,
+            @Nullable String raw) {
+        this.atsCompany = Optional.ofNullable(atsCompany)
+            .orElseThrow(() -> new IllegalArgumentException("atsCompany cannot be null"));
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
         this.raw = raw;
     }
     
     public CreateAtsCompanyRequest(
-            AtsCompany atsCompany,
-            String connectionId) {
-        this(atsCompany, connectionId, Optional.empty(),
-            Optional.empty());
+            @Nonnull AtsCompany atsCompany,
+            @Nonnull String connectionId) {
+        this(atsCompany, connectionId, null,
+            null);
     }
 
-    @JsonIgnore
     public AtsCompany atsCompany() {
-        return atsCompany;
+        return this.atsCompany;
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<CreateAtsCompanyQueryParamFields>> fields() {
-        return (Optional<List<CreateAtsCompanyQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
@@ -90,9 +84,8 @@ public class CreateAtsCompanyRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
     public static Builder builder() {
@@ -100,27 +93,17 @@ public class CreateAtsCompanyRequest {
     }
 
 
-    public CreateAtsCompanyRequest withAtsCompany(AtsCompany atsCompany) {
-        Utils.checkNotNull(atsCompany, "atsCompany");
-        this.atsCompany = atsCompany;
+    public CreateAtsCompanyRequest withAtsCompany(@Nonnull AtsCompany atsCompany) {
+        this.atsCompany = Utils.checkNotNull(atsCompany, "atsCompany");
         return this;
     }
+
 
     /**
      * ID of the connection
      */
-    public CreateAtsCompanyRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public CreateAtsCompanyRequest withFields(List<CreateAtsCompanyQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public CreateAtsCompanyRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -128,34 +111,22 @@ public class CreateAtsCompanyRequest {
     /**
      * Fields to return
      */
-    public CreateAtsCompanyRequest withFields(Optional<? extends List<CreateAtsCompanyQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public CreateAtsCompanyRequest withFields(@Nullable List<CreateAtsCompanyQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public CreateAtsCompanyRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
-
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public CreateAtsCompanyRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public CreateAtsCompanyRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -196,75 +167,46 @@ public class CreateAtsCompanyRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<CreateAtsCompanyQueryParamFields>> fields = Optional.empty();
+        private List<CreateAtsCompanyQueryParamFields> fields;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder atsCompany(AtsCompany atsCompany) {
-            Utils.checkNotNull(atsCompany, "atsCompany");
-            this.atsCompany = atsCompany;
+        public Builder atsCompany(@Nonnull AtsCompany atsCompany) {
+            this.atsCompany = Utils.checkNotNull(atsCompany, "atsCompany");
             return this;
         }
-
 
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<CreateAtsCompanyQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<CreateAtsCompanyQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<CreateAtsCompanyQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
         public CreateAtsCompanyRequest build() {
-
             return new CreateAtsCompanyRequest(
                 atsCompany, connectionId, fields,
                 raw);

@@ -4,11 +4,11 @@
 package to.unified.unified_java_sdk.models.operations.async;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import java.lang.Integer;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.io.InputStream;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.List;
 import java.util.Optional;
@@ -37,63 +37,56 @@ public class ListStorageFilesResponse implements AsyncResponse {
     /**
      * Successful
      */
-    private Optional<? extends List<StorageFile>> storageFiles;
+    private List<StorageFile> storageFiles;
 
     @JsonCreator
     public ListStorageFilesResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<Blob> rawResponse,
-            Optional<? extends List<StorageFile>> storageFiles) {
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        Utils.checkNotNull(storageFiles, "storageFiles");
-        this.contentType = contentType;
+            @Nonnull HttpResponse<Blob> rawResponse,
+            @Nullable List<StorageFile> storageFiles) {
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
         this.storageFiles = storageFiles;
     }
     
     public ListStorageFilesResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
+            @Nonnull HttpResponse<Blob> rawResponse) {
         this(contentType, statusCode, rawResponse,
-            Optional.empty());
+            null);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<Blob> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<StorageFile>> storageFiles() {
-        return (Optional<List<StorageFile>>) storageFiles;
+        return Optional.ofNullable(this.storageFiles);
     }
 
     public static Builder builder() {
@@ -104,36 +97,26 @@ public class ListStorageFilesResponse implements AsyncResponse {
     /**
      * HTTP response content type for this operation
      */
-    public ListStorageFilesResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
+    public ListStorageFilesResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public ListStorageFilesResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public ListStorageFilesResponse withRawResponse(HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
-        return this;
-    }
-
-    /**
-     * Successful
-     */
-    public ListStorageFilesResponse withStorageFiles(List<StorageFile> storageFiles) {
-        Utils.checkNotNull(storageFiles, "storageFiles");
-        this.storageFiles = Optional.ofNullable(storageFiles);
+    public ListStorageFilesResponse withRawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
 
@@ -141,11 +124,11 @@ public class ListStorageFilesResponse implements AsyncResponse {
     /**
      * Successful
      */
-    public ListStorageFilesResponse withStorageFiles(Optional<? extends List<StorageFile>> storageFiles) {
-        Utils.checkNotNull(storageFiles, "storageFiles");
+    public ListStorageFilesResponse withStorageFiles(@Nullable List<StorageFile> storageFiles) {
         this.storageFiles = storageFiles;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -184,67 +167,49 @@ public class ListStorageFilesResponse implements AsyncResponse {
 
         private String contentType;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<Blob> rawResponse;
 
-        private Optional<? extends List<StorageFile>> storageFiles = Optional.empty();
+        private List<StorageFile> storageFiles;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<Blob> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
-            return this;
-        }
-
-
-        /**
-         * Successful
-         */
-        public Builder storageFiles(List<StorageFile> storageFiles) {
-            Utils.checkNotNull(storageFiles, "storageFiles");
-            this.storageFiles = Optional.ofNullable(storageFiles);
+        public Builder rawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         /**
          * Successful
          */
-        public Builder storageFiles(Optional<? extends List<StorageFile>> storageFiles) {
-            Utils.checkNotNull(storageFiles, "storageFiles");
+        public Builder storageFiles(@Nullable List<StorageFile> storageFiles) {
             this.storageFiles = storageFiles;
             return this;
         }
 
         public ListStorageFilesResponse build() {
-
             return new ListStorageFilesResponse(
                 contentType, statusCode, rawResponse,
                 storageFiles);

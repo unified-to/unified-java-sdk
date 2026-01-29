@@ -4,14 +4,13 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -24,42 +23,36 @@ public class HrisPayslipDetail {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_amount")
-    private Optional<Double> companyAmount;
+    private Double companyAmount;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
-    private Optional<String> description;
+    private String description;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employee_amount")
-    private Optional<Double> employeeAmount;
+    private Double employeeAmount;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
-    private Optional<String> name;
+    private String name;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
-    private Optional<? extends HrisPayslipDetailType> type;
+    private HrisPayslipDetailType type;
 
     @JsonCreator
     public HrisPayslipDetail(
             @JsonProperty("amount") double amount,
-            @JsonProperty("company_amount") Optional<Double> companyAmount,
-            @JsonProperty("description") Optional<String> description,
-            @JsonProperty("employee_amount") Optional<Double> employeeAmount,
-            @JsonProperty("name") Optional<String> name,
-            @JsonProperty("type") Optional<? extends HrisPayslipDetailType> type) {
-        Utils.checkNotNull(amount, "amount");
-        Utils.checkNotNull(companyAmount, "companyAmount");
-        Utils.checkNotNull(description, "description");
-        Utils.checkNotNull(employeeAmount, "employeeAmount");
-        Utils.checkNotNull(name, "name");
-        Utils.checkNotNull(type, "type");
+            @JsonProperty("company_amount") @Nullable Double companyAmount,
+            @JsonProperty("description") @Nullable String description,
+            @JsonProperty("employee_amount") @Nullable Double employeeAmount,
+            @JsonProperty("name") @Nullable String name,
+            @JsonProperty("type") @Nullable HrisPayslipDetailType type) {
         this.amount = amount;
         this.companyAmount = companyAmount;
         this.description = description;
@@ -70,39 +63,32 @@ public class HrisPayslipDetail {
     
     public HrisPayslipDetail(
             double amount) {
-        this(amount, Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+        this(amount, null, null,
+            null, null, null);
     }
 
-    @JsonIgnore
     public double amount() {
-        return amount;
+        return this.amount;
     }
 
-    @JsonIgnore
     public Optional<Double> companyAmount() {
-        return companyAmount;
+        return Optional.ofNullable(this.companyAmount);
     }
 
-    @JsonIgnore
     public Optional<String> description() {
-        return description;
+        return Optional.ofNullable(this.description);
     }
 
-    @JsonIgnore
     public Optional<Double> employeeAmount() {
-        return employeeAmount;
+        return Optional.ofNullable(this.employeeAmount);
     }
 
-    @JsonIgnore
     public Optional<String> name() {
-        return name;
+        return Optional.ofNullable(this.name);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<HrisPayslipDetailType> type() {
-        return (Optional<HrisPayslipDetailType>) type;
+        return Optional.ofNullable(this.type);
     }
 
     public static Builder builder() {
@@ -111,75 +97,40 @@ public class HrisPayslipDetail {
 
 
     public HrisPayslipDetail withAmount(double amount) {
-        Utils.checkNotNull(amount, "amount");
         this.amount = amount;
         return this;
     }
 
-    public HrisPayslipDetail withCompanyAmount(double companyAmount) {
-        Utils.checkNotNull(companyAmount, "companyAmount");
-        this.companyAmount = Optional.ofNullable(companyAmount);
-        return this;
-    }
 
-
-    public HrisPayslipDetail withCompanyAmount(Optional<Double> companyAmount) {
-        Utils.checkNotNull(companyAmount, "companyAmount");
+    public HrisPayslipDetail withCompanyAmount(@Nullable Double companyAmount) {
         this.companyAmount = companyAmount;
         return this;
     }
 
-    public HrisPayslipDetail withDescription(String description) {
-        Utils.checkNotNull(description, "description");
-        this.description = Optional.ofNullable(description);
-        return this;
-    }
 
-
-    public HrisPayslipDetail withDescription(Optional<String> description) {
-        Utils.checkNotNull(description, "description");
+    public HrisPayslipDetail withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
-    public HrisPayslipDetail withEmployeeAmount(double employeeAmount) {
-        Utils.checkNotNull(employeeAmount, "employeeAmount");
-        this.employeeAmount = Optional.ofNullable(employeeAmount);
-        return this;
-    }
 
-
-    public HrisPayslipDetail withEmployeeAmount(Optional<Double> employeeAmount) {
-        Utils.checkNotNull(employeeAmount, "employeeAmount");
+    public HrisPayslipDetail withEmployeeAmount(@Nullable Double employeeAmount) {
         this.employeeAmount = employeeAmount;
         return this;
     }
 
-    public HrisPayslipDetail withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = Optional.ofNullable(name);
-        return this;
-    }
 
-
-    public HrisPayslipDetail withName(Optional<String> name) {
-        Utils.checkNotNull(name, "name");
+    public HrisPayslipDetail withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
-    public HrisPayslipDetail withType(HrisPayslipDetailType type) {
-        Utils.checkNotNull(type, "type");
-        this.type = Optional.ofNullable(type);
-        return this;
-    }
 
-
-    public HrisPayslipDetail withType(Optional<? extends HrisPayslipDetailType> type) {
-        Utils.checkNotNull(type, "type");
+    public HrisPayslipDetail withType(@Nullable HrisPayslipDetailType type) {
         this.type = type;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -220,96 +171,53 @@ public class HrisPayslipDetail {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Double amount;
+        private double amount;
 
-        private Optional<Double> companyAmount = Optional.empty();
+        private Double companyAmount;
 
-        private Optional<String> description = Optional.empty();
+        private String description;
 
-        private Optional<Double> employeeAmount = Optional.empty();
+        private Double employeeAmount;
 
-        private Optional<String> name = Optional.empty();
+        private String name;
 
-        private Optional<? extends HrisPayslipDetailType> type = Optional.empty();
+        private HrisPayslipDetailType type;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
         public Builder amount(double amount) {
-            Utils.checkNotNull(amount, "amount");
             this.amount = amount;
             return this;
         }
 
-
-        public Builder companyAmount(double companyAmount) {
-            Utils.checkNotNull(companyAmount, "companyAmount");
-            this.companyAmount = Optional.ofNullable(companyAmount);
-            return this;
-        }
-
-        public Builder companyAmount(Optional<Double> companyAmount) {
-            Utils.checkNotNull(companyAmount, "companyAmount");
+        public Builder companyAmount(@Nullable Double companyAmount) {
             this.companyAmount = companyAmount;
             return this;
         }
 
-
-        public Builder description(String description) {
-            Utils.checkNotNull(description, "description");
-            this.description = Optional.ofNullable(description);
-            return this;
-        }
-
-        public Builder description(Optional<String> description) {
-            Utils.checkNotNull(description, "description");
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-
-        public Builder employeeAmount(double employeeAmount) {
-            Utils.checkNotNull(employeeAmount, "employeeAmount");
-            this.employeeAmount = Optional.ofNullable(employeeAmount);
-            return this;
-        }
-
-        public Builder employeeAmount(Optional<Double> employeeAmount) {
-            Utils.checkNotNull(employeeAmount, "employeeAmount");
+        public Builder employeeAmount(@Nullable Double employeeAmount) {
             this.employeeAmount = employeeAmount;
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = Optional.ofNullable(name);
-            return this;
-        }
-
-        public Builder name(Optional<String> name) {
-            Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-
-        public Builder type(HrisPayslipDetailType type) {
-            Utils.checkNotNull(type, "type");
-            this.type = Optional.ofNullable(type);
-            return this;
-        }
-
-        public Builder type(Optional<? extends HrisPayslipDetailType> type) {
-            Utils.checkNotNull(type, "type");
+        public Builder type(@Nullable HrisPayslipDetailType type) {
             this.type = type;
             return this;
         }
 
         public HrisPayslipDetail build() {
-
             return new HrisPayslipDetail(
                 amount, companyAmount, description,
                 employeeAmount, name, type);

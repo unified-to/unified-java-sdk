@@ -4,15 +4,14 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
@@ -24,96 +23,83 @@ public class AccountingPurchaseorder {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_id")
-    private Optional<String> accountId;
+    private String accountId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billing_address")
-    private Optional<? extends PropertyAccountingPurchaseorderBillingAddress> billingAddress;
+    private PropertyAccountingPurchaseorderBillingAddress billingAddress;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_id")
-    private Optional<String> contactId;
+    private String contactId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
-    private Optional<String> currency;
+    private String currency;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineitems")
-    private Optional<? extends List<AccountingLineitem>> lineitems;
+    private List<AccountingLineitem> lineitems;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("posted_at")
-    private Optional<OffsetDateTime> postedAt;
+    private OffsetDateTime postedAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipping_address")
-    private Optional<? extends PropertyAccountingPurchaseorderShippingAddress> shippingAddress;
+    private PropertyAccountingPurchaseorderShippingAddress shippingAddress;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
-    private Optional<? extends AccountingPurchaseorderStatus> status;
+    private AccountingPurchaseorderStatus status;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_amount")
-    private Optional<Double> totalAmount;
+    private Double totalAmount;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
     @JsonCreator
     public AccountingPurchaseorder(
-            @JsonProperty("account_id") Optional<String> accountId,
-            @JsonProperty("billing_address") Optional<? extends PropertyAccountingPurchaseorderBillingAddress> billingAddress,
-            @JsonProperty("contact_id") Optional<String> contactId,
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("currency") Optional<String> currency,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("lineitems") Optional<? extends List<AccountingLineitem>> lineitems,
-            @JsonProperty("posted_at") Optional<OffsetDateTime> postedAt,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("shipping_address") Optional<? extends PropertyAccountingPurchaseorderShippingAddress> shippingAddress,
-            @JsonProperty("status") Optional<? extends AccountingPurchaseorderStatus> status,
-            @JsonProperty("total_amount") Optional<Double> totalAmount,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(accountId, "accountId");
-        Utils.checkNotNull(billingAddress, "billingAddress");
-        Utils.checkNotNull(contactId, "contactId");
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(currency, "currency");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(lineitems, "lineitems");
-        Utils.checkNotNull(postedAt, "postedAt");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(shippingAddress, "shippingAddress");
-        Utils.checkNotNull(status, "status");
-        Utils.checkNotNull(totalAmount, "totalAmount");
-        Utils.checkNotNull(updatedAt, "updatedAt");
+            @JsonProperty("account_id") @Nullable String accountId,
+            @JsonProperty("billing_address") @Nullable PropertyAccountingPurchaseorderBillingAddress billingAddress,
+            @JsonProperty("contact_id") @Nullable String contactId,
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("currency") @Nullable String currency,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("lineitems") @Nullable List<AccountingLineitem> lineitems,
+            @JsonProperty("posted_at") @Nullable OffsetDateTime postedAt,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("shipping_address") @Nullable PropertyAccountingPurchaseorderShippingAddress shippingAddress,
+            @JsonProperty("status") @Nullable AccountingPurchaseorderStatus status,
+            @JsonProperty("total_amount") @Nullable Double totalAmount,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.accountId = accountId;
         this.billingAddress = billingAddress;
         this.contactId = contactId;
@@ -130,81 +116,63 @@ public class AccountingPurchaseorder {
     }
     
     public AccountingPurchaseorder() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null);
     }
 
-    @JsonIgnore
     public Optional<String> accountId() {
-        return accountId;
+        return Optional.ofNullable(this.accountId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<PropertyAccountingPurchaseorderBillingAddress> billingAddress() {
-        return (Optional<PropertyAccountingPurchaseorderBillingAddress>) billingAddress;
+        return Optional.ofNullable(this.billingAddress);
     }
 
-    @JsonIgnore
     public Optional<String> contactId() {
-        return contactId;
+        return Optional.ofNullable(this.contactId);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<String> currency() {
-        return currency;
+        return Optional.ofNullable(this.currency);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<AccountingLineitem>> lineitems() {
-        return (Optional<List<AccountingLineitem>>) lineitems;
+        return Optional.ofNullable(this.lineitems);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> postedAt() {
-        return postedAt;
+        return Optional.ofNullable(this.postedAt);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<PropertyAccountingPurchaseorderShippingAddress> shippingAddress() {
-        return (Optional<PropertyAccountingPurchaseorderShippingAddress>) shippingAddress;
+        return Optional.ofNullable(this.shippingAddress);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<AccountingPurchaseorderStatus> status() {
-        return (Optional<AccountingPurchaseorderStatus>) status;
+        return Optional.ofNullable(this.status);
     }
 
-    @JsonIgnore
     public Optional<Double> totalAmount() {
-        return totalAmount;
+        return Optional.ofNullable(this.totalAmount);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
     public static Builder builder() {
@@ -212,174 +180,83 @@ public class AccountingPurchaseorder {
     }
 
 
-    public AccountingPurchaseorder withAccountId(String accountId) {
-        Utils.checkNotNull(accountId, "accountId");
-        this.accountId = Optional.ofNullable(accountId);
-        return this;
-    }
-
-
-    public AccountingPurchaseorder withAccountId(Optional<String> accountId) {
-        Utils.checkNotNull(accountId, "accountId");
+    public AccountingPurchaseorder withAccountId(@Nullable String accountId) {
         this.accountId = accountId;
         return this;
     }
 
-    public AccountingPurchaseorder withBillingAddress(PropertyAccountingPurchaseorderBillingAddress billingAddress) {
-        Utils.checkNotNull(billingAddress, "billingAddress");
-        this.billingAddress = Optional.ofNullable(billingAddress);
-        return this;
-    }
 
-
-    public AccountingPurchaseorder withBillingAddress(Optional<? extends PropertyAccountingPurchaseorderBillingAddress> billingAddress) {
-        Utils.checkNotNull(billingAddress, "billingAddress");
+    public AccountingPurchaseorder withBillingAddress(@Nullable PropertyAccountingPurchaseorderBillingAddress billingAddress) {
         this.billingAddress = billingAddress;
         return this;
     }
 
-    public AccountingPurchaseorder withContactId(String contactId) {
-        Utils.checkNotNull(contactId, "contactId");
-        this.contactId = Optional.ofNullable(contactId);
-        return this;
-    }
 
-
-    public AccountingPurchaseorder withContactId(Optional<String> contactId) {
-        Utils.checkNotNull(contactId, "contactId");
+    public AccountingPurchaseorder withContactId(@Nullable String contactId) {
         this.contactId = contactId;
         return this;
     }
 
-    public AccountingPurchaseorder withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
 
-
-    public AccountingPurchaseorder withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public AccountingPurchaseorder withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public AccountingPurchaseorder withCurrency(String currency) {
-        Utils.checkNotNull(currency, "currency");
-        this.currency = Optional.ofNullable(currency);
-        return this;
-    }
 
-
-    public AccountingPurchaseorder withCurrency(Optional<String> currency) {
-        Utils.checkNotNull(currency, "currency");
+    public AccountingPurchaseorder withCurrency(@Nullable String currency) {
         this.currency = currency;
         return this;
     }
 
-    public AccountingPurchaseorder withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public AccountingPurchaseorder withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public AccountingPurchaseorder withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public AccountingPurchaseorder withLineitems(List<AccountingLineitem> lineitems) {
-        Utils.checkNotNull(lineitems, "lineitems");
-        this.lineitems = Optional.ofNullable(lineitems);
-        return this;
-    }
 
-
-    public AccountingPurchaseorder withLineitems(Optional<? extends List<AccountingLineitem>> lineitems) {
-        Utils.checkNotNull(lineitems, "lineitems");
+    public AccountingPurchaseorder withLineitems(@Nullable List<AccountingLineitem> lineitems) {
         this.lineitems = lineitems;
         return this;
     }
 
-    public AccountingPurchaseorder withPostedAt(OffsetDateTime postedAt) {
-        Utils.checkNotNull(postedAt, "postedAt");
-        this.postedAt = Optional.ofNullable(postedAt);
-        return this;
-    }
 
-
-    public AccountingPurchaseorder withPostedAt(Optional<OffsetDateTime> postedAt) {
-        Utils.checkNotNull(postedAt, "postedAt");
+    public AccountingPurchaseorder withPostedAt(@Nullable OffsetDateTime postedAt) {
         this.postedAt = postedAt;
         return this;
     }
 
-    public AccountingPurchaseorder withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public AccountingPurchaseorder withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public AccountingPurchaseorder withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public AccountingPurchaseorder withShippingAddress(PropertyAccountingPurchaseorderShippingAddress shippingAddress) {
-        Utils.checkNotNull(shippingAddress, "shippingAddress");
-        this.shippingAddress = Optional.ofNullable(shippingAddress);
-        return this;
-    }
 
-
-    public AccountingPurchaseorder withShippingAddress(Optional<? extends PropertyAccountingPurchaseorderShippingAddress> shippingAddress) {
-        Utils.checkNotNull(shippingAddress, "shippingAddress");
+    public AccountingPurchaseorder withShippingAddress(@Nullable PropertyAccountingPurchaseorderShippingAddress shippingAddress) {
         this.shippingAddress = shippingAddress;
         return this;
     }
 
-    public AccountingPurchaseorder withStatus(AccountingPurchaseorderStatus status) {
-        Utils.checkNotNull(status, "status");
-        this.status = Optional.ofNullable(status);
-        return this;
-    }
 
-
-    public AccountingPurchaseorder withStatus(Optional<? extends AccountingPurchaseorderStatus> status) {
-        Utils.checkNotNull(status, "status");
+    public AccountingPurchaseorder withStatus(@Nullable AccountingPurchaseorderStatus status) {
         this.status = status;
         return this;
     }
 
-    public AccountingPurchaseorder withTotalAmount(double totalAmount) {
-        Utils.checkNotNull(totalAmount, "totalAmount");
-        this.totalAmount = Optional.ofNullable(totalAmount);
-        return this;
-    }
 
-
-    public AccountingPurchaseorder withTotalAmount(Optional<Double> totalAmount) {
-        Utils.checkNotNull(totalAmount, "totalAmount");
+    public AccountingPurchaseorder withTotalAmount(@Nullable Double totalAmount) {
         this.totalAmount = totalAmount;
         return this;
     }
 
-    public AccountingPurchaseorder withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public AccountingPurchaseorder withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public AccountingPurchaseorder withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -437,207 +314,102 @@ public class AccountingPurchaseorder {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> accountId = Optional.empty();
+        private String accountId;
 
-        private Optional<? extends PropertyAccountingPurchaseorderBillingAddress> billingAddress = Optional.empty();
+        private PropertyAccountingPurchaseorderBillingAddress billingAddress;
 
-        private Optional<String> contactId = Optional.empty();
+        private String contactId;
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<String> currency = Optional.empty();
+        private String currency;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<? extends List<AccountingLineitem>> lineitems = Optional.empty();
+        private List<AccountingLineitem> lineitems;
 
-        private Optional<OffsetDateTime> postedAt = Optional.empty();
+        private OffsetDateTime postedAt;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<? extends PropertyAccountingPurchaseorderShippingAddress> shippingAddress = Optional.empty();
+        private PropertyAccountingPurchaseorderShippingAddress shippingAddress;
 
-        private Optional<? extends AccountingPurchaseorderStatus> status = Optional.empty();
+        private AccountingPurchaseorderStatus status;
 
-        private Optional<Double> totalAmount = Optional.empty();
+        private Double totalAmount;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder accountId(String accountId) {
-            Utils.checkNotNull(accountId, "accountId");
-            this.accountId = Optional.ofNullable(accountId);
-            return this;
-        }
-
-        public Builder accountId(Optional<String> accountId) {
-            Utils.checkNotNull(accountId, "accountId");
+        public Builder accountId(@Nullable String accountId) {
             this.accountId = accountId;
             return this;
         }
 
-
-        public Builder billingAddress(PropertyAccountingPurchaseorderBillingAddress billingAddress) {
-            Utils.checkNotNull(billingAddress, "billingAddress");
-            this.billingAddress = Optional.ofNullable(billingAddress);
-            return this;
-        }
-
-        public Builder billingAddress(Optional<? extends PropertyAccountingPurchaseorderBillingAddress> billingAddress) {
-            Utils.checkNotNull(billingAddress, "billingAddress");
+        public Builder billingAddress(@Nullable PropertyAccountingPurchaseorderBillingAddress billingAddress) {
             this.billingAddress = billingAddress;
             return this;
         }
 
-
-        public Builder contactId(String contactId) {
-            Utils.checkNotNull(contactId, "contactId");
-            this.contactId = Optional.ofNullable(contactId);
-            return this;
-        }
-
-        public Builder contactId(Optional<String> contactId) {
-            Utils.checkNotNull(contactId, "contactId");
+        public Builder contactId(@Nullable String contactId) {
             this.contactId = contactId;
             return this;
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder currency(String currency) {
-            Utils.checkNotNull(currency, "currency");
-            this.currency = Optional.ofNullable(currency);
-            return this;
-        }
-
-        public Builder currency(Optional<String> currency) {
-            Utils.checkNotNull(currency, "currency");
+        public Builder currency(@Nullable String currency) {
             this.currency = currency;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder lineitems(List<AccountingLineitem> lineitems) {
-            Utils.checkNotNull(lineitems, "lineitems");
-            this.lineitems = Optional.ofNullable(lineitems);
-            return this;
-        }
-
-        public Builder lineitems(Optional<? extends List<AccountingLineitem>> lineitems) {
-            Utils.checkNotNull(lineitems, "lineitems");
+        public Builder lineitems(@Nullable List<AccountingLineitem> lineitems) {
             this.lineitems = lineitems;
             return this;
         }
 
-
-        public Builder postedAt(OffsetDateTime postedAt) {
-            Utils.checkNotNull(postedAt, "postedAt");
-            this.postedAt = Optional.ofNullable(postedAt);
-            return this;
-        }
-
-        public Builder postedAt(Optional<OffsetDateTime> postedAt) {
-            Utils.checkNotNull(postedAt, "postedAt");
+        public Builder postedAt(@Nullable OffsetDateTime postedAt) {
             this.postedAt = postedAt;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder shippingAddress(PropertyAccountingPurchaseorderShippingAddress shippingAddress) {
-            Utils.checkNotNull(shippingAddress, "shippingAddress");
-            this.shippingAddress = Optional.ofNullable(shippingAddress);
-            return this;
-        }
-
-        public Builder shippingAddress(Optional<? extends PropertyAccountingPurchaseorderShippingAddress> shippingAddress) {
-            Utils.checkNotNull(shippingAddress, "shippingAddress");
+        public Builder shippingAddress(@Nullable PropertyAccountingPurchaseorderShippingAddress shippingAddress) {
             this.shippingAddress = shippingAddress;
             return this;
         }
 
-
-        public Builder status(AccountingPurchaseorderStatus status) {
-            Utils.checkNotNull(status, "status");
-            this.status = Optional.ofNullable(status);
-            return this;
-        }
-
-        public Builder status(Optional<? extends AccountingPurchaseorderStatus> status) {
-            Utils.checkNotNull(status, "status");
+        public Builder status(@Nullable AccountingPurchaseorderStatus status) {
             this.status = status;
             return this;
         }
 
-
-        public Builder totalAmount(double totalAmount) {
-            Utils.checkNotNull(totalAmount, "totalAmount");
-            this.totalAmount = Optional.ofNullable(totalAmount);
-            return this;
-        }
-
-        public Builder totalAmount(Optional<Double> totalAmount) {
-            Utils.checkNotNull(totalAmount, "totalAmount");
+        public Builder totalAmount(@Nullable Double totalAmount) {
             this.totalAmount = totalAmount;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
         public AccountingPurchaseorder build() {
-
             return new AccountingPurchaseorder(
                 accountId, billingAddress, contactId,
                 createdAt, currency, id,

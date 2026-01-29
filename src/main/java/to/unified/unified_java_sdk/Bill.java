@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingBillRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingBillRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingBillResponse;
@@ -67,7 +68,7 @@ public class Bill {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAccountingBillResponse createAccountingBill(CreateAccountingBillRequest request) {
+    public CreateAccountingBillResponse createAccountingBill(@Nonnull CreateAccountingBillRequest request) {
         RequestOperation<CreateAccountingBillRequest, CreateAccountingBillResponse> operation
               = new CreateAccountingBill.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -89,7 +90,7 @@ public class Bill {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingBillResponse getAccountingBill(GetAccountingBillRequest request) {
+    public GetAccountingBillResponse getAccountingBill(@Nonnull GetAccountingBillRequest request) {
         RequestOperation<GetAccountingBillRequest, GetAccountingBillResponse> operation
               = new GetAccountingBill.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -111,7 +112,7 @@ public class Bill {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingBillsResponse listAccountingBills(ListAccountingBillsRequest request) {
+    public ListAccountingBillsResponse listAccountingBills(@Nonnull ListAccountingBillsRequest request) {
         RequestOperation<ListAccountingBillsRequest, ListAccountingBillsResponse> operation
               = new ListAccountingBills.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -133,7 +134,7 @@ public class Bill {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAccountingBillResponse patchAccountingBill(PatchAccountingBillRequest request) {
+    public PatchAccountingBillResponse patchAccountingBill(@Nonnull PatchAccountingBillRequest request) {
         RequestOperation<PatchAccountingBillRequest, PatchAccountingBillResponse> operation
               = new PatchAccountingBill.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -155,7 +156,7 @@ public class Bill {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAccountingBillResponse removeAccountingBill(RemoveAccountingBillRequest request) {
+    public RemoveAccountingBillResponse removeAccountingBill(@Nonnull RemoveAccountingBillRequest request) {
         RequestOperation<RemoveAccountingBillRequest, RemoveAccountingBillResponse> operation
               = new RemoveAccountingBill.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -177,7 +178,7 @@ public class Bill {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAccountingBillResponse updateAccountingBill(UpdateAccountingBillRequest request) {
+    public UpdateAccountingBillResponse updateAccountingBill(@Nonnull UpdateAccountingBillRequest request) {
         RequestOperation<UpdateAccountingBillRequest, UpdateAccountingBillResponse> operation
               = new UpdateAccountingBill.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

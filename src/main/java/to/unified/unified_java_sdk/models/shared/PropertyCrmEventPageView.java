@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
@@ -19,48 +19,42 @@ public class PropertyCrmEventPageView {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("average")
-    private Optional<Double> average;
+    private Double average;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
-    private Optional<Double> count;
+    private Double count;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
-    private Optional<String> url;
+    private String url;
 
     @JsonCreator
     public PropertyCrmEventPageView(
-            @JsonProperty("average") Optional<Double> average,
-            @JsonProperty("count") Optional<Double> count,
-            @JsonProperty("url") Optional<String> url) {
-        Utils.checkNotNull(average, "average");
-        Utils.checkNotNull(count, "count");
-        Utils.checkNotNull(url, "url");
+            @JsonProperty("average") @Nullable Double average,
+            @JsonProperty("count") @Nullable Double count,
+            @JsonProperty("url") @Nullable String url) {
         this.average = average;
         this.count = count;
         this.url = url;
     }
     
     public PropertyCrmEventPageView() {
-        this(Optional.empty(), Optional.empty(), Optional.empty());
+        this(null, null, null);
     }
 
-    @JsonIgnore
     public Optional<Double> average() {
-        return average;
+        return Optional.ofNullable(this.average);
     }
 
-    @JsonIgnore
     public Optional<Double> count() {
-        return count;
+        return Optional.ofNullable(this.count);
     }
 
-    @JsonIgnore
     public Optional<String> url() {
-        return url;
+        return Optional.ofNullable(this.url);
     }
 
     public static Builder builder() {
@@ -68,44 +62,23 @@ public class PropertyCrmEventPageView {
     }
 
 
-    public PropertyCrmEventPageView withAverage(double average) {
-        Utils.checkNotNull(average, "average");
-        this.average = Optional.ofNullable(average);
-        return this;
-    }
-
-
-    public PropertyCrmEventPageView withAverage(Optional<Double> average) {
-        Utils.checkNotNull(average, "average");
+    public PropertyCrmEventPageView withAverage(@Nullable Double average) {
         this.average = average;
         return this;
     }
 
-    public PropertyCrmEventPageView withCount(double count) {
-        Utils.checkNotNull(count, "count");
-        this.count = Optional.ofNullable(count);
-        return this;
-    }
 
-
-    public PropertyCrmEventPageView withCount(Optional<Double> count) {
-        Utils.checkNotNull(count, "count");
+    public PropertyCrmEventPageView withCount(@Nullable Double count) {
         this.count = count;
         return this;
     }
 
-    public PropertyCrmEventPageView withUrl(String url) {
-        Utils.checkNotNull(url, "url");
-        this.url = Optional.ofNullable(url);
-        return this;
-    }
 
-
-    public PropertyCrmEventPageView withUrl(Optional<String> url) {
-        Utils.checkNotNull(url, "url");
+    public PropertyCrmEventPageView withUrl(@Nullable String url) {
         this.url = url;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -139,57 +112,32 @@ public class PropertyCrmEventPageView {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<Double> average = Optional.empty();
+        private Double average;
 
-        private Optional<Double> count = Optional.empty();
+        private Double count;
 
-        private Optional<String> url = Optional.empty();
+        private String url;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder average(double average) {
-            Utils.checkNotNull(average, "average");
-            this.average = Optional.ofNullable(average);
-            return this;
-        }
-
-        public Builder average(Optional<Double> average) {
-            Utils.checkNotNull(average, "average");
+        public Builder average(@Nullable Double average) {
             this.average = average;
             return this;
         }
 
-
-        public Builder count(double count) {
-            Utils.checkNotNull(count, "count");
-            this.count = Optional.ofNullable(count);
-            return this;
-        }
-
-        public Builder count(Optional<Double> count) {
-            Utils.checkNotNull(count, "count");
+        public Builder count(@Nullable Double count) {
             this.count = count;
             return this;
         }
 
-
-        public Builder url(String url) {
-            Utils.checkNotNull(url, "url");
-            this.url = Optional.ofNullable(url);
-            return this;
-        }
-
-        public Builder url(Optional<String> url) {
-            Utils.checkNotNull(url, "url");
+        public Builder url(@Nullable String url) {
             this.url = url;
             return this;
         }
 
         public PropertyCrmEventPageView build() {
-
             return new PropertyCrmEventPageView(
                 average, count, url);
         }

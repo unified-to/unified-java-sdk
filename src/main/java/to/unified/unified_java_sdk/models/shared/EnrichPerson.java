@@ -4,15 +4,14 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
@@ -30,191 +29,165 @@ public class EnrichPerson {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
-    private Optional<? extends PropertyEnrichPersonAddress> address;
+    private PropertyEnrichPersonAddress address;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bio")
-    private Optional<String> bio;
+    private String bio;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("birthdate")
-    private Optional<String> birthdate;
+    private String birthdate;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company")
-    private Optional<String> company;
+    private String company;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_domain")
-    private Optional<String> companyDomain;
+    private String companyDomain;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
     /**
      * An array of email addresses for this person
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emails")
-    private Optional<? extends List<EnrichEmail>> emails;
+    private List<EnrichEmail> emails;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("facebook_url")
-    private Optional<String> facebookUrl;
+    private String facebookUrl;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first_name")
-    private Optional<String> firstName;
+    private String firstName;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gender")
-    private Optional<? extends Gender> gender;
+    private Gender gender;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("github_url")
-    private Optional<String> githubUrl;
+    private String githubUrl;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("github_username")
-    private Optional<String> githubUsername;
+    private String githubUsername;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image_url")
-    private Optional<String> imageUrl;
+    private String imageUrl;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_name")
-    private Optional<String> lastName;
+    private String lastName;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkedin_url")
-    private Optional<String> linkedinUrl;
+    private String linkedinUrl;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
-    private Optional<String> name;
+    private String name;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
     /**
      * An array of telephones for this person
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("telephones")
-    private Optional<? extends List<EnrichTelephone>> telephones;
+    private List<EnrichTelephone> telephones;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
-    private Optional<String> timezone;
+    private String timezone;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
-    private Optional<String> title;
+    private String title;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("twitter_handle")
-    private Optional<String> twitterHandle;
+    private String twitterHandle;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("twitter_url")
-    private Optional<String> twitterUrl;
+    private String twitterUrl;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utc_offset")
-    private Optional<Double> utcOffset;
+    private Double utcOffset;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("work_histories")
-    private Optional<? extends List<EnrichPersonWorkHistory>> workHistories;
+    private List<EnrichPersonWorkHistory> workHistories;
 
     @JsonCreator
     public EnrichPerson(
-            @JsonProperty("address") Optional<? extends PropertyEnrichPersonAddress> address,
-            @JsonProperty("bio") Optional<String> bio,
-            @JsonProperty("birthdate") Optional<String> birthdate,
-            @JsonProperty("company") Optional<String> company,
-            @JsonProperty("company_domain") Optional<String> companyDomain,
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("emails") Optional<? extends List<EnrichEmail>> emails,
-            @JsonProperty("facebook_url") Optional<String> facebookUrl,
-            @JsonProperty("first_name") Optional<String> firstName,
-            @JsonProperty("gender") Optional<? extends Gender> gender,
-            @JsonProperty("github_url") Optional<String> githubUrl,
-            @JsonProperty("github_username") Optional<String> githubUsername,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("image_url") Optional<String> imageUrl,
-            @JsonProperty("last_name") Optional<String> lastName,
-            @JsonProperty("linkedin_url") Optional<String> linkedinUrl,
-            @JsonProperty("name") Optional<String> name,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("telephones") Optional<? extends List<EnrichTelephone>> telephones,
-            @JsonProperty("timezone") Optional<String> timezone,
-            @JsonProperty("title") Optional<String> title,
-            @JsonProperty("twitter_handle") Optional<String> twitterHandle,
-            @JsonProperty("twitter_url") Optional<String> twitterUrl,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
-            @JsonProperty("utc_offset") Optional<Double> utcOffset,
-            @JsonProperty("work_histories") Optional<? extends List<EnrichPersonWorkHistory>> workHistories) {
-        Utils.checkNotNull(address, "address");
-        Utils.checkNotNull(bio, "bio");
-        Utils.checkNotNull(birthdate, "birthdate");
-        Utils.checkNotNull(company, "company");
-        Utils.checkNotNull(companyDomain, "companyDomain");
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(emails, "emails");
-        Utils.checkNotNull(facebookUrl, "facebookUrl");
-        Utils.checkNotNull(firstName, "firstName");
-        Utils.checkNotNull(gender, "gender");
-        Utils.checkNotNull(githubUrl, "githubUrl");
-        Utils.checkNotNull(githubUsername, "githubUsername");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(imageUrl, "imageUrl");
-        Utils.checkNotNull(lastName, "lastName");
-        Utils.checkNotNull(linkedinUrl, "linkedinUrl");
-        Utils.checkNotNull(name, "name");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(telephones, "telephones");
-        Utils.checkNotNull(timezone, "timezone");
-        Utils.checkNotNull(title, "title");
-        Utils.checkNotNull(twitterHandle, "twitterHandle");
-        Utils.checkNotNull(twitterUrl, "twitterUrl");
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        Utils.checkNotNull(utcOffset, "utcOffset");
-        Utils.checkNotNull(workHistories, "workHistories");
+            @JsonProperty("address") @Nullable PropertyEnrichPersonAddress address,
+            @JsonProperty("bio") @Nullable String bio,
+            @JsonProperty("birthdate") @Nullable String birthdate,
+            @JsonProperty("company") @Nullable String company,
+            @JsonProperty("company_domain") @Nullable String companyDomain,
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("emails") @Nullable List<EnrichEmail> emails,
+            @JsonProperty("facebook_url") @Nullable String facebookUrl,
+            @JsonProperty("first_name") @Nullable String firstName,
+            @JsonProperty("gender") @Nullable Gender gender,
+            @JsonProperty("github_url") @Nullable String githubUrl,
+            @JsonProperty("github_username") @Nullable String githubUsername,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("image_url") @Nullable String imageUrl,
+            @JsonProperty("last_name") @Nullable String lastName,
+            @JsonProperty("linkedin_url") @Nullable String linkedinUrl,
+            @JsonProperty("name") @Nullable String name,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("telephones") @Nullable List<EnrichTelephone> telephones,
+            @JsonProperty("timezone") @Nullable String timezone,
+            @JsonProperty("title") @Nullable String title,
+            @JsonProperty("twitter_handle") @Nullable String twitterHandle,
+            @JsonProperty("twitter_url") @Nullable String twitterUrl,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
+            @JsonProperty("utc_offset") @Nullable Double utcOffset,
+            @JsonProperty("work_histories") @Nullable List<EnrichPersonWorkHistory> workHistories) {
         this.address = address;
         this.bio = bio;
         this.birthdate = birthdate;
@@ -244,160 +217,128 @@ public class EnrichPerson {
     }
     
     public EnrichPerson() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null);
     }
 
     /**
      * The address of the person
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<PropertyEnrichPersonAddress> address() {
-        return (Optional<PropertyEnrichPersonAddress>) address;
+        return Optional.ofNullable(this.address);
     }
 
-    @JsonIgnore
     public Optional<String> bio() {
-        return bio;
+        return Optional.ofNullable(this.bio);
     }
 
-    @JsonIgnore
     public Optional<String> birthdate() {
-        return birthdate;
+        return Optional.ofNullable(this.birthdate);
     }
 
-    @JsonIgnore
     public Optional<String> company() {
-        return company;
+        return Optional.ofNullable(this.company);
     }
 
-    @JsonIgnore
     public Optional<String> companyDomain() {
-        return companyDomain;
+        return Optional.ofNullable(this.companyDomain);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
     /**
      * An array of email addresses for this person
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<EnrichEmail>> emails() {
-        return (Optional<List<EnrichEmail>>) emails;
+        return Optional.ofNullable(this.emails);
     }
 
-    @JsonIgnore
     public Optional<String> facebookUrl() {
-        return facebookUrl;
+        return Optional.ofNullable(this.facebookUrl);
     }
 
-    @JsonIgnore
     public Optional<String> firstName() {
-        return firstName;
+        return Optional.ofNullable(this.firstName);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Gender> gender() {
-        return (Optional<Gender>) gender;
+        return Optional.ofNullable(this.gender);
     }
 
-    @JsonIgnore
     public Optional<String> githubUrl() {
-        return githubUrl;
+        return Optional.ofNullable(this.githubUrl);
     }
 
-    @JsonIgnore
     public Optional<String> githubUsername() {
-        return githubUsername;
+        return Optional.ofNullable(this.githubUsername);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<String> imageUrl() {
-        return imageUrl;
+        return Optional.ofNullable(this.imageUrl);
     }
 
-    @JsonIgnore
     public Optional<String> lastName() {
-        return lastName;
+        return Optional.ofNullable(this.lastName);
     }
 
-    @JsonIgnore
     public Optional<String> linkedinUrl() {
-        return linkedinUrl;
+        return Optional.ofNullable(this.linkedinUrl);
     }
 
-    @JsonIgnore
     public Optional<String> name() {
-        return name;
+        return Optional.ofNullable(this.name);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
     /**
      * An array of telephones for this person
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<EnrichTelephone>> telephones() {
-        return (Optional<List<EnrichTelephone>>) telephones;
+        return Optional.ofNullable(this.telephones);
     }
 
-    @JsonIgnore
     public Optional<String> timezone() {
-        return timezone;
+        return Optional.ofNullable(this.timezone);
     }
 
-    @JsonIgnore
     public Optional<String> title() {
-        return title;
+        return Optional.ofNullable(this.title);
     }
 
-    @JsonIgnore
     public Optional<String> twitterHandle() {
-        return twitterHandle;
+        return Optional.ofNullable(this.twitterHandle);
     }
 
-    @JsonIgnore
     public Optional<String> twitterUrl() {
-        return twitterUrl;
+        return Optional.ofNullable(this.twitterUrl);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
-    @JsonIgnore
     public Optional<Double> utcOffset() {
-        return utcOffset;
+        return Optional.ofNullable(this.utcOffset);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<EnrichPersonWorkHistory>> workHistories() {
-        return (Optional<List<EnrichPersonWorkHistory>>) workHistories;
+        return Optional.ofNullable(this.workHistories);
     }
 
     public static Builder builder() {
@@ -408,358 +349,167 @@ public class EnrichPerson {
     /**
      * The address of the person
      */
-    public EnrichPerson withAddress(PropertyEnrichPersonAddress address) {
-        Utils.checkNotNull(address, "address");
-        this.address = Optional.ofNullable(address);
-        return this;
-    }
-
-
-    /**
-     * The address of the person
-     */
-    public EnrichPerson withAddress(Optional<? extends PropertyEnrichPersonAddress> address) {
-        Utils.checkNotNull(address, "address");
+    public EnrichPerson withAddress(@Nullable PropertyEnrichPersonAddress address) {
         this.address = address;
         return this;
     }
 
-    public EnrichPerson withBio(String bio) {
-        Utils.checkNotNull(bio, "bio");
-        this.bio = Optional.ofNullable(bio);
-        return this;
-    }
 
-
-    public EnrichPerson withBio(Optional<String> bio) {
-        Utils.checkNotNull(bio, "bio");
+    public EnrichPerson withBio(@Nullable String bio) {
         this.bio = bio;
         return this;
     }
 
-    public EnrichPerson withBirthdate(String birthdate) {
-        Utils.checkNotNull(birthdate, "birthdate");
-        this.birthdate = Optional.ofNullable(birthdate);
-        return this;
-    }
 
-
-    public EnrichPerson withBirthdate(Optional<String> birthdate) {
-        Utils.checkNotNull(birthdate, "birthdate");
+    public EnrichPerson withBirthdate(@Nullable String birthdate) {
         this.birthdate = birthdate;
         return this;
     }
 
-    public EnrichPerson withCompany(String company) {
-        Utils.checkNotNull(company, "company");
-        this.company = Optional.ofNullable(company);
-        return this;
-    }
 
-
-    public EnrichPerson withCompany(Optional<String> company) {
-        Utils.checkNotNull(company, "company");
+    public EnrichPerson withCompany(@Nullable String company) {
         this.company = company;
         return this;
     }
 
-    public EnrichPerson withCompanyDomain(String companyDomain) {
-        Utils.checkNotNull(companyDomain, "companyDomain");
-        this.companyDomain = Optional.ofNullable(companyDomain);
-        return this;
-    }
 
-
-    public EnrichPerson withCompanyDomain(Optional<String> companyDomain) {
-        Utils.checkNotNull(companyDomain, "companyDomain");
+    public EnrichPerson withCompanyDomain(@Nullable String companyDomain) {
         this.companyDomain = companyDomain;
         return this;
     }
 
-    public EnrichPerson withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
 
-
-    public EnrichPerson withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public EnrichPerson withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    /**
-     * An array of email addresses for this person
-     */
-    public EnrichPerson withEmails(List<EnrichEmail> emails) {
-        Utils.checkNotNull(emails, "emails");
-        this.emails = Optional.ofNullable(emails);
-        return this;
-    }
-
 
     /**
      * An array of email addresses for this person
      */
-    public EnrichPerson withEmails(Optional<? extends List<EnrichEmail>> emails) {
-        Utils.checkNotNull(emails, "emails");
+    public EnrichPerson withEmails(@Nullable List<EnrichEmail> emails) {
         this.emails = emails;
         return this;
     }
 
-    public EnrichPerson withFacebookUrl(String facebookUrl) {
-        Utils.checkNotNull(facebookUrl, "facebookUrl");
-        this.facebookUrl = Optional.ofNullable(facebookUrl);
-        return this;
-    }
 
-
-    public EnrichPerson withFacebookUrl(Optional<String> facebookUrl) {
-        Utils.checkNotNull(facebookUrl, "facebookUrl");
+    public EnrichPerson withFacebookUrl(@Nullable String facebookUrl) {
         this.facebookUrl = facebookUrl;
         return this;
     }
 
-    public EnrichPerson withFirstName(String firstName) {
-        Utils.checkNotNull(firstName, "firstName");
-        this.firstName = Optional.ofNullable(firstName);
-        return this;
-    }
 
-
-    public EnrichPerson withFirstName(Optional<String> firstName) {
-        Utils.checkNotNull(firstName, "firstName");
+    public EnrichPerson withFirstName(@Nullable String firstName) {
         this.firstName = firstName;
         return this;
     }
 
-    public EnrichPerson withGender(Gender gender) {
-        Utils.checkNotNull(gender, "gender");
-        this.gender = Optional.ofNullable(gender);
-        return this;
-    }
 
-
-    public EnrichPerson withGender(Optional<? extends Gender> gender) {
-        Utils.checkNotNull(gender, "gender");
+    public EnrichPerson withGender(@Nullable Gender gender) {
         this.gender = gender;
         return this;
     }
 
-    public EnrichPerson withGithubUrl(String githubUrl) {
-        Utils.checkNotNull(githubUrl, "githubUrl");
-        this.githubUrl = Optional.ofNullable(githubUrl);
-        return this;
-    }
 
-
-    public EnrichPerson withGithubUrl(Optional<String> githubUrl) {
-        Utils.checkNotNull(githubUrl, "githubUrl");
+    public EnrichPerson withGithubUrl(@Nullable String githubUrl) {
         this.githubUrl = githubUrl;
         return this;
     }
 
-    public EnrichPerson withGithubUsername(String githubUsername) {
-        Utils.checkNotNull(githubUsername, "githubUsername");
-        this.githubUsername = Optional.ofNullable(githubUsername);
-        return this;
-    }
 
-
-    public EnrichPerson withGithubUsername(Optional<String> githubUsername) {
-        Utils.checkNotNull(githubUsername, "githubUsername");
+    public EnrichPerson withGithubUsername(@Nullable String githubUsername) {
         this.githubUsername = githubUsername;
         return this;
     }
 
-    public EnrichPerson withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public EnrichPerson withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public EnrichPerson withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public EnrichPerson withImageUrl(String imageUrl) {
-        Utils.checkNotNull(imageUrl, "imageUrl");
-        this.imageUrl = Optional.ofNullable(imageUrl);
-        return this;
-    }
 
-
-    public EnrichPerson withImageUrl(Optional<String> imageUrl) {
-        Utils.checkNotNull(imageUrl, "imageUrl");
+    public EnrichPerson withImageUrl(@Nullable String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
     }
 
-    public EnrichPerson withLastName(String lastName) {
-        Utils.checkNotNull(lastName, "lastName");
-        this.lastName = Optional.ofNullable(lastName);
-        return this;
-    }
 
-
-    public EnrichPerson withLastName(Optional<String> lastName) {
-        Utils.checkNotNull(lastName, "lastName");
+    public EnrichPerson withLastName(@Nullable String lastName) {
         this.lastName = lastName;
         return this;
     }
 
-    public EnrichPerson withLinkedinUrl(String linkedinUrl) {
-        Utils.checkNotNull(linkedinUrl, "linkedinUrl");
-        this.linkedinUrl = Optional.ofNullable(linkedinUrl);
-        return this;
-    }
 
-
-    public EnrichPerson withLinkedinUrl(Optional<String> linkedinUrl) {
-        Utils.checkNotNull(linkedinUrl, "linkedinUrl");
+    public EnrichPerson withLinkedinUrl(@Nullable String linkedinUrl) {
         this.linkedinUrl = linkedinUrl;
         return this;
     }
 
-    public EnrichPerson withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = Optional.ofNullable(name);
-        return this;
-    }
 
-
-    public EnrichPerson withName(Optional<String> name) {
-        Utils.checkNotNull(name, "name");
+    public EnrichPerson withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
-    public EnrichPerson withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public EnrichPerson withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public EnrichPerson withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    /**
-     * An array of telephones for this person
-     */
-    public EnrichPerson withTelephones(List<EnrichTelephone> telephones) {
-        Utils.checkNotNull(telephones, "telephones");
-        this.telephones = Optional.ofNullable(telephones);
-        return this;
-    }
-
 
     /**
      * An array of telephones for this person
      */
-    public EnrichPerson withTelephones(Optional<? extends List<EnrichTelephone>> telephones) {
-        Utils.checkNotNull(telephones, "telephones");
+    public EnrichPerson withTelephones(@Nullable List<EnrichTelephone> telephones) {
         this.telephones = telephones;
         return this;
     }
 
-    public EnrichPerson withTimezone(String timezone) {
-        Utils.checkNotNull(timezone, "timezone");
-        this.timezone = Optional.ofNullable(timezone);
-        return this;
-    }
 
-
-    public EnrichPerson withTimezone(Optional<String> timezone) {
-        Utils.checkNotNull(timezone, "timezone");
+    public EnrichPerson withTimezone(@Nullable String timezone) {
         this.timezone = timezone;
         return this;
     }
 
-    public EnrichPerson withTitle(String title) {
-        Utils.checkNotNull(title, "title");
-        this.title = Optional.ofNullable(title);
-        return this;
-    }
 
-
-    public EnrichPerson withTitle(Optional<String> title) {
-        Utils.checkNotNull(title, "title");
+    public EnrichPerson withTitle(@Nullable String title) {
         this.title = title;
         return this;
     }
 
-    public EnrichPerson withTwitterHandle(String twitterHandle) {
-        Utils.checkNotNull(twitterHandle, "twitterHandle");
-        this.twitterHandle = Optional.ofNullable(twitterHandle);
-        return this;
-    }
 
-
-    public EnrichPerson withTwitterHandle(Optional<String> twitterHandle) {
-        Utils.checkNotNull(twitterHandle, "twitterHandle");
+    public EnrichPerson withTwitterHandle(@Nullable String twitterHandle) {
         this.twitterHandle = twitterHandle;
         return this;
     }
 
-    public EnrichPerson withTwitterUrl(String twitterUrl) {
-        Utils.checkNotNull(twitterUrl, "twitterUrl");
-        this.twitterUrl = Optional.ofNullable(twitterUrl);
-        return this;
-    }
 
-
-    public EnrichPerson withTwitterUrl(Optional<String> twitterUrl) {
-        Utils.checkNotNull(twitterUrl, "twitterUrl");
+    public EnrichPerson withTwitterUrl(@Nullable String twitterUrl) {
         this.twitterUrl = twitterUrl;
         return this;
     }
 
-    public EnrichPerson withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public EnrichPerson withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public EnrichPerson withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
-    public EnrichPerson withUtcOffset(double utcOffset) {
-        Utils.checkNotNull(utcOffset, "utcOffset");
-        this.utcOffset = Optional.ofNullable(utcOffset);
-        return this;
-    }
 
-
-    public EnrichPerson withUtcOffset(Optional<Double> utcOffset) {
-        Utils.checkNotNull(utcOffset, "utcOffset");
+    public EnrichPerson withUtcOffset(@Nullable Double utcOffset) {
         this.utcOffset = utcOffset;
         return this;
     }
 
-    public EnrichPerson withWorkHistories(List<EnrichPersonWorkHistory> workHistories) {
-        Utils.checkNotNull(workHistories, "workHistories");
-        this.workHistories = Optional.ofNullable(workHistories);
-        return this;
-    }
 
-
-    public EnrichPerson withWorkHistories(Optional<? extends List<EnrichPersonWorkHistory>> workHistories) {
-        Utils.checkNotNull(workHistories, "workHistories");
+    public EnrichPerson withWorkHistories(@Nullable List<EnrichPersonWorkHistory> workHistories) {
         this.workHistories = workHistories;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -847,420 +597,202 @@ public class EnrichPerson {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends PropertyEnrichPersonAddress> address = Optional.empty();
+        private PropertyEnrichPersonAddress address;
 
-        private Optional<String> bio = Optional.empty();
+        private String bio;
 
-        private Optional<String> birthdate = Optional.empty();
+        private String birthdate;
 
-        private Optional<String> company = Optional.empty();
+        private String company;
 
-        private Optional<String> companyDomain = Optional.empty();
+        private String companyDomain;
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<? extends List<EnrichEmail>> emails = Optional.empty();
+        private List<EnrichEmail> emails;
 
-        private Optional<String> facebookUrl = Optional.empty();
+        private String facebookUrl;
 
-        private Optional<String> firstName = Optional.empty();
+        private String firstName;
 
-        private Optional<? extends Gender> gender = Optional.empty();
+        private Gender gender;
 
-        private Optional<String> githubUrl = Optional.empty();
+        private String githubUrl;
 
-        private Optional<String> githubUsername = Optional.empty();
+        private String githubUsername;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<String> imageUrl = Optional.empty();
+        private String imageUrl;
 
-        private Optional<String> lastName = Optional.empty();
+        private String lastName;
 
-        private Optional<String> linkedinUrl = Optional.empty();
+        private String linkedinUrl;
 
-        private Optional<String> name = Optional.empty();
+        private String name;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<? extends List<EnrichTelephone>> telephones = Optional.empty();
+        private List<EnrichTelephone> telephones;
 
-        private Optional<String> timezone = Optional.empty();
+        private String timezone;
 
-        private Optional<String> title = Optional.empty();
+        private String title;
 
-        private Optional<String> twitterHandle = Optional.empty();
+        private String twitterHandle;
 
-        private Optional<String> twitterUrl = Optional.empty();
+        private String twitterUrl;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
-        private Optional<Double> utcOffset = Optional.empty();
+        private Double utcOffset;
 
-        private Optional<? extends List<EnrichPersonWorkHistory>> workHistories = Optional.empty();
+        private List<EnrichPersonWorkHistory> workHistories;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
         /**
          * The address of the person
          */
-        public Builder address(PropertyEnrichPersonAddress address) {
-            Utils.checkNotNull(address, "address");
-            this.address = Optional.ofNullable(address);
-            return this;
-        }
-
-        /**
-         * The address of the person
-         */
-        public Builder address(Optional<? extends PropertyEnrichPersonAddress> address) {
-            Utils.checkNotNull(address, "address");
+        public Builder address(@Nullable PropertyEnrichPersonAddress address) {
             this.address = address;
             return this;
         }
 
-
-        public Builder bio(String bio) {
-            Utils.checkNotNull(bio, "bio");
-            this.bio = Optional.ofNullable(bio);
-            return this;
-        }
-
-        public Builder bio(Optional<String> bio) {
-            Utils.checkNotNull(bio, "bio");
+        public Builder bio(@Nullable String bio) {
             this.bio = bio;
             return this;
         }
 
-
-        public Builder birthdate(String birthdate) {
-            Utils.checkNotNull(birthdate, "birthdate");
-            this.birthdate = Optional.ofNullable(birthdate);
-            return this;
-        }
-
-        public Builder birthdate(Optional<String> birthdate) {
-            Utils.checkNotNull(birthdate, "birthdate");
+        public Builder birthdate(@Nullable String birthdate) {
             this.birthdate = birthdate;
             return this;
         }
 
-
-        public Builder company(String company) {
-            Utils.checkNotNull(company, "company");
-            this.company = Optional.ofNullable(company);
-            return this;
-        }
-
-        public Builder company(Optional<String> company) {
-            Utils.checkNotNull(company, "company");
+        public Builder company(@Nullable String company) {
             this.company = company;
             return this;
         }
 
-
-        public Builder companyDomain(String companyDomain) {
-            Utils.checkNotNull(companyDomain, "companyDomain");
-            this.companyDomain = Optional.ofNullable(companyDomain);
-            return this;
-        }
-
-        public Builder companyDomain(Optional<String> companyDomain) {
-            Utils.checkNotNull(companyDomain, "companyDomain");
+        public Builder companyDomain(@Nullable String companyDomain) {
             this.companyDomain = companyDomain;
             return this;
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
         /**
          * An array of email addresses for this person
          */
-        public Builder emails(List<EnrichEmail> emails) {
-            Utils.checkNotNull(emails, "emails");
-            this.emails = Optional.ofNullable(emails);
-            return this;
-        }
-
-        /**
-         * An array of email addresses for this person
-         */
-        public Builder emails(Optional<? extends List<EnrichEmail>> emails) {
-            Utils.checkNotNull(emails, "emails");
+        public Builder emails(@Nullable List<EnrichEmail> emails) {
             this.emails = emails;
             return this;
         }
 
-
-        public Builder facebookUrl(String facebookUrl) {
-            Utils.checkNotNull(facebookUrl, "facebookUrl");
-            this.facebookUrl = Optional.ofNullable(facebookUrl);
-            return this;
-        }
-
-        public Builder facebookUrl(Optional<String> facebookUrl) {
-            Utils.checkNotNull(facebookUrl, "facebookUrl");
+        public Builder facebookUrl(@Nullable String facebookUrl) {
             this.facebookUrl = facebookUrl;
             return this;
         }
 
-
-        public Builder firstName(String firstName) {
-            Utils.checkNotNull(firstName, "firstName");
-            this.firstName = Optional.ofNullable(firstName);
-            return this;
-        }
-
-        public Builder firstName(Optional<String> firstName) {
-            Utils.checkNotNull(firstName, "firstName");
+        public Builder firstName(@Nullable String firstName) {
             this.firstName = firstName;
             return this;
         }
 
-
-        public Builder gender(Gender gender) {
-            Utils.checkNotNull(gender, "gender");
-            this.gender = Optional.ofNullable(gender);
-            return this;
-        }
-
-        public Builder gender(Optional<? extends Gender> gender) {
-            Utils.checkNotNull(gender, "gender");
+        public Builder gender(@Nullable Gender gender) {
             this.gender = gender;
             return this;
         }
 
-
-        public Builder githubUrl(String githubUrl) {
-            Utils.checkNotNull(githubUrl, "githubUrl");
-            this.githubUrl = Optional.ofNullable(githubUrl);
-            return this;
-        }
-
-        public Builder githubUrl(Optional<String> githubUrl) {
-            Utils.checkNotNull(githubUrl, "githubUrl");
+        public Builder githubUrl(@Nullable String githubUrl) {
             this.githubUrl = githubUrl;
             return this;
         }
 
-
-        public Builder githubUsername(String githubUsername) {
-            Utils.checkNotNull(githubUsername, "githubUsername");
-            this.githubUsername = Optional.ofNullable(githubUsername);
-            return this;
-        }
-
-        public Builder githubUsername(Optional<String> githubUsername) {
-            Utils.checkNotNull(githubUsername, "githubUsername");
+        public Builder githubUsername(@Nullable String githubUsername) {
             this.githubUsername = githubUsername;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder imageUrl(String imageUrl) {
-            Utils.checkNotNull(imageUrl, "imageUrl");
-            this.imageUrl = Optional.ofNullable(imageUrl);
-            return this;
-        }
-
-        public Builder imageUrl(Optional<String> imageUrl) {
-            Utils.checkNotNull(imageUrl, "imageUrl");
+        public Builder imageUrl(@Nullable String imageUrl) {
             this.imageUrl = imageUrl;
             return this;
         }
 
-
-        public Builder lastName(String lastName) {
-            Utils.checkNotNull(lastName, "lastName");
-            this.lastName = Optional.ofNullable(lastName);
-            return this;
-        }
-
-        public Builder lastName(Optional<String> lastName) {
-            Utils.checkNotNull(lastName, "lastName");
+        public Builder lastName(@Nullable String lastName) {
             this.lastName = lastName;
             return this;
         }
 
-
-        public Builder linkedinUrl(String linkedinUrl) {
-            Utils.checkNotNull(linkedinUrl, "linkedinUrl");
-            this.linkedinUrl = Optional.ofNullable(linkedinUrl);
-            return this;
-        }
-
-        public Builder linkedinUrl(Optional<String> linkedinUrl) {
-            Utils.checkNotNull(linkedinUrl, "linkedinUrl");
+        public Builder linkedinUrl(@Nullable String linkedinUrl) {
             this.linkedinUrl = linkedinUrl;
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = Optional.ofNullable(name);
-            return this;
-        }
-
-        public Builder name(Optional<String> name) {
-            Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
         /**
          * An array of telephones for this person
          */
-        public Builder telephones(List<EnrichTelephone> telephones) {
-            Utils.checkNotNull(telephones, "telephones");
-            this.telephones = Optional.ofNullable(telephones);
-            return this;
-        }
-
-        /**
-         * An array of telephones for this person
-         */
-        public Builder telephones(Optional<? extends List<EnrichTelephone>> telephones) {
-            Utils.checkNotNull(telephones, "telephones");
+        public Builder telephones(@Nullable List<EnrichTelephone> telephones) {
             this.telephones = telephones;
             return this;
         }
 
-
-        public Builder timezone(String timezone) {
-            Utils.checkNotNull(timezone, "timezone");
-            this.timezone = Optional.ofNullable(timezone);
-            return this;
-        }
-
-        public Builder timezone(Optional<String> timezone) {
-            Utils.checkNotNull(timezone, "timezone");
+        public Builder timezone(@Nullable String timezone) {
             this.timezone = timezone;
             return this;
         }
 
-
-        public Builder title(String title) {
-            Utils.checkNotNull(title, "title");
-            this.title = Optional.ofNullable(title);
-            return this;
-        }
-
-        public Builder title(Optional<String> title) {
-            Utils.checkNotNull(title, "title");
+        public Builder title(@Nullable String title) {
             this.title = title;
             return this;
         }
 
-
-        public Builder twitterHandle(String twitterHandle) {
-            Utils.checkNotNull(twitterHandle, "twitterHandle");
-            this.twitterHandle = Optional.ofNullable(twitterHandle);
-            return this;
-        }
-
-        public Builder twitterHandle(Optional<String> twitterHandle) {
-            Utils.checkNotNull(twitterHandle, "twitterHandle");
+        public Builder twitterHandle(@Nullable String twitterHandle) {
             this.twitterHandle = twitterHandle;
             return this;
         }
 
-
-        public Builder twitterUrl(String twitterUrl) {
-            Utils.checkNotNull(twitterUrl, "twitterUrl");
-            this.twitterUrl = Optional.ofNullable(twitterUrl);
-            return this;
-        }
-
-        public Builder twitterUrl(Optional<String> twitterUrl) {
-            Utils.checkNotNull(twitterUrl, "twitterUrl");
+        public Builder twitterUrl(@Nullable String twitterUrl) {
             this.twitterUrl = twitterUrl;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
-
-        public Builder utcOffset(double utcOffset) {
-            Utils.checkNotNull(utcOffset, "utcOffset");
-            this.utcOffset = Optional.ofNullable(utcOffset);
-            return this;
-        }
-
-        public Builder utcOffset(Optional<Double> utcOffset) {
-            Utils.checkNotNull(utcOffset, "utcOffset");
+        public Builder utcOffset(@Nullable Double utcOffset) {
             this.utcOffset = utcOffset;
             return this;
         }
 
-
-        public Builder workHistories(List<EnrichPersonWorkHistory> workHistories) {
-            Utils.checkNotNull(workHistories, "workHistories");
-            this.workHistories = Optional.ofNullable(workHistories);
-            return this;
-        }
-
-        public Builder workHistories(Optional<? extends List<EnrichPersonWorkHistory>> workHistories) {
-            Utils.checkNotNull(workHistories, "workHistories");
+        public Builder workHistories(@Nullable List<EnrichPersonWorkHistory> workHistories) {
             this.workHistories = workHistories;
             return this;
         }
 
         public EnrichPerson build() {
-
             return new EnrichPerson(
                 address, bio, birthdate,
                 company, companyDomain, createdAt,

@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.PatchCommerceLocationRequest;
@@ -13,27 +14,39 @@ import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchCommerceLocationRequestBuilder {
-
-    private PatchCommerceLocationRequest request;
     private final SDKConfiguration sdkConfiguration;
-    private final Headers _headers = new Headers(); 
+    private final Headers _headers = new Headers();
+    private PatchCommerceLocationRequest request;
 
     public PatchCommerceLocationRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
 
-    public PatchCommerceLocationRequestBuilder request(PatchCommerceLocationRequest request) {
-        Utils.checkNotNull(request, "request");
-        this.request = request;
+    public PatchCommerceLocationRequestBuilder request(@Nonnull PatchCommerceLocationRequest request) {
+        this.request = Utils.checkNotNull(request, "request");
         return this;
     }
 
+    private PatchCommerceLocationRequest _buildRequest() {
+        return this.request;
+    }
+    
+    public PatchCommerceLocationRequestBuilder header(String name, String value) {
+        Utils.checkNotNull(name, "name");
+        Utils.checkNotNull(value, "value");
+        this._headers.add(name, value);
+        return this;
+    }
+
+    /**
+    * Executes the request and returns the response.
+    *
+    * @return The response from the server.
+    */
     public CompletableFuture<PatchCommerceLocationResponse> call() {
-        
         AsyncRequestOperation<PatchCommerceLocationRequest, PatchCommerceLocationResponse> operation
               = new PatchCommerceLocation.Async(sdkConfiguration, _headers);
-
-        return operation.doRequest(request)
+        return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }
 }

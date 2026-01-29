@@ -4,15 +4,15 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Optional;
@@ -23,94 +23,94 @@ public class ShippingRateRate {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
-    private Optional<Double> amount;
+    private Double amount;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("base_amount")
-    private Optional<Double> baseAmount;
+    private Double baseAmount;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
-    private Optional<String> currency;
+    private String currency;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delivery_days")
-    private Optional<Double> deliveryDays;
+    private Double deliveryDays;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delivery_terms")
-    private Optional<String> deliveryTerms;
+    private String deliveryTerms;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
-    private Optional<String> description;
+    private String description;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discount_amount")
-    private Optional<Double> discountAmount;
+    private Double discountAmount;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimated_days")
-    private Optional<Double> estimatedDays;
+    private Double estimatedDays;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimated_delivery_end_at")
-    private Optional<OffsetDateTime> estimatedDeliveryEndAt;
+    private OffsetDateTime estimatedDeliveryEndAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimated_delivery_start_at")
-    private Optional<OffsetDateTime> estimatedDeliveryStartAt;
+    private OffsetDateTime estimatedDeliveryStartAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
-    private Optional<Boolean> isActive;
+    private Boolean isActive;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_guaranteed")
-    private Optional<Boolean> isGuaranteed;
+    private Boolean isGuaranteed;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_negotiated_rate")
-    private Optional<Boolean> isNegotiatedRate;
+    private Boolean isNegotiatedRate;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_trackable")
-    private Optional<Boolean> isTrackable;
+    private Boolean isTrackable;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("package_type")
-    private Optional<String> packageType;
+    private String packageType;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rate_source")
-    private Optional<String> rateSource;
+    private String rateSource;
 
     /**
      * Additional charges
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("surcharges")
-    private Optional<? extends List<ShippingRateSurcharge>> surcharges;
+    private List<ShippingRateSurcharge> surcharges;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax_amount")
-    private Optional<Double> taxAmount;
+    private Double taxAmount;
 
 
     @JsonProperty("title")
@@ -119,50 +119,30 @@ public class ShippingRateRate {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transit_hours")
-    private Optional<Double> transitHours;
+    private Double transitHours;
 
     @JsonCreator
     public ShippingRateRate(
-            @JsonProperty("amount") Optional<Double> amount,
-            @JsonProperty("base_amount") Optional<Double> baseAmount,
-            @JsonProperty("currency") Optional<String> currency,
-            @JsonProperty("delivery_days") Optional<Double> deliveryDays,
-            @JsonProperty("delivery_terms") Optional<String> deliveryTerms,
-            @JsonProperty("description") Optional<String> description,
-            @JsonProperty("discount_amount") Optional<Double> discountAmount,
-            @JsonProperty("estimated_days") Optional<Double> estimatedDays,
-            @JsonProperty("estimated_delivery_end_at") Optional<OffsetDateTime> estimatedDeliveryEndAt,
-            @JsonProperty("estimated_delivery_start_at") Optional<OffsetDateTime> estimatedDeliveryStartAt,
-            @JsonProperty("is_active") Optional<Boolean> isActive,
-            @JsonProperty("is_guaranteed") Optional<Boolean> isGuaranteed,
-            @JsonProperty("is_negotiated_rate") Optional<Boolean> isNegotiatedRate,
-            @JsonProperty("is_trackable") Optional<Boolean> isTrackable,
-            @JsonProperty("package_type") Optional<String> packageType,
-            @JsonProperty("rate_source") Optional<String> rateSource,
-            @JsonProperty("surcharges") Optional<? extends List<ShippingRateSurcharge>> surcharges,
-            @JsonProperty("tax_amount") Optional<Double> taxAmount,
-            @JsonProperty("title") String title,
-            @JsonProperty("transit_hours") Optional<Double> transitHours) {
-        Utils.checkNotNull(amount, "amount");
-        Utils.checkNotNull(baseAmount, "baseAmount");
-        Utils.checkNotNull(currency, "currency");
-        Utils.checkNotNull(deliveryDays, "deliveryDays");
-        Utils.checkNotNull(deliveryTerms, "deliveryTerms");
-        Utils.checkNotNull(description, "description");
-        Utils.checkNotNull(discountAmount, "discountAmount");
-        Utils.checkNotNull(estimatedDays, "estimatedDays");
-        Utils.checkNotNull(estimatedDeliveryEndAt, "estimatedDeliveryEndAt");
-        Utils.checkNotNull(estimatedDeliveryStartAt, "estimatedDeliveryStartAt");
-        Utils.checkNotNull(isActive, "isActive");
-        Utils.checkNotNull(isGuaranteed, "isGuaranteed");
-        Utils.checkNotNull(isNegotiatedRate, "isNegotiatedRate");
-        Utils.checkNotNull(isTrackable, "isTrackable");
-        Utils.checkNotNull(packageType, "packageType");
-        Utils.checkNotNull(rateSource, "rateSource");
-        Utils.checkNotNull(surcharges, "surcharges");
-        Utils.checkNotNull(taxAmount, "taxAmount");
-        Utils.checkNotNull(title, "title");
-        Utils.checkNotNull(transitHours, "transitHours");
+            @JsonProperty("amount") @Nullable Double amount,
+            @JsonProperty("base_amount") @Nullable Double baseAmount,
+            @JsonProperty("currency") @Nullable String currency,
+            @JsonProperty("delivery_days") @Nullable Double deliveryDays,
+            @JsonProperty("delivery_terms") @Nullable String deliveryTerms,
+            @JsonProperty("description") @Nullable String description,
+            @JsonProperty("discount_amount") @Nullable Double discountAmount,
+            @JsonProperty("estimated_days") @Nullable Double estimatedDays,
+            @JsonProperty("estimated_delivery_end_at") @Nullable OffsetDateTime estimatedDeliveryEndAt,
+            @JsonProperty("estimated_delivery_start_at") @Nullable OffsetDateTime estimatedDeliveryStartAt,
+            @JsonProperty("is_active") @Nullable Boolean isActive,
+            @JsonProperty("is_guaranteed") @Nullable Boolean isGuaranteed,
+            @JsonProperty("is_negotiated_rate") @Nullable Boolean isNegotiatedRate,
+            @JsonProperty("is_trackable") @Nullable Boolean isTrackable,
+            @JsonProperty("package_type") @Nullable String packageType,
+            @JsonProperty("rate_source") @Nullable String rateSource,
+            @JsonProperty("surcharges") @Nullable List<ShippingRateSurcharge> surcharges,
+            @JsonProperty("tax_amount") @Nullable Double taxAmount,
+            @JsonProperty("title") @Nonnull String title,
+            @JsonProperty("transit_hours") @Nullable Double transitHours) {
         this.amount = amount;
         this.baseAmount = baseAmount;
         this.currency = currency;
@@ -181,123 +161,103 @@ public class ShippingRateRate {
         this.rateSource = rateSource;
         this.surcharges = surcharges;
         this.taxAmount = taxAmount;
-        this.title = title;
+        this.title = Optional.ofNullable(title)
+            .orElseThrow(() -> new IllegalArgumentException("title cannot be null"));
         this.transitHours = transitHours;
     }
     
     public ShippingRateRate(
-            String title) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            title, Optional.empty());
+            @Nonnull String title) {
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            title, null);
     }
 
-    @JsonIgnore
     public Optional<Double> amount() {
-        return amount;
+        return Optional.ofNullable(this.amount);
     }
 
-    @JsonIgnore
     public Optional<Double> baseAmount() {
-        return baseAmount;
+        return Optional.ofNullable(this.baseAmount);
     }
 
-    @JsonIgnore
     public Optional<String> currency() {
-        return currency;
+        return Optional.ofNullable(this.currency);
     }
 
-    @JsonIgnore
     public Optional<Double> deliveryDays() {
-        return deliveryDays;
+        return Optional.ofNullable(this.deliveryDays);
     }
 
-    @JsonIgnore
     public Optional<String> deliveryTerms() {
-        return deliveryTerms;
+        return Optional.ofNullable(this.deliveryTerms);
     }
 
-    @JsonIgnore
     public Optional<String> description() {
-        return description;
+        return Optional.ofNullable(this.description);
     }
 
-    @JsonIgnore
     public Optional<Double> discountAmount() {
-        return discountAmount;
+        return Optional.ofNullable(this.discountAmount);
     }
 
-    @JsonIgnore
     public Optional<Double> estimatedDays() {
-        return estimatedDays;
+        return Optional.ofNullable(this.estimatedDays);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> estimatedDeliveryEndAt() {
-        return estimatedDeliveryEndAt;
+        return Optional.ofNullable(this.estimatedDeliveryEndAt);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> estimatedDeliveryStartAt() {
-        return estimatedDeliveryStartAt;
+        return Optional.ofNullable(this.estimatedDeliveryStartAt);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isActive() {
-        return isActive;
+        return Optional.ofNullable(this.isActive);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isGuaranteed() {
-        return isGuaranteed;
+        return Optional.ofNullable(this.isGuaranteed);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isNegotiatedRate() {
-        return isNegotiatedRate;
+        return Optional.ofNullable(this.isNegotiatedRate);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isTrackable() {
-        return isTrackable;
+        return Optional.ofNullable(this.isTrackable);
     }
 
-    @JsonIgnore
     public Optional<String> packageType() {
-        return packageType;
+        return Optional.ofNullable(this.packageType);
     }
 
-    @JsonIgnore
     public Optional<String> rateSource() {
-        return rateSource;
+        return Optional.ofNullable(this.rateSource);
     }
 
     /**
      * Additional charges
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<ShippingRateSurcharge>> surcharges() {
-        return (Optional<List<ShippingRateSurcharge>>) surcharges;
+        return Optional.ofNullable(this.surcharges);
     }
 
-    @JsonIgnore
     public Optional<Double> taxAmount() {
-        return taxAmount;
+        return Optional.ofNullable(this.taxAmount);
     }
 
-    @JsonIgnore
     public String title() {
-        return title;
+        return this.title;
     }
 
-    @JsonIgnore
     public Optional<Double> transitHours() {
-        return transitHours;
+        return Optional.ofNullable(this.transitHours);
     }
 
     public static Builder builder() {
@@ -305,264 +265,128 @@ public class ShippingRateRate {
     }
 
 
-    public ShippingRateRate withAmount(double amount) {
-        Utils.checkNotNull(amount, "amount");
-        this.amount = Optional.ofNullable(amount);
-        return this;
-    }
-
-
-    public ShippingRateRate withAmount(Optional<Double> amount) {
-        Utils.checkNotNull(amount, "amount");
+    public ShippingRateRate withAmount(@Nullable Double amount) {
         this.amount = amount;
         return this;
     }
 
-    public ShippingRateRate withBaseAmount(double baseAmount) {
-        Utils.checkNotNull(baseAmount, "baseAmount");
-        this.baseAmount = Optional.ofNullable(baseAmount);
-        return this;
-    }
 
-
-    public ShippingRateRate withBaseAmount(Optional<Double> baseAmount) {
-        Utils.checkNotNull(baseAmount, "baseAmount");
+    public ShippingRateRate withBaseAmount(@Nullable Double baseAmount) {
         this.baseAmount = baseAmount;
         return this;
     }
 
-    public ShippingRateRate withCurrency(String currency) {
-        Utils.checkNotNull(currency, "currency");
-        this.currency = Optional.ofNullable(currency);
-        return this;
-    }
 
-
-    public ShippingRateRate withCurrency(Optional<String> currency) {
-        Utils.checkNotNull(currency, "currency");
+    public ShippingRateRate withCurrency(@Nullable String currency) {
         this.currency = currency;
         return this;
     }
 
-    public ShippingRateRate withDeliveryDays(double deliveryDays) {
-        Utils.checkNotNull(deliveryDays, "deliveryDays");
-        this.deliveryDays = Optional.ofNullable(deliveryDays);
-        return this;
-    }
 
-
-    public ShippingRateRate withDeliveryDays(Optional<Double> deliveryDays) {
-        Utils.checkNotNull(deliveryDays, "deliveryDays");
+    public ShippingRateRate withDeliveryDays(@Nullable Double deliveryDays) {
         this.deliveryDays = deliveryDays;
         return this;
     }
 
-    public ShippingRateRate withDeliveryTerms(String deliveryTerms) {
-        Utils.checkNotNull(deliveryTerms, "deliveryTerms");
-        this.deliveryTerms = Optional.ofNullable(deliveryTerms);
-        return this;
-    }
 
-
-    public ShippingRateRate withDeliveryTerms(Optional<String> deliveryTerms) {
-        Utils.checkNotNull(deliveryTerms, "deliveryTerms");
+    public ShippingRateRate withDeliveryTerms(@Nullable String deliveryTerms) {
         this.deliveryTerms = deliveryTerms;
         return this;
     }
 
-    public ShippingRateRate withDescription(String description) {
-        Utils.checkNotNull(description, "description");
-        this.description = Optional.ofNullable(description);
-        return this;
-    }
 
-
-    public ShippingRateRate withDescription(Optional<String> description) {
-        Utils.checkNotNull(description, "description");
+    public ShippingRateRate withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
-    public ShippingRateRate withDiscountAmount(double discountAmount) {
-        Utils.checkNotNull(discountAmount, "discountAmount");
-        this.discountAmount = Optional.ofNullable(discountAmount);
-        return this;
-    }
 
-
-    public ShippingRateRate withDiscountAmount(Optional<Double> discountAmount) {
-        Utils.checkNotNull(discountAmount, "discountAmount");
+    public ShippingRateRate withDiscountAmount(@Nullable Double discountAmount) {
         this.discountAmount = discountAmount;
         return this;
     }
 
-    public ShippingRateRate withEstimatedDays(double estimatedDays) {
-        Utils.checkNotNull(estimatedDays, "estimatedDays");
-        this.estimatedDays = Optional.ofNullable(estimatedDays);
-        return this;
-    }
 
-
-    public ShippingRateRate withEstimatedDays(Optional<Double> estimatedDays) {
-        Utils.checkNotNull(estimatedDays, "estimatedDays");
+    public ShippingRateRate withEstimatedDays(@Nullable Double estimatedDays) {
         this.estimatedDays = estimatedDays;
         return this;
     }
 
-    public ShippingRateRate withEstimatedDeliveryEndAt(OffsetDateTime estimatedDeliveryEndAt) {
-        Utils.checkNotNull(estimatedDeliveryEndAt, "estimatedDeliveryEndAt");
-        this.estimatedDeliveryEndAt = Optional.ofNullable(estimatedDeliveryEndAt);
-        return this;
-    }
 
-
-    public ShippingRateRate withEstimatedDeliveryEndAt(Optional<OffsetDateTime> estimatedDeliveryEndAt) {
-        Utils.checkNotNull(estimatedDeliveryEndAt, "estimatedDeliveryEndAt");
+    public ShippingRateRate withEstimatedDeliveryEndAt(@Nullable OffsetDateTime estimatedDeliveryEndAt) {
         this.estimatedDeliveryEndAt = estimatedDeliveryEndAt;
         return this;
     }
 
-    public ShippingRateRate withEstimatedDeliveryStartAt(OffsetDateTime estimatedDeliveryStartAt) {
-        Utils.checkNotNull(estimatedDeliveryStartAt, "estimatedDeliveryStartAt");
-        this.estimatedDeliveryStartAt = Optional.ofNullable(estimatedDeliveryStartAt);
-        return this;
-    }
 
-
-    public ShippingRateRate withEstimatedDeliveryStartAt(Optional<OffsetDateTime> estimatedDeliveryStartAt) {
-        Utils.checkNotNull(estimatedDeliveryStartAt, "estimatedDeliveryStartAt");
+    public ShippingRateRate withEstimatedDeliveryStartAt(@Nullable OffsetDateTime estimatedDeliveryStartAt) {
         this.estimatedDeliveryStartAt = estimatedDeliveryStartAt;
         return this;
     }
 
-    public ShippingRateRate withIsActive(boolean isActive) {
-        Utils.checkNotNull(isActive, "isActive");
-        this.isActive = Optional.ofNullable(isActive);
-        return this;
-    }
 
-
-    public ShippingRateRate withIsActive(Optional<Boolean> isActive) {
-        Utils.checkNotNull(isActive, "isActive");
+    public ShippingRateRate withIsActive(@Nullable Boolean isActive) {
         this.isActive = isActive;
         return this;
     }
 
-    public ShippingRateRate withIsGuaranteed(boolean isGuaranteed) {
-        Utils.checkNotNull(isGuaranteed, "isGuaranteed");
-        this.isGuaranteed = Optional.ofNullable(isGuaranteed);
-        return this;
-    }
 
-
-    public ShippingRateRate withIsGuaranteed(Optional<Boolean> isGuaranteed) {
-        Utils.checkNotNull(isGuaranteed, "isGuaranteed");
+    public ShippingRateRate withIsGuaranteed(@Nullable Boolean isGuaranteed) {
         this.isGuaranteed = isGuaranteed;
         return this;
     }
 
-    public ShippingRateRate withIsNegotiatedRate(boolean isNegotiatedRate) {
-        Utils.checkNotNull(isNegotiatedRate, "isNegotiatedRate");
-        this.isNegotiatedRate = Optional.ofNullable(isNegotiatedRate);
-        return this;
-    }
 
-
-    public ShippingRateRate withIsNegotiatedRate(Optional<Boolean> isNegotiatedRate) {
-        Utils.checkNotNull(isNegotiatedRate, "isNegotiatedRate");
+    public ShippingRateRate withIsNegotiatedRate(@Nullable Boolean isNegotiatedRate) {
         this.isNegotiatedRate = isNegotiatedRate;
         return this;
     }
 
-    public ShippingRateRate withIsTrackable(boolean isTrackable) {
-        Utils.checkNotNull(isTrackable, "isTrackable");
-        this.isTrackable = Optional.ofNullable(isTrackable);
-        return this;
-    }
 
-
-    public ShippingRateRate withIsTrackable(Optional<Boolean> isTrackable) {
-        Utils.checkNotNull(isTrackable, "isTrackable");
+    public ShippingRateRate withIsTrackable(@Nullable Boolean isTrackable) {
         this.isTrackable = isTrackable;
         return this;
     }
 
-    public ShippingRateRate withPackageType(String packageType) {
-        Utils.checkNotNull(packageType, "packageType");
-        this.packageType = Optional.ofNullable(packageType);
-        return this;
-    }
 
-
-    public ShippingRateRate withPackageType(Optional<String> packageType) {
-        Utils.checkNotNull(packageType, "packageType");
+    public ShippingRateRate withPackageType(@Nullable String packageType) {
         this.packageType = packageType;
         return this;
     }
 
-    public ShippingRateRate withRateSource(String rateSource) {
-        Utils.checkNotNull(rateSource, "rateSource");
-        this.rateSource = Optional.ofNullable(rateSource);
-        return this;
-    }
 
-
-    public ShippingRateRate withRateSource(Optional<String> rateSource) {
-        Utils.checkNotNull(rateSource, "rateSource");
+    public ShippingRateRate withRateSource(@Nullable String rateSource) {
         this.rateSource = rateSource;
         return this;
     }
 
-    /**
-     * Additional charges
-     */
-    public ShippingRateRate withSurcharges(List<ShippingRateSurcharge> surcharges) {
-        Utils.checkNotNull(surcharges, "surcharges");
-        this.surcharges = Optional.ofNullable(surcharges);
-        return this;
-    }
-
 
     /**
      * Additional charges
      */
-    public ShippingRateRate withSurcharges(Optional<? extends List<ShippingRateSurcharge>> surcharges) {
-        Utils.checkNotNull(surcharges, "surcharges");
+    public ShippingRateRate withSurcharges(@Nullable List<ShippingRateSurcharge> surcharges) {
         this.surcharges = surcharges;
         return this;
     }
 
-    public ShippingRateRate withTaxAmount(double taxAmount) {
-        Utils.checkNotNull(taxAmount, "taxAmount");
-        this.taxAmount = Optional.ofNullable(taxAmount);
-        return this;
-    }
 
-
-    public ShippingRateRate withTaxAmount(Optional<Double> taxAmount) {
-        Utils.checkNotNull(taxAmount, "taxAmount");
+    public ShippingRateRate withTaxAmount(@Nullable Double taxAmount) {
         this.taxAmount = taxAmount;
         return this;
     }
 
-    public ShippingRateRate withTitle(String title) {
-        Utils.checkNotNull(title, "title");
-        this.title = title;
-        return this;
-    }
 
-    public ShippingRateRate withTransitHours(double transitHours) {
-        Utils.checkNotNull(transitHours, "transitHours");
-        this.transitHours = Optional.ofNullable(transitHours);
+    public ShippingRateRate withTitle(@Nonnull String title) {
+        this.title = Utils.checkNotNull(title, "title");
         return this;
     }
 
 
-    public ShippingRateRate withTransitHours(Optional<Double> transitHours) {
-        Utils.checkNotNull(transitHours, "transitHours");
+    public ShippingRateRate withTransitHours(@Nullable Double transitHours) {
         this.transitHours = transitHours;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -636,312 +460,154 @@ public class ShippingRateRate {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<Double> amount = Optional.empty();
+        private Double amount;
 
-        private Optional<Double> baseAmount = Optional.empty();
+        private Double baseAmount;
 
-        private Optional<String> currency = Optional.empty();
+        private String currency;
 
-        private Optional<Double> deliveryDays = Optional.empty();
+        private Double deliveryDays;
 
-        private Optional<String> deliveryTerms = Optional.empty();
+        private String deliveryTerms;
 
-        private Optional<String> description = Optional.empty();
+        private String description;
 
-        private Optional<Double> discountAmount = Optional.empty();
+        private Double discountAmount;
 
-        private Optional<Double> estimatedDays = Optional.empty();
+        private Double estimatedDays;
 
-        private Optional<OffsetDateTime> estimatedDeliveryEndAt = Optional.empty();
+        private OffsetDateTime estimatedDeliveryEndAt;
 
-        private Optional<OffsetDateTime> estimatedDeliveryStartAt = Optional.empty();
+        private OffsetDateTime estimatedDeliveryStartAt;
 
-        private Optional<Boolean> isActive = Optional.empty();
+        private Boolean isActive;
 
-        private Optional<Boolean> isGuaranteed = Optional.empty();
+        private Boolean isGuaranteed;
 
-        private Optional<Boolean> isNegotiatedRate = Optional.empty();
+        private Boolean isNegotiatedRate;
 
-        private Optional<Boolean> isTrackable = Optional.empty();
+        private Boolean isTrackable;
 
-        private Optional<String> packageType = Optional.empty();
+        private String packageType;
 
-        private Optional<String> rateSource = Optional.empty();
+        private String rateSource;
 
-        private Optional<? extends List<ShippingRateSurcharge>> surcharges = Optional.empty();
+        private List<ShippingRateSurcharge> surcharges;
 
-        private Optional<Double> taxAmount = Optional.empty();
+        private Double taxAmount;
 
         private String title;
 
-        private Optional<Double> transitHours = Optional.empty();
+        private Double transitHours;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder amount(double amount) {
-            Utils.checkNotNull(amount, "amount");
-            this.amount = Optional.ofNullable(amount);
-            return this;
-        }
-
-        public Builder amount(Optional<Double> amount) {
-            Utils.checkNotNull(amount, "amount");
+        public Builder amount(@Nullable Double amount) {
             this.amount = amount;
             return this;
         }
 
-
-        public Builder baseAmount(double baseAmount) {
-            Utils.checkNotNull(baseAmount, "baseAmount");
-            this.baseAmount = Optional.ofNullable(baseAmount);
-            return this;
-        }
-
-        public Builder baseAmount(Optional<Double> baseAmount) {
-            Utils.checkNotNull(baseAmount, "baseAmount");
+        public Builder baseAmount(@Nullable Double baseAmount) {
             this.baseAmount = baseAmount;
             return this;
         }
 
-
-        public Builder currency(String currency) {
-            Utils.checkNotNull(currency, "currency");
-            this.currency = Optional.ofNullable(currency);
-            return this;
-        }
-
-        public Builder currency(Optional<String> currency) {
-            Utils.checkNotNull(currency, "currency");
+        public Builder currency(@Nullable String currency) {
             this.currency = currency;
             return this;
         }
 
-
-        public Builder deliveryDays(double deliveryDays) {
-            Utils.checkNotNull(deliveryDays, "deliveryDays");
-            this.deliveryDays = Optional.ofNullable(deliveryDays);
-            return this;
-        }
-
-        public Builder deliveryDays(Optional<Double> deliveryDays) {
-            Utils.checkNotNull(deliveryDays, "deliveryDays");
+        public Builder deliveryDays(@Nullable Double deliveryDays) {
             this.deliveryDays = deliveryDays;
             return this;
         }
 
-
-        public Builder deliveryTerms(String deliveryTerms) {
-            Utils.checkNotNull(deliveryTerms, "deliveryTerms");
-            this.deliveryTerms = Optional.ofNullable(deliveryTerms);
-            return this;
-        }
-
-        public Builder deliveryTerms(Optional<String> deliveryTerms) {
-            Utils.checkNotNull(deliveryTerms, "deliveryTerms");
+        public Builder deliveryTerms(@Nullable String deliveryTerms) {
             this.deliveryTerms = deliveryTerms;
             return this;
         }
 
-
-        public Builder description(String description) {
-            Utils.checkNotNull(description, "description");
-            this.description = Optional.ofNullable(description);
-            return this;
-        }
-
-        public Builder description(Optional<String> description) {
-            Utils.checkNotNull(description, "description");
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-
-        public Builder discountAmount(double discountAmount) {
-            Utils.checkNotNull(discountAmount, "discountAmount");
-            this.discountAmount = Optional.ofNullable(discountAmount);
-            return this;
-        }
-
-        public Builder discountAmount(Optional<Double> discountAmount) {
-            Utils.checkNotNull(discountAmount, "discountAmount");
+        public Builder discountAmount(@Nullable Double discountAmount) {
             this.discountAmount = discountAmount;
             return this;
         }
 
-
-        public Builder estimatedDays(double estimatedDays) {
-            Utils.checkNotNull(estimatedDays, "estimatedDays");
-            this.estimatedDays = Optional.ofNullable(estimatedDays);
-            return this;
-        }
-
-        public Builder estimatedDays(Optional<Double> estimatedDays) {
-            Utils.checkNotNull(estimatedDays, "estimatedDays");
+        public Builder estimatedDays(@Nullable Double estimatedDays) {
             this.estimatedDays = estimatedDays;
             return this;
         }
 
-
-        public Builder estimatedDeliveryEndAt(OffsetDateTime estimatedDeliveryEndAt) {
-            Utils.checkNotNull(estimatedDeliveryEndAt, "estimatedDeliveryEndAt");
-            this.estimatedDeliveryEndAt = Optional.ofNullable(estimatedDeliveryEndAt);
-            return this;
-        }
-
-        public Builder estimatedDeliveryEndAt(Optional<OffsetDateTime> estimatedDeliveryEndAt) {
-            Utils.checkNotNull(estimatedDeliveryEndAt, "estimatedDeliveryEndAt");
+        public Builder estimatedDeliveryEndAt(@Nullable OffsetDateTime estimatedDeliveryEndAt) {
             this.estimatedDeliveryEndAt = estimatedDeliveryEndAt;
             return this;
         }
 
-
-        public Builder estimatedDeliveryStartAt(OffsetDateTime estimatedDeliveryStartAt) {
-            Utils.checkNotNull(estimatedDeliveryStartAt, "estimatedDeliveryStartAt");
-            this.estimatedDeliveryStartAt = Optional.ofNullable(estimatedDeliveryStartAt);
-            return this;
-        }
-
-        public Builder estimatedDeliveryStartAt(Optional<OffsetDateTime> estimatedDeliveryStartAt) {
-            Utils.checkNotNull(estimatedDeliveryStartAt, "estimatedDeliveryStartAt");
+        public Builder estimatedDeliveryStartAt(@Nullable OffsetDateTime estimatedDeliveryStartAt) {
             this.estimatedDeliveryStartAt = estimatedDeliveryStartAt;
             return this;
         }
 
-
-        public Builder isActive(boolean isActive) {
-            Utils.checkNotNull(isActive, "isActive");
-            this.isActive = Optional.ofNullable(isActive);
-            return this;
-        }
-
-        public Builder isActive(Optional<Boolean> isActive) {
-            Utils.checkNotNull(isActive, "isActive");
+        public Builder isActive(@Nullable Boolean isActive) {
             this.isActive = isActive;
             return this;
         }
 
-
-        public Builder isGuaranteed(boolean isGuaranteed) {
-            Utils.checkNotNull(isGuaranteed, "isGuaranteed");
-            this.isGuaranteed = Optional.ofNullable(isGuaranteed);
-            return this;
-        }
-
-        public Builder isGuaranteed(Optional<Boolean> isGuaranteed) {
-            Utils.checkNotNull(isGuaranteed, "isGuaranteed");
+        public Builder isGuaranteed(@Nullable Boolean isGuaranteed) {
             this.isGuaranteed = isGuaranteed;
             return this;
         }
 
-
-        public Builder isNegotiatedRate(boolean isNegotiatedRate) {
-            Utils.checkNotNull(isNegotiatedRate, "isNegotiatedRate");
-            this.isNegotiatedRate = Optional.ofNullable(isNegotiatedRate);
-            return this;
-        }
-
-        public Builder isNegotiatedRate(Optional<Boolean> isNegotiatedRate) {
-            Utils.checkNotNull(isNegotiatedRate, "isNegotiatedRate");
+        public Builder isNegotiatedRate(@Nullable Boolean isNegotiatedRate) {
             this.isNegotiatedRate = isNegotiatedRate;
             return this;
         }
 
-
-        public Builder isTrackable(boolean isTrackable) {
-            Utils.checkNotNull(isTrackable, "isTrackable");
-            this.isTrackable = Optional.ofNullable(isTrackable);
-            return this;
-        }
-
-        public Builder isTrackable(Optional<Boolean> isTrackable) {
-            Utils.checkNotNull(isTrackable, "isTrackable");
+        public Builder isTrackable(@Nullable Boolean isTrackable) {
             this.isTrackable = isTrackable;
             return this;
         }
 
-
-        public Builder packageType(String packageType) {
-            Utils.checkNotNull(packageType, "packageType");
-            this.packageType = Optional.ofNullable(packageType);
-            return this;
-        }
-
-        public Builder packageType(Optional<String> packageType) {
-            Utils.checkNotNull(packageType, "packageType");
+        public Builder packageType(@Nullable String packageType) {
             this.packageType = packageType;
             return this;
         }
 
-
-        public Builder rateSource(String rateSource) {
-            Utils.checkNotNull(rateSource, "rateSource");
-            this.rateSource = Optional.ofNullable(rateSource);
-            return this;
-        }
-
-        public Builder rateSource(Optional<String> rateSource) {
-            Utils.checkNotNull(rateSource, "rateSource");
+        public Builder rateSource(@Nullable String rateSource) {
             this.rateSource = rateSource;
             return this;
         }
 
-
         /**
          * Additional charges
          */
-        public Builder surcharges(List<ShippingRateSurcharge> surcharges) {
-            Utils.checkNotNull(surcharges, "surcharges");
-            this.surcharges = Optional.ofNullable(surcharges);
-            return this;
-        }
-
-        /**
-         * Additional charges
-         */
-        public Builder surcharges(Optional<? extends List<ShippingRateSurcharge>> surcharges) {
-            Utils.checkNotNull(surcharges, "surcharges");
+        public Builder surcharges(@Nullable List<ShippingRateSurcharge> surcharges) {
             this.surcharges = surcharges;
             return this;
         }
 
-
-        public Builder taxAmount(double taxAmount) {
-            Utils.checkNotNull(taxAmount, "taxAmount");
-            this.taxAmount = Optional.ofNullable(taxAmount);
-            return this;
-        }
-
-        public Builder taxAmount(Optional<Double> taxAmount) {
-            Utils.checkNotNull(taxAmount, "taxAmount");
+        public Builder taxAmount(@Nullable Double taxAmount) {
             this.taxAmount = taxAmount;
             return this;
         }
 
-
-        public Builder title(String title) {
-            Utils.checkNotNull(title, "title");
-            this.title = title;
+        public Builder title(@Nonnull String title) {
+            this.title = Utils.checkNotNull(title, "title");
             return this;
         }
 
-
-        public Builder transitHours(double transitHours) {
-            Utils.checkNotNull(transitHours, "transitHours");
-            this.transitHours = Optional.ofNullable(transitHours);
-            return this;
-        }
-
-        public Builder transitHours(Optional<Double> transitHours) {
-            Utils.checkNotNull(transitHours, "transitHours");
+        public Builder transitHours(@Nullable Double transitHours) {
             this.transitHours = transitHours;
             return this;
         }
 
         public ShippingRateRate build() {
-
             return new ShippingRateRate(
                 amount, baseAmount, currency,
                 deliveryDays, deliveryTerms, description,

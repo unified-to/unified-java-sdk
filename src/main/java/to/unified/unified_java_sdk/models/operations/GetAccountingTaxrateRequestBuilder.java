@@ -5,32 +5,45 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.GetAccountingTaxrate;
 import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetAccountingTaxrateRequestBuilder {
-
-    private GetAccountingTaxrateRequest request;
     private final SDKConfiguration sdkConfiguration;
-    private final Headers _headers = new Headers(); 
+    private final Headers _headers = new Headers();
+    private GetAccountingTaxrateRequest request;
 
     public GetAccountingTaxrateRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
 
-    public GetAccountingTaxrateRequestBuilder request(GetAccountingTaxrateRequest request) {
-        Utils.checkNotNull(request, "request");
-        this.request = request;
+    public GetAccountingTaxrateRequestBuilder request(@Nonnull GetAccountingTaxrateRequest request) {
+        this.request = Utils.checkNotNull(request, "request");
         return this;
     }
 
+    private GetAccountingTaxrateRequest _buildRequest() {
+        return this.request;
+    }
+    
+    public GetAccountingTaxrateRequestBuilder header(String name, String value) {
+        Utils.checkNotNull(name, "name");
+        Utils.checkNotNull(value, "value");
+        this._headers.add(name, value);
+        return this;
+    }
+
+    /**
+    * Executes the request and returns the response.
+    *
+    * @return The response from the server.
+    */
     public GetAccountingTaxrateResponse call() {
-        
         RequestOperation<GetAccountingTaxrateRequest, GetAccountingTaxrateResponse> operation
               = new GetAccountingTaxrate.Sync(sdkConfiguration, _headers);
-
-        return operation.handleResponse(operation.doRequest(request));
+        return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

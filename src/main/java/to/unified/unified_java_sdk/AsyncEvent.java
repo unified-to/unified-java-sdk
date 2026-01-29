@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateCalendarEventRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCrmEventRequest;
@@ -100,7 +101,7 @@ public class AsyncEvent {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCalendarEventResponse>} - The async response
      */
-    public CompletableFuture<CreateCalendarEventResponse> createCalendarEvent(CreateCalendarEventRequest request) {
+    public CompletableFuture<CreateCalendarEventResponse> createCalendarEvent(@Nonnull CreateCalendarEventRequest request) {
         AsyncRequestOperation<CreateCalendarEventRequest, CreateCalendarEventResponse> operation
               = new CreateCalendarEvent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -123,7 +124,7 @@ public class AsyncEvent {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCrmEventResponse>} - The async response
      */
-    public CompletableFuture<CreateCrmEventResponse> createCrmEvent(CreateCrmEventRequest request) {
+    public CompletableFuture<CreateCrmEventResponse> createCrmEvent(@Nonnull CreateCrmEventRequest request) {
         AsyncRequestOperation<CreateCrmEventRequest, CreateCrmEventResponse> operation
               = new CreateCrmEvent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -146,7 +147,7 @@ public class AsyncEvent {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCalendarEventResponse>} - The async response
      */
-    public CompletableFuture<GetCalendarEventResponse> getCalendarEvent(GetCalendarEventRequest request) {
+    public CompletableFuture<GetCalendarEventResponse> getCalendarEvent(@Nonnull GetCalendarEventRequest request) {
         AsyncRequestOperation<GetCalendarEventRequest, GetCalendarEventResponse> operation
               = new GetCalendarEvent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -169,7 +170,7 @@ public class AsyncEvent {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCrmEventResponse>} - The async response
      */
-    public CompletableFuture<GetCrmEventResponse> getCrmEvent(GetCrmEventRequest request) {
+    public CompletableFuture<GetCrmEventResponse> getCrmEvent(@Nonnull GetCrmEventRequest request) {
         AsyncRequestOperation<GetCrmEventRequest, GetCrmEventResponse> operation
               = new GetCrmEvent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -192,7 +193,7 @@ public class AsyncEvent {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCalendarEventsResponse>} - The async response
      */
-    public CompletableFuture<ListCalendarEventsResponse> listCalendarEvents(ListCalendarEventsRequest request) {
+    public CompletableFuture<ListCalendarEventsResponse> listCalendarEvents(@Nonnull ListCalendarEventsRequest request) {
         AsyncRequestOperation<ListCalendarEventsRequest, ListCalendarEventsResponse> operation
               = new ListCalendarEvents.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -215,7 +216,7 @@ public class AsyncEvent {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCrmEventsResponse>} - The async response
      */
-    public CompletableFuture<ListCrmEventsResponse> listCrmEvents(ListCrmEventsRequest request) {
+    public CompletableFuture<ListCrmEventsResponse> listCrmEvents(@Nonnull ListCrmEventsRequest request) {
         AsyncRequestOperation<ListCrmEventsRequest, ListCrmEventsResponse> operation
               = new ListCrmEvents.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -238,7 +239,7 @@ public class AsyncEvent {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCalendarEventResponse>} - The async response
      */
-    public CompletableFuture<PatchCalendarEventResponse> patchCalendarEvent(PatchCalendarEventRequest request) {
+    public CompletableFuture<PatchCalendarEventResponse> patchCalendarEvent(@Nonnull PatchCalendarEventRequest request) {
         AsyncRequestOperation<PatchCalendarEventRequest, PatchCalendarEventResponse> operation
               = new PatchCalendarEvent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -261,7 +262,7 @@ public class AsyncEvent {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCrmEventResponse>} - The async response
      */
-    public CompletableFuture<PatchCrmEventResponse> patchCrmEvent(PatchCrmEventRequest request) {
+    public CompletableFuture<PatchCrmEventResponse> patchCrmEvent(@Nonnull PatchCrmEventRequest request) {
         AsyncRequestOperation<PatchCrmEventRequest, PatchCrmEventResponse> operation
               = new PatchCrmEvent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -284,7 +285,7 @@ public class AsyncEvent {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchMessagingEventResponse>} - The async response
      */
-    public CompletableFuture<PatchMessagingEventResponse> patchMessagingEvent(PatchMessagingEventRequest request) {
+    public CompletableFuture<PatchMessagingEventResponse> patchMessagingEvent(@Nonnull PatchMessagingEventRequest request) {
         AsyncRequestOperation<PatchMessagingEventRequest, PatchMessagingEventResponse> operation
               = new PatchMessagingEvent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -307,7 +308,7 @@ public class AsyncEvent {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCalendarEventResponse>} - The async response
      */
-    public CompletableFuture<RemoveCalendarEventResponse> removeCalendarEvent(RemoveCalendarEventRequest request) {
+    public CompletableFuture<RemoveCalendarEventResponse> removeCalendarEvent(@Nonnull RemoveCalendarEventRequest request) {
         AsyncRequestOperation<RemoveCalendarEventRequest, RemoveCalendarEventResponse> operation
               = new RemoveCalendarEvent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -330,7 +331,7 @@ public class AsyncEvent {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCrmEventResponse>} - The async response
      */
-    public CompletableFuture<RemoveCrmEventResponse> removeCrmEvent(RemoveCrmEventRequest request) {
+    public CompletableFuture<RemoveCrmEventResponse> removeCrmEvent(@Nonnull RemoveCrmEventRequest request) {
         AsyncRequestOperation<RemoveCrmEventRequest, RemoveCrmEventResponse> operation
               = new RemoveCrmEvent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -353,7 +354,7 @@ public class AsyncEvent {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCalendarEventResponse>} - The async response
      */
-    public CompletableFuture<UpdateCalendarEventResponse> updateCalendarEvent(UpdateCalendarEventRequest request) {
+    public CompletableFuture<UpdateCalendarEventResponse> updateCalendarEvent(@Nonnull UpdateCalendarEventRequest request) {
         AsyncRequestOperation<UpdateCalendarEventRequest, UpdateCalendarEventResponse> operation
               = new UpdateCalendarEvent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -376,7 +377,7 @@ public class AsyncEvent {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCrmEventResponse>} - The async response
      */
-    public CompletableFuture<UpdateCrmEventResponse> updateCrmEvent(UpdateCrmEventRequest request) {
+    public CompletableFuture<UpdateCrmEventResponse> updateCrmEvent(@Nonnull UpdateCrmEventRequest request) {
         AsyncRequestOperation<UpdateCrmEventRequest, UpdateCrmEventResponse> operation
               = new UpdateCrmEvent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -399,7 +400,7 @@ public class AsyncEvent {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateMessagingEventResponse>} - The async response
      */
-    public CompletableFuture<UpdateMessagingEventResponse> updateMessagingEvent(UpdateMessagingEventRequest request) {
+    public CompletableFuture<UpdateMessagingEventResponse> updateMessagingEvent(@Nonnull UpdateMessagingEventRequest request) {
         AsyncRequestOperation<UpdateMessagingEventRequest, UpdateMessagingEventResponse> operation
               = new UpdateMessagingEvent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

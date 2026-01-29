@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.GetShippingCarrierRequest;
 import to.unified.unified_java_sdk.models.operations.GetShippingCarrierRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetShippingCarrierResponse;
@@ -51,7 +52,7 @@ public class Carrier {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetShippingCarrierResponse getShippingCarrier(GetShippingCarrierRequest request) {
+    public GetShippingCarrierResponse getShippingCarrier(@Nonnull GetShippingCarrierRequest request) {
         RequestOperation<GetShippingCarrierRequest, GetShippingCarrierResponse> operation
               = new GetShippingCarrier.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -73,7 +74,7 @@ public class Carrier {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListShippingCarriersResponse listShippingCarriers(ListShippingCarriersRequest request) {
+    public ListShippingCarriersResponse listShippingCarriers(@Nonnull ListShippingCarriersRequest request) {
         RequestOperation<ListShippingCarriersRequest, ListShippingCarriersResponse> operation
               = new ListShippingCarriers.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

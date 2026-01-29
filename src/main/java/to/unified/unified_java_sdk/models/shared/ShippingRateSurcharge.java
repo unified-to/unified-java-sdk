@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
@@ -19,33 +19,29 @@ public class ShippingRateSurcharge {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
-    private Optional<Double> amount;
+    private Double amount;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
-    private Optional<String> code;
+    private String code;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
-    private Optional<String> description;
+    private String description;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
-    private Optional<String> name;
+    private String name;
 
     @JsonCreator
     public ShippingRateSurcharge(
-            @JsonProperty("amount") Optional<Double> amount,
-            @JsonProperty("code") Optional<String> code,
-            @JsonProperty("description") Optional<String> description,
-            @JsonProperty("name") Optional<String> name) {
-        Utils.checkNotNull(amount, "amount");
-        Utils.checkNotNull(code, "code");
-        Utils.checkNotNull(description, "description");
-        Utils.checkNotNull(name, "name");
+            @JsonProperty("amount") @Nullable Double amount,
+            @JsonProperty("code") @Nullable String code,
+            @JsonProperty("description") @Nullable String description,
+            @JsonProperty("name") @Nullable String name) {
         this.amount = amount;
         this.code = code;
         this.description = description;
@@ -53,28 +49,24 @@ public class ShippingRateSurcharge {
     }
     
     public ShippingRateSurcharge() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+        this(null, null, null,
+            null);
     }
 
-    @JsonIgnore
     public Optional<Double> amount() {
-        return amount;
+        return Optional.ofNullable(this.amount);
     }
 
-    @JsonIgnore
     public Optional<String> code() {
-        return code;
+        return Optional.ofNullable(this.code);
     }
 
-    @JsonIgnore
     public Optional<String> description() {
-        return description;
+        return Optional.ofNullable(this.description);
     }
 
-    @JsonIgnore
     public Optional<String> name() {
-        return name;
+        return Optional.ofNullable(this.name);
     }
 
     public static Builder builder() {
@@ -82,57 +74,29 @@ public class ShippingRateSurcharge {
     }
 
 
-    public ShippingRateSurcharge withAmount(double amount) {
-        Utils.checkNotNull(amount, "amount");
-        this.amount = Optional.ofNullable(amount);
-        return this;
-    }
-
-
-    public ShippingRateSurcharge withAmount(Optional<Double> amount) {
-        Utils.checkNotNull(amount, "amount");
+    public ShippingRateSurcharge withAmount(@Nullable Double amount) {
         this.amount = amount;
         return this;
     }
 
-    public ShippingRateSurcharge withCode(String code) {
-        Utils.checkNotNull(code, "code");
-        this.code = Optional.ofNullable(code);
-        return this;
-    }
 
-
-    public ShippingRateSurcharge withCode(Optional<String> code) {
-        Utils.checkNotNull(code, "code");
+    public ShippingRateSurcharge withCode(@Nullable String code) {
         this.code = code;
         return this;
     }
 
-    public ShippingRateSurcharge withDescription(String description) {
-        Utils.checkNotNull(description, "description");
-        this.description = Optional.ofNullable(description);
-        return this;
-    }
 
-
-    public ShippingRateSurcharge withDescription(Optional<String> description) {
-        Utils.checkNotNull(description, "description");
+    public ShippingRateSurcharge withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
-    public ShippingRateSurcharge withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = Optional.ofNullable(name);
-        return this;
-    }
 
-
-    public ShippingRateSurcharge withName(Optional<String> name) {
-        Utils.checkNotNull(name, "name");
+    public ShippingRateSurcharge withName(@Nullable String name) {
         this.name = name;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -169,72 +133,39 @@ public class ShippingRateSurcharge {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<Double> amount = Optional.empty();
+        private Double amount;
 
-        private Optional<String> code = Optional.empty();
+        private String code;
 
-        private Optional<String> description = Optional.empty();
+        private String description;
 
-        private Optional<String> name = Optional.empty();
+        private String name;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder amount(double amount) {
-            Utils.checkNotNull(amount, "amount");
-            this.amount = Optional.ofNullable(amount);
-            return this;
-        }
-
-        public Builder amount(Optional<Double> amount) {
-            Utils.checkNotNull(amount, "amount");
+        public Builder amount(@Nullable Double amount) {
             this.amount = amount;
             return this;
         }
 
-
-        public Builder code(String code) {
-            Utils.checkNotNull(code, "code");
-            this.code = Optional.ofNullable(code);
-            return this;
-        }
-
-        public Builder code(Optional<String> code) {
-            Utils.checkNotNull(code, "code");
+        public Builder code(@Nullable String code) {
             this.code = code;
             return this;
         }
 
-
-        public Builder description(String description) {
-            Utils.checkNotNull(description, "description");
-            this.description = Optional.ofNullable(description);
-            return this;
-        }
-
-        public Builder description(Optional<String> description) {
-            Utils.checkNotNull(description, "description");
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = Optional.ofNullable(name);
-            return this;
-        }
-
-        public Builder name(Optional<String> name) {
-            Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
         public ShippingRateSurcharge build() {
-
             return new ShippingRateSurcharge(
                 amount, code, description,
                 name);

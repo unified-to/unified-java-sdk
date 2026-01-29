@@ -4,14 +4,13 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
@@ -23,68 +22,59 @@ public class AdsReport {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
-    private Optional<String> currency;
+    private String currency;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
-    private Optional<OffsetDateTime> endAt;
+    private OffsetDateTime endAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
-    private Optional<? extends List<AdsReportMetrics>> metrics;
+    private List<AdsReportMetrics> metrics;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_id")
-    private Optional<String> organizationId;
+    private String organizationId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
-    private Optional<OffsetDateTime> startAt;
+    private OffsetDateTime startAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
     @JsonCreator
     public AdsReport(
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("currency") Optional<String> currency,
-            @JsonProperty("end_at") Optional<OffsetDateTime> endAt,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("metrics") Optional<? extends List<AdsReportMetrics>> metrics,
-            @JsonProperty("organization_id") Optional<String> organizationId,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("start_at") Optional<OffsetDateTime> startAt,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(currency, "currency");
-        Utils.checkNotNull(endAt, "endAt");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(metrics, "metrics");
-        Utils.checkNotNull(organizationId, "organizationId");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(startAt, "startAt");
-        Utils.checkNotNull(updatedAt, "updatedAt");
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("currency") @Nullable String currency,
+            @JsonProperty("end_at") @Nullable OffsetDateTime endAt,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("metrics") @Nullable List<AdsReportMetrics> metrics,
+            @JsonProperty("organization_id") @Nullable String organizationId,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("start_at") @Nullable OffsetDateTime startAt,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.createdAt = createdAt;
         this.currency = currency;
         this.endAt = endAt;
@@ -97,56 +87,45 @@ public class AdsReport {
     }
     
     public AdsReport() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<String> currency() {
-        return currency;
+        return Optional.ofNullable(this.currency);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> endAt() {
-        return endAt;
+        return Optional.ofNullable(this.endAt);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<AdsReportMetrics>> metrics() {
-        return (Optional<List<AdsReportMetrics>>) metrics;
+        return Optional.ofNullable(this.metrics);
     }
 
-    @JsonIgnore
     public Optional<String> organizationId() {
-        return organizationId;
+        return Optional.ofNullable(this.organizationId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> startAt() {
-        return startAt;
+        return Optional.ofNullable(this.startAt);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
     public static Builder builder() {
@@ -154,122 +133,59 @@ public class AdsReport {
     }
 
 
-    public AdsReport withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
-
-
-    public AdsReport withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public AdsReport withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public AdsReport withCurrency(String currency) {
-        Utils.checkNotNull(currency, "currency");
-        this.currency = Optional.ofNullable(currency);
-        return this;
-    }
 
-
-    public AdsReport withCurrency(Optional<String> currency) {
-        Utils.checkNotNull(currency, "currency");
+    public AdsReport withCurrency(@Nullable String currency) {
         this.currency = currency;
         return this;
     }
 
-    public AdsReport withEndAt(OffsetDateTime endAt) {
-        Utils.checkNotNull(endAt, "endAt");
-        this.endAt = Optional.ofNullable(endAt);
-        return this;
-    }
 
-
-    public AdsReport withEndAt(Optional<OffsetDateTime> endAt) {
-        Utils.checkNotNull(endAt, "endAt");
+    public AdsReport withEndAt(@Nullable OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
     }
 
-    public AdsReport withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public AdsReport withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public AdsReport withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public AdsReport withMetrics(List<AdsReportMetrics> metrics) {
-        Utils.checkNotNull(metrics, "metrics");
-        this.metrics = Optional.ofNullable(metrics);
-        return this;
-    }
 
-
-    public AdsReport withMetrics(Optional<? extends List<AdsReportMetrics>> metrics) {
-        Utils.checkNotNull(metrics, "metrics");
+    public AdsReport withMetrics(@Nullable List<AdsReportMetrics> metrics) {
         this.metrics = metrics;
         return this;
     }
 
-    public AdsReport withOrganizationId(String organizationId) {
-        Utils.checkNotNull(organizationId, "organizationId");
-        this.organizationId = Optional.ofNullable(organizationId);
-        return this;
-    }
 
-
-    public AdsReport withOrganizationId(Optional<String> organizationId) {
-        Utils.checkNotNull(organizationId, "organizationId");
+    public AdsReport withOrganizationId(@Nullable String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
 
-    public AdsReport withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public AdsReport withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public AdsReport withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public AdsReport withStartAt(OffsetDateTime startAt) {
-        Utils.checkNotNull(startAt, "startAt");
-        this.startAt = Optional.ofNullable(startAt);
-        return this;
-    }
 
-
-    public AdsReport withStartAt(Optional<OffsetDateTime> startAt) {
-        Utils.checkNotNull(startAt, "startAt");
+    public AdsReport withStartAt(@Nullable OffsetDateTime startAt) {
         this.startAt = startAt;
         return this;
     }
 
-    public AdsReport withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public AdsReport withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public AdsReport withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -317,147 +233,74 @@ public class AdsReport {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<String> currency = Optional.empty();
+        private String currency;
 
-        private Optional<OffsetDateTime> endAt = Optional.empty();
+        private OffsetDateTime endAt;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<? extends List<AdsReportMetrics>> metrics = Optional.empty();
+        private List<AdsReportMetrics> metrics;
 
-        private Optional<String> organizationId = Optional.empty();
+        private String organizationId;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<OffsetDateTime> startAt = Optional.empty();
+        private OffsetDateTime startAt;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder currency(String currency) {
-            Utils.checkNotNull(currency, "currency");
-            this.currency = Optional.ofNullable(currency);
-            return this;
-        }
-
-        public Builder currency(Optional<String> currency) {
-            Utils.checkNotNull(currency, "currency");
+        public Builder currency(@Nullable String currency) {
             this.currency = currency;
             return this;
         }
 
-
-        public Builder endAt(OffsetDateTime endAt) {
-            Utils.checkNotNull(endAt, "endAt");
-            this.endAt = Optional.ofNullable(endAt);
-            return this;
-        }
-
-        public Builder endAt(Optional<OffsetDateTime> endAt) {
-            Utils.checkNotNull(endAt, "endAt");
+        public Builder endAt(@Nullable OffsetDateTime endAt) {
             this.endAt = endAt;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder metrics(List<AdsReportMetrics> metrics) {
-            Utils.checkNotNull(metrics, "metrics");
-            this.metrics = Optional.ofNullable(metrics);
-            return this;
-        }
-
-        public Builder metrics(Optional<? extends List<AdsReportMetrics>> metrics) {
-            Utils.checkNotNull(metrics, "metrics");
+        public Builder metrics(@Nullable List<AdsReportMetrics> metrics) {
             this.metrics = metrics;
             return this;
         }
 
-
-        public Builder organizationId(String organizationId) {
-            Utils.checkNotNull(organizationId, "organizationId");
-            this.organizationId = Optional.ofNullable(organizationId);
-            return this;
-        }
-
-        public Builder organizationId(Optional<String> organizationId) {
-            Utils.checkNotNull(organizationId, "organizationId");
+        public Builder organizationId(@Nullable String organizationId) {
             this.organizationId = organizationId;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder startAt(OffsetDateTime startAt) {
-            Utils.checkNotNull(startAt, "startAt");
-            this.startAt = Optional.ofNullable(startAt);
-            return this;
-        }
-
-        public Builder startAt(Optional<OffsetDateTime> startAt) {
-            Utils.checkNotNull(startAt, "startAt");
+        public Builder startAt(@Nullable OffsetDateTime startAt) {
             this.startAt = startAt;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
         public AdsReport build() {
-
             return new AdsReport(
                 createdAt, currency, endAt,
                 id, metrics, organizationId,

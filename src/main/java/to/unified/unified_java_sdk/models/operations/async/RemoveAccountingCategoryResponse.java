@@ -4,13 +4,14 @@
 package to.unified.unified_java_sdk.models.operations.async;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import java.lang.Integer;
+import jakarta.annotation.Nonnull;
+import java.io.InputStream;
 import java.lang.Override;
 import java.lang.String;
 import java.net.http.HttpResponse;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import to.unified.unified_java_sdk.utils.AsyncResponse;
 import to.unified.unified_java_sdk.utils.Blob;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -37,48 +38,43 @@ public class RemoveAccountingCategoryResponse implements AsyncResponse {
 
     @JsonCreator
     public RemoveAccountingCategoryResponse(
-            String contentType,
-            Map<String, List<String>> headers,
+            @Nonnull String contentType,
+            @Nonnull Map<String, List<String>> headers,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(contentType, "contentType");
+            @Nonnull HttpResponse<Blob> rawResponse) {
         headers = Utils.emptyMapIfNull(headers);
-        Utils.checkNotNull(headers, "headers");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.contentType = contentType;
-        this.headers = headers;
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
+        this.headers = Optional.ofNullable(headers)
+            .orElseThrow(() -> new IllegalArgumentException("headers cannot be null"));
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
-    @JsonIgnore
     public Map<String, List<String>> headers() {
-        return headers;
+        return this.headers;
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<Blob> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     public static Builder builder() {
@@ -89,35 +85,35 @@ public class RemoveAccountingCategoryResponse implements AsyncResponse {
     /**
      * HTTP response content type for this operation
      */
-    public RemoveAccountingCategoryResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
+    public RemoveAccountingCategoryResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
 
-    public RemoveAccountingCategoryResponse withHeaders(Map<String, List<String>> headers) {
-        Utils.checkNotNull(headers, "headers");
-        this.headers = headers;
+
+    public RemoveAccountingCategoryResponse withHeaders(@Nonnull Map<String, List<String>> headers) {
+        this.headers = Utils.checkNotNull(headers, "headers");
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public RemoveAccountingCategoryResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public RemoveAccountingCategoryResponse withRawResponse(HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
+    public RemoveAccountingCategoryResponse withRawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -158,7 +154,7 @@ public class RemoveAccountingCategoryResponse implements AsyncResponse {
 
         private Map<String, List<String>> headers;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<Blob> rawResponse;
 
@@ -166,45 +162,36 @@ public class RemoveAccountingCategoryResponse implements AsyncResponse {
           // force use of static builder() method
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
 
-
-        public Builder headers(Map<String, List<String>> headers) {
-            Utils.checkNotNull(headers, "headers");
-            this.headers = headers;
+        public Builder headers(@Nonnull Map<String, List<String>> headers) {
+            this.headers = Utils.checkNotNull(headers, "headers");
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<Blob> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
+        public Builder rawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         public RemoveAccountingCategoryResponse build() {
-
             return new RemoveAccountingCategoryResponse(
                 contentType, headers, statusCode,
                 rawResponse);

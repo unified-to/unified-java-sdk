@@ -5,32 +5,45 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.RemoveCommerceLocation;
 import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveCommerceLocationRequestBuilder {
-
-    private RemoveCommerceLocationRequest request;
     private final SDKConfiguration sdkConfiguration;
-    private final Headers _headers = new Headers(); 
+    private final Headers _headers = new Headers();
+    private RemoveCommerceLocationRequest request;
 
     public RemoveCommerceLocationRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
 
-    public RemoveCommerceLocationRequestBuilder request(RemoveCommerceLocationRequest request) {
-        Utils.checkNotNull(request, "request");
-        this.request = request;
+    public RemoveCommerceLocationRequestBuilder request(@Nonnull RemoveCommerceLocationRequest request) {
+        this.request = Utils.checkNotNull(request, "request");
         return this;
     }
 
+    private RemoveCommerceLocationRequest _buildRequest() {
+        return this.request;
+    }
+    
+    public RemoveCommerceLocationRequestBuilder header(String name, String value) {
+        Utils.checkNotNull(name, "name");
+        Utils.checkNotNull(value, "value");
+        this._headers.add(name, value);
+        return this;
+    }
+
+    /**
+    * Executes the request and returns the response.
+    *
+    * @return The response from the server.
+    */
     public RemoveCommerceLocationResponse call() {
-        
         RequestOperation<RemoveCommerceLocationRequest, RemoveCommerceLocationResponse> operation
               = new RemoveCommerceLocation.Sync(sdkConfiguration, _headers);
-
-        return operation.handleResponse(operation.doRequest(request));
+        return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

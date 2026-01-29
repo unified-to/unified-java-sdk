@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingTransactionRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingTransactionRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingTransactionResponse;
@@ -67,7 +68,7 @@ public class Transaction {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAccountingTransactionResponse createAccountingTransaction(CreateAccountingTransactionRequest request) {
+    public CreateAccountingTransactionResponse createAccountingTransaction(@Nonnull CreateAccountingTransactionRequest request) {
         RequestOperation<CreateAccountingTransactionRequest, CreateAccountingTransactionResponse> operation
               = new CreateAccountingTransaction.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -89,7 +90,7 @@ public class Transaction {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingTransactionResponse getAccountingTransaction(GetAccountingTransactionRequest request) {
+    public GetAccountingTransactionResponse getAccountingTransaction(@Nonnull GetAccountingTransactionRequest request) {
         RequestOperation<GetAccountingTransactionRequest, GetAccountingTransactionResponse> operation
               = new GetAccountingTransaction.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -111,7 +112,7 @@ public class Transaction {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingTransactionsResponse listAccountingTransactions(ListAccountingTransactionsRequest request) {
+    public ListAccountingTransactionsResponse listAccountingTransactions(@Nonnull ListAccountingTransactionsRequest request) {
         RequestOperation<ListAccountingTransactionsRequest, ListAccountingTransactionsResponse> operation
               = new ListAccountingTransactions.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -133,7 +134,7 @@ public class Transaction {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAccountingTransactionResponse patchAccountingTransaction(PatchAccountingTransactionRequest request) {
+    public PatchAccountingTransactionResponse patchAccountingTransaction(@Nonnull PatchAccountingTransactionRequest request) {
         RequestOperation<PatchAccountingTransactionRequest, PatchAccountingTransactionResponse> operation
               = new PatchAccountingTransaction.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -155,7 +156,7 @@ public class Transaction {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAccountingTransactionResponse removeAccountingTransaction(RemoveAccountingTransactionRequest request) {
+    public RemoveAccountingTransactionResponse removeAccountingTransaction(@Nonnull RemoveAccountingTransactionRequest request) {
         RequestOperation<RemoveAccountingTransactionRequest, RemoveAccountingTransactionResponse> operation
               = new RemoveAccountingTransaction.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -177,7 +178,7 @@ public class Transaction {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAccountingTransactionResponse updateAccountingTransaction(UpdateAccountingTransactionRequest request) {
+    public UpdateAccountingTransactionResponse updateAccountingTransaction(@Nonnull UpdateAccountingTransactionRequest request) {
         RequestOperation<UpdateAccountingTransactionRequest, UpdateAccountingTransactionResponse> operation
               = new UpdateAccountingTransaction.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

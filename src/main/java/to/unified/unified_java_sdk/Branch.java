@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateRepoBranchRequest;
 import to.unified.unified_java_sdk.models.operations.CreateRepoBranchRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateRepoBranchResponse;
@@ -67,7 +68,7 @@ public class Branch {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateRepoBranchResponse createRepoBranch(CreateRepoBranchRequest request) {
+    public CreateRepoBranchResponse createRepoBranch(@Nonnull CreateRepoBranchRequest request) {
         RequestOperation<CreateRepoBranchRequest, CreateRepoBranchResponse> operation
               = new CreateRepoBranch.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -89,7 +90,7 @@ public class Branch {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetRepoBranchResponse getRepoBranch(GetRepoBranchRequest request) {
+    public GetRepoBranchResponse getRepoBranch(@Nonnull GetRepoBranchRequest request) {
         RequestOperation<GetRepoBranchRequest, GetRepoBranchResponse> operation
               = new GetRepoBranch.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -111,7 +112,7 @@ public class Branch {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListRepoBranchesResponse listRepoBranches(ListRepoBranchesRequest request) {
+    public ListRepoBranchesResponse listRepoBranches(@Nonnull ListRepoBranchesRequest request) {
         RequestOperation<ListRepoBranchesRequest, ListRepoBranchesResponse> operation
               = new ListRepoBranches.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -133,7 +134,7 @@ public class Branch {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchRepoBranchResponse patchRepoBranch(PatchRepoBranchRequest request) {
+    public PatchRepoBranchResponse patchRepoBranch(@Nonnull PatchRepoBranchRequest request) {
         RequestOperation<PatchRepoBranchRequest, PatchRepoBranchResponse> operation
               = new PatchRepoBranch.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -155,7 +156,7 @@ public class Branch {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveRepoBranchResponse removeRepoBranch(RemoveRepoBranchRequest request) {
+    public RemoveRepoBranchResponse removeRepoBranch(@Nonnull RemoveRepoBranchRequest request) {
         RequestOperation<RemoveRepoBranchRequest, RemoveRepoBranchResponse> operation
               = new RemoveRepoBranch.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -177,7 +178,7 @@ public class Branch {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateRepoBranchResponse updateRepoBranch(UpdateRepoBranchRequest request) {
+    public UpdateRepoBranchResponse updateRepoBranch(@Nonnull UpdateRepoBranchRequest request) {
         RequestOperation<UpdateRepoBranchRequest, UpdateRepoBranchResponse> operation
               = new UpdateRepoBranch.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateTicketingCustomerRequest;
 import to.unified.unified_java_sdk.models.operations.CreateTicketingCustomerRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateTicketingCustomerResponse;
@@ -67,7 +68,7 @@ public class Customer {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateTicketingCustomerResponse createTicketingCustomer(CreateTicketingCustomerRequest request) {
+    public CreateTicketingCustomerResponse createTicketingCustomer(@Nonnull CreateTicketingCustomerRequest request) {
         RequestOperation<CreateTicketingCustomerRequest, CreateTicketingCustomerResponse> operation
               = new CreateTicketingCustomer.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -89,7 +90,7 @@ public class Customer {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetTicketingCustomerResponse getTicketingCustomer(GetTicketingCustomerRequest request) {
+    public GetTicketingCustomerResponse getTicketingCustomer(@Nonnull GetTicketingCustomerRequest request) {
         RequestOperation<GetTicketingCustomerRequest, GetTicketingCustomerResponse> operation
               = new GetTicketingCustomer.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -111,7 +112,7 @@ public class Customer {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListTicketingCustomersResponse listTicketingCustomers(ListTicketingCustomersRequest request) {
+    public ListTicketingCustomersResponse listTicketingCustomers(@Nonnull ListTicketingCustomersRequest request) {
         RequestOperation<ListTicketingCustomersRequest, ListTicketingCustomersResponse> operation
               = new ListTicketingCustomers.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -133,7 +134,7 @@ public class Customer {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchTicketingCustomerResponse patchTicketingCustomer(PatchTicketingCustomerRequest request) {
+    public PatchTicketingCustomerResponse patchTicketingCustomer(@Nonnull PatchTicketingCustomerRequest request) {
         RequestOperation<PatchTicketingCustomerRequest, PatchTicketingCustomerResponse> operation
               = new PatchTicketingCustomer.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -155,7 +156,7 @@ public class Customer {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveTicketingCustomerResponse removeTicketingCustomer(RemoveTicketingCustomerRequest request) {
+    public RemoveTicketingCustomerResponse removeTicketingCustomer(@Nonnull RemoveTicketingCustomerRequest request) {
         RequestOperation<RemoveTicketingCustomerRequest, RemoveTicketingCustomerResponse> operation
               = new RemoveTicketingCustomer.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -177,7 +178,7 @@ public class Customer {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateTicketingCustomerResponse updateTicketingCustomer(UpdateTicketingCustomerRequest request) {
+    public UpdateTicketingCustomerResponse updateTicketingCustomer(@Nonnull UpdateTicketingCustomerRequest request) {
         RequestOperation<UpdateTicketingCustomerRequest, UpdateTicketingCustomerResponse> operation
               = new UpdateTicketingCustomer.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

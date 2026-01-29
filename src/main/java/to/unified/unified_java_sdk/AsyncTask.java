@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateTaskCommentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateTaskProjectRequest;
@@ -124,7 +125,7 @@ public class AsyncTask {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateTaskCommentResponse>} - The async response
      */
-    public CompletableFuture<CreateTaskCommentResponse> createTaskComment(CreateTaskCommentRequest request) {
+    public CompletableFuture<CreateTaskCommentResponse> createTaskComment(@Nonnull CreateTaskCommentRequest request) {
         AsyncRequestOperation<CreateTaskCommentRequest, CreateTaskCommentResponse> operation
               = new CreateTaskComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -147,7 +148,7 @@ public class AsyncTask {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateTaskProjectResponse>} - The async response
      */
-    public CompletableFuture<CreateTaskProjectResponse> createTaskProject(CreateTaskProjectRequest request) {
+    public CompletableFuture<CreateTaskProjectResponse> createTaskProject(@Nonnull CreateTaskProjectRequest request) {
         AsyncRequestOperation<CreateTaskProjectRequest, CreateTaskProjectResponse> operation
               = new CreateTaskProject.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -170,7 +171,7 @@ public class AsyncTask {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateTaskTaskResponse>} - The async response
      */
-    public CompletableFuture<CreateTaskTaskResponse> createTaskTask(CreateTaskTaskRequest request) {
+    public CompletableFuture<CreateTaskTaskResponse> createTaskTask(@Nonnull CreateTaskTaskRequest request) {
         AsyncRequestOperation<CreateTaskTaskRequest, CreateTaskTaskResponse> operation
               = new CreateTaskTask.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -193,7 +194,7 @@ public class AsyncTask {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetTaskChangeResponse>} - The async response
      */
-    public CompletableFuture<GetTaskChangeResponse> getTaskChange(GetTaskChangeRequest request) {
+    public CompletableFuture<GetTaskChangeResponse> getTaskChange(@Nonnull GetTaskChangeRequest request) {
         AsyncRequestOperation<GetTaskChangeRequest, GetTaskChangeResponse> operation
               = new GetTaskChange.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -216,7 +217,7 @@ public class AsyncTask {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetTaskCommentResponse>} - The async response
      */
-    public CompletableFuture<GetTaskCommentResponse> getTaskComment(GetTaskCommentRequest request) {
+    public CompletableFuture<GetTaskCommentResponse> getTaskComment(@Nonnull GetTaskCommentRequest request) {
         AsyncRequestOperation<GetTaskCommentRequest, GetTaskCommentResponse> operation
               = new GetTaskComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -239,7 +240,7 @@ public class AsyncTask {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetTaskProjectResponse>} - The async response
      */
-    public CompletableFuture<GetTaskProjectResponse> getTaskProject(GetTaskProjectRequest request) {
+    public CompletableFuture<GetTaskProjectResponse> getTaskProject(@Nonnull GetTaskProjectRequest request) {
         AsyncRequestOperation<GetTaskProjectRequest, GetTaskProjectResponse> operation
               = new GetTaskProject.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -262,7 +263,7 @@ public class AsyncTask {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetTaskTaskResponse>} - The async response
      */
-    public CompletableFuture<GetTaskTaskResponse> getTaskTask(GetTaskTaskRequest request) {
+    public CompletableFuture<GetTaskTaskResponse> getTaskTask(@Nonnull GetTaskTaskRequest request) {
         AsyncRequestOperation<GetTaskTaskRequest, GetTaskTaskResponse> operation
               = new GetTaskTask.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -285,7 +286,7 @@ public class AsyncTask {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListTaskChangesResponse>} - The async response
      */
-    public CompletableFuture<ListTaskChangesResponse> listTaskChanges(ListTaskChangesRequest request) {
+    public CompletableFuture<ListTaskChangesResponse> listTaskChanges(@Nonnull ListTaskChangesRequest request) {
         AsyncRequestOperation<ListTaskChangesRequest, ListTaskChangesResponse> operation
               = new ListTaskChanges.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -308,7 +309,7 @@ public class AsyncTask {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListTaskCommentsResponse>} - The async response
      */
-    public CompletableFuture<ListTaskCommentsResponse> listTaskComments(ListTaskCommentsRequest request) {
+    public CompletableFuture<ListTaskCommentsResponse> listTaskComments(@Nonnull ListTaskCommentsRequest request) {
         AsyncRequestOperation<ListTaskCommentsRequest, ListTaskCommentsResponse> operation
               = new ListTaskComments.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -331,7 +332,7 @@ public class AsyncTask {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListTaskProjectsResponse>} - The async response
      */
-    public CompletableFuture<ListTaskProjectsResponse> listTaskProjects(ListTaskProjectsRequest request) {
+    public CompletableFuture<ListTaskProjectsResponse> listTaskProjects(@Nonnull ListTaskProjectsRequest request) {
         AsyncRequestOperation<ListTaskProjectsRequest, ListTaskProjectsResponse> operation
               = new ListTaskProjects.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -354,7 +355,7 @@ public class AsyncTask {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListTaskTasksResponse>} - The async response
      */
-    public CompletableFuture<ListTaskTasksResponse> listTaskTasks(ListTaskTasksRequest request) {
+    public CompletableFuture<ListTaskTasksResponse> listTaskTasks(@Nonnull ListTaskTasksRequest request) {
         AsyncRequestOperation<ListTaskTasksRequest, ListTaskTasksResponse> operation
               = new ListTaskTasks.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -377,7 +378,7 @@ public class AsyncTask {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchTaskCommentResponse>} - The async response
      */
-    public CompletableFuture<PatchTaskCommentResponse> patchTaskComment(PatchTaskCommentRequest request) {
+    public CompletableFuture<PatchTaskCommentResponse> patchTaskComment(@Nonnull PatchTaskCommentRequest request) {
         AsyncRequestOperation<PatchTaskCommentRequest, PatchTaskCommentResponse> operation
               = new PatchTaskComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -400,7 +401,7 @@ public class AsyncTask {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchTaskProjectResponse>} - The async response
      */
-    public CompletableFuture<PatchTaskProjectResponse> patchTaskProject(PatchTaskProjectRequest request) {
+    public CompletableFuture<PatchTaskProjectResponse> patchTaskProject(@Nonnull PatchTaskProjectRequest request) {
         AsyncRequestOperation<PatchTaskProjectRequest, PatchTaskProjectResponse> operation
               = new PatchTaskProject.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -423,7 +424,7 @@ public class AsyncTask {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchTaskTaskResponse>} - The async response
      */
-    public CompletableFuture<PatchTaskTaskResponse> patchTaskTask(PatchTaskTaskRequest request) {
+    public CompletableFuture<PatchTaskTaskResponse> patchTaskTask(@Nonnull PatchTaskTaskRequest request) {
         AsyncRequestOperation<PatchTaskTaskRequest, PatchTaskTaskResponse> operation
               = new PatchTaskTask.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -446,7 +447,7 @@ public class AsyncTask {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveTaskCommentResponse>} - The async response
      */
-    public CompletableFuture<RemoveTaskCommentResponse> removeTaskComment(RemoveTaskCommentRequest request) {
+    public CompletableFuture<RemoveTaskCommentResponse> removeTaskComment(@Nonnull RemoveTaskCommentRequest request) {
         AsyncRequestOperation<RemoveTaskCommentRequest, RemoveTaskCommentResponse> operation
               = new RemoveTaskComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -469,7 +470,7 @@ public class AsyncTask {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveTaskProjectResponse>} - The async response
      */
-    public CompletableFuture<RemoveTaskProjectResponse> removeTaskProject(RemoveTaskProjectRequest request) {
+    public CompletableFuture<RemoveTaskProjectResponse> removeTaskProject(@Nonnull RemoveTaskProjectRequest request) {
         AsyncRequestOperation<RemoveTaskProjectRequest, RemoveTaskProjectResponse> operation
               = new RemoveTaskProject.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -492,7 +493,7 @@ public class AsyncTask {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveTaskTaskResponse>} - The async response
      */
-    public CompletableFuture<RemoveTaskTaskResponse> removeTaskTask(RemoveTaskTaskRequest request) {
+    public CompletableFuture<RemoveTaskTaskResponse> removeTaskTask(@Nonnull RemoveTaskTaskRequest request) {
         AsyncRequestOperation<RemoveTaskTaskRequest, RemoveTaskTaskResponse> operation
               = new RemoveTaskTask.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -515,7 +516,7 @@ public class AsyncTask {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateTaskCommentResponse>} - The async response
      */
-    public CompletableFuture<UpdateTaskCommentResponse> updateTaskComment(UpdateTaskCommentRequest request) {
+    public CompletableFuture<UpdateTaskCommentResponse> updateTaskComment(@Nonnull UpdateTaskCommentRequest request) {
         AsyncRequestOperation<UpdateTaskCommentRequest, UpdateTaskCommentResponse> operation
               = new UpdateTaskComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -538,7 +539,7 @@ public class AsyncTask {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateTaskProjectResponse>} - The async response
      */
-    public CompletableFuture<UpdateTaskProjectResponse> updateTaskProject(UpdateTaskProjectRequest request) {
+    public CompletableFuture<UpdateTaskProjectResponse> updateTaskProject(@Nonnull UpdateTaskProjectRequest request) {
         AsyncRequestOperation<UpdateTaskProjectRequest, UpdateTaskProjectResponse> operation
               = new UpdateTaskProject.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -561,7 +562,7 @@ public class AsyncTask {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateTaskTaskResponse>} - The async response
      */
-    public CompletableFuture<UpdateTaskTaskResponse> updateTaskTask(UpdateTaskTaskRequest request) {
+    public CompletableFuture<UpdateTaskTaskResponse> updateTaskTask(@Nonnull UpdateTaskTaskRequest request) {
         AsyncRequestOperation<UpdateTaskTaskRequest, UpdateTaskTaskResponse> operation
               = new UpdateTaskTask.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

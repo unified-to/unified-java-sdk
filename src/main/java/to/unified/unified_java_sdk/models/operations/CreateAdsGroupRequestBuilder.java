@@ -5,32 +5,45 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.CreateAdsGroup;
 import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateAdsGroupRequestBuilder {
-
-    private CreateAdsGroupRequest request;
     private final SDKConfiguration sdkConfiguration;
-    private final Headers _headers = new Headers(); 
+    private final Headers _headers = new Headers();
+    private CreateAdsGroupRequest request;
 
     public CreateAdsGroupRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
 
-    public CreateAdsGroupRequestBuilder request(CreateAdsGroupRequest request) {
-        Utils.checkNotNull(request, "request");
-        this.request = request;
+    public CreateAdsGroupRequestBuilder request(@Nonnull CreateAdsGroupRequest request) {
+        this.request = Utils.checkNotNull(request, "request");
         return this;
     }
 
+    private CreateAdsGroupRequest _buildRequest() {
+        return this.request;
+    }
+    
+    public CreateAdsGroupRequestBuilder header(String name, String value) {
+        Utils.checkNotNull(name, "name");
+        Utils.checkNotNull(value, "value");
+        this._headers.add(name, value);
+        return this;
+    }
+
+    /**
+    * Executes the request and returns the response.
+    *
+    * @return The response from the server.
+    */
     public CreateAdsGroupResponse call() {
-        
         RequestOperation<CreateAdsGroupRequest, CreateAdsGroupResponse> operation
               = new CreateAdsGroup.Sync(sdkConfiguration, _headers);
-
-        return operation.handleResponse(operation.doRequest(request));
+        return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

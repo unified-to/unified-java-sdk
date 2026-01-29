@@ -4,14 +4,13 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -20,40 +19,35 @@ public class PropertyCalendarEventOrganizer {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
-    private Optional<String> email;
+    private String email;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
-    private Optional<String> name;
+    private String name;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required")
-    private Optional<Boolean> required;
+    private Boolean required;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
-    private Optional<? extends PropertyCalendarEventOrganizerStatus> status;
+    private PropertyCalendarEventOrganizerStatus status;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
-    private Optional<String> userId;
+    private String userId;
 
     @JsonCreator
     public PropertyCalendarEventOrganizer(
-            @JsonProperty("email") Optional<String> email,
-            @JsonProperty("name") Optional<String> name,
-            @JsonProperty("required") Optional<Boolean> required,
-            @JsonProperty("status") Optional<? extends PropertyCalendarEventOrganizerStatus> status,
-            @JsonProperty("user_id") Optional<String> userId) {
-        Utils.checkNotNull(email, "email");
-        Utils.checkNotNull(name, "name");
-        Utils.checkNotNull(required, "required");
-        Utils.checkNotNull(status, "status");
-        Utils.checkNotNull(userId, "userId");
+            @JsonProperty("email") @Nullable String email,
+            @JsonProperty("name") @Nullable String name,
+            @JsonProperty("required") @Nullable Boolean required,
+            @JsonProperty("status") @Nullable PropertyCalendarEventOrganizerStatus status,
+            @JsonProperty("user_id") @Nullable String userId) {
         this.email = email;
         this.name = name;
         this.required = required;
@@ -62,34 +56,28 @@ public class PropertyCalendarEventOrganizer {
     }
     
     public PropertyCalendarEventOrganizer() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null);
     }
 
-    @JsonIgnore
     public Optional<String> email() {
-        return email;
+        return Optional.ofNullable(this.email);
     }
 
-    @JsonIgnore
     public Optional<String> name() {
-        return name;
+        return Optional.ofNullable(this.name);
     }
 
-    @JsonIgnore
     public Optional<Boolean> required() {
-        return required;
+        return Optional.ofNullable(this.required);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<PropertyCalendarEventOrganizerStatus> status() {
-        return (Optional<PropertyCalendarEventOrganizerStatus>) status;
+        return Optional.ofNullable(this.status);
     }
 
-    @JsonIgnore
     public Optional<String> userId() {
-        return userId;
+        return Optional.ofNullable(this.userId);
     }
 
     public static Builder builder() {
@@ -97,70 +85,35 @@ public class PropertyCalendarEventOrganizer {
     }
 
 
-    public PropertyCalendarEventOrganizer withEmail(String email) {
-        Utils.checkNotNull(email, "email");
-        this.email = Optional.ofNullable(email);
-        return this;
-    }
-
-
-    public PropertyCalendarEventOrganizer withEmail(Optional<String> email) {
-        Utils.checkNotNull(email, "email");
+    public PropertyCalendarEventOrganizer withEmail(@Nullable String email) {
         this.email = email;
         return this;
     }
 
-    public PropertyCalendarEventOrganizer withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = Optional.ofNullable(name);
-        return this;
-    }
 
-
-    public PropertyCalendarEventOrganizer withName(Optional<String> name) {
-        Utils.checkNotNull(name, "name");
+    public PropertyCalendarEventOrganizer withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
-    public PropertyCalendarEventOrganizer withRequired(boolean required) {
-        Utils.checkNotNull(required, "required");
-        this.required = Optional.ofNullable(required);
-        return this;
-    }
 
-
-    public PropertyCalendarEventOrganizer withRequired(Optional<Boolean> required) {
-        Utils.checkNotNull(required, "required");
+    public PropertyCalendarEventOrganizer withRequired(@Nullable Boolean required) {
         this.required = required;
         return this;
     }
 
-    public PropertyCalendarEventOrganizer withStatus(PropertyCalendarEventOrganizerStatus status) {
-        Utils.checkNotNull(status, "status");
-        this.status = Optional.ofNullable(status);
-        return this;
-    }
 
-
-    public PropertyCalendarEventOrganizer withStatus(Optional<? extends PropertyCalendarEventOrganizerStatus> status) {
-        Utils.checkNotNull(status, "status");
+    public PropertyCalendarEventOrganizer withStatus(@Nullable PropertyCalendarEventOrganizerStatus status) {
         this.status = status;
         return this;
     }
 
-    public PropertyCalendarEventOrganizer withUserId(String userId) {
-        Utils.checkNotNull(userId, "userId");
-        this.userId = Optional.ofNullable(userId);
-        return this;
-    }
 
-
-    public PropertyCalendarEventOrganizer withUserId(Optional<String> userId) {
-        Utils.checkNotNull(userId, "userId");
+    public PropertyCalendarEventOrganizer withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -199,87 +152,46 @@ public class PropertyCalendarEventOrganizer {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> email = Optional.empty();
+        private String email;
 
-        private Optional<String> name = Optional.empty();
+        private String name;
 
-        private Optional<Boolean> required = Optional.empty();
+        private Boolean required;
 
-        private Optional<? extends PropertyCalendarEventOrganizerStatus> status = Optional.empty();
+        private PropertyCalendarEventOrganizerStatus status;
 
-        private Optional<String> userId = Optional.empty();
+        private String userId;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder email(String email) {
-            Utils.checkNotNull(email, "email");
-            this.email = Optional.ofNullable(email);
-            return this;
-        }
-
-        public Builder email(Optional<String> email) {
-            Utils.checkNotNull(email, "email");
+        public Builder email(@Nullable String email) {
             this.email = email;
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = Optional.ofNullable(name);
-            return this;
-        }
-
-        public Builder name(Optional<String> name) {
-            Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-
-        public Builder required(boolean required) {
-            Utils.checkNotNull(required, "required");
-            this.required = Optional.ofNullable(required);
-            return this;
-        }
-
-        public Builder required(Optional<Boolean> required) {
-            Utils.checkNotNull(required, "required");
+        public Builder required(@Nullable Boolean required) {
             this.required = required;
             return this;
         }
 
-
-        public Builder status(PropertyCalendarEventOrganizerStatus status) {
-            Utils.checkNotNull(status, "status");
-            this.status = Optional.ofNullable(status);
-            return this;
-        }
-
-        public Builder status(Optional<? extends PropertyCalendarEventOrganizerStatus> status) {
-            Utils.checkNotNull(status, "status");
+        public Builder status(@Nullable PropertyCalendarEventOrganizerStatus status) {
             this.status = status;
             return this;
         }
 
-
-        public Builder userId(String userId) {
-            Utils.checkNotNull(userId, "userId");
-            this.userId = Optional.ofNullable(userId);
-            return this;
-        }
-
-        public Builder userId(Optional<String> userId) {
-            Utils.checkNotNull(userId, "userId");
+        public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;
         }
 
         public PropertyCalendarEventOrganizer build() {
-
             return new PropertyCalendarEventOrganizer(
                 email, name, required,
                 status, userId);

@@ -5,32 +5,45 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.RemoveScimUsers;
 import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveScimUsersRequestBuilder {
-
-    private RemoveScimUsersRequest request;
     private final SDKConfiguration sdkConfiguration;
-    private final Headers _headers = new Headers(); 
+    private final Headers _headers = new Headers();
+    private RemoveScimUsersRequest request;
 
     public RemoveScimUsersRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
 
-    public RemoveScimUsersRequestBuilder request(RemoveScimUsersRequest request) {
-        Utils.checkNotNull(request, "request");
-        this.request = request;
+    public RemoveScimUsersRequestBuilder request(@Nonnull RemoveScimUsersRequest request) {
+        this.request = Utils.checkNotNull(request, "request");
         return this;
     }
 
+    private RemoveScimUsersRequest _buildRequest() {
+        return this.request;
+    }
+    
+    public RemoveScimUsersRequestBuilder header(String name, String value) {
+        Utils.checkNotNull(name, "name");
+        Utils.checkNotNull(value, "value");
+        this._headers.add(name, value);
+        return this;
+    }
+
+    /**
+    * Executes the request and returns the response.
+    *
+    * @return The response from the server.
+    */
     public RemoveScimUsersResponse call() {
-        
         RequestOperation<RemoveScimUsersRequest, RemoveScimUsersResponse> operation
               = new RemoveScimUsers.Sync(sdkConfiguration, _headers);
-
-        return operation.handleResponse(operation.doRequest(request));
+        return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

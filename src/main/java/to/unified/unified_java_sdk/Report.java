@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.GetAccountingReportRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingReportRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetAccountingReportResponse;
@@ -55,7 +56,7 @@ public class Report {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingReportResponse getAccountingReport(GetAccountingReportRequest request) {
+    public GetAccountingReportResponse getAccountingReport(@Nonnull GetAccountingReportRequest request) {
         RequestOperation<GetAccountingReportRequest, GetAccountingReportResponse> operation
               = new GetAccountingReport.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -77,7 +78,7 @@ public class Report {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingReportsResponse listAccountingReports(ListAccountingReportsRequest request) {
+    public ListAccountingReportsResponse listAccountingReports(@Nonnull ListAccountingReportsRequest request) {
         RequestOperation<ListAccountingReportsRequest, ListAccountingReportsResponse> operation
               = new ListAccountingReports.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -99,7 +100,7 @@ public class Report {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAdsReportsResponse listAdsReports(ListAdsReportsRequest request) {
+    public ListAdsReportsResponse listAdsReports(@Nonnull ListAdsReportsRequest request) {
         RequestOperation<ListAdsReportsRequest, ListAdsReportsResponse> operation
               = new ListAdsReports.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

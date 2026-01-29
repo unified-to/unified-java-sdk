@@ -4,11 +4,11 @@
 package to.unified.unified_java_sdk.models.operations.async;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import java.lang.Integer;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.io.InputStream;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.ScimGroup;
@@ -26,7 +26,7 @@ public class CreateScimGroupsResponse implements AsyncResponse {
     /**
      * Successful
      */
-    private Optional<? extends ScimGroup> scimGroup;
+    private ScimGroup scimGroup;
 
     /**
      * HTTP response status code for this operation
@@ -40,59 +40,52 @@ public class CreateScimGroupsResponse implements AsyncResponse {
 
     @JsonCreator
     public CreateScimGroupsResponse(
-            String contentType,
-            Optional<? extends ScimGroup> scimGroup,
+            @Nonnull String contentType,
+            @Nullable ScimGroup scimGroup,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(scimGroup, "scimGroup");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.contentType = contentType;
+            @Nonnull HttpResponse<Blob> rawResponse) {
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.scimGroup = scimGroup;
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
     }
     
     public CreateScimGroupsResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
-        this(contentType, Optional.empty(), statusCode,
+            @Nonnull HttpResponse<Blob> rawResponse) {
+        this(contentType, null, statusCode,
             rawResponse);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ScimGroup> scimGroup() {
-        return (Optional<ScimGroup>) scimGroup;
+        return Optional.ofNullable(this.scimGroup);
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<Blob> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     public static Builder builder() {
@@ -103,18 +96,8 @@ public class CreateScimGroupsResponse implements AsyncResponse {
     /**
      * HTTP response content type for this operation
      */
-    public CreateScimGroupsResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
-        return this;
-    }
-
-    /**
-     * Successful
-     */
-    public CreateScimGroupsResponse withScimGroup(ScimGroup scimGroup) {
-        Utils.checkNotNull(scimGroup, "scimGroup");
-        this.scimGroup = Optional.ofNullable(scimGroup);
+    public CreateScimGroupsResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
 
@@ -122,29 +105,29 @@ public class CreateScimGroupsResponse implements AsyncResponse {
     /**
      * Successful
      */
-    public CreateScimGroupsResponse withScimGroup(Optional<? extends ScimGroup> scimGroup) {
-        Utils.checkNotNull(scimGroup, "scimGroup");
+    public CreateScimGroupsResponse withScimGroup(@Nullable ScimGroup scimGroup) {
         this.scimGroup = scimGroup;
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public CreateScimGroupsResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public CreateScimGroupsResponse withRawResponse(HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
+    public CreateScimGroupsResponse withRawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -183,9 +166,9 @@ public class CreateScimGroupsResponse implements AsyncResponse {
 
         private String contentType;
 
-        private Optional<? extends ScimGroup> scimGroup = Optional.empty();
+        private ScimGroup scimGroup;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<Blob> rawResponse;
 
@@ -193,57 +176,39 @@ public class CreateScimGroupsResponse implements AsyncResponse {
           // force use of static builder() method
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
-            return this;
-        }
-
-
-        /**
-         * Successful
-         */
-        public Builder scimGroup(ScimGroup scimGroup) {
-            Utils.checkNotNull(scimGroup, "scimGroup");
-            this.scimGroup = Optional.ofNullable(scimGroup);
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
 
         /**
          * Successful
          */
-        public Builder scimGroup(Optional<? extends ScimGroup> scimGroup) {
-            Utils.checkNotNull(scimGroup, "scimGroup");
+        public Builder scimGroup(@Nullable ScimGroup scimGroup) {
             this.scimGroup = scimGroup;
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<Blob> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
+        public Builder rawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         public CreateScimGroupsResponse build() {
-
             return new CreateScimGroupsResponse(
                 contentType, scimGroup, statusCode,
                 rawResponse);

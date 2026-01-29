@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingJournalRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingJournalRequest;
@@ -68,7 +69,7 @@ public class AsyncJournal {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAccountingJournalResponse>} - The async response
      */
-    public CompletableFuture<CreateAccountingJournalResponse> createAccountingJournal(CreateAccountingJournalRequest request) {
+    public CompletableFuture<CreateAccountingJournalResponse> createAccountingJournal(@Nonnull CreateAccountingJournalRequest request) {
         AsyncRequestOperation<CreateAccountingJournalRequest, CreateAccountingJournalResponse> operation
               = new CreateAccountingJournal.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -91,7 +92,7 @@ public class AsyncJournal {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAccountingJournalResponse>} - The async response
      */
-    public CompletableFuture<GetAccountingJournalResponse> getAccountingJournal(GetAccountingJournalRequest request) {
+    public CompletableFuture<GetAccountingJournalResponse> getAccountingJournal(@Nonnull GetAccountingJournalRequest request) {
         AsyncRequestOperation<GetAccountingJournalRequest, GetAccountingJournalResponse> operation
               = new GetAccountingJournal.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -114,7 +115,7 @@ public class AsyncJournal {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAccountingJournalsResponse>} - The async response
      */
-    public CompletableFuture<ListAccountingJournalsResponse> listAccountingJournals(ListAccountingJournalsRequest request) {
+    public CompletableFuture<ListAccountingJournalsResponse> listAccountingJournals(@Nonnull ListAccountingJournalsRequest request) {
         AsyncRequestOperation<ListAccountingJournalsRequest, ListAccountingJournalsResponse> operation
               = new ListAccountingJournals.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -137,7 +138,7 @@ public class AsyncJournal {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAccountingJournalResponse>} - The async response
      */
-    public CompletableFuture<PatchAccountingJournalResponse> patchAccountingJournal(PatchAccountingJournalRequest request) {
+    public CompletableFuture<PatchAccountingJournalResponse> patchAccountingJournal(@Nonnull PatchAccountingJournalRequest request) {
         AsyncRequestOperation<PatchAccountingJournalRequest, PatchAccountingJournalResponse> operation
               = new PatchAccountingJournal.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -160,7 +161,7 @@ public class AsyncJournal {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAccountingJournalResponse>} - The async response
      */
-    public CompletableFuture<RemoveAccountingJournalResponse> removeAccountingJournal(RemoveAccountingJournalRequest request) {
+    public CompletableFuture<RemoveAccountingJournalResponse> removeAccountingJournal(@Nonnull RemoveAccountingJournalRequest request) {
         AsyncRequestOperation<RemoveAccountingJournalRequest, RemoveAccountingJournalResponse> operation
               = new RemoveAccountingJournal.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -183,7 +184,7 @@ public class AsyncJournal {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAccountingJournalResponse>} - The async response
      */
-    public CompletableFuture<UpdateAccountingJournalResponse> updateAccountingJournal(UpdateAccountingJournalRequest request) {
+    public CompletableFuture<UpdateAccountingJournalResponse> updateAccountingJournal(@Nonnull UpdateAccountingJournalRequest request) {
         AsyncRequestOperation<UpdateAccountingJournalRequest, UpdateAccountingJournalResponse> operation
               = new UpdateAccountingJournal.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

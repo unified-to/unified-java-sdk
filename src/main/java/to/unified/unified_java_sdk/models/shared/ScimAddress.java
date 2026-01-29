@@ -4,13 +4,12 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -19,54 +18,47 @@ public class ScimAddress {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
-    private Optional<String> country;
+    private String country;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formatted")
-    private Optional<String> formatted;
+    private String formatted;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locality")
-    private Optional<String> locality;
+    private String locality;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postalCode")
-    private Optional<String> postalCode;
+    private String postalCode;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
-    private Optional<String> region;
+    private String region;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streetAddress")
-    private Optional<String> streetAddress;
+    private String streetAddress;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
-    private Optional<? extends ScimAddressType> type;
+    private ScimAddressType type;
 
     @JsonCreator
     public ScimAddress(
-            @JsonProperty("country") Optional<String> country,
-            @JsonProperty("formatted") Optional<String> formatted,
-            @JsonProperty("locality") Optional<String> locality,
-            @JsonProperty("postalCode") Optional<String> postalCode,
-            @JsonProperty("region") Optional<String> region,
-            @JsonProperty("streetAddress") Optional<String> streetAddress,
-            @JsonProperty("type") Optional<? extends ScimAddressType> type) {
-        Utils.checkNotNull(country, "country");
-        Utils.checkNotNull(formatted, "formatted");
-        Utils.checkNotNull(locality, "locality");
-        Utils.checkNotNull(postalCode, "postalCode");
-        Utils.checkNotNull(region, "region");
-        Utils.checkNotNull(streetAddress, "streetAddress");
-        Utils.checkNotNull(type, "type");
+            @JsonProperty("country") @Nullable String country,
+            @JsonProperty("formatted") @Nullable String formatted,
+            @JsonProperty("locality") @Nullable String locality,
+            @JsonProperty("postalCode") @Nullable String postalCode,
+            @JsonProperty("region") @Nullable String region,
+            @JsonProperty("streetAddress") @Nullable String streetAddress,
+            @JsonProperty("type") @Nullable ScimAddressType type) {
         this.country = country;
         this.formatted = formatted;
         this.locality = locality;
@@ -77,45 +69,37 @@ public class ScimAddress {
     }
     
     public ScimAddress() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null);
     }
 
-    @JsonIgnore
     public Optional<String> country() {
-        return country;
+        return Optional.ofNullable(this.country);
     }
 
-    @JsonIgnore
     public Optional<String> formatted() {
-        return formatted;
+        return Optional.ofNullable(this.formatted);
     }
 
-    @JsonIgnore
     public Optional<String> locality() {
-        return locality;
+        return Optional.ofNullable(this.locality);
     }
 
-    @JsonIgnore
     public Optional<String> postalCode() {
-        return postalCode;
+        return Optional.ofNullable(this.postalCode);
     }
 
-    @JsonIgnore
     public Optional<String> region() {
-        return region;
+        return Optional.ofNullable(this.region);
     }
 
-    @JsonIgnore
     public Optional<String> streetAddress() {
-        return streetAddress;
+        return Optional.ofNullable(this.streetAddress);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ScimAddressType> type() {
-        return (Optional<ScimAddressType>) type;
+        return Optional.ofNullable(this.type);
     }
 
     public static Builder builder() {
@@ -123,96 +107,47 @@ public class ScimAddress {
     }
 
 
-    public ScimAddress withCountry(String country) {
-        Utils.checkNotNull(country, "country");
-        this.country = Optional.ofNullable(country);
-        return this;
-    }
-
-
-    public ScimAddress withCountry(Optional<String> country) {
-        Utils.checkNotNull(country, "country");
+    public ScimAddress withCountry(@Nullable String country) {
         this.country = country;
         return this;
     }
 
-    public ScimAddress withFormatted(String formatted) {
-        Utils.checkNotNull(formatted, "formatted");
-        this.formatted = Optional.ofNullable(formatted);
-        return this;
-    }
 
-
-    public ScimAddress withFormatted(Optional<String> formatted) {
-        Utils.checkNotNull(formatted, "formatted");
+    public ScimAddress withFormatted(@Nullable String formatted) {
         this.formatted = formatted;
         return this;
     }
 
-    public ScimAddress withLocality(String locality) {
-        Utils.checkNotNull(locality, "locality");
-        this.locality = Optional.ofNullable(locality);
-        return this;
-    }
 
-
-    public ScimAddress withLocality(Optional<String> locality) {
-        Utils.checkNotNull(locality, "locality");
+    public ScimAddress withLocality(@Nullable String locality) {
         this.locality = locality;
         return this;
     }
 
-    public ScimAddress withPostalCode(String postalCode) {
-        Utils.checkNotNull(postalCode, "postalCode");
-        this.postalCode = Optional.ofNullable(postalCode);
-        return this;
-    }
 
-
-    public ScimAddress withPostalCode(Optional<String> postalCode) {
-        Utils.checkNotNull(postalCode, "postalCode");
+    public ScimAddress withPostalCode(@Nullable String postalCode) {
         this.postalCode = postalCode;
         return this;
     }
 
-    public ScimAddress withRegion(String region) {
-        Utils.checkNotNull(region, "region");
-        this.region = Optional.ofNullable(region);
-        return this;
-    }
 
-
-    public ScimAddress withRegion(Optional<String> region) {
-        Utils.checkNotNull(region, "region");
+    public ScimAddress withRegion(@Nullable String region) {
         this.region = region;
         return this;
     }
 
-    public ScimAddress withStreetAddress(String streetAddress) {
-        Utils.checkNotNull(streetAddress, "streetAddress");
-        this.streetAddress = Optional.ofNullable(streetAddress);
-        return this;
-    }
 
-
-    public ScimAddress withStreetAddress(Optional<String> streetAddress) {
-        Utils.checkNotNull(streetAddress, "streetAddress");
+    public ScimAddress withStreetAddress(@Nullable String streetAddress) {
         this.streetAddress = streetAddress;
         return this;
     }
 
-    public ScimAddress withType(ScimAddressType type) {
-        Utils.checkNotNull(type, "type");
-        this.type = Optional.ofNullable(type);
-        return this;
-    }
 
-
-    public ScimAddress withType(Optional<? extends ScimAddressType> type) {
-        Utils.checkNotNull(type, "type");
+    public ScimAddress withType(@Nullable ScimAddressType type) {
         this.type = type;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -256,117 +191,60 @@ public class ScimAddress {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> country = Optional.empty();
+        private String country;
 
-        private Optional<String> formatted = Optional.empty();
+        private String formatted;
 
-        private Optional<String> locality = Optional.empty();
+        private String locality;
 
-        private Optional<String> postalCode = Optional.empty();
+        private String postalCode;
 
-        private Optional<String> region = Optional.empty();
+        private String region;
 
-        private Optional<String> streetAddress = Optional.empty();
+        private String streetAddress;
 
-        private Optional<? extends ScimAddressType> type = Optional.empty();
+        private ScimAddressType type;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder country(String country) {
-            Utils.checkNotNull(country, "country");
-            this.country = Optional.ofNullable(country);
-            return this;
-        }
-
-        public Builder country(Optional<String> country) {
-            Utils.checkNotNull(country, "country");
+        public Builder country(@Nullable String country) {
             this.country = country;
             return this;
         }
 
-
-        public Builder formatted(String formatted) {
-            Utils.checkNotNull(formatted, "formatted");
-            this.formatted = Optional.ofNullable(formatted);
-            return this;
-        }
-
-        public Builder formatted(Optional<String> formatted) {
-            Utils.checkNotNull(formatted, "formatted");
+        public Builder formatted(@Nullable String formatted) {
             this.formatted = formatted;
             return this;
         }
 
-
-        public Builder locality(String locality) {
-            Utils.checkNotNull(locality, "locality");
-            this.locality = Optional.ofNullable(locality);
-            return this;
-        }
-
-        public Builder locality(Optional<String> locality) {
-            Utils.checkNotNull(locality, "locality");
+        public Builder locality(@Nullable String locality) {
             this.locality = locality;
             return this;
         }
 
-
-        public Builder postalCode(String postalCode) {
-            Utils.checkNotNull(postalCode, "postalCode");
-            this.postalCode = Optional.ofNullable(postalCode);
-            return this;
-        }
-
-        public Builder postalCode(Optional<String> postalCode) {
-            Utils.checkNotNull(postalCode, "postalCode");
+        public Builder postalCode(@Nullable String postalCode) {
             this.postalCode = postalCode;
             return this;
         }
 
-
-        public Builder region(String region) {
-            Utils.checkNotNull(region, "region");
-            this.region = Optional.ofNullable(region);
-            return this;
-        }
-
-        public Builder region(Optional<String> region) {
-            Utils.checkNotNull(region, "region");
+        public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
 
-
-        public Builder streetAddress(String streetAddress) {
-            Utils.checkNotNull(streetAddress, "streetAddress");
-            this.streetAddress = Optional.ofNullable(streetAddress);
-            return this;
-        }
-
-        public Builder streetAddress(Optional<String> streetAddress) {
-            Utils.checkNotNull(streetAddress, "streetAddress");
+        public Builder streetAddress(@Nullable String streetAddress) {
             this.streetAddress = streetAddress;
             return this;
         }
 
-
-        public Builder type(ScimAddressType type) {
-            Utils.checkNotNull(type, "type");
-            this.type = Optional.ofNullable(type);
-            return this;
-        }
-
-        public Builder type(Optional<? extends ScimAddressType> type) {
-            Utils.checkNotNull(type, "type");
+        public Builder type(@Nullable ScimAddressType type) {
             this.type = type;
             return this;
         }
 
         public ScimAddress build() {
-
             return new ScimAddress(
                 country, formatted, locality,
                 postalCode, region, streetAddress,

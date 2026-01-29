@@ -4,12 +4,11 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.io.InputStream;
-import java.lang.Integer;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.List;
 import java.util.Optional;
@@ -22,7 +21,7 @@ public class ListCalendarLinksResponse implements Response {
     /**
      * Successful
      */
-    private Optional<? extends List<CalendarLink>> calendarLinks;
+    private List<CalendarLink> calendarLinks;
 
     /**
      * HTTP response content type for this operation
@@ -41,59 +40,52 @@ public class ListCalendarLinksResponse implements Response {
 
     @JsonCreator
     public ListCalendarLinksResponse(
-            Optional<? extends List<CalendarLink>> calendarLinks,
-            String contentType,
+            @Nullable List<CalendarLink> calendarLinks,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(calendarLinks, "calendarLinks");
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
+            @Nonnull HttpResponse<InputStream> rawResponse) {
         this.calendarLinks = calendarLinks;
-        this.contentType = contentType;
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
     }
     
     public ListCalendarLinksResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
-        this(Optional.empty(), contentType, statusCode,
+            @Nonnull HttpResponse<InputStream> rawResponse) {
+        this(null, contentType, statusCode,
             rawResponse);
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<CalendarLink>> calendarLinks() {
-        return (Optional<List<CalendarLink>>) calendarLinks;
+        return Optional.ofNullable(this.calendarLinks);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<InputStream> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     public static Builder builder() {
@@ -104,48 +96,38 @@ public class ListCalendarLinksResponse implements Response {
     /**
      * Successful
      */
-    public ListCalendarLinksResponse withCalendarLinks(List<CalendarLink> calendarLinks) {
-        Utils.checkNotNull(calendarLinks, "calendarLinks");
-        this.calendarLinks = Optional.ofNullable(calendarLinks);
-        return this;
-    }
-
-
-    /**
-     * Successful
-     */
-    public ListCalendarLinksResponse withCalendarLinks(Optional<? extends List<CalendarLink>> calendarLinks) {
-        Utils.checkNotNull(calendarLinks, "calendarLinks");
+    public ListCalendarLinksResponse withCalendarLinks(@Nullable List<CalendarLink> calendarLinks) {
         this.calendarLinks = calendarLinks;
         return this;
     }
 
+
     /**
      * HTTP response content type for this operation
      */
-    public ListCalendarLinksResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
+    public ListCalendarLinksResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public ListCalendarLinksResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public ListCalendarLinksResponse withRawResponse(HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
+    public ListCalendarLinksResponse withRawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -182,11 +164,11 @@ public class ListCalendarLinksResponse implements Response {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends List<CalendarLink>> calendarLinks = Optional.empty();
+        private List<CalendarLink> calendarLinks;
 
         private String contentType;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<InputStream> rawResponse;
 
@@ -194,57 +176,39 @@ public class ListCalendarLinksResponse implements Response {
           // force use of static builder() method
         }
 
-
         /**
          * Successful
          */
-        public Builder calendarLinks(List<CalendarLink> calendarLinks) {
-            Utils.checkNotNull(calendarLinks, "calendarLinks");
-            this.calendarLinks = Optional.ofNullable(calendarLinks);
-            return this;
-        }
-
-        /**
-         * Successful
-         */
-        public Builder calendarLinks(Optional<? extends List<CalendarLink>> calendarLinks) {
-            Utils.checkNotNull(calendarLinks, "calendarLinks");
+        public Builder calendarLinks(@Nullable List<CalendarLink> calendarLinks) {
             this.calendarLinks = calendarLinks;
             return this;
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<InputStream> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
+        public Builder rawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         public ListCalendarLinksResponse build() {
-
             return new ListCalendarLinksResponse(
                 calendarLinks, contentType, statusCode,
                 rawResponse);

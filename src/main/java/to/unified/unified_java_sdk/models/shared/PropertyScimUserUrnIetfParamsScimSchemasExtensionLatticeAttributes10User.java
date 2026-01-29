@@ -4,13 +4,12 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -20,75 +19,65 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes1
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Job Level")
-    private Optional<String> jobLevel;
+    private String jobLevel;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("People Manager (Reviews)")
-    private Optional<String> peopleManagerReviews;
+    private String peopleManagerReviews;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Remote Work - Location")
-    private Optional<String> remoteWorkLocation;
+    private String remoteWorkLocation;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Salary Information")
-    private Optional<String> salaryInformation;
+    private String salaryInformation;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sub Departments")
-    private Optional<String> subDepartments;
+    private String subDepartments;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("birthDate")
-    private Optional<OffsetDateTime> birthDate;
+    private OffsetDateTime birthDate;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ethnicity")
-    private Optional<? extends Ethnicity> ethnicity;
+    private Ethnicity ethnicity;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gender")
-    private Optional<? extends PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender> gender;
+    private PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender gender;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sexualOrientation")
-    private Optional<? extends SexualOrientation> sexualOrientation;
+    private SexualOrientation sexualOrientation;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startDate")
-    private Optional<OffsetDateTime> startDate;
+    private OffsetDateTime startDate;
 
     @JsonCreator
     public PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User(
-            @JsonProperty("Job Level") Optional<String> jobLevel,
-            @JsonProperty("People Manager (Reviews)") Optional<String> peopleManagerReviews,
-            @JsonProperty("Remote Work - Location") Optional<String> remoteWorkLocation,
-            @JsonProperty("Salary Information") Optional<String> salaryInformation,
-            @JsonProperty("Sub Departments") Optional<String> subDepartments,
-            @JsonProperty("birthDate") Optional<OffsetDateTime> birthDate,
-            @JsonProperty("ethnicity") Optional<? extends Ethnicity> ethnicity,
-            @JsonProperty("gender") Optional<? extends PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender> gender,
-            @JsonProperty("sexualOrientation") Optional<? extends SexualOrientation> sexualOrientation,
-            @JsonProperty("startDate") Optional<OffsetDateTime> startDate) {
-        Utils.checkNotNull(jobLevel, "jobLevel");
-        Utils.checkNotNull(peopleManagerReviews, "peopleManagerReviews");
-        Utils.checkNotNull(remoteWorkLocation, "remoteWorkLocation");
-        Utils.checkNotNull(salaryInformation, "salaryInformation");
-        Utils.checkNotNull(subDepartments, "subDepartments");
-        Utils.checkNotNull(birthDate, "birthDate");
-        Utils.checkNotNull(ethnicity, "ethnicity");
-        Utils.checkNotNull(gender, "gender");
-        Utils.checkNotNull(sexualOrientation, "sexualOrientation");
-        Utils.checkNotNull(startDate, "startDate");
+            @JsonProperty("Job Level") @Nullable String jobLevel,
+            @JsonProperty("People Manager (Reviews)") @Nullable String peopleManagerReviews,
+            @JsonProperty("Remote Work - Location") @Nullable String remoteWorkLocation,
+            @JsonProperty("Salary Information") @Nullable String salaryInformation,
+            @JsonProperty("Sub Departments") @Nullable String subDepartments,
+            @JsonProperty("birthDate") @Nullable OffsetDateTime birthDate,
+            @JsonProperty("ethnicity") @Nullable Ethnicity ethnicity,
+            @JsonProperty("gender") @Nullable PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender gender,
+            @JsonProperty("sexualOrientation") @Nullable SexualOrientation sexualOrientation,
+            @JsonProperty("startDate") @Nullable OffsetDateTime startDate) {
         this.jobLevel = jobLevel;
         this.peopleManagerReviews = peopleManagerReviews;
         this.remoteWorkLocation = remoteWorkLocation;
@@ -102,63 +91,50 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes1
     }
     
     public PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null);
     }
 
-    @JsonIgnore
     public Optional<String> jobLevel() {
-        return jobLevel;
+        return Optional.ofNullable(this.jobLevel);
     }
 
-    @JsonIgnore
     public Optional<String> peopleManagerReviews() {
-        return peopleManagerReviews;
+        return Optional.ofNullable(this.peopleManagerReviews);
     }
 
-    @JsonIgnore
     public Optional<String> remoteWorkLocation() {
-        return remoteWorkLocation;
+        return Optional.ofNullable(this.remoteWorkLocation);
     }
 
-    @JsonIgnore
     public Optional<String> salaryInformation() {
-        return salaryInformation;
+        return Optional.ofNullable(this.salaryInformation);
     }
 
-    @JsonIgnore
     public Optional<String> subDepartments() {
-        return subDepartments;
+        return Optional.ofNullable(this.subDepartments);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> birthDate() {
-        return birthDate;
+        return Optional.ofNullable(this.birthDate);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Ethnicity> ethnicity() {
-        return (Optional<Ethnicity>) ethnicity;
+        return Optional.ofNullable(this.ethnicity);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender> gender() {
-        return (Optional<PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender>) gender;
+        return Optional.ofNullable(this.gender);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<SexualOrientation> sexualOrientation() {
-        return (Optional<SexualOrientation>) sexualOrientation;
+        return Optional.ofNullable(this.sexualOrientation);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> startDate() {
-        return startDate;
+        return Optional.ofNullable(this.startDate);
     }
 
     public static Builder builder() {
@@ -166,135 +142,65 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes1
     }
 
 
-    public PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User withJobLevel(String jobLevel) {
-        Utils.checkNotNull(jobLevel, "jobLevel");
-        this.jobLevel = Optional.ofNullable(jobLevel);
-        return this;
-    }
-
-
-    public PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User withJobLevel(Optional<String> jobLevel) {
-        Utils.checkNotNull(jobLevel, "jobLevel");
+    public PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User withJobLevel(@Nullable String jobLevel) {
         this.jobLevel = jobLevel;
         return this;
     }
 
-    public PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User withPeopleManagerReviews(String peopleManagerReviews) {
-        Utils.checkNotNull(peopleManagerReviews, "peopleManagerReviews");
-        this.peopleManagerReviews = Optional.ofNullable(peopleManagerReviews);
-        return this;
-    }
 
-
-    public PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User withPeopleManagerReviews(Optional<String> peopleManagerReviews) {
-        Utils.checkNotNull(peopleManagerReviews, "peopleManagerReviews");
+    public PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User withPeopleManagerReviews(@Nullable String peopleManagerReviews) {
         this.peopleManagerReviews = peopleManagerReviews;
         return this;
     }
 
-    public PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User withRemoteWorkLocation(String remoteWorkLocation) {
-        Utils.checkNotNull(remoteWorkLocation, "remoteWorkLocation");
-        this.remoteWorkLocation = Optional.ofNullable(remoteWorkLocation);
-        return this;
-    }
 
-
-    public PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User withRemoteWorkLocation(Optional<String> remoteWorkLocation) {
-        Utils.checkNotNull(remoteWorkLocation, "remoteWorkLocation");
+    public PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User withRemoteWorkLocation(@Nullable String remoteWorkLocation) {
         this.remoteWorkLocation = remoteWorkLocation;
         return this;
     }
 
-    public PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User withSalaryInformation(String salaryInformation) {
-        Utils.checkNotNull(salaryInformation, "salaryInformation");
-        this.salaryInformation = Optional.ofNullable(salaryInformation);
-        return this;
-    }
 
-
-    public PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User withSalaryInformation(Optional<String> salaryInformation) {
-        Utils.checkNotNull(salaryInformation, "salaryInformation");
+    public PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User withSalaryInformation(@Nullable String salaryInformation) {
         this.salaryInformation = salaryInformation;
         return this;
     }
 
-    public PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User withSubDepartments(String subDepartments) {
-        Utils.checkNotNull(subDepartments, "subDepartments");
-        this.subDepartments = Optional.ofNullable(subDepartments);
-        return this;
-    }
 
-
-    public PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User withSubDepartments(Optional<String> subDepartments) {
-        Utils.checkNotNull(subDepartments, "subDepartments");
+    public PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User withSubDepartments(@Nullable String subDepartments) {
         this.subDepartments = subDepartments;
         return this;
     }
 
-    public PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User withBirthDate(OffsetDateTime birthDate) {
-        Utils.checkNotNull(birthDate, "birthDate");
-        this.birthDate = Optional.ofNullable(birthDate);
-        return this;
-    }
 
-
-    public PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User withBirthDate(Optional<OffsetDateTime> birthDate) {
-        Utils.checkNotNull(birthDate, "birthDate");
+    public PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User withBirthDate(@Nullable OffsetDateTime birthDate) {
         this.birthDate = birthDate;
         return this;
     }
 
-    public PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User withEthnicity(Ethnicity ethnicity) {
-        Utils.checkNotNull(ethnicity, "ethnicity");
-        this.ethnicity = Optional.ofNullable(ethnicity);
-        return this;
-    }
 
-
-    public PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User withEthnicity(Optional<? extends Ethnicity> ethnicity) {
-        Utils.checkNotNull(ethnicity, "ethnicity");
+    public PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User withEthnicity(@Nullable Ethnicity ethnicity) {
         this.ethnicity = ethnicity;
         return this;
     }
 
-    public PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User withGender(PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender gender) {
-        Utils.checkNotNull(gender, "gender");
-        this.gender = Optional.ofNullable(gender);
-        return this;
-    }
 
-
-    public PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User withGender(Optional<? extends PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender> gender) {
-        Utils.checkNotNull(gender, "gender");
+    public PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User withGender(@Nullable PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender gender) {
         this.gender = gender;
         return this;
     }
 
-    public PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User withSexualOrientation(SexualOrientation sexualOrientation) {
-        Utils.checkNotNull(sexualOrientation, "sexualOrientation");
-        this.sexualOrientation = Optional.ofNullable(sexualOrientation);
-        return this;
-    }
 
-
-    public PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User withSexualOrientation(Optional<? extends SexualOrientation> sexualOrientation) {
-        Utils.checkNotNull(sexualOrientation, "sexualOrientation");
+    public PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User withSexualOrientation(@Nullable SexualOrientation sexualOrientation) {
         this.sexualOrientation = sexualOrientation;
         return this;
     }
 
-    public PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User withStartDate(OffsetDateTime startDate) {
-        Utils.checkNotNull(startDate, "startDate");
-        this.startDate = Optional.ofNullable(startDate);
-        return this;
-    }
 
-
-    public PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User withStartDate(Optional<OffsetDateTime> startDate) {
-        Utils.checkNotNull(startDate, "startDate");
+    public PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User withStartDate(@Nullable OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -345,162 +251,81 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes1
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> jobLevel = Optional.empty();
+        private String jobLevel;
 
-        private Optional<String> peopleManagerReviews = Optional.empty();
+        private String peopleManagerReviews;
 
-        private Optional<String> remoteWorkLocation = Optional.empty();
+        private String remoteWorkLocation;
 
-        private Optional<String> salaryInformation = Optional.empty();
+        private String salaryInformation;
 
-        private Optional<String> subDepartments = Optional.empty();
+        private String subDepartments;
 
-        private Optional<OffsetDateTime> birthDate = Optional.empty();
+        private OffsetDateTime birthDate;
 
-        private Optional<? extends Ethnicity> ethnicity = Optional.empty();
+        private Ethnicity ethnicity;
 
-        private Optional<? extends PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender> gender = Optional.empty();
+        private PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender gender;
 
-        private Optional<? extends SexualOrientation> sexualOrientation = Optional.empty();
+        private SexualOrientation sexualOrientation;
 
-        private Optional<OffsetDateTime> startDate = Optional.empty();
+        private OffsetDateTime startDate;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder jobLevel(String jobLevel) {
-            Utils.checkNotNull(jobLevel, "jobLevel");
-            this.jobLevel = Optional.ofNullable(jobLevel);
-            return this;
-        }
-
-        public Builder jobLevel(Optional<String> jobLevel) {
-            Utils.checkNotNull(jobLevel, "jobLevel");
+        public Builder jobLevel(@Nullable String jobLevel) {
             this.jobLevel = jobLevel;
             return this;
         }
 
-
-        public Builder peopleManagerReviews(String peopleManagerReviews) {
-            Utils.checkNotNull(peopleManagerReviews, "peopleManagerReviews");
-            this.peopleManagerReviews = Optional.ofNullable(peopleManagerReviews);
-            return this;
-        }
-
-        public Builder peopleManagerReviews(Optional<String> peopleManagerReviews) {
-            Utils.checkNotNull(peopleManagerReviews, "peopleManagerReviews");
+        public Builder peopleManagerReviews(@Nullable String peopleManagerReviews) {
             this.peopleManagerReviews = peopleManagerReviews;
             return this;
         }
 
-
-        public Builder remoteWorkLocation(String remoteWorkLocation) {
-            Utils.checkNotNull(remoteWorkLocation, "remoteWorkLocation");
-            this.remoteWorkLocation = Optional.ofNullable(remoteWorkLocation);
-            return this;
-        }
-
-        public Builder remoteWorkLocation(Optional<String> remoteWorkLocation) {
-            Utils.checkNotNull(remoteWorkLocation, "remoteWorkLocation");
+        public Builder remoteWorkLocation(@Nullable String remoteWorkLocation) {
             this.remoteWorkLocation = remoteWorkLocation;
             return this;
         }
 
-
-        public Builder salaryInformation(String salaryInformation) {
-            Utils.checkNotNull(salaryInformation, "salaryInformation");
-            this.salaryInformation = Optional.ofNullable(salaryInformation);
-            return this;
-        }
-
-        public Builder salaryInformation(Optional<String> salaryInformation) {
-            Utils.checkNotNull(salaryInformation, "salaryInformation");
+        public Builder salaryInformation(@Nullable String salaryInformation) {
             this.salaryInformation = salaryInformation;
             return this;
         }
 
-
-        public Builder subDepartments(String subDepartments) {
-            Utils.checkNotNull(subDepartments, "subDepartments");
-            this.subDepartments = Optional.ofNullable(subDepartments);
-            return this;
-        }
-
-        public Builder subDepartments(Optional<String> subDepartments) {
-            Utils.checkNotNull(subDepartments, "subDepartments");
+        public Builder subDepartments(@Nullable String subDepartments) {
             this.subDepartments = subDepartments;
             return this;
         }
 
-
-        public Builder birthDate(OffsetDateTime birthDate) {
-            Utils.checkNotNull(birthDate, "birthDate");
-            this.birthDate = Optional.ofNullable(birthDate);
-            return this;
-        }
-
-        public Builder birthDate(Optional<OffsetDateTime> birthDate) {
-            Utils.checkNotNull(birthDate, "birthDate");
+        public Builder birthDate(@Nullable OffsetDateTime birthDate) {
             this.birthDate = birthDate;
             return this;
         }
 
-
-        public Builder ethnicity(Ethnicity ethnicity) {
-            Utils.checkNotNull(ethnicity, "ethnicity");
-            this.ethnicity = Optional.ofNullable(ethnicity);
-            return this;
-        }
-
-        public Builder ethnicity(Optional<? extends Ethnicity> ethnicity) {
-            Utils.checkNotNull(ethnicity, "ethnicity");
+        public Builder ethnicity(@Nullable Ethnicity ethnicity) {
             this.ethnicity = ethnicity;
             return this;
         }
 
-
-        public Builder gender(PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender gender) {
-            Utils.checkNotNull(gender, "gender");
-            this.gender = Optional.ofNullable(gender);
-            return this;
-        }
-
-        public Builder gender(Optional<? extends PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender> gender) {
-            Utils.checkNotNull(gender, "gender");
+        public Builder gender(@Nullable PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10UserGender gender) {
             this.gender = gender;
             return this;
         }
 
-
-        public Builder sexualOrientation(SexualOrientation sexualOrientation) {
-            Utils.checkNotNull(sexualOrientation, "sexualOrientation");
-            this.sexualOrientation = Optional.ofNullable(sexualOrientation);
-            return this;
-        }
-
-        public Builder sexualOrientation(Optional<? extends SexualOrientation> sexualOrientation) {
-            Utils.checkNotNull(sexualOrientation, "sexualOrientation");
+        public Builder sexualOrientation(@Nullable SexualOrientation sexualOrientation) {
             this.sexualOrientation = sexualOrientation;
             return this;
         }
 
-
-        public Builder startDate(OffsetDateTime startDate) {
-            Utils.checkNotNull(startDate, "startDate");
-            this.startDate = Optional.ofNullable(startDate);
-            return this;
-        }
-
-        public Builder startDate(Optional<OffsetDateTime> startDate) {
-            Utils.checkNotNull(startDate, "startDate");
+        public Builder startDate(@Nullable OffsetDateTime startDate) {
             this.startDate = startDate;
             return this;
         }
 
         public PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User build() {
-
             return new PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User(
                 jobLevel, peopleManagerReviews, remoteWorkLocation,
                 salaryInformation, subDepartments, birthDate,

@@ -4,10 +4,11 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
@@ -20,7 +21,7 @@ public class CommerceItemOption {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonProperty("name")
@@ -29,7 +30,7 @@ public class CommerceItemOption {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
-    private Optional<Double> position;
+    private Double position;
 
 
     @JsonProperty("values")
@@ -37,45 +38,39 @@ public class CommerceItemOption {
 
     @JsonCreator
     public CommerceItemOption(
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("name") String name,
-            @JsonProperty("position") Optional<Double> position,
-            @JsonProperty("values") List<String> values) {
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(name, "name");
-        Utils.checkNotNull(position, "position");
-        Utils.checkNotNull(values, "values");
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("name") @Nonnull String name,
+            @JsonProperty("position") @Nullable Double position,
+            @JsonProperty("values") @Nonnull List<String> values) {
         this.id = id;
-        this.name = name;
+        this.name = Optional.ofNullable(name)
+            .orElseThrow(() -> new IllegalArgumentException("name cannot be null"));
         this.position = position;
-        this.values = values;
+        this.values = Optional.ofNullable(values)
+            .orElseThrow(() -> new IllegalArgumentException("values cannot be null"));
     }
     
     public CommerceItemOption(
-            String name,
-            List<String> values) {
-        this(Optional.empty(), name, Optional.empty(),
+            @Nonnull String name,
+            @Nonnull List<String> values) {
+        this(null, name, null,
             values);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public String name() {
-        return name;
+        return this.name;
     }
 
-    @JsonIgnore
     public Optional<Double> position() {
-        return position;
+        return Optional.ofNullable(this.position);
     }
 
-    @JsonIgnore
     public List<String> values() {
-        return values;
+        return this.values;
     }
 
     public static Builder builder() {
@@ -83,43 +78,29 @@ public class CommerceItemOption {
     }
 
 
-    public CommerceItemOption withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
-
-
-    public CommerceItemOption withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public CommerceItemOption withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public CommerceItemOption withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = name;
-        return this;
-    }
 
-    public CommerceItemOption withPosition(double position) {
-        Utils.checkNotNull(position, "position");
-        this.position = Optional.ofNullable(position);
+    public CommerceItemOption withName(@Nonnull String name) {
+        this.name = Utils.checkNotNull(name, "name");
         return this;
     }
 
 
-    public CommerceItemOption withPosition(Optional<Double> position) {
-        Utils.checkNotNull(position, "position");
+    public CommerceItemOption withPosition(@Nullable Double position) {
         this.position = position;
         return this;
     }
 
-    public CommerceItemOption withValues(List<String> values) {
-        Utils.checkNotNull(values, "values");
-        this.values = values;
+
+    public CommerceItemOption withValues(@Nonnull List<String> values) {
+        this.values = Utils.checkNotNull(values, "values");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -156,11 +137,11 @@ public class CommerceItemOption {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
         private String name;
 
-        private Optional<Double> position = Optional.empty();
+        private Double position;
 
         private List<String> values;
 
@@ -168,48 +149,27 @@ public class CommerceItemOption {
           // force use of static builder() method
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = name;
+        public Builder name(@Nonnull String name) {
+            this.name = Utils.checkNotNull(name, "name");
             return this;
         }
 
-
-        public Builder position(double position) {
-            Utils.checkNotNull(position, "position");
-            this.position = Optional.ofNullable(position);
-            return this;
-        }
-
-        public Builder position(Optional<Double> position) {
-            Utils.checkNotNull(position, "position");
+        public Builder position(@Nullable Double position) {
             this.position = position;
             return this;
         }
 
-
-        public Builder values(List<String> values) {
-            Utils.checkNotNull(values, "values");
-            this.values = values;
+        public Builder values(@Nonnull List<String> values) {
+            this.values = Utils.checkNotNull(values, "values");
             return this;
         }
 
         public CommerceItemOption build() {
-
             return new CommerceItemOption(
                 id, name, position,
                 values);

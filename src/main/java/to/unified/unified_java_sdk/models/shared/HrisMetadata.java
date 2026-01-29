@@ -4,13 +4,12 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -19,47 +18,41 @@ public class HrisMetadata {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extra_data")
-    private Optional<? extends HrisMetadataExtraData> extraData;
+    private HrisMetadataExtraData extraData;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
-    private Optional<? extends HrisMetadataFormat> format;
+    private HrisMetadataFormat format;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespace")
-    private Optional<String> namespace;
+    private String namespace;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slug")
-    private Optional<String> slug;
+    private String slug;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
-    private Optional<? extends HrisMetadataValue> value;
+    private HrisMetadataValue value;
 
     @JsonCreator
     public HrisMetadata(
-            @JsonProperty("extra_data") Optional<? extends HrisMetadataExtraData> extraData,
-            @JsonProperty("format") Optional<? extends HrisMetadataFormat> format,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("namespace") Optional<String> namespace,
-            @JsonProperty("slug") Optional<String> slug,
-            @JsonProperty("value") Optional<? extends HrisMetadataValue> value) {
-        Utils.checkNotNull(extraData, "extraData");
-        Utils.checkNotNull(format, "format");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(namespace, "namespace");
-        Utils.checkNotNull(slug, "slug");
-        Utils.checkNotNull(value, "value");
+            @JsonProperty("extra_data") @Nullable HrisMetadataExtraData extraData,
+            @JsonProperty("format") @Nullable HrisMetadataFormat format,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("namespace") @Nullable String namespace,
+            @JsonProperty("slug") @Nullable String slug,
+            @JsonProperty("value") @Nullable HrisMetadataValue value) {
         this.extraData = extraData;
         this.format = format;
         this.id = id;
@@ -69,41 +62,32 @@ public class HrisMetadata {
     }
     
     public HrisMetadata() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null, null);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<HrisMetadataExtraData> extraData() {
-        return (Optional<HrisMetadataExtraData>) extraData;
+        return Optional.ofNullable(this.extraData);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<HrisMetadataFormat> format() {
-        return (Optional<HrisMetadataFormat>) format;
+        return Optional.ofNullable(this.format);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<String> namespace() {
-        return namespace;
+        return Optional.ofNullable(this.namespace);
     }
 
-    @JsonIgnore
     public Optional<String> slug() {
-        return slug;
+        return Optional.ofNullable(this.slug);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<HrisMetadataValue> value() {
-        return (Optional<HrisMetadataValue>) value;
+        return Optional.ofNullable(this.value);
     }
 
     public static Builder builder() {
@@ -111,83 +95,41 @@ public class HrisMetadata {
     }
 
 
-    public HrisMetadata withExtraData(HrisMetadataExtraData extraData) {
-        Utils.checkNotNull(extraData, "extraData");
-        this.extraData = Optional.ofNullable(extraData);
-        return this;
-    }
-
-
-    public HrisMetadata withExtraData(Optional<? extends HrisMetadataExtraData> extraData) {
-        Utils.checkNotNull(extraData, "extraData");
+    public HrisMetadata withExtraData(@Nullable HrisMetadataExtraData extraData) {
         this.extraData = extraData;
         return this;
     }
 
-    public HrisMetadata withFormat(HrisMetadataFormat format) {
-        Utils.checkNotNull(format, "format");
-        this.format = Optional.ofNullable(format);
-        return this;
-    }
 
-
-    public HrisMetadata withFormat(Optional<? extends HrisMetadataFormat> format) {
-        Utils.checkNotNull(format, "format");
+    public HrisMetadata withFormat(@Nullable HrisMetadataFormat format) {
         this.format = format;
         return this;
     }
 
-    public HrisMetadata withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public HrisMetadata withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public HrisMetadata withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public HrisMetadata withNamespace(String namespace) {
-        Utils.checkNotNull(namespace, "namespace");
-        this.namespace = Optional.ofNullable(namespace);
-        return this;
-    }
 
-
-    public HrisMetadata withNamespace(Optional<String> namespace) {
-        Utils.checkNotNull(namespace, "namespace");
+    public HrisMetadata withNamespace(@Nullable String namespace) {
         this.namespace = namespace;
         return this;
     }
 
-    public HrisMetadata withSlug(String slug) {
-        Utils.checkNotNull(slug, "slug");
-        this.slug = Optional.ofNullable(slug);
-        return this;
-    }
 
-
-    public HrisMetadata withSlug(Optional<String> slug) {
-        Utils.checkNotNull(slug, "slug");
+    public HrisMetadata withSlug(@Nullable String slug) {
         this.slug = slug;
         return this;
     }
 
-    public HrisMetadata withValue(HrisMetadataValue value) {
-        Utils.checkNotNull(value, "value");
-        this.value = Optional.ofNullable(value);
-        return this;
-    }
 
-
-    public HrisMetadata withValue(Optional<? extends HrisMetadataValue> value) {
-        Utils.checkNotNull(value, "value");
+    public HrisMetadata withValue(@Nullable HrisMetadataValue value) {
         this.value = value;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -228,102 +170,53 @@ public class HrisMetadata {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends HrisMetadataExtraData> extraData = Optional.empty();
+        private HrisMetadataExtraData extraData;
 
-        private Optional<? extends HrisMetadataFormat> format = Optional.empty();
+        private HrisMetadataFormat format;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<String> namespace = Optional.empty();
+        private String namespace;
 
-        private Optional<String> slug = Optional.empty();
+        private String slug;
 
-        private Optional<? extends HrisMetadataValue> value = Optional.empty();
+        private HrisMetadataValue value;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder extraData(HrisMetadataExtraData extraData) {
-            Utils.checkNotNull(extraData, "extraData");
-            this.extraData = Optional.ofNullable(extraData);
-            return this;
-        }
-
-        public Builder extraData(Optional<? extends HrisMetadataExtraData> extraData) {
-            Utils.checkNotNull(extraData, "extraData");
+        public Builder extraData(@Nullable HrisMetadataExtraData extraData) {
             this.extraData = extraData;
             return this;
         }
 
-
-        public Builder format(HrisMetadataFormat format) {
-            Utils.checkNotNull(format, "format");
-            this.format = Optional.ofNullable(format);
-            return this;
-        }
-
-        public Builder format(Optional<? extends HrisMetadataFormat> format) {
-            Utils.checkNotNull(format, "format");
+        public Builder format(@Nullable HrisMetadataFormat format) {
             this.format = format;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder namespace(String namespace) {
-            Utils.checkNotNull(namespace, "namespace");
-            this.namespace = Optional.ofNullable(namespace);
-            return this;
-        }
-
-        public Builder namespace(Optional<String> namespace) {
-            Utils.checkNotNull(namespace, "namespace");
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }
 
-
-        public Builder slug(String slug) {
-            Utils.checkNotNull(slug, "slug");
-            this.slug = Optional.ofNullable(slug);
-            return this;
-        }
-
-        public Builder slug(Optional<String> slug) {
-            Utils.checkNotNull(slug, "slug");
+        public Builder slug(@Nullable String slug) {
             this.slug = slug;
             return this;
         }
 
-
-        public Builder value(HrisMetadataValue value) {
-            Utils.checkNotNull(value, "value");
-            this.value = Optional.ofNullable(value);
-            return this;
-        }
-
-        public Builder value(Optional<? extends HrisMetadataValue> value) {
-            Utils.checkNotNull(value, "value");
+        public Builder value(@Nullable HrisMetadataValue value) {
             this.value = value;
             return this;
         }
 
         public HrisMetadata build() {
-
             return new HrisMetadata(
                 extraData, format, id,
                 namespace, slug, value);

@@ -4,12 +4,11 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.io.InputStream;
-import java.lang.Integer;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.List;
 import java.util.Optional;
@@ -22,7 +21,7 @@ public class ListAccountingTrialbalancesResponse implements Response {
     /**
      * Successful
      */
-    private Optional<? extends List<AccountingTrialbalance>> accountingTrialbalances;
+    private List<AccountingTrialbalance> accountingTrialbalances;
 
     /**
      * HTTP response content type for this operation
@@ -41,59 +40,52 @@ public class ListAccountingTrialbalancesResponse implements Response {
 
     @JsonCreator
     public ListAccountingTrialbalancesResponse(
-            Optional<? extends List<AccountingTrialbalance>> accountingTrialbalances,
-            String contentType,
+            @Nullable List<AccountingTrialbalance> accountingTrialbalances,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(accountingTrialbalances, "accountingTrialbalances");
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
+            @Nonnull HttpResponse<InputStream> rawResponse) {
         this.accountingTrialbalances = accountingTrialbalances;
-        this.contentType = contentType;
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
     }
     
     public ListAccountingTrialbalancesResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
-        this(Optional.empty(), contentType, statusCode,
+            @Nonnull HttpResponse<InputStream> rawResponse) {
+        this(null, contentType, statusCode,
             rawResponse);
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<AccountingTrialbalance>> accountingTrialbalances() {
-        return (Optional<List<AccountingTrialbalance>>) accountingTrialbalances;
+        return Optional.ofNullable(this.accountingTrialbalances);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<InputStream> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     public static Builder builder() {
@@ -104,48 +96,38 @@ public class ListAccountingTrialbalancesResponse implements Response {
     /**
      * Successful
      */
-    public ListAccountingTrialbalancesResponse withAccountingTrialbalances(List<AccountingTrialbalance> accountingTrialbalances) {
-        Utils.checkNotNull(accountingTrialbalances, "accountingTrialbalances");
-        this.accountingTrialbalances = Optional.ofNullable(accountingTrialbalances);
-        return this;
-    }
-
-
-    /**
-     * Successful
-     */
-    public ListAccountingTrialbalancesResponse withAccountingTrialbalances(Optional<? extends List<AccountingTrialbalance>> accountingTrialbalances) {
-        Utils.checkNotNull(accountingTrialbalances, "accountingTrialbalances");
+    public ListAccountingTrialbalancesResponse withAccountingTrialbalances(@Nullable List<AccountingTrialbalance> accountingTrialbalances) {
         this.accountingTrialbalances = accountingTrialbalances;
         return this;
     }
 
+
     /**
      * HTTP response content type for this operation
      */
-    public ListAccountingTrialbalancesResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
+    public ListAccountingTrialbalancesResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public ListAccountingTrialbalancesResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public ListAccountingTrialbalancesResponse withRawResponse(HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
+    public ListAccountingTrialbalancesResponse withRawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -182,11 +164,11 @@ public class ListAccountingTrialbalancesResponse implements Response {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends List<AccountingTrialbalance>> accountingTrialbalances = Optional.empty();
+        private List<AccountingTrialbalance> accountingTrialbalances;
 
         private String contentType;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<InputStream> rawResponse;
 
@@ -194,57 +176,39 @@ public class ListAccountingTrialbalancesResponse implements Response {
           // force use of static builder() method
         }
 
-
         /**
          * Successful
          */
-        public Builder accountingTrialbalances(List<AccountingTrialbalance> accountingTrialbalances) {
-            Utils.checkNotNull(accountingTrialbalances, "accountingTrialbalances");
-            this.accountingTrialbalances = Optional.ofNullable(accountingTrialbalances);
-            return this;
-        }
-
-        /**
-         * Successful
-         */
-        public Builder accountingTrialbalances(Optional<? extends List<AccountingTrialbalance>> accountingTrialbalances) {
-            Utils.checkNotNull(accountingTrialbalances, "accountingTrialbalances");
+        public Builder accountingTrialbalances(@Nullable List<AccountingTrialbalance> accountingTrialbalances) {
             this.accountingTrialbalances = accountingTrialbalances;
             return this;
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<InputStream> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
+        public Builder rawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         public ListAccountingTrialbalancesResponse build() {
-
             return new ListAccountingTrialbalancesResponse(
                 accountingTrialbalances, contentType, statusCode,
                 rawResponse);

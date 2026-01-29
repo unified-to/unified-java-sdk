@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingSalesorderRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingSalesorderRequest;
@@ -68,7 +69,7 @@ public class AsyncSalesorder {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAccountingSalesorderResponse>} - The async response
      */
-    public CompletableFuture<CreateAccountingSalesorderResponse> createAccountingSalesorder(CreateAccountingSalesorderRequest request) {
+    public CompletableFuture<CreateAccountingSalesorderResponse> createAccountingSalesorder(@Nonnull CreateAccountingSalesorderRequest request) {
         AsyncRequestOperation<CreateAccountingSalesorderRequest, CreateAccountingSalesorderResponse> operation
               = new CreateAccountingSalesorder.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -91,7 +92,7 @@ public class AsyncSalesorder {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAccountingSalesorderResponse>} - The async response
      */
-    public CompletableFuture<GetAccountingSalesorderResponse> getAccountingSalesorder(GetAccountingSalesorderRequest request) {
+    public CompletableFuture<GetAccountingSalesorderResponse> getAccountingSalesorder(@Nonnull GetAccountingSalesorderRequest request) {
         AsyncRequestOperation<GetAccountingSalesorderRequest, GetAccountingSalesorderResponse> operation
               = new GetAccountingSalesorder.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -114,7 +115,7 @@ public class AsyncSalesorder {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAccountingSalesordersResponse>} - The async response
      */
-    public CompletableFuture<ListAccountingSalesordersResponse> listAccountingSalesorders(ListAccountingSalesordersRequest request) {
+    public CompletableFuture<ListAccountingSalesordersResponse> listAccountingSalesorders(@Nonnull ListAccountingSalesordersRequest request) {
         AsyncRequestOperation<ListAccountingSalesordersRequest, ListAccountingSalesordersResponse> operation
               = new ListAccountingSalesorders.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -137,7 +138,7 @@ public class AsyncSalesorder {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAccountingSalesorderResponse>} - The async response
      */
-    public CompletableFuture<PatchAccountingSalesorderResponse> patchAccountingSalesorder(PatchAccountingSalesorderRequest request) {
+    public CompletableFuture<PatchAccountingSalesorderResponse> patchAccountingSalesorder(@Nonnull PatchAccountingSalesorderRequest request) {
         AsyncRequestOperation<PatchAccountingSalesorderRequest, PatchAccountingSalesorderResponse> operation
               = new PatchAccountingSalesorder.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -160,7 +161,7 @@ public class AsyncSalesorder {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAccountingSalesorderResponse>} - The async response
      */
-    public CompletableFuture<RemoveAccountingSalesorderResponse> removeAccountingSalesorder(RemoveAccountingSalesorderRequest request) {
+    public CompletableFuture<RemoveAccountingSalesorderResponse> removeAccountingSalesorder(@Nonnull RemoveAccountingSalesorderRequest request) {
         AsyncRequestOperation<RemoveAccountingSalesorderRequest, RemoveAccountingSalesorderResponse> operation
               = new RemoveAccountingSalesorder.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -183,7 +184,7 @@ public class AsyncSalesorder {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAccountingSalesorderResponse>} - The async response
      */
-    public CompletableFuture<UpdateAccountingSalesorderResponse> updateAccountingSalesorder(UpdateAccountingSalesorderRequest request) {
+    public CompletableFuture<UpdateAccountingSalesorderResponse> updateAccountingSalesorder(@Nonnull UpdateAccountingSalesorderRequest request) {
         AsyncRequestOperation<UpdateAccountingSalesorderRequest, UpdateAccountingSalesorderResponse> operation
               = new UpdateAccountingSalesorder.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

@@ -4,11 +4,11 @@
 package to.unified.unified_java_sdk.models.operations.async;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import java.lang.Integer;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.io.InputStream;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.FormsForm;
@@ -26,7 +26,7 @@ public class GetFormsFormResponse implements AsyncResponse {
     /**
      * Successful
      */
-    private Optional<? extends FormsForm> formsForm;
+    private FormsForm formsForm;
 
     /**
      * HTTP response status code for this operation
@@ -40,59 +40,52 @@ public class GetFormsFormResponse implements AsyncResponse {
 
     @JsonCreator
     public GetFormsFormResponse(
-            String contentType,
-            Optional<? extends FormsForm> formsForm,
+            @Nonnull String contentType,
+            @Nullable FormsForm formsForm,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(formsForm, "formsForm");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.contentType = contentType;
+            @Nonnull HttpResponse<Blob> rawResponse) {
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.formsForm = formsForm;
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
     }
     
     public GetFormsFormResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
-        this(contentType, Optional.empty(), statusCode,
+            @Nonnull HttpResponse<Blob> rawResponse) {
+        this(contentType, null, statusCode,
             rawResponse);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<FormsForm> formsForm() {
-        return (Optional<FormsForm>) formsForm;
+        return Optional.ofNullable(this.formsForm);
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<Blob> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     public static Builder builder() {
@@ -103,18 +96,8 @@ public class GetFormsFormResponse implements AsyncResponse {
     /**
      * HTTP response content type for this operation
      */
-    public GetFormsFormResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
-        return this;
-    }
-
-    /**
-     * Successful
-     */
-    public GetFormsFormResponse withFormsForm(FormsForm formsForm) {
-        Utils.checkNotNull(formsForm, "formsForm");
-        this.formsForm = Optional.ofNullable(formsForm);
+    public GetFormsFormResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
 
@@ -122,29 +105,29 @@ public class GetFormsFormResponse implements AsyncResponse {
     /**
      * Successful
      */
-    public GetFormsFormResponse withFormsForm(Optional<? extends FormsForm> formsForm) {
-        Utils.checkNotNull(formsForm, "formsForm");
+    public GetFormsFormResponse withFormsForm(@Nullable FormsForm formsForm) {
         this.formsForm = formsForm;
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public GetFormsFormResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public GetFormsFormResponse withRawResponse(HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
+    public GetFormsFormResponse withRawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -183,9 +166,9 @@ public class GetFormsFormResponse implements AsyncResponse {
 
         private String contentType;
 
-        private Optional<? extends FormsForm> formsForm = Optional.empty();
+        private FormsForm formsForm;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<Blob> rawResponse;
 
@@ -193,57 +176,39 @@ public class GetFormsFormResponse implements AsyncResponse {
           // force use of static builder() method
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
-            return this;
-        }
-
-
-        /**
-         * Successful
-         */
-        public Builder formsForm(FormsForm formsForm) {
-            Utils.checkNotNull(formsForm, "formsForm");
-            this.formsForm = Optional.ofNullable(formsForm);
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
 
         /**
          * Successful
          */
-        public Builder formsForm(Optional<? extends FormsForm> formsForm) {
-            Utils.checkNotNull(formsForm, "formsForm");
+        public Builder formsForm(@Nullable FormsForm formsForm) {
             this.formsForm = formsForm;
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<Blob> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
+        public Builder rawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         public GetFormsFormResponse build() {
-
             return new GetFormsFormResponse(
                 contentType, formsForm, statusCode,
                 rawResponse);

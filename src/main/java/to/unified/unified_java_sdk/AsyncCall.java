@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.GetUcCallRequest;
 import to.unified.unified_java_sdk.models.operations.ListUcCallsRequest;
@@ -52,7 +53,7 @@ public class AsyncCall {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetUcCallResponse>} - The async response
      */
-    public CompletableFuture<GetUcCallResponse> getUcCall(GetUcCallRequest request) {
+    public CompletableFuture<GetUcCallResponse> getUcCall(@Nonnull GetUcCallRequest request) {
         AsyncRequestOperation<GetUcCallRequest, GetUcCallResponse> operation
               = new GetUcCall.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -75,7 +76,7 @@ public class AsyncCall {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListUcCallsResponse>} - The async response
      */
-    public CompletableFuture<ListUcCallsResponse> listUcCalls(ListUcCallsRequest request) {
+    public CompletableFuture<ListUcCallsResponse> listUcCalls(@Nonnull ListUcCallsRequest request) {
         AsyncRequestOperation<ListUcCallsRequest, ListUcCallsResponse> operation
               = new ListUcCalls.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

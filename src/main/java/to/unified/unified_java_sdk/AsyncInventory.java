@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceInventoryRequest;
 import to.unified.unified_java_sdk.models.operations.GetCommerceInventoryRequest;
@@ -68,7 +69,7 @@ public class AsyncInventory {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCommerceInventoryResponse>} - The async response
      */
-    public CompletableFuture<CreateCommerceInventoryResponse> createCommerceInventory(CreateCommerceInventoryRequest request) {
+    public CompletableFuture<CreateCommerceInventoryResponse> createCommerceInventory(@Nonnull CreateCommerceInventoryRequest request) {
         AsyncRequestOperation<CreateCommerceInventoryRequest, CreateCommerceInventoryResponse> operation
               = new CreateCommerceInventory.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -91,7 +92,7 @@ public class AsyncInventory {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCommerceInventoryResponse>} - The async response
      */
-    public CompletableFuture<GetCommerceInventoryResponse> getCommerceInventory(GetCommerceInventoryRequest request) {
+    public CompletableFuture<GetCommerceInventoryResponse> getCommerceInventory(@Nonnull GetCommerceInventoryRequest request) {
         AsyncRequestOperation<GetCommerceInventoryRequest, GetCommerceInventoryResponse> operation
               = new GetCommerceInventory.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -114,7 +115,7 @@ public class AsyncInventory {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCommerceInventoriesResponse>} - The async response
      */
-    public CompletableFuture<ListCommerceInventoriesResponse> listCommerceInventories(ListCommerceInventoriesRequest request) {
+    public CompletableFuture<ListCommerceInventoriesResponse> listCommerceInventories(@Nonnull ListCommerceInventoriesRequest request) {
         AsyncRequestOperation<ListCommerceInventoriesRequest, ListCommerceInventoriesResponse> operation
               = new ListCommerceInventories.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -137,7 +138,7 @@ public class AsyncInventory {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCommerceInventoryResponse>} - The async response
      */
-    public CompletableFuture<PatchCommerceInventoryResponse> patchCommerceInventory(PatchCommerceInventoryRequest request) {
+    public CompletableFuture<PatchCommerceInventoryResponse> patchCommerceInventory(@Nonnull PatchCommerceInventoryRequest request) {
         AsyncRequestOperation<PatchCommerceInventoryRequest, PatchCommerceInventoryResponse> operation
               = new PatchCommerceInventory.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -160,7 +161,7 @@ public class AsyncInventory {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCommerceInventoryResponse>} - The async response
      */
-    public CompletableFuture<RemoveCommerceInventoryResponse> removeCommerceInventory(RemoveCommerceInventoryRequest request) {
+    public CompletableFuture<RemoveCommerceInventoryResponse> removeCommerceInventory(@Nonnull RemoveCommerceInventoryRequest request) {
         AsyncRequestOperation<RemoveCommerceInventoryRequest, RemoveCommerceInventoryResponse> operation
               = new RemoveCommerceInventory.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -183,7 +184,7 @@ public class AsyncInventory {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCommerceInventoryResponse>} - The async response
      */
-    public CompletableFuture<UpdateCommerceInventoryResponse> updateCommerceInventory(UpdateCommerceInventoryRequest request) {
+    public CompletableFuture<UpdateCommerceInventoryResponse> updateCommerceInventory(@Nonnull UpdateCommerceInventoryRequest request) {
         AsyncRequestOperation<UpdateCommerceInventoryRequest, UpdateCommerceInventoryResponse> operation
               = new UpdateCommerceInventory.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

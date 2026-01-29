@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.GetMessagingChannelRequest;
 import to.unified.unified_java_sdk.models.operations.GetMessagingChannelRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetMessagingChannelResponse;
@@ -51,7 +52,7 @@ public class Channel {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetMessagingChannelResponse getMessagingChannel(GetMessagingChannelRequest request) {
+    public GetMessagingChannelResponse getMessagingChannel(@Nonnull GetMessagingChannelRequest request) {
         RequestOperation<GetMessagingChannelRequest, GetMessagingChannelResponse> operation
               = new GetMessagingChannel.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -73,7 +74,7 @@ public class Channel {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListMessagingChannelsResponse listMessagingChannels(ListMessagingChannelsRequest request) {
+    public ListMessagingChannelsResponse listMessagingChannels(@Nonnull ListMessagingChannelsRequest request) {
         RequestOperation<ListMessagingChannelsRequest, ListMessagingChannelsResponse> operation
               = new ListMessagingChannels.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

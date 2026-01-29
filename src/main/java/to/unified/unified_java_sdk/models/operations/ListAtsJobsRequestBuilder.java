@@ -5,32 +5,45 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.ListAtsJobs;
 import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListAtsJobsRequestBuilder {
-
-    private ListAtsJobsRequest request;
     private final SDKConfiguration sdkConfiguration;
-    private final Headers _headers = new Headers(); 
+    private final Headers _headers = new Headers();
+    private ListAtsJobsRequest request;
 
     public ListAtsJobsRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
 
-    public ListAtsJobsRequestBuilder request(ListAtsJobsRequest request) {
-        Utils.checkNotNull(request, "request");
-        this.request = request;
+    public ListAtsJobsRequestBuilder request(@Nonnull ListAtsJobsRequest request) {
+        this.request = Utils.checkNotNull(request, "request");
         return this;
     }
 
+    private ListAtsJobsRequest _buildRequest() {
+        return this.request;
+    }
+    
+    public ListAtsJobsRequestBuilder header(String name, String value) {
+        Utils.checkNotNull(name, "name");
+        Utils.checkNotNull(value, "value");
+        this._headers.add(name, value);
+        return this;
+    }
+
+    /**
+    * Executes the request and returns the response.
+    *
+    * @return The response from the server.
+    */
     public ListAtsJobsResponse call() {
-        
         RequestOperation<ListAtsJobsRequest, ListAtsJobsResponse> operation
               = new ListAtsJobs.Sync(sdkConfiguration, _headers);
-
-        return operation.handleResponse(operation.doRequest(request));
+        return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

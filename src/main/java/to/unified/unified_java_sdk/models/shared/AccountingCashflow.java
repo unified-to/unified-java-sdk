@@ -4,15 +4,14 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
@@ -28,117 +27,101 @@ public class AccountingCashflow {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cash_beginning_amount")
-    private Optional<Double> cashBeginningAmount;
+    private Double cashBeginningAmount;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cash_ending_amount")
-    private Optional<Double> cashEndingAmount;
+    private Double cashEndingAmount;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category_ids")
-    private Optional<? extends List<String>> categoryIds;
+    private List<String> categoryIds;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_id")
-    private Optional<String> contactId;
+    private String contactId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
-    private Optional<String> currency;
+    private String currency;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
-    private Optional<OffsetDateTime> endAt;
+    private OffsetDateTime endAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("financing_sections")
-    private Optional<? extends List<AccountingCashflowSection>> financingSections;
+    private List<AccountingCashflowSection> financingSections;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("investing_sections")
-    private Optional<? extends List<AccountingCashflowSection>> investingSections;
+    private List<AccountingCashflowSection> investingSections;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
-    private Optional<String> name;
+    private String name;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("net_change_in_cash_amount")
-    private Optional<Double> netChangeInCashAmount;
+    private Double netChangeInCashAmount;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operating_sections")
-    private Optional<? extends List<AccountingCashflowSection>> operatingSections;
+    private List<AccountingCashflowSection> operatingSections;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
-    private Optional<OffsetDateTime> startAt;
+    private OffsetDateTime startAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
     @JsonCreator
     public AccountingCashflow(
-            @JsonProperty("cash_beginning_amount") Optional<Double> cashBeginningAmount,
-            @JsonProperty("cash_ending_amount") Optional<Double> cashEndingAmount,
-            @JsonProperty("category_ids") Optional<? extends List<String>> categoryIds,
-            @JsonProperty("contact_id") Optional<String> contactId,
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("currency") Optional<String> currency,
-            @JsonProperty("end_at") Optional<OffsetDateTime> endAt,
-            @JsonProperty("financing_sections") Optional<? extends List<AccountingCashflowSection>> financingSections,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("investing_sections") Optional<? extends List<AccountingCashflowSection>> investingSections,
-            @JsonProperty("name") Optional<String> name,
-            @JsonProperty("net_change_in_cash_amount") Optional<Double> netChangeInCashAmount,
-            @JsonProperty("operating_sections") Optional<? extends List<AccountingCashflowSection>> operatingSections,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("start_at") Optional<OffsetDateTime> startAt,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(cashBeginningAmount, "cashBeginningAmount");
-        Utils.checkNotNull(cashEndingAmount, "cashEndingAmount");
-        Utils.checkNotNull(categoryIds, "categoryIds");
-        Utils.checkNotNull(contactId, "contactId");
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(currency, "currency");
-        Utils.checkNotNull(endAt, "endAt");
-        Utils.checkNotNull(financingSections, "financingSections");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(investingSections, "investingSections");
-        Utils.checkNotNull(name, "name");
-        Utils.checkNotNull(netChangeInCashAmount, "netChangeInCashAmount");
-        Utils.checkNotNull(operatingSections, "operatingSections");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(startAt, "startAt");
-        Utils.checkNotNull(updatedAt, "updatedAt");
+            @JsonProperty("cash_beginning_amount") @Nullable Double cashBeginningAmount,
+            @JsonProperty("cash_ending_amount") @Nullable Double cashEndingAmount,
+            @JsonProperty("category_ids") @Nullable List<String> categoryIds,
+            @JsonProperty("contact_id") @Nullable String contactId,
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("currency") @Nullable String currency,
+            @JsonProperty("end_at") @Nullable OffsetDateTime endAt,
+            @JsonProperty("financing_sections") @Nullable List<AccountingCashflowSection> financingSections,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("investing_sections") @Nullable List<AccountingCashflowSection> investingSections,
+            @JsonProperty("name") @Nullable String name,
+            @JsonProperty("net_change_in_cash_amount") @Nullable Double netChangeInCashAmount,
+            @JsonProperty("operating_sections") @Nullable List<AccountingCashflowSection> operatingSections,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("start_at") @Nullable OffsetDateTime startAt,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.cashBeginningAmount = cashBeginningAmount;
         this.cashEndingAmount = cashEndingAmount;
         this.categoryIds = categoryIds;
@@ -158,97 +141,76 @@ public class AccountingCashflow {
     }
     
     public AccountingCashflow() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null);
     }
 
-    @JsonIgnore
     public Optional<Double> cashBeginningAmount() {
-        return cashBeginningAmount;
+        return Optional.ofNullable(this.cashBeginningAmount);
     }
 
-    @JsonIgnore
     public Optional<Double> cashEndingAmount() {
-        return cashEndingAmount;
+        return Optional.ofNullable(this.cashEndingAmount);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> categoryIds() {
-        return (Optional<List<String>>) categoryIds;
+        return Optional.ofNullable(this.categoryIds);
     }
 
-    @JsonIgnore
     public Optional<String> contactId() {
-        return contactId;
+        return Optional.ofNullable(this.contactId);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<String> currency() {
-        return currency;
+        return Optional.ofNullable(this.currency);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> endAt() {
-        return endAt;
+        return Optional.ofNullable(this.endAt);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<AccountingCashflowSection>> financingSections() {
-        return (Optional<List<AccountingCashflowSection>>) financingSections;
+        return Optional.ofNullable(this.financingSections);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<AccountingCashflowSection>> investingSections() {
-        return (Optional<List<AccountingCashflowSection>>) investingSections;
+        return Optional.ofNullable(this.investingSections);
     }
 
-    @JsonIgnore
     public Optional<String> name() {
-        return name;
+        return Optional.ofNullable(this.name);
     }
 
-    @JsonIgnore
     public Optional<Double> netChangeInCashAmount() {
-        return netChangeInCashAmount;
+        return Optional.ofNullable(this.netChangeInCashAmount);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<AccountingCashflowSection>> operatingSections() {
-        return (Optional<List<AccountingCashflowSection>>) operatingSections;
+        return Optional.ofNullable(this.operatingSections);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> startAt() {
-        return startAt;
+        return Optional.ofNullable(this.startAt);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
     public static Builder builder() {
@@ -256,213 +218,101 @@ public class AccountingCashflow {
     }
 
 
-    public AccountingCashflow withCashBeginningAmount(double cashBeginningAmount) {
-        Utils.checkNotNull(cashBeginningAmount, "cashBeginningAmount");
-        this.cashBeginningAmount = Optional.ofNullable(cashBeginningAmount);
-        return this;
-    }
-
-
-    public AccountingCashflow withCashBeginningAmount(Optional<Double> cashBeginningAmount) {
-        Utils.checkNotNull(cashBeginningAmount, "cashBeginningAmount");
+    public AccountingCashflow withCashBeginningAmount(@Nullable Double cashBeginningAmount) {
         this.cashBeginningAmount = cashBeginningAmount;
         return this;
     }
 
-    public AccountingCashflow withCashEndingAmount(double cashEndingAmount) {
-        Utils.checkNotNull(cashEndingAmount, "cashEndingAmount");
-        this.cashEndingAmount = Optional.ofNullable(cashEndingAmount);
-        return this;
-    }
 
-
-    public AccountingCashflow withCashEndingAmount(Optional<Double> cashEndingAmount) {
-        Utils.checkNotNull(cashEndingAmount, "cashEndingAmount");
+    public AccountingCashflow withCashEndingAmount(@Nullable Double cashEndingAmount) {
         this.cashEndingAmount = cashEndingAmount;
         return this;
     }
 
-    public AccountingCashflow withCategoryIds(List<String> categoryIds) {
-        Utils.checkNotNull(categoryIds, "categoryIds");
-        this.categoryIds = Optional.ofNullable(categoryIds);
-        return this;
-    }
 
-
-    public AccountingCashflow withCategoryIds(Optional<? extends List<String>> categoryIds) {
-        Utils.checkNotNull(categoryIds, "categoryIds");
+    public AccountingCashflow withCategoryIds(@Nullable List<String> categoryIds) {
         this.categoryIds = categoryIds;
         return this;
     }
 
-    public AccountingCashflow withContactId(String contactId) {
-        Utils.checkNotNull(contactId, "contactId");
-        this.contactId = Optional.ofNullable(contactId);
-        return this;
-    }
 
-
-    public AccountingCashflow withContactId(Optional<String> contactId) {
-        Utils.checkNotNull(contactId, "contactId");
+    public AccountingCashflow withContactId(@Nullable String contactId) {
         this.contactId = contactId;
         return this;
     }
 
-    public AccountingCashflow withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
 
-
-    public AccountingCashflow withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public AccountingCashflow withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public AccountingCashflow withCurrency(String currency) {
-        Utils.checkNotNull(currency, "currency");
-        this.currency = Optional.ofNullable(currency);
-        return this;
-    }
 
-
-    public AccountingCashflow withCurrency(Optional<String> currency) {
-        Utils.checkNotNull(currency, "currency");
+    public AccountingCashflow withCurrency(@Nullable String currency) {
         this.currency = currency;
         return this;
     }
 
-    public AccountingCashflow withEndAt(OffsetDateTime endAt) {
-        Utils.checkNotNull(endAt, "endAt");
-        this.endAt = Optional.ofNullable(endAt);
-        return this;
-    }
 
-
-    public AccountingCashflow withEndAt(Optional<OffsetDateTime> endAt) {
-        Utils.checkNotNull(endAt, "endAt");
+    public AccountingCashflow withEndAt(@Nullable OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
     }
 
-    public AccountingCashflow withFinancingSections(List<AccountingCashflowSection> financingSections) {
-        Utils.checkNotNull(financingSections, "financingSections");
-        this.financingSections = Optional.ofNullable(financingSections);
-        return this;
-    }
 
-
-    public AccountingCashflow withFinancingSections(Optional<? extends List<AccountingCashflowSection>> financingSections) {
-        Utils.checkNotNull(financingSections, "financingSections");
+    public AccountingCashflow withFinancingSections(@Nullable List<AccountingCashflowSection> financingSections) {
         this.financingSections = financingSections;
         return this;
     }
 
-    public AccountingCashflow withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public AccountingCashflow withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public AccountingCashflow withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public AccountingCashflow withInvestingSections(List<AccountingCashflowSection> investingSections) {
-        Utils.checkNotNull(investingSections, "investingSections");
-        this.investingSections = Optional.ofNullable(investingSections);
-        return this;
-    }
 
-
-    public AccountingCashflow withInvestingSections(Optional<? extends List<AccountingCashflowSection>> investingSections) {
-        Utils.checkNotNull(investingSections, "investingSections");
+    public AccountingCashflow withInvestingSections(@Nullable List<AccountingCashflowSection> investingSections) {
         this.investingSections = investingSections;
         return this;
     }
 
-    public AccountingCashflow withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = Optional.ofNullable(name);
-        return this;
-    }
 
-
-    public AccountingCashflow withName(Optional<String> name) {
-        Utils.checkNotNull(name, "name");
+    public AccountingCashflow withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
-    public AccountingCashflow withNetChangeInCashAmount(double netChangeInCashAmount) {
-        Utils.checkNotNull(netChangeInCashAmount, "netChangeInCashAmount");
-        this.netChangeInCashAmount = Optional.ofNullable(netChangeInCashAmount);
-        return this;
-    }
 
-
-    public AccountingCashflow withNetChangeInCashAmount(Optional<Double> netChangeInCashAmount) {
-        Utils.checkNotNull(netChangeInCashAmount, "netChangeInCashAmount");
+    public AccountingCashflow withNetChangeInCashAmount(@Nullable Double netChangeInCashAmount) {
         this.netChangeInCashAmount = netChangeInCashAmount;
         return this;
     }
 
-    public AccountingCashflow withOperatingSections(List<AccountingCashflowSection> operatingSections) {
-        Utils.checkNotNull(operatingSections, "operatingSections");
-        this.operatingSections = Optional.ofNullable(operatingSections);
-        return this;
-    }
 
-
-    public AccountingCashflow withOperatingSections(Optional<? extends List<AccountingCashflowSection>> operatingSections) {
-        Utils.checkNotNull(operatingSections, "operatingSections");
+    public AccountingCashflow withOperatingSections(@Nullable List<AccountingCashflowSection> operatingSections) {
         this.operatingSections = operatingSections;
         return this;
     }
 
-    public AccountingCashflow withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public AccountingCashflow withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public AccountingCashflow withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public AccountingCashflow withStartAt(OffsetDateTime startAt) {
-        Utils.checkNotNull(startAt, "startAt");
-        this.startAt = Optional.ofNullable(startAt);
-        return this;
-    }
 
-
-    public AccountingCashflow withStartAt(Optional<OffsetDateTime> startAt) {
-        Utils.checkNotNull(startAt, "startAt");
+    public AccountingCashflow withStartAt(@Nullable OffsetDateTime startAt) {
         this.startAt = startAt;
         return this;
     }
 
-    public AccountingCashflow withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public AccountingCashflow withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public AccountingCashflow withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -527,252 +377,123 @@ public class AccountingCashflow {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<Double> cashBeginningAmount = Optional.empty();
+        private Double cashBeginningAmount;
 
-        private Optional<Double> cashEndingAmount = Optional.empty();
+        private Double cashEndingAmount;
 
-        private Optional<? extends List<String>> categoryIds = Optional.empty();
+        private List<String> categoryIds;
 
-        private Optional<String> contactId = Optional.empty();
+        private String contactId;
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<String> currency = Optional.empty();
+        private String currency;
 
-        private Optional<OffsetDateTime> endAt = Optional.empty();
+        private OffsetDateTime endAt;
 
-        private Optional<? extends List<AccountingCashflowSection>> financingSections = Optional.empty();
+        private List<AccountingCashflowSection> financingSections;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<? extends List<AccountingCashflowSection>> investingSections = Optional.empty();
+        private List<AccountingCashflowSection> investingSections;
 
-        private Optional<String> name = Optional.empty();
+        private String name;
 
-        private Optional<Double> netChangeInCashAmount = Optional.empty();
+        private Double netChangeInCashAmount;
 
-        private Optional<? extends List<AccountingCashflowSection>> operatingSections = Optional.empty();
+        private List<AccountingCashflowSection> operatingSections;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<OffsetDateTime> startAt = Optional.empty();
+        private OffsetDateTime startAt;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder cashBeginningAmount(double cashBeginningAmount) {
-            Utils.checkNotNull(cashBeginningAmount, "cashBeginningAmount");
-            this.cashBeginningAmount = Optional.ofNullable(cashBeginningAmount);
-            return this;
-        }
-
-        public Builder cashBeginningAmount(Optional<Double> cashBeginningAmount) {
-            Utils.checkNotNull(cashBeginningAmount, "cashBeginningAmount");
+        public Builder cashBeginningAmount(@Nullable Double cashBeginningAmount) {
             this.cashBeginningAmount = cashBeginningAmount;
             return this;
         }
 
-
-        public Builder cashEndingAmount(double cashEndingAmount) {
-            Utils.checkNotNull(cashEndingAmount, "cashEndingAmount");
-            this.cashEndingAmount = Optional.ofNullable(cashEndingAmount);
-            return this;
-        }
-
-        public Builder cashEndingAmount(Optional<Double> cashEndingAmount) {
-            Utils.checkNotNull(cashEndingAmount, "cashEndingAmount");
+        public Builder cashEndingAmount(@Nullable Double cashEndingAmount) {
             this.cashEndingAmount = cashEndingAmount;
             return this;
         }
 
-
-        public Builder categoryIds(List<String> categoryIds) {
-            Utils.checkNotNull(categoryIds, "categoryIds");
-            this.categoryIds = Optional.ofNullable(categoryIds);
-            return this;
-        }
-
-        public Builder categoryIds(Optional<? extends List<String>> categoryIds) {
-            Utils.checkNotNull(categoryIds, "categoryIds");
+        public Builder categoryIds(@Nullable List<String> categoryIds) {
             this.categoryIds = categoryIds;
             return this;
         }
 
-
-        public Builder contactId(String contactId) {
-            Utils.checkNotNull(contactId, "contactId");
-            this.contactId = Optional.ofNullable(contactId);
-            return this;
-        }
-
-        public Builder contactId(Optional<String> contactId) {
-            Utils.checkNotNull(contactId, "contactId");
+        public Builder contactId(@Nullable String contactId) {
             this.contactId = contactId;
             return this;
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder currency(String currency) {
-            Utils.checkNotNull(currency, "currency");
-            this.currency = Optional.ofNullable(currency);
-            return this;
-        }
-
-        public Builder currency(Optional<String> currency) {
-            Utils.checkNotNull(currency, "currency");
+        public Builder currency(@Nullable String currency) {
             this.currency = currency;
             return this;
         }
 
-
-        public Builder endAt(OffsetDateTime endAt) {
-            Utils.checkNotNull(endAt, "endAt");
-            this.endAt = Optional.ofNullable(endAt);
-            return this;
-        }
-
-        public Builder endAt(Optional<OffsetDateTime> endAt) {
-            Utils.checkNotNull(endAt, "endAt");
+        public Builder endAt(@Nullable OffsetDateTime endAt) {
             this.endAt = endAt;
             return this;
         }
 
-
-        public Builder financingSections(List<AccountingCashflowSection> financingSections) {
-            Utils.checkNotNull(financingSections, "financingSections");
-            this.financingSections = Optional.ofNullable(financingSections);
-            return this;
-        }
-
-        public Builder financingSections(Optional<? extends List<AccountingCashflowSection>> financingSections) {
-            Utils.checkNotNull(financingSections, "financingSections");
+        public Builder financingSections(@Nullable List<AccountingCashflowSection> financingSections) {
             this.financingSections = financingSections;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder investingSections(List<AccountingCashflowSection> investingSections) {
-            Utils.checkNotNull(investingSections, "investingSections");
-            this.investingSections = Optional.ofNullable(investingSections);
-            return this;
-        }
-
-        public Builder investingSections(Optional<? extends List<AccountingCashflowSection>> investingSections) {
-            Utils.checkNotNull(investingSections, "investingSections");
+        public Builder investingSections(@Nullable List<AccountingCashflowSection> investingSections) {
             this.investingSections = investingSections;
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = Optional.ofNullable(name);
-            return this;
-        }
-
-        public Builder name(Optional<String> name) {
-            Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-
-        public Builder netChangeInCashAmount(double netChangeInCashAmount) {
-            Utils.checkNotNull(netChangeInCashAmount, "netChangeInCashAmount");
-            this.netChangeInCashAmount = Optional.ofNullable(netChangeInCashAmount);
-            return this;
-        }
-
-        public Builder netChangeInCashAmount(Optional<Double> netChangeInCashAmount) {
-            Utils.checkNotNull(netChangeInCashAmount, "netChangeInCashAmount");
+        public Builder netChangeInCashAmount(@Nullable Double netChangeInCashAmount) {
             this.netChangeInCashAmount = netChangeInCashAmount;
             return this;
         }
 
-
-        public Builder operatingSections(List<AccountingCashflowSection> operatingSections) {
-            Utils.checkNotNull(operatingSections, "operatingSections");
-            this.operatingSections = Optional.ofNullable(operatingSections);
-            return this;
-        }
-
-        public Builder operatingSections(Optional<? extends List<AccountingCashflowSection>> operatingSections) {
-            Utils.checkNotNull(operatingSections, "operatingSections");
+        public Builder operatingSections(@Nullable List<AccountingCashflowSection> operatingSections) {
             this.operatingSections = operatingSections;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder startAt(OffsetDateTime startAt) {
-            Utils.checkNotNull(startAt, "startAt");
-            this.startAt = Optional.ofNullable(startAt);
-            return this;
-        }
-
-        public Builder startAt(Optional<OffsetDateTime> startAt) {
-            Utils.checkNotNull(startAt, "startAt");
+        public Builder startAt(@Nullable OffsetDateTime startAt) {
             this.startAt = startAt;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
         public AccountingCashflow build() {
-
             return new AccountingCashflow(
                 cashBeginningAmount, cashEndingAmount, categoryIds,
                 contactId, createdAt, currency,

@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.CalendarCalendar;
@@ -30,7 +30,7 @@ public class UpdateCalendarCalendarRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<UpdateCalendarCalendarQueryParamFields>> fields;
+    private List<UpdateCalendarCalendarQueryParamFields> fields;
 
     /**
      * ID of the Calendar
@@ -44,63 +44,56 @@ public class UpdateCalendarCalendarRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
     @JsonCreator
     public UpdateCalendarCalendarRequest(
-            CalendarCalendar calendarCalendar,
-            String connectionId,
-            Optional<? extends List<UpdateCalendarCalendarQueryParamFields>> fields,
-            String id,
-            Optional<String> raw) {
-        Utils.checkNotNull(calendarCalendar, "calendarCalendar");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(raw, "raw");
-        this.calendarCalendar = calendarCalendar;
-        this.connectionId = connectionId;
+            @Nonnull CalendarCalendar calendarCalendar,
+            @Nonnull String connectionId,
+            @Nullable List<UpdateCalendarCalendarQueryParamFields> fields,
+            @Nonnull String id,
+            @Nullable String raw) {
+        this.calendarCalendar = Optional.ofNullable(calendarCalendar)
+            .orElseThrow(() -> new IllegalArgumentException("calendarCalendar cannot be null"));
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
-        this.id = id;
+        this.id = Optional.ofNullable(id)
+            .orElseThrow(() -> new IllegalArgumentException("id cannot be null"));
         this.raw = raw;
     }
     
     public UpdateCalendarCalendarRequest(
-            CalendarCalendar calendarCalendar,
-            String connectionId,
-            String id) {
-        this(calendarCalendar, connectionId, Optional.empty(),
-            id, Optional.empty());
+            @Nonnull CalendarCalendar calendarCalendar,
+            @Nonnull String connectionId,
+            @Nonnull String id) {
+        this(calendarCalendar, connectionId, null,
+            id, null);
     }
 
-    @JsonIgnore
     public CalendarCalendar calendarCalendar() {
-        return calendarCalendar;
+        return this.calendarCalendar;
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<UpdateCalendarCalendarQueryParamFields>> fields() {
-        return (Optional<List<UpdateCalendarCalendarQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
      * ID of the Calendar
      */
-    @JsonIgnore
     public String id() {
-        return id;
+        return this.id;
     }
 
     /**
@@ -108,9 +101,8 @@ public class UpdateCalendarCalendarRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
     public static Builder builder() {
@@ -118,27 +110,17 @@ public class UpdateCalendarCalendarRequest {
     }
 
 
-    public UpdateCalendarCalendarRequest withCalendarCalendar(CalendarCalendar calendarCalendar) {
-        Utils.checkNotNull(calendarCalendar, "calendarCalendar");
-        this.calendarCalendar = calendarCalendar;
+    public UpdateCalendarCalendarRequest withCalendarCalendar(@Nonnull CalendarCalendar calendarCalendar) {
+        this.calendarCalendar = Utils.checkNotNull(calendarCalendar, "calendarCalendar");
         return this;
     }
+
 
     /**
      * ID of the connection
      */
-    public UpdateCalendarCalendarRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public UpdateCalendarCalendarRequest withFields(List<UpdateCalendarCalendarQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public UpdateCalendarCalendarRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -146,29 +128,17 @@ public class UpdateCalendarCalendarRequest {
     /**
      * Fields to return
      */
-    public UpdateCalendarCalendarRequest withFields(Optional<? extends List<UpdateCalendarCalendarQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public UpdateCalendarCalendarRequest withFields(@Nullable List<UpdateCalendarCalendarQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
+
     /**
      * ID of the Calendar
      */
-    public UpdateCalendarCalendarRequest withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = id;
-        return this;
-    }
-
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public UpdateCalendarCalendarRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
+    public UpdateCalendarCalendarRequest withId(@Nonnull String id) {
+        this.id = Utils.checkNotNull(id, "id");
         return this;
     }
 
@@ -178,11 +148,11 @@ public class UpdateCalendarCalendarRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public UpdateCalendarCalendarRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public UpdateCalendarCalendarRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -225,71 +195,42 @@ public class UpdateCalendarCalendarRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<UpdateCalendarCalendarQueryParamFields>> fields = Optional.empty();
+        private List<UpdateCalendarCalendarQueryParamFields> fields;
 
         private String id;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder calendarCalendar(CalendarCalendar calendarCalendar) {
-            Utils.checkNotNull(calendarCalendar, "calendarCalendar");
-            this.calendarCalendar = calendarCalendar;
+        public Builder calendarCalendar(@Nonnull CalendarCalendar calendarCalendar) {
+            this.calendarCalendar = Utils.checkNotNull(calendarCalendar, "calendarCalendar");
             return this;
         }
-
 
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<UpdateCalendarCalendarQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<UpdateCalendarCalendarQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<UpdateCalendarCalendarQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * ID of the Calendar
          */
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = id;
-            return this;
-        }
-
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
+        public Builder id(@Nonnull String id) {
+            this.id = Utils.checkNotNull(id, "id");
             return this;
         }
 
@@ -298,14 +239,12 @@ public class UpdateCalendarCalendarRequest {
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
         public UpdateCalendarCalendarRequest build() {
-
             return new UpdateCalendarCalendarRequest(
                 calendarCalendar, connectionId, fields,
                 id, raw);

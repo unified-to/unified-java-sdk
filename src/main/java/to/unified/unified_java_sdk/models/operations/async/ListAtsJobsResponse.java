@@ -4,11 +4,11 @@
 package to.unified.unified_java_sdk.models.operations.async;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import java.lang.Integer;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.io.InputStream;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.List;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public class ListAtsJobsResponse implements AsyncResponse {
     /**
      * Successful
      */
-    private Optional<? extends List<AtsJob>> atsJobs;
+    private List<AtsJob> atsJobs;
 
     /**
      * HTTP response content type for this operation
@@ -41,59 +41,52 @@ public class ListAtsJobsResponse implements AsyncResponse {
 
     @JsonCreator
     public ListAtsJobsResponse(
-            Optional<? extends List<AtsJob>> atsJobs,
-            String contentType,
+            @Nullable List<AtsJob> atsJobs,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(atsJobs, "atsJobs");
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
+            @Nonnull HttpResponse<Blob> rawResponse) {
         this.atsJobs = atsJobs;
-        this.contentType = contentType;
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
     }
     
     public ListAtsJobsResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
-        this(Optional.empty(), contentType, statusCode,
+            @Nonnull HttpResponse<Blob> rawResponse) {
+        this(null, contentType, statusCode,
             rawResponse);
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<AtsJob>> atsJobs() {
-        return (Optional<List<AtsJob>>) atsJobs;
+        return Optional.ofNullable(this.atsJobs);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<Blob> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     public static Builder builder() {
@@ -104,48 +97,38 @@ public class ListAtsJobsResponse implements AsyncResponse {
     /**
      * Successful
      */
-    public ListAtsJobsResponse withAtsJobs(List<AtsJob> atsJobs) {
-        Utils.checkNotNull(atsJobs, "atsJobs");
-        this.atsJobs = Optional.ofNullable(atsJobs);
-        return this;
-    }
-
-
-    /**
-     * Successful
-     */
-    public ListAtsJobsResponse withAtsJobs(Optional<? extends List<AtsJob>> atsJobs) {
-        Utils.checkNotNull(atsJobs, "atsJobs");
+    public ListAtsJobsResponse withAtsJobs(@Nullable List<AtsJob> atsJobs) {
         this.atsJobs = atsJobs;
         return this;
     }
 
+
     /**
      * HTTP response content type for this operation
      */
-    public ListAtsJobsResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
+    public ListAtsJobsResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public ListAtsJobsResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public ListAtsJobsResponse withRawResponse(HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
+    public ListAtsJobsResponse withRawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -182,11 +165,11 @@ public class ListAtsJobsResponse implements AsyncResponse {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends List<AtsJob>> atsJobs = Optional.empty();
+        private List<AtsJob> atsJobs;
 
         private String contentType;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<Blob> rawResponse;
 
@@ -194,57 +177,39 @@ public class ListAtsJobsResponse implements AsyncResponse {
           // force use of static builder() method
         }
 
-
         /**
          * Successful
          */
-        public Builder atsJobs(List<AtsJob> atsJobs) {
-            Utils.checkNotNull(atsJobs, "atsJobs");
-            this.atsJobs = Optional.ofNullable(atsJobs);
-            return this;
-        }
-
-        /**
-         * Successful
-         */
-        public Builder atsJobs(Optional<? extends List<AtsJob>> atsJobs) {
-            Utils.checkNotNull(atsJobs, "atsJobs");
+        public Builder atsJobs(@Nullable List<AtsJob> atsJobs) {
             this.atsJobs = atsJobs;
             return this;
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<Blob> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
+        public Builder rawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         public ListAtsJobsResponse build() {
-
             return new ListAtsJobsResponse(
                 atsJobs, contentType, statusCode,
                 rawResponse);

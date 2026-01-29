@@ -4,11 +4,11 @@
 package to.unified.unified_java_sdk.models.operations.async;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import java.lang.Integer;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.io.InputStream;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.HrisPayslip;
@@ -26,7 +26,7 @@ public class GetHrisPayslipResponse implements AsyncResponse {
     /**
      * Successful
      */
-    private Optional<? extends HrisPayslip> hrisPayslip;
+    private HrisPayslip hrisPayslip;
 
     /**
      * HTTP response status code for this operation
@@ -40,59 +40,52 @@ public class GetHrisPayslipResponse implements AsyncResponse {
 
     @JsonCreator
     public GetHrisPayslipResponse(
-            String contentType,
-            Optional<? extends HrisPayslip> hrisPayslip,
+            @Nonnull String contentType,
+            @Nullable HrisPayslip hrisPayslip,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(hrisPayslip, "hrisPayslip");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.contentType = contentType;
+            @Nonnull HttpResponse<Blob> rawResponse) {
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.hrisPayslip = hrisPayslip;
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
     }
     
     public GetHrisPayslipResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
-        this(contentType, Optional.empty(), statusCode,
+            @Nonnull HttpResponse<Blob> rawResponse) {
+        this(contentType, null, statusCode,
             rawResponse);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<HrisPayslip> hrisPayslip() {
-        return (Optional<HrisPayslip>) hrisPayslip;
+        return Optional.ofNullable(this.hrisPayslip);
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<Blob> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     public static Builder builder() {
@@ -103,18 +96,8 @@ public class GetHrisPayslipResponse implements AsyncResponse {
     /**
      * HTTP response content type for this operation
      */
-    public GetHrisPayslipResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
-        return this;
-    }
-
-    /**
-     * Successful
-     */
-    public GetHrisPayslipResponse withHrisPayslip(HrisPayslip hrisPayslip) {
-        Utils.checkNotNull(hrisPayslip, "hrisPayslip");
-        this.hrisPayslip = Optional.ofNullable(hrisPayslip);
+    public GetHrisPayslipResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
 
@@ -122,29 +105,29 @@ public class GetHrisPayslipResponse implements AsyncResponse {
     /**
      * Successful
      */
-    public GetHrisPayslipResponse withHrisPayslip(Optional<? extends HrisPayslip> hrisPayslip) {
-        Utils.checkNotNull(hrisPayslip, "hrisPayslip");
+    public GetHrisPayslipResponse withHrisPayslip(@Nullable HrisPayslip hrisPayslip) {
         this.hrisPayslip = hrisPayslip;
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public GetHrisPayslipResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public GetHrisPayslipResponse withRawResponse(HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
+    public GetHrisPayslipResponse withRawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -183,9 +166,9 @@ public class GetHrisPayslipResponse implements AsyncResponse {
 
         private String contentType;
 
-        private Optional<? extends HrisPayslip> hrisPayslip = Optional.empty();
+        private HrisPayslip hrisPayslip;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<Blob> rawResponse;
 
@@ -193,57 +176,39 @@ public class GetHrisPayslipResponse implements AsyncResponse {
           // force use of static builder() method
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
-            return this;
-        }
-
-
-        /**
-         * Successful
-         */
-        public Builder hrisPayslip(HrisPayslip hrisPayslip) {
-            Utils.checkNotNull(hrisPayslip, "hrisPayslip");
-            this.hrisPayslip = Optional.ofNullable(hrisPayslip);
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
 
         /**
          * Successful
          */
-        public Builder hrisPayslip(Optional<? extends HrisPayslip> hrisPayslip) {
-            Utils.checkNotNull(hrisPayslip, "hrisPayslip");
+        public Builder hrisPayslip(@Nullable HrisPayslip hrisPayslip) {
             this.hrisPayslip = hrisPayslip;
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<Blob> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
+        public Builder rawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         public GetHrisPayslipResponse build() {
-
             return new GetHrisPayslipResponse(
                 contentType, hrisPayslip, statusCode,
                 rawResponse);

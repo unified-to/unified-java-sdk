@@ -5,32 +5,45 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.PatchCalendarLink;
 import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchCalendarLinkRequestBuilder {
-
-    private PatchCalendarLinkRequest request;
     private final SDKConfiguration sdkConfiguration;
-    private final Headers _headers = new Headers(); 
+    private final Headers _headers = new Headers();
+    private PatchCalendarLinkRequest request;
 
     public PatchCalendarLinkRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
 
-    public PatchCalendarLinkRequestBuilder request(PatchCalendarLinkRequest request) {
-        Utils.checkNotNull(request, "request");
-        this.request = request;
+    public PatchCalendarLinkRequestBuilder request(@Nonnull PatchCalendarLinkRequest request) {
+        this.request = Utils.checkNotNull(request, "request");
         return this;
     }
 
+    private PatchCalendarLinkRequest _buildRequest() {
+        return this.request;
+    }
+    
+    public PatchCalendarLinkRequestBuilder header(String name, String value) {
+        Utils.checkNotNull(name, "name");
+        Utils.checkNotNull(value, "value");
+        this._headers.add(name, value);
+        return this;
+    }
+
+    /**
+    * Executes the request and returns the response.
+    *
+    * @return The response from the server.
+    */
     public PatchCalendarLinkResponse call() {
-        
         RequestOperation<PatchCalendarLinkRequest, PatchCalendarLinkResponse> operation
               = new PatchCalendarLink.Sync(sdkConfiguration, _headers);
-
-        return operation.handleResponse(operation.doRequest(request));
+        return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

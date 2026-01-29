@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiPromptRequest;
 import to.unified.unified_java_sdk.models.operations.async.CreateGenaiPromptRequestBuilder;
@@ -48,7 +49,7 @@ public class AsyncPrompt {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateGenaiPromptResponse>} - The async response
      */
-    public CompletableFuture<CreateGenaiPromptResponse> createGenaiPrompt(CreateGenaiPromptRequest request) {
+    public CompletableFuture<CreateGenaiPromptResponse> createGenaiPrompt(@Nonnull CreateGenaiPromptRequest request) {
         AsyncRequestOperation<CreateGenaiPromptRequest, CreateGenaiPromptResponse> operation
               = new CreateGenaiPrompt.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

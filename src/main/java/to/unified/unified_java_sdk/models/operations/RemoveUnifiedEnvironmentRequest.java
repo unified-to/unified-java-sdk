@@ -4,9 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
 import java.lang.Override;
 import java.lang.String;
+import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -18,14 +19,13 @@ public class RemoveUnifiedEnvironmentRequest {
 
     @JsonCreator
     public RemoveUnifiedEnvironmentRequest(
-            String env) {
-        Utils.checkNotNull(env, "env");
-        this.env = env;
+            @Nonnull String env) {
+        this.env = Optional.ofNullable(env)
+            .orElseThrow(() -> new IllegalArgumentException("env cannot be null"));
     }
 
-    @JsonIgnore
     public String env() {
-        return env;
+        return this.env;
     }
 
     public static Builder builder() {
@@ -33,11 +33,11 @@ public class RemoveUnifiedEnvironmentRequest {
     }
 
 
-    public RemoveUnifiedEnvironmentRequest withEnv(String env) {
-        Utils.checkNotNull(env, "env");
-        this.env = env;
+    public RemoveUnifiedEnvironmentRequest withEnv(@Nonnull String env) {
+        this.env = Utils.checkNotNull(env, "env");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -73,15 +73,12 @@ public class RemoveUnifiedEnvironmentRequest {
           // force use of static builder() method
         }
 
-
-        public Builder env(String env) {
-            Utils.checkNotNull(env, "env");
-            this.env = env;
+        public Builder env(@Nonnull String env) {
+            this.env = Utils.checkNotNull(env, "env");
             return this;
         }
 
         public RemoveUnifiedEnvironmentRequest build() {
-
             return new RemoveUnifiedEnvironmentRequest(
                 env);
         }

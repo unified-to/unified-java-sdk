@@ -5,32 +5,45 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.CreateMessagingMessage;
 import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateMessagingMessageRequestBuilder {
-
-    private CreateMessagingMessageRequest request;
     private final SDKConfiguration sdkConfiguration;
-    private final Headers _headers = new Headers(); 
+    private final Headers _headers = new Headers();
+    private CreateMessagingMessageRequest request;
 
     public CreateMessagingMessageRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
 
-    public CreateMessagingMessageRequestBuilder request(CreateMessagingMessageRequest request) {
-        Utils.checkNotNull(request, "request");
-        this.request = request;
+    public CreateMessagingMessageRequestBuilder request(@Nonnull CreateMessagingMessageRequest request) {
+        this.request = Utils.checkNotNull(request, "request");
         return this;
     }
 
+    private CreateMessagingMessageRequest _buildRequest() {
+        return this.request;
+    }
+    
+    public CreateMessagingMessageRequestBuilder header(String name, String value) {
+        Utils.checkNotNull(name, "name");
+        Utils.checkNotNull(value, "value");
+        this._headers.add(name, value);
+        return this;
+    }
+
+    /**
+    * Executes the request and returns the response.
+    *
+    * @return The response from the server.
+    */
     public CreateMessagingMessageResponse call() {
-        
         RequestOperation<CreateMessagingMessageRequest, CreateMessagingMessageResponse> operation
               = new CreateMessagingMessage.Sync(sdkConfiguration, _headers);
-
-        return operation.handleResponse(operation.doRequest(request));
+        return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

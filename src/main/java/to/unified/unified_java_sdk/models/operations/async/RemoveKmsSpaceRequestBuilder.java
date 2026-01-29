@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.RemoveKmsSpaceRequest;
@@ -13,27 +14,39 @@ import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveKmsSpaceRequestBuilder {
-
-    private RemoveKmsSpaceRequest request;
     private final SDKConfiguration sdkConfiguration;
-    private final Headers _headers = new Headers(); 
+    private final Headers _headers = new Headers();
+    private RemoveKmsSpaceRequest request;
 
     public RemoveKmsSpaceRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
 
-    public RemoveKmsSpaceRequestBuilder request(RemoveKmsSpaceRequest request) {
-        Utils.checkNotNull(request, "request");
-        this.request = request;
+    public RemoveKmsSpaceRequestBuilder request(@Nonnull RemoveKmsSpaceRequest request) {
+        this.request = Utils.checkNotNull(request, "request");
         return this;
     }
 
+    private RemoveKmsSpaceRequest _buildRequest() {
+        return this.request;
+    }
+    
+    public RemoveKmsSpaceRequestBuilder header(String name, String value) {
+        Utils.checkNotNull(name, "name");
+        Utils.checkNotNull(value, "value");
+        this._headers.add(name, value);
+        return this;
+    }
+
+    /**
+    * Executes the request and returns the response.
+    *
+    * @return The response from the server.
+    */
     public CompletableFuture<RemoveKmsSpaceResponse> call() {
-        
         AsyncRequestOperation<RemoveKmsSpaceRequest, RemoveKmsSpaceResponse> operation
               = new RemoveKmsSpace.Async(sdkConfiguration, _headers);
-
-        return operation.doRequest(request)
+        return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }
 }

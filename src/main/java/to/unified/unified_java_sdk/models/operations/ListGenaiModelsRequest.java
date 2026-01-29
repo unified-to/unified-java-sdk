@@ -4,11 +4,11 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
@@ -26,25 +26,25 @@ public class ListGenaiModelsRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<ListGenaiModelsQueryParamFields>> fields;
+    private List<ListGenaiModelsQueryParamFields> fields;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
-    private Optional<Double> limit;
+    private Double limit;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
-    private Optional<Double> offset;
+    private Double offset;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
-    private Optional<String> order;
+    private String order;
 
     /**
      * Query string to search. eg. email address or name
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
-    private Optional<String> query;
+    private String query;
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
@@ -52,40 +52,32 @@ public class ListGenaiModelsRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
-    private Optional<String> sort;
+    private String sort;
 
     /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
-    private Optional<String> updatedGte;
+    private String updatedGte;
 
     @JsonCreator
     public ListGenaiModelsRequest(
-            String connectionId,
-            Optional<? extends List<ListGenaiModelsQueryParamFields>> fields,
-            Optional<Double> limit,
-            Optional<Double> offset,
-            Optional<String> order,
-            Optional<String> query,
-            Optional<String> raw,
-            Optional<String> sort,
-            Optional<String> updatedGte) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(limit, "limit");
-        Utils.checkNotNull(offset, "offset");
-        Utils.checkNotNull(order, "order");
-        Utils.checkNotNull(query, "query");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(sort, "sort");
-        Utils.checkNotNull(updatedGte, "updatedGte");
-        this.connectionId = connectionId;
+            @Nonnull String connectionId,
+            @Nullable List<ListGenaiModelsQueryParamFields> fields,
+            @Nullable Double limit,
+            @Nullable Double offset,
+            @Nullable String order,
+            @Nullable String query,
+            @Nullable String raw,
+            @Nullable String sort,
+            @Nullable String updatedGte) {
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
         this.limit = limit;
         this.offset = offset;
@@ -97,50 +89,43 @@ public class ListGenaiModelsRequest {
     }
     
     public ListGenaiModelsRequest(
-            String connectionId) {
-        this(connectionId, Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+            @Nonnull String connectionId) {
+        this(connectionId, null, null,
+            null, null, null,
+            null, null, null);
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<ListGenaiModelsQueryParamFields>> fields() {
-        return (Optional<List<ListGenaiModelsQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
-    @JsonIgnore
     public Optional<Double> limit() {
-        return limit;
+        return Optional.ofNullable(this.limit);
     }
 
-    @JsonIgnore
     public Optional<Double> offset() {
-        return offset;
+        return Optional.ofNullable(this.offset);
     }
 
-    @JsonIgnore
     public Optional<String> order() {
-        return order;
+        return Optional.ofNullable(this.order);
     }
 
     /**
      * Query string to search. eg. email address or name
      */
-    @JsonIgnore
     public Optional<String> query() {
-        return query;
+        return Optional.ofNullable(this.query);
     }
 
     /**
@@ -148,23 +133,20 @@ public class ListGenaiModelsRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @JsonIgnore
     public Optional<String> sort() {
-        return sort;
+        return Optional.ofNullable(this.sort);
     }
 
     /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
-    @JsonIgnore
     public Optional<String> updatedGte() {
-        return updatedGte;
+        return Optional.ofNullable(this.updatedGte);
     }
 
     public static Builder builder() {
@@ -175,18 +157,8 @@ public class ListGenaiModelsRequest {
     /**
      * ID of the connection
      */
-    public ListGenaiModelsRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public ListGenaiModelsRequest withFields(List<ListGenaiModelsQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public ListGenaiModelsRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -194,126 +166,65 @@ public class ListGenaiModelsRequest {
     /**
      * Fields to return
      */
-    public ListGenaiModelsRequest withFields(Optional<? extends List<ListGenaiModelsQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public ListGenaiModelsRequest withFields(@Nullable List<ListGenaiModelsQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
-    public ListGenaiModelsRequest withLimit(double limit) {
-        Utils.checkNotNull(limit, "limit");
-        this.limit = Optional.ofNullable(limit);
-        return this;
-    }
 
-
-    public ListGenaiModelsRequest withLimit(Optional<Double> limit) {
-        Utils.checkNotNull(limit, "limit");
+    public ListGenaiModelsRequest withLimit(@Nullable Double limit) {
         this.limit = limit;
         return this;
     }
 
-    public ListGenaiModelsRequest withOffset(double offset) {
-        Utils.checkNotNull(offset, "offset");
-        this.offset = Optional.ofNullable(offset);
-        return this;
-    }
 
-
-    public ListGenaiModelsRequest withOffset(Optional<Double> offset) {
-        Utils.checkNotNull(offset, "offset");
+    public ListGenaiModelsRequest withOffset(@Nullable Double offset) {
         this.offset = offset;
         return this;
     }
 
-    public ListGenaiModelsRequest withOrder(String order) {
-        Utils.checkNotNull(order, "order");
-        this.order = Optional.ofNullable(order);
-        return this;
-    }
 
-
-    public ListGenaiModelsRequest withOrder(Optional<String> order) {
-        Utils.checkNotNull(order, "order");
+    public ListGenaiModelsRequest withOrder(@Nullable String order) {
         this.order = order;
         return this;
     }
 
-    /**
-     * Query string to search. eg. email address or name
-     */
-    public ListGenaiModelsRequest withQuery(String query) {
-        Utils.checkNotNull(query, "query");
-        this.query = Optional.ofNullable(query);
-        return this;
-    }
-
 
     /**
      * Query string to search. eg. email address or name
      */
-    public ListGenaiModelsRequest withQuery(Optional<String> query) {
-        Utils.checkNotNull(query, "query");
+    public ListGenaiModelsRequest withQuery(@Nullable String query) {
         this.query = query;
         return this;
     }
 
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public ListGenaiModelsRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
-
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public ListGenaiModelsRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public ListGenaiModelsRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
 
-    public ListGenaiModelsRequest withSort(String sort) {
-        Utils.checkNotNull(sort, "sort");
-        this.sort = Optional.ofNullable(sort);
-        return this;
-    }
 
-
-    public ListGenaiModelsRequest withSort(Optional<String> sort) {
-        Utils.checkNotNull(sort, "sort");
+    public ListGenaiModelsRequest withSort(@Nullable String sort) {
         this.sort = sort;
         return this;
     }
 
-    /**
-     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
-     * YYYY-MM-DDTHH:MM:SSZ format)
-     */
-    public ListGenaiModelsRequest withUpdatedGte(String updatedGte) {
-        Utils.checkNotNull(updatedGte, "updatedGte");
-        this.updatedGte = Optional.ofNullable(updatedGte);
-        return this;
-    }
-
 
     /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
-    public ListGenaiModelsRequest withUpdatedGte(Optional<String> updatedGte) {
-        Utils.checkNotNull(updatedGte, "updatedGte");
+    public ListGenaiModelsRequest withUpdatedGte(@Nullable String updatedGte) {
         this.updatedGte = updatedGte;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -363,172 +274,90 @@ public class ListGenaiModelsRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<ListGenaiModelsQueryParamFields>> fields = Optional.empty();
+        private List<ListGenaiModelsQueryParamFields> fields;
 
-        private Optional<Double> limit = Optional.empty();
+        private Double limit;
 
-        private Optional<Double> offset = Optional.empty();
+        private Double offset;
 
-        private Optional<String> order = Optional.empty();
+        private String order;
 
-        private Optional<String> query = Optional.empty();
+        private String query;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
-        private Optional<String> sort = Optional.empty();
+        private String sort;
 
-        private Optional<String> updatedGte = Optional.empty();
+        private String updatedGte;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<ListGenaiModelsQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<ListGenaiModelsQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<ListGenaiModelsQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
-        public Builder limit(double limit) {
-            Utils.checkNotNull(limit, "limit");
-            this.limit = Optional.ofNullable(limit);
-            return this;
-        }
-
-        public Builder limit(Optional<Double> limit) {
-            Utils.checkNotNull(limit, "limit");
+        public Builder limit(@Nullable Double limit) {
             this.limit = limit;
             return this;
         }
 
-
-        public Builder offset(double offset) {
-            Utils.checkNotNull(offset, "offset");
-            this.offset = Optional.ofNullable(offset);
-            return this;
-        }
-
-        public Builder offset(Optional<Double> offset) {
-            Utils.checkNotNull(offset, "offset");
+        public Builder offset(@Nullable Double offset) {
             this.offset = offset;
             return this;
         }
 
-
-        public Builder order(String order) {
-            Utils.checkNotNull(order, "order");
-            this.order = Optional.ofNullable(order);
-            return this;
-        }
-
-        public Builder order(Optional<String> order) {
-            Utils.checkNotNull(order, "order");
+        public Builder order(@Nullable String order) {
             this.order = order;
             return this;
         }
 
-
         /**
          * Query string to search. eg. email address or name
          */
-        public Builder query(String query) {
-            Utils.checkNotNull(query, "query");
-            this.query = Optional.ofNullable(query);
-            return this;
-        }
-
-        /**
-         * Query string to search. eg. email address or name
-         */
-        public Builder query(Optional<String> query) {
-            Utils.checkNotNull(query, "query");
+        public Builder query(@Nullable String query) {
             this.query = query;
             return this;
         }
 
-
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder sort(String sort) {
-            Utils.checkNotNull(sort, "sort");
-            this.sort = Optional.ofNullable(sort);
-            return this;
-        }
-
-        public Builder sort(Optional<String> sort) {
-            Utils.checkNotNull(sort, "sort");
+        public Builder sort(@Nullable String sort) {
             this.sort = sort;
             return this;
         }
 
-
         /**
          * Return only results whose updated date is equal or greater to this value (ISO-8601 /
          * YYYY-MM-DDTHH:MM:SSZ format)
          */
-        public Builder updatedGte(String updatedGte) {
-            Utils.checkNotNull(updatedGte, "updatedGte");
-            this.updatedGte = Optional.ofNullable(updatedGte);
-            return this;
-        }
-
-        /**
-         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
-         * YYYY-MM-DDTHH:MM:SSZ format)
-         */
-        public Builder updatedGte(Optional<String> updatedGte) {
-            Utils.checkNotNull(updatedGte, "updatedGte");
+        public Builder updatedGte(@Nullable String updatedGte) {
             this.updatedGte = updatedGte;
             return this;
         }
 
         public ListGenaiModelsRequest build() {
-
             return new ListGenaiModelsRequest(
                 connectionId, fields, limit,
                 offset, order, query,

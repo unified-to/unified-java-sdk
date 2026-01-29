@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.GetPaymentRefundRequest;
 import to.unified.unified_java_sdk.models.operations.GetPaymentRefundRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetPaymentRefundResponse;
@@ -51,7 +52,7 @@ public class Refund {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetPaymentRefundResponse getPaymentRefund(GetPaymentRefundRequest request) {
+    public GetPaymentRefundResponse getPaymentRefund(@Nonnull GetPaymentRefundRequest request) {
         RequestOperation<GetPaymentRefundRequest, GetPaymentRefundResponse> operation
               = new GetPaymentRefund.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -73,7 +74,7 @@ public class Refund {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListPaymentRefundsResponse listPaymentRefunds(ListPaymentRefundsRequest request) {
+    public ListPaymentRefundsResponse listPaymentRefunds(@Nonnull ListPaymentRefundsRequest request) {
         RequestOperation<ListPaymentRefundsRequest, ListPaymentRefundsResponse> operation
               = new ListPaymentRefunds.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

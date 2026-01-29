@@ -4,15 +4,14 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -23,68 +22,59 @@ public class GenaiPrompt {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max_tokens")
-    private Optional<Double> maxTokens;
+    private Double maxTokens;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mcp_deferred_tools")
-    private Optional<? extends List<String>> mcpDeferredTools;
+    private List<String> mcpDeferredTools;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mcp_url")
-    private Optional<String> mcpUrl;
+    private String mcpUrl;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messages")
-    private Optional<? extends List<GenaiContent>> messages;
+    private List<GenaiContent> messages;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model_id")
-    private Optional<String> modelId;
+    private String modelId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responses")
-    private Optional<? extends List<String>> responses;
+    private List<String> responses;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("temperature")
-    private Optional<Double> temperature;
+    private Double temperature;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokens_used")
-    private Optional<Double> tokensUsed;
+    private Double tokensUsed;
 
     @JsonCreator
     public GenaiPrompt(
-            @JsonProperty("max_tokens") Optional<Double> maxTokens,
-            @JsonProperty("mcp_deferred_tools") Optional<? extends List<String>> mcpDeferredTools,
-            @JsonProperty("mcp_url") Optional<String> mcpUrl,
-            @JsonProperty("messages") Optional<? extends List<GenaiContent>> messages,
-            @JsonProperty("model_id") Optional<String> modelId,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("responses") Optional<? extends List<String>> responses,
-            @JsonProperty("temperature") Optional<Double> temperature,
-            @JsonProperty("tokens_used") Optional<Double> tokensUsed) {
-        Utils.checkNotNull(maxTokens, "maxTokens");
-        Utils.checkNotNull(mcpDeferredTools, "mcpDeferredTools");
-        Utils.checkNotNull(mcpUrl, "mcpUrl");
-        Utils.checkNotNull(messages, "messages");
-        Utils.checkNotNull(modelId, "modelId");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(responses, "responses");
-        Utils.checkNotNull(temperature, "temperature");
-        Utils.checkNotNull(tokensUsed, "tokensUsed");
+            @JsonProperty("max_tokens") @Nullable Double maxTokens,
+            @JsonProperty("mcp_deferred_tools") @Nullable List<String> mcpDeferredTools,
+            @JsonProperty("mcp_url") @Nullable String mcpUrl,
+            @JsonProperty("messages") @Nullable List<GenaiContent> messages,
+            @JsonProperty("model_id") @Nullable String modelId,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("responses") @Nullable List<String> responses,
+            @JsonProperty("temperature") @Nullable Double temperature,
+            @JsonProperty("tokens_used") @Nullable Double tokensUsed) {
         this.maxTokens = maxTokens;
         this.mcpDeferredTools = mcpDeferredTools;
         this.mcpUrl = mcpUrl;
@@ -97,58 +87,45 @@ public class GenaiPrompt {
     }
     
     public GenaiPrompt() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null);
     }
 
-    @JsonIgnore
     public Optional<Double> maxTokens() {
-        return maxTokens;
+        return Optional.ofNullable(this.maxTokens);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> mcpDeferredTools() {
-        return (Optional<List<String>>) mcpDeferredTools;
+        return Optional.ofNullable(this.mcpDeferredTools);
     }
 
-    @JsonIgnore
     public Optional<String> mcpUrl() {
-        return mcpUrl;
+        return Optional.ofNullable(this.mcpUrl);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<GenaiContent>> messages() {
-        return (Optional<List<GenaiContent>>) messages;
+        return Optional.ofNullable(this.messages);
     }
 
-    @JsonIgnore
     public Optional<String> modelId() {
-        return modelId;
+        return Optional.ofNullable(this.modelId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> responses() {
-        return (Optional<List<String>>) responses;
+        return Optional.ofNullable(this.responses);
     }
 
-    @JsonIgnore
     public Optional<Double> temperature() {
-        return temperature;
+        return Optional.ofNullable(this.temperature);
     }
 
-    @JsonIgnore
     public Optional<Double> tokensUsed() {
-        return tokensUsed;
+        return Optional.ofNullable(this.tokensUsed);
     }
 
     public static Builder builder() {
@@ -156,122 +133,59 @@ public class GenaiPrompt {
     }
 
 
-    public GenaiPrompt withMaxTokens(double maxTokens) {
-        Utils.checkNotNull(maxTokens, "maxTokens");
-        this.maxTokens = Optional.ofNullable(maxTokens);
-        return this;
-    }
-
-
-    public GenaiPrompt withMaxTokens(Optional<Double> maxTokens) {
-        Utils.checkNotNull(maxTokens, "maxTokens");
+    public GenaiPrompt withMaxTokens(@Nullable Double maxTokens) {
         this.maxTokens = maxTokens;
         return this;
     }
 
-    public GenaiPrompt withMcpDeferredTools(List<String> mcpDeferredTools) {
-        Utils.checkNotNull(mcpDeferredTools, "mcpDeferredTools");
-        this.mcpDeferredTools = Optional.ofNullable(mcpDeferredTools);
-        return this;
-    }
 
-
-    public GenaiPrompt withMcpDeferredTools(Optional<? extends List<String>> mcpDeferredTools) {
-        Utils.checkNotNull(mcpDeferredTools, "mcpDeferredTools");
+    public GenaiPrompt withMcpDeferredTools(@Nullable List<String> mcpDeferredTools) {
         this.mcpDeferredTools = mcpDeferredTools;
         return this;
     }
 
-    public GenaiPrompt withMcpUrl(String mcpUrl) {
-        Utils.checkNotNull(mcpUrl, "mcpUrl");
-        this.mcpUrl = Optional.ofNullable(mcpUrl);
-        return this;
-    }
 
-
-    public GenaiPrompt withMcpUrl(Optional<String> mcpUrl) {
-        Utils.checkNotNull(mcpUrl, "mcpUrl");
+    public GenaiPrompt withMcpUrl(@Nullable String mcpUrl) {
         this.mcpUrl = mcpUrl;
         return this;
     }
 
-    public GenaiPrompt withMessages(List<GenaiContent> messages) {
-        Utils.checkNotNull(messages, "messages");
-        this.messages = Optional.ofNullable(messages);
-        return this;
-    }
 
-
-    public GenaiPrompt withMessages(Optional<? extends List<GenaiContent>> messages) {
-        Utils.checkNotNull(messages, "messages");
+    public GenaiPrompt withMessages(@Nullable List<GenaiContent> messages) {
         this.messages = messages;
         return this;
     }
 
-    public GenaiPrompt withModelId(String modelId) {
-        Utils.checkNotNull(modelId, "modelId");
-        this.modelId = Optional.ofNullable(modelId);
-        return this;
-    }
 
-
-    public GenaiPrompt withModelId(Optional<String> modelId) {
-        Utils.checkNotNull(modelId, "modelId");
+    public GenaiPrompt withModelId(@Nullable String modelId) {
         this.modelId = modelId;
         return this;
     }
 
-    public GenaiPrompt withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public GenaiPrompt withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public GenaiPrompt withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public GenaiPrompt withResponses(List<String> responses) {
-        Utils.checkNotNull(responses, "responses");
-        this.responses = Optional.ofNullable(responses);
-        return this;
-    }
 
-
-    public GenaiPrompt withResponses(Optional<? extends List<String>> responses) {
-        Utils.checkNotNull(responses, "responses");
+    public GenaiPrompt withResponses(@Nullable List<String> responses) {
         this.responses = responses;
         return this;
     }
 
-    public GenaiPrompt withTemperature(double temperature) {
-        Utils.checkNotNull(temperature, "temperature");
-        this.temperature = Optional.ofNullable(temperature);
-        return this;
-    }
 
-
-    public GenaiPrompt withTemperature(Optional<Double> temperature) {
-        Utils.checkNotNull(temperature, "temperature");
+    public GenaiPrompt withTemperature(@Nullable Double temperature) {
         this.temperature = temperature;
         return this;
     }
 
-    public GenaiPrompt withTokensUsed(double tokensUsed) {
-        Utils.checkNotNull(tokensUsed, "tokensUsed");
-        this.tokensUsed = Optional.ofNullable(tokensUsed);
-        return this;
-    }
 
-
-    public GenaiPrompt withTokensUsed(Optional<Double> tokensUsed) {
-        Utils.checkNotNull(tokensUsed, "tokensUsed");
+    public GenaiPrompt withTokensUsed(@Nullable Double tokensUsed) {
         this.tokensUsed = tokensUsed;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -319,147 +233,74 @@ public class GenaiPrompt {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<Double> maxTokens = Optional.empty();
+        private Double maxTokens;
 
-        private Optional<? extends List<String>> mcpDeferredTools = Optional.empty();
+        private List<String> mcpDeferredTools;
 
-        private Optional<String> mcpUrl = Optional.empty();
+        private String mcpUrl;
 
-        private Optional<? extends List<GenaiContent>> messages = Optional.empty();
+        private List<GenaiContent> messages;
 
-        private Optional<String> modelId = Optional.empty();
+        private String modelId;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<? extends List<String>> responses = Optional.empty();
+        private List<String> responses;
 
-        private Optional<Double> temperature = Optional.empty();
+        private Double temperature;
 
-        private Optional<Double> tokensUsed = Optional.empty();
+        private Double tokensUsed;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder maxTokens(double maxTokens) {
-            Utils.checkNotNull(maxTokens, "maxTokens");
-            this.maxTokens = Optional.ofNullable(maxTokens);
-            return this;
-        }
-
-        public Builder maxTokens(Optional<Double> maxTokens) {
-            Utils.checkNotNull(maxTokens, "maxTokens");
+        public Builder maxTokens(@Nullable Double maxTokens) {
             this.maxTokens = maxTokens;
             return this;
         }
 
-
-        public Builder mcpDeferredTools(List<String> mcpDeferredTools) {
-            Utils.checkNotNull(mcpDeferredTools, "mcpDeferredTools");
-            this.mcpDeferredTools = Optional.ofNullable(mcpDeferredTools);
-            return this;
-        }
-
-        public Builder mcpDeferredTools(Optional<? extends List<String>> mcpDeferredTools) {
-            Utils.checkNotNull(mcpDeferredTools, "mcpDeferredTools");
+        public Builder mcpDeferredTools(@Nullable List<String> mcpDeferredTools) {
             this.mcpDeferredTools = mcpDeferredTools;
             return this;
         }
 
-
-        public Builder mcpUrl(String mcpUrl) {
-            Utils.checkNotNull(mcpUrl, "mcpUrl");
-            this.mcpUrl = Optional.ofNullable(mcpUrl);
-            return this;
-        }
-
-        public Builder mcpUrl(Optional<String> mcpUrl) {
-            Utils.checkNotNull(mcpUrl, "mcpUrl");
+        public Builder mcpUrl(@Nullable String mcpUrl) {
             this.mcpUrl = mcpUrl;
             return this;
         }
 
-
-        public Builder messages(List<GenaiContent> messages) {
-            Utils.checkNotNull(messages, "messages");
-            this.messages = Optional.ofNullable(messages);
-            return this;
-        }
-
-        public Builder messages(Optional<? extends List<GenaiContent>> messages) {
-            Utils.checkNotNull(messages, "messages");
+        public Builder messages(@Nullable List<GenaiContent> messages) {
             this.messages = messages;
             return this;
         }
 
-
-        public Builder modelId(String modelId) {
-            Utils.checkNotNull(modelId, "modelId");
-            this.modelId = Optional.ofNullable(modelId);
-            return this;
-        }
-
-        public Builder modelId(Optional<String> modelId) {
-            Utils.checkNotNull(modelId, "modelId");
+        public Builder modelId(@Nullable String modelId) {
             this.modelId = modelId;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder responses(List<String> responses) {
-            Utils.checkNotNull(responses, "responses");
-            this.responses = Optional.ofNullable(responses);
-            return this;
-        }
-
-        public Builder responses(Optional<? extends List<String>> responses) {
-            Utils.checkNotNull(responses, "responses");
+        public Builder responses(@Nullable List<String> responses) {
             this.responses = responses;
             return this;
         }
 
-
-        public Builder temperature(double temperature) {
-            Utils.checkNotNull(temperature, "temperature");
-            this.temperature = Optional.ofNullable(temperature);
-            return this;
-        }
-
-        public Builder temperature(Optional<Double> temperature) {
-            Utils.checkNotNull(temperature, "temperature");
+        public Builder temperature(@Nullable Double temperature) {
             this.temperature = temperature;
             return this;
         }
 
-
-        public Builder tokensUsed(double tokensUsed) {
-            Utils.checkNotNull(tokensUsed, "tokensUsed");
-            this.tokensUsed = Optional.ofNullable(tokensUsed);
-            return this;
-        }
-
-        public Builder tokensUsed(Optional<Double> tokensUsed) {
-            Utils.checkNotNull(tokensUsed, "tokensUsed");
+        public Builder tokensUsed(@Nullable Double tokensUsed) {
             this.tokensUsed = tokensUsed;
             return this;
         }
 
         public GenaiPrompt build() {
-
             return new GenaiPrompt(
                 maxTokens, mcpDeferredTools, mcpUrl,
                 messages, modelId, raw,

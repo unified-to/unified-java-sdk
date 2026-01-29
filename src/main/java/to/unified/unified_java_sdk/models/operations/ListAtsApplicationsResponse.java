@@ -4,12 +4,11 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.io.InputStream;
-import java.lang.Integer;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.List;
 import java.util.Optional;
@@ -22,7 +21,7 @@ public class ListAtsApplicationsResponse implements Response {
     /**
      * Successful
      */
-    private Optional<? extends List<AtsApplication>> atsApplications;
+    private List<AtsApplication> atsApplications;
 
     /**
      * HTTP response content type for this operation
@@ -41,59 +40,52 @@ public class ListAtsApplicationsResponse implements Response {
 
     @JsonCreator
     public ListAtsApplicationsResponse(
-            Optional<? extends List<AtsApplication>> atsApplications,
-            String contentType,
+            @Nullable List<AtsApplication> atsApplications,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(atsApplications, "atsApplications");
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
+            @Nonnull HttpResponse<InputStream> rawResponse) {
         this.atsApplications = atsApplications;
-        this.contentType = contentType;
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
     }
     
     public ListAtsApplicationsResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
-        this(Optional.empty(), contentType, statusCode,
+            @Nonnull HttpResponse<InputStream> rawResponse) {
+        this(null, contentType, statusCode,
             rawResponse);
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<AtsApplication>> atsApplications() {
-        return (Optional<List<AtsApplication>>) atsApplications;
+        return Optional.ofNullable(this.atsApplications);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<InputStream> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     public static Builder builder() {
@@ -104,48 +96,38 @@ public class ListAtsApplicationsResponse implements Response {
     /**
      * Successful
      */
-    public ListAtsApplicationsResponse withAtsApplications(List<AtsApplication> atsApplications) {
-        Utils.checkNotNull(atsApplications, "atsApplications");
-        this.atsApplications = Optional.ofNullable(atsApplications);
-        return this;
-    }
-
-
-    /**
-     * Successful
-     */
-    public ListAtsApplicationsResponse withAtsApplications(Optional<? extends List<AtsApplication>> atsApplications) {
-        Utils.checkNotNull(atsApplications, "atsApplications");
+    public ListAtsApplicationsResponse withAtsApplications(@Nullable List<AtsApplication> atsApplications) {
         this.atsApplications = atsApplications;
         return this;
     }
 
+
     /**
      * HTTP response content type for this operation
      */
-    public ListAtsApplicationsResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
+    public ListAtsApplicationsResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public ListAtsApplicationsResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public ListAtsApplicationsResponse withRawResponse(HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
+    public ListAtsApplicationsResponse withRawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -182,11 +164,11 @@ public class ListAtsApplicationsResponse implements Response {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends List<AtsApplication>> atsApplications = Optional.empty();
+        private List<AtsApplication> atsApplications;
 
         private String contentType;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<InputStream> rawResponse;
 
@@ -194,57 +176,39 @@ public class ListAtsApplicationsResponse implements Response {
           // force use of static builder() method
         }
 
-
         /**
          * Successful
          */
-        public Builder atsApplications(List<AtsApplication> atsApplications) {
-            Utils.checkNotNull(atsApplications, "atsApplications");
-            this.atsApplications = Optional.ofNullable(atsApplications);
-            return this;
-        }
-
-        /**
-         * Successful
-         */
-        public Builder atsApplications(Optional<? extends List<AtsApplication>> atsApplications) {
-            Utils.checkNotNull(atsApplications, "atsApplications");
+        public Builder atsApplications(@Nullable List<AtsApplication> atsApplications) {
             this.atsApplications = atsApplications;
             return this;
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<InputStream> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
+        public Builder rawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         public ListAtsApplicationsResponse build() {
-
             return new ListAtsApplicationsResponse(
                 atsApplications, contentType, statusCode,
                 rawResponse);

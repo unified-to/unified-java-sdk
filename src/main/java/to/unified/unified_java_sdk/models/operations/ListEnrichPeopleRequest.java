@@ -4,7 +4,8 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
 import java.util.Optional;
@@ -17,7 +18,7 @@ public class ListEnrichPeopleRequest {
      * The name of the company the person is associated with. Not valid by itself.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=company_name")
-    private Optional<String> companyName;
+    private String companyName;
 
     /**
      * ID of the connection
@@ -29,42 +30,37 @@ public class ListEnrichPeopleRequest {
      * The email of the person to search
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
-    private Optional<String> email;
+    private String email;
 
     /**
      * The LinkedIn URL of the person to search
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=linkedin_url")
-    private Optional<String> linkedinUrl;
+    private String linkedinUrl;
 
     /**
      * The name of the person to search
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
-    private Optional<String> name;
+    private String name;
 
     /**
      * The twitter handle of the person to search
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=twitter")
-    private Optional<String> twitter;
+    private String twitter;
 
     @JsonCreator
     public ListEnrichPeopleRequest(
-            Optional<String> companyName,
-            String connectionId,
-            Optional<String> email,
-            Optional<String> linkedinUrl,
-            Optional<String> name,
-            Optional<String> twitter) {
-        Utils.checkNotNull(companyName, "companyName");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(email, "email");
-        Utils.checkNotNull(linkedinUrl, "linkedinUrl");
-        Utils.checkNotNull(name, "name");
-        Utils.checkNotNull(twitter, "twitter");
+            @Nullable String companyName,
+            @Nonnull String connectionId,
+            @Nullable String email,
+            @Nullable String linkedinUrl,
+            @Nullable String name,
+            @Nullable String twitter) {
         this.companyName = companyName;
-        this.connectionId = connectionId;
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.email = email;
         this.linkedinUrl = linkedinUrl;
         this.name = name;
@@ -72,57 +68,51 @@ public class ListEnrichPeopleRequest {
     }
     
     public ListEnrichPeopleRequest(
-            String connectionId) {
-        this(Optional.empty(), connectionId, Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+            @Nonnull String connectionId) {
+        this(null, connectionId, null,
+            null, null, null);
     }
 
     /**
      * The name of the company the person is associated with. Not valid by itself.
      */
-    @JsonIgnore
     public Optional<String> companyName() {
-        return companyName;
+        return Optional.ofNullable(this.companyName);
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * The email of the person to search
      */
-    @JsonIgnore
     public Optional<String> email() {
-        return email;
+        return Optional.ofNullable(this.email);
     }
 
     /**
      * The LinkedIn URL of the person to search
      */
-    @JsonIgnore
     public Optional<String> linkedinUrl() {
-        return linkedinUrl;
+        return Optional.ofNullable(this.linkedinUrl);
     }
 
     /**
      * The name of the person to search
      */
-    @JsonIgnore
     public Optional<String> name() {
-        return name;
+        return Optional.ofNullable(this.name);
     }
 
     /**
      * The twitter handle of the person to search
      */
-    @JsonIgnore
     public Optional<String> twitter() {
-        return twitter;
+        return Optional.ofNullable(this.twitter);
     }
 
     public static Builder builder() {
@@ -133,37 +123,17 @@ public class ListEnrichPeopleRequest {
     /**
      * The name of the company the person is associated with. Not valid by itself.
      */
-    public ListEnrichPeopleRequest withCompanyName(String companyName) {
-        Utils.checkNotNull(companyName, "companyName");
-        this.companyName = Optional.ofNullable(companyName);
-        return this;
-    }
-
-
-    /**
-     * The name of the company the person is associated with. Not valid by itself.
-     */
-    public ListEnrichPeopleRequest withCompanyName(Optional<String> companyName) {
-        Utils.checkNotNull(companyName, "companyName");
+    public ListEnrichPeopleRequest withCompanyName(@Nullable String companyName) {
         this.companyName = companyName;
         return this;
     }
 
+
     /**
      * ID of the connection
      */
-    public ListEnrichPeopleRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * The email of the person to search
-     */
-    public ListEnrichPeopleRequest withEmail(String email) {
-        Utils.checkNotNull(email, "email");
-        this.email = Optional.ofNullable(email);
+    public ListEnrichPeopleRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -171,68 +141,38 @@ public class ListEnrichPeopleRequest {
     /**
      * The email of the person to search
      */
-    public ListEnrichPeopleRequest withEmail(Optional<String> email) {
-        Utils.checkNotNull(email, "email");
+    public ListEnrichPeopleRequest withEmail(@Nullable String email) {
         this.email = email;
         return this;
     }
 
-    /**
-     * The LinkedIn URL of the person to search
-     */
-    public ListEnrichPeopleRequest withLinkedinUrl(String linkedinUrl) {
-        Utils.checkNotNull(linkedinUrl, "linkedinUrl");
-        this.linkedinUrl = Optional.ofNullable(linkedinUrl);
-        return this;
-    }
-
 
     /**
      * The LinkedIn URL of the person to search
      */
-    public ListEnrichPeopleRequest withLinkedinUrl(Optional<String> linkedinUrl) {
-        Utils.checkNotNull(linkedinUrl, "linkedinUrl");
+    public ListEnrichPeopleRequest withLinkedinUrl(@Nullable String linkedinUrl) {
         this.linkedinUrl = linkedinUrl;
         return this;
     }
 
-    /**
-     * The name of the person to search
-     */
-    public ListEnrichPeopleRequest withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = Optional.ofNullable(name);
-        return this;
-    }
-
 
     /**
      * The name of the person to search
      */
-    public ListEnrichPeopleRequest withName(Optional<String> name) {
-        Utils.checkNotNull(name, "name");
+    public ListEnrichPeopleRequest withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
-    /**
-     * The twitter handle of the person to search
-     */
-    public ListEnrichPeopleRequest withTwitter(String twitter) {
-        Utils.checkNotNull(twitter, "twitter");
-        this.twitter = Optional.ofNullable(twitter);
-        return this;
-    }
-
 
     /**
      * The twitter handle of the person to search
      */
-    public ListEnrichPeopleRequest withTwitter(Optional<String> twitter) {
-        Utils.checkNotNull(twitter, "twitter");
+    public ListEnrichPeopleRequest withTwitter(@Nullable String twitter) {
         this.twitter = twitter;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -273,129 +213,71 @@ public class ListEnrichPeopleRequest {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> companyName = Optional.empty();
+        private String companyName;
 
         private String connectionId;
 
-        private Optional<String> email = Optional.empty();
+        private String email;
 
-        private Optional<String> linkedinUrl = Optional.empty();
+        private String linkedinUrl;
 
-        private Optional<String> name = Optional.empty();
+        private String name;
 
-        private Optional<String> twitter = Optional.empty();
+        private String twitter;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
         /**
          * The name of the company the person is associated with. Not valid by itself.
          */
-        public Builder companyName(String companyName) {
-            Utils.checkNotNull(companyName, "companyName");
-            this.companyName = Optional.ofNullable(companyName);
-            return this;
-        }
-
-        /**
-         * The name of the company the person is associated with. Not valid by itself.
-         */
-        public Builder companyName(Optional<String> companyName) {
-            Utils.checkNotNull(companyName, "companyName");
+        public Builder companyName(@Nullable String companyName) {
             this.companyName = companyName;
             return this;
         }
 
-
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * The email of the person to search
-         */
-        public Builder email(String email) {
-            Utils.checkNotNull(email, "email");
-            this.email = Optional.ofNullable(email);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * The email of the person to search
          */
-        public Builder email(Optional<String> email) {
-            Utils.checkNotNull(email, "email");
+        public Builder email(@Nullable String email) {
             this.email = email;
             return this;
         }
 
-
         /**
          * The LinkedIn URL of the person to search
          */
-        public Builder linkedinUrl(String linkedinUrl) {
-            Utils.checkNotNull(linkedinUrl, "linkedinUrl");
-            this.linkedinUrl = Optional.ofNullable(linkedinUrl);
-            return this;
-        }
-
-        /**
-         * The LinkedIn URL of the person to search
-         */
-        public Builder linkedinUrl(Optional<String> linkedinUrl) {
-            Utils.checkNotNull(linkedinUrl, "linkedinUrl");
+        public Builder linkedinUrl(@Nullable String linkedinUrl) {
             this.linkedinUrl = linkedinUrl;
             return this;
         }
 
-
         /**
          * The name of the person to search
          */
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = Optional.ofNullable(name);
-            return this;
-        }
-
-        /**
-         * The name of the person to search
-         */
-        public Builder name(Optional<String> name) {
-            Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-
         /**
          * The twitter handle of the person to search
          */
-        public Builder twitter(String twitter) {
-            Utils.checkNotNull(twitter, "twitter");
-            this.twitter = Optional.ofNullable(twitter);
-            return this;
-        }
-
-        /**
-         * The twitter handle of the person to search
-         */
-        public Builder twitter(Optional<String> twitter) {
-            Utils.checkNotNull(twitter, "twitter");
+        public Builder twitter(@Nullable String twitter) {
             this.twitter = twitter;
             return this;
         }
 
         public ListEnrichPeopleRequest build() {
-
             return new ListEnrichPeopleRequest(
                 companyName, connectionId, email,
                 linkedinUrl, name, twitter);

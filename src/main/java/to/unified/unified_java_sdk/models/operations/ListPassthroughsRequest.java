@@ -4,11 +4,11 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
@@ -28,44 +28,39 @@ public class ListPassthroughsRequest {
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
-    private Optional<? extends Map<String, Object>> query;
+    private Map<String, Object> query;
 
     @JsonCreator
     public ListPassthroughsRequest(
-            String connectionId,
-            String path,
-            Optional<? extends Map<String, Object>> query) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(path, "path");
-        Utils.checkNotNull(query, "query");
-        this.connectionId = connectionId;
-        this.path = path;
+            @Nonnull String connectionId,
+            @Nonnull String path,
+            @Nullable Map<String, Object> query) {
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
+        this.path = Optional.ofNullable(path)
+            .orElseThrow(() -> new IllegalArgumentException("path cannot be null"));
         this.query = query;
     }
     
     public ListPassthroughsRequest(
-            String connectionId,
-            String path) {
-        this(connectionId, path, Optional.empty());
+            @Nonnull String connectionId,
+            @Nonnull String path) {
+        this(connectionId, path, null);
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
-    @JsonIgnore
     public String path() {
-        return path;
+        return this.path;
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> query() {
-        return (Optional<Map<String, Object>>) query;
+        return Optional.ofNullable(this.query);
     }
 
     public static Builder builder() {
@@ -76,30 +71,23 @@ public class ListPassthroughsRequest {
     /**
      * ID of the connection
      */
-    public ListPassthroughsRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    public ListPassthroughsRequest withPath(String path) {
-        Utils.checkNotNull(path, "path");
-        this.path = path;
-        return this;
-    }
-
-    public ListPassthroughsRequest withQuery(Map<String, Object> query) {
-        Utils.checkNotNull(query, "query");
-        this.query = Optional.ofNullable(query);
+    public ListPassthroughsRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
 
-    public ListPassthroughsRequest withQuery(Optional<? extends Map<String, Object>> query) {
-        Utils.checkNotNull(query, "query");
+    public ListPassthroughsRequest withPath(@Nonnull String path) {
+        this.path = Utils.checkNotNull(path, "path");
+        return this;
+    }
+
+
+    public ListPassthroughsRequest withQuery(@Nullable Map<String, Object> query) {
         this.query = query;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -137,44 +125,31 @@ public class ListPassthroughsRequest {
 
         private String path;
 
-        private Optional<? extends Map<String, Object>> query = Optional.empty();
+        private Map<String, Object> query;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
-
-        public Builder path(String path) {
-            Utils.checkNotNull(path, "path");
-            this.path = path;
+        public Builder path(@Nonnull String path) {
+            this.path = Utils.checkNotNull(path, "path");
             return this;
         }
 
-
-        public Builder query(Map<String, Object> query) {
-            Utils.checkNotNull(query, "query");
-            this.query = Optional.ofNullable(query);
-            return this;
-        }
-
-        public Builder query(Optional<? extends Map<String, Object>> query) {
-            Utils.checkNotNull(query, "query");
+        public Builder query(@Nullable Map<String, Object> query) {
             this.query = query;
             return this;
         }
 
         public ListPassthroughsRequest build() {
-
             return new ListPassthroughsRequest(
                 connectionId, path, query);
         }

@@ -4,15 +4,15 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
@@ -24,67 +24,67 @@ public class HrisDevice {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("admin_user_ids")
-    private Optional<? extends List<String>> adminUserIds;
+    private List<String> adminUserIds;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("asset_tag")
-    private Optional<String> assetTag;
+    private String assetTag;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_antivirus")
-    private Optional<Boolean> hasAntivirus;
+    private Boolean hasAntivirus;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_firewall")
-    private Optional<Boolean> hasFirewall;
+    private Boolean hasFirewall;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_hd_encrypted")
-    private Optional<Boolean> hasHdEncrypted;
+    private Boolean hasHdEncrypted;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_password_manager")
-    private Optional<Boolean> hasPasswordManager;
+    private Boolean hasPasswordManager;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_screenlock")
-    private Optional<Boolean> hasScreenlock;
+    private Boolean hasScreenlock;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_missing")
-    private Optional<Boolean> isMissing;
+    private Boolean isMissing;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_id")
-    private Optional<String> locationId;
+    private String locationId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manufacturer")
-    private Optional<String> manufacturer;
+    private String manufacturer;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model")
-    private Optional<String> model;
+    private String model;
 
 
     @JsonProperty("name")
@@ -93,77 +93,57 @@ public class HrisDevice {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("os")
-    private Optional<String> os;
+    private String os;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("os_version")
-    private Optional<String> osVersion;
+    private String osVersion;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
     /**
      * users who have this device
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_ids")
-    private Optional<? extends List<String>> userIds;
+    private List<String> userIds;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
-    private Optional<String> version;
+    private String version;
 
     @JsonCreator
     public HrisDevice(
-            @JsonProperty("admin_user_ids") Optional<? extends List<String>> adminUserIds,
-            @JsonProperty("asset_tag") Optional<String> assetTag,
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("has_antivirus") Optional<Boolean> hasAntivirus,
-            @JsonProperty("has_firewall") Optional<Boolean> hasFirewall,
-            @JsonProperty("has_hd_encrypted") Optional<Boolean> hasHdEncrypted,
-            @JsonProperty("has_password_manager") Optional<Boolean> hasPasswordManager,
-            @JsonProperty("has_screenlock") Optional<Boolean> hasScreenlock,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("is_missing") Optional<Boolean> isMissing,
-            @JsonProperty("location_id") Optional<String> locationId,
-            @JsonProperty("manufacturer") Optional<String> manufacturer,
-            @JsonProperty("model") Optional<String> model,
-            @JsonProperty("name") String name,
-            @JsonProperty("os") Optional<String> os,
-            @JsonProperty("os_version") Optional<String> osVersion,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
-            @JsonProperty("user_ids") Optional<? extends List<String>> userIds,
-            @JsonProperty("version") Optional<String> version) {
-        Utils.checkNotNull(adminUserIds, "adminUserIds");
-        Utils.checkNotNull(assetTag, "assetTag");
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(hasAntivirus, "hasAntivirus");
-        Utils.checkNotNull(hasFirewall, "hasFirewall");
-        Utils.checkNotNull(hasHdEncrypted, "hasHdEncrypted");
-        Utils.checkNotNull(hasPasswordManager, "hasPasswordManager");
-        Utils.checkNotNull(hasScreenlock, "hasScreenlock");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(isMissing, "isMissing");
-        Utils.checkNotNull(locationId, "locationId");
-        Utils.checkNotNull(manufacturer, "manufacturer");
-        Utils.checkNotNull(model, "model");
-        Utils.checkNotNull(name, "name");
-        Utils.checkNotNull(os, "os");
-        Utils.checkNotNull(osVersion, "osVersion");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        Utils.checkNotNull(userIds, "userIds");
-        Utils.checkNotNull(version, "version");
+            @JsonProperty("admin_user_ids") @Nullable List<String> adminUserIds,
+            @JsonProperty("asset_tag") @Nullable String assetTag,
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("has_antivirus") @Nullable Boolean hasAntivirus,
+            @JsonProperty("has_firewall") @Nullable Boolean hasFirewall,
+            @JsonProperty("has_hd_encrypted") @Nullable Boolean hasHdEncrypted,
+            @JsonProperty("has_password_manager") @Nullable Boolean hasPasswordManager,
+            @JsonProperty("has_screenlock") @Nullable Boolean hasScreenlock,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("is_missing") @Nullable Boolean isMissing,
+            @JsonProperty("location_id") @Nullable String locationId,
+            @JsonProperty("manufacturer") @Nullable String manufacturer,
+            @JsonProperty("model") @Nullable String model,
+            @JsonProperty("name") @Nonnull String name,
+            @JsonProperty("os") @Nullable String os,
+            @JsonProperty("os_version") @Nullable String osVersion,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
+            @JsonProperty("user_ids") @Nullable List<String> userIds,
+            @JsonProperty("version") @Nullable String version) {
         this.adminUserIds = adminUserIds;
         this.assetTag = assetTag;
         this.createdAt = createdAt;
@@ -177,7 +157,8 @@ public class HrisDevice {
         this.locationId = locationId;
         this.manufacturer = manufacturer;
         this.model = model;
-        this.name = name;
+        this.name = Optional.ofNullable(name)
+            .orElseThrow(() -> new IllegalArgumentException("name cannot be null"));
         this.os = os;
         this.osVersion = osVersion;
         this.raw = raw;
@@ -187,120 +168,97 @@ public class HrisDevice {
     }
     
     public HrisDevice(
-            String name) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), name, Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+            @Nonnull String name) {
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, name, null,
+            null, null, null,
+            null, null);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> adminUserIds() {
-        return (Optional<List<String>>) adminUserIds;
+        return Optional.ofNullable(this.adminUserIds);
     }
 
-    @JsonIgnore
     public Optional<String> assetTag() {
-        return assetTag;
+        return Optional.ofNullable(this.assetTag);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<Boolean> hasAntivirus() {
-        return hasAntivirus;
+        return Optional.ofNullable(this.hasAntivirus);
     }
 
-    @JsonIgnore
     public Optional<Boolean> hasFirewall() {
-        return hasFirewall;
+        return Optional.ofNullable(this.hasFirewall);
     }
 
-    @JsonIgnore
     public Optional<Boolean> hasHdEncrypted() {
-        return hasHdEncrypted;
+        return Optional.ofNullable(this.hasHdEncrypted);
     }
 
-    @JsonIgnore
     public Optional<Boolean> hasPasswordManager() {
-        return hasPasswordManager;
+        return Optional.ofNullable(this.hasPasswordManager);
     }
 
-    @JsonIgnore
     public Optional<Boolean> hasScreenlock() {
-        return hasScreenlock;
+        return Optional.ofNullable(this.hasScreenlock);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isMissing() {
-        return isMissing;
+        return Optional.ofNullable(this.isMissing);
     }
 
-    @JsonIgnore
     public Optional<String> locationId() {
-        return locationId;
+        return Optional.ofNullable(this.locationId);
     }
 
-    @JsonIgnore
     public Optional<String> manufacturer() {
-        return manufacturer;
+        return Optional.ofNullable(this.manufacturer);
     }
 
-    @JsonIgnore
     public Optional<String> model() {
-        return model;
+        return Optional.ofNullable(this.model);
     }
 
-    @JsonIgnore
     public String name() {
-        return name;
+        return this.name;
     }
 
-    @JsonIgnore
     public Optional<String> os() {
-        return os;
+        return Optional.ofNullable(this.os);
     }
 
-    @JsonIgnore
     public Optional<String> osVersion() {
-        return osVersion;
+        return Optional.ofNullable(this.osVersion);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
     /**
      * users who have this device
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> userIds() {
-        return (Optional<List<String>>) userIds;
+        return Optional.ofNullable(this.userIds);
     }
 
-    @JsonIgnore
     public Optional<String> version() {
-        return version;
+        return Optional.ofNullable(this.version);
     }
 
     public static Builder builder() {
@@ -308,264 +266,128 @@ public class HrisDevice {
     }
 
 
-    public HrisDevice withAdminUserIds(List<String> adminUserIds) {
-        Utils.checkNotNull(adminUserIds, "adminUserIds");
-        this.adminUserIds = Optional.ofNullable(adminUserIds);
-        return this;
-    }
-
-
-    public HrisDevice withAdminUserIds(Optional<? extends List<String>> adminUserIds) {
-        Utils.checkNotNull(adminUserIds, "adminUserIds");
+    public HrisDevice withAdminUserIds(@Nullable List<String> adminUserIds) {
         this.adminUserIds = adminUserIds;
         return this;
     }
 
-    public HrisDevice withAssetTag(String assetTag) {
-        Utils.checkNotNull(assetTag, "assetTag");
-        this.assetTag = Optional.ofNullable(assetTag);
-        return this;
-    }
 
-
-    public HrisDevice withAssetTag(Optional<String> assetTag) {
-        Utils.checkNotNull(assetTag, "assetTag");
+    public HrisDevice withAssetTag(@Nullable String assetTag) {
         this.assetTag = assetTag;
         return this;
     }
 
-    public HrisDevice withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
 
-
-    public HrisDevice withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public HrisDevice withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public HrisDevice withHasAntivirus(boolean hasAntivirus) {
-        Utils.checkNotNull(hasAntivirus, "hasAntivirus");
-        this.hasAntivirus = Optional.ofNullable(hasAntivirus);
-        return this;
-    }
 
-
-    public HrisDevice withHasAntivirus(Optional<Boolean> hasAntivirus) {
-        Utils.checkNotNull(hasAntivirus, "hasAntivirus");
+    public HrisDevice withHasAntivirus(@Nullable Boolean hasAntivirus) {
         this.hasAntivirus = hasAntivirus;
         return this;
     }
 
-    public HrisDevice withHasFirewall(boolean hasFirewall) {
-        Utils.checkNotNull(hasFirewall, "hasFirewall");
-        this.hasFirewall = Optional.ofNullable(hasFirewall);
-        return this;
-    }
 
-
-    public HrisDevice withHasFirewall(Optional<Boolean> hasFirewall) {
-        Utils.checkNotNull(hasFirewall, "hasFirewall");
+    public HrisDevice withHasFirewall(@Nullable Boolean hasFirewall) {
         this.hasFirewall = hasFirewall;
         return this;
     }
 
-    public HrisDevice withHasHdEncrypted(boolean hasHdEncrypted) {
-        Utils.checkNotNull(hasHdEncrypted, "hasHdEncrypted");
-        this.hasHdEncrypted = Optional.ofNullable(hasHdEncrypted);
-        return this;
-    }
 
-
-    public HrisDevice withHasHdEncrypted(Optional<Boolean> hasHdEncrypted) {
-        Utils.checkNotNull(hasHdEncrypted, "hasHdEncrypted");
+    public HrisDevice withHasHdEncrypted(@Nullable Boolean hasHdEncrypted) {
         this.hasHdEncrypted = hasHdEncrypted;
         return this;
     }
 
-    public HrisDevice withHasPasswordManager(boolean hasPasswordManager) {
-        Utils.checkNotNull(hasPasswordManager, "hasPasswordManager");
-        this.hasPasswordManager = Optional.ofNullable(hasPasswordManager);
-        return this;
-    }
 
-
-    public HrisDevice withHasPasswordManager(Optional<Boolean> hasPasswordManager) {
-        Utils.checkNotNull(hasPasswordManager, "hasPasswordManager");
+    public HrisDevice withHasPasswordManager(@Nullable Boolean hasPasswordManager) {
         this.hasPasswordManager = hasPasswordManager;
         return this;
     }
 
-    public HrisDevice withHasScreenlock(boolean hasScreenlock) {
-        Utils.checkNotNull(hasScreenlock, "hasScreenlock");
-        this.hasScreenlock = Optional.ofNullable(hasScreenlock);
-        return this;
-    }
 
-
-    public HrisDevice withHasScreenlock(Optional<Boolean> hasScreenlock) {
-        Utils.checkNotNull(hasScreenlock, "hasScreenlock");
+    public HrisDevice withHasScreenlock(@Nullable Boolean hasScreenlock) {
         this.hasScreenlock = hasScreenlock;
         return this;
     }
 
-    public HrisDevice withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public HrisDevice withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public HrisDevice withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public HrisDevice withIsMissing(boolean isMissing) {
-        Utils.checkNotNull(isMissing, "isMissing");
-        this.isMissing = Optional.ofNullable(isMissing);
-        return this;
-    }
 
-
-    public HrisDevice withIsMissing(Optional<Boolean> isMissing) {
-        Utils.checkNotNull(isMissing, "isMissing");
+    public HrisDevice withIsMissing(@Nullable Boolean isMissing) {
         this.isMissing = isMissing;
         return this;
     }
 
-    public HrisDevice withLocationId(String locationId) {
-        Utils.checkNotNull(locationId, "locationId");
-        this.locationId = Optional.ofNullable(locationId);
-        return this;
-    }
 
-
-    public HrisDevice withLocationId(Optional<String> locationId) {
-        Utils.checkNotNull(locationId, "locationId");
+    public HrisDevice withLocationId(@Nullable String locationId) {
         this.locationId = locationId;
         return this;
     }
 
-    public HrisDevice withManufacturer(String manufacturer) {
-        Utils.checkNotNull(manufacturer, "manufacturer");
-        this.manufacturer = Optional.ofNullable(manufacturer);
-        return this;
-    }
 
-
-    public HrisDevice withManufacturer(Optional<String> manufacturer) {
-        Utils.checkNotNull(manufacturer, "manufacturer");
+    public HrisDevice withManufacturer(@Nullable String manufacturer) {
         this.manufacturer = manufacturer;
         return this;
     }
 
-    public HrisDevice withModel(String model) {
-        Utils.checkNotNull(model, "model");
-        this.model = Optional.ofNullable(model);
-        return this;
-    }
 
-
-    public HrisDevice withModel(Optional<String> model) {
-        Utils.checkNotNull(model, "model");
+    public HrisDevice withModel(@Nullable String model) {
         this.model = model;
         return this;
     }
 
-    public HrisDevice withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = name;
-        return this;
-    }
 
-    public HrisDevice withOs(String os) {
-        Utils.checkNotNull(os, "os");
-        this.os = Optional.ofNullable(os);
+    public HrisDevice withName(@Nonnull String name) {
+        this.name = Utils.checkNotNull(name, "name");
         return this;
     }
 
 
-    public HrisDevice withOs(Optional<String> os) {
-        Utils.checkNotNull(os, "os");
+    public HrisDevice withOs(@Nullable String os) {
         this.os = os;
         return this;
     }
 
-    public HrisDevice withOsVersion(String osVersion) {
-        Utils.checkNotNull(osVersion, "osVersion");
-        this.osVersion = Optional.ofNullable(osVersion);
-        return this;
-    }
 
-
-    public HrisDevice withOsVersion(Optional<String> osVersion) {
-        Utils.checkNotNull(osVersion, "osVersion");
+    public HrisDevice withOsVersion(@Nullable String osVersion) {
         this.osVersion = osVersion;
         return this;
     }
 
-    public HrisDevice withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public HrisDevice withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public HrisDevice withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public HrisDevice withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public HrisDevice withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public HrisDevice withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
-    /**
-     * users who have this device
-     */
-    public HrisDevice withUserIds(List<String> userIds) {
-        Utils.checkNotNull(userIds, "userIds");
-        this.userIds = Optional.ofNullable(userIds);
-        return this;
-    }
-
 
     /**
      * users who have this device
      */
-    public HrisDevice withUserIds(Optional<? extends List<String>> userIds) {
-        Utils.checkNotNull(userIds, "userIds");
+    public HrisDevice withUserIds(@Nullable List<String> userIds) {
         this.userIds = userIds;
         return this;
     }
 
-    public HrisDevice withVersion(String version) {
-        Utils.checkNotNull(version, "version");
-        this.version = Optional.ofNullable(version);
-        return this;
-    }
 
-
-    public HrisDevice withVersion(Optional<String> version) {
-        Utils.checkNotNull(version, "version");
+    public HrisDevice withVersion(@Nullable String version) {
         this.version = version;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -639,312 +461,154 @@ public class HrisDevice {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends List<String>> adminUserIds = Optional.empty();
+        private List<String> adminUserIds;
 
-        private Optional<String> assetTag = Optional.empty();
+        private String assetTag;
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<Boolean> hasAntivirus = Optional.empty();
+        private Boolean hasAntivirus;
 
-        private Optional<Boolean> hasFirewall = Optional.empty();
+        private Boolean hasFirewall;
 
-        private Optional<Boolean> hasHdEncrypted = Optional.empty();
+        private Boolean hasHdEncrypted;
 
-        private Optional<Boolean> hasPasswordManager = Optional.empty();
+        private Boolean hasPasswordManager;
 
-        private Optional<Boolean> hasScreenlock = Optional.empty();
+        private Boolean hasScreenlock;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<Boolean> isMissing = Optional.empty();
+        private Boolean isMissing;
 
-        private Optional<String> locationId = Optional.empty();
+        private String locationId;
 
-        private Optional<String> manufacturer = Optional.empty();
+        private String manufacturer;
 
-        private Optional<String> model = Optional.empty();
+        private String model;
 
         private String name;
 
-        private Optional<String> os = Optional.empty();
+        private String os;
 
-        private Optional<String> osVersion = Optional.empty();
+        private String osVersion;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
-        private Optional<? extends List<String>> userIds = Optional.empty();
+        private List<String> userIds;
 
-        private Optional<String> version = Optional.empty();
+        private String version;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder adminUserIds(List<String> adminUserIds) {
-            Utils.checkNotNull(adminUserIds, "adminUserIds");
-            this.adminUserIds = Optional.ofNullable(adminUserIds);
-            return this;
-        }
-
-        public Builder adminUserIds(Optional<? extends List<String>> adminUserIds) {
-            Utils.checkNotNull(adminUserIds, "adminUserIds");
+        public Builder adminUserIds(@Nullable List<String> adminUserIds) {
             this.adminUserIds = adminUserIds;
             return this;
         }
 
-
-        public Builder assetTag(String assetTag) {
-            Utils.checkNotNull(assetTag, "assetTag");
-            this.assetTag = Optional.ofNullable(assetTag);
-            return this;
-        }
-
-        public Builder assetTag(Optional<String> assetTag) {
-            Utils.checkNotNull(assetTag, "assetTag");
+        public Builder assetTag(@Nullable String assetTag) {
             this.assetTag = assetTag;
             return this;
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder hasAntivirus(boolean hasAntivirus) {
-            Utils.checkNotNull(hasAntivirus, "hasAntivirus");
-            this.hasAntivirus = Optional.ofNullable(hasAntivirus);
-            return this;
-        }
-
-        public Builder hasAntivirus(Optional<Boolean> hasAntivirus) {
-            Utils.checkNotNull(hasAntivirus, "hasAntivirus");
+        public Builder hasAntivirus(@Nullable Boolean hasAntivirus) {
             this.hasAntivirus = hasAntivirus;
             return this;
         }
 
-
-        public Builder hasFirewall(boolean hasFirewall) {
-            Utils.checkNotNull(hasFirewall, "hasFirewall");
-            this.hasFirewall = Optional.ofNullable(hasFirewall);
-            return this;
-        }
-
-        public Builder hasFirewall(Optional<Boolean> hasFirewall) {
-            Utils.checkNotNull(hasFirewall, "hasFirewall");
+        public Builder hasFirewall(@Nullable Boolean hasFirewall) {
             this.hasFirewall = hasFirewall;
             return this;
         }
 
-
-        public Builder hasHdEncrypted(boolean hasHdEncrypted) {
-            Utils.checkNotNull(hasHdEncrypted, "hasHdEncrypted");
-            this.hasHdEncrypted = Optional.ofNullable(hasHdEncrypted);
-            return this;
-        }
-
-        public Builder hasHdEncrypted(Optional<Boolean> hasHdEncrypted) {
-            Utils.checkNotNull(hasHdEncrypted, "hasHdEncrypted");
+        public Builder hasHdEncrypted(@Nullable Boolean hasHdEncrypted) {
             this.hasHdEncrypted = hasHdEncrypted;
             return this;
         }
 
-
-        public Builder hasPasswordManager(boolean hasPasswordManager) {
-            Utils.checkNotNull(hasPasswordManager, "hasPasswordManager");
-            this.hasPasswordManager = Optional.ofNullable(hasPasswordManager);
-            return this;
-        }
-
-        public Builder hasPasswordManager(Optional<Boolean> hasPasswordManager) {
-            Utils.checkNotNull(hasPasswordManager, "hasPasswordManager");
+        public Builder hasPasswordManager(@Nullable Boolean hasPasswordManager) {
             this.hasPasswordManager = hasPasswordManager;
             return this;
         }
 
-
-        public Builder hasScreenlock(boolean hasScreenlock) {
-            Utils.checkNotNull(hasScreenlock, "hasScreenlock");
-            this.hasScreenlock = Optional.ofNullable(hasScreenlock);
-            return this;
-        }
-
-        public Builder hasScreenlock(Optional<Boolean> hasScreenlock) {
-            Utils.checkNotNull(hasScreenlock, "hasScreenlock");
+        public Builder hasScreenlock(@Nullable Boolean hasScreenlock) {
             this.hasScreenlock = hasScreenlock;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder isMissing(boolean isMissing) {
-            Utils.checkNotNull(isMissing, "isMissing");
-            this.isMissing = Optional.ofNullable(isMissing);
-            return this;
-        }
-
-        public Builder isMissing(Optional<Boolean> isMissing) {
-            Utils.checkNotNull(isMissing, "isMissing");
+        public Builder isMissing(@Nullable Boolean isMissing) {
             this.isMissing = isMissing;
             return this;
         }
 
-
-        public Builder locationId(String locationId) {
-            Utils.checkNotNull(locationId, "locationId");
-            this.locationId = Optional.ofNullable(locationId);
-            return this;
-        }
-
-        public Builder locationId(Optional<String> locationId) {
-            Utils.checkNotNull(locationId, "locationId");
+        public Builder locationId(@Nullable String locationId) {
             this.locationId = locationId;
             return this;
         }
 
-
-        public Builder manufacturer(String manufacturer) {
-            Utils.checkNotNull(manufacturer, "manufacturer");
-            this.manufacturer = Optional.ofNullable(manufacturer);
-            return this;
-        }
-
-        public Builder manufacturer(Optional<String> manufacturer) {
-            Utils.checkNotNull(manufacturer, "manufacturer");
+        public Builder manufacturer(@Nullable String manufacturer) {
             this.manufacturer = manufacturer;
             return this;
         }
 
-
-        public Builder model(String model) {
-            Utils.checkNotNull(model, "model");
-            this.model = Optional.ofNullable(model);
-            return this;
-        }
-
-        public Builder model(Optional<String> model) {
-            Utils.checkNotNull(model, "model");
+        public Builder model(@Nullable String model) {
             this.model = model;
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = name;
+        public Builder name(@Nonnull String name) {
+            this.name = Utils.checkNotNull(name, "name");
             return this;
         }
 
-
-        public Builder os(String os) {
-            Utils.checkNotNull(os, "os");
-            this.os = Optional.ofNullable(os);
-            return this;
-        }
-
-        public Builder os(Optional<String> os) {
-            Utils.checkNotNull(os, "os");
+        public Builder os(@Nullable String os) {
             this.os = os;
             return this;
         }
 
-
-        public Builder osVersion(String osVersion) {
-            Utils.checkNotNull(osVersion, "osVersion");
-            this.osVersion = Optional.ofNullable(osVersion);
-            return this;
-        }
-
-        public Builder osVersion(Optional<String> osVersion) {
-            Utils.checkNotNull(osVersion, "osVersion");
+        public Builder osVersion(@Nullable String osVersion) {
             this.osVersion = osVersion;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
-
         /**
          * users who have this device
          */
-        public Builder userIds(List<String> userIds) {
-            Utils.checkNotNull(userIds, "userIds");
-            this.userIds = Optional.ofNullable(userIds);
-            return this;
-        }
-
-        /**
-         * users who have this device
-         */
-        public Builder userIds(Optional<? extends List<String>> userIds) {
-            Utils.checkNotNull(userIds, "userIds");
+        public Builder userIds(@Nullable List<String> userIds) {
             this.userIds = userIds;
             return this;
         }
 
-
-        public Builder version(String version) {
-            Utils.checkNotNull(version, "version");
-            this.version = Optional.ofNullable(version);
-            return this;
-        }
-
-        public Builder version(Optional<String> version) {
-            Utils.checkNotNull(version, "version");
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }
 
         public HrisDevice build() {
-
             return new HrisDevice(
                 adminUserIds, assetTag, createdAt,
                 hasAntivirus, hasFirewall, hasHdEncrypted,

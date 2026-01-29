@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.MetadataMetadata;
@@ -30,7 +30,7 @@ public class UpdateMetadataMetadataRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<UpdateMetadataMetadataQueryParamFields>> fields;
+    private List<UpdateMetadataMetadataQueryParamFields> fields;
 
     /**
      * ID of the Metadata
@@ -44,63 +44,56 @@ public class UpdateMetadataMetadataRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
     @JsonCreator
     public UpdateMetadataMetadataRequest(
-            MetadataMetadata metadataMetadata,
-            String connectionId,
-            Optional<? extends List<UpdateMetadataMetadataQueryParamFields>> fields,
-            String id,
-            Optional<String> raw) {
-        Utils.checkNotNull(metadataMetadata, "metadataMetadata");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(raw, "raw");
-        this.metadataMetadata = metadataMetadata;
-        this.connectionId = connectionId;
+            @Nonnull MetadataMetadata metadataMetadata,
+            @Nonnull String connectionId,
+            @Nullable List<UpdateMetadataMetadataQueryParamFields> fields,
+            @Nonnull String id,
+            @Nullable String raw) {
+        this.metadataMetadata = Optional.ofNullable(metadataMetadata)
+            .orElseThrow(() -> new IllegalArgumentException("metadataMetadata cannot be null"));
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
-        this.id = id;
+        this.id = Optional.ofNullable(id)
+            .orElseThrow(() -> new IllegalArgumentException("id cannot be null"));
         this.raw = raw;
     }
     
     public UpdateMetadataMetadataRequest(
-            MetadataMetadata metadataMetadata,
-            String connectionId,
-            String id) {
-        this(metadataMetadata, connectionId, Optional.empty(),
-            id, Optional.empty());
+            @Nonnull MetadataMetadata metadataMetadata,
+            @Nonnull String connectionId,
+            @Nonnull String id) {
+        this(metadataMetadata, connectionId, null,
+            id, null);
     }
 
-    @JsonIgnore
     public MetadataMetadata metadataMetadata() {
-        return metadataMetadata;
+        return this.metadataMetadata;
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<UpdateMetadataMetadataQueryParamFields>> fields() {
-        return (Optional<List<UpdateMetadataMetadataQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
      * ID of the Metadata
      */
-    @JsonIgnore
     public String id() {
-        return id;
+        return this.id;
     }
 
     /**
@@ -108,9 +101,8 @@ public class UpdateMetadataMetadataRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
     public static Builder builder() {
@@ -118,27 +110,17 @@ public class UpdateMetadataMetadataRequest {
     }
 
 
-    public UpdateMetadataMetadataRequest withMetadataMetadata(MetadataMetadata metadataMetadata) {
-        Utils.checkNotNull(metadataMetadata, "metadataMetadata");
-        this.metadataMetadata = metadataMetadata;
+    public UpdateMetadataMetadataRequest withMetadataMetadata(@Nonnull MetadataMetadata metadataMetadata) {
+        this.metadataMetadata = Utils.checkNotNull(metadataMetadata, "metadataMetadata");
         return this;
     }
+
 
     /**
      * ID of the connection
      */
-    public UpdateMetadataMetadataRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public UpdateMetadataMetadataRequest withFields(List<UpdateMetadataMetadataQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public UpdateMetadataMetadataRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -146,29 +128,17 @@ public class UpdateMetadataMetadataRequest {
     /**
      * Fields to return
      */
-    public UpdateMetadataMetadataRequest withFields(Optional<? extends List<UpdateMetadataMetadataQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public UpdateMetadataMetadataRequest withFields(@Nullable List<UpdateMetadataMetadataQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
+
     /**
      * ID of the Metadata
      */
-    public UpdateMetadataMetadataRequest withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = id;
-        return this;
-    }
-
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public UpdateMetadataMetadataRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
+    public UpdateMetadataMetadataRequest withId(@Nonnull String id) {
+        this.id = Utils.checkNotNull(id, "id");
         return this;
     }
 
@@ -178,11 +148,11 @@ public class UpdateMetadataMetadataRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public UpdateMetadataMetadataRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public UpdateMetadataMetadataRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -225,71 +195,42 @@ public class UpdateMetadataMetadataRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<UpdateMetadataMetadataQueryParamFields>> fields = Optional.empty();
+        private List<UpdateMetadataMetadataQueryParamFields> fields;
 
         private String id;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder metadataMetadata(MetadataMetadata metadataMetadata) {
-            Utils.checkNotNull(metadataMetadata, "metadataMetadata");
-            this.metadataMetadata = metadataMetadata;
+        public Builder metadataMetadata(@Nonnull MetadataMetadata metadataMetadata) {
+            this.metadataMetadata = Utils.checkNotNull(metadataMetadata, "metadataMetadata");
             return this;
         }
-
 
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<UpdateMetadataMetadataQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<UpdateMetadataMetadataQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<UpdateMetadataMetadataQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * ID of the Metadata
          */
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = id;
-            return this;
-        }
-
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
+        public Builder id(@Nonnull String id) {
+            this.id = Utils.checkNotNull(id, "id");
             return this;
         }
 
@@ -298,14 +239,12 @@ public class UpdateMetadataMetadataRequest {
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
         public UpdateMetadataMetadataRequest build() {
-
             return new UpdateMetadataMetadataRequest(
                 metadataMetadata, connectionId, fields,
                 id, raw);

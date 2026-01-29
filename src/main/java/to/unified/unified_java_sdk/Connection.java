@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateUnifiedConnectionRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateUnifiedConnectionResponse;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedConnectionRequest;
@@ -70,7 +71,7 @@ public class Connection {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateUnifiedConnectionResponse createUnifiedConnection(to.unified.unified_java_sdk.models.shared.Connection request) {
+    public CreateUnifiedConnectionResponse createUnifiedConnection(@Nonnull to.unified.unified_java_sdk.models.shared.Connection request) {
         RequestOperation<to.unified.unified_java_sdk.models.shared.Connection, CreateUnifiedConnectionResponse> operation
               = new CreateUnifiedConnection.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -92,7 +93,7 @@ public class Connection {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetUnifiedConnectionResponse getUnifiedConnection(GetUnifiedConnectionRequest request) {
+    public GetUnifiedConnectionResponse getUnifiedConnection(@Nonnull GetUnifiedConnectionRequest request) {
         RequestOperation<GetUnifiedConnectionRequest, GetUnifiedConnectionResponse> operation
               = new GetUnifiedConnection.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -114,7 +115,7 @@ public class Connection {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListUnifiedConnectionsResponse listUnifiedConnections(ListUnifiedConnectionsRequest request) {
+    public ListUnifiedConnectionsResponse listUnifiedConnections(@Nonnull ListUnifiedConnectionsRequest request) {
         RequestOperation<ListUnifiedConnectionsRequest, ListUnifiedConnectionsResponse> operation
               = new ListUnifiedConnections.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -136,7 +137,7 @@ public class Connection {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchUnifiedConnectionResponse patchUnifiedConnection(PatchUnifiedConnectionRequest request) {
+    public PatchUnifiedConnectionResponse patchUnifiedConnection(@Nonnull PatchUnifiedConnectionRequest request) {
         RequestOperation<PatchUnifiedConnectionRequest, PatchUnifiedConnectionResponse> operation
               = new PatchUnifiedConnection.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -158,7 +159,7 @@ public class Connection {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveUnifiedConnectionResponse removeUnifiedConnection(RemoveUnifiedConnectionRequest request) {
+    public RemoveUnifiedConnectionResponse removeUnifiedConnection(@Nonnull RemoveUnifiedConnectionRequest request) {
         RequestOperation<RemoveUnifiedConnectionRequest, RemoveUnifiedConnectionResponse> operation
               = new RemoveUnifiedConnection.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -180,7 +181,7 @@ public class Connection {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateUnifiedConnectionResponse updateUnifiedConnection(UpdateUnifiedConnectionRequest request) {
+    public UpdateUnifiedConnectionResponse updateUnifiedConnection(@Nonnull UpdateUnifiedConnectionRequest request) {
         RequestOperation<UpdateUnifiedConnectionRequest, UpdateUnifiedConnectionResponse> operation
               = new UpdateUnifiedConnection.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

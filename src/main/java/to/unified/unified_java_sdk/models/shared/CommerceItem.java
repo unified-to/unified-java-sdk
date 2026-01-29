@@ -4,15 +4,14 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
@@ -24,165 +23,143 @@ public class CommerceItem {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_id")
-    private Optional<String> accountId;
+    private String accountId;
 
     /**
      * &#64;deprecated; use collections instead
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collection_ids")
-    private Optional<? extends List<String>> collectionIds;
+    private List<String> collectionIds;
 
     /**
      * points to Collection with id, name, and type fields
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collections")
-    private Optional<? extends List<CommerceReference>> collections;
+    private List<CommerceReference> collections;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
-    private Optional<String> description;
+    private String description;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("global_code")
-    private Optional<String> globalCode;
+    private String globalCode;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
-    private Optional<Boolean> isActive;
+    private Boolean isActive;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_taxable")
-    private Optional<Boolean> isTaxable;
+    private Boolean isTaxable;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("media")
-    private Optional<? extends List<CommerceItemMedia>> media;
+    private List<CommerceItemMedia> media;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
-    private Optional<? extends List<CommerceMetadata>> metadata;
+    private List<CommerceMetadata> metadata;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
-    private Optional<String> name;
+    private String name;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public_description")
-    private Optional<String> publicDescription;
+    private String publicDescription;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public_name")
-    private Optional<String> publicName;
+    private String publicName;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slug")
-    private Optional<String> slug;
+    private String slug;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
-    private Optional<? extends List<String>> tags;
+    private List<String> tags;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxrate_id")
-    private Optional<String> taxrateId;
+    private String taxrateId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
-    private Optional<String> type;
+    private String type;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
     /**
      * first variant is the default variant
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variants")
-    private Optional<? extends List<CommerceItemVariant>> variants;
+    private List<CommerceItemVariant> variants;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendor_name")
-    private Optional<String> vendorName;
+    private String vendorName;
 
     @JsonCreator
     public CommerceItem(
-            @JsonProperty("account_id") Optional<String> accountId,
-            @JsonProperty("collection_ids") Optional<? extends List<String>> collectionIds,
-            @JsonProperty("collections") Optional<? extends List<CommerceReference>> collections,
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("description") Optional<String> description,
-            @JsonProperty("global_code") Optional<String> globalCode,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("is_active") Optional<Boolean> isActive,
-            @JsonProperty("is_taxable") Optional<Boolean> isTaxable,
-            @JsonProperty("media") Optional<? extends List<CommerceItemMedia>> media,
-            @JsonProperty("metadata") Optional<? extends List<CommerceMetadata>> metadata,
-            @JsonProperty("name") Optional<String> name,
-            @JsonProperty("public_description") Optional<String> publicDescription,
-            @JsonProperty("public_name") Optional<String> publicName,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("slug") Optional<String> slug,
-            @JsonProperty("tags") Optional<? extends List<String>> tags,
-            @JsonProperty("taxrate_id") Optional<String> taxrateId,
-            @JsonProperty("type") Optional<String> type,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
-            @JsonProperty("variants") Optional<? extends List<CommerceItemVariant>> variants,
-            @JsonProperty("vendor_name") Optional<String> vendorName) {
-        Utils.checkNotNull(accountId, "accountId");
-        Utils.checkNotNull(collectionIds, "collectionIds");
-        Utils.checkNotNull(collections, "collections");
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(description, "description");
-        Utils.checkNotNull(globalCode, "globalCode");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(isActive, "isActive");
-        Utils.checkNotNull(isTaxable, "isTaxable");
-        Utils.checkNotNull(media, "media");
-        Utils.checkNotNull(metadata, "metadata");
-        Utils.checkNotNull(name, "name");
-        Utils.checkNotNull(publicDescription, "publicDescription");
-        Utils.checkNotNull(publicName, "publicName");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(slug, "slug");
-        Utils.checkNotNull(tags, "tags");
-        Utils.checkNotNull(taxrateId, "taxrateId");
-        Utils.checkNotNull(type, "type");
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        Utils.checkNotNull(variants, "variants");
-        Utils.checkNotNull(vendorName, "vendorName");
+            @JsonProperty("account_id") @Nullable String accountId,
+            @JsonProperty("collection_ids") @Nullable List<String> collectionIds,
+            @JsonProperty("collections") @Nullable List<CommerceReference> collections,
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("description") @Nullable String description,
+            @JsonProperty("global_code") @Nullable String globalCode,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("is_active") @Nullable Boolean isActive,
+            @JsonProperty("is_taxable") @Nullable Boolean isTaxable,
+            @JsonProperty("media") @Nullable List<CommerceItemMedia> media,
+            @JsonProperty("metadata") @Nullable List<CommerceMetadata> metadata,
+            @JsonProperty("name") @Nullable String name,
+            @JsonProperty("public_description") @Nullable String publicDescription,
+            @JsonProperty("public_name") @Nullable String publicName,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("slug") @Nullable String slug,
+            @JsonProperty("tags") @Nullable List<String> tags,
+            @JsonProperty("taxrate_id") @Nullable String taxrateId,
+            @JsonProperty("type") @Nullable String type,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
+            @JsonProperty("variants") @Nullable List<CommerceItemVariant> variants,
+            @JsonProperty("vendor_name") @Nullable String vendorName) {
         this.accountId = accountId;
         this.collectionIds = collectionIds;
         this.collections = collections;
@@ -208,140 +185,111 @@ public class CommerceItem {
     }
     
     public CommerceItem() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null);
     }
 
-    @JsonIgnore
     public Optional<String> accountId() {
-        return accountId;
+        return Optional.ofNullable(this.accountId);
     }
 
     /**
      * &#64;deprecated; use collections instead
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> collectionIds() {
-        return (Optional<List<String>>) collectionIds;
+        return Optional.ofNullable(this.collectionIds);
     }
 
     /**
      * points to Collection with id, name, and type fields
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<CommerceReference>> collections() {
-        return (Optional<List<CommerceReference>>) collections;
+        return Optional.ofNullable(this.collections);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<String> description() {
-        return description;
+        return Optional.ofNullable(this.description);
     }
 
-    @JsonIgnore
     public Optional<String> globalCode() {
-        return globalCode;
+        return Optional.ofNullable(this.globalCode);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isActive() {
-        return isActive;
+        return Optional.ofNullable(this.isActive);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isTaxable() {
-        return isTaxable;
+        return Optional.ofNullable(this.isTaxable);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<CommerceItemMedia>> media() {
-        return (Optional<List<CommerceItemMedia>>) media;
+        return Optional.ofNullable(this.media);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<CommerceMetadata>> metadata() {
-        return (Optional<List<CommerceMetadata>>) metadata;
+        return Optional.ofNullable(this.metadata);
     }
 
-    @JsonIgnore
     public Optional<String> name() {
-        return name;
+        return Optional.ofNullable(this.name);
     }
 
-    @JsonIgnore
     public Optional<String> publicDescription() {
-        return publicDescription;
+        return Optional.ofNullable(this.publicDescription);
     }
 
-    @JsonIgnore
     public Optional<String> publicName() {
-        return publicName;
+        return Optional.ofNullable(this.publicName);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @JsonIgnore
     public Optional<String> slug() {
-        return slug;
+        return Optional.ofNullable(this.slug);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> tags() {
-        return (Optional<List<String>>) tags;
+        return Optional.ofNullable(this.tags);
     }
 
-    @JsonIgnore
     public Optional<String> taxrateId() {
-        return taxrateId;
+        return Optional.ofNullable(this.taxrateId);
     }
 
-    @JsonIgnore
     public Optional<String> type() {
-        return type;
+        return Optional.ofNullable(this.type);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
     /**
      * first variant is the default variant
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<CommerceItemVariant>> variants() {
-        return (Optional<List<CommerceItemVariant>>) variants;
+        return Optional.ofNullable(this.variants);
     }
 
-    @JsonIgnore
     public Optional<String> vendorName() {
-        return vendorName;
+        return Optional.ofNullable(this.vendorName);
     }
 
     public static Builder builder() {
@@ -349,309 +297,146 @@ public class CommerceItem {
     }
 
 
-    public CommerceItem withAccountId(String accountId) {
-        Utils.checkNotNull(accountId, "accountId");
-        this.accountId = Optional.ofNullable(accountId);
-        return this;
-    }
-
-
-    public CommerceItem withAccountId(Optional<String> accountId) {
-        Utils.checkNotNull(accountId, "accountId");
+    public CommerceItem withAccountId(@Nullable String accountId) {
         this.accountId = accountId;
         return this;
     }
 
-    /**
-     * &#64;deprecated; use collections instead
-     */
-    public CommerceItem withCollectionIds(List<String> collectionIds) {
-        Utils.checkNotNull(collectionIds, "collectionIds");
-        this.collectionIds = Optional.ofNullable(collectionIds);
-        return this;
-    }
-
 
     /**
      * &#64;deprecated; use collections instead
      */
-    public CommerceItem withCollectionIds(Optional<? extends List<String>> collectionIds) {
-        Utils.checkNotNull(collectionIds, "collectionIds");
+    public CommerceItem withCollectionIds(@Nullable List<String> collectionIds) {
         this.collectionIds = collectionIds;
         return this;
     }
 
-    /**
-     * points to Collection with id, name, and type fields
-     */
-    public CommerceItem withCollections(List<CommerceReference> collections) {
-        Utils.checkNotNull(collections, "collections");
-        this.collections = Optional.ofNullable(collections);
-        return this;
-    }
-
 
     /**
      * points to Collection with id, name, and type fields
      */
-    public CommerceItem withCollections(Optional<? extends List<CommerceReference>> collections) {
-        Utils.checkNotNull(collections, "collections");
+    public CommerceItem withCollections(@Nullable List<CommerceReference> collections) {
         this.collections = collections;
         return this;
     }
 
-    public CommerceItem withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
 
-
-    public CommerceItem withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public CommerceItem withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public CommerceItem withDescription(String description) {
-        Utils.checkNotNull(description, "description");
-        this.description = Optional.ofNullable(description);
-        return this;
-    }
 
-
-    public CommerceItem withDescription(Optional<String> description) {
-        Utils.checkNotNull(description, "description");
+    public CommerceItem withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
-    public CommerceItem withGlobalCode(String globalCode) {
-        Utils.checkNotNull(globalCode, "globalCode");
-        this.globalCode = Optional.ofNullable(globalCode);
-        return this;
-    }
 
-
-    public CommerceItem withGlobalCode(Optional<String> globalCode) {
-        Utils.checkNotNull(globalCode, "globalCode");
+    public CommerceItem withGlobalCode(@Nullable String globalCode) {
         this.globalCode = globalCode;
         return this;
     }
 
-    public CommerceItem withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public CommerceItem withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public CommerceItem withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public CommerceItem withIsActive(boolean isActive) {
-        Utils.checkNotNull(isActive, "isActive");
-        this.isActive = Optional.ofNullable(isActive);
-        return this;
-    }
 
-
-    public CommerceItem withIsActive(Optional<Boolean> isActive) {
-        Utils.checkNotNull(isActive, "isActive");
+    public CommerceItem withIsActive(@Nullable Boolean isActive) {
         this.isActive = isActive;
         return this;
     }
 
-    public CommerceItem withIsTaxable(boolean isTaxable) {
-        Utils.checkNotNull(isTaxable, "isTaxable");
-        this.isTaxable = Optional.ofNullable(isTaxable);
-        return this;
-    }
 
-
-    public CommerceItem withIsTaxable(Optional<Boolean> isTaxable) {
-        Utils.checkNotNull(isTaxable, "isTaxable");
+    public CommerceItem withIsTaxable(@Nullable Boolean isTaxable) {
         this.isTaxable = isTaxable;
         return this;
     }
 
-    public CommerceItem withMedia(List<CommerceItemMedia> media) {
-        Utils.checkNotNull(media, "media");
-        this.media = Optional.ofNullable(media);
-        return this;
-    }
 
-
-    public CommerceItem withMedia(Optional<? extends List<CommerceItemMedia>> media) {
-        Utils.checkNotNull(media, "media");
+    public CommerceItem withMedia(@Nullable List<CommerceItemMedia> media) {
         this.media = media;
         return this;
     }
 
-    public CommerceItem withMetadata(List<CommerceMetadata> metadata) {
-        Utils.checkNotNull(metadata, "metadata");
-        this.metadata = Optional.ofNullable(metadata);
-        return this;
-    }
 
-
-    public CommerceItem withMetadata(Optional<? extends List<CommerceMetadata>> metadata) {
-        Utils.checkNotNull(metadata, "metadata");
+    public CommerceItem withMetadata(@Nullable List<CommerceMetadata> metadata) {
         this.metadata = metadata;
         return this;
     }
 
-    public CommerceItem withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = Optional.ofNullable(name);
-        return this;
-    }
 
-
-    public CommerceItem withName(Optional<String> name) {
-        Utils.checkNotNull(name, "name");
+    public CommerceItem withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
-    public CommerceItem withPublicDescription(String publicDescription) {
-        Utils.checkNotNull(publicDescription, "publicDescription");
-        this.publicDescription = Optional.ofNullable(publicDescription);
-        return this;
-    }
 
-
-    public CommerceItem withPublicDescription(Optional<String> publicDescription) {
-        Utils.checkNotNull(publicDescription, "publicDescription");
+    public CommerceItem withPublicDescription(@Nullable String publicDescription) {
         this.publicDescription = publicDescription;
         return this;
     }
 
-    public CommerceItem withPublicName(String publicName) {
-        Utils.checkNotNull(publicName, "publicName");
-        this.publicName = Optional.ofNullable(publicName);
-        return this;
-    }
 
-
-    public CommerceItem withPublicName(Optional<String> publicName) {
-        Utils.checkNotNull(publicName, "publicName");
+    public CommerceItem withPublicName(@Nullable String publicName) {
         this.publicName = publicName;
         return this;
     }
 
-    public CommerceItem withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public CommerceItem withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public CommerceItem withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public CommerceItem withSlug(String slug) {
-        Utils.checkNotNull(slug, "slug");
-        this.slug = Optional.ofNullable(slug);
-        return this;
-    }
 
-
-    public CommerceItem withSlug(Optional<String> slug) {
-        Utils.checkNotNull(slug, "slug");
+    public CommerceItem withSlug(@Nullable String slug) {
         this.slug = slug;
         return this;
     }
 
-    public CommerceItem withTags(List<String> tags) {
-        Utils.checkNotNull(tags, "tags");
-        this.tags = Optional.ofNullable(tags);
-        return this;
-    }
 
-
-    public CommerceItem withTags(Optional<? extends List<String>> tags) {
-        Utils.checkNotNull(tags, "tags");
+    public CommerceItem withTags(@Nullable List<String> tags) {
         this.tags = tags;
         return this;
     }
 
-    public CommerceItem withTaxrateId(String taxrateId) {
-        Utils.checkNotNull(taxrateId, "taxrateId");
-        this.taxrateId = Optional.ofNullable(taxrateId);
-        return this;
-    }
 
-
-    public CommerceItem withTaxrateId(Optional<String> taxrateId) {
-        Utils.checkNotNull(taxrateId, "taxrateId");
+    public CommerceItem withTaxrateId(@Nullable String taxrateId) {
         this.taxrateId = taxrateId;
         return this;
     }
 
-    public CommerceItem withType(String type) {
-        Utils.checkNotNull(type, "type");
-        this.type = Optional.ofNullable(type);
-        return this;
-    }
 
-
-    public CommerceItem withType(Optional<String> type) {
-        Utils.checkNotNull(type, "type");
+    public CommerceItem withType(@Nullable String type) {
         this.type = type;
         return this;
     }
 
-    public CommerceItem withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public CommerceItem withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public CommerceItem withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
-    /**
-     * first variant is the default variant
-     */
-    public CommerceItem withVariants(List<CommerceItemVariant> variants) {
-        Utils.checkNotNull(variants, "variants");
-        this.variants = Optional.ofNullable(variants);
-        return this;
-    }
-
 
     /**
      * first variant is the default variant
      */
-    public CommerceItem withVariants(Optional<? extends List<CommerceItemVariant>> variants) {
-        Utils.checkNotNull(variants, "variants");
+    public CommerceItem withVariants(@Nullable List<CommerceItemVariant> variants) {
         this.variants = variants;
         return this;
     }
 
-    public CommerceItem withVendorName(String vendorName) {
-        Utils.checkNotNull(vendorName, "vendorName");
-        this.vendorName = Optional.ofNullable(vendorName);
-        return this;
-    }
 
-
-    public CommerceItem withVendorName(Optional<String> vendorName) {
-        Utils.checkNotNull(vendorName, "vendorName");
+    public CommerceItem withVendorName(@Nullable String vendorName) {
         this.vendorName = vendorName;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -730,360 +515,174 @@ public class CommerceItem {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> accountId = Optional.empty();
+        private String accountId;
 
-        private Optional<? extends List<String>> collectionIds = Optional.empty();
+        private List<String> collectionIds;
 
-        private Optional<? extends List<CommerceReference>> collections = Optional.empty();
+        private List<CommerceReference> collections;
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<String> description = Optional.empty();
+        private String description;
 
-        private Optional<String> globalCode = Optional.empty();
+        private String globalCode;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<Boolean> isActive = Optional.empty();
+        private Boolean isActive;
 
-        private Optional<Boolean> isTaxable = Optional.empty();
+        private Boolean isTaxable;
 
-        private Optional<? extends List<CommerceItemMedia>> media = Optional.empty();
+        private List<CommerceItemMedia> media;
 
-        private Optional<? extends List<CommerceMetadata>> metadata = Optional.empty();
+        private List<CommerceMetadata> metadata;
 
-        private Optional<String> name = Optional.empty();
+        private String name;
 
-        private Optional<String> publicDescription = Optional.empty();
+        private String publicDescription;
 
-        private Optional<String> publicName = Optional.empty();
+        private String publicName;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<String> slug = Optional.empty();
+        private String slug;
 
-        private Optional<? extends List<String>> tags = Optional.empty();
+        private List<String> tags;
 
-        private Optional<String> taxrateId = Optional.empty();
+        private String taxrateId;
 
-        private Optional<String> type = Optional.empty();
+        private String type;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
-        private Optional<? extends List<CommerceItemVariant>> variants = Optional.empty();
+        private List<CommerceItemVariant> variants;
 
-        private Optional<String> vendorName = Optional.empty();
+        private String vendorName;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder accountId(String accountId) {
-            Utils.checkNotNull(accountId, "accountId");
-            this.accountId = Optional.ofNullable(accountId);
-            return this;
-        }
-
-        public Builder accountId(Optional<String> accountId) {
-            Utils.checkNotNull(accountId, "accountId");
+        public Builder accountId(@Nullable String accountId) {
             this.accountId = accountId;
             return this;
         }
 
-
         /**
          * &#64;deprecated; use collections instead
          */
-        public Builder collectionIds(List<String> collectionIds) {
-            Utils.checkNotNull(collectionIds, "collectionIds");
-            this.collectionIds = Optional.ofNullable(collectionIds);
-            return this;
-        }
-
-        /**
-         * &#64;deprecated; use collections instead
-         */
-        public Builder collectionIds(Optional<? extends List<String>> collectionIds) {
-            Utils.checkNotNull(collectionIds, "collectionIds");
+        public Builder collectionIds(@Nullable List<String> collectionIds) {
             this.collectionIds = collectionIds;
             return this;
         }
 
-
         /**
          * points to Collection with id, name, and type fields
          */
-        public Builder collections(List<CommerceReference> collections) {
-            Utils.checkNotNull(collections, "collections");
-            this.collections = Optional.ofNullable(collections);
-            return this;
-        }
-
-        /**
-         * points to Collection with id, name, and type fields
-         */
-        public Builder collections(Optional<? extends List<CommerceReference>> collections) {
-            Utils.checkNotNull(collections, "collections");
+        public Builder collections(@Nullable List<CommerceReference> collections) {
             this.collections = collections;
             return this;
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder description(String description) {
-            Utils.checkNotNull(description, "description");
-            this.description = Optional.ofNullable(description);
-            return this;
-        }
-
-        public Builder description(Optional<String> description) {
-            Utils.checkNotNull(description, "description");
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-
-        public Builder globalCode(String globalCode) {
-            Utils.checkNotNull(globalCode, "globalCode");
-            this.globalCode = Optional.ofNullable(globalCode);
-            return this;
-        }
-
-        public Builder globalCode(Optional<String> globalCode) {
-            Utils.checkNotNull(globalCode, "globalCode");
+        public Builder globalCode(@Nullable String globalCode) {
             this.globalCode = globalCode;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder isActive(boolean isActive) {
-            Utils.checkNotNull(isActive, "isActive");
-            this.isActive = Optional.ofNullable(isActive);
-            return this;
-        }
-
-        public Builder isActive(Optional<Boolean> isActive) {
-            Utils.checkNotNull(isActive, "isActive");
+        public Builder isActive(@Nullable Boolean isActive) {
             this.isActive = isActive;
             return this;
         }
 
-
-        public Builder isTaxable(boolean isTaxable) {
-            Utils.checkNotNull(isTaxable, "isTaxable");
-            this.isTaxable = Optional.ofNullable(isTaxable);
-            return this;
-        }
-
-        public Builder isTaxable(Optional<Boolean> isTaxable) {
-            Utils.checkNotNull(isTaxable, "isTaxable");
+        public Builder isTaxable(@Nullable Boolean isTaxable) {
             this.isTaxable = isTaxable;
             return this;
         }
 
-
-        public Builder media(List<CommerceItemMedia> media) {
-            Utils.checkNotNull(media, "media");
-            this.media = Optional.ofNullable(media);
-            return this;
-        }
-
-        public Builder media(Optional<? extends List<CommerceItemMedia>> media) {
-            Utils.checkNotNull(media, "media");
+        public Builder media(@Nullable List<CommerceItemMedia> media) {
             this.media = media;
             return this;
         }
 
-
-        public Builder metadata(List<CommerceMetadata> metadata) {
-            Utils.checkNotNull(metadata, "metadata");
-            this.metadata = Optional.ofNullable(metadata);
-            return this;
-        }
-
-        public Builder metadata(Optional<? extends List<CommerceMetadata>> metadata) {
-            Utils.checkNotNull(metadata, "metadata");
+        public Builder metadata(@Nullable List<CommerceMetadata> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = Optional.ofNullable(name);
-            return this;
-        }
-
-        public Builder name(Optional<String> name) {
-            Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-
-        public Builder publicDescription(String publicDescription) {
-            Utils.checkNotNull(publicDescription, "publicDescription");
-            this.publicDescription = Optional.ofNullable(publicDescription);
-            return this;
-        }
-
-        public Builder publicDescription(Optional<String> publicDescription) {
-            Utils.checkNotNull(publicDescription, "publicDescription");
+        public Builder publicDescription(@Nullable String publicDescription) {
             this.publicDescription = publicDescription;
             return this;
         }
 
-
-        public Builder publicName(String publicName) {
-            Utils.checkNotNull(publicName, "publicName");
-            this.publicName = Optional.ofNullable(publicName);
-            return this;
-        }
-
-        public Builder publicName(Optional<String> publicName) {
-            Utils.checkNotNull(publicName, "publicName");
+        public Builder publicName(@Nullable String publicName) {
             this.publicName = publicName;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder slug(String slug) {
-            Utils.checkNotNull(slug, "slug");
-            this.slug = Optional.ofNullable(slug);
-            return this;
-        }
-
-        public Builder slug(Optional<String> slug) {
-            Utils.checkNotNull(slug, "slug");
+        public Builder slug(@Nullable String slug) {
             this.slug = slug;
             return this;
         }
 
-
-        public Builder tags(List<String> tags) {
-            Utils.checkNotNull(tags, "tags");
-            this.tags = Optional.ofNullable(tags);
-            return this;
-        }
-
-        public Builder tags(Optional<? extends List<String>> tags) {
-            Utils.checkNotNull(tags, "tags");
+        public Builder tags(@Nullable List<String> tags) {
             this.tags = tags;
             return this;
         }
 
-
-        public Builder taxrateId(String taxrateId) {
-            Utils.checkNotNull(taxrateId, "taxrateId");
-            this.taxrateId = Optional.ofNullable(taxrateId);
-            return this;
-        }
-
-        public Builder taxrateId(Optional<String> taxrateId) {
-            Utils.checkNotNull(taxrateId, "taxrateId");
+        public Builder taxrateId(@Nullable String taxrateId) {
             this.taxrateId = taxrateId;
             return this;
         }
 
-
-        public Builder type(String type) {
-            Utils.checkNotNull(type, "type");
-            this.type = Optional.ofNullable(type);
-            return this;
-        }
-
-        public Builder type(Optional<String> type) {
-            Utils.checkNotNull(type, "type");
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
-
         /**
          * first variant is the default variant
          */
-        public Builder variants(List<CommerceItemVariant> variants) {
-            Utils.checkNotNull(variants, "variants");
-            this.variants = Optional.ofNullable(variants);
-            return this;
-        }
-
-        /**
-         * first variant is the default variant
-         */
-        public Builder variants(Optional<? extends List<CommerceItemVariant>> variants) {
-            Utils.checkNotNull(variants, "variants");
+        public Builder variants(@Nullable List<CommerceItemVariant> variants) {
             this.variants = variants;
             return this;
         }
 
-
-        public Builder vendorName(String vendorName) {
-            Utils.checkNotNull(vendorName, "vendorName");
-            this.vendorName = Optional.ofNullable(vendorName);
-            return this;
-        }
-
-        public Builder vendorName(Optional<String> vendorName) {
-            Utils.checkNotNull(vendorName, "vendorName");
+        public Builder vendorName(@Nullable String vendorName) {
             this.vendorName = vendorName;
             return this;
         }
 
         public CommerceItem build() {
-
             return new CommerceItem(
                 accountId, collectionIds, collections,
                 createdAt, description, globalCode,

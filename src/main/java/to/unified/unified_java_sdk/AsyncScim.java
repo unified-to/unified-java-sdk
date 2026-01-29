@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateScimGroupsRequest;
 import to.unified.unified_java_sdk.models.operations.CreateScimUsersRequest;
@@ -92,7 +93,7 @@ public class AsyncScim {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateScimGroupsResponse>} - The async response
      */
-    public CompletableFuture<CreateScimGroupsResponse> createScimGroups(CreateScimGroupsRequest request) {
+    public CompletableFuture<CreateScimGroupsResponse> createScimGroups(@Nonnull CreateScimGroupsRequest request) {
         AsyncRequestOperation<CreateScimGroupsRequest, CreateScimGroupsResponse> operation
               = new CreateScimGroups.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -115,7 +116,7 @@ public class AsyncScim {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateScimUsersResponse>} - The async response
      */
-    public CompletableFuture<CreateScimUsersResponse> createScimUsers(CreateScimUsersRequest request) {
+    public CompletableFuture<CreateScimUsersResponse> createScimUsers(@Nonnull CreateScimUsersRequest request) {
         AsyncRequestOperation<CreateScimUsersRequest, CreateScimUsersResponse> operation
               = new CreateScimUsers.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -138,7 +139,7 @@ public class AsyncScim {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetScimGroupsResponse>} - The async response
      */
-    public CompletableFuture<GetScimGroupsResponse> getScimGroups(GetScimGroupsRequest request) {
+    public CompletableFuture<GetScimGroupsResponse> getScimGroups(@Nonnull GetScimGroupsRequest request) {
         AsyncRequestOperation<GetScimGroupsRequest, GetScimGroupsResponse> operation
               = new GetScimGroups.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -161,7 +162,7 @@ public class AsyncScim {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetScimUsersResponse>} - The async response
      */
-    public CompletableFuture<GetScimUsersResponse> getScimUsers(GetScimUsersRequest request) {
+    public CompletableFuture<GetScimUsersResponse> getScimUsers(@Nonnull GetScimUsersRequest request) {
         AsyncRequestOperation<GetScimUsersRequest, GetScimUsersResponse> operation
               = new GetScimUsers.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -184,7 +185,7 @@ public class AsyncScim {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListScimGroupsResponse>} - The async response
      */
-    public CompletableFuture<ListScimGroupsResponse> listScimGroups(ListScimGroupsRequest request) {
+    public CompletableFuture<ListScimGroupsResponse> listScimGroups(@Nonnull ListScimGroupsRequest request) {
         AsyncRequestOperation<ListScimGroupsRequest, ListScimGroupsResponse> operation
               = new ListScimGroups.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -207,7 +208,7 @@ public class AsyncScim {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListScimUsersResponse>} - The async response
      */
-    public CompletableFuture<ListScimUsersResponse> listScimUsers(ListScimUsersRequest request) {
+    public CompletableFuture<ListScimUsersResponse> listScimUsers(@Nonnull ListScimUsersRequest request) {
         AsyncRequestOperation<ListScimUsersRequest, ListScimUsersResponse> operation
               = new ListScimUsers.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -230,7 +231,7 @@ public class AsyncScim {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchScimGroupsResponse>} - The async response
      */
-    public CompletableFuture<PatchScimGroupsResponse> patchScimGroups(PatchScimGroupsRequest request) {
+    public CompletableFuture<PatchScimGroupsResponse> patchScimGroups(@Nonnull PatchScimGroupsRequest request) {
         AsyncRequestOperation<PatchScimGroupsRequest, PatchScimGroupsResponse> operation
               = new PatchScimGroups.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -253,7 +254,7 @@ public class AsyncScim {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchScimUsersResponse>} - The async response
      */
-    public CompletableFuture<PatchScimUsersResponse> patchScimUsers(PatchScimUsersRequest request) {
+    public CompletableFuture<PatchScimUsersResponse> patchScimUsers(@Nonnull PatchScimUsersRequest request) {
         AsyncRequestOperation<PatchScimUsersRequest, PatchScimUsersResponse> operation
               = new PatchScimUsers.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -276,7 +277,7 @@ public class AsyncScim {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveScimGroupsResponse>} - The async response
      */
-    public CompletableFuture<RemoveScimGroupsResponse> removeScimGroups(RemoveScimGroupsRequest request) {
+    public CompletableFuture<RemoveScimGroupsResponse> removeScimGroups(@Nonnull RemoveScimGroupsRequest request) {
         AsyncRequestOperation<RemoveScimGroupsRequest, RemoveScimGroupsResponse> operation
               = new RemoveScimGroups.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -299,7 +300,7 @@ public class AsyncScim {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveScimUsersResponse>} - The async response
      */
-    public CompletableFuture<RemoveScimUsersResponse> removeScimUsers(RemoveScimUsersRequest request) {
+    public CompletableFuture<RemoveScimUsersResponse> removeScimUsers(@Nonnull RemoveScimUsersRequest request) {
         AsyncRequestOperation<RemoveScimUsersRequest, RemoveScimUsersResponse> operation
               = new RemoveScimUsers.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -322,7 +323,7 @@ public class AsyncScim {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateScimGroupsResponse>} - The async response
      */
-    public CompletableFuture<UpdateScimGroupsResponse> updateScimGroups(UpdateScimGroupsRequest request) {
+    public CompletableFuture<UpdateScimGroupsResponse> updateScimGroups(@Nonnull UpdateScimGroupsRequest request) {
         AsyncRequestOperation<UpdateScimGroupsRequest, UpdateScimGroupsResponse> operation
               = new UpdateScimGroups.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -345,7 +346,7 @@ public class AsyncScim {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateScimUsersResponse>} - The async response
      */
-    public CompletableFuture<UpdateScimUsersResponse> updateScimUsers(UpdateScimUsersRequest request) {
+    public CompletableFuture<UpdateScimUsersResponse> updateScimUsers(@Nonnull UpdateScimUsersRequest request) {
         AsyncRequestOperation<UpdateScimUsersRequest, UpdateScimUsersResponse> operation
               = new UpdateScimUsers.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

@@ -4,16 +4,15 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.Map;
 import java.util.Optional;
@@ -28,117 +27,101 @@ public class HrisBenefit {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_id")
-    private Optional<String> companyId;
+    private String companyId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coverage_level")
-    private Optional<? extends CoverageLevel> coverageLevel;
+    private CoverageLevel coverageLevel;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
-    private Optional<String> currency;
+    private String currency;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
-    private Optional<String> description;
+    private String description;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employer_contribution_amount")
-    private Optional<Double> employerContributionAmount;
+    private Double employerContributionAmount;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employer_contribution_max_amount")
-    private Optional<Double> employerContributionMaxAmount;
+    private Double employerContributionMaxAmount;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employer_contribution_type")
-    private Optional<? extends EmployerContributionType> employerContributionType;
+    private EmployerContributionType employerContributionType;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("frequency")
-    private Optional<? extends HrisBenefitFrequency> frequency;
+    private HrisBenefitFrequency frequency;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
-    private Optional<Boolean> isActive;
+    private Boolean isActive;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
-    private Optional<String> name;
+    private String name;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax")
-    private Optional<? extends Tax> tax;
+    private Tax tax;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
-    private Optional<? extends HrisBenefitType> type;
+    private HrisBenefitType type;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
     @JsonCreator
     public HrisBenefit(
-            @JsonProperty("company_id") Optional<String> companyId,
-            @JsonProperty("coverage_level") Optional<? extends CoverageLevel> coverageLevel,
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("currency") Optional<String> currency,
-            @JsonProperty("description") Optional<String> description,
-            @JsonProperty("employer_contribution_amount") Optional<Double> employerContributionAmount,
-            @JsonProperty("employer_contribution_max_amount") Optional<Double> employerContributionMaxAmount,
-            @JsonProperty("employer_contribution_type") Optional<? extends EmployerContributionType> employerContributionType,
-            @JsonProperty("frequency") Optional<? extends HrisBenefitFrequency> frequency,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("is_active") Optional<Boolean> isActive,
-            @JsonProperty("name") Optional<String> name,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("tax") Optional<? extends Tax> tax,
-            @JsonProperty("type") Optional<? extends HrisBenefitType> type,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(companyId, "companyId");
-        Utils.checkNotNull(coverageLevel, "coverageLevel");
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(currency, "currency");
-        Utils.checkNotNull(description, "description");
-        Utils.checkNotNull(employerContributionAmount, "employerContributionAmount");
-        Utils.checkNotNull(employerContributionMaxAmount, "employerContributionMaxAmount");
-        Utils.checkNotNull(employerContributionType, "employerContributionType");
-        Utils.checkNotNull(frequency, "frequency");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(isActive, "isActive");
-        Utils.checkNotNull(name, "name");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(tax, "tax");
-        Utils.checkNotNull(type, "type");
-        Utils.checkNotNull(updatedAt, "updatedAt");
+            @JsonProperty("company_id") @Nullable String companyId,
+            @JsonProperty("coverage_level") @Nullable CoverageLevel coverageLevel,
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("currency") @Nullable String currency,
+            @JsonProperty("description") @Nullable String description,
+            @JsonProperty("employer_contribution_amount") @Nullable Double employerContributionAmount,
+            @JsonProperty("employer_contribution_max_amount") @Nullable Double employerContributionMaxAmount,
+            @JsonProperty("employer_contribution_type") @Nullable EmployerContributionType employerContributionType,
+            @JsonProperty("frequency") @Nullable HrisBenefitFrequency frequency,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("is_active") @Nullable Boolean isActive,
+            @JsonProperty("name") @Nullable String name,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("tax") @Nullable Tax tax,
+            @JsonProperty("type") @Nullable HrisBenefitType type,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.companyId = companyId;
         this.coverageLevel = coverageLevel;
         this.createdAt = createdAt;
@@ -158,98 +141,76 @@ public class HrisBenefit {
     }
     
     public HrisBenefit() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null);
     }
 
-    @JsonIgnore
     public Optional<String> companyId() {
-        return companyId;
+        return Optional.ofNullable(this.companyId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<CoverageLevel> coverageLevel() {
-        return (Optional<CoverageLevel>) coverageLevel;
+        return Optional.ofNullable(this.coverageLevel);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<String> currency() {
-        return currency;
+        return Optional.ofNullable(this.currency);
     }
 
-    @JsonIgnore
     public Optional<String> description() {
-        return description;
+        return Optional.ofNullable(this.description);
     }
 
-    @JsonIgnore
     public Optional<Double> employerContributionAmount() {
-        return employerContributionAmount;
+        return Optional.ofNullable(this.employerContributionAmount);
     }
 
-    @JsonIgnore
     public Optional<Double> employerContributionMaxAmount() {
-        return employerContributionMaxAmount;
+        return Optional.ofNullable(this.employerContributionMaxAmount);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<EmployerContributionType> employerContributionType() {
-        return (Optional<EmployerContributionType>) employerContributionType;
+        return Optional.ofNullable(this.employerContributionType);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<HrisBenefitFrequency> frequency() {
-        return (Optional<HrisBenefitFrequency>) frequency;
+        return Optional.ofNullable(this.frequency);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isActive() {
-        return isActive;
+        return Optional.ofNullable(this.isActive);
     }
 
-    @JsonIgnore
     public Optional<String> name() {
-        return name;
+        return Optional.ofNullable(this.name);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Tax> tax() {
-        return (Optional<Tax>) tax;
+        return Optional.ofNullable(this.tax);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<HrisBenefitType> type() {
-        return (Optional<HrisBenefitType>) type;
+        return Optional.ofNullable(this.type);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
     public static Builder builder() {
@@ -257,213 +218,101 @@ public class HrisBenefit {
     }
 
 
-    public HrisBenefit withCompanyId(String companyId) {
-        Utils.checkNotNull(companyId, "companyId");
-        this.companyId = Optional.ofNullable(companyId);
-        return this;
-    }
-
-
-    public HrisBenefit withCompanyId(Optional<String> companyId) {
-        Utils.checkNotNull(companyId, "companyId");
+    public HrisBenefit withCompanyId(@Nullable String companyId) {
         this.companyId = companyId;
         return this;
     }
 
-    public HrisBenefit withCoverageLevel(CoverageLevel coverageLevel) {
-        Utils.checkNotNull(coverageLevel, "coverageLevel");
-        this.coverageLevel = Optional.ofNullable(coverageLevel);
-        return this;
-    }
 
-
-    public HrisBenefit withCoverageLevel(Optional<? extends CoverageLevel> coverageLevel) {
-        Utils.checkNotNull(coverageLevel, "coverageLevel");
+    public HrisBenefit withCoverageLevel(@Nullable CoverageLevel coverageLevel) {
         this.coverageLevel = coverageLevel;
         return this;
     }
 
-    public HrisBenefit withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
 
-
-    public HrisBenefit withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public HrisBenefit withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public HrisBenefit withCurrency(String currency) {
-        Utils.checkNotNull(currency, "currency");
-        this.currency = Optional.ofNullable(currency);
-        return this;
-    }
 
-
-    public HrisBenefit withCurrency(Optional<String> currency) {
-        Utils.checkNotNull(currency, "currency");
+    public HrisBenefit withCurrency(@Nullable String currency) {
         this.currency = currency;
         return this;
     }
 
-    public HrisBenefit withDescription(String description) {
-        Utils.checkNotNull(description, "description");
-        this.description = Optional.ofNullable(description);
-        return this;
-    }
 
-
-    public HrisBenefit withDescription(Optional<String> description) {
-        Utils.checkNotNull(description, "description");
+    public HrisBenefit withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
-    public HrisBenefit withEmployerContributionAmount(double employerContributionAmount) {
-        Utils.checkNotNull(employerContributionAmount, "employerContributionAmount");
-        this.employerContributionAmount = Optional.ofNullable(employerContributionAmount);
-        return this;
-    }
 
-
-    public HrisBenefit withEmployerContributionAmount(Optional<Double> employerContributionAmount) {
-        Utils.checkNotNull(employerContributionAmount, "employerContributionAmount");
+    public HrisBenefit withEmployerContributionAmount(@Nullable Double employerContributionAmount) {
         this.employerContributionAmount = employerContributionAmount;
         return this;
     }
 
-    public HrisBenefit withEmployerContributionMaxAmount(double employerContributionMaxAmount) {
-        Utils.checkNotNull(employerContributionMaxAmount, "employerContributionMaxAmount");
-        this.employerContributionMaxAmount = Optional.ofNullable(employerContributionMaxAmount);
-        return this;
-    }
 
-
-    public HrisBenefit withEmployerContributionMaxAmount(Optional<Double> employerContributionMaxAmount) {
-        Utils.checkNotNull(employerContributionMaxAmount, "employerContributionMaxAmount");
+    public HrisBenefit withEmployerContributionMaxAmount(@Nullable Double employerContributionMaxAmount) {
         this.employerContributionMaxAmount = employerContributionMaxAmount;
         return this;
     }
 
-    public HrisBenefit withEmployerContributionType(EmployerContributionType employerContributionType) {
-        Utils.checkNotNull(employerContributionType, "employerContributionType");
-        this.employerContributionType = Optional.ofNullable(employerContributionType);
-        return this;
-    }
 
-
-    public HrisBenefit withEmployerContributionType(Optional<? extends EmployerContributionType> employerContributionType) {
-        Utils.checkNotNull(employerContributionType, "employerContributionType");
+    public HrisBenefit withEmployerContributionType(@Nullable EmployerContributionType employerContributionType) {
         this.employerContributionType = employerContributionType;
         return this;
     }
 
-    public HrisBenefit withFrequency(HrisBenefitFrequency frequency) {
-        Utils.checkNotNull(frequency, "frequency");
-        this.frequency = Optional.ofNullable(frequency);
-        return this;
-    }
 
-
-    public HrisBenefit withFrequency(Optional<? extends HrisBenefitFrequency> frequency) {
-        Utils.checkNotNull(frequency, "frequency");
+    public HrisBenefit withFrequency(@Nullable HrisBenefitFrequency frequency) {
         this.frequency = frequency;
         return this;
     }
 
-    public HrisBenefit withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public HrisBenefit withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public HrisBenefit withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public HrisBenefit withIsActive(boolean isActive) {
-        Utils.checkNotNull(isActive, "isActive");
-        this.isActive = Optional.ofNullable(isActive);
-        return this;
-    }
 
-
-    public HrisBenefit withIsActive(Optional<Boolean> isActive) {
-        Utils.checkNotNull(isActive, "isActive");
+    public HrisBenefit withIsActive(@Nullable Boolean isActive) {
         this.isActive = isActive;
         return this;
     }
 
-    public HrisBenefit withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = Optional.ofNullable(name);
-        return this;
-    }
 
-
-    public HrisBenefit withName(Optional<String> name) {
-        Utils.checkNotNull(name, "name");
+    public HrisBenefit withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
-    public HrisBenefit withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public HrisBenefit withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public HrisBenefit withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public HrisBenefit withTax(Tax tax) {
-        Utils.checkNotNull(tax, "tax");
-        this.tax = Optional.ofNullable(tax);
-        return this;
-    }
 
-
-    public HrisBenefit withTax(Optional<? extends Tax> tax) {
-        Utils.checkNotNull(tax, "tax");
+    public HrisBenefit withTax(@Nullable Tax tax) {
         this.tax = tax;
         return this;
     }
 
-    public HrisBenefit withType(HrisBenefitType type) {
-        Utils.checkNotNull(type, "type");
-        this.type = Optional.ofNullable(type);
-        return this;
-    }
 
-
-    public HrisBenefit withType(Optional<? extends HrisBenefitType> type) {
-        Utils.checkNotNull(type, "type");
+    public HrisBenefit withType(@Nullable HrisBenefitType type) {
         this.type = type;
         return this;
     }
 
-    public HrisBenefit withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public HrisBenefit withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public HrisBenefit withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -528,252 +377,123 @@ public class HrisBenefit {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> companyId = Optional.empty();
+        private String companyId;
 
-        private Optional<? extends CoverageLevel> coverageLevel = Optional.empty();
+        private CoverageLevel coverageLevel;
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<String> currency = Optional.empty();
+        private String currency;
 
-        private Optional<String> description = Optional.empty();
+        private String description;
 
-        private Optional<Double> employerContributionAmount = Optional.empty();
+        private Double employerContributionAmount;
 
-        private Optional<Double> employerContributionMaxAmount = Optional.empty();
+        private Double employerContributionMaxAmount;
 
-        private Optional<? extends EmployerContributionType> employerContributionType = Optional.empty();
+        private EmployerContributionType employerContributionType;
 
-        private Optional<? extends HrisBenefitFrequency> frequency = Optional.empty();
+        private HrisBenefitFrequency frequency;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<Boolean> isActive = Optional.empty();
+        private Boolean isActive;
 
-        private Optional<String> name = Optional.empty();
+        private String name;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<? extends Tax> tax = Optional.empty();
+        private Tax tax;
 
-        private Optional<? extends HrisBenefitType> type = Optional.empty();
+        private HrisBenefitType type;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder companyId(String companyId) {
-            Utils.checkNotNull(companyId, "companyId");
-            this.companyId = Optional.ofNullable(companyId);
-            return this;
-        }
-
-        public Builder companyId(Optional<String> companyId) {
-            Utils.checkNotNull(companyId, "companyId");
+        public Builder companyId(@Nullable String companyId) {
             this.companyId = companyId;
             return this;
         }
 
-
-        public Builder coverageLevel(CoverageLevel coverageLevel) {
-            Utils.checkNotNull(coverageLevel, "coverageLevel");
-            this.coverageLevel = Optional.ofNullable(coverageLevel);
-            return this;
-        }
-
-        public Builder coverageLevel(Optional<? extends CoverageLevel> coverageLevel) {
-            Utils.checkNotNull(coverageLevel, "coverageLevel");
+        public Builder coverageLevel(@Nullable CoverageLevel coverageLevel) {
             this.coverageLevel = coverageLevel;
             return this;
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder currency(String currency) {
-            Utils.checkNotNull(currency, "currency");
-            this.currency = Optional.ofNullable(currency);
-            return this;
-        }
-
-        public Builder currency(Optional<String> currency) {
-            Utils.checkNotNull(currency, "currency");
+        public Builder currency(@Nullable String currency) {
             this.currency = currency;
             return this;
         }
 
-
-        public Builder description(String description) {
-            Utils.checkNotNull(description, "description");
-            this.description = Optional.ofNullable(description);
-            return this;
-        }
-
-        public Builder description(Optional<String> description) {
-            Utils.checkNotNull(description, "description");
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-
-        public Builder employerContributionAmount(double employerContributionAmount) {
-            Utils.checkNotNull(employerContributionAmount, "employerContributionAmount");
-            this.employerContributionAmount = Optional.ofNullable(employerContributionAmount);
-            return this;
-        }
-
-        public Builder employerContributionAmount(Optional<Double> employerContributionAmount) {
-            Utils.checkNotNull(employerContributionAmount, "employerContributionAmount");
+        public Builder employerContributionAmount(@Nullable Double employerContributionAmount) {
             this.employerContributionAmount = employerContributionAmount;
             return this;
         }
 
-
-        public Builder employerContributionMaxAmount(double employerContributionMaxAmount) {
-            Utils.checkNotNull(employerContributionMaxAmount, "employerContributionMaxAmount");
-            this.employerContributionMaxAmount = Optional.ofNullable(employerContributionMaxAmount);
-            return this;
-        }
-
-        public Builder employerContributionMaxAmount(Optional<Double> employerContributionMaxAmount) {
-            Utils.checkNotNull(employerContributionMaxAmount, "employerContributionMaxAmount");
+        public Builder employerContributionMaxAmount(@Nullable Double employerContributionMaxAmount) {
             this.employerContributionMaxAmount = employerContributionMaxAmount;
             return this;
         }
 
-
-        public Builder employerContributionType(EmployerContributionType employerContributionType) {
-            Utils.checkNotNull(employerContributionType, "employerContributionType");
-            this.employerContributionType = Optional.ofNullable(employerContributionType);
-            return this;
-        }
-
-        public Builder employerContributionType(Optional<? extends EmployerContributionType> employerContributionType) {
-            Utils.checkNotNull(employerContributionType, "employerContributionType");
+        public Builder employerContributionType(@Nullable EmployerContributionType employerContributionType) {
             this.employerContributionType = employerContributionType;
             return this;
         }
 
-
-        public Builder frequency(HrisBenefitFrequency frequency) {
-            Utils.checkNotNull(frequency, "frequency");
-            this.frequency = Optional.ofNullable(frequency);
-            return this;
-        }
-
-        public Builder frequency(Optional<? extends HrisBenefitFrequency> frequency) {
-            Utils.checkNotNull(frequency, "frequency");
+        public Builder frequency(@Nullable HrisBenefitFrequency frequency) {
             this.frequency = frequency;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder isActive(boolean isActive) {
-            Utils.checkNotNull(isActive, "isActive");
-            this.isActive = Optional.ofNullable(isActive);
-            return this;
-        }
-
-        public Builder isActive(Optional<Boolean> isActive) {
-            Utils.checkNotNull(isActive, "isActive");
+        public Builder isActive(@Nullable Boolean isActive) {
             this.isActive = isActive;
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = Optional.ofNullable(name);
-            return this;
-        }
-
-        public Builder name(Optional<String> name) {
-            Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder tax(Tax tax) {
-            Utils.checkNotNull(tax, "tax");
-            this.tax = Optional.ofNullable(tax);
-            return this;
-        }
-
-        public Builder tax(Optional<? extends Tax> tax) {
-            Utils.checkNotNull(tax, "tax");
+        public Builder tax(@Nullable Tax tax) {
             this.tax = tax;
             return this;
         }
 
-
-        public Builder type(HrisBenefitType type) {
-            Utils.checkNotNull(type, "type");
-            this.type = Optional.ofNullable(type);
-            return this;
-        }
-
-        public Builder type(Optional<? extends HrisBenefitType> type) {
-            Utils.checkNotNull(type, "type");
+        public Builder type(@Nullable HrisBenefitType type) {
             this.type = type;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
         public HrisBenefit build() {
-
             return new HrisBenefit(
                 companyId, coverageLevel, createdAt,
                 currency, description, employerContributionAmount,

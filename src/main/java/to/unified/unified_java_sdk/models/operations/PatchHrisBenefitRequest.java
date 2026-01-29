@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.HrisBenefit;
@@ -32,7 +32,7 @@ public class PatchHrisBenefitRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<PatchHrisBenefitQueryParamFields>> fields;
+    private List<PatchHrisBenefitQueryParamFields> fields;
 
     /**
      * ID of the Benefit
@@ -46,66 +46,59 @@ public class PatchHrisBenefitRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
     @JsonCreator
     public PatchHrisBenefitRequest(
-            HrisBenefit hrisBenefit,
-            String connectionId,
-            Optional<? extends List<PatchHrisBenefitQueryParamFields>> fields,
-            String id,
-            Optional<String> raw) {
-        Utils.checkNotNull(hrisBenefit, "hrisBenefit");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(raw, "raw");
-        this.hrisBenefit = hrisBenefit;
-        this.connectionId = connectionId;
+            @Nonnull HrisBenefit hrisBenefit,
+            @Nonnull String connectionId,
+            @Nullable List<PatchHrisBenefitQueryParamFields> fields,
+            @Nonnull String id,
+            @Nullable String raw) {
+        this.hrisBenefit = Optional.ofNullable(hrisBenefit)
+            .orElseThrow(() -> new IllegalArgumentException("hrisBenefit cannot be null"));
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
-        this.id = id;
+        this.id = Optional.ofNullable(id)
+            .orElseThrow(() -> new IllegalArgumentException("id cannot be null"));
         this.raw = raw;
     }
     
     public PatchHrisBenefitRequest(
-            HrisBenefit hrisBenefit,
-            String connectionId,
-            String id) {
-        this(hrisBenefit, connectionId, Optional.empty(),
-            id, Optional.empty());
+            @Nonnull HrisBenefit hrisBenefit,
+            @Nonnull String connectionId,
+            @Nonnull String id) {
+        this(hrisBenefit, connectionId, null,
+            id, null);
     }
 
     /**
      * Company-wide benefit plans available to employees.
      */
-    @JsonIgnore
     public HrisBenefit hrisBenefit() {
-        return hrisBenefit;
+        return this.hrisBenefit;
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<PatchHrisBenefitQueryParamFields>> fields() {
-        return (Optional<List<PatchHrisBenefitQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
      * ID of the Benefit
      */
-    @JsonIgnore
     public String id() {
-        return id;
+        return this.id;
     }
 
     /**
@@ -113,9 +106,8 @@ public class PatchHrisBenefitRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
     public static Builder builder() {
@@ -126,27 +118,17 @@ public class PatchHrisBenefitRequest {
     /**
      * Company-wide benefit plans available to employees.
      */
-    public PatchHrisBenefitRequest withHrisBenefit(HrisBenefit hrisBenefit) {
-        Utils.checkNotNull(hrisBenefit, "hrisBenefit");
-        this.hrisBenefit = hrisBenefit;
+    public PatchHrisBenefitRequest withHrisBenefit(@Nonnull HrisBenefit hrisBenefit) {
+        this.hrisBenefit = Utils.checkNotNull(hrisBenefit, "hrisBenefit");
         return this;
     }
+
 
     /**
      * ID of the connection
      */
-    public PatchHrisBenefitRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public PatchHrisBenefitRequest withFields(List<PatchHrisBenefitQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public PatchHrisBenefitRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -154,29 +136,17 @@ public class PatchHrisBenefitRequest {
     /**
      * Fields to return
      */
-    public PatchHrisBenefitRequest withFields(Optional<? extends List<PatchHrisBenefitQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public PatchHrisBenefitRequest withFields(@Nullable List<PatchHrisBenefitQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
+
     /**
      * ID of the Benefit
      */
-    public PatchHrisBenefitRequest withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = id;
-        return this;
-    }
-
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public PatchHrisBenefitRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
+    public PatchHrisBenefitRequest withId(@Nonnull String id) {
+        this.id = Utils.checkNotNull(id, "id");
         return this;
     }
 
@@ -186,11 +156,11 @@ public class PatchHrisBenefitRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public PatchHrisBenefitRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public PatchHrisBenefitRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -233,74 +203,45 @@ public class PatchHrisBenefitRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<PatchHrisBenefitQueryParamFields>> fields = Optional.empty();
+        private List<PatchHrisBenefitQueryParamFields> fields;
 
         private String id;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
         /**
          * Company-wide benefit plans available to employees.
          */
-        public Builder hrisBenefit(HrisBenefit hrisBenefit) {
-            Utils.checkNotNull(hrisBenefit, "hrisBenefit");
-            this.hrisBenefit = hrisBenefit;
+        public Builder hrisBenefit(@Nonnull HrisBenefit hrisBenefit) {
+            this.hrisBenefit = Utils.checkNotNull(hrisBenefit, "hrisBenefit");
             return this;
         }
-
 
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<PatchHrisBenefitQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<PatchHrisBenefitQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<PatchHrisBenefitQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * ID of the Benefit
          */
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = id;
-            return this;
-        }
-
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
+        public Builder id(@Nonnull String id) {
+            this.id = Utils.checkNotNull(id, "id");
             return this;
         }
 
@@ -309,14 +250,12 @@ public class PatchHrisBenefitRequest {
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
         public PatchHrisBenefitRequest build() {
-
             return new PatchHrisBenefitRequest(
                 hrisBenefit, connectionId, fields,
                 id, raw);

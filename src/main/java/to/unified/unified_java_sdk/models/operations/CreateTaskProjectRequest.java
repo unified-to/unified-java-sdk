@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.TaskProject;
@@ -30,7 +30,7 @@ public class CreateTaskProjectRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<CreateTaskProjectQueryParamFields>> fields;
+    private List<CreateTaskProjectQueryParamFields> fields;
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
@@ -38,51 +38,45 @@ public class CreateTaskProjectRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
     @JsonCreator
     public CreateTaskProjectRequest(
-            TaskProject taskProject,
-            String connectionId,
-            Optional<? extends List<CreateTaskProjectQueryParamFields>> fields,
-            Optional<String> raw) {
-        Utils.checkNotNull(taskProject, "taskProject");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(raw, "raw");
-        this.taskProject = taskProject;
-        this.connectionId = connectionId;
+            @Nonnull TaskProject taskProject,
+            @Nonnull String connectionId,
+            @Nullable List<CreateTaskProjectQueryParamFields> fields,
+            @Nullable String raw) {
+        this.taskProject = Optional.ofNullable(taskProject)
+            .orElseThrow(() -> new IllegalArgumentException("taskProject cannot be null"));
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
         this.raw = raw;
     }
     
     public CreateTaskProjectRequest(
-            TaskProject taskProject,
-            String connectionId) {
-        this(taskProject, connectionId, Optional.empty(),
-            Optional.empty());
+            @Nonnull TaskProject taskProject,
+            @Nonnull String connectionId) {
+        this(taskProject, connectionId, null,
+            null);
     }
 
-    @JsonIgnore
     public TaskProject taskProject() {
-        return taskProject;
+        return this.taskProject;
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<CreateTaskProjectQueryParamFields>> fields() {
-        return (Optional<List<CreateTaskProjectQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
@@ -90,9 +84,8 @@ public class CreateTaskProjectRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
     public static Builder builder() {
@@ -100,27 +93,17 @@ public class CreateTaskProjectRequest {
     }
 
 
-    public CreateTaskProjectRequest withTaskProject(TaskProject taskProject) {
-        Utils.checkNotNull(taskProject, "taskProject");
-        this.taskProject = taskProject;
+    public CreateTaskProjectRequest withTaskProject(@Nonnull TaskProject taskProject) {
+        this.taskProject = Utils.checkNotNull(taskProject, "taskProject");
         return this;
     }
+
 
     /**
      * ID of the connection
      */
-    public CreateTaskProjectRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public CreateTaskProjectRequest withFields(List<CreateTaskProjectQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public CreateTaskProjectRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -128,34 +111,22 @@ public class CreateTaskProjectRequest {
     /**
      * Fields to return
      */
-    public CreateTaskProjectRequest withFields(Optional<? extends List<CreateTaskProjectQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public CreateTaskProjectRequest withFields(@Nullable List<CreateTaskProjectQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public CreateTaskProjectRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
-
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public CreateTaskProjectRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public CreateTaskProjectRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -196,75 +167,46 @@ public class CreateTaskProjectRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<CreateTaskProjectQueryParamFields>> fields = Optional.empty();
+        private List<CreateTaskProjectQueryParamFields> fields;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder taskProject(TaskProject taskProject) {
-            Utils.checkNotNull(taskProject, "taskProject");
-            this.taskProject = taskProject;
+        public Builder taskProject(@Nonnull TaskProject taskProject) {
+            this.taskProject = Utils.checkNotNull(taskProject, "taskProject");
             return this;
         }
-
 
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<CreateTaskProjectQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<CreateTaskProjectQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<CreateTaskProjectQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
         public CreateTaskProjectRequest build() {
-
             return new CreateTaskProjectRequest(
                 taskProject, connectionId, fields,
                 raw);

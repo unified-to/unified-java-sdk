@@ -4,16 +4,15 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -23,54 +22,47 @@ public class GenaiModel {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
-    private Optional<String> description;
+    private String description;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_temperature")
-    private Optional<Boolean> hasTemperature;
+    private Boolean hasTemperature;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max_tokens")
-    private Optional<Double> maxTokens;
+    private Double maxTokens;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
-    private Optional<String> name;
+    private String name;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("web_url")
-    private Optional<String> webUrl;
+    private String webUrl;
 
     @JsonCreator
     public GenaiModel(
-            @JsonProperty("description") Optional<String> description,
-            @JsonProperty("has_temperature") Optional<Boolean> hasTemperature,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("max_tokens") Optional<Double> maxTokens,
-            @JsonProperty("name") Optional<String> name,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("web_url") Optional<String> webUrl) {
-        Utils.checkNotNull(description, "description");
-        Utils.checkNotNull(hasTemperature, "hasTemperature");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(maxTokens, "maxTokens");
-        Utils.checkNotNull(name, "name");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(webUrl, "webUrl");
+            @JsonProperty("description") @Nullable String description,
+            @JsonProperty("has_temperature") @Nullable Boolean hasTemperature,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("max_tokens") @Nullable Double maxTokens,
+            @JsonProperty("name") @Nullable String name,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("web_url") @Nullable String webUrl) {
         this.description = description;
         this.hasTemperature = hasTemperature;
         this.id = id;
@@ -81,45 +73,37 @@ public class GenaiModel {
     }
     
     public GenaiModel() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null);
     }
 
-    @JsonIgnore
     public Optional<String> description() {
-        return description;
+        return Optional.ofNullable(this.description);
     }
 
-    @JsonIgnore
     public Optional<Boolean> hasTemperature() {
-        return hasTemperature;
+        return Optional.ofNullable(this.hasTemperature);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<Double> maxTokens() {
-        return maxTokens;
+        return Optional.ofNullable(this.maxTokens);
     }
 
-    @JsonIgnore
     public Optional<String> name() {
-        return name;
+        return Optional.ofNullable(this.name);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @JsonIgnore
     public Optional<String> webUrl() {
-        return webUrl;
+        return Optional.ofNullable(this.webUrl);
     }
 
     public static Builder builder() {
@@ -127,96 +111,47 @@ public class GenaiModel {
     }
 
 
-    public GenaiModel withDescription(String description) {
-        Utils.checkNotNull(description, "description");
-        this.description = Optional.ofNullable(description);
-        return this;
-    }
-
-
-    public GenaiModel withDescription(Optional<String> description) {
-        Utils.checkNotNull(description, "description");
+    public GenaiModel withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
-    public GenaiModel withHasTemperature(boolean hasTemperature) {
-        Utils.checkNotNull(hasTemperature, "hasTemperature");
-        this.hasTemperature = Optional.ofNullable(hasTemperature);
-        return this;
-    }
 
-
-    public GenaiModel withHasTemperature(Optional<Boolean> hasTemperature) {
-        Utils.checkNotNull(hasTemperature, "hasTemperature");
+    public GenaiModel withHasTemperature(@Nullable Boolean hasTemperature) {
         this.hasTemperature = hasTemperature;
         return this;
     }
 
-    public GenaiModel withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public GenaiModel withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public GenaiModel withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public GenaiModel withMaxTokens(double maxTokens) {
-        Utils.checkNotNull(maxTokens, "maxTokens");
-        this.maxTokens = Optional.ofNullable(maxTokens);
-        return this;
-    }
 
-
-    public GenaiModel withMaxTokens(Optional<Double> maxTokens) {
-        Utils.checkNotNull(maxTokens, "maxTokens");
+    public GenaiModel withMaxTokens(@Nullable Double maxTokens) {
         this.maxTokens = maxTokens;
         return this;
     }
 
-    public GenaiModel withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = Optional.ofNullable(name);
-        return this;
-    }
 
-
-    public GenaiModel withName(Optional<String> name) {
-        Utils.checkNotNull(name, "name");
+    public GenaiModel withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
-    public GenaiModel withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public GenaiModel withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public GenaiModel withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public GenaiModel withWebUrl(String webUrl) {
-        Utils.checkNotNull(webUrl, "webUrl");
-        this.webUrl = Optional.ofNullable(webUrl);
-        return this;
-    }
 
-
-    public GenaiModel withWebUrl(Optional<String> webUrl) {
-        Utils.checkNotNull(webUrl, "webUrl");
+    public GenaiModel withWebUrl(@Nullable String webUrl) {
         this.webUrl = webUrl;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -260,117 +195,60 @@ public class GenaiModel {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> description = Optional.empty();
+        private String description;
 
-        private Optional<Boolean> hasTemperature = Optional.empty();
+        private Boolean hasTemperature;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<Double> maxTokens = Optional.empty();
+        private Double maxTokens;
 
-        private Optional<String> name = Optional.empty();
+        private String name;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<String> webUrl = Optional.empty();
+        private String webUrl;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder description(String description) {
-            Utils.checkNotNull(description, "description");
-            this.description = Optional.ofNullable(description);
-            return this;
-        }
-
-        public Builder description(Optional<String> description) {
-            Utils.checkNotNull(description, "description");
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-
-        public Builder hasTemperature(boolean hasTemperature) {
-            Utils.checkNotNull(hasTemperature, "hasTemperature");
-            this.hasTemperature = Optional.ofNullable(hasTemperature);
-            return this;
-        }
-
-        public Builder hasTemperature(Optional<Boolean> hasTemperature) {
-            Utils.checkNotNull(hasTemperature, "hasTemperature");
+        public Builder hasTemperature(@Nullable Boolean hasTemperature) {
             this.hasTemperature = hasTemperature;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder maxTokens(double maxTokens) {
-            Utils.checkNotNull(maxTokens, "maxTokens");
-            this.maxTokens = Optional.ofNullable(maxTokens);
-            return this;
-        }
-
-        public Builder maxTokens(Optional<Double> maxTokens) {
-            Utils.checkNotNull(maxTokens, "maxTokens");
+        public Builder maxTokens(@Nullable Double maxTokens) {
             this.maxTokens = maxTokens;
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = Optional.ofNullable(name);
-            return this;
-        }
-
-        public Builder name(Optional<String> name) {
-            Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder webUrl(String webUrl) {
-            Utils.checkNotNull(webUrl, "webUrl");
-            this.webUrl = Optional.ofNullable(webUrl);
-            return this;
-        }
-
-        public Builder webUrl(Optional<String> webUrl) {
-            Utils.checkNotNull(webUrl, "webUrl");
+        public Builder webUrl(@Nullable String webUrl) {
             this.webUrl = webUrl;
             return this;
         }
 
         public GenaiModel build() {
-
             return new GenaiModel(
                 description, hasTemperature, id,
                 maxTokens, name, raw,

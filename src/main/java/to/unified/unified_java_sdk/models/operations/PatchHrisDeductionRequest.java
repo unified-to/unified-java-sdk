@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.HrisDeduction;
@@ -32,7 +32,7 @@ public class PatchHrisDeductionRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<PatchHrisDeductionQueryParamFields>> fields;
+    private List<PatchHrisDeductionQueryParamFields> fields;
 
     /**
      * ID of the Deduction
@@ -46,66 +46,59 @@ public class PatchHrisDeductionRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
     @JsonCreator
     public PatchHrisDeductionRequest(
-            HrisDeduction hrisDeduction,
-            String connectionId,
-            Optional<? extends List<PatchHrisDeductionQueryParamFields>> fields,
-            String id,
-            Optional<String> raw) {
-        Utils.checkNotNull(hrisDeduction, "hrisDeduction");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(raw, "raw");
-        this.hrisDeduction = hrisDeduction;
-        this.connectionId = connectionId;
+            @Nonnull HrisDeduction hrisDeduction,
+            @Nonnull String connectionId,
+            @Nullable List<PatchHrisDeductionQueryParamFields> fields,
+            @Nonnull String id,
+            @Nullable String raw) {
+        this.hrisDeduction = Optional.ofNullable(hrisDeduction)
+            .orElseThrow(() -> new IllegalArgumentException("hrisDeduction cannot be null"));
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
-        this.id = id;
+        this.id = Optional.ofNullable(id)
+            .orElseThrow(() -> new IllegalArgumentException("id cannot be null"));
         this.raw = raw;
     }
     
     public PatchHrisDeductionRequest(
-            HrisDeduction hrisDeduction,
-            String connectionId,
-            String id) {
-        this(hrisDeduction, connectionId, Optional.empty(),
-            id, Optional.empty());
+            @Nonnull HrisDeduction hrisDeduction,
+            @Nonnull String connectionId,
+            @Nonnull String id) {
+        this(hrisDeduction, connectionId, null,
+            id, null);
     }
 
     /**
      * Employee-specific deduction/benefit enrolment.
      */
-    @JsonIgnore
     public HrisDeduction hrisDeduction() {
-        return hrisDeduction;
+        return this.hrisDeduction;
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<PatchHrisDeductionQueryParamFields>> fields() {
-        return (Optional<List<PatchHrisDeductionQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
      * ID of the Deduction
      */
-    @JsonIgnore
     public String id() {
-        return id;
+        return this.id;
     }
 
     /**
@@ -113,9 +106,8 @@ public class PatchHrisDeductionRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
     public static Builder builder() {
@@ -126,27 +118,17 @@ public class PatchHrisDeductionRequest {
     /**
      * Employee-specific deduction/benefit enrolment.
      */
-    public PatchHrisDeductionRequest withHrisDeduction(HrisDeduction hrisDeduction) {
-        Utils.checkNotNull(hrisDeduction, "hrisDeduction");
-        this.hrisDeduction = hrisDeduction;
+    public PatchHrisDeductionRequest withHrisDeduction(@Nonnull HrisDeduction hrisDeduction) {
+        this.hrisDeduction = Utils.checkNotNull(hrisDeduction, "hrisDeduction");
         return this;
     }
+
 
     /**
      * ID of the connection
      */
-    public PatchHrisDeductionRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public PatchHrisDeductionRequest withFields(List<PatchHrisDeductionQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public PatchHrisDeductionRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -154,29 +136,17 @@ public class PatchHrisDeductionRequest {
     /**
      * Fields to return
      */
-    public PatchHrisDeductionRequest withFields(Optional<? extends List<PatchHrisDeductionQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public PatchHrisDeductionRequest withFields(@Nullable List<PatchHrisDeductionQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
+
     /**
      * ID of the Deduction
      */
-    public PatchHrisDeductionRequest withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = id;
-        return this;
-    }
-
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public PatchHrisDeductionRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
+    public PatchHrisDeductionRequest withId(@Nonnull String id) {
+        this.id = Utils.checkNotNull(id, "id");
         return this;
     }
 
@@ -186,11 +156,11 @@ public class PatchHrisDeductionRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public PatchHrisDeductionRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public PatchHrisDeductionRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -233,74 +203,45 @@ public class PatchHrisDeductionRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<PatchHrisDeductionQueryParamFields>> fields = Optional.empty();
+        private List<PatchHrisDeductionQueryParamFields> fields;
 
         private String id;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
         /**
          * Employee-specific deduction/benefit enrolment.
          */
-        public Builder hrisDeduction(HrisDeduction hrisDeduction) {
-            Utils.checkNotNull(hrisDeduction, "hrisDeduction");
-            this.hrisDeduction = hrisDeduction;
+        public Builder hrisDeduction(@Nonnull HrisDeduction hrisDeduction) {
+            this.hrisDeduction = Utils.checkNotNull(hrisDeduction, "hrisDeduction");
             return this;
         }
-
 
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<PatchHrisDeductionQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<PatchHrisDeductionQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<PatchHrisDeductionQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * ID of the Deduction
          */
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = id;
-            return this;
-        }
-
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
+        public Builder id(@Nonnull String id) {
+            this.id = Utils.checkNotNull(id, "id");
             return this;
         }
 
@@ -309,14 +250,12 @@ public class PatchHrisDeductionRequest {
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
         public PatchHrisDeductionRequest build() {
-
             return new PatchHrisDeductionRequest(
                 hrisDeduction, connectionId, fields,
                 id, raw);

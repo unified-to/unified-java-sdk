@@ -4,15 +4,15 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.Map;
 import java.util.Optional;
@@ -23,37 +23,37 @@ public class CommerceLocation {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
-    private Optional<? extends PropertyCommerceLocationAddress> address;
+    private PropertyCommerceLocationAddress address;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
-    private Optional<String> currency;
+    private String currency;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
-    private Optional<String> description;
+    private String description;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
-    private Optional<Boolean> isActive;
+    private Boolean isActive;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language_locale")
-    private Optional<String> languageLocale;
+    private String languageLocale;
 
 
     @JsonProperty("name")
@@ -62,42 +62,31 @@ public class CommerceLocation {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_id")
-    private Optional<String> parentId;
+    private String parentId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
     @JsonCreator
     public CommerceLocation(
-            @JsonProperty("address") Optional<? extends PropertyCommerceLocationAddress> address,
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("currency") Optional<String> currency,
-            @JsonProperty("description") Optional<String> description,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("is_active") Optional<Boolean> isActive,
-            @JsonProperty("language_locale") Optional<String> languageLocale,
-            @JsonProperty("name") String name,
-            @JsonProperty("parent_id") Optional<String> parentId,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(address, "address");
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(currency, "currency");
-        Utils.checkNotNull(description, "description");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(isActive, "isActive");
-        Utils.checkNotNull(languageLocale, "languageLocale");
-        Utils.checkNotNull(name, "name");
-        Utils.checkNotNull(parentId, "parentId");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(updatedAt, "updatedAt");
+            @JsonProperty("address") @Nullable PropertyCommerceLocationAddress address,
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("currency") @Nullable String currency,
+            @JsonProperty("description") @Nullable String description,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("is_active") @Nullable Boolean isActive,
+            @JsonProperty("language_locale") @Nullable String languageLocale,
+            @JsonProperty("name") @Nonnull String name,
+            @JsonProperty("parent_id") @Nullable String parentId,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.address = address;
         this.createdAt = createdAt;
         this.currency = currency;
@@ -105,75 +94,63 @@ public class CommerceLocation {
         this.id = id;
         this.isActive = isActive;
         this.languageLocale = languageLocale;
-        this.name = name;
+        this.name = Optional.ofNullable(name)
+            .orElseThrow(() -> new IllegalArgumentException("name cannot be null"));
         this.parentId = parentId;
         this.raw = raw;
         this.updatedAt = updatedAt;
     }
     
     public CommerceLocation(
-            String name) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), name, Optional.empty(),
-            Optional.empty(), Optional.empty());
+            @Nonnull String name) {
+        this(null, null, null,
+            null, null, null,
+            null, name, null,
+            null, null);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<PropertyCommerceLocationAddress> address() {
-        return (Optional<PropertyCommerceLocationAddress>) address;
+        return Optional.ofNullable(this.address);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<String> currency() {
-        return currency;
+        return Optional.ofNullable(this.currency);
     }
 
-    @JsonIgnore
     public Optional<String> description() {
-        return description;
+        return Optional.ofNullable(this.description);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isActive() {
-        return isActive;
+        return Optional.ofNullable(this.isActive);
     }
 
-    @JsonIgnore
     public Optional<String> languageLocale() {
-        return languageLocale;
+        return Optional.ofNullable(this.languageLocale);
     }
 
-    @JsonIgnore
     public String name() {
-        return name;
+        return this.name;
     }
 
-    @JsonIgnore
     public Optional<String> parentId() {
-        return parentId;
+        return Optional.ofNullable(this.parentId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
     public static Builder builder() {
@@ -181,141 +158,71 @@ public class CommerceLocation {
     }
 
 
-    public CommerceLocation withAddress(PropertyCommerceLocationAddress address) {
-        Utils.checkNotNull(address, "address");
-        this.address = Optional.ofNullable(address);
-        return this;
-    }
-
-
-    public CommerceLocation withAddress(Optional<? extends PropertyCommerceLocationAddress> address) {
-        Utils.checkNotNull(address, "address");
+    public CommerceLocation withAddress(@Nullable PropertyCommerceLocationAddress address) {
         this.address = address;
         return this;
     }
 
-    public CommerceLocation withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
 
-
-    public CommerceLocation withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public CommerceLocation withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public CommerceLocation withCurrency(String currency) {
-        Utils.checkNotNull(currency, "currency");
-        this.currency = Optional.ofNullable(currency);
-        return this;
-    }
 
-
-    public CommerceLocation withCurrency(Optional<String> currency) {
-        Utils.checkNotNull(currency, "currency");
+    public CommerceLocation withCurrency(@Nullable String currency) {
         this.currency = currency;
         return this;
     }
 
-    public CommerceLocation withDescription(String description) {
-        Utils.checkNotNull(description, "description");
-        this.description = Optional.ofNullable(description);
-        return this;
-    }
 
-
-    public CommerceLocation withDescription(Optional<String> description) {
-        Utils.checkNotNull(description, "description");
+    public CommerceLocation withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
-    public CommerceLocation withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public CommerceLocation withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public CommerceLocation withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public CommerceLocation withIsActive(boolean isActive) {
-        Utils.checkNotNull(isActive, "isActive");
-        this.isActive = Optional.ofNullable(isActive);
-        return this;
-    }
 
-
-    public CommerceLocation withIsActive(Optional<Boolean> isActive) {
-        Utils.checkNotNull(isActive, "isActive");
+    public CommerceLocation withIsActive(@Nullable Boolean isActive) {
         this.isActive = isActive;
         return this;
     }
 
-    public CommerceLocation withLanguageLocale(String languageLocale) {
-        Utils.checkNotNull(languageLocale, "languageLocale");
-        this.languageLocale = Optional.ofNullable(languageLocale);
-        return this;
-    }
 
-
-    public CommerceLocation withLanguageLocale(Optional<String> languageLocale) {
-        Utils.checkNotNull(languageLocale, "languageLocale");
+    public CommerceLocation withLanguageLocale(@Nullable String languageLocale) {
         this.languageLocale = languageLocale;
         return this;
     }
 
-    public CommerceLocation withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = name;
-        return this;
-    }
 
-    public CommerceLocation withParentId(String parentId) {
-        Utils.checkNotNull(parentId, "parentId");
-        this.parentId = Optional.ofNullable(parentId);
+    public CommerceLocation withName(@Nonnull String name) {
+        this.name = Utils.checkNotNull(name, "name");
         return this;
     }
 
 
-    public CommerceLocation withParentId(Optional<String> parentId) {
-        Utils.checkNotNull(parentId, "parentId");
+    public CommerceLocation withParentId(@Nullable String parentId) {
         this.parentId = parentId;
         return this;
     }
 
-    public CommerceLocation withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public CommerceLocation withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public CommerceLocation withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public CommerceLocation withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public CommerceLocation withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public CommerceLocation withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -368,171 +275,88 @@ public class CommerceLocation {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends PropertyCommerceLocationAddress> address = Optional.empty();
+        private PropertyCommerceLocationAddress address;
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<String> currency = Optional.empty();
+        private String currency;
 
-        private Optional<String> description = Optional.empty();
+        private String description;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<Boolean> isActive = Optional.empty();
+        private Boolean isActive;
 
-        private Optional<String> languageLocale = Optional.empty();
+        private String languageLocale;
 
         private String name;
 
-        private Optional<String> parentId = Optional.empty();
+        private String parentId;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder address(PropertyCommerceLocationAddress address) {
-            Utils.checkNotNull(address, "address");
-            this.address = Optional.ofNullable(address);
-            return this;
-        }
-
-        public Builder address(Optional<? extends PropertyCommerceLocationAddress> address) {
-            Utils.checkNotNull(address, "address");
+        public Builder address(@Nullable PropertyCommerceLocationAddress address) {
             this.address = address;
             return this;
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder currency(String currency) {
-            Utils.checkNotNull(currency, "currency");
-            this.currency = Optional.ofNullable(currency);
-            return this;
-        }
-
-        public Builder currency(Optional<String> currency) {
-            Utils.checkNotNull(currency, "currency");
+        public Builder currency(@Nullable String currency) {
             this.currency = currency;
             return this;
         }
 
-
-        public Builder description(String description) {
-            Utils.checkNotNull(description, "description");
-            this.description = Optional.ofNullable(description);
-            return this;
-        }
-
-        public Builder description(Optional<String> description) {
-            Utils.checkNotNull(description, "description");
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder isActive(boolean isActive) {
-            Utils.checkNotNull(isActive, "isActive");
-            this.isActive = Optional.ofNullable(isActive);
-            return this;
-        }
-
-        public Builder isActive(Optional<Boolean> isActive) {
-            Utils.checkNotNull(isActive, "isActive");
+        public Builder isActive(@Nullable Boolean isActive) {
             this.isActive = isActive;
             return this;
         }
 
-
-        public Builder languageLocale(String languageLocale) {
-            Utils.checkNotNull(languageLocale, "languageLocale");
-            this.languageLocale = Optional.ofNullable(languageLocale);
-            return this;
-        }
-
-        public Builder languageLocale(Optional<String> languageLocale) {
-            Utils.checkNotNull(languageLocale, "languageLocale");
+        public Builder languageLocale(@Nullable String languageLocale) {
             this.languageLocale = languageLocale;
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = name;
+        public Builder name(@Nonnull String name) {
+            this.name = Utils.checkNotNull(name, "name");
             return this;
         }
 
-
-        public Builder parentId(String parentId) {
-            Utils.checkNotNull(parentId, "parentId");
-            this.parentId = Optional.ofNullable(parentId);
-            return this;
-        }
-
-        public Builder parentId(Optional<String> parentId) {
-            Utils.checkNotNull(parentId, "parentId");
+        public Builder parentId(@Nullable String parentId) {
             this.parentId = parentId;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
         public CommerceLocation build() {
-
             return new CommerceLocation(
                 address, createdAt, currency,
                 description, id, isActive,

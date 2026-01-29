@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.LmsCourse;
@@ -30,7 +30,7 @@ public class CreateLmsCourseRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<CreateLmsCourseQueryParamFields>> fields;
+    private List<CreateLmsCourseQueryParamFields> fields;
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
@@ -38,51 +38,45 @@ public class CreateLmsCourseRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
     @JsonCreator
     public CreateLmsCourseRequest(
-            LmsCourse lmsCourse,
-            String connectionId,
-            Optional<? extends List<CreateLmsCourseQueryParamFields>> fields,
-            Optional<String> raw) {
-        Utils.checkNotNull(lmsCourse, "lmsCourse");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(raw, "raw");
-        this.lmsCourse = lmsCourse;
-        this.connectionId = connectionId;
+            @Nonnull LmsCourse lmsCourse,
+            @Nonnull String connectionId,
+            @Nullable List<CreateLmsCourseQueryParamFields> fields,
+            @Nullable String raw) {
+        this.lmsCourse = Optional.ofNullable(lmsCourse)
+            .orElseThrow(() -> new IllegalArgumentException("lmsCourse cannot be null"));
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
         this.raw = raw;
     }
     
     public CreateLmsCourseRequest(
-            LmsCourse lmsCourse,
-            String connectionId) {
-        this(lmsCourse, connectionId, Optional.empty(),
-            Optional.empty());
+            @Nonnull LmsCourse lmsCourse,
+            @Nonnull String connectionId) {
+        this(lmsCourse, connectionId, null,
+            null);
     }
 
-    @JsonIgnore
     public LmsCourse lmsCourse() {
-        return lmsCourse;
+        return this.lmsCourse;
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<CreateLmsCourseQueryParamFields>> fields() {
-        return (Optional<List<CreateLmsCourseQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
@@ -90,9 +84,8 @@ public class CreateLmsCourseRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
     public static Builder builder() {
@@ -100,27 +93,17 @@ public class CreateLmsCourseRequest {
     }
 
 
-    public CreateLmsCourseRequest withLmsCourse(LmsCourse lmsCourse) {
-        Utils.checkNotNull(lmsCourse, "lmsCourse");
-        this.lmsCourse = lmsCourse;
+    public CreateLmsCourseRequest withLmsCourse(@Nonnull LmsCourse lmsCourse) {
+        this.lmsCourse = Utils.checkNotNull(lmsCourse, "lmsCourse");
         return this;
     }
+
 
     /**
      * ID of the connection
      */
-    public CreateLmsCourseRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public CreateLmsCourseRequest withFields(List<CreateLmsCourseQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public CreateLmsCourseRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -128,34 +111,22 @@ public class CreateLmsCourseRequest {
     /**
      * Fields to return
      */
-    public CreateLmsCourseRequest withFields(Optional<? extends List<CreateLmsCourseQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public CreateLmsCourseRequest withFields(@Nullable List<CreateLmsCourseQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public CreateLmsCourseRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
-
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public CreateLmsCourseRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public CreateLmsCourseRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -196,75 +167,46 @@ public class CreateLmsCourseRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<CreateLmsCourseQueryParamFields>> fields = Optional.empty();
+        private List<CreateLmsCourseQueryParamFields> fields;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder lmsCourse(LmsCourse lmsCourse) {
-            Utils.checkNotNull(lmsCourse, "lmsCourse");
-            this.lmsCourse = lmsCourse;
+        public Builder lmsCourse(@Nonnull LmsCourse lmsCourse) {
+            this.lmsCourse = Utils.checkNotNull(lmsCourse, "lmsCourse");
             return this;
         }
-
 
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<CreateLmsCourseQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<CreateLmsCourseQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<CreateLmsCourseQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
         public CreateLmsCourseRequest build() {
-
             return new CreateLmsCourseRequest(
                 lmsCourse, connectionId, fields,
                 raw);

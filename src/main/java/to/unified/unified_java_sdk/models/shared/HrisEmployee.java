@@ -4,16 +4,15 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
@@ -25,72 +24,72 @@ public class HrisEmployee {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
-    private Optional<? extends PropertyHrisEmployeeAddress> address;
+    private PropertyHrisEmployeeAddress address;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bio")
-    private Optional<String> bio;
+    private String bio;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_id")
-    private Optional<String> companyId;
+    private String companyId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compensation")
-    private Optional<? extends List<HrisCompensation>> compensation;
+    private List<HrisCompensation> compensation;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
-    private Optional<String> currency;
+    private String currency;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date_of_birth")
-    private Optional<OffsetDateTime> dateOfBirth;
+    private OffsetDateTime dateOfBirth;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emails")
-    private Optional<? extends List<HrisEmail>> emails;
+    private List<HrisEmail> emails;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employee_number")
-    private Optional<String> employeeNumber;
+    private String employeeNumber;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employee_roles")
-    private Optional<? extends List<PropertyHrisEmployeeEmployeeRoles>> employeeRoles;
+    private List<PropertyHrisEmployeeEmployeeRoles> employeeRoles;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employment_status")
-    private Optional<? extends EmploymentStatus> employmentStatus;
+    private EmploymentStatus employmentStatus;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employment_type")
-    private Optional<? extends HrisEmployeeEmploymentType> employmentType;
+    private HrisEmployeeEmploymentType employmentType;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first_name")
-    private Optional<String> firstName;
+    private String firstName;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gender")
-    private Optional<? extends HrisEmployeeGender> gender;
+    private HrisEmployeeGender gender;
 
     /**
      * Which groups/teams/units that this employee/user belongs to. May not have all of the Group fields
@@ -98,217 +97,177 @@ public class HrisEmployee {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groups")
-    private Optional<? extends List<HrisGroup>> groups;
+    private List<HrisGroup> groups;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_mfa")
-    private Optional<Boolean> hasMfa;
+    private Boolean hasMfa;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hired_at")
-    private Optional<OffsetDateTime> hiredAt;
+    private OffsetDateTime hiredAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image_url")
-    private Optional<String> imageUrl;
+    private String imageUrl;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language_locale")
-    private Optional<String> languageLocale;
+    private String languageLocale;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_name")
-    private Optional<String> lastName;
+    private String lastName;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locations")
-    private Optional<? extends List<HrisLocation>> locations;
+    private List<HrisLocation> locations;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manager_id")
-    private Optional<String> managerId;
+    private String managerId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marital_status")
-    private Optional<? extends MaritalStatus> maritalStatus;
+    private MaritalStatus maritalStatus;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
-    private Optional<? extends List<HrisMetadata>> metadata;
+    private List<HrisMetadata> metadata;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
-    private Optional<String> name;
+    private String name;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pronouns")
-    private Optional<String> pronouns;
+    private String pronouns;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
     /**
      * the employee's personal relationships (eg. emergency contacts, spouse, dependants, ...)
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationships")
-    private Optional<? extends List<HrisEmployeerelationship>> relationships;
+    private List<HrisEmployeerelationship> relationships;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("salutation")
-    private Optional<String> salutation;
+    private String salutation;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ssn_sin")
-    private Optional<String> ssnSin;
+    private String ssnSin;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storage_quota_allocated")
-    private Optional<Double> storageQuotaAllocated;
+    private Double storageQuotaAllocated;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storage_quota_available")
-    private Optional<Double> storageQuotaAvailable;
+    private Double storageQuotaAvailable;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storage_quota_used")
-    private Optional<Double> storageQuotaUsed;
+    private Double storageQuotaUsed;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("telephones")
-    private Optional<? extends List<HrisTelephone>> telephones;
+    private List<HrisTelephone> telephones;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("terminated_at")
-    private Optional<OffsetDateTime> terminatedAt;
+    private OffsetDateTime terminatedAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("termination_reason")
-    private Optional<String> terminationReason;
+    private String terminationReason;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
-    private Optional<String> timezone;
+    private String timezone;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
-    private Optional<String> title;
+    private String title;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
     @JsonCreator
     public HrisEmployee(
-            @JsonProperty("address") Optional<? extends PropertyHrisEmployeeAddress> address,
-            @JsonProperty("bio") Optional<String> bio,
-            @JsonProperty("company_id") Optional<String> companyId,
-            @JsonProperty("compensation") Optional<? extends List<HrisCompensation>> compensation,
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("currency") Optional<String> currency,
-            @JsonProperty("date_of_birth") Optional<OffsetDateTime> dateOfBirth,
-            @JsonProperty("emails") Optional<? extends List<HrisEmail>> emails,
-            @JsonProperty("employee_number") Optional<String> employeeNumber,
-            @JsonProperty("employee_roles") Optional<? extends List<PropertyHrisEmployeeEmployeeRoles>> employeeRoles,
-            @JsonProperty("employment_status") Optional<? extends EmploymentStatus> employmentStatus,
-            @JsonProperty("employment_type") Optional<? extends HrisEmployeeEmploymentType> employmentType,
-            @JsonProperty("first_name") Optional<String> firstName,
-            @JsonProperty("gender") Optional<? extends HrisEmployeeGender> gender,
-            @JsonProperty("groups") Optional<? extends List<HrisGroup>> groups,
-            @JsonProperty("has_mfa") Optional<Boolean> hasMfa,
-            @JsonProperty("hired_at") Optional<OffsetDateTime> hiredAt,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("image_url") Optional<String> imageUrl,
-            @JsonProperty("language_locale") Optional<String> languageLocale,
-            @JsonProperty("last_name") Optional<String> lastName,
-            @JsonProperty("locations") Optional<? extends List<HrisLocation>> locations,
-            @JsonProperty("manager_id") Optional<String> managerId,
-            @JsonProperty("marital_status") Optional<? extends MaritalStatus> maritalStatus,
-            @JsonProperty("metadata") Optional<? extends List<HrisMetadata>> metadata,
-            @JsonProperty("name") Optional<String> name,
-            @JsonProperty("pronouns") Optional<String> pronouns,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("relationships") Optional<? extends List<HrisEmployeerelationship>> relationships,
-            @JsonProperty("salutation") Optional<String> salutation,
-            @JsonProperty("ssn_sin") Optional<String> ssnSin,
-            @JsonProperty("storage_quota_allocated") Optional<Double> storageQuotaAllocated,
-            @JsonProperty("storage_quota_available") Optional<Double> storageQuotaAvailable,
-            @JsonProperty("storage_quota_used") Optional<Double> storageQuotaUsed,
-            @JsonProperty("telephones") Optional<? extends List<HrisTelephone>> telephones,
-            @JsonProperty("terminated_at") Optional<OffsetDateTime> terminatedAt,
-            @JsonProperty("termination_reason") Optional<String> terminationReason,
-            @JsonProperty("timezone") Optional<String> timezone,
-            @JsonProperty("title") Optional<String> title,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(address, "address");
-        Utils.checkNotNull(bio, "bio");
-        Utils.checkNotNull(companyId, "companyId");
-        Utils.checkNotNull(compensation, "compensation");
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(currency, "currency");
-        Utils.checkNotNull(dateOfBirth, "dateOfBirth");
-        Utils.checkNotNull(emails, "emails");
-        Utils.checkNotNull(employeeNumber, "employeeNumber");
-        Utils.checkNotNull(employeeRoles, "employeeRoles");
-        Utils.checkNotNull(employmentStatus, "employmentStatus");
-        Utils.checkNotNull(employmentType, "employmentType");
-        Utils.checkNotNull(firstName, "firstName");
-        Utils.checkNotNull(gender, "gender");
-        Utils.checkNotNull(groups, "groups");
-        Utils.checkNotNull(hasMfa, "hasMfa");
-        Utils.checkNotNull(hiredAt, "hiredAt");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(imageUrl, "imageUrl");
-        Utils.checkNotNull(languageLocale, "languageLocale");
-        Utils.checkNotNull(lastName, "lastName");
-        Utils.checkNotNull(locations, "locations");
-        Utils.checkNotNull(managerId, "managerId");
-        Utils.checkNotNull(maritalStatus, "maritalStatus");
-        Utils.checkNotNull(metadata, "metadata");
-        Utils.checkNotNull(name, "name");
-        Utils.checkNotNull(pronouns, "pronouns");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(relationships, "relationships");
-        Utils.checkNotNull(salutation, "salutation");
-        Utils.checkNotNull(ssnSin, "ssnSin");
-        Utils.checkNotNull(storageQuotaAllocated, "storageQuotaAllocated");
-        Utils.checkNotNull(storageQuotaAvailable, "storageQuotaAvailable");
-        Utils.checkNotNull(storageQuotaUsed, "storageQuotaUsed");
-        Utils.checkNotNull(telephones, "telephones");
-        Utils.checkNotNull(terminatedAt, "terminatedAt");
-        Utils.checkNotNull(terminationReason, "terminationReason");
-        Utils.checkNotNull(timezone, "timezone");
-        Utils.checkNotNull(title, "title");
-        Utils.checkNotNull(updatedAt, "updatedAt");
+            @JsonProperty("address") @Nullable PropertyHrisEmployeeAddress address,
+            @JsonProperty("bio") @Nullable String bio,
+            @JsonProperty("company_id") @Nullable String companyId,
+            @JsonProperty("compensation") @Nullable List<HrisCompensation> compensation,
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("currency") @Nullable String currency,
+            @JsonProperty("date_of_birth") @Nullable OffsetDateTime dateOfBirth,
+            @JsonProperty("emails") @Nullable List<HrisEmail> emails,
+            @JsonProperty("employee_number") @Nullable String employeeNumber,
+            @JsonProperty("employee_roles") @Nullable List<PropertyHrisEmployeeEmployeeRoles> employeeRoles,
+            @JsonProperty("employment_status") @Nullable EmploymentStatus employmentStatus,
+            @JsonProperty("employment_type") @Nullable HrisEmployeeEmploymentType employmentType,
+            @JsonProperty("first_name") @Nullable String firstName,
+            @JsonProperty("gender") @Nullable HrisEmployeeGender gender,
+            @JsonProperty("groups") @Nullable List<HrisGroup> groups,
+            @JsonProperty("has_mfa") @Nullable Boolean hasMfa,
+            @JsonProperty("hired_at") @Nullable OffsetDateTime hiredAt,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("image_url") @Nullable String imageUrl,
+            @JsonProperty("language_locale") @Nullable String languageLocale,
+            @JsonProperty("last_name") @Nullable String lastName,
+            @JsonProperty("locations") @Nullable List<HrisLocation> locations,
+            @JsonProperty("manager_id") @Nullable String managerId,
+            @JsonProperty("marital_status") @Nullable MaritalStatus maritalStatus,
+            @JsonProperty("metadata") @Nullable List<HrisMetadata> metadata,
+            @JsonProperty("name") @Nullable String name,
+            @JsonProperty("pronouns") @Nullable String pronouns,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("relationships") @Nullable List<HrisEmployeerelationship> relationships,
+            @JsonProperty("salutation") @Nullable String salutation,
+            @JsonProperty("ssn_sin") @Nullable String ssnSin,
+            @JsonProperty("storage_quota_allocated") @Nullable Double storageQuotaAllocated,
+            @JsonProperty("storage_quota_available") @Nullable Double storageQuotaAvailable,
+            @JsonProperty("storage_quota_used") @Nullable Double storageQuotaUsed,
+            @JsonProperty("telephones") @Nullable List<HrisTelephone> telephones,
+            @JsonProperty("terminated_at") @Nullable OffsetDateTime terminatedAt,
+            @JsonProperty("termination_reason") @Nullable String terminationReason,
+            @JsonProperty("timezone") @Nullable String timezone,
+            @JsonProperty("title") @Nullable String title,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.address = address;
         this.bio = bio;
         this.companyId = companyId;
@@ -352,241 +311,187 @@ public class HrisEmployee {
     }
     
     public HrisEmployee() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<PropertyHrisEmployeeAddress> address() {
-        return (Optional<PropertyHrisEmployeeAddress>) address;
+        return Optional.ofNullable(this.address);
     }
 
-    @JsonIgnore
     public Optional<String> bio() {
-        return bio;
+        return Optional.ofNullable(this.bio);
     }
 
-    @JsonIgnore
     public Optional<String> companyId() {
-        return companyId;
+        return Optional.ofNullable(this.companyId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<HrisCompensation>> compensation() {
-        return (Optional<List<HrisCompensation>>) compensation;
+        return Optional.ofNullable(this.compensation);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<String> currency() {
-        return currency;
+        return Optional.ofNullable(this.currency);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> dateOfBirth() {
-        return dateOfBirth;
+        return Optional.ofNullable(this.dateOfBirth);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<HrisEmail>> emails() {
-        return (Optional<List<HrisEmail>>) emails;
+        return Optional.ofNullable(this.emails);
     }
 
-    @JsonIgnore
     public Optional<String> employeeNumber() {
-        return employeeNumber;
+        return Optional.ofNullable(this.employeeNumber);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<PropertyHrisEmployeeEmployeeRoles>> employeeRoles() {
-        return (Optional<List<PropertyHrisEmployeeEmployeeRoles>>) employeeRoles;
+        return Optional.ofNullable(this.employeeRoles);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<EmploymentStatus> employmentStatus() {
-        return (Optional<EmploymentStatus>) employmentStatus;
+        return Optional.ofNullable(this.employmentStatus);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<HrisEmployeeEmploymentType> employmentType() {
-        return (Optional<HrisEmployeeEmploymentType>) employmentType;
+        return Optional.ofNullable(this.employmentType);
     }
 
-    @JsonIgnore
     public Optional<String> firstName() {
-        return firstName;
+        return Optional.ofNullable(this.firstName);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<HrisEmployeeGender> gender() {
-        return (Optional<HrisEmployeeGender>) gender;
+        return Optional.ofNullable(this.gender);
     }
 
     /**
      * Which groups/teams/units that this employee/user belongs to. May not have all of the Group fields
      * present, but should have id, name, or email.
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<HrisGroup>> groups() {
-        return (Optional<List<HrisGroup>>) groups;
+        return Optional.ofNullable(this.groups);
     }
 
-    @JsonIgnore
     public Optional<Boolean> hasMfa() {
-        return hasMfa;
+        return Optional.ofNullable(this.hasMfa);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> hiredAt() {
-        return hiredAt;
+        return Optional.ofNullable(this.hiredAt);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<String> imageUrl() {
-        return imageUrl;
+        return Optional.ofNullable(this.imageUrl);
     }
 
-    @JsonIgnore
     public Optional<String> languageLocale() {
-        return languageLocale;
+        return Optional.ofNullable(this.languageLocale);
     }
 
-    @JsonIgnore
     public Optional<String> lastName() {
-        return lastName;
+        return Optional.ofNullable(this.lastName);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<HrisLocation>> locations() {
-        return (Optional<List<HrisLocation>>) locations;
+        return Optional.ofNullable(this.locations);
     }
 
-    @JsonIgnore
     public Optional<String> managerId() {
-        return managerId;
+        return Optional.ofNullable(this.managerId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<MaritalStatus> maritalStatus() {
-        return (Optional<MaritalStatus>) maritalStatus;
+        return Optional.ofNullable(this.maritalStatus);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<HrisMetadata>> metadata() {
-        return (Optional<List<HrisMetadata>>) metadata;
+        return Optional.ofNullable(this.metadata);
     }
 
-    @JsonIgnore
     public Optional<String> name() {
-        return name;
+        return Optional.ofNullable(this.name);
     }
 
-    @JsonIgnore
     public Optional<String> pronouns() {
-        return pronouns;
+        return Optional.ofNullable(this.pronouns);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
     /**
      * the employee's personal relationships (eg. emergency contacts, spouse, dependants, ...)
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<HrisEmployeerelationship>> relationships() {
-        return (Optional<List<HrisEmployeerelationship>>) relationships;
+        return Optional.ofNullable(this.relationships);
     }
 
-    @JsonIgnore
     public Optional<String> salutation() {
-        return salutation;
+        return Optional.ofNullable(this.salutation);
     }
 
-    @JsonIgnore
     public Optional<String> ssnSin() {
-        return ssnSin;
+        return Optional.ofNullable(this.ssnSin);
     }
 
-    @JsonIgnore
     public Optional<Double> storageQuotaAllocated() {
-        return storageQuotaAllocated;
+        return Optional.ofNullable(this.storageQuotaAllocated);
     }
 
-    @JsonIgnore
     public Optional<Double> storageQuotaAvailable() {
-        return storageQuotaAvailable;
+        return Optional.ofNullable(this.storageQuotaAvailable);
     }
 
-    @JsonIgnore
     public Optional<Double> storageQuotaUsed() {
-        return storageQuotaUsed;
+        return Optional.ofNullable(this.storageQuotaUsed);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<HrisTelephone>> telephones() {
-        return (Optional<List<HrisTelephone>>) telephones;
+        return Optional.ofNullable(this.telephones);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> terminatedAt() {
-        return terminatedAt;
+        return Optional.ofNullable(this.terminatedAt);
     }
 
-    @JsonIgnore
     public Optional<String> terminationReason() {
-        return terminationReason;
+        return Optional.ofNullable(this.terminationReason);
     }
 
-    @JsonIgnore
     public Optional<String> timezone() {
-        return timezone;
+        return Optional.ofNullable(this.timezone);
     }
 
-    @JsonIgnore
     public Optional<String> title() {
-        return title;
+        return Optional.ofNullable(this.title);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
     public static Builder builder() {
@@ -594,539 +499,252 @@ public class HrisEmployee {
     }
 
 
-    public HrisEmployee withAddress(PropertyHrisEmployeeAddress address) {
-        Utils.checkNotNull(address, "address");
-        this.address = Optional.ofNullable(address);
-        return this;
-    }
-
-
-    public HrisEmployee withAddress(Optional<? extends PropertyHrisEmployeeAddress> address) {
-        Utils.checkNotNull(address, "address");
+    public HrisEmployee withAddress(@Nullable PropertyHrisEmployeeAddress address) {
         this.address = address;
         return this;
     }
 
-    public HrisEmployee withBio(String bio) {
-        Utils.checkNotNull(bio, "bio");
-        this.bio = Optional.ofNullable(bio);
-        return this;
-    }
 
-
-    public HrisEmployee withBio(Optional<String> bio) {
-        Utils.checkNotNull(bio, "bio");
+    public HrisEmployee withBio(@Nullable String bio) {
         this.bio = bio;
         return this;
     }
 
-    public HrisEmployee withCompanyId(String companyId) {
-        Utils.checkNotNull(companyId, "companyId");
-        this.companyId = Optional.ofNullable(companyId);
-        return this;
-    }
 
-
-    public HrisEmployee withCompanyId(Optional<String> companyId) {
-        Utils.checkNotNull(companyId, "companyId");
+    public HrisEmployee withCompanyId(@Nullable String companyId) {
         this.companyId = companyId;
         return this;
     }
 
-    public HrisEmployee withCompensation(List<HrisCompensation> compensation) {
-        Utils.checkNotNull(compensation, "compensation");
-        this.compensation = Optional.ofNullable(compensation);
-        return this;
-    }
 
-
-    public HrisEmployee withCompensation(Optional<? extends List<HrisCompensation>> compensation) {
-        Utils.checkNotNull(compensation, "compensation");
+    public HrisEmployee withCompensation(@Nullable List<HrisCompensation> compensation) {
         this.compensation = compensation;
         return this;
     }
 
-    public HrisEmployee withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
 
-
-    public HrisEmployee withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public HrisEmployee withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public HrisEmployee withCurrency(String currency) {
-        Utils.checkNotNull(currency, "currency");
-        this.currency = Optional.ofNullable(currency);
-        return this;
-    }
 
-
-    public HrisEmployee withCurrency(Optional<String> currency) {
-        Utils.checkNotNull(currency, "currency");
+    public HrisEmployee withCurrency(@Nullable String currency) {
         this.currency = currency;
         return this;
     }
 
-    public HrisEmployee withDateOfBirth(OffsetDateTime dateOfBirth) {
-        Utils.checkNotNull(dateOfBirth, "dateOfBirth");
-        this.dateOfBirth = Optional.ofNullable(dateOfBirth);
-        return this;
-    }
 
-
-    public HrisEmployee withDateOfBirth(Optional<OffsetDateTime> dateOfBirth) {
-        Utils.checkNotNull(dateOfBirth, "dateOfBirth");
+    public HrisEmployee withDateOfBirth(@Nullable OffsetDateTime dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
         return this;
     }
 
-    public HrisEmployee withEmails(List<HrisEmail> emails) {
-        Utils.checkNotNull(emails, "emails");
-        this.emails = Optional.ofNullable(emails);
-        return this;
-    }
 
-
-    public HrisEmployee withEmails(Optional<? extends List<HrisEmail>> emails) {
-        Utils.checkNotNull(emails, "emails");
+    public HrisEmployee withEmails(@Nullable List<HrisEmail> emails) {
         this.emails = emails;
         return this;
     }
 
-    public HrisEmployee withEmployeeNumber(String employeeNumber) {
-        Utils.checkNotNull(employeeNumber, "employeeNumber");
-        this.employeeNumber = Optional.ofNullable(employeeNumber);
-        return this;
-    }
 
-
-    public HrisEmployee withEmployeeNumber(Optional<String> employeeNumber) {
-        Utils.checkNotNull(employeeNumber, "employeeNumber");
+    public HrisEmployee withEmployeeNumber(@Nullable String employeeNumber) {
         this.employeeNumber = employeeNumber;
         return this;
     }
 
-    public HrisEmployee withEmployeeRoles(List<PropertyHrisEmployeeEmployeeRoles> employeeRoles) {
-        Utils.checkNotNull(employeeRoles, "employeeRoles");
-        this.employeeRoles = Optional.ofNullable(employeeRoles);
-        return this;
-    }
 
-
-    public HrisEmployee withEmployeeRoles(Optional<? extends List<PropertyHrisEmployeeEmployeeRoles>> employeeRoles) {
-        Utils.checkNotNull(employeeRoles, "employeeRoles");
+    public HrisEmployee withEmployeeRoles(@Nullable List<PropertyHrisEmployeeEmployeeRoles> employeeRoles) {
         this.employeeRoles = employeeRoles;
         return this;
     }
 
-    public HrisEmployee withEmploymentStatus(EmploymentStatus employmentStatus) {
-        Utils.checkNotNull(employmentStatus, "employmentStatus");
-        this.employmentStatus = Optional.ofNullable(employmentStatus);
-        return this;
-    }
 
-
-    public HrisEmployee withEmploymentStatus(Optional<? extends EmploymentStatus> employmentStatus) {
-        Utils.checkNotNull(employmentStatus, "employmentStatus");
+    public HrisEmployee withEmploymentStatus(@Nullable EmploymentStatus employmentStatus) {
         this.employmentStatus = employmentStatus;
         return this;
     }
 
-    public HrisEmployee withEmploymentType(HrisEmployeeEmploymentType employmentType) {
-        Utils.checkNotNull(employmentType, "employmentType");
-        this.employmentType = Optional.ofNullable(employmentType);
-        return this;
-    }
 
-
-    public HrisEmployee withEmploymentType(Optional<? extends HrisEmployeeEmploymentType> employmentType) {
-        Utils.checkNotNull(employmentType, "employmentType");
+    public HrisEmployee withEmploymentType(@Nullable HrisEmployeeEmploymentType employmentType) {
         this.employmentType = employmentType;
         return this;
     }
 
-    public HrisEmployee withFirstName(String firstName) {
-        Utils.checkNotNull(firstName, "firstName");
-        this.firstName = Optional.ofNullable(firstName);
-        return this;
-    }
 
-
-    public HrisEmployee withFirstName(Optional<String> firstName) {
-        Utils.checkNotNull(firstName, "firstName");
+    public HrisEmployee withFirstName(@Nullable String firstName) {
         this.firstName = firstName;
         return this;
     }
 
-    public HrisEmployee withGender(HrisEmployeeGender gender) {
-        Utils.checkNotNull(gender, "gender");
-        this.gender = Optional.ofNullable(gender);
-        return this;
-    }
 
-
-    public HrisEmployee withGender(Optional<? extends HrisEmployeeGender> gender) {
-        Utils.checkNotNull(gender, "gender");
+    public HrisEmployee withGender(@Nullable HrisEmployeeGender gender) {
         this.gender = gender;
         return this;
     }
 
-    /**
-     * Which groups/teams/units that this employee/user belongs to. May not have all of the Group fields
-     * present, but should have id, name, or email.
-     */
-    public HrisEmployee withGroups(List<HrisGroup> groups) {
-        Utils.checkNotNull(groups, "groups");
-        this.groups = Optional.ofNullable(groups);
-        return this;
-    }
-
 
     /**
      * Which groups/teams/units that this employee/user belongs to. May not have all of the Group fields
      * present, but should have id, name, or email.
      */
-    public HrisEmployee withGroups(Optional<? extends List<HrisGroup>> groups) {
-        Utils.checkNotNull(groups, "groups");
+    public HrisEmployee withGroups(@Nullable List<HrisGroup> groups) {
         this.groups = groups;
         return this;
     }
 
-    public HrisEmployee withHasMfa(boolean hasMfa) {
-        Utils.checkNotNull(hasMfa, "hasMfa");
-        this.hasMfa = Optional.ofNullable(hasMfa);
-        return this;
-    }
 
-
-    public HrisEmployee withHasMfa(Optional<Boolean> hasMfa) {
-        Utils.checkNotNull(hasMfa, "hasMfa");
+    public HrisEmployee withHasMfa(@Nullable Boolean hasMfa) {
         this.hasMfa = hasMfa;
         return this;
     }
 
-    public HrisEmployee withHiredAt(OffsetDateTime hiredAt) {
-        Utils.checkNotNull(hiredAt, "hiredAt");
-        this.hiredAt = Optional.ofNullable(hiredAt);
-        return this;
-    }
 
-
-    public HrisEmployee withHiredAt(Optional<OffsetDateTime> hiredAt) {
-        Utils.checkNotNull(hiredAt, "hiredAt");
+    public HrisEmployee withHiredAt(@Nullable OffsetDateTime hiredAt) {
         this.hiredAt = hiredAt;
         return this;
     }
 
-    public HrisEmployee withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public HrisEmployee withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public HrisEmployee withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public HrisEmployee withImageUrl(String imageUrl) {
-        Utils.checkNotNull(imageUrl, "imageUrl");
-        this.imageUrl = Optional.ofNullable(imageUrl);
-        return this;
-    }
 
-
-    public HrisEmployee withImageUrl(Optional<String> imageUrl) {
-        Utils.checkNotNull(imageUrl, "imageUrl");
+    public HrisEmployee withImageUrl(@Nullable String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
     }
 
-    public HrisEmployee withLanguageLocale(String languageLocale) {
-        Utils.checkNotNull(languageLocale, "languageLocale");
-        this.languageLocale = Optional.ofNullable(languageLocale);
-        return this;
-    }
 
-
-    public HrisEmployee withLanguageLocale(Optional<String> languageLocale) {
-        Utils.checkNotNull(languageLocale, "languageLocale");
+    public HrisEmployee withLanguageLocale(@Nullable String languageLocale) {
         this.languageLocale = languageLocale;
         return this;
     }
 
-    public HrisEmployee withLastName(String lastName) {
-        Utils.checkNotNull(lastName, "lastName");
-        this.lastName = Optional.ofNullable(lastName);
-        return this;
-    }
 
-
-    public HrisEmployee withLastName(Optional<String> lastName) {
-        Utils.checkNotNull(lastName, "lastName");
+    public HrisEmployee withLastName(@Nullable String lastName) {
         this.lastName = lastName;
         return this;
     }
 
-    public HrisEmployee withLocations(List<HrisLocation> locations) {
-        Utils.checkNotNull(locations, "locations");
-        this.locations = Optional.ofNullable(locations);
-        return this;
-    }
 
-
-    public HrisEmployee withLocations(Optional<? extends List<HrisLocation>> locations) {
-        Utils.checkNotNull(locations, "locations");
+    public HrisEmployee withLocations(@Nullable List<HrisLocation> locations) {
         this.locations = locations;
         return this;
     }
 
-    public HrisEmployee withManagerId(String managerId) {
-        Utils.checkNotNull(managerId, "managerId");
-        this.managerId = Optional.ofNullable(managerId);
-        return this;
-    }
 
-
-    public HrisEmployee withManagerId(Optional<String> managerId) {
-        Utils.checkNotNull(managerId, "managerId");
+    public HrisEmployee withManagerId(@Nullable String managerId) {
         this.managerId = managerId;
         return this;
     }
 
-    public HrisEmployee withMaritalStatus(MaritalStatus maritalStatus) {
-        Utils.checkNotNull(maritalStatus, "maritalStatus");
-        this.maritalStatus = Optional.ofNullable(maritalStatus);
-        return this;
-    }
 
-
-    public HrisEmployee withMaritalStatus(Optional<? extends MaritalStatus> maritalStatus) {
-        Utils.checkNotNull(maritalStatus, "maritalStatus");
+    public HrisEmployee withMaritalStatus(@Nullable MaritalStatus maritalStatus) {
         this.maritalStatus = maritalStatus;
         return this;
     }
 
-    public HrisEmployee withMetadata(List<HrisMetadata> metadata) {
-        Utils.checkNotNull(metadata, "metadata");
-        this.metadata = Optional.ofNullable(metadata);
-        return this;
-    }
 
-
-    public HrisEmployee withMetadata(Optional<? extends List<HrisMetadata>> metadata) {
-        Utils.checkNotNull(metadata, "metadata");
+    public HrisEmployee withMetadata(@Nullable List<HrisMetadata> metadata) {
         this.metadata = metadata;
         return this;
     }
 
-    public HrisEmployee withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = Optional.ofNullable(name);
-        return this;
-    }
 
-
-    public HrisEmployee withName(Optional<String> name) {
-        Utils.checkNotNull(name, "name");
+    public HrisEmployee withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
-    public HrisEmployee withPronouns(String pronouns) {
-        Utils.checkNotNull(pronouns, "pronouns");
-        this.pronouns = Optional.ofNullable(pronouns);
-        return this;
-    }
 
-
-    public HrisEmployee withPronouns(Optional<String> pronouns) {
-        Utils.checkNotNull(pronouns, "pronouns");
+    public HrisEmployee withPronouns(@Nullable String pronouns) {
         this.pronouns = pronouns;
         return this;
     }
 
-    public HrisEmployee withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public HrisEmployee withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public HrisEmployee withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    /**
-     * the employee's personal relationships (eg. emergency contacts, spouse, dependants, ...)
-     */
-    public HrisEmployee withRelationships(List<HrisEmployeerelationship> relationships) {
-        Utils.checkNotNull(relationships, "relationships");
-        this.relationships = Optional.ofNullable(relationships);
-        return this;
-    }
-
 
     /**
      * the employee's personal relationships (eg. emergency contacts, spouse, dependants, ...)
      */
-    public HrisEmployee withRelationships(Optional<? extends List<HrisEmployeerelationship>> relationships) {
-        Utils.checkNotNull(relationships, "relationships");
+    public HrisEmployee withRelationships(@Nullable List<HrisEmployeerelationship> relationships) {
         this.relationships = relationships;
         return this;
     }
 
-    public HrisEmployee withSalutation(String salutation) {
-        Utils.checkNotNull(salutation, "salutation");
-        this.salutation = Optional.ofNullable(salutation);
-        return this;
-    }
 
-
-    public HrisEmployee withSalutation(Optional<String> salutation) {
-        Utils.checkNotNull(salutation, "salutation");
+    public HrisEmployee withSalutation(@Nullable String salutation) {
         this.salutation = salutation;
         return this;
     }
 
-    public HrisEmployee withSsnSin(String ssnSin) {
-        Utils.checkNotNull(ssnSin, "ssnSin");
-        this.ssnSin = Optional.ofNullable(ssnSin);
-        return this;
-    }
 
-
-    public HrisEmployee withSsnSin(Optional<String> ssnSin) {
-        Utils.checkNotNull(ssnSin, "ssnSin");
+    public HrisEmployee withSsnSin(@Nullable String ssnSin) {
         this.ssnSin = ssnSin;
         return this;
     }
 
-    public HrisEmployee withStorageQuotaAllocated(double storageQuotaAllocated) {
-        Utils.checkNotNull(storageQuotaAllocated, "storageQuotaAllocated");
-        this.storageQuotaAllocated = Optional.ofNullable(storageQuotaAllocated);
-        return this;
-    }
 
-
-    public HrisEmployee withStorageQuotaAllocated(Optional<Double> storageQuotaAllocated) {
-        Utils.checkNotNull(storageQuotaAllocated, "storageQuotaAllocated");
+    public HrisEmployee withStorageQuotaAllocated(@Nullable Double storageQuotaAllocated) {
         this.storageQuotaAllocated = storageQuotaAllocated;
         return this;
     }
 
-    public HrisEmployee withStorageQuotaAvailable(double storageQuotaAvailable) {
-        Utils.checkNotNull(storageQuotaAvailable, "storageQuotaAvailable");
-        this.storageQuotaAvailable = Optional.ofNullable(storageQuotaAvailable);
-        return this;
-    }
 
-
-    public HrisEmployee withStorageQuotaAvailable(Optional<Double> storageQuotaAvailable) {
-        Utils.checkNotNull(storageQuotaAvailable, "storageQuotaAvailable");
+    public HrisEmployee withStorageQuotaAvailable(@Nullable Double storageQuotaAvailable) {
         this.storageQuotaAvailable = storageQuotaAvailable;
         return this;
     }
 
-    public HrisEmployee withStorageQuotaUsed(double storageQuotaUsed) {
-        Utils.checkNotNull(storageQuotaUsed, "storageQuotaUsed");
-        this.storageQuotaUsed = Optional.ofNullable(storageQuotaUsed);
-        return this;
-    }
 
-
-    public HrisEmployee withStorageQuotaUsed(Optional<Double> storageQuotaUsed) {
-        Utils.checkNotNull(storageQuotaUsed, "storageQuotaUsed");
+    public HrisEmployee withStorageQuotaUsed(@Nullable Double storageQuotaUsed) {
         this.storageQuotaUsed = storageQuotaUsed;
         return this;
     }
 
-    public HrisEmployee withTelephones(List<HrisTelephone> telephones) {
-        Utils.checkNotNull(telephones, "telephones");
-        this.telephones = Optional.ofNullable(telephones);
-        return this;
-    }
 
-
-    public HrisEmployee withTelephones(Optional<? extends List<HrisTelephone>> telephones) {
-        Utils.checkNotNull(telephones, "telephones");
+    public HrisEmployee withTelephones(@Nullable List<HrisTelephone> telephones) {
         this.telephones = telephones;
         return this;
     }
 
-    public HrisEmployee withTerminatedAt(OffsetDateTime terminatedAt) {
-        Utils.checkNotNull(terminatedAt, "terminatedAt");
-        this.terminatedAt = Optional.ofNullable(terminatedAt);
-        return this;
-    }
 
-
-    public HrisEmployee withTerminatedAt(Optional<OffsetDateTime> terminatedAt) {
-        Utils.checkNotNull(terminatedAt, "terminatedAt");
+    public HrisEmployee withTerminatedAt(@Nullable OffsetDateTime terminatedAt) {
         this.terminatedAt = terminatedAt;
         return this;
     }
 
-    public HrisEmployee withTerminationReason(String terminationReason) {
-        Utils.checkNotNull(terminationReason, "terminationReason");
-        this.terminationReason = Optional.ofNullable(terminationReason);
-        return this;
-    }
 
-
-    public HrisEmployee withTerminationReason(Optional<String> terminationReason) {
-        Utils.checkNotNull(terminationReason, "terminationReason");
+    public HrisEmployee withTerminationReason(@Nullable String terminationReason) {
         this.terminationReason = terminationReason;
         return this;
     }
 
-    public HrisEmployee withTimezone(String timezone) {
-        Utils.checkNotNull(timezone, "timezone");
-        this.timezone = Optional.ofNullable(timezone);
-        return this;
-    }
 
-
-    public HrisEmployee withTimezone(Optional<String> timezone) {
-        Utils.checkNotNull(timezone, "timezone");
+    public HrisEmployee withTimezone(@Nullable String timezone) {
         this.timezone = timezone;
         return this;
     }
 
-    public HrisEmployee withTitle(String title) {
-        Utils.checkNotNull(title, "title");
-        this.title = Optional.ofNullable(title);
-        return this;
-    }
 
-
-    public HrisEmployee withTitle(Optional<String> title) {
-        Utils.checkNotNull(title, "title");
+    public HrisEmployee withTitle(@Nullable String title) {
         this.title = title;
         return this;
     }
 
-    public HrisEmployee withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public HrisEmployee withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public HrisEmployee withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -1247,626 +865,298 @@ public class HrisEmployee {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends PropertyHrisEmployeeAddress> address = Optional.empty();
+        private PropertyHrisEmployeeAddress address;
 
-        private Optional<String> bio = Optional.empty();
+        private String bio;
 
-        private Optional<String> companyId = Optional.empty();
+        private String companyId;
 
-        private Optional<? extends List<HrisCompensation>> compensation = Optional.empty();
+        private List<HrisCompensation> compensation;
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<String> currency = Optional.empty();
+        private String currency;
 
-        private Optional<OffsetDateTime> dateOfBirth = Optional.empty();
+        private OffsetDateTime dateOfBirth;
 
-        private Optional<? extends List<HrisEmail>> emails = Optional.empty();
+        private List<HrisEmail> emails;
 
-        private Optional<String> employeeNumber = Optional.empty();
+        private String employeeNumber;
 
-        private Optional<? extends List<PropertyHrisEmployeeEmployeeRoles>> employeeRoles = Optional.empty();
+        private List<PropertyHrisEmployeeEmployeeRoles> employeeRoles;
 
-        private Optional<? extends EmploymentStatus> employmentStatus = Optional.empty();
+        private EmploymentStatus employmentStatus;
 
-        private Optional<? extends HrisEmployeeEmploymentType> employmentType = Optional.empty();
+        private HrisEmployeeEmploymentType employmentType;
 
-        private Optional<String> firstName = Optional.empty();
+        private String firstName;
 
-        private Optional<? extends HrisEmployeeGender> gender = Optional.empty();
+        private HrisEmployeeGender gender;
 
-        private Optional<? extends List<HrisGroup>> groups = Optional.empty();
+        private List<HrisGroup> groups;
 
-        private Optional<Boolean> hasMfa = Optional.empty();
+        private Boolean hasMfa;
 
-        private Optional<OffsetDateTime> hiredAt = Optional.empty();
+        private OffsetDateTime hiredAt;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<String> imageUrl = Optional.empty();
+        private String imageUrl;
 
-        private Optional<String> languageLocale = Optional.empty();
+        private String languageLocale;
 
-        private Optional<String> lastName = Optional.empty();
+        private String lastName;
 
-        private Optional<? extends List<HrisLocation>> locations = Optional.empty();
+        private List<HrisLocation> locations;
 
-        private Optional<String> managerId = Optional.empty();
+        private String managerId;
 
-        private Optional<? extends MaritalStatus> maritalStatus = Optional.empty();
+        private MaritalStatus maritalStatus;
 
-        private Optional<? extends List<HrisMetadata>> metadata = Optional.empty();
+        private List<HrisMetadata> metadata;
 
-        private Optional<String> name = Optional.empty();
+        private String name;
 
-        private Optional<String> pronouns = Optional.empty();
+        private String pronouns;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<? extends List<HrisEmployeerelationship>> relationships = Optional.empty();
+        private List<HrisEmployeerelationship> relationships;
 
-        private Optional<String> salutation = Optional.empty();
+        private String salutation;
 
-        private Optional<String> ssnSin = Optional.empty();
+        private String ssnSin;
 
-        private Optional<Double> storageQuotaAllocated = Optional.empty();
+        private Double storageQuotaAllocated;
 
-        private Optional<Double> storageQuotaAvailable = Optional.empty();
+        private Double storageQuotaAvailable;
 
-        private Optional<Double> storageQuotaUsed = Optional.empty();
+        private Double storageQuotaUsed;
 
-        private Optional<? extends List<HrisTelephone>> telephones = Optional.empty();
+        private List<HrisTelephone> telephones;
 
-        private Optional<OffsetDateTime> terminatedAt = Optional.empty();
+        private OffsetDateTime terminatedAt;
 
-        private Optional<String> terminationReason = Optional.empty();
+        private String terminationReason;
 
-        private Optional<String> timezone = Optional.empty();
+        private String timezone;
 
-        private Optional<String> title = Optional.empty();
+        private String title;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder address(PropertyHrisEmployeeAddress address) {
-            Utils.checkNotNull(address, "address");
-            this.address = Optional.ofNullable(address);
-            return this;
-        }
-
-        public Builder address(Optional<? extends PropertyHrisEmployeeAddress> address) {
-            Utils.checkNotNull(address, "address");
+        public Builder address(@Nullable PropertyHrisEmployeeAddress address) {
             this.address = address;
             return this;
         }
 
-
-        public Builder bio(String bio) {
-            Utils.checkNotNull(bio, "bio");
-            this.bio = Optional.ofNullable(bio);
-            return this;
-        }
-
-        public Builder bio(Optional<String> bio) {
-            Utils.checkNotNull(bio, "bio");
+        public Builder bio(@Nullable String bio) {
             this.bio = bio;
             return this;
         }
 
-
-        public Builder companyId(String companyId) {
-            Utils.checkNotNull(companyId, "companyId");
-            this.companyId = Optional.ofNullable(companyId);
-            return this;
-        }
-
-        public Builder companyId(Optional<String> companyId) {
-            Utils.checkNotNull(companyId, "companyId");
+        public Builder companyId(@Nullable String companyId) {
             this.companyId = companyId;
             return this;
         }
 
-
-        public Builder compensation(List<HrisCompensation> compensation) {
-            Utils.checkNotNull(compensation, "compensation");
-            this.compensation = Optional.ofNullable(compensation);
-            return this;
-        }
-
-        public Builder compensation(Optional<? extends List<HrisCompensation>> compensation) {
-            Utils.checkNotNull(compensation, "compensation");
+        public Builder compensation(@Nullable List<HrisCompensation> compensation) {
             this.compensation = compensation;
             return this;
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder currency(String currency) {
-            Utils.checkNotNull(currency, "currency");
-            this.currency = Optional.ofNullable(currency);
-            return this;
-        }
-
-        public Builder currency(Optional<String> currency) {
-            Utils.checkNotNull(currency, "currency");
+        public Builder currency(@Nullable String currency) {
             this.currency = currency;
             return this;
         }
 
-
-        public Builder dateOfBirth(OffsetDateTime dateOfBirth) {
-            Utils.checkNotNull(dateOfBirth, "dateOfBirth");
-            this.dateOfBirth = Optional.ofNullable(dateOfBirth);
-            return this;
-        }
-
-        public Builder dateOfBirth(Optional<OffsetDateTime> dateOfBirth) {
-            Utils.checkNotNull(dateOfBirth, "dateOfBirth");
+        public Builder dateOfBirth(@Nullable OffsetDateTime dateOfBirth) {
             this.dateOfBirth = dateOfBirth;
             return this;
         }
 
-
-        public Builder emails(List<HrisEmail> emails) {
-            Utils.checkNotNull(emails, "emails");
-            this.emails = Optional.ofNullable(emails);
-            return this;
-        }
-
-        public Builder emails(Optional<? extends List<HrisEmail>> emails) {
-            Utils.checkNotNull(emails, "emails");
+        public Builder emails(@Nullable List<HrisEmail> emails) {
             this.emails = emails;
             return this;
         }
 
-
-        public Builder employeeNumber(String employeeNumber) {
-            Utils.checkNotNull(employeeNumber, "employeeNumber");
-            this.employeeNumber = Optional.ofNullable(employeeNumber);
-            return this;
-        }
-
-        public Builder employeeNumber(Optional<String> employeeNumber) {
-            Utils.checkNotNull(employeeNumber, "employeeNumber");
+        public Builder employeeNumber(@Nullable String employeeNumber) {
             this.employeeNumber = employeeNumber;
             return this;
         }
 
-
-        public Builder employeeRoles(List<PropertyHrisEmployeeEmployeeRoles> employeeRoles) {
-            Utils.checkNotNull(employeeRoles, "employeeRoles");
-            this.employeeRoles = Optional.ofNullable(employeeRoles);
-            return this;
-        }
-
-        public Builder employeeRoles(Optional<? extends List<PropertyHrisEmployeeEmployeeRoles>> employeeRoles) {
-            Utils.checkNotNull(employeeRoles, "employeeRoles");
+        public Builder employeeRoles(@Nullable List<PropertyHrisEmployeeEmployeeRoles> employeeRoles) {
             this.employeeRoles = employeeRoles;
             return this;
         }
 
-
-        public Builder employmentStatus(EmploymentStatus employmentStatus) {
-            Utils.checkNotNull(employmentStatus, "employmentStatus");
-            this.employmentStatus = Optional.ofNullable(employmentStatus);
-            return this;
-        }
-
-        public Builder employmentStatus(Optional<? extends EmploymentStatus> employmentStatus) {
-            Utils.checkNotNull(employmentStatus, "employmentStatus");
+        public Builder employmentStatus(@Nullable EmploymentStatus employmentStatus) {
             this.employmentStatus = employmentStatus;
             return this;
         }
 
-
-        public Builder employmentType(HrisEmployeeEmploymentType employmentType) {
-            Utils.checkNotNull(employmentType, "employmentType");
-            this.employmentType = Optional.ofNullable(employmentType);
-            return this;
-        }
-
-        public Builder employmentType(Optional<? extends HrisEmployeeEmploymentType> employmentType) {
-            Utils.checkNotNull(employmentType, "employmentType");
+        public Builder employmentType(@Nullable HrisEmployeeEmploymentType employmentType) {
             this.employmentType = employmentType;
             return this;
         }
 
-
-        public Builder firstName(String firstName) {
-            Utils.checkNotNull(firstName, "firstName");
-            this.firstName = Optional.ofNullable(firstName);
-            return this;
-        }
-
-        public Builder firstName(Optional<String> firstName) {
-            Utils.checkNotNull(firstName, "firstName");
+        public Builder firstName(@Nullable String firstName) {
             this.firstName = firstName;
             return this;
         }
 
-
-        public Builder gender(HrisEmployeeGender gender) {
-            Utils.checkNotNull(gender, "gender");
-            this.gender = Optional.ofNullable(gender);
-            return this;
-        }
-
-        public Builder gender(Optional<? extends HrisEmployeeGender> gender) {
-            Utils.checkNotNull(gender, "gender");
+        public Builder gender(@Nullable HrisEmployeeGender gender) {
             this.gender = gender;
             return this;
         }
 
-
         /**
          * Which groups/teams/units that this employee/user belongs to. May not have all of the Group fields
          * present, but should have id, name, or email.
          */
-        public Builder groups(List<HrisGroup> groups) {
-            Utils.checkNotNull(groups, "groups");
-            this.groups = Optional.ofNullable(groups);
-            return this;
-        }
-
-        /**
-         * Which groups/teams/units that this employee/user belongs to. May not have all of the Group fields
-         * present, but should have id, name, or email.
-         */
-        public Builder groups(Optional<? extends List<HrisGroup>> groups) {
-            Utils.checkNotNull(groups, "groups");
+        public Builder groups(@Nullable List<HrisGroup> groups) {
             this.groups = groups;
             return this;
         }
 
-
-        public Builder hasMfa(boolean hasMfa) {
-            Utils.checkNotNull(hasMfa, "hasMfa");
-            this.hasMfa = Optional.ofNullable(hasMfa);
-            return this;
-        }
-
-        public Builder hasMfa(Optional<Boolean> hasMfa) {
-            Utils.checkNotNull(hasMfa, "hasMfa");
+        public Builder hasMfa(@Nullable Boolean hasMfa) {
             this.hasMfa = hasMfa;
             return this;
         }
 
-
-        public Builder hiredAt(OffsetDateTime hiredAt) {
-            Utils.checkNotNull(hiredAt, "hiredAt");
-            this.hiredAt = Optional.ofNullable(hiredAt);
-            return this;
-        }
-
-        public Builder hiredAt(Optional<OffsetDateTime> hiredAt) {
-            Utils.checkNotNull(hiredAt, "hiredAt");
+        public Builder hiredAt(@Nullable OffsetDateTime hiredAt) {
             this.hiredAt = hiredAt;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder imageUrl(String imageUrl) {
-            Utils.checkNotNull(imageUrl, "imageUrl");
-            this.imageUrl = Optional.ofNullable(imageUrl);
-            return this;
-        }
-
-        public Builder imageUrl(Optional<String> imageUrl) {
-            Utils.checkNotNull(imageUrl, "imageUrl");
+        public Builder imageUrl(@Nullable String imageUrl) {
             this.imageUrl = imageUrl;
             return this;
         }
 
-
-        public Builder languageLocale(String languageLocale) {
-            Utils.checkNotNull(languageLocale, "languageLocale");
-            this.languageLocale = Optional.ofNullable(languageLocale);
-            return this;
-        }
-
-        public Builder languageLocale(Optional<String> languageLocale) {
-            Utils.checkNotNull(languageLocale, "languageLocale");
+        public Builder languageLocale(@Nullable String languageLocale) {
             this.languageLocale = languageLocale;
             return this;
         }
 
-
-        public Builder lastName(String lastName) {
-            Utils.checkNotNull(lastName, "lastName");
-            this.lastName = Optional.ofNullable(lastName);
-            return this;
-        }
-
-        public Builder lastName(Optional<String> lastName) {
-            Utils.checkNotNull(lastName, "lastName");
+        public Builder lastName(@Nullable String lastName) {
             this.lastName = lastName;
             return this;
         }
 
-
-        public Builder locations(List<HrisLocation> locations) {
-            Utils.checkNotNull(locations, "locations");
-            this.locations = Optional.ofNullable(locations);
-            return this;
-        }
-
-        public Builder locations(Optional<? extends List<HrisLocation>> locations) {
-            Utils.checkNotNull(locations, "locations");
+        public Builder locations(@Nullable List<HrisLocation> locations) {
             this.locations = locations;
             return this;
         }
 
-
-        public Builder managerId(String managerId) {
-            Utils.checkNotNull(managerId, "managerId");
-            this.managerId = Optional.ofNullable(managerId);
-            return this;
-        }
-
-        public Builder managerId(Optional<String> managerId) {
-            Utils.checkNotNull(managerId, "managerId");
+        public Builder managerId(@Nullable String managerId) {
             this.managerId = managerId;
             return this;
         }
 
-
-        public Builder maritalStatus(MaritalStatus maritalStatus) {
-            Utils.checkNotNull(maritalStatus, "maritalStatus");
-            this.maritalStatus = Optional.ofNullable(maritalStatus);
-            return this;
-        }
-
-        public Builder maritalStatus(Optional<? extends MaritalStatus> maritalStatus) {
-            Utils.checkNotNull(maritalStatus, "maritalStatus");
+        public Builder maritalStatus(@Nullable MaritalStatus maritalStatus) {
             this.maritalStatus = maritalStatus;
             return this;
         }
 
-
-        public Builder metadata(List<HrisMetadata> metadata) {
-            Utils.checkNotNull(metadata, "metadata");
-            this.metadata = Optional.ofNullable(metadata);
-            return this;
-        }
-
-        public Builder metadata(Optional<? extends List<HrisMetadata>> metadata) {
-            Utils.checkNotNull(metadata, "metadata");
+        public Builder metadata(@Nullable List<HrisMetadata> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = Optional.ofNullable(name);
-            return this;
-        }
-
-        public Builder name(Optional<String> name) {
-            Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-
-        public Builder pronouns(String pronouns) {
-            Utils.checkNotNull(pronouns, "pronouns");
-            this.pronouns = Optional.ofNullable(pronouns);
-            return this;
-        }
-
-        public Builder pronouns(Optional<String> pronouns) {
-            Utils.checkNotNull(pronouns, "pronouns");
+        public Builder pronouns(@Nullable String pronouns) {
             this.pronouns = pronouns;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
         /**
          * the employee's personal relationships (eg. emergency contacts, spouse, dependants, ...)
          */
-        public Builder relationships(List<HrisEmployeerelationship> relationships) {
-            Utils.checkNotNull(relationships, "relationships");
-            this.relationships = Optional.ofNullable(relationships);
-            return this;
-        }
-
-        /**
-         * the employee's personal relationships (eg. emergency contacts, spouse, dependants, ...)
-         */
-        public Builder relationships(Optional<? extends List<HrisEmployeerelationship>> relationships) {
-            Utils.checkNotNull(relationships, "relationships");
+        public Builder relationships(@Nullable List<HrisEmployeerelationship> relationships) {
             this.relationships = relationships;
             return this;
         }
 
-
-        public Builder salutation(String salutation) {
-            Utils.checkNotNull(salutation, "salutation");
-            this.salutation = Optional.ofNullable(salutation);
-            return this;
-        }
-
-        public Builder salutation(Optional<String> salutation) {
-            Utils.checkNotNull(salutation, "salutation");
+        public Builder salutation(@Nullable String salutation) {
             this.salutation = salutation;
             return this;
         }
 
-
-        public Builder ssnSin(String ssnSin) {
-            Utils.checkNotNull(ssnSin, "ssnSin");
-            this.ssnSin = Optional.ofNullable(ssnSin);
-            return this;
-        }
-
-        public Builder ssnSin(Optional<String> ssnSin) {
-            Utils.checkNotNull(ssnSin, "ssnSin");
+        public Builder ssnSin(@Nullable String ssnSin) {
             this.ssnSin = ssnSin;
             return this;
         }
 
-
-        public Builder storageQuotaAllocated(double storageQuotaAllocated) {
-            Utils.checkNotNull(storageQuotaAllocated, "storageQuotaAllocated");
-            this.storageQuotaAllocated = Optional.ofNullable(storageQuotaAllocated);
-            return this;
-        }
-
-        public Builder storageQuotaAllocated(Optional<Double> storageQuotaAllocated) {
-            Utils.checkNotNull(storageQuotaAllocated, "storageQuotaAllocated");
+        public Builder storageQuotaAllocated(@Nullable Double storageQuotaAllocated) {
             this.storageQuotaAllocated = storageQuotaAllocated;
             return this;
         }
 
-
-        public Builder storageQuotaAvailable(double storageQuotaAvailable) {
-            Utils.checkNotNull(storageQuotaAvailable, "storageQuotaAvailable");
-            this.storageQuotaAvailable = Optional.ofNullable(storageQuotaAvailable);
-            return this;
-        }
-
-        public Builder storageQuotaAvailable(Optional<Double> storageQuotaAvailable) {
-            Utils.checkNotNull(storageQuotaAvailable, "storageQuotaAvailable");
+        public Builder storageQuotaAvailable(@Nullable Double storageQuotaAvailable) {
             this.storageQuotaAvailable = storageQuotaAvailable;
             return this;
         }
 
-
-        public Builder storageQuotaUsed(double storageQuotaUsed) {
-            Utils.checkNotNull(storageQuotaUsed, "storageQuotaUsed");
-            this.storageQuotaUsed = Optional.ofNullable(storageQuotaUsed);
-            return this;
-        }
-
-        public Builder storageQuotaUsed(Optional<Double> storageQuotaUsed) {
-            Utils.checkNotNull(storageQuotaUsed, "storageQuotaUsed");
+        public Builder storageQuotaUsed(@Nullable Double storageQuotaUsed) {
             this.storageQuotaUsed = storageQuotaUsed;
             return this;
         }
 
-
-        public Builder telephones(List<HrisTelephone> telephones) {
-            Utils.checkNotNull(telephones, "telephones");
-            this.telephones = Optional.ofNullable(telephones);
-            return this;
-        }
-
-        public Builder telephones(Optional<? extends List<HrisTelephone>> telephones) {
-            Utils.checkNotNull(telephones, "telephones");
+        public Builder telephones(@Nullable List<HrisTelephone> telephones) {
             this.telephones = telephones;
             return this;
         }
 
-
-        public Builder terminatedAt(OffsetDateTime terminatedAt) {
-            Utils.checkNotNull(terminatedAt, "terminatedAt");
-            this.terminatedAt = Optional.ofNullable(terminatedAt);
-            return this;
-        }
-
-        public Builder terminatedAt(Optional<OffsetDateTime> terminatedAt) {
-            Utils.checkNotNull(terminatedAt, "terminatedAt");
+        public Builder terminatedAt(@Nullable OffsetDateTime terminatedAt) {
             this.terminatedAt = terminatedAt;
             return this;
         }
 
-
-        public Builder terminationReason(String terminationReason) {
-            Utils.checkNotNull(terminationReason, "terminationReason");
-            this.terminationReason = Optional.ofNullable(terminationReason);
-            return this;
-        }
-
-        public Builder terminationReason(Optional<String> terminationReason) {
-            Utils.checkNotNull(terminationReason, "terminationReason");
+        public Builder terminationReason(@Nullable String terminationReason) {
             this.terminationReason = terminationReason;
             return this;
         }
 
-
-        public Builder timezone(String timezone) {
-            Utils.checkNotNull(timezone, "timezone");
-            this.timezone = Optional.ofNullable(timezone);
-            return this;
-        }
-
-        public Builder timezone(Optional<String> timezone) {
-            Utils.checkNotNull(timezone, "timezone");
+        public Builder timezone(@Nullable String timezone) {
             this.timezone = timezone;
             return this;
         }
 
-
-        public Builder title(String title) {
-            Utils.checkNotNull(title, "title");
-            this.title = Optional.ofNullable(title);
-            return this;
-        }
-
-        public Builder title(Optional<String> title) {
-            Utils.checkNotNull(title, "title");
+        public Builder title(@Nullable String title) {
             this.title = title;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
         public HrisEmployee build() {
-
             return new HrisEmployee(
                 address, bio, companyId,
                 compensation, createdAt, currency,

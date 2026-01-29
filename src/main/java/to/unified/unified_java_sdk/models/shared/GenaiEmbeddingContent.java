@@ -4,10 +4,11 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nonnull;
 import java.lang.Override;
 import java.lang.String;
+import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
@@ -18,14 +19,13 @@ public class GenaiEmbeddingContent {
 
     @JsonCreator
     public GenaiEmbeddingContent(
-            @JsonProperty("text") String text) {
-        Utils.checkNotNull(text, "text");
-        this.text = text;
+            @JsonProperty("text") @Nonnull String text) {
+        this.text = Optional.ofNullable(text)
+            .orElseThrow(() -> new IllegalArgumentException("text cannot be null"));
     }
 
-    @JsonIgnore
     public String text() {
-        return text;
+        return this.text;
     }
 
     public static Builder builder() {
@@ -33,11 +33,11 @@ public class GenaiEmbeddingContent {
     }
 
 
-    public GenaiEmbeddingContent withText(String text) {
-        Utils.checkNotNull(text, "text");
-        this.text = text;
+    public GenaiEmbeddingContent withText(@Nonnull String text) {
+        this.text = Utils.checkNotNull(text, "text");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -73,15 +73,12 @@ public class GenaiEmbeddingContent {
           // force use of static builder() method
         }
 
-
-        public Builder text(String text) {
-            Utils.checkNotNull(text, "text");
-            this.text = text;
+        public Builder text(@Nonnull String text) {
+            this.text = Utils.checkNotNull(text, "text");
             return this;
         }
 
         public GenaiEmbeddingContent build() {
-
             return new GenaiEmbeddingContent(
                 text);
         }

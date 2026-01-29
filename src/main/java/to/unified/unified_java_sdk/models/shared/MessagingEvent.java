@@ -4,15 +4,14 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.Map;
 import java.util.Optional;
@@ -23,68 +22,59 @@ public class MessagingEvent {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("button")
-    private Optional<? extends PropertyMessagingEventButton> button;
+    private PropertyMessagingEventButton button;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channel")
-    private Optional<? extends PropertyMessagingEventChannel> channel;
+    private PropertyMessagingEventChannel channel;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_replacing_original")
-    private Optional<Boolean> isReplacingOriginal;
+    private Boolean isReplacingOriginal;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
-    private Optional<? extends PropertyMessagingEventMessage> message;
+    private PropertyMessagingEventMessage message;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
-    private Optional<? extends MessagingEventType> type;
+    private MessagingEventType type;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
-    private Optional<? extends PropertyMessagingEventUser> user;
+    private PropertyMessagingEventUser user;
 
     @JsonCreator
     public MessagingEvent(
-            @JsonProperty("button") Optional<? extends PropertyMessagingEventButton> button,
-            @JsonProperty("channel") Optional<? extends PropertyMessagingEventChannel> channel,
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("is_replacing_original") Optional<Boolean> isReplacingOriginal,
-            @JsonProperty("message") Optional<? extends PropertyMessagingEventMessage> message,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("type") Optional<? extends MessagingEventType> type,
-            @JsonProperty("user") Optional<? extends PropertyMessagingEventUser> user) {
-        Utils.checkNotNull(button, "button");
-        Utils.checkNotNull(channel, "channel");
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(isReplacingOriginal, "isReplacingOriginal");
-        Utils.checkNotNull(message, "message");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(type, "type");
-        Utils.checkNotNull(user, "user");
+            @JsonProperty("button") @Nullable PropertyMessagingEventButton button,
+            @JsonProperty("channel") @Nullable PropertyMessagingEventChannel channel,
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("is_replacing_original") @Nullable Boolean isReplacingOriginal,
+            @JsonProperty("message") @Nullable PropertyMessagingEventMessage message,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("type") @Nullable MessagingEventType type,
+            @JsonProperty("user") @Nullable PropertyMessagingEventUser user) {
         this.button = button;
         this.channel = channel;
         this.createdAt = createdAt;
@@ -97,60 +87,45 @@ public class MessagingEvent {
     }
     
     public MessagingEvent() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<PropertyMessagingEventButton> button() {
-        return (Optional<PropertyMessagingEventButton>) button;
+        return Optional.ofNullable(this.button);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<PropertyMessagingEventChannel> channel() {
-        return (Optional<PropertyMessagingEventChannel>) channel;
+        return Optional.ofNullable(this.channel);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isReplacingOriginal() {
-        return isReplacingOriginal;
+        return Optional.ofNullable(this.isReplacingOriginal);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<PropertyMessagingEventMessage> message() {
-        return (Optional<PropertyMessagingEventMessage>) message;
+        return Optional.ofNullable(this.message);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<MessagingEventType> type() {
-        return (Optional<MessagingEventType>) type;
+        return Optional.ofNullable(this.type);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<PropertyMessagingEventUser> user() {
-        return (Optional<PropertyMessagingEventUser>) user;
+        return Optional.ofNullable(this.user);
     }
 
     public static Builder builder() {
@@ -158,122 +133,59 @@ public class MessagingEvent {
     }
 
 
-    public MessagingEvent withButton(PropertyMessagingEventButton button) {
-        Utils.checkNotNull(button, "button");
-        this.button = Optional.ofNullable(button);
-        return this;
-    }
-
-
-    public MessagingEvent withButton(Optional<? extends PropertyMessagingEventButton> button) {
-        Utils.checkNotNull(button, "button");
+    public MessagingEvent withButton(@Nullable PropertyMessagingEventButton button) {
         this.button = button;
         return this;
     }
 
-    public MessagingEvent withChannel(PropertyMessagingEventChannel channel) {
-        Utils.checkNotNull(channel, "channel");
-        this.channel = Optional.ofNullable(channel);
-        return this;
-    }
 
-
-    public MessagingEvent withChannel(Optional<? extends PropertyMessagingEventChannel> channel) {
-        Utils.checkNotNull(channel, "channel");
+    public MessagingEvent withChannel(@Nullable PropertyMessagingEventChannel channel) {
         this.channel = channel;
         return this;
     }
 
-    public MessagingEvent withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
 
-
-    public MessagingEvent withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public MessagingEvent withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public MessagingEvent withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public MessagingEvent withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public MessagingEvent withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public MessagingEvent withIsReplacingOriginal(boolean isReplacingOriginal) {
-        Utils.checkNotNull(isReplacingOriginal, "isReplacingOriginal");
-        this.isReplacingOriginal = Optional.ofNullable(isReplacingOriginal);
-        return this;
-    }
 
-
-    public MessagingEvent withIsReplacingOriginal(Optional<Boolean> isReplacingOriginal) {
-        Utils.checkNotNull(isReplacingOriginal, "isReplacingOriginal");
+    public MessagingEvent withIsReplacingOriginal(@Nullable Boolean isReplacingOriginal) {
         this.isReplacingOriginal = isReplacingOriginal;
         return this;
     }
 
-    public MessagingEvent withMessage(PropertyMessagingEventMessage message) {
-        Utils.checkNotNull(message, "message");
-        this.message = Optional.ofNullable(message);
-        return this;
-    }
 
-
-    public MessagingEvent withMessage(Optional<? extends PropertyMessagingEventMessage> message) {
-        Utils.checkNotNull(message, "message");
+    public MessagingEvent withMessage(@Nullable PropertyMessagingEventMessage message) {
         this.message = message;
         return this;
     }
 
-    public MessagingEvent withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public MessagingEvent withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public MessagingEvent withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public MessagingEvent withType(MessagingEventType type) {
-        Utils.checkNotNull(type, "type");
-        this.type = Optional.ofNullable(type);
-        return this;
-    }
 
-
-    public MessagingEvent withType(Optional<? extends MessagingEventType> type) {
-        Utils.checkNotNull(type, "type");
+    public MessagingEvent withType(@Nullable MessagingEventType type) {
         this.type = type;
         return this;
     }
 
-    public MessagingEvent withUser(PropertyMessagingEventUser user) {
-        Utils.checkNotNull(user, "user");
-        this.user = Optional.ofNullable(user);
-        return this;
-    }
 
-
-    public MessagingEvent withUser(Optional<? extends PropertyMessagingEventUser> user) {
-        Utils.checkNotNull(user, "user");
+    public MessagingEvent withUser(@Nullable PropertyMessagingEventUser user) {
         this.user = user;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -321,147 +233,74 @@ public class MessagingEvent {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends PropertyMessagingEventButton> button = Optional.empty();
+        private PropertyMessagingEventButton button;
 
-        private Optional<? extends PropertyMessagingEventChannel> channel = Optional.empty();
+        private PropertyMessagingEventChannel channel;
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<Boolean> isReplacingOriginal = Optional.empty();
+        private Boolean isReplacingOriginal;
 
-        private Optional<? extends PropertyMessagingEventMessage> message = Optional.empty();
+        private PropertyMessagingEventMessage message;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<? extends MessagingEventType> type = Optional.empty();
+        private MessagingEventType type;
 
-        private Optional<? extends PropertyMessagingEventUser> user = Optional.empty();
+        private PropertyMessagingEventUser user;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder button(PropertyMessagingEventButton button) {
-            Utils.checkNotNull(button, "button");
-            this.button = Optional.ofNullable(button);
-            return this;
-        }
-
-        public Builder button(Optional<? extends PropertyMessagingEventButton> button) {
-            Utils.checkNotNull(button, "button");
+        public Builder button(@Nullable PropertyMessagingEventButton button) {
             this.button = button;
             return this;
         }
 
-
-        public Builder channel(PropertyMessagingEventChannel channel) {
-            Utils.checkNotNull(channel, "channel");
-            this.channel = Optional.ofNullable(channel);
-            return this;
-        }
-
-        public Builder channel(Optional<? extends PropertyMessagingEventChannel> channel) {
-            Utils.checkNotNull(channel, "channel");
+        public Builder channel(@Nullable PropertyMessagingEventChannel channel) {
             this.channel = channel;
             return this;
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder isReplacingOriginal(boolean isReplacingOriginal) {
-            Utils.checkNotNull(isReplacingOriginal, "isReplacingOriginal");
-            this.isReplacingOriginal = Optional.ofNullable(isReplacingOriginal);
-            return this;
-        }
-
-        public Builder isReplacingOriginal(Optional<Boolean> isReplacingOriginal) {
-            Utils.checkNotNull(isReplacingOriginal, "isReplacingOriginal");
+        public Builder isReplacingOriginal(@Nullable Boolean isReplacingOriginal) {
             this.isReplacingOriginal = isReplacingOriginal;
             return this;
         }
 
-
-        public Builder message(PropertyMessagingEventMessage message) {
-            Utils.checkNotNull(message, "message");
-            this.message = Optional.ofNullable(message);
-            return this;
-        }
-
-        public Builder message(Optional<? extends PropertyMessagingEventMessage> message) {
-            Utils.checkNotNull(message, "message");
+        public Builder message(@Nullable PropertyMessagingEventMessage message) {
             this.message = message;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder type(MessagingEventType type) {
-            Utils.checkNotNull(type, "type");
-            this.type = Optional.ofNullable(type);
-            return this;
-        }
-
-        public Builder type(Optional<? extends MessagingEventType> type) {
-            Utils.checkNotNull(type, "type");
+        public Builder type(@Nullable MessagingEventType type) {
             this.type = type;
             return this;
         }
 
-
-        public Builder user(PropertyMessagingEventUser user) {
-            Utils.checkNotNull(user, "user");
-            this.user = Optional.ofNullable(user);
-            return this;
-        }
-
-        public Builder user(Optional<? extends PropertyMessagingEventUser> user) {
-            Utils.checkNotNull(user, "user");
+        public Builder user(@Nullable PropertyMessagingEventUser user) {
             this.user = user;
             return this;
         }
 
         public MessagingEvent build() {
-
             return new MessagingEvent(
                 button, channel, createdAt,
                 id, isReplacingOriginal, message,

@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingExpenseRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingExpenseRequest;
@@ -68,7 +69,7 @@ public class AsyncExpense {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAccountingExpenseResponse>} - The async response
      */
-    public CompletableFuture<CreateAccountingExpenseResponse> createAccountingExpense(CreateAccountingExpenseRequest request) {
+    public CompletableFuture<CreateAccountingExpenseResponse> createAccountingExpense(@Nonnull CreateAccountingExpenseRequest request) {
         AsyncRequestOperation<CreateAccountingExpenseRequest, CreateAccountingExpenseResponse> operation
               = new CreateAccountingExpense.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -91,7 +92,7 @@ public class AsyncExpense {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAccountingExpenseResponse>} - The async response
      */
-    public CompletableFuture<GetAccountingExpenseResponse> getAccountingExpense(GetAccountingExpenseRequest request) {
+    public CompletableFuture<GetAccountingExpenseResponse> getAccountingExpense(@Nonnull GetAccountingExpenseRequest request) {
         AsyncRequestOperation<GetAccountingExpenseRequest, GetAccountingExpenseResponse> operation
               = new GetAccountingExpense.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -114,7 +115,7 @@ public class AsyncExpense {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAccountingExpensesResponse>} - The async response
      */
-    public CompletableFuture<ListAccountingExpensesResponse> listAccountingExpenses(ListAccountingExpensesRequest request) {
+    public CompletableFuture<ListAccountingExpensesResponse> listAccountingExpenses(@Nonnull ListAccountingExpensesRequest request) {
         AsyncRequestOperation<ListAccountingExpensesRequest, ListAccountingExpensesResponse> operation
               = new ListAccountingExpenses.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -137,7 +138,7 @@ public class AsyncExpense {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAccountingExpenseResponse>} - The async response
      */
-    public CompletableFuture<PatchAccountingExpenseResponse> patchAccountingExpense(PatchAccountingExpenseRequest request) {
+    public CompletableFuture<PatchAccountingExpenseResponse> patchAccountingExpense(@Nonnull PatchAccountingExpenseRequest request) {
         AsyncRequestOperation<PatchAccountingExpenseRequest, PatchAccountingExpenseResponse> operation
               = new PatchAccountingExpense.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -160,7 +161,7 @@ public class AsyncExpense {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAccountingExpenseResponse>} - The async response
      */
-    public CompletableFuture<RemoveAccountingExpenseResponse> removeAccountingExpense(RemoveAccountingExpenseRequest request) {
+    public CompletableFuture<RemoveAccountingExpenseResponse> removeAccountingExpense(@Nonnull RemoveAccountingExpenseRequest request) {
         AsyncRequestOperation<RemoveAccountingExpenseRequest, RemoveAccountingExpenseResponse> operation
               = new RemoveAccountingExpense.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -183,7 +184,7 @@ public class AsyncExpense {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAccountingExpenseResponse>} - The async response
      */
-    public CompletableFuture<UpdateAccountingExpenseResponse> updateAccountingExpense(UpdateAccountingExpenseRequest request) {
+    public CompletableFuture<UpdateAccountingExpenseResponse> updateAccountingExpense(@Nonnull UpdateAccountingExpenseRequest request) {
         AsyncRequestOperation<UpdateAccountingExpenseRequest, UpdateAccountingExpenseResponse> operation
               = new UpdateAccountingExpense.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

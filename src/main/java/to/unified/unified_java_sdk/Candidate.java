@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateAtsCandidateRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAtsCandidateRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAtsCandidateResponse;
@@ -67,7 +68,7 @@ public class Candidate {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAtsCandidateResponse createAtsCandidate(CreateAtsCandidateRequest request) {
+    public CreateAtsCandidateResponse createAtsCandidate(@Nonnull CreateAtsCandidateRequest request) {
         RequestOperation<CreateAtsCandidateRequest, CreateAtsCandidateResponse> operation
               = new CreateAtsCandidate.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -89,7 +90,7 @@ public class Candidate {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAtsCandidateResponse getAtsCandidate(GetAtsCandidateRequest request) {
+    public GetAtsCandidateResponse getAtsCandidate(@Nonnull GetAtsCandidateRequest request) {
         RequestOperation<GetAtsCandidateRequest, GetAtsCandidateResponse> operation
               = new GetAtsCandidate.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -111,7 +112,7 @@ public class Candidate {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAtsCandidatesResponse listAtsCandidates(ListAtsCandidatesRequest request) {
+    public ListAtsCandidatesResponse listAtsCandidates(@Nonnull ListAtsCandidatesRequest request) {
         RequestOperation<ListAtsCandidatesRequest, ListAtsCandidatesResponse> operation
               = new ListAtsCandidates.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -133,7 +134,7 @@ public class Candidate {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAtsCandidateResponse patchAtsCandidate(PatchAtsCandidateRequest request) {
+    public PatchAtsCandidateResponse patchAtsCandidate(@Nonnull PatchAtsCandidateRequest request) {
         RequestOperation<PatchAtsCandidateRequest, PatchAtsCandidateResponse> operation
               = new PatchAtsCandidate.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -155,7 +156,7 @@ public class Candidate {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAtsCandidateResponse removeAtsCandidate(RemoveAtsCandidateRequest request) {
+    public RemoveAtsCandidateResponse removeAtsCandidate(@Nonnull RemoveAtsCandidateRequest request) {
         RequestOperation<RemoveAtsCandidateRequest, RemoveAtsCandidateResponse> operation
               = new RemoveAtsCandidate.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -177,7 +178,7 @@ public class Candidate {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAtsCandidateResponse updateAtsCandidate(UpdateAtsCandidateRequest request) {
+    public UpdateAtsCandidateResponse updateAtsCandidate(@Nonnull UpdateAtsCandidateRequest request) {
         RequestOperation<UpdateAtsCandidateRequest, UpdateAtsCandidateResponse> operation
               = new UpdateAtsCandidate.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

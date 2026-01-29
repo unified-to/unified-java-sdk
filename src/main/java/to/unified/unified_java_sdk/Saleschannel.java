@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceSaleschannelRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceSaleschannelRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceSaleschannelResponse;
@@ -67,7 +68,7 @@ public class Saleschannel {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCommerceSaleschannelResponse createCommerceSaleschannel(CreateCommerceSaleschannelRequest request) {
+    public CreateCommerceSaleschannelResponse createCommerceSaleschannel(@Nonnull CreateCommerceSaleschannelRequest request) {
         RequestOperation<CreateCommerceSaleschannelRequest, CreateCommerceSaleschannelResponse> operation
               = new CreateCommerceSaleschannel.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -89,7 +90,7 @@ public class Saleschannel {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetCommerceSaleschannelResponse getCommerceSaleschannel(GetCommerceSaleschannelRequest request) {
+    public GetCommerceSaleschannelResponse getCommerceSaleschannel(@Nonnull GetCommerceSaleschannelRequest request) {
         RequestOperation<GetCommerceSaleschannelRequest, GetCommerceSaleschannelResponse> operation
               = new GetCommerceSaleschannel.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -111,7 +112,7 @@ public class Saleschannel {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCommerceSaleschannelsResponse listCommerceSaleschannels(ListCommerceSaleschannelsRequest request) {
+    public ListCommerceSaleschannelsResponse listCommerceSaleschannels(@Nonnull ListCommerceSaleschannelsRequest request) {
         RequestOperation<ListCommerceSaleschannelsRequest, ListCommerceSaleschannelsResponse> operation
               = new ListCommerceSaleschannels.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -133,7 +134,7 @@ public class Saleschannel {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCommerceSaleschannelResponse patchCommerceSaleschannel(PatchCommerceSaleschannelRequest request) {
+    public PatchCommerceSaleschannelResponse patchCommerceSaleschannel(@Nonnull PatchCommerceSaleschannelRequest request) {
         RequestOperation<PatchCommerceSaleschannelRequest, PatchCommerceSaleschannelResponse> operation
               = new PatchCommerceSaleschannel.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -155,7 +156,7 @@ public class Saleschannel {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCommerceSaleschannelResponse removeCommerceSaleschannel(RemoveCommerceSaleschannelRequest request) {
+    public RemoveCommerceSaleschannelResponse removeCommerceSaleschannel(@Nonnull RemoveCommerceSaleschannelRequest request) {
         RequestOperation<RemoveCommerceSaleschannelRequest, RemoveCommerceSaleschannelResponse> operation
               = new RemoveCommerceSaleschannel.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -177,7 +178,7 @@ public class Saleschannel {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCommerceSaleschannelResponse updateCommerceSaleschannel(UpdateCommerceSaleschannelRequest request) {
+    public UpdateCommerceSaleschannelResponse updateCommerceSaleschannel(@Nonnull UpdateCommerceSaleschannelRequest request) {
         RequestOperation<UpdateCommerceSaleschannelRequest, UpdateCommerceSaleschannelResponse> operation
               = new UpdateCommerceSaleschannel.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

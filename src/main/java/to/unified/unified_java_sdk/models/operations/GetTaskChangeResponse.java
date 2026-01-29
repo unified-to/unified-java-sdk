@@ -4,12 +4,11 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.io.InputStream;
-import java.lang.Integer;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.TaskChange;
@@ -36,63 +35,56 @@ public class GetTaskChangeResponse implements Response {
     /**
      * Successful
      */
-    private Optional<? extends TaskChange> taskChange;
+    private TaskChange taskChange;
 
     @JsonCreator
     public GetTaskChangeResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<InputStream> rawResponse,
-            Optional<? extends TaskChange> taskChange) {
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        Utils.checkNotNull(taskChange, "taskChange");
-        this.contentType = contentType;
+            @Nonnull HttpResponse<InputStream> rawResponse,
+            @Nullable TaskChange taskChange) {
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
         this.taskChange = taskChange;
     }
     
     public GetTaskChangeResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
+            @Nonnull HttpResponse<InputStream> rawResponse) {
         this(contentType, statusCode, rawResponse,
-            Optional.empty());
+            null);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<InputStream> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<TaskChange> taskChange() {
-        return (Optional<TaskChange>) taskChange;
+        return Optional.ofNullable(this.taskChange);
     }
 
     public static Builder builder() {
@@ -103,36 +95,26 @@ public class GetTaskChangeResponse implements Response {
     /**
      * HTTP response content type for this operation
      */
-    public GetTaskChangeResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
+    public GetTaskChangeResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public GetTaskChangeResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public GetTaskChangeResponse withRawResponse(HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
-        return this;
-    }
-
-    /**
-     * Successful
-     */
-    public GetTaskChangeResponse withTaskChange(TaskChange taskChange) {
-        Utils.checkNotNull(taskChange, "taskChange");
-        this.taskChange = Optional.ofNullable(taskChange);
+    public GetTaskChangeResponse withRawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
 
@@ -140,11 +122,11 @@ public class GetTaskChangeResponse implements Response {
     /**
      * Successful
      */
-    public GetTaskChangeResponse withTaskChange(Optional<? extends TaskChange> taskChange) {
-        Utils.checkNotNull(taskChange, "taskChange");
+    public GetTaskChangeResponse withTaskChange(@Nullable TaskChange taskChange) {
         this.taskChange = taskChange;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -183,67 +165,49 @@ public class GetTaskChangeResponse implements Response {
 
         private String contentType;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<InputStream> rawResponse;
 
-        private Optional<? extends TaskChange> taskChange = Optional.empty();
+        private TaskChange taskChange;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<InputStream> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
-            return this;
-        }
-
-
-        /**
-         * Successful
-         */
-        public Builder taskChange(TaskChange taskChange) {
-            Utils.checkNotNull(taskChange, "taskChange");
-            this.taskChange = Optional.ofNullable(taskChange);
+        public Builder rawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         /**
          * Successful
          */
-        public Builder taskChange(Optional<? extends TaskChange> taskChange) {
-            Utils.checkNotNull(taskChange, "taskChange");
+        public Builder taskChange(@Nullable TaskChange taskChange) {
             this.taskChange = taskChange;
             return this;
         }
 
         public GetTaskChangeResponse build() {
-
             return new GetTaskChangeResponse(
                 contentType, statusCode, rawResponse,
                 taskChange);

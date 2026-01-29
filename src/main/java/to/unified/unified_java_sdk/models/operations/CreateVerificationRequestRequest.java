@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.VerificationRequest;
@@ -30,7 +30,7 @@ public class CreateVerificationRequestRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<CreateVerificationRequestQueryParamFields>> fields;
+    private List<CreateVerificationRequestQueryParamFields> fields;
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
@@ -38,51 +38,45 @@ public class CreateVerificationRequestRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
     @JsonCreator
     public CreateVerificationRequestRequest(
-            VerificationRequest verificationRequest,
-            String connectionId,
-            Optional<? extends List<CreateVerificationRequestQueryParamFields>> fields,
-            Optional<String> raw) {
-        Utils.checkNotNull(verificationRequest, "verificationRequest");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(raw, "raw");
-        this.verificationRequest = verificationRequest;
-        this.connectionId = connectionId;
+            @Nonnull VerificationRequest verificationRequest,
+            @Nonnull String connectionId,
+            @Nullable List<CreateVerificationRequestQueryParamFields> fields,
+            @Nullable String raw) {
+        this.verificationRequest = Optional.ofNullable(verificationRequest)
+            .orElseThrow(() -> new IllegalArgumentException("verificationRequest cannot be null"));
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
         this.raw = raw;
     }
     
     public CreateVerificationRequestRequest(
-            VerificationRequest verificationRequest,
-            String connectionId) {
-        this(verificationRequest, connectionId, Optional.empty(),
-            Optional.empty());
+            @Nonnull VerificationRequest verificationRequest,
+            @Nonnull String connectionId) {
+        this(verificationRequest, connectionId, null,
+            null);
     }
 
-    @JsonIgnore
     public VerificationRequest verificationRequest() {
-        return verificationRequest;
+        return this.verificationRequest;
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<CreateVerificationRequestQueryParamFields>> fields() {
-        return (Optional<List<CreateVerificationRequestQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
@@ -90,9 +84,8 @@ public class CreateVerificationRequestRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
     public static Builder builder() {
@@ -100,27 +93,17 @@ public class CreateVerificationRequestRequest {
     }
 
 
-    public CreateVerificationRequestRequest withVerificationRequest(VerificationRequest verificationRequest) {
-        Utils.checkNotNull(verificationRequest, "verificationRequest");
-        this.verificationRequest = verificationRequest;
+    public CreateVerificationRequestRequest withVerificationRequest(@Nonnull VerificationRequest verificationRequest) {
+        this.verificationRequest = Utils.checkNotNull(verificationRequest, "verificationRequest");
         return this;
     }
+
 
     /**
      * ID of the connection
      */
-    public CreateVerificationRequestRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public CreateVerificationRequestRequest withFields(List<CreateVerificationRequestQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public CreateVerificationRequestRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -128,34 +111,22 @@ public class CreateVerificationRequestRequest {
     /**
      * Fields to return
      */
-    public CreateVerificationRequestRequest withFields(Optional<? extends List<CreateVerificationRequestQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public CreateVerificationRequestRequest withFields(@Nullable List<CreateVerificationRequestQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public CreateVerificationRequestRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
-
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public CreateVerificationRequestRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public CreateVerificationRequestRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -196,75 +167,46 @@ public class CreateVerificationRequestRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<CreateVerificationRequestQueryParamFields>> fields = Optional.empty();
+        private List<CreateVerificationRequestQueryParamFields> fields;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder verificationRequest(VerificationRequest verificationRequest) {
-            Utils.checkNotNull(verificationRequest, "verificationRequest");
-            this.verificationRequest = verificationRequest;
+        public Builder verificationRequest(@Nonnull VerificationRequest verificationRequest) {
+            this.verificationRequest = Utils.checkNotNull(verificationRequest, "verificationRequest");
             return this;
         }
-
 
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<CreateVerificationRequestQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<CreateVerificationRequestQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<CreateVerificationRequestQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
         public CreateVerificationRequestRequest build() {
-
             return new CreateVerificationRequestRequest(
                 verificationRequest, connectionId, fields,
                 raw);

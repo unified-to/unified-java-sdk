@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.CreateHrisLocationRequest;
@@ -13,27 +14,39 @@ import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateHrisLocationRequestBuilder {
-
-    private CreateHrisLocationRequest request;
     private final SDKConfiguration sdkConfiguration;
-    private final Headers _headers = new Headers(); 
+    private final Headers _headers = new Headers();
+    private CreateHrisLocationRequest request;
 
     public CreateHrisLocationRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
 
-    public CreateHrisLocationRequestBuilder request(CreateHrisLocationRequest request) {
-        Utils.checkNotNull(request, "request");
-        this.request = request;
+    public CreateHrisLocationRequestBuilder request(@Nonnull CreateHrisLocationRequest request) {
+        this.request = Utils.checkNotNull(request, "request");
         return this;
     }
 
+    private CreateHrisLocationRequest _buildRequest() {
+        return this.request;
+    }
+    
+    public CreateHrisLocationRequestBuilder header(String name, String value) {
+        Utils.checkNotNull(name, "name");
+        Utils.checkNotNull(value, "value");
+        this._headers.add(name, value);
+        return this;
+    }
+
+    /**
+    * Executes the request and returns the response.
+    *
+    * @return The response from the server.
+    */
     public CompletableFuture<CreateHrisLocationResponse> call() {
-        
         AsyncRequestOperation<CreateHrisLocationRequest, CreateHrisLocationResponse> operation
               = new CreateHrisLocation.Async(sdkConfiguration, _headers);
-
-        return operation.doRequest(request)
+        return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }
 }

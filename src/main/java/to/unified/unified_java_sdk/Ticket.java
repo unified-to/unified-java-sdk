@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateTicketingTicketRequest;
 import to.unified.unified_java_sdk.models.operations.CreateTicketingTicketRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateTicketingTicketResponse;
@@ -67,7 +68,7 @@ public class Ticket {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateTicketingTicketResponse createTicketingTicket(CreateTicketingTicketRequest request) {
+    public CreateTicketingTicketResponse createTicketingTicket(@Nonnull CreateTicketingTicketRequest request) {
         RequestOperation<CreateTicketingTicketRequest, CreateTicketingTicketResponse> operation
               = new CreateTicketingTicket.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -89,7 +90,7 @@ public class Ticket {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetTicketingTicketResponse getTicketingTicket(GetTicketingTicketRequest request) {
+    public GetTicketingTicketResponse getTicketingTicket(@Nonnull GetTicketingTicketRequest request) {
         RequestOperation<GetTicketingTicketRequest, GetTicketingTicketResponse> operation
               = new GetTicketingTicket.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -111,7 +112,7 @@ public class Ticket {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListTicketingTicketsResponse listTicketingTickets(ListTicketingTicketsRequest request) {
+    public ListTicketingTicketsResponse listTicketingTickets(@Nonnull ListTicketingTicketsRequest request) {
         RequestOperation<ListTicketingTicketsRequest, ListTicketingTicketsResponse> operation
               = new ListTicketingTickets.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -133,7 +134,7 @@ public class Ticket {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchTicketingTicketResponse patchTicketingTicket(PatchTicketingTicketRequest request) {
+    public PatchTicketingTicketResponse patchTicketingTicket(@Nonnull PatchTicketingTicketRequest request) {
         RequestOperation<PatchTicketingTicketRequest, PatchTicketingTicketResponse> operation
               = new PatchTicketingTicket.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -155,7 +156,7 @@ public class Ticket {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveTicketingTicketResponse removeTicketingTicket(RemoveTicketingTicketRequest request) {
+    public RemoveTicketingTicketResponse removeTicketingTicket(@Nonnull RemoveTicketingTicketRequest request) {
         RequestOperation<RemoveTicketingTicketRequest, RemoveTicketingTicketResponse> operation
               = new RemoveTicketingTicket.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -177,7 +178,7 @@ public class Ticket {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateTicketingTicketResponse updateTicketingTicket(UpdateTicketingTicketRequest request) {
+    public UpdateTicketingTicketResponse updateTicketingTicket(@Nonnull UpdateTicketingTicketRequest request) {
         RequestOperation<UpdateTicketingTicketRequest, UpdateTicketingTicketResponse> operation
               = new UpdateTicketingTicket.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.MessagingMessage;
@@ -30,7 +30,7 @@ public class UpdateMessagingMessageRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<UpdateMessagingMessageQueryParamFields>> fields;
+    private List<UpdateMessagingMessageQueryParamFields> fields;
 
     /**
      * ID of the Message
@@ -44,63 +44,56 @@ public class UpdateMessagingMessageRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
     @JsonCreator
     public UpdateMessagingMessageRequest(
-            MessagingMessage messagingMessage,
-            String connectionId,
-            Optional<? extends List<UpdateMessagingMessageQueryParamFields>> fields,
-            String id,
-            Optional<String> raw) {
-        Utils.checkNotNull(messagingMessage, "messagingMessage");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(raw, "raw");
-        this.messagingMessage = messagingMessage;
-        this.connectionId = connectionId;
+            @Nonnull MessagingMessage messagingMessage,
+            @Nonnull String connectionId,
+            @Nullable List<UpdateMessagingMessageQueryParamFields> fields,
+            @Nonnull String id,
+            @Nullable String raw) {
+        this.messagingMessage = Optional.ofNullable(messagingMessage)
+            .orElseThrow(() -> new IllegalArgumentException("messagingMessage cannot be null"));
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
-        this.id = id;
+        this.id = Optional.ofNullable(id)
+            .orElseThrow(() -> new IllegalArgumentException("id cannot be null"));
         this.raw = raw;
     }
     
     public UpdateMessagingMessageRequest(
-            MessagingMessage messagingMessage,
-            String connectionId,
-            String id) {
-        this(messagingMessage, connectionId, Optional.empty(),
-            id, Optional.empty());
+            @Nonnull MessagingMessage messagingMessage,
+            @Nonnull String connectionId,
+            @Nonnull String id) {
+        this(messagingMessage, connectionId, null,
+            id, null);
     }
 
-    @JsonIgnore
     public MessagingMessage messagingMessage() {
-        return messagingMessage;
+        return this.messagingMessage;
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<UpdateMessagingMessageQueryParamFields>> fields() {
-        return (Optional<List<UpdateMessagingMessageQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
      * ID of the Message
      */
-    @JsonIgnore
     public String id() {
-        return id;
+        return this.id;
     }
 
     /**
@@ -108,9 +101,8 @@ public class UpdateMessagingMessageRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
     public static Builder builder() {
@@ -118,27 +110,17 @@ public class UpdateMessagingMessageRequest {
     }
 
 
-    public UpdateMessagingMessageRequest withMessagingMessage(MessagingMessage messagingMessage) {
-        Utils.checkNotNull(messagingMessage, "messagingMessage");
-        this.messagingMessage = messagingMessage;
+    public UpdateMessagingMessageRequest withMessagingMessage(@Nonnull MessagingMessage messagingMessage) {
+        this.messagingMessage = Utils.checkNotNull(messagingMessage, "messagingMessage");
         return this;
     }
+
 
     /**
      * ID of the connection
      */
-    public UpdateMessagingMessageRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public UpdateMessagingMessageRequest withFields(List<UpdateMessagingMessageQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public UpdateMessagingMessageRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -146,29 +128,17 @@ public class UpdateMessagingMessageRequest {
     /**
      * Fields to return
      */
-    public UpdateMessagingMessageRequest withFields(Optional<? extends List<UpdateMessagingMessageQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public UpdateMessagingMessageRequest withFields(@Nullable List<UpdateMessagingMessageQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
+
     /**
      * ID of the Message
      */
-    public UpdateMessagingMessageRequest withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = id;
-        return this;
-    }
-
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public UpdateMessagingMessageRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
+    public UpdateMessagingMessageRequest withId(@Nonnull String id) {
+        this.id = Utils.checkNotNull(id, "id");
         return this;
     }
 
@@ -178,11 +148,11 @@ public class UpdateMessagingMessageRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public UpdateMessagingMessageRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public UpdateMessagingMessageRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -225,71 +195,42 @@ public class UpdateMessagingMessageRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<UpdateMessagingMessageQueryParamFields>> fields = Optional.empty();
+        private List<UpdateMessagingMessageQueryParamFields> fields;
 
         private String id;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder messagingMessage(MessagingMessage messagingMessage) {
-            Utils.checkNotNull(messagingMessage, "messagingMessage");
-            this.messagingMessage = messagingMessage;
+        public Builder messagingMessage(@Nonnull MessagingMessage messagingMessage) {
+            this.messagingMessage = Utils.checkNotNull(messagingMessage, "messagingMessage");
             return this;
         }
-
 
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<UpdateMessagingMessageQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<UpdateMessagingMessageQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<UpdateMessagingMessageQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * ID of the Message
          */
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = id;
-            return this;
-        }
-
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
+        public Builder id(@Nonnull String id) {
+            this.id = Utils.checkNotNull(id, "id");
             return this;
         }
 
@@ -298,14 +239,12 @@ public class UpdateMessagingMessageRequest {
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
         public UpdateMessagingMessageRequest build() {
-
             return new UpdateMessagingMessageRequest(
                 messagingMessage, connectionId, fields,
                 id, raw);

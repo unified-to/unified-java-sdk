@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceReviewRequest;
 import to.unified.unified_java_sdk.models.operations.GetCommerceReviewRequest;
@@ -68,7 +69,7 @@ public class AsyncReview {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCommerceReviewResponse>} - The async response
      */
-    public CompletableFuture<CreateCommerceReviewResponse> createCommerceReview(CreateCommerceReviewRequest request) {
+    public CompletableFuture<CreateCommerceReviewResponse> createCommerceReview(@Nonnull CreateCommerceReviewRequest request) {
         AsyncRequestOperation<CreateCommerceReviewRequest, CreateCommerceReviewResponse> operation
               = new CreateCommerceReview.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -91,7 +92,7 @@ public class AsyncReview {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCommerceReviewResponse>} - The async response
      */
-    public CompletableFuture<GetCommerceReviewResponse> getCommerceReview(GetCommerceReviewRequest request) {
+    public CompletableFuture<GetCommerceReviewResponse> getCommerceReview(@Nonnull GetCommerceReviewRequest request) {
         AsyncRequestOperation<GetCommerceReviewRequest, GetCommerceReviewResponse> operation
               = new GetCommerceReview.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -114,7 +115,7 @@ public class AsyncReview {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCommerceReviewsResponse>} - The async response
      */
-    public CompletableFuture<ListCommerceReviewsResponse> listCommerceReviews(ListCommerceReviewsRequest request) {
+    public CompletableFuture<ListCommerceReviewsResponse> listCommerceReviews(@Nonnull ListCommerceReviewsRequest request) {
         AsyncRequestOperation<ListCommerceReviewsRequest, ListCommerceReviewsResponse> operation
               = new ListCommerceReviews.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -137,7 +138,7 @@ public class AsyncReview {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCommerceReviewResponse>} - The async response
      */
-    public CompletableFuture<PatchCommerceReviewResponse> patchCommerceReview(PatchCommerceReviewRequest request) {
+    public CompletableFuture<PatchCommerceReviewResponse> patchCommerceReview(@Nonnull PatchCommerceReviewRequest request) {
         AsyncRequestOperation<PatchCommerceReviewRequest, PatchCommerceReviewResponse> operation
               = new PatchCommerceReview.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -160,7 +161,7 @@ public class AsyncReview {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCommerceReviewResponse>} - The async response
      */
-    public CompletableFuture<RemoveCommerceReviewResponse> removeCommerceReview(RemoveCommerceReviewRequest request) {
+    public CompletableFuture<RemoveCommerceReviewResponse> removeCommerceReview(@Nonnull RemoveCommerceReviewRequest request) {
         AsyncRequestOperation<RemoveCommerceReviewRequest, RemoveCommerceReviewResponse> operation
               = new RemoveCommerceReview.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -183,7 +184,7 @@ public class AsyncReview {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCommerceReviewResponse>} - The async response
      */
-    public CompletableFuture<UpdateCommerceReviewResponse> updateCommerceReview(UpdateCommerceReviewRequest request) {
+    public CompletableFuture<UpdateCommerceReviewResponse> updateCommerceReview(@Nonnull UpdateCommerceReviewRequest request) {
         AsyncRequestOperation<UpdateCommerceReviewRequest, UpdateCommerceReviewResponse> operation
               = new UpdateCommerceReview.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

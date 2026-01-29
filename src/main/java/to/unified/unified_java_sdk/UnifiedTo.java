@@ -110,7 +110,13 @@ public class UnifiedTo {
     private final Campaign campaign;
 
 
+    private final Creative creative;
+
+
     private final Group group;
+
+
+    private final Insertionorder insertionorder;
 
 
     private final Ats ats;
@@ -531,8 +537,18 @@ public class UnifiedTo {
     }
 
 
+    public Creative creative() {
+        return creative;
+    }
+
+
     public Group group() {
         return group;
+    }
+
+
+    public Insertionorder insertionorder() {
+        return insertionorder;
     }
 
 
@@ -1200,7 +1216,9 @@ public class UnifiedTo {
         this.ads = new Ads(sdkConfiguration);
         this.ad = new Ad(sdkConfiguration);
         this.campaign = new Campaign(sdkConfiguration);
+        this.creative = new Creative(sdkConfiguration);
         this.group = new Group(sdkConfiguration);
+        this.insertionorder = new Insertionorder(sdkConfiguration);
         this.ats = new Ats(sdkConfiguration);
         this.activity = new Activity(sdkConfiguration);
         this.application = new Application(sdkConfiguration);

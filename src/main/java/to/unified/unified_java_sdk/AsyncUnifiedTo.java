@@ -59,7 +59,11 @@ public class AsyncUnifiedTo {
 
     private final AsyncCampaign campaign;
 
+    private final AsyncCreative creative;
+
     private final AsyncGroup group;
+
+    private final AsyncInsertionorder insertionorder;
 
     private final AsyncAts ats;
 
@@ -355,8 +359,16 @@ public class AsyncUnifiedTo {
         return campaign;
     }
 
+    public AsyncCreative creative() {
+        return creative;
+    }
+
     public AsyncGroup group() {
         return group;
+    }
+
+    public AsyncInsertionorder insertionorder() {
+        return insertionorder;
     }
 
     public AsyncAts ats() {
@@ -792,7 +804,9 @@ public class AsyncUnifiedTo {
         this.ads = new AsyncAds(syncSDK.ads(), sdkConfiguration);
         this.ad = new AsyncAd(syncSDK.ad(), sdkConfiguration);
         this.campaign = new AsyncCampaign(syncSDK.campaign(), sdkConfiguration);
+        this.creative = new AsyncCreative(syncSDK.creative(), sdkConfiguration);
         this.group = new AsyncGroup(syncSDK.group(), sdkConfiguration);
+        this.insertionorder = new AsyncInsertionorder(syncSDK.insertionorder(), sdkConfiguration);
         this.ats = new AsyncAts(syncSDK.ats(), sdkConfiguration);
         this.activity = new AsyncActivity(syncSDK.activity(), sdkConfiguration);
         this.application = new AsyncApplication(syncSDK.application(), sdkConfiguration);

@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.GetAccountingProfitlossRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingProfitlossRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetAccountingProfitlossResponse;
@@ -51,7 +52,7 @@ public class Profitloss {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingProfitlossResponse getAccountingProfitloss(GetAccountingProfitlossRequest request) {
+    public GetAccountingProfitlossResponse getAccountingProfitloss(@Nonnull GetAccountingProfitlossRequest request) {
         RequestOperation<GetAccountingProfitlossRequest, GetAccountingProfitlossResponse> operation
               = new GetAccountingProfitloss.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -73,7 +74,7 @@ public class Profitloss {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingProfitlossesResponse listAccountingProfitlosses(ListAccountingProfitlossesRequest request) {
+    public ListAccountingProfitlossesResponse listAccountingProfitlosses(@Nonnull ListAccountingProfitlossesRequest request) {
         RequestOperation<ListAccountingProfitlossesRequest, ListAccountingProfitlossesResponse> operation
               = new ListAccountingProfitlosses.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

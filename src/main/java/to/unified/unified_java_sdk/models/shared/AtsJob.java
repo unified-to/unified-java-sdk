@@ -4,16 +4,15 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
@@ -25,193 +24,167 @@ public class AtsJob {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addresses")
-    private Optional<? extends List<AtsAddress>> addresses;
+    private List<AtsAddress> addresses;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("closed_at")
-    private Optional<OffsetDateTime> closedAt;
+    private OffsetDateTime closedAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_id")
-    private Optional<String> companyId;
+    private String companyId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compensation")
-    private Optional<? extends List<AtsCompensation>> compensation;
+    private List<AtsCompensation> compensation;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
-    private Optional<String> description;
+    private String description;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employment_type")
-    private Optional<? extends EmploymentType> employmentType;
+    private EmploymentType employmentType;
 
     /**
      * The departments/divisions/teams that this job belongs to
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groups")
-    private Optional<? extends List<AtsGroup>> groups;
+    private List<AtsGroup> groups;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hiring_manager_ids")
-    private Optional<? extends List<String>> hiringManagerIds;
+    private List<String> hiringManagerIds;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language_locale")
-    private Optional<String> languageLocale;
+    private String languageLocale;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
-    private Optional<? extends List<AtsMetadata>> metadata;
+    private List<AtsMetadata> metadata;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimum_degree")
-    private Optional<String> minimumDegree;
+    private String minimumDegree;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimum_experience_years")
-    private Optional<Double> minimumExperienceYears;
+    private Double minimumExperienceYears;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
-    private Optional<String> name;
+    private String name;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number_of_openings")
-    private Optional<Double> numberOfOpenings;
+    private Double numberOfOpenings;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("openings")
-    private Optional<? extends List<AtsJobOpening>> openings;
+    private List<AtsJobOpening> openings;
 
     /**
      * Public job postings
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postings")
-    private Optional<? extends List<AtsJobPosting>> postings;
+    private List<AtsJobPosting> postings;
 
     /**
      * URLs for pages containing public listings for the job
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public_job_urls")
-    private Optional<? extends List<String>> publicJobUrls;
+    private List<String> publicJobUrls;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("questions")
-    private Optional<? extends List<AtsJobQuestion>> questions;
+    private List<AtsJobQuestion> questions;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recruiter_ids")
-    private Optional<? extends List<String>> recruiterIds;
+    private List<String> recruiterIds;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remote")
-    private Optional<Boolean> remote;
+    private Boolean remote;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skills")
-    private Optional<? extends List<String>> skills;
+    private List<String> skills;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
-    private Optional<? extends AtsJobStatus> status;
+    private AtsJobStatus status;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
     @JsonCreator
     public AtsJob(
-            @JsonProperty("addresses") Optional<? extends List<AtsAddress>> addresses,
-            @JsonProperty("closed_at") Optional<OffsetDateTime> closedAt,
-            @JsonProperty("company_id") Optional<String> companyId,
-            @JsonProperty("compensation") Optional<? extends List<AtsCompensation>> compensation,
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("description") Optional<String> description,
-            @JsonProperty("employment_type") Optional<? extends EmploymentType> employmentType,
-            @JsonProperty("groups") Optional<? extends List<AtsGroup>> groups,
-            @JsonProperty("hiring_manager_ids") Optional<? extends List<String>> hiringManagerIds,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("language_locale") Optional<String> languageLocale,
-            @JsonProperty("metadata") Optional<? extends List<AtsMetadata>> metadata,
-            @JsonProperty("minimum_degree") Optional<String> minimumDegree,
-            @JsonProperty("minimum_experience_years") Optional<Double> minimumExperienceYears,
-            @JsonProperty("name") Optional<String> name,
-            @JsonProperty("number_of_openings") Optional<Double> numberOfOpenings,
-            @JsonProperty("openings") Optional<? extends List<AtsJobOpening>> openings,
-            @JsonProperty("postings") Optional<? extends List<AtsJobPosting>> postings,
-            @JsonProperty("public_job_urls") Optional<? extends List<String>> publicJobUrls,
-            @JsonProperty("questions") Optional<? extends List<AtsJobQuestion>> questions,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("recruiter_ids") Optional<? extends List<String>> recruiterIds,
-            @JsonProperty("remote") Optional<Boolean> remote,
-            @JsonProperty("skills") Optional<? extends List<String>> skills,
-            @JsonProperty("status") Optional<? extends AtsJobStatus> status,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(addresses, "addresses");
-        Utils.checkNotNull(closedAt, "closedAt");
-        Utils.checkNotNull(companyId, "companyId");
-        Utils.checkNotNull(compensation, "compensation");
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(description, "description");
-        Utils.checkNotNull(employmentType, "employmentType");
-        Utils.checkNotNull(groups, "groups");
-        Utils.checkNotNull(hiringManagerIds, "hiringManagerIds");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(languageLocale, "languageLocale");
-        Utils.checkNotNull(metadata, "metadata");
-        Utils.checkNotNull(minimumDegree, "minimumDegree");
-        Utils.checkNotNull(minimumExperienceYears, "minimumExperienceYears");
-        Utils.checkNotNull(name, "name");
-        Utils.checkNotNull(numberOfOpenings, "numberOfOpenings");
-        Utils.checkNotNull(openings, "openings");
-        Utils.checkNotNull(postings, "postings");
-        Utils.checkNotNull(publicJobUrls, "publicJobUrls");
-        Utils.checkNotNull(questions, "questions");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(recruiterIds, "recruiterIds");
-        Utils.checkNotNull(remote, "remote");
-        Utils.checkNotNull(skills, "skills");
-        Utils.checkNotNull(status, "status");
-        Utils.checkNotNull(updatedAt, "updatedAt");
+            @JsonProperty("addresses") @Nullable List<AtsAddress> addresses,
+            @JsonProperty("closed_at") @Nullable OffsetDateTime closedAt,
+            @JsonProperty("company_id") @Nullable String companyId,
+            @JsonProperty("compensation") @Nullable List<AtsCompensation> compensation,
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("description") @Nullable String description,
+            @JsonProperty("employment_type") @Nullable EmploymentType employmentType,
+            @JsonProperty("groups") @Nullable List<AtsGroup> groups,
+            @JsonProperty("hiring_manager_ids") @Nullable List<String> hiringManagerIds,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("language_locale") @Nullable String languageLocale,
+            @JsonProperty("metadata") @Nullable List<AtsMetadata> metadata,
+            @JsonProperty("minimum_degree") @Nullable String minimumDegree,
+            @JsonProperty("minimum_experience_years") @Nullable Double minimumExperienceYears,
+            @JsonProperty("name") @Nullable String name,
+            @JsonProperty("number_of_openings") @Nullable Double numberOfOpenings,
+            @JsonProperty("openings") @Nullable List<AtsJobOpening> openings,
+            @JsonProperty("postings") @Nullable List<AtsJobPosting> postings,
+            @JsonProperty("public_job_urls") @Nullable List<String> publicJobUrls,
+            @JsonProperty("questions") @Nullable List<AtsJobQuestion> questions,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("recruiter_ids") @Nullable List<String> recruiterIds,
+            @JsonProperty("remote") @Nullable Boolean remote,
+            @JsonProperty("skills") @Nullable List<String> skills,
+            @JsonProperty("status") @Nullable AtsJobStatus status,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.addresses = addresses;
         this.closedAt = closedAt;
         this.companyId = companyId;
@@ -241,168 +214,128 @@ public class AtsJob {
     }
     
     public AtsJob() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<AtsAddress>> addresses() {
-        return (Optional<List<AtsAddress>>) addresses;
+        return Optional.ofNullable(this.addresses);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> closedAt() {
-        return closedAt;
+        return Optional.ofNullable(this.closedAt);
     }
 
-    @JsonIgnore
     public Optional<String> companyId() {
-        return companyId;
+        return Optional.ofNullable(this.companyId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<AtsCompensation>> compensation() {
-        return (Optional<List<AtsCompensation>>) compensation;
+        return Optional.ofNullable(this.compensation);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<String> description() {
-        return description;
+        return Optional.ofNullable(this.description);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<EmploymentType> employmentType() {
-        return (Optional<EmploymentType>) employmentType;
+        return Optional.ofNullable(this.employmentType);
     }
 
     /**
      * The departments/divisions/teams that this job belongs to
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<AtsGroup>> groups() {
-        return (Optional<List<AtsGroup>>) groups;
+        return Optional.ofNullable(this.groups);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> hiringManagerIds() {
-        return (Optional<List<String>>) hiringManagerIds;
+        return Optional.ofNullable(this.hiringManagerIds);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<String> languageLocale() {
-        return languageLocale;
+        return Optional.ofNullable(this.languageLocale);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<AtsMetadata>> metadata() {
-        return (Optional<List<AtsMetadata>>) metadata;
+        return Optional.ofNullable(this.metadata);
     }
 
-    @JsonIgnore
     public Optional<String> minimumDegree() {
-        return minimumDegree;
+        return Optional.ofNullable(this.minimumDegree);
     }
 
-    @JsonIgnore
     public Optional<Double> minimumExperienceYears() {
-        return minimumExperienceYears;
+        return Optional.ofNullable(this.minimumExperienceYears);
     }
 
-    @JsonIgnore
     public Optional<String> name() {
-        return name;
+        return Optional.ofNullable(this.name);
     }
 
-    @JsonIgnore
     public Optional<Double> numberOfOpenings() {
-        return numberOfOpenings;
+        return Optional.ofNullable(this.numberOfOpenings);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<AtsJobOpening>> openings() {
-        return (Optional<List<AtsJobOpening>>) openings;
+        return Optional.ofNullable(this.openings);
     }
 
     /**
      * Public job postings
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<AtsJobPosting>> postings() {
-        return (Optional<List<AtsJobPosting>>) postings;
+        return Optional.ofNullable(this.postings);
     }
 
     /**
      * URLs for pages containing public listings for the job
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> publicJobUrls() {
-        return (Optional<List<String>>) publicJobUrls;
+        return Optional.ofNullable(this.publicJobUrls);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<AtsJobQuestion>> questions() {
-        return (Optional<List<AtsJobQuestion>>) questions;
+        return Optional.ofNullable(this.questions);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> recruiterIds() {
-        return (Optional<List<String>>) recruiterIds;
+        return Optional.ofNullable(this.recruiterIds);
     }
 
-    @JsonIgnore
     public Optional<Boolean> remote() {
-        return remote;
+        return Optional.ofNullable(this.remote);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> skills() {
-        return (Optional<List<String>>) skills;
+        return Optional.ofNullable(this.skills);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<AtsJobStatus> status() {
-        return (Optional<AtsJobStatus>) status;
+        return Optional.ofNullable(this.status);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
     public static Builder builder() {
@@ -410,361 +343,170 @@ public class AtsJob {
     }
 
 
-    public AtsJob withAddresses(List<AtsAddress> addresses) {
-        Utils.checkNotNull(addresses, "addresses");
-        this.addresses = Optional.ofNullable(addresses);
-        return this;
-    }
-
-
-    public AtsJob withAddresses(Optional<? extends List<AtsAddress>> addresses) {
-        Utils.checkNotNull(addresses, "addresses");
+    public AtsJob withAddresses(@Nullable List<AtsAddress> addresses) {
         this.addresses = addresses;
         return this;
     }
 
-    public AtsJob withClosedAt(OffsetDateTime closedAt) {
-        Utils.checkNotNull(closedAt, "closedAt");
-        this.closedAt = Optional.ofNullable(closedAt);
-        return this;
-    }
 
-
-    public AtsJob withClosedAt(Optional<OffsetDateTime> closedAt) {
-        Utils.checkNotNull(closedAt, "closedAt");
+    public AtsJob withClosedAt(@Nullable OffsetDateTime closedAt) {
         this.closedAt = closedAt;
         return this;
     }
 
-    public AtsJob withCompanyId(String companyId) {
-        Utils.checkNotNull(companyId, "companyId");
-        this.companyId = Optional.ofNullable(companyId);
-        return this;
-    }
 
-
-    public AtsJob withCompanyId(Optional<String> companyId) {
-        Utils.checkNotNull(companyId, "companyId");
+    public AtsJob withCompanyId(@Nullable String companyId) {
         this.companyId = companyId;
         return this;
     }
 
-    public AtsJob withCompensation(List<AtsCompensation> compensation) {
-        Utils.checkNotNull(compensation, "compensation");
-        this.compensation = Optional.ofNullable(compensation);
-        return this;
-    }
 
-
-    public AtsJob withCompensation(Optional<? extends List<AtsCompensation>> compensation) {
-        Utils.checkNotNull(compensation, "compensation");
+    public AtsJob withCompensation(@Nullable List<AtsCompensation> compensation) {
         this.compensation = compensation;
         return this;
     }
 
-    public AtsJob withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
 
-
-    public AtsJob withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public AtsJob withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public AtsJob withDescription(String description) {
-        Utils.checkNotNull(description, "description");
-        this.description = Optional.ofNullable(description);
-        return this;
-    }
 
-
-    public AtsJob withDescription(Optional<String> description) {
-        Utils.checkNotNull(description, "description");
+    public AtsJob withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
-    public AtsJob withEmploymentType(EmploymentType employmentType) {
-        Utils.checkNotNull(employmentType, "employmentType");
-        this.employmentType = Optional.ofNullable(employmentType);
-        return this;
-    }
 
-
-    public AtsJob withEmploymentType(Optional<? extends EmploymentType> employmentType) {
-        Utils.checkNotNull(employmentType, "employmentType");
+    public AtsJob withEmploymentType(@Nullable EmploymentType employmentType) {
         this.employmentType = employmentType;
         return this;
     }
 
-    /**
-     * The departments/divisions/teams that this job belongs to
-     */
-    public AtsJob withGroups(List<AtsGroup> groups) {
-        Utils.checkNotNull(groups, "groups");
-        this.groups = Optional.ofNullable(groups);
-        return this;
-    }
-
 
     /**
      * The departments/divisions/teams that this job belongs to
      */
-    public AtsJob withGroups(Optional<? extends List<AtsGroup>> groups) {
-        Utils.checkNotNull(groups, "groups");
+    public AtsJob withGroups(@Nullable List<AtsGroup> groups) {
         this.groups = groups;
         return this;
     }
 
-    public AtsJob withHiringManagerIds(List<String> hiringManagerIds) {
-        Utils.checkNotNull(hiringManagerIds, "hiringManagerIds");
-        this.hiringManagerIds = Optional.ofNullable(hiringManagerIds);
-        return this;
-    }
 
-
-    public AtsJob withHiringManagerIds(Optional<? extends List<String>> hiringManagerIds) {
-        Utils.checkNotNull(hiringManagerIds, "hiringManagerIds");
+    public AtsJob withHiringManagerIds(@Nullable List<String> hiringManagerIds) {
         this.hiringManagerIds = hiringManagerIds;
         return this;
     }
 
-    public AtsJob withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public AtsJob withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public AtsJob withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public AtsJob withLanguageLocale(String languageLocale) {
-        Utils.checkNotNull(languageLocale, "languageLocale");
-        this.languageLocale = Optional.ofNullable(languageLocale);
-        return this;
-    }
 
-
-    public AtsJob withLanguageLocale(Optional<String> languageLocale) {
-        Utils.checkNotNull(languageLocale, "languageLocale");
+    public AtsJob withLanguageLocale(@Nullable String languageLocale) {
         this.languageLocale = languageLocale;
         return this;
     }
 
-    public AtsJob withMetadata(List<AtsMetadata> metadata) {
-        Utils.checkNotNull(metadata, "metadata");
-        this.metadata = Optional.ofNullable(metadata);
-        return this;
-    }
 
-
-    public AtsJob withMetadata(Optional<? extends List<AtsMetadata>> metadata) {
-        Utils.checkNotNull(metadata, "metadata");
+    public AtsJob withMetadata(@Nullable List<AtsMetadata> metadata) {
         this.metadata = metadata;
         return this;
     }
 
-    public AtsJob withMinimumDegree(String minimumDegree) {
-        Utils.checkNotNull(minimumDegree, "minimumDegree");
-        this.minimumDegree = Optional.ofNullable(minimumDegree);
-        return this;
-    }
 
-
-    public AtsJob withMinimumDegree(Optional<String> minimumDegree) {
-        Utils.checkNotNull(minimumDegree, "minimumDegree");
+    public AtsJob withMinimumDegree(@Nullable String minimumDegree) {
         this.minimumDegree = minimumDegree;
         return this;
     }
 
-    public AtsJob withMinimumExperienceYears(double minimumExperienceYears) {
-        Utils.checkNotNull(minimumExperienceYears, "minimumExperienceYears");
-        this.minimumExperienceYears = Optional.ofNullable(minimumExperienceYears);
-        return this;
-    }
 
-
-    public AtsJob withMinimumExperienceYears(Optional<Double> minimumExperienceYears) {
-        Utils.checkNotNull(minimumExperienceYears, "minimumExperienceYears");
+    public AtsJob withMinimumExperienceYears(@Nullable Double minimumExperienceYears) {
         this.minimumExperienceYears = minimumExperienceYears;
         return this;
     }
 
-    public AtsJob withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = Optional.ofNullable(name);
-        return this;
-    }
 
-
-    public AtsJob withName(Optional<String> name) {
-        Utils.checkNotNull(name, "name");
+    public AtsJob withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
-    public AtsJob withNumberOfOpenings(double numberOfOpenings) {
-        Utils.checkNotNull(numberOfOpenings, "numberOfOpenings");
-        this.numberOfOpenings = Optional.ofNullable(numberOfOpenings);
-        return this;
-    }
 
-
-    public AtsJob withNumberOfOpenings(Optional<Double> numberOfOpenings) {
-        Utils.checkNotNull(numberOfOpenings, "numberOfOpenings");
+    public AtsJob withNumberOfOpenings(@Nullable Double numberOfOpenings) {
         this.numberOfOpenings = numberOfOpenings;
         return this;
     }
 
-    public AtsJob withOpenings(List<AtsJobOpening> openings) {
-        Utils.checkNotNull(openings, "openings");
-        this.openings = Optional.ofNullable(openings);
-        return this;
-    }
 
-
-    public AtsJob withOpenings(Optional<? extends List<AtsJobOpening>> openings) {
-        Utils.checkNotNull(openings, "openings");
+    public AtsJob withOpenings(@Nullable List<AtsJobOpening> openings) {
         this.openings = openings;
         return this;
     }
 
-    /**
-     * Public job postings
-     */
-    public AtsJob withPostings(List<AtsJobPosting> postings) {
-        Utils.checkNotNull(postings, "postings");
-        this.postings = Optional.ofNullable(postings);
-        return this;
-    }
-
 
     /**
      * Public job postings
      */
-    public AtsJob withPostings(Optional<? extends List<AtsJobPosting>> postings) {
-        Utils.checkNotNull(postings, "postings");
+    public AtsJob withPostings(@Nullable List<AtsJobPosting> postings) {
         this.postings = postings;
         return this;
     }
 
-    /**
-     * URLs for pages containing public listings for the job
-     */
-    public AtsJob withPublicJobUrls(List<String> publicJobUrls) {
-        Utils.checkNotNull(publicJobUrls, "publicJobUrls");
-        this.publicJobUrls = Optional.ofNullable(publicJobUrls);
-        return this;
-    }
-
 
     /**
      * URLs for pages containing public listings for the job
      */
-    public AtsJob withPublicJobUrls(Optional<? extends List<String>> publicJobUrls) {
-        Utils.checkNotNull(publicJobUrls, "publicJobUrls");
+    public AtsJob withPublicJobUrls(@Nullable List<String> publicJobUrls) {
         this.publicJobUrls = publicJobUrls;
         return this;
     }
 
-    public AtsJob withQuestions(List<AtsJobQuestion> questions) {
-        Utils.checkNotNull(questions, "questions");
-        this.questions = Optional.ofNullable(questions);
-        return this;
-    }
 
-
-    public AtsJob withQuestions(Optional<? extends List<AtsJobQuestion>> questions) {
-        Utils.checkNotNull(questions, "questions");
+    public AtsJob withQuestions(@Nullable List<AtsJobQuestion> questions) {
         this.questions = questions;
         return this;
     }
 
-    public AtsJob withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public AtsJob withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public AtsJob withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public AtsJob withRecruiterIds(List<String> recruiterIds) {
-        Utils.checkNotNull(recruiterIds, "recruiterIds");
-        this.recruiterIds = Optional.ofNullable(recruiterIds);
-        return this;
-    }
 
-
-    public AtsJob withRecruiterIds(Optional<? extends List<String>> recruiterIds) {
-        Utils.checkNotNull(recruiterIds, "recruiterIds");
+    public AtsJob withRecruiterIds(@Nullable List<String> recruiterIds) {
         this.recruiterIds = recruiterIds;
         return this;
     }
 
-    public AtsJob withRemote(boolean remote) {
-        Utils.checkNotNull(remote, "remote");
-        this.remote = Optional.ofNullable(remote);
-        return this;
-    }
 
-
-    public AtsJob withRemote(Optional<Boolean> remote) {
-        Utils.checkNotNull(remote, "remote");
+    public AtsJob withRemote(@Nullable Boolean remote) {
         this.remote = remote;
         return this;
     }
 
-    public AtsJob withSkills(List<String> skills) {
-        Utils.checkNotNull(skills, "skills");
-        this.skills = Optional.ofNullable(skills);
-        return this;
-    }
 
-
-    public AtsJob withSkills(Optional<? extends List<String>> skills) {
-        Utils.checkNotNull(skills, "skills");
+    public AtsJob withSkills(@Nullable List<String> skills) {
         this.skills = skills;
         return this;
     }
 
-    public AtsJob withStatus(AtsJobStatus status) {
-        Utils.checkNotNull(status, "status");
-        this.status = Optional.ofNullable(status);
-        return this;
-    }
 
-
-    public AtsJob withStatus(Optional<? extends AtsJobStatus> status) {
-        Utils.checkNotNull(status, "status");
+    public AtsJob withStatus(@Nullable AtsJobStatus status) {
         this.status = status;
         return this;
     }
 
-    public AtsJob withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public AtsJob withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public AtsJob withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -852,420 +594,202 @@ public class AtsJob {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends List<AtsAddress>> addresses = Optional.empty();
+        private List<AtsAddress> addresses;
 
-        private Optional<OffsetDateTime> closedAt = Optional.empty();
+        private OffsetDateTime closedAt;
 
-        private Optional<String> companyId = Optional.empty();
+        private String companyId;
 
-        private Optional<? extends List<AtsCompensation>> compensation = Optional.empty();
+        private List<AtsCompensation> compensation;
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<String> description = Optional.empty();
+        private String description;
 
-        private Optional<? extends EmploymentType> employmentType = Optional.empty();
+        private EmploymentType employmentType;
 
-        private Optional<? extends List<AtsGroup>> groups = Optional.empty();
+        private List<AtsGroup> groups;
 
-        private Optional<? extends List<String>> hiringManagerIds = Optional.empty();
+        private List<String> hiringManagerIds;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<String> languageLocale = Optional.empty();
+        private String languageLocale;
 
-        private Optional<? extends List<AtsMetadata>> metadata = Optional.empty();
+        private List<AtsMetadata> metadata;
 
-        private Optional<String> minimumDegree = Optional.empty();
+        private String minimumDegree;
 
-        private Optional<Double> minimumExperienceYears = Optional.empty();
+        private Double minimumExperienceYears;
 
-        private Optional<String> name = Optional.empty();
+        private String name;
 
-        private Optional<Double> numberOfOpenings = Optional.empty();
+        private Double numberOfOpenings;
 
-        private Optional<? extends List<AtsJobOpening>> openings = Optional.empty();
+        private List<AtsJobOpening> openings;
 
-        private Optional<? extends List<AtsJobPosting>> postings = Optional.empty();
+        private List<AtsJobPosting> postings;
 
-        private Optional<? extends List<String>> publicJobUrls = Optional.empty();
+        private List<String> publicJobUrls;
 
-        private Optional<? extends List<AtsJobQuestion>> questions = Optional.empty();
+        private List<AtsJobQuestion> questions;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<? extends List<String>> recruiterIds = Optional.empty();
+        private List<String> recruiterIds;
 
-        private Optional<Boolean> remote = Optional.empty();
+        private Boolean remote;
 
-        private Optional<? extends List<String>> skills = Optional.empty();
+        private List<String> skills;
 
-        private Optional<? extends AtsJobStatus> status = Optional.empty();
+        private AtsJobStatus status;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder addresses(List<AtsAddress> addresses) {
-            Utils.checkNotNull(addresses, "addresses");
-            this.addresses = Optional.ofNullable(addresses);
-            return this;
-        }
-
-        public Builder addresses(Optional<? extends List<AtsAddress>> addresses) {
-            Utils.checkNotNull(addresses, "addresses");
+        public Builder addresses(@Nullable List<AtsAddress> addresses) {
             this.addresses = addresses;
             return this;
         }
 
-
-        public Builder closedAt(OffsetDateTime closedAt) {
-            Utils.checkNotNull(closedAt, "closedAt");
-            this.closedAt = Optional.ofNullable(closedAt);
-            return this;
-        }
-
-        public Builder closedAt(Optional<OffsetDateTime> closedAt) {
-            Utils.checkNotNull(closedAt, "closedAt");
+        public Builder closedAt(@Nullable OffsetDateTime closedAt) {
             this.closedAt = closedAt;
             return this;
         }
 
-
-        public Builder companyId(String companyId) {
-            Utils.checkNotNull(companyId, "companyId");
-            this.companyId = Optional.ofNullable(companyId);
-            return this;
-        }
-
-        public Builder companyId(Optional<String> companyId) {
-            Utils.checkNotNull(companyId, "companyId");
+        public Builder companyId(@Nullable String companyId) {
             this.companyId = companyId;
             return this;
         }
 
-
-        public Builder compensation(List<AtsCompensation> compensation) {
-            Utils.checkNotNull(compensation, "compensation");
-            this.compensation = Optional.ofNullable(compensation);
-            return this;
-        }
-
-        public Builder compensation(Optional<? extends List<AtsCompensation>> compensation) {
-            Utils.checkNotNull(compensation, "compensation");
+        public Builder compensation(@Nullable List<AtsCompensation> compensation) {
             this.compensation = compensation;
             return this;
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder description(String description) {
-            Utils.checkNotNull(description, "description");
-            this.description = Optional.ofNullable(description);
-            return this;
-        }
-
-        public Builder description(Optional<String> description) {
-            Utils.checkNotNull(description, "description");
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-
-        public Builder employmentType(EmploymentType employmentType) {
-            Utils.checkNotNull(employmentType, "employmentType");
-            this.employmentType = Optional.ofNullable(employmentType);
-            return this;
-        }
-
-        public Builder employmentType(Optional<? extends EmploymentType> employmentType) {
-            Utils.checkNotNull(employmentType, "employmentType");
+        public Builder employmentType(@Nullable EmploymentType employmentType) {
             this.employmentType = employmentType;
             return this;
         }
 
-
         /**
          * The departments/divisions/teams that this job belongs to
          */
-        public Builder groups(List<AtsGroup> groups) {
-            Utils.checkNotNull(groups, "groups");
-            this.groups = Optional.ofNullable(groups);
-            return this;
-        }
-
-        /**
-         * The departments/divisions/teams that this job belongs to
-         */
-        public Builder groups(Optional<? extends List<AtsGroup>> groups) {
-            Utils.checkNotNull(groups, "groups");
+        public Builder groups(@Nullable List<AtsGroup> groups) {
             this.groups = groups;
             return this;
         }
 
-
-        public Builder hiringManagerIds(List<String> hiringManagerIds) {
-            Utils.checkNotNull(hiringManagerIds, "hiringManagerIds");
-            this.hiringManagerIds = Optional.ofNullable(hiringManagerIds);
-            return this;
-        }
-
-        public Builder hiringManagerIds(Optional<? extends List<String>> hiringManagerIds) {
-            Utils.checkNotNull(hiringManagerIds, "hiringManagerIds");
+        public Builder hiringManagerIds(@Nullable List<String> hiringManagerIds) {
             this.hiringManagerIds = hiringManagerIds;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder languageLocale(String languageLocale) {
-            Utils.checkNotNull(languageLocale, "languageLocale");
-            this.languageLocale = Optional.ofNullable(languageLocale);
-            return this;
-        }
-
-        public Builder languageLocale(Optional<String> languageLocale) {
-            Utils.checkNotNull(languageLocale, "languageLocale");
+        public Builder languageLocale(@Nullable String languageLocale) {
             this.languageLocale = languageLocale;
             return this;
         }
 
-
-        public Builder metadata(List<AtsMetadata> metadata) {
-            Utils.checkNotNull(metadata, "metadata");
-            this.metadata = Optional.ofNullable(metadata);
-            return this;
-        }
-
-        public Builder metadata(Optional<? extends List<AtsMetadata>> metadata) {
-            Utils.checkNotNull(metadata, "metadata");
+        public Builder metadata(@Nullable List<AtsMetadata> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-
-        public Builder minimumDegree(String minimumDegree) {
-            Utils.checkNotNull(minimumDegree, "minimumDegree");
-            this.minimumDegree = Optional.ofNullable(minimumDegree);
-            return this;
-        }
-
-        public Builder minimumDegree(Optional<String> minimumDegree) {
-            Utils.checkNotNull(minimumDegree, "minimumDegree");
+        public Builder minimumDegree(@Nullable String minimumDegree) {
             this.minimumDegree = minimumDegree;
             return this;
         }
 
-
-        public Builder minimumExperienceYears(double minimumExperienceYears) {
-            Utils.checkNotNull(minimumExperienceYears, "minimumExperienceYears");
-            this.minimumExperienceYears = Optional.ofNullable(minimumExperienceYears);
-            return this;
-        }
-
-        public Builder minimumExperienceYears(Optional<Double> minimumExperienceYears) {
-            Utils.checkNotNull(minimumExperienceYears, "minimumExperienceYears");
+        public Builder minimumExperienceYears(@Nullable Double minimumExperienceYears) {
             this.minimumExperienceYears = minimumExperienceYears;
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = Optional.ofNullable(name);
-            return this;
-        }
-
-        public Builder name(Optional<String> name) {
-            Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-
-        public Builder numberOfOpenings(double numberOfOpenings) {
-            Utils.checkNotNull(numberOfOpenings, "numberOfOpenings");
-            this.numberOfOpenings = Optional.ofNullable(numberOfOpenings);
-            return this;
-        }
-
-        public Builder numberOfOpenings(Optional<Double> numberOfOpenings) {
-            Utils.checkNotNull(numberOfOpenings, "numberOfOpenings");
+        public Builder numberOfOpenings(@Nullable Double numberOfOpenings) {
             this.numberOfOpenings = numberOfOpenings;
             return this;
         }
 
-
-        public Builder openings(List<AtsJobOpening> openings) {
-            Utils.checkNotNull(openings, "openings");
-            this.openings = Optional.ofNullable(openings);
-            return this;
-        }
-
-        public Builder openings(Optional<? extends List<AtsJobOpening>> openings) {
-            Utils.checkNotNull(openings, "openings");
+        public Builder openings(@Nullable List<AtsJobOpening> openings) {
             this.openings = openings;
             return this;
         }
 
-
         /**
          * Public job postings
          */
-        public Builder postings(List<AtsJobPosting> postings) {
-            Utils.checkNotNull(postings, "postings");
-            this.postings = Optional.ofNullable(postings);
-            return this;
-        }
-
-        /**
-         * Public job postings
-         */
-        public Builder postings(Optional<? extends List<AtsJobPosting>> postings) {
-            Utils.checkNotNull(postings, "postings");
+        public Builder postings(@Nullable List<AtsJobPosting> postings) {
             this.postings = postings;
             return this;
         }
 
-
         /**
          * URLs for pages containing public listings for the job
          */
-        public Builder publicJobUrls(List<String> publicJobUrls) {
-            Utils.checkNotNull(publicJobUrls, "publicJobUrls");
-            this.publicJobUrls = Optional.ofNullable(publicJobUrls);
-            return this;
-        }
-
-        /**
-         * URLs for pages containing public listings for the job
-         */
-        public Builder publicJobUrls(Optional<? extends List<String>> publicJobUrls) {
-            Utils.checkNotNull(publicJobUrls, "publicJobUrls");
+        public Builder publicJobUrls(@Nullable List<String> publicJobUrls) {
             this.publicJobUrls = publicJobUrls;
             return this;
         }
 
-
-        public Builder questions(List<AtsJobQuestion> questions) {
-            Utils.checkNotNull(questions, "questions");
-            this.questions = Optional.ofNullable(questions);
-            return this;
-        }
-
-        public Builder questions(Optional<? extends List<AtsJobQuestion>> questions) {
-            Utils.checkNotNull(questions, "questions");
+        public Builder questions(@Nullable List<AtsJobQuestion> questions) {
             this.questions = questions;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder recruiterIds(List<String> recruiterIds) {
-            Utils.checkNotNull(recruiterIds, "recruiterIds");
-            this.recruiterIds = Optional.ofNullable(recruiterIds);
-            return this;
-        }
-
-        public Builder recruiterIds(Optional<? extends List<String>> recruiterIds) {
-            Utils.checkNotNull(recruiterIds, "recruiterIds");
+        public Builder recruiterIds(@Nullable List<String> recruiterIds) {
             this.recruiterIds = recruiterIds;
             return this;
         }
 
-
-        public Builder remote(boolean remote) {
-            Utils.checkNotNull(remote, "remote");
-            this.remote = Optional.ofNullable(remote);
-            return this;
-        }
-
-        public Builder remote(Optional<Boolean> remote) {
-            Utils.checkNotNull(remote, "remote");
+        public Builder remote(@Nullable Boolean remote) {
             this.remote = remote;
             return this;
         }
 
-
-        public Builder skills(List<String> skills) {
-            Utils.checkNotNull(skills, "skills");
-            this.skills = Optional.ofNullable(skills);
-            return this;
-        }
-
-        public Builder skills(Optional<? extends List<String>> skills) {
-            Utils.checkNotNull(skills, "skills");
+        public Builder skills(@Nullable List<String> skills) {
             this.skills = skills;
             return this;
         }
 
-
-        public Builder status(AtsJobStatus status) {
-            Utils.checkNotNull(status, "status");
-            this.status = Optional.ofNullable(status);
-            return this;
-        }
-
-        public Builder status(Optional<? extends AtsJobStatus> status) {
-            Utils.checkNotNull(status, "status");
+        public Builder status(@Nullable AtsJobStatus status) {
             this.status = status;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
         public AtsJob build() {
-
             return new AtsJob(
                 addresses, closedAt, companyId,
                 compensation, createdAt, description,

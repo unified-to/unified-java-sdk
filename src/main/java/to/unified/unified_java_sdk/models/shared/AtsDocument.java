@@ -4,14 +4,13 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.Map;
 import java.util.Optional;
@@ -22,89 +21,77 @@ public class AtsDocument {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("application_id")
-    private Optional<String> applicationId;
+    private String applicationId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_id")
-    private Optional<String> candidateId;
+    private String candidateId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document_data")
-    private Optional<String> documentData;
+    private String documentData;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document_url")
-    private Optional<String> documentUrl;
+    private String documentUrl;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filename")
-    private Optional<String> filename;
+    private String filename;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("job_id")
-    private Optional<String> jobId;
+    private String jobId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
-    private Optional<? extends AtsDocumentType> type;
+    private AtsDocumentType type;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
-    private Optional<String> userId;
+    private String userId;
 
     @JsonCreator
     public AtsDocument(
-            @JsonProperty("application_id") Optional<String> applicationId,
-            @JsonProperty("candidate_id") Optional<String> candidateId,
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("document_data") Optional<String> documentData,
-            @JsonProperty("document_url") Optional<String> documentUrl,
-            @JsonProperty("filename") Optional<String> filename,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("job_id") Optional<String> jobId,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("type") Optional<? extends AtsDocumentType> type,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
-            @JsonProperty("user_id") Optional<String> userId) {
-        Utils.checkNotNull(applicationId, "applicationId");
-        Utils.checkNotNull(candidateId, "candidateId");
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(documentData, "documentData");
-        Utils.checkNotNull(documentUrl, "documentUrl");
-        Utils.checkNotNull(filename, "filename");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(jobId, "jobId");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(type, "type");
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        Utils.checkNotNull(userId, "userId");
+            @JsonProperty("application_id") @Nullable String applicationId,
+            @JsonProperty("candidate_id") @Nullable String candidateId,
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("document_data") @Nullable String documentData,
+            @JsonProperty("document_url") @Nullable String documentUrl,
+            @JsonProperty("filename") @Nullable String filename,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("job_id") @Nullable String jobId,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("type") @Nullable AtsDocumentType type,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
+            @JsonProperty("user_id") @Nullable String userId) {
         this.applicationId = applicationId;
         this.candidateId = candidateId;
         this.createdAt = createdAt;
@@ -120,72 +107,58 @@ public class AtsDocument {
     }
     
     public AtsDocument() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null);
     }
 
-    @JsonIgnore
     public Optional<String> applicationId() {
-        return applicationId;
+        return Optional.ofNullable(this.applicationId);
     }
 
-    @JsonIgnore
     public Optional<String> candidateId() {
-        return candidateId;
+        return Optional.ofNullable(this.candidateId);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<String> documentData() {
-        return documentData;
+        return Optional.ofNullable(this.documentData);
     }
 
-    @JsonIgnore
     public Optional<String> documentUrl() {
-        return documentUrl;
+        return Optional.ofNullable(this.documentUrl);
     }
 
-    @JsonIgnore
     public Optional<String> filename() {
-        return filename;
+        return Optional.ofNullable(this.filename);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<String> jobId() {
-        return jobId;
+        return Optional.ofNullable(this.jobId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<AtsDocumentType> type() {
-        return (Optional<AtsDocumentType>) type;
+        return Optional.ofNullable(this.type);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
-    @JsonIgnore
     public Optional<String> userId() {
-        return userId;
+        return Optional.ofNullable(this.userId);
     }
 
     public static Builder builder() {
@@ -193,161 +166,77 @@ public class AtsDocument {
     }
 
 
-    public AtsDocument withApplicationId(String applicationId) {
-        Utils.checkNotNull(applicationId, "applicationId");
-        this.applicationId = Optional.ofNullable(applicationId);
-        return this;
-    }
-
-
-    public AtsDocument withApplicationId(Optional<String> applicationId) {
-        Utils.checkNotNull(applicationId, "applicationId");
+    public AtsDocument withApplicationId(@Nullable String applicationId) {
         this.applicationId = applicationId;
         return this;
     }
 
-    public AtsDocument withCandidateId(String candidateId) {
-        Utils.checkNotNull(candidateId, "candidateId");
-        this.candidateId = Optional.ofNullable(candidateId);
-        return this;
-    }
 
-
-    public AtsDocument withCandidateId(Optional<String> candidateId) {
-        Utils.checkNotNull(candidateId, "candidateId");
+    public AtsDocument withCandidateId(@Nullable String candidateId) {
         this.candidateId = candidateId;
         return this;
     }
 
-    public AtsDocument withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
 
-
-    public AtsDocument withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public AtsDocument withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public AtsDocument withDocumentData(String documentData) {
-        Utils.checkNotNull(documentData, "documentData");
-        this.documentData = Optional.ofNullable(documentData);
-        return this;
-    }
 
-
-    public AtsDocument withDocumentData(Optional<String> documentData) {
-        Utils.checkNotNull(documentData, "documentData");
+    public AtsDocument withDocumentData(@Nullable String documentData) {
         this.documentData = documentData;
         return this;
     }
 
-    public AtsDocument withDocumentUrl(String documentUrl) {
-        Utils.checkNotNull(documentUrl, "documentUrl");
-        this.documentUrl = Optional.ofNullable(documentUrl);
-        return this;
-    }
 
-
-    public AtsDocument withDocumentUrl(Optional<String> documentUrl) {
-        Utils.checkNotNull(documentUrl, "documentUrl");
+    public AtsDocument withDocumentUrl(@Nullable String documentUrl) {
         this.documentUrl = documentUrl;
         return this;
     }
 
-    public AtsDocument withFilename(String filename) {
-        Utils.checkNotNull(filename, "filename");
-        this.filename = Optional.ofNullable(filename);
-        return this;
-    }
 
-
-    public AtsDocument withFilename(Optional<String> filename) {
-        Utils.checkNotNull(filename, "filename");
+    public AtsDocument withFilename(@Nullable String filename) {
         this.filename = filename;
         return this;
     }
 
-    public AtsDocument withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public AtsDocument withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public AtsDocument withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public AtsDocument withJobId(String jobId) {
-        Utils.checkNotNull(jobId, "jobId");
-        this.jobId = Optional.ofNullable(jobId);
-        return this;
-    }
 
-
-    public AtsDocument withJobId(Optional<String> jobId) {
-        Utils.checkNotNull(jobId, "jobId");
+    public AtsDocument withJobId(@Nullable String jobId) {
         this.jobId = jobId;
         return this;
     }
 
-    public AtsDocument withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public AtsDocument withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public AtsDocument withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public AtsDocument withType(AtsDocumentType type) {
-        Utils.checkNotNull(type, "type");
-        this.type = Optional.ofNullable(type);
-        return this;
-    }
 
-
-    public AtsDocument withType(Optional<? extends AtsDocumentType> type) {
-        Utils.checkNotNull(type, "type");
+    public AtsDocument withType(@Nullable AtsDocumentType type) {
         this.type = type;
         return this;
     }
 
-    public AtsDocument withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public AtsDocument withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public AtsDocument withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
-    public AtsDocument withUserId(String userId) {
-        Utils.checkNotNull(userId, "userId");
-        this.userId = Optional.ofNullable(userId);
-        return this;
-    }
 
-
-    public AtsDocument withUserId(Optional<String> userId) {
-        Utils.checkNotNull(userId, "userId");
+    public AtsDocument withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -402,192 +291,95 @@ public class AtsDocument {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> applicationId = Optional.empty();
+        private String applicationId;
 
-        private Optional<String> candidateId = Optional.empty();
+        private String candidateId;
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<String> documentData = Optional.empty();
+        private String documentData;
 
-        private Optional<String> documentUrl = Optional.empty();
+        private String documentUrl;
 
-        private Optional<String> filename = Optional.empty();
+        private String filename;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<String> jobId = Optional.empty();
+        private String jobId;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<? extends AtsDocumentType> type = Optional.empty();
+        private AtsDocumentType type;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
-        private Optional<String> userId = Optional.empty();
+        private String userId;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder applicationId(String applicationId) {
-            Utils.checkNotNull(applicationId, "applicationId");
-            this.applicationId = Optional.ofNullable(applicationId);
-            return this;
-        }
-
-        public Builder applicationId(Optional<String> applicationId) {
-            Utils.checkNotNull(applicationId, "applicationId");
+        public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = applicationId;
             return this;
         }
 
-
-        public Builder candidateId(String candidateId) {
-            Utils.checkNotNull(candidateId, "candidateId");
-            this.candidateId = Optional.ofNullable(candidateId);
-            return this;
-        }
-
-        public Builder candidateId(Optional<String> candidateId) {
-            Utils.checkNotNull(candidateId, "candidateId");
+        public Builder candidateId(@Nullable String candidateId) {
             this.candidateId = candidateId;
             return this;
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder documentData(String documentData) {
-            Utils.checkNotNull(documentData, "documentData");
-            this.documentData = Optional.ofNullable(documentData);
-            return this;
-        }
-
-        public Builder documentData(Optional<String> documentData) {
-            Utils.checkNotNull(documentData, "documentData");
+        public Builder documentData(@Nullable String documentData) {
             this.documentData = documentData;
             return this;
         }
 
-
-        public Builder documentUrl(String documentUrl) {
-            Utils.checkNotNull(documentUrl, "documentUrl");
-            this.documentUrl = Optional.ofNullable(documentUrl);
-            return this;
-        }
-
-        public Builder documentUrl(Optional<String> documentUrl) {
-            Utils.checkNotNull(documentUrl, "documentUrl");
+        public Builder documentUrl(@Nullable String documentUrl) {
             this.documentUrl = documentUrl;
             return this;
         }
 
-
-        public Builder filename(String filename) {
-            Utils.checkNotNull(filename, "filename");
-            this.filename = Optional.ofNullable(filename);
-            return this;
-        }
-
-        public Builder filename(Optional<String> filename) {
-            Utils.checkNotNull(filename, "filename");
+        public Builder filename(@Nullable String filename) {
             this.filename = filename;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder jobId(String jobId) {
-            Utils.checkNotNull(jobId, "jobId");
-            this.jobId = Optional.ofNullable(jobId);
-            return this;
-        }
-
-        public Builder jobId(Optional<String> jobId) {
-            Utils.checkNotNull(jobId, "jobId");
+        public Builder jobId(@Nullable String jobId) {
             this.jobId = jobId;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder type(AtsDocumentType type) {
-            Utils.checkNotNull(type, "type");
-            this.type = Optional.ofNullable(type);
-            return this;
-        }
-
-        public Builder type(Optional<? extends AtsDocumentType> type) {
-            Utils.checkNotNull(type, "type");
+        public Builder type(@Nullable AtsDocumentType type) {
             this.type = type;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
-
-        public Builder userId(String userId) {
-            Utils.checkNotNull(userId, "userId");
-            this.userId = Optional.ofNullable(userId);
-            return this;
-        }
-
-        public Builder userId(Optional<String> userId) {
-            Utils.checkNotNull(userId, "userId");
+        public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;
         }
 
         public AtsDocument build() {
-
             return new AtsDocument(
                 applicationId, candidateId, createdAt,
                 documentData, documentUrl, filename,

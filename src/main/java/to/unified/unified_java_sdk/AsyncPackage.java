@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.GetVerificationPackageRequest;
 import to.unified.unified_java_sdk.models.operations.ListVerificationPackagesRequest;
@@ -52,7 +53,7 @@ public class AsyncPackage {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetVerificationPackageResponse>} - The async response
      */
-    public CompletableFuture<GetVerificationPackageResponse> getVerificationPackage(GetVerificationPackageRequest request) {
+    public CompletableFuture<GetVerificationPackageResponse> getVerificationPackage(@Nonnull GetVerificationPackageRequest request) {
         AsyncRequestOperation<GetVerificationPackageRequest, GetVerificationPackageResponse> operation
               = new GetVerificationPackage.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -75,7 +76,7 @@ public class AsyncPackage {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListVerificationPackagesResponse>} - The async response
      */
-    public CompletableFuture<ListVerificationPackagesResponse> listVerificationPackages(ListVerificationPackagesRequest request) {
+    public CompletableFuture<ListVerificationPackagesResponse> listVerificationPackages(@Nonnull ListVerificationPackagesRequest request) {
         AsyncRequestOperation<ListVerificationPackagesRequest, ListVerificationPackagesResponse> operation
               = new ListVerificationPackages.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

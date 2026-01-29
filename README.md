@@ -38,7 +38,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.47.5'
+implementation 'to.unified:unified-java-sdk:0.47.6'
 ```
 
 Maven:
@@ -46,7 +46,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.47.5</version>
+    <version>0.47.6</version>
 </dependency>
 ```
 
@@ -282,28 +282,40 @@ public class Application {
 
 * [createAdsAd](docs/sdks/ads/README.md#createadsad) - Create an ad
 * [createAdsCampaign](docs/sdks/ads/README.md#createadscampaign) - Create a campaign
+* [createAdsCreative](docs/sdks/ads/README.md#createadscreative) - Create a creative
 * [createAdsGroup](docs/sdks/ads/README.md#createadsgroup) - Create a group
+* [createAdsInsertionorder](docs/sdks/ads/README.md#createadsinsertionorder) - Create an insertionorder
 * [createAdsOrganization](docs/sdks/ads/README.md#createadsorganization) - Create an organization
 * [getAdsAd](docs/sdks/ads/README.md#getadsad) - Retrieve an ad
 * [getAdsCampaign](docs/sdks/ads/README.md#getadscampaign) - Retrieve a campaign
+* [getAdsCreative](docs/sdks/ads/README.md#getadscreative) - Retrieve a creative
 * [getAdsGroup](docs/sdks/ads/README.md#getadsgroup) - Retrieve a group
+* [getAdsInsertionorder](docs/sdks/ads/README.md#getadsinsertionorder) - Retrieve an insertionorder
 * [getAdsOrganization](docs/sdks/ads/README.md#getadsorganization) - Retrieve an organization
 * [listAdsAds](docs/sdks/ads/README.md#listadsads) - List all ads
 * [listAdsCampaigns](docs/sdks/ads/README.md#listadscampaigns) - List all campaigns
+* [listAdsCreatives](docs/sdks/ads/README.md#listadscreatives) - List all creatives
 * [listAdsGroups](docs/sdks/ads/README.md#listadsgroups) - List all groups
+* [listAdsInsertionorders](docs/sdks/ads/README.md#listadsinsertionorders) - List all insertionorders
 * [listAdsOrganizations](docs/sdks/ads/README.md#listadsorganizations) - List all organizations
 * [listAdsReports](docs/sdks/ads/README.md#listadsreports) - List all reports
 * [patchAdsAd](docs/sdks/ads/README.md#patchadsad) - Update an ad
 * [patchAdsCampaign](docs/sdks/ads/README.md#patchadscampaign) - Update a campaign
+* [patchAdsCreative](docs/sdks/ads/README.md#patchadscreative) - Update a creative
 * [patchAdsGroup](docs/sdks/ads/README.md#patchadsgroup) - Update a group
+* [patchAdsInsertionorder](docs/sdks/ads/README.md#patchadsinsertionorder) - Update an insertionorder
 * [patchAdsOrganization](docs/sdks/ads/README.md#patchadsorganization) - Update an organization
 * [removeAdsAd](docs/sdks/ads/README.md#removeadsad) - Remove an ad
 * [removeAdsCampaign](docs/sdks/ads/README.md#removeadscampaign) - Remove a campaign
+* [removeAdsCreative](docs/sdks/ads/README.md#removeadscreative) - Remove a creative
 * [removeAdsGroup](docs/sdks/ads/README.md#removeadsgroup) - Remove a group
+* [removeAdsInsertionorder](docs/sdks/ads/README.md#removeadsinsertionorder) - Remove an insertionorder
 * [removeAdsOrganization](docs/sdks/ads/README.md#removeadsorganization) - Remove an organization
 * [updateAdsAd](docs/sdks/ads/README.md#updateadsad) - Update an ad
 * [updateAdsCampaign](docs/sdks/ads/README.md#updateadscampaign) - Update a campaign
+* [updateAdsCreative](docs/sdks/ads/README.md#updateadscreative) - Update a creative
 * [updateAdsGroup](docs/sdks/ads/README.md#updateadsgroup) - Update a group
+* [updateAdsInsertionorder](docs/sdks/ads/README.md#updateadsinsertionorder) - Update an insertionorder
 * [updateAdsOrganization](docs/sdks/ads/README.md#updateadsorganization) - Update an organization
 
 ### [Apicall](docs/sdks/apicall/README.md)
@@ -653,6 +665,15 @@ public class Application {
 * [removeLmsCourse](docs/sdks/course/README.md#removelmscourse) - Remove a course
 * [updateLmsCourse](docs/sdks/course/README.md#updatelmscourse) - Update a course
 
+### [Creative](docs/sdks/creative/README.md)
+
+* [createAdsCreative](docs/sdks/creative/README.md#createadscreative) - Create a creative
+* [getAdsCreative](docs/sdks/creative/README.md#getadscreative) - Retrieve a creative
+* [listAdsCreatives](docs/sdks/creative/README.md#listadscreatives) - List all creatives
+* [patchAdsCreative](docs/sdks/creative/README.md#patchadscreative) - Update a creative
+* [removeAdsCreative](docs/sdks/creative/README.md#removeadscreative) - Remove a creative
+* [updateAdsCreative](docs/sdks/creative/README.md#updateadscreative) - Update a creative
+
 ### [Creditmemo](docs/sdks/creditmemo/README.md)
 
 * [createAccountingCreditmemo](docs/sdks/creditmemo/README.md#createaccountingcreditmemo) - Create a creditmemo
@@ -908,6 +929,15 @@ public class Application {
 * [updateHrisLocation](docs/sdks/hris/README.md#updatehrislocation) - Update a location
 * [updateHrisTimeshift](docs/sdks/hris/README.md#updatehristimeshift) - Update a timeshift
 
+### [Insertionorder](docs/sdks/insertionorder/README.md)
+
+* [createAdsInsertionorder](docs/sdks/insertionorder/README.md#createadsinsertionorder) - Create an insertionorder
+* [getAdsInsertionorder](docs/sdks/insertionorder/README.md#getadsinsertionorder) - Retrieve an insertionorder
+* [listAdsInsertionorders](docs/sdks/insertionorder/README.md#listadsinsertionorders) - List all insertionorders
+* [patchAdsInsertionorder](docs/sdks/insertionorder/README.md#patchadsinsertionorder) - Update an insertionorder
+* [removeAdsInsertionorder](docs/sdks/insertionorder/README.md#removeadsinsertionorder) - Remove an insertionorder
+* [updateAdsInsertionorder](docs/sdks/insertionorder/README.md#updateadsinsertionorder) - Update an insertionorder
+
 ### [Instructor](docs/sdks/instructor/README.md)
 
 * [createLmsInstructor](docs/sdks/instructor/README.md#createlmsinstructor) - Create an instructor
@@ -1017,7 +1047,9 @@ public class Application {
 * [createShippingLabel](docs/sdks/label/README.md#createshippinglabel) - Create a label
 * [getShippingLabel](docs/sdks/label/README.md#getshippinglabel) - Retrieve a label
 * [listShippingLabels](docs/sdks/label/README.md#listshippinglabels) - List all labels
+* [patchShippingLabel](docs/sdks/label/README.md#patchshippinglabel) - Update a label
 * [removeShippingLabel](docs/sdks/label/README.md#removeshippinglabel) - Remove a label
+* [updateShippingLabel](docs/sdks/label/README.md#updateshippinglabel) - Update a label
 
 ### [Lead](docs/sdks/lead/README.md)
 
@@ -1305,7 +1337,6 @@ public class Application {
 ### [Rate](docs/sdks/rate/README.md)
 
 * [createShippingRate](docs/sdks/rate/README.md#createshippingrate) - Create a rate
-* [getShippingRate](docs/sdks/rate/README.md#getshippingrate) - Retrieve a rate
 
 ### [Recording](docs/sdks/recording/README.md)
 
@@ -1445,19 +1476,18 @@ public class Application {
 * [createShippingLabel](docs/sdks/shipping/README.md#createshippinglabel) - Create a label
 * [createShippingRate](docs/sdks/shipping/README.md#createshippingrate) - Create a rate
 * [createShippingShipment](docs/sdks/shipping/README.md#createshippingshipment) - Create a shipment
-* [createShippingTracking](docs/sdks/shipping/README.md#createshippingtracking) - Create a tracking
 * [getShippingCarrier](docs/sdks/shipping/README.md#getshippingcarrier) - Retrieve a carrier
 * [getShippingLabel](docs/sdks/shipping/README.md#getshippinglabel) - Retrieve a label
-* [getShippingRate](docs/sdks/shipping/README.md#getshippingrate) - Retrieve a rate
 * [getShippingShipment](docs/sdks/shipping/README.md#getshippingshipment) - Retrieve a shipment
 * [getShippingTracking](docs/sdks/shipping/README.md#getshippingtracking) - Retrieve a tracking
 * [listShippingCarriers](docs/sdks/shipping/README.md#listshippingcarriers) - List all carriers
 * [listShippingLabels](docs/sdks/shipping/README.md#listshippinglabels) - List all labels
 * [listShippingShipments](docs/sdks/shipping/README.md#listshippingshipments) - List all shipments
-* [listShippingTrackings](docs/sdks/shipping/README.md#listshippingtrackings) - List all trackings
+* [patchShippingLabel](docs/sdks/shipping/README.md#patchshippinglabel) - Update a label
 * [patchShippingShipment](docs/sdks/shipping/README.md#patchshippingshipment) - Update a shipment
 * [removeShippingLabel](docs/sdks/shipping/README.md#removeshippinglabel) - Remove a label
 * [removeShippingShipment](docs/sdks/shipping/README.md#removeshippingshipment) - Remove a shipment
+* [updateShippingLabel](docs/sdks/shipping/README.md#updateshippinglabel) - Update a label
 * [updateShippingShipment](docs/sdks/shipping/README.md#updateshippingshipment) - Update a shipment
 
 ### [Space](docs/sdks/space/README.md)
@@ -1585,9 +1615,7 @@ public class Application {
 
 ### [Tracking](docs/sdks/tracking/README.md)
 
-* [createShippingTracking](docs/sdks/tracking/README.md#createshippingtracking) - Create a tracking
 * [getShippingTracking](docs/sdks/tracking/README.md#getshippingtracking) - Retrieve a tracking
-* [listShippingTrackings](docs/sdks/tracking/README.md#listshippingtrackings) - List all trackings
 
 ### [Transaction](docs/sdks/transaction/README.md)
 

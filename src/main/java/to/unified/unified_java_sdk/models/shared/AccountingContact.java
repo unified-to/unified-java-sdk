@@ -4,16 +4,15 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.type.TypeReference;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
@@ -26,164 +25,143 @@ public class AccountingContact {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associated_contacts")
-    private Optional<? extends List<AccountingAssociatedContact>> associatedContacts;
+    private List<AccountingAssociatedContact> associatedContacts;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billing_address")
-    private Optional<? extends PropertyAccountingContactBillingAddress> billingAddress;
+    private PropertyAccountingContactBillingAddress billingAddress;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_name")
-    private Optional<String> companyName;
+    private String companyName;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
-    private Optional<String> currency;
+    private String currency;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emails")
-    private Optional<? extends List<AccountingEmail>> emails;
+    private List<AccountingEmail> emails;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first_name")
-    private Optional<String> firstName;
+    private String firstName;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identification")
-    private Optional<String> identification;
+    private String identification;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
-    private Optional<Boolean> isActive;
+    private Boolean isActive;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_customer")
-    private Optional<Boolean> isCustomer;
+    private Boolean isCustomer;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_supplier")
-    private Optional<Boolean> isSupplier;
+    private Boolean isSupplier;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_name")
-    private Optional<String> lastName;
+    private String lastName;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
-    private Optional<String> name;
+    private String name;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_methods")
-    private Optional<? extends List<AccountingContactPaymentMethod>> paymentMethods;
+    private List<AccountingContactPaymentMethod> paymentMethods;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portal_url")
-    private Optional<String> portalUrl;
+    private String portalUrl;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipping_address")
-    private Optional<? extends PropertyAccountingContactShippingAddress> shippingAddress;
+    private PropertyAccountingContactShippingAddress shippingAddress;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax_exemption")
-    private Optional<? extends TaxExemption> taxExemption;
+    private TaxExemption taxExemption;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax_number")
-    private Optional<String> taxNumber;
+    private String taxNumber;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("telephones")
-    private Optional<? extends List<AccountingTelephone>> telephones;
+    private List<AccountingTelephone> telephones;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
     @JsonCreator
     public AccountingContact(
-            @JsonProperty("associated_contacts") Optional<? extends List<AccountingAssociatedContact>> associatedContacts,
-            @JsonProperty("billing_address") Optional<? extends PropertyAccountingContactBillingAddress> billingAddress,
-            @JsonProperty("company_name") Optional<String> companyName,
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("currency") Optional<String> currency,
-            @JsonProperty("emails") Optional<? extends List<AccountingEmail>> emails,
-            @JsonProperty("first_name") Optional<String> firstName,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("identification") Optional<String> identification,
-            @JsonProperty("is_active") Optional<Boolean> isActive,
-            @JsonProperty("is_customer") Optional<Boolean> isCustomer,
-            @JsonProperty("is_supplier") Optional<Boolean> isSupplier,
-            @JsonProperty("last_name") Optional<String> lastName,
-            @JsonProperty("name") Optional<String> name,
-            @JsonProperty("payment_methods") Optional<? extends List<AccountingContactPaymentMethod>> paymentMethods,
-            @JsonProperty("portal_url") Optional<String> portalUrl,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("shipping_address") Optional<? extends PropertyAccountingContactShippingAddress> shippingAddress,
-            @JsonProperty("tax_exemption") Optional<? extends TaxExemption> taxExemption,
-            @JsonProperty("tax_number") Optional<String> taxNumber,
-            @JsonProperty("telephones") Optional<? extends List<AccountingTelephone>> telephones,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(associatedContacts, "associatedContacts");
-        Utils.checkNotNull(billingAddress, "billingAddress");
-        Utils.checkNotNull(companyName, "companyName");
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(currency, "currency");
-        Utils.checkNotNull(emails, "emails");
-        Utils.checkNotNull(firstName, "firstName");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(identification, "identification");
-        Utils.checkNotNull(isActive, "isActive");
-        Utils.checkNotNull(isCustomer, "isCustomer");
-        Utils.checkNotNull(isSupplier, "isSupplier");
-        Utils.checkNotNull(lastName, "lastName");
-        Utils.checkNotNull(name, "name");
-        Utils.checkNotNull(paymentMethods, "paymentMethods");
-        Utils.checkNotNull(portalUrl, "portalUrl");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(shippingAddress, "shippingAddress");
-        Utils.checkNotNull(taxExemption, "taxExemption");
-        Utils.checkNotNull(taxNumber, "taxNumber");
-        Utils.checkNotNull(telephones, "telephones");
-        Utils.checkNotNull(updatedAt, "updatedAt");
+            @JsonProperty("associated_contacts") @Nullable List<AccountingAssociatedContact> associatedContacts,
+            @JsonProperty("billing_address") @Nullable PropertyAccountingContactBillingAddress billingAddress,
+            @JsonProperty("company_name") @Nullable String companyName,
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("currency") @Nullable String currency,
+            @JsonProperty("emails") @Nullable List<AccountingEmail> emails,
+            @JsonProperty("first_name") @Nullable String firstName,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("identification") @Nullable String identification,
+            @JsonProperty("is_active") @Nullable Boolean isActive,
+            @JsonProperty("is_customer") @Nullable Boolean isCustomer,
+            @JsonProperty("is_supplier") @Nullable Boolean isSupplier,
+            @JsonProperty("last_name") @Nullable String lastName,
+            @JsonProperty("name") @Nullable String name,
+            @JsonProperty("payment_methods") @Nullable List<AccountingContactPaymentMethod> paymentMethods,
+            @JsonProperty("portal_url") @Nullable String portalUrl,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("shipping_address") @Nullable PropertyAccountingContactShippingAddress shippingAddress,
+            @JsonProperty("tax_exemption") @Nullable TaxExemption taxExemption,
+            @JsonProperty("tax_number") @Nullable String taxNumber,
+            @JsonProperty("telephones") @Nullable List<AccountingTelephone> telephones,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.associatedContacts = associatedContacts;
         this.billingAddress = billingAddress;
         this.companyName = companyName;
         this.createdAt = createdAt;
-        this.currency = currency;
+        this.currency = Optional.ofNullable(currency)
+            .orElse(Builder._SINGLETON_VALUE_Currency.value());
         this.emails = emails;
         this.firstName = firstName;
         this.id = id;
@@ -204,132 +182,102 @@ public class AccountingContact {
     }
     
     public AccountingContact() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<AccountingAssociatedContact>> associatedContacts() {
-        return (Optional<List<AccountingAssociatedContact>>) associatedContacts;
+        return Optional.ofNullable(this.associatedContacts);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<PropertyAccountingContactBillingAddress> billingAddress() {
-        return (Optional<PropertyAccountingContactBillingAddress>) billingAddress;
+        return Optional.ofNullable(this.billingAddress);
     }
 
-    @JsonIgnore
     public Optional<String> companyName() {
-        return companyName;
+        return Optional.ofNullable(this.companyName);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<String> currency() {
-        return currency;
+        return Optional.ofNullable(this.currency);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<AccountingEmail>> emails() {
-        return (Optional<List<AccountingEmail>>) emails;
+        return Optional.ofNullable(this.emails);
     }
 
-    @JsonIgnore
     public Optional<String> firstName() {
-        return firstName;
+        return Optional.ofNullable(this.firstName);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<String> identification() {
-        return identification;
+        return Optional.ofNullable(this.identification);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isActive() {
-        return isActive;
+        return Optional.ofNullable(this.isActive);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isCustomer() {
-        return isCustomer;
+        return Optional.ofNullable(this.isCustomer);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isSupplier() {
-        return isSupplier;
+        return Optional.ofNullable(this.isSupplier);
     }
 
-    @JsonIgnore
     public Optional<String> lastName() {
-        return lastName;
+        return Optional.ofNullable(this.lastName);
     }
 
-    @JsonIgnore
     public Optional<String> name() {
-        return name;
+        return Optional.ofNullable(this.name);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<AccountingContactPaymentMethod>> paymentMethods() {
-        return (Optional<List<AccountingContactPaymentMethod>>) paymentMethods;
+        return Optional.ofNullable(this.paymentMethods);
     }
 
-    @JsonIgnore
     public Optional<String> portalUrl() {
-        return portalUrl;
+        return Optional.ofNullable(this.portalUrl);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<PropertyAccountingContactShippingAddress> shippingAddress() {
-        return (Optional<PropertyAccountingContactShippingAddress>) shippingAddress;
+        return Optional.ofNullable(this.shippingAddress);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<TaxExemption> taxExemption() {
-        return (Optional<TaxExemption>) taxExemption;
+        return Optional.ofNullable(this.taxExemption);
     }
 
-    @JsonIgnore
     public Optional<String> taxNumber() {
-        return taxNumber;
+        return Optional.ofNullable(this.taxNumber);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<AccountingTelephone>> telephones() {
-        return (Optional<List<AccountingTelephone>>) telephones;
+        return Optional.ofNullable(this.telephones);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
     public static Builder builder() {
@@ -337,291 +285,137 @@ public class AccountingContact {
     }
 
 
-    public AccountingContact withAssociatedContacts(List<AccountingAssociatedContact> associatedContacts) {
-        Utils.checkNotNull(associatedContacts, "associatedContacts");
-        this.associatedContacts = Optional.ofNullable(associatedContacts);
-        return this;
-    }
-
-
-    public AccountingContact withAssociatedContacts(Optional<? extends List<AccountingAssociatedContact>> associatedContacts) {
-        Utils.checkNotNull(associatedContacts, "associatedContacts");
+    public AccountingContact withAssociatedContacts(@Nullable List<AccountingAssociatedContact> associatedContacts) {
         this.associatedContacts = associatedContacts;
         return this;
     }
 
-    public AccountingContact withBillingAddress(PropertyAccountingContactBillingAddress billingAddress) {
-        Utils.checkNotNull(billingAddress, "billingAddress");
-        this.billingAddress = Optional.ofNullable(billingAddress);
-        return this;
-    }
 
-
-    public AccountingContact withBillingAddress(Optional<? extends PropertyAccountingContactBillingAddress> billingAddress) {
-        Utils.checkNotNull(billingAddress, "billingAddress");
+    public AccountingContact withBillingAddress(@Nullable PropertyAccountingContactBillingAddress billingAddress) {
         this.billingAddress = billingAddress;
         return this;
     }
 
-    public AccountingContact withCompanyName(String companyName) {
-        Utils.checkNotNull(companyName, "companyName");
-        this.companyName = Optional.ofNullable(companyName);
-        return this;
-    }
 
-
-    public AccountingContact withCompanyName(Optional<String> companyName) {
-        Utils.checkNotNull(companyName, "companyName");
+    public AccountingContact withCompanyName(@Nullable String companyName) {
         this.companyName = companyName;
         return this;
     }
 
-    public AccountingContact withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
 
-
-    public AccountingContact withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public AccountingContact withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public AccountingContact withCurrency(String currency) {
-        Utils.checkNotNull(currency, "currency");
-        this.currency = Optional.ofNullable(currency);
-        return this;
-    }
 
-
-    public AccountingContact withCurrency(Optional<String> currency) {
-        Utils.checkNotNull(currency, "currency");
+    public AccountingContact withCurrency(@Nullable String currency) {
         this.currency = currency;
         return this;
     }
 
-    public AccountingContact withEmails(List<AccountingEmail> emails) {
-        Utils.checkNotNull(emails, "emails");
-        this.emails = Optional.ofNullable(emails);
-        return this;
-    }
 
-
-    public AccountingContact withEmails(Optional<? extends List<AccountingEmail>> emails) {
-        Utils.checkNotNull(emails, "emails");
+    public AccountingContact withEmails(@Nullable List<AccountingEmail> emails) {
         this.emails = emails;
         return this;
     }
 
-    public AccountingContact withFirstName(String firstName) {
-        Utils.checkNotNull(firstName, "firstName");
-        this.firstName = Optional.ofNullable(firstName);
-        return this;
-    }
 
-
-    public AccountingContact withFirstName(Optional<String> firstName) {
-        Utils.checkNotNull(firstName, "firstName");
+    public AccountingContact withFirstName(@Nullable String firstName) {
         this.firstName = firstName;
         return this;
     }
 
-    public AccountingContact withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public AccountingContact withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public AccountingContact withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public AccountingContact withIdentification(String identification) {
-        Utils.checkNotNull(identification, "identification");
-        this.identification = Optional.ofNullable(identification);
-        return this;
-    }
 
-
-    public AccountingContact withIdentification(Optional<String> identification) {
-        Utils.checkNotNull(identification, "identification");
+    public AccountingContact withIdentification(@Nullable String identification) {
         this.identification = identification;
         return this;
     }
 
-    public AccountingContact withIsActive(boolean isActive) {
-        Utils.checkNotNull(isActive, "isActive");
-        this.isActive = Optional.ofNullable(isActive);
-        return this;
-    }
 
-
-    public AccountingContact withIsActive(Optional<Boolean> isActive) {
-        Utils.checkNotNull(isActive, "isActive");
+    public AccountingContact withIsActive(@Nullable Boolean isActive) {
         this.isActive = isActive;
         return this;
     }
 
-    public AccountingContact withIsCustomer(boolean isCustomer) {
-        Utils.checkNotNull(isCustomer, "isCustomer");
-        this.isCustomer = Optional.ofNullable(isCustomer);
-        return this;
-    }
 
-
-    public AccountingContact withIsCustomer(Optional<Boolean> isCustomer) {
-        Utils.checkNotNull(isCustomer, "isCustomer");
+    public AccountingContact withIsCustomer(@Nullable Boolean isCustomer) {
         this.isCustomer = isCustomer;
         return this;
     }
 
-    public AccountingContact withIsSupplier(boolean isSupplier) {
-        Utils.checkNotNull(isSupplier, "isSupplier");
-        this.isSupplier = Optional.ofNullable(isSupplier);
-        return this;
-    }
 
-
-    public AccountingContact withIsSupplier(Optional<Boolean> isSupplier) {
-        Utils.checkNotNull(isSupplier, "isSupplier");
+    public AccountingContact withIsSupplier(@Nullable Boolean isSupplier) {
         this.isSupplier = isSupplier;
         return this;
     }
 
-    public AccountingContact withLastName(String lastName) {
-        Utils.checkNotNull(lastName, "lastName");
-        this.lastName = Optional.ofNullable(lastName);
-        return this;
-    }
 
-
-    public AccountingContact withLastName(Optional<String> lastName) {
-        Utils.checkNotNull(lastName, "lastName");
+    public AccountingContact withLastName(@Nullable String lastName) {
         this.lastName = lastName;
         return this;
     }
 
-    public AccountingContact withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = Optional.ofNullable(name);
-        return this;
-    }
 
-
-    public AccountingContact withName(Optional<String> name) {
-        Utils.checkNotNull(name, "name");
+    public AccountingContact withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
-    public AccountingContact withPaymentMethods(List<AccountingContactPaymentMethod> paymentMethods) {
-        Utils.checkNotNull(paymentMethods, "paymentMethods");
-        this.paymentMethods = Optional.ofNullable(paymentMethods);
-        return this;
-    }
 
-
-    public AccountingContact withPaymentMethods(Optional<? extends List<AccountingContactPaymentMethod>> paymentMethods) {
-        Utils.checkNotNull(paymentMethods, "paymentMethods");
+    public AccountingContact withPaymentMethods(@Nullable List<AccountingContactPaymentMethod> paymentMethods) {
         this.paymentMethods = paymentMethods;
         return this;
     }
 
-    public AccountingContact withPortalUrl(String portalUrl) {
-        Utils.checkNotNull(portalUrl, "portalUrl");
-        this.portalUrl = Optional.ofNullable(portalUrl);
-        return this;
-    }
 
-
-    public AccountingContact withPortalUrl(Optional<String> portalUrl) {
-        Utils.checkNotNull(portalUrl, "portalUrl");
+    public AccountingContact withPortalUrl(@Nullable String portalUrl) {
         this.portalUrl = portalUrl;
         return this;
     }
 
-    public AccountingContact withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public AccountingContact withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public AccountingContact withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public AccountingContact withShippingAddress(PropertyAccountingContactShippingAddress shippingAddress) {
-        Utils.checkNotNull(shippingAddress, "shippingAddress");
-        this.shippingAddress = Optional.ofNullable(shippingAddress);
-        return this;
-    }
 
-
-    public AccountingContact withShippingAddress(Optional<? extends PropertyAccountingContactShippingAddress> shippingAddress) {
-        Utils.checkNotNull(shippingAddress, "shippingAddress");
+    public AccountingContact withShippingAddress(@Nullable PropertyAccountingContactShippingAddress shippingAddress) {
         this.shippingAddress = shippingAddress;
         return this;
     }
 
-    public AccountingContact withTaxExemption(TaxExemption taxExemption) {
-        Utils.checkNotNull(taxExemption, "taxExemption");
-        this.taxExemption = Optional.ofNullable(taxExemption);
-        return this;
-    }
 
-
-    public AccountingContact withTaxExemption(Optional<? extends TaxExemption> taxExemption) {
-        Utils.checkNotNull(taxExemption, "taxExemption");
+    public AccountingContact withTaxExemption(@Nullable TaxExemption taxExemption) {
         this.taxExemption = taxExemption;
         return this;
     }
 
-    public AccountingContact withTaxNumber(String taxNumber) {
-        Utils.checkNotNull(taxNumber, "taxNumber");
-        this.taxNumber = Optional.ofNullable(taxNumber);
-        return this;
-    }
 
-
-    public AccountingContact withTaxNumber(Optional<String> taxNumber) {
-        Utils.checkNotNull(taxNumber, "taxNumber");
+    public AccountingContact withTaxNumber(@Nullable String taxNumber) {
         this.taxNumber = taxNumber;
         return this;
     }
 
-    public AccountingContact withTelephones(List<AccountingTelephone> telephones) {
-        Utils.checkNotNull(telephones, "telephones");
-        this.telephones = Optional.ofNullable(telephones);
-        return this;
-    }
 
-
-    public AccountingContact withTelephones(Optional<? extends List<AccountingTelephone>> telephones) {
-        Utils.checkNotNull(telephones, "telephones");
+    public AccountingContact withTelephones(@Nullable List<AccountingTelephone> telephones) {
         this.telephones = telephones;
         return this;
     }
 
-    public AccountingContact withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public AccountingContact withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public AccountingContact withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -700,345 +494,165 @@ public class AccountingContact {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends List<AccountingAssociatedContact>> associatedContacts = Optional.empty();
+        private List<AccountingAssociatedContact> associatedContacts;
 
-        private Optional<? extends PropertyAccountingContactBillingAddress> billingAddress = Optional.empty();
+        private PropertyAccountingContactBillingAddress billingAddress;
 
-        private Optional<String> companyName = Optional.empty();
+        private String companyName;
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<String> currency;
+        private String currency;
 
-        private Optional<? extends List<AccountingEmail>> emails = Optional.empty();
+        private List<AccountingEmail> emails;
 
-        private Optional<String> firstName = Optional.empty();
+        private String firstName;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<String> identification = Optional.empty();
+        private String identification;
 
-        private Optional<Boolean> isActive = Optional.empty();
+        private Boolean isActive;
 
-        private Optional<Boolean> isCustomer = Optional.empty();
+        private Boolean isCustomer;
 
-        private Optional<Boolean> isSupplier = Optional.empty();
+        private Boolean isSupplier;
 
-        private Optional<String> lastName = Optional.empty();
+        private String lastName;
 
-        private Optional<String> name = Optional.empty();
+        private String name;
 
-        private Optional<? extends List<AccountingContactPaymentMethod>> paymentMethods = Optional.empty();
+        private List<AccountingContactPaymentMethod> paymentMethods;
 
-        private Optional<String> portalUrl = Optional.empty();
+        private String portalUrl;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<? extends PropertyAccountingContactShippingAddress> shippingAddress = Optional.empty();
+        private PropertyAccountingContactShippingAddress shippingAddress;
 
-        private Optional<? extends TaxExemption> taxExemption = Optional.empty();
+        private TaxExemption taxExemption;
 
-        private Optional<String> taxNumber = Optional.empty();
+        private String taxNumber;
 
-        private Optional<? extends List<AccountingTelephone>> telephones = Optional.empty();
+        private List<AccountingTelephone> telephones;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder associatedContacts(List<AccountingAssociatedContact> associatedContacts) {
-            Utils.checkNotNull(associatedContacts, "associatedContacts");
-            this.associatedContacts = Optional.ofNullable(associatedContacts);
-            return this;
-        }
-
-        public Builder associatedContacts(Optional<? extends List<AccountingAssociatedContact>> associatedContacts) {
-            Utils.checkNotNull(associatedContacts, "associatedContacts");
+        public Builder associatedContacts(@Nullable List<AccountingAssociatedContact> associatedContacts) {
             this.associatedContacts = associatedContacts;
             return this;
         }
 
-
-        public Builder billingAddress(PropertyAccountingContactBillingAddress billingAddress) {
-            Utils.checkNotNull(billingAddress, "billingAddress");
-            this.billingAddress = Optional.ofNullable(billingAddress);
-            return this;
-        }
-
-        public Builder billingAddress(Optional<? extends PropertyAccountingContactBillingAddress> billingAddress) {
-            Utils.checkNotNull(billingAddress, "billingAddress");
+        public Builder billingAddress(@Nullable PropertyAccountingContactBillingAddress billingAddress) {
             this.billingAddress = billingAddress;
             return this;
         }
 
-
-        public Builder companyName(String companyName) {
-            Utils.checkNotNull(companyName, "companyName");
-            this.companyName = Optional.ofNullable(companyName);
-            return this;
-        }
-
-        public Builder companyName(Optional<String> companyName) {
-            Utils.checkNotNull(companyName, "companyName");
+        public Builder companyName(@Nullable String companyName) {
             this.companyName = companyName;
             return this;
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder currency(String currency) {
-            Utils.checkNotNull(currency, "currency");
-            this.currency = Optional.ofNullable(currency);
-            return this;
-        }
-
-        public Builder currency(Optional<String> currency) {
-            Utils.checkNotNull(currency, "currency");
+        public Builder currency(@Nullable String currency) {
             this.currency = currency;
             return this;
         }
 
-
-        public Builder emails(List<AccountingEmail> emails) {
-            Utils.checkNotNull(emails, "emails");
-            this.emails = Optional.ofNullable(emails);
-            return this;
-        }
-
-        public Builder emails(Optional<? extends List<AccountingEmail>> emails) {
-            Utils.checkNotNull(emails, "emails");
+        public Builder emails(@Nullable List<AccountingEmail> emails) {
             this.emails = emails;
             return this;
         }
 
-
-        public Builder firstName(String firstName) {
-            Utils.checkNotNull(firstName, "firstName");
-            this.firstName = Optional.ofNullable(firstName);
-            return this;
-        }
-
-        public Builder firstName(Optional<String> firstName) {
-            Utils.checkNotNull(firstName, "firstName");
+        public Builder firstName(@Nullable String firstName) {
             this.firstName = firstName;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder identification(String identification) {
-            Utils.checkNotNull(identification, "identification");
-            this.identification = Optional.ofNullable(identification);
-            return this;
-        }
-
-        public Builder identification(Optional<String> identification) {
-            Utils.checkNotNull(identification, "identification");
+        public Builder identification(@Nullable String identification) {
             this.identification = identification;
             return this;
         }
 
-
-        public Builder isActive(boolean isActive) {
-            Utils.checkNotNull(isActive, "isActive");
-            this.isActive = Optional.ofNullable(isActive);
-            return this;
-        }
-
-        public Builder isActive(Optional<Boolean> isActive) {
-            Utils.checkNotNull(isActive, "isActive");
+        public Builder isActive(@Nullable Boolean isActive) {
             this.isActive = isActive;
             return this;
         }
 
-
-        public Builder isCustomer(boolean isCustomer) {
-            Utils.checkNotNull(isCustomer, "isCustomer");
-            this.isCustomer = Optional.ofNullable(isCustomer);
-            return this;
-        }
-
-        public Builder isCustomer(Optional<Boolean> isCustomer) {
-            Utils.checkNotNull(isCustomer, "isCustomer");
+        public Builder isCustomer(@Nullable Boolean isCustomer) {
             this.isCustomer = isCustomer;
             return this;
         }
 
-
-        public Builder isSupplier(boolean isSupplier) {
-            Utils.checkNotNull(isSupplier, "isSupplier");
-            this.isSupplier = Optional.ofNullable(isSupplier);
-            return this;
-        }
-
-        public Builder isSupplier(Optional<Boolean> isSupplier) {
-            Utils.checkNotNull(isSupplier, "isSupplier");
+        public Builder isSupplier(@Nullable Boolean isSupplier) {
             this.isSupplier = isSupplier;
             return this;
         }
 
-
-        public Builder lastName(String lastName) {
-            Utils.checkNotNull(lastName, "lastName");
-            this.lastName = Optional.ofNullable(lastName);
-            return this;
-        }
-
-        public Builder lastName(Optional<String> lastName) {
-            Utils.checkNotNull(lastName, "lastName");
+        public Builder lastName(@Nullable String lastName) {
             this.lastName = lastName;
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = Optional.ofNullable(name);
-            return this;
-        }
-
-        public Builder name(Optional<String> name) {
-            Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-
-        public Builder paymentMethods(List<AccountingContactPaymentMethod> paymentMethods) {
-            Utils.checkNotNull(paymentMethods, "paymentMethods");
-            this.paymentMethods = Optional.ofNullable(paymentMethods);
-            return this;
-        }
-
-        public Builder paymentMethods(Optional<? extends List<AccountingContactPaymentMethod>> paymentMethods) {
-            Utils.checkNotNull(paymentMethods, "paymentMethods");
+        public Builder paymentMethods(@Nullable List<AccountingContactPaymentMethod> paymentMethods) {
             this.paymentMethods = paymentMethods;
             return this;
         }
 
-
-        public Builder portalUrl(String portalUrl) {
-            Utils.checkNotNull(portalUrl, "portalUrl");
-            this.portalUrl = Optional.ofNullable(portalUrl);
-            return this;
-        }
-
-        public Builder portalUrl(Optional<String> portalUrl) {
-            Utils.checkNotNull(portalUrl, "portalUrl");
+        public Builder portalUrl(@Nullable String portalUrl) {
             this.portalUrl = portalUrl;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder shippingAddress(PropertyAccountingContactShippingAddress shippingAddress) {
-            Utils.checkNotNull(shippingAddress, "shippingAddress");
-            this.shippingAddress = Optional.ofNullable(shippingAddress);
-            return this;
-        }
-
-        public Builder shippingAddress(Optional<? extends PropertyAccountingContactShippingAddress> shippingAddress) {
-            Utils.checkNotNull(shippingAddress, "shippingAddress");
+        public Builder shippingAddress(@Nullable PropertyAccountingContactShippingAddress shippingAddress) {
             this.shippingAddress = shippingAddress;
             return this;
         }
 
-
-        public Builder taxExemption(TaxExemption taxExemption) {
-            Utils.checkNotNull(taxExemption, "taxExemption");
-            this.taxExemption = Optional.ofNullable(taxExemption);
-            return this;
-        }
-
-        public Builder taxExemption(Optional<? extends TaxExemption> taxExemption) {
-            Utils.checkNotNull(taxExemption, "taxExemption");
+        public Builder taxExemption(@Nullable TaxExemption taxExemption) {
             this.taxExemption = taxExemption;
             return this;
         }
 
-
-        public Builder taxNumber(String taxNumber) {
-            Utils.checkNotNull(taxNumber, "taxNumber");
-            this.taxNumber = Optional.ofNullable(taxNumber);
-            return this;
-        }
-
-        public Builder taxNumber(Optional<String> taxNumber) {
-            Utils.checkNotNull(taxNumber, "taxNumber");
+        public Builder taxNumber(@Nullable String taxNumber) {
             this.taxNumber = taxNumber;
             return this;
         }
 
-
-        public Builder telephones(List<AccountingTelephone> telephones) {
-            Utils.checkNotNull(telephones, "telephones");
-            this.telephones = Optional.ofNullable(telephones);
-            return this;
-        }
-
-        public Builder telephones(Optional<? extends List<AccountingTelephone>> telephones) {
-            Utils.checkNotNull(telephones, "telephones");
+        public Builder telephones(@Nullable List<AccountingTelephone> telephones) {
             this.telephones = telephones;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
         public AccountingContact build() {
-            if (currency == null) {
-                currency = _SINGLETON_VALUE_Currency.value();
-            }
-
             return new AccountingContact(
                 associatedContacts, billingAddress, companyName,
                 createdAt, currency, emails,
@@ -1051,10 +665,10 @@ public class AccountingContact {
         }
 
 
-        private static final LazySingletonValue<Optional<String>> _SINGLETON_VALUE_Currency =
+        private static final LazySingletonValue<String> _SINGLETON_VALUE_Currency =
                 new LazySingletonValue<>(
                         "currency",
                         "\"USD\"",
-                        new TypeReference<Optional<String>>() {});
+                        new TypeReference<String>() {});
     }
 }

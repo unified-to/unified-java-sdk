@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateCrmDealRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCrmDealRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateCrmDealResponse;
@@ -67,7 +68,7 @@ public class Deal {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCrmDealResponse createCrmDeal(CreateCrmDealRequest request) {
+    public CreateCrmDealResponse createCrmDeal(@Nonnull CreateCrmDealRequest request) {
         RequestOperation<CreateCrmDealRequest, CreateCrmDealResponse> operation
               = new CreateCrmDeal.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -89,7 +90,7 @@ public class Deal {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetCrmDealResponse getCrmDeal(GetCrmDealRequest request) {
+    public GetCrmDealResponse getCrmDeal(@Nonnull GetCrmDealRequest request) {
         RequestOperation<GetCrmDealRequest, GetCrmDealResponse> operation
               = new GetCrmDeal.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -111,7 +112,7 @@ public class Deal {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCrmDealsResponse listCrmDeals(ListCrmDealsRequest request) {
+    public ListCrmDealsResponse listCrmDeals(@Nonnull ListCrmDealsRequest request) {
         RequestOperation<ListCrmDealsRequest, ListCrmDealsResponse> operation
               = new ListCrmDeals.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -133,7 +134,7 @@ public class Deal {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCrmDealResponse patchCrmDeal(PatchCrmDealRequest request) {
+    public PatchCrmDealResponse patchCrmDeal(@Nonnull PatchCrmDealRequest request) {
         RequestOperation<PatchCrmDealRequest, PatchCrmDealResponse> operation
               = new PatchCrmDeal.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -155,7 +156,7 @@ public class Deal {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCrmDealResponse removeCrmDeal(RemoveCrmDealRequest request) {
+    public RemoveCrmDealResponse removeCrmDeal(@Nonnull RemoveCrmDealRequest request) {
         RequestOperation<RemoveCrmDealRequest, RemoveCrmDealResponse> operation
               = new RemoveCrmDeal.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -177,7 +178,7 @@ public class Deal {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCrmDealResponse updateCrmDeal(UpdateCrmDealRequest request) {
+    public UpdateCrmDealResponse updateCrmDeal(@Nonnull UpdateCrmDealRequest request) {
         RequestOperation<UpdateCrmDealRequest, UpdateCrmDealResponse> operation
               = new UpdateCrmDeal.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

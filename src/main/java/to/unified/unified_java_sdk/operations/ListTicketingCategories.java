@@ -8,6 +8,7 @@ import static to.unified.unified_java_sdk.utils.Exceptions.unchecked;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import com.fasterxml.jackson.core.type.TypeReference;
+import jakarta.annotation.Nonnull;
 import java.io.InputStream;
 import java.lang.Exception;
 import java.lang.String;
@@ -43,7 +44,7 @@ public class ListTicketingCategories {
         final HTTPClient client;
         final Headers _headers;
 
-        public Base(SDKConfiguration sdkConfiguration, Headers _headers) {
+        public Base(@Nonnull SDKConfiguration sdkConfiguration, Headers _headers) {
             this.sdkConfiguration = sdkConfiguration;
             this._headers =_headers;
             this.baseUrl = this.sdkConfiguration.serverUrl();
@@ -104,7 +105,7 @@ public class ListTicketingCategories {
 
     public static class Sync extends Base
             implements RequestOperation<ListTicketingCategoriesRequest, ListTicketingCategoriesResponse> {
-        public Sync(SDKConfiguration sdkConfiguration, Headers _headers) {
+        public Sync(@Nonnull SDKConfiguration sdkConfiguration, Headers _headers) {
             super(sdkConfiguration, _headers);
         }
 
@@ -179,7 +180,7 @@ public class ListTicketingCategories {
     public static class Async extends Base
             implements AsyncRequestOperation<ListTicketingCategoriesRequest, to.unified.unified_java_sdk.models.operations.async.ListTicketingCategoriesResponse> {
 
-        public Async(SDKConfiguration sdkConfiguration, Headers _headers) {
+        public Async(@Nonnull SDKConfiguration sdkConfiguration, Headers _headers) {
             super(sdkConfiguration, _headers);
         }
 

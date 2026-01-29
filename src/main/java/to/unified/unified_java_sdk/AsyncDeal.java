@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateCrmDealRequest;
 import to.unified.unified_java_sdk.models.operations.GetCrmDealRequest;
@@ -68,7 +69,7 @@ public class AsyncDeal {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCrmDealResponse>} - The async response
      */
-    public CompletableFuture<CreateCrmDealResponse> createCrmDeal(CreateCrmDealRequest request) {
+    public CompletableFuture<CreateCrmDealResponse> createCrmDeal(@Nonnull CreateCrmDealRequest request) {
         AsyncRequestOperation<CreateCrmDealRequest, CreateCrmDealResponse> operation
               = new CreateCrmDeal.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -91,7 +92,7 @@ public class AsyncDeal {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCrmDealResponse>} - The async response
      */
-    public CompletableFuture<GetCrmDealResponse> getCrmDeal(GetCrmDealRequest request) {
+    public CompletableFuture<GetCrmDealResponse> getCrmDeal(@Nonnull GetCrmDealRequest request) {
         AsyncRequestOperation<GetCrmDealRequest, GetCrmDealResponse> operation
               = new GetCrmDeal.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -114,7 +115,7 @@ public class AsyncDeal {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCrmDealsResponse>} - The async response
      */
-    public CompletableFuture<ListCrmDealsResponse> listCrmDeals(ListCrmDealsRequest request) {
+    public CompletableFuture<ListCrmDealsResponse> listCrmDeals(@Nonnull ListCrmDealsRequest request) {
         AsyncRequestOperation<ListCrmDealsRequest, ListCrmDealsResponse> operation
               = new ListCrmDeals.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -137,7 +138,7 @@ public class AsyncDeal {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCrmDealResponse>} - The async response
      */
-    public CompletableFuture<PatchCrmDealResponse> patchCrmDeal(PatchCrmDealRequest request) {
+    public CompletableFuture<PatchCrmDealResponse> patchCrmDeal(@Nonnull PatchCrmDealRequest request) {
         AsyncRequestOperation<PatchCrmDealRequest, PatchCrmDealResponse> operation
               = new PatchCrmDeal.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -160,7 +161,7 @@ public class AsyncDeal {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCrmDealResponse>} - The async response
      */
-    public CompletableFuture<RemoveCrmDealResponse> removeCrmDeal(RemoveCrmDealRequest request) {
+    public CompletableFuture<RemoveCrmDealResponse> removeCrmDeal(@Nonnull RemoveCrmDealRequest request) {
         AsyncRequestOperation<RemoveCrmDealRequest, RemoveCrmDealResponse> operation
               = new RemoveCrmDeal.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -183,7 +184,7 @@ public class AsyncDeal {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCrmDealResponse>} - The async response
      */
-    public CompletableFuture<UpdateCrmDealResponse> updateCrmDeal(UpdateCrmDealRequest request) {
+    public CompletableFuture<UpdateCrmDealResponse> updateCrmDeal(@Nonnull UpdateCrmDealRequest request) {
         AsyncRequestOperation<UpdateCrmDealRequest, UpdateCrmDealResponse> operation
               = new UpdateCrmDeal.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

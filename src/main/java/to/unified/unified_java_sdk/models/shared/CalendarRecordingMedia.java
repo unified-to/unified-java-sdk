@@ -4,13 +4,12 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Optional;
@@ -21,54 +20,47 @@ public class CalendarRecordingMedia {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attendees")
-    private Optional<? extends List<CalendarAttendee>> attendees;
+    private List<CalendarAttendee> attendees;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
-    private Optional<OffsetDateTime> endAt;
+    private OffsetDateTime endAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
-    private Optional<String> language;
+    private String language;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recording_download_url")
-    private Optional<String> recordingDownloadUrl;
+    private String recordingDownloadUrl;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
-    private Optional<OffsetDateTime> startAt;
+    private OffsetDateTime startAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transcript_download_url")
-    private Optional<String> transcriptDownloadUrl;
+    private String transcriptDownloadUrl;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transcripts")
-    private Optional<? extends List<CalendarRecordingTranscript>> transcripts;
+    private List<CalendarRecordingTranscript> transcripts;
 
     @JsonCreator
     public CalendarRecordingMedia(
-            @JsonProperty("attendees") Optional<? extends List<CalendarAttendee>> attendees,
-            @JsonProperty("end_at") Optional<OffsetDateTime> endAt,
-            @JsonProperty("language") Optional<String> language,
-            @JsonProperty("recording_download_url") Optional<String> recordingDownloadUrl,
-            @JsonProperty("start_at") Optional<OffsetDateTime> startAt,
-            @JsonProperty("transcript_download_url") Optional<String> transcriptDownloadUrl,
-            @JsonProperty("transcripts") Optional<? extends List<CalendarRecordingTranscript>> transcripts) {
-        Utils.checkNotNull(attendees, "attendees");
-        Utils.checkNotNull(endAt, "endAt");
-        Utils.checkNotNull(language, "language");
-        Utils.checkNotNull(recordingDownloadUrl, "recordingDownloadUrl");
-        Utils.checkNotNull(startAt, "startAt");
-        Utils.checkNotNull(transcriptDownloadUrl, "transcriptDownloadUrl");
-        Utils.checkNotNull(transcripts, "transcripts");
+            @JsonProperty("attendees") @Nullable List<CalendarAttendee> attendees,
+            @JsonProperty("end_at") @Nullable OffsetDateTime endAt,
+            @JsonProperty("language") @Nullable String language,
+            @JsonProperty("recording_download_url") @Nullable String recordingDownloadUrl,
+            @JsonProperty("start_at") @Nullable OffsetDateTime startAt,
+            @JsonProperty("transcript_download_url") @Nullable String transcriptDownloadUrl,
+            @JsonProperty("transcripts") @Nullable List<CalendarRecordingTranscript> transcripts) {
         this.attendees = attendees;
         this.endAt = endAt;
         this.language = language;
@@ -79,46 +71,37 @@ public class CalendarRecordingMedia {
     }
     
     public CalendarRecordingMedia() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<CalendarAttendee>> attendees() {
-        return (Optional<List<CalendarAttendee>>) attendees;
+        return Optional.ofNullable(this.attendees);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> endAt() {
-        return endAt;
+        return Optional.ofNullable(this.endAt);
     }
 
-    @JsonIgnore
     public Optional<String> language() {
-        return language;
+        return Optional.ofNullable(this.language);
     }
 
-    @JsonIgnore
     public Optional<String> recordingDownloadUrl() {
-        return recordingDownloadUrl;
+        return Optional.ofNullable(this.recordingDownloadUrl);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> startAt() {
-        return startAt;
+        return Optional.ofNullable(this.startAt);
     }
 
-    @JsonIgnore
     public Optional<String> transcriptDownloadUrl() {
-        return transcriptDownloadUrl;
+        return Optional.ofNullable(this.transcriptDownloadUrl);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<CalendarRecordingTranscript>> transcripts() {
-        return (Optional<List<CalendarRecordingTranscript>>) transcripts;
+        return Optional.ofNullable(this.transcripts);
     }
 
     public static Builder builder() {
@@ -126,96 +109,47 @@ public class CalendarRecordingMedia {
     }
 
 
-    public CalendarRecordingMedia withAttendees(List<CalendarAttendee> attendees) {
-        Utils.checkNotNull(attendees, "attendees");
-        this.attendees = Optional.ofNullable(attendees);
-        return this;
-    }
-
-
-    public CalendarRecordingMedia withAttendees(Optional<? extends List<CalendarAttendee>> attendees) {
-        Utils.checkNotNull(attendees, "attendees");
+    public CalendarRecordingMedia withAttendees(@Nullable List<CalendarAttendee> attendees) {
         this.attendees = attendees;
         return this;
     }
 
-    public CalendarRecordingMedia withEndAt(OffsetDateTime endAt) {
-        Utils.checkNotNull(endAt, "endAt");
-        this.endAt = Optional.ofNullable(endAt);
-        return this;
-    }
 
-
-    public CalendarRecordingMedia withEndAt(Optional<OffsetDateTime> endAt) {
-        Utils.checkNotNull(endAt, "endAt");
+    public CalendarRecordingMedia withEndAt(@Nullable OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
     }
 
-    public CalendarRecordingMedia withLanguage(String language) {
-        Utils.checkNotNull(language, "language");
-        this.language = Optional.ofNullable(language);
-        return this;
-    }
 
-
-    public CalendarRecordingMedia withLanguage(Optional<String> language) {
-        Utils.checkNotNull(language, "language");
+    public CalendarRecordingMedia withLanguage(@Nullable String language) {
         this.language = language;
         return this;
     }
 
-    public CalendarRecordingMedia withRecordingDownloadUrl(String recordingDownloadUrl) {
-        Utils.checkNotNull(recordingDownloadUrl, "recordingDownloadUrl");
-        this.recordingDownloadUrl = Optional.ofNullable(recordingDownloadUrl);
-        return this;
-    }
 
-
-    public CalendarRecordingMedia withRecordingDownloadUrl(Optional<String> recordingDownloadUrl) {
-        Utils.checkNotNull(recordingDownloadUrl, "recordingDownloadUrl");
+    public CalendarRecordingMedia withRecordingDownloadUrl(@Nullable String recordingDownloadUrl) {
         this.recordingDownloadUrl = recordingDownloadUrl;
         return this;
     }
 
-    public CalendarRecordingMedia withStartAt(OffsetDateTime startAt) {
-        Utils.checkNotNull(startAt, "startAt");
-        this.startAt = Optional.ofNullable(startAt);
-        return this;
-    }
 
-
-    public CalendarRecordingMedia withStartAt(Optional<OffsetDateTime> startAt) {
-        Utils.checkNotNull(startAt, "startAt");
+    public CalendarRecordingMedia withStartAt(@Nullable OffsetDateTime startAt) {
         this.startAt = startAt;
         return this;
     }
 
-    public CalendarRecordingMedia withTranscriptDownloadUrl(String transcriptDownloadUrl) {
-        Utils.checkNotNull(transcriptDownloadUrl, "transcriptDownloadUrl");
-        this.transcriptDownloadUrl = Optional.ofNullable(transcriptDownloadUrl);
-        return this;
-    }
 
-
-    public CalendarRecordingMedia withTranscriptDownloadUrl(Optional<String> transcriptDownloadUrl) {
-        Utils.checkNotNull(transcriptDownloadUrl, "transcriptDownloadUrl");
+    public CalendarRecordingMedia withTranscriptDownloadUrl(@Nullable String transcriptDownloadUrl) {
         this.transcriptDownloadUrl = transcriptDownloadUrl;
         return this;
     }
 
-    public CalendarRecordingMedia withTranscripts(List<CalendarRecordingTranscript> transcripts) {
-        Utils.checkNotNull(transcripts, "transcripts");
-        this.transcripts = Optional.ofNullable(transcripts);
-        return this;
-    }
 
-
-    public CalendarRecordingMedia withTranscripts(Optional<? extends List<CalendarRecordingTranscript>> transcripts) {
-        Utils.checkNotNull(transcripts, "transcripts");
+    public CalendarRecordingMedia withTranscripts(@Nullable List<CalendarRecordingTranscript> transcripts) {
         this.transcripts = transcripts;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -259,117 +193,60 @@ public class CalendarRecordingMedia {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends List<CalendarAttendee>> attendees = Optional.empty();
+        private List<CalendarAttendee> attendees;
 
-        private Optional<OffsetDateTime> endAt = Optional.empty();
+        private OffsetDateTime endAt;
 
-        private Optional<String> language = Optional.empty();
+        private String language;
 
-        private Optional<String> recordingDownloadUrl = Optional.empty();
+        private String recordingDownloadUrl;
 
-        private Optional<OffsetDateTime> startAt = Optional.empty();
+        private OffsetDateTime startAt;
 
-        private Optional<String> transcriptDownloadUrl = Optional.empty();
+        private String transcriptDownloadUrl;
 
-        private Optional<? extends List<CalendarRecordingTranscript>> transcripts = Optional.empty();
+        private List<CalendarRecordingTranscript> transcripts;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder attendees(List<CalendarAttendee> attendees) {
-            Utils.checkNotNull(attendees, "attendees");
-            this.attendees = Optional.ofNullable(attendees);
-            return this;
-        }
-
-        public Builder attendees(Optional<? extends List<CalendarAttendee>> attendees) {
-            Utils.checkNotNull(attendees, "attendees");
+        public Builder attendees(@Nullable List<CalendarAttendee> attendees) {
             this.attendees = attendees;
             return this;
         }
 
-
-        public Builder endAt(OffsetDateTime endAt) {
-            Utils.checkNotNull(endAt, "endAt");
-            this.endAt = Optional.ofNullable(endAt);
-            return this;
-        }
-
-        public Builder endAt(Optional<OffsetDateTime> endAt) {
-            Utils.checkNotNull(endAt, "endAt");
+        public Builder endAt(@Nullable OffsetDateTime endAt) {
             this.endAt = endAt;
             return this;
         }
 
-
-        public Builder language(String language) {
-            Utils.checkNotNull(language, "language");
-            this.language = Optional.ofNullable(language);
-            return this;
-        }
-
-        public Builder language(Optional<String> language) {
-            Utils.checkNotNull(language, "language");
+        public Builder language(@Nullable String language) {
             this.language = language;
             return this;
         }
 
-
-        public Builder recordingDownloadUrl(String recordingDownloadUrl) {
-            Utils.checkNotNull(recordingDownloadUrl, "recordingDownloadUrl");
-            this.recordingDownloadUrl = Optional.ofNullable(recordingDownloadUrl);
-            return this;
-        }
-
-        public Builder recordingDownloadUrl(Optional<String> recordingDownloadUrl) {
-            Utils.checkNotNull(recordingDownloadUrl, "recordingDownloadUrl");
+        public Builder recordingDownloadUrl(@Nullable String recordingDownloadUrl) {
             this.recordingDownloadUrl = recordingDownloadUrl;
             return this;
         }
 
-
-        public Builder startAt(OffsetDateTime startAt) {
-            Utils.checkNotNull(startAt, "startAt");
-            this.startAt = Optional.ofNullable(startAt);
-            return this;
-        }
-
-        public Builder startAt(Optional<OffsetDateTime> startAt) {
-            Utils.checkNotNull(startAt, "startAt");
+        public Builder startAt(@Nullable OffsetDateTime startAt) {
             this.startAt = startAt;
             return this;
         }
 
-
-        public Builder transcriptDownloadUrl(String transcriptDownloadUrl) {
-            Utils.checkNotNull(transcriptDownloadUrl, "transcriptDownloadUrl");
-            this.transcriptDownloadUrl = Optional.ofNullable(transcriptDownloadUrl);
-            return this;
-        }
-
-        public Builder transcriptDownloadUrl(Optional<String> transcriptDownloadUrl) {
-            Utils.checkNotNull(transcriptDownloadUrl, "transcriptDownloadUrl");
+        public Builder transcriptDownloadUrl(@Nullable String transcriptDownloadUrl) {
             this.transcriptDownloadUrl = transcriptDownloadUrl;
             return this;
         }
 
-
-        public Builder transcripts(List<CalendarRecordingTranscript> transcripts) {
-            Utils.checkNotNull(transcripts, "transcripts");
-            this.transcripts = Optional.ofNullable(transcripts);
-            return this;
-        }
-
-        public Builder transcripts(Optional<? extends List<CalendarRecordingTranscript>> transcripts) {
-            Utils.checkNotNull(transcripts, "transcripts");
+        public Builder transcripts(@Nullable List<CalendarRecordingTranscript> transcripts) {
             this.transcripts = transcripts;
             return this;
         }
 
         public CalendarRecordingMedia build() {
-
             return new CalendarRecordingMedia(
                 attendees, endAt, language,
                 recordingDownloadUrl, startAt, transcriptDownloadUrl,

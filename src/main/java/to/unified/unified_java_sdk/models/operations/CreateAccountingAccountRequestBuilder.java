@@ -5,32 +5,45 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.CreateAccountingAccount;
 import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateAccountingAccountRequestBuilder {
-
-    private CreateAccountingAccountRequest request;
     private final SDKConfiguration sdkConfiguration;
-    private final Headers _headers = new Headers(); 
+    private final Headers _headers = new Headers();
+    private CreateAccountingAccountRequest request;
 
     public CreateAccountingAccountRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
 
-    public CreateAccountingAccountRequestBuilder request(CreateAccountingAccountRequest request) {
-        Utils.checkNotNull(request, "request");
-        this.request = request;
+    public CreateAccountingAccountRequestBuilder request(@Nonnull CreateAccountingAccountRequest request) {
+        this.request = Utils.checkNotNull(request, "request");
         return this;
     }
 
+    private CreateAccountingAccountRequest _buildRequest() {
+        return this.request;
+    }
+    
+    public CreateAccountingAccountRequestBuilder header(String name, String value) {
+        Utils.checkNotNull(name, "name");
+        Utils.checkNotNull(value, "value");
+        this._headers.add(name, value);
+        return this;
+    }
+
+    /**
+    * Executes the request and returns the response.
+    *
+    * @return The response from the server.
+    */
     public CreateAccountingAccountResponse call() {
-        
         RequestOperation<CreateAccountingAccountRequest, CreateAccountingAccountResponse> operation
               = new CreateAccountingAccount.Sync(sdkConfiguration, _headers);
-
-        return operation.handleResponse(operation.doRequest(request));
+        return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

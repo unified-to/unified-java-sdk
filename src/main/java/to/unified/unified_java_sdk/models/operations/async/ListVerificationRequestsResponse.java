@@ -4,11 +4,11 @@
 package to.unified.unified_java_sdk.models.operations.async;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import java.lang.Integer;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.io.InputStream;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.List;
 import java.util.Optional;
@@ -37,63 +37,56 @@ public class ListVerificationRequestsResponse implements AsyncResponse {
     /**
      * Successful
      */
-    private Optional<? extends List<VerificationRequest>> verificationRequests;
+    private List<VerificationRequest> verificationRequests;
 
     @JsonCreator
     public ListVerificationRequestsResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<Blob> rawResponse,
-            Optional<? extends List<VerificationRequest>> verificationRequests) {
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        Utils.checkNotNull(verificationRequests, "verificationRequests");
-        this.contentType = contentType;
+            @Nonnull HttpResponse<Blob> rawResponse,
+            @Nullable List<VerificationRequest> verificationRequests) {
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
         this.verificationRequests = verificationRequests;
     }
     
     public ListVerificationRequestsResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
+            @Nonnull HttpResponse<Blob> rawResponse) {
         this(contentType, statusCode, rawResponse,
-            Optional.empty());
+            null);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<Blob> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<VerificationRequest>> verificationRequests() {
-        return (Optional<List<VerificationRequest>>) verificationRequests;
+        return Optional.ofNullable(this.verificationRequests);
     }
 
     public static Builder builder() {
@@ -104,36 +97,26 @@ public class ListVerificationRequestsResponse implements AsyncResponse {
     /**
      * HTTP response content type for this operation
      */
-    public ListVerificationRequestsResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
+    public ListVerificationRequestsResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public ListVerificationRequestsResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public ListVerificationRequestsResponse withRawResponse(HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
-        return this;
-    }
-
-    /**
-     * Successful
-     */
-    public ListVerificationRequestsResponse withVerificationRequests(List<VerificationRequest> verificationRequests) {
-        Utils.checkNotNull(verificationRequests, "verificationRequests");
-        this.verificationRequests = Optional.ofNullable(verificationRequests);
+    public ListVerificationRequestsResponse withRawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
 
@@ -141,11 +124,11 @@ public class ListVerificationRequestsResponse implements AsyncResponse {
     /**
      * Successful
      */
-    public ListVerificationRequestsResponse withVerificationRequests(Optional<? extends List<VerificationRequest>> verificationRequests) {
-        Utils.checkNotNull(verificationRequests, "verificationRequests");
+    public ListVerificationRequestsResponse withVerificationRequests(@Nullable List<VerificationRequest> verificationRequests) {
         this.verificationRequests = verificationRequests;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -184,67 +167,49 @@ public class ListVerificationRequestsResponse implements AsyncResponse {
 
         private String contentType;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<Blob> rawResponse;
 
-        private Optional<? extends List<VerificationRequest>> verificationRequests = Optional.empty();
+        private List<VerificationRequest> verificationRequests;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<Blob> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
-            return this;
-        }
-
-
-        /**
-         * Successful
-         */
-        public Builder verificationRequests(List<VerificationRequest> verificationRequests) {
-            Utils.checkNotNull(verificationRequests, "verificationRequests");
-            this.verificationRequests = Optional.ofNullable(verificationRequests);
+        public Builder rawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         /**
          * Successful
          */
-        public Builder verificationRequests(Optional<? extends List<VerificationRequest>> verificationRequests) {
-            Utils.checkNotNull(verificationRequests, "verificationRequests");
+        public Builder verificationRequests(@Nullable List<VerificationRequest> verificationRequests) {
             this.verificationRequests = verificationRequests;
             return this;
         }
 
         public ListVerificationRequestsResponse build() {
-
             return new ListVerificationRequestsResponse(
                 contentType, statusCode, rawResponse,
                 verificationRequests);

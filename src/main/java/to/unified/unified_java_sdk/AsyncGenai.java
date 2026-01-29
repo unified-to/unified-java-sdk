@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiEmbeddingRequest;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiPromptRequest;
@@ -60,7 +61,7 @@ public class AsyncGenai {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateGenaiEmbeddingResponse>} - The async response
      */
-    public CompletableFuture<CreateGenaiEmbeddingResponse> createGenaiEmbedding(CreateGenaiEmbeddingRequest request) {
+    public CompletableFuture<CreateGenaiEmbeddingResponse> createGenaiEmbedding(@Nonnull CreateGenaiEmbeddingRequest request) {
         AsyncRequestOperation<CreateGenaiEmbeddingRequest, CreateGenaiEmbeddingResponse> operation
               = new CreateGenaiEmbedding.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -83,7 +84,7 @@ public class AsyncGenai {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateGenaiPromptResponse>} - The async response
      */
-    public CompletableFuture<CreateGenaiPromptResponse> createGenaiPrompt(CreateGenaiPromptRequest request) {
+    public CompletableFuture<CreateGenaiPromptResponse> createGenaiPrompt(@Nonnull CreateGenaiPromptRequest request) {
         AsyncRequestOperation<CreateGenaiPromptRequest, CreateGenaiPromptResponse> operation
               = new CreateGenaiPrompt.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -106,7 +107,7 @@ public class AsyncGenai {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetGenaiModelResponse>} - The async response
      */
-    public CompletableFuture<GetGenaiModelResponse> getGenaiModel(GetGenaiModelRequest request) {
+    public CompletableFuture<GetGenaiModelResponse> getGenaiModel(@Nonnull GetGenaiModelRequest request) {
         AsyncRequestOperation<GetGenaiModelRequest, GetGenaiModelResponse> operation
               = new GetGenaiModel.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -129,7 +130,7 @@ public class AsyncGenai {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListGenaiModelsResponse>} - The async response
      */
-    public CompletableFuture<ListGenaiModelsResponse> listGenaiModels(ListGenaiModelsRequest request) {
+    public CompletableFuture<ListGenaiModelsResponse> listGenaiModels(@Nonnull ListGenaiModelsRequest request) {
         AsyncRequestOperation<ListGenaiModelsRequest, ListGenaiModelsResponse> operation
               = new ListGenaiModels.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

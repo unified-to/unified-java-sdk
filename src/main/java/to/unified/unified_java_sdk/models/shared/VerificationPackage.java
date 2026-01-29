@@ -4,16 +4,16 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
@@ -25,44 +25,44 @@ public class VerificationPackage {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aliases")
-    private Optional<? extends List<String>> aliases;
+    private List<String> aliases;
 
     /**
      * average processing time in minutes
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("average_processing_times")
-    private Optional<? extends List<VerificationTime>> averageProcessingTimes;
+    private List<VerificationTime> averageProcessingTimes;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cost_amount")
-    private Optional<Double> costAmount;
+    private Double costAmount;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
-    private Optional<String> currency;
+    private String currency;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
-    private Optional<String> description;
+    private String description;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_redirect_url")
-    private Optional<Boolean> hasRedirectUrl;
+    private Boolean hasRedirectUrl;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_target_url")
-    private Optional<Boolean> hasTargetUrl;
+    private Boolean hasTargetUrl;
 
 
     @JsonProperty("id")
@@ -71,12 +71,12 @@ public class VerificationPackage {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("info_url")
-    private Optional<String> infoUrl;
+    private String infoUrl;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max_score")
-    private Optional<Double> maxScore;
+    private Double maxScore;
 
 
     @JsonProperty("name")
@@ -85,26 +85,26 @@ public class VerificationPackage {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("needs_ip_address")
-    private Optional<Boolean> needsIpAddress;
+    private Boolean needsIpAddress;
 
     /**
      * Questions that need to be answered for this verification
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
-    private Optional<? extends List<VerificationParameter>> parameters;
+    private List<VerificationParameter> parameters;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
     /**
      * Category (Verification, Validation, Background Check)
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
-    private Optional<? extends List<String>> tags;
+    private List<String> tags;
 
 
     @JsonProperty("type")
@@ -113,46 +113,36 @@ public class VerificationPackage {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
+
+    /**
+     * {country}-{stateprovince/territory} or just {country} 2-digit ISO codes
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("valid_regions")
+    private List<String> validRegions;
 
     @JsonCreator
     public VerificationPackage(
-            @JsonProperty("aliases") Optional<? extends List<String>> aliases,
-            @JsonProperty("average_processing_times") Optional<? extends List<VerificationTime>> averageProcessingTimes,
-            @JsonProperty("cost_amount") Optional<Double> costAmount,
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("currency") Optional<String> currency,
-            @JsonProperty("description") Optional<String> description,
-            @JsonProperty("has_redirect_url") Optional<Boolean> hasRedirectUrl,
-            @JsonProperty("has_target_url") Optional<Boolean> hasTargetUrl,
-            @JsonProperty("id") String id,
-            @JsonProperty("info_url") Optional<String> infoUrl,
-            @JsonProperty("max_score") Optional<Double> maxScore,
-            @JsonProperty("name") String name,
-            @JsonProperty("needs_ip_address") Optional<Boolean> needsIpAddress,
-            @JsonProperty("parameters") Optional<? extends List<VerificationParameter>> parameters,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("tags") Optional<? extends List<String>> tags,
-            @JsonProperty("type") VerificationPackageType type,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(aliases, "aliases");
-        Utils.checkNotNull(averageProcessingTimes, "averageProcessingTimes");
-        Utils.checkNotNull(costAmount, "costAmount");
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(currency, "currency");
-        Utils.checkNotNull(description, "description");
-        Utils.checkNotNull(hasRedirectUrl, "hasRedirectUrl");
-        Utils.checkNotNull(hasTargetUrl, "hasTargetUrl");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(infoUrl, "infoUrl");
-        Utils.checkNotNull(maxScore, "maxScore");
-        Utils.checkNotNull(name, "name");
-        Utils.checkNotNull(needsIpAddress, "needsIpAddress");
-        Utils.checkNotNull(parameters, "parameters");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(tags, "tags");
-        Utils.checkNotNull(type, "type");
-        Utils.checkNotNull(updatedAt, "updatedAt");
+            @JsonProperty("aliases") @Nullable List<String> aliases,
+            @JsonProperty("average_processing_times") @Nullable List<VerificationTime> averageProcessingTimes,
+            @JsonProperty("cost_amount") @Nullable Double costAmount,
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("currency") @Nullable String currency,
+            @JsonProperty("description") @Nullable String description,
+            @JsonProperty("has_redirect_url") @Nullable Boolean hasRedirectUrl,
+            @JsonProperty("has_target_url") @Nullable Boolean hasTargetUrl,
+            @JsonProperty("id") @Nonnull String id,
+            @JsonProperty("info_url") @Nullable String infoUrl,
+            @JsonProperty("max_score") @Nullable Double maxScore,
+            @JsonProperty("name") @Nonnull String name,
+            @JsonProperty("needs_ip_address") @Nullable Boolean needsIpAddress,
+            @JsonProperty("parameters") @Nullable List<VerificationParameter> parameters,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("tags") @Nullable List<String> tags,
+            @JsonProperty("type") @Nonnull VerificationPackageType type,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
+            @JsonProperty("valid_regions") @Nullable List<String> validRegions) {
         this.aliases = aliases;
         this.averageProcessingTimes = averageProcessingTimes;
         this.costAmount = costAmount;
@@ -161,132 +151,121 @@ public class VerificationPackage {
         this.description = description;
         this.hasRedirectUrl = hasRedirectUrl;
         this.hasTargetUrl = hasTargetUrl;
-        this.id = id;
+        this.id = Optional.ofNullable(id)
+            .orElseThrow(() -> new IllegalArgumentException("id cannot be null"));
         this.infoUrl = infoUrl;
         this.maxScore = maxScore;
-        this.name = name;
+        this.name = Optional.ofNullable(name)
+            .orElseThrow(() -> new IllegalArgumentException("name cannot be null"));
         this.needsIpAddress = needsIpAddress;
         this.parameters = parameters;
         this.raw = raw;
         this.tags = tags;
-        this.type = type;
+        this.type = Optional.ofNullable(type)
+            .orElseThrow(() -> new IllegalArgumentException("type cannot be null"));
         this.updatedAt = updatedAt;
+        this.validRegions = validRegions;
     }
     
     public VerificationPackage(
-            String id,
-            String name,
-            VerificationPackageType type) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), id,
-            Optional.empty(), Optional.empty(), name,
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), type, Optional.empty());
+            @Nonnull String id,
+            @Nonnull String name,
+            @Nonnull VerificationPackageType type) {
+        this(null, null, null,
+            null, null, null,
+            null, null, id,
+            null, null, name,
+            null, null, null,
+            null, type, null,
+            null);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> aliases() {
-        return (Optional<List<String>>) aliases;
+        return Optional.ofNullable(this.aliases);
     }
 
     /**
      * average processing time in minutes
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<VerificationTime>> averageProcessingTimes() {
-        return (Optional<List<VerificationTime>>) averageProcessingTimes;
+        return Optional.ofNullable(this.averageProcessingTimes);
     }
 
-    @JsonIgnore
     public Optional<Double> costAmount() {
-        return costAmount;
+        return Optional.ofNullable(this.costAmount);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<String> currency() {
-        return currency;
+        return Optional.ofNullable(this.currency);
     }
 
-    @JsonIgnore
     public Optional<String> description() {
-        return description;
+        return Optional.ofNullable(this.description);
     }
 
-    @JsonIgnore
     public Optional<Boolean> hasRedirectUrl() {
-        return hasRedirectUrl;
+        return Optional.ofNullable(this.hasRedirectUrl);
     }
 
-    @JsonIgnore
     public Optional<Boolean> hasTargetUrl() {
-        return hasTargetUrl;
+        return Optional.ofNullable(this.hasTargetUrl);
     }
 
-    @JsonIgnore
     public String id() {
-        return id;
+        return this.id;
     }
 
-    @JsonIgnore
     public Optional<String> infoUrl() {
-        return infoUrl;
+        return Optional.ofNullable(this.infoUrl);
     }
 
-    @JsonIgnore
     public Optional<Double> maxScore() {
-        return maxScore;
+        return Optional.ofNullable(this.maxScore);
     }
 
-    @JsonIgnore
     public String name() {
-        return name;
+        return this.name;
     }
 
-    @JsonIgnore
     public Optional<Boolean> needsIpAddress() {
-        return needsIpAddress;
+        return Optional.ofNullable(this.needsIpAddress);
     }
 
     /**
      * Questions that need to be answered for this verification
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<VerificationParameter>> parameters() {
-        return (Optional<List<VerificationParameter>>) parameters;
+        return Optional.ofNullable(this.parameters);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
     /**
      * Category (Verification, Validation, Background Check)
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> tags() {
-        return (Optional<List<String>>) tags;
+        return Optional.ofNullable(this.tags);
     }
 
-    @JsonIgnore
     public VerificationPackageType type() {
-        return type;
+        return this.type;
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
+    }
+
+    /**
+     * {country}-{stateprovince/territory} or just {country} 2-digit ISO codes
+     */
+    public Optional<List<String>> validRegions() {
+        return Optional.ofNullable(this.validRegions);
     }
 
     public static Builder builder() {
@@ -294,236 +273,131 @@ public class VerificationPackage {
     }
 
 
-    public VerificationPackage withAliases(List<String> aliases) {
-        Utils.checkNotNull(aliases, "aliases");
-        this.aliases = Optional.ofNullable(aliases);
-        return this;
-    }
-
-
-    public VerificationPackage withAliases(Optional<? extends List<String>> aliases) {
-        Utils.checkNotNull(aliases, "aliases");
+    public VerificationPackage withAliases(@Nullable List<String> aliases) {
         this.aliases = aliases;
         return this;
     }
 
-    /**
-     * average processing time in minutes
-     */
-    public VerificationPackage withAverageProcessingTimes(List<VerificationTime> averageProcessingTimes) {
-        Utils.checkNotNull(averageProcessingTimes, "averageProcessingTimes");
-        this.averageProcessingTimes = Optional.ofNullable(averageProcessingTimes);
-        return this;
-    }
-
 
     /**
      * average processing time in minutes
      */
-    public VerificationPackage withAverageProcessingTimes(Optional<? extends List<VerificationTime>> averageProcessingTimes) {
-        Utils.checkNotNull(averageProcessingTimes, "averageProcessingTimes");
+    public VerificationPackage withAverageProcessingTimes(@Nullable List<VerificationTime> averageProcessingTimes) {
         this.averageProcessingTimes = averageProcessingTimes;
         return this;
     }
 
-    public VerificationPackage withCostAmount(double costAmount) {
-        Utils.checkNotNull(costAmount, "costAmount");
-        this.costAmount = Optional.ofNullable(costAmount);
-        return this;
-    }
 
-
-    public VerificationPackage withCostAmount(Optional<Double> costAmount) {
-        Utils.checkNotNull(costAmount, "costAmount");
+    public VerificationPackage withCostAmount(@Nullable Double costAmount) {
         this.costAmount = costAmount;
         return this;
     }
 
-    public VerificationPackage withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
 
-
-    public VerificationPackage withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public VerificationPackage withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public VerificationPackage withCurrency(String currency) {
-        Utils.checkNotNull(currency, "currency");
-        this.currency = Optional.ofNullable(currency);
-        return this;
-    }
 
-
-    public VerificationPackage withCurrency(Optional<String> currency) {
-        Utils.checkNotNull(currency, "currency");
+    public VerificationPackage withCurrency(@Nullable String currency) {
         this.currency = currency;
         return this;
     }
 
-    public VerificationPackage withDescription(String description) {
-        Utils.checkNotNull(description, "description");
-        this.description = Optional.ofNullable(description);
-        return this;
-    }
 
-
-    public VerificationPackage withDescription(Optional<String> description) {
-        Utils.checkNotNull(description, "description");
+    public VerificationPackage withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
-    public VerificationPackage withHasRedirectUrl(boolean hasRedirectUrl) {
-        Utils.checkNotNull(hasRedirectUrl, "hasRedirectUrl");
-        this.hasRedirectUrl = Optional.ofNullable(hasRedirectUrl);
-        return this;
-    }
 
-
-    public VerificationPackage withHasRedirectUrl(Optional<Boolean> hasRedirectUrl) {
-        Utils.checkNotNull(hasRedirectUrl, "hasRedirectUrl");
+    public VerificationPackage withHasRedirectUrl(@Nullable Boolean hasRedirectUrl) {
         this.hasRedirectUrl = hasRedirectUrl;
         return this;
     }
 
-    public VerificationPackage withHasTargetUrl(boolean hasTargetUrl) {
-        Utils.checkNotNull(hasTargetUrl, "hasTargetUrl");
-        this.hasTargetUrl = Optional.ofNullable(hasTargetUrl);
-        return this;
-    }
 
-
-    public VerificationPackage withHasTargetUrl(Optional<Boolean> hasTargetUrl) {
-        Utils.checkNotNull(hasTargetUrl, "hasTargetUrl");
+    public VerificationPackage withHasTargetUrl(@Nullable Boolean hasTargetUrl) {
         this.hasTargetUrl = hasTargetUrl;
         return this;
     }
 
-    public VerificationPackage withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = id;
-        return this;
-    }
 
-    public VerificationPackage withInfoUrl(String infoUrl) {
-        Utils.checkNotNull(infoUrl, "infoUrl");
-        this.infoUrl = Optional.ofNullable(infoUrl);
+    public VerificationPackage withId(@Nonnull String id) {
+        this.id = Utils.checkNotNull(id, "id");
         return this;
     }
 
 
-    public VerificationPackage withInfoUrl(Optional<String> infoUrl) {
-        Utils.checkNotNull(infoUrl, "infoUrl");
+    public VerificationPackage withInfoUrl(@Nullable String infoUrl) {
         this.infoUrl = infoUrl;
         return this;
     }
 
-    public VerificationPackage withMaxScore(double maxScore) {
-        Utils.checkNotNull(maxScore, "maxScore");
-        this.maxScore = Optional.ofNullable(maxScore);
-        return this;
-    }
 
-
-    public VerificationPackage withMaxScore(Optional<Double> maxScore) {
-        Utils.checkNotNull(maxScore, "maxScore");
+    public VerificationPackage withMaxScore(@Nullable Double maxScore) {
         this.maxScore = maxScore;
         return this;
     }
 
-    public VerificationPackage withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = name;
-        return this;
-    }
 
-    public VerificationPackage withNeedsIpAddress(boolean needsIpAddress) {
-        Utils.checkNotNull(needsIpAddress, "needsIpAddress");
-        this.needsIpAddress = Optional.ofNullable(needsIpAddress);
+    public VerificationPackage withName(@Nonnull String name) {
+        this.name = Utils.checkNotNull(name, "name");
         return this;
     }
 
 
-    public VerificationPackage withNeedsIpAddress(Optional<Boolean> needsIpAddress) {
-        Utils.checkNotNull(needsIpAddress, "needsIpAddress");
+    public VerificationPackage withNeedsIpAddress(@Nullable Boolean needsIpAddress) {
         this.needsIpAddress = needsIpAddress;
         return this;
     }
 
-    /**
-     * Questions that need to be answered for this verification
-     */
-    public VerificationPackage withParameters(List<VerificationParameter> parameters) {
-        Utils.checkNotNull(parameters, "parameters");
-        this.parameters = Optional.ofNullable(parameters);
-        return this;
-    }
-
 
     /**
      * Questions that need to be answered for this verification
      */
-    public VerificationPackage withParameters(Optional<? extends List<VerificationParameter>> parameters) {
-        Utils.checkNotNull(parameters, "parameters");
+    public VerificationPackage withParameters(@Nullable List<VerificationParameter> parameters) {
         this.parameters = parameters;
         return this;
     }
 
-    public VerificationPackage withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public VerificationPackage withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public VerificationPackage withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    /**
-     * Category (Verification, Validation, Background Check)
-     */
-    public VerificationPackage withTags(List<String> tags) {
-        Utils.checkNotNull(tags, "tags");
-        this.tags = Optional.ofNullable(tags);
-        return this;
-    }
-
 
     /**
      * Category (Verification, Validation, Background Check)
      */
-    public VerificationPackage withTags(Optional<? extends List<String>> tags) {
-        Utils.checkNotNull(tags, "tags");
+    public VerificationPackage withTags(@Nullable List<String> tags) {
         this.tags = tags;
         return this;
     }
 
-    public VerificationPackage withType(VerificationPackageType type) {
-        Utils.checkNotNull(type, "type");
-        this.type = type;
-        return this;
-    }
 
-    public VerificationPackage withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
+    public VerificationPackage withType(@Nonnull VerificationPackageType type) {
+        this.type = Utils.checkNotNull(type, "type");
         return this;
     }
 
 
-    public VerificationPackage withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public VerificationPackage withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
+
+
+    /**
+     * {country}-{stateprovince/territory} or just {country} 2-digit ISO codes
+     */
+    public VerificationPackage withValidRegions(@Nullable List<String> validRegions) {
+        this.validRegions = validRegions;
+        return this;
+    }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -552,7 +426,8 @@ public class VerificationPackage {
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.tags, other.tags) &&
             Utils.enhancedDeepEquals(this.type, other.type) &&
-            Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
+            Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
+            Utils.enhancedDeepEquals(this.validRegions, other.validRegions);
     }
     
     @Override
@@ -563,7 +438,8 @@ public class VerificationPackage {
             hasRedirectUrl, hasTargetUrl, id,
             infoUrl, maxScore, name,
             needsIpAddress, parameters, raw,
-            tags, type, updatedAt);
+            tags, type, updatedAt,
+            validRegions);
     }
     
     @Override
@@ -586,295 +462,171 @@ public class VerificationPackage {
                 "raw", raw,
                 "tags", tags,
                 "type", type,
-                "updatedAt", updatedAt);
+                "updatedAt", updatedAt,
+                "validRegions", validRegions);
     }
 
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends List<String>> aliases = Optional.empty();
+        private List<String> aliases;
 
-        private Optional<? extends List<VerificationTime>> averageProcessingTimes = Optional.empty();
+        private List<VerificationTime> averageProcessingTimes;
 
-        private Optional<Double> costAmount = Optional.empty();
+        private Double costAmount;
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<String> currency = Optional.empty();
+        private String currency;
 
-        private Optional<String> description = Optional.empty();
+        private String description;
 
-        private Optional<Boolean> hasRedirectUrl = Optional.empty();
+        private Boolean hasRedirectUrl;
 
-        private Optional<Boolean> hasTargetUrl = Optional.empty();
+        private Boolean hasTargetUrl;
 
         private String id;
 
-        private Optional<String> infoUrl = Optional.empty();
+        private String infoUrl;
 
-        private Optional<Double> maxScore = Optional.empty();
+        private Double maxScore;
 
         private String name;
 
-        private Optional<Boolean> needsIpAddress = Optional.empty();
+        private Boolean needsIpAddress;
 
-        private Optional<? extends List<VerificationParameter>> parameters = Optional.empty();
+        private List<VerificationParameter> parameters;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<? extends List<String>> tags = Optional.empty();
+        private List<String> tags;
 
         private VerificationPackageType type;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
+
+        private List<String> validRegions;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder aliases(List<String> aliases) {
-            Utils.checkNotNull(aliases, "aliases");
-            this.aliases = Optional.ofNullable(aliases);
-            return this;
-        }
-
-        public Builder aliases(Optional<? extends List<String>> aliases) {
-            Utils.checkNotNull(aliases, "aliases");
+        public Builder aliases(@Nullable List<String> aliases) {
             this.aliases = aliases;
             return this;
         }
 
-
         /**
          * average processing time in minutes
          */
-        public Builder averageProcessingTimes(List<VerificationTime> averageProcessingTimes) {
-            Utils.checkNotNull(averageProcessingTimes, "averageProcessingTimes");
-            this.averageProcessingTimes = Optional.ofNullable(averageProcessingTimes);
-            return this;
-        }
-
-        /**
-         * average processing time in minutes
-         */
-        public Builder averageProcessingTimes(Optional<? extends List<VerificationTime>> averageProcessingTimes) {
-            Utils.checkNotNull(averageProcessingTimes, "averageProcessingTimes");
+        public Builder averageProcessingTimes(@Nullable List<VerificationTime> averageProcessingTimes) {
             this.averageProcessingTimes = averageProcessingTimes;
             return this;
         }
 
-
-        public Builder costAmount(double costAmount) {
-            Utils.checkNotNull(costAmount, "costAmount");
-            this.costAmount = Optional.ofNullable(costAmount);
-            return this;
-        }
-
-        public Builder costAmount(Optional<Double> costAmount) {
-            Utils.checkNotNull(costAmount, "costAmount");
+        public Builder costAmount(@Nullable Double costAmount) {
             this.costAmount = costAmount;
             return this;
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder currency(String currency) {
-            Utils.checkNotNull(currency, "currency");
-            this.currency = Optional.ofNullable(currency);
-            return this;
-        }
-
-        public Builder currency(Optional<String> currency) {
-            Utils.checkNotNull(currency, "currency");
+        public Builder currency(@Nullable String currency) {
             this.currency = currency;
             return this;
         }
 
-
-        public Builder description(String description) {
-            Utils.checkNotNull(description, "description");
-            this.description = Optional.ofNullable(description);
-            return this;
-        }
-
-        public Builder description(Optional<String> description) {
-            Utils.checkNotNull(description, "description");
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-
-        public Builder hasRedirectUrl(boolean hasRedirectUrl) {
-            Utils.checkNotNull(hasRedirectUrl, "hasRedirectUrl");
-            this.hasRedirectUrl = Optional.ofNullable(hasRedirectUrl);
-            return this;
-        }
-
-        public Builder hasRedirectUrl(Optional<Boolean> hasRedirectUrl) {
-            Utils.checkNotNull(hasRedirectUrl, "hasRedirectUrl");
+        public Builder hasRedirectUrl(@Nullable Boolean hasRedirectUrl) {
             this.hasRedirectUrl = hasRedirectUrl;
             return this;
         }
 
-
-        public Builder hasTargetUrl(boolean hasTargetUrl) {
-            Utils.checkNotNull(hasTargetUrl, "hasTargetUrl");
-            this.hasTargetUrl = Optional.ofNullable(hasTargetUrl);
-            return this;
-        }
-
-        public Builder hasTargetUrl(Optional<Boolean> hasTargetUrl) {
-            Utils.checkNotNull(hasTargetUrl, "hasTargetUrl");
+        public Builder hasTargetUrl(@Nullable Boolean hasTargetUrl) {
             this.hasTargetUrl = hasTargetUrl;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = id;
+        public Builder id(@Nonnull String id) {
+            this.id = Utils.checkNotNull(id, "id");
             return this;
         }
 
-
-        public Builder infoUrl(String infoUrl) {
-            Utils.checkNotNull(infoUrl, "infoUrl");
-            this.infoUrl = Optional.ofNullable(infoUrl);
-            return this;
-        }
-
-        public Builder infoUrl(Optional<String> infoUrl) {
-            Utils.checkNotNull(infoUrl, "infoUrl");
+        public Builder infoUrl(@Nullable String infoUrl) {
             this.infoUrl = infoUrl;
             return this;
         }
 
-
-        public Builder maxScore(double maxScore) {
-            Utils.checkNotNull(maxScore, "maxScore");
-            this.maxScore = Optional.ofNullable(maxScore);
-            return this;
-        }
-
-        public Builder maxScore(Optional<Double> maxScore) {
-            Utils.checkNotNull(maxScore, "maxScore");
+        public Builder maxScore(@Nullable Double maxScore) {
             this.maxScore = maxScore;
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = name;
+        public Builder name(@Nonnull String name) {
+            this.name = Utils.checkNotNull(name, "name");
             return this;
         }
 
-
-        public Builder needsIpAddress(boolean needsIpAddress) {
-            Utils.checkNotNull(needsIpAddress, "needsIpAddress");
-            this.needsIpAddress = Optional.ofNullable(needsIpAddress);
-            return this;
-        }
-
-        public Builder needsIpAddress(Optional<Boolean> needsIpAddress) {
-            Utils.checkNotNull(needsIpAddress, "needsIpAddress");
+        public Builder needsIpAddress(@Nullable Boolean needsIpAddress) {
             this.needsIpAddress = needsIpAddress;
             return this;
         }
 
-
         /**
          * Questions that need to be answered for this verification
          */
-        public Builder parameters(List<VerificationParameter> parameters) {
-            Utils.checkNotNull(parameters, "parameters");
-            this.parameters = Optional.ofNullable(parameters);
-            return this;
-        }
-
-        /**
-         * Questions that need to be answered for this verification
-         */
-        public Builder parameters(Optional<? extends List<VerificationParameter>> parameters) {
-            Utils.checkNotNull(parameters, "parameters");
+        public Builder parameters(@Nullable List<VerificationParameter> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
         /**
          * Category (Verification, Validation, Background Check)
          */
-        public Builder tags(List<String> tags) {
-            Utils.checkNotNull(tags, "tags");
-            this.tags = Optional.ofNullable(tags);
-            return this;
-        }
-
-        /**
-         * Category (Verification, Validation, Background Check)
-         */
-        public Builder tags(Optional<? extends List<String>> tags) {
-            Utils.checkNotNull(tags, "tags");
+        public Builder tags(@Nullable List<String> tags) {
             this.tags = tags;
             return this;
         }
 
-
-        public Builder type(VerificationPackageType type) {
-            Utils.checkNotNull(type, "type");
-            this.type = type;
+        public Builder type(@Nonnull VerificationPackageType type) {
+            this.type = Utils.checkNotNull(type, "type");
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
-        public VerificationPackage build() {
+        /**
+         * {country}-{stateprovince/territory} or just {country} 2-digit ISO codes
+         */
+        public Builder validRegions(@Nullable List<String> validRegions) {
+            this.validRegions = validRegions;
+            return this;
+        }
 
+        public VerificationPackage build() {
             return new VerificationPackage(
                 aliases, averageProcessingTimes, costAmount,
                 createdAt, currency, description,
                 hasRedirectUrl, hasTargetUrl, id,
                 infoUrl, maxScore, name,
                 needsIpAddress, parameters, raw,
-                tags, type, updatedAt);
+                tags, type, updatedAt,
+                validRegions);
         }
 
     }

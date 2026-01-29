@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateUcCommentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateUcContactRequest;
@@ -124,7 +125,7 @@ public class AsyncUc {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateUcCommentResponse>} - The async response
      */
-    public CompletableFuture<CreateUcCommentResponse> createUcComment(CreateUcCommentRequest request) {
+    public CompletableFuture<CreateUcCommentResponse> createUcComment(@Nonnull CreateUcCommentRequest request) {
         AsyncRequestOperation<CreateUcCommentRequest, CreateUcCommentResponse> operation
               = new CreateUcComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -147,7 +148,7 @@ public class AsyncUc {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateUcContactResponse>} - The async response
      */
-    public CompletableFuture<CreateUcContactResponse> createUcContact(CreateUcContactRequest request) {
+    public CompletableFuture<CreateUcContactResponse> createUcContact(@Nonnull CreateUcContactRequest request) {
         AsyncRequestOperation<CreateUcContactRequest, CreateUcContactResponse> operation
               = new CreateUcContact.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -170,7 +171,7 @@ public class AsyncUc {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateUcRecordingResponse>} - The async response
      */
-    public CompletableFuture<CreateUcRecordingResponse> createUcRecording(CreateUcRecordingRequest request) {
+    public CompletableFuture<CreateUcRecordingResponse> createUcRecording(@Nonnull CreateUcRecordingRequest request) {
         AsyncRequestOperation<CreateUcRecordingRequest, CreateUcRecordingResponse> operation
               = new CreateUcRecording.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -193,7 +194,7 @@ public class AsyncUc {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetUcCallResponse>} - The async response
      */
-    public CompletableFuture<GetUcCallResponse> getUcCall(GetUcCallRequest request) {
+    public CompletableFuture<GetUcCallResponse> getUcCall(@Nonnull GetUcCallRequest request) {
         AsyncRequestOperation<GetUcCallRequest, GetUcCallResponse> operation
               = new GetUcCall.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -216,7 +217,7 @@ public class AsyncUc {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetUcCommentResponse>} - The async response
      */
-    public CompletableFuture<GetUcCommentResponse> getUcComment(GetUcCommentRequest request) {
+    public CompletableFuture<GetUcCommentResponse> getUcComment(@Nonnull GetUcCommentRequest request) {
         AsyncRequestOperation<GetUcCommentRequest, GetUcCommentResponse> operation
               = new GetUcComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -239,7 +240,7 @@ public class AsyncUc {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetUcContactResponse>} - The async response
      */
-    public CompletableFuture<GetUcContactResponse> getUcContact(GetUcContactRequest request) {
+    public CompletableFuture<GetUcContactResponse> getUcContact(@Nonnull GetUcContactRequest request) {
         AsyncRequestOperation<GetUcContactRequest, GetUcContactResponse> operation
               = new GetUcContact.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -262,7 +263,7 @@ public class AsyncUc {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetUcRecordingResponse>} - The async response
      */
-    public CompletableFuture<GetUcRecordingResponse> getUcRecording(GetUcRecordingRequest request) {
+    public CompletableFuture<GetUcRecordingResponse> getUcRecording(@Nonnull GetUcRecordingRequest request) {
         AsyncRequestOperation<GetUcRecordingRequest, GetUcRecordingResponse> operation
               = new GetUcRecording.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -285,7 +286,7 @@ public class AsyncUc {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListUcCallsResponse>} - The async response
      */
-    public CompletableFuture<ListUcCallsResponse> listUcCalls(ListUcCallsRequest request) {
+    public CompletableFuture<ListUcCallsResponse> listUcCalls(@Nonnull ListUcCallsRequest request) {
         AsyncRequestOperation<ListUcCallsRequest, ListUcCallsResponse> operation
               = new ListUcCalls.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -308,7 +309,7 @@ public class AsyncUc {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListUcCommentsResponse>} - The async response
      */
-    public CompletableFuture<ListUcCommentsResponse> listUcComments(ListUcCommentsRequest request) {
+    public CompletableFuture<ListUcCommentsResponse> listUcComments(@Nonnull ListUcCommentsRequest request) {
         AsyncRequestOperation<ListUcCommentsRequest, ListUcCommentsResponse> operation
               = new ListUcComments.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -331,7 +332,7 @@ public class AsyncUc {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListUcContactsResponse>} - The async response
      */
-    public CompletableFuture<ListUcContactsResponse> listUcContacts(ListUcContactsRequest request) {
+    public CompletableFuture<ListUcContactsResponse> listUcContacts(@Nonnull ListUcContactsRequest request) {
         AsyncRequestOperation<ListUcContactsRequest, ListUcContactsResponse> operation
               = new ListUcContacts.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -354,7 +355,7 @@ public class AsyncUc {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListUcRecordingsResponse>} - The async response
      */
-    public CompletableFuture<ListUcRecordingsResponse> listUcRecordings(ListUcRecordingsRequest request) {
+    public CompletableFuture<ListUcRecordingsResponse> listUcRecordings(@Nonnull ListUcRecordingsRequest request) {
         AsyncRequestOperation<ListUcRecordingsRequest, ListUcRecordingsResponse> operation
               = new ListUcRecordings.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -377,7 +378,7 @@ public class AsyncUc {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchUcCommentResponse>} - The async response
      */
-    public CompletableFuture<PatchUcCommentResponse> patchUcComment(PatchUcCommentRequest request) {
+    public CompletableFuture<PatchUcCommentResponse> patchUcComment(@Nonnull PatchUcCommentRequest request) {
         AsyncRequestOperation<PatchUcCommentRequest, PatchUcCommentResponse> operation
               = new PatchUcComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -400,7 +401,7 @@ public class AsyncUc {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchUcContactResponse>} - The async response
      */
-    public CompletableFuture<PatchUcContactResponse> patchUcContact(PatchUcContactRequest request) {
+    public CompletableFuture<PatchUcContactResponse> patchUcContact(@Nonnull PatchUcContactRequest request) {
         AsyncRequestOperation<PatchUcContactRequest, PatchUcContactResponse> operation
               = new PatchUcContact.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -423,7 +424,7 @@ public class AsyncUc {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchUcRecordingResponse>} - The async response
      */
-    public CompletableFuture<PatchUcRecordingResponse> patchUcRecording(PatchUcRecordingRequest request) {
+    public CompletableFuture<PatchUcRecordingResponse> patchUcRecording(@Nonnull PatchUcRecordingRequest request) {
         AsyncRequestOperation<PatchUcRecordingRequest, PatchUcRecordingResponse> operation
               = new PatchUcRecording.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -446,7 +447,7 @@ public class AsyncUc {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveUcCommentResponse>} - The async response
      */
-    public CompletableFuture<RemoveUcCommentResponse> removeUcComment(RemoveUcCommentRequest request) {
+    public CompletableFuture<RemoveUcCommentResponse> removeUcComment(@Nonnull RemoveUcCommentRequest request) {
         AsyncRequestOperation<RemoveUcCommentRequest, RemoveUcCommentResponse> operation
               = new RemoveUcComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -469,7 +470,7 @@ public class AsyncUc {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveUcContactResponse>} - The async response
      */
-    public CompletableFuture<RemoveUcContactResponse> removeUcContact(RemoveUcContactRequest request) {
+    public CompletableFuture<RemoveUcContactResponse> removeUcContact(@Nonnull RemoveUcContactRequest request) {
         AsyncRequestOperation<RemoveUcContactRequest, RemoveUcContactResponse> operation
               = new RemoveUcContact.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -492,7 +493,7 @@ public class AsyncUc {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveUcRecordingResponse>} - The async response
      */
-    public CompletableFuture<RemoveUcRecordingResponse> removeUcRecording(RemoveUcRecordingRequest request) {
+    public CompletableFuture<RemoveUcRecordingResponse> removeUcRecording(@Nonnull RemoveUcRecordingRequest request) {
         AsyncRequestOperation<RemoveUcRecordingRequest, RemoveUcRecordingResponse> operation
               = new RemoveUcRecording.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -515,7 +516,7 @@ public class AsyncUc {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateUcCommentResponse>} - The async response
      */
-    public CompletableFuture<UpdateUcCommentResponse> updateUcComment(UpdateUcCommentRequest request) {
+    public CompletableFuture<UpdateUcCommentResponse> updateUcComment(@Nonnull UpdateUcCommentRequest request) {
         AsyncRequestOperation<UpdateUcCommentRequest, UpdateUcCommentResponse> operation
               = new UpdateUcComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -538,7 +539,7 @@ public class AsyncUc {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateUcContactResponse>} - The async response
      */
-    public CompletableFuture<UpdateUcContactResponse> updateUcContact(UpdateUcContactRequest request) {
+    public CompletableFuture<UpdateUcContactResponse> updateUcContact(@Nonnull UpdateUcContactRequest request) {
         AsyncRequestOperation<UpdateUcContactRequest, UpdateUcContactResponse> operation
               = new UpdateUcContact.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -561,7 +562,7 @@ public class AsyncUc {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateUcRecordingResponse>} - The async response
      */
-    public CompletableFuture<UpdateUcRecordingResponse> updateUcRecording(UpdateUcRecordingRequest request) {
+    public CompletableFuture<UpdateUcRecordingResponse> updateUcRecording(@Nonnull UpdateUcRecordingRequest request) {
         AsyncRequestOperation<UpdateUcRecordingRequest, UpdateUcRecordingResponse> operation
               = new UpdateUcRecording.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

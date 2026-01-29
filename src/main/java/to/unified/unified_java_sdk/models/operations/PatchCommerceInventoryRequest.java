@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.CommerceInventory;
@@ -30,7 +30,7 @@ public class PatchCommerceInventoryRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<PatchCommerceInventoryQueryParamFields>> fields;
+    private List<PatchCommerceInventoryQueryParamFields> fields;
 
     /**
      * ID of the Inventory
@@ -44,63 +44,56 @@ public class PatchCommerceInventoryRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
     @JsonCreator
     public PatchCommerceInventoryRequest(
-            CommerceInventory commerceInventory,
-            String connectionId,
-            Optional<? extends List<PatchCommerceInventoryQueryParamFields>> fields,
-            String id,
-            Optional<String> raw) {
-        Utils.checkNotNull(commerceInventory, "commerceInventory");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(raw, "raw");
-        this.commerceInventory = commerceInventory;
-        this.connectionId = connectionId;
+            @Nonnull CommerceInventory commerceInventory,
+            @Nonnull String connectionId,
+            @Nullable List<PatchCommerceInventoryQueryParamFields> fields,
+            @Nonnull String id,
+            @Nullable String raw) {
+        this.commerceInventory = Optional.ofNullable(commerceInventory)
+            .orElseThrow(() -> new IllegalArgumentException("commerceInventory cannot be null"));
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
-        this.id = id;
+        this.id = Optional.ofNullable(id)
+            .orElseThrow(() -> new IllegalArgumentException("id cannot be null"));
         this.raw = raw;
     }
     
     public PatchCommerceInventoryRequest(
-            CommerceInventory commerceInventory,
-            String connectionId,
-            String id) {
-        this(commerceInventory, connectionId, Optional.empty(),
-            id, Optional.empty());
+            @Nonnull CommerceInventory commerceInventory,
+            @Nonnull String connectionId,
+            @Nonnull String id) {
+        this(commerceInventory, connectionId, null,
+            id, null);
     }
 
-    @JsonIgnore
     public CommerceInventory commerceInventory() {
-        return commerceInventory;
+        return this.commerceInventory;
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<PatchCommerceInventoryQueryParamFields>> fields() {
-        return (Optional<List<PatchCommerceInventoryQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
      * ID of the Inventory
      */
-    @JsonIgnore
     public String id() {
-        return id;
+        return this.id;
     }
 
     /**
@@ -108,9 +101,8 @@ public class PatchCommerceInventoryRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
     public static Builder builder() {
@@ -118,27 +110,17 @@ public class PatchCommerceInventoryRequest {
     }
 
 
-    public PatchCommerceInventoryRequest withCommerceInventory(CommerceInventory commerceInventory) {
-        Utils.checkNotNull(commerceInventory, "commerceInventory");
-        this.commerceInventory = commerceInventory;
+    public PatchCommerceInventoryRequest withCommerceInventory(@Nonnull CommerceInventory commerceInventory) {
+        this.commerceInventory = Utils.checkNotNull(commerceInventory, "commerceInventory");
         return this;
     }
+
 
     /**
      * ID of the connection
      */
-    public PatchCommerceInventoryRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public PatchCommerceInventoryRequest withFields(List<PatchCommerceInventoryQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public PatchCommerceInventoryRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -146,29 +128,17 @@ public class PatchCommerceInventoryRequest {
     /**
      * Fields to return
      */
-    public PatchCommerceInventoryRequest withFields(Optional<? extends List<PatchCommerceInventoryQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public PatchCommerceInventoryRequest withFields(@Nullable List<PatchCommerceInventoryQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
+
     /**
      * ID of the Inventory
      */
-    public PatchCommerceInventoryRequest withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = id;
-        return this;
-    }
-
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public PatchCommerceInventoryRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
+    public PatchCommerceInventoryRequest withId(@Nonnull String id) {
+        this.id = Utils.checkNotNull(id, "id");
         return this;
     }
 
@@ -178,11 +148,11 @@ public class PatchCommerceInventoryRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public PatchCommerceInventoryRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public PatchCommerceInventoryRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -225,71 +195,42 @@ public class PatchCommerceInventoryRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<PatchCommerceInventoryQueryParamFields>> fields = Optional.empty();
+        private List<PatchCommerceInventoryQueryParamFields> fields;
 
         private String id;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder commerceInventory(CommerceInventory commerceInventory) {
-            Utils.checkNotNull(commerceInventory, "commerceInventory");
-            this.commerceInventory = commerceInventory;
+        public Builder commerceInventory(@Nonnull CommerceInventory commerceInventory) {
+            this.commerceInventory = Utils.checkNotNull(commerceInventory, "commerceInventory");
             return this;
         }
-
 
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<PatchCommerceInventoryQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<PatchCommerceInventoryQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<PatchCommerceInventoryQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * ID of the Inventory
          */
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = id;
-            return this;
-        }
-
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
+        public Builder id(@Nonnull String id) {
+            this.id = Utils.checkNotNull(id, "id");
             return this;
         }
 
@@ -298,14 +239,12 @@ public class PatchCommerceInventoryRequest {
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
         public PatchCommerceInventoryRequest build() {
-
             return new PatchCommerceInventoryRequest(
                 commerceInventory, connectionId, fields,
                 id, raw);

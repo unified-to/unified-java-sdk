@@ -4,15 +4,15 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.Map;
 import java.util.Optional;
@@ -23,32 +23,32 @@ public class AccountingOrganization {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
-    private Optional<? extends PropertyAccountingOrganizationAddress> address;
+    private PropertyAccountingOrganizationAddress address;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
-    private Optional<String> currency;
+    private String currency;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fiscal_year_end_month")
-    private Optional<Double> fiscalYearEndMonth;
+    private Double fiscalYearEndMonth;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legal_name")
-    private Optional<String> legalName;
+    private String legalName;
 
 
     @JsonProperty("name")
@@ -57,68 +57,56 @@ public class AccountingOrganization {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_code")
-    private Optional<String> organizationCode;
+    private String organizationCode;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax_number")
-    private Optional<String> taxNumber;
+    private String taxNumber;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
-    private Optional<String> timezone;
+    private String timezone;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("website")
-    private Optional<String> website;
+    private String website;
 
     @JsonCreator
     public AccountingOrganization(
-            @JsonProperty("address") Optional<? extends PropertyAccountingOrganizationAddress> address,
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("currency") Optional<String> currency,
-            @JsonProperty("fiscal_year_end_month") Optional<Double> fiscalYearEndMonth,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("legal_name") Optional<String> legalName,
-            @JsonProperty("name") String name,
-            @JsonProperty("organization_code") Optional<String> organizationCode,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("tax_number") Optional<String> taxNumber,
-            @JsonProperty("timezone") Optional<String> timezone,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
-            @JsonProperty("website") Optional<String> website) {
-        Utils.checkNotNull(address, "address");
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(currency, "currency");
-        Utils.checkNotNull(fiscalYearEndMonth, "fiscalYearEndMonth");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(legalName, "legalName");
-        Utils.checkNotNull(name, "name");
-        Utils.checkNotNull(organizationCode, "organizationCode");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(taxNumber, "taxNumber");
-        Utils.checkNotNull(timezone, "timezone");
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        Utils.checkNotNull(website, "website");
+            @JsonProperty("address") @Nullable PropertyAccountingOrganizationAddress address,
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("currency") @Nullable String currency,
+            @JsonProperty("fiscal_year_end_month") @Nullable Double fiscalYearEndMonth,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("legal_name") @Nullable String legalName,
+            @JsonProperty("name") @Nonnull String name,
+            @JsonProperty("organization_code") @Nullable String organizationCode,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("tax_number") @Nullable String taxNumber,
+            @JsonProperty("timezone") @Nullable String timezone,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
+            @JsonProperty("website") @Nullable String website) {
         this.address = address;
         this.createdAt = createdAt;
         this.currency = currency;
         this.fiscalYearEndMonth = fiscalYearEndMonth;
         this.id = id;
         this.legalName = legalName;
-        this.name = name;
+        this.name = Optional.ofNullable(name)
+            .orElseThrow(() -> new IllegalArgumentException("name cannot be null"));
         this.organizationCode = organizationCode;
         this.raw = raw;
         this.taxNumber = taxNumber;
@@ -128,79 +116,64 @@ public class AccountingOrganization {
     }
     
     public AccountingOrganization(
-            String name) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            name, Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+            @Nonnull String name) {
+        this(null, null, null,
+            null, null, null,
+            name, null, null,
+            null, null, null,
+            null);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<PropertyAccountingOrganizationAddress> address() {
-        return (Optional<PropertyAccountingOrganizationAddress>) address;
+        return Optional.ofNullable(this.address);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<String> currency() {
-        return currency;
+        return Optional.ofNullable(this.currency);
     }
 
-    @JsonIgnore
     public Optional<Double> fiscalYearEndMonth() {
-        return fiscalYearEndMonth;
+        return Optional.ofNullable(this.fiscalYearEndMonth);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<String> legalName() {
-        return legalName;
+        return Optional.ofNullable(this.legalName);
     }
 
-    @JsonIgnore
     public String name() {
-        return name;
+        return this.name;
     }
 
-    @JsonIgnore
     public Optional<String> organizationCode() {
-        return organizationCode;
+        return Optional.ofNullable(this.organizationCode);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @JsonIgnore
     public Optional<String> taxNumber() {
-        return taxNumber;
+        return Optional.ofNullable(this.taxNumber);
     }
 
-    @JsonIgnore
     public Optional<String> timezone() {
-        return timezone;
+        return Optional.ofNullable(this.timezone);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
-    @JsonIgnore
     public Optional<String> website() {
-        return website;
+        return Optional.ofNullable(this.website);
     }
 
     public static Builder builder() {
@@ -208,167 +181,83 @@ public class AccountingOrganization {
     }
 
 
-    public AccountingOrganization withAddress(PropertyAccountingOrganizationAddress address) {
-        Utils.checkNotNull(address, "address");
-        this.address = Optional.ofNullable(address);
-        return this;
-    }
-
-
-    public AccountingOrganization withAddress(Optional<? extends PropertyAccountingOrganizationAddress> address) {
-        Utils.checkNotNull(address, "address");
+    public AccountingOrganization withAddress(@Nullable PropertyAccountingOrganizationAddress address) {
         this.address = address;
         return this;
     }
 
-    public AccountingOrganization withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
 
-
-    public AccountingOrganization withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public AccountingOrganization withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public AccountingOrganization withCurrency(String currency) {
-        Utils.checkNotNull(currency, "currency");
-        this.currency = Optional.ofNullable(currency);
-        return this;
-    }
 
-
-    public AccountingOrganization withCurrency(Optional<String> currency) {
-        Utils.checkNotNull(currency, "currency");
+    public AccountingOrganization withCurrency(@Nullable String currency) {
         this.currency = currency;
         return this;
     }
 
-    public AccountingOrganization withFiscalYearEndMonth(double fiscalYearEndMonth) {
-        Utils.checkNotNull(fiscalYearEndMonth, "fiscalYearEndMonth");
-        this.fiscalYearEndMonth = Optional.ofNullable(fiscalYearEndMonth);
-        return this;
-    }
 
-
-    public AccountingOrganization withFiscalYearEndMonth(Optional<Double> fiscalYearEndMonth) {
-        Utils.checkNotNull(fiscalYearEndMonth, "fiscalYearEndMonth");
+    public AccountingOrganization withFiscalYearEndMonth(@Nullable Double fiscalYearEndMonth) {
         this.fiscalYearEndMonth = fiscalYearEndMonth;
         return this;
     }
 
-    public AccountingOrganization withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public AccountingOrganization withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public AccountingOrganization withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public AccountingOrganization withLegalName(String legalName) {
-        Utils.checkNotNull(legalName, "legalName");
-        this.legalName = Optional.ofNullable(legalName);
-        return this;
-    }
 
-
-    public AccountingOrganization withLegalName(Optional<String> legalName) {
-        Utils.checkNotNull(legalName, "legalName");
+    public AccountingOrganization withLegalName(@Nullable String legalName) {
         this.legalName = legalName;
         return this;
     }
 
-    public AccountingOrganization withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = name;
-        return this;
-    }
 
-    public AccountingOrganization withOrganizationCode(String organizationCode) {
-        Utils.checkNotNull(organizationCode, "organizationCode");
-        this.organizationCode = Optional.ofNullable(organizationCode);
+    public AccountingOrganization withName(@Nonnull String name) {
+        this.name = Utils.checkNotNull(name, "name");
         return this;
     }
 
 
-    public AccountingOrganization withOrganizationCode(Optional<String> organizationCode) {
-        Utils.checkNotNull(organizationCode, "organizationCode");
+    public AccountingOrganization withOrganizationCode(@Nullable String organizationCode) {
         this.organizationCode = organizationCode;
         return this;
     }
 
-    public AccountingOrganization withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public AccountingOrganization withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public AccountingOrganization withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public AccountingOrganization withTaxNumber(String taxNumber) {
-        Utils.checkNotNull(taxNumber, "taxNumber");
-        this.taxNumber = Optional.ofNullable(taxNumber);
-        return this;
-    }
 
-
-    public AccountingOrganization withTaxNumber(Optional<String> taxNumber) {
-        Utils.checkNotNull(taxNumber, "taxNumber");
+    public AccountingOrganization withTaxNumber(@Nullable String taxNumber) {
         this.taxNumber = taxNumber;
         return this;
     }
 
-    public AccountingOrganization withTimezone(String timezone) {
-        Utils.checkNotNull(timezone, "timezone");
-        this.timezone = Optional.ofNullable(timezone);
-        return this;
-    }
 
-
-    public AccountingOrganization withTimezone(Optional<String> timezone) {
-        Utils.checkNotNull(timezone, "timezone");
+    public AccountingOrganization withTimezone(@Nullable String timezone) {
         this.timezone = timezone;
         return this;
     }
 
-    public AccountingOrganization withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public AccountingOrganization withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public AccountingOrganization withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
-    public AccountingOrganization withWebsite(String website) {
-        Utils.checkNotNull(website, "website");
-        this.website = Optional.ofNullable(website);
-        return this;
-    }
 
-
-    public AccountingOrganization withWebsite(Optional<String> website) {
-        Utils.checkNotNull(website, "website");
+    public AccountingOrganization withWebsite(@Nullable String website) {
         this.website = website;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -426,201 +315,102 @@ public class AccountingOrganization {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends PropertyAccountingOrganizationAddress> address = Optional.empty();
+        private PropertyAccountingOrganizationAddress address;
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<String> currency = Optional.empty();
+        private String currency;
 
-        private Optional<Double> fiscalYearEndMonth = Optional.empty();
+        private Double fiscalYearEndMonth;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<String> legalName = Optional.empty();
+        private String legalName;
 
         private String name;
 
-        private Optional<String> organizationCode = Optional.empty();
+        private String organizationCode;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<String> taxNumber = Optional.empty();
+        private String taxNumber;
 
-        private Optional<String> timezone = Optional.empty();
+        private String timezone;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
-        private Optional<String> website = Optional.empty();
+        private String website;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder address(PropertyAccountingOrganizationAddress address) {
-            Utils.checkNotNull(address, "address");
-            this.address = Optional.ofNullable(address);
-            return this;
-        }
-
-        public Builder address(Optional<? extends PropertyAccountingOrganizationAddress> address) {
-            Utils.checkNotNull(address, "address");
+        public Builder address(@Nullable PropertyAccountingOrganizationAddress address) {
             this.address = address;
             return this;
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder currency(String currency) {
-            Utils.checkNotNull(currency, "currency");
-            this.currency = Optional.ofNullable(currency);
-            return this;
-        }
-
-        public Builder currency(Optional<String> currency) {
-            Utils.checkNotNull(currency, "currency");
+        public Builder currency(@Nullable String currency) {
             this.currency = currency;
             return this;
         }
 
-
-        public Builder fiscalYearEndMonth(double fiscalYearEndMonth) {
-            Utils.checkNotNull(fiscalYearEndMonth, "fiscalYearEndMonth");
-            this.fiscalYearEndMonth = Optional.ofNullable(fiscalYearEndMonth);
-            return this;
-        }
-
-        public Builder fiscalYearEndMonth(Optional<Double> fiscalYearEndMonth) {
-            Utils.checkNotNull(fiscalYearEndMonth, "fiscalYearEndMonth");
+        public Builder fiscalYearEndMonth(@Nullable Double fiscalYearEndMonth) {
             this.fiscalYearEndMonth = fiscalYearEndMonth;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder legalName(String legalName) {
-            Utils.checkNotNull(legalName, "legalName");
-            this.legalName = Optional.ofNullable(legalName);
-            return this;
-        }
-
-        public Builder legalName(Optional<String> legalName) {
-            Utils.checkNotNull(legalName, "legalName");
+        public Builder legalName(@Nullable String legalName) {
             this.legalName = legalName;
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = name;
+        public Builder name(@Nonnull String name) {
+            this.name = Utils.checkNotNull(name, "name");
             return this;
         }
 
-
-        public Builder organizationCode(String organizationCode) {
-            Utils.checkNotNull(organizationCode, "organizationCode");
-            this.organizationCode = Optional.ofNullable(organizationCode);
-            return this;
-        }
-
-        public Builder organizationCode(Optional<String> organizationCode) {
-            Utils.checkNotNull(organizationCode, "organizationCode");
+        public Builder organizationCode(@Nullable String organizationCode) {
             this.organizationCode = organizationCode;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder taxNumber(String taxNumber) {
-            Utils.checkNotNull(taxNumber, "taxNumber");
-            this.taxNumber = Optional.ofNullable(taxNumber);
-            return this;
-        }
-
-        public Builder taxNumber(Optional<String> taxNumber) {
-            Utils.checkNotNull(taxNumber, "taxNumber");
+        public Builder taxNumber(@Nullable String taxNumber) {
             this.taxNumber = taxNumber;
             return this;
         }
 
-
-        public Builder timezone(String timezone) {
-            Utils.checkNotNull(timezone, "timezone");
-            this.timezone = Optional.ofNullable(timezone);
-            return this;
-        }
-
-        public Builder timezone(Optional<String> timezone) {
-            Utils.checkNotNull(timezone, "timezone");
+        public Builder timezone(@Nullable String timezone) {
             this.timezone = timezone;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
-
-        public Builder website(String website) {
-            Utils.checkNotNull(website, "website");
-            this.website = Optional.ofNullable(website);
-            return this;
-        }
-
-        public Builder website(Optional<String> website) {
-            Utils.checkNotNull(website, "website");
+        public Builder website(@Nullable String website) {
             this.website = website;
             return this;
         }
 
         public AccountingOrganization build() {
-
             return new AccountingOrganization(
                 address, createdAt, currency,
                 fiscalYearEndMonth, id, legalName,

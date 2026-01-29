@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateShippingLabelRequest;
 import to.unified.unified_java_sdk.models.operations.CreateShippingLabelRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateShippingLabelResponse;
@@ -14,13 +15,21 @@ import to.unified.unified_java_sdk.models.operations.GetShippingLabelResponse;
 import to.unified.unified_java_sdk.models.operations.ListShippingLabelsRequest;
 import to.unified.unified_java_sdk.models.operations.ListShippingLabelsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListShippingLabelsResponse;
+import to.unified.unified_java_sdk.models.operations.PatchShippingLabelRequest;
+import to.unified.unified_java_sdk.models.operations.PatchShippingLabelRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchShippingLabelResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveShippingLabelRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveShippingLabelRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveShippingLabelResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateShippingLabelRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateShippingLabelRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateShippingLabelResponse;
 import to.unified.unified_java_sdk.operations.CreateShippingLabel;
 import to.unified.unified_java_sdk.operations.GetShippingLabel;
 import to.unified.unified_java_sdk.operations.ListShippingLabels;
+import to.unified.unified_java_sdk.operations.PatchShippingLabel;
 import to.unified.unified_java_sdk.operations.RemoveShippingLabel;
+import to.unified.unified_java_sdk.operations.UpdateShippingLabel;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -59,7 +68,7 @@ public class Label {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateShippingLabelResponse createShippingLabel(CreateShippingLabelRequest request) {
+    public CreateShippingLabelResponse createShippingLabel(@Nonnull CreateShippingLabelRequest request) {
         RequestOperation<CreateShippingLabelRequest, CreateShippingLabelResponse> operation
               = new CreateShippingLabel.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -81,7 +90,7 @@ public class Label {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetShippingLabelResponse getShippingLabel(GetShippingLabelRequest request) {
+    public GetShippingLabelResponse getShippingLabel(@Nonnull GetShippingLabelRequest request) {
         RequestOperation<GetShippingLabelRequest, GetShippingLabelResponse> operation
               = new GetShippingLabel.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -103,9 +112,31 @@ public class Label {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListShippingLabelsResponse listShippingLabels(ListShippingLabelsRequest request) {
+    public ListShippingLabelsResponse listShippingLabels(@Nonnull ListShippingLabelsRequest request) {
         RequestOperation<ListShippingLabelsRequest, ListShippingLabelsResponse> operation
               = new ListShippingLabels.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update a label
+     * 
+     * @return The call builder
+     */
+    public PatchShippingLabelRequestBuilder patchShippingLabel() {
+        return new PatchShippingLabelRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a label
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchShippingLabelResponse patchShippingLabel(@Nonnull PatchShippingLabelRequest request) {
+        RequestOperation<PatchShippingLabelRequest, PatchShippingLabelResponse> operation
+              = new PatchShippingLabel.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -125,9 +156,31 @@ public class Label {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveShippingLabelResponse removeShippingLabel(RemoveShippingLabelRequest request) {
+    public RemoveShippingLabelResponse removeShippingLabel(@Nonnull RemoveShippingLabelRequest request) {
         RequestOperation<RemoveShippingLabelRequest, RemoveShippingLabelResponse> operation
               = new RemoveShippingLabel.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update a label
+     * 
+     * @return The call builder
+     */
+    public UpdateShippingLabelRequestBuilder updateShippingLabel() {
+        return new UpdateShippingLabelRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a label
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateShippingLabelResponse updateShippingLabel(@Nonnull UpdateShippingLabelRequest request) {
+        RequestOperation<UpdateShippingLabelRequest, UpdateShippingLabelResponse> operation
+              = new UpdateShippingLabel.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

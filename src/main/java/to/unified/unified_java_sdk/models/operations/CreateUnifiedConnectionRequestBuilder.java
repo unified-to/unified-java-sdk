@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.shared.Connection;
 import to.unified.unified_java_sdk.operations.CreateUnifiedConnection;
@@ -12,26 +13,38 @@ import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateUnifiedConnectionRequestBuilder {
-
-    private Connection request;
     private final SDKConfiguration sdkConfiguration;
-    private final Headers _headers = new Headers(); 
+    private final Headers _headers = new Headers();
+    private Connection request;
 
     public CreateUnifiedConnectionRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
 
-    public CreateUnifiedConnectionRequestBuilder request(Connection request) {
-        Utils.checkNotNull(request, "request");
-        this.request = request;
+    public CreateUnifiedConnectionRequestBuilder request(@Nonnull Connection request) {
+        this.request = Utils.checkNotNull(request, "request");
         return this;
     }
 
+    private Connection _buildRequest() {
+        return this.request;
+    }
+    
+    public CreateUnifiedConnectionRequestBuilder header(String name, String value) {
+        Utils.checkNotNull(name, "name");
+        Utils.checkNotNull(value, "value");
+        this._headers.add(name, value);
+        return this;
+    }
+
+    /**
+    * Executes the request and returns the response.
+    *
+    * @return The response from the server.
+    */
     public CreateUnifiedConnectionResponse call() {
-        
         RequestOperation<Connection, CreateUnifiedConnectionResponse> operation
               = new CreateUnifiedConnection.Sync(sdkConfiguration, _headers);
-
-        return operation.handleResponse(operation.doRequest(request));
+        return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

@@ -4,15 +4,15 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
@@ -24,59 +24,59 @@ public class HrisPayslip {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_id")
-    private Optional<String> companyId;
+    private String companyId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
-    private Optional<String> currency;
+    private String currency;
 
     /**
      * // The ID (and optionally name) of the employee deduction (if this detail represents a deduction)
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deduction")
-    private Optional<? extends PropertyHrisPayslipDeduction> deduction;
+    private PropertyHrisPayslipDeduction deduction;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
-    private Optional<? extends List<HrisPayslipDetail>> details;
+    private List<HrisPayslipDetail> details;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
-    private Optional<OffsetDateTime> endAt;
+    private OffsetDateTime endAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gross_amount")
-    private Optional<Double> grossAmount;
+    private Double grossAmount;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("net_amount")
-    private Optional<Double> netAmount;
+    private Double netAmount;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paid_at")
-    private Optional<OffsetDateTime> paidAt;
+    private OffsetDateTime paidAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_type")
-    private Optional<? extends PaymentType> paymentType;
+    private PaymentType paymentType;
 
 
     @JsonProperty("raw")
@@ -85,51 +85,36 @@ public class HrisPayslip {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
-    private Optional<OffsetDateTime> startAt;
+    private OffsetDateTime startAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
-    private Optional<String> userId;
+    private String userId;
 
     @JsonCreator
     public HrisPayslip(
-            @JsonProperty("company_id") Optional<String> companyId,
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("currency") Optional<String> currency,
-            @JsonProperty("deduction") Optional<? extends PropertyHrisPayslipDeduction> deduction,
-            @JsonProperty("details") Optional<? extends List<HrisPayslipDetail>> details,
-            @JsonProperty("end_at") Optional<OffsetDateTime> endAt,
-            @JsonProperty("gross_amount") Optional<Double> grossAmount,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("net_amount") Optional<Double> netAmount,
-            @JsonProperty("paid_at") Optional<OffsetDateTime> paidAt,
-            @JsonProperty("payment_type") Optional<? extends PaymentType> paymentType,
-            @JsonProperty("raw") Map<String, Object> raw,
-            @JsonProperty("start_at") Optional<OffsetDateTime> startAt,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
-            @JsonProperty("user_id") Optional<String> userId) {
-        Utils.checkNotNull(companyId, "companyId");
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(currency, "currency");
-        Utils.checkNotNull(deduction, "deduction");
-        Utils.checkNotNull(details, "details");
-        Utils.checkNotNull(endAt, "endAt");
-        Utils.checkNotNull(grossAmount, "grossAmount");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(netAmount, "netAmount");
-        Utils.checkNotNull(paidAt, "paidAt");
-        Utils.checkNotNull(paymentType, "paymentType");
+            @JsonProperty("company_id") @Nullable String companyId,
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("currency") @Nullable String currency,
+            @JsonProperty("deduction") @Nullable PropertyHrisPayslipDeduction deduction,
+            @JsonProperty("details") @Nullable List<HrisPayslipDetail> details,
+            @JsonProperty("end_at") @Nullable OffsetDateTime endAt,
+            @JsonProperty("gross_amount") @Nullable Double grossAmount,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("net_amount") @Nullable Double netAmount,
+            @JsonProperty("paid_at") @Nullable OffsetDateTime paidAt,
+            @JsonProperty("payment_type") @Nullable PaymentType paymentType,
+            @JsonProperty("raw") @Nonnull Map<String, Object> raw,
+            @JsonProperty("start_at") @Nullable OffsetDateTime startAt,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
+            @JsonProperty("user_id") @Nullable String userId) {
         raw = Utils.emptyMapIfNull(raw);
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(startAt, "startAt");
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        Utils.checkNotNull(userId, "userId");
         this.companyId = companyId;
         this.createdAt = createdAt;
         this.currency = currency;
@@ -141,100 +126,83 @@ public class HrisPayslip {
         this.netAmount = netAmount;
         this.paidAt = paidAt;
         this.paymentType = paymentType;
-        this.raw = raw;
+        this.raw = Optional.ofNullable(raw)
+            .orElseThrow(() -> new IllegalArgumentException("raw cannot be null"));
         this.startAt = startAt;
         this.updatedAt = updatedAt;
         this.userId = userId;
     }
     
     public HrisPayslip(
-            Map<String, Object> raw) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), raw,
-            Optional.empty(), Optional.empty(), Optional.empty());
+            @Nonnull Map<String, Object> raw) {
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, raw,
+            null, null, null);
     }
 
-    @JsonIgnore
     public Optional<String> companyId() {
-        return companyId;
+        return Optional.ofNullable(this.companyId);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<String> currency() {
-        return currency;
+        return Optional.ofNullable(this.currency);
     }
 
     /**
      * // The ID (and optionally name) of the employee deduction (if this detail represents a deduction)
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<PropertyHrisPayslipDeduction> deduction() {
-        return (Optional<PropertyHrisPayslipDeduction>) deduction;
+        return Optional.ofNullable(this.deduction);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<HrisPayslipDetail>> details() {
-        return (Optional<List<HrisPayslipDetail>>) details;
+        return Optional.ofNullable(this.details);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> endAt() {
-        return endAt;
+        return Optional.ofNullable(this.endAt);
     }
 
-    @JsonIgnore
     public Optional<Double> grossAmount() {
-        return grossAmount;
+        return Optional.ofNullable(this.grossAmount);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<Double> netAmount() {
-        return netAmount;
+        return Optional.ofNullable(this.netAmount);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> paidAt() {
-        return paidAt;
+        return Optional.ofNullable(this.paidAt);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<PaymentType> paymentType() {
-        return (Optional<PaymentType>) paymentType;
+        return Optional.ofNullable(this.paymentType);
     }
 
-    @JsonIgnore
     public Map<String, Object> raw() {
-        return raw;
+        return this.raw;
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> startAt() {
-        return startAt;
+        return Optional.ofNullable(this.startAt);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
-    @JsonIgnore
     public Optional<String> userId() {
-        return userId;
+        return Optional.ofNullable(this.userId);
     }
 
     public static Builder builder() {
@@ -242,199 +210,98 @@ public class HrisPayslip {
     }
 
 
-    public HrisPayslip withCompanyId(String companyId) {
-        Utils.checkNotNull(companyId, "companyId");
-        this.companyId = Optional.ofNullable(companyId);
-        return this;
-    }
-
-
-    public HrisPayslip withCompanyId(Optional<String> companyId) {
-        Utils.checkNotNull(companyId, "companyId");
+    public HrisPayslip withCompanyId(@Nullable String companyId) {
         this.companyId = companyId;
         return this;
     }
 
-    public HrisPayslip withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
 
-
-    public HrisPayslip withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public HrisPayslip withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public HrisPayslip withCurrency(String currency) {
-        Utils.checkNotNull(currency, "currency");
-        this.currency = Optional.ofNullable(currency);
-        return this;
-    }
 
-
-    public HrisPayslip withCurrency(Optional<String> currency) {
-        Utils.checkNotNull(currency, "currency");
+    public HrisPayslip withCurrency(@Nullable String currency) {
         this.currency = currency;
         return this;
     }
 
-    /**
-     * // The ID (and optionally name) of the employee deduction (if this detail represents a deduction)
-     */
-    public HrisPayslip withDeduction(PropertyHrisPayslipDeduction deduction) {
-        Utils.checkNotNull(deduction, "deduction");
-        this.deduction = Optional.ofNullable(deduction);
-        return this;
-    }
-
 
     /**
      * // The ID (and optionally name) of the employee deduction (if this detail represents a deduction)
      */
-    public HrisPayslip withDeduction(Optional<? extends PropertyHrisPayslipDeduction> deduction) {
-        Utils.checkNotNull(deduction, "deduction");
+    public HrisPayslip withDeduction(@Nullable PropertyHrisPayslipDeduction deduction) {
         this.deduction = deduction;
         return this;
     }
 
-    public HrisPayslip withDetails(List<HrisPayslipDetail> details) {
-        Utils.checkNotNull(details, "details");
-        this.details = Optional.ofNullable(details);
-        return this;
-    }
 
-
-    public HrisPayslip withDetails(Optional<? extends List<HrisPayslipDetail>> details) {
-        Utils.checkNotNull(details, "details");
+    public HrisPayslip withDetails(@Nullable List<HrisPayslipDetail> details) {
         this.details = details;
         return this;
     }
 
-    public HrisPayslip withEndAt(OffsetDateTime endAt) {
-        Utils.checkNotNull(endAt, "endAt");
-        this.endAt = Optional.ofNullable(endAt);
-        return this;
-    }
 
-
-    public HrisPayslip withEndAt(Optional<OffsetDateTime> endAt) {
-        Utils.checkNotNull(endAt, "endAt");
+    public HrisPayslip withEndAt(@Nullable OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
     }
 
-    public HrisPayslip withGrossAmount(double grossAmount) {
-        Utils.checkNotNull(grossAmount, "grossAmount");
-        this.grossAmount = Optional.ofNullable(grossAmount);
-        return this;
-    }
 
-
-    public HrisPayslip withGrossAmount(Optional<Double> grossAmount) {
-        Utils.checkNotNull(grossAmount, "grossAmount");
+    public HrisPayslip withGrossAmount(@Nullable Double grossAmount) {
         this.grossAmount = grossAmount;
         return this;
     }
 
-    public HrisPayslip withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public HrisPayslip withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public HrisPayslip withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public HrisPayslip withNetAmount(double netAmount) {
-        Utils.checkNotNull(netAmount, "netAmount");
-        this.netAmount = Optional.ofNullable(netAmount);
-        return this;
-    }
 
-
-    public HrisPayslip withNetAmount(Optional<Double> netAmount) {
-        Utils.checkNotNull(netAmount, "netAmount");
+    public HrisPayslip withNetAmount(@Nullable Double netAmount) {
         this.netAmount = netAmount;
         return this;
     }
 
-    public HrisPayslip withPaidAt(OffsetDateTime paidAt) {
-        Utils.checkNotNull(paidAt, "paidAt");
-        this.paidAt = Optional.ofNullable(paidAt);
-        return this;
-    }
 
-
-    public HrisPayslip withPaidAt(Optional<OffsetDateTime> paidAt) {
-        Utils.checkNotNull(paidAt, "paidAt");
+    public HrisPayslip withPaidAt(@Nullable OffsetDateTime paidAt) {
         this.paidAt = paidAt;
         return this;
     }
 
-    public HrisPayslip withPaymentType(PaymentType paymentType) {
-        Utils.checkNotNull(paymentType, "paymentType");
-        this.paymentType = Optional.ofNullable(paymentType);
-        return this;
-    }
 
-
-    public HrisPayslip withPaymentType(Optional<? extends PaymentType> paymentType) {
-        Utils.checkNotNull(paymentType, "paymentType");
+    public HrisPayslip withPaymentType(@Nullable PaymentType paymentType) {
         this.paymentType = paymentType;
         return this;
     }
 
-    public HrisPayslip withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = raw;
-        return this;
-    }
 
-    public HrisPayslip withStartAt(OffsetDateTime startAt) {
-        Utils.checkNotNull(startAt, "startAt");
-        this.startAt = Optional.ofNullable(startAt);
+    public HrisPayslip withRaw(@Nonnull Map<String, Object> raw) {
+        this.raw = Utils.checkNotNull(raw, "raw");
         return this;
     }
 
 
-    public HrisPayslip withStartAt(Optional<OffsetDateTime> startAt) {
-        Utils.checkNotNull(startAt, "startAt");
+    public HrisPayslip withStartAt(@Nullable OffsetDateTime startAt) {
         this.startAt = startAt;
         return this;
     }
 
-    public HrisPayslip withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public HrisPayslip withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public HrisPayslip withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
-    public HrisPayslip withUserId(String userId) {
-        Utils.checkNotNull(userId, "userId");
-        this.userId = Optional.ofNullable(userId);
-        return this;
-    }
 
-
-    public HrisPayslip withUserId(Optional<String> userId) {
-        Utils.checkNotNull(userId, "userId");
+    public HrisPayslip withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -496,237 +363,119 @@ public class HrisPayslip {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> companyId = Optional.empty();
+        private String companyId;
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<String> currency = Optional.empty();
+        private String currency;
 
-        private Optional<? extends PropertyHrisPayslipDeduction> deduction = Optional.empty();
+        private PropertyHrisPayslipDeduction deduction;
 
-        private Optional<? extends List<HrisPayslipDetail>> details = Optional.empty();
+        private List<HrisPayslipDetail> details;
 
-        private Optional<OffsetDateTime> endAt = Optional.empty();
+        private OffsetDateTime endAt;
 
-        private Optional<Double> grossAmount = Optional.empty();
+        private Double grossAmount;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<Double> netAmount = Optional.empty();
+        private Double netAmount;
 
-        private Optional<OffsetDateTime> paidAt = Optional.empty();
+        private OffsetDateTime paidAt;
 
-        private Optional<? extends PaymentType> paymentType = Optional.empty();
+        private PaymentType paymentType;
 
         private Map<String, Object> raw;
 
-        private Optional<OffsetDateTime> startAt = Optional.empty();
+        private OffsetDateTime startAt;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
-        private Optional<String> userId = Optional.empty();
+        private String userId;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder companyId(String companyId) {
-            Utils.checkNotNull(companyId, "companyId");
-            this.companyId = Optional.ofNullable(companyId);
-            return this;
-        }
-
-        public Builder companyId(Optional<String> companyId) {
-            Utils.checkNotNull(companyId, "companyId");
+        public Builder companyId(@Nullable String companyId) {
             this.companyId = companyId;
             return this;
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder currency(String currency) {
-            Utils.checkNotNull(currency, "currency");
-            this.currency = Optional.ofNullable(currency);
-            return this;
-        }
-
-        public Builder currency(Optional<String> currency) {
-            Utils.checkNotNull(currency, "currency");
+        public Builder currency(@Nullable String currency) {
             this.currency = currency;
             return this;
         }
 
-
         /**
          * // The ID (and optionally name) of the employee deduction (if this detail represents a deduction)
          */
-        public Builder deduction(PropertyHrisPayslipDeduction deduction) {
-            Utils.checkNotNull(deduction, "deduction");
-            this.deduction = Optional.ofNullable(deduction);
-            return this;
-        }
-
-        /**
-         * // The ID (and optionally name) of the employee deduction (if this detail represents a deduction)
-         */
-        public Builder deduction(Optional<? extends PropertyHrisPayslipDeduction> deduction) {
-            Utils.checkNotNull(deduction, "deduction");
+        public Builder deduction(@Nullable PropertyHrisPayslipDeduction deduction) {
             this.deduction = deduction;
             return this;
         }
 
-
-        public Builder details(List<HrisPayslipDetail> details) {
-            Utils.checkNotNull(details, "details");
-            this.details = Optional.ofNullable(details);
-            return this;
-        }
-
-        public Builder details(Optional<? extends List<HrisPayslipDetail>> details) {
-            Utils.checkNotNull(details, "details");
+        public Builder details(@Nullable List<HrisPayslipDetail> details) {
             this.details = details;
             return this;
         }
 
-
-        public Builder endAt(OffsetDateTime endAt) {
-            Utils.checkNotNull(endAt, "endAt");
-            this.endAt = Optional.ofNullable(endAt);
-            return this;
-        }
-
-        public Builder endAt(Optional<OffsetDateTime> endAt) {
-            Utils.checkNotNull(endAt, "endAt");
+        public Builder endAt(@Nullable OffsetDateTime endAt) {
             this.endAt = endAt;
             return this;
         }
 
-
-        public Builder grossAmount(double grossAmount) {
-            Utils.checkNotNull(grossAmount, "grossAmount");
-            this.grossAmount = Optional.ofNullable(grossAmount);
-            return this;
-        }
-
-        public Builder grossAmount(Optional<Double> grossAmount) {
-            Utils.checkNotNull(grossAmount, "grossAmount");
+        public Builder grossAmount(@Nullable Double grossAmount) {
             this.grossAmount = grossAmount;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder netAmount(double netAmount) {
-            Utils.checkNotNull(netAmount, "netAmount");
-            this.netAmount = Optional.ofNullable(netAmount);
-            return this;
-        }
-
-        public Builder netAmount(Optional<Double> netAmount) {
-            Utils.checkNotNull(netAmount, "netAmount");
+        public Builder netAmount(@Nullable Double netAmount) {
             this.netAmount = netAmount;
             return this;
         }
 
-
-        public Builder paidAt(OffsetDateTime paidAt) {
-            Utils.checkNotNull(paidAt, "paidAt");
-            this.paidAt = Optional.ofNullable(paidAt);
-            return this;
-        }
-
-        public Builder paidAt(Optional<OffsetDateTime> paidAt) {
-            Utils.checkNotNull(paidAt, "paidAt");
+        public Builder paidAt(@Nullable OffsetDateTime paidAt) {
             this.paidAt = paidAt;
             return this;
         }
 
-
-        public Builder paymentType(PaymentType paymentType) {
-            Utils.checkNotNull(paymentType, "paymentType");
-            this.paymentType = Optional.ofNullable(paymentType);
-            return this;
-        }
-
-        public Builder paymentType(Optional<? extends PaymentType> paymentType) {
-            Utils.checkNotNull(paymentType, "paymentType");
+        public Builder paymentType(@Nullable PaymentType paymentType) {
             this.paymentType = paymentType;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = raw;
+        public Builder raw(@Nonnull Map<String, Object> raw) {
+            this.raw = Utils.checkNotNull(raw, "raw");
             return this;
         }
 
-
-        public Builder startAt(OffsetDateTime startAt) {
-            Utils.checkNotNull(startAt, "startAt");
-            this.startAt = Optional.ofNullable(startAt);
-            return this;
-        }
-
-        public Builder startAt(Optional<OffsetDateTime> startAt) {
-            Utils.checkNotNull(startAt, "startAt");
+        public Builder startAt(@Nullable OffsetDateTime startAt) {
             this.startAt = startAt;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
-
-        public Builder userId(String userId) {
-            Utils.checkNotNull(userId, "userId");
-            this.userId = Optional.ofNullable(userId);
-            return this;
-        }
-
-        public Builder userId(Optional<String> userId) {
-            Utils.checkNotNull(userId, "userId");
+        public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;
         }
 
         public HrisPayslip build() {
-
             return new HrisPayslip(
                 companyId, createdAt, currency,
                 deduction, details, endAt,

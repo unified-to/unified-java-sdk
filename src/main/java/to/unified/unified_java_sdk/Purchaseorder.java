@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingPurchaseorderRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingPurchaseorderRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingPurchaseorderResponse;
@@ -67,7 +68,7 @@ public class Purchaseorder {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAccountingPurchaseorderResponse createAccountingPurchaseorder(CreateAccountingPurchaseorderRequest request) {
+    public CreateAccountingPurchaseorderResponse createAccountingPurchaseorder(@Nonnull CreateAccountingPurchaseorderRequest request) {
         RequestOperation<CreateAccountingPurchaseorderRequest, CreateAccountingPurchaseorderResponse> operation
               = new CreateAccountingPurchaseorder.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -89,7 +90,7 @@ public class Purchaseorder {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingPurchaseorderResponse getAccountingPurchaseorder(GetAccountingPurchaseorderRequest request) {
+    public GetAccountingPurchaseorderResponse getAccountingPurchaseorder(@Nonnull GetAccountingPurchaseorderRequest request) {
         RequestOperation<GetAccountingPurchaseorderRequest, GetAccountingPurchaseorderResponse> operation
               = new GetAccountingPurchaseorder.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -111,7 +112,7 @@ public class Purchaseorder {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingPurchaseordersResponse listAccountingPurchaseorders(ListAccountingPurchaseordersRequest request) {
+    public ListAccountingPurchaseordersResponse listAccountingPurchaseorders(@Nonnull ListAccountingPurchaseordersRequest request) {
         RequestOperation<ListAccountingPurchaseordersRequest, ListAccountingPurchaseordersResponse> operation
               = new ListAccountingPurchaseorders.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -133,7 +134,7 @@ public class Purchaseorder {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAccountingPurchaseorderResponse patchAccountingPurchaseorder(PatchAccountingPurchaseorderRequest request) {
+    public PatchAccountingPurchaseorderResponse patchAccountingPurchaseorder(@Nonnull PatchAccountingPurchaseorderRequest request) {
         RequestOperation<PatchAccountingPurchaseorderRequest, PatchAccountingPurchaseorderResponse> operation
               = new PatchAccountingPurchaseorder.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -155,7 +156,7 @@ public class Purchaseorder {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAccountingPurchaseorderResponse removeAccountingPurchaseorder(RemoveAccountingPurchaseorderRequest request) {
+    public RemoveAccountingPurchaseorderResponse removeAccountingPurchaseorder(@Nonnull RemoveAccountingPurchaseorderRequest request) {
         RequestOperation<RemoveAccountingPurchaseorderRequest, RemoveAccountingPurchaseorderResponse> operation
               = new RemoveAccountingPurchaseorder.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -177,7 +178,7 @@ public class Purchaseorder {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAccountingPurchaseorderResponse updateAccountingPurchaseorder(UpdateAccountingPurchaseorderRequest request) {
+    public UpdateAccountingPurchaseorderResponse updateAccountingPurchaseorder(@Nonnull UpdateAccountingPurchaseorderRequest request) {
         RequestOperation<UpdateAccountingPurchaseorderRequest, UpdateAccountingPurchaseorderResponse> operation
               = new UpdateAccountingPurchaseorder.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

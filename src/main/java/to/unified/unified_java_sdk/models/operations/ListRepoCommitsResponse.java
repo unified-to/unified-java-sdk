@@ -4,12 +4,11 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.io.InputStream;
-import java.lang.Integer;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.List;
 import java.util.Optional;
@@ -27,7 +26,7 @@ public class ListRepoCommitsResponse implements Response {
     /**
      * Successful
      */
-    private Optional<? extends List<RepoCommit>> repoCommits;
+    private List<RepoCommit> repoCommits;
 
     /**
      * HTTP response status code for this operation
@@ -41,59 +40,52 @@ public class ListRepoCommitsResponse implements Response {
 
     @JsonCreator
     public ListRepoCommitsResponse(
-            String contentType,
-            Optional<? extends List<RepoCommit>> repoCommits,
+            @Nonnull String contentType,
+            @Nullable List<RepoCommit> repoCommits,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(repoCommits, "repoCommits");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.contentType = contentType;
+            @Nonnull HttpResponse<InputStream> rawResponse) {
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.repoCommits = repoCommits;
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
     }
     
     public ListRepoCommitsResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
-        this(contentType, Optional.empty(), statusCode,
+            @Nonnull HttpResponse<InputStream> rawResponse) {
+        this(contentType, null, statusCode,
             rawResponse);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<RepoCommit>> repoCommits() {
-        return (Optional<List<RepoCommit>>) repoCommits;
+        return Optional.ofNullable(this.repoCommits);
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<InputStream> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     public static Builder builder() {
@@ -104,18 +96,8 @@ public class ListRepoCommitsResponse implements Response {
     /**
      * HTTP response content type for this operation
      */
-    public ListRepoCommitsResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
-        return this;
-    }
-
-    /**
-     * Successful
-     */
-    public ListRepoCommitsResponse withRepoCommits(List<RepoCommit> repoCommits) {
-        Utils.checkNotNull(repoCommits, "repoCommits");
-        this.repoCommits = Optional.ofNullable(repoCommits);
+    public ListRepoCommitsResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
 
@@ -123,29 +105,29 @@ public class ListRepoCommitsResponse implements Response {
     /**
      * Successful
      */
-    public ListRepoCommitsResponse withRepoCommits(Optional<? extends List<RepoCommit>> repoCommits) {
-        Utils.checkNotNull(repoCommits, "repoCommits");
+    public ListRepoCommitsResponse withRepoCommits(@Nullable List<RepoCommit> repoCommits) {
         this.repoCommits = repoCommits;
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public ListRepoCommitsResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public ListRepoCommitsResponse withRawResponse(HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
+    public ListRepoCommitsResponse withRawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -184,9 +166,9 @@ public class ListRepoCommitsResponse implements Response {
 
         private String contentType;
 
-        private Optional<? extends List<RepoCommit>> repoCommits = Optional.empty();
+        private List<RepoCommit> repoCommits;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<InputStream> rawResponse;
 
@@ -194,57 +176,39 @@ public class ListRepoCommitsResponse implements Response {
           // force use of static builder() method
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
-            return this;
-        }
-
-
-        /**
-         * Successful
-         */
-        public Builder repoCommits(List<RepoCommit> repoCommits) {
-            Utils.checkNotNull(repoCommits, "repoCommits");
-            this.repoCommits = Optional.ofNullable(repoCommits);
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
 
         /**
          * Successful
          */
-        public Builder repoCommits(Optional<? extends List<RepoCommit>> repoCommits) {
-            Utils.checkNotNull(repoCommits, "repoCommits");
+        public Builder repoCommits(@Nullable List<RepoCommit> repoCommits) {
             this.repoCommits = repoCommits;
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<InputStream> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
+        public Builder rawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         public ListRepoCommitsResponse build() {
-
             return new ListRepoCommitsResponse(
                 contentType, repoCommits, statusCode,
                 rawResponse);

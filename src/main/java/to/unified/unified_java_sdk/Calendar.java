@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateCalendarCalendarRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCalendarCalendarRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateCalendarCalendarResponse;
@@ -127,7 +128,7 @@ public class Calendar {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCalendarCalendarResponse createCalendarCalendar(CreateCalendarCalendarRequest request) {
+    public CreateCalendarCalendarResponse createCalendarCalendar(@Nonnull CreateCalendarCalendarRequest request) {
         RequestOperation<CreateCalendarCalendarRequest, CreateCalendarCalendarResponse> operation
               = new CreateCalendarCalendar.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -149,7 +150,7 @@ public class Calendar {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCalendarEventResponse createCalendarEvent(CreateCalendarEventRequest request) {
+    public CreateCalendarEventResponse createCalendarEvent(@Nonnull CreateCalendarEventRequest request) {
         RequestOperation<CreateCalendarEventRequest, CreateCalendarEventResponse> operation
               = new CreateCalendarEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -171,7 +172,7 @@ public class Calendar {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCalendarLinkResponse createCalendarLink(CreateCalendarLinkRequest request) {
+    public CreateCalendarLinkResponse createCalendarLink(@Nonnull CreateCalendarLinkRequest request) {
         RequestOperation<CreateCalendarLinkRequest, CreateCalendarLinkResponse> operation
               = new CreateCalendarLink.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -193,7 +194,7 @@ public class Calendar {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetCalendarCalendarResponse getCalendarCalendar(GetCalendarCalendarRequest request) {
+    public GetCalendarCalendarResponse getCalendarCalendar(@Nonnull GetCalendarCalendarRequest request) {
         RequestOperation<GetCalendarCalendarRequest, GetCalendarCalendarResponse> operation
               = new GetCalendarCalendar.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -215,7 +216,7 @@ public class Calendar {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetCalendarEventResponse getCalendarEvent(GetCalendarEventRequest request) {
+    public GetCalendarEventResponse getCalendarEvent(@Nonnull GetCalendarEventRequest request) {
         RequestOperation<GetCalendarEventRequest, GetCalendarEventResponse> operation
               = new GetCalendarEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -237,7 +238,7 @@ public class Calendar {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetCalendarLinkResponse getCalendarLink(GetCalendarLinkRequest request) {
+    public GetCalendarLinkResponse getCalendarLink(@Nonnull GetCalendarLinkRequest request) {
         RequestOperation<GetCalendarLinkRequest, GetCalendarLinkResponse> operation
               = new GetCalendarLink.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -259,7 +260,7 @@ public class Calendar {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetCalendarRecordingResponse getCalendarRecording(GetCalendarRecordingRequest request) {
+    public GetCalendarRecordingResponse getCalendarRecording(@Nonnull GetCalendarRecordingRequest request) {
         RequestOperation<GetCalendarRecordingRequest, GetCalendarRecordingResponse> operation
               = new GetCalendarRecording.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -281,7 +282,7 @@ public class Calendar {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCalendarBusiesResponse listCalendarBusies(ListCalendarBusiesRequest request) {
+    public ListCalendarBusiesResponse listCalendarBusies(@Nonnull ListCalendarBusiesRequest request) {
         RequestOperation<ListCalendarBusiesRequest, ListCalendarBusiesResponse> operation
               = new ListCalendarBusies.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -303,7 +304,7 @@ public class Calendar {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCalendarCalendarsResponse listCalendarCalendars(ListCalendarCalendarsRequest request) {
+    public ListCalendarCalendarsResponse listCalendarCalendars(@Nonnull ListCalendarCalendarsRequest request) {
         RequestOperation<ListCalendarCalendarsRequest, ListCalendarCalendarsResponse> operation
               = new ListCalendarCalendars.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -325,7 +326,7 @@ public class Calendar {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCalendarEventsResponse listCalendarEvents(ListCalendarEventsRequest request) {
+    public ListCalendarEventsResponse listCalendarEvents(@Nonnull ListCalendarEventsRequest request) {
         RequestOperation<ListCalendarEventsRequest, ListCalendarEventsResponse> operation
               = new ListCalendarEvents.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -347,7 +348,7 @@ public class Calendar {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCalendarLinksResponse listCalendarLinks(ListCalendarLinksRequest request) {
+    public ListCalendarLinksResponse listCalendarLinks(@Nonnull ListCalendarLinksRequest request) {
         RequestOperation<ListCalendarLinksRequest, ListCalendarLinksResponse> operation
               = new ListCalendarLinks.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -369,7 +370,7 @@ public class Calendar {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCalendarRecordingsResponse listCalendarRecordings(ListCalendarRecordingsRequest request) {
+    public ListCalendarRecordingsResponse listCalendarRecordings(@Nonnull ListCalendarRecordingsRequest request) {
         RequestOperation<ListCalendarRecordingsRequest, ListCalendarRecordingsResponse> operation
               = new ListCalendarRecordings.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -391,7 +392,7 @@ public class Calendar {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCalendarCalendarResponse patchCalendarCalendar(PatchCalendarCalendarRequest request) {
+    public PatchCalendarCalendarResponse patchCalendarCalendar(@Nonnull PatchCalendarCalendarRequest request) {
         RequestOperation<PatchCalendarCalendarRequest, PatchCalendarCalendarResponse> operation
               = new PatchCalendarCalendar.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -413,7 +414,7 @@ public class Calendar {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCalendarEventResponse patchCalendarEvent(PatchCalendarEventRequest request) {
+    public PatchCalendarEventResponse patchCalendarEvent(@Nonnull PatchCalendarEventRequest request) {
         RequestOperation<PatchCalendarEventRequest, PatchCalendarEventResponse> operation
               = new PatchCalendarEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -435,7 +436,7 @@ public class Calendar {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCalendarLinkResponse patchCalendarLink(PatchCalendarLinkRequest request) {
+    public PatchCalendarLinkResponse patchCalendarLink(@Nonnull PatchCalendarLinkRequest request) {
         RequestOperation<PatchCalendarLinkRequest, PatchCalendarLinkResponse> operation
               = new PatchCalendarLink.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -457,7 +458,7 @@ public class Calendar {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCalendarCalendarResponse removeCalendarCalendar(RemoveCalendarCalendarRequest request) {
+    public RemoveCalendarCalendarResponse removeCalendarCalendar(@Nonnull RemoveCalendarCalendarRequest request) {
         RequestOperation<RemoveCalendarCalendarRequest, RemoveCalendarCalendarResponse> operation
               = new RemoveCalendarCalendar.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -479,7 +480,7 @@ public class Calendar {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCalendarEventResponse removeCalendarEvent(RemoveCalendarEventRequest request) {
+    public RemoveCalendarEventResponse removeCalendarEvent(@Nonnull RemoveCalendarEventRequest request) {
         RequestOperation<RemoveCalendarEventRequest, RemoveCalendarEventResponse> operation
               = new RemoveCalendarEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -501,7 +502,7 @@ public class Calendar {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCalendarLinkResponse removeCalendarLink(RemoveCalendarLinkRequest request) {
+    public RemoveCalendarLinkResponse removeCalendarLink(@Nonnull RemoveCalendarLinkRequest request) {
         RequestOperation<RemoveCalendarLinkRequest, RemoveCalendarLinkResponse> operation
               = new RemoveCalendarLink.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -523,7 +524,7 @@ public class Calendar {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCalendarCalendarResponse updateCalendarCalendar(UpdateCalendarCalendarRequest request) {
+    public UpdateCalendarCalendarResponse updateCalendarCalendar(@Nonnull UpdateCalendarCalendarRequest request) {
         RequestOperation<UpdateCalendarCalendarRequest, UpdateCalendarCalendarResponse> operation
               = new UpdateCalendarCalendar.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -545,7 +546,7 @@ public class Calendar {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCalendarEventResponse updateCalendarEvent(UpdateCalendarEventRequest request) {
+    public UpdateCalendarEventResponse updateCalendarEvent(@Nonnull UpdateCalendarEventRequest request) {
         RequestOperation<UpdateCalendarEventRequest, UpdateCalendarEventResponse> operation
               = new UpdateCalendarEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -567,7 +568,7 @@ public class Calendar {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCalendarLinkResponse updateCalendarLink(UpdateCalendarLinkRequest request) {
+    public UpdateCalendarLinkResponse updateCalendarLink(@Nonnull UpdateCalendarLinkRequest request) {
         RequestOperation<UpdateCalendarLinkRequest, UpdateCalendarLinkResponse> operation
               = new UpdateCalendarLink.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateMartechMemberRequest;
 import to.unified.unified_java_sdk.models.operations.GetMartechMemberRequest;
@@ -68,7 +69,7 @@ public class AsyncMember {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateMartechMemberResponse>} - The async response
      */
-    public CompletableFuture<CreateMartechMemberResponse> createMartechMember(CreateMartechMemberRequest request) {
+    public CompletableFuture<CreateMartechMemberResponse> createMartechMember(@Nonnull CreateMartechMemberRequest request) {
         AsyncRequestOperation<CreateMartechMemberRequest, CreateMartechMemberResponse> operation
               = new CreateMartechMember.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -91,7 +92,7 @@ public class AsyncMember {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetMartechMemberResponse>} - The async response
      */
-    public CompletableFuture<GetMartechMemberResponse> getMartechMember(GetMartechMemberRequest request) {
+    public CompletableFuture<GetMartechMemberResponse> getMartechMember(@Nonnull GetMartechMemberRequest request) {
         AsyncRequestOperation<GetMartechMemberRequest, GetMartechMemberResponse> operation
               = new GetMartechMember.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -114,7 +115,7 @@ public class AsyncMember {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListMartechMembersResponse>} - The async response
      */
-    public CompletableFuture<ListMartechMembersResponse> listMartechMembers(ListMartechMembersRequest request) {
+    public CompletableFuture<ListMartechMembersResponse> listMartechMembers(@Nonnull ListMartechMembersRequest request) {
         AsyncRequestOperation<ListMartechMembersRequest, ListMartechMembersResponse> operation
               = new ListMartechMembers.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -137,7 +138,7 @@ public class AsyncMember {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchMartechMemberResponse>} - The async response
      */
-    public CompletableFuture<PatchMartechMemberResponse> patchMartechMember(PatchMartechMemberRequest request) {
+    public CompletableFuture<PatchMartechMemberResponse> patchMartechMember(@Nonnull PatchMartechMemberRequest request) {
         AsyncRequestOperation<PatchMartechMemberRequest, PatchMartechMemberResponse> operation
               = new PatchMartechMember.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -160,7 +161,7 @@ public class AsyncMember {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveMartechMemberResponse>} - The async response
      */
-    public CompletableFuture<RemoveMartechMemberResponse> removeMartechMember(RemoveMartechMemberRequest request) {
+    public CompletableFuture<RemoveMartechMemberResponse> removeMartechMember(@Nonnull RemoveMartechMemberRequest request) {
         AsyncRequestOperation<RemoveMartechMemberRequest, RemoveMartechMemberResponse> operation
               = new RemoveMartechMember.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -183,7 +184,7 @@ public class AsyncMember {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateMartechMemberResponse>} - The async response
      */
-    public CompletableFuture<UpdateMartechMemberResponse> updateMartechMember(UpdateMartechMemberRequest request) {
+    public CompletableFuture<UpdateMartechMemberResponse> updateMartechMember(@Nonnull UpdateMartechMemberRequest request) {
         AsyncRequestOperation<UpdateMartechMemberRequest, UpdateMartechMemberResponse> operation
               = new UpdateMartechMember.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

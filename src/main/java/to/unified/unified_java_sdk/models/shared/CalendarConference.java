@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
 import java.util.Optional;
@@ -18,68 +18,59 @@ public class CalendarConference {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conference_identifier")
-    private Optional<String> conferenceIdentifier;
+    private String conferenceIdentifier;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country_code")
-    private Optional<String> countryCode;
+    private String countryCode;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("host_access_code")
-    private Optional<String> hostAccessCode;
+    private String hostAccessCode;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
-    private Optional<String> label;
+    private String label;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
-    private Optional<String> notes;
+    private String notes;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("participant_access_code")
-    private Optional<String> participantAccessCode;
+    private String participantAccessCode;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region_code")
-    private Optional<String> regionCode;
+    private String regionCode;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("telephone")
-    private Optional<String> telephone;
+    private String telephone;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
-    private Optional<String> url;
+    private String url;
 
     @JsonCreator
     public CalendarConference(
-            @JsonProperty("conference_identifier") Optional<String> conferenceIdentifier,
-            @JsonProperty("country_code") Optional<String> countryCode,
-            @JsonProperty("host_access_code") Optional<String> hostAccessCode,
-            @JsonProperty("label") Optional<String> label,
-            @JsonProperty("notes") Optional<String> notes,
-            @JsonProperty("participant_access_code") Optional<String> participantAccessCode,
-            @JsonProperty("region_code") Optional<String> regionCode,
-            @JsonProperty("telephone") Optional<String> telephone,
-            @JsonProperty("url") Optional<String> url) {
-        Utils.checkNotNull(conferenceIdentifier, "conferenceIdentifier");
-        Utils.checkNotNull(countryCode, "countryCode");
-        Utils.checkNotNull(hostAccessCode, "hostAccessCode");
-        Utils.checkNotNull(label, "label");
-        Utils.checkNotNull(notes, "notes");
-        Utils.checkNotNull(participantAccessCode, "participantAccessCode");
-        Utils.checkNotNull(regionCode, "regionCode");
-        Utils.checkNotNull(telephone, "telephone");
-        Utils.checkNotNull(url, "url");
+            @JsonProperty("conference_identifier") @Nullable String conferenceIdentifier,
+            @JsonProperty("country_code") @Nullable String countryCode,
+            @JsonProperty("host_access_code") @Nullable String hostAccessCode,
+            @JsonProperty("label") @Nullable String label,
+            @JsonProperty("notes") @Nullable String notes,
+            @JsonProperty("participant_access_code") @Nullable String participantAccessCode,
+            @JsonProperty("region_code") @Nullable String regionCode,
+            @JsonProperty("telephone") @Nullable String telephone,
+            @JsonProperty("url") @Nullable String url) {
         this.conferenceIdentifier = conferenceIdentifier;
         this.countryCode = countryCode;
         this.hostAccessCode = hostAccessCode;
@@ -92,54 +83,45 @@ public class CalendarConference {
     }
     
     public CalendarConference() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null);
     }
 
-    @JsonIgnore
     public Optional<String> conferenceIdentifier() {
-        return conferenceIdentifier;
+        return Optional.ofNullable(this.conferenceIdentifier);
     }
 
-    @JsonIgnore
     public Optional<String> countryCode() {
-        return countryCode;
+        return Optional.ofNullable(this.countryCode);
     }
 
-    @JsonIgnore
     public Optional<String> hostAccessCode() {
-        return hostAccessCode;
+        return Optional.ofNullable(this.hostAccessCode);
     }
 
-    @JsonIgnore
     public Optional<String> label() {
-        return label;
+        return Optional.ofNullable(this.label);
     }
 
-    @JsonIgnore
     public Optional<String> notes() {
-        return notes;
+        return Optional.ofNullable(this.notes);
     }
 
-    @JsonIgnore
     public Optional<String> participantAccessCode() {
-        return participantAccessCode;
+        return Optional.ofNullable(this.participantAccessCode);
     }
 
-    @JsonIgnore
     public Optional<String> regionCode() {
-        return regionCode;
+        return Optional.ofNullable(this.regionCode);
     }
 
-    @JsonIgnore
     public Optional<String> telephone() {
-        return telephone;
+        return Optional.ofNullable(this.telephone);
     }
 
-    @JsonIgnore
     public Optional<String> url() {
-        return url;
+        return Optional.ofNullable(this.url);
     }
 
     public static Builder builder() {
@@ -147,122 +129,59 @@ public class CalendarConference {
     }
 
 
-    public CalendarConference withConferenceIdentifier(String conferenceIdentifier) {
-        Utils.checkNotNull(conferenceIdentifier, "conferenceIdentifier");
-        this.conferenceIdentifier = Optional.ofNullable(conferenceIdentifier);
-        return this;
-    }
-
-
-    public CalendarConference withConferenceIdentifier(Optional<String> conferenceIdentifier) {
-        Utils.checkNotNull(conferenceIdentifier, "conferenceIdentifier");
+    public CalendarConference withConferenceIdentifier(@Nullable String conferenceIdentifier) {
         this.conferenceIdentifier = conferenceIdentifier;
         return this;
     }
 
-    public CalendarConference withCountryCode(String countryCode) {
-        Utils.checkNotNull(countryCode, "countryCode");
-        this.countryCode = Optional.ofNullable(countryCode);
-        return this;
-    }
 
-
-    public CalendarConference withCountryCode(Optional<String> countryCode) {
-        Utils.checkNotNull(countryCode, "countryCode");
+    public CalendarConference withCountryCode(@Nullable String countryCode) {
         this.countryCode = countryCode;
         return this;
     }
 
-    public CalendarConference withHostAccessCode(String hostAccessCode) {
-        Utils.checkNotNull(hostAccessCode, "hostAccessCode");
-        this.hostAccessCode = Optional.ofNullable(hostAccessCode);
-        return this;
-    }
 
-
-    public CalendarConference withHostAccessCode(Optional<String> hostAccessCode) {
-        Utils.checkNotNull(hostAccessCode, "hostAccessCode");
+    public CalendarConference withHostAccessCode(@Nullable String hostAccessCode) {
         this.hostAccessCode = hostAccessCode;
         return this;
     }
 
-    public CalendarConference withLabel(String label) {
-        Utils.checkNotNull(label, "label");
-        this.label = Optional.ofNullable(label);
-        return this;
-    }
 
-
-    public CalendarConference withLabel(Optional<String> label) {
-        Utils.checkNotNull(label, "label");
+    public CalendarConference withLabel(@Nullable String label) {
         this.label = label;
         return this;
     }
 
-    public CalendarConference withNotes(String notes) {
-        Utils.checkNotNull(notes, "notes");
-        this.notes = Optional.ofNullable(notes);
-        return this;
-    }
 
-
-    public CalendarConference withNotes(Optional<String> notes) {
-        Utils.checkNotNull(notes, "notes");
+    public CalendarConference withNotes(@Nullable String notes) {
         this.notes = notes;
         return this;
     }
 
-    public CalendarConference withParticipantAccessCode(String participantAccessCode) {
-        Utils.checkNotNull(participantAccessCode, "participantAccessCode");
-        this.participantAccessCode = Optional.ofNullable(participantAccessCode);
-        return this;
-    }
 
-
-    public CalendarConference withParticipantAccessCode(Optional<String> participantAccessCode) {
-        Utils.checkNotNull(participantAccessCode, "participantAccessCode");
+    public CalendarConference withParticipantAccessCode(@Nullable String participantAccessCode) {
         this.participantAccessCode = participantAccessCode;
         return this;
     }
 
-    public CalendarConference withRegionCode(String regionCode) {
-        Utils.checkNotNull(regionCode, "regionCode");
-        this.regionCode = Optional.ofNullable(regionCode);
-        return this;
-    }
 
-
-    public CalendarConference withRegionCode(Optional<String> regionCode) {
-        Utils.checkNotNull(regionCode, "regionCode");
+    public CalendarConference withRegionCode(@Nullable String regionCode) {
         this.regionCode = regionCode;
         return this;
     }
 
-    public CalendarConference withTelephone(String telephone) {
-        Utils.checkNotNull(telephone, "telephone");
-        this.telephone = Optional.ofNullable(telephone);
-        return this;
-    }
 
-
-    public CalendarConference withTelephone(Optional<String> telephone) {
-        Utils.checkNotNull(telephone, "telephone");
+    public CalendarConference withTelephone(@Nullable String telephone) {
         this.telephone = telephone;
         return this;
     }
 
-    public CalendarConference withUrl(String url) {
-        Utils.checkNotNull(url, "url");
-        this.url = Optional.ofNullable(url);
-        return this;
-    }
 
-
-    public CalendarConference withUrl(Optional<String> url) {
-        Utils.checkNotNull(url, "url");
+    public CalendarConference withUrl(@Nullable String url) {
         this.url = url;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -310,147 +229,74 @@ public class CalendarConference {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> conferenceIdentifier = Optional.empty();
+        private String conferenceIdentifier;
 
-        private Optional<String> countryCode = Optional.empty();
+        private String countryCode;
 
-        private Optional<String> hostAccessCode = Optional.empty();
+        private String hostAccessCode;
 
-        private Optional<String> label = Optional.empty();
+        private String label;
 
-        private Optional<String> notes = Optional.empty();
+        private String notes;
 
-        private Optional<String> participantAccessCode = Optional.empty();
+        private String participantAccessCode;
 
-        private Optional<String> regionCode = Optional.empty();
+        private String regionCode;
 
-        private Optional<String> telephone = Optional.empty();
+        private String telephone;
 
-        private Optional<String> url = Optional.empty();
+        private String url;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder conferenceIdentifier(String conferenceIdentifier) {
-            Utils.checkNotNull(conferenceIdentifier, "conferenceIdentifier");
-            this.conferenceIdentifier = Optional.ofNullable(conferenceIdentifier);
-            return this;
-        }
-
-        public Builder conferenceIdentifier(Optional<String> conferenceIdentifier) {
-            Utils.checkNotNull(conferenceIdentifier, "conferenceIdentifier");
+        public Builder conferenceIdentifier(@Nullable String conferenceIdentifier) {
             this.conferenceIdentifier = conferenceIdentifier;
             return this;
         }
 
-
-        public Builder countryCode(String countryCode) {
-            Utils.checkNotNull(countryCode, "countryCode");
-            this.countryCode = Optional.ofNullable(countryCode);
-            return this;
-        }
-
-        public Builder countryCode(Optional<String> countryCode) {
-            Utils.checkNotNull(countryCode, "countryCode");
+        public Builder countryCode(@Nullable String countryCode) {
             this.countryCode = countryCode;
             return this;
         }
 
-
-        public Builder hostAccessCode(String hostAccessCode) {
-            Utils.checkNotNull(hostAccessCode, "hostAccessCode");
-            this.hostAccessCode = Optional.ofNullable(hostAccessCode);
-            return this;
-        }
-
-        public Builder hostAccessCode(Optional<String> hostAccessCode) {
-            Utils.checkNotNull(hostAccessCode, "hostAccessCode");
+        public Builder hostAccessCode(@Nullable String hostAccessCode) {
             this.hostAccessCode = hostAccessCode;
             return this;
         }
 
-
-        public Builder label(String label) {
-            Utils.checkNotNull(label, "label");
-            this.label = Optional.ofNullable(label);
-            return this;
-        }
-
-        public Builder label(Optional<String> label) {
-            Utils.checkNotNull(label, "label");
+        public Builder label(@Nullable String label) {
             this.label = label;
             return this;
         }
 
-
-        public Builder notes(String notes) {
-            Utils.checkNotNull(notes, "notes");
-            this.notes = Optional.ofNullable(notes);
-            return this;
-        }
-
-        public Builder notes(Optional<String> notes) {
-            Utils.checkNotNull(notes, "notes");
+        public Builder notes(@Nullable String notes) {
             this.notes = notes;
             return this;
         }
 
-
-        public Builder participantAccessCode(String participantAccessCode) {
-            Utils.checkNotNull(participantAccessCode, "participantAccessCode");
-            this.participantAccessCode = Optional.ofNullable(participantAccessCode);
-            return this;
-        }
-
-        public Builder participantAccessCode(Optional<String> participantAccessCode) {
-            Utils.checkNotNull(participantAccessCode, "participantAccessCode");
+        public Builder participantAccessCode(@Nullable String participantAccessCode) {
             this.participantAccessCode = participantAccessCode;
             return this;
         }
 
-
-        public Builder regionCode(String regionCode) {
-            Utils.checkNotNull(regionCode, "regionCode");
-            this.regionCode = Optional.ofNullable(regionCode);
-            return this;
-        }
-
-        public Builder regionCode(Optional<String> regionCode) {
-            Utils.checkNotNull(regionCode, "regionCode");
+        public Builder regionCode(@Nullable String regionCode) {
             this.regionCode = regionCode;
             return this;
         }
 
-
-        public Builder telephone(String telephone) {
-            Utils.checkNotNull(telephone, "telephone");
-            this.telephone = Optional.ofNullable(telephone);
-            return this;
-        }
-
-        public Builder telephone(Optional<String> telephone) {
-            Utils.checkNotNull(telephone, "telephone");
+        public Builder telephone(@Nullable String telephone) {
             this.telephone = telephone;
             return this;
         }
 
-
-        public Builder url(String url) {
-            Utils.checkNotNull(url, "url");
-            this.url = Optional.ofNullable(url);
-            return this;
-        }
-
-        public Builder url(Optional<String> url) {
-            Utils.checkNotNull(url, "url");
+        public Builder url(@Nullable String url) {
             this.url = url;
             return this;
         }
 
         public CalendarConference build() {
-
             return new CalendarConference(
                 conferenceIdentifier, countryCode, hostAccessCode,
                 label, notes, participantAccessCode,

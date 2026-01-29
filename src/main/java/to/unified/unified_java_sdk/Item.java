@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceItemRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceItemRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceItemResponse;
@@ -67,7 +68,7 @@ public class Item {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCommerceItemResponse createCommerceItem(CreateCommerceItemRequest request) {
+    public CreateCommerceItemResponse createCommerceItem(@Nonnull CreateCommerceItemRequest request) {
         RequestOperation<CreateCommerceItemRequest, CreateCommerceItemResponse> operation
               = new CreateCommerceItem.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -89,7 +90,7 @@ public class Item {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetCommerceItemResponse getCommerceItem(GetCommerceItemRequest request) {
+    public GetCommerceItemResponse getCommerceItem(@Nonnull GetCommerceItemRequest request) {
         RequestOperation<GetCommerceItemRequest, GetCommerceItemResponse> operation
               = new GetCommerceItem.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -111,7 +112,7 @@ public class Item {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCommerceItemsResponse listCommerceItems(ListCommerceItemsRequest request) {
+    public ListCommerceItemsResponse listCommerceItems(@Nonnull ListCommerceItemsRequest request) {
         RequestOperation<ListCommerceItemsRequest, ListCommerceItemsResponse> operation
               = new ListCommerceItems.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -133,7 +134,7 @@ public class Item {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCommerceItemResponse patchCommerceItem(PatchCommerceItemRequest request) {
+    public PatchCommerceItemResponse patchCommerceItem(@Nonnull PatchCommerceItemRequest request) {
         RequestOperation<PatchCommerceItemRequest, PatchCommerceItemResponse> operation
               = new PatchCommerceItem.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -155,7 +156,7 @@ public class Item {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCommerceItemResponse removeCommerceItem(RemoveCommerceItemRequest request) {
+    public RemoveCommerceItemResponse removeCommerceItem(@Nonnull RemoveCommerceItemRequest request) {
         RequestOperation<RemoveCommerceItemRequest, RemoveCommerceItemResponse> operation
               = new RemoveCommerceItem.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -177,7 +178,7 @@ public class Item {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCommerceItemResponse updateCommerceItem(UpdateCommerceItemRequest request) {
+    public UpdateCommerceItemResponse updateCommerceItem(@Nonnull UpdateCommerceItemRequest request) {
         RequestOperation<UpdateCommerceItemRequest, UpdateCommerceItemResponse> operation
               = new UpdateCommerceItem.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

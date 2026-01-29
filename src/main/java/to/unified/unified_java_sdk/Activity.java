@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateAtsActivityRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAtsActivityRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAtsActivityResponse;
@@ -67,7 +68,7 @@ public class Activity {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAtsActivityResponse createAtsActivity(CreateAtsActivityRequest request) {
+    public CreateAtsActivityResponse createAtsActivity(@Nonnull CreateAtsActivityRequest request) {
         RequestOperation<CreateAtsActivityRequest, CreateAtsActivityResponse> operation
               = new CreateAtsActivity.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -89,7 +90,7 @@ public class Activity {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAtsActivityResponse getAtsActivity(GetAtsActivityRequest request) {
+    public GetAtsActivityResponse getAtsActivity(@Nonnull GetAtsActivityRequest request) {
         RequestOperation<GetAtsActivityRequest, GetAtsActivityResponse> operation
               = new GetAtsActivity.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -111,7 +112,7 @@ public class Activity {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAtsActivitiesResponse listAtsActivities(ListAtsActivitiesRequest request) {
+    public ListAtsActivitiesResponse listAtsActivities(@Nonnull ListAtsActivitiesRequest request) {
         RequestOperation<ListAtsActivitiesRequest, ListAtsActivitiesResponse> operation
               = new ListAtsActivities.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -133,7 +134,7 @@ public class Activity {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAtsActivityResponse patchAtsActivity(PatchAtsActivityRequest request) {
+    public PatchAtsActivityResponse patchAtsActivity(@Nonnull PatchAtsActivityRequest request) {
         RequestOperation<PatchAtsActivityRequest, PatchAtsActivityResponse> operation
               = new PatchAtsActivity.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -155,7 +156,7 @@ public class Activity {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAtsActivityResponse removeAtsActivity(RemoveAtsActivityRequest request) {
+    public RemoveAtsActivityResponse removeAtsActivity(@Nonnull RemoveAtsActivityRequest request) {
         RequestOperation<RemoveAtsActivityRequest, RemoveAtsActivityResponse> operation
               = new RemoveAtsActivity.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -177,7 +178,7 @@ public class Activity {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAtsActivityResponse updateAtsActivity(UpdateAtsActivityRequest request) {
+    public UpdateAtsActivityResponse updateAtsActivity(@Nonnull UpdateAtsActivityRequest request) {
         RequestOperation<UpdateAtsActivityRequest, UpdateAtsActivityResponse> operation
               = new UpdateAtsActivity.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

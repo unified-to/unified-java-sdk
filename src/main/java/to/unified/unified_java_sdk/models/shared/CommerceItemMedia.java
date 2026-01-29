@@ -4,14 +4,14 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -21,32 +21,32 @@ public class CommerceItemMedia {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alt")
-    private Optional<String> alt;
+    private String alt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
-    private Optional<Double> height;
+    private Double height;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
-    private Optional<? extends List<CommerceMetadata>> metadata;
+    private List<CommerceMetadata> metadata;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
-    private Optional<Double> position;
+    private Double position;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
-    private Optional<? extends CommerceItemMediaType> type;
+    private CommerceItemMediaType type;
 
 
     @JsonProperty("url")
@@ -55,83 +55,66 @@ public class CommerceItemMedia {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
-    private Optional<Double> width;
+    private Double width;
 
     @JsonCreator
     public CommerceItemMedia(
-            @JsonProperty("alt") Optional<String> alt,
-            @JsonProperty("height") Optional<Double> height,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("metadata") Optional<? extends List<CommerceMetadata>> metadata,
-            @JsonProperty("position") Optional<Double> position,
-            @JsonProperty("type") Optional<? extends CommerceItemMediaType> type,
-            @JsonProperty("url") String url,
-            @JsonProperty("width") Optional<Double> width) {
-        Utils.checkNotNull(alt, "alt");
-        Utils.checkNotNull(height, "height");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(metadata, "metadata");
-        Utils.checkNotNull(position, "position");
-        Utils.checkNotNull(type, "type");
-        Utils.checkNotNull(url, "url");
-        Utils.checkNotNull(width, "width");
+            @JsonProperty("alt") @Nullable String alt,
+            @JsonProperty("height") @Nullable Double height,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("metadata") @Nullable List<CommerceMetadata> metadata,
+            @JsonProperty("position") @Nullable Double position,
+            @JsonProperty("type") @Nullable CommerceItemMediaType type,
+            @JsonProperty("url") @Nonnull String url,
+            @JsonProperty("width") @Nullable Double width) {
         this.alt = alt;
         this.height = height;
         this.id = id;
         this.metadata = metadata;
         this.position = position;
         this.type = type;
-        this.url = url;
+        this.url = Optional.ofNullable(url)
+            .orElseThrow(() -> new IllegalArgumentException("url cannot be null"));
         this.width = width;
     }
     
     public CommerceItemMedia(
-            String url) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            url, Optional.empty());
+            @Nonnull String url) {
+        this(null, null, null,
+            null, null, null,
+            url, null);
     }
 
-    @JsonIgnore
     public Optional<String> alt() {
-        return alt;
+        return Optional.ofNullable(this.alt);
     }
 
-    @JsonIgnore
     public Optional<Double> height() {
-        return height;
+        return Optional.ofNullable(this.height);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<CommerceMetadata>> metadata() {
-        return (Optional<List<CommerceMetadata>>) metadata;
+        return Optional.ofNullable(this.metadata);
     }
 
-    @JsonIgnore
     public Optional<Double> position() {
-        return position;
+        return Optional.ofNullable(this.position);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<CommerceItemMediaType> type() {
-        return (Optional<CommerceItemMediaType>) type;
+        return Optional.ofNullable(this.type);
     }
 
-    @JsonIgnore
     public String url() {
-        return url;
+        return this.url;
     }
 
-    @JsonIgnore
     public Optional<Double> width() {
-        return width;
+        return Optional.ofNullable(this.width);
     }
 
     public static Builder builder() {
@@ -139,102 +122,53 @@ public class CommerceItemMedia {
     }
 
 
-    public CommerceItemMedia withAlt(String alt) {
-        Utils.checkNotNull(alt, "alt");
-        this.alt = Optional.ofNullable(alt);
-        return this;
-    }
-
-
-    public CommerceItemMedia withAlt(Optional<String> alt) {
-        Utils.checkNotNull(alt, "alt");
+    public CommerceItemMedia withAlt(@Nullable String alt) {
         this.alt = alt;
         return this;
     }
 
-    public CommerceItemMedia withHeight(double height) {
-        Utils.checkNotNull(height, "height");
-        this.height = Optional.ofNullable(height);
-        return this;
-    }
 
-
-    public CommerceItemMedia withHeight(Optional<Double> height) {
-        Utils.checkNotNull(height, "height");
+    public CommerceItemMedia withHeight(@Nullable Double height) {
         this.height = height;
         return this;
     }
 
-    public CommerceItemMedia withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public CommerceItemMedia withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public CommerceItemMedia withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public CommerceItemMedia withMetadata(List<CommerceMetadata> metadata) {
-        Utils.checkNotNull(metadata, "metadata");
-        this.metadata = Optional.ofNullable(metadata);
-        return this;
-    }
 
-
-    public CommerceItemMedia withMetadata(Optional<? extends List<CommerceMetadata>> metadata) {
-        Utils.checkNotNull(metadata, "metadata");
+    public CommerceItemMedia withMetadata(@Nullable List<CommerceMetadata> metadata) {
         this.metadata = metadata;
         return this;
     }
 
-    public CommerceItemMedia withPosition(double position) {
-        Utils.checkNotNull(position, "position");
-        this.position = Optional.ofNullable(position);
-        return this;
-    }
 
-
-    public CommerceItemMedia withPosition(Optional<Double> position) {
-        Utils.checkNotNull(position, "position");
+    public CommerceItemMedia withPosition(@Nullable Double position) {
         this.position = position;
         return this;
     }
 
-    public CommerceItemMedia withType(CommerceItemMediaType type) {
-        Utils.checkNotNull(type, "type");
-        this.type = Optional.ofNullable(type);
-        return this;
-    }
 
-
-    public CommerceItemMedia withType(Optional<? extends CommerceItemMediaType> type) {
-        Utils.checkNotNull(type, "type");
+    public CommerceItemMedia withType(@Nullable CommerceItemMediaType type) {
         this.type = type;
         return this;
     }
 
-    public CommerceItemMedia withUrl(String url) {
-        Utils.checkNotNull(url, "url");
-        this.url = url;
-        return this;
-    }
 
-    public CommerceItemMedia withWidth(double width) {
-        Utils.checkNotNull(width, "width");
-        this.width = Optional.ofNullable(width);
+    public CommerceItemMedia withUrl(@Nonnull String url) {
+        this.url = Utils.checkNotNull(url, "url");
         return this;
     }
 
 
-    public CommerceItemMedia withWidth(Optional<Double> width) {
-        Utils.checkNotNull(width, "width");
+    public CommerceItemMedia withWidth(@Nullable Double width) {
         this.width = width;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -280,126 +214,67 @@ public class CommerceItemMedia {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> alt = Optional.empty();
+        private String alt;
 
-        private Optional<Double> height = Optional.empty();
+        private Double height;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<? extends List<CommerceMetadata>> metadata = Optional.empty();
+        private List<CommerceMetadata> metadata;
 
-        private Optional<Double> position = Optional.empty();
+        private Double position;
 
-        private Optional<? extends CommerceItemMediaType> type = Optional.empty();
+        private CommerceItemMediaType type;
 
         private String url;
 
-        private Optional<Double> width = Optional.empty();
+        private Double width;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder alt(String alt) {
-            Utils.checkNotNull(alt, "alt");
-            this.alt = Optional.ofNullable(alt);
-            return this;
-        }
-
-        public Builder alt(Optional<String> alt) {
-            Utils.checkNotNull(alt, "alt");
+        public Builder alt(@Nullable String alt) {
             this.alt = alt;
             return this;
         }
 
-
-        public Builder height(double height) {
-            Utils.checkNotNull(height, "height");
-            this.height = Optional.ofNullable(height);
-            return this;
-        }
-
-        public Builder height(Optional<Double> height) {
-            Utils.checkNotNull(height, "height");
+        public Builder height(@Nullable Double height) {
             this.height = height;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder metadata(List<CommerceMetadata> metadata) {
-            Utils.checkNotNull(metadata, "metadata");
-            this.metadata = Optional.ofNullable(metadata);
-            return this;
-        }
-
-        public Builder metadata(Optional<? extends List<CommerceMetadata>> metadata) {
-            Utils.checkNotNull(metadata, "metadata");
+        public Builder metadata(@Nullable List<CommerceMetadata> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-
-        public Builder position(double position) {
-            Utils.checkNotNull(position, "position");
-            this.position = Optional.ofNullable(position);
-            return this;
-        }
-
-        public Builder position(Optional<Double> position) {
-            Utils.checkNotNull(position, "position");
+        public Builder position(@Nullable Double position) {
             this.position = position;
             return this;
         }
 
-
-        public Builder type(CommerceItemMediaType type) {
-            Utils.checkNotNull(type, "type");
-            this.type = Optional.ofNullable(type);
-            return this;
-        }
-
-        public Builder type(Optional<? extends CommerceItemMediaType> type) {
-            Utils.checkNotNull(type, "type");
+        public Builder type(@Nullable CommerceItemMediaType type) {
             this.type = type;
             return this;
         }
 
-
-        public Builder url(String url) {
-            Utils.checkNotNull(url, "url");
-            this.url = url;
+        public Builder url(@Nonnull String url) {
+            this.url = Utils.checkNotNull(url, "url");
             return this;
         }
 
-
-        public Builder width(double width) {
-            Utils.checkNotNull(width, "width");
-            this.width = Optional.ofNullable(width);
-            return this;
-        }
-
-        public Builder width(Optional<Double> width) {
-            Utils.checkNotNull(width, "width");
+        public Builder width(@Nullable Double width) {
             this.width = width;
             return this;
         }
 
         public CommerceItemMedia build() {
-
             return new CommerceItemMedia(
                 alt, height, id,
                 metadata, position, type,

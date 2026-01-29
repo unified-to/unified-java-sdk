@@ -4,12 +4,11 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.io.InputStream;
-import java.lang.Integer;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.PaymentLink;
@@ -26,7 +25,7 @@ public class UpdatePaymentLinkResponse implements Response {
     /**
      * Successful
      */
-    private Optional<? extends PaymentLink> paymentLink;
+    private PaymentLink paymentLink;
 
     /**
      * HTTP response status code for this operation
@@ -40,59 +39,52 @@ public class UpdatePaymentLinkResponse implements Response {
 
     @JsonCreator
     public UpdatePaymentLinkResponse(
-            String contentType,
-            Optional<? extends PaymentLink> paymentLink,
+            @Nonnull String contentType,
+            @Nullable PaymentLink paymentLink,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(paymentLink, "paymentLink");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.contentType = contentType;
+            @Nonnull HttpResponse<InputStream> rawResponse) {
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.paymentLink = paymentLink;
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
     }
     
     public UpdatePaymentLinkResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
-        this(contentType, Optional.empty(), statusCode,
+            @Nonnull HttpResponse<InputStream> rawResponse) {
+        this(contentType, null, statusCode,
             rawResponse);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<PaymentLink> paymentLink() {
-        return (Optional<PaymentLink>) paymentLink;
+        return Optional.ofNullable(this.paymentLink);
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<InputStream> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     public static Builder builder() {
@@ -103,18 +95,8 @@ public class UpdatePaymentLinkResponse implements Response {
     /**
      * HTTP response content type for this operation
      */
-    public UpdatePaymentLinkResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
-        return this;
-    }
-
-    /**
-     * Successful
-     */
-    public UpdatePaymentLinkResponse withPaymentLink(PaymentLink paymentLink) {
-        Utils.checkNotNull(paymentLink, "paymentLink");
-        this.paymentLink = Optional.ofNullable(paymentLink);
+    public UpdatePaymentLinkResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
 
@@ -122,29 +104,29 @@ public class UpdatePaymentLinkResponse implements Response {
     /**
      * Successful
      */
-    public UpdatePaymentLinkResponse withPaymentLink(Optional<? extends PaymentLink> paymentLink) {
-        Utils.checkNotNull(paymentLink, "paymentLink");
+    public UpdatePaymentLinkResponse withPaymentLink(@Nullable PaymentLink paymentLink) {
         this.paymentLink = paymentLink;
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public UpdatePaymentLinkResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public UpdatePaymentLinkResponse withRawResponse(HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
+    public UpdatePaymentLinkResponse withRawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -183,9 +165,9 @@ public class UpdatePaymentLinkResponse implements Response {
 
         private String contentType;
 
-        private Optional<? extends PaymentLink> paymentLink = Optional.empty();
+        private PaymentLink paymentLink;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<InputStream> rawResponse;
 
@@ -193,57 +175,39 @@ public class UpdatePaymentLinkResponse implements Response {
           // force use of static builder() method
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
-            return this;
-        }
-
-
-        /**
-         * Successful
-         */
-        public Builder paymentLink(PaymentLink paymentLink) {
-            Utils.checkNotNull(paymentLink, "paymentLink");
-            this.paymentLink = Optional.ofNullable(paymentLink);
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
 
         /**
          * Successful
          */
-        public Builder paymentLink(Optional<? extends PaymentLink> paymentLink) {
-            Utils.checkNotNull(paymentLink, "paymentLink");
+        public Builder paymentLink(@Nullable PaymentLink paymentLink) {
             this.paymentLink = paymentLink;
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<InputStream> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
+        public Builder rawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         public UpdatePaymentLinkResponse build() {
-
             return new UpdatePaymentLinkResponse(
                 contentType, paymentLink, statusCode,
                 rawResponse);

@@ -4,9 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
 import java.lang.Override;
 import java.lang.String;
+import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.ScimGroup;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -25,25 +26,23 @@ public class CreateScimGroupsRequest {
 
     @JsonCreator
     public CreateScimGroupsRequest(
-            ScimGroup scimGroup,
-            String connectionId) {
-        Utils.checkNotNull(scimGroup, "scimGroup");
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.scimGroup = scimGroup;
-        this.connectionId = connectionId;
+            @Nonnull ScimGroup scimGroup,
+            @Nonnull String connectionId) {
+        this.scimGroup = Optional.ofNullable(scimGroup)
+            .orElseThrow(() -> new IllegalArgumentException("scimGroup cannot be null"));
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
     }
 
-    @JsonIgnore
     public ScimGroup scimGroup() {
-        return scimGroup;
+        return this.scimGroup;
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     public static Builder builder() {
@@ -51,20 +50,20 @@ public class CreateScimGroupsRequest {
     }
 
 
-    public CreateScimGroupsRequest withScimGroup(ScimGroup scimGroup) {
-        Utils.checkNotNull(scimGroup, "scimGroup");
-        this.scimGroup = scimGroup;
+    public CreateScimGroupsRequest withScimGroup(@Nonnull ScimGroup scimGroup) {
+        this.scimGroup = Utils.checkNotNull(scimGroup, "scimGroup");
         return this;
     }
+
 
     /**
      * ID of the connection
      */
-    public CreateScimGroupsRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
+    public CreateScimGroupsRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -104,25 +103,20 @@ public class CreateScimGroupsRequest {
           // force use of static builder() method
         }
 
-
-        public Builder scimGroup(ScimGroup scimGroup) {
-            Utils.checkNotNull(scimGroup, "scimGroup");
-            this.scimGroup = scimGroup;
+        public Builder scimGroup(@Nonnull ScimGroup scimGroup) {
+            this.scimGroup = Utils.checkNotNull(scimGroup, "scimGroup");
             return this;
         }
-
 
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         public CreateScimGroupsRequest build() {
-
             return new CreateScimGroupsRequest(
                 scimGroup, connectionId);
         }

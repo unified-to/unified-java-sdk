@@ -4,14 +4,13 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -21,85 +20,88 @@ public class AccountingJournalLineitem {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_id")
-    private Optional<String> accountId;
+    private String accountId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category_ids")
-    private Optional<? extends List<String>> categoryIds;
+    private List<String> categoryIds;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_id")
-    private Optional<String> contactId;
+    private String contactId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("credit_amount")
+    private Double creditAmount;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("debit_amount")
+    private Double debitAmount;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
-    private Optional<String> description;
+    private String description;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group_id")
-    private Optional<String> groupId;
+    private String groupId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoice_id")
-    private Optional<String> invoiceId;
+    private String invoiceId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_id")
-    private Optional<String> paymentId;
+    private String paymentId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_id")
-    private Optional<String> projectId;
+    private String projectId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax_amount")
-    private Optional<Double> taxAmount;
+    private Double taxAmount;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_amount")
-    private Optional<Double> totalAmount;
+    private Double totalAmount;
 
     @JsonCreator
     public AccountingJournalLineitem(
-            @JsonProperty("account_id") Optional<String> accountId,
-            @JsonProperty("category_ids") Optional<? extends List<String>> categoryIds,
-            @JsonProperty("contact_id") Optional<String> contactId,
-            @JsonProperty("description") Optional<String> description,
-            @JsonProperty("group_id") Optional<String> groupId,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("invoice_id") Optional<String> invoiceId,
-            @JsonProperty("payment_id") Optional<String> paymentId,
-            @JsonProperty("project_id") Optional<String> projectId,
-            @JsonProperty("tax_amount") Optional<Double> taxAmount,
-            @JsonProperty("total_amount") Optional<Double> totalAmount) {
-        Utils.checkNotNull(accountId, "accountId");
-        Utils.checkNotNull(categoryIds, "categoryIds");
-        Utils.checkNotNull(contactId, "contactId");
-        Utils.checkNotNull(description, "description");
-        Utils.checkNotNull(groupId, "groupId");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(invoiceId, "invoiceId");
-        Utils.checkNotNull(paymentId, "paymentId");
-        Utils.checkNotNull(projectId, "projectId");
-        Utils.checkNotNull(taxAmount, "taxAmount");
-        Utils.checkNotNull(totalAmount, "totalAmount");
+            @JsonProperty("account_id") @Nullable String accountId,
+            @JsonProperty("category_ids") @Nullable List<String> categoryIds,
+            @JsonProperty("contact_id") @Nullable String contactId,
+            @JsonProperty("credit_amount") @Nullable Double creditAmount,
+            @JsonProperty("debit_amount") @Nullable Double debitAmount,
+            @JsonProperty("description") @Nullable String description,
+            @JsonProperty("group_id") @Nullable String groupId,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("invoice_id") @Nullable String invoiceId,
+            @JsonProperty("payment_id") @Nullable String paymentId,
+            @JsonProperty("project_id") @Nullable String projectId,
+            @JsonProperty("tax_amount") @Nullable Double taxAmount,
+            @JsonProperty("total_amount") @Nullable Double totalAmount) {
         this.accountId = accountId;
         this.categoryIds = categoryIds;
         this.contactId = contactId;
+        this.creditAmount = creditAmount;
+        this.debitAmount = debitAmount;
         this.description = description;
         this.groupId = groupId;
         this.id = id;
@@ -111,66 +113,63 @@ public class AccountingJournalLineitem {
     }
     
     public AccountingJournalLineitem() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null);
     }
 
-    @JsonIgnore
     public Optional<String> accountId() {
-        return accountId;
+        return Optional.ofNullable(this.accountId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> categoryIds() {
-        return (Optional<List<String>>) categoryIds;
+        return Optional.ofNullable(this.categoryIds);
     }
 
-    @JsonIgnore
     public Optional<String> contactId() {
-        return contactId;
+        return Optional.ofNullable(this.contactId);
     }
 
-    @JsonIgnore
+    public Optional<Double> creditAmount() {
+        return Optional.ofNullable(this.creditAmount);
+    }
+
+    public Optional<Double> debitAmount() {
+        return Optional.ofNullable(this.debitAmount);
+    }
+
     public Optional<String> description() {
-        return description;
+        return Optional.ofNullable(this.description);
     }
 
-    @JsonIgnore
     public Optional<String> groupId() {
-        return groupId;
+        return Optional.ofNullable(this.groupId);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<String> invoiceId() {
-        return invoiceId;
+        return Optional.ofNullable(this.invoiceId);
     }
 
-    @JsonIgnore
     public Optional<String> paymentId() {
-        return paymentId;
+        return Optional.ofNullable(this.paymentId);
     }
 
-    @JsonIgnore
     public Optional<String> projectId() {
-        return projectId;
+        return Optional.ofNullable(this.projectId);
     }
 
-    @JsonIgnore
     public Optional<Double> taxAmount() {
-        return taxAmount;
+        return Optional.ofNullable(this.taxAmount);
     }
 
-    @JsonIgnore
     public Optional<Double> totalAmount() {
-        return totalAmount;
+        return Optional.ofNullable(this.totalAmount);
     }
 
     public static Builder builder() {
@@ -178,148 +177,83 @@ public class AccountingJournalLineitem {
     }
 
 
-    public AccountingJournalLineitem withAccountId(String accountId) {
-        Utils.checkNotNull(accountId, "accountId");
-        this.accountId = Optional.ofNullable(accountId);
-        return this;
-    }
-
-
-    public AccountingJournalLineitem withAccountId(Optional<String> accountId) {
-        Utils.checkNotNull(accountId, "accountId");
+    public AccountingJournalLineitem withAccountId(@Nullable String accountId) {
         this.accountId = accountId;
         return this;
     }
 
-    public AccountingJournalLineitem withCategoryIds(List<String> categoryIds) {
-        Utils.checkNotNull(categoryIds, "categoryIds");
-        this.categoryIds = Optional.ofNullable(categoryIds);
-        return this;
-    }
 
-
-    public AccountingJournalLineitem withCategoryIds(Optional<? extends List<String>> categoryIds) {
-        Utils.checkNotNull(categoryIds, "categoryIds");
+    public AccountingJournalLineitem withCategoryIds(@Nullable List<String> categoryIds) {
         this.categoryIds = categoryIds;
         return this;
     }
 
-    public AccountingJournalLineitem withContactId(String contactId) {
-        Utils.checkNotNull(contactId, "contactId");
-        this.contactId = Optional.ofNullable(contactId);
-        return this;
-    }
 
-
-    public AccountingJournalLineitem withContactId(Optional<String> contactId) {
-        Utils.checkNotNull(contactId, "contactId");
+    public AccountingJournalLineitem withContactId(@Nullable String contactId) {
         this.contactId = contactId;
         return this;
     }
 
-    public AccountingJournalLineitem withDescription(String description) {
-        Utils.checkNotNull(description, "description");
-        this.description = Optional.ofNullable(description);
+
+    public AccountingJournalLineitem withCreditAmount(@Nullable Double creditAmount) {
+        this.creditAmount = creditAmount;
         return this;
     }
 
 
-    public AccountingJournalLineitem withDescription(Optional<String> description) {
-        Utils.checkNotNull(description, "description");
+    public AccountingJournalLineitem withDebitAmount(@Nullable Double debitAmount) {
+        this.debitAmount = debitAmount;
+        return this;
+    }
+
+
+    public AccountingJournalLineitem withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
-    public AccountingJournalLineitem withGroupId(String groupId) {
-        Utils.checkNotNull(groupId, "groupId");
-        this.groupId = Optional.ofNullable(groupId);
-        return this;
-    }
 
-
-    public AccountingJournalLineitem withGroupId(Optional<String> groupId) {
-        Utils.checkNotNull(groupId, "groupId");
+    public AccountingJournalLineitem withGroupId(@Nullable String groupId) {
         this.groupId = groupId;
         return this;
     }
 
-    public AccountingJournalLineitem withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public AccountingJournalLineitem withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public AccountingJournalLineitem withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public AccountingJournalLineitem withInvoiceId(String invoiceId) {
-        Utils.checkNotNull(invoiceId, "invoiceId");
-        this.invoiceId = Optional.ofNullable(invoiceId);
-        return this;
-    }
 
-
-    public AccountingJournalLineitem withInvoiceId(Optional<String> invoiceId) {
-        Utils.checkNotNull(invoiceId, "invoiceId");
+    public AccountingJournalLineitem withInvoiceId(@Nullable String invoiceId) {
         this.invoiceId = invoiceId;
         return this;
     }
 
-    public AccountingJournalLineitem withPaymentId(String paymentId) {
-        Utils.checkNotNull(paymentId, "paymentId");
-        this.paymentId = Optional.ofNullable(paymentId);
-        return this;
-    }
 
-
-    public AccountingJournalLineitem withPaymentId(Optional<String> paymentId) {
-        Utils.checkNotNull(paymentId, "paymentId");
+    public AccountingJournalLineitem withPaymentId(@Nullable String paymentId) {
         this.paymentId = paymentId;
         return this;
     }
 
-    public AccountingJournalLineitem withProjectId(String projectId) {
-        Utils.checkNotNull(projectId, "projectId");
-        this.projectId = Optional.ofNullable(projectId);
-        return this;
-    }
 
-
-    public AccountingJournalLineitem withProjectId(Optional<String> projectId) {
-        Utils.checkNotNull(projectId, "projectId");
+    public AccountingJournalLineitem withProjectId(@Nullable String projectId) {
         this.projectId = projectId;
         return this;
     }
 
-    public AccountingJournalLineitem withTaxAmount(double taxAmount) {
-        Utils.checkNotNull(taxAmount, "taxAmount");
-        this.taxAmount = Optional.ofNullable(taxAmount);
-        return this;
-    }
 
-
-    public AccountingJournalLineitem withTaxAmount(Optional<Double> taxAmount) {
-        Utils.checkNotNull(taxAmount, "taxAmount");
+    public AccountingJournalLineitem withTaxAmount(@Nullable Double taxAmount) {
         this.taxAmount = taxAmount;
         return this;
     }
 
-    public AccountingJournalLineitem withTotalAmount(double totalAmount) {
-        Utils.checkNotNull(totalAmount, "totalAmount");
-        this.totalAmount = Optional.ofNullable(totalAmount);
-        return this;
-    }
 
-
-    public AccountingJournalLineitem withTotalAmount(Optional<Double> totalAmount) {
-        Utils.checkNotNull(totalAmount, "totalAmount");
+    public AccountingJournalLineitem withTotalAmount(@Nullable Double totalAmount) {
         this.totalAmount = totalAmount;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -334,6 +268,8 @@ public class AccountingJournalLineitem {
             Utils.enhancedDeepEquals(this.accountId, other.accountId) &&
             Utils.enhancedDeepEquals(this.categoryIds, other.categoryIds) &&
             Utils.enhancedDeepEquals(this.contactId, other.contactId) &&
+            Utils.enhancedDeepEquals(this.creditAmount, other.creditAmount) &&
+            Utils.enhancedDeepEquals(this.debitAmount, other.debitAmount) &&
             Utils.enhancedDeepEquals(this.description, other.description) &&
             Utils.enhancedDeepEquals(this.groupId, other.groupId) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
@@ -348,9 +284,10 @@ public class AccountingJournalLineitem {
     public int hashCode() {
         return Utils.enhancedHash(
             accountId, categoryIds, contactId,
-            description, groupId, id,
-            invoiceId, paymentId, projectId,
-            taxAmount, totalAmount);
+            creditAmount, debitAmount, description,
+            groupId, id, invoiceId,
+            paymentId, projectId, taxAmount,
+            totalAmount);
     }
     
     @Override
@@ -359,6 +296,8 @@ public class AccountingJournalLineitem {
                 "accountId", accountId,
                 "categoryIds", categoryIds,
                 "contactId", contactId,
+                "creditAmount", creditAmount,
+                "debitAmount", debitAmount,
                 "description", description,
                 "groupId", groupId,
                 "id", id,
@@ -372,182 +311,108 @@ public class AccountingJournalLineitem {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> accountId = Optional.empty();
+        private String accountId;
 
-        private Optional<? extends List<String>> categoryIds = Optional.empty();
+        private List<String> categoryIds;
 
-        private Optional<String> contactId = Optional.empty();
+        private String contactId;
 
-        private Optional<String> description = Optional.empty();
+        private Double creditAmount;
 
-        private Optional<String> groupId = Optional.empty();
+        private Double debitAmount;
 
-        private Optional<String> id = Optional.empty();
+        private String description;
 
-        private Optional<String> invoiceId = Optional.empty();
+        private String groupId;
 
-        private Optional<String> paymentId = Optional.empty();
+        private String id;
 
-        private Optional<String> projectId = Optional.empty();
+        private String invoiceId;
 
-        private Optional<Double> taxAmount = Optional.empty();
+        private String paymentId;
 
-        private Optional<Double> totalAmount = Optional.empty();
+        private String projectId;
+
+        private Double taxAmount;
+
+        private Double totalAmount;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder accountId(String accountId) {
-            Utils.checkNotNull(accountId, "accountId");
-            this.accountId = Optional.ofNullable(accountId);
-            return this;
-        }
-
-        public Builder accountId(Optional<String> accountId) {
-            Utils.checkNotNull(accountId, "accountId");
+        public Builder accountId(@Nullable String accountId) {
             this.accountId = accountId;
             return this;
         }
 
-
-        public Builder categoryIds(List<String> categoryIds) {
-            Utils.checkNotNull(categoryIds, "categoryIds");
-            this.categoryIds = Optional.ofNullable(categoryIds);
-            return this;
-        }
-
-        public Builder categoryIds(Optional<? extends List<String>> categoryIds) {
-            Utils.checkNotNull(categoryIds, "categoryIds");
+        public Builder categoryIds(@Nullable List<String> categoryIds) {
             this.categoryIds = categoryIds;
             return this;
         }
 
-
-        public Builder contactId(String contactId) {
-            Utils.checkNotNull(contactId, "contactId");
-            this.contactId = Optional.ofNullable(contactId);
-            return this;
-        }
-
-        public Builder contactId(Optional<String> contactId) {
-            Utils.checkNotNull(contactId, "contactId");
+        public Builder contactId(@Nullable String contactId) {
             this.contactId = contactId;
             return this;
         }
 
-
-        public Builder description(String description) {
-            Utils.checkNotNull(description, "description");
-            this.description = Optional.ofNullable(description);
+        public Builder creditAmount(@Nullable Double creditAmount) {
+            this.creditAmount = creditAmount;
             return this;
         }
 
-        public Builder description(Optional<String> description) {
-            Utils.checkNotNull(description, "description");
+        public Builder debitAmount(@Nullable Double debitAmount) {
+            this.debitAmount = debitAmount;
+            return this;
+        }
+
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-
-        public Builder groupId(String groupId) {
-            Utils.checkNotNull(groupId, "groupId");
-            this.groupId = Optional.ofNullable(groupId);
-            return this;
-        }
-
-        public Builder groupId(Optional<String> groupId) {
-            Utils.checkNotNull(groupId, "groupId");
+        public Builder groupId(@Nullable String groupId) {
             this.groupId = groupId;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder invoiceId(String invoiceId) {
-            Utils.checkNotNull(invoiceId, "invoiceId");
-            this.invoiceId = Optional.ofNullable(invoiceId);
-            return this;
-        }
-
-        public Builder invoiceId(Optional<String> invoiceId) {
-            Utils.checkNotNull(invoiceId, "invoiceId");
+        public Builder invoiceId(@Nullable String invoiceId) {
             this.invoiceId = invoiceId;
             return this;
         }
 
-
-        public Builder paymentId(String paymentId) {
-            Utils.checkNotNull(paymentId, "paymentId");
-            this.paymentId = Optional.ofNullable(paymentId);
-            return this;
-        }
-
-        public Builder paymentId(Optional<String> paymentId) {
-            Utils.checkNotNull(paymentId, "paymentId");
+        public Builder paymentId(@Nullable String paymentId) {
             this.paymentId = paymentId;
             return this;
         }
 
-
-        public Builder projectId(String projectId) {
-            Utils.checkNotNull(projectId, "projectId");
-            this.projectId = Optional.ofNullable(projectId);
-            return this;
-        }
-
-        public Builder projectId(Optional<String> projectId) {
-            Utils.checkNotNull(projectId, "projectId");
+        public Builder projectId(@Nullable String projectId) {
             this.projectId = projectId;
             return this;
         }
 
-
-        public Builder taxAmount(double taxAmount) {
-            Utils.checkNotNull(taxAmount, "taxAmount");
-            this.taxAmount = Optional.ofNullable(taxAmount);
-            return this;
-        }
-
-        public Builder taxAmount(Optional<Double> taxAmount) {
-            Utils.checkNotNull(taxAmount, "taxAmount");
+        public Builder taxAmount(@Nullable Double taxAmount) {
             this.taxAmount = taxAmount;
             return this;
         }
 
-
-        public Builder totalAmount(double totalAmount) {
-            Utils.checkNotNull(totalAmount, "totalAmount");
-            this.totalAmount = Optional.ofNullable(totalAmount);
-            return this;
-        }
-
-        public Builder totalAmount(Optional<Double> totalAmount) {
-            Utils.checkNotNull(totalAmount, "totalAmount");
+        public Builder totalAmount(@Nullable Double totalAmount) {
             this.totalAmount = totalAmount;
             return this;
         }
 
         public AccountingJournalLineitem build() {
-
             return new AccountingJournalLineitem(
                 accountId, categoryIds, contactId,
-                description, groupId, id,
-                invoiceId, paymentId, projectId,
-                taxAmount, totalAmount);
+                creditAmount, debitAmount, description,
+                groupId, id, invoiceId,
+                paymentId, projectId, taxAmount,
+                totalAmount);
         }
 
     }

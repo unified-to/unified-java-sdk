@@ -4,12 +4,11 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.io.InputStream;
-import java.lang.Integer;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.HrisCompany;
@@ -26,7 +25,7 @@ public class PatchHrisCompanyResponse implements Response {
     /**
      * Successful
      */
-    private Optional<? extends HrisCompany> hrisCompany;
+    private HrisCompany hrisCompany;
 
     /**
      * HTTP response status code for this operation
@@ -40,59 +39,52 @@ public class PatchHrisCompanyResponse implements Response {
 
     @JsonCreator
     public PatchHrisCompanyResponse(
-            String contentType,
-            Optional<? extends HrisCompany> hrisCompany,
+            @Nonnull String contentType,
+            @Nullable HrisCompany hrisCompany,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(hrisCompany, "hrisCompany");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.contentType = contentType;
+            @Nonnull HttpResponse<InputStream> rawResponse) {
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.hrisCompany = hrisCompany;
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
     }
     
     public PatchHrisCompanyResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
-        this(contentType, Optional.empty(), statusCode,
+            @Nonnull HttpResponse<InputStream> rawResponse) {
+        this(contentType, null, statusCode,
             rawResponse);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<HrisCompany> hrisCompany() {
-        return (Optional<HrisCompany>) hrisCompany;
+        return Optional.ofNullable(this.hrisCompany);
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<InputStream> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     public static Builder builder() {
@@ -103,18 +95,8 @@ public class PatchHrisCompanyResponse implements Response {
     /**
      * HTTP response content type for this operation
      */
-    public PatchHrisCompanyResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
-        return this;
-    }
-
-    /**
-     * Successful
-     */
-    public PatchHrisCompanyResponse withHrisCompany(HrisCompany hrisCompany) {
-        Utils.checkNotNull(hrisCompany, "hrisCompany");
-        this.hrisCompany = Optional.ofNullable(hrisCompany);
+    public PatchHrisCompanyResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
 
@@ -122,29 +104,29 @@ public class PatchHrisCompanyResponse implements Response {
     /**
      * Successful
      */
-    public PatchHrisCompanyResponse withHrisCompany(Optional<? extends HrisCompany> hrisCompany) {
-        Utils.checkNotNull(hrisCompany, "hrisCompany");
+    public PatchHrisCompanyResponse withHrisCompany(@Nullable HrisCompany hrisCompany) {
         this.hrisCompany = hrisCompany;
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public PatchHrisCompanyResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public PatchHrisCompanyResponse withRawResponse(HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
+    public PatchHrisCompanyResponse withRawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -183,9 +165,9 @@ public class PatchHrisCompanyResponse implements Response {
 
         private String contentType;
 
-        private Optional<? extends HrisCompany> hrisCompany = Optional.empty();
+        private HrisCompany hrisCompany;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<InputStream> rawResponse;
 
@@ -193,57 +175,39 @@ public class PatchHrisCompanyResponse implements Response {
           // force use of static builder() method
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
-            return this;
-        }
-
-
-        /**
-         * Successful
-         */
-        public Builder hrisCompany(HrisCompany hrisCompany) {
-            Utils.checkNotNull(hrisCompany, "hrisCompany");
-            this.hrisCompany = Optional.ofNullable(hrisCompany);
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
 
         /**
          * Successful
          */
-        public Builder hrisCompany(Optional<? extends HrisCompany> hrisCompany) {
-            Utils.checkNotNull(hrisCompany, "hrisCompany");
+        public Builder hrisCompany(@Nullable HrisCompany hrisCompany) {
             this.hrisCompany = hrisCompany;
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<InputStream> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
+        public Builder rawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         public PatchHrisCompanyResponse build() {
-
             return new PatchHrisCompanyResponse(
                 contentType, hrisCompany, statusCode,
                 rawResponse);

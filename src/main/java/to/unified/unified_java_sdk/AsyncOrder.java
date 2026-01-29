@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingOrderRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingOrderRequest;
@@ -68,7 +69,7 @@ public class AsyncOrder {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAccountingOrderResponse>} - The async response
      */
-    public CompletableFuture<CreateAccountingOrderResponse> createAccountingOrder(CreateAccountingOrderRequest request) {
+    public CompletableFuture<CreateAccountingOrderResponse> createAccountingOrder(@Nonnull CreateAccountingOrderRequest request) {
         AsyncRequestOperation<CreateAccountingOrderRequest, CreateAccountingOrderResponse> operation
               = new CreateAccountingOrder.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -91,7 +92,7 @@ public class AsyncOrder {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAccountingOrderResponse>} - The async response
      */
-    public CompletableFuture<GetAccountingOrderResponse> getAccountingOrder(GetAccountingOrderRequest request) {
+    public CompletableFuture<GetAccountingOrderResponse> getAccountingOrder(@Nonnull GetAccountingOrderRequest request) {
         AsyncRequestOperation<GetAccountingOrderRequest, GetAccountingOrderResponse> operation
               = new GetAccountingOrder.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -114,7 +115,7 @@ public class AsyncOrder {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAccountingOrdersResponse>} - The async response
      */
-    public CompletableFuture<ListAccountingOrdersResponse> listAccountingOrders(ListAccountingOrdersRequest request) {
+    public CompletableFuture<ListAccountingOrdersResponse> listAccountingOrders(@Nonnull ListAccountingOrdersRequest request) {
         AsyncRequestOperation<ListAccountingOrdersRequest, ListAccountingOrdersResponse> operation
               = new ListAccountingOrders.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -137,7 +138,7 @@ public class AsyncOrder {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAccountingOrderResponse>} - The async response
      */
-    public CompletableFuture<PatchAccountingOrderResponse> patchAccountingOrder(PatchAccountingOrderRequest request) {
+    public CompletableFuture<PatchAccountingOrderResponse> patchAccountingOrder(@Nonnull PatchAccountingOrderRequest request) {
         AsyncRequestOperation<PatchAccountingOrderRequest, PatchAccountingOrderResponse> operation
               = new PatchAccountingOrder.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -160,7 +161,7 @@ public class AsyncOrder {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAccountingOrderResponse>} - The async response
      */
-    public CompletableFuture<RemoveAccountingOrderResponse> removeAccountingOrder(RemoveAccountingOrderRequest request) {
+    public CompletableFuture<RemoveAccountingOrderResponse> removeAccountingOrder(@Nonnull RemoveAccountingOrderRequest request) {
         AsyncRequestOperation<RemoveAccountingOrderRequest, RemoveAccountingOrderResponse> operation
               = new RemoveAccountingOrder.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -183,7 +184,7 @@ public class AsyncOrder {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAccountingOrderResponse>} - The async response
      */
-    public CompletableFuture<UpdateAccountingOrderResponse> updateAccountingOrder(UpdateAccountingOrderRequest request) {
+    public CompletableFuture<UpdateAccountingOrderResponse> updateAccountingOrder(@Nonnull UpdateAccountingOrderRequest request) {
         AsyncRequestOperation<UpdateAccountingOrderRequest, UpdateAccountingOrderResponse> operation
               = new UpdateAccountingOrder.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

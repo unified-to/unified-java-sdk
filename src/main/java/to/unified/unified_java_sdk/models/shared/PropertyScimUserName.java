@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
 import java.util.Optional;
@@ -18,47 +18,41 @@ public class PropertyScimUserName {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("familyName")
-    private Optional<String> familyName;
+    private String familyName;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formatted")
-    private Optional<String> formatted;
+    private String formatted;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("givenName")
-    private Optional<String> givenName;
+    private String givenName;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("honorificPrefix")
-    private Optional<String> honorificPrefix;
+    private String honorificPrefix;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("honorificSuffix")
-    private Optional<String> honorificSuffix;
+    private String honorificSuffix;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("middleName")
-    private Optional<String> middleName;
+    private String middleName;
 
     @JsonCreator
     public PropertyScimUserName(
-            @JsonProperty("familyName") Optional<String> familyName,
-            @JsonProperty("formatted") Optional<String> formatted,
-            @JsonProperty("givenName") Optional<String> givenName,
-            @JsonProperty("honorificPrefix") Optional<String> honorificPrefix,
-            @JsonProperty("honorificSuffix") Optional<String> honorificSuffix,
-            @JsonProperty("middleName") Optional<String> middleName) {
-        Utils.checkNotNull(familyName, "familyName");
-        Utils.checkNotNull(formatted, "formatted");
-        Utils.checkNotNull(givenName, "givenName");
-        Utils.checkNotNull(honorificPrefix, "honorificPrefix");
-        Utils.checkNotNull(honorificSuffix, "honorificSuffix");
-        Utils.checkNotNull(middleName, "middleName");
+            @JsonProperty("familyName") @Nullable String familyName,
+            @JsonProperty("formatted") @Nullable String formatted,
+            @JsonProperty("givenName") @Nullable String givenName,
+            @JsonProperty("honorificPrefix") @Nullable String honorificPrefix,
+            @JsonProperty("honorificSuffix") @Nullable String honorificSuffix,
+            @JsonProperty("middleName") @Nullable String middleName) {
         this.familyName = familyName;
         this.formatted = formatted;
         this.givenName = givenName;
@@ -68,38 +62,32 @@ public class PropertyScimUserName {
     }
     
     public PropertyScimUserName() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null, null);
     }
 
-    @JsonIgnore
     public Optional<String> familyName() {
-        return familyName;
+        return Optional.ofNullable(this.familyName);
     }
 
-    @JsonIgnore
     public Optional<String> formatted() {
-        return formatted;
+        return Optional.ofNullable(this.formatted);
     }
 
-    @JsonIgnore
     public Optional<String> givenName() {
-        return givenName;
+        return Optional.ofNullable(this.givenName);
     }
 
-    @JsonIgnore
     public Optional<String> honorificPrefix() {
-        return honorificPrefix;
+        return Optional.ofNullable(this.honorificPrefix);
     }
 
-    @JsonIgnore
     public Optional<String> honorificSuffix() {
-        return honorificSuffix;
+        return Optional.ofNullable(this.honorificSuffix);
     }
 
-    @JsonIgnore
     public Optional<String> middleName() {
-        return middleName;
+        return Optional.ofNullable(this.middleName);
     }
 
     public static Builder builder() {
@@ -107,83 +95,41 @@ public class PropertyScimUserName {
     }
 
 
-    public PropertyScimUserName withFamilyName(String familyName) {
-        Utils.checkNotNull(familyName, "familyName");
-        this.familyName = Optional.ofNullable(familyName);
-        return this;
-    }
-
-
-    public PropertyScimUserName withFamilyName(Optional<String> familyName) {
-        Utils.checkNotNull(familyName, "familyName");
+    public PropertyScimUserName withFamilyName(@Nullable String familyName) {
         this.familyName = familyName;
         return this;
     }
 
-    public PropertyScimUserName withFormatted(String formatted) {
-        Utils.checkNotNull(formatted, "formatted");
-        this.formatted = Optional.ofNullable(formatted);
-        return this;
-    }
 
-
-    public PropertyScimUserName withFormatted(Optional<String> formatted) {
-        Utils.checkNotNull(formatted, "formatted");
+    public PropertyScimUserName withFormatted(@Nullable String formatted) {
         this.formatted = formatted;
         return this;
     }
 
-    public PropertyScimUserName withGivenName(String givenName) {
-        Utils.checkNotNull(givenName, "givenName");
-        this.givenName = Optional.ofNullable(givenName);
-        return this;
-    }
 
-
-    public PropertyScimUserName withGivenName(Optional<String> givenName) {
-        Utils.checkNotNull(givenName, "givenName");
+    public PropertyScimUserName withGivenName(@Nullable String givenName) {
         this.givenName = givenName;
         return this;
     }
 
-    public PropertyScimUserName withHonorificPrefix(String honorificPrefix) {
-        Utils.checkNotNull(honorificPrefix, "honorificPrefix");
-        this.honorificPrefix = Optional.ofNullable(honorificPrefix);
-        return this;
-    }
 
-
-    public PropertyScimUserName withHonorificPrefix(Optional<String> honorificPrefix) {
-        Utils.checkNotNull(honorificPrefix, "honorificPrefix");
+    public PropertyScimUserName withHonorificPrefix(@Nullable String honorificPrefix) {
         this.honorificPrefix = honorificPrefix;
         return this;
     }
 
-    public PropertyScimUserName withHonorificSuffix(String honorificSuffix) {
-        Utils.checkNotNull(honorificSuffix, "honorificSuffix");
-        this.honorificSuffix = Optional.ofNullable(honorificSuffix);
-        return this;
-    }
 
-
-    public PropertyScimUserName withHonorificSuffix(Optional<String> honorificSuffix) {
-        Utils.checkNotNull(honorificSuffix, "honorificSuffix");
+    public PropertyScimUserName withHonorificSuffix(@Nullable String honorificSuffix) {
         this.honorificSuffix = honorificSuffix;
         return this;
     }
 
-    public PropertyScimUserName withMiddleName(String middleName) {
-        Utils.checkNotNull(middleName, "middleName");
-        this.middleName = Optional.ofNullable(middleName);
-        return this;
-    }
 
-
-    public PropertyScimUserName withMiddleName(Optional<String> middleName) {
-        Utils.checkNotNull(middleName, "middleName");
+    public PropertyScimUserName withMiddleName(@Nullable String middleName) {
         this.middleName = middleName;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -224,102 +170,53 @@ public class PropertyScimUserName {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> familyName = Optional.empty();
+        private String familyName;
 
-        private Optional<String> formatted = Optional.empty();
+        private String formatted;
 
-        private Optional<String> givenName = Optional.empty();
+        private String givenName;
 
-        private Optional<String> honorificPrefix = Optional.empty();
+        private String honorificPrefix;
 
-        private Optional<String> honorificSuffix = Optional.empty();
+        private String honorificSuffix;
 
-        private Optional<String> middleName = Optional.empty();
+        private String middleName;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder familyName(String familyName) {
-            Utils.checkNotNull(familyName, "familyName");
-            this.familyName = Optional.ofNullable(familyName);
-            return this;
-        }
-
-        public Builder familyName(Optional<String> familyName) {
-            Utils.checkNotNull(familyName, "familyName");
+        public Builder familyName(@Nullable String familyName) {
             this.familyName = familyName;
             return this;
         }
 
-
-        public Builder formatted(String formatted) {
-            Utils.checkNotNull(formatted, "formatted");
-            this.formatted = Optional.ofNullable(formatted);
-            return this;
-        }
-
-        public Builder formatted(Optional<String> formatted) {
-            Utils.checkNotNull(formatted, "formatted");
+        public Builder formatted(@Nullable String formatted) {
             this.formatted = formatted;
             return this;
         }
 
-
-        public Builder givenName(String givenName) {
-            Utils.checkNotNull(givenName, "givenName");
-            this.givenName = Optional.ofNullable(givenName);
-            return this;
-        }
-
-        public Builder givenName(Optional<String> givenName) {
-            Utils.checkNotNull(givenName, "givenName");
+        public Builder givenName(@Nullable String givenName) {
             this.givenName = givenName;
             return this;
         }
 
-
-        public Builder honorificPrefix(String honorificPrefix) {
-            Utils.checkNotNull(honorificPrefix, "honorificPrefix");
-            this.honorificPrefix = Optional.ofNullable(honorificPrefix);
-            return this;
-        }
-
-        public Builder honorificPrefix(Optional<String> honorificPrefix) {
-            Utils.checkNotNull(honorificPrefix, "honorificPrefix");
+        public Builder honorificPrefix(@Nullable String honorificPrefix) {
             this.honorificPrefix = honorificPrefix;
             return this;
         }
 
-
-        public Builder honorificSuffix(String honorificSuffix) {
-            Utils.checkNotNull(honorificSuffix, "honorificSuffix");
-            this.honorificSuffix = Optional.ofNullable(honorificSuffix);
-            return this;
-        }
-
-        public Builder honorificSuffix(Optional<String> honorificSuffix) {
-            Utils.checkNotNull(honorificSuffix, "honorificSuffix");
+        public Builder honorificSuffix(@Nullable String honorificSuffix) {
             this.honorificSuffix = honorificSuffix;
             return this;
         }
 
-
-        public Builder middleName(String middleName) {
-            Utils.checkNotNull(middleName, "middleName");
-            this.middleName = Optional.ofNullable(middleName);
-            return this;
-        }
-
-        public Builder middleName(Optional<String> middleName) {
-            Utils.checkNotNull(middleName, "middleName");
+        public Builder middleName(@Nullable String middleName) {
             this.middleName = middleName;
             return this;
         }
 
         public PropertyScimUserName build() {
-
             return new PropertyScimUserName(
                 familyName, formatted, givenName,
                 honorificPrefix, honorificSuffix, middleName);

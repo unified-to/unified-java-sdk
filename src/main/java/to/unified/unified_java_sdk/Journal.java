@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingJournalRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingJournalRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingJournalResponse;
@@ -67,7 +68,7 @@ public class Journal {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAccountingJournalResponse createAccountingJournal(CreateAccountingJournalRequest request) {
+    public CreateAccountingJournalResponse createAccountingJournal(@Nonnull CreateAccountingJournalRequest request) {
         RequestOperation<CreateAccountingJournalRequest, CreateAccountingJournalResponse> operation
               = new CreateAccountingJournal.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -89,7 +90,7 @@ public class Journal {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingJournalResponse getAccountingJournal(GetAccountingJournalRequest request) {
+    public GetAccountingJournalResponse getAccountingJournal(@Nonnull GetAccountingJournalRequest request) {
         RequestOperation<GetAccountingJournalRequest, GetAccountingJournalResponse> operation
               = new GetAccountingJournal.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -111,7 +112,7 @@ public class Journal {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingJournalsResponse listAccountingJournals(ListAccountingJournalsRequest request) {
+    public ListAccountingJournalsResponse listAccountingJournals(@Nonnull ListAccountingJournalsRequest request) {
         RequestOperation<ListAccountingJournalsRequest, ListAccountingJournalsResponse> operation
               = new ListAccountingJournals.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -133,7 +134,7 @@ public class Journal {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAccountingJournalResponse patchAccountingJournal(PatchAccountingJournalRequest request) {
+    public PatchAccountingJournalResponse patchAccountingJournal(@Nonnull PatchAccountingJournalRequest request) {
         RequestOperation<PatchAccountingJournalRequest, PatchAccountingJournalResponse> operation
               = new PatchAccountingJournal.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -155,7 +156,7 @@ public class Journal {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAccountingJournalResponse removeAccountingJournal(RemoveAccountingJournalRequest request) {
+    public RemoveAccountingJournalResponse removeAccountingJournal(@Nonnull RemoveAccountingJournalRequest request) {
         RequestOperation<RemoveAccountingJournalRequest, RemoveAccountingJournalResponse> operation
               = new RemoveAccountingJournal.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -177,7 +178,7 @@ public class Journal {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAccountingJournalResponse updateAccountingJournal(UpdateAccountingJournalRequest request) {
+    public UpdateAccountingJournalResponse updateAccountingJournal(@Nonnull UpdateAccountingJournalRequest request) {
         RequestOperation<UpdateAccountingJournalRequest, UpdateAccountingJournalResponse> operation
               = new UpdateAccountingJournal.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

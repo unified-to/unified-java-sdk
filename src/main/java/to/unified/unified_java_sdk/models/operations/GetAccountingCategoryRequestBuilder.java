@@ -5,32 +5,45 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.GetAccountingCategory;
 import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetAccountingCategoryRequestBuilder {
-
-    private GetAccountingCategoryRequest request;
     private final SDKConfiguration sdkConfiguration;
-    private final Headers _headers = new Headers(); 
+    private final Headers _headers = new Headers();
+    private GetAccountingCategoryRequest request;
 
     public GetAccountingCategoryRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
 
-    public GetAccountingCategoryRequestBuilder request(GetAccountingCategoryRequest request) {
-        Utils.checkNotNull(request, "request");
-        this.request = request;
+    public GetAccountingCategoryRequestBuilder request(@Nonnull GetAccountingCategoryRequest request) {
+        this.request = Utils.checkNotNull(request, "request");
         return this;
     }
 
+    private GetAccountingCategoryRequest _buildRequest() {
+        return this.request;
+    }
+    
+    public GetAccountingCategoryRequestBuilder header(String name, String value) {
+        Utils.checkNotNull(name, "name");
+        Utils.checkNotNull(value, "value");
+        this._headers.add(name, value);
+        return this;
+    }
+
+    /**
+    * Executes the request and returns the response.
+    *
+    * @return The response from the server.
+    */
     public GetAccountingCategoryResponse call() {
-        
         RequestOperation<GetAccountingCategoryRequest, GetAccountingCategoryResponse> operation
               = new GetAccountingCategory.Sync(sdkConfiguration, _headers);
-
-        return operation.handleResponse(operation.doRequest(request));
+        return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

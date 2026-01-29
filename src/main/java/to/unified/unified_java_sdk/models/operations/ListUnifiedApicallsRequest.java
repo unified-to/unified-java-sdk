@@ -4,7 +4,7 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Override;
@@ -19,99 +19,86 @@ public class ListUnifiedApicallsRequest {
      * Filter the results to just this integration
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=connection_id")
-    private Optional<String> connectionId;
+    private String connectionId;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=env")
-    private Optional<String> env;
+    private String env;
 
     /**
      * Filter the results for API Calls with errors
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=error")
-    private Optional<Boolean> error;
+    private Boolean error;
 
     /**
      * Filter the results to only those integrations for your user referenced by this value
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=external_xref")
-    private Optional<String> externalXref;
+    private String externalXref;
 
     /**
      * Filter the results to just this integration
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=integration_type")
-    private Optional<String> integrationType;
+    private String integrationType;
 
     /**
      * Filter the results for only billable API Calls
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_billable")
-    private Optional<Boolean> isBillable;
+    private Boolean isBillable;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
-    private Optional<Double> limit;
+    private Double limit;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
-    private Optional<Double> offset;
+    private Double offset;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
-    private Optional<String> order;
+    private String order;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
-    private Optional<String> sort;
+    private String sort;
 
     /**
      * Filter the results to just this type
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
-    private Optional<String> type;
+    private String type;
 
     /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
-    private Optional<String> updatedGte;
+    private String updatedGte;
 
     /**
      * Filter the results to just this webhook
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=webhook_id")
-    private Optional<String> webhookId;
+    private String webhookId;
 
     @JsonCreator
     public ListUnifiedApicallsRequest(
-            Optional<String> connectionId,
-            Optional<String> env,
-            Optional<Boolean> error,
-            Optional<String> externalXref,
-            Optional<String> integrationType,
-            Optional<Boolean> isBillable,
-            Optional<Double> limit,
-            Optional<Double> offset,
-            Optional<String> order,
-            Optional<String> sort,
-            Optional<String> type,
-            Optional<String> updatedGte,
-            Optional<String> webhookId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(env, "env");
-        Utils.checkNotNull(error, "error");
-        Utils.checkNotNull(externalXref, "externalXref");
-        Utils.checkNotNull(integrationType, "integrationType");
-        Utils.checkNotNull(isBillable, "isBillable");
-        Utils.checkNotNull(limit, "limit");
-        Utils.checkNotNull(offset, "offset");
-        Utils.checkNotNull(order, "order");
-        Utils.checkNotNull(sort, "sort");
-        Utils.checkNotNull(type, "type");
-        Utils.checkNotNull(updatedGte, "updatedGte");
-        Utils.checkNotNull(webhookId, "webhookId");
+            @Nullable String connectionId,
+            @Nullable String env,
+            @Nullable Boolean error,
+            @Nullable String externalXref,
+            @Nullable String integrationType,
+            @Nullable Boolean isBillable,
+            @Nullable Double limit,
+            @Nullable Double offset,
+            @Nullable String order,
+            @Nullable String sort,
+            @Nullable String type,
+            @Nullable String updatedGte,
+            @Nullable String webhookId) {
         this.connectionId = connectionId;
         this.env = env;
         this.error = error;
@@ -128,101 +115,88 @@ public class ListUnifiedApicallsRequest {
     }
     
     public ListUnifiedApicallsRequest() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null);
     }
 
     /**
      * Filter the results to just this integration
      */
-    @JsonIgnore
     public Optional<String> connectionId() {
-        return connectionId;
+        return Optional.ofNullable(this.connectionId);
     }
 
-    @JsonIgnore
     public Optional<String> env() {
-        return env;
+        return Optional.ofNullable(this.env);
     }
 
     /**
      * Filter the results for API Calls with errors
      */
-    @JsonIgnore
     public Optional<Boolean> error() {
-        return error;
+        return Optional.ofNullable(this.error);
     }
 
     /**
      * Filter the results to only those integrations for your user referenced by this value
      */
-    @JsonIgnore
     public Optional<String> externalXref() {
-        return externalXref;
+        return Optional.ofNullable(this.externalXref);
     }
 
     /**
      * Filter the results to just this integration
      */
-    @JsonIgnore
     public Optional<String> integrationType() {
-        return integrationType;
+        return Optional.ofNullable(this.integrationType);
     }
 
     /**
      * Filter the results for only billable API Calls
      */
-    @JsonIgnore
     public Optional<Boolean> isBillable() {
-        return isBillable;
+        return Optional.ofNullable(this.isBillable);
     }
 
-    @JsonIgnore
     public Optional<Double> limit() {
-        return limit;
+        return Optional.ofNullable(this.limit);
     }
 
-    @JsonIgnore
     public Optional<Double> offset() {
-        return offset;
+        return Optional.ofNullable(this.offset);
     }
 
-    @JsonIgnore
     public Optional<String> order() {
-        return order;
+        return Optional.ofNullable(this.order);
     }
 
-    @JsonIgnore
     public Optional<String> sort() {
-        return sort;
+        return Optional.ofNullable(this.sort);
     }
 
     /**
      * Filter the results to just this type
      */
-    @JsonIgnore
     public Optional<String> type() {
-        return type;
+        return Optional.ofNullable(this.type);
     }
 
     /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
-    @JsonIgnore
     public Optional<String> updatedGte() {
-        return updatedGte;
+        return Optional.ofNullable(this.updatedGte);
     }
 
     /**
      * Filter the results to just this webhook
      */
-    @JsonIgnore
     public Optional<String> webhookId() {
-        return webhookId;
+        return Optional.ofNullable(this.webhookId);
     }
 
     public static Builder builder() {
@@ -233,221 +207,105 @@ public class ListUnifiedApicallsRequest {
     /**
      * Filter the results to just this integration
      */
-    public ListUnifiedApicallsRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = Optional.ofNullable(connectionId);
-        return this;
-    }
-
-
-    /**
-     * Filter the results to just this integration
-     */
-    public ListUnifiedApicallsRequest withConnectionId(Optional<String> connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
+    public ListUnifiedApicallsRequest withConnectionId(@Nullable String connectionId) {
         this.connectionId = connectionId;
         return this;
     }
 
-    public ListUnifiedApicallsRequest withEnv(String env) {
-        Utils.checkNotNull(env, "env");
-        this.env = Optional.ofNullable(env);
-        return this;
-    }
 
-
-    public ListUnifiedApicallsRequest withEnv(Optional<String> env) {
-        Utils.checkNotNull(env, "env");
+    public ListUnifiedApicallsRequest withEnv(@Nullable String env) {
         this.env = env;
         return this;
     }
 
-    /**
-     * Filter the results for API Calls with errors
-     */
-    public ListUnifiedApicallsRequest withError(boolean error) {
-        Utils.checkNotNull(error, "error");
-        this.error = Optional.ofNullable(error);
-        return this;
-    }
-
 
     /**
      * Filter the results for API Calls with errors
      */
-    public ListUnifiedApicallsRequest withError(Optional<Boolean> error) {
-        Utils.checkNotNull(error, "error");
+    public ListUnifiedApicallsRequest withError(@Nullable Boolean error) {
         this.error = error;
         return this;
     }
 
-    /**
-     * Filter the results to only those integrations for your user referenced by this value
-     */
-    public ListUnifiedApicallsRequest withExternalXref(String externalXref) {
-        Utils.checkNotNull(externalXref, "externalXref");
-        this.externalXref = Optional.ofNullable(externalXref);
-        return this;
-    }
-
 
     /**
      * Filter the results to only those integrations for your user referenced by this value
      */
-    public ListUnifiedApicallsRequest withExternalXref(Optional<String> externalXref) {
-        Utils.checkNotNull(externalXref, "externalXref");
+    public ListUnifiedApicallsRequest withExternalXref(@Nullable String externalXref) {
         this.externalXref = externalXref;
         return this;
     }
 
-    /**
-     * Filter the results to just this integration
-     */
-    public ListUnifiedApicallsRequest withIntegrationType(String integrationType) {
-        Utils.checkNotNull(integrationType, "integrationType");
-        this.integrationType = Optional.ofNullable(integrationType);
-        return this;
-    }
-
 
     /**
      * Filter the results to just this integration
      */
-    public ListUnifiedApicallsRequest withIntegrationType(Optional<String> integrationType) {
-        Utils.checkNotNull(integrationType, "integrationType");
+    public ListUnifiedApicallsRequest withIntegrationType(@Nullable String integrationType) {
         this.integrationType = integrationType;
         return this;
     }
 
-    /**
-     * Filter the results for only billable API Calls
-     */
-    public ListUnifiedApicallsRequest withIsBillable(boolean isBillable) {
-        Utils.checkNotNull(isBillable, "isBillable");
-        this.isBillable = Optional.ofNullable(isBillable);
-        return this;
-    }
-
 
     /**
      * Filter the results for only billable API Calls
      */
-    public ListUnifiedApicallsRequest withIsBillable(Optional<Boolean> isBillable) {
-        Utils.checkNotNull(isBillable, "isBillable");
+    public ListUnifiedApicallsRequest withIsBillable(@Nullable Boolean isBillable) {
         this.isBillable = isBillable;
         return this;
     }
 
-    public ListUnifiedApicallsRequest withLimit(double limit) {
-        Utils.checkNotNull(limit, "limit");
-        this.limit = Optional.ofNullable(limit);
-        return this;
-    }
 
-
-    public ListUnifiedApicallsRequest withLimit(Optional<Double> limit) {
-        Utils.checkNotNull(limit, "limit");
+    public ListUnifiedApicallsRequest withLimit(@Nullable Double limit) {
         this.limit = limit;
         return this;
     }
 
-    public ListUnifiedApicallsRequest withOffset(double offset) {
-        Utils.checkNotNull(offset, "offset");
-        this.offset = Optional.ofNullable(offset);
-        return this;
-    }
 
-
-    public ListUnifiedApicallsRequest withOffset(Optional<Double> offset) {
-        Utils.checkNotNull(offset, "offset");
+    public ListUnifiedApicallsRequest withOffset(@Nullable Double offset) {
         this.offset = offset;
         return this;
     }
 
-    public ListUnifiedApicallsRequest withOrder(String order) {
-        Utils.checkNotNull(order, "order");
-        this.order = Optional.ofNullable(order);
-        return this;
-    }
 
-
-    public ListUnifiedApicallsRequest withOrder(Optional<String> order) {
-        Utils.checkNotNull(order, "order");
+    public ListUnifiedApicallsRequest withOrder(@Nullable String order) {
         this.order = order;
         return this;
     }
 
-    public ListUnifiedApicallsRequest withSort(String sort) {
-        Utils.checkNotNull(sort, "sort");
-        this.sort = Optional.ofNullable(sort);
-        return this;
-    }
 
-
-    public ListUnifiedApicallsRequest withSort(Optional<String> sort) {
-        Utils.checkNotNull(sort, "sort");
+    public ListUnifiedApicallsRequest withSort(@Nullable String sort) {
         this.sort = sort;
         return this;
     }
 
-    /**
-     * Filter the results to just this type
-     */
-    public ListUnifiedApicallsRequest withType(String type) {
-        Utils.checkNotNull(type, "type");
-        this.type = Optional.ofNullable(type);
-        return this;
-    }
-
 
     /**
      * Filter the results to just this type
      */
-    public ListUnifiedApicallsRequest withType(Optional<String> type) {
-        Utils.checkNotNull(type, "type");
+    public ListUnifiedApicallsRequest withType(@Nullable String type) {
         this.type = type;
         return this;
     }
 
-    /**
-     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
-     * YYYY-MM-DDTHH:MM:SSZ format)
-     */
-    public ListUnifiedApicallsRequest withUpdatedGte(String updatedGte) {
-        Utils.checkNotNull(updatedGte, "updatedGte");
-        this.updatedGte = Optional.ofNullable(updatedGte);
-        return this;
-    }
-
 
     /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
-    public ListUnifiedApicallsRequest withUpdatedGte(Optional<String> updatedGte) {
-        Utils.checkNotNull(updatedGte, "updatedGte");
+    public ListUnifiedApicallsRequest withUpdatedGte(@Nullable String updatedGte) {
         this.updatedGte = updatedGte;
         return this;
     }
 
-    /**
-     * Filter the results to just this webhook
-     */
-    public ListUnifiedApicallsRequest withWebhookId(String webhookId) {
-        Utils.checkNotNull(webhookId, "webhookId");
-        this.webhookId = Optional.ofNullable(webhookId);
-        return this;
-    }
-
 
     /**
      * Filter the results to just this webhook
      */
-    public ListUnifiedApicallsRequest withWebhookId(Optional<String> webhookId) {
-        Utils.checkNotNull(webhookId, "webhookId");
+    public ListUnifiedApicallsRequest withWebhookId(@Nullable String webhookId) {
         this.webhookId = webhookId;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -505,257 +363,127 @@ public class ListUnifiedApicallsRequest {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> connectionId = Optional.empty();
+        private String connectionId;
 
-        private Optional<String> env = Optional.empty();
+        private String env;
 
-        private Optional<Boolean> error = Optional.empty();
+        private Boolean error;
 
-        private Optional<String> externalXref = Optional.empty();
+        private String externalXref;
 
-        private Optional<String> integrationType = Optional.empty();
+        private String integrationType;
 
-        private Optional<Boolean> isBillable = Optional.empty();
+        private Boolean isBillable;
 
-        private Optional<Double> limit = Optional.empty();
+        private Double limit;
 
-        private Optional<Double> offset = Optional.empty();
+        private Double offset;
 
-        private Optional<String> order = Optional.empty();
+        private String order;
 
-        private Optional<String> sort = Optional.empty();
+        private String sort;
 
-        private Optional<String> type = Optional.empty();
+        private String type;
 
-        private Optional<String> updatedGte = Optional.empty();
+        private String updatedGte;
 
-        private Optional<String> webhookId = Optional.empty();
+        private String webhookId;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
         /**
          * Filter the results to just this integration
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = Optional.ofNullable(connectionId);
-            return this;
-        }
-
-        /**
-         * Filter the results to just this integration
-         */
-        public Builder connectionId(Optional<String> connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
+        public Builder connectionId(@Nullable String connectionId) {
             this.connectionId = connectionId;
             return this;
         }
 
-
-        public Builder env(String env) {
-            Utils.checkNotNull(env, "env");
-            this.env = Optional.ofNullable(env);
-            return this;
-        }
-
-        public Builder env(Optional<String> env) {
-            Utils.checkNotNull(env, "env");
+        public Builder env(@Nullable String env) {
             this.env = env;
             return this;
         }
 
-
         /**
          * Filter the results for API Calls with errors
          */
-        public Builder error(boolean error) {
-            Utils.checkNotNull(error, "error");
-            this.error = Optional.ofNullable(error);
-            return this;
-        }
-
-        /**
-         * Filter the results for API Calls with errors
-         */
-        public Builder error(Optional<Boolean> error) {
-            Utils.checkNotNull(error, "error");
+        public Builder error(@Nullable Boolean error) {
             this.error = error;
             return this;
         }
 
-
         /**
          * Filter the results to only those integrations for your user referenced by this value
          */
-        public Builder externalXref(String externalXref) {
-            Utils.checkNotNull(externalXref, "externalXref");
-            this.externalXref = Optional.ofNullable(externalXref);
-            return this;
-        }
-
-        /**
-         * Filter the results to only those integrations for your user referenced by this value
-         */
-        public Builder externalXref(Optional<String> externalXref) {
-            Utils.checkNotNull(externalXref, "externalXref");
+        public Builder externalXref(@Nullable String externalXref) {
             this.externalXref = externalXref;
             return this;
         }
 
-
         /**
          * Filter the results to just this integration
          */
-        public Builder integrationType(String integrationType) {
-            Utils.checkNotNull(integrationType, "integrationType");
-            this.integrationType = Optional.ofNullable(integrationType);
-            return this;
-        }
-
-        /**
-         * Filter the results to just this integration
-         */
-        public Builder integrationType(Optional<String> integrationType) {
-            Utils.checkNotNull(integrationType, "integrationType");
+        public Builder integrationType(@Nullable String integrationType) {
             this.integrationType = integrationType;
             return this;
         }
 
-
         /**
          * Filter the results for only billable API Calls
          */
-        public Builder isBillable(boolean isBillable) {
-            Utils.checkNotNull(isBillable, "isBillable");
-            this.isBillable = Optional.ofNullable(isBillable);
-            return this;
-        }
-
-        /**
-         * Filter the results for only billable API Calls
-         */
-        public Builder isBillable(Optional<Boolean> isBillable) {
-            Utils.checkNotNull(isBillable, "isBillable");
+        public Builder isBillable(@Nullable Boolean isBillable) {
             this.isBillable = isBillable;
             return this;
         }
 
-
-        public Builder limit(double limit) {
-            Utils.checkNotNull(limit, "limit");
-            this.limit = Optional.ofNullable(limit);
-            return this;
-        }
-
-        public Builder limit(Optional<Double> limit) {
-            Utils.checkNotNull(limit, "limit");
+        public Builder limit(@Nullable Double limit) {
             this.limit = limit;
             return this;
         }
 
-
-        public Builder offset(double offset) {
-            Utils.checkNotNull(offset, "offset");
-            this.offset = Optional.ofNullable(offset);
-            return this;
-        }
-
-        public Builder offset(Optional<Double> offset) {
-            Utils.checkNotNull(offset, "offset");
+        public Builder offset(@Nullable Double offset) {
             this.offset = offset;
             return this;
         }
 
-
-        public Builder order(String order) {
-            Utils.checkNotNull(order, "order");
-            this.order = Optional.ofNullable(order);
-            return this;
-        }
-
-        public Builder order(Optional<String> order) {
-            Utils.checkNotNull(order, "order");
+        public Builder order(@Nullable String order) {
             this.order = order;
             return this;
         }
 
-
-        public Builder sort(String sort) {
-            Utils.checkNotNull(sort, "sort");
-            this.sort = Optional.ofNullable(sort);
-            return this;
-        }
-
-        public Builder sort(Optional<String> sort) {
-            Utils.checkNotNull(sort, "sort");
+        public Builder sort(@Nullable String sort) {
             this.sort = sort;
             return this;
         }
 
-
         /**
          * Filter the results to just this type
          */
-        public Builder type(String type) {
-            Utils.checkNotNull(type, "type");
-            this.type = Optional.ofNullable(type);
-            return this;
-        }
-
-        /**
-         * Filter the results to just this type
-         */
-        public Builder type(Optional<String> type) {
-            Utils.checkNotNull(type, "type");
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-
         /**
          * Return only results whose updated date is equal or greater to this value (ISO-8601 /
          * YYYY-MM-DDTHH:MM:SSZ format)
          */
-        public Builder updatedGte(String updatedGte) {
-            Utils.checkNotNull(updatedGte, "updatedGte");
-            this.updatedGte = Optional.ofNullable(updatedGte);
-            return this;
-        }
-
-        /**
-         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
-         * YYYY-MM-DDTHH:MM:SSZ format)
-         */
-        public Builder updatedGte(Optional<String> updatedGte) {
-            Utils.checkNotNull(updatedGte, "updatedGte");
+        public Builder updatedGte(@Nullable String updatedGte) {
             this.updatedGte = updatedGte;
             return this;
         }
 
-
         /**
          * Filter the results to just this webhook
          */
-        public Builder webhookId(String webhookId) {
-            Utils.checkNotNull(webhookId, "webhookId");
-            this.webhookId = Optional.ofNullable(webhookId);
-            return this;
-        }
-
-        /**
-         * Filter the results to just this webhook
-         */
-        public Builder webhookId(Optional<String> webhookId) {
-            Utils.checkNotNull(webhookId, "webhookId");
+        public Builder webhookId(@Nullable String webhookId) {
             this.webhookId = webhookId;
             return this;
         }
 
         public ListUnifiedApicallsRequest build() {
-
             return new ListUnifiedApicallsRequest(
                 connectionId, env, error,
                 externalXref, integrationType, isBillable,

@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAtsInterviewRequest;
 import to.unified.unified_java_sdk.models.operations.GetAtsInterviewRequest;
@@ -68,7 +69,7 @@ public class AsyncInterview {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAtsInterviewResponse>} - The async response
      */
-    public CompletableFuture<CreateAtsInterviewResponse> createAtsInterview(CreateAtsInterviewRequest request) {
+    public CompletableFuture<CreateAtsInterviewResponse> createAtsInterview(@Nonnull CreateAtsInterviewRequest request) {
         AsyncRequestOperation<CreateAtsInterviewRequest, CreateAtsInterviewResponse> operation
               = new CreateAtsInterview.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -91,7 +92,7 @@ public class AsyncInterview {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAtsInterviewResponse>} - The async response
      */
-    public CompletableFuture<GetAtsInterviewResponse> getAtsInterview(GetAtsInterviewRequest request) {
+    public CompletableFuture<GetAtsInterviewResponse> getAtsInterview(@Nonnull GetAtsInterviewRequest request) {
         AsyncRequestOperation<GetAtsInterviewRequest, GetAtsInterviewResponse> operation
               = new GetAtsInterview.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -114,7 +115,7 @@ public class AsyncInterview {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAtsInterviewsResponse>} - The async response
      */
-    public CompletableFuture<ListAtsInterviewsResponse> listAtsInterviews(ListAtsInterviewsRequest request) {
+    public CompletableFuture<ListAtsInterviewsResponse> listAtsInterviews(@Nonnull ListAtsInterviewsRequest request) {
         AsyncRequestOperation<ListAtsInterviewsRequest, ListAtsInterviewsResponse> operation
               = new ListAtsInterviews.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -137,7 +138,7 @@ public class AsyncInterview {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAtsInterviewResponse>} - The async response
      */
-    public CompletableFuture<PatchAtsInterviewResponse> patchAtsInterview(PatchAtsInterviewRequest request) {
+    public CompletableFuture<PatchAtsInterviewResponse> patchAtsInterview(@Nonnull PatchAtsInterviewRequest request) {
         AsyncRequestOperation<PatchAtsInterviewRequest, PatchAtsInterviewResponse> operation
               = new PatchAtsInterview.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -160,7 +161,7 @@ public class AsyncInterview {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAtsInterviewResponse>} - The async response
      */
-    public CompletableFuture<RemoveAtsInterviewResponse> removeAtsInterview(RemoveAtsInterviewRequest request) {
+    public CompletableFuture<RemoveAtsInterviewResponse> removeAtsInterview(@Nonnull RemoveAtsInterviewRequest request) {
         AsyncRequestOperation<RemoveAtsInterviewRequest, RemoveAtsInterviewResponse> operation
               = new RemoveAtsInterview.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -183,7 +184,7 @@ public class AsyncInterview {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAtsInterviewResponse>} - The async response
      */
-    public CompletableFuture<UpdateAtsInterviewResponse> updateAtsInterview(UpdateAtsInterviewRequest request) {
+    public CompletableFuture<UpdateAtsInterviewResponse> updateAtsInterview(@Nonnull UpdateAtsInterviewRequest request) {
         AsyncRequestOperation<UpdateAtsInterviewRequest, UpdateAtsInterviewResponse> operation
               = new UpdateAtsInterview.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

@@ -4,15 +4,14 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
@@ -24,145 +23,125 @@ public class PaymentSubscription {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canceled_at")
-    private Optional<OffsetDateTime> canceledAt;
+    private OffsetDateTime canceledAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_id")
-    private Optional<String> contactId;
+    private String contactId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
-    private Optional<String> currency;
+    private String currency;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("current_period_end_at")
-    private Optional<OffsetDateTime> currentPeriodEndAt;
+    private OffsetDateTime currentPeriodEndAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("current_period_start_at")
-    private Optional<OffsetDateTime> currentPeriodStartAt;
+    private OffsetDateTime currentPeriodStartAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("day_of_month")
-    private Optional<Double> dayOfMonth;
+    private Double dayOfMonth;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("day_of_week")
-    private Optional<Double> dayOfWeek;
+    private Double dayOfWeek;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
-    private Optional<String> description;
+    private String description;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
-    private Optional<OffsetDateTime> endAt;
+    private OffsetDateTime endAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interval")
-    private Optional<Double> interval;
+    private Double interval;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interval_unit")
-    private Optional<? extends IntervalUnit> intervalUnit;
+    private IntervalUnit intervalUnit;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoice_id")
-    private Optional<String> invoiceId;
+    private String invoiceId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineitems")
-    private Optional<? extends List<PaymentLineitem>> lineitems;
+    private List<PaymentLineitem> lineitems;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("month")
-    private Optional<Double> month;
+    private Double month;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
-    private Optional<OffsetDateTime> startAt;
+    private OffsetDateTime startAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
-    private Optional<? extends PaymentSubscriptionStatus> status;
+    private PaymentSubscriptionStatus status;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
     @JsonCreator
     public PaymentSubscription(
-            @JsonProperty("canceled_at") Optional<OffsetDateTime> canceledAt,
-            @JsonProperty("contact_id") Optional<String> contactId,
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("currency") Optional<String> currency,
-            @JsonProperty("current_period_end_at") Optional<OffsetDateTime> currentPeriodEndAt,
-            @JsonProperty("current_period_start_at") Optional<OffsetDateTime> currentPeriodStartAt,
-            @JsonProperty("day_of_month") Optional<Double> dayOfMonth,
-            @JsonProperty("day_of_week") Optional<Double> dayOfWeek,
-            @JsonProperty("description") Optional<String> description,
-            @JsonProperty("end_at") Optional<OffsetDateTime> endAt,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("interval") Optional<Double> interval,
-            @JsonProperty("interval_unit") Optional<? extends IntervalUnit> intervalUnit,
-            @JsonProperty("invoice_id") Optional<String> invoiceId,
-            @JsonProperty("lineitems") Optional<? extends List<PaymentLineitem>> lineitems,
-            @JsonProperty("month") Optional<Double> month,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("start_at") Optional<OffsetDateTime> startAt,
-            @JsonProperty("status") Optional<? extends PaymentSubscriptionStatus> status,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(canceledAt, "canceledAt");
-        Utils.checkNotNull(contactId, "contactId");
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(currency, "currency");
-        Utils.checkNotNull(currentPeriodEndAt, "currentPeriodEndAt");
-        Utils.checkNotNull(currentPeriodStartAt, "currentPeriodStartAt");
-        Utils.checkNotNull(dayOfMonth, "dayOfMonth");
-        Utils.checkNotNull(dayOfWeek, "dayOfWeek");
-        Utils.checkNotNull(description, "description");
-        Utils.checkNotNull(endAt, "endAt");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(interval, "interval");
-        Utils.checkNotNull(intervalUnit, "intervalUnit");
-        Utils.checkNotNull(invoiceId, "invoiceId");
-        Utils.checkNotNull(lineitems, "lineitems");
-        Utils.checkNotNull(month, "month");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(startAt, "startAt");
-        Utils.checkNotNull(status, "status");
-        Utils.checkNotNull(updatedAt, "updatedAt");
+            @JsonProperty("canceled_at") @Nullable OffsetDateTime canceledAt,
+            @JsonProperty("contact_id") @Nullable String contactId,
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("currency") @Nullable String currency,
+            @JsonProperty("current_period_end_at") @Nullable OffsetDateTime currentPeriodEndAt,
+            @JsonProperty("current_period_start_at") @Nullable OffsetDateTime currentPeriodStartAt,
+            @JsonProperty("day_of_month") @Nullable Double dayOfMonth,
+            @JsonProperty("day_of_week") @Nullable Double dayOfWeek,
+            @JsonProperty("description") @Nullable String description,
+            @JsonProperty("end_at") @Nullable OffsetDateTime endAt,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("interval") @Nullable Double interval,
+            @JsonProperty("interval_unit") @Nullable IntervalUnit intervalUnit,
+            @JsonProperty("invoice_id") @Nullable String invoiceId,
+            @JsonProperty("lineitems") @Nullable List<PaymentLineitem> lineitems,
+            @JsonProperty("month") @Nullable Double month,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("start_at") @Nullable OffsetDateTime startAt,
+            @JsonProperty("status") @Nullable PaymentSubscriptionStatus status,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.canceledAt = canceledAt;
         this.contactId = contactId;
         this.createdAt = createdAt;
@@ -186,117 +165,93 @@ public class PaymentSubscription {
     }
     
     public PaymentSubscription() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> canceledAt() {
-        return canceledAt;
+        return Optional.ofNullable(this.canceledAt);
     }
 
-    @JsonIgnore
     public Optional<String> contactId() {
-        return contactId;
+        return Optional.ofNullable(this.contactId);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<String> currency() {
-        return currency;
+        return Optional.ofNullable(this.currency);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> currentPeriodEndAt() {
-        return currentPeriodEndAt;
+        return Optional.ofNullable(this.currentPeriodEndAt);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> currentPeriodStartAt() {
-        return currentPeriodStartAt;
+        return Optional.ofNullable(this.currentPeriodStartAt);
     }
 
-    @JsonIgnore
     public Optional<Double> dayOfMonth() {
-        return dayOfMonth;
+        return Optional.ofNullable(this.dayOfMonth);
     }
 
-    @JsonIgnore
     public Optional<Double> dayOfWeek() {
-        return dayOfWeek;
+        return Optional.ofNullable(this.dayOfWeek);
     }
 
-    @JsonIgnore
     public Optional<String> description() {
-        return description;
+        return Optional.ofNullable(this.description);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> endAt() {
-        return endAt;
+        return Optional.ofNullable(this.endAt);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<Double> interval() {
-        return interval;
+        return Optional.ofNullable(this.interval);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<IntervalUnit> intervalUnit() {
-        return (Optional<IntervalUnit>) intervalUnit;
+        return Optional.ofNullable(this.intervalUnit);
     }
 
-    @JsonIgnore
     public Optional<String> invoiceId() {
-        return invoiceId;
+        return Optional.ofNullable(this.invoiceId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<PaymentLineitem>> lineitems() {
-        return (Optional<List<PaymentLineitem>>) lineitems;
+        return Optional.ofNullable(this.lineitems);
     }
 
-    @JsonIgnore
     public Optional<Double> month() {
-        return month;
+        return Optional.ofNullable(this.month);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> startAt() {
-        return startAt;
+        return Optional.ofNullable(this.startAt);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<PaymentSubscriptionStatus> status() {
-        return (Optional<PaymentSubscriptionStatus>) status;
+        return Optional.ofNullable(this.status);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
     public static Builder builder() {
@@ -304,265 +259,125 @@ public class PaymentSubscription {
     }
 
 
-    public PaymentSubscription withCanceledAt(OffsetDateTime canceledAt) {
-        Utils.checkNotNull(canceledAt, "canceledAt");
-        this.canceledAt = Optional.ofNullable(canceledAt);
-        return this;
-    }
-
-
-    public PaymentSubscription withCanceledAt(Optional<OffsetDateTime> canceledAt) {
-        Utils.checkNotNull(canceledAt, "canceledAt");
+    public PaymentSubscription withCanceledAt(@Nullable OffsetDateTime canceledAt) {
         this.canceledAt = canceledAt;
         return this;
     }
 
-    public PaymentSubscription withContactId(String contactId) {
-        Utils.checkNotNull(contactId, "contactId");
-        this.contactId = Optional.ofNullable(contactId);
-        return this;
-    }
 
-
-    public PaymentSubscription withContactId(Optional<String> contactId) {
-        Utils.checkNotNull(contactId, "contactId");
+    public PaymentSubscription withContactId(@Nullable String contactId) {
         this.contactId = contactId;
         return this;
     }
 
-    public PaymentSubscription withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
 
-
-    public PaymentSubscription withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public PaymentSubscription withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public PaymentSubscription withCurrency(String currency) {
-        Utils.checkNotNull(currency, "currency");
-        this.currency = Optional.ofNullable(currency);
-        return this;
-    }
 
-
-    public PaymentSubscription withCurrency(Optional<String> currency) {
-        Utils.checkNotNull(currency, "currency");
+    public PaymentSubscription withCurrency(@Nullable String currency) {
         this.currency = currency;
         return this;
     }
 
-    public PaymentSubscription withCurrentPeriodEndAt(OffsetDateTime currentPeriodEndAt) {
-        Utils.checkNotNull(currentPeriodEndAt, "currentPeriodEndAt");
-        this.currentPeriodEndAt = Optional.ofNullable(currentPeriodEndAt);
-        return this;
-    }
 
-
-    public PaymentSubscription withCurrentPeriodEndAt(Optional<OffsetDateTime> currentPeriodEndAt) {
-        Utils.checkNotNull(currentPeriodEndAt, "currentPeriodEndAt");
+    public PaymentSubscription withCurrentPeriodEndAt(@Nullable OffsetDateTime currentPeriodEndAt) {
         this.currentPeriodEndAt = currentPeriodEndAt;
         return this;
     }
 
-    public PaymentSubscription withCurrentPeriodStartAt(OffsetDateTime currentPeriodStartAt) {
-        Utils.checkNotNull(currentPeriodStartAt, "currentPeriodStartAt");
-        this.currentPeriodStartAt = Optional.ofNullable(currentPeriodStartAt);
-        return this;
-    }
 
-
-    public PaymentSubscription withCurrentPeriodStartAt(Optional<OffsetDateTime> currentPeriodStartAt) {
-        Utils.checkNotNull(currentPeriodStartAt, "currentPeriodStartAt");
+    public PaymentSubscription withCurrentPeriodStartAt(@Nullable OffsetDateTime currentPeriodStartAt) {
         this.currentPeriodStartAt = currentPeriodStartAt;
         return this;
     }
 
-    public PaymentSubscription withDayOfMonth(double dayOfMonth) {
-        Utils.checkNotNull(dayOfMonth, "dayOfMonth");
-        this.dayOfMonth = Optional.ofNullable(dayOfMonth);
-        return this;
-    }
 
-
-    public PaymentSubscription withDayOfMonth(Optional<Double> dayOfMonth) {
-        Utils.checkNotNull(dayOfMonth, "dayOfMonth");
+    public PaymentSubscription withDayOfMonth(@Nullable Double dayOfMonth) {
         this.dayOfMonth = dayOfMonth;
         return this;
     }
 
-    public PaymentSubscription withDayOfWeek(double dayOfWeek) {
-        Utils.checkNotNull(dayOfWeek, "dayOfWeek");
-        this.dayOfWeek = Optional.ofNullable(dayOfWeek);
-        return this;
-    }
 
-
-    public PaymentSubscription withDayOfWeek(Optional<Double> dayOfWeek) {
-        Utils.checkNotNull(dayOfWeek, "dayOfWeek");
+    public PaymentSubscription withDayOfWeek(@Nullable Double dayOfWeek) {
         this.dayOfWeek = dayOfWeek;
         return this;
     }
 
-    public PaymentSubscription withDescription(String description) {
-        Utils.checkNotNull(description, "description");
-        this.description = Optional.ofNullable(description);
-        return this;
-    }
 
-
-    public PaymentSubscription withDescription(Optional<String> description) {
-        Utils.checkNotNull(description, "description");
+    public PaymentSubscription withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
-    public PaymentSubscription withEndAt(OffsetDateTime endAt) {
-        Utils.checkNotNull(endAt, "endAt");
-        this.endAt = Optional.ofNullable(endAt);
-        return this;
-    }
 
-
-    public PaymentSubscription withEndAt(Optional<OffsetDateTime> endAt) {
-        Utils.checkNotNull(endAt, "endAt");
+    public PaymentSubscription withEndAt(@Nullable OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
     }
 
-    public PaymentSubscription withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public PaymentSubscription withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public PaymentSubscription withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public PaymentSubscription withInterval(double interval) {
-        Utils.checkNotNull(interval, "interval");
-        this.interval = Optional.ofNullable(interval);
-        return this;
-    }
 
-
-    public PaymentSubscription withInterval(Optional<Double> interval) {
-        Utils.checkNotNull(interval, "interval");
+    public PaymentSubscription withInterval(@Nullable Double interval) {
         this.interval = interval;
         return this;
     }
 
-    public PaymentSubscription withIntervalUnit(IntervalUnit intervalUnit) {
-        Utils.checkNotNull(intervalUnit, "intervalUnit");
-        this.intervalUnit = Optional.ofNullable(intervalUnit);
-        return this;
-    }
 
-
-    public PaymentSubscription withIntervalUnit(Optional<? extends IntervalUnit> intervalUnit) {
-        Utils.checkNotNull(intervalUnit, "intervalUnit");
+    public PaymentSubscription withIntervalUnit(@Nullable IntervalUnit intervalUnit) {
         this.intervalUnit = intervalUnit;
         return this;
     }
 
-    public PaymentSubscription withInvoiceId(String invoiceId) {
-        Utils.checkNotNull(invoiceId, "invoiceId");
-        this.invoiceId = Optional.ofNullable(invoiceId);
-        return this;
-    }
 
-
-    public PaymentSubscription withInvoiceId(Optional<String> invoiceId) {
-        Utils.checkNotNull(invoiceId, "invoiceId");
+    public PaymentSubscription withInvoiceId(@Nullable String invoiceId) {
         this.invoiceId = invoiceId;
         return this;
     }
 
-    public PaymentSubscription withLineitems(List<PaymentLineitem> lineitems) {
-        Utils.checkNotNull(lineitems, "lineitems");
-        this.lineitems = Optional.ofNullable(lineitems);
-        return this;
-    }
 
-
-    public PaymentSubscription withLineitems(Optional<? extends List<PaymentLineitem>> lineitems) {
-        Utils.checkNotNull(lineitems, "lineitems");
+    public PaymentSubscription withLineitems(@Nullable List<PaymentLineitem> lineitems) {
         this.lineitems = lineitems;
         return this;
     }
 
-    public PaymentSubscription withMonth(double month) {
-        Utils.checkNotNull(month, "month");
-        this.month = Optional.ofNullable(month);
-        return this;
-    }
 
-
-    public PaymentSubscription withMonth(Optional<Double> month) {
-        Utils.checkNotNull(month, "month");
+    public PaymentSubscription withMonth(@Nullable Double month) {
         this.month = month;
         return this;
     }
 
-    public PaymentSubscription withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public PaymentSubscription withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public PaymentSubscription withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public PaymentSubscription withStartAt(OffsetDateTime startAt) {
-        Utils.checkNotNull(startAt, "startAt");
-        this.startAt = Optional.ofNullable(startAt);
-        return this;
-    }
 
-
-    public PaymentSubscription withStartAt(Optional<OffsetDateTime> startAt) {
-        Utils.checkNotNull(startAt, "startAt");
+    public PaymentSubscription withStartAt(@Nullable OffsetDateTime startAt) {
         this.startAt = startAt;
         return this;
     }
 
-    public PaymentSubscription withStatus(PaymentSubscriptionStatus status) {
-        Utils.checkNotNull(status, "status");
-        this.status = Optional.ofNullable(status);
-        return this;
-    }
 
-
-    public PaymentSubscription withStatus(Optional<? extends PaymentSubscriptionStatus> status) {
-        Utils.checkNotNull(status, "status");
+    public PaymentSubscription withStatus(@Nullable PaymentSubscriptionStatus status) {
         this.status = status;
         return this;
     }
 
-    public PaymentSubscription withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public PaymentSubscription withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public PaymentSubscription withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -636,312 +451,151 @@ public class PaymentSubscription {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<OffsetDateTime> canceledAt = Optional.empty();
+        private OffsetDateTime canceledAt;
 
-        private Optional<String> contactId = Optional.empty();
+        private String contactId;
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<String> currency = Optional.empty();
+        private String currency;
 
-        private Optional<OffsetDateTime> currentPeriodEndAt = Optional.empty();
+        private OffsetDateTime currentPeriodEndAt;
 
-        private Optional<OffsetDateTime> currentPeriodStartAt = Optional.empty();
+        private OffsetDateTime currentPeriodStartAt;
 
-        private Optional<Double> dayOfMonth = Optional.empty();
+        private Double dayOfMonth;
 
-        private Optional<Double> dayOfWeek = Optional.empty();
+        private Double dayOfWeek;
 
-        private Optional<String> description = Optional.empty();
+        private String description;
 
-        private Optional<OffsetDateTime> endAt = Optional.empty();
+        private OffsetDateTime endAt;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<Double> interval = Optional.empty();
+        private Double interval;
 
-        private Optional<? extends IntervalUnit> intervalUnit = Optional.empty();
+        private IntervalUnit intervalUnit;
 
-        private Optional<String> invoiceId = Optional.empty();
+        private String invoiceId;
 
-        private Optional<? extends List<PaymentLineitem>> lineitems = Optional.empty();
+        private List<PaymentLineitem> lineitems;
 
-        private Optional<Double> month = Optional.empty();
+        private Double month;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<OffsetDateTime> startAt = Optional.empty();
+        private OffsetDateTime startAt;
 
-        private Optional<? extends PaymentSubscriptionStatus> status = Optional.empty();
+        private PaymentSubscriptionStatus status;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder canceledAt(OffsetDateTime canceledAt) {
-            Utils.checkNotNull(canceledAt, "canceledAt");
-            this.canceledAt = Optional.ofNullable(canceledAt);
-            return this;
-        }
-
-        public Builder canceledAt(Optional<OffsetDateTime> canceledAt) {
-            Utils.checkNotNull(canceledAt, "canceledAt");
+        public Builder canceledAt(@Nullable OffsetDateTime canceledAt) {
             this.canceledAt = canceledAt;
             return this;
         }
 
-
-        public Builder contactId(String contactId) {
-            Utils.checkNotNull(contactId, "contactId");
-            this.contactId = Optional.ofNullable(contactId);
-            return this;
-        }
-
-        public Builder contactId(Optional<String> contactId) {
-            Utils.checkNotNull(contactId, "contactId");
+        public Builder contactId(@Nullable String contactId) {
             this.contactId = contactId;
             return this;
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder currency(String currency) {
-            Utils.checkNotNull(currency, "currency");
-            this.currency = Optional.ofNullable(currency);
-            return this;
-        }
-
-        public Builder currency(Optional<String> currency) {
-            Utils.checkNotNull(currency, "currency");
+        public Builder currency(@Nullable String currency) {
             this.currency = currency;
             return this;
         }
 
-
-        public Builder currentPeriodEndAt(OffsetDateTime currentPeriodEndAt) {
-            Utils.checkNotNull(currentPeriodEndAt, "currentPeriodEndAt");
-            this.currentPeriodEndAt = Optional.ofNullable(currentPeriodEndAt);
-            return this;
-        }
-
-        public Builder currentPeriodEndAt(Optional<OffsetDateTime> currentPeriodEndAt) {
-            Utils.checkNotNull(currentPeriodEndAt, "currentPeriodEndAt");
+        public Builder currentPeriodEndAt(@Nullable OffsetDateTime currentPeriodEndAt) {
             this.currentPeriodEndAt = currentPeriodEndAt;
             return this;
         }
 
-
-        public Builder currentPeriodStartAt(OffsetDateTime currentPeriodStartAt) {
-            Utils.checkNotNull(currentPeriodStartAt, "currentPeriodStartAt");
-            this.currentPeriodStartAt = Optional.ofNullable(currentPeriodStartAt);
-            return this;
-        }
-
-        public Builder currentPeriodStartAt(Optional<OffsetDateTime> currentPeriodStartAt) {
-            Utils.checkNotNull(currentPeriodStartAt, "currentPeriodStartAt");
+        public Builder currentPeriodStartAt(@Nullable OffsetDateTime currentPeriodStartAt) {
             this.currentPeriodStartAt = currentPeriodStartAt;
             return this;
         }
 
-
-        public Builder dayOfMonth(double dayOfMonth) {
-            Utils.checkNotNull(dayOfMonth, "dayOfMonth");
-            this.dayOfMonth = Optional.ofNullable(dayOfMonth);
-            return this;
-        }
-
-        public Builder dayOfMonth(Optional<Double> dayOfMonth) {
-            Utils.checkNotNull(dayOfMonth, "dayOfMonth");
+        public Builder dayOfMonth(@Nullable Double dayOfMonth) {
             this.dayOfMonth = dayOfMonth;
             return this;
         }
 
-
-        public Builder dayOfWeek(double dayOfWeek) {
-            Utils.checkNotNull(dayOfWeek, "dayOfWeek");
-            this.dayOfWeek = Optional.ofNullable(dayOfWeek);
-            return this;
-        }
-
-        public Builder dayOfWeek(Optional<Double> dayOfWeek) {
-            Utils.checkNotNull(dayOfWeek, "dayOfWeek");
+        public Builder dayOfWeek(@Nullable Double dayOfWeek) {
             this.dayOfWeek = dayOfWeek;
             return this;
         }
 
-
-        public Builder description(String description) {
-            Utils.checkNotNull(description, "description");
-            this.description = Optional.ofNullable(description);
-            return this;
-        }
-
-        public Builder description(Optional<String> description) {
-            Utils.checkNotNull(description, "description");
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-
-        public Builder endAt(OffsetDateTime endAt) {
-            Utils.checkNotNull(endAt, "endAt");
-            this.endAt = Optional.ofNullable(endAt);
-            return this;
-        }
-
-        public Builder endAt(Optional<OffsetDateTime> endAt) {
-            Utils.checkNotNull(endAt, "endAt");
+        public Builder endAt(@Nullable OffsetDateTime endAt) {
             this.endAt = endAt;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder interval(double interval) {
-            Utils.checkNotNull(interval, "interval");
-            this.interval = Optional.ofNullable(interval);
-            return this;
-        }
-
-        public Builder interval(Optional<Double> interval) {
-            Utils.checkNotNull(interval, "interval");
+        public Builder interval(@Nullable Double interval) {
             this.interval = interval;
             return this;
         }
 
-
-        public Builder intervalUnit(IntervalUnit intervalUnit) {
-            Utils.checkNotNull(intervalUnit, "intervalUnit");
-            this.intervalUnit = Optional.ofNullable(intervalUnit);
-            return this;
-        }
-
-        public Builder intervalUnit(Optional<? extends IntervalUnit> intervalUnit) {
-            Utils.checkNotNull(intervalUnit, "intervalUnit");
+        public Builder intervalUnit(@Nullable IntervalUnit intervalUnit) {
             this.intervalUnit = intervalUnit;
             return this;
         }
 
-
-        public Builder invoiceId(String invoiceId) {
-            Utils.checkNotNull(invoiceId, "invoiceId");
-            this.invoiceId = Optional.ofNullable(invoiceId);
-            return this;
-        }
-
-        public Builder invoiceId(Optional<String> invoiceId) {
-            Utils.checkNotNull(invoiceId, "invoiceId");
+        public Builder invoiceId(@Nullable String invoiceId) {
             this.invoiceId = invoiceId;
             return this;
         }
 
-
-        public Builder lineitems(List<PaymentLineitem> lineitems) {
-            Utils.checkNotNull(lineitems, "lineitems");
-            this.lineitems = Optional.ofNullable(lineitems);
-            return this;
-        }
-
-        public Builder lineitems(Optional<? extends List<PaymentLineitem>> lineitems) {
-            Utils.checkNotNull(lineitems, "lineitems");
+        public Builder lineitems(@Nullable List<PaymentLineitem> lineitems) {
             this.lineitems = lineitems;
             return this;
         }
 
-
-        public Builder month(double month) {
-            Utils.checkNotNull(month, "month");
-            this.month = Optional.ofNullable(month);
-            return this;
-        }
-
-        public Builder month(Optional<Double> month) {
-            Utils.checkNotNull(month, "month");
+        public Builder month(@Nullable Double month) {
             this.month = month;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder startAt(OffsetDateTime startAt) {
-            Utils.checkNotNull(startAt, "startAt");
-            this.startAt = Optional.ofNullable(startAt);
-            return this;
-        }
-
-        public Builder startAt(Optional<OffsetDateTime> startAt) {
-            Utils.checkNotNull(startAt, "startAt");
+        public Builder startAt(@Nullable OffsetDateTime startAt) {
             this.startAt = startAt;
             return this;
         }
 
-
-        public Builder status(PaymentSubscriptionStatus status) {
-            Utils.checkNotNull(status, "status");
-            this.status = Optional.ofNullable(status);
-            return this;
-        }
-
-        public Builder status(Optional<? extends PaymentSubscriptionStatus> status) {
-            Utils.checkNotNull(status, "status");
+        public Builder status(@Nullable PaymentSubscriptionStatus status) {
             this.status = status;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
         public PaymentSubscription build() {
-
             return new PaymentSubscription(
                 canceledAt, contactId, createdAt,
                 currency, currentPeriodEndAt, currentPeriodStartAt,

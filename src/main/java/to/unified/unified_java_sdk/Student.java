@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateLmsStudentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateLmsStudentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateLmsStudentResponse;
@@ -67,7 +68,7 @@ public class Student {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateLmsStudentResponse createLmsStudent(CreateLmsStudentRequest request) {
+    public CreateLmsStudentResponse createLmsStudent(@Nonnull CreateLmsStudentRequest request) {
         RequestOperation<CreateLmsStudentRequest, CreateLmsStudentResponse> operation
               = new CreateLmsStudent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -89,7 +90,7 @@ public class Student {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetLmsStudentResponse getLmsStudent(GetLmsStudentRequest request) {
+    public GetLmsStudentResponse getLmsStudent(@Nonnull GetLmsStudentRequest request) {
         RequestOperation<GetLmsStudentRequest, GetLmsStudentResponse> operation
               = new GetLmsStudent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -111,7 +112,7 @@ public class Student {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListLmsStudentsResponse listLmsStudents(ListLmsStudentsRequest request) {
+    public ListLmsStudentsResponse listLmsStudents(@Nonnull ListLmsStudentsRequest request) {
         RequestOperation<ListLmsStudentsRequest, ListLmsStudentsResponse> operation
               = new ListLmsStudents.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -133,7 +134,7 @@ public class Student {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchLmsStudentResponse patchLmsStudent(PatchLmsStudentRequest request) {
+    public PatchLmsStudentResponse patchLmsStudent(@Nonnull PatchLmsStudentRequest request) {
         RequestOperation<PatchLmsStudentRequest, PatchLmsStudentResponse> operation
               = new PatchLmsStudent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -155,7 +156,7 @@ public class Student {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveLmsStudentResponse removeLmsStudent(RemoveLmsStudentRequest request) {
+    public RemoveLmsStudentResponse removeLmsStudent(@Nonnull RemoveLmsStudentRequest request) {
         RequestOperation<RemoveLmsStudentRequest, RemoveLmsStudentResponse> operation
               = new RemoveLmsStudent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -177,7 +178,7 @@ public class Student {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateLmsStudentResponse updateLmsStudent(UpdateLmsStudentRequest request) {
+    public UpdateLmsStudentResponse updateLmsStudent(@Nonnull UpdateLmsStudentRequest request) {
         RequestOperation<UpdateLmsStudentRequest, UpdateLmsStudentResponse> operation
               = new UpdateLmsStudent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

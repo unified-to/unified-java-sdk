@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.GetHrisPayslipRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisPayslipsRequest;
@@ -52,7 +53,7 @@ public class AsyncPayslip {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetHrisPayslipResponse>} - The async response
      */
-    public CompletableFuture<GetHrisPayslipResponse> getHrisPayslip(GetHrisPayslipRequest request) {
+    public CompletableFuture<GetHrisPayslipResponse> getHrisPayslip(@Nonnull GetHrisPayslipRequest request) {
         AsyncRequestOperation<GetHrisPayslipRequest, GetHrisPayslipResponse> operation
               = new GetHrisPayslip.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -75,7 +76,7 @@ public class AsyncPayslip {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListHrisPayslipsResponse>} - The async response
      */
-    public CompletableFuture<ListHrisPayslipsResponse> listHrisPayslips(ListHrisPayslipsRequest request) {
+    public CompletableFuture<ListHrisPayslipsResponse> listHrisPayslips(@Nonnull ListHrisPayslipsRequest request) {
         AsyncRequestOperation<ListHrisPayslipsRequest, ListHrisPayslipsResponse> operation
               = new ListHrisPayslips.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

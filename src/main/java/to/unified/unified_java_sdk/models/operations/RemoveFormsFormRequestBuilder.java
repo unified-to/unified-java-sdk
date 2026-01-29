@@ -5,32 +5,45 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.RemoveFormsForm;
 import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveFormsFormRequestBuilder {
-
-    private RemoveFormsFormRequest request;
     private final SDKConfiguration sdkConfiguration;
-    private final Headers _headers = new Headers(); 
+    private final Headers _headers = new Headers();
+    private RemoveFormsFormRequest request;
 
     public RemoveFormsFormRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
 
-    public RemoveFormsFormRequestBuilder request(RemoveFormsFormRequest request) {
-        Utils.checkNotNull(request, "request");
-        this.request = request;
+    public RemoveFormsFormRequestBuilder request(@Nonnull RemoveFormsFormRequest request) {
+        this.request = Utils.checkNotNull(request, "request");
         return this;
     }
 
+    private RemoveFormsFormRequest _buildRequest() {
+        return this.request;
+    }
+    
+    public RemoveFormsFormRequestBuilder header(String name, String value) {
+        Utils.checkNotNull(name, "name");
+        Utils.checkNotNull(value, "value");
+        this._headers.add(name, value);
+        return this;
+    }
+
+    /**
+    * Executes the request and returns the response.
+    *
+    * @return The response from the server.
+    */
     public RemoveFormsFormResponse call() {
-        
         RequestOperation<RemoveFormsFormRequest, RemoveFormsFormResponse> operation
               = new RemoveFormsForm.Sync(sdkConfiguration, _headers);
-
-        return operation.handleResponse(operation.doRequest(request));
+        return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

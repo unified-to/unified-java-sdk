@@ -4,14 +4,13 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -25,49 +24,42 @@ public class AccountingProfitlossSubcategory {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
-    private Optional<Double> amount;
+    private Double amount;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
-    private Optional<String> name;
+    private String name;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transaction_ids")
-    private Optional<? extends List<String>> transactionIds;
+    private List<String> transactionIds;
 
     @JsonCreator
     public AccountingProfitlossSubcategory(
-            @JsonProperty("amount") Optional<Double> amount,
-            @JsonProperty("name") Optional<String> name,
-            @JsonProperty("transaction_ids") Optional<? extends List<String>> transactionIds) {
-        Utils.checkNotNull(amount, "amount");
-        Utils.checkNotNull(name, "name");
-        Utils.checkNotNull(transactionIds, "transactionIds");
+            @JsonProperty("amount") @Nullable Double amount,
+            @JsonProperty("name") @Nullable String name,
+            @JsonProperty("transaction_ids") @Nullable List<String> transactionIds) {
         this.amount = amount;
         this.name = name;
         this.transactionIds = transactionIds;
     }
     
     public AccountingProfitlossSubcategory() {
-        this(Optional.empty(), Optional.empty(), Optional.empty());
+        this(null, null, null);
     }
 
-    @JsonIgnore
     public Optional<Double> amount() {
-        return amount;
+        return Optional.ofNullable(this.amount);
     }
 
-    @JsonIgnore
     public Optional<String> name() {
-        return name;
+        return Optional.ofNullable(this.name);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> transactionIds() {
-        return (Optional<List<String>>) transactionIds;
+        return Optional.ofNullable(this.transactionIds);
     }
 
     public static Builder builder() {
@@ -75,44 +67,23 @@ public class AccountingProfitlossSubcategory {
     }
 
 
-    public AccountingProfitlossSubcategory withAmount(double amount) {
-        Utils.checkNotNull(amount, "amount");
-        this.amount = Optional.ofNullable(amount);
-        return this;
-    }
-
-
-    public AccountingProfitlossSubcategory withAmount(Optional<Double> amount) {
-        Utils.checkNotNull(amount, "amount");
+    public AccountingProfitlossSubcategory withAmount(@Nullable Double amount) {
         this.amount = amount;
         return this;
     }
 
-    public AccountingProfitlossSubcategory withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = Optional.ofNullable(name);
-        return this;
-    }
 
-
-    public AccountingProfitlossSubcategory withName(Optional<String> name) {
-        Utils.checkNotNull(name, "name");
+    public AccountingProfitlossSubcategory withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
-    public AccountingProfitlossSubcategory withTransactionIds(List<String> transactionIds) {
-        Utils.checkNotNull(transactionIds, "transactionIds");
-        this.transactionIds = Optional.ofNullable(transactionIds);
-        return this;
-    }
 
-
-    public AccountingProfitlossSubcategory withTransactionIds(Optional<? extends List<String>> transactionIds) {
-        Utils.checkNotNull(transactionIds, "transactionIds");
+    public AccountingProfitlossSubcategory withTransactionIds(@Nullable List<String> transactionIds) {
         this.transactionIds = transactionIds;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -146,57 +117,32 @@ public class AccountingProfitlossSubcategory {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<Double> amount = Optional.empty();
+        private Double amount;
 
-        private Optional<String> name = Optional.empty();
+        private String name;
 
-        private Optional<? extends List<String>> transactionIds = Optional.empty();
+        private List<String> transactionIds;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder amount(double amount) {
-            Utils.checkNotNull(amount, "amount");
-            this.amount = Optional.ofNullable(amount);
-            return this;
-        }
-
-        public Builder amount(Optional<Double> amount) {
-            Utils.checkNotNull(amount, "amount");
+        public Builder amount(@Nullable Double amount) {
             this.amount = amount;
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = Optional.ofNullable(name);
-            return this;
-        }
-
-        public Builder name(Optional<String> name) {
-            Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-
-        public Builder transactionIds(List<String> transactionIds) {
-            Utils.checkNotNull(transactionIds, "transactionIds");
-            this.transactionIds = Optional.ofNullable(transactionIds);
-            return this;
-        }
-
-        public Builder transactionIds(Optional<? extends List<String>> transactionIds) {
-            Utils.checkNotNull(transactionIds, "transactionIds");
+        public Builder transactionIds(@Nullable List<String> transactionIds) {
             this.transactionIds = transactionIds;
             return this;
         }
 
         public AccountingProfitlossSubcategory build() {
-
             return new AccountingProfitlossSubcategory(
                 amount, name, transactionIds);
         }

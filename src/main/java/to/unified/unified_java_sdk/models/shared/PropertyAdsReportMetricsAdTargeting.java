@@ -4,13 +4,12 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -20,131 +19,113 @@ public class PropertyAdsReportMetricsAdTargeting {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("age_ranges")
-    private Optional<? extends List<String>> ageRanges;
+    private List<String> ageRanges;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audiences")
-    private Optional<? extends List<String>> audiences;
+    private List<String> audiences;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("companies")
-    private Optional<? extends List<String>> companies;
+    private List<String> companies;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_sizes")
-    private Optional<? extends List<String>> companySizes;
+    private List<String> companySizes;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("degrees")
-    private Optional<? extends List<String>> degrees;
+    private List<String> degrees;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("devices")
-    private Optional<? extends List<String>> devices;
+    private List<String> devices;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("genders")
-    private Optional<? extends List<String>> genders;
+    private List<String> genders;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("industries")
-    private Optional<? extends List<String>> industries;
+    private List<String> industries;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interests")
-    private Optional<? extends List<String>> interests;
+    private List<String> interests;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("job_functions")
-    private Optional<? extends List<String>> jobFunctions;
+    private List<String> jobFunctions;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("job_titles")
-    private Optional<? extends List<String>> jobTitles;
+    private List<String> jobTitles;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keywords")
-    private Optional<? extends List<String>> keywords;
+    private List<String> keywords;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languages")
-    private Optional<? extends List<String>> languages;
+    private List<String> languages;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locations")
-    private Optional<? extends List<String>> locations;
+    private List<String> locations;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placements")
-    private Optional<? extends List<String>> placements;
+    private List<String> placements;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schools")
-    private Optional<? extends List<String>> schools;
+    private List<String> schools;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seniorities")
-    private Optional<? extends List<String>> seniorities;
+    private List<String> seniorities;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skills")
-    private Optional<? extends List<String>> skills;
+    private List<String> skills;
 
     @JsonCreator
     public PropertyAdsReportMetricsAdTargeting(
-            @JsonProperty("age_ranges") Optional<? extends List<String>> ageRanges,
-            @JsonProperty("audiences") Optional<? extends List<String>> audiences,
-            @JsonProperty("companies") Optional<? extends List<String>> companies,
-            @JsonProperty("company_sizes") Optional<? extends List<String>> companySizes,
-            @JsonProperty("degrees") Optional<? extends List<String>> degrees,
-            @JsonProperty("devices") Optional<? extends List<String>> devices,
-            @JsonProperty("genders") Optional<? extends List<String>> genders,
-            @JsonProperty("industries") Optional<? extends List<String>> industries,
-            @JsonProperty("interests") Optional<? extends List<String>> interests,
-            @JsonProperty("job_functions") Optional<? extends List<String>> jobFunctions,
-            @JsonProperty("job_titles") Optional<? extends List<String>> jobTitles,
-            @JsonProperty("keywords") Optional<? extends List<String>> keywords,
-            @JsonProperty("languages") Optional<? extends List<String>> languages,
-            @JsonProperty("locations") Optional<? extends List<String>> locations,
-            @JsonProperty("placements") Optional<? extends List<String>> placements,
-            @JsonProperty("schools") Optional<? extends List<String>> schools,
-            @JsonProperty("seniorities") Optional<? extends List<String>> seniorities,
-            @JsonProperty("skills") Optional<? extends List<String>> skills) {
-        Utils.checkNotNull(ageRanges, "ageRanges");
-        Utils.checkNotNull(audiences, "audiences");
-        Utils.checkNotNull(companies, "companies");
-        Utils.checkNotNull(companySizes, "companySizes");
-        Utils.checkNotNull(degrees, "degrees");
-        Utils.checkNotNull(devices, "devices");
-        Utils.checkNotNull(genders, "genders");
-        Utils.checkNotNull(industries, "industries");
-        Utils.checkNotNull(interests, "interests");
-        Utils.checkNotNull(jobFunctions, "jobFunctions");
-        Utils.checkNotNull(jobTitles, "jobTitles");
-        Utils.checkNotNull(keywords, "keywords");
-        Utils.checkNotNull(languages, "languages");
-        Utils.checkNotNull(locations, "locations");
-        Utils.checkNotNull(placements, "placements");
-        Utils.checkNotNull(schools, "schools");
-        Utils.checkNotNull(seniorities, "seniorities");
-        Utils.checkNotNull(skills, "skills");
+            @JsonProperty("age_ranges") @Nullable List<String> ageRanges,
+            @JsonProperty("audiences") @Nullable List<String> audiences,
+            @JsonProperty("companies") @Nullable List<String> companies,
+            @JsonProperty("company_sizes") @Nullable List<String> companySizes,
+            @JsonProperty("degrees") @Nullable List<String> degrees,
+            @JsonProperty("devices") @Nullable List<String> devices,
+            @JsonProperty("genders") @Nullable List<String> genders,
+            @JsonProperty("industries") @Nullable List<String> industries,
+            @JsonProperty("interests") @Nullable List<String> interests,
+            @JsonProperty("job_functions") @Nullable List<String> jobFunctions,
+            @JsonProperty("job_titles") @Nullable List<String> jobTitles,
+            @JsonProperty("keywords") @Nullable List<String> keywords,
+            @JsonProperty("languages") @Nullable List<String> languages,
+            @JsonProperty("locations") @Nullable List<String> locations,
+            @JsonProperty("placements") @Nullable List<String> placements,
+            @JsonProperty("schools") @Nullable List<String> schools,
+            @JsonProperty("seniorities") @Nullable List<String> seniorities,
+            @JsonProperty("skills") @Nullable List<String> skills) {
         this.ageRanges = ageRanges;
         this.audiences = audiences;
         this.companies = companies;
@@ -166,120 +147,84 @@ public class PropertyAdsReportMetricsAdTargeting {
     }
     
     public PropertyAdsReportMetricsAdTargeting() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> ageRanges() {
-        return (Optional<List<String>>) ageRanges;
+        return Optional.ofNullable(this.ageRanges);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> audiences() {
-        return (Optional<List<String>>) audiences;
+        return Optional.ofNullable(this.audiences);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> companies() {
-        return (Optional<List<String>>) companies;
+        return Optional.ofNullable(this.companies);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> companySizes() {
-        return (Optional<List<String>>) companySizes;
+        return Optional.ofNullable(this.companySizes);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> degrees() {
-        return (Optional<List<String>>) degrees;
+        return Optional.ofNullable(this.degrees);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> devices() {
-        return (Optional<List<String>>) devices;
+        return Optional.ofNullable(this.devices);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> genders() {
-        return (Optional<List<String>>) genders;
+        return Optional.ofNullable(this.genders);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> industries() {
-        return (Optional<List<String>>) industries;
+        return Optional.ofNullable(this.industries);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> interests() {
-        return (Optional<List<String>>) interests;
+        return Optional.ofNullable(this.interests);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> jobFunctions() {
-        return (Optional<List<String>>) jobFunctions;
+        return Optional.ofNullable(this.jobFunctions);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> jobTitles() {
-        return (Optional<List<String>>) jobTitles;
+        return Optional.ofNullable(this.jobTitles);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> keywords() {
-        return (Optional<List<String>>) keywords;
+        return Optional.ofNullable(this.keywords);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> languages() {
-        return (Optional<List<String>>) languages;
+        return Optional.ofNullable(this.languages);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> locations() {
-        return (Optional<List<String>>) locations;
+        return Optional.ofNullable(this.locations);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> placements() {
-        return (Optional<List<String>>) placements;
+        return Optional.ofNullable(this.placements);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> schools() {
-        return (Optional<List<String>>) schools;
+        return Optional.ofNullable(this.schools);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> seniorities() {
-        return (Optional<List<String>>) seniorities;
+        return Optional.ofNullable(this.seniorities);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> skills() {
-        return (Optional<List<String>>) skills;
+        return Optional.ofNullable(this.skills);
     }
 
     public static Builder builder() {
@@ -287,239 +232,113 @@ public class PropertyAdsReportMetricsAdTargeting {
     }
 
 
-    public PropertyAdsReportMetricsAdTargeting withAgeRanges(List<String> ageRanges) {
-        Utils.checkNotNull(ageRanges, "ageRanges");
-        this.ageRanges = Optional.ofNullable(ageRanges);
-        return this;
-    }
-
-
-    public PropertyAdsReportMetricsAdTargeting withAgeRanges(Optional<? extends List<String>> ageRanges) {
-        Utils.checkNotNull(ageRanges, "ageRanges");
+    public PropertyAdsReportMetricsAdTargeting withAgeRanges(@Nullable List<String> ageRanges) {
         this.ageRanges = ageRanges;
         return this;
     }
 
-    public PropertyAdsReportMetricsAdTargeting withAudiences(List<String> audiences) {
-        Utils.checkNotNull(audiences, "audiences");
-        this.audiences = Optional.ofNullable(audiences);
-        return this;
-    }
 
-
-    public PropertyAdsReportMetricsAdTargeting withAudiences(Optional<? extends List<String>> audiences) {
-        Utils.checkNotNull(audiences, "audiences");
+    public PropertyAdsReportMetricsAdTargeting withAudiences(@Nullable List<String> audiences) {
         this.audiences = audiences;
         return this;
     }
 
-    public PropertyAdsReportMetricsAdTargeting withCompanies(List<String> companies) {
-        Utils.checkNotNull(companies, "companies");
-        this.companies = Optional.ofNullable(companies);
-        return this;
-    }
 
-
-    public PropertyAdsReportMetricsAdTargeting withCompanies(Optional<? extends List<String>> companies) {
-        Utils.checkNotNull(companies, "companies");
+    public PropertyAdsReportMetricsAdTargeting withCompanies(@Nullable List<String> companies) {
         this.companies = companies;
         return this;
     }
 
-    public PropertyAdsReportMetricsAdTargeting withCompanySizes(List<String> companySizes) {
-        Utils.checkNotNull(companySizes, "companySizes");
-        this.companySizes = Optional.ofNullable(companySizes);
-        return this;
-    }
 
-
-    public PropertyAdsReportMetricsAdTargeting withCompanySizes(Optional<? extends List<String>> companySizes) {
-        Utils.checkNotNull(companySizes, "companySizes");
+    public PropertyAdsReportMetricsAdTargeting withCompanySizes(@Nullable List<String> companySizes) {
         this.companySizes = companySizes;
         return this;
     }
 
-    public PropertyAdsReportMetricsAdTargeting withDegrees(List<String> degrees) {
-        Utils.checkNotNull(degrees, "degrees");
-        this.degrees = Optional.ofNullable(degrees);
-        return this;
-    }
 
-
-    public PropertyAdsReportMetricsAdTargeting withDegrees(Optional<? extends List<String>> degrees) {
-        Utils.checkNotNull(degrees, "degrees");
+    public PropertyAdsReportMetricsAdTargeting withDegrees(@Nullable List<String> degrees) {
         this.degrees = degrees;
         return this;
     }
 
-    public PropertyAdsReportMetricsAdTargeting withDevices(List<String> devices) {
-        Utils.checkNotNull(devices, "devices");
-        this.devices = Optional.ofNullable(devices);
-        return this;
-    }
 
-
-    public PropertyAdsReportMetricsAdTargeting withDevices(Optional<? extends List<String>> devices) {
-        Utils.checkNotNull(devices, "devices");
+    public PropertyAdsReportMetricsAdTargeting withDevices(@Nullable List<String> devices) {
         this.devices = devices;
         return this;
     }
 
-    public PropertyAdsReportMetricsAdTargeting withGenders(List<String> genders) {
-        Utils.checkNotNull(genders, "genders");
-        this.genders = Optional.ofNullable(genders);
-        return this;
-    }
 
-
-    public PropertyAdsReportMetricsAdTargeting withGenders(Optional<? extends List<String>> genders) {
-        Utils.checkNotNull(genders, "genders");
+    public PropertyAdsReportMetricsAdTargeting withGenders(@Nullable List<String> genders) {
         this.genders = genders;
         return this;
     }
 
-    public PropertyAdsReportMetricsAdTargeting withIndustries(List<String> industries) {
-        Utils.checkNotNull(industries, "industries");
-        this.industries = Optional.ofNullable(industries);
-        return this;
-    }
 
-
-    public PropertyAdsReportMetricsAdTargeting withIndustries(Optional<? extends List<String>> industries) {
-        Utils.checkNotNull(industries, "industries");
+    public PropertyAdsReportMetricsAdTargeting withIndustries(@Nullable List<String> industries) {
         this.industries = industries;
         return this;
     }
 
-    public PropertyAdsReportMetricsAdTargeting withInterests(List<String> interests) {
-        Utils.checkNotNull(interests, "interests");
-        this.interests = Optional.ofNullable(interests);
-        return this;
-    }
 
-
-    public PropertyAdsReportMetricsAdTargeting withInterests(Optional<? extends List<String>> interests) {
-        Utils.checkNotNull(interests, "interests");
+    public PropertyAdsReportMetricsAdTargeting withInterests(@Nullable List<String> interests) {
         this.interests = interests;
         return this;
     }
 
-    public PropertyAdsReportMetricsAdTargeting withJobFunctions(List<String> jobFunctions) {
-        Utils.checkNotNull(jobFunctions, "jobFunctions");
-        this.jobFunctions = Optional.ofNullable(jobFunctions);
-        return this;
-    }
 
-
-    public PropertyAdsReportMetricsAdTargeting withJobFunctions(Optional<? extends List<String>> jobFunctions) {
-        Utils.checkNotNull(jobFunctions, "jobFunctions");
+    public PropertyAdsReportMetricsAdTargeting withJobFunctions(@Nullable List<String> jobFunctions) {
         this.jobFunctions = jobFunctions;
         return this;
     }
 
-    public PropertyAdsReportMetricsAdTargeting withJobTitles(List<String> jobTitles) {
-        Utils.checkNotNull(jobTitles, "jobTitles");
-        this.jobTitles = Optional.ofNullable(jobTitles);
-        return this;
-    }
 
-
-    public PropertyAdsReportMetricsAdTargeting withJobTitles(Optional<? extends List<String>> jobTitles) {
-        Utils.checkNotNull(jobTitles, "jobTitles");
+    public PropertyAdsReportMetricsAdTargeting withJobTitles(@Nullable List<String> jobTitles) {
         this.jobTitles = jobTitles;
         return this;
     }
 
-    public PropertyAdsReportMetricsAdTargeting withKeywords(List<String> keywords) {
-        Utils.checkNotNull(keywords, "keywords");
-        this.keywords = Optional.ofNullable(keywords);
-        return this;
-    }
 
-
-    public PropertyAdsReportMetricsAdTargeting withKeywords(Optional<? extends List<String>> keywords) {
-        Utils.checkNotNull(keywords, "keywords");
+    public PropertyAdsReportMetricsAdTargeting withKeywords(@Nullable List<String> keywords) {
         this.keywords = keywords;
         return this;
     }
 
-    public PropertyAdsReportMetricsAdTargeting withLanguages(List<String> languages) {
-        Utils.checkNotNull(languages, "languages");
-        this.languages = Optional.ofNullable(languages);
-        return this;
-    }
 
-
-    public PropertyAdsReportMetricsAdTargeting withLanguages(Optional<? extends List<String>> languages) {
-        Utils.checkNotNull(languages, "languages");
+    public PropertyAdsReportMetricsAdTargeting withLanguages(@Nullable List<String> languages) {
         this.languages = languages;
         return this;
     }
 
-    public PropertyAdsReportMetricsAdTargeting withLocations(List<String> locations) {
-        Utils.checkNotNull(locations, "locations");
-        this.locations = Optional.ofNullable(locations);
-        return this;
-    }
 
-
-    public PropertyAdsReportMetricsAdTargeting withLocations(Optional<? extends List<String>> locations) {
-        Utils.checkNotNull(locations, "locations");
+    public PropertyAdsReportMetricsAdTargeting withLocations(@Nullable List<String> locations) {
         this.locations = locations;
         return this;
     }
 
-    public PropertyAdsReportMetricsAdTargeting withPlacements(List<String> placements) {
-        Utils.checkNotNull(placements, "placements");
-        this.placements = Optional.ofNullable(placements);
-        return this;
-    }
 
-
-    public PropertyAdsReportMetricsAdTargeting withPlacements(Optional<? extends List<String>> placements) {
-        Utils.checkNotNull(placements, "placements");
+    public PropertyAdsReportMetricsAdTargeting withPlacements(@Nullable List<String> placements) {
         this.placements = placements;
         return this;
     }
 
-    public PropertyAdsReportMetricsAdTargeting withSchools(List<String> schools) {
-        Utils.checkNotNull(schools, "schools");
-        this.schools = Optional.ofNullable(schools);
-        return this;
-    }
 
-
-    public PropertyAdsReportMetricsAdTargeting withSchools(Optional<? extends List<String>> schools) {
-        Utils.checkNotNull(schools, "schools");
+    public PropertyAdsReportMetricsAdTargeting withSchools(@Nullable List<String> schools) {
         this.schools = schools;
         return this;
     }
 
-    public PropertyAdsReportMetricsAdTargeting withSeniorities(List<String> seniorities) {
-        Utils.checkNotNull(seniorities, "seniorities");
-        this.seniorities = Optional.ofNullable(seniorities);
-        return this;
-    }
 
-
-    public PropertyAdsReportMetricsAdTargeting withSeniorities(Optional<? extends List<String>> seniorities) {
-        Utils.checkNotNull(seniorities, "seniorities");
+    public PropertyAdsReportMetricsAdTargeting withSeniorities(@Nullable List<String> seniorities) {
         this.seniorities = seniorities;
         return this;
     }
 
-    public PropertyAdsReportMetricsAdTargeting withSkills(List<String> skills) {
-        Utils.checkNotNull(skills, "skills");
-        this.skills = Optional.ofNullable(skills);
-        return this;
-    }
 
-
-    public PropertyAdsReportMetricsAdTargeting withSkills(Optional<? extends List<String>> skills) {
-        Utils.checkNotNull(skills, "skills");
+    public PropertyAdsReportMetricsAdTargeting withSkills(@Nullable List<String> skills) {
         this.skills = skills;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -588,282 +407,137 @@ public class PropertyAdsReportMetricsAdTargeting {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends List<String>> ageRanges = Optional.empty();
+        private List<String> ageRanges;
 
-        private Optional<? extends List<String>> audiences = Optional.empty();
+        private List<String> audiences;
 
-        private Optional<? extends List<String>> companies = Optional.empty();
+        private List<String> companies;
 
-        private Optional<? extends List<String>> companySizes = Optional.empty();
+        private List<String> companySizes;
 
-        private Optional<? extends List<String>> degrees = Optional.empty();
+        private List<String> degrees;
 
-        private Optional<? extends List<String>> devices = Optional.empty();
+        private List<String> devices;
 
-        private Optional<? extends List<String>> genders = Optional.empty();
+        private List<String> genders;
 
-        private Optional<? extends List<String>> industries = Optional.empty();
+        private List<String> industries;
 
-        private Optional<? extends List<String>> interests = Optional.empty();
+        private List<String> interests;
 
-        private Optional<? extends List<String>> jobFunctions = Optional.empty();
+        private List<String> jobFunctions;
 
-        private Optional<? extends List<String>> jobTitles = Optional.empty();
+        private List<String> jobTitles;
 
-        private Optional<? extends List<String>> keywords = Optional.empty();
+        private List<String> keywords;
 
-        private Optional<? extends List<String>> languages = Optional.empty();
+        private List<String> languages;
 
-        private Optional<? extends List<String>> locations = Optional.empty();
+        private List<String> locations;
 
-        private Optional<? extends List<String>> placements = Optional.empty();
+        private List<String> placements;
 
-        private Optional<? extends List<String>> schools = Optional.empty();
+        private List<String> schools;
 
-        private Optional<? extends List<String>> seniorities = Optional.empty();
+        private List<String> seniorities;
 
-        private Optional<? extends List<String>> skills = Optional.empty();
+        private List<String> skills;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder ageRanges(List<String> ageRanges) {
-            Utils.checkNotNull(ageRanges, "ageRanges");
-            this.ageRanges = Optional.ofNullable(ageRanges);
-            return this;
-        }
-
-        public Builder ageRanges(Optional<? extends List<String>> ageRanges) {
-            Utils.checkNotNull(ageRanges, "ageRanges");
+        public Builder ageRanges(@Nullable List<String> ageRanges) {
             this.ageRanges = ageRanges;
             return this;
         }
 
-
-        public Builder audiences(List<String> audiences) {
-            Utils.checkNotNull(audiences, "audiences");
-            this.audiences = Optional.ofNullable(audiences);
-            return this;
-        }
-
-        public Builder audiences(Optional<? extends List<String>> audiences) {
-            Utils.checkNotNull(audiences, "audiences");
+        public Builder audiences(@Nullable List<String> audiences) {
             this.audiences = audiences;
             return this;
         }
 
-
-        public Builder companies(List<String> companies) {
-            Utils.checkNotNull(companies, "companies");
-            this.companies = Optional.ofNullable(companies);
-            return this;
-        }
-
-        public Builder companies(Optional<? extends List<String>> companies) {
-            Utils.checkNotNull(companies, "companies");
+        public Builder companies(@Nullable List<String> companies) {
             this.companies = companies;
             return this;
         }
 
-
-        public Builder companySizes(List<String> companySizes) {
-            Utils.checkNotNull(companySizes, "companySizes");
-            this.companySizes = Optional.ofNullable(companySizes);
-            return this;
-        }
-
-        public Builder companySizes(Optional<? extends List<String>> companySizes) {
-            Utils.checkNotNull(companySizes, "companySizes");
+        public Builder companySizes(@Nullable List<String> companySizes) {
             this.companySizes = companySizes;
             return this;
         }
 
-
-        public Builder degrees(List<String> degrees) {
-            Utils.checkNotNull(degrees, "degrees");
-            this.degrees = Optional.ofNullable(degrees);
-            return this;
-        }
-
-        public Builder degrees(Optional<? extends List<String>> degrees) {
-            Utils.checkNotNull(degrees, "degrees");
+        public Builder degrees(@Nullable List<String> degrees) {
             this.degrees = degrees;
             return this;
         }
 
-
-        public Builder devices(List<String> devices) {
-            Utils.checkNotNull(devices, "devices");
-            this.devices = Optional.ofNullable(devices);
-            return this;
-        }
-
-        public Builder devices(Optional<? extends List<String>> devices) {
-            Utils.checkNotNull(devices, "devices");
+        public Builder devices(@Nullable List<String> devices) {
             this.devices = devices;
             return this;
         }
 
-
-        public Builder genders(List<String> genders) {
-            Utils.checkNotNull(genders, "genders");
-            this.genders = Optional.ofNullable(genders);
-            return this;
-        }
-
-        public Builder genders(Optional<? extends List<String>> genders) {
-            Utils.checkNotNull(genders, "genders");
+        public Builder genders(@Nullable List<String> genders) {
             this.genders = genders;
             return this;
         }
 
-
-        public Builder industries(List<String> industries) {
-            Utils.checkNotNull(industries, "industries");
-            this.industries = Optional.ofNullable(industries);
-            return this;
-        }
-
-        public Builder industries(Optional<? extends List<String>> industries) {
-            Utils.checkNotNull(industries, "industries");
+        public Builder industries(@Nullable List<String> industries) {
             this.industries = industries;
             return this;
         }
 
-
-        public Builder interests(List<String> interests) {
-            Utils.checkNotNull(interests, "interests");
-            this.interests = Optional.ofNullable(interests);
-            return this;
-        }
-
-        public Builder interests(Optional<? extends List<String>> interests) {
-            Utils.checkNotNull(interests, "interests");
+        public Builder interests(@Nullable List<String> interests) {
             this.interests = interests;
             return this;
         }
 
-
-        public Builder jobFunctions(List<String> jobFunctions) {
-            Utils.checkNotNull(jobFunctions, "jobFunctions");
-            this.jobFunctions = Optional.ofNullable(jobFunctions);
-            return this;
-        }
-
-        public Builder jobFunctions(Optional<? extends List<String>> jobFunctions) {
-            Utils.checkNotNull(jobFunctions, "jobFunctions");
+        public Builder jobFunctions(@Nullable List<String> jobFunctions) {
             this.jobFunctions = jobFunctions;
             return this;
         }
 
-
-        public Builder jobTitles(List<String> jobTitles) {
-            Utils.checkNotNull(jobTitles, "jobTitles");
-            this.jobTitles = Optional.ofNullable(jobTitles);
-            return this;
-        }
-
-        public Builder jobTitles(Optional<? extends List<String>> jobTitles) {
-            Utils.checkNotNull(jobTitles, "jobTitles");
+        public Builder jobTitles(@Nullable List<String> jobTitles) {
             this.jobTitles = jobTitles;
             return this;
         }
 
-
-        public Builder keywords(List<String> keywords) {
-            Utils.checkNotNull(keywords, "keywords");
-            this.keywords = Optional.ofNullable(keywords);
-            return this;
-        }
-
-        public Builder keywords(Optional<? extends List<String>> keywords) {
-            Utils.checkNotNull(keywords, "keywords");
+        public Builder keywords(@Nullable List<String> keywords) {
             this.keywords = keywords;
             return this;
         }
 
-
-        public Builder languages(List<String> languages) {
-            Utils.checkNotNull(languages, "languages");
-            this.languages = Optional.ofNullable(languages);
-            return this;
-        }
-
-        public Builder languages(Optional<? extends List<String>> languages) {
-            Utils.checkNotNull(languages, "languages");
+        public Builder languages(@Nullable List<String> languages) {
             this.languages = languages;
             return this;
         }
 
-
-        public Builder locations(List<String> locations) {
-            Utils.checkNotNull(locations, "locations");
-            this.locations = Optional.ofNullable(locations);
-            return this;
-        }
-
-        public Builder locations(Optional<? extends List<String>> locations) {
-            Utils.checkNotNull(locations, "locations");
+        public Builder locations(@Nullable List<String> locations) {
             this.locations = locations;
             return this;
         }
 
-
-        public Builder placements(List<String> placements) {
-            Utils.checkNotNull(placements, "placements");
-            this.placements = Optional.ofNullable(placements);
-            return this;
-        }
-
-        public Builder placements(Optional<? extends List<String>> placements) {
-            Utils.checkNotNull(placements, "placements");
+        public Builder placements(@Nullable List<String> placements) {
             this.placements = placements;
             return this;
         }
 
-
-        public Builder schools(List<String> schools) {
-            Utils.checkNotNull(schools, "schools");
-            this.schools = Optional.ofNullable(schools);
-            return this;
-        }
-
-        public Builder schools(Optional<? extends List<String>> schools) {
-            Utils.checkNotNull(schools, "schools");
+        public Builder schools(@Nullable List<String> schools) {
             this.schools = schools;
             return this;
         }
 
-
-        public Builder seniorities(List<String> seniorities) {
-            Utils.checkNotNull(seniorities, "seniorities");
-            this.seniorities = Optional.ofNullable(seniorities);
-            return this;
-        }
-
-        public Builder seniorities(Optional<? extends List<String>> seniorities) {
-            Utils.checkNotNull(seniorities, "seniorities");
+        public Builder seniorities(@Nullable List<String> seniorities) {
             this.seniorities = seniorities;
             return this;
         }
 
-
-        public Builder skills(List<String> skills) {
-            Utils.checkNotNull(skills, "skills");
-            this.skills = Optional.ofNullable(skills);
-            return this;
-        }
-
-        public Builder skills(Optional<? extends List<String>> skills) {
-            Utils.checkNotNull(skills, "skills");
+        public Builder skills(@Nullable List<String> skills) {
             this.skills = skills;
             return this;
         }
 
         public PropertyAdsReportMetricsAdTargeting build() {
-
             return new PropertyAdsReportMetricsAdTargeting(
                 ageRanges, audiences, companies,
                 companySizes, degrees, devices,

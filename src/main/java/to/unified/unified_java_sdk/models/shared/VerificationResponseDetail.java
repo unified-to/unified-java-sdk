@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Override;
 import java.lang.String;
@@ -19,47 +19,41 @@ public class VerificationResponseDetail {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("download_url")
-    private Optional<String> downloadUrl;
+    private String downloadUrl;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_failed_reason")
-    private Optional<Boolean> isFailedReason;
+    private Boolean isFailedReason;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_private")
-    private Optional<Boolean> isPrivate;
+    private Boolean isPrivate;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameter_id")
-    private Optional<String> parameterId;
+    private String parameterId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
-    private Optional<String> text;
+    private String text;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
-    private Optional<String> title;
+    private String title;
 
     @JsonCreator
     public VerificationResponseDetail(
-            @JsonProperty("download_url") Optional<String> downloadUrl,
-            @JsonProperty("is_failed_reason") Optional<Boolean> isFailedReason,
-            @JsonProperty("is_private") Optional<Boolean> isPrivate,
-            @JsonProperty("parameter_id") Optional<String> parameterId,
-            @JsonProperty("text") Optional<String> text,
-            @JsonProperty("title") Optional<String> title) {
-        Utils.checkNotNull(downloadUrl, "downloadUrl");
-        Utils.checkNotNull(isFailedReason, "isFailedReason");
-        Utils.checkNotNull(isPrivate, "isPrivate");
-        Utils.checkNotNull(parameterId, "parameterId");
-        Utils.checkNotNull(text, "text");
-        Utils.checkNotNull(title, "title");
+            @JsonProperty("download_url") @Nullable String downloadUrl,
+            @JsonProperty("is_failed_reason") @Nullable Boolean isFailedReason,
+            @JsonProperty("is_private") @Nullable Boolean isPrivate,
+            @JsonProperty("parameter_id") @Nullable String parameterId,
+            @JsonProperty("text") @Nullable String text,
+            @JsonProperty("title") @Nullable String title) {
         this.downloadUrl = downloadUrl;
         this.isFailedReason = isFailedReason;
         this.isPrivate = isPrivate;
@@ -69,38 +63,32 @@ public class VerificationResponseDetail {
     }
     
     public VerificationResponseDetail() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null, null);
     }
 
-    @JsonIgnore
     public Optional<String> downloadUrl() {
-        return downloadUrl;
+        return Optional.ofNullable(this.downloadUrl);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isFailedReason() {
-        return isFailedReason;
+        return Optional.ofNullable(this.isFailedReason);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isPrivate() {
-        return isPrivate;
+        return Optional.ofNullable(this.isPrivate);
     }
 
-    @JsonIgnore
     public Optional<String> parameterId() {
-        return parameterId;
+        return Optional.ofNullable(this.parameterId);
     }
 
-    @JsonIgnore
     public Optional<String> text() {
-        return text;
+        return Optional.ofNullable(this.text);
     }
 
-    @JsonIgnore
     public Optional<String> title() {
-        return title;
+        return Optional.ofNullable(this.title);
     }
 
     public static Builder builder() {
@@ -108,83 +96,41 @@ public class VerificationResponseDetail {
     }
 
 
-    public VerificationResponseDetail withDownloadUrl(String downloadUrl) {
-        Utils.checkNotNull(downloadUrl, "downloadUrl");
-        this.downloadUrl = Optional.ofNullable(downloadUrl);
-        return this;
-    }
-
-
-    public VerificationResponseDetail withDownloadUrl(Optional<String> downloadUrl) {
-        Utils.checkNotNull(downloadUrl, "downloadUrl");
+    public VerificationResponseDetail withDownloadUrl(@Nullable String downloadUrl) {
         this.downloadUrl = downloadUrl;
         return this;
     }
 
-    public VerificationResponseDetail withIsFailedReason(boolean isFailedReason) {
-        Utils.checkNotNull(isFailedReason, "isFailedReason");
-        this.isFailedReason = Optional.ofNullable(isFailedReason);
-        return this;
-    }
 
-
-    public VerificationResponseDetail withIsFailedReason(Optional<Boolean> isFailedReason) {
-        Utils.checkNotNull(isFailedReason, "isFailedReason");
+    public VerificationResponseDetail withIsFailedReason(@Nullable Boolean isFailedReason) {
         this.isFailedReason = isFailedReason;
         return this;
     }
 
-    public VerificationResponseDetail withIsPrivate(boolean isPrivate) {
-        Utils.checkNotNull(isPrivate, "isPrivate");
-        this.isPrivate = Optional.ofNullable(isPrivate);
-        return this;
-    }
 
-
-    public VerificationResponseDetail withIsPrivate(Optional<Boolean> isPrivate) {
-        Utils.checkNotNull(isPrivate, "isPrivate");
+    public VerificationResponseDetail withIsPrivate(@Nullable Boolean isPrivate) {
         this.isPrivate = isPrivate;
         return this;
     }
 
-    public VerificationResponseDetail withParameterId(String parameterId) {
-        Utils.checkNotNull(parameterId, "parameterId");
-        this.parameterId = Optional.ofNullable(parameterId);
-        return this;
-    }
 
-
-    public VerificationResponseDetail withParameterId(Optional<String> parameterId) {
-        Utils.checkNotNull(parameterId, "parameterId");
+    public VerificationResponseDetail withParameterId(@Nullable String parameterId) {
         this.parameterId = parameterId;
         return this;
     }
 
-    public VerificationResponseDetail withText(String text) {
-        Utils.checkNotNull(text, "text");
-        this.text = Optional.ofNullable(text);
-        return this;
-    }
 
-
-    public VerificationResponseDetail withText(Optional<String> text) {
-        Utils.checkNotNull(text, "text");
+    public VerificationResponseDetail withText(@Nullable String text) {
         this.text = text;
         return this;
     }
 
-    public VerificationResponseDetail withTitle(String title) {
-        Utils.checkNotNull(title, "title");
-        this.title = Optional.ofNullable(title);
-        return this;
-    }
 
-
-    public VerificationResponseDetail withTitle(Optional<String> title) {
-        Utils.checkNotNull(title, "title");
+    public VerificationResponseDetail withTitle(@Nullable String title) {
         this.title = title;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -225,102 +171,53 @@ public class VerificationResponseDetail {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> downloadUrl = Optional.empty();
+        private String downloadUrl;
 
-        private Optional<Boolean> isFailedReason = Optional.empty();
+        private Boolean isFailedReason;
 
-        private Optional<Boolean> isPrivate = Optional.empty();
+        private Boolean isPrivate;
 
-        private Optional<String> parameterId = Optional.empty();
+        private String parameterId;
 
-        private Optional<String> text = Optional.empty();
+        private String text;
 
-        private Optional<String> title = Optional.empty();
+        private String title;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder downloadUrl(String downloadUrl) {
-            Utils.checkNotNull(downloadUrl, "downloadUrl");
-            this.downloadUrl = Optional.ofNullable(downloadUrl);
-            return this;
-        }
-
-        public Builder downloadUrl(Optional<String> downloadUrl) {
-            Utils.checkNotNull(downloadUrl, "downloadUrl");
+        public Builder downloadUrl(@Nullable String downloadUrl) {
             this.downloadUrl = downloadUrl;
             return this;
         }
 
-
-        public Builder isFailedReason(boolean isFailedReason) {
-            Utils.checkNotNull(isFailedReason, "isFailedReason");
-            this.isFailedReason = Optional.ofNullable(isFailedReason);
-            return this;
-        }
-
-        public Builder isFailedReason(Optional<Boolean> isFailedReason) {
-            Utils.checkNotNull(isFailedReason, "isFailedReason");
+        public Builder isFailedReason(@Nullable Boolean isFailedReason) {
             this.isFailedReason = isFailedReason;
             return this;
         }
 
-
-        public Builder isPrivate(boolean isPrivate) {
-            Utils.checkNotNull(isPrivate, "isPrivate");
-            this.isPrivate = Optional.ofNullable(isPrivate);
-            return this;
-        }
-
-        public Builder isPrivate(Optional<Boolean> isPrivate) {
-            Utils.checkNotNull(isPrivate, "isPrivate");
+        public Builder isPrivate(@Nullable Boolean isPrivate) {
             this.isPrivate = isPrivate;
             return this;
         }
 
-
-        public Builder parameterId(String parameterId) {
-            Utils.checkNotNull(parameterId, "parameterId");
-            this.parameterId = Optional.ofNullable(parameterId);
-            return this;
-        }
-
-        public Builder parameterId(Optional<String> parameterId) {
-            Utils.checkNotNull(parameterId, "parameterId");
+        public Builder parameterId(@Nullable String parameterId) {
             this.parameterId = parameterId;
             return this;
         }
 
-
-        public Builder text(String text) {
-            Utils.checkNotNull(text, "text");
-            this.text = Optional.ofNullable(text);
-            return this;
-        }
-
-        public Builder text(Optional<String> text) {
-            Utils.checkNotNull(text, "text");
+        public Builder text(@Nullable String text) {
             this.text = text;
             return this;
         }
 
-
-        public Builder title(String title) {
-            Utils.checkNotNull(title, "title");
-            this.title = Optional.ofNullable(title);
-            return this;
-        }
-
-        public Builder title(Optional<String> title) {
-            Utils.checkNotNull(title, "title");
+        public Builder title(@Nullable String title) {
             this.title = title;
             return this;
         }
 
         public VerificationResponseDetail build() {
-
             return new VerificationResponseDetail(
                 downloadUrl, isFailedReason, isPrivate,
                 parameterId, text, title);

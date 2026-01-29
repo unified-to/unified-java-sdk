@@ -8,6 +8,7 @@ import static to.unified.unified_java_sdk.utils.Exceptions.unchecked;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import com.fasterxml.jackson.core.type.TypeReference;
+import jakarta.annotation.Nonnull;
 import java.io.InputStream;
 import java.lang.Exception;
 import java.lang.IllegalArgumentException;
@@ -46,7 +47,7 @@ public class UpdatePaymentPayment {
         final HTTPClient client;
         final Headers _headers;
 
-        public Base(SDKConfiguration sdkConfiguration, Headers _headers) {
+        public Base(@Nonnull SDKConfiguration sdkConfiguration, Headers _headers) {
             this.sdkConfiguration = sdkConfiguration;
             this._headers =_headers;
             this.baseUrl = this.sdkConfiguration.serverUrl();
@@ -120,7 +121,7 @@ public class UpdatePaymentPayment {
 
     public static class Sync extends Base
             implements RequestOperation<UpdatePaymentPaymentRequest, UpdatePaymentPaymentResponse> {
-        public Sync(SDKConfiguration sdkConfiguration, Headers _headers) {
+        public Sync(@Nonnull SDKConfiguration sdkConfiguration, Headers _headers) {
             super(sdkConfiguration, _headers);
         }
 
@@ -195,7 +196,7 @@ public class UpdatePaymentPayment {
     public static class Async extends Base
             implements AsyncRequestOperation<UpdatePaymentPaymentRequest, to.unified.unified_java_sdk.models.operations.async.UpdatePaymentPaymentResponse> {
 
-        public Async(SDKConfiguration sdkConfiguration, Headers _headers) {
+        public Async(@Nonnull SDKConfiguration sdkConfiguration, Headers _headers) {
             super(sdkConfiguration, _headers);
         }
 

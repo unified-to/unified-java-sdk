@@ -4,15 +4,14 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
@@ -24,117 +23,101 @@ public class HrisLocation {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
-    private Optional<? extends PropertyHrisLocationAddress> address;
+    private PropertyHrisLocationAddress address;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_id")
-    private Optional<String> companyId;
+    private String companyId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
-    private Optional<String> currency;
+    private String currency;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
-    private Optional<String> description;
+    private String description;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("external_identifier")
-    private Optional<String> externalIdentifier;
+    private String externalIdentifier;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
-    private Optional<Boolean> isActive;
+    private Boolean isActive;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_hq")
-    private Optional<Boolean> isHq;
+    private Boolean isHq;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language_locale")
-    private Optional<String> languageLocale;
+    private String languageLocale;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
-    private Optional<String> name;
+    private String name;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_id")
-    private Optional<String> parentId;
+    private String parentId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("telephones")
-    private Optional<? extends List<HrisTelephone>> telephones;
+    private List<HrisTelephone> telephones;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
-    private Optional<String> timezone;
+    private String timezone;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
     @JsonCreator
     public HrisLocation(
-            @JsonProperty("address") Optional<? extends PropertyHrisLocationAddress> address,
-            @JsonProperty("company_id") Optional<String> companyId,
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("currency") Optional<String> currency,
-            @JsonProperty("description") Optional<String> description,
-            @JsonProperty("external_identifier") Optional<String> externalIdentifier,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("is_active") Optional<Boolean> isActive,
-            @JsonProperty("is_hq") Optional<Boolean> isHq,
-            @JsonProperty("language_locale") Optional<String> languageLocale,
-            @JsonProperty("name") Optional<String> name,
-            @JsonProperty("parent_id") Optional<String> parentId,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("telephones") Optional<? extends List<HrisTelephone>> telephones,
-            @JsonProperty("timezone") Optional<String> timezone,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(address, "address");
-        Utils.checkNotNull(companyId, "companyId");
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(currency, "currency");
-        Utils.checkNotNull(description, "description");
-        Utils.checkNotNull(externalIdentifier, "externalIdentifier");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(isActive, "isActive");
-        Utils.checkNotNull(isHq, "isHq");
-        Utils.checkNotNull(languageLocale, "languageLocale");
-        Utils.checkNotNull(name, "name");
-        Utils.checkNotNull(parentId, "parentId");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(telephones, "telephones");
-        Utils.checkNotNull(timezone, "timezone");
-        Utils.checkNotNull(updatedAt, "updatedAt");
+            @JsonProperty("address") @Nullable PropertyHrisLocationAddress address,
+            @JsonProperty("company_id") @Nullable String companyId,
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("currency") @Nullable String currency,
+            @JsonProperty("description") @Nullable String description,
+            @JsonProperty("external_identifier") @Nullable String externalIdentifier,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("is_active") @Nullable Boolean isActive,
+            @JsonProperty("is_hq") @Nullable Boolean isHq,
+            @JsonProperty("language_locale") @Nullable String languageLocale,
+            @JsonProperty("name") @Nullable String name,
+            @JsonProperty("parent_id") @Nullable String parentId,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("telephones") @Nullable List<HrisTelephone> telephones,
+            @JsonProperty("timezone") @Nullable String timezone,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.address = address;
         this.companyId = companyId;
         this.createdAt = createdAt;
@@ -154,95 +137,76 @@ public class HrisLocation {
     }
     
     public HrisLocation() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<PropertyHrisLocationAddress> address() {
-        return (Optional<PropertyHrisLocationAddress>) address;
+        return Optional.ofNullable(this.address);
     }
 
-    @JsonIgnore
     public Optional<String> companyId() {
-        return companyId;
+        return Optional.ofNullable(this.companyId);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<String> currency() {
-        return currency;
+        return Optional.ofNullable(this.currency);
     }
 
-    @JsonIgnore
     public Optional<String> description() {
-        return description;
+        return Optional.ofNullable(this.description);
     }
 
-    @JsonIgnore
     public Optional<String> externalIdentifier() {
-        return externalIdentifier;
+        return Optional.ofNullable(this.externalIdentifier);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isActive() {
-        return isActive;
+        return Optional.ofNullable(this.isActive);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isHq() {
-        return isHq;
+        return Optional.ofNullable(this.isHq);
     }
 
-    @JsonIgnore
     public Optional<String> languageLocale() {
-        return languageLocale;
+        return Optional.ofNullable(this.languageLocale);
     }
 
-    @JsonIgnore
     public Optional<String> name() {
-        return name;
+        return Optional.ofNullable(this.name);
     }
 
-    @JsonIgnore
     public Optional<String> parentId() {
-        return parentId;
+        return Optional.ofNullable(this.parentId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<HrisTelephone>> telephones() {
-        return (Optional<List<HrisTelephone>>) telephones;
+        return Optional.ofNullable(this.telephones);
     }
 
-    @JsonIgnore
     public Optional<String> timezone() {
-        return timezone;
+        return Optional.ofNullable(this.timezone);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
     public static Builder builder() {
@@ -250,213 +214,101 @@ public class HrisLocation {
     }
 
 
-    public HrisLocation withAddress(PropertyHrisLocationAddress address) {
-        Utils.checkNotNull(address, "address");
-        this.address = Optional.ofNullable(address);
-        return this;
-    }
-
-
-    public HrisLocation withAddress(Optional<? extends PropertyHrisLocationAddress> address) {
-        Utils.checkNotNull(address, "address");
+    public HrisLocation withAddress(@Nullable PropertyHrisLocationAddress address) {
         this.address = address;
         return this;
     }
 
-    public HrisLocation withCompanyId(String companyId) {
-        Utils.checkNotNull(companyId, "companyId");
-        this.companyId = Optional.ofNullable(companyId);
-        return this;
-    }
 
-
-    public HrisLocation withCompanyId(Optional<String> companyId) {
-        Utils.checkNotNull(companyId, "companyId");
+    public HrisLocation withCompanyId(@Nullable String companyId) {
         this.companyId = companyId;
         return this;
     }
 
-    public HrisLocation withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
 
-
-    public HrisLocation withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public HrisLocation withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public HrisLocation withCurrency(String currency) {
-        Utils.checkNotNull(currency, "currency");
-        this.currency = Optional.ofNullable(currency);
-        return this;
-    }
 
-
-    public HrisLocation withCurrency(Optional<String> currency) {
-        Utils.checkNotNull(currency, "currency");
+    public HrisLocation withCurrency(@Nullable String currency) {
         this.currency = currency;
         return this;
     }
 
-    public HrisLocation withDescription(String description) {
-        Utils.checkNotNull(description, "description");
-        this.description = Optional.ofNullable(description);
-        return this;
-    }
 
-
-    public HrisLocation withDescription(Optional<String> description) {
-        Utils.checkNotNull(description, "description");
+    public HrisLocation withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
-    public HrisLocation withExternalIdentifier(String externalIdentifier) {
-        Utils.checkNotNull(externalIdentifier, "externalIdentifier");
-        this.externalIdentifier = Optional.ofNullable(externalIdentifier);
-        return this;
-    }
 
-
-    public HrisLocation withExternalIdentifier(Optional<String> externalIdentifier) {
-        Utils.checkNotNull(externalIdentifier, "externalIdentifier");
+    public HrisLocation withExternalIdentifier(@Nullable String externalIdentifier) {
         this.externalIdentifier = externalIdentifier;
         return this;
     }
 
-    public HrisLocation withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public HrisLocation withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public HrisLocation withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public HrisLocation withIsActive(boolean isActive) {
-        Utils.checkNotNull(isActive, "isActive");
-        this.isActive = Optional.ofNullable(isActive);
-        return this;
-    }
 
-
-    public HrisLocation withIsActive(Optional<Boolean> isActive) {
-        Utils.checkNotNull(isActive, "isActive");
+    public HrisLocation withIsActive(@Nullable Boolean isActive) {
         this.isActive = isActive;
         return this;
     }
 
-    public HrisLocation withIsHq(boolean isHq) {
-        Utils.checkNotNull(isHq, "isHq");
-        this.isHq = Optional.ofNullable(isHq);
-        return this;
-    }
 
-
-    public HrisLocation withIsHq(Optional<Boolean> isHq) {
-        Utils.checkNotNull(isHq, "isHq");
+    public HrisLocation withIsHq(@Nullable Boolean isHq) {
         this.isHq = isHq;
         return this;
     }
 
-    public HrisLocation withLanguageLocale(String languageLocale) {
-        Utils.checkNotNull(languageLocale, "languageLocale");
-        this.languageLocale = Optional.ofNullable(languageLocale);
-        return this;
-    }
 
-
-    public HrisLocation withLanguageLocale(Optional<String> languageLocale) {
-        Utils.checkNotNull(languageLocale, "languageLocale");
+    public HrisLocation withLanguageLocale(@Nullable String languageLocale) {
         this.languageLocale = languageLocale;
         return this;
     }
 
-    public HrisLocation withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = Optional.ofNullable(name);
-        return this;
-    }
 
-
-    public HrisLocation withName(Optional<String> name) {
-        Utils.checkNotNull(name, "name");
+    public HrisLocation withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
-    public HrisLocation withParentId(String parentId) {
-        Utils.checkNotNull(parentId, "parentId");
-        this.parentId = Optional.ofNullable(parentId);
-        return this;
-    }
 
-
-    public HrisLocation withParentId(Optional<String> parentId) {
-        Utils.checkNotNull(parentId, "parentId");
+    public HrisLocation withParentId(@Nullable String parentId) {
         this.parentId = parentId;
         return this;
     }
 
-    public HrisLocation withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public HrisLocation withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public HrisLocation withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public HrisLocation withTelephones(List<HrisTelephone> telephones) {
-        Utils.checkNotNull(telephones, "telephones");
-        this.telephones = Optional.ofNullable(telephones);
-        return this;
-    }
 
-
-    public HrisLocation withTelephones(Optional<? extends List<HrisTelephone>> telephones) {
-        Utils.checkNotNull(telephones, "telephones");
+    public HrisLocation withTelephones(@Nullable List<HrisTelephone> telephones) {
         this.telephones = telephones;
         return this;
     }
 
-    public HrisLocation withTimezone(String timezone) {
-        Utils.checkNotNull(timezone, "timezone");
-        this.timezone = Optional.ofNullable(timezone);
-        return this;
-    }
 
-
-    public HrisLocation withTimezone(Optional<String> timezone) {
-        Utils.checkNotNull(timezone, "timezone");
+    public HrisLocation withTimezone(@Nullable String timezone) {
         this.timezone = timezone;
         return this;
     }
 
-    public HrisLocation withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public HrisLocation withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public HrisLocation withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -521,252 +373,123 @@ public class HrisLocation {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends PropertyHrisLocationAddress> address = Optional.empty();
+        private PropertyHrisLocationAddress address;
 
-        private Optional<String> companyId = Optional.empty();
+        private String companyId;
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<String> currency = Optional.empty();
+        private String currency;
 
-        private Optional<String> description = Optional.empty();
+        private String description;
 
-        private Optional<String> externalIdentifier = Optional.empty();
+        private String externalIdentifier;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<Boolean> isActive = Optional.empty();
+        private Boolean isActive;
 
-        private Optional<Boolean> isHq = Optional.empty();
+        private Boolean isHq;
 
-        private Optional<String> languageLocale = Optional.empty();
+        private String languageLocale;
 
-        private Optional<String> name = Optional.empty();
+        private String name;
 
-        private Optional<String> parentId = Optional.empty();
+        private String parentId;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<? extends List<HrisTelephone>> telephones = Optional.empty();
+        private List<HrisTelephone> telephones;
 
-        private Optional<String> timezone = Optional.empty();
+        private String timezone;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder address(PropertyHrisLocationAddress address) {
-            Utils.checkNotNull(address, "address");
-            this.address = Optional.ofNullable(address);
-            return this;
-        }
-
-        public Builder address(Optional<? extends PropertyHrisLocationAddress> address) {
-            Utils.checkNotNull(address, "address");
+        public Builder address(@Nullable PropertyHrisLocationAddress address) {
             this.address = address;
             return this;
         }
 
-
-        public Builder companyId(String companyId) {
-            Utils.checkNotNull(companyId, "companyId");
-            this.companyId = Optional.ofNullable(companyId);
-            return this;
-        }
-
-        public Builder companyId(Optional<String> companyId) {
-            Utils.checkNotNull(companyId, "companyId");
+        public Builder companyId(@Nullable String companyId) {
             this.companyId = companyId;
             return this;
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder currency(String currency) {
-            Utils.checkNotNull(currency, "currency");
-            this.currency = Optional.ofNullable(currency);
-            return this;
-        }
-
-        public Builder currency(Optional<String> currency) {
-            Utils.checkNotNull(currency, "currency");
+        public Builder currency(@Nullable String currency) {
             this.currency = currency;
             return this;
         }
 
-
-        public Builder description(String description) {
-            Utils.checkNotNull(description, "description");
-            this.description = Optional.ofNullable(description);
-            return this;
-        }
-
-        public Builder description(Optional<String> description) {
-            Utils.checkNotNull(description, "description");
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-
-        public Builder externalIdentifier(String externalIdentifier) {
-            Utils.checkNotNull(externalIdentifier, "externalIdentifier");
-            this.externalIdentifier = Optional.ofNullable(externalIdentifier);
-            return this;
-        }
-
-        public Builder externalIdentifier(Optional<String> externalIdentifier) {
-            Utils.checkNotNull(externalIdentifier, "externalIdentifier");
+        public Builder externalIdentifier(@Nullable String externalIdentifier) {
             this.externalIdentifier = externalIdentifier;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder isActive(boolean isActive) {
-            Utils.checkNotNull(isActive, "isActive");
-            this.isActive = Optional.ofNullable(isActive);
-            return this;
-        }
-
-        public Builder isActive(Optional<Boolean> isActive) {
-            Utils.checkNotNull(isActive, "isActive");
+        public Builder isActive(@Nullable Boolean isActive) {
             this.isActive = isActive;
             return this;
         }
 
-
-        public Builder isHq(boolean isHq) {
-            Utils.checkNotNull(isHq, "isHq");
-            this.isHq = Optional.ofNullable(isHq);
-            return this;
-        }
-
-        public Builder isHq(Optional<Boolean> isHq) {
-            Utils.checkNotNull(isHq, "isHq");
+        public Builder isHq(@Nullable Boolean isHq) {
             this.isHq = isHq;
             return this;
         }
 
-
-        public Builder languageLocale(String languageLocale) {
-            Utils.checkNotNull(languageLocale, "languageLocale");
-            this.languageLocale = Optional.ofNullable(languageLocale);
-            return this;
-        }
-
-        public Builder languageLocale(Optional<String> languageLocale) {
-            Utils.checkNotNull(languageLocale, "languageLocale");
+        public Builder languageLocale(@Nullable String languageLocale) {
             this.languageLocale = languageLocale;
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = Optional.ofNullable(name);
-            return this;
-        }
-
-        public Builder name(Optional<String> name) {
-            Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-
-        public Builder parentId(String parentId) {
-            Utils.checkNotNull(parentId, "parentId");
-            this.parentId = Optional.ofNullable(parentId);
-            return this;
-        }
-
-        public Builder parentId(Optional<String> parentId) {
-            Utils.checkNotNull(parentId, "parentId");
+        public Builder parentId(@Nullable String parentId) {
             this.parentId = parentId;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder telephones(List<HrisTelephone> telephones) {
-            Utils.checkNotNull(telephones, "telephones");
-            this.telephones = Optional.ofNullable(telephones);
-            return this;
-        }
-
-        public Builder telephones(Optional<? extends List<HrisTelephone>> telephones) {
-            Utils.checkNotNull(telephones, "telephones");
+        public Builder telephones(@Nullable List<HrisTelephone> telephones) {
             this.telephones = telephones;
             return this;
         }
 
-
-        public Builder timezone(String timezone) {
-            Utils.checkNotNull(timezone, "timezone");
-            this.timezone = Optional.ofNullable(timezone);
-            return this;
-        }
-
-        public Builder timezone(Optional<String> timezone) {
-            Utils.checkNotNull(timezone, "timezone");
+        public Builder timezone(@Nullable String timezone) {
             this.timezone = timezone;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
         public HrisLocation build() {
-
             return new HrisLocation(
                 address, companyId, createdAt,
                 currency, description, externalIdentifier,

@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.MarketingList;
@@ -32,7 +32,7 @@ public class CreateMartechListRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<CreateMartechListQueryParamFields>> fields;
+    private List<CreateMartechListQueryParamFields> fields;
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
@@ -40,54 +40,48 @@ public class CreateMartechListRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
     @JsonCreator
     public CreateMartechListRequest(
-            MarketingList marketingList,
-            String connectionId,
-            Optional<? extends List<CreateMartechListQueryParamFields>> fields,
-            Optional<String> raw) {
-        Utils.checkNotNull(marketingList, "marketingList");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(raw, "raw");
-        this.marketingList = marketingList;
-        this.connectionId = connectionId;
+            @Nonnull MarketingList marketingList,
+            @Nonnull String connectionId,
+            @Nullable List<CreateMartechListQueryParamFields> fields,
+            @Nullable String raw) {
+        this.marketingList = Optional.ofNullable(marketingList)
+            .orElseThrow(() -> new IllegalArgumentException("marketingList cannot be null"));
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
         this.raw = raw;
     }
     
     public CreateMartechListRequest(
-            MarketingList marketingList,
-            String connectionId) {
-        this(marketingList, connectionId, Optional.empty(),
-            Optional.empty());
+            @Nonnull MarketingList marketingList,
+            @Nonnull String connectionId) {
+        this(marketingList, connectionId, null,
+            null);
     }
 
     /**
      * Mailing List
      */
-    @JsonIgnore
     public MarketingList marketingList() {
-        return marketingList;
+        return this.marketingList;
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<CreateMartechListQueryParamFields>> fields() {
-        return (Optional<List<CreateMartechListQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
@@ -95,9 +89,8 @@ public class CreateMartechListRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
     public static Builder builder() {
@@ -108,27 +101,17 @@ public class CreateMartechListRequest {
     /**
      * Mailing List
      */
-    public CreateMartechListRequest withMarketingList(MarketingList marketingList) {
-        Utils.checkNotNull(marketingList, "marketingList");
-        this.marketingList = marketingList;
+    public CreateMartechListRequest withMarketingList(@Nonnull MarketingList marketingList) {
+        this.marketingList = Utils.checkNotNull(marketingList, "marketingList");
         return this;
     }
+
 
     /**
      * ID of the connection
      */
-    public CreateMartechListRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public CreateMartechListRequest withFields(List<CreateMartechListQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public CreateMartechListRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -136,34 +119,22 @@ public class CreateMartechListRequest {
     /**
      * Fields to return
      */
-    public CreateMartechListRequest withFields(Optional<? extends List<CreateMartechListQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public CreateMartechListRequest withFields(@Nullable List<CreateMartechListQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public CreateMartechListRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
-
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public CreateMartechListRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public CreateMartechListRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -204,78 +175,49 @@ public class CreateMartechListRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<CreateMartechListQueryParamFields>> fields = Optional.empty();
+        private List<CreateMartechListQueryParamFields> fields;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
         /**
          * Mailing List
          */
-        public Builder marketingList(MarketingList marketingList) {
-            Utils.checkNotNull(marketingList, "marketingList");
-            this.marketingList = marketingList;
+        public Builder marketingList(@Nonnull MarketingList marketingList) {
+            this.marketingList = Utils.checkNotNull(marketingList, "marketingList");
             return this;
         }
-
 
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<CreateMartechListQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<CreateMartechListQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<CreateMartechListQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
         public CreateMartechListRequest build() {
-
             return new CreateMartechListRequest(
                 marketingList, connectionId, fields,
                 raw);

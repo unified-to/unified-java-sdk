@@ -49,7 +49,6 @@ public class CommerceMetadata1 {
         }
 
         public CommerceMetadata1 build() {
-
             return new CommerceMetadata1(
                 );
         }

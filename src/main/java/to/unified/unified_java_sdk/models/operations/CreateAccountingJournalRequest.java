@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.AccountingJournal;
@@ -30,7 +30,7 @@ public class CreateAccountingJournalRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<CreateAccountingJournalQueryParamFields>> fields;
+    private List<CreateAccountingJournalQueryParamFields> fields;
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
@@ -38,51 +38,45 @@ public class CreateAccountingJournalRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
     @JsonCreator
     public CreateAccountingJournalRequest(
-            AccountingJournal accountingJournal,
-            String connectionId,
-            Optional<? extends List<CreateAccountingJournalQueryParamFields>> fields,
-            Optional<String> raw) {
-        Utils.checkNotNull(accountingJournal, "accountingJournal");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(raw, "raw");
-        this.accountingJournal = accountingJournal;
-        this.connectionId = connectionId;
+            @Nonnull AccountingJournal accountingJournal,
+            @Nonnull String connectionId,
+            @Nullable List<CreateAccountingJournalQueryParamFields> fields,
+            @Nullable String raw) {
+        this.accountingJournal = Optional.ofNullable(accountingJournal)
+            .orElseThrow(() -> new IllegalArgumentException("accountingJournal cannot be null"));
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
         this.raw = raw;
     }
     
     public CreateAccountingJournalRequest(
-            AccountingJournal accountingJournal,
-            String connectionId) {
-        this(accountingJournal, connectionId, Optional.empty(),
-            Optional.empty());
+            @Nonnull AccountingJournal accountingJournal,
+            @Nonnull String connectionId) {
+        this(accountingJournal, connectionId, null,
+            null);
     }
 
-    @JsonIgnore
     public AccountingJournal accountingJournal() {
-        return accountingJournal;
+        return this.accountingJournal;
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<CreateAccountingJournalQueryParamFields>> fields() {
-        return (Optional<List<CreateAccountingJournalQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
@@ -90,9 +84,8 @@ public class CreateAccountingJournalRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
     public static Builder builder() {
@@ -100,27 +93,17 @@ public class CreateAccountingJournalRequest {
     }
 
 
-    public CreateAccountingJournalRequest withAccountingJournal(AccountingJournal accountingJournal) {
-        Utils.checkNotNull(accountingJournal, "accountingJournal");
-        this.accountingJournal = accountingJournal;
+    public CreateAccountingJournalRequest withAccountingJournal(@Nonnull AccountingJournal accountingJournal) {
+        this.accountingJournal = Utils.checkNotNull(accountingJournal, "accountingJournal");
         return this;
     }
+
 
     /**
      * ID of the connection
      */
-    public CreateAccountingJournalRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public CreateAccountingJournalRequest withFields(List<CreateAccountingJournalQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public CreateAccountingJournalRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -128,34 +111,22 @@ public class CreateAccountingJournalRequest {
     /**
      * Fields to return
      */
-    public CreateAccountingJournalRequest withFields(Optional<? extends List<CreateAccountingJournalQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public CreateAccountingJournalRequest withFields(@Nullable List<CreateAccountingJournalQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public CreateAccountingJournalRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
-
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public CreateAccountingJournalRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public CreateAccountingJournalRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -196,75 +167,46 @@ public class CreateAccountingJournalRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<CreateAccountingJournalQueryParamFields>> fields = Optional.empty();
+        private List<CreateAccountingJournalQueryParamFields> fields;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder accountingJournal(AccountingJournal accountingJournal) {
-            Utils.checkNotNull(accountingJournal, "accountingJournal");
-            this.accountingJournal = accountingJournal;
+        public Builder accountingJournal(@Nonnull AccountingJournal accountingJournal) {
+            this.accountingJournal = Utils.checkNotNull(accountingJournal, "accountingJournal");
             return this;
         }
-
 
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<CreateAccountingJournalQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<CreateAccountingJournalQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<CreateAccountingJournalQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
         public CreateAccountingJournalRequest build() {
-
             return new CreateAccountingJournalRequest(
                 accountingJournal, connectionId, fields,
                 raw);

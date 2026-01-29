@@ -4,11 +4,11 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
@@ -20,7 +20,7 @@ public class ListAdsReportsRequest {
      * The campaign ID to filter by
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=campaign_id")
-    private Optional<String> campaignId;
+    private String campaignId;
 
     /**
      * ID of the connection
@@ -32,31 +32,31 @@ public class ListAdsReportsRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<ListAdsReportsQueryParamFields>> fields;
+    private List<ListAdsReportsQueryParamFields> fields;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
-    private Optional<Double> limit;
+    private Double limit;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
-    private Optional<Double> offset;
+    private Double offset;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
-    private Optional<String> order;
+    private String order;
 
     /**
      * The org ID to filter by (reference to AdsOrganization)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=org_id")
-    private Optional<String> orgId;
+    private String orgId;
 
     /**
      * Query string to search. eg. email address or name
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
-    private Optional<String> query;
+    private String query;
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
@@ -64,51 +64,40 @@ public class ListAdsReportsRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
-    private Optional<String> sort;
+    private String sort;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
-    private Optional<String> type;
+    private String type;
 
     /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
-    private Optional<String> updatedGte;
+    private String updatedGte;
 
     @JsonCreator
     public ListAdsReportsRequest(
-            Optional<String> campaignId,
-            String connectionId,
-            Optional<? extends List<ListAdsReportsQueryParamFields>> fields,
-            Optional<Double> limit,
-            Optional<Double> offset,
-            Optional<String> order,
-            Optional<String> orgId,
-            Optional<String> query,
-            Optional<String> raw,
-            Optional<String> sort,
-            Optional<String> type,
-            Optional<String> updatedGte) {
-        Utils.checkNotNull(campaignId, "campaignId");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(limit, "limit");
-        Utils.checkNotNull(offset, "offset");
-        Utils.checkNotNull(order, "order");
-        Utils.checkNotNull(orgId, "orgId");
-        Utils.checkNotNull(query, "query");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(sort, "sort");
-        Utils.checkNotNull(type, "type");
-        Utils.checkNotNull(updatedGte, "updatedGte");
+            @Nullable String campaignId,
+            @Nonnull String connectionId,
+            @Nullable List<ListAdsReportsQueryParamFields> fields,
+            @Nullable Double limit,
+            @Nullable Double offset,
+            @Nullable String order,
+            @Nullable String orgId,
+            @Nullable String query,
+            @Nullable String raw,
+            @Nullable String sort,
+            @Nullable String type,
+            @Nullable String updatedGte) {
         this.campaignId = campaignId;
-        this.connectionId = connectionId;
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
         this.limit = limit;
         this.offset = offset;
@@ -122,67 +111,58 @@ public class ListAdsReportsRequest {
     }
     
     public ListAdsReportsRequest(
-            String connectionId) {
-        this(Optional.empty(), connectionId, Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+            @Nonnull String connectionId) {
+        this(null, connectionId, null,
+            null, null, null,
+            null, null, null,
+            null, null, null);
     }
 
     /**
      * The campaign ID to filter by
      */
-    @JsonIgnore
     public Optional<String> campaignId() {
-        return campaignId;
+        return Optional.ofNullable(this.campaignId);
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<ListAdsReportsQueryParamFields>> fields() {
-        return (Optional<List<ListAdsReportsQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
-    @JsonIgnore
     public Optional<Double> limit() {
-        return limit;
+        return Optional.ofNullable(this.limit);
     }
 
-    @JsonIgnore
     public Optional<Double> offset() {
-        return offset;
+        return Optional.ofNullable(this.offset);
     }
 
-    @JsonIgnore
     public Optional<String> order() {
-        return order;
+        return Optional.ofNullable(this.order);
     }
 
     /**
      * The org ID to filter by (reference to AdsOrganization)
      */
-    @JsonIgnore
     public Optional<String> orgId() {
-        return orgId;
+        return Optional.ofNullable(this.orgId);
     }
 
     /**
      * Query string to search. eg. email address or name
      */
-    @JsonIgnore
     public Optional<String> query() {
-        return query;
+        return Optional.ofNullable(this.query);
     }
 
     /**
@@ -190,28 +170,24 @@ public class ListAdsReportsRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @JsonIgnore
     public Optional<String> sort() {
-        return sort;
+        return Optional.ofNullable(this.sort);
     }
 
-    @JsonIgnore
     public Optional<String> type() {
-        return type;
+        return Optional.ofNullable(this.type);
     }
 
     /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
-    @JsonIgnore
     public Optional<String> updatedGte() {
-        return updatedGte;
+        return Optional.ofNullable(this.updatedGte);
     }
 
     public static Builder builder() {
@@ -222,37 +198,17 @@ public class ListAdsReportsRequest {
     /**
      * The campaign ID to filter by
      */
-    public ListAdsReportsRequest withCampaignId(String campaignId) {
-        Utils.checkNotNull(campaignId, "campaignId");
-        this.campaignId = Optional.ofNullable(campaignId);
-        return this;
-    }
-
-
-    /**
-     * The campaign ID to filter by
-     */
-    public ListAdsReportsRequest withCampaignId(Optional<String> campaignId) {
-        Utils.checkNotNull(campaignId, "campaignId");
+    public ListAdsReportsRequest withCampaignId(@Nullable String campaignId) {
         this.campaignId = campaignId;
         return this;
     }
 
+
     /**
      * ID of the connection
      */
-    public ListAdsReportsRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public ListAdsReportsRequest withFields(List<ListAdsReportsQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public ListAdsReportsRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -260,158 +216,80 @@ public class ListAdsReportsRequest {
     /**
      * Fields to return
      */
-    public ListAdsReportsRequest withFields(Optional<? extends List<ListAdsReportsQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public ListAdsReportsRequest withFields(@Nullable List<ListAdsReportsQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
-    public ListAdsReportsRequest withLimit(double limit) {
-        Utils.checkNotNull(limit, "limit");
-        this.limit = Optional.ofNullable(limit);
-        return this;
-    }
 
-
-    public ListAdsReportsRequest withLimit(Optional<Double> limit) {
-        Utils.checkNotNull(limit, "limit");
+    public ListAdsReportsRequest withLimit(@Nullable Double limit) {
         this.limit = limit;
         return this;
     }
 
-    public ListAdsReportsRequest withOffset(double offset) {
-        Utils.checkNotNull(offset, "offset");
-        this.offset = Optional.ofNullable(offset);
-        return this;
-    }
 
-
-    public ListAdsReportsRequest withOffset(Optional<Double> offset) {
-        Utils.checkNotNull(offset, "offset");
+    public ListAdsReportsRequest withOffset(@Nullable Double offset) {
         this.offset = offset;
         return this;
     }
 
-    public ListAdsReportsRequest withOrder(String order) {
-        Utils.checkNotNull(order, "order");
-        this.order = Optional.ofNullable(order);
-        return this;
-    }
 
-
-    public ListAdsReportsRequest withOrder(Optional<String> order) {
-        Utils.checkNotNull(order, "order");
+    public ListAdsReportsRequest withOrder(@Nullable String order) {
         this.order = order;
         return this;
     }
 
-    /**
-     * The org ID to filter by (reference to AdsOrganization)
-     */
-    public ListAdsReportsRequest withOrgId(String orgId) {
-        Utils.checkNotNull(orgId, "orgId");
-        this.orgId = Optional.ofNullable(orgId);
-        return this;
-    }
-
 
     /**
      * The org ID to filter by (reference to AdsOrganization)
      */
-    public ListAdsReportsRequest withOrgId(Optional<String> orgId) {
-        Utils.checkNotNull(orgId, "orgId");
+    public ListAdsReportsRequest withOrgId(@Nullable String orgId) {
         this.orgId = orgId;
         return this;
     }
 
-    /**
-     * Query string to search. eg. email address or name
-     */
-    public ListAdsReportsRequest withQuery(String query) {
-        Utils.checkNotNull(query, "query");
-        this.query = Optional.ofNullable(query);
-        return this;
-    }
-
 
     /**
      * Query string to search. eg. email address or name
      */
-    public ListAdsReportsRequest withQuery(Optional<String> query) {
-        Utils.checkNotNull(query, "query");
+    public ListAdsReportsRequest withQuery(@Nullable String query) {
         this.query = query;
         return this;
     }
 
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public ListAdsReportsRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
-
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public ListAdsReportsRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public ListAdsReportsRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
 
-    public ListAdsReportsRequest withSort(String sort) {
-        Utils.checkNotNull(sort, "sort");
-        this.sort = Optional.ofNullable(sort);
-        return this;
-    }
 
-
-    public ListAdsReportsRequest withSort(Optional<String> sort) {
-        Utils.checkNotNull(sort, "sort");
+    public ListAdsReportsRequest withSort(@Nullable String sort) {
         this.sort = sort;
         return this;
     }
 
-    public ListAdsReportsRequest withType(String type) {
-        Utils.checkNotNull(type, "type");
-        this.type = Optional.ofNullable(type);
-        return this;
-    }
 
-
-    public ListAdsReportsRequest withType(Optional<String> type) {
-        Utils.checkNotNull(type, "type");
+    public ListAdsReportsRequest withType(@Nullable String type) {
         this.type = type;
         return this;
     }
 
-    /**
-     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
-     * YYYY-MM-DDTHH:MM:SSZ format)
-     */
-    public ListAdsReportsRequest withUpdatedGte(String updatedGte) {
-        Utils.checkNotNull(updatedGte, "updatedGte");
-        this.updatedGte = Optional.ofNullable(updatedGte);
-        return this;
-    }
-
 
     /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
-    public ListAdsReportsRequest withUpdatedGte(Optional<String> updatedGte) {
-        Utils.checkNotNull(updatedGte, "updatedGte");
+    public ListAdsReportsRequest withUpdatedGte(@Nullable String updatedGte) {
         this.updatedGte = updatedGte;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -466,231 +344,119 @@ public class ListAdsReportsRequest {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> campaignId = Optional.empty();
+        private String campaignId;
 
         private String connectionId;
 
-        private Optional<? extends List<ListAdsReportsQueryParamFields>> fields = Optional.empty();
+        private List<ListAdsReportsQueryParamFields> fields;
 
-        private Optional<Double> limit = Optional.empty();
+        private Double limit;
 
-        private Optional<Double> offset = Optional.empty();
+        private Double offset;
 
-        private Optional<String> order = Optional.empty();
+        private String order;
 
-        private Optional<String> orgId = Optional.empty();
+        private String orgId;
 
-        private Optional<String> query = Optional.empty();
+        private String query;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
-        private Optional<String> sort = Optional.empty();
+        private String sort;
 
-        private Optional<String> type = Optional.empty();
+        private String type;
 
-        private Optional<String> updatedGte = Optional.empty();
+        private String updatedGte;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
         /**
          * The campaign ID to filter by
          */
-        public Builder campaignId(String campaignId) {
-            Utils.checkNotNull(campaignId, "campaignId");
-            this.campaignId = Optional.ofNullable(campaignId);
-            return this;
-        }
-
-        /**
-         * The campaign ID to filter by
-         */
-        public Builder campaignId(Optional<String> campaignId) {
-            Utils.checkNotNull(campaignId, "campaignId");
+        public Builder campaignId(@Nullable String campaignId) {
             this.campaignId = campaignId;
             return this;
         }
 
-
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<ListAdsReportsQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<ListAdsReportsQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<ListAdsReportsQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
-        public Builder limit(double limit) {
-            Utils.checkNotNull(limit, "limit");
-            this.limit = Optional.ofNullable(limit);
-            return this;
-        }
-
-        public Builder limit(Optional<Double> limit) {
-            Utils.checkNotNull(limit, "limit");
+        public Builder limit(@Nullable Double limit) {
             this.limit = limit;
             return this;
         }
 
-
-        public Builder offset(double offset) {
-            Utils.checkNotNull(offset, "offset");
-            this.offset = Optional.ofNullable(offset);
-            return this;
-        }
-
-        public Builder offset(Optional<Double> offset) {
-            Utils.checkNotNull(offset, "offset");
+        public Builder offset(@Nullable Double offset) {
             this.offset = offset;
             return this;
         }
 
-
-        public Builder order(String order) {
-            Utils.checkNotNull(order, "order");
-            this.order = Optional.ofNullable(order);
-            return this;
-        }
-
-        public Builder order(Optional<String> order) {
-            Utils.checkNotNull(order, "order");
+        public Builder order(@Nullable String order) {
             this.order = order;
             return this;
         }
 
-
         /**
          * The org ID to filter by (reference to AdsOrganization)
          */
-        public Builder orgId(String orgId) {
-            Utils.checkNotNull(orgId, "orgId");
-            this.orgId = Optional.ofNullable(orgId);
-            return this;
-        }
-
-        /**
-         * The org ID to filter by (reference to AdsOrganization)
-         */
-        public Builder orgId(Optional<String> orgId) {
-            Utils.checkNotNull(orgId, "orgId");
+        public Builder orgId(@Nullable String orgId) {
             this.orgId = orgId;
             return this;
         }
 
-
         /**
          * Query string to search. eg. email address or name
          */
-        public Builder query(String query) {
-            Utils.checkNotNull(query, "query");
-            this.query = Optional.ofNullable(query);
-            return this;
-        }
-
-        /**
-         * Query string to search. eg. email address or name
-         */
-        public Builder query(Optional<String> query) {
-            Utils.checkNotNull(query, "query");
+        public Builder query(@Nullable String query) {
             this.query = query;
             return this;
         }
 
-
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder sort(String sort) {
-            Utils.checkNotNull(sort, "sort");
-            this.sort = Optional.ofNullable(sort);
-            return this;
-        }
-
-        public Builder sort(Optional<String> sort) {
-            Utils.checkNotNull(sort, "sort");
+        public Builder sort(@Nullable String sort) {
             this.sort = sort;
             return this;
         }
 
-
-        public Builder type(String type) {
-            Utils.checkNotNull(type, "type");
-            this.type = Optional.ofNullable(type);
-            return this;
-        }
-
-        public Builder type(Optional<String> type) {
-            Utils.checkNotNull(type, "type");
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-
         /**
          * Return only results whose updated date is equal or greater to this value (ISO-8601 /
          * YYYY-MM-DDTHH:MM:SSZ format)
          */
-        public Builder updatedGte(String updatedGte) {
-            Utils.checkNotNull(updatedGte, "updatedGte");
-            this.updatedGte = Optional.ofNullable(updatedGte);
-            return this;
-        }
-
-        /**
-         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
-         * YYYY-MM-DDTHH:MM:SSZ format)
-         */
-        public Builder updatedGte(Optional<String> updatedGte) {
-            Utils.checkNotNull(updatedGte, "updatedGte");
+        public Builder updatedGte(@Nullable String updatedGte) {
             this.updatedGte = updatedGte;
             return this;
         }
 
         public ListAdsReportsRequest build() {
-
             return new ListAdsReportsRequest(
                 campaignId, connectionId, fields,
                 limit, offset, order,

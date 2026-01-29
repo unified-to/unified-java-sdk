@@ -474,6 +474,17 @@ public class UnifiedJavaSDKAutoConfig {
         return unifiedTo.campaign();
     }
     /**
+     * Creates a Creative sub-SDK bean if none exists.
+     *
+     * @param unifiedTo the main SDK instance
+     * @return A configured Creative instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public Creative creative(UnifiedTo unifiedTo) {
+        return unifiedTo.creative();
+    }
+    /**
      * Creates a Group sub-SDK bean if none exists.
      *
      * @param unifiedTo the main SDK instance
@@ -483,6 +494,17 @@ public class UnifiedJavaSDKAutoConfig {
     @ConditionalOnMissingBean
     public Group group(UnifiedTo unifiedTo) {
         return unifiedTo.group();
+    }
+    /**
+     * Creates a Insertionorder sub-SDK bean if none exists.
+     *
+     * @param unifiedTo the main SDK instance
+     * @return A configured Insertionorder instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public Insertionorder insertionorder(UnifiedTo unifiedTo) {
+        return unifiedTo.insertionorder();
     }
     /**
      * Creates a Ats sub-SDK bean if none exists.
@@ -1862,6 +1884,17 @@ public class UnifiedJavaSDKAutoConfig {
         return asyncUnifiedTo.campaign();
     }
     /**
+     * Creates an AsyncCreative sub-SDK bean if none exists.
+     *
+     * @param asyncUnifiedTo the async SDK instance
+     * @return A configured AsyncCreative instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public AsyncCreative asyncCreative(AsyncUnifiedTo asyncUnifiedTo) {
+        return asyncUnifiedTo.creative();
+    }
+    /**
      * Creates an AsyncGroup sub-SDK bean if none exists.
      *
      * @param asyncUnifiedTo the async SDK instance
@@ -1871,6 +1904,17 @@ public class UnifiedJavaSDKAutoConfig {
     @ConditionalOnMissingBean
     public AsyncGroup asyncGroup(AsyncUnifiedTo asyncUnifiedTo) {
         return asyncUnifiedTo.group();
+    }
+    /**
+     * Creates an AsyncInsertionorder sub-SDK bean if none exists.
+     *
+     * @param asyncUnifiedTo the async SDK instance
+     * @return A configured AsyncInsertionorder instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public AsyncInsertionorder asyncInsertionorder(AsyncUnifiedTo asyncUnifiedTo) {
+        return asyncUnifiedTo.insertionorder();
     }
     /**
      * Creates an AsyncAts sub-SDK bean if none exists.

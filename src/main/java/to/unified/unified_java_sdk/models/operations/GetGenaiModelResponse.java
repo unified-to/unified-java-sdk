@@ -4,12 +4,11 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.io.InputStream;
-import java.lang.Integer;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.GenaiModel;
@@ -26,7 +25,7 @@ public class GetGenaiModelResponse implements Response {
     /**
      * Successful
      */
-    private Optional<? extends GenaiModel> genaiModel;
+    private GenaiModel genaiModel;
 
     /**
      * HTTP response status code for this operation
@@ -40,59 +39,52 @@ public class GetGenaiModelResponse implements Response {
 
     @JsonCreator
     public GetGenaiModelResponse(
-            String contentType,
-            Optional<? extends GenaiModel> genaiModel,
+            @Nonnull String contentType,
+            @Nullable GenaiModel genaiModel,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(genaiModel, "genaiModel");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.contentType = contentType;
+            @Nonnull HttpResponse<InputStream> rawResponse) {
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.genaiModel = genaiModel;
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
     }
     
     public GetGenaiModelResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
-        this(contentType, Optional.empty(), statusCode,
+            @Nonnull HttpResponse<InputStream> rawResponse) {
+        this(contentType, null, statusCode,
             rawResponse);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<GenaiModel> genaiModel() {
-        return (Optional<GenaiModel>) genaiModel;
+        return Optional.ofNullable(this.genaiModel);
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<InputStream> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     public static Builder builder() {
@@ -103,18 +95,8 @@ public class GetGenaiModelResponse implements Response {
     /**
      * HTTP response content type for this operation
      */
-    public GetGenaiModelResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
-        return this;
-    }
-
-    /**
-     * Successful
-     */
-    public GetGenaiModelResponse withGenaiModel(GenaiModel genaiModel) {
-        Utils.checkNotNull(genaiModel, "genaiModel");
-        this.genaiModel = Optional.ofNullable(genaiModel);
+    public GetGenaiModelResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
 
@@ -122,29 +104,29 @@ public class GetGenaiModelResponse implements Response {
     /**
      * Successful
      */
-    public GetGenaiModelResponse withGenaiModel(Optional<? extends GenaiModel> genaiModel) {
-        Utils.checkNotNull(genaiModel, "genaiModel");
+    public GetGenaiModelResponse withGenaiModel(@Nullable GenaiModel genaiModel) {
         this.genaiModel = genaiModel;
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public GetGenaiModelResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public GetGenaiModelResponse withRawResponse(HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
+    public GetGenaiModelResponse withRawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -183,9 +165,9 @@ public class GetGenaiModelResponse implements Response {
 
         private String contentType;
 
-        private Optional<? extends GenaiModel> genaiModel = Optional.empty();
+        private GenaiModel genaiModel;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<InputStream> rawResponse;
 
@@ -193,57 +175,39 @@ public class GetGenaiModelResponse implements Response {
           // force use of static builder() method
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
-            return this;
-        }
-
-
-        /**
-         * Successful
-         */
-        public Builder genaiModel(GenaiModel genaiModel) {
-            Utils.checkNotNull(genaiModel, "genaiModel");
-            this.genaiModel = Optional.ofNullable(genaiModel);
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
 
         /**
          * Successful
          */
-        public Builder genaiModel(Optional<? extends GenaiModel> genaiModel) {
-            Utils.checkNotNull(genaiModel, "genaiModel");
+        public Builder genaiModel(@Nullable GenaiModel genaiModel) {
             this.genaiModel = genaiModel;
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<InputStream> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
+        public Builder rawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         public GetGenaiModelResponse build() {
-
             return new GetGenaiModelResponse(
                 contentType, genaiModel, statusCode,
                 rawResponse);

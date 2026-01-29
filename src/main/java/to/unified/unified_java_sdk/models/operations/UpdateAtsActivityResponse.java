@@ -4,12 +4,11 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.io.InputStream;
-import java.lang.Integer;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.AtsActivity;
@@ -21,7 +20,7 @@ public class UpdateAtsActivityResponse implements Response {
     /**
      * Successful
      */
-    private Optional<? extends AtsActivity> atsActivity;
+    private AtsActivity atsActivity;
 
     /**
      * HTTP response content type for this operation
@@ -40,59 +39,52 @@ public class UpdateAtsActivityResponse implements Response {
 
     @JsonCreator
     public UpdateAtsActivityResponse(
-            Optional<? extends AtsActivity> atsActivity,
-            String contentType,
+            @Nullable AtsActivity atsActivity,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(atsActivity, "atsActivity");
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
+            @Nonnull HttpResponse<InputStream> rawResponse) {
         this.atsActivity = atsActivity;
-        this.contentType = contentType;
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
     }
     
     public UpdateAtsActivityResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
-        this(Optional.empty(), contentType, statusCode,
+            @Nonnull HttpResponse<InputStream> rawResponse) {
+        this(null, contentType, statusCode,
             rawResponse);
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<AtsActivity> atsActivity() {
-        return (Optional<AtsActivity>) atsActivity;
+        return Optional.ofNullable(this.atsActivity);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<InputStream> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     public static Builder builder() {
@@ -103,48 +95,38 @@ public class UpdateAtsActivityResponse implements Response {
     /**
      * Successful
      */
-    public UpdateAtsActivityResponse withAtsActivity(AtsActivity atsActivity) {
-        Utils.checkNotNull(atsActivity, "atsActivity");
-        this.atsActivity = Optional.ofNullable(atsActivity);
-        return this;
-    }
-
-
-    /**
-     * Successful
-     */
-    public UpdateAtsActivityResponse withAtsActivity(Optional<? extends AtsActivity> atsActivity) {
-        Utils.checkNotNull(atsActivity, "atsActivity");
+    public UpdateAtsActivityResponse withAtsActivity(@Nullable AtsActivity atsActivity) {
         this.atsActivity = atsActivity;
         return this;
     }
 
+
     /**
      * HTTP response content type for this operation
      */
-    public UpdateAtsActivityResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
+    public UpdateAtsActivityResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public UpdateAtsActivityResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public UpdateAtsActivityResponse withRawResponse(HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
+    public UpdateAtsActivityResponse withRawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -181,11 +163,11 @@ public class UpdateAtsActivityResponse implements Response {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends AtsActivity> atsActivity = Optional.empty();
+        private AtsActivity atsActivity;
 
         private String contentType;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<InputStream> rawResponse;
 
@@ -193,57 +175,39 @@ public class UpdateAtsActivityResponse implements Response {
           // force use of static builder() method
         }
 
-
         /**
          * Successful
          */
-        public Builder atsActivity(AtsActivity atsActivity) {
-            Utils.checkNotNull(atsActivity, "atsActivity");
-            this.atsActivity = Optional.ofNullable(atsActivity);
-            return this;
-        }
-
-        /**
-         * Successful
-         */
-        public Builder atsActivity(Optional<? extends AtsActivity> atsActivity) {
-            Utils.checkNotNull(atsActivity, "atsActivity");
+        public Builder atsActivity(@Nullable AtsActivity atsActivity) {
             this.atsActivity = atsActivity;
             return this;
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<InputStream> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
+        public Builder rawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         public UpdateAtsActivityResponse build() {
-
             return new UpdateAtsActivityResponse(
                 atsActivity, contentType, statusCode,
                 rawResponse);

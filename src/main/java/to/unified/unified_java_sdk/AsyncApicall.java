@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedApicallRequest;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedApicallsRequest;
@@ -52,7 +53,7 @@ public class AsyncApicall {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetUnifiedApicallResponse>} - The async response
      */
-    public CompletableFuture<GetUnifiedApicallResponse> getUnifiedApicall(GetUnifiedApicallRequest request) {
+    public CompletableFuture<GetUnifiedApicallResponse> getUnifiedApicall(@Nonnull GetUnifiedApicallRequest request) {
         AsyncRequestOperation<GetUnifiedApicallRequest, GetUnifiedApicallResponse> operation
               = new GetUnifiedApicall.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -75,7 +76,7 @@ public class AsyncApicall {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListUnifiedApicallsResponse>} - The async response
      */
-    public CompletableFuture<ListUnifiedApicallsResponse> listUnifiedApicalls(ListUnifiedApicallsRequest request) {
+    public CompletableFuture<ListUnifiedApicallsResponse> listUnifiedApicalls(@Nonnull ListUnifiedApicallsRequest request) {
         AsyncRequestOperation<ListUnifiedApicallsRequest, ListUnifiedApicallsResponse> operation
               = new ListUnifiedApicalls.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

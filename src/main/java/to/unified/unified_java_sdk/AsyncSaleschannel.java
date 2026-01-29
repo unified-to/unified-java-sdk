@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceSaleschannelRequest;
 import to.unified.unified_java_sdk.models.operations.GetCommerceSaleschannelRequest;
@@ -68,7 +69,7 @@ public class AsyncSaleschannel {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCommerceSaleschannelResponse>} - The async response
      */
-    public CompletableFuture<CreateCommerceSaleschannelResponse> createCommerceSaleschannel(CreateCommerceSaleschannelRequest request) {
+    public CompletableFuture<CreateCommerceSaleschannelResponse> createCommerceSaleschannel(@Nonnull CreateCommerceSaleschannelRequest request) {
         AsyncRequestOperation<CreateCommerceSaleschannelRequest, CreateCommerceSaleschannelResponse> operation
               = new CreateCommerceSaleschannel.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -91,7 +92,7 @@ public class AsyncSaleschannel {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCommerceSaleschannelResponse>} - The async response
      */
-    public CompletableFuture<GetCommerceSaleschannelResponse> getCommerceSaleschannel(GetCommerceSaleschannelRequest request) {
+    public CompletableFuture<GetCommerceSaleschannelResponse> getCommerceSaleschannel(@Nonnull GetCommerceSaleschannelRequest request) {
         AsyncRequestOperation<GetCommerceSaleschannelRequest, GetCommerceSaleschannelResponse> operation
               = new GetCommerceSaleschannel.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -114,7 +115,7 @@ public class AsyncSaleschannel {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCommerceSaleschannelsResponse>} - The async response
      */
-    public CompletableFuture<ListCommerceSaleschannelsResponse> listCommerceSaleschannels(ListCommerceSaleschannelsRequest request) {
+    public CompletableFuture<ListCommerceSaleschannelsResponse> listCommerceSaleschannels(@Nonnull ListCommerceSaleschannelsRequest request) {
         AsyncRequestOperation<ListCommerceSaleschannelsRequest, ListCommerceSaleschannelsResponse> operation
               = new ListCommerceSaleschannels.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -137,7 +138,7 @@ public class AsyncSaleschannel {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCommerceSaleschannelResponse>} - The async response
      */
-    public CompletableFuture<PatchCommerceSaleschannelResponse> patchCommerceSaleschannel(PatchCommerceSaleschannelRequest request) {
+    public CompletableFuture<PatchCommerceSaleschannelResponse> patchCommerceSaleschannel(@Nonnull PatchCommerceSaleschannelRequest request) {
         AsyncRequestOperation<PatchCommerceSaleschannelRequest, PatchCommerceSaleschannelResponse> operation
               = new PatchCommerceSaleschannel.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -160,7 +161,7 @@ public class AsyncSaleschannel {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCommerceSaleschannelResponse>} - The async response
      */
-    public CompletableFuture<RemoveCommerceSaleschannelResponse> removeCommerceSaleschannel(RemoveCommerceSaleschannelRequest request) {
+    public CompletableFuture<RemoveCommerceSaleschannelResponse> removeCommerceSaleschannel(@Nonnull RemoveCommerceSaleschannelRequest request) {
         AsyncRequestOperation<RemoveCommerceSaleschannelRequest, RemoveCommerceSaleschannelResponse> operation
               = new RemoveCommerceSaleschannel.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -183,7 +184,7 @@ public class AsyncSaleschannel {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCommerceSaleschannelResponse>} - The async response
      */
-    public CompletableFuture<UpdateCommerceSaleschannelResponse> updateCommerceSaleschannel(UpdateCommerceSaleschannelRequest request) {
+    public CompletableFuture<UpdateCommerceSaleschannelResponse> updateCommerceSaleschannel(@Nonnull UpdateCommerceSaleschannelRequest request) {
         AsyncRequestOperation<UpdateCommerceSaleschannelRequest, UpdateCommerceSaleschannelResponse> operation
               = new UpdateCommerceSaleschannel.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

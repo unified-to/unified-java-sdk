@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.AtsScorecard;
@@ -30,7 +30,7 @@ public class CreateAtsScorecardRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<CreateAtsScorecardQueryParamFields>> fields;
+    private List<CreateAtsScorecardQueryParamFields> fields;
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
@@ -38,51 +38,45 @@ public class CreateAtsScorecardRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
     @JsonCreator
     public CreateAtsScorecardRequest(
-            AtsScorecard atsScorecard,
-            String connectionId,
-            Optional<? extends List<CreateAtsScorecardQueryParamFields>> fields,
-            Optional<String> raw) {
-        Utils.checkNotNull(atsScorecard, "atsScorecard");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(raw, "raw");
-        this.atsScorecard = atsScorecard;
-        this.connectionId = connectionId;
+            @Nonnull AtsScorecard atsScorecard,
+            @Nonnull String connectionId,
+            @Nullable List<CreateAtsScorecardQueryParamFields> fields,
+            @Nullable String raw) {
+        this.atsScorecard = Optional.ofNullable(atsScorecard)
+            .orElseThrow(() -> new IllegalArgumentException("atsScorecard cannot be null"));
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
         this.raw = raw;
     }
     
     public CreateAtsScorecardRequest(
-            AtsScorecard atsScorecard,
-            String connectionId) {
-        this(atsScorecard, connectionId, Optional.empty(),
-            Optional.empty());
+            @Nonnull AtsScorecard atsScorecard,
+            @Nonnull String connectionId) {
+        this(atsScorecard, connectionId, null,
+            null);
     }
 
-    @JsonIgnore
     public AtsScorecard atsScorecard() {
-        return atsScorecard;
+        return this.atsScorecard;
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<CreateAtsScorecardQueryParamFields>> fields() {
-        return (Optional<List<CreateAtsScorecardQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
@@ -90,9 +84,8 @@ public class CreateAtsScorecardRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
     public static Builder builder() {
@@ -100,27 +93,17 @@ public class CreateAtsScorecardRequest {
     }
 
 
-    public CreateAtsScorecardRequest withAtsScorecard(AtsScorecard atsScorecard) {
-        Utils.checkNotNull(atsScorecard, "atsScorecard");
-        this.atsScorecard = atsScorecard;
+    public CreateAtsScorecardRequest withAtsScorecard(@Nonnull AtsScorecard atsScorecard) {
+        this.atsScorecard = Utils.checkNotNull(atsScorecard, "atsScorecard");
         return this;
     }
+
 
     /**
      * ID of the connection
      */
-    public CreateAtsScorecardRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public CreateAtsScorecardRequest withFields(List<CreateAtsScorecardQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public CreateAtsScorecardRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -128,34 +111,22 @@ public class CreateAtsScorecardRequest {
     /**
      * Fields to return
      */
-    public CreateAtsScorecardRequest withFields(Optional<? extends List<CreateAtsScorecardQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public CreateAtsScorecardRequest withFields(@Nullable List<CreateAtsScorecardQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public CreateAtsScorecardRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
-
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public CreateAtsScorecardRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public CreateAtsScorecardRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -196,75 +167,46 @@ public class CreateAtsScorecardRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<CreateAtsScorecardQueryParamFields>> fields = Optional.empty();
+        private List<CreateAtsScorecardQueryParamFields> fields;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder atsScorecard(AtsScorecard atsScorecard) {
-            Utils.checkNotNull(atsScorecard, "atsScorecard");
-            this.atsScorecard = atsScorecard;
+        public Builder atsScorecard(@Nonnull AtsScorecard atsScorecard) {
+            this.atsScorecard = Utils.checkNotNull(atsScorecard, "atsScorecard");
             return this;
         }
-
 
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<CreateAtsScorecardQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<CreateAtsScorecardQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<CreateAtsScorecardQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
         public CreateAtsScorecardRequest build() {
-
             return new CreateAtsScorecardRequest(
                 atsScorecard, connectionId, fields,
                 raw);

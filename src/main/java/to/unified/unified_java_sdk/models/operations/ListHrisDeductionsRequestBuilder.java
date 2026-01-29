@@ -5,32 +5,45 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.ListHrisDeductions;
 import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListHrisDeductionsRequestBuilder {
-
-    private ListHrisDeductionsRequest request;
     private final SDKConfiguration sdkConfiguration;
-    private final Headers _headers = new Headers(); 
+    private final Headers _headers = new Headers();
+    private ListHrisDeductionsRequest request;
 
     public ListHrisDeductionsRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
 
-    public ListHrisDeductionsRequestBuilder request(ListHrisDeductionsRequest request) {
-        Utils.checkNotNull(request, "request");
-        this.request = request;
+    public ListHrisDeductionsRequestBuilder request(@Nonnull ListHrisDeductionsRequest request) {
+        this.request = Utils.checkNotNull(request, "request");
         return this;
     }
 
+    private ListHrisDeductionsRequest _buildRequest() {
+        return this.request;
+    }
+    
+    public ListHrisDeductionsRequestBuilder header(String name, String value) {
+        Utils.checkNotNull(name, "name");
+        Utils.checkNotNull(value, "value");
+        this._headers.add(name, value);
+        return this;
+    }
+
+    /**
+    * Executes the request and returns the response.
+    *
+    * @return The response from the server.
+    */
     public ListHrisDeductionsResponse call() {
-        
         RequestOperation<ListHrisDeductionsRequest, ListHrisDeductionsResponse> operation
               = new ListHrisDeductions.Sync(sdkConfiguration, _headers);
-
-        return operation.handleResponse(operation.doRequest(request));
+        return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

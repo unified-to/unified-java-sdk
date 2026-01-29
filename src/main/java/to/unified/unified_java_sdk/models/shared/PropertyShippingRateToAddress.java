@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Override;
 import java.lang.String;
@@ -23,110 +23,95 @@ public class PropertyShippingRateToAddress {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address1")
-    private Optional<String> address1;
+    private String address1;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address2")
-    private Optional<String> address2;
+    private String address2;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
-    private Optional<String> city;
+    private String city;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_name")
-    private Optional<String> companyName;
+    private String companyName;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
-    private Optional<String> country;
+    private String country;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country_code")
-    private Optional<String> countryCode;
+    private String countryCode;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delivery_instructions")
-    private Optional<String> deliveryInstructions;
+    private String deliveryInstructions;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
-    private Optional<String> email;
+    private String email;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_residential")
-    private Optional<Boolean> isResidential;
+    private Boolean isResidential;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_validated")
-    private Optional<Boolean> isValidated;
+    private Boolean isValidated;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
-    private Optional<String> name;
+    private String name;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postal_code")
-    private Optional<String> postalCode;
+    private String postalCode;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
-    private Optional<String> region;
+    private String region;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region_code")
-    private Optional<String> regionCode;
+    private String regionCode;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("telephone")
-    private Optional<String> telephone;
+    private String telephone;
 
     @JsonCreator
     public PropertyShippingRateToAddress(
-            @JsonProperty("address1") Optional<String> address1,
-            @JsonProperty("address2") Optional<String> address2,
-            @JsonProperty("city") Optional<String> city,
-            @JsonProperty("company_name") Optional<String> companyName,
-            @JsonProperty("country") Optional<String> country,
-            @JsonProperty("country_code") Optional<String> countryCode,
-            @JsonProperty("delivery_instructions") Optional<String> deliveryInstructions,
-            @JsonProperty("email") Optional<String> email,
-            @JsonProperty("is_residential") Optional<Boolean> isResidential,
-            @JsonProperty("is_validated") Optional<Boolean> isValidated,
-            @JsonProperty("name") Optional<String> name,
-            @JsonProperty("postal_code") Optional<String> postalCode,
-            @JsonProperty("region") Optional<String> region,
-            @JsonProperty("region_code") Optional<String> regionCode,
-            @JsonProperty("telephone") Optional<String> telephone) {
-        Utils.checkNotNull(address1, "address1");
-        Utils.checkNotNull(address2, "address2");
-        Utils.checkNotNull(city, "city");
-        Utils.checkNotNull(companyName, "companyName");
-        Utils.checkNotNull(country, "country");
-        Utils.checkNotNull(countryCode, "countryCode");
-        Utils.checkNotNull(deliveryInstructions, "deliveryInstructions");
-        Utils.checkNotNull(email, "email");
-        Utils.checkNotNull(isResidential, "isResidential");
-        Utils.checkNotNull(isValidated, "isValidated");
-        Utils.checkNotNull(name, "name");
-        Utils.checkNotNull(postalCode, "postalCode");
-        Utils.checkNotNull(region, "region");
-        Utils.checkNotNull(regionCode, "regionCode");
-        Utils.checkNotNull(telephone, "telephone");
+            @JsonProperty("address1") @Nullable String address1,
+            @JsonProperty("address2") @Nullable String address2,
+            @JsonProperty("city") @Nullable String city,
+            @JsonProperty("company_name") @Nullable String companyName,
+            @JsonProperty("country") @Nullable String country,
+            @JsonProperty("country_code") @Nullable String countryCode,
+            @JsonProperty("delivery_instructions") @Nullable String deliveryInstructions,
+            @JsonProperty("email") @Nullable String email,
+            @JsonProperty("is_residential") @Nullable Boolean isResidential,
+            @JsonProperty("is_validated") @Nullable Boolean isValidated,
+            @JsonProperty("name") @Nullable String name,
+            @JsonProperty("postal_code") @Nullable String postalCode,
+            @JsonProperty("region") @Nullable String region,
+            @JsonProperty("region_code") @Nullable String regionCode,
+            @JsonProperty("telephone") @Nullable String telephone) {
         this.address1 = address1;
         this.address2 = address2;
         this.city = city;
@@ -145,86 +130,71 @@ public class PropertyShippingRateToAddress {
     }
     
     public PropertyShippingRateToAddress() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null);
     }
 
-    @JsonIgnore
     public Optional<String> address1() {
-        return address1;
+        return Optional.ofNullable(this.address1);
     }
 
-    @JsonIgnore
     public Optional<String> address2() {
-        return address2;
+        return Optional.ofNullable(this.address2);
     }
 
-    @JsonIgnore
     public Optional<String> city() {
-        return city;
+        return Optional.ofNullable(this.city);
     }
 
-    @JsonIgnore
     public Optional<String> companyName() {
-        return companyName;
+        return Optional.ofNullable(this.companyName);
     }
 
-    @JsonIgnore
     public Optional<String> country() {
-        return country;
+        return Optional.ofNullable(this.country);
     }
 
-    @JsonIgnore
     public Optional<String> countryCode() {
-        return countryCode;
+        return Optional.ofNullable(this.countryCode);
     }
 
-    @JsonIgnore
     public Optional<String> deliveryInstructions() {
-        return deliveryInstructions;
+        return Optional.ofNullable(this.deliveryInstructions);
     }
 
-    @JsonIgnore
     public Optional<String> email() {
-        return email;
+        return Optional.ofNullable(this.email);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isResidential() {
-        return isResidential;
+        return Optional.ofNullable(this.isResidential);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isValidated() {
-        return isValidated;
+        return Optional.ofNullable(this.isValidated);
     }
 
-    @JsonIgnore
     public Optional<String> name() {
-        return name;
+        return Optional.ofNullable(this.name);
     }
 
-    @JsonIgnore
     public Optional<String> postalCode() {
-        return postalCode;
+        return Optional.ofNullable(this.postalCode);
     }
 
-    @JsonIgnore
     public Optional<String> region() {
-        return region;
+        return Optional.ofNullable(this.region);
     }
 
-    @JsonIgnore
     public Optional<String> regionCode() {
-        return regionCode;
+        return Optional.ofNullable(this.regionCode);
     }
 
-    @JsonIgnore
     public Optional<String> telephone() {
-        return telephone;
+        return Optional.ofNullable(this.telephone);
     }
 
     public static Builder builder() {
@@ -232,200 +202,95 @@ public class PropertyShippingRateToAddress {
     }
 
 
-    public PropertyShippingRateToAddress withAddress1(String address1) {
-        Utils.checkNotNull(address1, "address1");
-        this.address1 = Optional.ofNullable(address1);
-        return this;
-    }
-
-
-    public PropertyShippingRateToAddress withAddress1(Optional<String> address1) {
-        Utils.checkNotNull(address1, "address1");
+    public PropertyShippingRateToAddress withAddress1(@Nullable String address1) {
         this.address1 = address1;
         return this;
     }
 
-    public PropertyShippingRateToAddress withAddress2(String address2) {
-        Utils.checkNotNull(address2, "address2");
-        this.address2 = Optional.ofNullable(address2);
-        return this;
-    }
 
-
-    public PropertyShippingRateToAddress withAddress2(Optional<String> address2) {
-        Utils.checkNotNull(address2, "address2");
+    public PropertyShippingRateToAddress withAddress2(@Nullable String address2) {
         this.address2 = address2;
         return this;
     }
 
-    public PropertyShippingRateToAddress withCity(String city) {
-        Utils.checkNotNull(city, "city");
-        this.city = Optional.ofNullable(city);
-        return this;
-    }
 
-
-    public PropertyShippingRateToAddress withCity(Optional<String> city) {
-        Utils.checkNotNull(city, "city");
+    public PropertyShippingRateToAddress withCity(@Nullable String city) {
         this.city = city;
         return this;
     }
 
-    public PropertyShippingRateToAddress withCompanyName(String companyName) {
-        Utils.checkNotNull(companyName, "companyName");
-        this.companyName = Optional.ofNullable(companyName);
-        return this;
-    }
 
-
-    public PropertyShippingRateToAddress withCompanyName(Optional<String> companyName) {
-        Utils.checkNotNull(companyName, "companyName");
+    public PropertyShippingRateToAddress withCompanyName(@Nullable String companyName) {
         this.companyName = companyName;
         return this;
     }
 
-    public PropertyShippingRateToAddress withCountry(String country) {
-        Utils.checkNotNull(country, "country");
-        this.country = Optional.ofNullable(country);
-        return this;
-    }
 
-
-    public PropertyShippingRateToAddress withCountry(Optional<String> country) {
-        Utils.checkNotNull(country, "country");
+    public PropertyShippingRateToAddress withCountry(@Nullable String country) {
         this.country = country;
         return this;
     }
 
-    public PropertyShippingRateToAddress withCountryCode(String countryCode) {
-        Utils.checkNotNull(countryCode, "countryCode");
-        this.countryCode = Optional.ofNullable(countryCode);
-        return this;
-    }
 
-
-    public PropertyShippingRateToAddress withCountryCode(Optional<String> countryCode) {
-        Utils.checkNotNull(countryCode, "countryCode");
+    public PropertyShippingRateToAddress withCountryCode(@Nullable String countryCode) {
         this.countryCode = countryCode;
         return this;
     }
 
-    public PropertyShippingRateToAddress withDeliveryInstructions(String deliveryInstructions) {
-        Utils.checkNotNull(deliveryInstructions, "deliveryInstructions");
-        this.deliveryInstructions = Optional.ofNullable(deliveryInstructions);
-        return this;
-    }
 
-
-    public PropertyShippingRateToAddress withDeliveryInstructions(Optional<String> deliveryInstructions) {
-        Utils.checkNotNull(deliveryInstructions, "deliveryInstructions");
+    public PropertyShippingRateToAddress withDeliveryInstructions(@Nullable String deliveryInstructions) {
         this.deliveryInstructions = deliveryInstructions;
         return this;
     }
 
-    public PropertyShippingRateToAddress withEmail(String email) {
-        Utils.checkNotNull(email, "email");
-        this.email = Optional.ofNullable(email);
-        return this;
-    }
 
-
-    public PropertyShippingRateToAddress withEmail(Optional<String> email) {
-        Utils.checkNotNull(email, "email");
+    public PropertyShippingRateToAddress withEmail(@Nullable String email) {
         this.email = email;
         return this;
     }
 
-    public PropertyShippingRateToAddress withIsResidential(boolean isResidential) {
-        Utils.checkNotNull(isResidential, "isResidential");
-        this.isResidential = Optional.ofNullable(isResidential);
-        return this;
-    }
 
-
-    public PropertyShippingRateToAddress withIsResidential(Optional<Boolean> isResidential) {
-        Utils.checkNotNull(isResidential, "isResidential");
+    public PropertyShippingRateToAddress withIsResidential(@Nullable Boolean isResidential) {
         this.isResidential = isResidential;
         return this;
     }
 
-    public PropertyShippingRateToAddress withIsValidated(boolean isValidated) {
-        Utils.checkNotNull(isValidated, "isValidated");
-        this.isValidated = Optional.ofNullable(isValidated);
-        return this;
-    }
 
-
-    public PropertyShippingRateToAddress withIsValidated(Optional<Boolean> isValidated) {
-        Utils.checkNotNull(isValidated, "isValidated");
+    public PropertyShippingRateToAddress withIsValidated(@Nullable Boolean isValidated) {
         this.isValidated = isValidated;
         return this;
     }
 
-    public PropertyShippingRateToAddress withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = Optional.ofNullable(name);
-        return this;
-    }
 
-
-    public PropertyShippingRateToAddress withName(Optional<String> name) {
-        Utils.checkNotNull(name, "name");
+    public PropertyShippingRateToAddress withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
-    public PropertyShippingRateToAddress withPostalCode(String postalCode) {
-        Utils.checkNotNull(postalCode, "postalCode");
-        this.postalCode = Optional.ofNullable(postalCode);
-        return this;
-    }
 
-
-    public PropertyShippingRateToAddress withPostalCode(Optional<String> postalCode) {
-        Utils.checkNotNull(postalCode, "postalCode");
+    public PropertyShippingRateToAddress withPostalCode(@Nullable String postalCode) {
         this.postalCode = postalCode;
         return this;
     }
 
-    public PropertyShippingRateToAddress withRegion(String region) {
-        Utils.checkNotNull(region, "region");
-        this.region = Optional.ofNullable(region);
-        return this;
-    }
 
-
-    public PropertyShippingRateToAddress withRegion(Optional<String> region) {
-        Utils.checkNotNull(region, "region");
+    public PropertyShippingRateToAddress withRegion(@Nullable String region) {
         this.region = region;
         return this;
     }
 
-    public PropertyShippingRateToAddress withRegionCode(String regionCode) {
-        Utils.checkNotNull(regionCode, "regionCode");
-        this.regionCode = Optional.ofNullable(regionCode);
-        return this;
-    }
 
-
-    public PropertyShippingRateToAddress withRegionCode(Optional<String> regionCode) {
-        Utils.checkNotNull(regionCode, "regionCode");
+    public PropertyShippingRateToAddress withRegionCode(@Nullable String regionCode) {
         this.regionCode = regionCode;
         return this;
     }
 
-    public PropertyShippingRateToAddress withTelephone(String telephone) {
-        Utils.checkNotNull(telephone, "telephone");
-        this.telephone = Optional.ofNullable(telephone);
-        return this;
-    }
 
-
-    public PropertyShippingRateToAddress withTelephone(Optional<String> telephone) {
-        Utils.checkNotNull(telephone, "telephone");
+    public PropertyShippingRateToAddress withTelephone(@Nullable String telephone) {
         this.telephone = telephone;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -487,237 +352,116 @@ public class PropertyShippingRateToAddress {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> address1 = Optional.empty();
+        private String address1;
 
-        private Optional<String> address2 = Optional.empty();
+        private String address2;
 
-        private Optional<String> city = Optional.empty();
+        private String city;
 
-        private Optional<String> companyName = Optional.empty();
+        private String companyName;
 
-        private Optional<String> country = Optional.empty();
+        private String country;
 
-        private Optional<String> countryCode = Optional.empty();
+        private String countryCode;
 
-        private Optional<String> deliveryInstructions = Optional.empty();
+        private String deliveryInstructions;
 
-        private Optional<String> email = Optional.empty();
+        private String email;
 
-        private Optional<Boolean> isResidential = Optional.empty();
+        private Boolean isResidential;
 
-        private Optional<Boolean> isValidated = Optional.empty();
+        private Boolean isValidated;
 
-        private Optional<String> name = Optional.empty();
+        private String name;
 
-        private Optional<String> postalCode = Optional.empty();
+        private String postalCode;
 
-        private Optional<String> region = Optional.empty();
+        private String region;
 
-        private Optional<String> regionCode = Optional.empty();
+        private String regionCode;
 
-        private Optional<String> telephone = Optional.empty();
+        private String telephone;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder address1(String address1) {
-            Utils.checkNotNull(address1, "address1");
-            this.address1 = Optional.ofNullable(address1);
-            return this;
-        }
-
-        public Builder address1(Optional<String> address1) {
-            Utils.checkNotNull(address1, "address1");
+        public Builder address1(@Nullable String address1) {
             this.address1 = address1;
             return this;
         }
 
-
-        public Builder address2(String address2) {
-            Utils.checkNotNull(address2, "address2");
-            this.address2 = Optional.ofNullable(address2);
-            return this;
-        }
-
-        public Builder address2(Optional<String> address2) {
-            Utils.checkNotNull(address2, "address2");
+        public Builder address2(@Nullable String address2) {
             this.address2 = address2;
             return this;
         }
 
-
-        public Builder city(String city) {
-            Utils.checkNotNull(city, "city");
-            this.city = Optional.ofNullable(city);
-            return this;
-        }
-
-        public Builder city(Optional<String> city) {
-            Utils.checkNotNull(city, "city");
+        public Builder city(@Nullable String city) {
             this.city = city;
             return this;
         }
 
-
-        public Builder companyName(String companyName) {
-            Utils.checkNotNull(companyName, "companyName");
-            this.companyName = Optional.ofNullable(companyName);
-            return this;
-        }
-
-        public Builder companyName(Optional<String> companyName) {
-            Utils.checkNotNull(companyName, "companyName");
+        public Builder companyName(@Nullable String companyName) {
             this.companyName = companyName;
             return this;
         }
 
-
-        public Builder country(String country) {
-            Utils.checkNotNull(country, "country");
-            this.country = Optional.ofNullable(country);
-            return this;
-        }
-
-        public Builder country(Optional<String> country) {
-            Utils.checkNotNull(country, "country");
+        public Builder country(@Nullable String country) {
             this.country = country;
             return this;
         }
 
-
-        public Builder countryCode(String countryCode) {
-            Utils.checkNotNull(countryCode, "countryCode");
-            this.countryCode = Optional.ofNullable(countryCode);
-            return this;
-        }
-
-        public Builder countryCode(Optional<String> countryCode) {
-            Utils.checkNotNull(countryCode, "countryCode");
+        public Builder countryCode(@Nullable String countryCode) {
             this.countryCode = countryCode;
             return this;
         }
 
-
-        public Builder deliveryInstructions(String deliveryInstructions) {
-            Utils.checkNotNull(deliveryInstructions, "deliveryInstructions");
-            this.deliveryInstructions = Optional.ofNullable(deliveryInstructions);
-            return this;
-        }
-
-        public Builder deliveryInstructions(Optional<String> deliveryInstructions) {
-            Utils.checkNotNull(deliveryInstructions, "deliveryInstructions");
+        public Builder deliveryInstructions(@Nullable String deliveryInstructions) {
             this.deliveryInstructions = deliveryInstructions;
             return this;
         }
 
-
-        public Builder email(String email) {
-            Utils.checkNotNull(email, "email");
-            this.email = Optional.ofNullable(email);
-            return this;
-        }
-
-        public Builder email(Optional<String> email) {
-            Utils.checkNotNull(email, "email");
+        public Builder email(@Nullable String email) {
             this.email = email;
             return this;
         }
 
-
-        public Builder isResidential(boolean isResidential) {
-            Utils.checkNotNull(isResidential, "isResidential");
-            this.isResidential = Optional.ofNullable(isResidential);
-            return this;
-        }
-
-        public Builder isResidential(Optional<Boolean> isResidential) {
-            Utils.checkNotNull(isResidential, "isResidential");
+        public Builder isResidential(@Nullable Boolean isResidential) {
             this.isResidential = isResidential;
             return this;
         }
 
-
-        public Builder isValidated(boolean isValidated) {
-            Utils.checkNotNull(isValidated, "isValidated");
-            this.isValidated = Optional.ofNullable(isValidated);
-            return this;
-        }
-
-        public Builder isValidated(Optional<Boolean> isValidated) {
-            Utils.checkNotNull(isValidated, "isValidated");
+        public Builder isValidated(@Nullable Boolean isValidated) {
             this.isValidated = isValidated;
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = Optional.ofNullable(name);
-            return this;
-        }
-
-        public Builder name(Optional<String> name) {
-            Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-
-        public Builder postalCode(String postalCode) {
-            Utils.checkNotNull(postalCode, "postalCode");
-            this.postalCode = Optional.ofNullable(postalCode);
-            return this;
-        }
-
-        public Builder postalCode(Optional<String> postalCode) {
-            Utils.checkNotNull(postalCode, "postalCode");
+        public Builder postalCode(@Nullable String postalCode) {
             this.postalCode = postalCode;
             return this;
         }
 
-
-        public Builder region(String region) {
-            Utils.checkNotNull(region, "region");
-            this.region = Optional.ofNullable(region);
-            return this;
-        }
-
-        public Builder region(Optional<String> region) {
-            Utils.checkNotNull(region, "region");
+        public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
 
-
-        public Builder regionCode(String regionCode) {
-            Utils.checkNotNull(regionCode, "regionCode");
-            this.regionCode = Optional.ofNullable(regionCode);
-            return this;
-        }
-
-        public Builder regionCode(Optional<String> regionCode) {
-            Utils.checkNotNull(regionCode, "regionCode");
+        public Builder regionCode(@Nullable String regionCode) {
             this.regionCode = regionCode;
             return this;
         }
 
-
-        public Builder telephone(String telephone) {
-            Utils.checkNotNull(telephone, "telephone");
-            this.telephone = Optional.ofNullable(telephone);
-            return this;
-        }
-
-        public Builder telephone(Optional<String> telephone) {
-            Utils.checkNotNull(telephone, "telephone");
+        public Builder telephone(@Nullable String telephone) {
             this.telephone = telephone;
             return this;
         }
 
         public PropertyShippingRateToAddress build() {
-
             return new PropertyShippingRateToAddress(
                 address1, address2, city,
                 companyName, country, countryCode,

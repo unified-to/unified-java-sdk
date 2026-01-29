@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.GetMessagingChannelRequest;
 import to.unified.unified_java_sdk.models.operations.ListMessagingChannelsRequest;
@@ -52,7 +53,7 @@ public class AsyncChannel {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetMessagingChannelResponse>} - The async response
      */
-    public CompletableFuture<GetMessagingChannelResponse> getMessagingChannel(GetMessagingChannelRequest request) {
+    public CompletableFuture<GetMessagingChannelResponse> getMessagingChannel(@Nonnull GetMessagingChannelRequest request) {
         AsyncRequestOperation<GetMessagingChannelRequest, GetMessagingChannelResponse> operation
               = new GetMessagingChannel.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -75,7 +76,7 @@ public class AsyncChannel {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListMessagingChannelsResponse>} - The async response
      */
-    public CompletableFuture<ListMessagingChannelsResponse> listMessagingChannels(ListMessagingChannelsRequest request) {
+    public CompletableFuture<ListMessagingChannelsResponse> listMessagingChannels(@Nonnull ListMessagingChannelsRequest request) {
         AsyncRequestOperation<ListMessagingChannelsRequest, ListMessagingChannelsResponse> operation
               = new ListMessagingChannels.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

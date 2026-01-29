@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateKmsPageRequest;
 import to.unified.unified_java_sdk.models.operations.CreateKmsPageRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateKmsPageResponse;
@@ -67,7 +68,7 @@ public class Page {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateKmsPageResponse createKmsPage(CreateKmsPageRequest request) {
+    public CreateKmsPageResponse createKmsPage(@Nonnull CreateKmsPageRequest request) {
         RequestOperation<CreateKmsPageRequest, CreateKmsPageResponse> operation
               = new CreateKmsPage.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -89,7 +90,7 @@ public class Page {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetKmsPageResponse getKmsPage(GetKmsPageRequest request) {
+    public GetKmsPageResponse getKmsPage(@Nonnull GetKmsPageRequest request) {
         RequestOperation<GetKmsPageRequest, GetKmsPageResponse> operation
               = new GetKmsPage.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -111,7 +112,7 @@ public class Page {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListKmsPagesResponse listKmsPages(ListKmsPagesRequest request) {
+    public ListKmsPagesResponse listKmsPages(@Nonnull ListKmsPagesRequest request) {
         RequestOperation<ListKmsPagesRequest, ListKmsPagesResponse> operation
               = new ListKmsPages.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -133,7 +134,7 @@ public class Page {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchKmsPageResponse patchKmsPage(PatchKmsPageRequest request) {
+    public PatchKmsPageResponse patchKmsPage(@Nonnull PatchKmsPageRequest request) {
         RequestOperation<PatchKmsPageRequest, PatchKmsPageResponse> operation
               = new PatchKmsPage.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -155,7 +156,7 @@ public class Page {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveKmsPageResponse removeKmsPage(RemoveKmsPageRequest request) {
+    public RemoveKmsPageResponse removeKmsPage(@Nonnull RemoveKmsPageRequest request) {
         RequestOperation<RemoveKmsPageRequest, RemoveKmsPageResponse> operation
               = new RemoveKmsPage.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -177,7 +178,7 @@ public class Page {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateKmsPageResponse updateKmsPage(UpdateKmsPageRequest request) {
+    public UpdateKmsPageResponse updateKmsPage(@Nonnull UpdateKmsPageRequest request) {
         RequestOperation<UpdateKmsPageRequest, UpdateKmsPageResponse> operation
               = new UpdateKmsPage.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

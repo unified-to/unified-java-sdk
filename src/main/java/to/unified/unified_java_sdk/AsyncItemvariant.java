@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceItemvariantRequest;
 import to.unified.unified_java_sdk.models.operations.GetCommerceItemvariantRequest;
@@ -68,7 +69,7 @@ public class AsyncItemvariant {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCommerceItemvariantResponse>} - The async response
      */
-    public CompletableFuture<CreateCommerceItemvariantResponse> createCommerceItemvariant(CreateCommerceItemvariantRequest request) {
+    public CompletableFuture<CreateCommerceItemvariantResponse> createCommerceItemvariant(@Nonnull CreateCommerceItemvariantRequest request) {
         AsyncRequestOperation<CreateCommerceItemvariantRequest, CreateCommerceItemvariantResponse> operation
               = new CreateCommerceItemvariant.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -91,7 +92,7 @@ public class AsyncItemvariant {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCommerceItemvariantResponse>} - The async response
      */
-    public CompletableFuture<GetCommerceItemvariantResponse> getCommerceItemvariant(GetCommerceItemvariantRequest request) {
+    public CompletableFuture<GetCommerceItemvariantResponse> getCommerceItemvariant(@Nonnull GetCommerceItemvariantRequest request) {
         AsyncRequestOperation<GetCommerceItemvariantRequest, GetCommerceItemvariantResponse> operation
               = new GetCommerceItemvariant.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -114,7 +115,7 @@ public class AsyncItemvariant {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCommerceItemvariantsResponse>} - The async response
      */
-    public CompletableFuture<ListCommerceItemvariantsResponse> listCommerceItemvariants(ListCommerceItemvariantsRequest request) {
+    public CompletableFuture<ListCommerceItemvariantsResponse> listCommerceItemvariants(@Nonnull ListCommerceItemvariantsRequest request) {
         AsyncRequestOperation<ListCommerceItemvariantsRequest, ListCommerceItemvariantsResponse> operation
               = new ListCommerceItemvariants.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -137,7 +138,7 @@ public class AsyncItemvariant {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCommerceItemvariantResponse>} - The async response
      */
-    public CompletableFuture<PatchCommerceItemvariantResponse> patchCommerceItemvariant(PatchCommerceItemvariantRequest request) {
+    public CompletableFuture<PatchCommerceItemvariantResponse> patchCommerceItemvariant(@Nonnull PatchCommerceItemvariantRequest request) {
         AsyncRequestOperation<PatchCommerceItemvariantRequest, PatchCommerceItemvariantResponse> operation
               = new PatchCommerceItemvariant.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -160,7 +161,7 @@ public class AsyncItemvariant {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCommerceItemvariantResponse>} - The async response
      */
-    public CompletableFuture<RemoveCommerceItemvariantResponse> removeCommerceItemvariant(RemoveCommerceItemvariantRequest request) {
+    public CompletableFuture<RemoveCommerceItemvariantResponse> removeCommerceItemvariant(@Nonnull RemoveCommerceItemvariantRequest request) {
         AsyncRequestOperation<RemoveCommerceItemvariantRequest, RemoveCommerceItemvariantResponse> operation
               = new RemoveCommerceItemvariant.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -183,7 +184,7 @@ public class AsyncItemvariant {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCommerceItemvariantResponse>} - The async response
      */
-    public CompletableFuture<UpdateCommerceItemvariantResponse> updateCommerceItemvariant(UpdateCommerceItemvariantRequest request) {
+    public CompletableFuture<UpdateCommerceItemvariantResponse> updateCommerceItemvariant(@Nonnull UpdateCommerceItemvariantRequest request) {
         AsyncRequestOperation<UpdateCommerceItemvariantRequest, UpdateCommerceItemvariantResponse> operation
               = new UpdateCommerceItemvariant.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

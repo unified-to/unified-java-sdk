@@ -7,19 +7,18 @@
 * [createShippingLabel](#createshippinglabel) - Create a label
 * [createShippingRate](#createshippingrate) - Create a rate
 * [createShippingShipment](#createshippingshipment) - Create a shipment
-* [createShippingTracking](#createshippingtracking) - Create a tracking
 * [getShippingCarrier](#getshippingcarrier) - Retrieve a carrier
 * [getShippingLabel](#getshippinglabel) - Retrieve a label
-* [getShippingRate](#getshippingrate) - Retrieve a rate
 * [getShippingShipment](#getshippingshipment) - Retrieve a shipment
 * [getShippingTracking](#getshippingtracking) - Retrieve a tracking
 * [listShippingCarriers](#listshippingcarriers) - List all carriers
 * [listShippingLabels](#listshippinglabels) - List all labels
 * [listShippingShipments](#listshippingshipments) - List all shipments
-* [listShippingTrackings](#listshippingtrackings) - List all trackings
+* [patchShippingLabel](#patchshippinglabel) - Update a label
 * [patchShippingShipment](#patchshippingshipment) - Update a shipment
 * [removeShippingLabel](#removeshippinglabel) - Remove a label
 * [removeShippingShipment](#removeshippingshipment) - Remove a shipment
+* [updateShippingLabel](#updateshippinglabel) - Update a label
 * [updateShippingShipment](#updateshippingshipment) - Update a shipment
 
 ## createShippingLabel
@@ -202,66 +201,6 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## createShippingTracking
-
-Create a tracking
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="createShippingTracking" method="post" path="/shipping/{connection_id}/tracking" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.CreateShippingTrackingRequest;
-import to.unified.unified_java_sdk.models.operations.CreateShippingTrackingResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-import to.unified.unified_java_sdk.models.shared.ShippingTracking;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        CreateShippingTrackingRequest req = CreateShippingTrackingRequest.builder()
-                .shippingTracking(ShippingTracking.builder()
-                    .build())
-                .connectionId("<id>")
-                .build();
-
-        CreateShippingTrackingResponse res = sdk.shipping().createShippingTracking()
-                .request(req)
-                .call();
-
-        if (res.shippingTracking().isPresent()) {
-            // handle response
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
-| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `request`                                                                                 | [CreateShippingTrackingRequest](../../models/operations/CreateShippingTrackingRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
-
-### Response
-
-**[CreateShippingTrackingResponse](../../models/operations/CreateShippingTrackingResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
 ## getShippingCarrier
 
 Retrieve a carrier
@@ -371,64 +310,6 @@ public class Application {
 ### Response
 
 **[GetShippingLabelResponse](../../models/operations/GetShippingLabelResponse.md)**
-
-### Errors
-
-| Error Type             | Status Code            | Content Type           |
-| ---------------------- | ---------------------- | ---------------------- |
-| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
-
-## getShippingRate
-
-Retrieve a rate
-
-### Example Usage
-
-<!-- UsageSnippet language="java" operationID="getShippingRate" method="get" path="/shipping/{connection_id}/rate/{id}" -->
-```java
-package hello.world;
-
-import java.lang.Exception;
-import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.GetShippingRateRequest;
-import to.unified.unified_java_sdk.models.operations.GetShippingRateResponse;
-import to.unified.unified_java_sdk.models.shared.Security;
-
-public class Application {
-
-    public static void main(String[] args) throws Exception {
-
-        UnifiedTo sdk = UnifiedTo.builder()
-                .security(Security.builder()
-                    .jwt(System.getenv().getOrDefault("JWT", ""))
-                    .build())
-            .build();
-
-        GetShippingRateRequest req = GetShippingRateRequest.builder()
-                .connectionId("<id>")
-                .id("<id>")
-                .build();
-
-        GetShippingRateResponse res = sdk.shipping().getShippingRate()
-                .request(req)
-                .call();
-
-        if (res.shippingRate().isPresent()) {
-            // handle response
-        }
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
-| `request`                                                                   | [GetShippingRateRequest](../../models/operations/GetShippingRateRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
-
-### Response
-
-**[GetShippingRateResponse](../../models/operations/GetShippingRateResponse.md)**
 
 ### Errors
 
@@ -723,21 +604,22 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listShippingTrackings
+## patchShippingLabel
 
-List all trackings
+Update a label
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listShippingTrackings" method="get" path="/shipping/{connection_id}/tracking" -->
+<!-- UsageSnippet language="java" operationID="patchShippingLabel" method="patch" path="/shipping/{connection_id}/label/{id}" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListShippingTrackingsRequest;
-import to.unified.unified_java_sdk.models.operations.ListShippingTrackingsResponse;
+import to.unified.unified_java_sdk.models.operations.PatchShippingLabelRequest;
+import to.unified.unified_java_sdk.models.operations.PatchShippingLabelResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.ShippingLabel;
 
 public class Application {
 
@@ -749,15 +631,18 @@ public class Application {
                     .build())
             .build();
 
-        ListShippingTrackingsRequest req = ListShippingTrackingsRequest.builder()
+        PatchShippingLabelRequest req = PatchShippingLabelRequest.builder()
+                .shippingLabel(ShippingLabel.builder()
+                    .build())
                 .connectionId("<id>")
+                .id("<id>")
                 .build();
 
-        ListShippingTrackingsResponse res = sdk.shipping().listShippingTrackings()
+        PatchShippingLabelResponse res = sdk.shipping().patchShippingLabel()
                 .request(req)
                 .call();
 
-        if (res.shippingTrackings().isPresent()) {
+        if (res.shippingLabel().isPresent()) {
             // handle response
         }
     }
@@ -766,13 +651,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
-| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| `request`                                                                               | [ListShippingTrackingsRequest](../../models/operations/ListShippingTrackingsRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [PatchShippingLabelRequest](../../models/operations/PatchShippingLabelRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
 
 ### Response
 
-**[ListShippingTrackingsResponse](../../models/operations/ListShippingTrackingsResponse.md)**
+**[PatchShippingLabelResponse](../../models/operations/PatchShippingLabelResponse.md)**
 
 ### Errors
 
@@ -946,6 +831,67 @@ public class Application {
 ### Response
 
 **[RemoveShippingShipmentResponse](../../models/operations/RemoveShippingShipmentResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateShippingLabel
+
+Update a label
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateShippingLabel" method="put" path="/shipping/{connection_id}/label/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateShippingLabelRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateShippingLabelResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+import to.unified.unified_java_sdk.models.shared.ShippingLabel;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateShippingLabelRequest req = UpdateShippingLabelRequest.builder()
+                .shippingLabel(ShippingLabel.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateShippingLabelResponse res = sdk.shipping().updateShippingLabel()
+                .request(req)
+                .call();
+
+        if (res.shippingLabel().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [UpdateShippingLabelRequest](../../models/operations/UpdateShippingLabelRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[UpdateShippingLabelResponse](../../models/operations/UpdateShippingLabelResponse.md)**
 
 ### Errors
 

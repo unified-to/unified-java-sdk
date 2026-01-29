@@ -4,14 +4,13 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
@@ -23,54 +22,47 @@ public class TaskChange {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
-    private Optional<? extends List<TaskChangeItem>> items;
+    private List<TaskChangeItem> items;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("task_id")
-    private Optional<String> taskId;
+    private String taskId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
-    private Optional<String> userId;
+    private String userId;
 
     @JsonCreator
     public TaskChange(
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("items") Optional<? extends List<TaskChangeItem>> items,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("task_id") Optional<String> taskId,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
-            @JsonProperty("user_id") Optional<String> userId) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(items, "items");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(taskId, "taskId");
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        Utils.checkNotNull(userId, "userId");
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("items") @Nullable List<TaskChangeItem> items,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("task_id") @Nullable String taskId,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
+            @JsonProperty("user_id") @Nullable String userId) {
         this.createdAt = createdAt;
         this.id = id;
         this.items = items;
@@ -81,46 +73,37 @@ public class TaskChange {
     }
     
     public TaskChange() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<TaskChangeItem>> items() {
-        return (Optional<List<TaskChangeItem>>) items;
+        return Optional.ofNullable(this.items);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @JsonIgnore
     public Optional<String> taskId() {
-        return taskId;
+        return Optional.ofNullable(this.taskId);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
-    @JsonIgnore
     public Optional<String> userId() {
-        return userId;
+        return Optional.ofNullable(this.userId);
     }
 
     public static Builder builder() {
@@ -128,96 +111,47 @@ public class TaskChange {
     }
 
 
-    public TaskChange withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
-
-
-    public TaskChange withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public TaskChange withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public TaskChange withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public TaskChange withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public TaskChange withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public TaskChange withItems(List<TaskChangeItem> items) {
-        Utils.checkNotNull(items, "items");
-        this.items = Optional.ofNullable(items);
-        return this;
-    }
 
-
-    public TaskChange withItems(Optional<? extends List<TaskChangeItem>> items) {
-        Utils.checkNotNull(items, "items");
+    public TaskChange withItems(@Nullable List<TaskChangeItem> items) {
         this.items = items;
         return this;
     }
 
-    public TaskChange withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public TaskChange withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public TaskChange withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public TaskChange withTaskId(String taskId) {
-        Utils.checkNotNull(taskId, "taskId");
-        this.taskId = Optional.ofNullable(taskId);
-        return this;
-    }
 
-
-    public TaskChange withTaskId(Optional<String> taskId) {
-        Utils.checkNotNull(taskId, "taskId");
+    public TaskChange withTaskId(@Nullable String taskId) {
         this.taskId = taskId;
         return this;
     }
 
-    public TaskChange withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public TaskChange withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public TaskChange withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
-    public TaskChange withUserId(String userId) {
-        Utils.checkNotNull(userId, "userId");
-        this.userId = Optional.ofNullable(userId);
-        return this;
-    }
 
-
-    public TaskChange withUserId(Optional<String> userId) {
-        Utils.checkNotNull(userId, "userId");
+    public TaskChange withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -261,117 +195,60 @@ public class TaskChange {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<? extends List<TaskChangeItem>> items = Optional.empty();
+        private List<TaskChangeItem> items;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<String> taskId = Optional.empty();
+        private String taskId;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
-        private Optional<String> userId = Optional.empty();
+        private String userId;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder items(List<TaskChangeItem> items) {
-            Utils.checkNotNull(items, "items");
-            this.items = Optional.ofNullable(items);
-            return this;
-        }
-
-        public Builder items(Optional<? extends List<TaskChangeItem>> items) {
-            Utils.checkNotNull(items, "items");
+        public Builder items(@Nullable List<TaskChangeItem> items) {
             this.items = items;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder taskId(String taskId) {
-            Utils.checkNotNull(taskId, "taskId");
-            this.taskId = Optional.ofNullable(taskId);
-            return this;
-        }
-
-        public Builder taskId(Optional<String> taskId) {
-            Utils.checkNotNull(taskId, "taskId");
+        public Builder taskId(@Nullable String taskId) {
             this.taskId = taskId;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
-
-        public Builder userId(String userId) {
-            Utils.checkNotNull(userId, "userId");
-            this.userId = Optional.ofNullable(userId);
-            return this;
-        }
-
-        public Builder userId(Optional<String> userId) {
-            Utils.checkNotNull(userId, "userId");
+        public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;
         }
 
         public TaskChange build() {
-
             return new TaskChange(
                 createdAt, id, items,
                 raw, taskId, updatedAt,

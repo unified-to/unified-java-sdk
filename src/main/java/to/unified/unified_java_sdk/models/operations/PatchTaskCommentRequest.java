@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.TaskComment;
@@ -30,7 +30,7 @@ public class PatchTaskCommentRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<PatchTaskCommentQueryParamFields>> fields;
+    private List<PatchTaskCommentQueryParamFields> fields;
 
     /**
      * ID of the Comment
@@ -44,63 +44,56 @@ public class PatchTaskCommentRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
     @JsonCreator
     public PatchTaskCommentRequest(
-            TaskComment taskComment,
-            String connectionId,
-            Optional<? extends List<PatchTaskCommentQueryParamFields>> fields,
-            String id,
-            Optional<String> raw) {
-        Utils.checkNotNull(taskComment, "taskComment");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(raw, "raw");
-        this.taskComment = taskComment;
-        this.connectionId = connectionId;
+            @Nonnull TaskComment taskComment,
+            @Nonnull String connectionId,
+            @Nullable List<PatchTaskCommentQueryParamFields> fields,
+            @Nonnull String id,
+            @Nullable String raw) {
+        this.taskComment = Optional.ofNullable(taskComment)
+            .orElseThrow(() -> new IllegalArgumentException("taskComment cannot be null"));
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
-        this.id = id;
+        this.id = Optional.ofNullable(id)
+            .orElseThrow(() -> new IllegalArgumentException("id cannot be null"));
         this.raw = raw;
     }
     
     public PatchTaskCommentRequest(
-            TaskComment taskComment,
-            String connectionId,
-            String id) {
-        this(taskComment, connectionId, Optional.empty(),
-            id, Optional.empty());
+            @Nonnull TaskComment taskComment,
+            @Nonnull String connectionId,
+            @Nonnull String id) {
+        this(taskComment, connectionId, null,
+            id, null);
     }
 
-    @JsonIgnore
     public TaskComment taskComment() {
-        return taskComment;
+        return this.taskComment;
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<PatchTaskCommentQueryParamFields>> fields() {
-        return (Optional<List<PatchTaskCommentQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
      * ID of the Comment
      */
-    @JsonIgnore
     public String id() {
-        return id;
+        return this.id;
     }
 
     /**
@@ -108,9 +101,8 @@ public class PatchTaskCommentRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
     public static Builder builder() {
@@ -118,27 +110,17 @@ public class PatchTaskCommentRequest {
     }
 
 
-    public PatchTaskCommentRequest withTaskComment(TaskComment taskComment) {
-        Utils.checkNotNull(taskComment, "taskComment");
-        this.taskComment = taskComment;
+    public PatchTaskCommentRequest withTaskComment(@Nonnull TaskComment taskComment) {
+        this.taskComment = Utils.checkNotNull(taskComment, "taskComment");
         return this;
     }
+
 
     /**
      * ID of the connection
      */
-    public PatchTaskCommentRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public PatchTaskCommentRequest withFields(List<PatchTaskCommentQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public PatchTaskCommentRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -146,29 +128,17 @@ public class PatchTaskCommentRequest {
     /**
      * Fields to return
      */
-    public PatchTaskCommentRequest withFields(Optional<? extends List<PatchTaskCommentQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public PatchTaskCommentRequest withFields(@Nullable List<PatchTaskCommentQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
+
     /**
      * ID of the Comment
      */
-    public PatchTaskCommentRequest withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = id;
-        return this;
-    }
-
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public PatchTaskCommentRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
+    public PatchTaskCommentRequest withId(@Nonnull String id) {
+        this.id = Utils.checkNotNull(id, "id");
         return this;
     }
 
@@ -178,11 +148,11 @@ public class PatchTaskCommentRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public PatchTaskCommentRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public PatchTaskCommentRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -225,71 +195,42 @@ public class PatchTaskCommentRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<PatchTaskCommentQueryParamFields>> fields = Optional.empty();
+        private List<PatchTaskCommentQueryParamFields> fields;
 
         private String id;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder taskComment(TaskComment taskComment) {
-            Utils.checkNotNull(taskComment, "taskComment");
-            this.taskComment = taskComment;
+        public Builder taskComment(@Nonnull TaskComment taskComment) {
+            this.taskComment = Utils.checkNotNull(taskComment, "taskComment");
             return this;
         }
-
 
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<PatchTaskCommentQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<PatchTaskCommentQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<PatchTaskCommentQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * ID of the Comment
          */
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = id;
-            return this;
-        }
-
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
+        public Builder id(@Nonnull String id) {
+            this.id = Utils.checkNotNull(id, "id");
             return this;
         }
 
@@ -298,14 +239,12 @@ public class PatchTaskCommentRequest {
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
         public PatchTaskCommentRequest build() {
-
             return new PatchTaskCommentRequest(
                 taskComment, connectionId, fields,
                 id, raw);

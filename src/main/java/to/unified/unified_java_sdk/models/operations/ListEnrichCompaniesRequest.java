@@ -4,7 +4,8 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
 import java.util.Optional;
@@ -23,54 +24,49 @@ public class ListEnrichCompaniesRequest {
      * The domain of the company to search
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain")
-    private Optional<String> domain;
+    private String domain;
 
     /**
      * The name of the company to search
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
-    private Optional<String> name;
+    private String name;
 
     @JsonCreator
     public ListEnrichCompaniesRequest(
-            String connectionId,
-            Optional<String> domain,
-            Optional<String> name) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(domain, "domain");
-        Utils.checkNotNull(name, "name");
-        this.connectionId = connectionId;
+            @Nonnull String connectionId,
+            @Nullable String domain,
+            @Nullable String name) {
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.domain = domain;
         this.name = name;
     }
     
     public ListEnrichCompaniesRequest(
-            String connectionId) {
-        this(connectionId, Optional.empty(), Optional.empty());
+            @Nonnull String connectionId) {
+        this(connectionId, null, null);
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * The domain of the company to search
      */
-    @JsonIgnore
     public Optional<String> domain() {
-        return domain;
+        return Optional.ofNullable(this.domain);
     }
 
     /**
      * The name of the company to search
      */
-    @JsonIgnore
     public Optional<String> name() {
-        return name;
+        return Optional.ofNullable(this.name);
     }
 
     public static Builder builder() {
@@ -81,18 +77,8 @@ public class ListEnrichCompaniesRequest {
     /**
      * ID of the connection
      */
-    public ListEnrichCompaniesRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * The domain of the company to search
-     */
-    public ListEnrichCompaniesRequest withDomain(String domain) {
-        Utils.checkNotNull(domain, "domain");
-        this.domain = Optional.ofNullable(domain);
+    public ListEnrichCompaniesRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -100,30 +86,20 @@ public class ListEnrichCompaniesRequest {
     /**
      * The domain of the company to search
      */
-    public ListEnrichCompaniesRequest withDomain(Optional<String> domain) {
-        Utils.checkNotNull(domain, "domain");
+    public ListEnrichCompaniesRequest withDomain(@Nullable String domain) {
         this.domain = domain;
         return this;
     }
 
-    /**
-     * The name of the company to search
-     */
-    public ListEnrichCompaniesRequest withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = Optional.ofNullable(name);
-        return this;
-    }
-
 
     /**
      * The name of the company to search
      */
-    public ListEnrichCompaniesRequest withName(Optional<String> name) {
-        Utils.checkNotNull(name, "name");
+    public ListEnrichCompaniesRequest withName(@Nullable String name) {
         this.name = name;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -159,64 +135,39 @@ public class ListEnrichCompaniesRequest {
 
         private String connectionId;
 
-        private Optional<String> domain = Optional.empty();
+        private String domain;
 
-        private Optional<String> name = Optional.empty();
+        private String name;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * The domain of the company to search
-         */
-        public Builder domain(String domain) {
-            Utils.checkNotNull(domain, "domain");
-            this.domain = Optional.ofNullable(domain);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * The domain of the company to search
          */
-        public Builder domain(Optional<String> domain) {
-            Utils.checkNotNull(domain, "domain");
+        public Builder domain(@Nullable String domain) {
             this.domain = domain;
             return this;
         }
 
-
         /**
          * The name of the company to search
          */
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = Optional.ofNullable(name);
-            return this;
-        }
-
-        /**
-         * The name of the company to search
-         */
-        public Builder name(Optional<String> name) {
-            Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
         public ListEnrichCompaniesRequest build() {
-
             return new ListEnrichCompaniesRequest(
                 connectionId, domain, name);
         }

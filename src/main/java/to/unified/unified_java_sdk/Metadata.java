@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateMetadataMetadataRequest;
 import to.unified.unified_java_sdk.models.operations.CreateMetadataMetadataRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateMetadataMetadataResponse;
@@ -67,7 +68,7 @@ public class Metadata {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateMetadataMetadataResponse createMetadataMetadata(CreateMetadataMetadataRequest request) {
+    public CreateMetadataMetadataResponse createMetadataMetadata(@Nonnull CreateMetadataMetadataRequest request) {
         RequestOperation<CreateMetadataMetadataRequest, CreateMetadataMetadataResponse> operation
               = new CreateMetadataMetadata.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -89,7 +90,7 @@ public class Metadata {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetMetadataMetadataResponse getMetadataMetadata(GetMetadataMetadataRequest request) {
+    public GetMetadataMetadataResponse getMetadataMetadata(@Nonnull GetMetadataMetadataRequest request) {
         RequestOperation<GetMetadataMetadataRequest, GetMetadataMetadataResponse> operation
               = new GetMetadataMetadata.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -111,7 +112,7 @@ public class Metadata {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListMetadataMetadatasResponse listMetadataMetadatas(ListMetadataMetadatasRequest request) {
+    public ListMetadataMetadatasResponse listMetadataMetadatas(@Nonnull ListMetadataMetadatasRequest request) {
         RequestOperation<ListMetadataMetadatasRequest, ListMetadataMetadatasResponse> operation
               = new ListMetadataMetadatas.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -133,7 +134,7 @@ public class Metadata {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchMetadataMetadataResponse patchMetadataMetadata(PatchMetadataMetadataRequest request) {
+    public PatchMetadataMetadataResponse patchMetadataMetadata(@Nonnull PatchMetadataMetadataRequest request) {
         RequestOperation<PatchMetadataMetadataRequest, PatchMetadataMetadataResponse> operation
               = new PatchMetadataMetadata.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -155,7 +156,7 @@ public class Metadata {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveMetadataMetadataResponse removeMetadataMetadata(RemoveMetadataMetadataRequest request) {
+    public RemoveMetadataMetadataResponse removeMetadataMetadata(@Nonnull RemoveMetadataMetadataRequest request) {
         RequestOperation<RemoveMetadataMetadataRequest, RemoveMetadataMetadataResponse> operation
               = new RemoveMetadataMetadata.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -177,7 +178,7 @@ public class Metadata {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateMetadataMetadataResponse updateMetadataMetadata(UpdateMetadataMetadataRequest request) {
+    public UpdateMetadataMetadataResponse updateMetadataMetadata(@Nonnull UpdateMetadataMetadataRequest request) {
         RequestOperation<UpdateMetadataMetadataRequest, UpdateMetadataMetadataResponse> operation
               = new UpdateMetadataMetadata.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

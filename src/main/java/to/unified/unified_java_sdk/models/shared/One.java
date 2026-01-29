@@ -49,7 +49,6 @@ public class One {
         }
 
         public One build() {
-
             return new One(
                 );
         }

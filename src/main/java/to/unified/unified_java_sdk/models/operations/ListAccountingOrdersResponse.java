@@ -4,12 +4,11 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.io.InputStream;
-import java.lang.Integer;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.List;
 import java.util.Optional;
@@ -22,7 +21,7 @@ public class ListAccountingOrdersResponse implements Response {
     /**
      * Successful
      */
-    private Optional<? extends List<AccountingOrder>> accountingOrders;
+    private List<AccountingOrder> accountingOrders;
 
     /**
      * HTTP response content type for this operation
@@ -41,59 +40,52 @@ public class ListAccountingOrdersResponse implements Response {
 
     @JsonCreator
     public ListAccountingOrdersResponse(
-            Optional<? extends List<AccountingOrder>> accountingOrders,
-            String contentType,
+            @Nullable List<AccountingOrder> accountingOrders,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(accountingOrders, "accountingOrders");
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
+            @Nonnull HttpResponse<InputStream> rawResponse) {
         this.accountingOrders = accountingOrders;
-        this.contentType = contentType;
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
     }
     
     public ListAccountingOrdersResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
-        this(Optional.empty(), contentType, statusCode,
+            @Nonnull HttpResponse<InputStream> rawResponse) {
+        this(null, contentType, statusCode,
             rawResponse);
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<AccountingOrder>> accountingOrders() {
-        return (Optional<List<AccountingOrder>>) accountingOrders;
+        return Optional.ofNullable(this.accountingOrders);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<InputStream> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     public static Builder builder() {
@@ -104,48 +96,38 @@ public class ListAccountingOrdersResponse implements Response {
     /**
      * Successful
      */
-    public ListAccountingOrdersResponse withAccountingOrders(List<AccountingOrder> accountingOrders) {
-        Utils.checkNotNull(accountingOrders, "accountingOrders");
-        this.accountingOrders = Optional.ofNullable(accountingOrders);
-        return this;
-    }
-
-
-    /**
-     * Successful
-     */
-    public ListAccountingOrdersResponse withAccountingOrders(Optional<? extends List<AccountingOrder>> accountingOrders) {
-        Utils.checkNotNull(accountingOrders, "accountingOrders");
+    public ListAccountingOrdersResponse withAccountingOrders(@Nullable List<AccountingOrder> accountingOrders) {
         this.accountingOrders = accountingOrders;
         return this;
     }
 
+
     /**
      * HTTP response content type for this operation
      */
-    public ListAccountingOrdersResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
+    public ListAccountingOrdersResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public ListAccountingOrdersResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public ListAccountingOrdersResponse withRawResponse(HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
+    public ListAccountingOrdersResponse withRawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -182,11 +164,11 @@ public class ListAccountingOrdersResponse implements Response {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends List<AccountingOrder>> accountingOrders = Optional.empty();
+        private List<AccountingOrder> accountingOrders;
 
         private String contentType;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<InputStream> rawResponse;
 
@@ -194,57 +176,39 @@ public class ListAccountingOrdersResponse implements Response {
           // force use of static builder() method
         }
 
-
         /**
          * Successful
          */
-        public Builder accountingOrders(List<AccountingOrder> accountingOrders) {
-            Utils.checkNotNull(accountingOrders, "accountingOrders");
-            this.accountingOrders = Optional.ofNullable(accountingOrders);
-            return this;
-        }
-
-        /**
-         * Successful
-         */
-        public Builder accountingOrders(Optional<? extends List<AccountingOrder>> accountingOrders) {
-            Utils.checkNotNull(accountingOrders, "accountingOrders");
+        public Builder accountingOrders(@Nullable List<AccountingOrder> accountingOrders) {
             this.accountingOrders = accountingOrders;
             return this;
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<InputStream> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
+        public Builder rawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         public ListAccountingOrdersResponse build() {
-
             return new ListAccountingOrdersResponse(
                 accountingOrders, contentType, statusCode,
                 rawResponse);

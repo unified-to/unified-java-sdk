@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedIssueRequest;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedIssuesRequest;
@@ -52,7 +53,7 @@ public class AsyncIssue {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetUnifiedIssueResponse>} - The async response
      */
-    public CompletableFuture<GetUnifiedIssueResponse> getUnifiedIssue(GetUnifiedIssueRequest request) {
+    public CompletableFuture<GetUnifiedIssueResponse> getUnifiedIssue(@Nonnull GetUnifiedIssueRequest request) {
         AsyncRequestOperation<GetUnifiedIssueRequest, GetUnifiedIssueResponse> operation
               = new GetUnifiedIssue.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -75,7 +76,7 @@ public class AsyncIssue {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListUnifiedIssuesResponse>} - The async response
      */
-    public CompletableFuture<ListUnifiedIssuesResponse> listUnifiedIssues(ListUnifiedIssuesRequest request) {
+    public CompletableFuture<ListUnifiedIssuesResponse> listUnifiedIssues(@Nonnull ListUnifiedIssuesRequest request) {
         AsyncRequestOperation<ListUnifiedIssuesRequest, ListUnifiedIssuesResponse> operation
               = new ListUnifiedIssues.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

@@ -4,14 +4,13 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -20,61 +19,53 @@ public class CommerceMetadata {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
-    private Optional<String> description;
+    private String description;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extra_data")
-    private Optional<? extends CommerceMetadataExtraData> extraData;
+    private CommerceMetadataExtraData extraData;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
-    private Optional<? extends CommerceMetadataFormat> format;
+    private CommerceMetadataFormat format;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_required")
-    private Optional<Boolean> isRequired;
+    private Boolean isRequired;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespace")
-    private Optional<String> namespace;
+    private String namespace;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slug")
-    private Optional<String> slug;
+    private String slug;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
-    private Optional<? extends CommerceMetadataValue> value;
+    private CommerceMetadataValue value;
 
     @JsonCreator
     public CommerceMetadata(
-            @JsonProperty("description") Optional<String> description,
-            @JsonProperty("extra_data") Optional<? extends CommerceMetadataExtraData> extraData,
-            @JsonProperty("format") Optional<? extends CommerceMetadataFormat> format,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("is_required") Optional<Boolean> isRequired,
-            @JsonProperty("namespace") Optional<String> namespace,
-            @JsonProperty("slug") Optional<String> slug,
-            @JsonProperty("value") Optional<? extends CommerceMetadataValue> value) {
-        Utils.checkNotNull(description, "description");
-        Utils.checkNotNull(extraData, "extraData");
-        Utils.checkNotNull(format, "format");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(isRequired, "isRequired");
-        Utils.checkNotNull(namespace, "namespace");
-        Utils.checkNotNull(slug, "slug");
-        Utils.checkNotNull(value, "value");
+            @JsonProperty("description") @Nullable String description,
+            @JsonProperty("extra_data") @Nullable CommerceMetadataExtraData extraData,
+            @JsonProperty("format") @Nullable CommerceMetadataFormat format,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("is_required") @Nullable Boolean isRequired,
+            @JsonProperty("namespace") @Nullable String namespace,
+            @JsonProperty("slug") @Nullable String slug,
+            @JsonProperty("value") @Nullable CommerceMetadataValue value) {
         this.description = description;
         this.extraData = extraData;
         this.format = format;
@@ -86,52 +77,41 @@ public class CommerceMetadata {
     }
     
     public CommerceMetadata() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null);
     }
 
-    @JsonIgnore
     public Optional<String> description() {
-        return description;
+        return Optional.ofNullable(this.description);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<CommerceMetadataExtraData> extraData() {
-        return (Optional<CommerceMetadataExtraData>) extraData;
+        return Optional.ofNullable(this.extraData);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<CommerceMetadataFormat> format() {
-        return (Optional<CommerceMetadataFormat>) format;
+        return Optional.ofNullable(this.format);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isRequired() {
-        return isRequired;
+        return Optional.ofNullable(this.isRequired);
     }
 
-    @JsonIgnore
     public Optional<String> namespace() {
-        return namespace;
+        return Optional.ofNullable(this.namespace);
     }
 
-    @JsonIgnore
     public Optional<String> slug() {
-        return slug;
+        return Optional.ofNullable(this.slug);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<CommerceMetadataValue> value() {
-        return (Optional<CommerceMetadataValue>) value;
+        return Optional.ofNullable(this.value);
     }
 
     public static Builder builder() {
@@ -139,109 +119,53 @@ public class CommerceMetadata {
     }
 
 
-    public CommerceMetadata withDescription(String description) {
-        Utils.checkNotNull(description, "description");
-        this.description = Optional.ofNullable(description);
-        return this;
-    }
-
-
-    public CommerceMetadata withDescription(Optional<String> description) {
-        Utils.checkNotNull(description, "description");
+    public CommerceMetadata withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
-    public CommerceMetadata withExtraData(CommerceMetadataExtraData extraData) {
-        Utils.checkNotNull(extraData, "extraData");
-        this.extraData = Optional.ofNullable(extraData);
-        return this;
-    }
 
-
-    public CommerceMetadata withExtraData(Optional<? extends CommerceMetadataExtraData> extraData) {
-        Utils.checkNotNull(extraData, "extraData");
+    public CommerceMetadata withExtraData(@Nullable CommerceMetadataExtraData extraData) {
         this.extraData = extraData;
         return this;
     }
 
-    public CommerceMetadata withFormat(CommerceMetadataFormat format) {
-        Utils.checkNotNull(format, "format");
-        this.format = Optional.ofNullable(format);
-        return this;
-    }
 
-
-    public CommerceMetadata withFormat(Optional<? extends CommerceMetadataFormat> format) {
-        Utils.checkNotNull(format, "format");
+    public CommerceMetadata withFormat(@Nullable CommerceMetadataFormat format) {
         this.format = format;
         return this;
     }
 
-    public CommerceMetadata withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public CommerceMetadata withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public CommerceMetadata withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public CommerceMetadata withIsRequired(boolean isRequired) {
-        Utils.checkNotNull(isRequired, "isRequired");
-        this.isRequired = Optional.ofNullable(isRequired);
-        return this;
-    }
 
-
-    public CommerceMetadata withIsRequired(Optional<Boolean> isRequired) {
-        Utils.checkNotNull(isRequired, "isRequired");
+    public CommerceMetadata withIsRequired(@Nullable Boolean isRequired) {
         this.isRequired = isRequired;
         return this;
     }
 
-    public CommerceMetadata withNamespace(String namespace) {
-        Utils.checkNotNull(namespace, "namespace");
-        this.namespace = Optional.ofNullable(namespace);
-        return this;
-    }
 
-
-    public CommerceMetadata withNamespace(Optional<String> namespace) {
-        Utils.checkNotNull(namespace, "namespace");
+    public CommerceMetadata withNamespace(@Nullable String namespace) {
         this.namespace = namespace;
         return this;
     }
 
-    public CommerceMetadata withSlug(String slug) {
-        Utils.checkNotNull(slug, "slug");
-        this.slug = Optional.ofNullable(slug);
-        return this;
-    }
 
-
-    public CommerceMetadata withSlug(Optional<String> slug) {
-        Utils.checkNotNull(slug, "slug");
+    public CommerceMetadata withSlug(@Nullable String slug) {
         this.slug = slug;
         return this;
     }
 
-    public CommerceMetadata withValue(CommerceMetadataValue value) {
-        Utils.checkNotNull(value, "value");
-        this.value = Optional.ofNullable(value);
-        return this;
-    }
 
-
-    public CommerceMetadata withValue(Optional<? extends CommerceMetadataValue> value) {
-        Utils.checkNotNull(value, "value");
+    public CommerceMetadata withValue(@Nullable CommerceMetadataValue value) {
         this.value = value;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -287,132 +211,67 @@ public class CommerceMetadata {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> description = Optional.empty();
+        private String description;
 
-        private Optional<? extends CommerceMetadataExtraData> extraData = Optional.empty();
+        private CommerceMetadataExtraData extraData;
 
-        private Optional<? extends CommerceMetadataFormat> format = Optional.empty();
+        private CommerceMetadataFormat format;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<Boolean> isRequired = Optional.empty();
+        private Boolean isRequired;
 
-        private Optional<String> namespace = Optional.empty();
+        private String namespace;
 
-        private Optional<String> slug = Optional.empty();
+        private String slug;
 
-        private Optional<? extends CommerceMetadataValue> value = Optional.empty();
+        private CommerceMetadataValue value;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder description(String description) {
-            Utils.checkNotNull(description, "description");
-            this.description = Optional.ofNullable(description);
-            return this;
-        }
-
-        public Builder description(Optional<String> description) {
-            Utils.checkNotNull(description, "description");
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-
-        public Builder extraData(CommerceMetadataExtraData extraData) {
-            Utils.checkNotNull(extraData, "extraData");
-            this.extraData = Optional.ofNullable(extraData);
-            return this;
-        }
-
-        public Builder extraData(Optional<? extends CommerceMetadataExtraData> extraData) {
-            Utils.checkNotNull(extraData, "extraData");
+        public Builder extraData(@Nullable CommerceMetadataExtraData extraData) {
             this.extraData = extraData;
             return this;
         }
 
-
-        public Builder format(CommerceMetadataFormat format) {
-            Utils.checkNotNull(format, "format");
-            this.format = Optional.ofNullable(format);
-            return this;
-        }
-
-        public Builder format(Optional<? extends CommerceMetadataFormat> format) {
-            Utils.checkNotNull(format, "format");
+        public Builder format(@Nullable CommerceMetadataFormat format) {
             this.format = format;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder isRequired(boolean isRequired) {
-            Utils.checkNotNull(isRequired, "isRequired");
-            this.isRequired = Optional.ofNullable(isRequired);
-            return this;
-        }
-
-        public Builder isRequired(Optional<Boolean> isRequired) {
-            Utils.checkNotNull(isRequired, "isRequired");
+        public Builder isRequired(@Nullable Boolean isRequired) {
             this.isRequired = isRequired;
             return this;
         }
 
-
-        public Builder namespace(String namespace) {
-            Utils.checkNotNull(namespace, "namespace");
-            this.namespace = Optional.ofNullable(namespace);
-            return this;
-        }
-
-        public Builder namespace(Optional<String> namespace) {
-            Utils.checkNotNull(namespace, "namespace");
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }
 
-
-        public Builder slug(String slug) {
-            Utils.checkNotNull(slug, "slug");
-            this.slug = Optional.ofNullable(slug);
-            return this;
-        }
-
-        public Builder slug(Optional<String> slug) {
-            Utils.checkNotNull(slug, "slug");
+        public Builder slug(@Nullable String slug) {
             this.slug = slug;
             return this;
         }
 
-
-        public Builder value(CommerceMetadataValue value) {
-            Utils.checkNotNull(value, "value");
-            this.value = Optional.ofNullable(value);
-            return this;
-        }
-
-        public Builder value(Optional<? extends CommerceMetadataValue> value) {
-            Utils.checkNotNull(value, "value");
+        public Builder value(@Nullable CommerceMetadataValue value) {
             this.value = value;
             return this;
         }
 
         public CommerceMetadata build() {
-
             return new CommerceMetadata(
                 description, extraData, format,
                 id, isRequired, namespace,

@@ -4,9 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
 import java.lang.Override;
 import java.lang.String;
+import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -26,28 +27,26 @@ public class RemoveRepoBranchRequest {
 
     @JsonCreator
     public RemoveRepoBranchRequest(
-            String connectionId,
-            String id) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(id, "id");
-        this.connectionId = connectionId;
-        this.id = id;
+            @Nonnull String connectionId,
+            @Nonnull String id) {
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
+        this.id = Optional.ofNullable(id)
+            .orElseThrow(() -> new IllegalArgumentException("id cannot be null"));
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * ID of the Branch
      */
-    @JsonIgnore
     public String id() {
-        return id;
+        return this.id;
     }
 
     public static Builder builder() {
@@ -58,20 +57,20 @@ public class RemoveRepoBranchRequest {
     /**
      * ID of the connection
      */
-    public RemoveRepoBranchRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
+    public RemoveRepoBranchRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
+
 
     /**
      * ID of the Branch
      */
-    public RemoveRepoBranchRequest withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = id;
+    public RemoveRepoBranchRequest withId(@Nonnull String id) {
+        this.id = Utils.checkNotNull(id, "id");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -111,28 +110,23 @@ public class RemoveRepoBranchRequest {
           // force use of static builder() method
         }
 
-
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
-
 
         /**
          * ID of the Branch
          */
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = id;
+        public Builder id(@Nonnull String id) {
+            this.id = Utils.checkNotNull(id, "id");
             return this;
         }
 
         public RemoveRepoBranchRequest build() {
-
             return new RemoveRepoBranchRequest(
                 connectionId, id);
         }

@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateUcCommentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateUcCommentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateUcCommentResponse;
@@ -123,7 +124,7 @@ public class Uc {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateUcCommentResponse createUcComment(CreateUcCommentRequest request) {
+    public CreateUcCommentResponse createUcComment(@Nonnull CreateUcCommentRequest request) {
         RequestOperation<CreateUcCommentRequest, CreateUcCommentResponse> operation
               = new CreateUcComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -145,7 +146,7 @@ public class Uc {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateUcContactResponse createUcContact(CreateUcContactRequest request) {
+    public CreateUcContactResponse createUcContact(@Nonnull CreateUcContactRequest request) {
         RequestOperation<CreateUcContactRequest, CreateUcContactResponse> operation
               = new CreateUcContact.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -167,7 +168,7 @@ public class Uc {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateUcRecordingResponse createUcRecording(CreateUcRecordingRequest request) {
+    public CreateUcRecordingResponse createUcRecording(@Nonnull CreateUcRecordingRequest request) {
         RequestOperation<CreateUcRecordingRequest, CreateUcRecordingResponse> operation
               = new CreateUcRecording.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -189,7 +190,7 @@ public class Uc {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetUcCallResponse getUcCall(GetUcCallRequest request) {
+    public GetUcCallResponse getUcCall(@Nonnull GetUcCallRequest request) {
         RequestOperation<GetUcCallRequest, GetUcCallResponse> operation
               = new GetUcCall.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -211,7 +212,7 @@ public class Uc {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetUcCommentResponse getUcComment(GetUcCommentRequest request) {
+    public GetUcCommentResponse getUcComment(@Nonnull GetUcCommentRequest request) {
         RequestOperation<GetUcCommentRequest, GetUcCommentResponse> operation
               = new GetUcComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -233,7 +234,7 @@ public class Uc {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetUcContactResponse getUcContact(GetUcContactRequest request) {
+    public GetUcContactResponse getUcContact(@Nonnull GetUcContactRequest request) {
         RequestOperation<GetUcContactRequest, GetUcContactResponse> operation
               = new GetUcContact.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -255,7 +256,7 @@ public class Uc {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetUcRecordingResponse getUcRecording(GetUcRecordingRequest request) {
+    public GetUcRecordingResponse getUcRecording(@Nonnull GetUcRecordingRequest request) {
         RequestOperation<GetUcRecordingRequest, GetUcRecordingResponse> operation
               = new GetUcRecording.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -277,7 +278,7 @@ public class Uc {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListUcCallsResponse listUcCalls(ListUcCallsRequest request) {
+    public ListUcCallsResponse listUcCalls(@Nonnull ListUcCallsRequest request) {
         RequestOperation<ListUcCallsRequest, ListUcCallsResponse> operation
               = new ListUcCalls.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -299,7 +300,7 @@ public class Uc {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListUcCommentsResponse listUcComments(ListUcCommentsRequest request) {
+    public ListUcCommentsResponse listUcComments(@Nonnull ListUcCommentsRequest request) {
         RequestOperation<ListUcCommentsRequest, ListUcCommentsResponse> operation
               = new ListUcComments.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -321,7 +322,7 @@ public class Uc {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListUcContactsResponse listUcContacts(ListUcContactsRequest request) {
+    public ListUcContactsResponse listUcContacts(@Nonnull ListUcContactsRequest request) {
         RequestOperation<ListUcContactsRequest, ListUcContactsResponse> operation
               = new ListUcContacts.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -343,7 +344,7 @@ public class Uc {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListUcRecordingsResponse listUcRecordings(ListUcRecordingsRequest request) {
+    public ListUcRecordingsResponse listUcRecordings(@Nonnull ListUcRecordingsRequest request) {
         RequestOperation<ListUcRecordingsRequest, ListUcRecordingsResponse> operation
               = new ListUcRecordings.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -365,7 +366,7 @@ public class Uc {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchUcCommentResponse patchUcComment(PatchUcCommentRequest request) {
+    public PatchUcCommentResponse patchUcComment(@Nonnull PatchUcCommentRequest request) {
         RequestOperation<PatchUcCommentRequest, PatchUcCommentResponse> operation
               = new PatchUcComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -387,7 +388,7 @@ public class Uc {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchUcContactResponse patchUcContact(PatchUcContactRequest request) {
+    public PatchUcContactResponse patchUcContact(@Nonnull PatchUcContactRequest request) {
         RequestOperation<PatchUcContactRequest, PatchUcContactResponse> operation
               = new PatchUcContact.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -409,7 +410,7 @@ public class Uc {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchUcRecordingResponse patchUcRecording(PatchUcRecordingRequest request) {
+    public PatchUcRecordingResponse patchUcRecording(@Nonnull PatchUcRecordingRequest request) {
         RequestOperation<PatchUcRecordingRequest, PatchUcRecordingResponse> operation
               = new PatchUcRecording.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -431,7 +432,7 @@ public class Uc {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveUcCommentResponse removeUcComment(RemoveUcCommentRequest request) {
+    public RemoveUcCommentResponse removeUcComment(@Nonnull RemoveUcCommentRequest request) {
         RequestOperation<RemoveUcCommentRequest, RemoveUcCommentResponse> operation
               = new RemoveUcComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -453,7 +454,7 @@ public class Uc {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveUcContactResponse removeUcContact(RemoveUcContactRequest request) {
+    public RemoveUcContactResponse removeUcContact(@Nonnull RemoveUcContactRequest request) {
         RequestOperation<RemoveUcContactRequest, RemoveUcContactResponse> operation
               = new RemoveUcContact.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -475,7 +476,7 @@ public class Uc {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveUcRecordingResponse removeUcRecording(RemoveUcRecordingRequest request) {
+    public RemoveUcRecordingResponse removeUcRecording(@Nonnull RemoveUcRecordingRequest request) {
         RequestOperation<RemoveUcRecordingRequest, RemoveUcRecordingResponse> operation
               = new RemoveUcRecording.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -497,7 +498,7 @@ public class Uc {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateUcCommentResponse updateUcComment(UpdateUcCommentRequest request) {
+    public UpdateUcCommentResponse updateUcComment(@Nonnull UpdateUcCommentRequest request) {
         RequestOperation<UpdateUcCommentRequest, UpdateUcCommentResponse> operation
               = new UpdateUcComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -519,7 +520,7 @@ public class Uc {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateUcContactResponse updateUcContact(UpdateUcContactRequest request) {
+    public UpdateUcContactResponse updateUcContact(@Nonnull UpdateUcContactRequest request) {
         RequestOperation<UpdateUcContactRequest, UpdateUcContactResponse> operation
               = new UpdateUcContact.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -541,7 +542,7 @@ public class Uc {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateUcRecordingResponse updateUcRecording(UpdateUcRecordingRequest request) {
+    public UpdateUcRecordingResponse updateUcRecording(@Nonnull UpdateUcRecordingRequest request) {
         RequestOperation<UpdateUcRecordingRequest, UpdateUcRecordingResponse> operation
               = new UpdateUcRecording.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

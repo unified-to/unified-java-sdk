@@ -4,12 +4,11 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.io.InputStream;
-import java.lang.Integer;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.List;
 import java.util.Optional;
@@ -27,7 +26,7 @@ public class ListHrisDeductionsResponse implements Response {
     /**
      * Successful
      */
-    private Optional<? extends List<HrisDeduction>> hrisDeductions;
+    private List<HrisDeduction> hrisDeductions;
 
     /**
      * HTTP response status code for this operation
@@ -41,59 +40,52 @@ public class ListHrisDeductionsResponse implements Response {
 
     @JsonCreator
     public ListHrisDeductionsResponse(
-            String contentType,
-            Optional<? extends List<HrisDeduction>> hrisDeductions,
+            @Nonnull String contentType,
+            @Nullable List<HrisDeduction> hrisDeductions,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(hrisDeductions, "hrisDeductions");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.contentType = contentType;
+            @Nonnull HttpResponse<InputStream> rawResponse) {
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.hrisDeductions = hrisDeductions;
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
     }
     
     public ListHrisDeductionsResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
-        this(contentType, Optional.empty(), statusCode,
+            @Nonnull HttpResponse<InputStream> rawResponse) {
+        this(contentType, null, statusCode,
             rawResponse);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<HrisDeduction>> hrisDeductions() {
-        return (Optional<List<HrisDeduction>>) hrisDeductions;
+        return Optional.ofNullable(this.hrisDeductions);
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<InputStream> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     public static Builder builder() {
@@ -104,18 +96,8 @@ public class ListHrisDeductionsResponse implements Response {
     /**
      * HTTP response content type for this operation
      */
-    public ListHrisDeductionsResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
-        return this;
-    }
-
-    /**
-     * Successful
-     */
-    public ListHrisDeductionsResponse withHrisDeductions(List<HrisDeduction> hrisDeductions) {
-        Utils.checkNotNull(hrisDeductions, "hrisDeductions");
-        this.hrisDeductions = Optional.ofNullable(hrisDeductions);
+    public ListHrisDeductionsResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
 
@@ -123,29 +105,29 @@ public class ListHrisDeductionsResponse implements Response {
     /**
      * Successful
      */
-    public ListHrisDeductionsResponse withHrisDeductions(Optional<? extends List<HrisDeduction>> hrisDeductions) {
-        Utils.checkNotNull(hrisDeductions, "hrisDeductions");
+    public ListHrisDeductionsResponse withHrisDeductions(@Nullable List<HrisDeduction> hrisDeductions) {
         this.hrisDeductions = hrisDeductions;
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public ListHrisDeductionsResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public ListHrisDeductionsResponse withRawResponse(HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
+    public ListHrisDeductionsResponse withRawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -184,9 +166,9 @@ public class ListHrisDeductionsResponse implements Response {
 
         private String contentType;
 
-        private Optional<? extends List<HrisDeduction>> hrisDeductions = Optional.empty();
+        private List<HrisDeduction> hrisDeductions;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<InputStream> rawResponse;
 
@@ -194,57 +176,39 @@ public class ListHrisDeductionsResponse implements Response {
           // force use of static builder() method
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
-            return this;
-        }
-
-
-        /**
-         * Successful
-         */
-        public Builder hrisDeductions(List<HrisDeduction> hrisDeductions) {
-            Utils.checkNotNull(hrisDeductions, "hrisDeductions");
-            this.hrisDeductions = Optional.ofNullable(hrisDeductions);
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
 
         /**
          * Successful
          */
-        public Builder hrisDeductions(Optional<? extends List<HrisDeduction>> hrisDeductions) {
-            Utils.checkNotNull(hrisDeductions, "hrisDeductions");
+        public Builder hrisDeductions(@Nullable List<HrisDeduction> hrisDeductions) {
             this.hrisDeductions = hrisDeductions;
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<InputStream> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
+        public Builder rawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         public ListHrisDeductionsResponse build() {
-
             return new ListHrisDeductionsResponse(
                 contentType, hrisDeductions, statusCode,
                 rawResponse);

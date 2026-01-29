@@ -5,32 +5,45 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.RemovePaymentPayment;
 import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemovePaymentPaymentRequestBuilder {
-
-    private RemovePaymentPaymentRequest request;
     private final SDKConfiguration sdkConfiguration;
-    private final Headers _headers = new Headers(); 
+    private final Headers _headers = new Headers();
+    private RemovePaymentPaymentRequest request;
 
     public RemovePaymentPaymentRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
 
-    public RemovePaymentPaymentRequestBuilder request(RemovePaymentPaymentRequest request) {
-        Utils.checkNotNull(request, "request");
-        this.request = request;
+    public RemovePaymentPaymentRequestBuilder request(@Nonnull RemovePaymentPaymentRequest request) {
+        this.request = Utils.checkNotNull(request, "request");
         return this;
     }
 
+    private RemovePaymentPaymentRequest _buildRequest() {
+        return this.request;
+    }
+    
+    public RemovePaymentPaymentRequestBuilder header(String name, String value) {
+        Utils.checkNotNull(name, "name");
+        Utils.checkNotNull(value, "value");
+        this._headers.add(name, value);
+        return this;
+    }
+
+    /**
+    * Executes the request and returns the response.
+    *
+    * @return The response from the server.
+    */
     public RemovePaymentPaymentResponse call() {
-        
         RequestOperation<RemovePaymentPaymentRequest, RemovePaymentPaymentResponse> operation
               = new RemovePaymentPayment.Sync(sdkConfiguration, _headers);
-
-        return operation.handleResponse(operation.doRequest(request));
+        return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

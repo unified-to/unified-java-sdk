@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.PaymentSubscription;
@@ -30,7 +30,7 @@ public class CreatePaymentSubscriptionRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<CreatePaymentSubscriptionQueryParamFields>> fields;
+    private List<CreatePaymentSubscriptionQueryParamFields> fields;
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
@@ -38,51 +38,45 @@ public class CreatePaymentSubscriptionRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
     @JsonCreator
     public CreatePaymentSubscriptionRequest(
-            PaymentSubscription paymentSubscription,
-            String connectionId,
-            Optional<? extends List<CreatePaymentSubscriptionQueryParamFields>> fields,
-            Optional<String> raw) {
-        Utils.checkNotNull(paymentSubscription, "paymentSubscription");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(raw, "raw");
-        this.paymentSubscription = paymentSubscription;
-        this.connectionId = connectionId;
+            @Nonnull PaymentSubscription paymentSubscription,
+            @Nonnull String connectionId,
+            @Nullable List<CreatePaymentSubscriptionQueryParamFields> fields,
+            @Nullable String raw) {
+        this.paymentSubscription = Optional.ofNullable(paymentSubscription)
+            .orElseThrow(() -> new IllegalArgumentException("paymentSubscription cannot be null"));
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
         this.raw = raw;
     }
     
     public CreatePaymentSubscriptionRequest(
-            PaymentSubscription paymentSubscription,
-            String connectionId) {
-        this(paymentSubscription, connectionId, Optional.empty(),
-            Optional.empty());
+            @Nonnull PaymentSubscription paymentSubscription,
+            @Nonnull String connectionId) {
+        this(paymentSubscription, connectionId, null,
+            null);
     }
 
-    @JsonIgnore
     public PaymentSubscription paymentSubscription() {
-        return paymentSubscription;
+        return this.paymentSubscription;
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<CreatePaymentSubscriptionQueryParamFields>> fields() {
-        return (Optional<List<CreatePaymentSubscriptionQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
@@ -90,9 +84,8 @@ public class CreatePaymentSubscriptionRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
     public static Builder builder() {
@@ -100,27 +93,17 @@ public class CreatePaymentSubscriptionRequest {
     }
 
 
-    public CreatePaymentSubscriptionRequest withPaymentSubscription(PaymentSubscription paymentSubscription) {
-        Utils.checkNotNull(paymentSubscription, "paymentSubscription");
-        this.paymentSubscription = paymentSubscription;
+    public CreatePaymentSubscriptionRequest withPaymentSubscription(@Nonnull PaymentSubscription paymentSubscription) {
+        this.paymentSubscription = Utils.checkNotNull(paymentSubscription, "paymentSubscription");
         return this;
     }
+
 
     /**
      * ID of the connection
      */
-    public CreatePaymentSubscriptionRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public CreatePaymentSubscriptionRequest withFields(List<CreatePaymentSubscriptionQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public CreatePaymentSubscriptionRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -128,34 +111,22 @@ public class CreatePaymentSubscriptionRequest {
     /**
      * Fields to return
      */
-    public CreatePaymentSubscriptionRequest withFields(Optional<? extends List<CreatePaymentSubscriptionQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public CreatePaymentSubscriptionRequest withFields(@Nullable List<CreatePaymentSubscriptionQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public CreatePaymentSubscriptionRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
-
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public CreatePaymentSubscriptionRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public CreatePaymentSubscriptionRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -196,75 +167,46 @@ public class CreatePaymentSubscriptionRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<CreatePaymentSubscriptionQueryParamFields>> fields = Optional.empty();
+        private List<CreatePaymentSubscriptionQueryParamFields> fields;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder paymentSubscription(PaymentSubscription paymentSubscription) {
-            Utils.checkNotNull(paymentSubscription, "paymentSubscription");
-            this.paymentSubscription = paymentSubscription;
+        public Builder paymentSubscription(@Nonnull PaymentSubscription paymentSubscription) {
+            this.paymentSubscription = Utils.checkNotNull(paymentSubscription, "paymentSubscription");
             return this;
         }
-
 
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<CreatePaymentSubscriptionQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<CreatePaymentSubscriptionQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<CreatePaymentSubscriptionQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
         public CreatePaymentSubscriptionRequest build() {
-
             return new CreatePaymentSubscriptionRequest(
                 paymentSubscription, connectionId, fields,
                 raw);

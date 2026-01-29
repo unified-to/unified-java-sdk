@@ -4,16 +4,15 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.Map;
 import java.util.Optional;
@@ -24,103 +23,89 @@ public class ShippingLabel {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_voided")
-    private Optional<Boolean> isVoided;
+    private Boolean isVoided;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label_cost")
-    private Optional<Double> labelCost;
+    private Double labelCost;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label_cost_currency")
-    private Optional<String> labelCostCurrency;
+    private String labelCostCurrency;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label_format")
-    private Optional<? extends LabelFormat> labelFormat;
+    private LabelFormat labelFormat;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label_url")
-    private Optional<String> labelUrl;
+    private String labelUrl;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rate_id")
-    private Optional<String> rateId;
+    private String rateId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service_code")
-    private Optional<String> serviceCode;
+    private String serviceCode;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipment_id")
-    private Optional<String> shipmentId;
+    private String shipmentId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
-    private Optional<? extends ShippingLabelStatus> status;
+    private ShippingLabelStatus status;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tracking_number")
-    private Optional<String> trackingNumber;
+    private String trackingNumber;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
     @JsonCreator
     public ShippingLabel(
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("is_voided") Optional<Boolean> isVoided,
-            @JsonProperty("label_cost") Optional<Double> labelCost,
-            @JsonProperty("label_cost_currency") Optional<String> labelCostCurrency,
-            @JsonProperty("label_format") Optional<? extends LabelFormat> labelFormat,
-            @JsonProperty("label_url") Optional<String> labelUrl,
-            @JsonProperty("rate_id") Optional<String> rateId,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("service_code") Optional<String> serviceCode,
-            @JsonProperty("shipment_id") Optional<String> shipmentId,
-            @JsonProperty("status") Optional<? extends ShippingLabelStatus> status,
-            @JsonProperty("tracking_number") Optional<String> trackingNumber,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(isVoided, "isVoided");
-        Utils.checkNotNull(labelCost, "labelCost");
-        Utils.checkNotNull(labelCostCurrency, "labelCostCurrency");
-        Utils.checkNotNull(labelFormat, "labelFormat");
-        Utils.checkNotNull(labelUrl, "labelUrl");
-        Utils.checkNotNull(rateId, "rateId");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(serviceCode, "serviceCode");
-        Utils.checkNotNull(shipmentId, "shipmentId");
-        Utils.checkNotNull(status, "status");
-        Utils.checkNotNull(trackingNumber, "trackingNumber");
-        Utils.checkNotNull(updatedAt, "updatedAt");
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("is_voided") @Nullable Boolean isVoided,
+            @JsonProperty("label_cost") @Nullable Double labelCost,
+            @JsonProperty("label_cost_currency") @Nullable String labelCostCurrency,
+            @JsonProperty("label_format") @Nullable LabelFormat labelFormat,
+            @JsonProperty("label_url") @Nullable String labelUrl,
+            @JsonProperty("rate_id") @Nullable String rateId,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("service_code") @Nullable String serviceCode,
+            @JsonProperty("shipment_id") @Nullable String shipmentId,
+            @JsonProperty("status") @Nullable ShippingLabelStatus status,
+            @JsonProperty("tracking_number") @Nullable String trackingNumber,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.createdAt = createdAt;
         this.id = id;
         this.isVoided = isVoided;
@@ -138,84 +123,67 @@ public class ShippingLabel {
     }
     
     public ShippingLabel() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isVoided() {
-        return isVoided;
+        return Optional.ofNullable(this.isVoided);
     }
 
-    @JsonIgnore
     public Optional<Double> labelCost() {
-        return labelCost;
+        return Optional.ofNullable(this.labelCost);
     }
 
-    @JsonIgnore
     public Optional<String> labelCostCurrency() {
-        return labelCostCurrency;
+        return Optional.ofNullable(this.labelCostCurrency);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<LabelFormat> labelFormat() {
-        return (Optional<LabelFormat>) labelFormat;
+        return Optional.ofNullable(this.labelFormat);
     }
 
-    @JsonIgnore
     public Optional<String> labelUrl() {
-        return labelUrl;
+        return Optional.ofNullable(this.labelUrl);
     }
 
-    @JsonIgnore
     public Optional<String> rateId() {
-        return rateId;
+        return Optional.ofNullable(this.rateId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @JsonIgnore
     public Optional<String> serviceCode() {
-        return serviceCode;
+        return Optional.ofNullable(this.serviceCode);
     }
 
-    @JsonIgnore
     public Optional<String> shipmentId() {
-        return shipmentId;
+        return Optional.ofNullable(this.shipmentId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ShippingLabelStatus> status() {
-        return (Optional<ShippingLabelStatus>) status;
+        return Optional.ofNullable(this.status);
     }
 
-    @JsonIgnore
     public Optional<String> trackingNumber() {
-        return trackingNumber;
+        return Optional.ofNullable(this.trackingNumber);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
     public static Builder builder() {
@@ -223,187 +191,89 @@ public class ShippingLabel {
     }
 
 
-    public ShippingLabel withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
-
-
-    public ShippingLabel withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public ShippingLabel withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public ShippingLabel withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public ShippingLabel withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public ShippingLabel withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public ShippingLabel withIsVoided(boolean isVoided) {
-        Utils.checkNotNull(isVoided, "isVoided");
-        this.isVoided = Optional.ofNullable(isVoided);
-        return this;
-    }
 
-
-    public ShippingLabel withIsVoided(Optional<Boolean> isVoided) {
-        Utils.checkNotNull(isVoided, "isVoided");
+    public ShippingLabel withIsVoided(@Nullable Boolean isVoided) {
         this.isVoided = isVoided;
         return this;
     }
 
-    public ShippingLabel withLabelCost(double labelCost) {
-        Utils.checkNotNull(labelCost, "labelCost");
-        this.labelCost = Optional.ofNullable(labelCost);
-        return this;
-    }
 
-
-    public ShippingLabel withLabelCost(Optional<Double> labelCost) {
-        Utils.checkNotNull(labelCost, "labelCost");
+    public ShippingLabel withLabelCost(@Nullable Double labelCost) {
         this.labelCost = labelCost;
         return this;
     }
 
-    public ShippingLabel withLabelCostCurrency(String labelCostCurrency) {
-        Utils.checkNotNull(labelCostCurrency, "labelCostCurrency");
-        this.labelCostCurrency = Optional.ofNullable(labelCostCurrency);
-        return this;
-    }
 
-
-    public ShippingLabel withLabelCostCurrency(Optional<String> labelCostCurrency) {
-        Utils.checkNotNull(labelCostCurrency, "labelCostCurrency");
+    public ShippingLabel withLabelCostCurrency(@Nullable String labelCostCurrency) {
         this.labelCostCurrency = labelCostCurrency;
         return this;
     }
 
-    public ShippingLabel withLabelFormat(LabelFormat labelFormat) {
-        Utils.checkNotNull(labelFormat, "labelFormat");
-        this.labelFormat = Optional.ofNullable(labelFormat);
-        return this;
-    }
 
-
-    public ShippingLabel withLabelFormat(Optional<? extends LabelFormat> labelFormat) {
-        Utils.checkNotNull(labelFormat, "labelFormat");
+    public ShippingLabel withLabelFormat(@Nullable LabelFormat labelFormat) {
         this.labelFormat = labelFormat;
         return this;
     }
 
-    public ShippingLabel withLabelUrl(String labelUrl) {
-        Utils.checkNotNull(labelUrl, "labelUrl");
-        this.labelUrl = Optional.ofNullable(labelUrl);
-        return this;
-    }
 
-
-    public ShippingLabel withLabelUrl(Optional<String> labelUrl) {
-        Utils.checkNotNull(labelUrl, "labelUrl");
+    public ShippingLabel withLabelUrl(@Nullable String labelUrl) {
         this.labelUrl = labelUrl;
         return this;
     }
 
-    public ShippingLabel withRateId(String rateId) {
-        Utils.checkNotNull(rateId, "rateId");
-        this.rateId = Optional.ofNullable(rateId);
-        return this;
-    }
 
-
-    public ShippingLabel withRateId(Optional<String> rateId) {
-        Utils.checkNotNull(rateId, "rateId");
+    public ShippingLabel withRateId(@Nullable String rateId) {
         this.rateId = rateId;
         return this;
     }
 
-    public ShippingLabel withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public ShippingLabel withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public ShippingLabel withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public ShippingLabel withServiceCode(String serviceCode) {
-        Utils.checkNotNull(serviceCode, "serviceCode");
-        this.serviceCode = Optional.ofNullable(serviceCode);
-        return this;
-    }
 
-
-    public ShippingLabel withServiceCode(Optional<String> serviceCode) {
-        Utils.checkNotNull(serviceCode, "serviceCode");
+    public ShippingLabel withServiceCode(@Nullable String serviceCode) {
         this.serviceCode = serviceCode;
         return this;
     }
 
-    public ShippingLabel withShipmentId(String shipmentId) {
-        Utils.checkNotNull(shipmentId, "shipmentId");
-        this.shipmentId = Optional.ofNullable(shipmentId);
-        return this;
-    }
 
-
-    public ShippingLabel withShipmentId(Optional<String> shipmentId) {
-        Utils.checkNotNull(shipmentId, "shipmentId");
+    public ShippingLabel withShipmentId(@Nullable String shipmentId) {
         this.shipmentId = shipmentId;
         return this;
     }
 
-    public ShippingLabel withStatus(ShippingLabelStatus status) {
-        Utils.checkNotNull(status, "status");
-        this.status = Optional.ofNullable(status);
-        return this;
-    }
 
-
-    public ShippingLabel withStatus(Optional<? extends ShippingLabelStatus> status) {
-        Utils.checkNotNull(status, "status");
+    public ShippingLabel withStatus(@Nullable ShippingLabelStatus status) {
         this.status = status;
         return this;
     }
 
-    public ShippingLabel withTrackingNumber(String trackingNumber) {
-        Utils.checkNotNull(trackingNumber, "trackingNumber");
-        this.trackingNumber = Optional.ofNullable(trackingNumber);
-        return this;
-    }
 
-
-    public ShippingLabel withTrackingNumber(Optional<String> trackingNumber) {
-        Utils.checkNotNull(trackingNumber, "trackingNumber");
+    public ShippingLabel withTrackingNumber(@Nullable String trackingNumber) {
         this.trackingNumber = trackingNumber;
         return this;
     }
 
-    public ShippingLabel withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public ShippingLabel withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public ShippingLabel withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -463,222 +333,109 @@ public class ShippingLabel {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<Boolean> isVoided = Optional.empty();
+        private Boolean isVoided;
 
-        private Optional<Double> labelCost = Optional.empty();
+        private Double labelCost;
 
-        private Optional<String> labelCostCurrency = Optional.empty();
+        private String labelCostCurrency;
 
-        private Optional<? extends LabelFormat> labelFormat = Optional.empty();
+        private LabelFormat labelFormat;
 
-        private Optional<String> labelUrl = Optional.empty();
+        private String labelUrl;
 
-        private Optional<String> rateId = Optional.empty();
+        private String rateId;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<String> serviceCode = Optional.empty();
+        private String serviceCode;
 
-        private Optional<String> shipmentId = Optional.empty();
+        private String shipmentId;
 
-        private Optional<? extends ShippingLabelStatus> status = Optional.empty();
+        private ShippingLabelStatus status;
 
-        private Optional<String> trackingNumber = Optional.empty();
+        private String trackingNumber;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder isVoided(boolean isVoided) {
-            Utils.checkNotNull(isVoided, "isVoided");
-            this.isVoided = Optional.ofNullable(isVoided);
-            return this;
-        }
-
-        public Builder isVoided(Optional<Boolean> isVoided) {
-            Utils.checkNotNull(isVoided, "isVoided");
+        public Builder isVoided(@Nullable Boolean isVoided) {
             this.isVoided = isVoided;
             return this;
         }
 
-
-        public Builder labelCost(double labelCost) {
-            Utils.checkNotNull(labelCost, "labelCost");
-            this.labelCost = Optional.ofNullable(labelCost);
-            return this;
-        }
-
-        public Builder labelCost(Optional<Double> labelCost) {
-            Utils.checkNotNull(labelCost, "labelCost");
+        public Builder labelCost(@Nullable Double labelCost) {
             this.labelCost = labelCost;
             return this;
         }
 
-
-        public Builder labelCostCurrency(String labelCostCurrency) {
-            Utils.checkNotNull(labelCostCurrency, "labelCostCurrency");
-            this.labelCostCurrency = Optional.ofNullable(labelCostCurrency);
-            return this;
-        }
-
-        public Builder labelCostCurrency(Optional<String> labelCostCurrency) {
-            Utils.checkNotNull(labelCostCurrency, "labelCostCurrency");
+        public Builder labelCostCurrency(@Nullable String labelCostCurrency) {
             this.labelCostCurrency = labelCostCurrency;
             return this;
         }
 
-
-        public Builder labelFormat(LabelFormat labelFormat) {
-            Utils.checkNotNull(labelFormat, "labelFormat");
-            this.labelFormat = Optional.ofNullable(labelFormat);
-            return this;
-        }
-
-        public Builder labelFormat(Optional<? extends LabelFormat> labelFormat) {
-            Utils.checkNotNull(labelFormat, "labelFormat");
+        public Builder labelFormat(@Nullable LabelFormat labelFormat) {
             this.labelFormat = labelFormat;
             return this;
         }
 
-
-        public Builder labelUrl(String labelUrl) {
-            Utils.checkNotNull(labelUrl, "labelUrl");
-            this.labelUrl = Optional.ofNullable(labelUrl);
-            return this;
-        }
-
-        public Builder labelUrl(Optional<String> labelUrl) {
-            Utils.checkNotNull(labelUrl, "labelUrl");
+        public Builder labelUrl(@Nullable String labelUrl) {
             this.labelUrl = labelUrl;
             return this;
         }
 
-
-        public Builder rateId(String rateId) {
-            Utils.checkNotNull(rateId, "rateId");
-            this.rateId = Optional.ofNullable(rateId);
-            return this;
-        }
-
-        public Builder rateId(Optional<String> rateId) {
-            Utils.checkNotNull(rateId, "rateId");
+        public Builder rateId(@Nullable String rateId) {
             this.rateId = rateId;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder serviceCode(String serviceCode) {
-            Utils.checkNotNull(serviceCode, "serviceCode");
-            this.serviceCode = Optional.ofNullable(serviceCode);
-            return this;
-        }
-
-        public Builder serviceCode(Optional<String> serviceCode) {
-            Utils.checkNotNull(serviceCode, "serviceCode");
+        public Builder serviceCode(@Nullable String serviceCode) {
             this.serviceCode = serviceCode;
             return this;
         }
 
-
-        public Builder shipmentId(String shipmentId) {
-            Utils.checkNotNull(shipmentId, "shipmentId");
-            this.shipmentId = Optional.ofNullable(shipmentId);
-            return this;
-        }
-
-        public Builder shipmentId(Optional<String> shipmentId) {
-            Utils.checkNotNull(shipmentId, "shipmentId");
+        public Builder shipmentId(@Nullable String shipmentId) {
             this.shipmentId = shipmentId;
             return this;
         }
 
-
-        public Builder status(ShippingLabelStatus status) {
-            Utils.checkNotNull(status, "status");
-            this.status = Optional.ofNullable(status);
-            return this;
-        }
-
-        public Builder status(Optional<? extends ShippingLabelStatus> status) {
-            Utils.checkNotNull(status, "status");
+        public Builder status(@Nullable ShippingLabelStatus status) {
             this.status = status;
             return this;
         }
 
-
-        public Builder trackingNumber(String trackingNumber) {
-            Utils.checkNotNull(trackingNumber, "trackingNumber");
-            this.trackingNumber = Optional.ofNullable(trackingNumber);
-            return this;
-        }
-
-        public Builder trackingNumber(Optional<String> trackingNumber) {
-            Utils.checkNotNull(trackingNumber, "trackingNumber");
+        public Builder trackingNumber(@Nullable String trackingNumber) {
             this.trackingNumber = trackingNumber;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
         public ShippingLabel build() {
-
             return new ShippingLabel(
                 createdAt, id, isVoided,
                 labelCost, labelCostCurrency, labelFormat,

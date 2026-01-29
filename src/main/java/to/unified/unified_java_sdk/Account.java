@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingAccountRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingAccountRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingAccountResponse;
@@ -67,7 +68,7 @@ public class Account {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAccountingAccountResponse createAccountingAccount(CreateAccountingAccountRequest request) {
+    public CreateAccountingAccountResponse createAccountingAccount(@Nonnull CreateAccountingAccountRequest request) {
         RequestOperation<CreateAccountingAccountRequest, CreateAccountingAccountResponse> operation
               = new CreateAccountingAccount.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -89,7 +90,7 @@ public class Account {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingAccountResponse getAccountingAccount(GetAccountingAccountRequest request) {
+    public GetAccountingAccountResponse getAccountingAccount(@Nonnull GetAccountingAccountRequest request) {
         RequestOperation<GetAccountingAccountRequest, GetAccountingAccountResponse> operation
               = new GetAccountingAccount.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -111,7 +112,7 @@ public class Account {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingAccountsResponse listAccountingAccounts(ListAccountingAccountsRequest request) {
+    public ListAccountingAccountsResponse listAccountingAccounts(@Nonnull ListAccountingAccountsRequest request) {
         RequestOperation<ListAccountingAccountsRequest, ListAccountingAccountsResponse> operation
               = new ListAccountingAccounts.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -133,7 +134,7 @@ public class Account {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAccountingAccountResponse patchAccountingAccount(PatchAccountingAccountRequest request) {
+    public PatchAccountingAccountResponse patchAccountingAccount(@Nonnull PatchAccountingAccountRequest request) {
         RequestOperation<PatchAccountingAccountRequest, PatchAccountingAccountResponse> operation
               = new PatchAccountingAccount.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -155,7 +156,7 @@ public class Account {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAccountingAccountResponse removeAccountingAccount(RemoveAccountingAccountRequest request) {
+    public RemoveAccountingAccountResponse removeAccountingAccount(@Nonnull RemoveAccountingAccountRequest request) {
         RequestOperation<RemoveAccountingAccountRequest, RemoveAccountingAccountResponse> operation
               = new RemoveAccountingAccount.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -177,7 +178,7 @@ public class Account {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAccountingAccountResponse updateAccountingAccount(UpdateAccountingAccountRequest request) {
+    public UpdateAccountingAccountResponse updateAccountingAccount(@Nonnull UpdateAccountingAccountRequest request) {
         RequestOperation<UpdateAccountingAccountRequest, UpdateAccountingAccountResponse> operation
               = new UpdateAccountingAccount.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

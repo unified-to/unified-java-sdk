@@ -4,11 +4,11 @@
 package to.unified.unified_java_sdk.models.operations.async;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import java.lang.Integer;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.io.InputStream;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.LmsInstructor;
@@ -26,7 +26,7 @@ public class CreateLmsInstructorResponse implements AsyncResponse {
     /**
      * Successful
      */
-    private Optional<? extends LmsInstructor> lmsInstructor;
+    private LmsInstructor lmsInstructor;
 
     /**
      * HTTP response status code for this operation
@@ -40,59 +40,52 @@ public class CreateLmsInstructorResponse implements AsyncResponse {
 
     @JsonCreator
     public CreateLmsInstructorResponse(
-            String contentType,
-            Optional<? extends LmsInstructor> lmsInstructor,
+            @Nonnull String contentType,
+            @Nullable LmsInstructor lmsInstructor,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(lmsInstructor, "lmsInstructor");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.contentType = contentType;
+            @Nonnull HttpResponse<Blob> rawResponse) {
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.lmsInstructor = lmsInstructor;
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
     }
     
     public CreateLmsInstructorResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
-        this(contentType, Optional.empty(), statusCode,
+            @Nonnull HttpResponse<Blob> rawResponse) {
+        this(contentType, null, statusCode,
             rawResponse);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<LmsInstructor> lmsInstructor() {
-        return (Optional<LmsInstructor>) lmsInstructor;
+        return Optional.ofNullable(this.lmsInstructor);
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<Blob> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     public static Builder builder() {
@@ -103,18 +96,8 @@ public class CreateLmsInstructorResponse implements AsyncResponse {
     /**
      * HTTP response content type for this operation
      */
-    public CreateLmsInstructorResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
-        return this;
-    }
-
-    /**
-     * Successful
-     */
-    public CreateLmsInstructorResponse withLmsInstructor(LmsInstructor lmsInstructor) {
-        Utils.checkNotNull(lmsInstructor, "lmsInstructor");
-        this.lmsInstructor = Optional.ofNullable(lmsInstructor);
+    public CreateLmsInstructorResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
 
@@ -122,29 +105,29 @@ public class CreateLmsInstructorResponse implements AsyncResponse {
     /**
      * Successful
      */
-    public CreateLmsInstructorResponse withLmsInstructor(Optional<? extends LmsInstructor> lmsInstructor) {
-        Utils.checkNotNull(lmsInstructor, "lmsInstructor");
+    public CreateLmsInstructorResponse withLmsInstructor(@Nullable LmsInstructor lmsInstructor) {
         this.lmsInstructor = lmsInstructor;
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public CreateLmsInstructorResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public CreateLmsInstructorResponse withRawResponse(HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
+    public CreateLmsInstructorResponse withRawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -183,9 +166,9 @@ public class CreateLmsInstructorResponse implements AsyncResponse {
 
         private String contentType;
 
-        private Optional<? extends LmsInstructor> lmsInstructor = Optional.empty();
+        private LmsInstructor lmsInstructor;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<Blob> rawResponse;
 
@@ -193,57 +176,39 @@ public class CreateLmsInstructorResponse implements AsyncResponse {
           // force use of static builder() method
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
-            return this;
-        }
-
-
-        /**
-         * Successful
-         */
-        public Builder lmsInstructor(LmsInstructor lmsInstructor) {
-            Utils.checkNotNull(lmsInstructor, "lmsInstructor");
-            this.lmsInstructor = Optional.ofNullable(lmsInstructor);
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
 
         /**
          * Successful
          */
-        public Builder lmsInstructor(Optional<? extends LmsInstructor> lmsInstructor) {
-            Utils.checkNotNull(lmsInstructor, "lmsInstructor");
+        public Builder lmsInstructor(@Nullable LmsInstructor lmsInstructor) {
             this.lmsInstructor = lmsInstructor;
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<Blob> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
+        public Builder rawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         public CreateLmsInstructorResponse build() {
-
             return new CreateLmsInstructorResponse(
                 contentType, lmsInstructor, statusCode,
                 rawResponse);

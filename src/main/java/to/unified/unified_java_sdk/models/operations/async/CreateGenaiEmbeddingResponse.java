@@ -4,11 +4,11 @@
 package to.unified.unified_java_sdk.models.operations.async;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import java.lang.Integer;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.io.InputStream;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.GenaiEmbedding;
@@ -26,7 +26,7 @@ public class CreateGenaiEmbeddingResponse implements AsyncResponse {
     /**
      * Successful
      */
-    private Optional<? extends GenaiEmbedding> genaiEmbedding;
+    private GenaiEmbedding genaiEmbedding;
 
     /**
      * HTTP response status code for this operation
@@ -40,59 +40,52 @@ public class CreateGenaiEmbeddingResponse implements AsyncResponse {
 
     @JsonCreator
     public CreateGenaiEmbeddingResponse(
-            String contentType,
-            Optional<? extends GenaiEmbedding> genaiEmbedding,
+            @Nonnull String contentType,
+            @Nullable GenaiEmbedding genaiEmbedding,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(genaiEmbedding, "genaiEmbedding");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.contentType = contentType;
+            @Nonnull HttpResponse<Blob> rawResponse) {
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.genaiEmbedding = genaiEmbedding;
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
     }
     
     public CreateGenaiEmbeddingResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
-        this(contentType, Optional.empty(), statusCode,
+            @Nonnull HttpResponse<Blob> rawResponse) {
+        this(contentType, null, statusCode,
             rawResponse);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<GenaiEmbedding> genaiEmbedding() {
-        return (Optional<GenaiEmbedding>) genaiEmbedding;
+        return Optional.ofNullable(this.genaiEmbedding);
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<Blob> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     public static Builder builder() {
@@ -103,18 +96,8 @@ public class CreateGenaiEmbeddingResponse implements AsyncResponse {
     /**
      * HTTP response content type for this operation
      */
-    public CreateGenaiEmbeddingResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
-        return this;
-    }
-
-    /**
-     * Successful
-     */
-    public CreateGenaiEmbeddingResponse withGenaiEmbedding(GenaiEmbedding genaiEmbedding) {
-        Utils.checkNotNull(genaiEmbedding, "genaiEmbedding");
-        this.genaiEmbedding = Optional.ofNullable(genaiEmbedding);
+    public CreateGenaiEmbeddingResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
 
@@ -122,29 +105,29 @@ public class CreateGenaiEmbeddingResponse implements AsyncResponse {
     /**
      * Successful
      */
-    public CreateGenaiEmbeddingResponse withGenaiEmbedding(Optional<? extends GenaiEmbedding> genaiEmbedding) {
-        Utils.checkNotNull(genaiEmbedding, "genaiEmbedding");
+    public CreateGenaiEmbeddingResponse withGenaiEmbedding(@Nullable GenaiEmbedding genaiEmbedding) {
         this.genaiEmbedding = genaiEmbedding;
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public CreateGenaiEmbeddingResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public CreateGenaiEmbeddingResponse withRawResponse(HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
+    public CreateGenaiEmbeddingResponse withRawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -183,9 +166,9 @@ public class CreateGenaiEmbeddingResponse implements AsyncResponse {
 
         private String contentType;
 
-        private Optional<? extends GenaiEmbedding> genaiEmbedding = Optional.empty();
+        private GenaiEmbedding genaiEmbedding;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<Blob> rawResponse;
 
@@ -193,57 +176,39 @@ public class CreateGenaiEmbeddingResponse implements AsyncResponse {
           // force use of static builder() method
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
-            return this;
-        }
-
-
-        /**
-         * Successful
-         */
-        public Builder genaiEmbedding(GenaiEmbedding genaiEmbedding) {
-            Utils.checkNotNull(genaiEmbedding, "genaiEmbedding");
-            this.genaiEmbedding = Optional.ofNullable(genaiEmbedding);
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
 
         /**
          * Successful
          */
-        public Builder genaiEmbedding(Optional<? extends GenaiEmbedding> genaiEmbedding) {
-            Utils.checkNotNull(genaiEmbedding, "genaiEmbedding");
+        public Builder genaiEmbedding(@Nullable GenaiEmbedding genaiEmbedding) {
             this.genaiEmbedding = genaiEmbedding;
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<Blob> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
+        public Builder rawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         public CreateGenaiEmbeddingResponse build() {
-
             return new CreateGenaiEmbeddingResponse(
                 contentType, genaiEmbedding, statusCode,
                 rawResponse);

@@ -4,16 +4,16 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
@@ -25,52 +25,52 @@ public class FormsForm {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confirmation_message")
-    private Optional<String> confirmationMessage;
+    private String confirmationMessage;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confirmation_redirect_url")
-    private Optional<String> confirmationRedirectUrl;
+    private String confirmationRedirectUrl;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
-    private Optional<String> description;
+    private String description;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
-    private Optional<? extends List<FormField>> fields;
+    private List<FormField> fields;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_multiple_submissions")
-    private Optional<Boolean> hasMultipleSubmissions;
+    private Boolean hasMultipleSubmissions;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_progress_bar")
-    private Optional<Boolean> hasProgressBar;
+    private Boolean hasProgressBar;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_shuffle_questions")
-    private Optional<Boolean> hasShuffleQuestions;
+    private Boolean hasShuffleQuestions;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
-    private Optional<Boolean> isActive;
+    private Boolean isActive;
 
 
     @JsonProperty("name")
@@ -79,55 +79,40 @@ public class FormsForm {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("published_url")
-    private Optional<String> publishedUrl;
+    private String publishedUrl;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response_count")
-    private Optional<Double> responseCount;
+    private Double responseCount;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
     @JsonCreator
     public FormsForm(
-            @JsonProperty("confirmation_message") Optional<String> confirmationMessage,
-            @JsonProperty("confirmation_redirect_url") Optional<String> confirmationRedirectUrl,
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("description") Optional<String> description,
-            @JsonProperty("fields") Optional<? extends List<FormField>> fields,
-            @JsonProperty("has_multiple_submissions") Optional<Boolean> hasMultipleSubmissions,
-            @JsonProperty("has_progress_bar") Optional<Boolean> hasProgressBar,
-            @JsonProperty("has_shuffle_questions") Optional<Boolean> hasShuffleQuestions,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("is_active") Optional<Boolean> isActive,
-            @JsonProperty("name") String name,
-            @JsonProperty("published_url") Optional<String> publishedUrl,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("response_count") Optional<Double> responseCount,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(confirmationMessage, "confirmationMessage");
-        Utils.checkNotNull(confirmationRedirectUrl, "confirmationRedirectUrl");
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(description, "description");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(hasMultipleSubmissions, "hasMultipleSubmissions");
-        Utils.checkNotNull(hasProgressBar, "hasProgressBar");
-        Utils.checkNotNull(hasShuffleQuestions, "hasShuffleQuestions");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(isActive, "isActive");
-        Utils.checkNotNull(name, "name");
-        Utils.checkNotNull(publishedUrl, "publishedUrl");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(responseCount, "responseCount");
-        Utils.checkNotNull(updatedAt, "updatedAt");
+            @JsonProperty("confirmation_message") @Nullable String confirmationMessage,
+            @JsonProperty("confirmation_redirect_url") @Nullable String confirmationRedirectUrl,
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("description") @Nullable String description,
+            @JsonProperty("fields") @Nullable List<FormField> fields,
+            @JsonProperty("has_multiple_submissions") @Nullable Boolean hasMultipleSubmissions,
+            @JsonProperty("has_progress_bar") @Nullable Boolean hasProgressBar,
+            @JsonProperty("has_shuffle_questions") @Nullable Boolean hasShuffleQuestions,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("is_active") @Nullable Boolean isActive,
+            @JsonProperty("name") @Nonnull String name,
+            @JsonProperty("published_url") @Nullable String publishedUrl,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("response_count") @Nullable Double responseCount,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.confirmationMessage = confirmationMessage;
         this.confirmationRedirectUrl = confirmationRedirectUrl;
         this.createdAt = createdAt;
@@ -138,7 +123,8 @@ public class FormsForm {
         this.hasShuffleQuestions = hasShuffleQuestions;
         this.id = id;
         this.isActive = isActive;
-        this.name = name;
+        this.name = Optional.ofNullable(name)
+            .orElseThrow(() -> new IllegalArgumentException("name cannot be null"));
         this.publishedUrl = publishedUrl;
         this.raw = raw;
         this.responseCount = responseCount;
@@ -146,89 +132,72 @@ public class FormsForm {
     }
     
     public FormsForm(
-            String name) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), name, Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+            @Nonnull String name) {
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null, name, null,
+            null, null, null);
     }
 
-    @JsonIgnore
     public Optional<String> confirmationMessage() {
-        return confirmationMessage;
+        return Optional.ofNullable(this.confirmationMessage);
     }
 
-    @JsonIgnore
     public Optional<String> confirmationRedirectUrl() {
-        return confirmationRedirectUrl;
+        return Optional.ofNullable(this.confirmationRedirectUrl);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<String> description() {
-        return description;
+        return Optional.ofNullable(this.description);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<FormField>> fields() {
-        return (Optional<List<FormField>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
-    @JsonIgnore
     public Optional<Boolean> hasMultipleSubmissions() {
-        return hasMultipleSubmissions;
+        return Optional.ofNullable(this.hasMultipleSubmissions);
     }
 
-    @JsonIgnore
     public Optional<Boolean> hasProgressBar() {
-        return hasProgressBar;
+        return Optional.ofNullable(this.hasProgressBar);
     }
 
-    @JsonIgnore
     public Optional<Boolean> hasShuffleQuestions() {
-        return hasShuffleQuestions;
+        return Optional.ofNullable(this.hasShuffleQuestions);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isActive() {
-        return isActive;
+        return Optional.ofNullable(this.isActive);
     }
 
-    @JsonIgnore
     public String name() {
-        return name;
+        return this.name;
     }
 
-    @JsonIgnore
     public Optional<String> publishedUrl() {
-        return publishedUrl;
+        return Optional.ofNullable(this.publishedUrl);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @JsonIgnore
     public Optional<Double> responseCount() {
-        return responseCount;
+        return Optional.ofNullable(this.responseCount);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
     public static Builder builder() {
@@ -236,193 +205,95 @@ public class FormsForm {
     }
 
 
-    public FormsForm withConfirmationMessage(String confirmationMessage) {
-        Utils.checkNotNull(confirmationMessage, "confirmationMessage");
-        this.confirmationMessage = Optional.ofNullable(confirmationMessage);
-        return this;
-    }
-
-
-    public FormsForm withConfirmationMessage(Optional<String> confirmationMessage) {
-        Utils.checkNotNull(confirmationMessage, "confirmationMessage");
+    public FormsForm withConfirmationMessage(@Nullable String confirmationMessage) {
         this.confirmationMessage = confirmationMessage;
         return this;
     }
 
-    public FormsForm withConfirmationRedirectUrl(String confirmationRedirectUrl) {
-        Utils.checkNotNull(confirmationRedirectUrl, "confirmationRedirectUrl");
-        this.confirmationRedirectUrl = Optional.ofNullable(confirmationRedirectUrl);
-        return this;
-    }
 
-
-    public FormsForm withConfirmationRedirectUrl(Optional<String> confirmationRedirectUrl) {
-        Utils.checkNotNull(confirmationRedirectUrl, "confirmationRedirectUrl");
+    public FormsForm withConfirmationRedirectUrl(@Nullable String confirmationRedirectUrl) {
         this.confirmationRedirectUrl = confirmationRedirectUrl;
         return this;
     }
 
-    public FormsForm withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
 
-
-    public FormsForm withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public FormsForm withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public FormsForm withDescription(String description) {
-        Utils.checkNotNull(description, "description");
-        this.description = Optional.ofNullable(description);
-        return this;
-    }
 
-
-    public FormsForm withDescription(Optional<String> description) {
-        Utils.checkNotNull(description, "description");
+    public FormsForm withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
-    public FormsForm withFields(List<FormField> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
-        return this;
-    }
 
-
-    public FormsForm withFields(Optional<? extends List<FormField>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public FormsForm withFields(@Nullable List<FormField> fields) {
         this.fields = fields;
         return this;
     }
 
-    public FormsForm withHasMultipleSubmissions(boolean hasMultipleSubmissions) {
-        Utils.checkNotNull(hasMultipleSubmissions, "hasMultipleSubmissions");
-        this.hasMultipleSubmissions = Optional.ofNullable(hasMultipleSubmissions);
-        return this;
-    }
 
-
-    public FormsForm withHasMultipleSubmissions(Optional<Boolean> hasMultipleSubmissions) {
-        Utils.checkNotNull(hasMultipleSubmissions, "hasMultipleSubmissions");
+    public FormsForm withHasMultipleSubmissions(@Nullable Boolean hasMultipleSubmissions) {
         this.hasMultipleSubmissions = hasMultipleSubmissions;
         return this;
     }
 
-    public FormsForm withHasProgressBar(boolean hasProgressBar) {
-        Utils.checkNotNull(hasProgressBar, "hasProgressBar");
-        this.hasProgressBar = Optional.ofNullable(hasProgressBar);
-        return this;
-    }
 
-
-    public FormsForm withHasProgressBar(Optional<Boolean> hasProgressBar) {
-        Utils.checkNotNull(hasProgressBar, "hasProgressBar");
+    public FormsForm withHasProgressBar(@Nullable Boolean hasProgressBar) {
         this.hasProgressBar = hasProgressBar;
         return this;
     }
 
-    public FormsForm withHasShuffleQuestions(boolean hasShuffleQuestions) {
-        Utils.checkNotNull(hasShuffleQuestions, "hasShuffleQuestions");
-        this.hasShuffleQuestions = Optional.ofNullable(hasShuffleQuestions);
-        return this;
-    }
 
-
-    public FormsForm withHasShuffleQuestions(Optional<Boolean> hasShuffleQuestions) {
-        Utils.checkNotNull(hasShuffleQuestions, "hasShuffleQuestions");
+    public FormsForm withHasShuffleQuestions(@Nullable Boolean hasShuffleQuestions) {
         this.hasShuffleQuestions = hasShuffleQuestions;
         return this;
     }
 
-    public FormsForm withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public FormsForm withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public FormsForm withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public FormsForm withIsActive(boolean isActive) {
-        Utils.checkNotNull(isActive, "isActive");
-        this.isActive = Optional.ofNullable(isActive);
-        return this;
-    }
 
-
-    public FormsForm withIsActive(Optional<Boolean> isActive) {
-        Utils.checkNotNull(isActive, "isActive");
+    public FormsForm withIsActive(@Nullable Boolean isActive) {
         this.isActive = isActive;
         return this;
     }
 
-    public FormsForm withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = name;
-        return this;
-    }
 
-    public FormsForm withPublishedUrl(String publishedUrl) {
-        Utils.checkNotNull(publishedUrl, "publishedUrl");
-        this.publishedUrl = Optional.ofNullable(publishedUrl);
+    public FormsForm withName(@Nonnull String name) {
+        this.name = Utils.checkNotNull(name, "name");
         return this;
     }
 
 
-    public FormsForm withPublishedUrl(Optional<String> publishedUrl) {
-        Utils.checkNotNull(publishedUrl, "publishedUrl");
+    public FormsForm withPublishedUrl(@Nullable String publishedUrl) {
         this.publishedUrl = publishedUrl;
         return this;
     }
 
-    public FormsForm withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public FormsForm withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public FormsForm withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public FormsForm withResponseCount(double responseCount) {
-        Utils.checkNotNull(responseCount, "responseCount");
-        this.responseCount = Optional.ofNullable(responseCount);
-        return this;
-    }
 
-
-    public FormsForm withResponseCount(Optional<Double> responseCount) {
-        Utils.checkNotNull(responseCount, "responseCount");
+    public FormsForm withResponseCount(@Nullable Double responseCount) {
         this.responseCount = responseCount;
         return this;
     }
 
-    public FormsForm withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public FormsForm withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public FormsForm withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -484,231 +355,116 @@ public class FormsForm {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> confirmationMessage = Optional.empty();
+        private String confirmationMessage;
 
-        private Optional<String> confirmationRedirectUrl = Optional.empty();
+        private String confirmationRedirectUrl;
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<String> description = Optional.empty();
+        private String description;
 
-        private Optional<? extends List<FormField>> fields = Optional.empty();
+        private List<FormField> fields;
 
-        private Optional<Boolean> hasMultipleSubmissions = Optional.empty();
+        private Boolean hasMultipleSubmissions;
 
-        private Optional<Boolean> hasProgressBar = Optional.empty();
+        private Boolean hasProgressBar;
 
-        private Optional<Boolean> hasShuffleQuestions = Optional.empty();
+        private Boolean hasShuffleQuestions;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<Boolean> isActive = Optional.empty();
+        private Boolean isActive;
 
         private String name;
 
-        private Optional<String> publishedUrl = Optional.empty();
+        private String publishedUrl;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<Double> responseCount = Optional.empty();
+        private Double responseCount;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder confirmationMessage(String confirmationMessage) {
-            Utils.checkNotNull(confirmationMessage, "confirmationMessage");
-            this.confirmationMessage = Optional.ofNullable(confirmationMessage);
-            return this;
-        }
-
-        public Builder confirmationMessage(Optional<String> confirmationMessage) {
-            Utils.checkNotNull(confirmationMessage, "confirmationMessage");
+        public Builder confirmationMessage(@Nullable String confirmationMessage) {
             this.confirmationMessage = confirmationMessage;
             return this;
         }
 
-
-        public Builder confirmationRedirectUrl(String confirmationRedirectUrl) {
-            Utils.checkNotNull(confirmationRedirectUrl, "confirmationRedirectUrl");
-            this.confirmationRedirectUrl = Optional.ofNullable(confirmationRedirectUrl);
-            return this;
-        }
-
-        public Builder confirmationRedirectUrl(Optional<String> confirmationRedirectUrl) {
-            Utils.checkNotNull(confirmationRedirectUrl, "confirmationRedirectUrl");
+        public Builder confirmationRedirectUrl(@Nullable String confirmationRedirectUrl) {
             this.confirmationRedirectUrl = confirmationRedirectUrl;
             return this;
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder description(String description) {
-            Utils.checkNotNull(description, "description");
-            this.description = Optional.ofNullable(description);
-            return this;
-        }
-
-        public Builder description(Optional<String> description) {
-            Utils.checkNotNull(description, "description");
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-
-        public Builder fields(List<FormField> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
-            return this;
-        }
-
-        public Builder fields(Optional<? extends List<FormField>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<FormField> fields) {
             this.fields = fields;
             return this;
         }
 
-
-        public Builder hasMultipleSubmissions(boolean hasMultipleSubmissions) {
-            Utils.checkNotNull(hasMultipleSubmissions, "hasMultipleSubmissions");
-            this.hasMultipleSubmissions = Optional.ofNullable(hasMultipleSubmissions);
-            return this;
-        }
-
-        public Builder hasMultipleSubmissions(Optional<Boolean> hasMultipleSubmissions) {
-            Utils.checkNotNull(hasMultipleSubmissions, "hasMultipleSubmissions");
+        public Builder hasMultipleSubmissions(@Nullable Boolean hasMultipleSubmissions) {
             this.hasMultipleSubmissions = hasMultipleSubmissions;
             return this;
         }
 
-
-        public Builder hasProgressBar(boolean hasProgressBar) {
-            Utils.checkNotNull(hasProgressBar, "hasProgressBar");
-            this.hasProgressBar = Optional.ofNullable(hasProgressBar);
-            return this;
-        }
-
-        public Builder hasProgressBar(Optional<Boolean> hasProgressBar) {
-            Utils.checkNotNull(hasProgressBar, "hasProgressBar");
+        public Builder hasProgressBar(@Nullable Boolean hasProgressBar) {
             this.hasProgressBar = hasProgressBar;
             return this;
         }
 
-
-        public Builder hasShuffleQuestions(boolean hasShuffleQuestions) {
-            Utils.checkNotNull(hasShuffleQuestions, "hasShuffleQuestions");
-            this.hasShuffleQuestions = Optional.ofNullable(hasShuffleQuestions);
-            return this;
-        }
-
-        public Builder hasShuffleQuestions(Optional<Boolean> hasShuffleQuestions) {
-            Utils.checkNotNull(hasShuffleQuestions, "hasShuffleQuestions");
+        public Builder hasShuffleQuestions(@Nullable Boolean hasShuffleQuestions) {
             this.hasShuffleQuestions = hasShuffleQuestions;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder isActive(boolean isActive) {
-            Utils.checkNotNull(isActive, "isActive");
-            this.isActive = Optional.ofNullable(isActive);
-            return this;
-        }
-
-        public Builder isActive(Optional<Boolean> isActive) {
-            Utils.checkNotNull(isActive, "isActive");
+        public Builder isActive(@Nullable Boolean isActive) {
             this.isActive = isActive;
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = name;
+        public Builder name(@Nonnull String name) {
+            this.name = Utils.checkNotNull(name, "name");
             return this;
         }
 
-
-        public Builder publishedUrl(String publishedUrl) {
-            Utils.checkNotNull(publishedUrl, "publishedUrl");
-            this.publishedUrl = Optional.ofNullable(publishedUrl);
-            return this;
-        }
-
-        public Builder publishedUrl(Optional<String> publishedUrl) {
-            Utils.checkNotNull(publishedUrl, "publishedUrl");
+        public Builder publishedUrl(@Nullable String publishedUrl) {
             this.publishedUrl = publishedUrl;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder responseCount(double responseCount) {
-            Utils.checkNotNull(responseCount, "responseCount");
-            this.responseCount = Optional.ofNullable(responseCount);
-            return this;
-        }
-
-        public Builder responseCount(Optional<Double> responseCount) {
-            Utils.checkNotNull(responseCount, "responseCount");
+        public Builder responseCount(@Nullable Double responseCount) {
             this.responseCount = responseCount;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
         public FormsForm build() {
-
             return new FormsForm(
                 confirmationMessage, confirmationRedirectUrl, createdAt,
                 description, fields, hasMultipleSubmissions,

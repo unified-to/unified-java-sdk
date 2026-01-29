@@ -4,13 +4,13 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -20,22 +20,22 @@ public class CalendarRecordingTranscript {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attendee")
-    private Optional<? extends PropertyCalendarRecordingTranscriptAttendee> attendee;
+    private PropertyCalendarRecordingTranscriptAttendee attendee;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
-    private Optional<OffsetDateTime> endAt;
+    private OffsetDateTime endAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
-    private Optional<String> language;
+    private String language;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
-    private Optional<OffsetDateTime> startAt;
+    private OffsetDateTime startAt;
 
 
     @JsonProperty("text")
@@ -43,53 +43,43 @@ public class CalendarRecordingTranscript {
 
     @JsonCreator
     public CalendarRecordingTranscript(
-            @JsonProperty("attendee") Optional<? extends PropertyCalendarRecordingTranscriptAttendee> attendee,
-            @JsonProperty("end_at") Optional<OffsetDateTime> endAt,
-            @JsonProperty("language") Optional<String> language,
-            @JsonProperty("start_at") Optional<OffsetDateTime> startAt,
-            @JsonProperty("text") String text) {
-        Utils.checkNotNull(attendee, "attendee");
-        Utils.checkNotNull(endAt, "endAt");
-        Utils.checkNotNull(language, "language");
-        Utils.checkNotNull(startAt, "startAt");
-        Utils.checkNotNull(text, "text");
+            @JsonProperty("attendee") @Nullable PropertyCalendarRecordingTranscriptAttendee attendee,
+            @JsonProperty("end_at") @Nullable OffsetDateTime endAt,
+            @JsonProperty("language") @Nullable String language,
+            @JsonProperty("start_at") @Nullable OffsetDateTime startAt,
+            @JsonProperty("text") @Nonnull String text) {
         this.attendee = attendee;
         this.endAt = endAt;
         this.language = language;
         this.startAt = startAt;
-        this.text = text;
+        this.text = Optional.ofNullable(text)
+            .orElseThrow(() -> new IllegalArgumentException("text cannot be null"));
     }
     
     public CalendarRecordingTranscript(
-            String text) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), text);
+            @Nonnull String text) {
+        this(null, null, null,
+            null, text);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<PropertyCalendarRecordingTranscriptAttendee> attendee() {
-        return (Optional<PropertyCalendarRecordingTranscriptAttendee>) attendee;
+        return Optional.ofNullable(this.attendee);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> endAt() {
-        return endAt;
+        return Optional.ofNullable(this.endAt);
     }
 
-    @JsonIgnore
     public Optional<String> language() {
-        return language;
+        return Optional.ofNullable(this.language);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> startAt() {
-        return startAt;
+        return Optional.ofNullable(this.startAt);
     }
 
-    @JsonIgnore
     public String text() {
-        return text;
+        return this.text;
     }
 
     public static Builder builder() {
@@ -97,63 +87,35 @@ public class CalendarRecordingTranscript {
     }
 
 
-    public CalendarRecordingTranscript withAttendee(PropertyCalendarRecordingTranscriptAttendee attendee) {
-        Utils.checkNotNull(attendee, "attendee");
-        this.attendee = Optional.ofNullable(attendee);
-        return this;
-    }
-
-
-    public CalendarRecordingTranscript withAttendee(Optional<? extends PropertyCalendarRecordingTranscriptAttendee> attendee) {
-        Utils.checkNotNull(attendee, "attendee");
+    public CalendarRecordingTranscript withAttendee(@Nullable PropertyCalendarRecordingTranscriptAttendee attendee) {
         this.attendee = attendee;
         return this;
     }
 
-    public CalendarRecordingTranscript withEndAt(OffsetDateTime endAt) {
-        Utils.checkNotNull(endAt, "endAt");
-        this.endAt = Optional.ofNullable(endAt);
-        return this;
-    }
 
-
-    public CalendarRecordingTranscript withEndAt(Optional<OffsetDateTime> endAt) {
-        Utils.checkNotNull(endAt, "endAt");
+    public CalendarRecordingTranscript withEndAt(@Nullable OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
     }
 
-    public CalendarRecordingTranscript withLanguage(String language) {
-        Utils.checkNotNull(language, "language");
-        this.language = Optional.ofNullable(language);
-        return this;
-    }
 
-
-    public CalendarRecordingTranscript withLanguage(Optional<String> language) {
-        Utils.checkNotNull(language, "language");
+    public CalendarRecordingTranscript withLanguage(@Nullable String language) {
         this.language = language;
         return this;
     }
 
-    public CalendarRecordingTranscript withStartAt(OffsetDateTime startAt) {
-        Utils.checkNotNull(startAt, "startAt");
-        this.startAt = Optional.ofNullable(startAt);
-        return this;
-    }
 
-
-    public CalendarRecordingTranscript withStartAt(Optional<OffsetDateTime> startAt) {
-        Utils.checkNotNull(startAt, "startAt");
+    public CalendarRecordingTranscript withStartAt(@Nullable OffsetDateTime startAt) {
         this.startAt = startAt;
         return this;
     }
 
-    public CalendarRecordingTranscript withText(String text) {
-        Utils.checkNotNull(text, "text");
-        this.text = text;
+
+    public CalendarRecordingTranscript withText(@Nonnull String text) {
+        this.text = Utils.checkNotNull(text, "text");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -192,13 +154,13 @@ public class CalendarRecordingTranscript {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends PropertyCalendarRecordingTranscriptAttendee> attendee = Optional.empty();
+        private PropertyCalendarRecordingTranscriptAttendee attendee;
 
-        private Optional<OffsetDateTime> endAt = Optional.empty();
+        private OffsetDateTime endAt;
 
-        private Optional<String> language = Optional.empty();
+        private String language;
 
-        private Optional<OffsetDateTime> startAt = Optional.empty();
+        private OffsetDateTime startAt;
 
         private String text;
 
@@ -206,67 +168,32 @@ public class CalendarRecordingTranscript {
           // force use of static builder() method
         }
 
-
-        public Builder attendee(PropertyCalendarRecordingTranscriptAttendee attendee) {
-            Utils.checkNotNull(attendee, "attendee");
-            this.attendee = Optional.ofNullable(attendee);
-            return this;
-        }
-
-        public Builder attendee(Optional<? extends PropertyCalendarRecordingTranscriptAttendee> attendee) {
-            Utils.checkNotNull(attendee, "attendee");
+        public Builder attendee(@Nullable PropertyCalendarRecordingTranscriptAttendee attendee) {
             this.attendee = attendee;
             return this;
         }
 
-
-        public Builder endAt(OffsetDateTime endAt) {
-            Utils.checkNotNull(endAt, "endAt");
-            this.endAt = Optional.ofNullable(endAt);
-            return this;
-        }
-
-        public Builder endAt(Optional<OffsetDateTime> endAt) {
-            Utils.checkNotNull(endAt, "endAt");
+        public Builder endAt(@Nullable OffsetDateTime endAt) {
             this.endAt = endAt;
             return this;
         }
 
-
-        public Builder language(String language) {
-            Utils.checkNotNull(language, "language");
-            this.language = Optional.ofNullable(language);
-            return this;
-        }
-
-        public Builder language(Optional<String> language) {
-            Utils.checkNotNull(language, "language");
+        public Builder language(@Nullable String language) {
             this.language = language;
             return this;
         }
 
-
-        public Builder startAt(OffsetDateTime startAt) {
-            Utils.checkNotNull(startAt, "startAt");
-            this.startAt = Optional.ofNullable(startAt);
-            return this;
-        }
-
-        public Builder startAt(Optional<OffsetDateTime> startAt) {
-            Utils.checkNotNull(startAt, "startAt");
+        public Builder startAt(@Nullable OffsetDateTime startAt) {
             this.startAt = startAt;
             return this;
         }
 
-
-        public Builder text(String text) {
-            Utils.checkNotNull(text, "text");
-            this.text = text;
+        public Builder text(@Nonnull String text) {
+            this.text = Utils.checkNotNull(text, "text");
             return this;
         }
 
         public CalendarRecordingTranscript build() {
-
             return new CalendarRecordingTranscript(
                 attendee, endAt, language,
                 startAt, text);

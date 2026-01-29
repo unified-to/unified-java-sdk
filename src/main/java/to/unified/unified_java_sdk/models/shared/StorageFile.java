@@ -4,15 +4,14 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
@@ -24,124 +23,107 @@ public class StorageFile {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
-    private Optional<String> data;
+    private String data;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
-    private Optional<String> description;
+    private String description;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("download_url")
-    private Optional<String> downloadUrl;
+    private String downloadUrl;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hash")
-    private Optional<String> hash;
+    private String hash;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mime_type")
-    private Optional<String> mimeType;
+    private String mimeType;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
-    private Optional<String> name;
+    private String name;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_id")
-    private Optional<String> parentId;
+    private String parentId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
-    private Optional<? extends List<StoragePermission>> permissions;
+    private List<StoragePermission> permissions;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
-    private Optional<Double> size;
+    private Double size;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
-    private Optional<? extends StorageFileType> type;
+    private StorageFileType type;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
-    private Optional<String> userId;
+    private String userId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
-    private Optional<String> version;
+    private String version;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("web_url")
-    private Optional<String> webUrl;
+    private String webUrl;
 
     @JsonCreator
     public StorageFile(
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("data") Optional<String> data,
-            @JsonProperty("description") Optional<String> description,
-            @JsonProperty("download_url") Optional<String> downloadUrl,
-            @JsonProperty("hash") Optional<String> hash,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("mime_type") Optional<String> mimeType,
-            @JsonProperty("name") Optional<String> name,
-            @JsonProperty("parent_id") Optional<String> parentId,
-            @JsonProperty("permissions") Optional<? extends List<StoragePermission>> permissions,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("size") Optional<Double> size,
-            @JsonProperty("type") Optional<? extends StorageFileType> type,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
-            @JsonProperty("user_id") Optional<String> userId,
-            @JsonProperty("version") Optional<String> version,
-            @JsonProperty("web_url") Optional<String> webUrl) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(data, "data");
-        Utils.checkNotNull(description, "description");
-        Utils.checkNotNull(downloadUrl, "downloadUrl");
-        Utils.checkNotNull(hash, "hash");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(mimeType, "mimeType");
-        Utils.checkNotNull(name, "name");
-        Utils.checkNotNull(parentId, "parentId");
-        Utils.checkNotNull(permissions, "permissions");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(size, "size");
-        Utils.checkNotNull(type, "type");
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        Utils.checkNotNull(userId, "userId");
-        Utils.checkNotNull(version, "version");
-        Utils.checkNotNull(webUrl, "webUrl");
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("data") @Nullable String data,
+            @JsonProperty("description") @Nullable String description,
+            @JsonProperty("download_url") @Nullable String downloadUrl,
+            @JsonProperty("hash") @Nullable String hash,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("mime_type") @Nullable String mimeType,
+            @JsonProperty("name") @Nullable String name,
+            @JsonProperty("parent_id") @Nullable String parentId,
+            @JsonProperty("permissions") @Nullable List<StoragePermission> permissions,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("size") @Nullable Double size,
+            @JsonProperty("type") @Nullable StorageFileType type,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
+            @JsonProperty("user_id") @Nullable String userId,
+            @JsonProperty("version") @Nullable String version,
+            @JsonProperty("web_url") @Nullable String webUrl) {
         this.createdAt = createdAt;
         this.data = data;
         this.description = description;
@@ -162,100 +144,80 @@ public class StorageFile {
     }
     
     public StorageFile() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<String> data() {
-        return data;
+        return Optional.ofNullable(this.data);
     }
 
-    @JsonIgnore
     public Optional<String> description() {
-        return description;
+        return Optional.ofNullable(this.description);
     }
 
-    @JsonIgnore
     public Optional<String> downloadUrl() {
-        return downloadUrl;
+        return Optional.ofNullable(this.downloadUrl);
     }
 
-    @JsonIgnore
     public Optional<String> hash() {
-        return hash;
+        return Optional.ofNullable(this.hash);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<String> mimeType() {
-        return mimeType;
+        return Optional.ofNullable(this.mimeType);
     }
 
-    @JsonIgnore
     public Optional<String> name() {
-        return name;
+        return Optional.ofNullable(this.name);
     }
 
-    @JsonIgnore
     public Optional<String> parentId() {
-        return parentId;
+        return Optional.ofNullable(this.parentId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<StoragePermission>> permissions() {
-        return (Optional<List<StoragePermission>>) permissions;
+        return Optional.ofNullable(this.permissions);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @JsonIgnore
     public Optional<Double> size() {
-        return size;
+        return Optional.ofNullable(this.size);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<StorageFileType> type() {
-        return (Optional<StorageFileType>) type;
+        return Optional.ofNullable(this.type);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
-    @JsonIgnore
     public Optional<String> userId() {
-        return userId;
+        return Optional.ofNullable(this.userId);
     }
 
-    @JsonIgnore
     public Optional<String> version() {
-        return version;
+        return Optional.ofNullable(this.version);
     }
 
-    @JsonIgnore
     public Optional<String> webUrl() {
-        return webUrl;
+        return Optional.ofNullable(this.webUrl);
     }
 
     public static Builder builder() {
@@ -263,226 +225,107 @@ public class StorageFile {
     }
 
 
-    public StorageFile withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
-
-
-    public StorageFile withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public StorageFile withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public StorageFile withData(String data) {
-        Utils.checkNotNull(data, "data");
-        this.data = Optional.ofNullable(data);
-        return this;
-    }
 
-
-    public StorageFile withData(Optional<String> data) {
-        Utils.checkNotNull(data, "data");
+    public StorageFile withData(@Nullable String data) {
         this.data = data;
         return this;
     }
 
-    public StorageFile withDescription(String description) {
-        Utils.checkNotNull(description, "description");
-        this.description = Optional.ofNullable(description);
-        return this;
-    }
 
-
-    public StorageFile withDescription(Optional<String> description) {
-        Utils.checkNotNull(description, "description");
+    public StorageFile withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
-    public StorageFile withDownloadUrl(String downloadUrl) {
-        Utils.checkNotNull(downloadUrl, "downloadUrl");
-        this.downloadUrl = Optional.ofNullable(downloadUrl);
-        return this;
-    }
 
-
-    public StorageFile withDownloadUrl(Optional<String> downloadUrl) {
-        Utils.checkNotNull(downloadUrl, "downloadUrl");
+    public StorageFile withDownloadUrl(@Nullable String downloadUrl) {
         this.downloadUrl = downloadUrl;
         return this;
     }
 
-    public StorageFile withHash(String hash) {
-        Utils.checkNotNull(hash, "hash");
-        this.hash = Optional.ofNullable(hash);
-        return this;
-    }
 
-
-    public StorageFile withHash(Optional<String> hash) {
-        Utils.checkNotNull(hash, "hash");
+    public StorageFile withHash(@Nullable String hash) {
         this.hash = hash;
         return this;
     }
 
-    public StorageFile withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public StorageFile withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public StorageFile withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public StorageFile withMimeType(String mimeType) {
-        Utils.checkNotNull(mimeType, "mimeType");
-        this.mimeType = Optional.ofNullable(mimeType);
-        return this;
-    }
 
-
-    public StorageFile withMimeType(Optional<String> mimeType) {
-        Utils.checkNotNull(mimeType, "mimeType");
+    public StorageFile withMimeType(@Nullable String mimeType) {
         this.mimeType = mimeType;
         return this;
     }
 
-    public StorageFile withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = Optional.ofNullable(name);
-        return this;
-    }
 
-
-    public StorageFile withName(Optional<String> name) {
-        Utils.checkNotNull(name, "name");
+    public StorageFile withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
-    public StorageFile withParentId(String parentId) {
-        Utils.checkNotNull(parentId, "parentId");
-        this.parentId = Optional.ofNullable(parentId);
-        return this;
-    }
 
-
-    public StorageFile withParentId(Optional<String> parentId) {
-        Utils.checkNotNull(parentId, "parentId");
+    public StorageFile withParentId(@Nullable String parentId) {
         this.parentId = parentId;
         return this;
     }
 
-    public StorageFile withPermissions(List<StoragePermission> permissions) {
-        Utils.checkNotNull(permissions, "permissions");
-        this.permissions = Optional.ofNullable(permissions);
-        return this;
-    }
 
-
-    public StorageFile withPermissions(Optional<? extends List<StoragePermission>> permissions) {
-        Utils.checkNotNull(permissions, "permissions");
+    public StorageFile withPermissions(@Nullable List<StoragePermission> permissions) {
         this.permissions = permissions;
         return this;
     }
 
-    public StorageFile withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public StorageFile withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public StorageFile withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public StorageFile withSize(double size) {
-        Utils.checkNotNull(size, "size");
-        this.size = Optional.ofNullable(size);
-        return this;
-    }
 
-
-    public StorageFile withSize(Optional<Double> size) {
-        Utils.checkNotNull(size, "size");
+    public StorageFile withSize(@Nullable Double size) {
         this.size = size;
         return this;
     }
 
-    public StorageFile withType(StorageFileType type) {
-        Utils.checkNotNull(type, "type");
-        this.type = Optional.ofNullable(type);
-        return this;
-    }
 
-
-    public StorageFile withType(Optional<? extends StorageFileType> type) {
-        Utils.checkNotNull(type, "type");
+    public StorageFile withType(@Nullable StorageFileType type) {
         this.type = type;
         return this;
     }
 
-    public StorageFile withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public StorageFile withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public StorageFile withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
-    public StorageFile withUserId(String userId) {
-        Utils.checkNotNull(userId, "userId");
-        this.userId = Optional.ofNullable(userId);
-        return this;
-    }
 
-
-    public StorageFile withUserId(Optional<String> userId) {
-        Utils.checkNotNull(userId, "userId");
+    public StorageFile withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
     }
 
-    public StorageFile withVersion(String version) {
-        Utils.checkNotNull(version, "version");
-        this.version = Optional.ofNullable(version);
-        return this;
-    }
 
-
-    public StorageFile withVersion(Optional<String> version) {
-        Utils.checkNotNull(version, "version");
+    public StorageFile withVersion(@Nullable String version) {
         this.version = version;
         return this;
     }
 
-    public StorageFile withWebUrl(String webUrl) {
-        Utils.checkNotNull(webUrl, "webUrl");
-        this.webUrl = Optional.ofNullable(webUrl);
-        return this;
-    }
 
-
-    public StorageFile withWebUrl(Optional<String> webUrl) {
-        Utils.checkNotNull(webUrl, "webUrl");
+    public StorageFile withWebUrl(@Nullable String webUrl) {
         this.webUrl = webUrl;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -549,267 +392,130 @@ public class StorageFile {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<String> data = Optional.empty();
+        private String data;
 
-        private Optional<String> description = Optional.empty();
+        private String description;
 
-        private Optional<String> downloadUrl = Optional.empty();
+        private String downloadUrl;
 
-        private Optional<String> hash = Optional.empty();
+        private String hash;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<String> mimeType = Optional.empty();
+        private String mimeType;
 
-        private Optional<String> name = Optional.empty();
+        private String name;
 
-        private Optional<String> parentId = Optional.empty();
+        private String parentId;
 
-        private Optional<? extends List<StoragePermission>> permissions = Optional.empty();
+        private List<StoragePermission> permissions;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<Double> size = Optional.empty();
+        private Double size;
 
-        private Optional<? extends StorageFileType> type = Optional.empty();
+        private StorageFileType type;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
-        private Optional<String> userId = Optional.empty();
+        private String userId;
 
-        private Optional<String> version = Optional.empty();
+        private String version;
 
-        private Optional<String> webUrl = Optional.empty();
+        private String webUrl;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder data(String data) {
-            Utils.checkNotNull(data, "data");
-            this.data = Optional.ofNullable(data);
-            return this;
-        }
-
-        public Builder data(Optional<String> data) {
-            Utils.checkNotNull(data, "data");
+        public Builder data(@Nullable String data) {
             this.data = data;
             return this;
         }
 
-
-        public Builder description(String description) {
-            Utils.checkNotNull(description, "description");
-            this.description = Optional.ofNullable(description);
-            return this;
-        }
-
-        public Builder description(Optional<String> description) {
-            Utils.checkNotNull(description, "description");
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-
-        public Builder downloadUrl(String downloadUrl) {
-            Utils.checkNotNull(downloadUrl, "downloadUrl");
-            this.downloadUrl = Optional.ofNullable(downloadUrl);
-            return this;
-        }
-
-        public Builder downloadUrl(Optional<String> downloadUrl) {
-            Utils.checkNotNull(downloadUrl, "downloadUrl");
+        public Builder downloadUrl(@Nullable String downloadUrl) {
             this.downloadUrl = downloadUrl;
             return this;
         }
 
-
-        public Builder hash(String hash) {
-            Utils.checkNotNull(hash, "hash");
-            this.hash = Optional.ofNullable(hash);
-            return this;
-        }
-
-        public Builder hash(Optional<String> hash) {
-            Utils.checkNotNull(hash, "hash");
+        public Builder hash(@Nullable String hash) {
             this.hash = hash;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder mimeType(String mimeType) {
-            Utils.checkNotNull(mimeType, "mimeType");
-            this.mimeType = Optional.ofNullable(mimeType);
-            return this;
-        }
-
-        public Builder mimeType(Optional<String> mimeType) {
-            Utils.checkNotNull(mimeType, "mimeType");
+        public Builder mimeType(@Nullable String mimeType) {
             this.mimeType = mimeType;
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = Optional.ofNullable(name);
-            return this;
-        }
-
-        public Builder name(Optional<String> name) {
-            Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-
-        public Builder parentId(String parentId) {
-            Utils.checkNotNull(parentId, "parentId");
-            this.parentId = Optional.ofNullable(parentId);
-            return this;
-        }
-
-        public Builder parentId(Optional<String> parentId) {
-            Utils.checkNotNull(parentId, "parentId");
+        public Builder parentId(@Nullable String parentId) {
             this.parentId = parentId;
             return this;
         }
 
-
-        public Builder permissions(List<StoragePermission> permissions) {
-            Utils.checkNotNull(permissions, "permissions");
-            this.permissions = Optional.ofNullable(permissions);
-            return this;
-        }
-
-        public Builder permissions(Optional<? extends List<StoragePermission>> permissions) {
-            Utils.checkNotNull(permissions, "permissions");
+        public Builder permissions(@Nullable List<StoragePermission> permissions) {
             this.permissions = permissions;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder size(double size) {
-            Utils.checkNotNull(size, "size");
-            this.size = Optional.ofNullable(size);
-            return this;
-        }
-
-        public Builder size(Optional<Double> size) {
-            Utils.checkNotNull(size, "size");
+        public Builder size(@Nullable Double size) {
             this.size = size;
             return this;
         }
 
-
-        public Builder type(StorageFileType type) {
-            Utils.checkNotNull(type, "type");
-            this.type = Optional.ofNullable(type);
-            return this;
-        }
-
-        public Builder type(Optional<? extends StorageFileType> type) {
-            Utils.checkNotNull(type, "type");
+        public Builder type(@Nullable StorageFileType type) {
             this.type = type;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
-
-        public Builder userId(String userId) {
-            Utils.checkNotNull(userId, "userId");
-            this.userId = Optional.ofNullable(userId);
-            return this;
-        }
-
-        public Builder userId(Optional<String> userId) {
-            Utils.checkNotNull(userId, "userId");
+        public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;
         }
 
-
-        public Builder version(String version) {
-            Utils.checkNotNull(version, "version");
-            this.version = Optional.ofNullable(version);
-            return this;
-        }
-
-        public Builder version(Optional<String> version) {
-            Utils.checkNotNull(version, "version");
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }
 
-
-        public Builder webUrl(String webUrl) {
-            Utils.checkNotNull(webUrl, "webUrl");
-            this.webUrl = Optional.ofNullable(webUrl);
-            return this;
-        }
-
-        public Builder webUrl(Optional<String> webUrl) {
-            Utils.checkNotNull(webUrl, "webUrl");
+        public Builder webUrl(@Nullable String webUrl) {
             this.webUrl = webUrl;
             return this;
         }
 
         public StorageFile build() {
-
             return new StorageFile(
                 createdAt, data, description,
                 downloadUrl, hash, id,

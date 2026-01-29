@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.HrisLocation;
@@ -30,7 +30,7 @@ public class PatchHrisLocationRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<PatchHrisLocationQueryParamFields>> fields;
+    private List<PatchHrisLocationQueryParamFields> fields;
 
     /**
      * ID of the Location
@@ -44,63 +44,56 @@ public class PatchHrisLocationRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
     @JsonCreator
     public PatchHrisLocationRequest(
-            HrisLocation hrisLocation,
-            String connectionId,
-            Optional<? extends List<PatchHrisLocationQueryParamFields>> fields,
-            String id,
-            Optional<String> raw) {
-        Utils.checkNotNull(hrisLocation, "hrisLocation");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(raw, "raw");
-        this.hrisLocation = hrisLocation;
-        this.connectionId = connectionId;
+            @Nonnull HrisLocation hrisLocation,
+            @Nonnull String connectionId,
+            @Nullable List<PatchHrisLocationQueryParamFields> fields,
+            @Nonnull String id,
+            @Nullable String raw) {
+        this.hrisLocation = Optional.ofNullable(hrisLocation)
+            .orElseThrow(() -> new IllegalArgumentException("hrisLocation cannot be null"));
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
-        this.id = id;
+        this.id = Optional.ofNullable(id)
+            .orElseThrow(() -> new IllegalArgumentException("id cannot be null"));
         this.raw = raw;
     }
     
     public PatchHrisLocationRequest(
-            HrisLocation hrisLocation,
-            String connectionId,
-            String id) {
-        this(hrisLocation, connectionId, Optional.empty(),
-            id, Optional.empty());
+            @Nonnull HrisLocation hrisLocation,
+            @Nonnull String connectionId,
+            @Nonnull String id) {
+        this(hrisLocation, connectionId, null,
+            id, null);
     }
 
-    @JsonIgnore
     public HrisLocation hrisLocation() {
-        return hrisLocation;
+        return this.hrisLocation;
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<PatchHrisLocationQueryParamFields>> fields() {
-        return (Optional<List<PatchHrisLocationQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
      * ID of the Location
      */
-    @JsonIgnore
     public String id() {
-        return id;
+        return this.id;
     }
 
     /**
@@ -108,9 +101,8 @@ public class PatchHrisLocationRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
     public static Builder builder() {
@@ -118,27 +110,17 @@ public class PatchHrisLocationRequest {
     }
 
 
-    public PatchHrisLocationRequest withHrisLocation(HrisLocation hrisLocation) {
-        Utils.checkNotNull(hrisLocation, "hrisLocation");
-        this.hrisLocation = hrisLocation;
+    public PatchHrisLocationRequest withHrisLocation(@Nonnull HrisLocation hrisLocation) {
+        this.hrisLocation = Utils.checkNotNull(hrisLocation, "hrisLocation");
         return this;
     }
+
 
     /**
      * ID of the connection
      */
-    public PatchHrisLocationRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public PatchHrisLocationRequest withFields(List<PatchHrisLocationQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public PatchHrisLocationRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -146,29 +128,17 @@ public class PatchHrisLocationRequest {
     /**
      * Fields to return
      */
-    public PatchHrisLocationRequest withFields(Optional<? extends List<PatchHrisLocationQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public PatchHrisLocationRequest withFields(@Nullable List<PatchHrisLocationQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
+
     /**
      * ID of the Location
      */
-    public PatchHrisLocationRequest withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = id;
-        return this;
-    }
-
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public PatchHrisLocationRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
+    public PatchHrisLocationRequest withId(@Nonnull String id) {
+        this.id = Utils.checkNotNull(id, "id");
         return this;
     }
 
@@ -178,11 +148,11 @@ public class PatchHrisLocationRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public PatchHrisLocationRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public PatchHrisLocationRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -225,71 +195,42 @@ public class PatchHrisLocationRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<PatchHrisLocationQueryParamFields>> fields = Optional.empty();
+        private List<PatchHrisLocationQueryParamFields> fields;
 
         private String id;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder hrisLocation(HrisLocation hrisLocation) {
-            Utils.checkNotNull(hrisLocation, "hrisLocation");
-            this.hrisLocation = hrisLocation;
+        public Builder hrisLocation(@Nonnull HrisLocation hrisLocation) {
+            this.hrisLocation = Utils.checkNotNull(hrisLocation, "hrisLocation");
             return this;
         }
-
 
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<PatchHrisLocationQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<PatchHrisLocationQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<PatchHrisLocationQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * ID of the Location
          */
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = id;
-            return this;
-        }
-
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
+        public Builder id(@Nonnull String id) {
+            this.id = Utils.checkNotNull(id, "id");
             return this;
         }
 
@@ -298,14 +239,12 @@ public class PatchHrisLocationRequest {
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
         public PatchHrisLocationRequest build() {
-
             return new PatchHrisLocationRequest(
                 hrisLocation, connectionId, fields,
                 id, raw);

@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
@@ -23,33 +23,29 @@ public class PropertyCrmEventMeeting {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
-    private Optional<String> description;
+    private String description;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
-    private Optional<OffsetDateTime> endAt;
+    private OffsetDateTime endAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
-    private Optional<OffsetDateTime> startAt;
+    private OffsetDateTime startAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
-    private Optional<String> title;
+    private String title;
 
     @JsonCreator
     public PropertyCrmEventMeeting(
-            @JsonProperty("description") Optional<String> description,
-            @JsonProperty("end_at") Optional<OffsetDateTime> endAt,
-            @JsonProperty("start_at") Optional<OffsetDateTime> startAt,
-            @JsonProperty("title") Optional<String> title) {
-        Utils.checkNotNull(description, "description");
-        Utils.checkNotNull(endAt, "endAt");
-        Utils.checkNotNull(startAt, "startAt");
-        Utils.checkNotNull(title, "title");
+            @JsonProperty("description") @Nullable String description,
+            @JsonProperty("end_at") @Nullable OffsetDateTime endAt,
+            @JsonProperty("start_at") @Nullable OffsetDateTime startAt,
+            @JsonProperty("title") @Nullable String title) {
         this.description = description;
         this.endAt = endAt;
         this.startAt = startAt;
@@ -57,28 +53,24 @@ public class PropertyCrmEventMeeting {
     }
     
     public PropertyCrmEventMeeting() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+        this(null, null, null,
+            null);
     }
 
-    @JsonIgnore
     public Optional<String> description() {
-        return description;
+        return Optional.ofNullable(this.description);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> endAt() {
-        return endAt;
+        return Optional.ofNullable(this.endAt);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> startAt() {
-        return startAt;
+        return Optional.ofNullable(this.startAt);
     }
 
-    @JsonIgnore
     public Optional<String> title() {
-        return title;
+        return Optional.ofNullable(this.title);
     }
 
     public static Builder builder() {
@@ -86,57 +78,29 @@ public class PropertyCrmEventMeeting {
     }
 
 
-    public PropertyCrmEventMeeting withDescription(String description) {
-        Utils.checkNotNull(description, "description");
-        this.description = Optional.ofNullable(description);
-        return this;
-    }
-
-
-    public PropertyCrmEventMeeting withDescription(Optional<String> description) {
-        Utils.checkNotNull(description, "description");
+    public PropertyCrmEventMeeting withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
-    public PropertyCrmEventMeeting withEndAt(OffsetDateTime endAt) {
-        Utils.checkNotNull(endAt, "endAt");
-        this.endAt = Optional.ofNullable(endAt);
-        return this;
-    }
 
-
-    public PropertyCrmEventMeeting withEndAt(Optional<OffsetDateTime> endAt) {
-        Utils.checkNotNull(endAt, "endAt");
+    public PropertyCrmEventMeeting withEndAt(@Nullable OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
     }
 
-    public PropertyCrmEventMeeting withStartAt(OffsetDateTime startAt) {
-        Utils.checkNotNull(startAt, "startAt");
-        this.startAt = Optional.ofNullable(startAt);
-        return this;
-    }
 
-
-    public PropertyCrmEventMeeting withStartAt(Optional<OffsetDateTime> startAt) {
-        Utils.checkNotNull(startAt, "startAt");
+    public PropertyCrmEventMeeting withStartAt(@Nullable OffsetDateTime startAt) {
         this.startAt = startAt;
         return this;
     }
 
-    public PropertyCrmEventMeeting withTitle(String title) {
-        Utils.checkNotNull(title, "title");
-        this.title = Optional.ofNullable(title);
-        return this;
-    }
 
-
-    public PropertyCrmEventMeeting withTitle(Optional<String> title) {
-        Utils.checkNotNull(title, "title");
+    public PropertyCrmEventMeeting withTitle(@Nullable String title) {
         this.title = title;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -173,72 +137,39 @@ public class PropertyCrmEventMeeting {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> description = Optional.empty();
+        private String description;
 
-        private Optional<OffsetDateTime> endAt = Optional.empty();
+        private OffsetDateTime endAt;
 
-        private Optional<OffsetDateTime> startAt = Optional.empty();
+        private OffsetDateTime startAt;
 
-        private Optional<String> title = Optional.empty();
+        private String title;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder description(String description) {
-            Utils.checkNotNull(description, "description");
-            this.description = Optional.ofNullable(description);
-            return this;
-        }
-
-        public Builder description(Optional<String> description) {
-            Utils.checkNotNull(description, "description");
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-
-        public Builder endAt(OffsetDateTime endAt) {
-            Utils.checkNotNull(endAt, "endAt");
-            this.endAt = Optional.ofNullable(endAt);
-            return this;
-        }
-
-        public Builder endAt(Optional<OffsetDateTime> endAt) {
-            Utils.checkNotNull(endAt, "endAt");
+        public Builder endAt(@Nullable OffsetDateTime endAt) {
             this.endAt = endAt;
             return this;
         }
 
-
-        public Builder startAt(OffsetDateTime startAt) {
-            Utils.checkNotNull(startAt, "startAt");
-            this.startAt = Optional.ofNullable(startAt);
-            return this;
-        }
-
-        public Builder startAt(Optional<OffsetDateTime> startAt) {
-            Utils.checkNotNull(startAt, "startAt");
+        public Builder startAt(@Nullable OffsetDateTime startAt) {
             this.startAt = startAt;
             return this;
         }
 
-
-        public Builder title(String title) {
-            Utils.checkNotNull(title, "title");
-            this.title = Optional.ofNullable(title);
-            return this;
-        }
-
-        public Builder title(Optional<String> title) {
-            Utils.checkNotNull(title, "title");
+        public Builder title(@Nullable String title) {
             this.title = title;
             return this;
         }
 
         public PropertyCrmEventMeeting build() {
-
             return new PropertyCrmEventMeeting(
                 description, endAt, startAt,
                 title);

@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingBillRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingBillRequest;
@@ -68,7 +69,7 @@ public class AsyncBill {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAccountingBillResponse>} - The async response
      */
-    public CompletableFuture<CreateAccountingBillResponse> createAccountingBill(CreateAccountingBillRequest request) {
+    public CompletableFuture<CreateAccountingBillResponse> createAccountingBill(@Nonnull CreateAccountingBillRequest request) {
         AsyncRequestOperation<CreateAccountingBillRequest, CreateAccountingBillResponse> operation
               = new CreateAccountingBill.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -91,7 +92,7 @@ public class AsyncBill {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAccountingBillResponse>} - The async response
      */
-    public CompletableFuture<GetAccountingBillResponse> getAccountingBill(GetAccountingBillRequest request) {
+    public CompletableFuture<GetAccountingBillResponse> getAccountingBill(@Nonnull GetAccountingBillRequest request) {
         AsyncRequestOperation<GetAccountingBillRequest, GetAccountingBillResponse> operation
               = new GetAccountingBill.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -114,7 +115,7 @@ public class AsyncBill {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAccountingBillsResponse>} - The async response
      */
-    public CompletableFuture<ListAccountingBillsResponse> listAccountingBills(ListAccountingBillsRequest request) {
+    public CompletableFuture<ListAccountingBillsResponse> listAccountingBills(@Nonnull ListAccountingBillsRequest request) {
         AsyncRequestOperation<ListAccountingBillsRequest, ListAccountingBillsResponse> operation
               = new ListAccountingBills.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -137,7 +138,7 @@ public class AsyncBill {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAccountingBillResponse>} - The async response
      */
-    public CompletableFuture<PatchAccountingBillResponse> patchAccountingBill(PatchAccountingBillRequest request) {
+    public CompletableFuture<PatchAccountingBillResponse> patchAccountingBill(@Nonnull PatchAccountingBillRequest request) {
         AsyncRequestOperation<PatchAccountingBillRequest, PatchAccountingBillResponse> operation
               = new PatchAccountingBill.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -160,7 +161,7 @@ public class AsyncBill {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAccountingBillResponse>} - The async response
      */
-    public CompletableFuture<RemoveAccountingBillResponse> removeAccountingBill(RemoveAccountingBillRequest request) {
+    public CompletableFuture<RemoveAccountingBillResponse> removeAccountingBill(@Nonnull RemoveAccountingBillRequest request) {
         AsyncRequestOperation<RemoveAccountingBillRequest, RemoveAccountingBillResponse> operation
               = new RemoveAccountingBill.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -183,7 +184,7 @@ public class AsyncBill {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAccountingBillResponse>} - The async response
      */
-    public CompletableFuture<UpdateAccountingBillResponse> updateAccountingBill(UpdateAccountingBillRequest request) {
+    public CompletableFuture<UpdateAccountingBillResponse> updateAccountingBill(@Nonnull UpdateAccountingBillRequest request) {
         AsyncRequestOperation<UpdateAccountingBillRequest, UpdateAccountingBillResponse> operation
               = new UpdateAccountingBill.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAtsJobRequest;
 import to.unified.unified_java_sdk.models.operations.GetAtsJobRequest;
@@ -68,7 +69,7 @@ public class AsyncJob {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAtsJobResponse>} - The async response
      */
-    public CompletableFuture<CreateAtsJobResponse> createAtsJob(CreateAtsJobRequest request) {
+    public CompletableFuture<CreateAtsJobResponse> createAtsJob(@Nonnull CreateAtsJobRequest request) {
         AsyncRequestOperation<CreateAtsJobRequest, CreateAtsJobResponse> operation
               = new CreateAtsJob.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -91,7 +92,7 @@ public class AsyncJob {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAtsJobResponse>} - The async response
      */
-    public CompletableFuture<GetAtsJobResponse> getAtsJob(GetAtsJobRequest request) {
+    public CompletableFuture<GetAtsJobResponse> getAtsJob(@Nonnull GetAtsJobRequest request) {
         AsyncRequestOperation<GetAtsJobRequest, GetAtsJobResponse> operation
               = new GetAtsJob.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -114,7 +115,7 @@ public class AsyncJob {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAtsJobsResponse>} - The async response
      */
-    public CompletableFuture<ListAtsJobsResponse> listAtsJobs(ListAtsJobsRequest request) {
+    public CompletableFuture<ListAtsJobsResponse> listAtsJobs(@Nonnull ListAtsJobsRequest request) {
         AsyncRequestOperation<ListAtsJobsRequest, ListAtsJobsResponse> operation
               = new ListAtsJobs.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -137,7 +138,7 @@ public class AsyncJob {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAtsJobResponse>} - The async response
      */
-    public CompletableFuture<PatchAtsJobResponse> patchAtsJob(PatchAtsJobRequest request) {
+    public CompletableFuture<PatchAtsJobResponse> patchAtsJob(@Nonnull PatchAtsJobRequest request) {
         AsyncRequestOperation<PatchAtsJobRequest, PatchAtsJobResponse> operation
               = new PatchAtsJob.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -160,7 +161,7 @@ public class AsyncJob {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAtsJobResponse>} - The async response
      */
-    public CompletableFuture<RemoveAtsJobResponse> removeAtsJob(RemoveAtsJobRequest request) {
+    public CompletableFuture<RemoveAtsJobResponse> removeAtsJob(@Nonnull RemoveAtsJobRequest request) {
         AsyncRequestOperation<RemoveAtsJobRequest, RemoveAtsJobResponse> operation
               = new RemoveAtsJob.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -183,7 +184,7 @@ public class AsyncJob {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAtsJobResponse>} - The async response
      */
-    public CompletableFuture<UpdateAtsJobResponse> updateAtsJob(UpdateAtsJobRequest request) {
+    public CompletableFuture<UpdateAtsJobResponse> updateAtsJob(@Nonnull UpdateAtsJobRequest request) {
         AsyncRequestOperation<UpdateAtsJobRequest, UpdateAtsJobResponse> operation
               = new UpdateAtsJob.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

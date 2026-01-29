@@ -4,16 +4,15 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
@@ -25,68 +24,59 @@ public class CrmPipeline {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deal_probability")
-    private Optional<Double> dealProbability;
+    private Double dealProbability;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display_order")
-    private Optional<Double> displayOrder;
+    private Double displayOrder;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
-    private Optional<Boolean> isActive;
+    private Boolean isActive;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
-    private Optional<String> name;
+    private String name;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stages")
-    private Optional<? extends List<CrmStage>> stages;
+    private List<CrmStage> stages;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
     @JsonCreator
     public CrmPipeline(
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("deal_probability") Optional<Double> dealProbability,
-            @JsonProperty("display_order") Optional<Double> displayOrder,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("is_active") Optional<Boolean> isActive,
-            @JsonProperty("name") Optional<String> name,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("stages") Optional<? extends List<CrmStage>> stages,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(dealProbability, "dealProbability");
-        Utils.checkNotNull(displayOrder, "displayOrder");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(isActive, "isActive");
-        Utils.checkNotNull(name, "name");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(stages, "stages");
-        Utils.checkNotNull(updatedAt, "updatedAt");
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("deal_probability") @Nullable Double dealProbability,
+            @JsonProperty("display_order") @Nullable Double displayOrder,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("is_active") @Nullable Boolean isActive,
+            @JsonProperty("name") @Nullable String name,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("stages") @Nullable List<CrmStage> stages,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.createdAt = createdAt;
         this.dealProbability = dealProbability;
         this.displayOrder = displayOrder;
@@ -99,56 +89,45 @@ public class CrmPipeline {
     }
     
     public CrmPipeline() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<Double> dealProbability() {
-        return dealProbability;
+        return Optional.ofNullable(this.dealProbability);
     }
 
-    @JsonIgnore
     public Optional<Double> displayOrder() {
-        return displayOrder;
+        return Optional.ofNullable(this.displayOrder);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isActive() {
-        return isActive;
+        return Optional.ofNullable(this.isActive);
     }
 
-    @JsonIgnore
     public Optional<String> name() {
-        return name;
+        return Optional.ofNullable(this.name);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<CrmStage>> stages() {
-        return (Optional<List<CrmStage>>) stages;
+        return Optional.ofNullable(this.stages);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
     public static Builder builder() {
@@ -156,122 +135,59 @@ public class CrmPipeline {
     }
 
 
-    public CrmPipeline withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
-
-
-    public CrmPipeline withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public CrmPipeline withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public CrmPipeline withDealProbability(double dealProbability) {
-        Utils.checkNotNull(dealProbability, "dealProbability");
-        this.dealProbability = Optional.ofNullable(dealProbability);
-        return this;
-    }
 
-
-    public CrmPipeline withDealProbability(Optional<Double> dealProbability) {
-        Utils.checkNotNull(dealProbability, "dealProbability");
+    public CrmPipeline withDealProbability(@Nullable Double dealProbability) {
         this.dealProbability = dealProbability;
         return this;
     }
 
-    public CrmPipeline withDisplayOrder(double displayOrder) {
-        Utils.checkNotNull(displayOrder, "displayOrder");
-        this.displayOrder = Optional.ofNullable(displayOrder);
-        return this;
-    }
 
-
-    public CrmPipeline withDisplayOrder(Optional<Double> displayOrder) {
-        Utils.checkNotNull(displayOrder, "displayOrder");
+    public CrmPipeline withDisplayOrder(@Nullable Double displayOrder) {
         this.displayOrder = displayOrder;
         return this;
     }
 
-    public CrmPipeline withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public CrmPipeline withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public CrmPipeline withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public CrmPipeline withIsActive(boolean isActive) {
-        Utils.checkNotNull(isActive, "isActive");
-        this.isActive = Optional.ofNullable(isActive);
-        return this;
-    }
 
-
-    public CrmPipeline withIsActive(Optional<Boolean> isActive) {
-        Utils.checkNotNull(isActive, "isActive");
+    public CrmPipeline withIsActive(@Nullable Boolean isActive) {
         this.isActive = isActive;
         return this;
     }
 
-    public CrmPipeline withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = Optional.ofNullable(name);
-        return this;
-    }
 
-
-    public CrmPipeline withName(Optional<String> name) {
-        Utils.checkNotNull(name, "name");
+    public CrmPipeline withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
-    public CrmPipeline withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public CrmPipeline withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public CrmPipeline withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public CrmPipeline withStages(List<CrmStage> stages) {
-        Utils.checkNotNull(stages, "stages");
-        this.stages = Optional.ofNullable(stages);
-        return this;
-    }
 
-
-    public CrmPipeline withStages(Optional<? extends List<CrmStage>> stages) {
-        Utils.checkNotNull(stages, "stages");
+    public CrmPipeline withStages(@Nullable List<CrmStage> stages) {
         this.stages = stages;
         return this;
     }
 
-    public CrmPipeline withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public CrmPipeline withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public CrmPipeline withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -319,147 +235,74 @@ public class CrmPipeline {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<Double> dealProbability = Optional.empty();
+        private Double dealProbability;
 
-        private Optional<Double> displayOrder = Optional.empty();
+        private Double displayOrder;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<Boolean> isActive = Optional.empty();
+        private Boolean isActive;
 
-        private Optional<String> name = Optional.empty();
+        private String name;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<? extends List<CrmStage>> stages = Optional.empty();
+        private List<CrmStage> stages;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder dealProbability(double dealProbability) {
-            Utils.checkNotNull(dealProbability, "dealProbability");
-            this.dealProbability = Optional.ofNullable(dealProbability);
-            return this;
-        }
-
-        public Builder dealProbability(Optional<Double> dealProbability) {
-            Utils.checkNotNull(dealProbability, "dealProbability");
+        public Builder dealProbability(@Nullable Double dealProbability) {
             this.dealProbability = dealProbability;
             return this;
         }
 
-
-        public Builder displayOrder(double displayOrder) {
-            Utils.checkNotNull(displayOrder, "displayOrder");
-            this.displayOrder = Optional.ofNullable(displayOrder);
-            return this;
-        }
-
-        public Builder displayOrder(Optional<Double> displayOrder) {
-            Utils.checkNotNull(displayOrder, "displayOrder");
+        public Builder displayOrder(@Nullable Double displayOrder) {
             this.displayOrder = displayOrder;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder isActive(boolean isActive) {
-            Utils.checkNotNull(isActive, "isActive");
-            this.isActive = Optional.ofNullable(isActive);
-            return this;
-        }
-
-        public Builder isActive(Optional<Boolean> isActive) {
-            Utils.checkNotNull(isActive, "isActive");
+        public Builder isActive(@Nullable Boolean isActive) {
             this.isActive = isActive;
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = Optional.ofNullable(name);
-            return this;
-        }
-
-        public Builder name(Optional<String> name) {
-            Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder stages(List<CrmStage> stages) {
-            Utils.checkNotNull(stages, "stages");
-            this.stages = Optional.ofNullable(stages);
-            return this;
-        }
-
-        public Builder stages(Optional<? extends List<CrmStage>> stages) {
-            Utils.checkNotNull(stages, "stages");
+        public Builder stages(@Nullable List<CrmStage> stages) {
             this.stages = stages;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
         public CrmPipeline build() {
-
             return new CrmPipeline(
                 createdAt, dealProbability, displayOrder,
                 id, isActive, name,

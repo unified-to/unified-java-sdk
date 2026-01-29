@@ -4,14 +4,13 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -23,68 +22,59 @@ public class AtsJobPosting {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
-    private Optional<? extends PropertyAtsJobPostingAddress> address;
+    private PropertyAtsJobPostingAddress address;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
-    private Optional<String> description;
+    private String description;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
-    private Optional<Boolean> isActive;
+    private Boolean isActive;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
-    private Optional<String> location;
+    private String location;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
-    private Optional<String> name;
+    private String name;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("posting_url")
-    private Optional<String> postingUrl;
+    private String postingUrl;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
     @JsonCreator
     public AtsJobPosting(
-            @JsonProperty("address") Optional<? extends PropertyAtsJobPostingAddress> address,
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("description") Optional<String> description,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("is_active") Optional<Boolean> isActive,
-            @JsonProperty("location") Optional<String> location,
-            @JsonProperty("name") Optional<String> name,
-            @JsonProperty("posting_url") Optional<String> postingUrl,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(address, "address");
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(description, "description");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(isActive, "isActive");
-        Utils.checkNotNull(location, "location");
-        Utils.checkNotNull(name, "name");
-        Utils.checkNotNull(postingUrl, "postingUrl");
-        Utils.checkNotNull(updatedAt, "updatedAt");
+            @JsonProperty("address") @Nullable PropertyAtsJobPostingAddress address,
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("description") @Nullable String description,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("is_active") @Nullable Boolean isActive,
+            @JsonProperty("location") @Nullable String location,
+            @JsonProperty("name") @Nullable String name,
+            @JsonProperty("posting_url") @Nullable String postingUrl,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.address = address;
         this.createdAt = createdAt;
         this.description = description;
@@ -97,58 +87,48 @@ public class AtsJobPosting {
     }
     
     public AtsJobPosting() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null);
     }
 
     /**
      * job-post-specific address
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<PropertyAtsJobPostingAddress> address() {
-        return (Optional<PropertyAtsJobPostingAddress>) address;
+        return Optional.ofNullable(this.address);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<String> description() {
-        return description;
+        return Optional.ofNullable(this.description);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isActive() {
-        return isActive;
+        return Optional.ofNullable(this.isActive);
     }
 
-    @JsonIgnore
     public Optional<String> location() {
-        return location;
+        return Optional.ofNullable(this.location);
     }
 
-    @JsonIgnore
     public Optional<String> name() {
-        return name;
+        return Optional.ofNullable(this.name);
     }
 
-    @JsonIgnore
     public Optional<String> postingUrl() {
-        return postingUrl;
+        return Optional.ofNullable(this.postingUrl);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
     public static Builder builder() {
@@ -159,125 +139,59 @@ public class AtsJobPosting {
     /**
      * job-post-specific address
      */
-    public AtsJobPosting withAddress(PropertyAtsJobPostingAddress address) {
-        Utils.checkNotNull(address, "address");
-        this.address = Optional.ofNullable(address);
-        return this;
-    }
-
-
-    /**
-     * job-post-specific address
-     */
-    public AtsJobPosting withAddress(Optional<? extends PropertyAtsJobPostingAddress> address) {
-        Utils.checkNotNull(address, "address");
+    public AtsJobPosting withAddress(@Nullable PropertyAtsJobPostingAddress address) {
         this.address = address;
         return this;
     }
 
-    public AtsJobPosting withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
 
-
-    public AtsJobPosting withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public AtsJobPosting withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public AtsJobPosting withDescription(String description) {
-        Utils.checkNotNull(description, "description");
-        this.description = Optional.ofNullable(description);
-        return this;
-    }
 
-
-    public AtsJobPosting withDescription(Optional<String> description) {
-        Utils.checkNotNull(description, "description");
+    public AtsJobPosting withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
-    public AtsJobPosting withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public AtsJobPosting withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public AtsJobPosting withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public AtsJobPosting withIsActive(boolean isActive) {
-        Utils.checkNotNull(isActive, "isActive");
-        this.isActive = Optional.ofNullable(isActive);
-        return this;
-    }
 
-
-    public AtsJobPosting withIsActive(Optional<Boolean> isActive) {
-        Utils.checkNotNull(isActive, "isActive");
+    public AtsJobPosting withIsActive(@Nullable Boolean isActive) {
         this.isActive = isActive;
         return this;
     }
 
-    public AtsJobPosting withLocation(String location) {
-        Utils.checkNotNull(location, "location");
-        this.location = Optional.ofNullable(location);
-        return this;
-    }
 
-
-    public AtsJobPosting withLocation(Optional<String> location) {
-        Utils.checkNotNull(location, "location");
+    public AtsJobPosting withLocation(@Nullable String location) {
         this.location = location;
         return this;
     }
 
-    public AtsJobPosting withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = Optional.ofNullable(name);
-        return this;
-    }
 
-
-    public AtsJobPosting withName(Optional<String> name) {
-        Utils.checkNotNull(name, "name");
+    public AtsJobPosting withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
-    public AtsJobPosting withPostingUrl(String postingUrl) {
-        Utils.checkNotNull(postingUrl, "postingUrl");
-        this.postingUrl = Optional.ofNullable(postingUrl);
-        return this;
-    }
 
-
-    public AtsJobPosting withPostingUrl(Optional<String> postingUrl) {
-        Utils.checkNotNull(postingUrl, "postingUrl");
+    public AtsJobPosting withPostingUrl(@Nullable String postingUrl) {
         this.postingUrl = postingUrl;
         return this;
     }
 
-    public AtsJobPosting withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public AtsJobPosting withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public AtsJobPosting withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -325,153 +239,77 @@ public class AtsJobPosting {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends PropertyAtsJobPostingAddress> address = Optional.empty();
+        private PropertyAtsJobPostingAddress address;
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<String> description = Optional.empty();
+        private String description;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<Boolean> isActive = Optional.empty();
+        private Boolean isActive;
 
-        private Optional<String> location = Optional.empty();
+        private String location;
 
-        private Optional<String> name = Optional.empty();
+        private String name;
 
-        private Optional<String> postingUrl = Optional.empty();
+        private String postingUrl;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
         /**
          * job-post-specific address
          */
-        public Builder address(PropertyAtsJobPostingAddress address) {
-            Utils.checkNotNull(address, "address");
-            this.address = Optional.ofNullable(address);
-            return this;
-        }
-
-        /**
-         * job-post-specific address
-         */
-        public Builder address(Optional<? extends PropertyAtsJobPostingAddress> address) {
-            Utils.checkNotNull(address, "address");
+        public Builder address(@Nullable PropertyAtsJobPostingAddress address) {
             this.address = address;
             return this;
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder description(String description) {
-            Utils.checkNotNull(description, "description");
-            this.description = Optional.ofNullable(description);
-            return this;
-        }
-
-        public Builder description(Optional<String> description) {
-            Utils.checkNotNull(description, "description");
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder isActive(boolean isActive) {
-            Utils.checkNotNull(isActive, "isActive");
-            this.isActive = Optional.ofNullable(isActive);
-            return this;
-        }
-
-        public Builder isActive(Optional<Boolean> isActive) {
-            Utils.checkNotNull(isActive, "isActive");
+        public Builder isActive(@Nullable Boolean isActive) {
             this.isActive = isActive;
             return this;
         }
 
-
-        public Builder location(String location) {
-            Utils.checkNotNull(location, "location");
-            this.location = Optional.ofNullable(location);
-            return this;
-        }
-
-        public Builder location(Optional<String> location) {
-            Utils.checkNotNull(location, "location");
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = Optional.ofNullable(name);
-            return this;
-        }
-
-        public Builder name(Optional<String> name) {
-            Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-
-        public Builder postingUrl(String postingUrl) {
-            Utils.checkNotNull(postingUrl, "postingUrl");
-            this.postingUrl = Optional.ofNullable(postingUrl);
-            return this;
-        }
-
-        public Builder postingUrl(Optional<String> postingUrl) {
-            Utils.checkNotNull(postingUrl, "postingUrl");
+        public Builder postingUrl(@Nullable String postingUrl) {
             this.postingUrl = postingUrl;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
         public AtsJobPosting build() {
-
             return new AtsJobPosting(
                 address, createdAt, description,
                 id, isActive, location,

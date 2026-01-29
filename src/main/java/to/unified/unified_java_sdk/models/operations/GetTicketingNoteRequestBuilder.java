@@ -5,32 +5,45 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.GetTicketingNote;
 import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetTicketingNoteRequestBuilder {
-
-    private GetTicketingNoteRequest request;
     private final SDKConfiguration sdkConfiguration;
-    private final Headers _headers = new Headers(); 
+    private final Headers _headers = new Headers();
+    private GetTicketingNoteRequest request;
 
     public GetTicketingNoteRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
 
-    public GetTicketingNoteRequestBuilder request(GetTicketingNoteRequest request) {
-        Utils.checkNotNull(request, "request");
-        this.request = request;
+    public GetTicketingNoteRequestBuilder request(@Nonnull GetTicketingNoteRequest request) {
+        this.request = Utils.checkNotNull(request, "request");
         return this;
     }
 
+    private GetTicketingNoteRequest _buildRequest() {
+        return this.request;
+    }
+    
+    public GetTicketingNoteRequestBuilder header(String name, String value) {
+        Utils.checkNotNull(name, "name");
+        Utils.checkNotNull(value, "value");
+        this._headers.add(name, value);
+        return this;
+    }
+
+    /**
+    * Executes the request and returns the response.
+    *
+    * @return The response from the server.
+    */
     public GetTicketingNoteResponse call() {
-        
         RequestOperation<GetTicketingNoteRequest, GetTicketingNoteResponse> operation
               = new GetTicketingNote.Sync(sdkConfiguration, _headers);
-
-        return operation.handleResponse(operation.doRequest(request));
+        return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

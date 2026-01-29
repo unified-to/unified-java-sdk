@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.CalendarLink;
@@ -30,7 +30,7 @@ public class CreateCalendarLinkRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<CreateCalendarLinkQueryParamFields>> fields;
+    private List<CreateCalendarLinkQueryParamFields> fields;
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
@@ -38,51 +38,45 @@ public class CreateCalendarLinkRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
     @JsonCreator
     public CreateCalendarLinkRequest(
-            CalendarLink calendarLink,
-            String connectionId,
-            Optional<? extends List<CreateCalendarLinkQueryParamFields>> fields,
-            Optional<String> raw) {
-        Utils.checkNotNull(calendarLink, "calendarLink");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(raw, "raw");
-        this.calendarLink = calendarLink;
-        this.connectionId = connectionId;
+            @Nonnull CalendarLink calendarLink,
+            @Nonnull String connectionId,
+            @Nullable List<CreateCalendarLinkQueryParamFields> fields,
+            @Nullable String raw) {
+        this.calendarLink = Optional.ofNullable(calendarLink)
+            .orElseThrow(() -> new IllegalArgumentException("calendarLink cannot be null"));
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
         this.raw = raw;
     }
     
     public CreateCalendarLinkRequest(
-            CalendarLink calendarLink,
-            String connectionId) {
-        this(calendarLink, connectionId, Optional.empty(),
-            Optional.empty());
+            @Nonnull CalendarLink calendarLink,
+            @Nonnull String connectionId) {
+        this(calendarLink, connectionId, null,
+            null);
     }
 
-    @JsonIgnore
     public CalendarLink calendarLink() {
-        return calendarLink;
+        return this.calendarLink;
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<CreateCalendarLinkQueryParamFields>> fields() {
-        return (Optional<List<CreateCalendarLinkQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
@@ -90,9 +84,8 @@ public class CreateCalendarLinkRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
     public static Builder builder() {
@@ -100,27 +93,17 @@ public class CreateCalendarLinkRequest {
     }
 
 
-    public CreateCalendarLinkRequest withCalendarLink(CalendarLink calendarLink) {
-        Utils.checkNotNull(calendarLink, "calendarLink");
-        this.calendarLink = calendarLink;
+    public CreateCalendarLinkRequest withCalendarLink(@Nonnull CalendarLink calendarLink) {
+        this.calendarLink = Utils.checkNotNull(calendarLink, "calendarLink");
         return this;
     }
+
 
     /**
      * ID of the connection
      */
-    public CreateCalendarLinkRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public CreateCalendarLinkRequest withFields(List<CreateCalendarLinkQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public CreateCalendarLinkRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -128,34 +111,22 @@ public class CreateCalendarLinkRequest {
     /**
      * Fields to return
      */
-    public CreateCalendarLinkRequest withFields(Optional<? extends List<CreateCalendarLinkQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public CreateCalendarLinkRequest withFields(@Nullable List<CreateCalendarLinkQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public CreateCalendarLinkRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
-
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public CreateCalendarLinkRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public CreateCalendarLinkRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -196,75 +167,46 @@ public class CreateCalendarLinkRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<CreateCalendarLinkQueryParamFields>> fields = Optional.empty();
+        private List<CreateCalendarLinkQueryParamFields> fields;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder calendarLink(CalendarLink calendarLink) {
-            Utils.checkNotNull(calendarLink, "calendarLink");
-            this.calendarLink = calendarLink;
+        public Builder calendarLink(@Nonnull CalendarLink calendarLink) {
+            this.calendarLink = Utils.checkNotNull(calendarLink, "calendarLink");
             return this;
         }
-
 
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<CreateCalendarLinkQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<CreateCalendarLinkQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<CreateCalendarLinkQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
         public CreateCalendarLinkRequest build() {
-
             return new CreateCalendarLinkRequest(
                 calendarLink, connectionId, fields,
                 raw);

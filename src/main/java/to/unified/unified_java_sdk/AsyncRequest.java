@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateVerificationRequestRequest;
 import to.unified.unified_java_sdk.models.operations.GetVerificationRequestRequest;
@@ -68,7 +69,7 @@ public class AsyncRequest {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateVerificationRequestResponse>} - The async response
      */
-    public CompletableFuture<CreateVerificationRequestResponse> createVerificationRequest(CreateVerificationRequestRequest request) {
+    public CompletableFuture<CreateVerificationRequestResponse> createVerificationRequest(@Nonnull CreateVerificationRequestRequest request) {
         AsyncRequestOperation<CreateVerificationRequestRequest, CreateVerificationRequestResponse> operation
               = new CreateVerificationRequest.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -91,7 +92,7 @@ public class AsyncRequest {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetVerificationRequestResponse>} - The async response
      */
-    public CompletableFuture<GetVerificationRequestResponse> getVerificationRequest(GetVerificationRequestRequest request) {
+    public CompletableFuture<GetVerificationRequestResponse> getVerificationRequest(@Nonnull GetVerificationRequestRequest request) {
         AsyncRequestOperation<GetVerificationRequestRequest, GetVerificationRequestResponse> operation
               = new GetVerificationRequest.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -114,7 +115,7 @@ public class AsyncRequest {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListVerificationRequestsResponse>} - The async response
      */
-    public CompletableFuture<ListVerificationRequestsResponse> listVerificationRequests(ListVerificationRequestsRequest request) {
+    public CompletableFuture<ListVerificationRequestsResponse> listVerificationRequests(@Nonnull ListVerificationRequestsRequest request) {
         AsyncRequestOperation<ListVerificationRequestsRequest, ListVerificationRequestsResponse> operation
               = new ListVerificationRequests.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -137,7 +138,7 @@ public class AsyncRequest {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchVerificationRequestResponse>} - The async response
      */
-    public CompletableFuture<PatchVerificationRequestResponse> patchVerificationRequest(PatchVerificationRequestRequest request) {
+    public CompletableFuture<PatchVerificationRequestResponse> patchVerificationRequest(@Nonnull PatchVerificationRequestRequest request) {
         AsyncRequestOperation<PatchVerificationRequestRequest, PatchVerificationRequestResponse> operation
               = new PatchVerificationRequest.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -160,7 +161,7 @@ public class AsyncRequest {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveVerificationRequestResponse>} - The async response
      */
-    public CompletableFuture<RemoveVerificationRequestResponse> removeVerificationRequest(RemoveVerificationRequestRequest request) {
+    public CompletableFuture<RemoveVerificationRequestResponse> removeVerificationRequest(@Nonnull RemoveVerificationRequestRequest request) {
         AsyncRequestOperation<RemoveVerificationRequestRequest, RemoveVerificationRequestResponse> operation
               = new RemoveVerificationRequest.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -183,7 +184,7 @@ public class AsyncRequest {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateVerificationRequestResponse>} - The async response
      */
-    public CompletableFuture<UpdateVerificationRequestResponse> updateVerificationRequest(UpdateVerificationRequestRequest request) {
+    public CompletableFuture<UpdateVerificationRequestResponse> updateVerificationRequest(@Nonnull UpdateVerificationRequestRequest request) {
         AsyncRequestOperation<UpdateVerificationRequestRequest, UpdateVerificationRequestResponse> operation
               = new UpdateVerificationRequest.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

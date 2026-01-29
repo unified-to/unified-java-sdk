@@ -4,14 +4,13 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
@@ -23,75 +22,65 @@ public class RepoPullrequest {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("closed_at")
-    private Optional<OffsetDateTime> closedAt;
+    private OffsetDateTime closedAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commit_ids")
-    private Optional<? extends List<String>> commitIds;
+    private List<String> commitIds;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
-    private Optional<? extends List<String>> labels;
+    private List<String> labels;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repo_id")
-    private Optional<String> repoId;
+    private String repoId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
-    private Optional<? extends RepoPullrequestStatus> status;
+    private RepoPullrequestStatus status;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_ids")
-    private Optional<? extends List<String>> userIds;
+    private List<String> userIds;
 
     @JsonCreator
     public RepoPullrequest(
-            @JsonProperty("closed_at") Optional<OffsetDateTime> closedAt,
-            @JsonProperty("commit_ids") Optional<? extends List<String>> commitIds,
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("labels") Optional<? extends List<String>> labels,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("repo_id") Optional<String> repoId,
-            @JsonProperty("status") Optional<? extends RepoPullrequestStatus> status,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
-            @JsonProperty("user_ids") Optional<? extends List<String>> userIds) {
-        Utils.checkNotNull(closedAt, "closedAt");
-        Utils.checkNotNull(commitIds, "commitIds");
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(labels, "labels");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(repoId, "repoId");
-        Utils.checkNotNull(status, "status");
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        Utils.checkNotNull(userIds, "userIds");
+            @JsonProperty("closed_at") @Nullable OffsetDateTime closedAt,
+            @JsonProperty("commit_ids") @Nullable List<String> commitIds,
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("labels") @Nullable List<String> labels,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("repo_id") @Nullable String repoId,
+            @JsonProperty("status") @Nullable RepoPullrequestStatus status,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
+            @JsonProperty("user_ids") @Nullable List<String> userIds) {
         this.closedAt = closedAt;
         this.commitIds = commitIds;
         this.createdAt = createdAt;
@@ -105,65 +94,50 @@ public class RepoPullrequest {
     }
     
     public RepoPullrequest() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> closedAt() {
-        return closedAt;
+        return Optional.ofNullable(this.closedAt);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> commitIds() {
-        return (Optional<List<String>>) commitIds;
+        return Optional.ofNullable(this.commitIds);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> labels() {
-        return (Optional<List<String>>) labels;
+        return Optional.ofNullable(this.labels);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @JsonIgnore
     public Optional<String> repoId() {
-        return repoId;
+        return Optional.ofNullable(this.repoId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<RepoPullrequestStatus> status() {
-        return (Optional<RepoPullrequestStatus>) status;
+        return Optional.ofNullable(this.status);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> userIds() {
-        return (Optional<List<String>>) userIds;
+        return Optional.ofNullable(this.userIds);
     }
 
     public static Builder builder() {
@@ -171,135 +145,65 @@ public class RepoPullrequest {
     }
 
 
-    public RepoPullrequest withClosedAt(OffsetDateTime closedAt) {
-        Utils.checkNotNull(closedAt, "closedAt");
-        this.closedAt = Optional.ofNullable(closedAt);
-        return this;
-    }
-
-
-    public RepoPullrequest withClosedAt(Optional<OffsetDateTime> closedAt) {
-        Utils.checkNotNull(closedAt, "closedAt");
+    public RepoPullrequest withClosedAt(@Nullable OffsetDateTime closedAt) {
         this.closedAt = closedAt;
         return this;
     }
 
-    public RepoPullrequest withCommitIds(List<String> commitIds) {
-        Utils.checkNotNull(commitIds, "commitIds");
-        this.commitIds = Optional.ofNullable(commitIds);
-        return this;
-    }
 
-
-    public RepoPullrequest withCommitIds(Optional<? extends List<String>> commitIds) {
-        Utils.checkNotNull(commitIds, "commitIds");
+    public RepoPullrequest withCommitIds(@Nullable List<String> commitIds) {
         this.commitIds = commitIds;
         return this;
     }
 
-    public RepoPullrequest withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
 
-
-    public RepoPullrequest withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public RepoPullrequest withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public RepoPullrequest withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public RepoPullrequest withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public RepoPullrequest withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public RepoPullrequest withLabels(List<String> labels) {
-        Utils.checkNotNull(labels, "labels");
-        this.labels = Optional.ofNullable(labels);
-        return this;
-    }
 
-
-    public RepoPullrequest withLabels(Optional<? extends List<String>> labels) {
-        Utils.checkNotNull(labels, "labels");
+    public RepoPullrequest withLabels(@Nullable List<String> labels) {
         this.labels = labels;
         return this;
     }
 
-    public RepoPullrequest withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public RepoPullrequest withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public RepoPullrequest withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public RepoPullrequest withRepoId(String repoId) {
-        Utils.checkNotNull(repoId, "repoId");
-        this.repoId = Optional.ofNullable(repoId);
-        return this;
-    }
 
-
-    public RepoPullrequest withRepoId(Optional<String> repoId) {
-        Utils.checkNotNull(repoId, "repoId");
+    public RepoPullrequest withRepoId(@Nullable String repoId) {
         this.repoId = repoId;
         return this;
     }
 
-    public RepoPullrequest withStatus(RepoPullrequestStatus status) {
-        Utils.checkNotNull(status, "status");
-        this.status = Optional.ofNullable(status);
-        return this;
-    }
 
-
-    public RepoPullrequest withStatus(Optional<? extends RepoPullrequestStatus> status) {
-        Utils.checkNotNull(status, "status");
+    public RepoPullrequest withStatus(@Nullable RepoPullrequestStatus status) {
         this.status = status;
         return this;
     }
 
-    public RepoPullrequest withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public RepoPullrequest withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public RepoPullrequest withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
-    public RepoPullrequest withUserIds(List<String> userIds) {
-        Utils.checkNotNull(userIds, "userIds");
-        this.userIds = Optional.ofNullable(userIds);
-        return this;
-    }
 
-
-    public RepoPullrequest withUserIds(Optional<? extends List<String>> userIds) {
-        Utils.checkNotNull(userIds, "userIds");
+    public RepoPullrequest withUserIds(@Nullable List<String> userIds) {
         this.userIds = userIds;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -350,162 +254,81 @@ public class RepoPullrequest {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<OffsetDateTime> closedAt = Optional.empty();
+        private OffsetDateTime closedAt;
 
-        private Optional<? extends List<String>> commitIds = Optional.empty();
+        private List<String> commitIds;
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<? extends List<String>> labels = Optional.empty();
+        private List<String> labels;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<String> repoId = Optional.empty();
+        private String repoId;
 
-        private Optional<? extends RepoPullrequestStatus> status = Optional.empty();
+        private RepoPullrequestStatus status;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
-        private Optional<? extends List<String>> userIds = Optional.empty();
+        private List<String> userIds;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder closedAt(OffsetDateTime closedAt) {
-            Utils.checkNotNull(closedAt, "closedAt");
-            this.closedAt = Optional.ofNullable(closedAt);
-            return this;
-        }
-
-        public Builder closedAt(Optional<OffsetDateTime> closedAt) {
-            Utils.checkNotNull(closedAt, "closedAt");
+        public Builder closedAt(@Nullable OffsetDateTime closedAt) {
             this.closedAt = closedAt;
             return this;
         }
 
-
-        public Builder commitIds(List<String> commitIds) {
-            Utils.checkNotNull(commitIds, "commitIds");
-            this.commitIds = Optional.ofNullable(commitIds);
-            return this;
-        }
-
-        public Builder commitIds(Optional<? extends List<String>> commitIds) {
-            Utils.checkNotNull(commitIds, "commitIds");
+        public Builder commitIds(@Nullable List<String> commitIds) {
             this.commitIds = commitIds;
             return this;
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder labels(List<String> labels) {
-            Utils.checkNotNull(labels, "labels");
-            this.labels = Optional.ofNullable(labels);
-            return this;
-        }
-
-        public Builder labels(Optional<? extends List<String>> labels) {
-            Utils.checkNotNull(labels, "labels");
+        public Builder labels(@Nullable List<String> labels) {
             this.labels = labels;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder repoId(String repoId) {
-            Utils.checkNotNull(repoId, "repoId");
-            this.repoId = Optional.ofNullable(repoId);
-            return this;
-        }
-
-        public Builder repoId(Optional<String> repoId) {
-            Utils.checkNotNull(repoId, "repoId");
+        public Builder repoId(@Nullable String repoId) {
             this.repoId = repoId;
             return this;
         }
 
-
-        public Builder status(RepoPullrequestStatus status) {
-            Utils.checkNotNull(status, "status");
-            this.status = Optional.ofNullable(status);
-            return this;
-        }
-
-        public Builder status(Optional<? extends RepoPullrequestStatus> status) {
-            Utils.checkNotNull(status, "status");
+        public Builder status(@Nullable RepoPullrequestStatus status) {
             this.status = status;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
-
-        public Builder userIds(List<String> userIds) {
-            Utils.checkNotNull(userIds, "userIds");
-            this.userIds = Optional.ofNullable(userIds);
-            return this;
-        }
-
-        public Builder userIds(Optional<? extends List<String>> userIds) {
-            Utils.checkNotNull(userIds, "userIds");
+        public Builder userIds(@Nullable List<String> userIds) {
             this.userIds = userIds;
             return this;
         }
 
         public RepoPullrequest build() {
-
             return new RepoPullrequest(
                 closedAt, commitIds, createdAt,
                 id, labels, raw,

@@ -4,11 +4,11 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
@@ -26,25 +26,25 @@ public class ListAtsApplicationstatusesRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<ListAtsApplicationstatusesQueryParamFields>> fields;
+    private List<ListAtsApplicationstatusesQueryParamFields> fields;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
-    private Optional<Double> limit;
+    private Double limit;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
-    private Optional<Double> offset;
+    private Double offset;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
-    private Optional<String> order;
+    private String order;
 
     /**
      * Query string to search. eg. email address or name
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
-    private Optional<String> query;
+    private String query;
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
@@ -52,40 +52,32 @@ public class ListAtsApplicationstatusesRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
-    private Optional<String> sort;
+    private String sort;
 
     /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
-    private Optional<String> updatedGte;
+    private String updatedGte;
 
     @JsonCreator
     public ListAtsApplicationstatusesRequest(
-            String connectionId,
-            Optional<? extends List<ListAtsApplicationstatusesQueryParamFields>> fields,
-            Optional<Double> limit,
-            Optional<Double> offset,
-            Optional<String> order,
-            Optional<String> query,
-            Optional<String> raw,
-            Optional<String> sort,
-            Optional<String> updatedGte) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(limit, "limit");
-        Utils.checkNotNull(offset, "offset");
-        Utils.checkNotNull(order, "order");
-        Utils.checkNotNull(query, "query");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(sort, "sort");
-        Utils.checkNotNull(updatedGte, "updatedGte");
-        this.connectionId = connectionId;
+            @Nonnull String connectionId,
+            @Nullable List<ListAtsApplicationstatusesQueryParamFields> fields,
+            @Nullable Double limit,
+            @Nullable Double offset,
+            @Nullable String order,
+            @Nullable String query,
+            @Nullable String raw,
+            @Nullable String sort,
+            @Nullable String updatedGte) {
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
         this.limit = limit;
         this.offset = offset;
@@ -97,50 +89,43 @@ public class ListAtsApplicationstatusesRequest {
     }
     
     public ListAtsApplicationstatusesRequest(
-            String connectionId) {
-        this(connectionId, Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+            @Nonnull String connectionId) {
+        this(connectionId, null, null,
+            null, null, null,
+            null, null, null);
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<ListAtsApplicationstatusesQueryParamFields>> fields() {
-        return (Optional<List<ListAtsApplicationstatusesQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
-    @JsonIgnore
     public Optional<Double> limit() {
-        return limit;
+        return Optional.ofNullable(this.limit);
     }
 
-    @JsonIgnore
     public Optional<Double> offset() {
-        return offset;
+        return Optional.ofNullable(this.offset);
     }
 
-    @JsonIgnore
     public Optional<String> order() {
-        return order;
+        return Optional.ofNullable(this.order);
     }
 
     /**
      * Query string to search. eg. email address or name
      */
-    @JsonIgnore
     public Optional<String> query() {
-        return query;
+        return Optional.ofNullable(this.query);
     }
 
     /**
@@ -148,23 +133,20 @@ public class ListAtsApplicationstatusesRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @JsonIgnore
     public Optional<String> sort() {
-        return sort;
+        return Optional.ofNullable(this.sort);
     }
 
     /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
-    @JsonIgnore
     public Optional<String> updatedGte() {
-        return updatedGte;
+        return Optional.ofNullable(this.updatedGte);
     }
 
     public static Builder builder() {
@@ -175,18 +157,8 @@ public class ListAtsApplicationstatusesRequest {
     /**
      * ID of the connection
      */
-    public ListAtsApplicationstatusesRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public ListAtsApplicationstatusesRequest withFields(List<ListAtsApplicationstatusesQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public ListAtsApplicationstatusesRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -194,126 +166,65 @@ public class ListAtsApplicationstatusesRequest {
     /**
      * Fields to return
      */
-    public ListAtsApplicationstatusesRequest withFields(Optional<? extends List<ListAtsApplicationstatusesQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public ListAtsApplicationstatusesRequest withFields(@Nullable List<ListAtsApplicationstatusesQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
-    public ListAtsApplicationstatusesRequest withLimit(double limit) {
-        Utils.checkNotNull(limit, "limit");
-        this.limit = Optional.ofNullable(limit);
-        return this;
-    }
 
-
-    public ListAtsApplicationstatusesRequest withLimit(Optional<Double> limit) {
-        Utils.checkNotNull(limit, "limit");
+    public ListAtsApplicationstatusesRequest withLimit(@Nullable Double limit) {
         this.limit = limit;
         return this;
     }
 
-    public ListAtsApplicationstatusesRequest withOffset(double offset) {
-        Utils.checkNotNull(offset, "offset");
-        this.offset = Optional.ofNullable(offset);
-        return this;
-    }
 
-
-    public ListAtsApplicationstatusesRequest withOffset(Optional<Double> offset) {
-        Utils.checkNotNull(offset, "offset");
+    public ListAtsApplicationstatusesRequest withOffset(@Nullable Double offset) {
         this.offset = offset;
         return this;
     }
 
-    public ListAtsApplicationstatusesRequest withOrder(String order) {
-        Utils.checkNotNull(order, "order");
-        this.order = Optional.ofNullable(order);
-        return this;
-    }
 
-
-    public ListAtsApplicationstatusesRequest withOrder(Optional<String> order) {
-        Utils.checkNotNull(order, "order");
+    public ListAtsApplicationstatusesRequest withOrder(@Nullable String order) {
         this.order = order;
         return this;
     }
 
-    /**
-     * Query string to search. eg. email address or name
-     */
-    public ListAtsApplicationstatusesRequest withQuery(String query) {
-        Utils.checkNotNull(query, "query");
-        this.query = Optional.ofNullable(query);
-        return this;
-    }
-
 
     /**
      * Query string to search. eg. email address or name
      */
-    public ListAtsApplicationstatusesRequest withQuery(Optional<String> query) {
-        Utils.checkNotNull(query, "query");
+    public ListAtsApplicationstatusesRequest withQuery(@Nullable String query) {
         this.query = query;
         return this;
     }
 
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public ListAtsApplicationstatusesRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
-
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public ListAtsApplicationstatusesRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public ListAtsApplicationstatusesRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
 
-    public ListAtsApplicationstatusesRequest withSort(String sort) {
-        Utils.checkNotNull(sort, "sort");
-        this.sort = Optional.ofNullable(sort);
-        return this;
-    }
 
-
-    public ListAtsApplicationstatusesRequest withSort(Optional<String> sort) {
-        Utils.checkNotNull(sort, "sort");
+    public ListAtsApplicationstatusesRequest withSort(@Nullable String sort) {
         this.sort = sort;
         return this;
     }
 
-    /**
-     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
-     * YYYY-MM-DDTHH:MM:SSZ format)
-     */
-    public ListAtsApplicationstatusesRequest withUpdatedGte(String updatedGte) {
-        Utils.checkNotNull(updatedGte, "updatedGte");
-        this.updatedGte = Optional.ofNullable(updatedGte);
-        return this;
-    }
-
 
     /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
-    public ListAtsApplicationstatusesRequest withUpdatedGte(Optional<String> updatedGte) {
-        Utils.checkNotNull(updatedGte, "updatedGte");
+    public ListAtsApplicationstatusesRequest withUpdatedGte(@Nullable String updatedGte) {
         this.updatedGte = updatedGte;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -363,172 +274,90 @@ public class ListAtsApplicationstatusesRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<ListAtsApplicationstatusesQueryParamFields>> fields = Optional.empty();
+        private List<ListAtsApplicationstatusesQueryParamFields> fields;
 
-        private Optional<Double> limit = Optional.empty();
+        private Double limit;
 
-        private Optional<Double> offset = Optional.empty();
+        private Double offset;
 
-        private Optional<String> order = Optional.empty();
+        private String order;
 
-        private Optional<String> query = Optional.empty();
+        private String query;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
-        private Optional<String> sort = Optional.empty();
+        private String sort;
 
-        private Optional<String> updatedGte = Optional.empty();
+        private String updatedGte;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<ListAtsApplicationstatusesQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<ListAtsApplicationstatusesQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<ListAtsApplicationstatusesQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
-        public Builder limit(double limit) {
-            Utils.checkNotNull(limit, "limit");
-            this.limit = Optional.ofNullable(limit);
-            return this;
-        }
-
-        public Builder limit(Optional<Double> limit) {
-            Utils.checkNotNull(limit, "limit");
+        public Builder limit(@Nullable Double limit) {
             this.limit = limit;
             return this;
         }
 
-
-        public Builder offset(double offset) {
-            Utils.checkNotNull(offset, "offset");
-            this.offset = Optional.ofNullable(offset);
-            return this;
-        }
-
-        public Builder offset(Optional<Double> offset) {
-            Utils.checkNotNull(offset, "offset");
+        public Builder offset(@Nullable Double offset) {
             this.offset = offset;
             return this;
         }
 
-
-        public Builder order(String order) {
-            Utils.checkNotNull(order, "order");
-            this.order = Optional.ofNullable(order);
-            return this;
-        }
-
-        public Builder order(Optional<String> order) {
-            Utils.checkNotNull(order, "order");
+        public Builder order(@Nullable String order) {
             this.order = order;
             return this;
         }
 
-
         /**
          * Query string to search. eg. email address or name
          */
-        public Builder query(String query) {
-            Utils.checkNotNull(query, "query");
-            this.query = Optional.ofNullable(query);
-            return this;
-        }
-
-        /**
-         * Query string to search. eg. email address or name
-         */
-        public Builder query(Optional<String> query) {
-            Utils.checkNotNull(query, "query");
+        public Builder query(@Nullable String query) {
             this.query = query;
             return this;
         }
 
-
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder sort(String sort) {
-            Utils.checkNotNull(sort, "sort");
-            this.sort = Optional.ofNullable(sort);
-            return this;
-        }
-
-        public Builder sort(Optional<String> sort) {
-            Utils.checkNotNull(sort, "sort");
+        public Builder sort(@Nullable String sort) {
             this.sort = sort;
             return this;
         }
 
-
         /**
          * Return only results whose updated date is equal or greater to this value (ISO-8601 /
          * YYYY-MM-DDTHH:MM:SSZ format)
          */
-        public Builder updatedGte(String updatedGte) {
-            Utils.checkNotNull(updatedGte, "updatedGte");
-            this.updatedGte = Optional.ofNullable(updatedGte);
-            return this;
-        }
-
-        /**
-         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
-         * YYYY-MM-DDTHH:MM:SSZ format)
-         */
-        public Builder updatedGte(Optional<String> updatedGte) {
-            Utils.checkNotNull(updatedGte, "updatedGte");
+        public Builder updatedGte(@Nullable String updatedGte) {
             this.updatedGte = updatedGte;
             return this;
         }
 
         public ListAtsApplicationstatusesRequest build() {
-
             return new ListAtsApplicationstatusesRequest(
                 connectionId, fields, limit,
                 offset, order, query,

@@ -4,13 +4,12 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.io.InputStream;
-import java.lang.Integer;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.List;
 import java.util.Map;
@@ -41,53 +40,47 @@ public class UpdatePassthroughJsonResponse implements Response {
     /**
      * Successful
      */
-    private Optional<? extends InputStream> defaultWildcardWildcardResponseStream;
+    private InputStream defaultWildcardWildcardResponseStream;
 
     /**
      * Successful
      */
-    private Optional<? extends Object> defaultApplicationJsonAny;
+    private Object defaultApplicationJsonAny;
 
     /**
      * Successful
      */
-    private Optional<String> defaultApplicationXmlRes;
+    private String defaultApplicationXmlRes;
 
     /**
      * Successful
      */
-    private Optional<String> defaultTextCsvRes;
+    private String defaultTextCsvRes;
 
     /**
      * Successful
      */
-    private Optional<String> defaultTextPlainRes;
+    private String defaultTextPlainRes;
 
     @JsonCreator
     public UpdatePassthroughJsonResponse(
-            String contentType,
-            Map<String, List<String>> headers,
+            @Nonnull String contentType,
+            @Nonnull Map<String, List<String>> headers,
             int statusCode,
-            HttpResponse<InputStream> rawResponse,
-            Optional<? extends InputStream> defaultWildcardWildcardResponseStream,
-            Optional<? extends Object> defaultApplicationJsonAny,
-            Optional<String> defaultApplicationXmlRes,
-            Optional<String> defaultTextCsvRes,
-            Optional<String> defaultTextPlainRes) {
-        Utils.checkNotNull(contentType, "contentType");
+            @Nonnull HttpResponse<InputStream> rawResponse,
+            @Nullable InputStream defaultWildcardWildcardResponseStream,
+            @Nullable Object defaultApplicationJsonAny,
+            @Nullable String defaultApplicationXmlRes,
+            @Nullable String defaultTextCsvRes,
+            @Nullable String defaultTextPlainRes) {
         headers = Utils.emptyMapIfNull(headers);
-        Utils.checkNotNull(headers, "headers");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        Utils.checkNotNull(defaultWildcardWildcardResponseStream, "defaultWildcardWildcardResponseStream");
-        Utils.checkNotNull(defaultApplicationJsonAny, "defaultApplicationJsonAny");
-        Utils.checkNotNull(defaultApplicationXmlRes, "defaultApplicationXmlRes");
-        Utils.checkNotNull(defaultTextCsvRes, "defaultTextCsvRes");
-        Utils.checkNotNull(defaultTextPlainRes, "defaultTextPlainRes");
-        this.contentType = contentType;
-        this.headers = headers;
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
+        this.headers = Optional.ofNullable(headers)
+            .orElseThrow(() -> new IllegalArgumentException("headers cannot be null"));
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
         this.defaultWildcardWildcardResponseStream = defaultWildcardWildcardResponseStream;
         this.defaultApplicationJsonAny = defaultApplicationJsonAny;
         this.defaultApplicationXmlRes = defaultApplicationXmlRes;
@@ -96,84 +89,73 @@ public class UpdatePassthroughJsonResponse implements Response {
     }
     
     public UpdatePassthroughJsonResponse(
-            String contentType,
-            Map<String, List<String>> headers,
+            @Nonnull String contentType,
+            @Nonnull Map<String, List<String>> headers,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
+            @Nonnull HttpResponse<InputStream> rawResponse) {
         this(contentType, headers, statusCode,
-            rawResponse, Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+            rawResponse, null, null,
+            null, null, null);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
-    @JsonIgnore
     public Map<String, List<String>> headers() {
-        return headers;
+        return this.headers;
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<InputStream> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<InputStream> defaultWildcardWildcardResponseStream() {
-        return (Optional<InputStream>) defaultWildcardWildcardResponseStream;
+        return Optional.ofNullable(this.defaultWildcardWildcardResponseStream);
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Object> defaultApplicationJsonAny() {
-        return (Optional<Object>) defaultApplicationJsonAny;
+        return Optional.ofNullable(this.defaultApplicationJsonAny);
     }
 
     /**
      * Successful
      */
-    @JsonIgnore
     public Optional<String> defaultApplicationXmlRes() {
-        return defaultApplicationXmlRes;
+        return Optional.ofNullable(this.defaultApplicationXmlRes);
     }
 
     /**
      * Successful
      */
-    @JsonIgnore
     public Optional<String> defaultTextCsvRes() {
-        return defaultTextCsvRes;
+        return Optional.ofNullable(this.defaultTextCsvRes);
     }
 
     /**
      * Successful
      */
-    @JsonIgnore
     public Optional<String> defaultTextPlainRes() {
-        return defaultTextPlainRes;
+        return Optional.ofNullable(this.defaultTextPlainRes);
     }
 
     public static Builder builder() {
@@ -184,42 +166,32 @@ public class UpdatePassthroughJsonResponse implements Response {
     /**
      * HTTP response content type for this operation
      */
-    public UpdatePassthroughJsonResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
+    public UpdatePassthroughJsonResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
 
-    public UpdatePassthroughJsonResponse withHeaders(Map<String, List<String>> headers) {
-        Utils.checkNotNull(headers, "headers");
-        this.headers = headers;
+
+    public UpdatePassthroughJsonResponse withHeaders(@Nonnull Map<String, List<String>> headers) {
+        this.headers = Utils.checkNotNull(headers, "headers");
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public UpdatePassthroughJsonResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public UpdatePassthroughJsonResponse withRawResponse(HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
-        return this;
-    }
-
-    /**
-     * Successful
-     */
-    public UpdatePassthroughJsonResponse withDefaultWildcardWildcardResponseStream(InputStream defaultWildcardWildcardResponseStream) {
-        Utils.checkNotNull(defaultWildcardWildcardResponseStream, "defaultWildcardWildcardResponseStream");
-        this.defaultWildcardWildcardResponseStream = Optional.ofNullable(defaultWildcardWildcardResponseStream);
+    public UpdatePassthroughJsonResponse withRawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
 
@@ -227,87 +199,47 @@ public class UpdatePassthroughJsonResponse implements Response {
     /**
      * Successful
      */
-    public UpdatePassthroughJsonResponse withDefaultWildcardWildcardResponseStream(Optional<? extends InputStream> defaultWildcardWildcardResponseStream) {
-        Utils.checkNotNull(defaultWildcardWildcardResponseStream, "defaultWildcardWildcardResponseStream");
+    public UpdatePassthroughJsonResponse withDefaultWildcardWildcardResponseStream(@Nullable InputStream defaultWildcardWildcardResponseStream) {
         this.defaultWildcardWildcardResponseStream = defaultWildcardWildcardResponseStream;
         return this;
     }
 
-    /**
-     * Successful
-     */
-    public UpdatePassthroughJsonResponse withDefaultApplicationJsonAny(Object defaultApplicationJsonAny) {
-        Utils.checkNotNull(defaultApplicationJsonAny, "defaultApplicationJsonAny");
-        this.defaultApplicationJsonAny = Optional.ofNullable(defaultApplicationJsonAny);
-        return this;
-    }
-
 
     /**
      * Successful
      */
-    public UpdatePassthroughJsonResponse withDefaultApplicationJsonAny(Optional<? extends Object> defaultApplicationJsonAny) {
-        Utils.checkNotNull(defaultApplicationJsonAny, "defaultApplicationJsonAny");
+    public UpdatePassthroughJsonResponse withDefaultApplicationJsonAny(@Nullable Object defaultApplicationJsonAny) {
         this.defaultApplicationJsonAny = defaultApplicationJsonAny;
         return this;
     }
 
-    /**
-     * Successful
-     */
-    public UpdatePassthroughJsonResponse withDefaultApplicationXmlRes(String defaultApplicationXmlRes) {
-        Utils.checkNotNull(defaultApplicationXmlRes, "defaultApplicationXmlRes");
-        this.defaultApplicationXmlRes = Optional.ofNullable(defaultApplicationXmlRes);
-        return this;
-    }
-
 
     /**
      * Successful
      */
-    public UpdatePassthroughJsonResponse withDefaultApplicationXmlRes(Optional<String> defaultApplicationXmlRes) {
-        Utils.checkNotNull(defaultApplicationXmlRes, "defaultApplicationXmlRes");
+    public UpdatePassthroughJsonResponse withDefaultApplicationXmlRes(@Nullable String defaultApplicationXmlRes) {
         this.defaultApplicationXmlRes = defaultApplicationXmlRes;
         return this;
     }
 
-    /**
-     * Successful
-     */
-    public UpdatePassthroughJsonResponse withDefaultTextCsvRes(String defaultTextCsvRes) {
-        Utils.checkNotNull(defaultTextCsvRes, "defaultTextCsvRes");
-        this.defaultTextCsvRes = Optional.ofNullable(defaultTextCsvRes);
-        return this;
-    }
-
 
     /**
      * Successful
      */
-    public UpdatePassthroughJsonResponse withDefaultTextCsvRes(Optional<String> defaultTextCsvRes) {
-        Utils.checkNotNull(defaultTextCsvRes, "defaultTextCsvRes");
+    public UpdatePassthroughJsonResponse withDefaultTextCsvRes(@Nullable String defaultTextCsvRes) {
         this.defaultTextCsvRes = defaultTextCsvRes;
         return this;
     }
 
-    /**
-     * Successful
-     */
-    public UpdatePassthroughJsonResponse withDefaultTextPlainRes(String defaultTextPlainRes) {
-        Utils.checkNotNull(defaultTextPlainRes, "defaultTextPlainRes");
-        this.defaultTextPlainRes = Optional.ofNullable(defaultTextPlainRes);
-        return this;
-    }
-
 
     /**
      * Successful
      */
-    public UpdatePassthroughJsonResponse withDefaultTextPlainRes(Optional<String> defaultTextPlainRes) {
-        Utils.checkNotNull(defaultTextPlainRes, "defaultTextPlainRes");
+    public UpdatePassthroughJsonResponse withDefaultTextPlainRes(@Nullable String defaultTextPlainRes) {
         this.defaultTextPlainRes = defaultTextPlainRes;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -359,158 +291,94 @@ public class UpdatePassthroughJsonResponse implements Response {
 
         private Map<String, List<String>> headers;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<InputStream> rawResponse;
 
-        private Optional<? extends InputStream> defaultWildcardWildcardResponseStream = Optional.empty();
+        private InputStream defaultWildcardWildcardResponseStream;
 
-        private Optional<? extends Object> defaultApplicationJsonAny = Optional.empty();
+        private Object defaultApplicationJsonAny;
 
-        private Optional<String> defaultApplicationXmlRes = Optional.empty();
+        private String defaultApplicationXmlRes;
 
-        private Optional<String> defaultTextCsvRes = Optional.empty();
+        private String defaultTextCsvRes;
 
-        private Optional<String> defaultTextPlainRes = Optional.empty();
+        private String defaultTextPlainRes;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
 
-
-        public Builder headers(Map<String, List<String>> headers) {
-            Utils.checkNotNull(headers, "headers");
-            this.headers = headers;
+        public Builder headers(@Nonnull Map<String, List<String>> headers) {
+            this.headers = Utils.checkNotNull(headers, "headers");
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<InputStream> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
-            return this;
-        }
-
-
-        /**
-         * Successful
-         */
-        public Builder defaultWildcardWildcardResponseStream(InputStream defaultWildcardWildcardResponseStream) {
-            Utils.checkNotNull(defaultWildcardWildcardResponseStream, "defaultWildcardWildcardResponseStream");
-            this.defaultWildcardWildcardResponseStream = Optional.ofNullable(defaultWildcardWildcardResponseStream);
+        public Builder rawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         /**
          * Successful
          */
-        public Builder defaultWildcardWildcardResponseStream(Optional<? extends InputStream> defaultWildcardWildcardResponseStream) {
-            Utils.checkNotNull(defaultWildcardWildcardResponseStream, "defaultWildcardWildcardResponseStream");
+        public Builder defaultWildcardWildcardResponseStream(@Nullable InputStream defaultWildcardWildcardResponseStream) {
             this.defaultWildcardWildcardResponseStream = defaultWildcardWildcardResponseStream;
             return this;
         }
 
-
         /**
          * Successful
          */
-        public Builder defaultApplicationJsonAny(Object defaultApplicationJsonAny) {
-            Utils.checkNotNull(defaultApplicationJsonAny, "defaultApplicationJsonAny");
-            this.defaultApplicationJsonAny = Optional.ofNullable(defaultApplicationJsonAny);
-            return this;
-        }
-
-        /**
-         * Successful
-         */
-        public Builder defaultApplicationJsonAny(Optional<? extends Object> defaultApplicationJsonAny) {
-            Utils.checkNotNull(defaultApplicationJsonAny, "defaultApplicationJsonAny");
+        public Builder defaultApplicationJsonAny(@Nullable Object defaultApplicationJsonAny) {
             this.defaultApplicationJsonAny = defaultApplicationJsonAny;
             return this;
         }
 
-
         /**
          * Successful
          */
-        public Builder defaultApplicationXmlRes(String defaultApplicationXmlRes) {
-            Utils.checkNotNull(defaultApplicationXmlRes, "defaultApplicationXmlRes");
-            this.defaultApplicationXmlRes = Optional.ofNullable(defaultApplicationXmlRes);
-            return this;
-        }
-
-        /**
-         * Successful
-         */
-        public Builder defaultApplicationXmlRes(Optional<String> defaultApplicationXmlRes) {
-            Utils.checkNotNull(defaultApplicationXmlRes, "defaultApplicationXmlRes");
+        public Builder defaultApplicationXmlRes(@Nullable String defaultApplicationXmlRes) {
             this.defaultApplicationXmlRes = defaultApplicationXmlRes;
             return this;
         }
 
-
         /**
          * Successful
          */
-        public Builder defaultTextCsvRes(String defaultTextCsvRes) {
-            Utils.checkNotNull(defaultTextCsvRes, "defaultTextCsvRes");
-            this.defaultTextCsvRes = Optional.ofNullable(defaultTextCsvRes);
-            return this;
-        }
-
-        /**
-         * Successful
-         */
-        public Builder defaultTextCsvRes(Optional<String> defaultTextCsvRes) {
-            Utils.checkNotNull(defaultTextCsvRes, "defaultTextCsvRes");
+        public Builder defaultTextCsvRes(@Nullable String defaultTextCsvRes) {
             this.defaultTextCsvRes = defaultTextCsvRes;
             return this;
         }
 
-
         /**
          * Successful
          */
-        public Builder defaultTextPlainRes(String defaultTextPlainRes) {
-            Utils.checkNotNull(defaultTextPlainRes, "defaultTextPlainRes");
-            this.defaultTextPlainRes = Optional.ofNullable(defaultTextPlainRes);
-            return this;
-        }
-
-        /**
-         * Successful
-         */
-        public Builder defaultTextPlainRes(Optional<String> defaultTextPlainRes) {
-            Utils.checkNotNull(defaultTextPlainRes, "defaultTextPlainRes");
+        public Builder defaultTextPlainRes(@Nullable String defaultTextPlainRes) {
             this.defaultTextPlainRes = defaultTextPlainRes;
             return this;
         }
 
         public UpdatePassthroughJsonResponse build() {
-
             return new UpdatePassthroughJsonResponse(
                 contentType, headers, statusCode,
                 rawResponse, defaultWildcardWildcardResponseStream, defaultApplicationJsonAny,

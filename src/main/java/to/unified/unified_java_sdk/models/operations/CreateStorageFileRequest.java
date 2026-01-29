@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.StorageFile;
@@ -30,7 +30,7 @@ public class CreateStorageFileRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<CreateStorageFileQueryParamFields>> fields;
+    private List<CreateStorageFileQueryParamFields> fields;
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
@@ -38,51 +38,45 @@ public class CreateStorageFileRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
     @JsonCreator
     public CreateStorageFileRequest(
-            StorageFile storageFile,
-            String connectionId,
-            Optional<? extends List<CreateStorageFileQueryParamFields>> fields,
-            Optional<String> raw) {
-        Utils.checkNotNull(storageFile, "storageFile");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(raw, "raw");
-        this.storageFile = storageFile;
-        this.connectionId = connectionId;
+            @Nonnull StorageFile storageFile,
+            @Nonnull String connectionId,
+            @Nullable List<CreateStorageFileQueryParamFields> fields,
+            @Nullable String raw) {
+        this.storageFile = Optional.ofNullable(storageFile)
+            .orElseThrow(() -> new IllegalArgumentException("storageFile cannot be null"));
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
         this.raw = raw;
     }
     
     public CreateStorageFileRequest(
-            StorageFile storageFile,
-            String connectionId) {
-        this(storageFile, connectionId, Optional.empty(),
-            Optional.empty());
+            @Nonnull StorageFile storageFile,
+            @Nonnull String connectionId) {
+        this(storageFile, connectionId, null,
+            null);
     }
 
-    @JsonIgnore
     public StorageFile storageFile() {
-        return storageFile;
+        return this.storageFile;
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<CreateStorageFileQueryParamFields>> fields() {
-        return (Optional<List<CreateStorageFileQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
@@ -90,9 +84,8 @@ public class CreateStorageFileRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
     public static Builder builder() {
@@ -100,27 +93,17 @@ public class CreateStorageFileRequest {
     }
 
 
-    public CreateStorageFileRequest withStorageFile(StorageFile storageFile) {
-        Utils.checkNotNull(storageFile, "storageFile");
-        this.storageFile = storageFile;
+    public CreateStorageFileRequest withStorageFile(@Nonnull StorageFile storageFile) {
+        this.storageFile = Utils.checkNotNull(storageFile, "storageFile");
         return this;
     }
+
 
     /**
      * ID of the connection
      */
-    public CreateStorageFileRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public CreateStorageFileRequest withFields(List<CreateStorageFileQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public CreateStorageFileRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -128,34 +111,22 @@ public class CreateStorageFileRequest {
     /**
      * Fields to return
      */
-    public CreateStorageFileRequest withFields(Optional<? extends List<CreateStorageFileQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public CreateStorageFileRequest withFields(@Nullable List<CreateStorageFileQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public CreateStorageFileRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
-
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public CreateStorageFileRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public CreateStorageFileRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -196,75 +167,46 @@ public class CreateStorageFileRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<CreateStorageFileQueryParamFields>> fields = Optional.empty();
+        private List<CreateStorageFileQueryParamFields> fields;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder storageFile(StorageFile storageFile) {
-            Utils.checkNotNull(storageFile, "storageFile");
-            this.storageFile = storageFile;
+        public Builder storageFile(@Nonnull StorageFile storageFile) {
+            this.storageFile = Utils.checkNotNull(storageFile, "storageFile");
             return this;
         }
-
 
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<CreateStorageFileQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<CreateStorageFileQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<CreateStorageFileQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
         public CreateStorageFileRequest build() {
-
             return new CreateStorageFileRequest(
                 storageFile, connectionId, fields,
                 raw);

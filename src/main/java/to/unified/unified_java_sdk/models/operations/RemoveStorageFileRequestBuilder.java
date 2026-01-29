@@ -5,32 +5,45 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.RemoveStorageFile;
 import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveStorageFileRequestBuilder {
-
-    private RemoveStorageFileRequest request;
     private final SDKConfiguration sdkConfiguration;
-    private final Headers _headers = new Headers(); 
+    private final Headers _headers = new Headers();
+    private RemoveStorageFileRequest request;
 
     public RemoveStorageFileRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
 
-    public RemoveStorageFileRequestBuilder request(RemoveStorageFileRequest request) {
-        Utils.checkNotNull(request, "request");
-        this.request = request;
+    public RemoveStorageFileRequestBuilder request(@Nonnull RemoveStorageFileRequest request) {
+        this.request = Utils.checkNotNull(request, "request");
         return this;
     }
 
+    private RemoveStorageFileRequest _buildRequest() {
+        return this.request;
+    }
+    
+    public RemoveStorageFileRequestBuilder header(String name, String value) {
+        Utils.checkNotNull(name, "name");
+        Utils.checkNotNull(value, "value");
+        this._headers.add(name, value);
+        return this;
+    }
+
+    /**
+    * Executes the request and returns the response.
+    *
+    * @return The response from the server.
+    */
     public RemoveStorageFileResponse call() {
-        
         RequestOperation<RemoveStorageFileRequest, RemoveStorageFileResponse> operation
               = new RemoveStorageFile.Sync(sdkConfiguration, _headers);
-
-        return operation.handleResponse(operation.doRequest(request));
+        return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

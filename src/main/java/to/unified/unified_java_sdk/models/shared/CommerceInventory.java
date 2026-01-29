@@ -4,15 +4,13 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.lang.Double;
+import jakarta.annotation.Nullable;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.Map;
 import java.util.Optional;
@@ -27,56 +25,48 @@ public class CommerceInventory {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_id")
-    private Optional<String> itemId;
+    private String itemId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_option_id")
-    private Optional<String> itemOptionId;
+    private String itemOptionId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_variant_id")
-    private Optional<String> itemVariantId;
+    private String itemVariantId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_id")
-    private Optional<String> locationId;
+    private String locationId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
     @JsonCreator
     public CommerceInventory(
             @JsonProperty("available") double available,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("item_id") Optional<String> itemId,
-            @JsonProperty("item_option_id") Optional<String> itemOptionId,
-            @JsonProperty("item_variant_id") Optional<String> itemVariantId,
-            @JsonProperty("location_id") Optional<String> locationId,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(available, "available");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(itemId, "itemId");
-        Utils.checkNotNull(itemOptionId, "itemOptionId");
-        Utils.checkNotNull(itemVariantId, "itemVariantId");
-        Utils.checkNotNull(locationId, "locationId");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(updatedAt, "updatedAt");
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("item_id") @Nullable String itemId,
+            @JsonProperty("item_option_id") @Nullable String itemOptionId,
+            @JsonProperty("item_variant_id") @Nullable String itemVariantId,
+            @JsonProperty("location_id") @Nullable String locationId,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.available = available;
         this.id = id;
         this.itemId = itemId;
@@ -89,50 +79,41 @@ public class CommerceInventory {
     
     public CommerceInventory(
             double available) {
-        this(available, Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+        this(available, null, null,
+            null, null, null,
+            null, null);
     }
 
-    @JsonIgnore
     public double available() {
-        return available;
+        return this.available;
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<String> itemId() {
-        return itemId;
+        return Optional.ofNullable(this.itemId);
     }
 
-    @JsonIgnore
     public Optional<String> itemOptionId() {
-        return itemOptionId;
+        return Optional.ofNullable(this.itemOptionId);
     }
 
-    @JsonIgnore
     public Optional<String> itemVariantId() {
-        return itemVariantId;
+        return Optional.ofNullable(this.itemVariantId);
     }
 
-    @JsonIgnore
     public Optional<String> locationId() {
-        return locationId;
+        return Optional.ofNullable(this.locationId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
     public static Builder builder() {
@@ -141,101 +122,52 @@ public class CommerceInventory {
 
 
     public CommerceInventory withAvailable(double available) {
-        Utils.checkNotNull(available, "available");
         this.available = available;
         return this;
     }
 
-    public CommerceInventory withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public CommerceInventory withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public CommerceInventory withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public CommerceInventory withItemId(String itemId) {
-        Utils.checkNotNull(itemId, "itemId");
-        this.itemId = Optional.ofNullable(itemId);
-        return this;
-    }
 
-
-    public CommerceInventory withItemId(Optional<String> itemId) {
-        Utils.checkNotNull(itemId, "itemId");
+    public CommerceInventory withItemId(@Nullable String itemId) {
         this.itemId = itemId;
         return this;
     }
 
-    public CommerceInventory withItemOptionId(String itemOptionId) {
-        Utils.checkNotNull(itemOptionId, "itemOptionId");
-        this.itemOptionId = Optional.ofNullable(itemOptionId);
-        return this;
-    }
 
-
-    public CommerceInventory withItemOptionId(Optional<String> itemOptionId) {
-        Utils.checkNotNull(itemOptionId, "itemOptionId");
+    public CommerceInventory withItemOptionId(@Nullable String itemOptionId) {
         this.itemOptionId = itemOptionId;
         return this;
     }
 
-    public CommerceInventory withItemVariantId(String itemVariantId) {
-        Utils.checkNotNull(itemVariantId, "itemVariantId");
-        this.itemVariantId = Optional.ofNullable(itemVariantId);
-        return this;
-    }
 
-
-    public CommerceInventory withItemVariantId(Optional<String> itemVariantId) {
-        Utils.checkNotNull(itemVariantId, "itemVariantId");
+    public CommerceInventory withItemVariantId(@Nullable String itemVariantId) {
         this.itemVariantId = itemVariantId;
         return this;
     }
 
-    public CommerceInventory withLocationId(String locationId) {
-        Utils.checkNotNull(locationId, "locationId");
-        this.locationId = Optional.ofNullable(locationId);
-        return this;
-    }
 
-
-    public CommerceInventory withLocationId(Optional<String> locationId) {
-        Utils.checkNotNull(locationId, "locationId");
+    public CommerceInventory withLocationId(@Nullable String locationId) {
         this.locationId = locationId;
         return this;
     }
 
-    public CommerceInventory withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public CommerceInventory withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public CommerceInventory withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public CommerceInventory withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public CommerceInventory withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public CommerceInventory withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -281,126 +213,67 @@ public class CommerceInventory {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Double available;
+        private double available;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<String> itemId = Optional.empty();
+        private String itemId;
 
-        private Optional<String> itemOptionId = Optional.empty();
+        private String itemOptionId;
 
-        private Optional<String> itemVariantId = Optional.empty();
+        private String itemVariantId;
 
-        private Optional<String> locationId = Optional.empty();
+        private String locationId;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
         public Builder available(double available) {
-            Utils.checkNotNull(available, "available");
             this.available = available;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder itemId(String itemId) {
-            Utils.checkNotNull(itemId, "itemId");
-            this.itemId = Optional.ofNullable(itemId);
-            return this;
-        }
-
-        public Builder itemId(Optional<String> itemId) {
-            Utils.checkNotNull(itemId, "itemId");
+        public Builder itemId(@Nullable String itemId) {
             this.itemId = itemId;
             return this;
         }
 
-
-        public Builder itemOptionId(String itemOptionId) {
-            Utils.checkNotNull(itemOptionId, "itemOptionId");
-            this.itemOptionId = Optional.ofNullable(itemOptionId);
-            return this;
-        }
-
-        public Builder itemOptionId(Optional<String> itemOptionId) {
-            Utils.checkNotNull(itemOptionId, "itemOptionId");
+        public Builder itemOptionId(@Nullable String itemOptionId) {
             this.itemOptionId = itemOptionId;
             return this;
         }
 
-
-        public Builder itemVariantId(String itemVariantId) {
-            Utils.checkNotNull(itemVariantId, "itemVariantId");
-            this.itemVariantId = Optional.ofNullable(itemVariantId);
-            return this;
-        }
-
-        public Builder itemVariantId(Optional<String> itemVariantId) {
-            Utils.checkNotNull(itemVariantId, "itemVariantId");
+        public Builder itemVariantId(@Nullable String itemVariantId) {
             this.itemVariantId = itemVariantId;
             return this;
         }
 
-
-        public Builder locationId(String locationId) {
-            Utils.checkNotNull(locationId, "locationId");
-            this.locationId = Optional.ofNullable(locationId);
-            return this;
-        }
-
-        public Builder locationId(Optional<String> locationId) {
-            Utils.checkNotNull(locationId, "locationId");
+        public Builder locationId(@Nullable String locationId) {
             this.locationId = locationId;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
         public CommerceInventory build() {
-
             return new CommerceInventory(
                 available, id, itemId,
                 itemOptionId, itemVariantId, locationId,

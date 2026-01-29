@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.PaymentPayment;
@@ -30,7 +30,7 @@ public class CreatePaymentPaymentRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<CreatePaymentPaymentQueryParamFields>> fields;
+    private List<CreatePaymentPaymentQueryParamFields> fields;
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
@@ -38,51 +38,45 @@ public class CreatePaymentPaymentRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
     @JsonCreator
     public CreatePaymentPaymentRequest(
-            PaymentPayment paymentPayment,
-            String connectionId,
-            Optional<? extends List<CreatePaymentPaymentQueryParamFields>> fields,
-            Optional<String> raw) {
-        Utils.checkNotNull(paymentPayment, "paymentPayment");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(raw, "raw");
-        this.paymentPayment = paymentPayment;
-        this.connectionId = connectionId;
+            @Nonnull PaymentPayment paymentPayment,
+            @Nonnull String connectionId,
+            @Nullable List<CreatePaymentPaymentQueryParamFields> fields,
+            @Nullable String raw) {
+        this.paymentPayment = Optional.ofNullable(paymentPayment)
+            .orElseThrow(() -> new IllegalArgumentException("paymentPayment cannot be null"));
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
         this.raw = raw;
     }
     
     public CreatePaymentPaymentRequest(
-            PaymentPayment paymentPayment,
-            String connectionId) {
-        this(paymentPayment, connectionId, Optional.empty(),
-            Optional.empty());
+            @Nonnull PaymentPayment paymentPayment,
+            @Nonnull String connectionId) {
+        this(paymentPayment, connectionId, null,
+            null);
     }
 
-    @JsonIgnore
     public PaymentPayment paymentPayment() {
-        return paymentPayment;
+        return this.paymentPayment;
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<CreatePaymentPaymentQueryParamFields>> fields() {
-        return (Optional<List<CreatePaymentPaymentQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
@@ -90,9 +84,8 @@ public class CreatePaymentPaymentRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
     public static Builder builder() {
@@ -100,27 +93,17 @@ public class CreatePaymentPaymentRequest {
     }
 
 
-    public CreatePaymentPaymentRequest withPaymentPayment(PaymentPayment paymentPayment) {
-        Utils.checkNotNull(paymentPayment, "paymentPayment");
-        this.paymentPayment = paymentPayment;
+    public CreatePaymentPaymentRequest withPaymentPayment(@Nonnull PaymentPayment paymentPayment) {
+        this.paymentPayment = Utils.checkNotNull(paymentPayment, "paymentPayment");
         return this;
     }
+
 
     /**
      * ID of the connection
      */
-    public CreatePaymentPaymentRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public CreatePaymentPaymentRequest withFields(List<CreatePaymentPaymentQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public CreatePaymentPaymentRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -128,34 +111,22 @@ public class CreatePaymentPaymentRequest {
     /**
      * Fields to return
      */
-    public CreatePaymentPaymentRequest withFields(Optional<? extends List<CreatePaymentPaymentQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public CreatePaymentPaymentRequest withFields(@Nullable List<CreatePaymentPaymentQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public CreatePaymentPaymentRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
-
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public CreatePaymentPaymentRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public CreatePaymentPaymentRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -196,75 +167,46 @@ public class CreatePaymentPaymentRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<CreatePaymentPaymentQueryParamFields>> fields = Optional.empty();
+        private List<CreatePaymentPaymentQueryParamFields> fields;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder paymentPayment(PaymentPayment paymentPayment) {
-            Utils.checkNotNull(paymentPayment, "paymentPayment");
-            this.paymentPayment = paymentPayment;
+        public Builder paymentPayment(@Nonnull PaymentPayment paymentPayment) {
+            this.paymentPayment = Utils.checkNotNull(paymentPayment, "paymentPayment");
             return this;
         }
-
 
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<CreatePaymentPaymentQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<CreatePaymentPaymentQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<CreatePaymentPaymentQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
         public CreatePaymentPaymentRequest build() {
-
             return new CreatePaymentPaymentRequest(
                 paymentPayment, connectionId, fields,
                 raw);

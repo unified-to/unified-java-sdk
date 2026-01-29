@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateAdsAdRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAdsAdRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAdsAdResponse;
@@ -67,7 +68,7 @@ public class Ad {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAdsAdResponse createAdsAd(CreateAdsAdRequest request) {
+    public CreateAdsAdResponse createAdsAd(@Nonnull CreateAdsAdRequest request) {
         RequestOperation<CreateAdsAdRequest, CreateAdsAdResponse> operation
               = new CreateAdsAd.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -89,7 +90,7 @@ public class Ad {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAdsAdResponse getAdsAd(GetAdsAdRequest request) {
+    public GetAdsAdResponse getAdsAd(@Nonnull GetAdsAdRequest request) {
         RequestOperation<GetAdsAdRequest, GetAdsAdResponse> operation
               = new GetAdsAd.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -111,7 +112,7 @@ public class Ad {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAdsAdsResponse listAdsAds(ListAdsAdsRequest request) {
+    public ListAdsAdsResponse listAdsAds(@Nonnull ListAdsAdsRequest request) {
         RequestOperation<ListAdsAdsRequest, ListAdsAdsResponse> operation
               = new ListAdsAds.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -133,7 +134,7 @@ public class Ad {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAdsAdResponse patchAdsAd(PatchAdsAdRequest request) {
+    public PatchAdsAdResponse patchAdsAd(@Nonnull PatchAdsAdRequest request) {
         RequestOperation<PatchAdsAdRequest, PatchAdsAdResponse> operation
               = new PatchAdsAd.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -155,7 +156,7 @@ public class Ad {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAdsAdResponse removeAdsAd(RemoveAdsAdRequest request) {
+    public RemoveAdsAdResponse removeAdsAd(@Nonnull RemoveAdsAdRequest request) {
         RequestOperation<RemoveAdsAdRequest, RemoveAdsAdResponse> operation
               = new RemoveAdsAd.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -177,7 +178,7 @@ public class Ad {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAdsAdResponse updateAdsAd(UpdateAdsAdRequest request) {
+    public UpdateAdsAdResponse updateAdsAd(@Nonnull UpdateAdsAdRequest request) {
         RequestOperation<UpdateAdsAdRequest, UpdateAdsAdResponse> operation
               = new UpdateAdsAd.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

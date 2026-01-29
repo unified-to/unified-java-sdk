@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateUcRecordingRequest;
 import to.unified.unified_java_sdk.models.operations.GetCalendarRecordingRequest;
@@ -76,7 +77,7 @@ public class AsyncRecording {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateUcRecordingResponse>} - The async response
      */
-    public CompletableFuture<CreateUcRecordingResponse> createUcRecording(CreateUcRecordingRequest request) {
+    public CompletableFuture<CreateUcRecordingResponse> createUcRecording(@Nonnull CreateUcRecordingRequest request) {
         AsyncRequestOperation<CreateUcRecordingRequest, CreateUcRecordingResponse> operation
               = new CreateUcRecording.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -99,7 +100,7 @@ public class AsyncRecording {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCalendarRecordingResponse>} - The async response
      */
-    public CompletableFuture<GetCalendarRecordingResponse> getCalendarRecording(GetCalendarRecordingRequest request) {
+    public CompletableFuture<GetCalendarRecordingResponse> getCalendarRecording(@Nonnull GetCalendarRecordingRequest request) {
         AsyncRequestOperation<GetCalendarRecordingRequest, GetCalendarRecordingResponse> operation
               = new GetCalendarRecording.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -122,7 +123,7 @@ public class AsyncRecording {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetUcRecordingResponse>} - The async response
      */
-    public CompletableFuture<GetUcRecordingResponse> getUcRecording(GetUcRecordingRequest request) {
+    public CompletableFuture<GetUcRecordingResponse> getUcRecording(@Nonnull GetUcRecordingRequest request) {
         AsyncRequestOperation<GetUcRecordingRequest, GetUcRecordingResponse> operation
               = new GetUcRecording.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -145,7 +146,7 @@ public class AsyncRecording {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCalendarRecordingsResponse>} - The async response
      */
-    public CompletableFuture<ListCalendarRecordingsResponse> listCalendarRecordings(ListCalendarRecordingsRequest request) {
+    public CompletableFuture<ListCalendarRecordingsResponse> listCalendarRecordings(@Nonnull ListCalendarRecordingsRequest request) {
         AsyncRequestOperation<ListCalendarRecordingsRequest, ListCalendarRecordingsResponse> operation
               = new ListCalendarRecordings.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -168,7 +169,7 @@ public class AsyncRecording {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListUcRecordingsResponse>} - The async response
      */
-    public CompletableFuture<ListUcRecordingsResponse> listUcRecordings(ListUcRecordingsRequest request) {
+    public CompletableFuture<ListUcRecordingsResponse> listUcRecordings(@Nonnull ListUcRecordingsRequest request) {
         AsyncRequestOperation<ListUcRecordingsRequest, ListUcRecordingsResponse> operation
               = new ListUcRecordings.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -191,7 +192,7 @@ public class AsyncRecording {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchUcRecordingResponse>} - The async response
      */
-    public CompletableFuture<PatchUcRecordingResponse> patchUcRecording(PatchUcRecordingRequest request) {
+    public CompletableFuture<PatchUcRecordingResponse> patchUcRecording(@Nonnull PatchUcRecordingRequest request) {
         AsyncRequestOperation<PatchUcRecordingRequest, PatchUcRecordingResponse> operation
               = new PatchUcRecording.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -214,7 +215,7 @@ public class AsyncRecording {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveUcRecordingResponse>} - The async response
      */
-    public CompletableFuture<RemoveUcRecordingResponse> removeUcRecording(RemoveUcRecordingRequest request) {
+    public CompletableFuture<RemoveUcRecordingResponse> removeUcRecording(@Nonnull RemoveUcRecordingRequest request) {
         AsyncRequestOperation<RemoveUcRecordingRequest, RemoveUcRecordingResponse> operation
               = new RemoveUcRecording.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -237,7 +238,7 @@ public class AsyncRecording {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateUcRecordingResponse>} - The async response
      */
-    public CompletableFuture<UpdateUcRecordingResponse> updateUcRecording(UpdateUcRecordingRequest request) {
+    public CompletableFuture<UpdateUcRecordingResponse> updateUcRecording(@Nonnull UpdateUcRecordingRequest request) {
         AsyncRequestOperation<UpdateUcRecordingRequest, UpdateUcRecordingResponse> operation
               = new UpdateUcRecording.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

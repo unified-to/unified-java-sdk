@@ -5,32 +5,45 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.UpdateLmsCourse;
 import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class UpdateLmsCourseRequestBuilder {
-
-    private UpdateLmsCourseRequest request;
     private final SDKConfiguration sdkConfiguration;
-    private final Headers _headers = new Headers(); 
+    private final Headers _headers = new Headers();
+    private UpdateLmsCourseRequest request;
 
     public UpdateLmsCourseRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
 
-    public UpdateLmsCourseRequestBuilder request(UpdateLmsCourseRequest request) {
-        Utils.checkNotNull(request, "request");
-        this.request = request;
+    public UpdateLmsCourseRequestBuilder request(@Nonnull UpdateLmsCourseRequest request) {
+        this.request = Utils.checkNotNull(request, "request");
         return this;
     }
 
+    private UpdateLmsCourseRequest _buildRequest() {
+        return this.request;
+    }
+    
+    public UpdateLmsCourseRequestBuilder header(String name, String value) {
+        Utils.checkNotNull(name, "name");
+        Utils.checkNotNull(value, "value");
+        this._headers.add(name, value);
+        return this;
+    }
+
+    /**
+    * Executes the request and returns the response.
+    *
+    * @return The response from the server.
+    */
     public UpdateLmsCourseResponse call() {
-        
         RequestOperation<UpdateLmsCourseRequest, UpdateLmsCourseResponse> operation
               = new UpdateLmsCourse.Sync(sdkConfiguration, _headers);
-
-        return operation.handleResponse(operation.doRequest(request));
+        return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAdsGroupRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisGroupRequest;
@@ -116,7 +117,7 @@ public class AsyncGroup {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAdsGroupResponse>} - The async response
      */
-    public CompletableFuture<CreateAdsGroupResponse> createAdsGroup(CreateAdsGroupRequest request) {
+    public CompletableFuture<CreateAdsGroupResponse> createAdsGroup(@Nonnull CreateAdsGroupRequest request) {
         AsyncRequestOperation<CreateAdsGroupRequest, CreateAdsGroupResponse> operation
               = new CreateAdsGroup.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -139,7 +140,7 @@ public class AsyncGroup {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateHrisGroupResponse>} - The async response
      */
-    public CompletableFuture<CreateHrisGroupResponse> createHrisGroup(CreateHrisGroupRequest request) {
+    public CompletableFuture<CreateHrisGroupResponse> createHrisGroup(@Nonnull CreateHrisGroupRequest request) {
         AsyncRequestOperation<CreateHrisGroupRequest, CreateHrisGroupResponse> operation
               = new CreateHrisGroup.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -162,7 +163,7 @@ public class AsyncGroup {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateScimGroupsResponse>} - The async response
      */
-    public CompletableFuture<CreateScimGroupsResponse> createScimGroups(CreateScimGroupsRequest request) {
+    public CompletableFuture<CreateScimGroupsResponse> createScimGroups(@Nonnull CreateScimGroupsRequest request) {
         AsyncRequestOperation<CreateScimGroupsRequest, CreateScimGroupsResponse> operation
               = new CreateScimGroups.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -185,7 +186,7 @@ public class AsyncGroup {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAdsGroupResponse>} - The async response
      */
-    public CompletableFuture<GetAdsGroupResponse> getAdsGroup(GetAdsGroupRequest request) {
+    public CompletableFuture<GetAdsGroupResponse> getAdsGroup(@Nonnull GetAdsGroupRequest request) {
         AsyncRequestOperation<GetAdsGroupRequest, GetAdsGroupResponse> operation
               = new GetAdsGroup.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -208,7 +209,7 @@ public class AsyncGroup {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetHrisGroupResponse>} - The async response
      */
-    public CompletableFuture<GetHrisGroupResponse> getHrisGroup(GetHrisGroupRequest request) {
+    public CompletableFuture<GetHrisGroupResponse> getHrisGroup(@Nonnull GetHrisGroupRequest request) {
         AsyncRequestOperation<GetHrisGroupRequest, GetHrisGroupResponse> operation
               = new GetHrisGroup.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -231,7 +232,7 @@ public class AsyncGroup {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetScimGroupsResponse>} - The async response
      */
-    public CompletableFuture<GetScimGroupsResponse> getScimGroups(GetScimGroupsRequest request) {
+    public CompletableFuture<GetScimGroupsResponse> getScimGroups(@Nonnull GetScimGroupsRequest request) {
         AsyncRequestOperation<GetScimGroupsRequest, GetScimGroupsResponse> operation
               = new GetScimGroups.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -254,7 +255,7 @@ public class AsyncGroup {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAdsGroupsResponse>} - The async response
      */
-    public CompletableFuture<ListAdsGroupsResponse> listAdsGroups(ListAdsGroupsRequest request) {
+    public CompletableFuture<ListAdsGroupsResponse> listAdsGroups(@Nonnull ListAdsGroupsRequest request) {
         AsyncRequestOperation<ListAdsGroupsRequest, ListAdsGroupsResponse> operation
               = new ListAdsGroups.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -277,7 +278,7 @@ public class AsyncGroup {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListHrisGroupsResponse>} - The async response
      */
-    public CompletableFuture<ListHrisGroupsResponse> listHrisGroups(ListHrisGroupsRequest request) {
+    public CompletableFuture<ListHrisGroupsResponse> listHrisGroups(@Nonnull ListHrisGroupsRequest request) {
         AsyncRequestOperation<ListHrisGroupsRequest, ListHrisGroupsResponse> operation
               = new ListHrisGroups.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -300,7 +301,7 @@ public class AsyncGroup {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListScimGroupsResponse>} - The async response
      */
-    public CompletableFuture<ListScimGroupsResponse> listScimGroups(ListScimGroupsRequest request) {
+    public CompletableFuture<ListScimGroupsResponse> listScimGroups(@Nonnull ListScimGroupsRequest request) {
         AsyncRequestOperation<ListScimGroupsRequest, ListScimGroupsResponse> operation
               = new ListScimGroups.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -323,7 +324,7 @@ public class AsyncGroup {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAdsGroupResponse>} - The async response
      */
-    public CompletableFuture<PatchAdsGroupResponse> patchAdsGroup(PatchAdsGroupRequest request) {
+    public CompletableFuture<PatchAdsGroupResponse> patchAdsGroup(@Nonnull PatchAdsGroupRequest request) {
         AsyncRequestOperation<PatchAdsGroupRequest, PatchAdsGroupResponse> operation
               = new PatchAdsGroup.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -346,7 +347,7 @@ public class AsyncGroup {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchHrisGroupResponse>} - The async response
      */
-    public CompletableFuture<PatchHrisGroupResponse> patchHrisGroup(PatchHrisGroupRequest request) {
+    public CompletableFuture<PatchHrisGroupResponse> patchHrisGroup(@Nonnull PatchHrisGroupRequest request) {
         AsyncRequestOperation<PatchHrisGroupRequest, PatchHrisGroupResponse> operation
               = new PatchHrisGroup.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -369,7 +370,7 @@ public class AsyncGroup {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchScimGroupsResponse>} - The async response
      */
-    public CompletableFuture<PatchScimGroupsResponse> patchScimGroups(PatchScimGroupsRequest request) {
+    public CompletableFuture<PatchScimGroupsResponse> patchScimGroups(@Nonnull PatchScimGroupsRequest request) {
         AsyncRequestOperation<PatchScimGroupsRequest, PatchScimGroupsResponse> operation
               = new PatchScimGroups.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -392,7 +393,7 @@ public class AsyncGroup {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAdsGroupResponse>} - The async response
      */
-    public CompletableFuture<RemoveAdsGroupResponse> removeAdsGroup(RemoveAdsGroupRequest request) {
+    public CompletableFuture<RemoveAdsGroupResponse> removeAdsGroup(@Nonnull RemoveAdsGroupRequest request) {
         AsyncRequestOperation<RemoveAdsGroupRequest, RemoveAdsGroupResponse> operation
               = new RemoveAdsGroup.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -415,7 +416,7 @@ public class AsyncGroup {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveHrisGroupResponse>} - The async response
      */
-    public CompletableFuture<RemoveHrisGroupResponse> removeHrisGroup(RemoveHrisGroupRequest request) {
+    public CompletableFuture<RemoveHrisGroupResponse> removeHrisGroup(@Nonnull RemoveHrisGroupRequest request) {
         AsyncRequestOperation<RemoveHrisGroupRequest, RemoveHrisGroupResponse> operation
               = new RemoveHrisGroup.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -438,7 +439,7 @@ public class AsyncGroup {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveScimGroupsResponse>} - The async response
      */
-    public CompletableFuture<RemoveScimGroupsResponse> removeScimGroups(RemoveScimGroupsRequest request) {
+    public CompletableFuture<RemoveScimGroupsResponse> removeScimGroups(@Nonnull RemoveScimGroupsRequest request) {
         AsyncRequestOperation<RemoveScimGroupsRequest, RemoveScimGroupsResponse> operation
               = new RemoveScimGroups.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -461,7 +462,7 @@ public class AsyncGroup {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAdsGroupResponse>} - The async response
      */
-    public CompletableFuture<UpdateAdsGroupResponse> updateAdsGroup(UpdateAdsGroupRequest request) {
+    public CompletableFuture<UpdateAdsGroupResponse> updateAdsGroup(@Nonnull UpdateAdsGroupRequest request) {
         AsyncRequestOperation<UpdateAdsGroupRequest, UpdateAdsGroupResponse> operation
               = new UpdateAdsGroup.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -484,7 +485,7 @@ public class AsyncGroup {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateHrisGroupResponse>} - The async response
      */
-    public CompletableFuture<UpdateHrisGroupResponse> updateHrisGroup(UpdateHrisGroupRequest request) {
+    public CompletableFuture<UpdateHrisGroupResponse> updateHrisGroup(@Nonnull UpdateHrisGroupRequest request) {
         AsyncRequestOperation<UpdateHrisGroupRequest, UpdateHrisGroupResponse> operation
               = new UpdateHrisGroup.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -507,7 +508,7 @@ public class AsyncGroup {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateScimGroupsResponse>} - The async response
      */
-    public CompletableFuture<UpdateScimGroupsResponse> updateScimGroups(UpdateScimGroupsRequest request) {
+    public CompletableFuture<UpdateScimGroupsResponse> updateScimGroups(@Nonnull UpdateScimGroupsRequest request) {
         AsyncRequestOperation<UpdateScimGroupsRequest, UpdateScimGroupsResponse> operation
               = new UpdateScimGroups.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

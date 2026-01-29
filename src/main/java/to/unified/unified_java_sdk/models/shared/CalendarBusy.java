@@ -4,14 +4,14 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.Map;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public class CalendarBusy {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
-    private Optional<String> description;
+    private String description;
 
 
     @JsonProperty("end_at")
@@ -31,12 +31,12 @@ public class CalendarBusy {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonProperty("start_at")
@@ -45,66 +45,55 @@ public class CalendarBusy {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
-    private Optional<String> timezone;
+    private String timezone;
 
     @JsonCreator
     public CalendarBusy(
-            @JsonProperty("description") Optional<String> description,
-            @JsonProperty("end_at") OffsetDateTime endAt,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("start_at") OffsetDateTime startAt,
-            @JsonProperty("timezone") Optional<String> timezone) {
-        Utils.checkNotNull(description, "description");
-        Utils.checkNotNull(endAt, "endAt");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(startAt, "startAt");
-        Utils.checkNotNull(timezone, "timezone");
+            @JsonProperty("description") @Nullable String description,
+            @JsonProperty("end_at") @Nonnull OffsetDateTime endAt,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("start_at") @Nonnull OffsetDateTime startAt,
+            @JsonProperty("timezone") @Nullable String timezone) {
         this.description = description;
-        this.endAt = endAt;
+        this.endAt = Optional.ofNullable(endAt)
+            .orElseThrow(() -> new IllegalArgumentException("endAt cannot be null"));
         this.id = id;
         this.raw = raw;
-        this.startAt = startAt;
+        this.startAt = Optional.ofNullable(startAt)
+            .orElseThrow(() -> new IllegalArgumentException("startAt cannot be null"));
         this.timezone = timezone;
     }
     
     public CalendarBusy(
-            OffsetDateTime endAt,
-            OffsetDateTime startAt) {
-        this(Optional.empty(), endAt, Optional.empty(),
-            Optional.empty(), startAt, Optional.empty());
+            @Nonnull OffsetDateTime endAt,
+            @Nonnull OffsetDateTime startAt) {
+        this(null, endAt, null,
+            null, startAt, null);
     }
 
-    @JsonIgnore
     public Optional<String> description() {
-        return description;
+        return Optional.ofNullable(this.description);
     }
 
-    @JsonIgnore
     public OffsetDateTime endAt() {
-        return endAt;
+        return this.endAt;
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @JsonIgnore
     public OffsetDateTime startAt() {
-        return startAt;
+        return this.startAt;
     }
 
-    @JsonIgnore
     public Optional<String> timezone() {
-        return timezone;
+        return Optional.ofNullable(this.timezone);
     }
 
     public static Builder builder() {
@@ -112,69 +101,41 @@ public class CalendarBusy {
     }
 
 
-    public CalendarBusy withDescription(String description) {
-        Utils.checkNotNull(description, "description");
-        this.description = Optional.ofNullable(description);
-        return this;
-    }
-
-
-    public CalendarBusy withDescription(Optional<String> description) {
-        Utils.checkNotNull(description, "description");
+    public CalendarBusy withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
-    public CalendarBusy withEndAt(OffsetDateTime endAt) {
-        Utils.checkNotNull(endAt, "endAt");
-        this.endAt = endAt;
-        return this;
-    }
 
-    public CalendarBusy withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
+    public CalendarBusy withEndAt(@Nonnull OffsetDateTime endAt) {
+        this.endAt = Utils.checkNotNull(endAt, "endAt");
         return this;
     }
 
 
-    public CalendarBusy withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public CalendarBusy withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public CalendarBusy withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public CalendarBusy withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public CalendarBusy withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public CalendarBusy withStartAt(OffsetDateTime startAt) {
-        Utils.checkNotNull(startAt, "startAt");
-        this.startAt = startAt;
-        return this;
-    }
 
-    public CalendarBusy withTimezone(String timezone) {
-        Utils.checkNotNull(timezone, "timezone");
-        this.timezone = Optional.ofNullable(timezone);
+    public CalendarBusy withStartAt(@Nonnull OffsetDateTime startAt) {
+        this.startAt = Utils.checkNotNull(startAt, "startAt");
         return this;
     }
 
 
-    public CalendarBusy withTimezone(Optional<String> timezone) {
-        Utils.checkNotNull(timezone, "timezone");
+    public CalendarBusy withTimezone(@Nullable String timezone) {
         this.timezone = timezone;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -215,90 +176,53 @@ public class CalendarBusy {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> description = Optional.empty();
+        private String description;
 
         private OffsetDateTime endAt;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
         private OffsetDateTime startAt;
 
-        private Optional<String> timezone = Optional.empty();
+        private String timezone;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder description(String description) {
-            Utils.checkNotNull(description, "description");
-            this.description = Optional.ofNullable(description);
-            return this;
-        }
-
-        public Builder description(Optional<String> description) {
-            Utils.checkNotNull(description, "description");
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-
-        public Builder endAt(OffsetDateTime endAt) {
-            Utils.checkNotNull(endAt, "endAt");
-            this.endAt = endAt;
+        public Builder endAt(@Nonnull OffsetDateTime endAt) {
+            this.endAt = Utils.checkNotNull(endAt, "endAt");
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder startAt(OffsetDateTime startAt) {
-            Utils.checkNotNull(startAt, "startAt");
-            this.startAt = startAt;
+        public Builder startAt(@Nonnull OffsetDateTime startAt) {
+            this.startAt = Utils.checkNotNull(startAt, "startAt");
             return this;
         }
 
-
-        public Builder timezone(String timezone) {
-            Utils.checkNotNull(timezone, "timezone");
-            this.timezone = Optional.ofNullable(timezone);
-            return this;
-        }
-
-        public Builder timezone(Optional<String> timezone) {
-            Utils.checkNotNull(timezone, "timezone");
+        public Builder timezone(@Nullable String timezone) {
             this.timezone = timezone;
             return this;
         }
 
         public CalendarBusy build() {
-
             return new CalendarBusy(
                 description, endAt, id,
                 raw, startAt, timezone);

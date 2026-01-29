@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.KmsPage;
@@ -30,7 +30,7 @@ public class CreateKmsPageRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<CreateKmsPageQueryParamFields>> fields;
+    private List<CreateKmsPageQueryParamFields> fields;
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
@@ -38,51 +38,45 @@ public class CreateKmsPageRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
     @JsonCreator
     public CreateKmsPageRequest(
-            KmsPage kmsPage,
-            String connectionId,
-            Optional<? extends List<CreateKmsPageQueryParamFields>> fields,
-            Optional<String> raw) {
-        Utils.checkNotNull(kmsPage, "kmsPage");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(raw, "raw");
-        this.kmsPage = kmsPage;
-        this.connectionId = connectionId;
+            @Nonnull KmsPage kmsPage,
+            @Nonnull String connectionId,
+            @Nullable List<CreateKmsPageQueryParamFields> fields,
+            @Nullable String raw) {
+        this.kmsPage = Optional.ofNullable(kmsPage)
+            .orElseThrow(() -> new IllegalArgumentException("kmsPage cannot be null"));
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
         this.raw = raw;
     }
     
     public CreateKmsPageRequest(
-            KmsPage kmsPage,
-            String connectionId) {
-        this(kmsPage, connectionId, Optional.empty(),
-            Optional.empty());
+            @Nonnull KmsPage kmsPage,
+            @Nonnull String connectionId) {
+        this(kmsPage, connectionId, null,
+            null);
     }
 
-    @JsonIgnore
     public KmsPage kmsPage() {
-        return kmsPage;
+        return this.kmsPage;
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<CreateKmsPageQueryParamFields>> fields() {
-        return (Optional<List<CreateKmsPageQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
@@ -90,9 +84,8 @@ public class CreateKmsPageRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
     public static Builder builder() {
@@ -100,27 +93,17 @@ public class CreateKmsPageRequest {
     }
 
 
-    public CreateKmsPageRequest withKmsPage(KmsPage kmsPage) {
-        Utils.checkNotNull(kmsPage, "kmsPage");
-        this.kmsPage = kmsPage;
+    public CreateKmsPageRequest withKmsPage(@Nonnull KmsPage kmsPage) {
+        this.kmsPage = Utils.checkNotNull(kmsPage, "kmsPage");
         return this;
     }
+
 
     /**
      * ID of the connection
      */
-    public CreateKmsPageRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public CreateKmsPageRequest withFields(List<CreateKmsPageQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public CreateKmsPageRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -128,34 +111,22 @@ public class CreateKmsPageRequest {
     /**
      * Fields to return
      */
-    public CreateKmsPageRequest withFields(Optional<? extends List<CreateKmsPageQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public CreateKmsPageRequest withFields(@Nullable List<CreateKmsPageQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public CreateKmsPageRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
-
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public CreateKmsPageRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public CreateKmsPageRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -196,75 +167,46 @@ public class CreateKmsPageRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<CreateKmsPageQueryParamFields>> fields = Optional.empty();
+        private List<CreateKmsPageQueryParamFields> fields;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder kmsPage(KmsPage kmsPage) {
-            Utils.checkNotNull(kmsPage, "kmsPage");
-            this.kmsPage = kmsPage;
+        public Builder kmsPage(@Nonnull KmsPage kmsPage) {
+            this.kmsPage = Utils.checkNotNull(kmsPage, "kmsPage");
             return this;
         }
-
 
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<CreateKmsPageQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<CreateKmsPageQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<CreateKmsPageQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
         public CreateKmsPageRequest build() {
-
             return new CreateKmsPageRequest(
                 kmsPage, connectionId, fields,
                 raw);

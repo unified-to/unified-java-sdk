@@ -4,13 +4,13 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -23,45 +23,39 @@ public class PropertyAtsActivityFrom {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
-    private Optional<String> name;
+    private String name;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
-    private Optional<? extends PropertyAtsActivityFromType> type;
+    private PropertyAtsActivityFromType type;
 
     @JsonCreator
     public PropertyAtsActivityFrom(
-            @JsonProperty("email") String email,
-            @JsonProperty("name") Optional<String> name,
-            @JsonProperty("type") Optional<? extends PropertyAtsActivityFromType> type) {
-        Utils.checkNotNull(email, "email");
-        Utils.checkNotNull(name, "name");
-        Utils.checkNotNull(type, "type");
-        this.email = email;
+            @JsonProperty("email") @Nonnull String email,
+            @JsonProperty("name") @Nullable String name,
+            @JsonProperty("type") @Nullable PropertyAtsActivityFromType type) {
+        this.email = Optional.ofNullable(email)
+            .orElseThrow(() -> new IllegalArgumentException("email cannot be null"));
         this.name = name;
         this.type = type;
     }
     
     public PropertyAtsActivityFrom(
-            String email) {
-        this(email, Optional.empty(), Optional.empty());
+            @Nonnull String email) {
+        this(email, null, null);
     }
 
-    @JsonIgnore
     public String email() {
-        return email;
+        return this.email;
     }
 
-    @JsonIgnore
     public Optional<String> name() {
-        return name;
+        return Optional.ofNullable(this.name);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<PropertyAtsActivityFromType> type() {
-        return (Optional<PropertyAtsActivityFromType>) type;
+        return Optional.ofNullable(this.type);
     }
 
     public static Builder builder() {
@@ -69,37 +63,23 @@ public class PropertyAtsActivityFrom {
     }
 
 
-    public PropertyAtsActivityFrom withEmail(String email) {
-        Utils.checkNotNull(email, "email");
-        this.email = email;
-        return this;
-    }
-
-    public PropertyAtsActivityFrom withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = Optional.ofNullable(name);
+    public PropertyAtsActivityFrom withEmail(@Nonnull String email) {
+        this.email = Utils.checkNotNull(email, "email");
         return this;
     }
 
 
-    public PropertyAtsActivityFrom withName(Optional<String> name) {
-        Utils.checkNotNull(name, "name");
+    public PropertyAtsActivityFrom withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
-    public PropertyAtsActivityFrom withType(PropertyAtsActivityFromType type) {
-        Utils.checkNotNull(type, "type");
-        this.type = Optional.ofNullable(type);
-        return this;
-    }
 
-
-    public PropertyAtsActivityFrom withType(Optional<? extends PropertyAtsActivityFromType> type) {
-        Utils.checkNotNull(type, "type");
+    public PropertyAtsActivityFrom withType(@Nullable PropertyAtsActivityFromType type) {
         this.type = type;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -135,49 +115,30 @@ public class PropertyAtsActivityFrom {
 
         private String email;
 
-        private Optional<String> name = Optional.empty();
+        private String name;
 
-        private Optional<? extends PropertyAtsActivityFromType> type = Optional.empty();
+        private PropertyAtsActivityFromType type;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder email(String email) {
-            Utils.checkNotNull(email, "email");
-            this.email = email;
+        public Builder email(@Nonnull String email) {
+            this.email = Utils.checkNotNull(email, "email");
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = Optional.ofNullable(name);
-            return this;
-        }
-
-        public Builder name(Optional<String> name) {
-            Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-
-        public Builder type(PropertyAtsActivityFromType type) {
-            Utils.checkNotNull(type, "type");
-            this.type = Optional.ofNullable(type);
-            return this;
-        }
-
-        public Builder type(Optional<? extends PropertyAtsActivityFromType> type) {
-            Utils.checkNotNull(type, "type");
+        public Builder type(@Nullable PropertyAtsActivityFromType type) {
             this.type = type;
             return this;
         }
 
         public PropertyAtsActivityFrom build() {
-
             return new PropertyAtsActivityFrom(
                 email, name, type);
         }

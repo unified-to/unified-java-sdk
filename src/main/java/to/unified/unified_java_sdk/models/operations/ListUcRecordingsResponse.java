@@ -4,12 +4,11 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.io.InputStream;
-import java.lang.Integer;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.List;
 import java.util.Optional;
@@ -37,63 +36,56 @@ public class ListUcRecordingsResponse implements Response {
     /**
      * Successful
      */
-    private Optional<? extends List<UcRecording>> ucRecordings;
+    private List<UcRecording> ucRecordings;
 
     @JsonCreator
     public ListUcRecordingsResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<InputStream> rawResponse,
-            Optional<? extends List<UcRecording>> ucRecordings) {
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        Utils.checkNotNull(ucRecordings, "ucRecordings");
-        this.contentType = contentType;
+            @Nonnull HttpResponse<InputStream> rawResponse,
+            @Nullable List<UcRecording> ucRecordings) {
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
         this.ucRecordings = ucRecordings;
     }
     
     public ListUcRecordingsResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
+            @Nonnull HttpResponse<InputStream> rawResponse) {
         this(contentType, statusCode, rawResponse,
-            Optional.empty());
+            null);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<InputStream> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<UcRecording>> ucRecordings() {
-        return (Optional<List<UcRecording>>) ucRecordings;
+        return Optional.ofNullable(this.ucRecordings);
     }
 
     public static Builder builder() {
@@ -104,36 +96,26 @@ public class ListUcRecordingsResponse implements Response {
     /**
      * HTTP response content type for this operation
      */
-    public ListUcRecordingsResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
+    public ListUcRecordingsResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public ListUcRecordingsResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public ListUcRecordingsResponse withRawResponse(HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
-        return this;
-    }
-
-    /**
-     * Successful
-     */
-    public ListUcRecordingsResponse withUcRecordings(List<UcRecording> ucRecordings) {
-        Utils.checkNotNull(ucRecordings, "ucRecordings");
-        this.ucRecordings = Optional.ofNullable(ucRecordings);
+    public ListUcRecordingsResponse withRawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
 
@@ -141,11 +123,11 @@ public class ListUcRecordingsResponse implements Response {
     /**
      * Successful
      */
-    public ListUcRecordingsResponse withUcRecordings(Optional<? extends List<UcRecording>> ucRecordings) {
-        Utils.checkNotNull(ucRecordings, "ucRecordings");
+    public ListUcRecordingsResponse withUcRecordings(@Nullable List<UcRecording> ucRecordings) {
         this.ucRecordings = ucRecordings;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -184,67 +166,49 @@ public class ListUcRecordingsResponse implements Response {
 
         private String contentType;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<InputStream> rawResponse;
 
-        private Optional<? extends List<UcRecording>> ucRecordings = Optional.empty();
+        private List<UcRecording> ucRecordings;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<InputStream> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
-            return this;
-        }
-
-
-        /**
-         * Successful
-         */
-        public Builder ucRecordings(List<UcRecording> ucRecordings) {
-            Utils.checkNotNull(ucRecordings, "ucRecordings");
-            this.ucRecordings = Optional.ofNullable(ucRecordings);
+        public Builder rawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         /**
          * Successful
          */
-        public Builder ucRecordings(Optional<? extends List<UcRecording>> ucRecordings) {
-            Utils.checkNotNull(ucRecordings, "ucRecordings");
+        public Builder ucRecordings(@Nullable List<UcRecording> ucRecordings) {
             this.ucRecordings = ucRecordings;
             return this;
         }
 
         public ListUcRecordingsResponse build() {
-
             return new ListUcRecordingsResponse(
                 contentType, statusCode, rawResponse,
                 ucRecordings);

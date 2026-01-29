@@ -4,14 +4,13 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -24,61 +23,53 @@ public class PropertyShippingShipmentInsurance {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coverage_amount")
-    private Optional<Double> coverageAmount;
+    private Double coverageAmount;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coverage_type")
-    private Optional<? extends CoverageType> coverageType;
+    private CoverageType coverageType;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
-    private Optional<String> currency;
+    private String currency;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insurance_cost")
-    private Optional<Double> insuranceCost;
+    private Double insuranceCost;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insurance_cost_currency")
-    private Optional<String> insuranceCostCurrency;
+    private String insuranceCostCurrency;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insurance_provider")
-    private Optional<String> insuranceProvider;
+    private String insuranceProvider;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insurance_provider_code")
-    private Optional<String> insuranceProviderCode;
+    private String insuranceProviderCode;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insured_value")
-    private Optional<Double> insuredValue;
+    private Double insuredValue;
 
     @JsonCreator
     public PropertyShippingShipmentInsurance(
-            @JsonProperty("coverage_amount") Optional<Double> coverageAmount,
-            @JsonProperty("coverage_type") Optional<? extends CoverageType> coverageType,
-            @JsonProperty("currency") Optional<String> currency,
-            @JsonProperty("insurance_cost") Optional<Double> insuranceCost,
-            @JsonProperty("insurance_cost_currency") Optional<String> insuranceCostCurrency,
-            @JsonProperty("insurance_provider") Optional<String> insuranceProvider,
-            @JsonProperty("insurance_provider_code") Optional<String> insuranceProviderCode,
-            @JsonProperty("insured_value") Optional<Double> insuredValue) {
-        Utils.checkNotNull(coverageAmount, "coverageAmount");
-        Utils.checkNotNull(coverageType, "coverageType");
-        Utils.checkNotNull(currency, "currency");
-        Utils.checkNotNull(insuranceCost, "insuranceCost");
-        Utils.checkNotNull(insuranceCostCurrency, "insuranceCostCurrency");
-        Utils.checkNotNull(insuranceProvider, "insuranceProvider");
-        Utils.checkNotNull(insuranceProviderCode, "insuranceProviderCode");
-        Utils.checkNotNull(insuredValue, "insuredValue");
+            @JsonProperty("coverage_amount") @Nullable Double coverageAmount,
+            @JsonProperty("coverage_type") @Nullable CoverageType coverageType,
+            @JsonProperty("currency") @Nullable String currency,
+            @JsonProperty("insurance_cost") @Nullable Double insuranceCost,
+            @JsonProperty("insurance_cost_currency") @Nullable String insuranceCostCurrency,
+            @JsonProperty("insurance_provider") @Nullable String insuranceProvider,
+            @JsonProperty("insurance_provider_code") @Nullable String insuranceProviderCode,
+            @JsonProperty("insured_value") @Nullable Double insuredValue) {
         this.coverageAmount = coverageAmount;
         this.coverageType = coverageType;
         this.currency = currency;
@@ -90,50 +81,41 @@ public class PropertyShippingShipmentInsurance {
     }
     
     public PropertyShippingShipmentInsurance() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null);
     }
 
-    @JsonIgnore
     public Optional<Double> coverageAmount() {
-        return coverageAmount;
+        return Optional.ofNullable(this.coverageAmount);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<CoverageType> coverageType() {
-        return (Optional<CoverageType>) coverageType;
+        return Optional.ofNullable(this.coverageType);
     }
 
-    @JsonIgnore
     public Optional<String> currency() {
-        return currency;
+        return Optional.ofNullable(this.currency);
     }
 
-    @JsonIgnore
     public Optional<Double> insuranceCost() {
-        return insuranceCost;
+        return Optional.ofNullable(this.insuranceCost);
     }
 
-    @JsonIgnore
     public Optional<String> insuranceCostCurrency() {
-        return insuranceCostCurrency;
+        return Optional.ofNullable(this.insuranceCostCurrency);
     }
 
-    @JsonIgnore
     public Optional<String> insuranceProvider() {
-        return insuranceProvider;
+        return Optional.ofNullable(this.insuranceProvider);
     }
 
-    @JsonIgnore
     public Optional<String> insuranceProviderCode() {
-        return insuranceProviderCode;
+        return Optional.ofNullable(this.insuranceProviderCode);
     }
 
-    @JsonIgnore
     public Optional<Double> insuredValue() {
-        return insuredValue;
+        return Optional.ofNullable(this.insuredValue);
     }
 
     public static Builder builder() {
@@ -141,109 +123,53 @@ public class PropertyShippingShipmentInsurance {
     }
 
 
-    public PropertyShippingShipmentInsurance withCoverageAmount(double coverageAmount) {
-        Utils.checkNotNull(coverageAmount, "coverageAmount");
-        this.coverageAmount = Optional.ofNullable(coverageAmount);
-        return this;
-    }
-
-
-    public PropertyShippingShipmentInsurance withCoverageAmount(Optional<Double> coverageAmount) {
-        Utils.checkNotNull(coverageAmount, "coverageAmount");
+    public PropertyShippingShipmentInsurance withCoverageAmount(@Nullable Double coverageAmount) {
         this.coverageAmount = coverageAmount;
         return this;
     }
 
-    public PropertyShippingShipmentInsurance withCoverageType(CoverageType coverageType) {
-        Utils.checkNotNull(coverageType, "coverageType");
-        this.coverageType = Optional.ofNullable(coverageType);
-        return this;
-    }
 
-
-    public PropertyShippingShipmentInsurance withCoverageType(Optional<? extends CoverageType> coverageType) {
-        Utils.checkNotNull(coverageType, "coverageType");
+    public PropertyShippingShipmentInsurance withCoverageType(@Nullable CoverageType coverageType) {
         this.coverageType = coverageType;
         return this;
     }
 
-    public PropertyShippingShipmentInsurance withCurrency(String currency) {
-        Utils.checkNotNull(currency, "currency");
-        this.currency = Optional.ofNullable(currency);
-        return this;
-    }
 
-
-    public PropertyShippingShipmentInsurance withCurrency(Optional<String> currency) {
-        Utils.checkNotNull(currency, "currency");
+    public PropertyShippingShipmentInsurance withCurrency(@Nullable String currency) {
         this.currency = currency;
         return this;
     }
 
-    public PropertyShippingShipmentInsurance withInsuranceCost(double insuranceCost) {
-        Utils.checkNotNull(insuranceCost, "insuranceCost");
-        this.insuranceCost = Optional.ofNullable(insuranceCost);
-        return this;
-    }
 
-
-    public PropertyShippingShipmentInsurance withInsuranceCost(Optional<Double> insuranceCost) {
-        Utils.checkNotNull(insuranceCost, "insuranceCost");
+    public PropertyShippingShipmentInsurance withInsuranceCost(@Nullable Double insuranceCost) {
         this.insuranceCost = insuranceCost;
         return this;
     }
 
-    public PropertyShippingShipmentInsurance withInsuranceCostCurrency(String insuranceCostCurrency) {
-        Utils.checkNotNull(insuranceCostCurrency, "insuranceCostCurrency");
-        this.insuranceCostCurrency = Optional.ofNullable(insuranceCostCurrency);
-        return this;
-    }
 
-
-    public PropertyShippingShipmentInsurance withInsuranceCostCurrency(Optional<String> insuranceCostCurrency) {
-        Utils.checkNotNull(insuranceCostCurrency, "insuranceCostCurrency");
+    public PropertyShippingShipmentInsurance withInsuranceCostCurrency(@Nullable String insuranceCostCurrency) {
         this.insuranceCostCurrency = insuranceCostCurrency;
         return this;
     }
 
-    public PropertyShippingShipmentInsurance withInsuranceProvider(String insuranceProvider) {
-        Utils.checkNotNull(insuranceProvider, "insuranceProvider");
-        this.insuranceProvider = Optional.ofNullable(insuranceProvider);
-        return this;
-    }
 
-
-    public PropertyShippingShipmentInsurance withInsuranceProvider(Optional<String> insuranceProvider) {
-        Utils.checkNotNull(insuranceProvider, "insuranceProvider");
+    public PropertyShippingShipmentInsurance withInsuranceProvider(@Nullable String insuranceProvider) {
         this.insuranceProvider = insuranceProvider;
         return this;
     }
 
-    public PropertyShippingShipmentInsurance withInsuranceProviderCode(String insuranceProviderCode) {
-        Utils.checkNotNull(insuranceProviderCode, "insuranceProviderCode");
-        this.insuranceProviderCode = Optional.ofNullable(insuranceProviderCode);
-        return this;
-    }
 
-
-    public PropertyShippingShipmentInsurance withInsuranceProviderCode(Optional<String> insuranceProviderCode) {
-        Utils.checkNotNull(insuranceProviderCode, "insuranceProviderCode");
+    public PropertyShippingShipmentInsurance withInsuranceProviderCode(@Nullable String insuranceProviderCode) {
         this.insuranceProviderCode = insuranceProviderCode;
         return this;
     }
 
-    public PropertyShippingShipmentInsurance withInsuredValue(double insuredValue) {
-        Utils.checkNotNull(insuredValue, "insuredValue");
-        this.insuredValue = Optional.ofNullable(insuredValue);
-        return this;
-    }
 
-
-    public PropertyShippingShipmentInsurance withInsuredValue(Optional<Double> insuredValue) {
-        Utils.checkNotNull(insuredValue, "insuredValue");
+    public PropertyShippingShipmentInsurance withInsuredValue(@Nullable Double insuredValue) {
         this.insuredValue = insuredValue;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -289,132 +215,67 @@ public class PropertyShippingShipmentInsurance {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<Double> coverageAmount = Optional.empty();
+        private Double coverageAmount;
 
-        private Optional<? extends CoverageType> coverageType = Optional.empty();
+        private CoverageType coverageType;
 
-        private Optional<String> currency = Optional.empty();
+        private String currency;
 
-        private Optional<Double> insuranceCost = Optional.empty();
+        private Double insuranceCost;
 
-        private Optional<String> insuranceCostCurrency = Optional.empty();
+        private String insuranceCostCurrency;
 
-        private Optional<String> insuranceProvider = Optional.empty();
+        private String insuranceProvider;
 
-        private Optional<String> insuranceProviderCode = Optional.empty();
+        private String insuranceProviderCode;
 
-        private Optional<Double> insuredValue = Optional.empty();
+        private Double insuredValue;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder coverageAmount(double coverageAmount) {
-            Utils.checkNotNull(coverageAmount, "coverageAmount");
-            this.coverageAmount = Optional.ofNullable(coverageAmount);
-            return this;
-        }
-
-        public Builder coverageAmount(Optional<Double> coverageAmount) {
-            Utils.checkNotNull(coverageAmount, "coverageAmount");
+        public Builder coverageAmount(@Nullable Double coverageAmount) {
             this.coverageAmount = coverageAmount;
             return this;
         }
 
-
-        public Builder coverageType(CoverageType coverageType) {
-            Utils.checkNotNull(coverageType, "coverageType");
-            this.coverageType = Optional.ofNullable(coverageType);
-            return this;
-        }
-
-        public Builder coverageType(Optional<? extends CoverageType> coverageType) {
-            Utils.checkNotNull(coverageType, "coverageType");
+        public Builder coverageType(@Nullable CoverageType coverageType) {
             this.coverageType = coverageType;
             return this;
         }
 
-
-        public Builder currency(String currency) {
-            Utils.checkNotNull(currency, "currency");
-            this.currency = Optional.ofNullable(currency);
-            return this;
-        }
-
-        public Builder currency(Optional<String> currency) {
-            Utils.checkNotNull(currency, "currency");
+        public Builder currency(@Nullable String currency) {
             this.currency = currency;
             return this;
         }
 
-
-        public Builder insuranceCost(double insuranceCost) {
-            Utils.checkNotNull(insuranceCost, "insuranceCost");
-            this.insuranceCost = Optional.ofNullable(insuranceCost);
-            return this;
-        }
-
-        public Builder insuranceCost(Optional<Double> insuranceCost) {
-            Utils.checkNotNull(insuranceCost, "insuranceCost");
+        public Builder insuranceCost(@Nullable Double insuranceCost) {
             this.insuranceCost = insuranceCost;
             return this;
         }
 
-
-        public Builder insuranceCostCurrency(String insuranceCostCurrency) {
-            Utils.checkNotNull(insuranceCostCurrency, "insuranceCostCurrency");
-            this.insuranceCostCurrency = Optional.ofNullable(insuranceCostCurrency);
-            return this;
-        }
-
-        public Builder insuranceCostCurrency(Optional<String> insuranceCostCurrency) {
-            Utils.checkNotNull(insuranceCostCurrency, "insuranceCostCurrency");
+        public Builder insuranceCostCurrency(@Nullable String insuranceCostCurrency) {
             this.insuranceCostCurrency = insuranceCostCurrency;
             return this;
         }
 
-
-        public Builder insuranceProvider(String insuranceProvider) {
-            Utils.checkNotNull(insuranceProvider, "insuranceProvider");
-            this.insuranceProvider = Optional.ofNullable(insuranceProvider);
-            return this;
-        }
-
-        public Builder insuranceProvider(Optional<String> insuranceProvider) {
-            Utils.checkNotNull(insuranceProvider, "insuranceProvider");
+        public Builder insuranceProvider(@Nullable String insuranceProvider) {
             this.insuranceProvider = insuranceProvider;
             return this;
         }
 
-
-        public Builder insuranceProviderCode(String insuranceProviderCode) {
-            Utils.checkNotNull(insuranceProviderCode, "insuranceProviderCode");
-            this.insuranceProviderCode = Optional.ofNullable(insuranceProviderCode);
-            return this;
-        }
-
-        public Builder insuranceProviderCode(Optional<String> insuranceProviderCode) {
-            Utils.checkNotNull(insuranceProviderCode, "insuranceProviderCode");
+        public Builder insuranceProviderCode(@Nullable String insuranceProviderCode) {
             this.insuranceProviderCode = insuranceProviderCode;
             return this;
         }
 
-
-        public Builder insuredValue(double insuredValue) {
-            Utils.checkNotNull(insuredValue, "insuredValue");
-            this.insuredValue = Optional.ofNullable(insuredValue);
-            return this;
-        }
-
-        public Builder insuredValue(Optional<Double> insuredValue) {
-            Utils.checkNotNull(insuredValue, "insuredValue");
+        public Builder insuredValue(@Nullable Double insuredValue) {
             this.insuredValue = insuredValue;
             return this;
         }
 
         public PropertyShippingShipmentInsurance build() {
-
             return new PropertyShippingShipmentInsurance(
                 coverageAmount, coverageType, currency,
                 insuranceCost, insuranceCostCurrency, insuranceProvider,

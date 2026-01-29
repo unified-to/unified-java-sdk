@@ -4,15 +4,14 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
@@ -24,182 +23,157 @@ public class VerificationRequest {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_id")
-    private Optional<String> candidateId;
+    private String candidateId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("package_id")
-    private Optional<String> packageId;
+    private String packageId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
-    private Optional<? extends List<VerificationParameterInput>> parameters;
+    private List<VerificationParameterInput> parameters;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profile_addresses")
-    private Optional<? extends List<VerificationAddress>> profileAddresses;
+    private List<VerificationAddress> profileAddresses;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profile_date_of_birth")
-    private Optional<String> profileDateOfBirth;
+    private String profileDateOfBirth;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profile_emails")
-    private Optional<? extends List<String>> profileEmails;
+    private List<String> profileEmails;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profile_gender")
-    private Optional<? extends ProfileGender> profileGender;
+    private ProfileGender profileGender;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profile_ip_address")
-    private Optional<String> profileIpAddress;
+    private String profileIpAddress;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profile_name")
-    private Optional<String> profileName;
+    private String profileName;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profile_national_identifier")
-    private Optional<String> profileNationalIdentifier;
+    private String profileNationalIdentifier;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profile_telephones")
-    private Optional<? extends List<String>> profileTelephones;
+    private List<String> profileTelephones;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response_completed_at")
-    private Optional<OffsetDateTime> responseCompletedAt;
+    private OffsetDateTime responseCompletedAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response_details")
-    private Optional<? extends List<VerificationResponseDetail>> responseDetails;
+    private List<VerificationResponseDetail> responseDetails;
 
     /**
      * report download
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response_download_urls")
-    private Optional<? extends List<String>> responseDownloadUrls;
+    private List<String> responseDownloadUrls;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response_expires_at")
-    private Optional<OffsetDateTime> responseExpiresAt;
+    private OffsetDateTime responseExpiresAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response_issued_at")
-    private Optional<OffsetDateTime> responseIssuedAt;
+    private OffsetDateTime responseIssuedAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response_redirect_url")
-    private Optional<String> responseRedirectUrl;
+    private String responseRedirectUrl;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response_score")
-    private Optional<Double> responseScore;
+    private Double responseScore;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response_source")
-    private Optional<String> responseSource;
+    private String responseSource;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response_status")
-    private Optional<? extends ResponseStatus> responseStatus;
+    private ResponseStatus responseStatus;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target_url")
-    private Optional<String> targetUrl;
+    private String targetUrl;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
     @JsonCreator
     public VerificationRequest(
-            @JsonProperty("candidate_id") Optional<String> candidateId,
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("package_id") Optional<String> packageId,
-            @JsonProperty("parameters") Optional<? extends List<VerificationParameterInput>> parameters,
-            @JsonProperty("profile_addresses") Optional<? extends List<VerificationAddress>> profileAddresses,
-            @JsonProperty("profile_date_of_birth") Optional<String> profileDateOfBirth,
-            @JsonProperty("profile_emails") Optional<? extends List<String>> profileEmails,
-            @JsonProperty("profile_gender") Optional<? extends ProfileGender> profileGender,
-            @JsonProperty("profile_ip_address") Optional<String> profileIpAddress,
-            @JsonProperty("profile_name") Optional<String> profileName,
-            @JsonProperty("profile_national_identifier") Optional<String> profileNationalIdentifier,
-            @JsonProperty("profile_telephones") Optional<? extends List<String>> profileTelephones,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("response_completed_at") Optional<OffsetDateTime> responseCompletedAt,
-            @JsonProperty("response_details") Optional<? extends List<VerificationResponseDetail>> responseDetails,
-            @JsonProperty("response_download_urls") Optional<? extends List<String>> responseDownloadUrls,
-            @JsonProperty("response_expires_at") Optional<OffsetDateTime> responseExpiresAt,
-            @JsonProperty("response_issued_at") Optional<OffsetDateTime> responseIssuedAt,
-            @JsonProperty("response_redirect_url") Optional<String> responseRedirectUrl,
-            @JsonProperty("response_score") Optional<Double> responseScore,
-            @JsonProperty("response_source") Optional<String> responseSource,
-            @JsonProperty("response_status") Optional<? extends ResponseStatus> responseStatus,
-            @JsonProperty("target_url") Optional<String> targetUrl,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(candidateId, "candidateId");
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(packageId, "packageId");
-        Utils.checkNotNull(parameters, "parameters");
-        Utils.checkNotNull(profileAddresses, "profileAddresses");
-        Utils.checkNotNull(profileDateOfBirth, "profileDateOfBirth");
-        Utils.checkNotNull(profileEmails, "profileEmails");
-        Utils.checkNotNull(profileGender, "profileGender");
-        Utils.checkNotNull(profileIpAddress, "profileIpAddress");
-        Utils.checkNotNull(profileName, "profileName");
-        Utils.checkNotNull(profileNationalIdentifier, "profileNationalIdentifier");
-        Utils.checkNotNull(profileTelephones, "profileTelephones");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(responseCompletedAt, "responseCompletedAt");
-        Utils.checkNotNull(responseDetails, "responseDetails");
-        Utils.checkNotNull(responseDownloadUrls, "responseDownloadUrls");
-        Utils.checkNotNull(responseExpiresAt, "responseExpiresAt");
-        Utils.checkNotNull(responseIssuedAt, "responseIssuedAt");
-        Utils.checkNotNull(responseRedirectUrl, "responseRedirectUrl");
-        Utils.checkNotNull(responseScore, "responseScore");
-        Utils.checkNotNull(responseSource, "responseSource");
-        Utils.checkNotNull(responseStatus, "responseStatus");
-        Utils.checkNotNull(targetUrl, "targetUrl");
-        Utils.checkNotNull(updatedAt, "updatedAt");
+            @JsonProperty("candidate_id") @Nullable String candidateId,
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("package_id") @Nullable String packageId,
+            @JsonProperty("parameters") @Nullable List<VerificationParameterInput> parameters,
+            @JsonProperty("profile_addresses") @Nullable List<VerificationAddress> profileAddresses,
+            @JsonProperty("profile_date_of_birth") @Nullable String profileDateOfBirth,
+            @JsonProperty("profile_emails") @Nullable List<String> profileEmails,
+            @JsonProperty("profile_gender") @Nullable ProfileGender profileGender,
+            @JsonProperty("profile_ip_address") @Nullable String profileIpAddress,
+            @JsonProperty("profile_name") @Nullable String profileName,
+            @JsonProperty("profile_national_identifier") @Nullable String profileNationalIdentifier,
+            @JsonProperty("profile_telephones") @Nullable List<String> profileTelephones,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("response_completed_at") @Nullable OffsetDateTime responseCompletedAt,
+            @JsonProperty("response_details") @Nullable List<VerificationResponseDetail> responseDetails,
+            @JsonProperty("response_download_urls") @Nullable List<String> responseDownloadUrls,
+            @JsonProperty("response_expires_at") @Nullable OffsetDateTime responseExpiresAt,
+            @JsonProperty("response_issued_at") @Nullable OffsetDateTime responseIssuedAt,
+            @JsonProperty("response_redirect_url") @Nullable String responseRedirectUrl,
+            @JsonProperty("response_score") @Nullable Double responseScore,
+            @JsonProperty("response_source") @Nullable String responseSource,
+            @JsonProperty("response_status") @Nullable ResponseStatus responseStatus,
+            @JsonProperty("target_url") @Nullable String targetUrl,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.candidateId = candidateId;
         this.createdAt = createdAt;
         this.id = id;
@@ -228,152 +202,118 @@ public class VerificationRequest {
     }
     
     public VerificationRequest() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null);
     }
 
-    @JsonIgnore
     public Optional<String> candidateId() {
-        return candidateId;
+        return Optional.ofNullable(this.candidateId);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<String> packageId() {
-        return packageId;
+        return Optional.ofNullable(this.packageId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<VerificationParameterInput>> parameters() {
-        return (Optional<List<VerificationParameterInput>>) parameters;
+        return Optional.ofNullable(this.parameters);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<VerificationAddress>> profileAddresses() {
-        return (Optional<List<VerificationAddress>>) profileAddresses;
+        return Optional.ofNullable(this.profileAddresses);
     }
 
-    @JsonIgnore
     public Optional<String> profileDateOfBirth() {
-        return profileDateOfBirth;
+        return Optional.ofNullable(this.profileDateOfBirth);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> profileEmails() {
-        return (Optional<List<String>>) profileEmails;
+        return Optional.ofNullable(this.profileEmails);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ProfileGender> profileGender() {
-        return (Optional<ProfileGender>) profileGender;
+        return Optional.ofNullable(this.profileGender);
     }
 
-    @JsonIgnore
     public Optional<String> profileIpAddress() {
-        return profileIpAddress;
+        return Optional.ofNullable(this.profileIpAddress);
     }
 
-    @JsonIgnore
     public Optional<String> profileName() {
-        return profileName;
+        return Optional.ofNullable(this.profileName);
     }
 
-    @JsonIgnore
     public Optional<String> profileNationalIdentifier() {
-        return profileNationalIdentifier;
+        return Optional.ofNullable(this.profileNationalIdentifier);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> profileTelephones() {
-        return (Optional<List<String>>) profileTelephones;
+        return Optional.ofNullable(this.profileTelephones);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> responseCompletedAt() {
-        return responseCompletedAt;
+        return Optional.ofNullable(this.responseCompletedAt);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<VerificationResponseDetail>> responseDetails() {
-        return (Optional<List<VerificationResponseDetail>>) responseDetails;
+        return Optional.ofNullable(this.responseDetails);
     }
 
     /**
      * report download
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> responseDownloadUrls() {
-        return (Optional<List<String>>) responseDownloadUrls;
+        return Optional.ofNullable(this.responseDownloadUrls);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> responseExpiresAt() {
-        return responseExpiresAt;
+        return Optional.ofNullable(this.responseExpiresAt);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> responseIssuedAt() {
-        return responseIssuedAt;
+        return Optional.ofNullable(this.responseIssuedAt);
     }
 
-    @JsonIgnore
     public Optional<String> responseRedirectUrl() {
-        return responseRedirectUrl;
+        return Optional.ofNullable(this.responseRedirectUrl);
     }
 
-    @JsonIgnore
     public Optional<Double> responseScore() {
-        return responseScore;
+        return Optional.ofNullable(this.responseScore);
     }
 
-    @JsonIgnore
     public Optional<String> responseSource() {
-        return responseSource;
+        return Optional.ofNullable(this.responseSource);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ResponseStatus> responseStatus() {
-        return (Optional<ResponseStatus>) responseStatus;
+        return Optional.ofNullable(this.responseStatus);
     }
 
-    @JsonIgnore
     public Optional<String> targetUrl() {
-        return targetUrl;
+        return Optional.ofNullable(this.targetUrl);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
     public static Builder builder() {
@@ -381,336 +321,158 @@ public class VerificationRequest {
     }
 
 
-    public VerificationRequest withCandidateId(String candidateId) {
-        Utils.checkNotNull(candidateId, "candidateId");
-        this.candidateId = Optional.ofNullable(candidateId);
-        return this;
-    }
-
-
-    public VerificationRequest withCandidateId(Optional<String> candidateId) {
-        Utils.checkNotNull(candidateId, "candidateId");
+    public VerificationRequest withCandidateId(@Nullable String candidateId) {
         this.candidateId = candidateId;
         return this;
     }
 
-    public VerificationRequest withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
 
-
-    public VerificationRequest withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public VerificationRequest withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public VerificationRequest withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public VerificationRequest withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public VerificationRequest withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public VerificationRequest withPackageId(String packageId) {
-        Utils.checkNotNull(packageId, "packageId");
-        this.packageId = Optional.ofNullable(packageId);
-        return this;
-    }
 
-
-    public VerificationRequest withPackageId(Optional<String> packageId) {
-        Utils.checkNotNull(packageId, "packageId");
+    public VerificationRequest withPackageId(@Nullable String packageId) {
         this.packageId = packageId;
         return this;
     }
 
-    public VerificationRequest withParameters(List<VerificationParameterInput> parameters) {
-        Utils.checkNotNull(parameters, "parameters");
-        this.parameters = Optional.ofNullable(parameters);
-        return this;
-    }
 
-
-    public VerificationRequest withParameters(Optional<? extends List<VerificationParameterInput>> parameters) {
-        Utils.checkNotNull(parameters, "parameters");
+    public VerificationRequest withParameters(@Nullable List<VerificationParameterInput> parameters) {
         this.parameters = parameters;
         return this;
     }
 
-    public VerificationRequest withProfileAddresses(List<VerificationAddress> profileAddresses) {
-        Utils.checkNotNull(profileAddresses, "profileAddresses");
-        this.profileAddresses = Optional.ofNullable(profileAddresses);
-        return this;
-    }
 
-
-    public VerificationRequest withProfileAddresses(Optional<? extends List<VerificationAddress>> profileAddresses) {
-        Utils.checkNotNull(profileAddresses, "profileAddresses");
+    public VerificationRequest withProfileAddresses(@Nullable List<VerificationAddress> profileAddresses) {
         this.profileAddresses = profileAddresses;
         return this;
     }
 
-    public VerificationRequest withProfileDateOfBirth(String profileDateOfBirth) {
-        Utils.checkNotNull(profileDateOfBirth, "profileDateOfBirth");
-        this.profileDateOfBirth = Optional.ofNullable(profileDateOfBirth);
-        return this;
-    }
 
-
-    public VerificationRequest withProfileDateOfBirth(Optional<String> profileDateOfBirth) {
-        Utils.checkNotNull(profileDateOfBirth, "profileDateOfBirth");
+    public VerificationRequest withProfileDateOfBirth(@Nullable String profileDateOfBirth) {
         this.profileDateOfBirth = profileDateOfBirth;
         return this;
     }
 
-    public VerificationRequest withProfileEmails(List<String> profileEmails) {
-        Utils.checkNotNull(profileEmails, "profileEmails");
-        this.profileEmails = Optional.ofNullable(profileEmails);
-        return this;
-    }
 
-
-    public VerificationRequest withProfileEmails(Optional<? extends List<String>> profileEmails) {
-        Utils.checkNotNull(profileEmails, "profileEmails");
+    public VerificationRequest withProfileEmails(@Nullable List<String> profileEmails) {
         this.profileEmails = profileEmails;
         return this;
     }
 
-    public VerificationRequest withProfileGender(ProfileGender profileGender) {
-        Utils.checkNotNull(profileGender, "profileGender");
-        this.profileGender = Optional.ofNullable(profileGender);
-        return this;
-    }
 
-
-    public VerificationRequest withProfileGender(Optional<? extends ProfileGender> profileGender) {
-        Utils.checkNotNull(profileGender, "profileGender");
+    public VerificationRequest withProfileGender(@Nullable ProfileGender profileGender) {
         this.profileGender = profileGender;
         return this;
     }
 
-    public VerificationRequest withProfileIpAddress(String profileIpAddress) {
-        Utils.checkNotNull(profileIpAddress, "profileIpAddress");
-        this.profileIpAddress = Optional.ofNullable(profileIpAddress);
-        return this;
-    }
 
-
-    public VerificationRequest withProfileIpAddress(Optional<String> profileIpAddress) {
-        Utils.checkNotNull(profileIpAddress, "profileIpAddress");
+    public VerificationRequest withProfileIpAddress(@Nullable String profileIpAddress) {
         this.profileIpAddress = profileIpAddress;
         return this;
     }
 
-    public VerificationRequest withProfileName(String profileName) {
-        Utils.checkNotNull(profileName, "profileName");
-        this.profileName = Optional.ofNullable(profileName);
-        return this;
-    }
 
-
-    public VerificationRequest withProfileName(Optional<String> profileName) {
-        Utils.checkNotNull(profileName, "profileName");
+    public VerificationRequest withProfileName(@Nullable String profileName) {
         this.profileName = profileName;
         return this;
     }
 
-    public VerificationRequest withProfileNationalIdentifier(String profileNationalIdentifier) {
-        Utils.checkNotNull(profileNationalIdentifier, "profileNationalIdentifier");
-        this.profileNationalIdentifier = Optional.ofNullable(profileNationalIdentifier);
-        return this;
-    }
 
-
-    public VerificationRequest withProfileNationalIdentifier(Optional<String> profileNationalIdentifier) {
-        Utils.checkNotNull(profileNationalIdentifier, "profileNationalIdentifier");
+    public VerificationRequest withProfileNationalIdentifier(@Nullable String profileNationalIdentifier) {
         this.profileNationalIdentifier = profileNationalIdentifier;
         return this;
     }
 
-    public VerificationRequest withProfileTelephones(List<String> profileTelephones) {
-        Utils.checkNotNull(profileTelephones, "profileTelephones");
-        this.profileTelephones = Optional.ofNullable(profileTelephones);
-        return this;
-    }
 
-
-    public VerificationRequest withProfileTelephones(Optional<? extends List<String>> profileTelephones) {
-        Utils.checkNotNull(profileTelephones, "profileTelephones");
+    public VerificationRequest withProfileTelephones(@Nullable List<String> profileTelephones) {
         this.profileTelephones = profileTelephones;
         return this;
     }
 
-    public VerificationRequest withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public VerificationRequest withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public VerificationRequest withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public VerificationRequest withResponseCompletedAt(OffsetDateTime responseCompletedAt) {
-        Utils.checkNotNull(responseCompletedAt, "responseCompletedAt");
-        this.responseCompletedAt = Optional.ofNullable(responseCompletedAt);
-        return this;
-    }
 
-
-    public VerificationRequest withResponseCompletedAt(Optional<OffsetDateTime> responseCompletedAt) {
-        Utils.checkNotNull(responseCompletedAt, "responseCompletedAt");
+    public VerificationRequest withResponseCompletedAt(@Nullable OffsetDateTime responseCompletedAt) {
         this.responseCompletedAt = responseCompletedAt;
         return this;
     }
 
-    public VerificationRequest withResponseDetails(List<VerificationResponseDetail> responseDetails) {
-        Utils.checkNotNull(responseDetails, "responseDetails");
-        this.responseDetails = Optional.ofNullable(responseDetails);
-        return this;
-    }
 
-
-    public VerificationRequest withResponseDetails(Optional<? extends List<VerificationResponseDetail>> responseDetails) {
-        Utils.checkNotNull(responseDetails, "responseDetails");
+    public VerificationRequest withResponseDetails(@Nullable List<VerificationResponseDetail> responseDetails) {
         this.responseDetails = responseDetails;
         return this;
     }
 
-    /**
-     * report download
-     */
-    public VerificationRequest withResponseDownloadUrls(List<String> responseDownloadUrls) {
-        Utils.checkNotNull(responseDownloadUrls, "responseDownloadUrls");
-        this.responseDownloadUrls = Optional.ofNullable(responseDownloadUrls);
-        return this;
-    }
-
 
     /**
      * report download
      */
-    public VerificationRequest withResponseDownloadUrls(Optional<? extends List<String>> responseDownloadUrls) {
-        Utils.checkNotNull(responseDownloadUrls, "responseDownloadUrls");
+    public VerificationRequest withResponseDownloadUrls(@Nullable List<String> responseDownloadUrls) {
         this.responseDownloadUrls = responseDownloadUrls;
         return this;
     }
 
-    public VerificationRequest withResponseExpiresAt(OffsetDateTime responseExpiresAt) {
-        Utils.checkNotNull(responseExpiresAt, "responseExpiresAt");
-        this.responseExpiresAt = Optional.ofNullable(responseExpiresAt);
-        return this;
-    }
 
-
-    public VerificationRequest withResponseExpiresAt(Optional<OffsetDateTime> responseExpiresAt) {
-        Utils.checkNotNull(responseExpiresAt, "responseExpiresAt");
+    public VerificationRequest withResponseExpiresAt(@Nullable OffsetDateTime responseExpiresAt) {
         this.responseExpiresAt = responseExpiresAt;
         return this;
     }
 
-    public VerificationRequest withResponseIssuedAt(OffsetDateTime responseIssuedAt) {
-        Utils.checkNotNull(responseIssuedAt, "responseIssuedAt");
-        this.responseIssuedAt = Optional.ofNullable(responseIssuedAt);
-        return this;
-    }
 
-
-    public VerificationRequest withResponseIssuedAt(Optional<OffsetDateTime> responseIssuedAt) {
-        Utils.checkNotNull(responseIssuedAt, "responseIssuedAt");
+    public VerificationRequest withResponseIssuedAt(@Nullable OffsetDateTime responseIssuedAt) {
         this.responseIssuedAt = responseIssuedAt;
         return this;
     }
 
-    public VerificationRequest withResponseRedirectUrl(String responseRedirectUrl) {
-        Utils.checkNotNull(responseRedirectUrl, "responseRedirectUrl");
-        this.responseRedirectUrl = Optional.ofNullable(responseRedirectUrl);
-        return this;
-    }
 
-
-    public VerificationRequest withResponseRedirectUrl(Optional<String> responseRedirectUrl) {
-        Utils.checkNotNull(responseRedirectUrl, "responseRedirectUrl");
+    public VerificationRequest withResponseRedirectUrl(@Nullable String responseRedirectUrl) {
         this.responseRedirectUrl = responseRedirectUrl;
         return this;
     }
 
-    public VerificationRequest withResponseScore(double responseScore) {
-        Utils.checkNotNull(responseScore, "responseScore");
-        this.responseScore = Optional.ofNullable(responseScore);
-        return this;
-    }
 
-
-    public VerificationRequest withResponseScore(Optional<Double> responseScore) {
-        Utils.checkNotNull(responseScore, "responseScore");
+    public VerificationRequest withResponseScore(@Nullable Double responseScore) {
         this.responseScore = responseScore;
         return this;
     }
 
-    public VerificationRequest withResponseSource(String responseSource) {
-        Utils.checkNotNull(responseSource, "responseSource");
-        this.responseSource = Optional.ofNullable(responseSource);
-        return this;
-    }
 
-
-    public VerificationRequest withResponseSource(Optional<String> responseSource) {
-        Utils.checkNotNull(responseSource, "responseSource");
+    public VerificationRequest withResponseSource(@Nullable String responseSource) {
         this.responseSource = responseSource;
         return this;
     }
 
-    public VerificationRequest withResponseStatus(ResponseStatus responseStatus) {
-        Utils.checkNotNull(responseStatus, "responseStatus");
-        this.responseStatus = Optional.ofNullable(responseStatus);
-        return this;
-    }
 
-
-    public VerificationRequest withResponseStatus(Optional<? extends ResponseStatus> responseStatus) {
-        Utils.checkNotNull(responseStatus, "responseStatus");
+    public VerificationRequest withResponseStatus(@Nullable ResponseStatus responseStatus) {
         this.responseStatus = responseStatus;
         return this;
     }
 
-    public VerificationRequest withTargetUrl(String targetUrl) {
-        Utils.checkNotNull(targetUrl, "targetUrl");
-        this.targetUrl = Optional.ofNullable(targetUrl);
-        return this;
-    }
 
-
-    public VerificationRequest withTargetUrl(Optional<String> targetUrl) {
-        Utils.checkNotNull(targetUrl, "targetUrl");
+    public VerificationRequest withTargetUrl(@Nullable String targetUrl) {
         this.targetUrl = targetUrl;
         return this;
     }
 
-    public VerificationRequest withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public VerificationRequest withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public VerificationRequest withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -796,393 +558,189 @@ public class VerificationRequest {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> candidateId = Optional.empty();
+        private String candidateId;
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<String> packageId = Optional.empty();
+        private String packageId;
 
-        private Optional<? extends List<VerificationParameterInput>> parameters = Optional.empty();
+        private List<VerificationParameterInput> parameters;
 
-        private Optional<? extends List<VerificationAddress>> profileAddresses = Optional.empty();
+        private List<VerificationAddress> profileAddresses;
 
-        private Optional<String> profileDateOfBirth = Optional.empty();
+        private String profileDateOfBirth;
 
-        private Optional<? extends List<String>> profileEmails = Optional.empty();
+        private List<String> profileEmails;
 
-        private Optional<? extends ProfileGender> profileGender = Optional.empty();
+        private ProfileGender profileGender;
 
-        private Optional<String> profileIpAddress = Optional.empty();
+        private String profileIpAddress;
 
-        private Optional<String> profileName = Optional.empty();
+        private String profileName;
 
-        private Optional<String> profileNationalIdentifier = Optional.empty();
+        private String profileNationalIdentifier;
 
-        private Optional<? extends List<String>> profileTelephones = Optional.empty();
+        private List<String> profileTelephones;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<OffsetDateTime> responseCompletedAt = Optional.empty();
+        private OffsetDateTime responseCompletedAt;
 
-        private Optional<? extends List<VerificationResponseDetail>> responseDetails = Optional.empty();
+        private List<VerificationResponseDetail> responseDetails;
 
-        private Optional<? extends List<String>> responseDownloadUrls = Optional.empty();
+        private List<String> responseDownloadUrls;
 
-        private Optional<OffsetDateTime> responseExpiresAt = Optional.empty();
+        private OffsetDateTime responseExpiresAt;
 
-        private Optional<OffsetDateTime> responseIssuedAt = Optional.empty();
+        private OffsetDateTime responseIssuedAt;
 
-        private Optional<String> responseRedirectUrl = Optional.empty();
+        private String responseRedirectUrl;
 
-        private Optional<Double> responseScore = Optional.empty();
+        private Double responseScore;
 
-        private Optional<String> responseSource = Optional.empty();
+        private String responseSource;
 
-        private Optional<? extends ResponseStatus> responseStatus = Optional.empty();
+        private ResponseStatus responseStatus;
 
-        private Optional<String> targetUrl = Optional.empty();
+        private String targetUrl;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder candidateId(String candidateId) {
-            Utils.checkNotNull(candidateId, "candidateId");
-            this.candidateId = Optional.ofNullable(candidateId);
-            return this;
-        }
-
-        public Builder candidateId(Optional<String> candidateId) {
-            Utils.checkNotNull(candidateId, "candidateId");
+        public Builder candidateId(@Nullable String candidateId) {
             this.candidateId = candidateId;
             return this;
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder packageId(String packageId) {
-            Utils.checkNotNull(packageId, "packageId");
-            this.packageId = Optional.ofNullable(packageId);
-            return this;
-        }
-
-        public Builder packageId(Optional<String> packageId) {
-            Utils.checkNotNull(packageId, "packageId");
+        public Builder packageId(@Nullable String packageId) {
             this.packageId = packageId;
             return this;
         }
 
-
-        public Builder parameters(List<VerificationParameterInput> parameters) {
-            Utils.checkNotNull(parameters, "parameters");
-            this.parameters = Optional.ofNullable(parameters);
-            return this;
-        }
-
-        public Builder parameters(Optional<? extends List<VerificationParameterInput>> parameters) {
-            Utils.checkNotNull(parameters, "parameters");
+        public Builder parameters(@Nullable List<VerificationParameterInput> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-
-        public Builder profileAddresses(List<VerificationAddress> profileAddresses) {
-            Utils.checkNotNull(profileAddresses, "profileAddresses");
-            this.profileAddresses = Optional.ofNullable(profileAddresses);
-            return this;
-        }
-
-        public Builder profileAddresses(Optional<? extends List<VerificationAddress>> profileAddresses) {
-            Utils.checkNotNull(profileAddresses, "profileAddresses");
+        public Builder profileAddresses(@Nullable List<VerificationAddress> profileAddresses) {
             this.profileAddresses = profileAddresses;
             return this;
         }
 
-
-        public Builder profileDateOfBirth(String profileDateOfBirth) {
-            Utils.checkNotNull(profileDateOfBirth, "profileDateOfBirth");
-            this.profileDateOfBirth = Optional.ofNullable(profileDateOfBirth);
-            return this;
-        }
-
-        public Builder profileDateOfBirth(Optional<String> profileDateOfBirth) {
-            Utils.checkNotNull(profileDateOfBirth, "profileDateOfBirth");
+        public Builder profileDateOfBirth(@Nullable String profileDateOfBirth) {
             this.profileDateOfBirth = profileDateOfBirth;
             return this;
         }
 
-
-        public Builder profileEmails(List<String> profileEmails) {
-            Utils.checkNotNull(profileEmails, "profileEmails");
-            this.profileEmails = Optional.ofNullable(profileEmails);
-            return this;
-        }
-
-        public Builder profileEmails(Optional<? extends List<String>> profileEmails) {
-            Utils.checkNotNull(profileEmails, "profileEmails");
+        public Builder profileEmails(@Nullable List<String> profileEmails) {
             this.profileEmails = profileEmails;
             return this;
         }
 
-
-        public Builder profileGender(ProfileGender profileGender) {
-            Utils.checkNotNull(profileGender, "profileGender");
-            this.profileGender = Optional.ofNullable(profileGender);
-            return this;
-        }
-
-        public Builder profileGender(Optional<? extends ProfileGender> profileGender) {
-            Utils.checkNotNull(profileGender, "profileGender");
+        public Builder profileGender(@Nullable ProfileGender profileGender) {
             this.profileGender = profileGender;
             return this;
         }
 
-
-        public Builder profileIpAddress(String profileIpAddress) {
-            Utils.checkNotNull(profileIpAddress, "profileIpAddress");
-            this.profileIpAddress = Optional.ofNullable(profileIpAddress);
-            return this;
-        }
-
-        public Builder profileIpAddress(Optional<String> profileIpAddress) {
-            Utils.checkNotNull(profileIpAddress, "profileIpAddress");
+        public Builder profileIpAddress(@Nullable String profileIpAddress) {
             this.profileIpAddress = profileIpAddress;
             return this;
         }
 
-
-        public Builder profileName(String profileName) {
-            Utils.checkNotNull(profileName, "profileName");
-            this.profileName = Optional.ofNullable(profileName);
-            return this;
-        }
-
-        public Builder profileName(Optional<String> profileName) {
-            Utils.checkNotNull(profileName, "profileName");
+        public Builder profileName(@Nullable String profileName) {
             this.profileName = profileName;
             return this;
         }
 
-
-        public Builder profileNationalIdentifier(String profileNationalIdentifier) {
-            Utils.checkNotNull(profileNationalIdentifier, "profileNationalIdentifier");
-            this.profileNationalIdentifier = Optional.ofNullable(profileNationalIdentifier);
-            return this;
-        }
-
-        public Builder profileNationalIdentifier(Optional<String> profileNationalIdentifier) {
-            Utils.checkNotNull(profileNationalIdentifier, "profileNationalIdentifier");
+        public Builder profileNationalIdentifier(@Nullable String profileNationalIdentifier) {
             this.profileNationalIdentifier = profileNationalIdentifier;
             return this;
         }
 
-
-        public Builder profileTelephones(List<String> profileTelephones) {
-            Utils.checkNotNull(profileTelephones, "profileTelephones");
-            this.profileTelephones = Optional.ofNullable(profileTelephones);
-            return this;
-        }
-
-        public Builder profileTelephones(Optional<? extends List<String>> profileTelephones) {
-            Utils.checkNotNull(profileTelephones, "profileTelephones");
+        public Builder profileTelephones(@Nullable List<String> profileTelephones) {
             this.profileTelephones = profileTelephones;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder responseCompletedAt(OffsetDateTime responseCompletedAt) {
-            Utils.checkNotNull(responseCompletedAt, "responseCompletedAt");
-            this.responseCompletedAt = Optional.ofNullable(responseCompletedAt);
-            return this;
-        }
-
-        public Builder responseCompletedAt(Optional<OffsetDateTime> responseCompletedAt) {
-            Utils.checkNotNull(responseCompletedAt, "responseCompletedAt");
+        public Builder responseCompletedAt(@Nullable OffsetDateTime responseCompletedAt) {
             this.responseCompletedAt = responseCompletedAt;
             return this;
         }
 
-
-        public Builder responseDetails(List<VerificationResponseDetail> responseDetails) {
-            Utils.checkNotNull(responseDetails, "responseDetails");
-            this.responseDetails = Optional.ofNullable(responseDetails);
-            return this;
-        }
-
-        public Builder responseDetails(Optional<? extends List<VerificationResponseDetail>> responseDetails) {
-            Utils.checkNotNull(responseDetails, "responseDetails");
+        public Builder responseDetails(@Nullable List<VerificationResponseDetail> responseDetails) {
             this.responseDetails = responseDetails;
             return this;
         }
 
-
         /**
          * report download
          */
-        public Builder responseDownloadUrls(List<String> responseDownloadUrls) {
-            Utils.checkNotNull(responseDownloadUrls, "responseDownloadUrls");
-            this.responseDownloadUrls = Optional.ofNullable(responseDownloadUrls);
-            return this;
-        }
-
-        /**
-         * report download
-         */
-        public Builder responseDownloadUrls(Optional<? extends List<String>> responseDownloadUrls) {
-            Utils.checkNotNull(responseDownloadUrls, "responseDownloadUrls");
+        public Builder responseDownloadUrls(@Nullable List<String> responseDownloadUrls) {
             this.responseDownloadUrls = responseDownloadUrls;
             return this;
         }
 
-
-        public Builder responseExpiresAt(OffsetDateTime responseExpiresAt) {
-            Utils.checkNotNull(responseExpiresAt, "responseExpiresAt");
-            this.responseExpiresAt = Optional.ofNullable(responseExpiresAt);
-            return this;
-        }
-
-        public Builder responseExpiresAt(Optional<OffsetDateTime> responseExpiresAt) {
-            Utils.checkNotNull(responseExpiresAt, "responseExpiresAt");
+        public Builder responseExpiresAt(@Nullable OffsetDateTime responseExpiresAt) {
             this.responseExpiresAt = responseExpiresAt;
             return this;
         }
 
-
-        public Builder responseIssuedAt(OffsetDateTime responseIssuedAt) {
-            Utils.checkNotNull(responseIssuedAt, "responseIssuedAt");
-            this.responseIssuedAt = Optional.ofNullable(responseIssuedAt);
-            return this;
-        }
-
-        public Builder responseIssuedAt(Optional<OffsetDateTime> responseIssuedAt) {
-            Utils.checkNotNull(responseIssuedAt, "responseIssuedAt");
+        public Builder responseIssuedAt(@Nullable OffsetDateTime responseIssuedAt) {
             this.responseIssuedAt = responseIssuedAt;
             return this;
         }
 
-
-        public Builder responseRedirectUrl(String responseRedirectUrl) {
-            Utils.checkNotNull(responseRedirectUrl, "responseRedirectUrl");
-            this.responseRedirectUrl = Optional.ofNullable(responseRedirectUrl);
-            return this;
-        }
-
-        public Builder responseRedirectUrl(Optional<String> responseRedirectUrl) {
-            Utils.checkNotNull(responseRedirectUrl, "responseRedirectUrl");
+        public Builder responseRedirectUrl(@Nullable String responseRedirectUrl) {
             this.responseRedirectUrl = responseRedirectUrl;
             return this;
         }
 
-
-        public Builder responseScore(double responseScore) {
-            Utils.checkNotNull(responseScore, "responseScore");
-            this.responseScore = Optional.ofNullable(responseScore);
-            return this;
-        }
-
-        public Builder responseScore(Optional<Double> responseScore) {
-            Utils.checkNotNull(responseScore, "responseScore");
+        public Builder responseScore(@Nullable Double responseScore) {
             this.responseScore = responseScore;
             return this;
         }
 
-
-        public Builder responseSource(String responseSource) {
-            Utils.checkNotNull(responseSource, "responseSource");
-            this.responseSource = Optional.ofNullable(responseSource);
-            return this;
-        }
-
-        public Builder responseSource(Optional<String> responseSource) {
-            Utils.checkNotNull(responseSource, "responseSource");
+        public Builder responseSource(@Nullable String responseSource) {
             this.responseSource = responseSource;
             return this;
         }
 
-
-        public Builder responseStatus(ResponseStatus responseStatus) {
-            Utils.checkNotNull(responseStatus, "responseStatus");
-            this.responseStatus = Optional.ofNullable(responseStatus);
-            return this;
-        }
-
-        public Builder responseStatus(Optional<? extends ResponseStatus> responseStatus) {
-            Utils.checkNotNull(responseStatus, "responseStatus");
+        public Builder responseStatus(@Nullable ResponseStatus responseStatus) {
             this.responseStatus = responseStatus;
             return this;
         }
 
-
-        public Builder targetUrl(String targetUrl) {
-            Utils.checkNotNull(targetUrl, "targetUrl");
-            this.targetUrl = Optional.ofNullable(targetUrl);
-            return this;
-        }
-
-        public Builder targetUrl(Optional<String> targetUrl) {
-            Utils.checkNotNull(targetUrl, "targetUrl");
+        public Builder targetUrl(@Nullable String targetUrl) {
             this.targetUrl = targetUrl;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
         public VerificationRequest build() {
-
             return new VerificationRequest(
                 candidateId, createdAt, id,
                 packageId, parameters, profileAddresses,

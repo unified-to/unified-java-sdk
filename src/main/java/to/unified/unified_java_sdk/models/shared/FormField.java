@@ -4,15 +4,15 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Optional;
@@ -25,57 +25,57 @@ public class FormField {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("choices")
-    private Optional<? extends List<String>> choices;
+    private List<String> choices;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("default_value")
-    private Optional<String> defaultValue;
+    private String defaultValue;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
-    private Optional<String> description;
+    private String description;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
-    private Optional<Boolean> isActive;
+    private Boolean isActive;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_required")
-    private Optional<Boolean> isRequired;
+    private Boolean isRequired;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max")
-    private Optional<Double> max;
+    private Double max;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max_length")
-    private Optional<Double> maxLength;
+    private Double maxLength;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("min")
-    private Optional<Double> min;
+    private Double min;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("min_length")
-    private Optional<Double> minLength;
+    private Double minLength;
 
 
     @JsonProperty("name")
@@ -84,12 +84,12 @@ public class FormField {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
-    private Optional<Double> order;
+    private Double order;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pattern")
-    private Optional<String> pattern;
+    private String pattern;
 
 
     @JsonProperty("type")
@@ -98,42 +98,26 @@ public class FormField {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
     @JsonCreator
     public FormField(
-            @JsonProperty("choices") Optional<? extends List<String>> choices,
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("default_value") Optional<String> defaultValue,
-            @JsonProperty("description") Optional<String> description,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("is_active") Optional<Boolean> isActive,
-            @JsonProperty("is_required") Optional<Boolean> isRequired,
-            @JsonProperty("max") Optional<Double> max,
-            @JsonProperty("max_length") Optional<Double> maxLength,
-            @JsonProperty("min") Optional<Double> min,
-            @JsonProperty("min_length") Optional<Double> minLength,
-            @JsonProperty("name") String name,
-            @JsonProperty("order") Optional<Double> order,
-            @JsonProperty("pattern") Optional<String> pattern,
-            @JsonProperty("type") FormFieldType type,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(choices, "choices");
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(defaultValue, "defaultValue");
-        Utils.checkNotNull(description, "description");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(isActive, "isActive");
-        Utils.checkNotNull(isRequired, "isRequired");
-        Utils.checkNotNull(max, "max");
-        Utils.checkNotNull(maxLength, "maxLength");
-        Utils.checkNotNull(min, "min");
-        Utils.checkNotNull(minLength, "minLength");
-        Utils.checkNotNull(name, "name");
-        Utils.checkNotNull(order, "order");
-        Utils.checkNotNull(pattern, "pattern");
-        Utils.checkNotNull(type, "type");
-        Utils.checkNotNull(updatedAt, "updatedAt");
+            @JsonProperty("choices") @Nullable List<String> choices,
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("default_value") @Nullable String defaultValue,
+            @JsonProperty("description") @Nullable String description,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("is_active") @Nullable Boolean isActive,
+            @JsonProperty("is_required") @Nullable Boolean isRequired,
+            @JsonProperty("max") @Nullable Double max,
+            @JsonProperty("max_length") @Nullable Double maxLength,
+            @JsonProperty("min") @Nullable Double min,
+            @JsonProperty("min_length") @Nullable Double minLength,
+            @JsonProperty("name") @Nonnull String name,
+            @JsonProperty("order") @Nullable Double order,
+            @JsonProperty("pattern") @Nullable String pattern,
+            @JsonProperty("type") @Nonnull FormFieldType type,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.choices = choices;
         this.createdAt = createdAt;
         this.defaultValue = defaultValue;
@@ -145,106 +129,91 @@ public class FormField {
         this.maxLength = maxLength;
         this.min = min;
         this.minLength = minLength;
-        this.name = name;
+        this.name = Optional.ofNullable(name)
+            .orElseThrow(() -> new IllegalArgumentException("name cannot be null"));
         this.order = order;
         this.pattern = pattern;
-        this.type = type;
+        this.type = Optional.ofNullable(type)
+            .orElseThrow(() -> new IllegalArgumentException("type cannot be null"));
         this.updatedAt = updatedAt;
     }
     
     public FormField(
-            String name,
-            FormFieldType type) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), name,
-            Optional.empty(), Optional.empty(), type,
-            Optional.empty());
+            @Nonnull String name,
+            @Nonnull FormFieldType type) {
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, name,
+            null, null, type,
+            null);
     }
 
     /**
      * For select/radio/checkbox fields
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> choices() {
-        return (Optional<List<String>>) choices;
+        return Optional.ofNullable(this.choices);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<String> defaultValue() {
-        return defaultValue;
+        return Optional.ofNullable(this.defaultValue);
     }
 
-    @JsonIgnore
     public Optional<String> description() {
-        return description;
+        return Optional.ofNullable(this.description);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isActive() {
-        return isActive;
+        return Optional.ofNullable(this.isActive);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isRequired() {
-        return isRequired;
+        return Optional.ofNullable(this.isRequired);
     }
 
-    @JsonIgnore
     public Optional<Double> max() {
-        return max;
+        return Optional.ofNullable(this.max);
     }
 
-    @JsonIgnore
     public Optional<Double> maxLength() {
-        return maxLength;
+        return Optional.ofNullable(this.maxLength);
     }
 
-    @JsonIgnore
     public Optional<Double> min() {
-        return min;
+        return Optional.ofNullable(this.min);
     }
 
-    @JsonIgnore
     public Optional<Double> minLength() {
-        return minLength;
+        return Optional.ofNullable(this.minLength);
     }
 
-    @JsonIgnore
     public String name() {
-        return name;
+        return this.name;
     }
 
-    @JsonIgnore
     public Optional<Double> order() {
-        return order;
+        return Optional.ofNullable(this.order);
     }
 
-    @JsonIgnore
     public Optional<String> pattern() {
-        return pattern;
+        return Optional.ofNullable(this.pattern);
     }
 
-    @JsonIgnore
     public FormFieldType type() {
-        return type;
+        return this.type;
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
     public static Builder builder() {
@@ -255,202 +224,101 @@ public class FormField {
     /**
      * For select/radio/checkbox fields
      */
-    public FormField withChoices(List<String> choices) {
-        Utils.checkNotNull(choices, "choices");
-        this.choices = Optional.ofNullable(choices);
-        return this;
-    }
-
-
-    /**
-     * For select/radio/checkbox fields
-     */
-    public FormField withChoices(Optional<? extends List<String>> choices) {
-        Utils.checkNotNull(choices, "choices");
+    public FormField withChoices(@Nullable List<String> choices) {
         this.choices = choices;
         return this;
     }
 
-    public FormField withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
 
-
-    public FormField withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public FormField withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public FormField withDefaultValue(String defaultValue) {
-        Utils.checkNotNull(defaultValue, "defaultValue");
-        this.defaultValue = Optional.ofNullable(defaultValue);
-        return this;
-    }
 
-
-    public FormField withDefaultValue(Optional<String> defaultValue) {
-        Utils.checkNotNull(defaultValue, "defaultValue");
+    public FormField withDefaultValue(@Nullable String defaultValue) {
         this.defaultValue = defaultValue;
         return this;
     }
 
-    public FormField withDescription(String description) {
-        Utils.checkNotNull(description, "description");
-        this.description = Optional.ofNullable(description);
-        return this;
-    }
 
-
-    public FormField withDescription(Optional<String> description) {
-        Utils.checkNotNull(description, "description");
+    public FormField withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
-    public FormField withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public FormField withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public FormField withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public FormField withIsActive(boolean isActive) {
-        Utils.checkNotNull(isActive, "isActive");
-        this.isActive = Optional.ofNullable(isActive);
-        return this;
-    }
 
-
-    public FormField withIsActive(Optional<Boolean> isActive) {
-        Utils.checkNotNull(isActive, "isActive");
+    public FormField withIsActive(@Nullable Boolean isActive) {
         this.isActive = isActive;
         return this;
     }
 
-    public FormField withIsRequired(boolean isRequired) {
-        Utils.checkNotNull(isRequired, "isRequired");
-        this.isRequired = Optional.ofNullable(isRequired);
-        return this;
-    }
 
-
-    public FormField withIsRequired(Optional<Boolean> isRequired) {
-        Utils.checkNotNull(isRequired, "isRequired");
+    public FormField withIsRequired(@Nullable Boolean isRequired) {
         this.isRequired = isRequired;
         return this;
     }
 
-    public FormField withMax(double max) {
-        Utils.checkNotNull(max, "max");
-        this.max = Optional.ofNullable(max);
-        return this;
-    }
 
-
-    public FormField withMax(Optional<Double> max) {
-        Utils.checkNotNull(max, "max");
+    public FormField withMax(@Nullable Double max) {
         this.max = max;
         return this;
     }
 
-    public FormField withMaxLength(double maxLength) {
-        Utils.checkNotNull(maxLength, "maxLength");
-        this.maxLength = Optional.ofNullable(maxLength);
-        return this;
-    }
 
-
-    public FormField withMaxLength(Optional<Double> maxLength) {
-        Utils.checkNotNull(maxLength, "maxLength");
+    public FormField withMaxLength(@Nullable Double maxLength) {
         this.maxLength = maxLength;
         return this;
     }
 
-    public FormField withMin(double min) {
-        Utils.checkNotNull(min, "min");
-        this.min = Optional.ofNullable(min);
-        return this;
-    }
 
-
-    public FormField withMin(Optional<Double> min) {
-        Utils.checkNotNull(min, "min");
+    public FormField withMin(@Nullable Double min) {
         this.min = min;
         return this;
     }
 
-    public FormField withMinLength(double minLength) {
-        Utils.checkNotNull(minLength, "minLength");
-        this.minLength = Optional.ofNullable(minLength);
-        return this;
-    }
 
-
-    public FormField withMinLength(Optional<Double> minLength) {
-        Utils.checkNotNull(minLength, "minLength");
+    public FormField withMinLength(@Nullable Double minLength) {
         this.minLength = minLength;
         return this;
     }
 
-    public FormField withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = name;
-        return this;
-    }
 
-    public FormField withOrder(double order) {
-        Utils.checkNotNull(order, "order");
-        this.order = Optional.ofNullable(order);
+    public FormField withName(@Nonnull String name) {
+        this.name = Utils.checkNotNull(name, "name");
         return this;
     }
 
 
-    public FormField withOrder(Optional<Double> order) {
-        Utils.checkNotNull(order, "order");
+    public FormField withOrder(@Nullable Double order) {
         this.order = order;
         return this;
     }
 
-    public FormField withPattern(String pattern) {
-        Utils.checkNotNull(pattern, "pattern");
-        this.pattern = Optional.ofNullable(pattern);
-        return this;
-    }
 
-
-    public FormField withPattern(Optional<String> pattern) {
-        Utils.checkNotNull(pattern, "pattern");
+    public FormField withPattern(@Nullable String pattern) {
         this.pattern = pattern;
         return this;
     }
 
-    public FormField withType(FormFieldType type) {
-        Utils.checkNotNull(type, "type");
-        this.type = type;
-        return this;
-    }
 
-    public FormField withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
+    public FormField withType(@Nonnull FormFieldType type) {
+        this.type = Utils.checkNotNull(type, "type");
         return this;
     }
 
 
-    public FormField withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public FormField withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -515,246 +383,126 @@ public class FormField {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends List<String>> choices = Optional.empty();
+        private List<String> choices;
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<String> defaultValue = Optional.empty();
+        private String defaultValue;
 
-        private Optional<String> description = Optional.empty();
+        private String description;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<Boolean> isActive = Optional.empty();
+        private Boolean isActive;
 
-        private Optional<Boolean> isRequired = Optional.empty();
+        private Boolean isRequired;
 
-        private Optional<Double> max = Optional.empty();
+        private Double max;
 
-        private Optional<Double> maxLength = Optional.empty();
+        private Double maxLength;
 
-        private Optional<Double> min = Optional.empty();
+        private Double min;
 
-        private Optional<Double> minLength = Optional.empty();
+        private Double minLength;
 
         private String name;
 
-        private Optional<Double> order = Optional.empty();
+        private Double order;
 
-        private Optional<String> pattern = Optional.empty();
+        private String pattern;
 
         private FormFieldType type;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
         /**
          * For select/radio/checkbox fields
          */
-        public Builder choices(List<String> choices) {
-            Utils.checkNotNull(choices, "choices");
-            this.choices = Optional.ofNullable(choices);
-            return this;
-        }
-
-        /**
-         * For select/radio/checkbox fields
-         */
-        public Builder choices(Optional<? extends List<String>> choices) {
-            Utils.checkNotNull(choices, "choices");
+        public Builder choices(@Nullable List<String> choices) {
             this.choices = choices;
             return this;
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder defaultValue(String defaultValue) {
-            Utils.checkNotNull(defaultValue, "defaultValue");
-            this.defaultValue = Optional.ofNullable(defaultValue);
-            return this;
-        }
-
-        public Builder defaultValue(Optional<String> defaultValue) {
-            Utils.checkNotNull(defaultValue, "defaultValue");
+        public Builder defaultValue(@Nullable String defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
 
-
-        public Builder description(String description) {
-            Utils.checkNotNull(description, "description");
-            this.description = Optional.ofNullable(description);
-            return this;
-        }
-
-        public Builder description(Optional<String> description) {
-            Utils.checkNotNull(description, "description");
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder isActive(boolean isActive) {
-            Utils.checkNotNull(isActive, "isActive");
-            this.isActive = Optional.ofNullable(isActive);
-            return this;
-        }
-
-        public Builder isActive(Optional<Boolean> isActive) {
-            Utils.checkNotNull(isActive, "isActive");
+        public Builder isActive(@Nullable Boolean isActive) {
             this.isActive = isActive;
             return this;
         }
 
-
-        public Builder isRequired(boolean isRequired) {
-            Utils.checkNotNull(isRequired, "isRequired");
-            this.isRequired = Optional.ofNullable(isRequired);
-            return this;
-        }
-
-        public Builder isRequired(Optional<Boolean> isRequired) {
-            Utils.checkNotNull(isRequired, "isRequired");
+        public Builder isRequired(@Nullable Boolean isRequired) {
             this.isRequired = isRequired;
             return this;
         }
 
-
-        public Builder max(double max) {
-            Utils.checkNotNull(max, "max");
-            this.max = Optional.ofNullable(max);
-            return this;
-        }
-
-        public Builder max(Optional<Double> max) {
-            Utils.checkNotNull(max, "max");
+        public Builder max(@Nullable Double max) {
             this.max = max;
             return this;
         }
 
-
-        public Builder maxLength(double maxLength) {
-            Utils.checkNotNull(maxLength, "maxLength");
-            this.maxLength = Optional.ofNullable(maxLength);
-            return this;
-        }
-
-        public Builder maxLength(Optional<Double> maxLength) {
-            Utils.checkNotNull(maxLength, "maxLength");
+        public Builder maxLength(@Nullable Double maxLength) {
             this.maxLength = maxLength;
             return this;
         }
 
-
-        public Builder min(double min) {
-            Utils.checkNotNull(min, "min");
-            this.min = Optional.ofNullable(min);
-            return this;
-        }
-
-        public Builder min(Optional<Double> min) {
-            Utils.checkNotNull(min, "min");
+        public Builder min(@Nullable Double min) {
             this.min = min;
             return this;
         }
 
-
-        public Builder minLength(double minLength) {
-            Utils.checkNotNull(minLength, "minLength");
-            this.minLength = Optional.ofNullable(minLength);
-            return this;
-        }
-
-        public Builder minLength(Optional<Double> minLength) {
-            Utils.checkNotNull(minLength, "minLength");
+        public Builder minLength(@Nullable Double minLength) {
             this.minLength = minLength;
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = name;
+        public Builder name(@Nonnull String name) {
+            this.name = Utils.checkNotNull(name, "name");
             return this;
         }
 
-
-        public Builder order(double order) {
-            Utils.checkNotNull(order, "order");
-            this.order = Optional.ofNullable(order);
-            return this;
-        }
-
-        public Builder order(Optional<Double> order) {
-            Utils.checkNotNull(order, "order");
+        public Builder order(@Nullable Double order) {
             this.order = order;
             return this;
         }
 
-
-        public Builder pattern(String pattern) {
-            Utils.checkNotNull(pattern, "pattern");
-            this.pattern = Optional.ofNullable(pattern);
-            return this;
-        }
-
-        public Builder pattern(Optional<String> pattern) {
-            Utils.checkNotNull(pattern, "pattern");
+        public Builder pattern(@Nullable String pattern) {
             this.pattern = pattern;
             return this;
         }
 
-
-        public Builder type(FormFieldType type) {
-            Utils.checkNotNull(type, "type");
-            this.type = type;
+        public Builder type(@Nonnull FormFieldType type) {
+            this.type = Utils.checkNotNull(type, "type");
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
         public FormField build() {
-
             return new FormField(
                 choices, createdAt, defaultValue,
                 description, id, isActive,

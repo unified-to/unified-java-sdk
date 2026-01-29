@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateTicketingNoteRequest;
 import to.unified.unified_java_sdk.models.operations.GetTicketingNoteRequest;
@@ -68,7 +69,7 @@ public class AsyncNote {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateTicketingNoteResponse>} - The async response
      */
-    public CompletableFuture<CreateTicketingNoteResponse> createTicketingNote(CreateTicketingNoteRequest request) {
+    public CompletableFuture<CreateTicketingNoteResponse> createTicketingNote(@Nonnull CreateTicketingNoteRequest request) {
         AsyncRequestOperation<CreateTicketingNoteRequest, CreateTicketingNoteResponse> operation
               = new CreateTicketingNote.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -91,7 +92,7 @@ public class AsyncNote {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetTicketingNoteResponse>} - The async response
      */
-    public CompletableFuture<GetTicketingNoteResponse> getTicketingNote(GetTicketingNoteRequest request) {
+    public CompletableFuture<GetTicketingNoteResponse> getTicketingNote(@Nonnull GetTicketingNoteRequest request) {
         AsyncRequestOperation<GetTicketingNoteRequest, GetTicketingNoteResponse> operation
               = new GetTicketingNote.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -114,7 +115,7 @@ public class AsyncNote {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListTicketingNotesResponse>} - The async response
      */
-    public CompletableFuture<ListTicketingNotesResponse> listTicketingNotes(ListTicketingNotesRequest request) {
+    public CompletableFuture<ListTicketingNotesResponse> listTicketingNotes(@Nonnull ListTicketingNotesRequest request) {
         AsyncRequestOperation<ListTicketingNotesRequest, ListTicketingNotesResponse> operation
               = new ListTicketingNotes.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -137,7 +138,7 @@ public class AsyncNote {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchTicketingNoteResponse>} - The async response
      */
-    public CompletableFuture<PatchTicketingNoteResponse> patchTicketingNote(PatchTicketingNoteRequest request) {
+    public CompletableFuture<PatchTicketingNoteResponse> patchTicketingNote(@Nonnull PatchTicketingNoteRequest request) {
         AsyncRequestOperation<PatchTicketingNoteRequest, PatchTicketingNoteResponse> operation
               = new PatchTicketingNote.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -160,7 +161,7 @@ public class AsyncNote {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveTicketingNoteResponse>} - The async response
      */
-    public CompletableFuture<RemoveTicketingNoteResponse> removeTicketingNote(RemoveTicketingNoteRequest request) {
+    public CompletableFuture<RemoveTicketingNoteResponse> removeTicketingNote(@Nonnull RemoveTicketingNoteRequest request) {
         AsyncRequestOperation<RemoveTicketingNoteRequest, RemoveTicketingNoteResponse> operation
               = new RemoveTicketingNote.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -183,7 +184,7 @@ public class AsyncNote {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateTicketingNoteResponse>} - The async response
      */
-    public CompletableFuture<UpdateTicketingNoteResponse> updateTicketingNote(UpdateTicketingNoteRequest request) {
+    public CompletableFuture<UpdateTicketingNoteResponse> updateTicketingNote(@Nonnull UpdateTicketingNoteRequest request) {
         AsyncRequestOperation<UpdateTicketingNoteRequest, UpdateTicketingNoteResponse> operation
               = new UpdateTicketingNote.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

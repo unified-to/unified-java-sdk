@@ -7,6 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.RequestOperation
 import static to.unified.unified_java_sdk.utils.Exceptions.unchecked;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.io.InputStream;
 import java.lang.Exception;
 import java.lang.String;
@@ -40,7 +41,7 @@ public class RemoveTicketingNote {
         final HTTPClient client;
         final Headers _headers;
 
-        public Base(SDKConfiguration sdkConfiguration, Headers _headers) {
+        public Base(@Nonnull SDKConfiguration sdkConfiguration, Headers _headers) {
             this.sdkConfiguration = sdkConfiguration;
             this._headers =_headers;
             this.baseUrl = this.sdkConfiguration.serverUrl();
@@ -96,7 +97,7 @@ public class RemoveTicketingNote {
 
     public static class Sync extends Base
             implements RequestOperation<RemoveTicketingNoteRequest, RemoveTicketingNoteResponse> {
-        public Sync(SDKConfiguration sdkConfiguration, Headers _headers) {
+        public Sync(@Nonnull SDKConfiguration sdkConfiguration, Headers _headers) {
             super(sdkConfiguration, _headers);
         }
 
@@ -173,7 +174,7 @@ public class RemoveTicketingNote {
     public static class Async extends Base
             implements AsyncRequestOperation<RemoveTicketingNoteRequest, to.unified.unified_java_sdk.models.operations.async.RemoveTicketingNoteResponse> {
 
-        public Async(SDKConfiguration sdkConfiguration, Headers _headers) {
+        public Async(@Nonnull SDKConfiguration sdkConfiguration, Headers _headers) {
             super(sdkConfiguration, _headers);
         }
 

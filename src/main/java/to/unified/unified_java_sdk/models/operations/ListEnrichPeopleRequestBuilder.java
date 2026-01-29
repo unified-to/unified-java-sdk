@@ -5,32 +5,45 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.ListEnrichPeople;
 import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListEnrichPeopleRequestBuilder {
-
-    private ListEnrichPeopleRequest request;
     private final SDKConfiguration sdkConfiguration;
-    private final Headers _headers = new Headers(); 
+    private final Headers _headers = new Headers();
+    private ListEnrichPeopleRequest request;
 
     public ListEnrichPeopleRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
 
-    public ListEnrichPeopleRequestBuilder request(ListEnrichPeopleRequest request) {
-        Utils.checkNotNull(request, "request");
-        this.request = request;
+    public ListEnrichPeopleRequestBuilder request(@Nonnull ListEnrichPeopleRequest request) {
+        this.request = Utils.checkNotNull(request, "request");
         return this;
     }
 
+    private ListEnrichPeopleRequest _buildRequest() {
+        return this.request;
+    }
+    
+    public ListEnrichPeopleRequestBuilder header(String name, String value) {
+        Utils.checkNotNull(name, "name");
+        Utils.checkNotNull(value, "value");
+        this._headers.add(name, value);
+        return this;
+    }
+
+    /**
+    * Executes the request and returns the response.
+    *
+    * @return The response from the server.
+    */
     public ListEnrichPeopleResponse call() {
-        
         RequestOperation<ListEnrichPeopleRequest, ListEnrichPeopleResponse> operation
               = new ListEnrichPeople.Sync(sdkConfiguration, _headers);
-
-        return operation.handleResponse(operation.doRequest(request));
+        return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

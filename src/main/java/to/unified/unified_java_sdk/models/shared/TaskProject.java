@@ -4,15 +4,14 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
@@ -24,82 +23,71 @@ public class TaskProject {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
-    private Optional<String> description;
+    private String description;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group_ids")
-    private Optional<? extends List<String>> groupIds;
+    private List<String> groupIds;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_children")
-    private Optional<Boolean> hasChildren;
+    private Boolean hasChildren;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_tasks")
-    private Optional<Boolean> hasTasks;
+    private Boolean hasTasks;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
-    private Optional<String> name;
+    private String name;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_id")
-    private Optional<String> parentId;
+    private String parentId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_ids")
-    private Optional<? extends List<String>> userIds;
+    private List<String> userIds;
 
     @JsonCreator
     public TaskProject(
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("description") Optional<String> description,
-            @JsonProperty("group_ids") Optional<? extends List<String>> groupIds,
-            @JsonProperty("has_children") Optional<Boolean> hasChildren,
-            @JsonProperty("has_tasks") Optional<Boolean> hasTasks,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("name") Optional<String> name,
-            @JsonProperty("parent_id") Optional<String> parentId,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
-            @JsonProperty("user_ids") Optional<? extends List<String>> userIds) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(description, "description");
-        Utils.checkNotNull(groupIds, "groupIds");
-        Utils.checkNotNull(hasChildren, "hasChildren");
-        Utils.checkNotNull(hasTasks, "hasTasks");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(name, "name");
-        Utils.checkNotNull(parentId, "parentId");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        Utils.checkNotNull(userIds, "userIds");
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("description") @Nullable String description,
+            @JsonProperty("group_ids") @Nullable List<String> groupIds,
+            @JsonProperty("has_children") @Nullable Boolean hasChildren,
+            @JsonProperty("has_tasks") @Nullable Boolean hasTasks,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("name") @Nullable String name,
+            @JsonProperty("parent_id") @Nullable String parentId,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
+            @JsonProperty("user_ids") @Nullable List<String> userIds) {
         this.createdAt = createdAt;
         this.description = description;
         this.groupIds = groupIds;
@@ -114,68 +102,54 @@ public class TaskProject {
     }
     
     public TaskProject() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<String> description() {
-        return description;
+        return Optional.ofNullable(this.description);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> groupIds() {
-        return (Optional<List<String>>) groupIds;
+        return Optional.ofNullable(this.groupIds);
     }
 
-    @JsonIgnore
     public Optional<Boolean> hasChildren() {
-        return hasChildren;
+        return Optional.ofNullable(this.hasChildren);
     }
 
-    @JsonIgnore
     public Optional<Boolean> hasTasks() {
-        return hasTasks;
+        return Optional.ofNullable(this.hasTasks);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<String> name() {
-        return name;
+        return Optional.ofNullable(this.name);
     }
 
-    @JsonIgnore
     public Optional<String> parentId() {
-        return parentId;
+        return Optional.ofNullable(this.parentId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> userIds() {
-        return (Optional<List<String>>) userIds;
+        return Optional.ofNullable(this.userIds);
     }
 
     public static Builder builder() {
@@ -183,148 +157,71 @@ public class TaskProject {
     }
 
 
-    public TaskProject withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
-
-
-    public TaskProject withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public TaskProject withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public TaskProject withDescription(String description) {
-        Utils.checkNotNull(description, "description");
-        this.description = Optional.ofNullable(description);
-        return this;
-    }
 
-
-    public TaskProject withDescription(Optional<String> description) {
-        Utils.checkNotNull(description, "description");
+    public TaskProject withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
-    public TaskProject withGroupIds(List<String> groupIds) {
-        Utils.checkNotNull(groupIds, "groupIds");
-        this.groupIds = Optional.ofNullable(groupIds);
-        return this;
-    }
 
-
-    public TaskProject withGroupIds(Optional<? extends List<String>> groupIds) {
-        Utils.checkNotNull(groupIds, "groupIds");
+    public TaskProject withGroupIds(@Nullable List<String> groupIds) {
         this.groupIds = groupIds;
         return this;
     }
 
-    public TaskProject withHasChildren(boolean hasChildren) {
-        Utils.checkNotNull(hasChildren, "hasChildren");
-        this.hasChildren = Optional.ofNullable(hasChildren);
-        return this;
-    }
 
-
-    public TaskProject withHasChildren(Optional<Boolean> hasChildren) {
-        Utils.checkNotNull(hasChildren, "hasChildren");
+    public TaskProject withHasChildren(@Nullable Boolean hasChildren) {
         this.hasChildren = hasChildren;
         return this;
     }
 
-    public TaskProject withHasTasks(boolean hasTasks) {
-        Utils.checkNotNull(hasTasks, "hasTasks");
-        this.hasTasks = Optional.ofNullable(hasTasks);
-        return this;
-    }
 
-
-    public TaskProject withHasTasks(Optional<Boolean> hasTasks) {
-        Utils.checkNotNull(hasTasks, "hasTasks");
+    public TaskProject withHasTasks(@Nullable Boolean hasTasks) {
         this.hasTasks = hasTasks;
         return this;
     }
 
-    public TaskProject withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public TaskProject withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public TaskProject withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public TaskProject withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = Optional.ofNullable(name);
-        return this;
-    }
 
-
-    public TaskProject withName(Optional<String> name) {
-        Utils.checkNotNull(name, "name");
+    public TaskProject withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
-    public TaskProject withParentId(String parentId) {
-        Utils.checkNotNull(parentId, "parentId");
-        this.parentId = Optional.ofNullable(parentId);
-        return this;
-    }
 
-
-    public TaskProject withParentId(Optional<String> parentId) {
-        Utils.checkNotNull(parentId, "parentId");
+    public TaskProject withParentId(@Nullable String parentId) {
         this.parentId = parentId;
         return this;
     }
 
-    public TaskProject withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public TaskProject withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public TaskProject withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public TaskProject withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public TaskProject withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public TaskProject withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
-    public TaskProject withUserIds(List<String> userIds) {
-        Utils.checkNotNull(userIds, "userIds");
-        this.userIds = Optional.ofNullable(userIds);
-        return this;
-    }
 
-
-    public TaskProject withUserIds(Optional<? extends List<String>> userIds) {
-        Utils.checkNotNull(userIds, "userIds");
+    public TaskProject withUserIds(@Nullable List<String> userIds) {
         this.userIds = userIds;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -377,177 +274,88 @@ public class TaskProject {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<String> description = Optional.empty();
+        private String description;
 
-        private Optional<? extends List<String>> groupIds = Optional.empty();
+        private List<String> groupIds;
 
-        private Optional<Boolean> hasChildren = Optional.empty();
+        private Boolean hasChildren;
 
-        private Optional<Boolean> hasTasks = Optional.empty();
+        private Boolean hasTasks;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<String> name = Optional.empty();
+        private String name;
 
-        private Optional<String> parentId = Optional.empty();
+        private String parentId;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
-        private Optional<? extends List<String>> userIds = Optional.empty();
+        private List<String> userIds;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder description(String description) {
-            Utils.checkNotNull(description, "description");
-            this.description = Optional.ofNullable(description);
-            return this;
-        }
-
-        public Builder description(Optional<String> description) {
-            Utils.checkNotNull(description, "description");
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-
-        public Builder groupIds(List<String> groupIds) {
-            Utils.checkNotNull(groupIds, "groupIds");
-            this.groupIds = Optional.ofNullable(groupIds);
-            return this;
-        }
-
-        public Builder groupIds(Optional<? extends List<String>> groupIds) {
-            Utils.checkNotNull(groupIds, "groupIds");
+        public Builder groupIds(@Nullable List<String> groupIds) {
             this.groupIds = groupIds;
             return this;
         }
 
-
-        public Builder hasChildren(boolean hasChildren) {
-            Utils.checkNotNull(hasChildren, "hasChildren");
-            this.hasChildren = Optional.ofNullable(hasChildren);
-            return this;
-        }
-
-        public Builder hasChildren(Optional<Boolean> hasChildren) {
-            Utils.checkNotNull(hasChildren, "hasChildren");
+        public Builder hasChildren(@Nullable Boolean hasChildren) {
             this.hasChildren = hasChildren;
             return this;
         }
 
-
-        public Builder hasTasks(boolean hasTasks) {
-            Utils.checkNotNull(hasTasks, "hasTasks");
-            this.hasTasks = Optional.ofNullable(hasTasks);
-            return this;
-        }
-
-        public Builder hasTasks(Optional<Boolean> hasTasks) {
-            Utils.checkNotNull(hasTasks, "hasTasks");
+        public Builder hasTasks(@Nullable Boolean hasTasks) {
             this.hasTasks = hasTasks;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = Optional.ofNullable(name);
-            return this;
-        }
-
-        public Builder name(Optional<String> name) {
-            Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-
-        public Builder parentId(String parentId) {
-            Utils.checkNotNull(parentId, "parentId");
-            this.parentId = Optional.ofNullable(parentId);
-            return this;
-        }
-
-        public Builder parentId(Optional<String> parentId) {
-            Utils.checkNotNull(parentId, "parentId");
+        public Builder parentId(@Nullable String parentId) {
             this.parentId = parentId;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
-
-        public Builder userIds(List<String> userIds) {
-            Utils.checkNotNull(userIds, "userIds");
-            this.userIds = Optional.ofNullable(userIds);
-            return this;
-        }
-
-        public Builder userIds(Optional<? extends List<String>> userIds) {
-            Utils.checkNotNull(userIds, "userIds");
+        public Builder userIds(@Nullable List<String> userIds) {
             this.userIds = userIds;
             return this;
         }
 
         public TaskProject build() {
-
             return new TaskProject(
                 createdAt, description, groupIds,
                 hasChildren, hasTasks, id,

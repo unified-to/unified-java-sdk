@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.RemoveLmsCourseRequest;
@@ -13,27 +14,39 @@ import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveLmsCourseRequestBuilder {
-
-    private RemoveLmsCourseRequest request;
     private final SDKConfiguration sdkConfiguration;
-    private final Headers _headers = new Headers(); 
+    private final Headers _headers = new Headers();
+    private RemoveLmsCourseRequest request;
 
     public RemoveLmsCourseRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
 
-    public RemoveLmsCourseRequestBuilder request(RemoveLmsCourseRequest request) {
-        Utils.checkNotNull(request, "request");
-        this.request = request;
+    public RemoveLmsCourseRequestBuilder request(@Nonnull RemoveLmsCourseRequest request) {
+        this.request = Utils.checkNotNull(request, "request");
         return this;
     }
 
+    private RemoveLmsCourseRequest _buildRequest() {
+        return this.request;
+    }
+    
+    public RemoveLmsCourseRequestBuilder header(String name, String value) {
+        Utils.checkNotNull(name, "name");
+        Utils.checkNotNull(value, "value");
+        this._headers.add(name, value);
+        return this;
+    }
+
+    /**
+    * Executes the request and returns the response.
+    *
+    * @return The response from the server.
+    */
     public CompletableFuture<RemoveLmsCourseResponse> call() {
-        
         AsyncRequestOperation<RemoveLmsCourseRequest, RemoveLmsCourseResponse> operation
               = new RemoveLmsCourse.Async(sdkConfiguration, _headers);
-
-        return operation.doRequest(request)
+        return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }
 }

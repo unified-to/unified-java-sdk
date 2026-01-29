@@ -4,12 +4,11 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.io.InputStream;
-import java.lang.Integer;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.AccountingAccount;
@@ -21,7 +20,7 @@ public class PatchAccountingAccountResponse implements Response {
     /**
      * Successful
      */
-    private Optional<? extends AccountingAccount> accountingAccount;
+    private AccountingAccount accountingAccount;
 
     /**
      * HTTP response content type for this operation
@@ -40,59 +39,52 @@ public class PatchAccountingAccountResponse implements Response {
 
     @JsonCreator
     public PatchAccountingAccountResponse(
-            Optional<? extends AccountingAccount> accountingAccount,
-            String contentType,
+            @Nullable AccountingAccount accountingAccount,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(accountingAccount, "accountingAccount");
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
+            @Nonnull HttpResponse<InputStream> rawResponse) {
         this.accountingAccount = accountingAccount;
-        this.contentType = contentType;
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
     }
     
     public PatchAccountingAccountResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
-        this(Optional.empty(), contentType, statusCode,
+            @Nonnull HttpResponse<InputStream> rawResponse) {
+        this(null, contentType, statusCode,
             rawResponse);
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<AccountingAccount> accountingAccount() {
-        return (Optional<AccountingAccount>) accountingAccount;
+        return Optional.ofNullable(this.accountingAccount);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<InputStream> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     public static Builder builder() {
@@ -103,48 +95,38 @@ public class PatchAccountingAccountResponse implements Response {
     /**
      * Successful
      */
-    public PatchAccountingAccountResponse withAccountingAccount(AccountingAccount accountingAccount) {
-        Utils.checkNotNull(accountingAccount, "accountingAccount");
-        this.accountingAccount = Optional.ofNullable(accountingAccount);
-        return this;
-    }
-
-
-    /**
-     * Successful
-     */
-    public PatchAccountingAccountResponse withAccountingAccount(Optional<? extends AccountingAccount> accountingAccount) {
-        Utils.checkNotNull(accountingAccount, "accountingAccount");
+    public PatchAccountingAccountResponse withAccountingAccount(@Nullable AccountingAccount accountingAccount) {
         this.accountingAccount = accountingAccount;
         return this;
     }
 
+
     /**
      * HTTP response content type for this operation
      */
-    public PatchAccountingAccountResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
+    public PatchAccountingAccountResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public PatchAccountingAccountResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public PatchAccountingAccountResponse withRawResponse(HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
+    public PatchAccountingAccountResponse withRawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -181,11 +163,11 @@ public class PatchAccountingAccountResponse implements Response {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends AccountingAccount> accountingAccount = Optional.empty();
+        private AccountingAccount accountingAccount;
 
         private String contentType;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<InputStream> rawResponse;
 
@@ -193,57 +175,39 @@ public class PatchAccountingAccountResponse implements Response {
           // force use of static builder() method
         }
 
-
         /**
          * Successful
          */
-        public Builder accountingAccount(AccountingAccount accountingAccount) {
-            Utils.checkNotNull(accountingAccount, "accountingAccount");
-            this.accountingAccount = Optional.ofNullable(accountingAccount);
-            return this;
-        }
-
-        /**
-         * Successful
-         */
-        public Builder accountingAccount(Optional<? extends AccountingAccount> accountingAccount) {
-            Utils.checkNotNull(accountingAccount, "accountingAccount");
+        public Builder accountingAccount(@Nullable AccountingAccount accountingAccount) {
             this.accountingAccount = accountingAccount;
             return this;
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<InputStream> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
+        public Builder rawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         public PatchAccountingAccountResponse build() {
-
             return new PatchAccountingAccountResponse(
                 accountingAccount, contentType, statusCode,
                 rawResponse);

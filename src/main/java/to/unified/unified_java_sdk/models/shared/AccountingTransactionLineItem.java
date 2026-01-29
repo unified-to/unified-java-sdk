@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
@@ -19,61 +19,53 @@ public class AccountingTransactionLineItem {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_id")
-    private Optional<String> accountId;
+    private String accountId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
-    private Optional<String> description;
+    private String description;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
-    private Optional<String> name;
+    private String name;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object_type")
-    private Optional<String> objectType;
+    private String objectType;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_amount")
-    private Optional<Double> totalAmount;
+    private Double totalAmount;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit_amount")
-    private Optional<Double> unitAmount;
+    private Double unitAmount;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit_quantity")
-    private Optional<Double> unitQuantity;
+    private Double unitQuantity;
 
     @JsonCreator
     public AccountingTransactionLineItem(
-            @JsonProperty("account_id") Optional<String> accountId,
-            @JsonProperty("description") Optional<String> description,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("name") Optional<String> name,
-            @JsonProperty("object_type") Optional<String> objectType,
-            @JsonProperty("total_amount") Optional<Double> totalAmount,
-            @JsonProperty("unit_amount") Optional<Double> unitAmount,
-            @JsonProperty("unit_quantity") Optional<Double> unitQuantity) {
-        Utils.checkNotNull(accountId, "accountId");
-        Utils.checkNotNull(description, "description");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(name, "name");
-        Utils.checkNotNull(objectType, "objectType");
-        Utils.checkNotNull(totalAmount, "totalAmount");
-        Utils.checkNotNull(unitAmount, "unitAmount");
-        Utils.checkNotNull(unitQuantity, "unitQuantity");
+            @JsonProperty("account_id") @Nullable String accountId,
+            @JsonProperty("description") @Nullable String description,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("name") @Nullable String name,
+            @JsonProperty("object_type") @Nullable String objectType,
+            @JsonProperty("total_amount") @Nullable Double totalAmount,
+            @JsonProperty("unit_amount") @Nullable Double unitAmount,
+            @JsonProperty("unit_quantity") @Nullable Double unitQuantity) {
         this.accountId = accountId;
         this.description = description;
         this.id = id;
@@ -85,49 +77,41 @@ public class AccountingTransactionLineItem {
     }
     
     public AccountingTransactionLineItem() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null);
     }
 
-    @JsonIgnore
     public Optional<String> accountId() {
-        return accountId;
+        return Optional.ofNullable(this.accountId);
     }
 
-    @JsonIgnore
     public Optional<String> description() {
-        return description;
+        return Optional.ofNullable(this.description);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<String> name() {
-        return name;
+        return Optional.ofNullable(this.name);
     }
 
-    @JsonIgnore
     public Optional<String> objectType() {
-        return objectType;
+        return Optional.ofNullable(this.objectType);
     }
 
-    @JsonIgnore
     public Optional<Double> totalAmount() {
-        return totalAmount;
+        return Optional.ofNullable(this.totalAmount);
     }
 
-    @JsonIgnore
     public Optional<Double> unitAmount() {
-        return unitAmount;
+        return Optional.ofNullable(this.unitAmount);
     }
 
-    @JsonIgnore
     public Optional<Double> unitQuantity() {
-        return unitQuantity;
+        return Optional.ofNullable(this.unitQuantity);
     }
 
     public static Builder builder() {
@@ -135,109 +119,53 @@ public class AccountingTransactionLineItem {
     }
 
 
-    public AccountingTransactionLineItem withAccountId(String accountId) {
-        Utils.checkNotNull(accountId, "accountId");
-        this.accountId = Optional.ofNullable(accountId);
-        return this;
-    }
-
-
-    public AccountingTransactionLineItem withAccountId(Optional<String> accountId) {
-        Utils.checkNotNull(accountId, "accountId");
+    public AccountingTransactionLineItem withAccountId(@Nullable String accountId) {
         this.accountId = accountId;
         return this;
     }
 
-    public AccountingTransactionLineItem withDescription(String description) {
-        Utils.checkNotNull(description, "description");
-        this.description = Optional.ofNullable(description);
-        return this;
-    }
 
-
-    public AccountingTransactionLineItem withDescription(Optional<String> description) {
-        Utils.checkNotNull(description, "description");
+    public AccountingTransactionLineItem withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
-    public AccountingTransactionLineItem withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public AccountingTransactionLineItem withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public AccountingTransactionLineItem withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public AccountingTransactionLineItem withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = Optional.ofNullable(name);
-        return this;
-    }
 
-
-    public AccountingTransactionLineItem withName(Optional<String> name) {
-        Utils.checkNotNull(name, "name");
+    public AccountingTransactionLineItem withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
-    public AccountingTransactionLineItem withObjectType(String objectType) {
-        Utils.checkNotNull(objectType, "objectType");
-        this.objectType = Optional.ofNullable(objectType);
-        return this;
-    }
 
-
-    public AccountingTransactionLineItem withObjectType(Optional<String> objectType) {
-        Utils.checkNotNull(objectType, "objectType");
+    public AccountingTransactionLineItem withObjectType(@Nullable String objectType) {
         this.objectType = objectType;
         return this;
     }
 
-    public AccountingTransactionLineItem withTotalAmount(double totalAmount) {
-        Utils.checkNotNull(totalAmount, "totalAmount");
-        this.totalAmount = Optional.ofNullable(totalAmount);
-        return this;
-    }
 
-
-    public AccountingTransactionLineItem withTotalAmount(Optional<Double> totalAmount) {
-        Utils.checkNotNull(totalAmount, "totalAmount");
+    public AccountingTransactionLineItem withTotalAmount(@Nullable Double totalAmount) {
         this.totalAmount = totalAmount;
         return this;
     }
 
-    public AccountingTransactionLineItem withUnitAmount(double unitAmount) {
-        Utils.checkNotNull(unitAmount, "unitAmount");
-        this.unitAmount = Optional.ofNullable(unitAmount);
-        return this;
-    }
 
-
-    public AccountingTransactionLineItem withUnitAmount(Optional<Double> unitAmount) {
-        Utils.checkNotNull(unitAmount, "unitAmount");
+    public AccountingTransactionLineItem withUnitAmount(@Nullable Double unitAmount) {
         this.unitAmount = unitAmount;
         return this;
     }
 
-    public AccountingTransactionLineItem withUnitQuantity(double unitQuantity) {
-        Utils.checkNotNull(unitQuantity, "unitQuantity");
-        this.unitQuantity = Optional.ofNullable(unitQuantity);
-        return this;
-    }
 
-
-    public AccountingTransactionLineItem withUnitQuantity(Optional<Double> unitQuantity) {
-        Utils.checkNotNull(unitQuantity, "unitQuantity");
+    public AccountingTransactionLineItem withUnitQuantity(@Nullable Double unitQuantity) {
         this.unitQuantity = unitQuantity;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -283,132 +211,67 @@ public class AccountingTransactionLineItem {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> accountId = Optional.empty();
+        private String accountId;
 
-        private Optional<String> description = Optional.empty();
+        private String description;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<String> name = Optional.empty();
+        private String name;
 
-        private Optional<String> objectType = Optional.empty();
+        private String objectType;
 
-        private Optional<Double> totalAmount = Optional.empty();
+        private Double totalAmount;
 
-        private Optional<Double> unitAmount = Optional.empty();
+        private Double unitAmount;
 
-        private Optional<Double> unitQuantity = Optional.empty();
+        private Double unitQuantity;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder accountId(String accountId) {
-            Utils.checkNotNull(accountId, "accountId");
-            this.accountId = Optional.ofNullable(accountId);
-            return this;
-        }
-
-        public Builder accountId(Optional<String> accountId) {
-            Utils.checkNotNull(accountId, "accountId");
+        public Builder accountId(@Nullable String accountId) {
             this.accountId = accountId;
             return this;
         }
 
-
-        public Builder description(String description) {
-            Utils.checkNotNull(description, "description");
-            this.description = Optional.ofNullable(description);
-            return this;
-        }
-
-        public Builder description(Optional<String> description) {
-            Utils.checkNotNull(description, "description");
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = Optional.ofNullable(name);
-            return this;
-        }
-
-        public Builder name(Optional<String> name) {
-            Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-
-        public Builder objectType(String objectType) {
-            Utils.checkNotNull(objectType, "objectType");
-            this.objectType = Optional.ofNullable(objectType);
-            return this;
-        }
-
-        public Builder objectType(Optional<String> objectType) {
-            Utils.checkNotNull(objectType, "objectType");
+        public Builder objectType(@Nullable String objectType) {
             this.objectType = objectType;
             return this;
         }
 
-
-        public Builder totalAmount(double totalAmount) {
-            Utils.checkNotNull(totalAmount, "totalAmount");
-            this.totalAmount = Optional.ofNullable(totalAmount);
-            return this;
-        }
-
-        public Builder totalAmount(Optional<Double> totalAmount) {
-            Utils.checkNotNull(totalAmount, "totalAmount");
+        public Builder totalAmount(@Nullable Double totalAmount) {
             this.totalAmount = totalAmount;
             return this;
         }
 
-
-        public Builder unitAmount(double unitAmount) {
-            Utils.checkNotNull(unitAmount, "unitAmount");
-            this.unitAmount = Optional.ofNullable(unitAmount);
-            return this;
-        }
-
-        public Builder unitAmount(Optional<Double> unitAmount) {
-            Utils.checkNotNull(unitAmount, "unitAmount");
+        public Builder unitAmount(@Nullable Double unitAmount) {
             this.unitAmount = unitAmount;
             return this;
         }
 
-
-        public Builder unitQuantity(double unitQuantity) {
-            Utils.checkNotNull(unitQuantity, "unitQuantity");
-            this.unitQuantity = Optional.ofNullable(unitQuantity);
-            return this;
-        }
-
-        public Builder unitQuantity(Optional<Double> unitQuantity) {
-            Utils.checkNotNull(unitQuantity, "unitQuantity");
+        public Builder unitQuantity(@Nullable Double unitQuantity) {
             this.unitQuantity = unitQuantity;
             return this;
         }
 
         public AccountingTransactionLineItem build() {
-
             return new AccountingTransactionLineItem(
                 accountId, description, id,
                 name, objectType, totalAmount,

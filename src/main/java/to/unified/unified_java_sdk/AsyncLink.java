@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateCalendarLinkRequest;
 import to.unified.unified_java_sdk.models.operations.CreatePaymentLinkRequest;
@@ -92,7 +93,7 @@ public class AsyncLink {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCalendarLinkResponse>} - The async response
      */
-    public CompletableFuture<CreateCalendarLinkResponse> createCalendarLink(CreateCalendarLinkRequest request) {
+    public CompletableFuture<CreateCalendarLinkResponse> createCalendarLink(@Nonnull CreateCalendarLinkRequest request) {
         AsyncRequestOperation<CreateCalendarLinkRequest, CreateCalendarLinkResponse> operation
               = new CreateCalendarLink.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -115,7 +116,7 @@ public class AsyncLink {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreatePaymentLinkResponse>} - The async response
      */
-    public CompletableFuture<CreatePaymentLinkResponse> createPaymentLink(CreatePaymentLinkRequest request) {
+    public CompletableFuture<CreatePaymentLinkResponse> createPaymentLink(@Nonnull CreatePaymentLinkRequest request) {
         AsyncRequestOperation<CreatePaymentLinkRequest, CreatePaymentLinkResponse> operation
               = new CreatePaymentLink.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -138,7 +139,7 @@ public class AsyncLink {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCalendarLinkResponse>} - The async response
      */
-    public CompletableFuture<GetCalendarLinkResponse> getCalendarLink(GetCalendarLinkRequest request) {
+    public CompletableFuture<GetCalendarLinkResponse> getCalendarLink(@Nonnull GetCalendarLinkRequest request) {
         AsyncRequestOperation<GetCalendarLinkRequest, GetCalendarLinkResponse> operation
               = new GetCalendarLink.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -161,7 +162,7 @@ public class AsyncLink {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetPaymentLinkResponse>} - The async response
      */
-    public CompletableFuture<GetPaymentLinkResponse> getPaymentLink(GetPaymentLinkRequest request) {
+    public CompletableFuture<GetPaymentLinkResponse> getPaymentLink(@Nonnull GetPaymentLinkRequest request) {
         AsyncRequestOperation<GetPaymentLinkRequest, GetPaymentLinkResponse> operation
               = new GetPaymentLink.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -184,7 +185,7 @@ public class AsyncLink {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCalendarLinksResponse>} - The async response
      */
-    public CompletableFuture<ListCalendarLinksResponse> listCalendarLinks(ListCalendarLinksRequest request) {
+    public CompletableFuture<ListCalendarLinksResponse> listCalendarLinks(@Nonnull ListCalendarLinksRequest request) {
         AsyncRequestOperation<ListCalendarLinksRequest, ListCalendarLinksResponse> operation
               = new ListCalendarLinks.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -207,7 +208,7 @@ public class AsyncLink {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListPaymentLinksResponse>} - The async response
      */
-    public CompletableFuture<ListPaymentLinksResponse> listPaymentLinks(ListPaymentLinksRequest request) {
+    public CompletableFuture<ListPaymentLinksResponse> listPaymentLinks(@Nonnull ListPaymentLinksRequest request) {
         AsyncRequestOperation<ListPaymentLinksRequest, ListPaymentLinksResponse> operation
               = new ListPaymentLinks.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -230,7 +231,7 @@ public class AsyncLink {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCalendarLinkResponse>} - The async response
      */
-    public CompletableFuture<PatchCalendarLinkResponse> patchCalendarLink(PatchCalendarLinkRequest request) {
+    public CompletableFuture<PatchCalendarLinkResponse> patchCalendarLink(@Nonnull PatchCalendarLinkRequest request) {
         AsyncRequestOperation<PatchCalendarLinkRequest, PatchCalendarLinkResponse> operation
               = new PatchCalendarLink.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -253,7 +254,7 @@ public class AsyncLink {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchPaymentLinkResponse>} - The async response
      */
-    public CompletableFuture<PatchPaymentLinkResponse> patchPaymentLink(PatchPaymentLinkRequest request) {
+    public CompletableFuture<PatchPaymentLinkResponse> patchPaymentLink(@Nonnull PatchPaymentLinkRequest request) {
         AsyncRequestOperation<PatchPaymentLinkRequest, PatchPaymentLinkResponse> operation
               = new PatchPaymentLink.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -276,7 +277,7 @@ public class AsyncLink {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCalendarLinkResponse>} - The async response
      */
-    public CompletableFuture<RemoveCalendarLinkResponse> removeCalendarLink(RemoveCalendarLinkRequest request) {
+    public CompletableFuture<RemoveCalendarLinkResponse> removeCalendarLink(@Nonnull RemoveCalendarLinkRequest request) {
         AsyncRequestOperation<RemoveCalendarLinkRequest, RemoveCalendarLinkResponse> operation
               = new RemoveCalendarLink.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -299,7 +300,7 @@ public class AsyncLink {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemovePaymentLinkResponse>} - The async response
      */
-    public CompletableFuture<RemovePaymentLinkResponse> removePaymentLink(RemovePaymentLinkRequest request) {
+    public CompletableFuture<RemovePaymentLinkResponse> removePaymentLink(@Nonnull RemovePaymentLinkRequest request) {
         AsyncRequestOperation<RemovePaymentLinkRequest, RemovePaymentLinkResponse> operation
               = new RemovePaymentLink.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -322,7 +323,7 @@ public class AsyncLink {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCalendarLinkResponse>} - The async response
      */
-    public CompletableFuture<UpdateCalendarLinkResponse> updateCalendarLink(UpdateCalendarLinkRequest request) {
+    public CompletableFuture<UpdateCalendarLinkResponse> updateCalendarLink(@Nonnull UpdateCalendarLinkRequest request) {
         AsyncRequestOperation<UpdateCalendarLinkRequest, UpdateCalendarLinkResponse> operation
               = new UpdateCalendarLink.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -345,7 +346,7 @@ public class AsyncLink {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdatePaymentLinkResponse>} - The async response
      */
-    public CompletableFuture<UpdatePaymentLinkResponse> updatePaymentLink(UpdatePaymentLinkRequest request) {
+    public CompletableFuture<UpdatePaymentLinkResponse> updatePaymentLink(@Nonnull UpdatePaymentLinkRequest request) {
         AsyncRequestOperation<UpdatePaymentLinkRequest, UpdatePaymentLinkResponse> operation
               = new UpdatePaymentLink.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

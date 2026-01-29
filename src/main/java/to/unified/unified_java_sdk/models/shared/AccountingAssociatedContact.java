@@ -4,13 +4,12 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -20,49 +19,42 @@ public class AccountingAssociatedContact {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emails")
-    private Optional<? extends List<AccountingEmail>> emails;
+    private List<AccountingEmail> emails;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
-    private Optional<String> name;
+    private String name;
 
     @JsonCreator
     public AccountingAssociatedContact(
-            @JsonProperty("emails") Optional<? extends List<AccountingEmail>> emails,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("name") Optional<String> name) {
-        Utils.checkNotNull(emails, "emails");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(name, "name");
+            @JsonProperty("emails") @Nullable List<AccountingEmail> emails,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("name") @Nullable String name) {
         this.emails = emails;
         this.id = id;
         this.name = name;
     }
     
     public AccountingAssociatedContact() {
-        this(Optional.empty(), Optional.empty(), Optional.empty());
+        this(null, null, null);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<AccountingEmail>> emails() {
-        return (Optional<List<AccountingEmail>>) emails;
+        return Optional.ofNullable(this.emails);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<String> name() {
-        return name;
+        return Optional.ofNullable(this.name);
     }
 
     public static Builder builder() {
@@ -70,44 +62,23 @@ public class AccountingAssociatedContact {
     }
 
 
-    public AccountingAssociatedContact withEmails(List<AccountingEmail> emails) {
-        Utils.checkNotNull(emails, "emails");
-        this.emails = Optional.ofNullable(emails);
-        return this;
-    }
-
-
-    public AccountingAssociatedContact withEmails(Optional<? extends List<AccountingEmail>> emails) {
-        Utils.checkNotNull(emails, "emails");
+    public AccountingAssociatedContact withEmails(@Nullable List<AccountingEmail> emails) {
         this.emails = emails;
         return this;
     }
 
-    public AccountingAssociatedContact withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public AccountingAssociatedContact withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public AccountingAssociatedContact withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public AccountingAssociatedContact withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = Optional.ofNullable(name);
-        return this;
-    }
 
-
-    public AccountingAssociatedContact withName(Optional<String> name) {
-        Utils.checkNotNull(name, "name");
+    public AccountingAssociatedContact withName(@Nullable String name) {
         this.name = name;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -141,57 +112,32 @@ public class AccountingAssociatedContact {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends List<AccountingEmail>> emails = Optional.empty();
+        private List<AccountingEmail> emails;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<String> name = Optional.empty();
+        private String name;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder emails(List<AccountingEmail> emails) {
-            Utils.checkNotNull(emails, "emails");
-            this.emails = Optional.ofNullable(emails);
-            return this;
-        }
-
-        public Builder emails(Optional<? extends List<AccountingEmail>> emails) {
-            Utils.checkNotNull(emails, "emails");
+        public Builder emails(@Nullable List<AccountingEmail> emails) {
             this.emails = emails;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = Optional.ofNullable(name);
-            return this;
-        }
-
-        public Builder name(Optional<String> name) {
-            Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
         public AccountingAssociatedContact build() {
-
             return new AccountingAssociatedContact(
                 emails, id, name);
         }

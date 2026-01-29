@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateCrmPipelineRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCrmPipelineRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateCrmPipelineResponse;
@@ -67,7 +68,7 @@ public class Pipeline {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCrmPipelineResponse createCrmPipeline(CreateCrmPipelineRequest request) {
+    public CreateCrmPipelineResponse createCrmPipeline(@Nonnull CreateCrmPipelineRequest request) {
         RequestOperation<CreateCrmPipelineRequest, CreateCrmPipelineResponse> operation
               = new CreateCrmPipeline.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -89,7 +90,7 @@ public class Pipeline {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetCrmPipelineResponse getCrmPipeline(GetCrmPipelineRequest request) {
+    public GetCrmPipelineResponse getCrmPipeline(@Nonnull GetCrmPipelineRequest request) {
         RequestOperation<GetCrmPipelineRequest, GetCrmPipelineResponse> operation
               = new GetCrmPipeline.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -111,7 +112,7 @@ public class Pipeline {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCrmPipelinesResponse listCrmPipelines(ListCrmPipelinesRequest request) {
+    public ListCrmPipelinesResponse listCrmPipelines(@Nonnull ListCrmPipelinesRequest request) {
         RequestOperation<ListCrmPipelinesRequest, ListCrmPipelinesResponse> operation
               = new ListCrmPipelines.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -133,7 +134,7 @@ public class Pipeline {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCrmPipelineResponse patchCrmPipeline(PatchCrmPipelineRequest request) {
+    public PatchCrmPipelineResponse patchCrmPipeline(@Nonnull PatchCrmPipelineRequest request) {
         RequestOperation<PatchCrmPipelineRequest, PatchCrmPipelineResponse> operation
               = new PatchCrmPipeline.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -155,7 +156,7 @@ public class Pipeline {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCrmPipelineResponse removeCrmPipeline(RemoveCrmPipelineRequest request) {
+    public RemoveCrmPipelineResponse removeCrmPipeline(@Nonnull RemoveCrmPipelineRequest request) {
         RequestOperation<RemoveCrmPipelineRequest, RemoveCrmPipelineResponse> operation
               = new RemoveCrmPipeline.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -177,7 +178,7 @@ public class Pipeline {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCrmPipelineResponse updateCrmPipeline(UpdateCrmPipelineRequest request) {
+    public UpdateCrmPipelineResponse updateCrmPipeline(@Nonnull UpdateCrmPipelineRequest request) {
         RequestOperation<UpdateCrmPipelineRequest, UpdateCrmPipelineResponse> operation
               = new UpdateCrmPipeline.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

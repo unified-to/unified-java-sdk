@@ -4,13 +4,13 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -23,32 +23,28 @@ public class TicketingTelephone {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
-    private Optional<? extends TicketingTelephoneType> type;
+    private TicketingTelephoneType type;
 
     @JsonCreator
     public TicketingTelephone(
-            @JsonProperty("telephone") String telephone,
-            @JsonProperty("type") Optional<? extends TicketingTelephoneType> type) {
-        Utils.checkNotNull(telephone, "telephone");
-        Utils.checkNotNull(type, "type");
-        this.telephone = telephone;
+            @JsonProperty("telephone") @Nonnull String telephone,
+            @JsonProperty("type") @Nullable TicketingTelephoneType type) {
+        this.telephone = Optional.ofNullable(telephone)
+            .orElseThrow(() -> new IllegalArgumentException("telephone cannot be null"));
         this.type = type;
     }
     
     public TicketingTelephone(
-            String telephone) {
-        this(telephone, Optional.empty());
+            @Nonnull String telephone) {
+        this(telephone, null);
     }
 
-    @JsonIgnore
     public String telephone() {
-        return telephone;
+        return this.telephone;
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<TicketingTelephoneType> type() {
-        return (Optional<TicketingTelephoneType>) type;
+        return Optional.ofNullable(this.type);
     }
 
     public static Builder builder() {
@@ -56,24 +52,17 @@ public class TicketingTelephone {
     }
 
 
-    public TicketingTelephone withTelephone(String telephone) {
-        Utils.checkNotNull(telephone, "telephone");
-        this.telephone = telephone;
-        return this;
-    }
-
-    public TicketingTelephone withType(TicketingTelephoneType type) {
-        Utils.checkNotNull(type, "type");
-        this.type = Optional.ofNullable(type);
+    public TicketingTelephone withTelephone(@Nonnull String telephone) {
+        this.telephone = Utils.checkNotNull(telephone, "telephone");
         return this;
     }
 
 
-    public TicketingTelephone withType(Optional<? extends TicketingTelephoneType> type) {
-        Utils.checkNotNull(type, "type");
+    public TicketingTelephone withType(@Nullable TicketingTelephoneType type) {
         this.type = type;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -107,34 +96,23 @@ public class TicketingTelephone {
 
         private String telephone;
 
-        private Optional<? extends TicketingTelephoneType> type = Optional.empty();
+        private TicketingTelephoneType type;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder telephone(String telephone) {
-            Utils.checkNotNull(telephone, "telephone");
-            this.telephone = telephone;
+        public Builder telephone(@Nonnull String telephone) {
+            this.telephone = Utils.checkNotNull(telephone, "telephone");
             return this;
         }
 
-
-        public Builder type(TicketingTelephoneType type) {
-            Utils.checkNotNull(type, "type");
-            this.type = Optional.ofNullable(type);
-            return this;
-        }
-
-        public Builder type(Optional<? extends TicketingTelephoneType> type) {
-            Utils.checkNotNull(type, "type");
+        public Builder type(@Nullable TicketingTelephoneType type) {
             this.type = type;
             return this;
         }
 
         public TicketingTelephone build() {
-
             return new TicketingTelephone(
                 telephone, type);
         }

@@ -5,32 +5,45 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.ListAtsScorecards;
 import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListAtsScorecardsRequestBuilder {
-
-    private ListAtsScorecardsRequest request;
     private final SDKConfiguration sdkConfiguration;
-    private final Headers _headers = new Headers(); 
+    private final Headers _headers = new Headers();
+    private ListAtsScorecardsRequest request;
 
     public ListAtsScorecardsRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
 
-    public ListAtsScorecardsRequestBuilder request(ListAtsScorecardsRequest request) {
-        Utils.checkNotNull(request, "request");
-        this.request = request;
+    public ListAtsScorecardsRequestBuilder request(@Nonnull ListAtsScorecardsRequest request) {
+        this.request = Utils.checkNotNull(request, "request");
         return this;
     }
 
+    private ListAtsScorecardsRequest _buildRequest() {
+        return this.request;
+    }
+    
+    public ListAtsScorecardsRequestBuilder header(String name, String value) {
+        Utils.checkNotNull(name, "name");
+        Utils.checkNotNull(value, "value");
+        this._headers.add(name, value);
+        return this;
+    }
+
+    /**
+    * Executes the request and returns the response.
+    *
+    * @return The response from the server.
+    */
     public ListAtsScorecardsResponse call() {
-        
         RequestOperation<ListAtsScorecardsRequest, ListAtsScorecardsResponse> operation
               = new ListAtsScorecards.Sync(sdkConfiguration, _headers);
-
-        return operation.handleResponse(operation.doRequest(request));
+        return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

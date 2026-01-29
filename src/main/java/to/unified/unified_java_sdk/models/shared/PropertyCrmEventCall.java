@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
@@ -24,48 +24,42 @@ public class PropertyCrmEventCall {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
-    private Optional<String> description;
+    private String description;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
-    private Optional<Double> duration;
+    private Double duration;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
-    private Optional<OffsetDateTime> startAt;
+    private OffsetDateTime startAt;
 
     @JsonCreator
     public PropertyCrmEventCall(
-            @JsonProperty("description") Optional<String> description,
-            @JsonProperty("duration") Optional<Double> duration,
-            @JsonProperty("start_at") Optional<OffsetDateTime> startAt) {
-        Utils.checkNotNull(description, "description");
-        Utils.checkNotNull(duration, "duration");
-        Utils.checkNotNull(startAt, "startAt");
+            @JsonProperty("description") @Nullable String description,
+            @JsonProperty("duration") @Nullable Double duration,
+            @JsonProperty("start_at") @Nullable OffsetDateTime startAt) {
         this.description = description;
         this.duration = duration;
         this.startAt = startAt;
     }
     
     public PropertyCrmEventCall() {
-        this(Optional.empty(), Optional.empty(), Optional.empty());
+        this(null, null, null);
     }
 
-    @JsonIgnore
     public Optional<String> description() {
-        return description;
+        return Optional.ofNullable(this.description);
     }
 
-    @JsonIgnore
     public Optional<Double> duration() {
-        return duration;
+        return Optional.ofNullable(this.duration);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> startAt() {
-        return startAt;
+        return Optional.ofNullable(this.startAt);
     }
 
     public static Builder builder() {
@@ -73,44 +67,23 @@ public class PropertyCrmEventCall {
     }
 
 
-    public PropertyCrmEventCall withDescription(String description) {
-        Utils.checkNotNull(description, "description");
-        this.description = Optional.ofNullable(description);
-        return this;
-    }
-
-
-    public PropertyCrmEventCall withDescription(Optional<String> description) {
-        Utils.checkNotNull(description, "description");
+    public PropertyCrmEventCall withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
-    public PropertyCrmEventCall withDuration(double duration) {
-        Utils.checkNotNull(duration, "duration");
-        this.duration = Optional.ofNullable(duration);
-        return this;
-    }
 
-
-    public PropertyCrmEventCall withDuration(Optional<Double> duration) {
-        Utils.checkNotNull(duration, "duration");
+    public PropertyCrmEventCall withDuration(@Nullable Double duration) {
         this.duration = duration;
         return this;
     }
 
-    public PropertyCrmEventCall withStartAt(OffsetDateTime startAt) {
-        Utils.checkNotNull(startAt, "startAt");
-        this.startAt = Optional.ofNullable(startAt);
-        return this;
-    }
 
-
-    public PropertyCrmEventCall withStartAt(Optional<OffsetDateTime> startAt) {
-        Utils.checkNotNull(startAt, "startAt");
+    public PropertyCrmEventCall withStartAt(@Nullable OffsetDateTime startAt) {
         this.startAt = startAt;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -144,57 +117,32 @@ public class PropertyCrmEventCall {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> description = Optional.empty();
+        private String description;
 
-        private Optional<Double> duration = Optional.empty();
+        private Double duration;
 
-        private Optional<OffsetDateTime> startAt = Optional.empty();
+        private OffsetDateTime startAt;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder description(String description) {
-            Utils.checkNotNull(description, "description");
-            this.description = Optional.ofNullable(description);
-            return this;
-        }
-
-        public Builder description(Optional<String> description) {
-            Utils.checkNotNull(description, "description");
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-
-        public Builder duration(double duration) {
-            Utils.checkNotNull(duration, "duration");
-            this.duration = Optional.ofNullable(duration);
-            return this;
-        }
-
-        public Builder duration(Optional<Double> duration) {
-            Utils.checkNotNull(duration, "duration");
+        public Builder duration(@Nullable Double duration) {
             this.duration = duration;
             return this;
         }
 
-
-        public Builder startAt(OffsetDateTime startAt) {
-            Utils.checkNotNull(startAt, "startAt");
-            this.startAt = Optional.ofNullable(startAt);
-            return this;
-        }
-
-        public Builder startAt(Optional<OffsetDateTime> startAt) {
-            Utils.checkNotNull(startAt, "startAt");
+        public Builder startAt(@Nullable OffsetDateTime startAt) {
             this.startAt = startAt;
             return this;
         }
 
         public PropertyCrmEventCall build() {
-
             return new PropertyCrmEventCall(
                 description, duration, startAt);
         }

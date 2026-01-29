@@ -4,11 +4,11 @@
 package to.unified.unified_java_sdk.models.operations.async;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import java.lang.Integer;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.io.InputStream;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.List;
 import java.util.Optional;
@@ -37,63 +37,56 @@ public class ListUcContactsResponse implements AsyncResponse {
     /**
      * Successful
      */
-    private Optional<? extends List<UcContact>> ucContacts;
+    private List<UcContact> ucContacts;
 
     @JsonCreator
     public ListUcContactsResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<Blob> rawResponse,
-            Optional<? extends List<UcContact>> ucContacts) {
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        Utils.checkNotNull(ucContacts, "ucContacts");
-        this.contentType = contentType;
+            @Nonnull HttpResponse<Blob> rawResponse,
+            @Nullable List<UcContact> ucContacts) {
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
         this.ucContacts = ucContacts;
     }
     
     public ListUcContactsResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
+            @Nonnull HttpResponse<Blob> rawResponse) {
         this(contentType, statusCode, rawResponse,
-            Optional.empty());
+            null);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<Blob> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<UcContact>> ucContacts() {
-        return (Optional<List<UcContact>>) ucContacts;
+        return Optional.ofNullable(this.ucContacts);
     }
 
     public static Builder builder() {
@@ -104,36 +97,26 @@ public class ListUcContactsResponse implements AsyncResponse {
     /**
      * HTTP response content type for this operation
      */
-    public ListUcContactsResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
+    public ListUcContactsResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public ListUcContactsResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public ListUcContactsResponse withRawResponse(HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
-        return this;
-    }
-
-    /**
-     * Successful
-     */
-    public ListUcContactsResponse withUcContacts(List<UcContact> ucContacts) {
-        Utils.checkNotNull(ucContacts, "ucContacts");
-        this.ucContacts = Optional.ofNullable(ucContacts);
+    public ListUcContactsResponse withRawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
 
@@ -141,11 +124,11 @@ public class ListUcContactsResponse implements AsyncResponse {
     /**
      * Successful
      */
-    public ListUcContactsResponse withUcContacts(Optional<? extends List<UcContact>> ucContacts) {
-        Utils.checkNotNull(ucContacts, "ucContacts");
+    public ListUcContactsResponse withUcContacts(@Nullable List<UcContact> ucContacts) {
         this.ucContacts = ucContacts;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -184,67 +167,49 @@ public class ListUcContactsResponse implements AsyncResponse {
 
         private String contentType;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<Blob> rawResponse;
 
-        private Optional<? extends List<UcContact>> ucContacts = Optional.empty();
+        private List<UcContact> ucContacts;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<Blob> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
-            return this;
-        }
-
-
-        /**
-         * Successful
-         */
-        public Builder ucContacts(List<UcContact> ucContacts) {
-            Utils.checkNotNull(ucContacts, "ucContacts");
-            this.ucContacts = Optional.ofNullable(ucContacts);
+        public Builder rawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         /**
          * Successful
          */
-        public Builder ucContacts(Optional<? extends List<UcContact>> ucContacts) {
-            Utils.checkNotNull(ucContacts, "ucContacts");
+        public Builder ucContacts(@Nullable List<UcContact> ucContacts) {
             this.ucContacts = ucContacts;
             return this;
         }
 
         public ListUcContactsResponse build() {
-
             return new ListUcContactsResponse(
                 contentType, statusCode, rawResponse,
                 ucContacts);

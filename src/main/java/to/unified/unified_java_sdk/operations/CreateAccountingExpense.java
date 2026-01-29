@@ -8,6 +8,7 @@ import static to.unified.unified_java_sdk.utils.Exceptions.unchecked;
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
 import com.fasterxml.jackson.core.type.TypeReference;
+import jakarta.annotation.Nonnull;
 import java.io.InputStream;
 import java.lang.Exception;
 import java.lang.IllegalArgumentException;
@@ -46,7 +47,7 @@ public class CreateAccountingExpense {
         final HTTPClient client;
         final Headers _headers;
 
-        public Base(SDKConfiguration sdkConfiguration, Headers _headers) {
+        public Base(@Nonnull SDKConfiguration sdkConfiguration, Headers _headers) {
             this.sdkConfiguration = sdkConfiguration;
             this._headers =_headers;
             this.baseUrl = this.sdkConfiguration.serverUrl();
@@ -120,7 +121,7 @@ public class CreateAccountingExpense {
 
     public static class Sync extends Base
             implements RequestOperation<CreateAccountingExpenseRequest, CreateAccountingExpenseResponse> {
-        public Sync(SDKConfiguration sdkConfiguration, Headers _headers) {
+        public Sync(@Nonnull SDKConfiguration sdkConfiguration, Headers _headers) {
             super(sdkConfiguration, _headers);
         }
 
@@ -195,7 +196,7 @@ public class CreateAccountingExpense {
     public static class Async extends Base
             implements AsyncRequestOperation<CreateAccountingExpenseRequest, to.unified.unified_java_sdk.models.operations.async.CreateAccountingExpenseResponse> {
 
-        public Async(SDKConfiguration sdkConfiguration, Headers _headers) {
+        public Async(@Nonnull SDKConfiguration sdkConfiguration, Headers _headers) {
             super(sdkConfiguration, _headers);
         }
 

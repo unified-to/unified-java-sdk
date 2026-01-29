@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
@@ -20,124 +20,107 @@ public class PaymentLineitem {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_id")
-    private Optional<String> accountId;
+    private String accountId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discount_amount")
-    private Optional<Double> discountAmount;
+    private Double discountAmount;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_description")
-    private Optional<String> itemDescription;
+    private String itemDescription;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_id")
-    private Optional<String> itemId;
+    private String itemId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_name")
-    private Optional<String> itemName;
+    private String itemName;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_sku")
-    private Optional<String> itemSku;
+    private String itemSku;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
-    private Optional<String> notes;
+    private String notes;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refund_amount")
-    private Optional<Double> refundAmount;
+    private Double refundAmount;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refunded_at")
-    private Optional<OffsetDateTime> refundedAt;
+    private OffsetDateTime refundedAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax_amount")
-    private Optional<Double> taxAmount;
+    private Double taxAmount;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxrate_id")
-    private Optional<String> taxrateId;
+    private String taxrateId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_amount")
-    private Optional<Double> totalAmount;
+    private Double totalAmount;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit_amount")
-    private Optional<Double> unitAmount;
+    private Double unitAmount;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit_quantity")
-    private Optional<Double> unitQuantity;
+    private Double unitQuantity;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
     @JsonCreator
     public PaymentLineitem(
-            @JsonProperty("account_id") Optional<String> accountId,
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("discount_amount") Optional<Double> discountAmount,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("item_description") Optional<String> itemDescription,
-            @JsonProperty("item_id") Optional<String> itemId,
-            @JsonProperty("item_name") Optional<String> itemName,
-            @JsonProperty("item_sku") Optional<String> itemSku,
-            @JsonProperty("notes") Optional<String> notes,
-            @JsonProperty("refund_amount") Optional<Double> refundAmount,
-            @JsonProperty("refunded_at") Optional<OffsetDateTime> refundedAt,
-            @JsonProperty("tax_amount") Optional<Double> taxAmount,
-            @JsonProperty("taxrate_id") Optional<String> taxrateId,
-            @JsonProperty("total_amount") Optional<Double> totalAmount,
-            @JsonProperty("unit_amount") Optional<Double> unitAmount,
-            @JsonProperty("unit_quantity") Optional<Double> unitQuantity,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(accountId, "accountId");
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(discountAmount, "discountAmount");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(itemDescription, "itemDescription");
-        Utils.checkNotNull(itemId, "itemId");
-        Utils.checkNotNull(itemName, "itemName");
-        Utils.checkNotNull(itemSku, "itemSku");
-        Utils.checkNotNull(notes, "notes");
-        Utils.checkNotNull(refundAmount, "refundAmount");
-        Utils.checkNotNull(refundedAt, "refundedAt");
-        Utils.checkNotNull(taxAmount, "taxAmount");
-        Utils.checkNotNull(taxrateId, "taxrateId");
-        Utils.checkNotNull(totalAmount, "totalAmount");
-        Utils.checkNotNull(unitAmount, "unitAmount");
-        Utils.checkNotNull(unitQuantity, "unitQuantity");
-        Utils.checkNotNull(updatedAt, "updatedAt");
+            @JsonProperty("account_id") @Nullable String accountId,
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("discount_amount") @Nullable Double discountAmount,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("item_description") @Nullable String itemDescription,
+            @JsonProperty("item_id") @Nullable String itemId,
+            @JsonProperty("item_name") @Nullable String itemName,
+            @JsonProperty("item_sku") @Nullable String itemSku,
+            @JsonProperty("notes") @Nullable String notes,
+            @JsonProperty("refund_amount") @Nullable Double refundAmount,
+            @JsonProperty("refunded_at") @Nullable OffsetDateTime refundedAt,
+            @JsonProperty("tax_amount") @Nullable Double taxAmount,
+            @JsonProperty("taxrate_id") @Nullable String taxrateId,
+            @JsonProperty("total_amount") @Nullable Double totalAmount,
+            @JsonProperty("unit_amount") @Nullable Double unitAmount,
+            @JsonProperty("unit_quantity") @Nullable Double unitQuantity,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.accountId = accountId;
         this.createdAt = createdAt;
         this.discountAmount = discountAmount;
@@ -158,97 +141,80 @@ public class PaymentLineitem {
     }
     
     public PaymentLineitem() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null);
     }
 
-    @JsonIgnore
     public Optional<String> accountId() {
-        return accountId;
+        return Optional.ofNullable(this.accountId);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<Double> discountAmount() {
-        return discountAmount;
+        return Optional.ofNullable(this.discountAmount);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<String> itemDescription() {
-        return itemDescription;
+        return Optional.ofNullable(this.itemDescription);
     }
 
-    @JsonIgnore
     public Optional<String> itemId() {
-        return itemId;
+        return Optional.ofNullable(this.itemId);
     }
 
-    @JsonIgnore
     public Optional<String> itemName() {
-        return itemName;
+        return Optional.ofNullable(this.itemName);
     }
 
-    @JsonIgnore
     public Optional<String> itemSku() {
-        return itemSku;
+        return Optional.ofNullable(this.itemSku);
     }
 
-    @JsonIgnore
     public Optional<String> notes() {
-        return notes;
+        return Optional.ofNullable(this.notes);
     }
 
-    @JsonIgnore
     public Optional<Double> refundAmount() {
-        return refundAmount;
+        return Optional.ofNullable(this.refundAmount);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> refundedAt() {
-        return refundedAt;
+        return Optional.ofNullable(this.refundedAt);
     }
 
-    @JsonIgnore
     public Optional<Double> taxAmount() {
-        return taxAmount;
+        return Optional.ofNullable(this.taxAmount);
     }
 
-    @JsonIgnore
     public Optional<String> taxrateId() {
-        return taxrateId;
+        return Optional.ofNullable(this.taxrateId);
     }
 
-    @JsonIgnore
     public Optional<Double> totalAmount() {
-        return totalAmount;
+        return Optional.ofNullable(this.totalAmount);
     }
 
-    @JsonIgnore
     public Optional<Double> unitAmount() {
-        return unitAmount;
+        return Optional.ofNullable(this.unitAmount);
     }
 
-    @JsonIgnore
     public Optional<Double> unitQuantity() {
-        return unitQuantity;
+        return Optional.ofNullable(this.unitQuantity);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
     public static Builder builder() {
@@ -256,226 +222,107 @@ public class PaymentLineitem {
     }
 
 
-    public PaymentLineitem withAccountId(String accountId) {
-        Utils.checkNotNull(accountId, "accountId");
-        this.accountId = Optional.ofNullable(accountId);
-        return this;
-    }
-
-
-    public PaymentLineitem withAccountId(Optional<String> accountId) {
-        Utils.checkNotNull(accountId, "accountId");
+    public PaymentLineitem withAccountId(@Nullable String accountId) {
         this.accountId = accountId;
         return this;
     }
 
-    public PaymentLineitem withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
 
-
-    public PaymentLineitem withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public PaymentLineitem withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public PaymentLineitem withDiscountAmount(double discountAmount) {
-        Utils.checkNotNull(discountAmount, "discountAmount");
-        this.discountAmount = Optional.ofNullable(discountAmount);
-        return this;
-    }
 
-
-    public PaymentLineitem withDiscountAmount(Optional<Double> discountAmount) {
-        Utils.checkNotNull(discountAmount, "discountAmount");
+    public PaymentLineitem withDiscountAmount(@Nullable Double discountAmount) {
         this.discountAmount = discountAmount;
         return this;
     }
 
-    public PaymentLineitem withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public PaymentLineitem withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public PaymentLineitem withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public PaymentLineitem withItemDescription(String itemDescription) {
-        Utils.checkNotNull(itemDescription, "itemDescription");
-        this.itemDescription = Optional.ofNullable(itemDescription);
-        return this;
-    }
 
-
-    public PaymentLineitem withItemDescription(Optional<String> itemDescription) {
-        Utils.checkNotNull(itemDescription, "itemDescription");
+    public PaymentLineitem withItemDescription(@Nullable String itemDescription) {
         this.itemDescription = itemDescription;
         return this;
     }
 
-    public PaymentLineitem withItemId(String itemId) {
-        Utils.checkNotNull(itemId, "itemId");
-        this.itemId = Optional.ofNullable(itemId);
-        return this;
-    }
 
-
-    public PaymentLineitem withItemId(Optional<String> itemId) {
-        Utils.checkNotNull(itemId, "itemId");
+    public PaymentLineitem withItemId(@Nullable String itemId) {
         this.itemId = itemId;
         return this;
     }
 
-    public PaymentLineitem withItemName(String itemName) {
-        Utils.checkNotNull(itemName, "itemName");
-        this.itemName = Optional.ofNullable(itemName);
-        return this;
-    }
 
-
-    public PaymentLineitem withItemName(Optional<String> itemName) {
-        Utils.checkNotNull(itemName, "itemName");
+    public PaymentLineitem withItemName(@Nullable String itemName) {
         this.itemName = itemName;
         return this;
     }
 
-    public PaymentLineitem withItemSku(String itemSku) {
-        Utils.checkNotNull(itemSku, "itemSku");
-        this.itemSku = Optional.ofNullable(itemSku);
-        return this;
-    }
 
-
-    public PaymentLineitem withItemSku(Optional<String> itemSku) {
-        Utils.checkNotNull(itemSku, "itemSku");
+    public PaymentLineitem withItemSku(@Nullable String itemSku) {
         this.itemSku = itemSku;
         return this;
     }
 
-    public PaymentLineitem withNotes(String notes) {
-        Utils.checkNotNull(notes, "notes");
-        this.notes = Optional.ofNullable(notes);
-        return this;
-    }
 
-
-    public PaymentLineitem withNotes(Optional<String> notes) {
-        Utils.checkNotNull(notes, "notes");
+    public PaymentLineitem withNotes(@Nullable String notes) {
         this.notes = notes;
         return this;
     }
 
-    public PaymentLineitem withRefundAmount(double refundAmount) {
-        Utils.checkNotNull(refundAmount, "refundAmount");
-        this.refundAmount = Optional.ofNullable(refundAmount);
-        return this;
-    }
 
-
-    public PaymentLineitem withRefundAmount(Optional<Double> refundAmount) {
-        Utils.checkNotNull(refundAmount, "refundAmount");
+    public PaymentLineitem withRefundAmount(@Nullable Double refundAmount) {
         this.refundAmount = refundAmount;
         return this;
     }
 
-    public PaymentLineitem withRefundedAt(OffsetDateTime refundedAt) {
-        Utils.checkNotNull(refundedAt, "refundedAt");
-        this.refundedAt = Optional.ofNullable(refundedAt);
-        return this;
-    }
 
-
-    public PaymentLineitem withRefundedAt(Optional<OffsetDateTime> refundedAt) {
-        Utils.checkNotNull(refundedAt, "refundedAt");
+    public PaymentLineitem withRefundedAt(@Nullable OffsetDateTime refundedAt) {
         this.refundedAt = refundedAt;
         return this;
     }
 
-    public PaymentLineitem withTaxAmount(double taxAmount) {
-        Utils.checkNotNull(taxAmount, "taxAmount");
-        this.taxAmount = Optional.ofNullable(taxAmount);
-        return this;
-    }
 
-
-    public PaymentLineitem withTaxAmount(Optional<Double> taxAmount) {
-        Utils.checkNotNull(taxAmount, "taxAmount");
+    public PaymentLineitem withTaxAmount(@Nullable Double taxAmount) {
         this.taxAmount = taxAmount;
         return this;
     }
 
-    public PaymentLineitem withTaxrateId(String taxrateId) {
-        Utils.checkNotNull(taxrateId, "taxrateId");
-        this.taxrateId = Optional.ofNullable(taxrateId);
-        return this;
-    }
 
-
-    public PaymentLineitem withTaxrateId(Optional<String> taxrateId) {
-        Utils.checkNotNull(taxrateId, "taxrateId");
+    public PaymentLineitem withTaxrateId(@Nullable String taxrateId) {
         this.taxrateId = taxrateId;
         return this;
     }
 
-    public PaymentLineitem withTotalAmount(double totalAmount) {
-        Utils.checkNotNull(totalAmount, "totalAmount");
-        this.totalAmount = Optional.ofNullable(totalAmount);
-        return this;
-    }
 
-
-    public PaymentLineitem withTotalAmount(Optional<Double> totalAmount) {
-        Utils.checkNotNull(totalAmount, "totalAmount");
+    public PaymentLineitem withTotalAmount(@Nullable Double totalAmount) {
         this.totalAmount = totalAmount;
         return this;
     }
 
-    public PaymentLineitem withUnitAmount(double unitAmount) {
-        Utils.checkNotNull(unitAmount, "unitAmount");
-        this.unitAmount = Optional.ofNullable(unitAmount);
-        return this;
-    }
 
-
-    public PaymentLineitem withUnitAmount(Optional<Double> unitAmount) {
-        Utils.checkNotNull(unitAmount, "unitAmount");
+    public PaymentLineitem withUnitAmount(@Nullable Double unitAmount) {
         this.unitAmount = unitAmount;
         return this;
     }
 
-    public PaymentLineitem withUnitQuantity(double unitQuantity) {
-        Utils.checkNotNull(unitQuantity, "unitQuantity");
-        this.unitQuantity = Optional.ofNullable(unitQuantity);
-        return this;
-    }
 
-
-    public PaymentLineitem withUnitQuantity(Optional<Double> unitQuantity) {
-        Utils.checkNotNull(unitQuantity, "unitQuantity");
+    public PaymentLineitem withUnitQuantity(@Nullable Double unitQuantity) {
         this.unitQuantity = unitQuantity;
         return this;
     }
 
-    public PaymentLineitem withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public PaymentLineitem withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public PaymentLineitem withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -542,267 +389,130 @@ public class PaymentLineitem {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> accountId = Optional.empty();
+        private String accountId;
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<Double> discountAmount = Optional.empty();
+        private Double discountAmount;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<String> itemDescription = Optional.empty();
+        private String itemDescription;
 
-        private Optional<String> itemId = Optional.empty();
+        private String itemId;
 
-        private Optional<String> itemName = Optional.empty();
+        private String itemName;
 
-        private Optional<String> itemSku = Optional.empty();
+        private String itemSku;
 
-        private Optional<String> notes = Optional.empty();
+        private String notes;
 
-        private Optional<Double> refundAmount = Optional.empty();
+        private Double refundAmount;
 
-        private Optional<OffsetDateTime> refundedAt = Optional.empty();
+        private OffsetDateTime refundedAt;
 
-        private Optional<Double> taxAmount = Optional.empty();
+        private Double taxAmount;
 
-        private Optional<String> taxrateId = Optional.empty();
+        private String taxrateId;
 
-        private Optional<Double> totalAmount = Optional.empty();
+        private Double totalAmount;
 
-        private Optional<Double> unitAmount = Optional.empty();
+        private Double unitAmount;
 
-        private Optional<Double> unitQuantity = Optional.empty();
+        private Double unitQuantity;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder accountId(String accountId) {
-            Utils.checkNotNull(accountId, "accountId");
-            this.accountId = Optional.ofNullable(accountId);
-            return this;
-        }
-
-        public Builder accountId(Optional<String> accountId) {
-            Utils.checkNotNull(accountId, "accountId");
+        public Builder accountId(@Nullable String accountId) {
             this.accountId = accountId;
             return this;
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder discountAmount(double discountAmount) {
-            Utils.checkNotNull(discountAmount, "discountAmount");
-            this.discountAmount = Optional.ofNullable(discountAmount);
-            return this;
-        }
-
-        public Builder discountAmount(Optional<Double> discountAmount) {
-            Utils.checkNotNull(discountAmount, "discountAmount");
+        public Builder discountAmount(@Nullable Double discountAmount) {
             this.discountAmount = discountAmount;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder itemDescription(String itemDescription) {
-            Utils.checkNotNull(itemDescription, "itemDescription");
-            this.itemDescription = Optional.ofNullable(itemDescription);
-            return this;
-        }
-
-        public Builder itemDescription(Optional<String> itemDescription) {
-            Utils.checkNotNull(itemDescription, "itemDescription");
+        public Builder itemDescription(@Nullable String itemDescription) {
             this.itemDescription = itemDescription;
             return this;
         }
 
-
-        public Builder itemId(String itemId) {
-            Utils.checkNotNull(itemId, "itemId");
-            this.itemId = Optional.ofNullable(itemId);
-            return this;
-        }
-
-        public Builder itemId(Optional<String> itemId) {
-            Utils.checkNotNull(itemId, "itemId");
+        public Builder itemId(@Nullable String itemId) {
             this.itemId = itemId;
             return this;
         }
 
-
-        public Builder itemName(String itemName) {
-            Utils.checkNotNull(itemName, "itemName");
-            this.itemName = Optional.ofNullable(itemName);
-            return this;
-        }
-
-        public Builder itemName(Optional<String> itemName) {
-            Utils.checkNotNull(itemName, "itemName");
+        public Builder itemName(@Nullable String itemName) {
             this.itemName = itemName;
             return this;
         }
 
-
-        public Builder itemSku(String itemSku) {
-            Utils.checkNotNull(itemSku, "itemSku");
-            this.itemSku = Optional.ofNullable(itemSku);
-            return this;
-        }
-
-        public Builder itemSku(Optional<String> itemSku) {
-            Utils.checkNotNull(itemSku, "itemSku");
+        public Builder itemSku(@Nullable String itemSku) {
             this.itemSku = itemSku;
             return this;
         }
 
-
-        public Builder notes(String notes) {
-            Utils.checkNotNull(notes, "notes");
-            this.notes = Optional.ofNullable(notes);
-            return this;
-        }
-
-        public Builder notes(Optional<String> notes) {
-            Utils.checkNotNull(notes, "notes");
+        public Builder notes(@Nullable String notes) {
             this.notes = notes;
             return this;
         }
 
-
-        public Builder refundAmount(double refundAmount) {
-            Utils.checkNotNull(refundAmount, "refundAmount");
-            this.refundAmount = Optional.ofNullable(refundAmount);
-            return this;
-        }
-
-        public Builder refundAmount(Optional<Double> refundAmount) {
-            Utils.checkNotNull(refundAmount, "refundAmount");
+        public Builder refundAmount(@Nullable Double refundAmount) {
             this.refundAmount = refundAmount;
             return this;
         }
 
-
-        public Builder refundedAt(OffsetDateTime refundedAt) {
-            Utils.checkNotNull(refundedAt, "refundedAt");
-            this.refundedAt = Optional.ofNullable(refundedAt);
-            return this;
-        }
-
-        public Builder refundedAt(Optional<OffsetDateTime> refundedAt) {
-            Utils.checkNotNull(refundedAt, "refundedAt");
+        public Builder refundedAt(@Nullable OffsetDateTime refundedAt) {
             this.refundedAt = refundedAt;
             return this;
         }
 
-
-        public Builder taxAmount(double taxAmount) {
-            Utils.checkNotNull(taxAmount, "taxAmount");
-            this.taxAmount = Optional.ofNullable(taxAmount);
-            return this;
-        }
-
-        public Builder taxAmount(Optional<Double> taxAmount) {
-            Utils.checkNotNull(taxAmount, "taxAmount");
+        public Builder taxAmount(@Nullable Double taxAmount) {
             this.taxAmount = taxAmount;
             return this;
         }
 
-
-        public Builder taxrateId(String taxrateId) {
-            Utils.checkNotNull(taxrateId, "taxrateId");
-            this.taxrateId = Optional.ofNullable(taxrateId);
-            return this;
-        }
-
-        public Builder taxrateId(Optional<String> taxrateId) {
-            Utils.checkNotNull(taxrateId, "taxrateId");
+        public Builder taxrateId(@Nullable String taxrateId) {
             this.taxrateId = taxrateId;
             return this;
         }
 
-
-        public Builder totalAmount(double totalAmount) {
-            Utils.checkNotNull(totalAmount, "totalAmount");
-            this.totalAmount = Optional.ofNullable(totalAmount);
-            return this;
-        }
-
-        public Builder totalAmount(Optional<Double> totalAmount) {
-            Utils.checkNotNull(totalAmount, "totalAmount");
+        public Builder totalAmount(@Nullable Double totalAmount) {
             this.totalAmount = totalAmount;
             return this;
         }
 
-
-        public Builder unitAmount(double unitAmount) {
-            Utils.checkNotNull(unitAmount, "unitAmount");
-            this.unitAmount = Optional.ofNullable(unitAmount);
-            return this;
-        }
-
-        public Builder unitAmount(Optional<Double> unitAmount) {
-            Utils.checkNotNull(unitAmount, "unitAmount");
+        public Builder unitAmount(@Nullable Double unitAmount) {
             this.unitAmount = unitAmount;
             return this;
         }
 
-
-        public Builder unitQuantity(double unitQuantity) {
-            Utils.checkNotNull(unitQuantity, "unitQuantity");
-            this.unitQuantity = Optional.ofNullable(unitQuantity);
-            return this;
-        }
-
-        public Builder unitQuantity(Optional<Double> unitQuantity) {
-            Utils.checkNotNull(unitQuantity, "unitQuantity");
+        public Builder unitQuantity(@Nullable Double unitQuantity) {
             this.unitQuantity = unitQuantity;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
         public PaymentLineitem build() {
-
             return new PaymentLineitem(
                 accountId, createdAt, discountAmount,
                 id, itemDescription, itemId,

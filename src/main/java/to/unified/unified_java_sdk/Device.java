@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateHrisDeviceRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisDeviceRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateHrisDeviceResponse;
@@ -67,7 +68,7 @@ public class Device {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateHrisDeviceResponse createHrisDevice(CreateHrisDeviceRequest request) {
+    public CreateHrisDeviceResponse createHrisDevice(@Nonnull CreateHrisDeviceRequest request) {
         RequestOperation<CreateHrisDeviceRequest, CreateHrisDeviceResponse> operation
               = new CreateHrisDevice.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -89,7 +90,7 @@ public class Device {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetHrisDeviceResponse getHrisDevice(GetHrisDeviceRequest request) {
+    public GetHrisDeviceResponse getHrisDevice(@Nonnull GetHrisDeviceRequest request) {
         RequestOperation<GetHrisDeviceRequest, GetHrisDeviceResponse> operation
               = new GetHrisDevice.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -111,7 +112,7 @@ public class Device {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListHrisDevicesResponse listHrisDevices(ListHrisDevicesRequest request) {
+    public ListHrisDevicesResponse listHrisDevices(@Nonnull ListHrisDevicesRequest request) {
         RequestOperation<ListHrisDevicesRequest, ListHrisDevicesResponse> operation
               = new ListHrisDevices.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -133,7 +134,7 @@ public class Device {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchHrisDeviceResponse patchHrisDevice(PatchHrisDeviceRequest request) {
+    public PatchHrisDeviceResponse patchHrisDevice(@Nonnull PatchHrisDeviceRequest request) {
         RequestOperation<PatchHrisDeviceRequest, PatchHrisDeviceResponse> operation
               = new PatchHrisDevice.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -155,7 +156,7 @@ public class Device {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveHrisDeviceResponse removeHrisDevice(RemoveHrisDeviceRequest request) {
+    public RemoveHrisDeviceResponse removeHrisDevice(@Nonnull RemoveHrisDeviceRequest request) {
         RequestOperation<RemoveHrisDeviceRequest, RemoveHrisDeviceResponse> operation
               = new RemoveHrisDevice.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -177,7 +178,7 @@ public class Device {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateHrisDeviceResponse updateHrisDevice(UpdateHrisDeviceRequest request) {
+    public UpdateHrisDeviceResponse updateHrisDevice(@Nonnull UpdateHrisDeviceRequest request) {
         RequestOperation<UpdateHrisDeviceRequest, UpdateHrisDeviceResponse> operation
               = new UpdateHrisDevice.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

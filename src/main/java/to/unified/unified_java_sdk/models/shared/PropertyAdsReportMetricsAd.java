@@ -4,16 +4,16 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -23,129 +23,131 @@ public class PropertyAdsReportMetricsAd {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ad_copy")
-    private Optional<String> adCopy;
+    private String adCopy;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ad_type")
-    private Optional<? extends PropertyAdsReportMetricsAdAdType> adType;
+    private PropertyAdsReportMetricsAdAdType adType;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("campaign_id")
-    private Optional<String> campaignId;
+    private String campaignId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creative_asset_url")
-    private Optional<String> creativeAssetUrl;
+    private String creativeAssetUrl;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("creative_ids")
+    private List<String> creativeIds;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cta")
-    private Optional<String> cta;
+    private String cta;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
-    private Optional<String> description;
+    private String description;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("final_url")
-    private Optional<String> finalUrl;
+    private String finalUrl;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group_id")
-    private Optional<String> groupId;
+    private String groupId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headline")
-    private Optional<String> headline;
+    private String headline;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
-    private Optional<Boolean> isActive;
+    private Boolean isActive;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("item_id")
+    private String itemId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
-    private Optional<String> name;
+    private String name;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_id")
-    private Optional<String> organizationId;
+    private String organizationId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("status")
+    private PropertyAdsReportMetricsAdStatus status;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targeting")
-    private Optional<? extends PropertyAdsReportMetricsAdTargeting> targeting;
+    private PropertyAdsReportMetricsAdTargeting targeting;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
     @JsonCreator
     public PropertyAdsReportMetricsAd(
-            @JsonProperty("ad_copy") Optional<String> adCopy,
-            @JsonProperty("ad_type") Optional<? extends PropertyAdsReportMetricsAdAdType> adType,
-            @JsonProperty("campaign_id") Optional<String> campaignId,
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("creative_asset_url") Optional<String> creativeAssetUrl,
-            @JsonProperty("cta") Optional<String> cta,
-            @JsonProperty("description") Optional<String> description,
-            @JsonProperty("final_url") Optional<String> finalUrl,
-            @JsonProperty("group_id") Optional<String> groupId,
-            @JsonProperty("headline") Optional<String> headline,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("is_active") Optional<Boolean> isActive,
-            @JsonProperty("name") Optional<String> name,
-            @JsonProperty("organization_id") Optional<String> organizationId,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("targeting") Optional<? extends PropertyAdsReportMetricsAdTargeting> targeting,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(adCopy, "adCopy");
-        Utils.checkNotNull(adType, "adType");
-        Utils.checkNotNull(campaignId, "campaignId");
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(creativeAssetUrl, "creativeAssetUrl");
-        Utils.checkNotNull(cta, "cta");
-        Utils.checkNotNull(description, "description");
-        Utils.checkNotNull(finalUrl, "finalUrl");
-        Utils.checkNotNull(groupId, "groupId");
-        Utils.checkNotNull(headline, "headline");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(isActive, "isActive");
-        Utils.checkNotNull(name, "name");
-        Utils.checkNotNull(organizationId, "organizationId");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(targeting, "targeting");
-        Utils.checkNotNull(updatedAt, "updatedAt");
+            @JsonProperty("ad_copy") @Nullable String adCopy,
+            @JsonProperty("ad_type") @Nullable PropertyAdsReportMetricsAdAdType adType,
+            @JsonProperty("campaign_id") @Nullable String campaignId,
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("creative_asset_url") @Nullable String creativeAssetUrl,
+            @JsonProperty("creative_ids") @Nullable List<String> creativeIds,
+            @JsonProperty("cta") @Nullable String cta,
+            @JsonProperty("description") @Nullable String description,
+            @JsonProperty("final_url") @Nullable String finalUrl,
+            @JsonProperty("group_id") @Nullable String groupId,
+            @JsonProperty("headline") @Nullable String headline,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("is_active") @Nullable Boolean isActive,
+            @JsonProperty("item_id") @Nullable String itemId,
+            @JsonProperty("name") @Nullable String name,
+            @JsonProperty("organization_id") @Nullable String organizationId,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("status") @Nullable PropertyAdsReportMetricsAdStatus status,
+            @JsonProperty("targeting") @Nullable PropertyAdsReportMetricsAdTargeting targeting,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.adCopy = adCopy;
         this.adType = adType;
         this.campaignId = campaignId;
         this.createdAt = createdAt;
         this.creativeAssetUrl = creativeAssetUrl;
+        this.creativeIds = creativeIds;
         this.cta = cta;
         this.description = description;
         this.finalUrl = finalUrl;
@@ -153,108 +155,103 @@ public class PropertyAdsReportMetricsAd {
         this.headline = headline;
         this.id = id;
         this.isActive = isActive;
+        this.itemId = itemId;
         this.name = name;
         this.organizationId = organizationId;
         this.raw = raw;
+        this.status = status;
         this.targeting = targeting;
         this.updatedAt = updatedAt;
     }
     
     public PropertyAdsReportMetricsAd() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null);
     }
 
-    @JsonIgnore
     public Optional<String> adCopy() {
-        return adCopy;
+        return Optional.ofNullable(this.adCopy);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<PropertyAdsReportMetricsAdAdType> adType() {
-        return (Optional<PropertyAdsReportMetricsAdAdType>) adType;
+        return Optional.ofNullable(this.adType);
     }
 
-    @JsonIgnore
     public Optional<String> campaignId() {
-        return campaignId;
+        return Optional.ofNullable(this.campaignId);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<String> creativeAssetUrl() {
-        return creativeAssetUrl;
+        return Optional.ofNullable(this.creativeAssetUrl);
     }
 
-    @JsonIgnore
+    public Optional<List<String>> creativeIds() {
+        return Optional.ofNullable(this.creativeIds);
+    }
+
     public Optional<String> cta() {
-        return cta;
+        return Optional.ofNullable(this.cta);
     }
 
-    @JsonIgnore
     public Optional<String> description() {
-        return description;
+        return Optional.ofNullable(this.description);
     }
 
-    @JsonIgnore
     public Optional<String> finalUrl() {
-        return finalUrl;
+        return Optional.ofNullable(this.finalUrl);
     }
 
-    @JsonIgnore
     public Optional<String> groupId() {
-        return groupId;
+        return Optional.ofNullable(this.groupId);
     }
 
-    @JsonIgnore
     public Optional<String> headline() {
-        return headline;
+        return Optional.ofNullable(this.headline);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isActive() {
-        return isActive;
+        return Optional.ofNullable(this.isActive);
     }
 
-    @JsonIgnore
+    public Optional<String> itemId() {
+        return Optional.ofNullable(this.itemId);
+    }
+
     public Optional<String> name() {
-        return name;
+        return Optional.ofNullable(this.name);
     }
 
-    @JsonIgnore
     public Optional<String> organizationId() {
-        return organizationId;
+        return Optional.ofNullable(this.organizationId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
+    public Optional<PropertyAdsReportMetricsAdStatus> status() {
+        return Optional.ofNullable(this.status);
+    }
+
     public Optional<PropertyAdsReportMetricsAdTargeting> targeting() {
-        return (Optional<PropertyAdsReportMetricsAdTargeting>) targeting;
+        return Optional.ofNullable(this.targeting);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
     public static Builder builder() {
@@ -262,226 +259,125 @@ public class PropertyAdsReportMetricsAd {
     }
 
 
-    public PropertyAdsReportMetricsAd withAdCopy(String adCopy) {
-        Utils.checkNotNull(adCopy, "adCopy");
-        this.adCopy = Optional.ofNullable(adCopy);
-        return this;
-    }
-
-
-    public PropertyAdsReportMetricsAd withAdCopy(Optional<String> adCopy) {
-        Utils.checkNotNull(adCopy, "adCopy");
+    public PropertyAdsReportMetricsAd withAdCopy(@Nullable String adCopy) {
         this.adCopy = adCopy;
         return this;
     }
 
-    public PropertyAdsReportMetricsAd withAdType(PropertyAdsReportMetricsAdAdType adType) {
-        Utils.checkNotNull(adType, "adType");
-        this.adType = Optional.ofNullable(adType);
-        return this;
-    }
 
-
-    public PropertyAdsReportMetricsAd withAdType(Optional<? extends PropertyAdsReportMetricsAdAdType> adType) {
-        Utils.checkNotNull(adType, "adType");
+    public PropertyAdsReportMetricsAd withAdType(@Nullable PropertyAdsReportMetricsAdAdType adType) {
         this.adType = adType;
         return this;
     }
 
-    public PropertyAdsReportMetricsAd withCampaignId(String campaignId) {
-        Utils.checkNotNull(campaignId, "campaignId");
-        this.campaignId = Optional.ofNullable(campaignId);
-        return this;
-    }
 
-
-    public PropertyAdsReportMetricsAd withCampaignId(Optional<String> campaignId) {
-        Utils.checkNotNull(campaignId, "campaignId");
+    public PropertyAdsReportMetricsAd withCampaignId(@Nullable String campaignId) {
         this.campaignId = campaignId;
         return this;
     }
 
-    public PropertyAdsReportMetricsAd withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
 
-
-    public PropertyAdsReportMetricsAd withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public PropertyAdsReportMetricsAd withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public PropertyAdsReportMetricsAd withCreativeAssetUrl(String creativeAssetUrl) {
-        Utils.checkNotNull(creativeAssetUrl, "creativeAssetUrl");
-        this.creativeAssetUrl = Optional.ofNullable(creativeAssetUrl);
-        return this;
-    }
 
-
-    public PropertyAdsReportMetricsAd withCreativeAssetUrl(Optional<String> creativeAssetUrl) {
-        Utils.checkNotNull(creativeAssetUrl, "creativeAssetUrl");
+    public PropertyAdsReportMetricsAd withCreativeAssetUrl(@Nullable String creativeAssetUrl) {
         this.creativeAssetUrl = creativeAssetUrl;
         return this;
     }
 
-    public PropertyAdsReportMetricsAd withCta(String cta) {
-        Utils.checkNotNull(cta, "cta");
-        this.cta = Optional.ofNullable(cta);
+
+    public PropertyAdsReportMetricsAd withCreativeIds(@Nullable List<String> creativeIds) {
+        this.creativeIds = creativeIds;
         return this;
     }
 
 
-    public PropertyAdsReportMetricsAd withCta(Optional<String> cta) {
-        Utils.checkNotNull(cta, "cta");
+    public PropertyAdsReportMetricsAd withCta(@Nullable String cta) {
         this.cta = cta;
         return this;
     }
 
-    public PropertyAdsReportMetricsAd withDescription(String description) {
-        Utils.checkNotNull(description, "description");
-        this.description = Optional.ofNullable(description);
-        return this;
-    }
 
-
-    public PropertyAdsReportMetricsAd withDescription(Optional<String> description) {
-        Utils.checkNotNull(description, "description");
+    public PropertyAdsReportMetricsAd withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
-    public PropertyAdsReportMetricsAd withFinalUrl(String finalUrl) {
-        Utils.checkNotNull(finalUrl, "finalUrl");
-        this.finalUrl = Optional.ofNullable(finalUrl);
-        return this;
-    }
 
-
-    public PropertyAdsReportMetricsAd withFinalUrl(Optional<String> finalUrl) {
-        Utils.checkNotNull(finalUrl, "finalUrl");
+    public PropertyAdsReportMetricsAd withFinalUrl(@Nullable String finalUrl) {
         this.finalUrl = finalUrl;
         return this;
     }
 
-    public PropertyAdsReportMetricsAd withGroupId(String groupId) {
-        Utils.checkNotNull(groupId, "groupId");
-        this.groupId = Optional.ofNullable(groupId);
-        return this;
-    }
 
-
-    public PropertyAdsReportMetricsAd withGroupId(Optional<String> groupId) {
-        Utils.checkNotNull(groupId, "groupId");
+    public PropertyAdsReportMetricsAd withGroupId(@Nullable String groupId) {
         this.groupId = groupId;
         return this;
     }
 
-    public PropertyAdsReportMetricsAd withHeadline(String headline) {
-        Utils.checkNotNull(headline, "headline");
-        this.headline = Optional.ofNullable(headline);
-        return this;
-    }
 
-
-    public PropertyAdsReportMetricsAd withHeadline(Optional<String> headline) {
-        Utils.checkNotNull(headline, "headline");
+    public PropertyAdsReportMetricsAd withHeadline(@Nullable String headline) {
         this.headline = headline;
         return this;
     }
 
-    public PropertyAdsReportMetricsAd withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public PropertyAdsReportMetricsAd withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public PropertyAdsReportMetricsAd withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public PropertyAdsReportMetricsAd withIsActive(boolean isActive) {
-        Utils.checkNotNull(isActive, "isActive");
-        this.isActive = Optional.ofNullable(isActive);
-        return this;
-    }
 
-
-    public PropertyAdsReportMetricsAd withIsActive(Optional<Boolean> isActive) {
-        Utils.checkNotNull(isActive, "isActive");
+    public PropertyAdsReportMetricsAd withIsActive(@Nullable Boolean isActive) {
         this.isActive = isActive;
         return this;
     }
 
-    public PropertyAdsReportMetricsAd withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = Optional.ofNullable(name);
+
+    public PropertyAdsReportMetricsAd withItemId(@Nullable String itemId) {
+        this.itemId = itemId;
         return this;
     }
 
 
-    public PropertyAdsReportMetricsAd withName(Optional<String> name) {
-        Utils.checkNotNull(name, "name");
+    public PropertyAdsReportMetricsAd withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
-    public PropertyAdsReportMetricsAd withOrganizationId(String organizationId) {
-        Utils.checkNotNull(organizationId, "organizationId");
-        this.organizationId = Optional.ofNullable(organizationId);
-        return this;
-    }
 
-
-    public PropertyAdsReportMetricsAd withOrganizationId(Optional<String> organizationId) {
-        Utils.checkNotNull(organizationId, "organizationId");
+    public PropertyAdsReportMetricsAd withOrganizationId(@Nullable String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
 
-    public PropertyAdsReportMetricsAd withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public PropertyAdsReportMetricsAd withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public PropertyAdsReportMetricsAd withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public PropertyAdsReportMetricsAd withTargeting(PropertyAdsReportMetricsAdTargeting targeting) {
-        Utils.checkNotNull(targeting, "targeting");
-        this.targeting = Optional.ofNullable(targeting);
+
+    public PropertyAdsReportMetricsAd withStatus(@Nullable PropertyAdsReportMetricsAdStatus status) {
+        this.status = status;
         return this;
     }
 
 
-    public PropertyAdsReportMetricsAd withTargeting(Optional<? extends PropertyAdsReportMetricsAdTargeting> targeting) {
-        Utils.checkNotNull(targeting, "targeting");
+    public PropertyAdsReportMetricsAd withTargeting(@Nullable PropertyAdsReportMetricsAdTargeting targeting) {
         this.targeting = targeting;
         return this;
     }
 
-    public PropertyAdsReportMetricsAd withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public PropertyAdsReportMetricsAd withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public PropertyAdsReportMetricsAd withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -498,6 +394,7 @@ public class PropertyAdsReportMetricsAd {
             Utils.enhancedDeepEquals(this.campaignId, other.campaignId) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.creativeAssetUrl, other.creativeAssetUrl) &&
+            Utils.enhancedDeepEquals(this.creativeIds, other.creativeIds) &&
             Utils.enhancedDeepEquals(this.cta, other.cta) &&
             Utils.enhancedDeepEquals(this.description, other.description) &&
             Utils.enhancedDeepEquals(this.finalUrl, other.finalUrl) &&
@@ -505,9 +402,11 @@ public class PropertyAdsReportMetricsAd {
             Utils.enhancedDeepEquals(this.headline, other.headline) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
+            Utils.enhancedDeepEquals(this.itemId, other.itemId) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.status, other.status) &&
             Utils.enhancedDeepEquals(this.targeting, other.targeting) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
     }
@@ -516,10 +415,11 @@ public class PropertyAdsReportMetricsAd {
     public int hashCode() {
         return Utils.enhancedHash(
             adCopy, adType, campaignId,
-            createdAt, creativeAssetUrl, cta,
-            description, finalUrl, groupId,
-            headline, id, isActive,
-            name, organizationId, raw,
+            createdAt, creativeAssetUrl, creativeIds,
+            cta, description, finalUrl,
+            groupId, headline, id,
+            isActive, itemId, name,
+            organizationId, raw, status,
             targeting, updatedAt);
     }
     
@@ -531,6 +431,7 @@ public class PropertyAdsReportMetricsAd {
                 "campaignId", campaignId,
                 "createdAt", createdAt,
                 "creativeAssetUrl", creativeAssetUrl,
+                "creativeIds", creativeIds,
                 "cta", cta,
                 "description", description,
                 "finalUrl", finalUrl,
@@ -538,9 +439,11 @@ public class PropertyAdsReportMetricsAd {
                 "headline", headline,
                 "id", id,
                 "isActive", isActive,
+                "itemId", itemId,
                 "name", name,
                 "organizationId", organizationId,
                 "raw", raw,
+                "status", status,
                 "targeting", targeting,
                 "updatedAt", updatedAt);
     }
@@ -548,273 +451,158 @@ public class PropertyAdsReportMetricsAd {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> adCopy = Optional.empty();
+        private String adCopy;
 
-        private Optional<? extends PropertyAdsReportMetricsAdAdType> adType = Optional.empty();
+        private PropertyAdsReportMetricsAdAdType adType;
 
-        private Optional<String> campaignId = Optional.empty();
+        private String campaignId;
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<String> creativeAssetUrl = Optional.empty();
+        private String creativeAssetUrl;
 
-        private Optional<String> cta = Optional.empty();
+        private List<String> creativeIds;
 
-        private Optional<String> description = Optional.empty();
+        private String cta;
 
-        private Optional<String> finalUrl = Optional.empty();
+        private String description;
 
-        private Optional<String> groupId = Optional.empty();
+        private String finalUrl;
 
-        private Optional<String> headline = Optional.empty();
+        private String groupId;
 
-        private Optional<String> id = Optional.empty();
+        private String headline;
 
-        private Optional<Boolean> isActive = Optional.empty();
+        private String id;
 
-        private Optional<String> name = Optional.empty();
+        private Boolean isActive;
 
-        private Optional<String> organizationId = Optional.empty();
+        private String itemId;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private String name;
 
-        private Optional<? extends PropertyAdsReportMetricsAdTargeting> targeting = Optional.empty();
+        private String organizationId;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private Map<String, Object> raw;
+
+        private PropertyAdsReportMetricsAdStatus status;
+
+        private PropertyAdsReportMetricsAdTargeting targeting;
+
+        private OffsetDateTime updatedAt;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder adCopy(String adCopy) {
-            Utils.checkNotNull(adCopy, "adCopy");
-            this.adCopy = Optional.ofNullable(adCopy);
-            return this;
-        }
-
-        public Builder adCopy(Optional<String> adCopy) {
-            Utils.checkNotNull(adCopy, "adCopy");
+        public Builder adCopy(@Nullable String adCopy) {
             this.adCopy = adCopy;
             return this;
         }
 
-
-        public Builder adType(PropertyAdsReportMetricsAdAdType adType) {
-            Utils.checkNotNull(adType, "adType");
-            this.adType = Optional.ofNullable(adType);
-            return this;
-        }
-
-        public Builder adType(Optional<? extends PropertyAdsReportMetricsAdAdType> adType) {
-            Utils.checkNotNull(adType, "adType");
+        public Builder adType(@Nullable PropertyAdsReportMetricsAdAdType adType) {
             this.adType = adType;
             return this;
         }
 
-
-        public Builder campaignId(String campaignId) {
-            Utils.checkNotNull(campaignId, "campaignId");
-            this.campaignId = Optional.ofNullable(campaignId);
-            return this;
-        }
-
-        public Builder campaignId(Optional<String> campaignId) {
-            Utils.checkNotNull(campaignId, "campaignId");
+        public Builder campaignId(@Nullable String campaignId) {
             this.campaignId = campaignId;
             return this;
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder creativeAssetUrl(String creativeAssetUrl) {
-            Utils.checkNotNull(creativeAssetUrl, "creativeAssetUrl");
-            this.creativeAssetUrl = Optional.ofNullable(creativeAssetUrl);
-            return this;
-        }
-
-        public Builder creativeAssetUrl(Optional<String> creativeAssetUrl) {
-            Utils.checkNotNull(creativeAssetUrl, "creativeAssetUrl");
+        public Builder creativeAssetUrl(@Nullable String creativeAssetUrl) {
             this.creativeAssetUrl = creativeAssetUrl;
             return this;
         }
 
-
-        public Builder cta(String cta) {
-            Utils.checkNotNull(cta, "cta");
-            this.cta = Optional.ofNullable(cta);
+        public Builder creativeIds(@Nullable List<String> creativeIds) {
+            this.creativeIds = creativeIds;
             return this;
         }
 
-        public Builder cta(Optional<String> cta) {
-            Utils.checkNotNull(cta, "cta");
+        public Builder cta(@Nullable String cta) {
             this.cta = cta;
             return this;
         }
 
-
-        public Builder description(String description) {
-            Utils.checkNotNull(description, "description");
-            this.description = Optional.ofNullable(description);
-            return this;
-        }
-
-        public Builder description(Optional<String> description) {
-            Utils.checkNotNull(description, "description");
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-
-        public Builder finalUrl(String finalUrl) {
-            Utils.checkNotNull(finalUrl, "finalUrl");
-            this.finalUrl = Optional.ofNullable(finalUrl);
-            return this;
-        }
-
-        public Builder finalUrl(Optional<String> finalUrl) {
-            Utils.checkNotNull(finalUrl, "finalUrl");
+        public Builder finalUrl(@Nullable String finalUrl) {
             this.finalUrl = finalUrl;
             return this;
         }
 
-
-        public Builder groupId(String groupId) {
-            Utils.checkNotNull(groupId, "groupId");
-            this.groupId = Optional.ofNullable(groupId);
-            return this;
-        }
-
-        public Builder groupId(Optional<String> groupId) {
-            Utils.checkNotNull(groupId, "groupId");
+        public Builder groupId(@Nullable String groupId) {
             this.groupId = groupId;
             return this;
         }
 
-
-        public Builder headline(String headline) {
-            Utils.checkNotNull(headline, "headline");
-            this.headline = Optional.ofNullable(headline);
-            return this;
-        }
-
-        public Builder headline(Optional<String> headline) {
-            Utils.checkNotNull(headline, "headline");
+        public Builder headline(@Nullable String headline) {
             this.headline = headline;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder isActive(boolean isActive) {
-            Utils.checkNotNull(isActive, "isActive");
-            this.isActive = Optional.ofNullable(isActive);
-            return this;
-        }
-
-        public Builder isActive(Optional<Boolean> isActive) {
-            Utils.checkNotNull(isActive, "isActive");
+        public Builder isActive(@Nullable Boolean isActive) {
             this.isActive = isActive;
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = Optional.ofNullable(name);
+        public Builder itemId(@Nullable String itemId) {
+            this.itemId = itemId;
             return this;
         }
 
-        public Builder name(Optional<String> name) {
-            Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-
-        public Builder organizationId(String organizationId) {
-            Utils.checkNotNull(organizationId, "organizationId");
-            this.organizationId = Optional.ofNullable(organizationId);
-            return this;
-        }
-
-        public Builder organizationId(Optional<String> organizationId) {
-            Utils.checkNotNull(organizationId, "organizationId");
+        public Builder organizationId(@Nullable String organizationId) {
             this.organizationId = organizationId;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder targeting(PropertyAdsReportMetricsAdTargeting targeting) {
-            Utils.checkNotNull(targeting, "targeting");
-            this.targeting = Optional.ofNullable(targeting);
+        public Builder status(@Nullable PropertyAdsReportMetricsAdStatus status) {
+            this.status = status;
             return this;
         }
 
-        public Builder targeting(Optional<? extends PropertyAdsReportMetricsAdTargeting> targeting) {
-            Utils.checkNotNull(targeting, "targeting");
+        public Builder targeting(@Nullable PropertyAdsReportMetricsAdTargeting targeting) {
             this.targeting = targeting;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
         public PropertyAdsReportMetricsAd build() {
-
             return new PropertyAdsReportMetricsAd(
                 adCopy, adType, campaignId,
-                createdAt, creativeAssetUrl, cta,
-                description, finalUrl, groupId,
-                headline, id, isActive,
-                name, organizationId, raw,
+                createdAt, creativeAssetUrl, creativeIds,
+                cta, description, finalUrl,
+                groupId, headline, id,
+                isActive, itemId, name,
+                organizationId, raw, status,
                 targeting, updatedAt);
         }
 

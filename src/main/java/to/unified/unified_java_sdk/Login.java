@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationLoginRequest;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationLoginRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationLoginResponse;
@@ -55,7 +56,7 @@ public class Login {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetUnifiedIntegrationLoginResponse getUnifiedIntegrationLogin(GetUnifiedIntegrationLoginRequest request) {
+    public GetUnifiedIntegrationLoginResponse getUnifiedIntegrationLogin(@Nonnull GetUnifiedIntegrationLoginRequest request) {
         RequestOperation<GetUnifiedIntegrationLoginRequest, GetUnifiedIntegrationLoginResponse> operation
               = new GetUnifiedIntegrationLogin.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAtsScorecardRequest;
 import to.unified.unified_java_sdk.models.operations.GetAtsScorecardRequest;
@@ -68,7 +69,7 @@ public class AsyncScorecard {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAtsScorecardResponse>} - The async response
      */
-    public CompletableFuture<CreateAtsScorecardResponse> createAtsScorecard(CreateAtsScorecardRequest request) {
+    public CompletableFuture<CreateAtsScorecardResponse> createAtsScorecard(@Nonnull CreateAtsScorecardRequest request) {
         AsyncRequestOperation<CreateAtsScorecardRequest, CreateAtsScorecardResponse> operation
               = new CreateAtsScorecard.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -91,7 +92,7 @@ public class AsyncScorecard {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAtsScorecardResponse>} - The async response
      */
-    public CompletableFuture<GetAtsScorecardResponse> getAtsScorecard(GetAtsScorecardRequest request) {
+    public CompletableFuture<GetAtsScorecardResponse> getAtsScorecard(@Nonnull GetAtsScorecardRequest request) {
         AsyncRequestOperation<GetAtsScorecardRequest, GetAtsScorecardResponse> operation
               = new GetAtsScorecard.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -114,7 +115,7 @@ public class AsyncScorecard {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAtsScorecardsResponse>} - The async response
      */
-    public CompletableFuture<ListAtsScorecardsResponse> listAtsScorecards(ListAtsScorecardsRequest request) {
+    public CompletableFuture<ListAtsScorecardsResponse> listAtsScorecards(@Nonnull ListAtsScorecardsRequest request) {
         AsyncRequestOperation<ListAtsScorecardsRequest, ListAtsScorecardsResponse> operation
               = new ListAtsScorecards.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -137,7 +138,7 @@ public class AsyncScorecard {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAtsScorecardResponse>} - The async response
      */
-    public CompletableFuture<PatchAtsScorecardResponse> patchAtsScorecard(PatchAtsScorecardRequest request) {
+    public CompletableFuture<PatchAtsScorecardResponse> patchAtsScorecard(@Nonnull PatchAtsScorecardRequest request) {
         AsyncRequestOperation<PatchAtsScorecardRequest, PatchAtsScorecardResponse> operation
               = new PatchAtsScorecard.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -160,7 +161,7 @@ public class AsyncScorecard {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAtsScorecardResponse>} - The async response
      */
-    public CompletableFuture<RemoveAtsScorecardResponse> removeAtsScorecard(RemoveAtsScorecardRequest request) {
+    public CompletableFuture<RemoveAtsScorecardResponse> removeAtsScorecard(@Nonnull RemoveAtsScorecardRequest request) {
         AsyncRequestOperation<RemoveAtsScorecardRequest, RemoveAtsScorecardResponse> operation
               = new RemoveAtsScorecard.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -183,7 +184,7 @@ public class AsyncScorecard {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAtsScorecardResponse>} - The async response
      */
-    public CompletableFuture<UpdateAtsScorecardResponse> updateAtsScorecard(UpdateAtsScorecardRequest request) {
+    public CompletableFuture<UpdateAtsScorecardResponse> updateAtsScorecard(@Nonnull UpdateAtsScorecardRequest request) {
         AsyncRequestOperation<UpdateAtsScorecardRequest, UpdateAtsScorecardResponse> operation
               = new UpdateAtsScorecard.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

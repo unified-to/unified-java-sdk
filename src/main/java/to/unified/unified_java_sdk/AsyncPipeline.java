@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateCrmPipelineRequest;
 import to.unified.unified_java_sdk.models.operations.GetCrmPipelineRequest;
@@ -68,7 +69,7 @@ public class AsyncPipeline {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCrmPipelineResponse>} - The async response
      */
-    public CompletableFuture<CreateCrmPipelineResponse> createCrmPipeline(CreateCrmPipelineRequest request) {
+    public CompletableFuture<CreateCrmPipelineResponse> createCrmPipeline(@Nonnull CreateCrmPipelineRequest request) {
         AsyncRequestOperation<CreateCrmPipelineRequest, CreateCrmPipelineResponse> operation
               = new CreateCrmPipeline.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -91,7 +92,7 @@ public class AsyncPipeline {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCrmPipelineResponse>} - The async response
      */
-    public CompletableFuture<GetCrmPipelineResponse> getCrmPipeline(GetCrmPipelineRequest request) {
+    public CompletableFuture<GetCrmPipelineResponse> getCrmPipeline(@Nonnull GetCrmPipelineRequest request) {
         AsyncRequestOperation<GetCrmPipelineRequest, GetCrmPipelineResponse> operation
               = new GetCrmPipeline.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -114,7 +115,7 @@ public class AsyncPipeline {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCrmPipelinesResponse>} - The async response
      */
-    public CompletableFuture<ListCrmPipelinesResponse> listCrmPipelines(ListCrmPipelinesRequest request) {
+    public CompletableFuture<ListCrmPipelinesResponse> listCrmPipelines(@Nonnull ListCrmPipelinesRequest request) {
         AsyncRequestOperation<ListCrmPipelinesRequest, ListCrmPipelinesResponse> operation
               = new ListCrmPipelines.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -137,7 +138,7 @@ public class AsyncPipeline {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCrmPipelineResponse>} - The async response
      */
-    public CompletableFuture<PatchCrmPipelineResponse> patchCrmPipeline(PatchCrmPipelineRequest request) {
+    public CompletableFuture<PatchCrmPipelineResponse> patchCrmPipeline(@Nonnull PatchCrmPipelineRequest request) {
         AsyncRequestOperation<PatchCrmPipelineRequest, PatchCrmPipelineResponse> operation
               = new PatchCrmPipeline.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -160,7 +161,7 @@ public class AsyncPipeline {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCrmPipelineResponse>} - The async response
      */
-    public CompletableFuture<RemoveCrmPipelineResponse> removeCrmPipeline(RemoveCrmPipelineRequest request) {
+    public CompletableFuture<RemoveCrmPipelineResponse> removeCrmPipeline(@Nonnull RemoveCrmPipelineRequest request) {
         AsyncRequestOperation<RemoveCrmPipelineRequest, RemoveCrmPipelineResponse> operation
               = new RemoveCrmPipeline.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -183,7 +184,7 @@ public class AsyncPipeline {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCrmPipelineResponse>} - The async response
      */
-    public CompletableFuture<UpdateCrmPipelineResponse> updateCrmPipeline(UpdateCrmPipelineRequest request) {
+    public CompletableFuture<UpdateCrmPipelineResponse> updateCrmPipeline(@Nonnull UpdateCrmPipelineRequest request) {
         AsyncRequestOperation<UpdateCrmPipelineRequest, UpdateCrmPipelineResponse> operation
               = new UpdateCrmPipeline.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

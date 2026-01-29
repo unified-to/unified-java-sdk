@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceCollectionRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceCollectionRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceCollectionResponse;
@@ -67,7 +68,7 @@ public class Collection {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCommerceCollectionResponse createCommerceCollection(CreateCommerceCollectionRequest request) {
+    public CreateCommerceCollectionResponse createCommerceCollection(@Nonnull CreateCommerceCollectionRequest request) {
         RequestOperation<CreateCommerceCollectionRequest, CreateCommerceCollectionResponse> operation
               = new CreateCommerceCollection.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -89,7 +90,7 @@ public class Collection {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetCommerceCollectionResponse getCommerceCollection(GetCommerceCollectionRequest request) {
+    public GetCommerceCollectionResponse getCommerceCollection(@Nonnull GetCommerceCollectionRequest request) {
         RequestOperation<GetCommerceCollectionRequest, GetCommerceCollectionResponse> operation
               = new GetCommerceCollection.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -111,7 +112,7 @@ public class Collection {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCommerceCollectionsResponse listCommerceCollections(ListCommerceCollectionsRequest request) {
+    public ListCommerceCollectionsResponse listCommerceCollections(@Nonnull ListCommerceCollectionsRequest request) {
         RequestOperation<ListCommerceCollectionsRequest, ListCommerceCollectionsResponse> operation
               = new ListCommerceCollections.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -133,7 +134,7 @@ public class Collection {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCommerceCollectionResponse patchCommerceCollection(PatchCommerceCollectionRequest request) {
+    public PatchCommerceCollectionResponse patchCommerceCollection(@Nonnull PatchCommerceCollectionRequest request) {
         RequestOperation<PatchCommerceCollectionRequest, PatchCommerceCollectionResponse> operation
               = new PatchCommerceCollection.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -155,7 +156,7 @@ public class Collection {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCommerceCollectionResponse removeCommerceCollection(RemoveCommerceCollectionRequest request) {
+    public RemoveCommerceCollectionResponse removeCommerceCollection(@Nonnull RemoveCommerceCollectionRequest request) {
         RequestOperation<RemoveCommerceCollectionRequest, RemoveCommerceCollectionResponse> operation
               = new RemoveCommerceCollection.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -177,7 +178,7 @@ public class Collection {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCommerceCollectionResponse updateCommerceCollection(UpdateCommerceCollectionRequest request) {
+    public UpdateCommerceCollectionResponse updateCommerceCollection(@Nonnull UpdateCommerceCollectionRequest request) {
         RequestOperation<UpdateCommerceCollectionRequest, UpdateCommerceCollectionResponse> operation
               = new UpdateCommerceCollection.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

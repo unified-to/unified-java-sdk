@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceItemvariantRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceItemvariantRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceItemvariantResponse;
@@ -67,7 +68,7 @@ public class Itemvariant {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCommerceItemvariantResponse createCommerceItemvariant(CreateCommerceItemvariantRequest request) {
+    public CreateCommerceItemvariantResponse createCommerceItemvariant(@Nonnull CreateCommerceItemvariantRequest request) {
         RequestOperation<CreateCommerceItemvariantRequest, CreateCommerceItemvariantResponse> operation
               = new CreateCommerceItemvariant.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -89,7 +90,7 @@ public class Itemvariant {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetCommerceItemvariantResponse getCommerceItemvariant(GetCommerceItemvariantRequest request) {
+    public GetCommerceItemvariantResponse getCommerceItemvariant(@Nonnull GetCommerceItemvariantRequest request) {
         RequestOperation<GetCommerceItemvariantRequest, GetCommerceItemvariantResponse> operation
               = new GetCommerceItemvariant.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -111,7 +112,7 @@ public class Itemvariant {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCommerceItemvariantsResponse listCommerceItemvariants(ListCommerceItemvariantsRequest request) {
+    public ListCommerceItemvariantsResponse listCommerceItemvariants(@Nonnull ListCommerceItemvariantsRequest request) {
         RequestOperation<ListCommerceItemvariantsRequest, ListCommerceItemvariantsResponse> operation
               = new ListCommerceItemvariants.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -133,7 +134,7 @@ public class Itemvariant {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCommerceItemvariantResponse patchCommerceItemvariant(PatchCommerceItemvariantRequest request) {
+    public PatchCommerceItemvariantResponse patchCommerceItemvariant(@Nonnull PatchCommerceItemvariantRequest request) {
         RequestOperation<PatchCommerceItemvariantRequest, PatchCommerceItemvariantResponse> operation
               = new PatchCommerceItemvariant.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -155,7 +156,7 @@ public class Itemvariant {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCommerceItemvariantResponse removeCommerceItemvariant(RemoveCommerceItemvariantRequest request) {
+    public RemoveCommerceItemvariantResponse removeCommerceItemvariant(@Nonnull RemoveCommerceItemvariantRequest request) {
         RequestOperation<RemoveCommerceItemvariantRequest, RemoveCommerceItemvariantResponse> operation
               = new RemoveCommerceItemvariant.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -177,7 +178,7 @@ public class Itemvariant {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCommerceItemvariantResponse updateCommerceItemvariant(UpdateCommerceItemvariantRequest request) {
+    public UpdateCommerceItemvariantResponse updateCommerceItemvariant(@Nonnull UpdateCommerceItemvariantRequest request) {
         RequestOperation<UpdateCommerceItemvariantRequest, UpdateCommerceItemvariantResponse> operation
               = new UpdateCommerceItemvariant.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

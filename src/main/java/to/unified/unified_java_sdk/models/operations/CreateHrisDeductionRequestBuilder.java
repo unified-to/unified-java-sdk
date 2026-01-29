@@ -5,32 +5,45 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.CreateHrisDeduction;
 import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class CreateHrisDeductionRequestBuilder {
-
-    private CreateHrisDeductionRequest request;
     private final SDKConfiguration sdkConfiguration;
-    private final Headers _headers = new Headers(); 
+    private final Headers _headers = new Headers();
+    private CreateHrisDeductionRequest request;
 
     public CreateHrisDeductionRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
 
-    public CreateHrisDeductionRequestBuilder request(CreateHrisDeductionRequest request) {
-        Utils.checkNotNull(request, "request");
-        this.request = request;
+    public CreateHrisDeductionRequestBuilder request(@Nonnull CreateHrisDeductionRequest request) {
+        this.request = Utils.checkNotNull(request, "request");
         return this;
     }
 
+    private CreateHrisDeductionRequest _buildRequest() {
+        return this.request;
+    }
+    
+    public CreateHrisDeductionRequestBuilder header(String name, String value) {
+        Utils.checkNotNull(name, "name");
+        Utils.checkNotNull(value, "value");
+        this._headers.add(name, value);
+        return this;
+    }
+
+    /**
+    * Executes the request and returns the response.
+    *
+    * @return The response from the server.
+    */
     public CreateHrisDeductionResponse call() {
-        
         RequestOperation<CreateHrisDeductionRequest, CreateHrisDeductionResponse> operation
               = new CreateHrisDeduction.Sync(sdkConfiguration, _headers);
-
-        return operation.handleResponse(operation.doRequest(request));
+        return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

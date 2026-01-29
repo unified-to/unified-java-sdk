@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingAccountRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingAccountRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingAccountResponse;
@@ -403,7 +404,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAccountingAccountResponse createAccountingAccount(CreateAccountingAccountRequest request) {
+    public CreateAccountingAccountResponse createAccountingAccount(@Nonnull CreateAccountingAccountRequest request) {
         RequestOperation<CreateAccountingAccountRequest, CreateAccountingAccountResponse> operation
               = new CreateAccountingAccount.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -425,7 +426,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAccountingBillResponse createAccountingBill(CreateAccountingBillRequest request) {
+    public CreateAccountingBillResponse createAccountingBill(@Nonnull CreateAccountingBillRequest request) {
         RequestOperation<CreateAccountingBillRequest, CreateAccountingBillResponse> operation
               = new CreateAccountingBill.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -447,7 +448,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAccountingCategoryResponse createAccountingCategory(CreateAccountingCategoryRequest request) {
+    public CreateAccountingCategoryResponse createAccountingCategory(@Nonnull CreateAccountingCategoryRequest request) {
         RequestOperation<CreateAccountingCategoryRequest, CreateAccountingCategoryResponse> operation
               = new CreateAccountingCategory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -469,7 +470,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAccountingContactResponse createAccountingContact(CreateAccountingContactRequest request) {
+    public CreateAccountingContactResponse createAccountingContact(@Nonnull CreateAccountingContactRequest request) {
         RequestOperation<CreateAccountingContactRequest, CreateAccountingContactResponse> operation
               = new CreateAccountingContact.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -491,7 +492,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAccountingCreditmemoResponse createAccountingCreditmemo(CreateAccountingCreditmemoRequest request) {
+    public CreateAccountingCreditmemoResponse createAccountingCreditmemo(@Nonnull CreateAccountingCreditmemoRequest request) {
         RequestOperation<CreateAccountingCreditmemoRequest, CreateAccountingCreditmemoResponse> operation
               = new CreateAccountingCreditmemo.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -513,7 +514,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAccountingExpenseResponse createAccountingExpense(CreateAccountingExpenseRequest request) {
+    public CreateAccountingExpenseResponse createAccountingExpense(@Nonnull CreateAccountingExpenseRequest request) {
         RequestOperation<CreateAccountingExpenseRequest, CreateAccountingExpenseResponse> operation
               = new CreateAccountingExpense.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -535,7 +536,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAccountingInvoiceResponse createAccountingInvoice(CreateAccountingInvoiceRequest request) {
+    public CreateAccountingInvoiceResponse createAccountingInvoice(@Nonnull CreateAccountingInvoiceRequest request) {
         RequestOperation<CreateAccountingInvoiceRequest, CreateAccountingInvoiceResponse> operation
               = new CreateAccountingInvoice.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -557,7 +558,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAccountingJournalResponse createAccountingJournal(CreateAccountingJournalRequest request) {
+    public CreateAccountingJournalResponse createAccountingJournal(@Nonnull CreateAccountingJournalRequest request) {
         RequestOperation<CreateAccountingJournalRequest, CreateAccountingJournalResponse> operation
               = new CreateAccountingJournal.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -579,7 +580,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAccountingOrderResponse createAccountingOrder(CreateAccountingOrderRequest request) {
+    public CreateAccountingOrderResponse createAccountingOrder(@Nonnull CreateAccountingOrderRequest request) {
         RequestOperation<CreateAccountingOrderRequest, CreateAccountingOrderResponse> operation
               = new CreateAccountingOrder.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -601,7 +602,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAccountingPurchaseorderResponse createAccountingPurchaseorder(CreateAccountingPurchaseorderRequest request) {
+    public CreateAccountingPurchaseorderResponse createAccountingPurchaseorder(@Nonnull CreateAccountingPurchaseorderRequest request) {
         RequestOperation<CreateAccountingPurchaseorderRequest, CreateAccountingPurchaseorderResponse> operation
               = new CreateAccountingPurchaseorder.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -623,7 +624,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAccountingSalesorderResponse createAccountingSalesorder(CreateAccountingSalesorderRequest request) {
+    public CreateAccountingSalesorderResponse createAccountingSalesorder(@Nonnull CreateAccountingSalesorderRequest request) {
         RequestOperation<CreateAccountingSalesorderRequest, CreateAccountingSalesorderResponse> operation
               = new CreateAccountingSalesorder.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -645,7 +646,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAccountingTaxrateResponse createAccountingTaxrate(CreateAccountingTaxrateRequest request) {
+    public CreateAccountingTaxrateResponse createAccountingTaxrate(@Nonnull CreateAccountingTaxrateRequest request) {
         RequestOperation<CreateAccountingTaxrateRequest, CreateAccountingTaxrateResponse> operation
               = new CreateAccountingTaxrate.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -667,7 +668,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAccountingTransactionResponse createAccountingTransaction(CreateAccountingTransactionRequest request) {
+    public CreateAccountingTransactionResponse createAccountingTransaction(@Nonnull CreateAccountingTransactionRequest request) {
         RequestOperation<CreateAccountingTransactionRequest, CreateAccountingTransactionResponse> operation
               = new CreateAccountingTransaction.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -689,7 +690,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingAccountResponse getAccountingAccount(GetAccountingAccountRequest request) {
+    public GetAccountingAccountResponse getAccountingAccount(@Nonnull GetAccountingAccountRequest request) {
         RequestOperation<GetAccountingAccountRequest, GetAccountingAccountResponse> operation
               = new GetAccountingAccount.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -711,7 +712,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingBalancesheetResponse getAccountingBalancesheet(GetAccountingBalancesheetRequest request) {
+    public GetAccountingBalancesheetResponse getAccountingBalancesheet(@Nonnull GetAccountingBalancesheetRequest request) {
         RequestOperation<GetAccountingBalancesheetRequest, GetAccountingBalancesheetResponse> operation
               = new GetAccountingBalancesheet.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -733,7 +734,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingBillResponse getAccountingBill(GetAccountingBillRequest request) {
+    public GetAccountingBillResponse getAccountingBill(@Nonnull GetAccountingBillRequest request) {
         RequestOperation<GetAccountingBillRequest, GetAccountingBillResponse> operation
               = new GetAccountingBill.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -755,7 +756,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingCashflowResponse getAccountingCashflow(GetAccountingCashflowRequest request) {
+    public GetAccountingCashflowResponse getAccountingCashflow(@Nonnull GetAccountingCashflowRequest request) {
         RequestOperation<GetAccountingCashflowRequest, GetAccountingCashflowResponse> operation
               = new GetAccountingCashflow.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -777,7 +778,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingCategoryResponse getAccountingCategory(GetAccountingCategoryRequest request) {
+    public GetAccountingCategoryResponse getAccountingCategory(@Nonnull GetAccountingCategoryRequest request) {
         RequestOperation<GetAccountingCategoryRequest, GetAccountingCategoryResponse> operation
               = new GetAccountingCategory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -799,7 +800,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingContactResponse getAccountingContact(GetAccountingContactRequest request) {
+    public GetAccountingContactResponse getAccountingContact(@Nonnull GetAccountingContactRequest request) {
         RequestOperation<GetAccountingContactRequest, GetAccountingContactResponse> operation
               = new GetAccountingContact.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -821,7 +822,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingCreditmemoResponse getAccountingCreditmemo(GetAccountingCreditmemoRequest request) {
+    public GetAccountingCreditmemoResponse getAccountingCreditmemo(@Nonnull GetAccountingCreditmemoRequest request) {
         RequestOperation<GetAccountingCreditmemoRequest, GetAccountingCreditmemoResponse> operation
               = new GetAccountingCreditmemo.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -843,7 +844,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingExpenseResponse getAccountingExpense(GetAccountingExpenseRequest request) {
+    public GetAccountingExpenseResponse getAccountingExpense(@Nonnull GetAccountingExpenseRequest request) {
         RequestOperation<GetAccountingExpenseRequest, GetAccountingExpenseResponse> operation
               = new GetAccountingExpense.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -865,7 +866,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingInvoiceResponse getAccountingInvoice(GetAccountingInvoiceRequest request) {
+    public GetAccountingInvoiceResponse getAccountingInvoice(@Nonnull GetAccountingInvoiceRequest request) {
         RequestOperation<GetAccountingInvoiceRequest, GetAccountingInvoiceResponse> operation
               = new GetAccountingInvoice.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -887,7 +888,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingJournalResponse getAccountingJournal(GetAccountingJournalRequest request) {
+    public GetAccountingJournalResponse getAccountingJournal(@Nonnull GetAccountingJournalRequest request) {
         RequestOperation<GetAccountingJournalRequest, GetAccountingJournalResponse> operation
               = new GetAccountingJournal.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -909,7 +910,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingOrderResponse getAccountingOrder(GetAccountingOrderRequest request) {
+    public GetAccountingOrderResponse getAccountingOrder(@Nonnull GetAccountingOrderRequest request) {
         RequestOperation<GetAccountingOrderRequest, GetAccountingOrderResponse> operation
               = new GetAccountingOrder.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -931,7 +932,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingOrganizationResponse getAccountingOrganization(GetAccountingOrganizationRequest request) {
+    public GetAccountingOrganizationResponse getAccountingOrganization(@Nonnull GetAccountingOrganizationRequest request) {
         RequestOperation<GetAccountingOrganizationRequest, GetAccountingOrganizationResponse> operation
               = new GetAccountingOrganization.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -953,7 +954,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingProfitlossResponse getAccountingProfitloss(GetAccountingProfitlossRequest request) {
+    public GetAccountingProfitlossResponse getAccountingProfitloss(@Nonnull GetAccountingProfitlossRequest request) {
         RequestOperation<GetAccountingProfitlossRequest, GetAccountingProfitlossResponse> operation
               = new GetAccountingProfitloss.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -975,7 +976,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingPurchaseorderResponse getAccountingPurchaseorder(GetAccountingPurchaseorderRequest request) {
+    public GetAccountingPurchaseorderResponse getAccountingPurchaseorder(@Nonnull GetAccountingPurchaseorderRequest request) {
         RequestOperation<GetAccountingPurchaseorderRequest, GetAccountingPurchaseorderResponse> operation
               = new GetAccountingPurchaseorder.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -997,7 +998,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingReportResponse getAccountingReport(GetAccountingReportRequest request) {
+    public GetAccountingReportResponse getAccountingReport(@Nonnull GetAccountingReportRequest request) {
         RequestOperation<GetAccountingReportRequest, GetAccountingReportResponse> operation
               = new GetAccountingReport.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1019,7 +1020,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingSalesorderResponse getAccountingSalesorder(GetAccountingSalesorderRequest request) {
+    public GetAccountingSalesorderResponse getAccountingSalesorder(@Nonnull GetAccountingSalesorderRequest request) {
         RequestOperation<GetAccountingSalesorderRequest, GetAccountingSalesorderResponse> operation
               = new GetAccountingSalesorder.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1041,7 +1042,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingTaxrateResponse getAccountingTaxrate(GetAccountingTaxrateRequest request) {
+    public GetAccountingTaxrateResponse getAccountingTaxrate(@Nonnull GetAccountingTaxrateRequest request) {
         RequestOperation<GetAccountingTaxrateRequest, GetAccountingTaxrateResponse> operation
               = new GetAccountingTaxrate.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1063,7 +1064,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingTransactionResponse getAccountingTransaction(GetAccountingTransactionRequest request) {
+    public GetAccountingTransactionResponse getAccountingTransaction(@Nonnull GetAccountingTransactionRequest request) {
         RequestOperation<GetAccountingTransactionRequest, GetAccountingTransactionResponse> operation
               = new GetAccountingTransaction.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1085,7 +1086,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingTrialbalanceResponse getAccountingTrialbalance(GetAccountingTrialbalanceRequest request) {
+    public GetAccountingTrialbalanceResponse getAccountingTrialbalance(@Nonnull GetAccountingTrialbalanceRequest request) {
         RequestOperation<GetAccountingTrialbalanceRequest, GetAccountingTrialbalanceResponse> operation
               = new GetAccountingTrialbalance.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1107,7 +1108,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingAccountsResponse listAccountingAccounts(ListAccountingAccountsRequest request) {
+    public ListAccountingAccountsResponse listAccountingAccounts(@Nonnull ListAccountingAccountsRequest request) {
         RequestOperation<ListAccountingAccountsRequest, ListAccountingAccountsResponse> operation
               = new ListAccountingAccounts.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1129,7 +1130,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingBalancesheetsResponse listAccountingBalancesheets(ListAccountingBalancesheetsRequest request) {
+    public ListAccountingBalancesheetsResponse listAccountingBalancesheets(@Nonnull ListAccountingBalancesheetsRequest request) {
         RequestOperation<ListAccountingBalancesheetsRequest, ListAccountingBalancesheetsResponse> operation
               = new ListAccountingBalancesheets.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1151,7 +1152,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingBillsResponse listAccountingBills(ListAccountingBillsRequest request) {
+    public ListAccountingBillsResponse listAccountingBills(@Nonnull ListAccountingBillsRequest request) {
         RequestOperation<ListAccountingBillsRequest, ListAccountingBillsResponse> operation
               = new ListAccountingBills.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1173,7 +1174,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingCashflowsResponse listAccountingCashflows(ListAccountingCashflowsRequest request) {
+    public ListAccountingCashflowsResponse listAccountingCashflows(@Nonnull ListAccountingCashflowsRequest request) {
         RequestOperation<ListAccountingCashflowsRequest, ListAccountingCashflowsResponse> operation
               = new ListAccountingCashflows.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1195,7 +1196,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingCategoriesResponse listAccountingCategories(ListAccountingCategoriesRequest request) {
+    public ListAccountingCategoriesResponse listAccountingCategories(@Nonnull ListAccountingCategoriesRequest request) {
         RequestOperation<ListAccountingCategoriesRequest, ListAccountingCategoriesResponse> operation
               = new ListAccountingCategories.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1217,7 +1218,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingContactsResponse listAccountingContacts(ListAccountingContactsRequest request) {
+    public ListAccountingContactsResponse listAccountingContacts(@Nonnull ListAccountingContactsRequest request) {
         RequestOperation<ListAccountingContactsRequest, ListAccountingContactsResponse> operation
               = new ListAccountingContacts.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1239,7 +1240,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingCreditmemoesResponse listAccountingCreditmemoes(ListAccountingCreditmemoesRequest request) {
+    public ListAccountingCreditmemoesResponse listAccountingCreditmemoes(@Nonnull ListAccountingCreditmemoesRequest request) {
         RequestOperation<ListAccountingCreditmemoesRequest, ListAccountingCreditmemoesResponse> operation
               = new ListAccountingCreditmemoes.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1261,7 +1262,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingExpensesResponse listAccountingExpenses(ListAccountingExpensesRequest request) {
+    public ListAccountingExpensesResponse listAccountingExpenses(@Nonnull ListAccountingExpensesRequest request) {
         RequestOperation<ListAccountingExpensesRequest, ListAccountingExpensesResponse> operation
               = new ListAccountingExpenses.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1283,7 +1284,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingInvoicesResponse listAccountingInvoices(ListAccountingInvoicesRequest request) {
+    public ListAccountingInvoicesResponse listAccountingInvoices(@Nonnull ListAccountingInvoicesRequest request) {
         RequestOperation<ListAccountingInvoicesRequest, ListAccountingInvoicesResponse> operation
               = new ListAccountingInvoices.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1305,7 +1306,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingJournalsResponse listAccountingJournals(ListAccountingJournalsRequest request) {
+    public ListAccountingJournalsResponse listAccountingJournals(@Nonnull ListAccountingJournalsRequest request) {
         RequestOperation<ListAccountingJournalsRequest, ListAccountingJournalsResponse> operation
               = new ListAccountingJournals.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1327,7 +1328,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingOrdersResponse listAccountingOrders(ListAccountingOrdersRequest request) {
+    public ListAccountingOrdersResponse listAccountingOrders(@Nonnull ListAccountingOrdersRequest request) {
         RequestOperation<ListAccountingOrdersRequest, ListAccountingOrdersResponse> operation
               = new ListAccountingOrders.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1349,7 +1350,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingOrganizationsResponse listAccountingOrganizations(ListAccountingOrganizationsRequest request) {
+    public ListAccountingOrganizationsResponse listAccountingOrganizations(@Nonnull ListAccountingOrganizationsRequest request) {
         RequestOperation<ListAccountingOrganizationsRequest, ListAccountingOrganizationsResponse> operation
               = new ListAccountingOrganizations.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1371,7 +1372,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingProfitlossesResponse listAccountingProfitlosses(ListAccountingProfitlossesRequest request) {
+    public ListAccountingProfitlossesResponse listAccountingProfitlosses(@Nonnull ListAccountingProfitlossesRequest request) {
         RequestOperation<ListAccountingProfitlossesRequest, ListAccountingProfitlossesResponse> operation
               = new ListAccountingProfitlosses.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1393,7 +1394,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingPurchaseordersResponse listAccountingPurchaseorders(ListAccountingPurchaseordersRequest request) {
+    public ListAccountingPurchaseordersResponse listAccountingPurchaseorders(@Nonnull ListAccountingPurchaseordersRequest request) {
         RequestOperation<ListAccountingPurchaseordersRequest, ListAccountingPurchaseordersResponse> operation
               = new ListAccountingPurchaseorders.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1415,7 +1416,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingReportsResponse listAccountingReports(ListAccountingReportsRequest request) {
+    public ListAccountingReportsResponse listAccountingReports(@Nonnull ListAccountingReportsRequest request) {
         RequestOperation<ListAccountingReportsRequest, ListAccountingReportsResponse> operation
               = new ListAccountingReports.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1437,7 +1438,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingSalesordersResponse listAccountingSalesorders(ListAccountingSalesordersRequest request) {
+    public ListAccountingSalesordersResponse listAccountingSalesorders(@Nonnull ListAccountingSalesordersRequest request) {
         RequestOperation<ListAccountingSalesordersRequest, ListAccountingSalesordersResponse> operation
               = new ListAccountingSalesorders.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1459,7 +1460,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingTaxratesResponse listAccountingTaxrates(ListAccountingTaxratesRequest request) {
+    public ListAccountingTaxratesResponse listAccountingTaxrates(@Nonnull ListAccountingTaxratesRequest request) {
         RequestOperation<ListAccountingTaxratesRequest, ListAccountingTaxratesResponse> operation
               = new ListAccountingTaxrates.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1481,7 +1482,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingTransactionsResponse listAccountingTransactions(ListAccountingTransactionsRequest request) {
+    public ListAccountingTransactionsResponse listAccountingTransactions(@Nonnull ListAccountingTransactionsRequest request) {
         RequestOperation<ListAccountingTransactionsRequest, ListAccountingTransactionsResponse> operation
               = new ListAccountingTransactions.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1503,7 +1504,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingTrialbalancesResponse listAccountingTrialbalances(ListAccountingTrialbalancesRequest request) {
+    public ListAccountingTrialbalancesResponse listAccountingTrialbalances(@Nonnull ListAccountingTrialbalancesRequest request) {
         RequestOperation<ListAccountingTrialbalancesRequest, ListAccountingTrialbalancesResponse> operation
               = new ListAccountingTrialbalances.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1525,7 +1526,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAccountingAccountResponse patchAccountingAccount(PatchAccountingAccountRequest request) {
+    public PatchAccountingAccountResponse patchAccountingAccount(@Nonnull PatchAccountingAccountRequest request) {
         RequestOperation<PatchAccountingAccountRequest, PatchAccountingAccountResponse> operation
               = new PatchAccountingAccount.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1547,7 +1548,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAccountingBillResponse patchAccountingBill(PatchAccountingBillRequest request) {
+    public PatchAccountingBillResponse patchAccountingBill(@Nonnull PatchAccountingBillRequest request) {
         RequestOperation<PatchAccountingBillRequest, PatchAccountingBillResponse> operation
               = new PatchAccountingBill.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1569,7 +1570,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAccountingCategoryResponse patchAccountingCategory(PatchAccountingCategoryRequest request) {
+    public PatchAccountingCategoryResponse patchAccountingCategory(@Nonnull PatchAccountingCategoryRequest request) {
         RequestOperation<PatchAccountingCategoryRequest, PatchAccountingCategoryResponse> operation
               = new PatchAccountingCategory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1591,7 +1592,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAccountingContactResponse patchAccountingContact(PatchAccountingContactRequest request) {
+    public PatchAccountingContactResponse patchAccountingContact(@Nonnull PatchAccountingContactRequest request) {
         RequestOperation<PatchAccountingContactRequest, PatchAccountingContactResponse> operation
               = new PatchAccountingContact.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1613,7 +1614,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAccountingCreditmemoResponse patchAccountingCreditmemo(PatchAccountingCreditmemoRequest request) {
+    public PatchAccountingCreditmemoResponse patchAccountingCreditmemo(@Nonnull PatchAccountingCreditmemoRequest request) {
         RequestOperation<PatchAccountingCreditmemoRequest, PatchAccountingCreditmemoResponse> operation
               = new PatchAccountingCreditmemo.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1635,7 +1636,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAccountingExpenseResponse patchAccountingExpense(PatchAccountingExpenseRequest request) {
+    public PatchAccountingExpenseResponse patchAccountingExpense(@Nonnull PatchAccountingExpenseRequest request) {
         RequestOperation<PatchAccountingExpenseRequest, PatchAccountingExpenseResponse> operation
               = new PatchAccountingExpense.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1657,7 +1658,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAccountingInvoiceResponse patchAccountingInvoice(PatchAccountingInvoiceRequest request) {
+    public PatchAccountingInvoiceResponse patchAccountingInvoice(@Nonnull PatchAccountingInvoiceRequest request) {
         RequestOperation<PatchAccountingInvoiceRequest, PatchAccountingInvoiceResponse> operation
               = new PatchAccountingInvoice.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1679,7 +1680,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAccountingJournalResponse patchAccountingJournal(PatchAccountingJournalRequest request) {
+    public PatchAccountingJournalResponse patchAccountingJournal(@Nonnull PatchAccountingJournalRequest request) {
         RequestOperation<PatchAccountingJournalRequest, PatchAccountingJournalResponse> operation
               = new PatchAccountingJournal.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1701,7 +1702,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAccountingOrderResponse patchAccountingOrder(PatchAccountingOrderRequest request) {
+    public PatchAccountingOrderResponse patchAccountingOrder(@Nonnull PatchAccountingOrderRequest request) {
         RequestOperation<PatchAccountingOrderRequest, PatchAccountingOrderResponse> operation
               = new PatchAccountingOrder.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1723,7 +1724,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAccountingPurchaseorderResponse patchAccountingPurchaseorder(PatchAccountingPurchaseorderRequest request) {
+    public PatchAccountingPurchaseorderResponse patchAccountingPurchaseorder(@Nonnull PatchAccountingPurchaseorderRequest request) {
         RequestOperation<PatchAccountingPurchaseorderRequest, PatchAccountingPurchaseorderResponse> operation
               = new PatchAccountingPurchaseorder.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1745,7 +1746,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAccountingSalesorderResponse patchAccountingSalesorder(PatchAccountingSalesorderRequest request) {
+    public PatchAccountingSalesorderResponse patchAccountingSalesorder(@Nonnull PatchAccountingSalesorderRequest request) {
         RequestOperation<PatchAccountingSalesorderRequest, PatchAccountingSalesorderResponse> operation
               = new PatchAccountingSalesorder.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1767,7 +1768,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAccountingTaxrateResponse patchAccountingTaxrate(PatchAccountingTaxrateRequest request) {
+    public PatchAccountingTaxrateResponse patchAccountingTaxrate(@Nonnull PatchAccountingTaxrateRequest request) {
         RequestOperation<PatchAccountingTaxrateRequest, PatchAccountingTaxrateResponse> operation
               = new PatchAccountingTaxrate.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1789,7 +1790,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAccountingTransactionResponse patchAccountingTransaction(PatchAccountingTransactionRequest request) {
+    public PatchAccountingTransactionResponse patchAccountingTransaction(@Nonnull PatchAccountingTransactionRequest request) {
         RequestOperation<PatchAccountingTransactionRequest, PatchAccountingTransactionResponse> operation
               = new PatchAccountingTransaction.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1811,7 +1812,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAccountingAccountResponse removeAccountingAccount(RemoveAccountingAccountRequest request) {
+    public RemoveAccountingAccountResponse removeAccountingAccount(@Nonnull RemoveAccountingAccountRequest request) {
         RequestOperation<RemoveAccountingAccountRequest, RemoveAccountingAccountResponse> operation
               = new RemoveAccountingAccount.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1833,7 +1834,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAccountingBillResponse removeAccountingBill(RemoveAccountingBillRequest request) {
+    public RemoveAccountingBillResponse removeAccountingBill(@Nonnull RemoveAccountingBillRequest request) {
         RequestOperation<RemoveAccountingBillRequest, RemoveAccountingBillResponse> operation
               = new RemoveAccountingBill.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1855,7 +1856,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAccountingCategoryResponse removeAccountingCategory(RemoveAccountingCategoryRequest request) {
+    public RemoveAccountingCategoryResponse removeAccountingCategory(@Nonnull RemoveAccountingCategoryRequest request) {
         RequestOperation<RemoveAccountingCategoryRequest, RemoveAccountingCategoryResponse> operation
               = new RemoveAccountingCategory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1877,7 +1878,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAccountingContactResponse removeAccountingContact(RemoveAccountingContactRequest request) {
+    public RemoveAccountingContactResponse removeAccountingContact(@Nonnull RemoveAccountingContactRequest request) {
         RequestOperation<RemoveAccountingContactRequest, RemoveAccountingContactResponse> operation
               = new RemoveAccountingContact.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1899,7 +1900,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAccountingCreditmemoResponse removeAccountingCreditmemo(RemoveAccountingCreditmemoRequest request) {
+    public RemoveAccountingCreditmemoResponse removeAccountingCreditmemo(@Nonnull RemoveAccountingCreditmemoRequest request) {
         RequestOperation<RemoveAccountingCreditmemoRequest, RemoveAccountingCreditmemoResponse> operation
               = new RemoveAccountingCreditmemo.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1921,7 +1922,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAccountingExpenseResponse removeAccountingExpense(RemoveAccountingExpenseRequest request) {
+    public RemoveAccountingExpenseResponse removeAccountingExpense(@Nonnull RemoveAccountingExpenseRequest request) {
         RequestOperation<RemoveAccountingExpenseRequest, RemoveAccountingExpenseResponse> operation
               = new RemoveAccountingExpense.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1943,7 +1944,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAccountingInvoiceResponse removeAccountingInvoice(RemoveAccountingInvoiceRequest request) {
+    public RemoveAccountingInvoiceResponse removeAccountingInvoice(@Nonnull RemoveAccountingInvoiceRequest request) {
         RequestOperation<RemoveAccountingInvoiceRequest, RemoveAccountingInvoiceResponse> operation
               = new RemoveAccountingInvoice.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1965,7 +1966,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAccountingJournalResponse removeAccountingJournal(RemoveAccountingJournalRequest request) {
+    public RemoveAccountingJournalResponse removeAccountingJournal(@Nonnull RemoveAccountingJournalRequest request) {
         RequestOperation<RemoveAccountingJournalRequest, RemoveAccountingJournalResponse> operation
               = new RemoveAccountingJournal.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1987,7 +1988,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAccountingOrderResponse removeAccountingOrder(RemoveAccountingOrderRequest request) {
+    public RemoveAccountingOrderResponse removeAccountingOrder(@Nonnull RemoveAccountingOrderRequest request) {
         RequestOperation<RemoveAccountingOrderRequest, RemoveAccountingOrderResponse> operation
               = new RemoveAccountingOrder.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -2009,7 +2010,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAccountingPurchaseorderResponse removeAccountingPurchaseorder(RemoveAccountingPurchaseorderRequest request) {
+    public RemoveAccountingPurchaseorderResponse removeAccountingPurchaseorder(@Nonnull RemoveAccountingPurchaseorderRequest request) {
         RequestOperation<RemoveAccountingPurchaseorderRequest, RemoveAccountingPurchaseorderResponse> operation
               = new RemoveAccountingPurchaseorder.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -2031,7 +2032,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAccountingSalesorderResponse removeAccountingSalesorder(RemoveAccountingSalesorderRequest request) {
+    public RemoveAccountingSalesorderResponse removeAccountingSalesorder(@Nonnull RemoveAccountingSalesorderRequest request) {
         RequestOperation<RemoveAccountingSalesorderRequest, RemoveAccountingSalesorderResponse> operation
               = new RemoveAccountingSalesorder.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -2053,7 +2054,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAccountingTaxrateResponse removeAccountingTaxrate(RemoveAccountingTaxrateRequest request) {
+    public RemoveAccountingTaxrateResponse removeAccountingTaxrate(@Nonnull RemoveAccountingTaxrateRequest request) {
         RequestOperation<RemoveAccountingTaxrateRequest, RemoveAccountingTaxrateResponse> operation
               = new RemoveAccountingTaxrate.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -2075,7 +2076,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAccountingTransactionResponse removeAccountingTransaction(RemoveAccountingTransactionRequest request) {
+    public RemoveAccountingTransactionResponse removeAccountingTransaction(@Nonnull RemoveAccountingTransactionRequest request) {
         RequestOperation<RemoveAccountingTransactionRequest, RemoveAccountingTransactionResponse> operation
               = new RemoveAccountingTransaction.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -2097,7 +2098,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAccountingAccountResponse updateAccountingAccount(UpdateAccountingAccountRequest request) {
+    public UpdateAccountingAccountResponse updateAccountingAccount(@Nonnull UpdateAccountingAccountRequest request) {
         RequestOperation<UpdateAccountingAccountRequest, UpdateAccountingAccountResponse> operation
               = new UpdateAccountingAccount.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -2119,7 +2120,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAccountingBillResponse updateAccountingBill(UpdateAccountingBillRequest request) {
+    public UpdateAccountingBillResponse updateAccountingBill(@Nonnull UpdateAccountingBillRequest request) {
         RequestOperation<UpdateAccountingBillRequest, UpdateAccountingBillResponse> operation
               = new UpdateAccountingBill.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -2141,7 +2142,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAccountingCategoryResponse updateAccountingCategory(UpdateAccountingCategoryRequest request) {
+    public UpdateAccountingCategoryResponse updateAccountingCategory(@Nonnull UpdateAccountingCategoryRequest request) {
         RequestOperation<UpdateAccountingCategoryRequest, UpdateAccountingCategoryResponse> operation
               = new UpdateAccountingCategory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -2163,7 +2164,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAccountingContactResponse updateAccountingContact(UpdateAccountingContactRequest request) {
+    public UpdateAccountingContactResponse updateAccountingContact(@Nonnull UpdateAccountingContactRequest request) {
         RequestOperation<UpdateAccountingContactRequest, UpdateAccountingContactResponse> operation
               = new UpdateAccountingContact.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -2185,7 +2186,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAccountingCreditmemoResponse updateAccountingCreditmemo(UpdateAccountingCreditmemoRequest request) {
+    public UpdateAccountingCreditmemoResponse updateAccountingCreditmemo(@Nonnull UpdateAccountingCreditmemoRequest request) {
         RequestOperation<UpdateAccountingCreditmemoRequest, UpdateAccountingCreditmemoResponse> operation
               = new UpdateAccountingCreditmemo.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -2207,7 +2208,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAccountingExpenseResponse updateAccountingExpense(UpdateAccountingExpenseRequest request) {
+    public UpdateAccountingExpenseResponse updateAccountingExpense(@Nonnull UpdateAccountingExpenseRequest request) {
         RequestOperation<UpdateAccountingExpenseRequest, UpdateAccountingExpenseResponse> operation
               = new UpdateAccountingExpense.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -2229,7 +2230,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAccountingInvoiceResponse updateAccountingInvoice(UpdateAccountingInvoiceRequest request) {
+    public UpdateAccountingInvoiceResponse updateAccountingInvoice(@Nonnull UpdateAccountingInvoiceRequest request) {
         RequestOperation<UpdateAccountingInvoiceRequest, UpdateAccountingInvoiceResponse> operation
               = new UpdateAccountingInvoice.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -2251,7 +2252,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAccountingJournalResponse updateAccountingJournal(UpdateAccountingJournalRequest request) {
+    public UpdateAccountingJournalResponse updateAccountingJournal(@Nonnull UpdateAccountingJournalRequest request) {
         RequestOperation<UpdateAccountingJournalRequest, UpdateAccountingJournalResponse> operation
               = new UpdateAccountingJournal.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -2273,7 +2274,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAccountingOrderResponse updateAccountingOrder(UpdateAccountingOrderRequest request) {
+    public UpdateAccountingOrderResponse updateAccountingOrder(@Nonnull UpdateAccountingOrderRequest request) {
         RequestOperation<UpdateAccountingOrderRequest, UpdateAccountingOrderResponse> operation
               = new UpdateAccountingOrder.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -2295,7 +2296,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAccountingPurchaseorderResponse updateAccountingPurchaseorder(UpdateAccountingPurchaseorderRequest request) {
+    public UpdateAccountingPurchaseorderResponse updateAccountingPurchaseorder(@Nonnull UpdateAccountingPurchaseorderRequest request) {
         RequestOperation<UpdateAccountingPurchaseorderRequest, UpdateAccountingPurchaseorderResponse> operation
               = new UpdateAccountingPurchaseorder.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -2317,7 +2318,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAccountingSalesorderResponse updateAccountingSalesorder(UpdateAccountingSalesorderRequest request) {
+    public UpdateAccountingSalesorderResponse updateAccountingSalesorder(@Nonnull UpdateAccountingSalesorderRequest request) {
         RequestOperation<UpdateAccountingSalesorderRequest, UpdateAccountingSalesorderResponse> operation
               = new UpdateAccountingSalesorder.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -2339,7 +2340,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAccountingTaxrateResponse updateAccountingTaxrate(UpdateAccountingTaxrateRequest request) {
+    public UpdateAccountingTaxrateResponse updateAccountingTaxrate(@Nonnull UpdateAccountingTaxrateRequest request) {
         RequestOperation<UpdateAccountingTaxrateRequest, UpdateAccountingTaxrateResponse> operation
               = new UpdateAccountingTaxrate.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -2361,7 +2362,7 @@ public class Accounting {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAccountingTransactionResponse updateAccountingTransaction(UpdateAccountingTransactionRequest request) {
+    public UpdateAccountingTransactionResponse updateAccountingTransaction(@Nonnull UpdateAccountingTransactionRequest request) {
         RequestOperation<UpdateAccountingTransactionRequest, UpdateAccountingTransactionResponse> operation
               = new UpdateAccountingTransaction.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

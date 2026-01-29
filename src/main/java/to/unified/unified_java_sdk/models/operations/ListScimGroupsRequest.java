@@ -4,7 +4,8 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
@@ -22,39 +23,34 @@ public class ListScimGroupsRequest {
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
-    private Optional<Double> count;
+    private Double count;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
-    private Optional<String> filter;
+    private String filter;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortBy")
-    private Optional<String> sortBy;
+    private String sortBy;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortOrder")
-    private Optional<String> sortOrder;
+    private String sortOrder;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startIndex")
-    private Optional<Double> startIndex;
+    private Double startIndex;
 
     @JsonCreator
     public ListScimGroupsRequest(
-            String connectionId,
-            Optional<Double> count,
-            Optional<String> filter,
-            Optional<String> sortBy,
-            Optional<String> sortOrder,
-            Optional<Double> startIndex) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(count, "count");
-        Utils.checkNotNull(filter, "filter");
-        Utils.checkNotNull(sortBy, "sortBy");
-        Utils.checkNotNull(sortOrder, "sortOrder");
-        Utils.checkNotNull(startIndex, "startIndex");
-        this.connectionId = connectionId;
+            @Nonnull String connectionId,
+            @Nullable Double count,
+            @Nullable String filter,
+            @Nullable String sortBy,
+            @Nullable String sortOrder,
+            @Nullable Double startIndex) {
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.count = count;
         this.filter = filter;
         this.sortBy = sortBy;
@@ -63,42 +59,36 @@ public class ListScimGroupsRequest {
     }
     
     public ListScimGroupsRequest(
-            String connectionId) {
-        this(connectionId, Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+            @Nonnull String connectionId) {
+        this(connectionId, null, null,
+            null, null, null);
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
-    @JsonIgnore
     public Optional<Double> count() {
-        return count;
+        return Optional.ofNullable(this.count);
     }
 
-    @JsonIgnore
     public Optional<String> filter() {
-        return filter;
+        return Optional.ofNullable(this.filter);
     }
 
-    @JsonIgnore
     public Optional<String> sortBy() {
-        return sortBy;
+        return Optional.ofNullable(this.sortBy);
     }
 
-    @JsonIgnore
     public Optional<String> sortOrder() {
-        return sortOrder;
+        return Optional.ofNullable(this.sortOrder);
     }
 
-    @JsonIgnore
     public Optional<Double> startIndex() {
-        return startIndex;
+        return Optional.ofNullable(this.startIndex);
     }
 
     public static Builder builder() {
@@ -109,76 +99,41 @@ public class ListScimGroupsRequest {
     /**
      * ID of the connection
      */
-    public ListScimGroupsRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    public ListScimGroupsRequest withCount(double count) {
-        Utils.checkNotNull(count, "count");
-        this.count = Optional.ofNullable(count);
+    public ListScimGroupsRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
 
-    public ListScimGroupsRequest withCount(Optional<Double> count) {
-        Utils.checkNotNull(count, "count");
+    public ListScimGroupsRequest withCount(@Nullable Double count) {
         this.count = count;
         return this;
     }
 
-    public ListScimGroupsRequest withFilter(String filter) {
-        Utils.checkNotNull(filter, "filter");
-        this.filter = Optional.ofNullable(filter);
-        return this;
-    }
 
-
-    public ListScimGroupsRequest withFilter(Optional<String> filter) {
-        Utils.checkNotNull(filter, "filter");
+    public ListScimGroupsRequest withFilter(@Nullable String filter) {
         this.filter = filter;
         return this;
     }
 
-    public ListScimGroupsRequest withSortBy(String sortBy) {
-        Utils.checkNotNull(sortBy, "sortBy");
-        this.sortBy = Optional.ofNullable(sortBy);
-        return this;
-    }
 
-
-    public ListScimGroupsRequest withSortBy(Optional<String> sortBy) {
-        Utils.checkNotNull(sortBy, "sortBy");
+    public ListScimGroupsRequest withSortBy(@Nullable String sortBy) {
         this.sortBy = sortBy;
         return this;
     }
 
-    public ListScimGroupsRequest withSortOrder(String sortOrder) {
-        Utils.checkNotNull(sortOrder, "sortOrder");
-        this.sortOrder = Optional.ofNullable(sortOrder);
-        return this;
-    }
 
-
-    public ListScimGroupsRequest withSortOrder(Optional<String> sortOrder) {
-        Utils.checkNotNull(sortOrder, "sortOrder");
+    public ListScimGroupsRequest withSortOrder(@Nullable String sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
 
-    public ListScimGroupsRequest withStartIndex(double startIndex) {
-        Utils.checkNotNull(startIndex, "startIndex");
-        this.startIndex = Optional.ofNullable(startIndex);
-        return this;
-    }
 
-
-    public ListScimGroupsRequest withStartIndex(Optional<Double> startIndex) {
-        Utils.checkNotNull(startIndex, "startIndex");
+    public ListScimGroupsRequest withStartIndex(@Nullable Double startIndex) {
         this.startIndex = startIndex;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -221,97 +176,54 @@ public class ListScimGroupsRequest {
 
         private String connectionId;
 
-        private Optional<Double> count = Optional.empty();
+        private Double count;
 
-        private Optional<String> filter = Optional.empty();
+        private String filter;
 
-        private Optional<String> sortBy = Optional.empty();
+        private String sortBy;
 
-        private Optional<String> sortOrder = Optional.empty();
+        private String sortOrder;
 
-        private Optional<Double> startIndex = Optional.empty();
+        private Double startIndex;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
-
-        public Builder count(double count) {
-            Utils.checkNotNull(count, "count");
-            this.count = Optional.ofNullable(count);
-            return this;
-        }
-
-        public Builder count(Optional<Double> count) {
-            Utils.checkNotNull(count, "count");
+        public Builder count(@Nullable Double count) {
             this.count = count;
             return this;
         }
 
-
-        public Builder filter(String filter) {
-            Utils.checkNotNull(filter, "filter");
-            this.filter = Optional.ofNullable(filter);
-            return this;
-        }
-
-        public Builder filter(Optional<String> filter) {
-            Utils.checkNotNull(filter, "filter");
+        public Builder filter(@Nullable String filter) {
             this.filter = filter;
             return this;
         }
 
-
-        public Builder sortBy(String sortBy) {
-            Utils.checkNotNull(sortBy, "sortBy");
-            this.sortBy = Optional.ofNullable(sortBy);
-            return this;
-        }
-
-        public Builder sortBy(Optional<String> sortBy) {
-            Utils.checkNotNull(sortBy, "sortBy");
+        public Builder sortBy(@Nullable String sortBy) {
             this.sortBy = sortBy;
             return this;
         }
 
-
-        public Builder sortOrder(String sortOrder) {
-            Utils.checkNotNull(sortOrder, "sortOrder");
-            this.sortOrder = Optional.ofNullable(sortOrder);
-            return this;
-        }
-
-        public Builder sortOrder(Optional<String> sortOrder) {
-            Utils.checkNotNull(sortOrder, "sortOrder");
+        public Builder sortOrder(@Nullable String sortOrder) {
             this.sortOrder = sortOrder;
             return this;
         }
 
-
-        public Builder startIndex(double startIndex) {
-            Utils.checkNotNull(startIndex, "startIndex");
-            this.startIndex = Optional.ofNullable(startIndex);
-            return this;
-        }
-
-        public Builder startIndex(Optional<Double> startIndex) {
-            Utils.checkNotNull(startIndex, "startIndex");
+        public Builder startIndex(@Nullable Double startIndex) {
             this.startIndex = startIndex;
             return this;
         }
 
         public ListScimGroupsRequest build() {
-
             return new ListScimGroupsRequest(
                 connectionId, count, filter,
                 sortBy, sortOrder, startIndex);

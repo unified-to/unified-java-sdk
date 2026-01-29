@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingInvoiceRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingInvoiceRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingInvoiceResponse;
@@ -67,7 +68,7 @@ public class Invoice {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAccountingInvoiceResponse createAccountingInvoice(CreateAccountingInvoiceRequest request) {
+    public CreateAccountingInvoiceResponse createAccountingInvoice(@Nonnull CreateAccountingInvoiceRequest request) {
         RequestOperation<CreateAccountingInvoiceRequest, CreateAccountingInvoiceResponse> operation
               = new CreateAccountingInvoice.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -89,7 +90,7 @@ public class Invoice {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingInvoiceResponse getAccountingInvoice(GetAccountingInvoiceRequest request) {
+    public GetAccountingInvoiceResponse getAccountingInvoice(@Nonnull GetAccountingInvoiceRequest request) {
         RequestOperation<GetAccountingInvoiceRequest, GetAccountingInvoiceResponse> operation
               = new GetAccountingInvoice.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -111,7 +112,7 @@ public class Invoice {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingInvoicesResponse listAccountingInvoices(ListAccountingInvoicesRequest request) {
+    public ListAccountingInvoicesResponse listAccountingInvoices(@Nonnull ListAccountingInvoicesRequest request) {
         RequestOperation<ListAccountingInvoicesRequest, ListAccountingInvoicesResponse> operation
               = new ListAccountingInvoices.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -133,7 +134,7 @@ public class Invoice {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAccountingInvoiceResponse patchAccountingInvoice(PatchAccountingInvoiceRequest request) {
+    public PatchAccountingInvoiceResponse patchAccountingInvoice(@Nonnull PatchAccountingInvoiceRequest request) {
         RequestOperation<PatchAccountingInvoiceRequest, PatchAccountingInvoiceResponse> operation
               = new PatchAccountingInvoice.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -155,7 +156,7 @@ public class Invoice {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAccountingInvoiceResponse removeAccountingInvoice(RemoveAccountingInvoiceRequest request) {
+    public RemoveAccountingInvoiceResponse removeAccountingInvoice(@Nonnull RemoveAccountingInvoiceRequest request) {
         RequestOperation<RemoveAccountingInvoiceRequest, RemoveAccountingInvoiceResponse> operation
               = new RemoveAccountingInvoice.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -177,7 +178,7 @@ public class Invoice {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAccountingInvoiceResponse updateAccountingInvoice(UpdateAccountingInvoiceRequest request) {
+    public UpdateAccountingInvoiceResponse updateAccountingInvoice(@Nonnull UpdateAccountingInvoiceRequest request) {
         RequestOperation<UpdateAccountingInvoiceRequest, UpdateAccountingInvoiceResponse> operation
               = new UpdateAccountingInvoice.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

@@ -4,11 +4,11 @@
 package to.unified.unified_java_sdk.models.operations.async;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import java.lang.Integer;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.io.InputStream;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.List;
 import java.util.Optional;
@@ -27,7 +27,7 @@ public class ListRepoRepositoriesResponse implements AsyncResponse {
     /**
      * Successful
      */
-    private Optional<? extends List<RepoRepository>> repoRepositories;
+    private List<RepoRepository> repoRepositories;
 
     /**
      * HTTP response status code for this operation
@@ -41,59 +41,52 @@ public class ListRepoRepositoriesResponse implements AsyncResponse {
 
     @JsonCreator
     public ListRepoRepositoriesResponse(
-            String contentType,
-            Optional<? extends List<RepoRepository>> repoRepositories,
+            @Nonnull String contentType,
+            @Nullable List<RepoRepository> repoRepositories,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(repoRepositories, "repoRepositories");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.contentType = contentType;
+            @Nonnull HttpResponse<Blob> rawResponse) {
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.repoRepositories = repoRepositories;
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
     }
     
     public ListRepoRepositoriesResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
-        this(contentType, Optional.empty(), statusCode,
+            @Nonnull HttpResponse<Blob> rawResponse) {
+        this(contentType, null, statusCode,
             rawResponse);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<RepoRepository>> repoRepositories() {
-        return (Optional<List<RepoRepository>>) repoRepositories;
+        return Optional.ofNullable(this.repoRepositories);
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<Blob> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     public static Builder builder() {
@@ -104,18 +97,8 @@ public class ListRepoRepositoriesResponse implements AsyncResponse {
     /**
      * HTTP response content type for this operation
      */
-    public ListRepoRepositoriesResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
-        return this;
-    }
-
-    /**
-     * Successful
-     */
-    public ListRepoRepositoriesResponse withRepoRepositories(List<RepoRepository> repoRepositories) {
-        Utils.checkNotNull(repoRepositories, "repoRepositories");
-        this.repoRepositories = Optional.ofNullable(repoRepositories);
+    public ListRepoRepositoriesResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
 
@@ -123,29 +106,29 @@ public class ListRepoRepositoriesResponse implements AsyncResponse {
     /**
      * Successful
      */
-    public ListRepoRepositoriesResponse withRepoRepositories(Optional<? extends List<RepoRepository>> repoRepositories) {
-        Utils.checkNotNull(repoRepositories, "repoRepositories");
+    public ListRepoRepositoriesResponse withRepoRepositories(@Nullable List<RepoRepository> repoRepositories) {
         this.repoRepositories = repoRepositories;
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public ListRepoRepositoriesResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public ListRepoRepositoriesResponse withRawResponse(HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
+    public ListRepoRepositoriesResponse withRawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -184,9 +167,9 @@ public class ListRepoRepositoriesResponse implements AsyncResponse {
 
         private String contentType;
 
-        private Optional<? extends List<RepoRepository>> repoRepositories = Optional.empty();
+        private List<RepoRepository> repoRepositories;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<Blob> rawResponse;
 
@@ -194,57 +177,39 @@ public class ListRepoRepositoriesResponse implements AsyncResponse {
           // force use of static builder() method
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
-            return this;
-        }
-
-
-        /**
-         * Successful
-         */
-        public Builder repoRepositories(List<RepoRepository> repoRepositories) {
-            Utils.checkNotNull(repoRepositories, "repoRepositories");
-            this.repoRepositories = Optional.ofNullable(repoRepositories);
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
 
         /**
          * Successful
          */
-        public Builder repoRepositories(Optional<? extends List<RepoRepository>> repoRepositories) {
-            Utils.checkNotNull(repoRepositories, "repoRepositories");
+        public Builder repoRepositories(@Nullable List<RepoRepository> repoRepositories) {
             this.repoRepositories = repoRepositories;
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<Blob> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
+        public Builder rawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         public ListRepoRepositoriesResponse build() {
-
             return new ListRepoRepositoriesResponse(
                 contentType, repoRepositories, statusCode,
                 rawResponse);

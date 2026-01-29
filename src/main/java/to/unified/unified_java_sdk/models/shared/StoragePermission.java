@@ -4,10 +4,11 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Override;
 import java.lang.String;
@@ -20,17 +21,17 @@ public class StoragePermission {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group_id")
-    private Optional<String> groupId;
+    private String groupId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_hidden")
-    private Optional<Boolean> isHidden;
+    private Boolean isHidden;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_public")
-    private Optional<Boolean> isPublic;
+    private Boolean isPublic;
 
 
     @JsonProperty("roles")
@@ -39,56 +40,47 @@ public class StoragePermission {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
-    private Optional<String> userId;
+    private String userId;
 
     @JsonCreator
     public StoragePermission(
-            @JsonProperty("group_id") Optional<String> groupId,
-            @JsonProperty("is_hidden") Optional<Boolean> isHidden,
-            @JsonProperty("is_public") Optional<Boolean> isPublic,
-            @JsonProperty("roles") List<PropertyStoragePermissionRoles> roles,
-            @JsonProperty("user_id") Optional<String> userId) {
-        Utils.checkNotNull(groupId, "groupId");
-        Utils.checkNotNull(isHidden, "isHidden");
-        Utils.checkNotNull(isPublic, "isPublic");
-        Utils.checkNotNull(roles, "roles");
-        Utils.checkNotNull(userId, "userId");
+            @JsonProperty("group_id") @Nullable String groupId,
+            @JsonProperty("is_hidden") @Nullable Boolean isHidden,
+            @JsonProperty("is_public") @Nullable Boolean isPublic,
+            @JsonProperty("roles") @Nonnull List<PropertyStoragePermissionRoles> roles,
+            @JsonProperty("user_id") @Nullable String userId) {
         this.groupId = groupId;
         this.isHidden = isHidden;
         this.isPublic = isPublic;
-        this.roles = roles;
+        this.roles = Optional.ofNullable(roles)
+            .orElseThrow(() -> new IllegalArgumentException("roles cannot be null"));
         this.userId = userId;
     }
     
     public StoragePermission(
-            List<PropertyStoragePermissionRoles> roles) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            roles, Optional.empty());
+            @Nonnull List<PropertyStoragePermissionRoles> roles) {
+        this(null, null, null,
+            roles, null);
     }
 
-    @JsonIgnore
     public Optional<String> groupId() {
-        return groupId;
+        return Optional.ofNullable(this.groupId);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isHidden() {
-        return isHidden;
+        return Optional.ofNullable(this.isHidden);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isPublic() {
-        return isPublic;
+        return Optional.ofNullable(this.isPublic);
     }
 
-    @JsonIgnore
     public List<PropertyStoragePermissionRoles> roles() {
-        return roles;
+        return this.roles;
     }
 
-    @JsonIgnore
     public Optional<String> userId() {
-        return userId;
+        return Optional.ofNullable(this.userId);
     }
 
     public static Builder builder() {
@@ -96,63 +88,35 @@ public class StoragePermission {
     }
 
 
-    public StoragePermission withGroupId(String groupId) {
-        Utils.checkNotNull(groupId, "groupId");
-        this.groupId = Optional.ofNullable(groupId);
-        return this;
-    }
-
-
-    public StoragePermission withGroupId(Optional<String> groupId) {
-        Utils.checkNotNull(groupId, "groupId");
+    public StoragePermission withGroupId(@Nullable String groupId) {
         this.groupId = groupId;
         return this;
     }
 
-    public StoragePermission withIsHidden(boolean isHidden) {
-        Utils.checkNotNull(isHidden, "isHidden");
-        this.isHidden = Optional.ofNullable(isHidden);
-        return this;
-    }
 
-
-    public StoragePermission withIsHidden(Optional<Boolean> isHidden) {
-        Utils.checkNotNull(isHidden, "isHidden");
+    public StoragePermission withIsHidden(@Nullable Boolean isHidden) {
         this.isHidden = isHidden;
         return this;
     }
 
-    public StoragePermission withIsPublic(boolean isPublic) {
-        Utils.checkNotNull(isPublic, "isPublic");
-        this.isPublic = Optional.ofNullable(isPublic);
-        return this;
-    }
 
-
-    public StoragePermission withIsPublic(Optional<Boolean> isPublic) {
-        Utils.checkNotNull(isPublic, "isPublic");
+    public StoragePermission withIsPublic(@Nullable Boolean isPublic) {
         this.isPublic = isPublic;
         return this;
     }
 
-    public StoragePermission withRoles(List<PropertyStoragePermissionRoles> roles) {
-        Utils.checkNotNull(roles, "roles");
-        this.roles = roles;
-        return this;
-    }
 
-    public StoragePermission withUserId(String userId) {
-        Utils.checkNotNull(userId, "userId");
-        this.userId = Optional.ofNullable(userId);
+    public StoragePermission withRoles(@Nonnull List<PropertyStoragePermissionRoles> roles) {
+        this.roles = Utils.checkNotNull(roles, "roles");
         return this;
     }
 
 
-    public StoragePermission withUserId(Optional<String> userId) {
-        Utils.checkNotNull(userId, "userId");
+    public StoragePermission withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -191,81 +155,46 @@ public class StoragePermission {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> groupId = Optional.empty();
+        private String groupId;
 
-        private Optional<Boolean> isHidden = Optional.empty();
+        private Boolean isHidden;
 
-        private Optional<Boolean> isPublic = Optional.empty();
+        private Boolean isPublic;
 
         private List<PropertyStoragePermissionRoles> roles;
 
-        private Optional<String> userId = Optional.empty();
+        private String userId;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder groupId(String groupId) {
-            Utils.checkNotNull(groupId, "groupId");
-            this.groupId = Optional.ofNullable(groupId);
-            return this;
-        }
-
-        public Builder groupId(Optional<String> groupId) {
-            Utils.checkNotNull(groupId, "groupId");
+        public Builder groupId(@Nullable String groupId) {
             this.groupId = groupId;
             return this;
         }
 
-
-        public Builder isHidden(boolean isHidden) {
-            Utils.checkNotNull(isHidden, "isHidden");
-            this.isHidden = Optional.ofNullable(isHidden);
-            return this;
-        }
-
-        public Builder isHidden(Optional<Boolean> isHidden) {
-            Utils.checkNotNull(isHidden, "isHidden");
+        public Builder isHidden(@Nullable Boolean isHidden) {
             this.isHidden = isHidden;
             return this;
         }
 
-
-        public Builder isPublic(boolean isPublic) {
-            Utils.checkNotNull(isPublic, "isPublic");
-            this.isPublic = Optional.ofNullable(isPublic);
-            return this;
-        }
-
-        public Builder isPublic(Optional<Boolean> isPublic) {
-            Utils.checkNotNull(isPublic, "isPublic");
+        public Builder isPublic(@Nullable Boolean isPublic) {
             this.isPublic = isPublic;
             return this;
         }
 
-
-        public Builder roles(List<PropertyStoragePermissionRoles> roles) {
-            Utils.checkNotNull(roles, "roles");
-            this.roles = roles;
+        public Builder roles(@Nonnull List<PropertyStoragePermissionRoles> roles) {
+            this.roles = Utils.checkNotNull(roles, "roles");
             return this;
         }
 
-
-        public Builder userId(String userId) {
-            Utils.checkNotNull(userId, "userId");
-            this.userId = Optional.ofNullable(userId);
-            return this;
-        }
-
-        public Builder userId(Optional<String> userId) {
-            Utils.checkNotNull(userId, "userId");
+        public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;
         }
 
         public StoragePermission build() {
-
             return new StoragePermission(
                 groupId, isHidden, isPublic,
                 roles, userId);

@@ -4,13 +4,12 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -19,36 +18,31 @@ public class AccountingTelephone {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("telephone")
-    private Optional<String> telephone;
+    private String telephone;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
-    private Optional<? extends AccountingTelephoneType> type;
+    private AccountingTelephoneType type;
 
     @JsonCreator
     public AccountingTelephone(
-            @JsonProperty("telephone") Optional<String> telephone,
-            @JsonProperty("type") Optional<? extends AccountingTelephoneType> type) {
-        Utils.checkNotNull(telephone, "telephone");
-        Utils.checkNotNull(type, "type");
+            @JsonProperty("telephone") @Nullable String telephone,
+            @JsonProperty("type") @Nullable AccountingTelephoneType type) {
         this.telephone = telephone;
         this.type = type;
     }
     
     public AccountingTelephone() {
-        this(Optional.empty(), Optional.empty());
+        this(null, null);
     }
 
-    @JsonIgnore
     public Optional<String> telephone() {
-        return telephone;
+        return Optional.ofNullable(this.telephone);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<AccountingTelephoneType> type() {
-        return (Optional<AccountingTelephoneType>) type;
+        return Optional.ofNullable(this.type);
     }
 
     public static Builder builder() {
@@ -56,31 +50,17 @@ public class AccountingTelephone {
     }
 
 
-    public AccountingTelephone withTelephone(String telephone) {
-        Utils.checkNotNull(telephone, "telephone");
-        this.telephone = Optional.ofNullable(telephone);
-        return this;
-    }
-
-
-    public AccountingTelephone withTelephone(Optional<String> telephone) {
-        Utils.checkNotNull(telephone, "telephone");
+    public AccountingTelephone withTelephone(@Nullable String telephone) {
         this.telephone = telephone;
         return this;
     }
 
-    public AccountingTelephone withType(AccountingTelephoneType type) {
-        Utils.checkNotNull(type, "type");
-        this.type = Optional.ofNullable(type);
-        return this;
-    }
 
-
-    public AccountingTelephone withType(Optional<? extends AccountingTelephoneType> type) {
-        Utils.checkNotNull(type, "type");
+    public AccountingTelephone withType(@Nullable AccountingTelephoneType type) {
         this.type = type;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -112,42 +92,25 @@ public class AccountingTelephone {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> telephone = Optional.empty();
+        private String telephone;
 
-        private Optional<? extends AccountingTelephoneType> type = Optional.empty();
+        private AccountingTelephoneType type;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder telephone(String telephone) {
-            Utils.checkNotNull(telephone, "telephone");
-            this.telephone = Optional.ofNullable(telephone);
-            return this;
-        }
-
-        public Builder telephone(Optional<String> telephone) {
-            Utils.checkNotNull(telephone, "telephone");
+        public Builder telephone(@Nullable String telephone) {
             this.telephone = telephone;
             return this;
         }
 
-
-        public Builder type(AccountingTelephoneType type) {
-            Utils.checkNotNull(type, "type");
-            this.type = Optional.ofNullable(type);
-            return this;
-        }
-
-        public Builder type(Optional<? extends AccountingTelephoneType> type) {
-            Utils.checkNotNull(type, "type");
+        public Builder type(@Nullable AccountingTelephoneType type) {
             this.type = type;
             return this;
         }
 
         public AccountingTelephone build() {
-
             return new AccountingTelephone(
                 telephone, type);
         }

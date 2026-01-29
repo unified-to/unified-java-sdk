@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationLoginRequest;
 import to.unified.unified_java_sdk.models.operations.async.GetUnifiedIntegrationLoginRequestBuilder;
@@ -56,7 +57,7 @@ public class AsyncLogin {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetUnifiedIntegrationLoginResponse>} - The async response
      */
-    public CompletableFuture<GetUnifiedIntegrationLoginResponse> getUnifiedIntegrationLogin(GetUnifiedIntegrationLoginRequest request) {
+    public CompletableFuture<GetUnifiedIntegrationLoginResponse> getUnifiedIntegrationLogin(@Nonnull GetUnifiedIntegrationLoginRequest request) {
         AsyncRequestOperation<GetUnifiedIntegrationLoginRequest, GetUnifiedIntegrationLoginResponse> operation
               = new GetUnifiedIntegrationLogin.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

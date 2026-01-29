@@ -49,7 +49,6 @@ public class AtsMetadata1 {
         }
 
         public AtsMetadata1 build() {
-
             return new AtsMetadata1(
                 );
         }

@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationAuthRequest;
 import to.unified.unified_java_sdk.models.operations.ListUnifiedIntegrationWorkspacesRequest;
@@ -62,7 +63,7 @@ public class AsyncIntegration {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetUnifiedIntegrationAuthResponse>} - The async response
      */
-    public CompletableFuture<GetUnifiedIntegrationAuthResponse> getUnifiedIntegrationAuth(GetUnifiedIntegrationAuthRequest request) {
+    public CompletableFuture<GetUnifiedIntegrationAuthResponse> getUnifiedIntegrationAuth(@Nonnull GetUnifiedIntegrationAuthRequest request) {
         AsyncRequestOperation<GetUnifiedIntegrationAuthRequest, GetUnifiedIntegrationAuthResponse> operation
               = new GetUnifiedIntegrationAuth.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -89,7 +90,7 @@ public class AsyncIntegration {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListUnifiedIntegrationWorkspacesResponse>} - The async response
      */
-    public CompletableFuture<ListUnifiedIntegrationWorkspacesResponse> listUnifiedIntegrationWorkspaces(ListUnifiedIntegrationWorkspacesRequest request) {
+    public CompletableFuture<ListUnifiedIntegrationWorkspacesResponse> listUnifiedIntegrationWorkspaces(@Nonnull ListUnifiedIntegrationWorkspacesRequest request) {
         AsyncRequestOperation<ListUnifiedIntegrationWorkspacesRequest, ListUnifiedIntegrationWorkspacesResponse> operation
               = new ListUnifiedIntegrationWorkspaces.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -112,7 +113,7 @@ public class AsyncIntegration {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListUnifiedIntegrationsResponse>} - The async response
      */
-    public CompletableFuture<ListUnifiedIntegrationsResponse> listUnifiedIntegrations(ListUnifiedIntegrationsRequest request) {
+    public CompletableFuture<ListUnifiedIntegrationsResponse> listUnifiedIntegrations(@Nonnull ListUnifiedIntegrationsRequest request) {
         AsyncRequestOperation<ListUnifiedIntegrationsRequest, ListUnifiedIntegrationsResponse> operation
               = new ListUnifiedIntegrations.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

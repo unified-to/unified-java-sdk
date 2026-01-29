@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
@@ -19,47 +19,41 @@ public class AtsCandidateEducation {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("degree")
-    private Optional<String> degree;
+    private String degree;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
-    private Optional<OffsetDateTime> endAt;
+    private OffsetDateTime endAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field_of_study")
-    private Optional<String> fieldOfStudy;
+    private String fieldOfStudy;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("institution")
-    private Optional<String> institution;
+    private String institution;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("level")
-    private Optional<String> level;
+    private String level;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
-    private Optional<OffsetDateTime> startAt;
+    private OffsetDateTime startAt;
 
     @JsonCreator
     public AtsCandidateEducation(
-            @JsonProperty("degree") Optional<String> degree,
-            @JsonProperty("end_at") Optional<OffsetDateTime> endAt,
-            @JsonProperty("field_of_study") Optional<String> fieldOfStudy,
-            @JsonProperty("institution") Optional<String> institution,
-            @JsonProperty("level") Optional<String> level,
-            @JsonProperty("start_at") Optional<OffsetDateTime> startAt) {
-        Utils.checkNotNull(degree, "degree");
-        Utils.checkNotNull(endAt, "endAt");
-        Utils.checkNotNull(fieldOfStudy, "fieldOfStudy");
-        Utils.checkNotNull(institution, "institution");
-        Utils.checkNotNull(level, "level");
-        Utils.checkNotNull(startAt, "startAt");
+            @JsonProperty("degree") @Nullable String degree,
+            @JsonProperty("end_at") @Nullable OffsetDateTime endAt,
+            @JsonProperty("field_of_study") @Nullable String fieldOfStudy,
+            @JsonProperty("institution") @Nullable String institution,
+            @JsonProperty("level") @Nullable String level,
+            @JsonProperty("start_at") @Nullable OffsetDateTime startAt) {
         this.degree = degree;
         this.endAt = endAt;
         this.fieldOfStudy = fieldOfStudy;
@@ -69,38 +63,32 @@ public class AtsCandidateEducation {
     }
     
     public AtsCandidateEducation() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null, null);
     }
 
-    @JsonIgnore
     public Optional<String> degree() {
-        return degree;
+        return Optional.ofNullable(this.degree);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> endAt() {
-        return endAt;
+        return Optional.ofNullable(this.endAt);
     }
 
-    @JsonIgnore
     public Optional<String> fieldOfStudy() {
-        return fieldOfStudy;
+        return Optional.ofNullable(this.fieldOfStudy);
     }
 
-    @JsonIgnore
     public Optional<String> institution() {
-        return institution;
+        return Optional.ofNullable(this.institution);
     }
 
-    @JsonIgnore
     public Optional<String> level() {
-        return level;
+        return Optional.ofNullable(this.level);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> startAt() {
-        return startAt;
+        return Optional.ofNullable(this.startAt);
     }
 
     public static Builder builder() {
@@ -108,83 +96,41 @@ public class AtsCandidateEducation {
     }
 
 
-    public AtsCandidateEducation withDegree(String degree) {
-        Utils.checkNotNull(degree, "degree");
-        this.degree = Optional.ofNullable(degree);
-        return this;
-    }
-
-
-    public AtsCandidateEducation withDegree(Optional<String> degree) {
-        Utils.checkNotNull(degree, "degree");
+    public AtsCandidateEducation withDegree(@Nullable String degree) {
         this.degree = degree;
         return this;
     }
 
-    public AtsCandidateEducation withEndAt(OffsetDateTime endAt) {
-        Utils.checkNotNull(endAt, "endAt");
-        this.endAt = Optional.ofNullable(endAt);
-        return this;
-    }
 
-
-    public AtsCandidateEducation withEndAt(Optional<OffsetDateTime> endAt) {
-        Utils.checkNotNull(endAt, "endAt");
+    public AtsCandidateEducation withEndAt(@Nullable OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
     }
 
-    public AtsCandidateEducation withFieldOfStudy(String fieldOfStudy) {
-        Utils.checkNotNull(fieldOfStudy, "fieldOfStudy");
-        this.fieldOfStudy = Optional.ofNullable(fieldOfStudy);
-        return this;
-    }
 
-
-    public AtsCandidateEducation withFieldOfStudy(Optional<String> fieldOfStudy) {
-        Utils.checkNotNull(fieldOfStudy, "fieldOfStudy");
+    public AtsCandidateEducation withFieldOfStudy(@Nullable String fieldOfStudy) {
         this.fieldOfStudy = fieldOfStudy;
         return this;
     }
 
-    public AtsCandidateEducation withInstitution(String institution) {
-        Utils.checkNotNull(institution, "institution");
-        this.institution = Optional.ofNullable(institution);
-        return this;
-    }
 
-
-    public AtsCandidateEducation withInstitution(Optional<String> institution) {
-        Utils.checkNotNull(institution, "institution");
+    public AtsCandidateEducation withInstitution(@Nullable String institution) {
         this.institution = institution;
         return this;
     }
 
-    public AtsCandidateEducation withLevel(String level) {
-        Utils.checkNotNull(level, "level");
-        this.level = Optional.ofNullable(level);
-        return this;
-    }
 
-
-    public AtsCandidateEducation withLevel(Optional<String> level) {
-        Utils.checkNotNull(level, "level");
+    public AtsCandidateEducation withLevel(@Nullable String level) {
         this.level = level;
         return this;
     }
 
-    public AtsCandidateEducation withStartAt(OffsetDateTime startAt) {
-        Utils.checkNotNull(startAt, "startAt");
-        this.startAt = Optional.ofNullable(startAt);
-        return this;
-    }
 
-
-    public AtsCandidateEducation withStartAt(Optional<OffsetDateTime> startAt) {
-        Utils.checkNotNull(startAt, "startAt");
+    public AtsCandidateEducation withStartAt(@Nullable OffsetDateTime startAt) {
         this.startAt = startAt;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -225,102 +171,53 @@ public class AtsCandidateEducation {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> degree = Optional.empty();
+        private String degree;
 
-        private Optional<OffsetDateTime> endAt = Optional.empty();
+        private OffsetDateTime endAt;
 
-        private Optional<String> fieldOfStudy = Optional.empty();
+        private String fieldOfStudy;
 
-        private Optional<String> institution = Optional.empty();
+        private String institution;
 
-        private Optional<String> level = Optional.empty();
+        private String level;
 
-        private Optional<OffsetDateTime> startAt = Optional.empty();
+        private OffsetDateTime startAt;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder degree(String degree) {
-            Utils.checkNotNull(degree, "degree");
-            this.degree = Optional.ofNullable(degree);
-            return this;
-        }
-
-        public Builder degree(Optional<String> degree) {
-            Utils.checkNotNull(degree, "degree");
+        public Builder degree(@Nullable String degree) {
             this.degree = degree;
             return this;
         }
 
-
-        public Builder endAt(OffsetDateTime endAt) {
-            Utils.checkNotNull(endAt, "endAt");
-            this.endAt = Optional.ofNullable(endAt);
-            return this;
-        }
-
-        public Builder endAt(Optional<OffsetDateTime> endAt) {
-            Utils.checkNotNull(endAt, "endAt");
+        public Builder endAt(@Nullable OffsetDateTime endAt) {
             this.endAt = endAt;
             return this;
         }
 
-
-        public Builder fieldOfStudy(String fieldOfStudy) {
-            Utils.checkNotNull(fieldOfStudy, "fieldOfStudy");
-            this.fieldOfStudy = Optional.ofNullable(fieldOfStudy);
-            return this;
-        }
-
-        public Builder fieldOfStudy(Optional<String> fieldOfStudy) {
-            Utils.checkNotNull(fieldOfStudy, "fieldOfStudy");
+        public Builder fieldOfStudy(@Nullable String fieldOfStudy) {
             this.fieldOfStudy = fieldOfStudy;
             return this;
         }
 
-
-        public Builder institution(String institution) {
-            Utils.checkNotNull(institution, "institution");
-            this.institution = Optional.ofNullable(institution);
-            return this;
-        }
-
-        public Builder institution(Optional<String> institution) {
-            Utils.checkNotNull(institution, "institution");
+        public Builder institution(@Nullable String institution) {
             this.institution = institution;
             return this;
         }
 
-
-        public Builder level(String level) {
-            Utils.checkNotNull(level, "level");
-            this.level = Optional.ofNullable(level);
-            return this;
-        }
-
-        public Builder level(Optional<String> level) {
-            Utils.checkNotNull(level, "level");
+        public Builder level(@Nullable String level) {
             this.level = level;
             return this;
         }
 
-
-        public Builder startAt(OffsetDateTime startAt) {
-            Utils.checkNotNull(startAt, "startAt");
-            this.startAt = Optional.ofNullable(startAt);
-            return this;
-        }
-
-        public Builder startAt(Optional<OffsetDateTime> startAt) {
-            Utils.checkNotNull(startAt, "startAt");
+        public Builder startAt(@Nullable OffsetDateTime startAt) {
             this.startAt = startAt;
             return this;
         }
 
         public AtsCandidateEducation build() {
-
             return new AtsCandidateEducation(
                 degree, endAt, fieldOfStudy,
                 institution, level, startAt);

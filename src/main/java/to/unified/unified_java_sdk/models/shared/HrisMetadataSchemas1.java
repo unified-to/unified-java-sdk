@@ -49,7 +49,6 @@ public class HrisMetadataSchemas1 {
         }
 
         public HrisMetadataSchemas1 build() {
-
             return new HrisMetadataSchemas1(
                 );
         }

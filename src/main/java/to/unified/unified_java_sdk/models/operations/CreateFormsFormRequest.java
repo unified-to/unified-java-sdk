@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.FormsForm;
@@ -30,7 +30,7 @@ public class CreateFormsFormRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<CreateFormsFormQueryParamFields>> fields;
+    private List<CreateFormsFormQueryParamFields> fields;
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
@@ -38,51 +38,45 @@ public class CreateFormsFormRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
     @JsonCreator
     public CreateFormsFormRequest(
-            FormsForm formsForm,
-            String connectionId,
-            Optional<? extends List<CreateFormsFormQueryParamFields>> fields,
-            Optional<String> raw) {
-        Utils.checkNotNull(formsForm, "formsForm");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(raw, "raw");
-        this.formsForm = formsForm;
-        this.connectionId = connectionId;
+            @Nonnull FormsForm formsForm,
+            @Nonnull String connectionId,
+            @Nullable List<CreateFormsFormQueryParamFields> fields,
+            @Nullable String raw) {
+        this.formsForm = Optional.ofNullable(formsForm)
+            .orElseThrow(() -> new IllegalArgumentException("formsForm cannot be null"));
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
         this.raw = raw;
     }
     
     public CreateFormsFormRequest(
-            FormsForm formsForm,
-            String connectionId) {
-        this(formsForm, connectionId, Optional.empty(),
-            Optional.empty());
+            @Nonnull FormsForm formsForm,
+            @Nonnull String connectionId) {
+        this(formsForm, connectionId, null,
+            null);
     }
 
-    @JsonIgnore
     public FormsForm formsForm() {
-        return formsForm;
+        return this.formsForm;
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<CreateFormsFormQueryParamFields>> fields() {
-        return (Optional<List<CreateFormsFormQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
@@ -90,9 +84,8 @@ public class CreateFormsFormRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
     public static Builder builder() {
@@ -100,27 +93,17 @@ public class CreateFormsFormRequest {
     }
 
 
-    public CreateFormsFormRequest withFormsForm(FormsForm formsForm) {
-        Utils.checkNotNull(formsForm, "formsForm");
-        this.formsForm = formsForm;
+    public CreateFormsFormRequest withFormsForm(@Nonnull FormsForm formsForm) {
+        this.formsForm = Utils.checkNotNull(formsForm, "formsForm");
         return this;
     }
+
 
     /**
      * ID of the connection
      */
-    public CreateFormsFormRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public CreateFormsFormRequest withFields(List<CreateFormsFormQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public CreateFormsFormRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -128,34 +111,22 @@ public class CreateFormsFormRequest {
     /**
      * Fields to return
      */
-    public CreateFormsFormRequest withFields(Optional<? extends List<CreateFormsFormQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public CreateFormsFormRequest withFields(@Nullable List<CreateFormsFormQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public CreateFormsFormRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
-
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public CreateFormsFormRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public CreateFormsFormRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -196,75 +167,46 @@ public class CreateFormsFormRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<CreateFormsFormQueryParamFields>> fields = Optional.empty();
+        private List<CreateFormsFormQueryParamFields> fields;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder formsForm(FormsForm formsForm) {
-            Utils.checkNotNull(formsForm, "formsForm");
-            this.formsForm = formsForm;
+        public Builder formsForm(@Nonnull FormsForm formsForm) {
+            this.formsForm = Utils.checkNotNull(formsForm, "formsForm");
             return this;
         }
-
 
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<CreateFormsFormQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<CreateFormsFormQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<CreateFormsFormQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
         public CreateFormsFormRequest build() {
-
             return new CreateFormsFormRequest(
                 formsForm, connectionId, fields,
                 raw);

@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.PatchTicketingTicketRequest;
@@ -13,27 +14,39 @@ import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchTicketingTicketRequestBuilder {
-
-    private PatchTicketingTicketRequest request;
     private final SDKConfiguration sdkConfiguration;
-    private final Headers _headers = new Headers(); 
+    private final Headers _headers = new Headers();
+    private PatchTicketingTicketRequest request;
 
     public PatchTicketingTicketRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
 
-    public PatchTicketingTicketRequestBuilder request(PatchTicketingTicketRequest request) {
-        Utils.checkNotNull(request, "request");
-        this.request = request;
+    public PatchTicketingTicketRequestBuilder request(@Nonnull PatchTicketingTicketRequest request) {
+        this.request = Utils.checkNotNull(request, "request");
         return this;
     }
 
+    private PatchTicketingTicketRequest _buildRequest() {
+        return this.request;
+    }
+    
+    public PatchTicketingTicketRequestBuilder header(String name, String value) {
+        Utils.checkNotNull(name, "name");
+        Utils.checkNotNull(value, "value");
+        this._headers.add(name, value);
+        return this;
+    }
+
+    /**
+    * Executes the request and returns the response.
+    *
+    * @return The response from the server.
+    */
     public CompletableFuture<PatchTicketingTicketResponse> call() {
-        
         AsyncRequestOperation<PatchTicketingTicketRequest, PatchTicketingTicketResponse> operation
               = new PatchTicketingTicket.Async(sdkConfiguration, _headers);
-
-        return operation.doRequest(request)
+        return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }
 }

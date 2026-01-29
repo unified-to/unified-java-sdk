@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateLmsClassRequest;
 import to.unified.unified_java_sdk.models.operations.CreateLmsClassRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateLmsClassResponse;
@@ -139,7 +140,7 @@ public class Lms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateLmsClassResponse createLmsClass(CreateLmsClassRequest request) {
+    public CreateLmsClassResponse createLmsClass(@Nonnull CreateLmsClassRequest request) {
         RequestOperation<CreateLmsClassRequest, CreateLmsClassResponse> operation
               = new CreateLmsClass.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -161,7 +162,7 @@ public class Lms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateLmsCourseResponse createLmsCourse(CreateLmsCourseRequest request) {
+    public CreateLmsCourseResponse createLmsCourse(@Nonnull CreateLmsCourseRequest request) {
         RequestOperation<CreateLmsCourseRequest, CreateLmsCourseResponse> operation
               = new CreateLmsCourse.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -183,7 +184,7 @@ public class Lms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateLmsInstructorResponse createLmsInstructor(CreateLmsInstructorRequest request) {
+    public CreateLmsInstructorResponse createLmsInstructor(@Nonnull CreateLmsInstructorRequest request) {
         RequestOperation<CreateLmsInstructorRequest, CreateLmsInstructorResponse> operation
               = new CreateLmsInstructor.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -205,7 +206,7 @@ public class Lms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateLmsStudentResponse createLmsStudent(CreateLmsStudentRequest request) {
+    public CreateLmsStudentResponse createLmsStudent(@Nonnull CreateLmsStudentRequest request) {
         RequestOperation<CreateLmsStudentRequest, CreateLmsStudentResponse> operation
               = new CreateLmsStudent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -227,7 +228,7 @@ public class Lms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetLmsClassResponse getLmsClass(GetLmsClassRequest request) {
+    public GetLmsClassResponse getLmsClass(@Nonnull GetLmsClassRequest request) {
         RequestOperation<GetLmsClassRequest, GetLmsClassResponse> operation
               = new GetLmsClass.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -249,7 +250,7 @@ public class Lms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetLmsCourseResponse getLmsCourse(GetLmsCourseRequest request) {
+    public GetLmsCourseResponse getLmsCourse(@Nonnull GetLmsCourseRequest request) {
         RequestOperation<GetLmsCourseRequest, GetLmsCourseResponse> operation
               = new GetLmsCourse.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -271,7 +272,7 @@ public class Lms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetLmsInstructorResponse getLmsInstructor(GetLmsInstructorRequest request) {
+    public GetLmsInstructorResponse getLmsInstructor(@Nonnull GetLmsInstructorRequest request) {
         RequestOperation<GetLmsInstructorRequest, GetLmsInstructorResponse> operation
               = new GetLmsInstructor.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -293,7 +294,7 @@ public class Lms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetLmsStudentResponse getLmsStudent(GetLmsStudentRequest request) {
+    public GetLmsStudentResponse getLmsStudent(@Nonnull GetLmsStudentRequest request) {
         RequestOperation<GetLmsStudentRequest, GetLmsStudentResponse> operation
               = new GetLmsStudent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -315,7 +316,7 @@ public class Lms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListLmsClassesResponse listLmsClasses(ListLmsClassesRequest request) {
+    public ListLmsClassesResponse listLmsClasses(@Nonnull ListLmsClassesRequest request) {
         RequestOperation<ListLmsClassesRequest, ListLmsClassesResponse> operation
               = new ListLmsClasses.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -337,7 +338,7 @@ public class Lms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListLmsCoursesResponse listLmsCourses(ListLmsCoursesRequest request) {
+    public ListLmsCoursesResponse listLmsCourses(@Nonnull ListLmsCoursesRequest request) {
         RequestOperation<ListLmsCoursesRequest, ListLmsCoursesResponse> operation
               = new ListLmsCourses.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -359,7 +360,7 @@ public class Lms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListLmsInstructorsResponse listLmsInstructors(ListLmsInstructorsRequest request) {
+    public ListLmsInstructorsResponse listLmsInstructors(@Nonnull ListLmsInstructorsRequest request) {
         RequestOperation<ListLmsInstructorsRequest, ListLmsInstructorsResponse> operation
               = new ListLmsInstructors.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -381,7 +382,7 @@ public class Lms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListLmsStudentsResponse listLmsStudents(ListLmsStudentsRequest request) {
+    public ListLmsStudentsResponse listLmsStudents(@Nonnull ListLmsStudentsRequest request) {
         RequestOperation<ListLmsStudentsRequest, ListLmsStudentsResponse> operation
               = new ListLmsStudents.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -403,7 +404,7 @@ public class Lms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchLmsClassResponse patchLmsClass(PatchLmsClassRequest request) {
+    public PatchLmsClassResponse patchLmsClass(@Nonnull PatchLmsClassRequest request) {
         RequestOperation<PatchLmsClassRequest, PatchLmsClassResponse> operation
               = new PatchLmsClass.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -425,7 +426,7 @@ public class Lms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchLmsCourseResponse patchLmsCourse(PatchLmsCourseRequest request) {
+    public PatchLmsCourseResponse patchLmsCourse(@Nonnull PatchLmsCourseRequest request) {
         RequestOperation<PatchLmsCourseRequest, PatchLmsCourseResponse> operation
               = new PatchLmsCourse.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -447,7 +448,7 @@ public class Lms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchLmsInstructorResponse patchLmsInstructor(PatchLmsInstructorRequest request) {
+    public PatchLmsInstructorResponse patchLmsInstructor(@Nonnull PatchLmsInstructorRequest request) {
         RequestOperation<PatchLmsInstructorRequest, PatchLmsInstructorResponse> operation
               = new PatchLmsInstructor.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -469,7 +470,7 @@ public class Lms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchLmsStudentResponse patchLmsStudent(PatchLmsStudentRequest request) {
+    public PatchLmsStudentResponse patchLmsStudent(@Nonnull PatchLmsStudentRequest request) {
         RequestOperation<PatchLmsStudentRequest, PatchLmsStudentResponse> operation
               = new PatchLmsStudent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -491,7 +492,7 @@ public class Lms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveLmsClassResponse removeLmsClass(RemoveLmsClassRequest request) {
+    public RemoveLmsClassResponse removeLmsClass(@Nonnull RemoveLmsClassRequest request) {
         RequestOperation<RemoveLmsClassRequest, RemoveLmsClassResponse> operation
               = new RemoveLmsClass.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -513,7 +514,7 @@ public class Lms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveLmsCourseResponse removeLmsCourse(RemoveLmsCourseRequest request) {
+    public RemoveLmsCourseResponse removeLmsCourse(@Nonnull RemoveLmsCourseRequest request) {
         RequestOperation<RemoveLmsCourseRequest, RemoveLmsCourseResponse> operation
               = new RemoveLmsCourse.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -535,7 +536,7 @@ public class Lms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveLmsInstructorResponse removeLmsInstructor(RemoveLmsInstructorRequest request) {
+    public RemoveLmsInstructorResponse removeLmsInstructor(@Nonnull RemoveLmsInstructorRequest request) {
         RequestOperation<RemoveLmsInstructorRequest, RemoveLmsInstructorResponse> operation
               = new RemoveLmsInstructor.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -557,7 +558,7 @@ public class Lms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveLmsStudentResponse removeLmsStudent(RemoveLmsStudentRequest request) {
+    public RemoveLmsStudentResponse removeLmsStudent(@Nonnull RemoveLmsStudentRequest request) {
         RequestOperation<RemoveLmsStudentRequest, RemoveLmsStudentResponse> operation
               = new RemoveLmsStudent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -579,7 +580,7 @@ public class Lms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateLmsClassResponse updateLmsClass(UpdateLmsClassRequest request) {
+    public UpdateLmsClassResponse updateLmsClass(@Nonnull UpdateLmsClassRequest request) {
         RequestOperation<UpdateLmsClassRequest, UpdateLmsClassResponse> operation
               = new UpdateLmsClass.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -601,7 +602,7 @@ public class Lms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateLmsCourseResponse updateLmsCourse(UpdateLmsCourseRequest request) {
+    public UpdateLmsCourseResponse updateLmsCourse(@Nonnull UpdateLmsCourseRequest request) {
         RequestOperation<UpdateLmsCourseRequest, UpdateLmsCourseResponse> operation
               = new UpdateLmsCourse.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -623,7 +624,7 @@ public class Lms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateLmsInstructorResponse updateLmsInstructor(UpdateLmsInstructorRequest request) {
+    public UpdateLmsInstructorResponse updateLmsInstructor(@Nonnull UpdateLmsInstructorRequest request) {
         RequestOperation<UpdateLmsInstructorRequest, UpdateLmsInstructorResponse> operation
               = new UpdateLmsInstructor.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -645,7 +646,7 @@ public class Lms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateLmsStudentResponse updateLmsStudent(UpdateLmsStudentRequest request) {
+    public UpdateLmsStudentResponse updateLmsStudent(@Nonnull UpdateLmsStudentRequest request) {
         RequestOperation<UpdateLmsStudentRequest, UpdateLmsStudentResponse> operation
               = new UpdateLmsStudent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

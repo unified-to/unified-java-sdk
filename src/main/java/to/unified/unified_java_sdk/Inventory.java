@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceInventoryRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceInventoryRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceInventoryResponse;
@@ -67,7 +68,7 @@ public class Inventory {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCommerceInventoryResponse createCommerceInventory(CreateCommerceInventoryRequest request) {
+    public CreateCommerceInventoryResponse createCommerceInventory(@Nonnull CreateCommerceInventoryRequest request) {
         RequestOperation<CreateCommerceInventoryRequest, CreateCommerceInventoryResponse> operation
               = new CreateCommerceInventory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -89,7 +90,7 @@ public class Inventory {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetCommerceInventoryResponse getCommerceInventory(GetCommerceInventoryRequest request) {
+    public GetCommerceInventoryResponse getCommerceInventory(@Nonnull GetCommerceInventoryRequest request) {
         RequestOperation<GetCommerceInventoryRequest, GetCommerceInventoryResponse> operation
               = new GetCommerceInventory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -111,7 +112,7 @@ public class Inventory {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCommerceInventoriesResponse listCommerceInventories(ListCommerceInventoriesRequest request) {
+    public ListCommerceInventoriesResponse listCommerceInventories(@Nonnull ListCommerceInventoriesRequest request) {
         RequestOperation<ListCommerceInventoriesRequest, ListCommerceInventoriesResponse> operation
               = new ListCommerceInventories.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -133,7 +134,7 @@ public class Inventory {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCommerceInventoryResponse patchCommerceInventory(PatchCommerceInventoryRequest request) {
+    public PatchCommerceInventoryResponse patchCommerceInventory(@Nonnull PatchCommerceInventoryRequest request) {
         RequestOperation<PatchCommerceInventoryRequest, PatchCommerceInventoryResponse> operation
               = new PatchCommerceInventory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -155,7 +156,7 @@ public class Inventory {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCommerceInventoryResponse removeCommerceInventory(RemoveCommerceInventoryRequest request) {
+    public RemoveCommerceInventoryResponse removeCommerceInventory(@Nonnull RemoveCommerceInventoryRequest request) {
         RequestOperation<RemoveCommerceInventoryRequest, RemoveCommerceInventoryResponse> operation
               = new RemoveCommerceInventory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -177,7 +178,7 @@ public class Inventory {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCommerceInventoryResponse updateCommerceInventory(UpdateCommerceInventoryRequest request) {
+    public UpdateCommerceInventoryResponse updateCommerceInventory(@Nonnull UpdateCommerceInventoryRequest request) {
         RequestOperation<UpdateCommerceInventoryRequest, UpdateCommerceInventoryResponse> operation
               = new UpdateCommerceInventory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

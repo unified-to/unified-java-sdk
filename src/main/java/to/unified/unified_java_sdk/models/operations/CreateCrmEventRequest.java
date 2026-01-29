@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.CrmEvent;
@@ -33,7 +33,7 @@ public class CreateCrmEventRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<CreateCrmEventQueryParamFields>> fields;
+    private List<CreateCrmEventQueryParamFields> fields;
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
@@ -41,55 +41,49 @@ public class CreateCrmEventRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
     @JsonCreator
     public CreateCrmEventRequest(
-            CrmEvent crmEvent,
-            String connectionId,
-            Optional<? extends List<CreateCrmEventQueryParamFields>> fields,
-            Optional<String> raw) {
-        Utils.checkNotNull(crmEvent, "crmEvent");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(raw, "raw");
-        this.crmEvent = crmEvent;
-        this.connectionId = connectionId;
+            @Nonnull CrmEvent crmEvent,
+            @Nonnull String connectionId,
+            @Nullable List<CreateCrmEventQueryParamFields> fields,
+            @Nullable String raw) {
+        this.crmEvent = Optional.ofNullable(crmEvent)
+            .orElseThrow(() -> new IllegalArgumentException("crmEvent cannot be null"));
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
         this.raw = raw;
     }
     
     public CreateCrmEventRequest(
-            CrmEvent crmEvent,
-            String connectionId) {
-        this(crmEvent, connectionId, Optional.empty(),
-            Optional.empty());
+            @Nonnull CrmEvent crmEvent,
+            @Nonnull String connectionId) {
+        this(crmEvent, connectionId, null,
+            null);
     }
 
     /**
      * An event represents an event, activity, or engagement and is always associated with a deal, contact,
      * or company
      */
-    @JsonIgnore
     public CrmEvent crmEvent() {
-        return crmEvent;
+        return this.crmEvent;
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<CreateCrmEventQueryParamFields>> fields() {
-        return (Optional<List<CreateCrmEventQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
@@ -97,9 +91,8 @@ public class CreateCrmEventRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
     public static Builder builder() {
@@ -111,27 +104,17 @@ public class CreateCrmEventRequest {
      * An event represents an event, activity, or engagement and is always associated with a deal, contact,
      * or company
      */
-    public CreateCrmEventRequest withCrmEvent(CrmEvent crmEvent) {
-        Utils.checkNotNull(crmEvent, "crmEvent");
-        this.crmEvent = crmEvent;
+    public CreateCrmEventRequest withCrmEvent(@Nonnull CrmEvent crmEvent) {
+        this.crmEvent = Utils.checkNotNull(crmEvent, "crmEvent");
         return this;
     }
+
 
     /**
      * ID of the connection
      */
-    public CreateCrmEventRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public CreateCrmEventRequest withFields(List<CreateCrmEventQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public CreateCrmEventRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -139,34 +122,22 @@ public class CreateCrmEventRequest {
     /**
      * Fields to return
      */
-    public CreateCrmEventRequest withFields(Optional<? extends List<CreateCrmEventQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public CreateCrmEventRequest withFields(@Nullable List<CreateCrmEventQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public CreateCrmEventRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
-
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public CreateCrmEventRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public CreateCrmEventRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -207,79 +178,50 @@ public class CreateCrmEventRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<CreateCrmEventQueryParamFields>> fields = Optional.empty();
+        private List<CreateCrmEventQueryParamFields> fields;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
         /**
          * An event represents an event, activity, or engagement and is always associated with a deal, contact,
          * or company
          */
-        public Builder crmEvent(CrmEvent crmEvent) {
-            Utils.checkNotNull(crmEvent, "crmEvent");
-            this.crmEvent = crmEvent;
+        public Builder crmEvent(@Nonnull CrmEvent crmEvent) {
+            this.crmEvent = Utils.checkNotNull(crmEvent, "crmEvent");
             return this;
         }
-
 
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<CreateCrmEventQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<CreateCrmEventQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<CreateCrmEventQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
         public CreateCrmEventRequest build() {
-
             return new CreateCrmEventRequest(
                 crmEvent, connectionId, fields,
                 raw);

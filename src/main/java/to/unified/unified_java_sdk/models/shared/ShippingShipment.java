@@ -4,16 +4,15 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
@@ -25,271 +24,235 @@ public class ShippingShipment {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carrier_id")
-    private Optional<String> carrierId;
+    private String carrierId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
     /**
      * Customs information
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customs")
-    private Optional<? extends PropertyShippingShipmentCustoms> customs;
+    private PropertyShippingShipmentCustoms customs;
 
     /**
      * Origin address
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("from_address")
-    private Optional<? extends PropertyShippingShipmentFromAddress> fromAddress;
+    private PropertyShippingShipmentFromAddress fromAddress;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
     /**
      * Insurance details
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insurance")
-    private Optional<? extends PropertyShippingShipmentInsurance> insurance;
+    private PropertyShippingShipmentInsurance insurance;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_adult_signature_required")
-    private Optional<Boolean> isAdultSignatureRequired;
+    private Boolean isAdultSignatureRequired;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_international")
-    private Optional<Boolean> isInternational;
+    private Boolean isInternational;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_rate_guaranteed")
-    private Optional<Boolean> isRateGuaranteed;
+    private Boolean isRateGuaranteed;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_return")
-    private Optional<Boolean> isReturn;
+    private Boolean isReturn;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_signature_required")
-    private Optional<Boolean> isSignatureRequired;
+    private Boolean isSignatureRequired;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label_id")
-    private Optional<String> labelId;
+    private String labelId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_id")
-    private Optional<String> orderId;
+    private String orderId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("original_shipment_id")
-    private Optional<String> originalShipmentId;
+    private String originalShipmentId;
 
     /**
      * Array of packages in this shipment
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packages")
-    private Optional<? extends List<ShippingPackage>> packages;
+    private List<ShippingPackage> packages;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rate_amount")
-    private Optional<Double> rateAmount;
+    private Double rateAmount;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rate_currency")
-    private Optional<String> rateCurrency;
+    private String rateCurrency;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rate_estimated_days")
-    private Optional<Double> rateEstimatedDays;
+    private Double rateEstimatedDays;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rate_estimated_delivery_at")
-    private Optional<OffsetDateTime> rateEstimatedDeliveryAt;
+    private OffsetDateTime rateEstimatedDeliveryAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rate_id")
-    private Optional<String> rateId;
+    private String rateId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rate_service_name")
-    private Optional<String> rateServiceName;
+    private String rateServiceName;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference_number")
-    private Optional<String> referenceNumber;
+    private String referenceNumber;
 
     /**
      * Return address (may differ from from_address)
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("return_address")
-    private Optional<? extends PropertyShippingShipmentReturnAddress> returnAddress;
+    private PropertyShippingShipmentReturnAddress returnAddress;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("return_authorization_number")
-    private Optional<String> returnAuthorizationNumber;
+    private String returnAuthorizationNumber;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("return_reason")
-    private Optional<String> returnReason;
+    private String returnReason;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("return_type")
-    private Optional<? extends ReturnType> returnType;
+    private ReturnType returnType;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service_code")
-    private Optional<String> serviceCode;
+    private String serviceCode;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipped_at")
-    private Optional<OffsetDateTime> shippedAt;
+    private OffsetDateTime shippedAt;
 
     /**
      * Array of special instructions
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("special_instructions")
-    private Optional<? extends List<String>> specialInstructions;
+    private List<String> specialInstructions;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
-    private Optional<? extends ShippingShipmentStatus> status;
+    private ShippingShipmentStatus status;
 
     /**
      * Destination address
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("to_address")
-    private Optional<? extends PropertyShippingShipmentToAddress> toAddress;
+    private PropertyShippingShipmentToAddress toAddress;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tracking_id")
-    private Optional<String> trackingId;
+    private String trackingId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warehouse_location_id")
-    private Optional<String> warehouseLocationId;
+    private String warehouseLocationId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warehouse_location_name")
-    private Optional<String> warehouseLocationName;
+    private String warehouseLocationName;
 
     @JsonCreator
     public ShippingShipment(
-            @JsonProperty("carrier_id") Optional<String> carrierId,
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("customs") Optional<? extends PropertyShippingShipmentCustoms> customs,
-            @JsonProperty("from_address") Optional<? extends PropertyShippingShipmentFromAddress> fromAddress,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("insurance") Optional<? extends PropertyShippingShipmentInsurance> insurance,
-            @JsonProperty("is_adult_signature_required") Optional<Boolean> isAdultSignatureRequired,
-            @JsonProperty("is_international") Optional<Boolean> isInternational,
-            @JsonProperty("is_rate_guaranteed") Optional<Boolean> isRateGuaranteed,
-            @JsonProperty("is_return") Optional<Boolean> isReturn,
-            @JsonProperty("is_signature_required") Optional<Boolean> isSignatureRequired,
-            @JsonProperty("label_id") Optional<String> labelId,
-            @JsonProperty("order_id") Optional<String> orderId,
-            @JsonProperty("original_shipment_id") Optional<String> originalShipmentId,
-            @JsonProperty("packages") Optional<? extends List<ShippingPackage>> packages,
-            @JsonProperty("rate_amount") Optional<Double> rateAmount,
-            @JsonProperty("rate_currency") Optional<String> rateCurrency,
-            @JsonProperty("rate_estimated_days") Optional<Double> rateEstimatedDays,
-            @JsonProperty("rate_estimated_delivery_at") Optional<OffsetDateTime> rateEstimatedDeliveryAt,
-            @JsonProperty("rate_id") Optional<String> rateId,
-            @JsonProperty("rate_service_name") Optional<String> rateServiceName,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("reference_number") Optional<String> referenceNumber,
-            @JsonProperty("return_address") Optional<? extends PropertyShippingShipmentReturnAddress> returnAddress,
-            @JsonProperty("return_authorization_number") Optional<String> returnAuthorizationNumber,
-            @JsonProperty("return_reason") Optional<String> returnReason,
-            @JsonProperty("return_type") Optional<? extends ReturnType> returnType,
-            @JsonProperty("service_code") Optional<String> serviceCode,
-            @JsonProperty("shipped_at") Optional<OffsetDateTime> shippedAt,
-            @JsonProperty("special_instructions") Optional<? extends List<String>> specialInstructions,
-            @JsonProperty("status") Optional<? extends ShippingShipmentStatus> status,
-            @JsonProperty("to_address") Optional<? extends PropertyShippingShipmentToAddress> toAddress,
-            @JsonProperty("tracking_id") Optional<String> trackingId,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
-            @JsonProperty("warehouse_location_id") Optional<String> warehouseLocationId,
-            @JsonProperty("warehouse_location_name") Optional<String> warehouseLocationName) {
-        Utils.checkNotNull(carrierId, "carrierId");
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(customs, "customs");
-        Utils.checkNotNull(fromAddress, "fromAddress");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(insurance, "insurance");
-        Utils.checkNotNull(isAdultSignatureRequired, "isAdultSignatureRequired");
-        Utils.checkNotNull(isInternational, "isInternational");
-        Utils.checkNotNull(isRateGuaranteed, "isRateGuaranteed");
-        Utils.checkNotNull(isReturn, "isReturn");
-        Utils.checkNotNull(isSignatureRequired, "isSignatureRequired");
-        Utils.checkNotNull(labelId, "labelId");
-        Utils.checkNotNull(orderId, "orderId");
-        Utils.checkNotNull(originalShipmentId, "originalShipmentId");
-        Utils.checkNotNull(packages, "packages");
-        Utils.checkNotNull(rateAmount, "rateAmount");
-        Utils.checkNotNull(rateCurrency, "rateCurrency");
-        Utils.checkNotNull(rateEstimatedDays, "rateEstimatedDays");
-        Utils.checkNotNull(rateEstimatedDeliveryAt, "rateEstimatedDeliveryAt");
-        Utils.checkNotNull(rateId, "rateId");
-        Utils.checkNotNull(rateServiceName, "rateServiceName");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(referenceNumber, "referenceNumber");
-        Utils.checkNotNull(returnAddress, "returnAddress");
-        Utils.checkNotNull(returnAuthorizationNumber, "returnAuthorizationNumber");
-        Utils.checkNotNull(returnReason, "returnReason");
-        Utils.checkNotNull(returnType, "returnType");
-        Utils.checkNotNull(serviceCode, "serviceCode");
-        Utils.checkNotNull(shippedAt, "shippedAt");
-        Utils.checkNotNull(specialInstructions, "specialInstructions");
-        Utils.checkNotNull(status, "status");
-        Utils.checkNotNull(toAddress, "toAddress");
-        Utils.checkNotNull(trackingId, "trackingId");
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        Utils.checkNotNull(warehouseLocationId, "warehouseLocationId");
-        Utils.checkNotNull(warehouseLocationName, "warehouseLocationName");
+            @JsonProperty("carrier_id") @Nullable String carrierId,
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("customs") @Nullable PropertyShippingShipmentCustoms customs,
+            @JsonProperty("from_address") @Nullable PropertyShippingShipmentFromAddress fromAddress,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("insurance") @Nullable PropertyShippingShipmentInsurance insurance,
+            @JsonProperty("is_adult_signature_required") @Nullable Boolean isAdultSignatureRequired,
+            @JsonProperty("is_international") @Nullable Boolean isInternational,
+            @JsonProperty("is_rate_guaranteed") @Nullable Boolean isRateGuaranteed,
+            @JsonProperty("is_return") @Nullable Boolean isReturn,
+            @JsonProperty("is_signature_required") @Nullable Boolean isSignatureRequired,
+            @JsonProperty("label_id") @Nullable String labelId,
+            @JsonProperty("order_id") @Nullable String orderId,
+            @JsonProperty("original_shipment_id") @Nullable String originalShipmentId,
+            @JsonProperty("packages") @Nullable List<ShippingPackage> packages,
+            @JsonProperty("rate_amount") @Nullable Double rateAmount,
+            @JsonProperty("rate_currency") @Nullable String rateCurrency,
+            @JsonProperty("rate_estimated_days") @Nullable Double rateEstimatedDays,
+            @JsonProperty("rate_estimated_delivery_at") @Nullable OffsetDateTime rateEstimatedDeliveryAt,
+            @JsonProperty("rate_id") @Nullable String rateId,
+            @JsonProperty("rate_service_name") @Nullable String rateServiceName,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("reference_number") @Nullable String referenceNumber,
+            @JsonProperty("return_address") @Nullable PropertyShippingShipmentReturnAddress returnAddress,
+            @JsonProperty("return_authorization_number") @Nullable String returnAuthorizationNumber,
+            @JsonProperty("return_reason") @Nullable String returnReason,
+            @JsonProperty("return_type") @Nullable ReturnType returnType,
+            @JsonProperty("service_code") @Nullable String serviceCode,
+            @JsonProperty("shipped_at") @Nullable OffsetDateTime shippedAt,
+            @JsonProperty("special_instructions") @Nullable List<String> specialInstructions,
+            @JsonProperty("status") @Nullable ShippingShipmentStatus status,
+            @JsonProperty("to_address") @Nullable PropertyShippingShipmentToAddress toAddress,
+            @JsonProperty("tracking_id") @Nullable String trackingId,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
+            @JsonProperty("warehouse_location_id") @Nullable String warehouseLocationId,
+            @JsonProperty("warehouse_location_name") @Nullable String warehouseLocationName) {
         this.carrierId = carrierId;
         this.createdAt = createdAt;
         this.customs = customs;
@@ -329,229 +292,183 @@ public class ShippingShipment {
     }
     
     public ShippingShipment() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null);
     }
 
-    @JsonIgnore
     public Optional<String> carrierId() {
-        return carrierId;
+        return Optional.ofNullable(this.carrierId);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
     /**
      * Customs information
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<PropertyShippingShipmentCustoms> customs() {
-        return (Optional<PropertyShippingShipmentCustoms>) customs;
+        return Optional.ofNullable(this.customs);
     }
 
     /**
      * Origin address
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<PropertyShippingShipmentFromAddress> fromAddress() {
-        return (Optional<PropertyShippingShipmentFromAddress>) fromAddress;
+        return Optional.ofNullable(this.fromAddress);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
     /**
      * Insurance details
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<PropertyShippingShipmentInsurance> insurance() {
-        return (Optional<PropertyShippingShipmentInsurance>) insurance;
+        return Optional.ofNullable(this.insurance);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isAdultSignatureRequired() {
-        return isAdultSignatureRequired;
+        return Optional.ofNullable(this.isAdultSignatureRequired);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isInternational() {
-        return isInternational;
+        return Optional.ofNullable(this.isInternational);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isRateGuaranteed() {
-        return isRateGuaranteed;
+        return Optional.ofNullable(this.isRateGuaranteed);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isReturn() {
-        return isReturn;
+        return Optional.ofNullable(this.isReturn);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isSignatureRequired() {
-        return isSignatureRequired;
+        return Optional.ofNullable(this.isSignatureRequired);
     }
 
-    @JsonIgnore
     public Optional<String> labelId() {
-        return labelId;
+        return Optional.ofNullable(this.labelId);
     }
 
-    @JsonIgnore
     public Optional<String> orderId() {
-        return orderId;
+        return Optional.ofNullable(this.orderId);
     }
 
-    @JsonIgnore
     public Optional<String> originalShipmentId() {
-        return originalShipmentId;
+        return Optional.ofNullable(this.originalShipmentId);
     }
 
     /**
      * Array of packages in this shipment
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<ShippingPackage>> packages() {
-        return (Optional<List<ShippingPackage>>) packages;
+        return Optional.ofNullable(this.packages);
     }
 
-    @JsonIgnore
     public Optional<Double> rateAmount() {
-        return rateAmount;
+        return Optional.ofNullable(this.rateAmount);
     }
 
-    @JsonIgnore
     public Optional<String> rateCurrency() {
-        return rateCurrency;
+        return Optional.ofNullable(this.rateCurrency);
     }
 
-    @JsonIgnore
     public Optional<Double> rateEstimatedDays() {
-        return rateEstimatedDays;
+        return Optional.ofNullable(this.rateEstimatedDays);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> rateEstimatedDeliveryAt() {
-        return rateEstimatedDeliveryAt;
+        return Optional.ofNullable(this.rateEstimatedDeliveryAt);
     }
 
-    @JsonIgnore
     public Optional<String> rateId() {
-        return rateId;
+        return Optional.ofNullable(this.rateId);
     }
 
-    @JsonIgnore
     public Optional<String> rateServiceName() {
-        return rateServiceName;
+        return Optional.ofNullable(this.rateServiceName);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @JsonIgnore
     public Optional<String> referenceNumber() {
-        return referenceNumber;
+        return Optional.ofNullable(this.referenceNumber);
     }
 
     /**
      * Return address (may differ from from_address)
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<PropertyShippingShipmentReturnAddress> returnAddress() {
-        return (Optional<PropertyShippingShipmentReturnAddress>) returnAddress;
+        return Optional.ofNullable(this.returnAddress);
     }
 
-    @JsonIgnore
     public Optional<String> returnAuthorizationNumber() {
-        return returnAuthorizationNumber;
+        return Optional.ofNullable(this.returnAuthorizationNumber);
     }
 
-    @JsonIgnore
     public Optional<String> returnReason() {
-        return returnReason;
+        return Optional.ofNullable(this.returnReason);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ReturnType> returnType() {
-        return (Optional<ReturnType>) returnType;
+        return Optional.ofNullable(this.returnType);
     }
 
-    @JsonIgnore
     public Optional<String> serviceCode() {
-        return serviceCode;
+        return Optional.ofNullable(this.serviceCode);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> shippedAt() {
-        return shippedAt;
+        return Optional.ofNullable(this.shippedAt);
     }
 
     /**
      * Array of special instructions
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> specialInstructions() {
-        return (Optional<List<String>>) specialInstructions;
+        return Optional.ofNullable(this.specialInstructions);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ShippingShipmentStatus> status() {
-        return (Optional<ShippingShipmentStatus>) status;
+        return Optional.ofNullable(this.status);
     }
 
     /**
      * Destination address
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<PropertyShippingShipmentToAddress> toAddress() {
-        return (Optional<PropertyShippingShipmentToAddress>) toAddress;
+        return Optional.ofNullable(this.toAddress);
     }
 
-    @JsonIgnore
     public Optional<String> trackingId() {
-        return trackingId;
+        return Optional.ofNullable(this.trackingId);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
-    @JsonIgnore
     public Optional<String> warehouseLocationId() {
-        return warehouseLocationId;
+        return Optional.ofNullable(this.warehouseLocationId);
     }
 
-    @JsonIgnore
     public Optional<String> warehouseLocationName() {
-        return warehouseLocationName;
+        return Optional.ofNullable(this.warehouseLocationName);
     }
 
     public static Builder builder() {
@@ -559,515 +476,242 @@ public class ShippingShipment {
     }
 
 
-    public ShippingShipment withCarrierId(String carrierId) {
-        Utils.checkNotNull(carrierId, "carrierId");
-        this.carrierId = Optional.ofNullable(carrierId);
-        return this;
-    }
-
-
-    public ShippingShipment withCarrierId(Optional<String> carrierId) {
-        Utils.checkNotNull(carrierId, "carrierId");
+    public ShippingShipment withCarrierId(@Nullable String carrierId) {
         this.carrierId = carrierId;
         return this;
     }
 
-    public ShippingShipment withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
 
-
-    public ShippingShipment withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public ShippingShipment withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    /**
-     * Customs information
-     */
-    public ShippingShipment withCustoms(PropertyShippingShipmentCustoms customs) {
-        Utils.checkNotNull(customs, "customs");
-        this.customs = Optional.ofNullable(customs);
-        return this;
-    }
-
 
     /**
      * Customs information
      */
-    public ShippingShipment withCustoms(Optional<? extends PropertyShippingShipmentCustoms> customs) {
-        Utils.checkNotNull(customs, "customs");
+    public ShippingShipment withCustoms(@Nullable PropertyShippingShipmentCustoms customs) {
         this.customs = customs;
         return this;
     }
 
-    /**
-     * Origin address
-     */
-    public ShippingShipment withFromAddress(PropertyShippingShipmentFromAddress fromAddress) {
-        Utils.checkNotNull(fromAddress, "fromAddress");
-        this.fromAddress = Optional.ofNullable(fromAddress);
-        return this;
-    }
-
 
     /**
      * Origin address
      */
-    public ShippingShipment withFromAddress(Optional<? extends PropertyShippingShipmentFromAddress> fromAddress) {
-        Utils.checkNotNull(fromAddress, "fromAddress");
+    public ShippingShipment withFromAddress(@Nullable PropertyShippingShipmentFromAddress fromAddress) {
         this.fromAddress = fromAddress;
         return this;
     }
 
-    public ShippingShipment withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public ShippingShipment withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public ShippingShipment withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    /**
-     * Insurance details
-     */
-    public ShippingShipment withInsurance(PropertyShippingShipmentInsurance insurance) {
-        Utils.checkNotNull(insurance, "insurance");
-        this.insurance = Optional.ofNullable(insurance);
-        return this;
-    }
-
 
     /**
      * Insurance details
      */
-    public ShippingShipment withInsurance(Optional<? extends PropertyShippingShipmentInsurance> insurance) {
-        Utils.checkNotNull(insurance, "insurance");
+    public ShippingShipment withInsurance(@Nullable PropertyShippingShipmentInsurance insurance) {
         this.insurance = insurance;
         return this;
     }
 
-    public ShippingShipment withIsAdultSignatureRequired(boolean isAdultSignatureRequired) {
-        Utils.checkNotNull(isAdultSignatureRequired, "isAdultSignatureRequired");
-        this.isAdultSignatureRequired = Optional.ofNullable(isAdultSignatureRequired);
-        return this;
-    }
 
-
-    public ShippingShipment withIsAdultSignatureRequired(Optional<Boolean> isAdultSignatureRequired) {
-        Utils.checkNotNull(isAdultSignatureRequired, "isAdultSignatureRequired");
+    public ShippingShipment withIsAdultSignatureRequired(@Nullable Boolean isAdultSignatureRequired) {
         this.isAdultSignatureRequired = isAdultSignatureRequired;
         return this;
     }
 
-    public ShippingShipment withIsInternational(boolean isInternational) {
-        Utils.checkNotNull(isInternational, "isInternational");
-        this.isInternational = Optional.ofNullable(isInternational);
-        return this;
-    }
 
-
-    public ShippingShipment withIsInternational(Optional<Boolean> isInternational) {
-        Utils.checkNotNull(isInternational, "isInternational");
+    public ShippingShipment withIsInternational(@Nullable Boolean isInternational) {
         this.isInternational = isInternational;
         return this;
     }
 
-    public ShippingShipment withIsRateGuaranteed(boolean isRateGuaranteed) {
-        Utils.checkNotNull(isRateGuaranteed, "isRateGuaranteed");
-        this.isRateGuaranteed = Optional.ofNullable(isRateGuaranteed);
-        return this;
-    }
 
-
-    public ShippingShipment withIsRateGuaranteed(Optional<Boolean> isRateGuaranteed) {
-        Utils.checkNotNull(isRateGuaranteed, "isRateGuaranteed");
+    public ShippingShipment withIsRateGuaranteed(@Nullable Boolean isRateGuaranteed) {
         this.isRateGuaranteed = isRateGuaranteed;
         return this;
     }
 
-    public ShippingShipment withIsReturn(boolean isReturn) {
-        Utils.checkNotNull(isReturn, "isReturn");
-        this.isReturn = Optional.ofNullable(isReturn);
-        return this;
-    }
 
-
-    public ShippingShipment withIsReturn(Optional<Boolean> isReturn) {
-        Utils.checkNotNull(isReturn, "isReturn");
+    public ShippingShipment withIsReturn(@Nullable Boolean isReturn) {
         this.isReturn = isReturn;
         return this;
     }
 
-    public ShippingShipment withIsSignatureRequired(boolean isSignatureRequired) {
-        Utils.checkNotNull(isSignatureRequired, "isSignatureRequired");
-        this.isSignatureRequired = Optional.ofNullable(isSignatureRequired);
-        return this;
-    }
 
-
-    public ShippingShipment withIsSignatureRequired(Optional<Boolean> isSignatureRequired) {
-        Utils.checkNotNull(isSignatureRequired, "isSignatureRequired");
+    public ShippingShipment withIsSignatureRequired(@Nullable Boolean isSignatureRequired) {
         this.isSignatureRequired = isSignatureRequired;
         return this;
     }
 
-    public ShippingShipment withLabelId(String labelId) {
-        Utils.checkNotNull(labelId, "labelId");
-        this.labelId = Optional.ofNullable(labelId);
-        return this;
-    }
 
-
-    public ShippingShipment withLabelId(Optional<String> labelId) {
-        Utils.checkNotNull(labelId, "labelId");
+    public ShippingShipment withLabelId(@Nullable String labelId) {
         this.labelId = labelId;
         return this;
     }
 
-    public ShippingShipment withOrderId(String orderId) {
-        Utils.checkNotNull(orderId, "orderId");
-        this.orderId = Optional.ofNullable(orderId);
-        return this;
-    }
 
-
-    public ShippingShipment withOrderId(Optional<String> orderId) {
-        Utils.checkNotNull(orderId, "orderId");
+    public ShippingShipment withOrderId(@Nullable String orderId) {
         this.orderId = orderId;
         return this;
     }
 
-    public ShippingShipment withOriginalShipmentId(String originalShipmentId) {
-        Utils.checkNotNull(originalShipmentId, "originalShipmentId");
-        this.originalShipmentId = Optional.ofNullable(originalShipmentId);
-        return this;
-    }
 
-
-    public ShippingShipment withOriginalShipmentId(Optional<String> originalShipmentId) {
-        Utils.checkNotNull(originalShipmentId, "originalShipmentId");
+    public ShippingShipment withOriginalShipmentId(@Nullable String originalShipmentId) {
         this.originalShipmentId = originalShipmentId;
         return this;
     }
 
-    /**
-     * Array of packages in this shipment
-     */
-    public ShippingShipment withPackages(List<ShippingPackage> packages) {
-        Utils.checkNotNull(packages, "packages");
-        this.packages = Optional.ofNullable(packages);
-        return this;
-    }
-
 
     /**
      * Array of packages in this shipment
      */
-    public ShippingShipment withPackages(Optional<? extends List<ShippingPackage>> packages) {
-        Utils.checkNotNull(packages, "packages");
+    public ShippingShipment withPackages(@Nullable List<ShippingPackage> packages) {
         this.packages = packages;
         return this;
     }
 
-    public ShippingShipment withRateAmount(double rateAmount) {
-        Utils.checkNotNull(rateAmount, "rateAmount");
-        this.rateAmount = Optional.ofNullable(rateAmount);
-        return this;
-    }
 
-
-    public ShippingShipment withRateAmount(Optional<Double> rateAmount) {
-        Utils.checkNotNull(rateAmount, "rateAmount");
+    public ShippingShipment withRateAmount(@Nullable Double rateAmount) {
         this.rateAmount = rateAmount;
         return this;
     }
 
-    public ShippingShipment withRateCurrency(String rateCurrency) {
-        Utils.checkNotNull(rateCurrency, "rateCurrency");
-        this.rateCurrency = Optional.ofNullable(rateCurrency);
-        return this;
-    }
 
-
-    public ShippingShipment withRateCurrency(Optional<String> rateCurrency) {
-        Utils.checkNotNull(rateCurrency, "rateCurrency");
+    public ShippingShipment withRateCurrency(@Nullable String rateCurrency) {
         this.rateCurrency = rateCurrency;
         return this;
     }
 
-    public ShippingShipment withRateEstimatedDays(double rateEstimatedDays) {
-        Utils.checkNotNull(rateEstimatedDays, "rateEstimatedDays");
-        this.rateEstimatedDays = Optional.ofNullable(rateEstimatedDays);
-        return this;
-    }
 
-
-    public ShippingShipment withRateEstimatedDays(Optional<Double> rateEstimatedDays) {
-        Utils.checkNotNull(rateEstimatedDays, "rateEstimatedDays");
+    public ShippingShipment withRateEstimatedDays(@Nullable Double rateEstimatedDays) {
         this.rateEstimatedDays = rateEstimatedDays;
         return this;
     }
 
-    public ShippingShipment withRateEstimatedDeliveryAt(OffsetDateTime rateEstimatedDeliveryAt) {
-        Utils.checkNotNull(rateEstimatedDeliveryAt, "rateEstimatedDeliveryAt");
-        this.rateEstimatedDeliveryAt = Optional.ofNullable(rateEstimatedDeliveryAt);
-        return this;
-    }
 
-
-    public ShippingShipment withRateEstimatedDeliveryAt(Optional<OffsetDateTime> rateEstimatedDeliveryAt) {
-        Utils.checkNotNull(rateEstimatedDeliveryAt, "rateEstimatedDeliveryAt");
+    public ShippingShipment withRateEstimatedDeliveryAt(@Nullable OffsetDateTime rateEstimatedDeliveryAt) {
         this.rateEstimatedDeliveryAt = rateEstimatedDeliveryAt;
         return this;
     }
 
-    public ShippingShipment withRateId(String rateId) {
-        Utils.checkNotNull(rateId, "rateId");
-        this.rateId = Optional.ofNullable(rateId);
-        return this;
-    }
 
-
-    public ShippingShipment withRateId(Optional<String> rateId) {
-        Utils.checkNotNull(rateId, "rateId");
+    public ShippingShipment withRateId(@Nullable String rateId) {
         this.rateId = rateId;
         return this;
     }
 
-    public ShippingShipment withRateServiceName(String rateServiceName) {
-        Utils.checkNotNull(rateServiceName, "rateServiceName");
-        this.rateServiceName = Optional.ofNullable(rateServiceName);
-        return this;
-    }
 
-
-    public ShippingShipment withRateServiceName(Optional<String> rateServiceName) {
-        Utils.checkNotNull(rateServiceName, "rateServiceName");
+    public ShippingShipment withRateServiceName(@Nullable String rateServiceName) {
         this.rateServiceName = rateServiceName;
         return this;
     }
 
-    public ShippingShipment withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public ShippingShipment withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public ShippingShipment withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public ShippingShipment withReferenceNumber(String referenceNumber) {
-        Utils.checkNotNull(referenceNumber, "referenceNumber");
-        this.referenceNumber = Optional.ofNullable(referenceNumber);
-        return this;
-    }
 
-
-    public ShippingShipment withReferenceNumber(Optional<String> referenceNumber) {
-        Utils.checkNotNull(referenceNumber, "referenceNumber");
+    public ShippingShipment withReferenceNumber(@Nullable String referenceNumber) {
         this.referenceNumber = referenceNumber;
         return this;
     }
 
-    /**
-     * Return address (may differ from from_address)
-     */
-    public ShippingShipment withReturnAddress(PropertyShippingShipmentReturnAddress returnAddress) {
-        Utils.checkNotNull(returnAddress, "returnAddress");
-        this.returnAddress = Optional.ofNullable(returnAddress);
-        return this;
-    }
-
 
     /**
      * Return address (may differ from from_address)
      */
-    public ShippingShipment withReturnAddress(Optional<? extends PropertyShippingShipmentReturnAddress> returnAddress) {
-        Utils.checkNotNull(returnAddress, "returnAddress");
+    public ShippingShipment withReturnAddress(@Nullable PropertyShippingShipmentReturnAddress returnAddress) {
         this.returnAddress = returnAddress;
         return this;
     }
 
-    public ShippingShipment withReturnAuthorizationNumber(String returnAuthorizationNumber) {
-        Utils.checkNotNull(returnAuthorizationNumber, "returnAuthorizationNumber");
-        this.returnAuthorizationNumber = Optional.ofNullable(returnAuthorizationNumber);
-        return this;
-    }
 
-
-    public ShippingShipment withReturnAuthorizationNumber(Optional<String> returnAuthorizationNumber) {
-        Utils.checkNotNull(returnAuthorizationNumber, "returnAuthorizationNumber");
+    public ShippingShipment withReturnAuthorizationNumber(@Nullable String returnAuthorizationNumber) {
         this.returnAuthorizationNumber = returnAuthorizationNumber;
         return this;
     }
 
-    public ShippingShipment withReturnReason(String returnReason) {
-        Utils.checkNotNull(returnReason, "returnReason");
-        this.returnReason = Optional.ofNullable(returnReason);
-        return this;
-    }
 
-
-    public ShippingShipment withReturnReason(Optional<String> returnReason) {
-        Utils.checkNotNull(returnReason, "returnReason");
+    public ShippingShipment withReturnReason(@Nullable String returnReason) {
         this.returnReason = returnReason;
         return this;
     }
 
-    public ShippingShipment withReturnType(ReturnType returnType) {
-        Utils.checkNotNull(returnType, "returnType");
-        this.returnType = Optional.ofNullable(returnType);
-        return this;
-    }
 
-
-    public ShippingShipment withReturnType(Optional<? extends ReturnType> returnType) {
-        Utils.checkNotNull(returnType, "returnType");
+    public ShippingShipment withReturnType(@Nullable ReturnType returnType) {
         this.returnType = returnType;
         return this;
     }
 
-    public ShippingShipment withServiceCode(String serviceCode) {
-        Utils.checkNotNull(serviceCode, "serviceCode");
-        this.serviceCode = Optional.ofNullable(serviceCode);
-        return this;
-    }
 
-
-    public ShippingShipment withServiceCode(Optional<String> serviceCode) {
-        Utils.checkNotNull(serviceCode, "serviceCode");
+    public ShippingShipment withServiceCode(@Nullable String serviceCode) {
         this.serviceCode = serviceCode;
         return this;
     }
 
-    public ShippingShipment withShippedAt(OffsetDateTime shippedAt) {
-        Utils.checkNotNull(shippedAt, "shippedAt");
-        this.shippedAt = Optional.ofNullable(shippedAt);
-        return this;
-    }
 
-
-    public ShippingShipment withShippedAt(Optional<OffsetDateTime> shippedAt) {
-        Utils.checkNotNull(shippedAt, "shippedAt");
+    public ShippingShipment withShippedAt(@Nullable OffsetDateTime shippedAt) {
         this.shippedAt = shippedAt;
         return this;
     }
 
-    /**
-     * Array of special instructions
-     */
-    public ShippingShipment withSpecialInstructions(List<String> specialInstructions) {
-        Utils.checkNotNull(specialInstructions, "specialInstructions");
-        this.specialInstructions = Optional.ofNullable(specialInstructions);
-        return this;
-    }
-
 
     /**
      * Array of special instructions
      */
-    public ShippingShipment withSpecialInstructions(Optional<? extends List<String>> specialInstructions) {
-        Utils.checkNotNull(specialInstructions, "specialInstructions");
+    public ShippingShipment withSpecialInstructions(@Nullable List<String> specialInstructions) {
         this.specialInstructions = specialInstructions;
         return this;
     }
 
-    public ShippingShipment withStatus(ShippingShipmentStatus status) {
-        Utils.checkNotNull(status, "status");
-        this.status = Optional.ofNullable(status);
-        return this;
-    }
 
-
-    public ShippingShipment withStatus(Optional<? extends ShippingShipmentStatus> status) {
-        Utils.checkNotNull(status, "status");
+    public ShippingShipment withStatus(@Nullable ShippingShipmentStatus status) {
         this.status = status;
         return this;
     }
 
-    /**
-     * Destination address
-     */
-    public ShippingShipment withToAddress(PropertyShippingShipmentToAddress toAddress) {
-        Utils.checkNotNull(toAddress, "toAddress");
-        this.toAddress = Optional.ofNullable(toAddress);
-        return this;
-    }
-
 
     /**
      * Destination address
      */
-    public ShippingShipment withToAddress(Optional<? extends PropertyShippingShipmentToAddress> toAddress) {
-        Utils.checkNotNull(toAddress, "toAddress");
+    public ShippingShipment withToAddress(@Nullable PropertyShippingShipmentToAddress toAddress) {
         this.toAddress = toAddress;
         return this;
     }
 
-    public ShippingShipment withTrackingId(String trackingId) {
-        Utils.checkNotNull(trackingId, "trackingId");
-        this.trackingId = Optional.ofNullable(trackingId);
-        return this;
-    }
 
-
-    public ShippingShipment withTrackingId(Optional<String> trackingId) {
-        Utils.checkNotNull(trackingId, "trackingId");
+    public ShippingShipment withTrackingId(@Nullable String trackingId) {
         this.trackingId = trackingId;
         return this;
     }
 
-    public ShippingShipment withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public ShippingShipment withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public ShippingShipment withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
-    public ShippingShipment withWarehouseLocationId(String warehouseLocationId) {
-        Utils.checkNotNull(warehouseLocationId, "warehouseLocationId");
-        this.warehouseLocationId = Optional.ofNullable(warehouseLocationId);
-        return this;
-    }
 
-
-    public ShippingShipment withWarehouseLocationId(Optional<String> warehouseLocationId) {
-        Utils.checkNotNull(warehouseLocationId, "warehouseLocationId");
+    public ShippingShipment withWarehouseLocationId(@Nullable String warehouseLocationId) {
         this.warehouseLocationId = warehouseLocationId;
         return this;
     }
 
-    public ShippingShipment withWarehouseLocationName(String warehouseLocationName) {
-        Utils.checkNotNull(warehouseLocationName, "warehouseLocationName");
-        this.warehouseLocationName = Optional.ofNullable(warehouseLocationName);
-        return this;
-    }
 
-
-    public ShippingShipment withWarehouseLocationName(Optional<String> warehouseLocationName) {
-        Utils.checkNotNull(warehouseLocationName, "warehouseLocationName");
+    public ShippingShipment withWarehouseLocationName(@Nullable String warehouseLocationName) {
         this.warehouseLocationName = warehouseLocationName;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -1178,594 +822,284 @@ public class ShippingShipment {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> carrierId = Optional.empty();
+        private String carrierId;
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<? extends PropertyShippingShipmentCustoms> customs = Optional.empty();
+        private PropertyShippingShipmentCustoms customs;
 
-        private Optional<? extends PropertyShippingShipmentFromAddress> fromAddress = Optional.empty();
+        private PropertyShippingShipmentFromAddress fromAddress;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<? extends PropertyShippingShipmentInsurance> insurance = Optional.empty();
+        private PropertyShippingShipmentInsurance insurance;
 
-        private Optional<Boolean> isAdultSignatureRequired = Optional.empty();
+        private Boolean isAdultSignatureRequired;
 
-        private Optional<Boolean> isInternational = Optional.empty();
+        private Boolean isInternational;
 
-        private Optional<Boolean> isRateGuaranteed = Optional.empty();
+        private Boolean isRateGuaranteed;
 
-        private Optional<Boolean> isReturn = Optional.empty();
+        private Boolean isReturn;
 
-        private Optional<Boolean> isSignatureRequired = Optional.empty();
+        private Boolean isSignatureRequired;
 
-        private Optional<String> labelId = Optional.empty();
+        private String labelId;
 
-        private Optional<String> orderId = Optional.empty();
+        private String orderId;
 
-        private Optional<String> originalShipmentId = Optional.empty();
+        private String originalShipmentId;
 
-        private Optional<? extends List<ShippingPackage>> packages = Optional.empty();
+        private List<ShippingPackage> packages;
 
-        private Optional<Double> rateAmount = Optional.empty();
+        private Double rateAmount;
 
-        private Optional<String> rateCurrency = Optional.empty();
+        private String rateCurrency;
 
-        private Optional<Double> rateEstimatedDays = Optional.empty();
+        private Double rateEstimatedDays;
 
-        private Optional<OffsetDateTime> rateEstimatedDeliveryAt = Optional.empty();
+        private OffsetDateTime rateEstimatedDeliveryAt;
 
-        private Optional<String> rateId = Optional.empty();
+        private String rateId;
 
-        private Optional<String> rateServiceName = Optional.empty();
+        private String rateServiceName;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<String> referenceNumber = Optional.empty();
+        private String referenceNumber;
 
-        private Optional<? extends PropertyShippingShipmentReturnAddress> returnAddress = Optional.empty();
+        private PropertyShippingShipmentReturnAddress returnAddress;
 
-        private Optional<String> returnAuthorizationNumber = Optional.empty();
+        private String returnAuthorizationNumber;
 
-        private Optional<String> returnReason = Optional.empty();
+        private String returnReason;
 
-        private Optional<? extends ReturnType> returnType = Optional.empty();
+        private ReturnType returnType;
 
-        private Optional<String> serviceCode = Optional.empty();
+        private String serviceCode;
 
-        private Optional<OffsetDateTime> shippedAt = Optional.empty();
+        private OffsetDateTime shippedAt;
 
-        private Optional<? extends List<String>> specialInstructions = Optional.empty();
+        private List<String> specialInstructions;
 
-        private Optional<? extends ShippingShipmentStatus> status = Optional.empty();
+        private ShippingShipmentStatus status;
 
-        private Optional<? extends PropertyShippingShipmentToAddress> toAddress = Optional.empty();
+        private PropertyShippingShipmentToAddress toAddress;
 
-        private Optional<String> trackingId = Optional.empty();
+        private String trackingId;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
-        private Optional<String> warehouseLocationId = Optional.empty();
+        private String warehouseLocationId;
 
-        private Optional<String> warehouseLocationName = Optional.empty();
+        private String warehouseLocationName;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder carrierId(String carrierId) {
-            Utils.checkNotNull(carrierId, "carrierId");
-            this.carrierId = Optional.ofNullable(carrierId);
-            return this;
-        }
-
-        public Builder carrierId(Optional<String> carrierId) {
-            Utils.checkNotNull(carrierId, "carrierId");
+        public Builder carrierId(@Nullable String carrierId) {
             this.carrierId = carrierId;
             return this;
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
         /**
          * Customs information
          */
-        public Builder customs(PropertyShippingShipmentCustoms customs) {
-            Utils.checkNotNull(customs, "customs");
-            this.customs = Optional.ofNullable(customs);
-            return this;
-        }
-
-        /**
-         * Customs information
-         */
-        public Builder customs(Optional<? extends PropertyShippingShipmentCustoms> customs) {
-            Utils.checkNotNull(customs, "customs");
+        public Builder customs(@Nullable PropertyShippingShipmentCustoms customs) {
             this.customs = customs;
             return this;
         }
 
-
         /**
          * Origin address
          */
-        public Builder fromAddress(PropertyShippingShipmentFromAddress fromAddress) {
-            Utils.checkNotNull(fromAddress, "fromAddress");
-            this.fromAddress = Optional.ofNullable(fromAddress);
-            return this;
-        }
-
-        /**
-         * Origin address
-         */
-        public Builder fromAddress(Optional<? extends PropertyShippingShipmentFromAddress> fromAddress) {
-            Utils.checkNotNull(fromAddress, "fromAddress");
+        public Builder fromAddress(@Nullable PropertyShippingShipmentFromAddress fromAddress) {
             this.fromAddress = fromAddress;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
         /**
          * Insurance details
          */
-        public Builder insurance(PropertyShippingShipmentInsurance insurance) {
-            Utils.checkNotNull(insurance, "insurance");
-            this.insurance = Optional.ofNullable(insurance);
-            return this;
-        }
-
-        /**
-         * Insurance details
-         */
-        public Builder insurance(Optional<? extends PropertyShippingShipmentInsurance> insurance) {
-            Utils.checkNotNull(insurance, "insurance");
+        public Builder insurance(@Nullable PropertyShippingShipmentInsurance insurance) {
             this.insurance = insurance;
             return this;
         }
 
-
-        public Builder isAdultSignatureRequired(boolean isAdultSignatureRequired) {
-            Utils.checkNotNull(isAdultSignatureRequired, "isAdultSignatureRequired");
-            this.isAdultSignatureRequired = Optional.ofNullable(isAdultSignatureRequired);
-            return this;
-        }
-
-        public Builder isAdultSignatureRequired(Optional<Boolean> isAdultSignatureRequired) {
-            Utils.checkNotNull(isAdultSignatureRequired, "isAdultSignatureRequired");
+        public Builder isAdultSignatureRequired(@Nullable Boolean isAdultSignatureRequired) {
             this.isAdultSignatureRequired = isAdultSignatureRequired;
             return this;
         }
 
-
-        public Builder isInternational(boolean isInternational) {
-            Utils.checkNotNull(isInternational, "isInternational");
-            this.isInternational = Optional.ofNullable(isInternational);
-            return this;
-        }
-
-        public Builder isInternational(Optional<Boolean> isInternational) {
-            Utils.checkNotNull(isInternational, "isInternational");
+        public Builder isInternational(@Nullable Boolean isInternational) {
             this.isInternational = isInternational;
             return this;
         }
 
-
-        public Builder isRateGuaranteed(boolean isRateGuaranteed) {
-            Utils.checkNotNull(isRateGuaranteed, "isRateGuaranteed");
-            this.isRateGuaranteed = Optional.ofNullable(isRateGuaranteed);
-            return this;
-        }
-
-        public Builder isRateGuaranteed(Optional<Boolean> isRateGuaranteed) {
-            Utils.checkNotNull(isRateGuaranteed, "isRateGuaranteed");
+        public Builder isRateGuaranteed(@Nullable Boolean isRateGuaranteed) {
             this.isRateGuaranteed = isRateGuaranteed;
             return this;
         }
 
-
-        public Builder isReturn(boolean isReturn) {
-            Utils.checkNotNull(isReturn, "isReturn");
-            this.isReturn = Optional.ofNullable(isReturn);
-            return this;
-        }
-
-        public Builder isReturn(Optional<Boolean> isReturn) {
-            Utils.checkNotNull(isReturn, "isReturn");
+        public Builder isReturn(@Nullable Boolean isReturn) {
             this.isReturn = isReturn;
             return this;
         }
 
-
-        public Builder isSignatureRequired(boolean isSignatureRequired) {
-            Utils.checkNotNull(isSignatureRequired, "isSignatureRequired");
-            this.isSignatureRequired = Optional.ofNullable(isSignatureRequired);
-            return this;
-        }
-
-        public Builder isSignatureRequired(Optional<Boolean> isSignatureRequired) {
-            Utils.checkNotNull(isSignatureRequired, "isSignatureRequired");
+        public Builder isSignatureRequired(@Nullable Boolean isSignatureRequired) {
             this.isSignatureRequired = isSignatureRequired;
             return this;
         }
 
-
-        public Builder labelId(String labelId) {
-            Utils.checkNotNull(labelId, "labelId");
-            this.labelId = Optional.ofNullable(labelId);
-            return this;
-        }
-
-        public Builder labelId(Optional<String> labelId) {
-            Utils.checkNotNull(labelId, "labelId");
+        public Builder labelId(@Nullable String labelId) {
             this.labelId = labelId;
             return this;
         }
 
-
-        public Builder orderId(String orderId) {
-            Utils.checkNotNull(orderId, "orderId");
-            this.orderId = Optional.ofNullable(orderId);
-            return this;
-        }
-
-        public Builder orderId(Optional<String> orderId) {
-            Utils.checkNotNull(orderId, "orderId");
+        public Builder orderId(@Nullable String orderId) {
             this.orderId = orderId;
             return this;
         }
 
-
-        public Builder originalShipmentId(String originalShipmentId) {
-            Utils.checkNotNull(originalShipmentId, "originalShipmentId");
-            this.originalShipmentId = Optional.ofNullable(originalShipmentId);
-            return this;
-        }
-
-        public Builder originalShipmentId(Optional<String> originalShipmentId) {
-            Utils.checkNotNull(originalShipmentId, "originalShipmentId");
+        public Builder originalShipmentId(@Nullable String originalShipmentId) {
             this.originalShipmentId = originalShipmentId;
             return this;
         }
 
-
         /**
          * Array of packages in this shipment
          */
-        public Builder packages(List<ShippingPackage> packages) {
-            Utils.checkNotNull(packages, "packages");
-            this.packages = Optional.ofNullable(packages);
-            return this;
-        }
-
-        /**
-         * Array of packages in this shipment
-         */
-        public Builder packages(Optional<? extends List<ShippingPackage>> packages) {
-            Utils.checkNotNull(packages, "packages");
+        public Builder packages(@Nullable List<ShippingPackage> packages) {
             this.packages = packages;
             return this;
         }
 
-
-        public Builder rateAmount(double rateAmount) {
-            Utils.checkNotNull(rateAmount, "rateAmount");
-            this.rateAmount = Optional.ofNullable(rateAmount);
-            return this;
-        }
-
-        public Builder rateAmount(Optional<Double> rateAmount) {
-            Utils.checkNotNull(rateAmount, "rateAmount");
+        public Builder rateAmount(@Nullable Double rateAmount) {
             this.rateAmount = rateAmount;
             return this;
         }
 
-
-        public Builder rateCurrency(String rateCurrency) {
-            Utils.checkNotNull(rateCurrency, "rateCurrency");
-            this.rateCurrency = Optional.ofNullable(rateCurrency);
-            return this;
-        }
-
-        public Builder rateCurrency(Optional<String> rateCurrency) {
-            Utils.checkNotNull(rateCurrency, "rateCurrency");
+        public Builder rateCurrency(@Nullable String rateCurrency) {
             this.rateCurrency = rateCurrency;
             return this;
         }
 
-
-        public Builder rateEstimatedDays(double rateEstimatedDays) {
-            Utils.checkNotNull(rateEstimatedDays, "rateEstimatedDays");
-            this.rateEstimatedDays = Optional.ofNullable(rateEstimatedDays);
-            return this;
-        }
-
-        public Builder rateEstimatedDays(Optional<Double> rateEstimatedDays) {
-            Utils.checkNotNull(rateEstimatedDays, "rateEstimatedDays");
+        public Builder rateEstimatedDays(@Nullable Double rateEstimatedDays) {
             this.rateEstimatedDays = rateEstimatedDays;
             return this;
         }
 
-
-        public Builder rateEstimatedDeliveryAt(OffsetDateTime rateEstimatedDeliveryAt) {
-            Utils.checkNotNull(rateEstimatedDeliveryAt, "rateEstimatedDeliveryAt");
-            this.rateEstimatedDeliveryAt = Optional.ofNullable(rateEstimatedDeliveryAt);
-            return this;
-        }
-
-        public Builder rateEstimatedDeliveryAt(Optional<OffsetDateTime> rateEstimatedDeliveryAt) {
-            Utils.checkNotNull(rateEstimatedDeliveryAt, "rateEstimatedDeliveryAt");
+        public Builder rateEstimatedDeliveryAt(@Nullable OffsetDateTime rateEstimatedDeliveryAt) {
             this.rateEstimatedDeliveryAt = rateEstimatedDeliveryAt;
             return this;
         }
 
-
-        public Builder rateId(String rateId) {
-            Utils.checkNotNull(rateId, "rateId");
-            this.rateId = Optional.ofNullable(rateId);
-            return this;
-        }
-
-        public Builder rateId(Optional<String> rateId) {
-            Utils.checkNotNull(rateId, "rateId");
+        public Builder rateId(@Nullable String rateId) {
             this.rateId = rateId;
             return this;
         }
 
-
-        public Builder rateServiceName(String rateServiceName) {
-            Utils.checkNotNull(rateServiceName, "rateServiceName");
-            this.rateServiceName = Optional.ofNullable(rateServiceName);
-            return this;
-        }
-
-        public Builder rateServiceName(Optional<String> rateServiceName) {
-            Utils.checkNotNull(rateServiceName, "rateServiceName");
+        public Builder rateServiceName(@Nullable String rateServiceName) {
             this.rateServiceName = rateServiceName;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder referenceNumber(String referenceNumber) {
-            Utils.checkNotNull(referenceNumber, "referenceNumber");
-            this.referenceNumber = Optional.ofNullable(referenceNumber);
-            return this;
-        }
-
-        public Builder referenceNumber(Optional<String> referenceNumber) {
-            Utils.checkNotNull(referenceNumber, "referenceNumber");
+        public Builder referenceNumber(@Nullable String referenceNumber) {
             this.referenceNumber = referenceNumber;
             return this;
         }
 
-
         /**
          * Return address (may differ from from_address)
          */
-        public Builder returnAddress(PropertyShippingShipmentReturnAddress returnAddress) {
-            Utils.checkNotNull(returnAddress, "returnAddress");
-            this.returnAddress = Optional.ofNullable(returnAddress);
-            return this;
-        }
-
-        /**
-         * Return address (may differ from from_address)
-         */
-        public Builder returnAddress(Optional<? extends PropertyShippingShipmentReturnAddress> returnAddress) {
-            Utils.checkNotNull(returnAddress, "returnAddress");
+        public Builder returnAddress(@Nullable PropertyShippingShipmentReturnAddress returnAddress) {
             this.returnAddress = returnAddress;
             return this;
         }
 
-
-        public Builder returnAuthorizationNumber(String returnAuthorizationNumber) {
-            Utils.checkNotNull(returnAuthorizationNumber, "returnAuthorizationNumber");
-            this.returnAuthorizationNumber = Optional.ofNullable(returnAuthorizationNumber);
-            return this;
-        }
-
-        public Builder returnAuthorizationNumber(Optional<String> returnAuthorizationNumber) {
-            Utils.checkNotNull(returnAuthorizationNumber, "returnAuthorizationNumber");
+        public Builder returnAuthorizationNumber(@Nullable String returnAuthorizationNumber) {
             this.returnAuthorizationNumber = returnAuthorizationNumber;
             return this;
         }
 
-
-        public Builder returnReason(String returnReason) {
-            Utils.checkNotNull(returnReason, "returnReason");
-            this.returnReason = Optional.ofNullable(returnReason);
-            return this;
-        }
-
-        public Builder returnReason(Optional<String> returnReason) {
-            Utils.checkNotNull(returnReason, "returnReason");
+        public Builder returnReason(@Nullable String returnReason) {
             this.returnReason = returnReason;
             return this;
         }
 
-
-        public Builder returnType(ReturnType returnType) {
-            Utils.checkNotNull(returnType, "returnType");
-            this.returnType = Optional.ofNullable(returnType);
-            return this;
-        }
-
-        public Builder returnType(Optional<? extends ReturnType> returnType) {
-            Utils.checkNotNull(returnType, "returnType");
+        public Builder returnType(@Nullable ReturnType returnType) {
             this.returnType = returnType;
             return this;
         }
 
-
-        public Builder serviceCode(String serviceCode) {
-            Utils.checkNotNull(serviceCode, "serviceCode");
-            this.serviceCode = Optional.ofNullable(serviceCode);
-            return this;
-        }
-
-        public Builder serviceCode(Optional<String> serviceCode) {
-            Utils.checkNotNull(serviceCode, "serviceCode");
+        public Builder serviceCode(@Nullable String serviceCode) {
             this.serviceCode = serviceCode;
             return this;
         }
 
-
-        public Builder shippedAt(OffsetDateTime shippedAt) {
-            Utils.checkNotNull(shippedAt, "shippedAt");
-            this.shippedAt = Optional.ofNullable(shippedAt);
-            return this;
-        }
-
-        public Builder shippedAt(Optional<OffsetDateTime> shippedAt) {
-            Utils.checkNotNull(shippedAt, "shippedAt");
+        public Builder shippedAt(@Nullable OffsetDateTime shippedAt) {
             this.shippedAt = shippedAt;
             return this;
         }
 
-
         /**
          * Array of special instructions
          */
-        public Builder specialInstructions(List<String> specialInstructions) {
-            Utils.checkNotNull(specialInstructions, "specialInstructions");
-            this.specialInstructions = Optional.ofNullable(specialInstructions);
-            return this;
-        }
-
-        /**
-         * Array of special instructions
-         */
-        public Builder specialInstructions(Optional<? extends List<String>> specialInstructions) {
-            Utils.checkNotNull(specialInstructions, "specialInstructions");
+        public Builder specialInstructions(@Nullable List<String> specialInstructions) {
             this.specialInstructions = specialInstructions;
             return this;
         }
 
-
-        public Builder status(ShippingShipmentStatus status) {
-            Utils.checkNotNull(status, "status");
-            this.status = Optional.ofNullable(status);
-            return this;
-        }
-
-        public Builder status(Optional<? extends ShippingShipmentStatus> status) {
-            Utils.checkNotNull(status, "status");
+        public Builder status(@Nullable ShippingShipmentStatus status) {
             this.status = status;
             return this;
         }
 
-
         /**
          * Destination address
          */
-        public Builder toAddress(PropertyShippingShipmentToAddress toAddress) {
-            Utils.checkNotNull(toAddress, "toAddress");
-            this.toAddress = Optional.ofNullable(toAddress);
-            return this;
-        }
-
-        /**
-         * Destination address
-         */
-        public Builder toAddress(Optional<? extends PropertyShippingShipmentToAddress> toAddress) {
-            Utils.checkNotNull(toAddress, "toAddress");
+        public Builder toAddress(@Nullable PropertyShippingShipmentToAddress toAddress) {
             this.toAddress = toAddress;
             return this;
         }
 
-
-        public Builder trackingId(String trackingId) {
-            Utils.checkNotNull(trackingId, "trackingId");
-            this.trackingId = Optional.ofNullable(trackingId);
-            return this;
-        }
-
-        public Builder trackingId(Optional<String> trackingId) {
-            Utils.checkNotNull(trackingId, "trackingId");
+        public Builder trackingId(@Nullable String trackingId) {
             this.trackingId = trackingId;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
-
-        public Builder warehouseLocationId(String warehouseLocationId) {
-            Utils.checkNotNull(warehouseLocationId, "warehouseLocationId");
-            this.warehouseLocationId = Optional.ofNullable(warehouseLocationId);
-            return this;
-        }
-
-        public Builder warehouseLocationId(Optional<String> warehouseLocationId) {
-            Utils.checkNotNull(warehouseLocationId, "warehouseLocationId");
+        public Builder warehouseLocationId(@Nullable String warehouseLocationId) {
             this.warehouseLocationId = warehouseLocationId;
             return this;
         }
 
-
-        public Builder warehouseLocationName(String warehouseLocationName) {
-            Utils.checkNotNull(warehouseLocationName, "warehouseLocationName");
-            this.warehouseLocationName = Optional.ofNullable(warehouseLocationName);
-            return this;
-        }
-
-        public Builder warehouseLocationName(Optional<String> warehouseLocationName) {
-            Utils.checkNotNull(warehouseLocationName, "warehouseLocationName");
+        public Builder warehouseLocationName(@Nullable String warehouseLocationName) {
             this.warehouseLocationName = warehouseLocationName;
             return this;
         }
 
         public ShippingShipment build() {
-
             return new ShippingShipment(
                 carrierId, createdAt, customs,
                 fromAddress, id, insurance,

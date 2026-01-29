@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingCreditmemoRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingCreditmemoRequest;
@@ -68,7 +69,7 @@ public class AsyncCreditmemo {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAccountingCreditmemoResponse>} - The async response
      */
-    public CompletableFuture<CreateAccountingCreditmemoResponse> createAccountingCreditmemo(CreateAccountingCreditmemoRequest request) {
+    public CompletableFuture<CreateAccountingCreditmemoResponse> createAccountingCreditmemo(@Nonnull CreateAccountingCreditmemoRequest request) {
         AsyncRequestOperation<CreateAccountingCreditmemoRequest, CreateAccountingCreditmemoResponse> operation
               = new CreateAccountingCreditmemo.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -91,7 +92,7 @@ public class AsyncCreditmemo {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAccountingCreditmemoResponse>} - The async response
      */
-    public CompletableFuture<GetAccountingCreditmemoResponse> getAccountingCreditmemo(GetAccountingCreditmemoRequest request) {
+    public CompletableFuture<GetAccountingCreditmemoResponse> getAccountingCreditmemo(@Nonnull GetAccountingCreditmemoRequest request) {
         AsyncRequestOperation<GetAccountingCreditmemoRequest, GetAccountingCreditmemoResponse> operation
               = new GetAccountingCreditmemo.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -114,7 +115,7 @@ public class AsyncCreditmemo {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAccountingCreditmemoesResponse>} - The async response
      */
-    public CompletableFuture<ListAccountingCreditmemoesResponse> listAccountingCreditmemoes(ListAccountingCreditmemoesRequest request) {
+    public CompletableFuture<ListAccountingCreditmemoesResponse> listAccountingCreditmemoes(@Nonnull ListAccountingCreditmemoesRequest request) {
         AsyncRequestOperation<ListAccountingCreditmemoesRequest, ListAccountingCreditmemoesResponse> operation
               = new ListAccountingCreditmemoes.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -137,7 +138,7 @@ public class AsyncCreditmemo {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAccountingCreditmemoResponse>} - The async response
      */
-    public CompletableFuture<PatchAccountingCreditmemoResponse> patchAccountingCreditmemo(PatchAccountingCreditmemoRequest request) {
+    public CompletableFuture<PatchAccountingCreditmemoResponse> patchAccountingCreditmemo(@Nonnull PatchAccountingCreditmemoRequest request) {
         AsyncRequestOperation<PatchAccountingCreditmemoRequest, PatchAccountingCreditmemoResponse> operation
               = new PatchAccountingCreditmemo.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -160,7 +161,7 @@ public class AsyncCreditmemo {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAccountingCreditmemoResponse>} - The async response
      */
-    public CompletableFuture<RemoveAccountingCreditmemoResponse> removeAccountingCreditmemo(RemoveAccountingCreditmemoRequest request) {
+    public CompletableFuture<RemoveAccountingCreditmemoResponse> removeAccountingCreditmemo(@Nonnull RemoveAccountingCreditmemoRequest request) {
         AsyncRequestOperation<RemoveAccountingCreditmemoRequest, RemoveAccountingCreditmemoResponse> operation
               = new RemoveAccountingCreditmemo.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -183,7 +184,7 @@ public class AsyncCreditmemo {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAccountingCreditmemoResponse>} - The async response
      */
-    public CompletableFuture<UpdateAccountingCreditmemoResponse> updateAccountingCreditmemo(UpdateAccountingCreditmemoRequest request) {
+    public CompletableFuture<UpdateAccountingCreditmemoResponse> updateAccountingCreditmemo(@Nonnull UpdateAccountingCreditmemoRequest request) {
         AsyncRequestOperation<UpdateAccountingCreditmemoRequest, UpdateAccountingCreditmemoResponse> operation
               = new UpdateAccountingCreditmemo.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

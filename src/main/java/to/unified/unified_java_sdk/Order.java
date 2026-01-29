@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingOrderRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingOrderRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingOrderResponse;
@@ -67,7 +68,7 @@ public class Order {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAccountingOrderResponse createAccountingOrder(CreateAccountingOrderRequest request) {
+    public CreateAccountingOrderResponse createAccountingOrder(@Nonnull CreateAccountingOrderRequest request) {
         RequestOperation<CreateAccountingOrderRequest, CreateAccountingOrderResponse> operation
               = new CreateAccountingOrder.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -89,7 +90,7 @@ public class Order {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingOrderResponse getAccountingOrder(GetAccountingOrderRequest request) {
+    public GetAccountingOrderResponse getAccountingOrder(@Nonnull GetAccountingOrderRequest request) {
         RequestOperation<GetAccountingOrderRequest, GetAccountingOrderResponse> operation
               = new GetAccountingOrder.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -111,7 +112,7 @@ public class Order {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingOrdersResponse listAccountingOrders(ListAccountingOrdersRequest request) {
+    public ListAccountingOrdersResponse listAccountingOrders(@Nonnull ListAccountingOrdersRequest request) {
         RequestOperation<ListAccountingOrdersRequest, ListAccountingOrdersResponse> operation
               = new ListAccountingOrders.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -133,7 +134,7 @@ public class Order {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAccountingOrderResponse patchAccountingOrder(PatchAccountingOrderRequest request) {
+    public PatchAccountingOrderResponse patchAccountingOrder(@Nonnull PatchAccountingOrderRequest request) {
         RequestOperation<PatchAccountingOrderRequest, PatchAccountingOrderResponse> operation
               = new PatchAccountingOrder.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -155,7 +156,7 @@ public class Order {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAccountingOrderResponse removeAccountingOrder(RemoveAccountingOrderRequest request) {
+    public RemoveAccountingOrderResponse removeAccountingOrder(@Nonnull RemoveAccountingOrderRequest request) {
         RequestOperation<RemoveAccountingOrderRequest, RemoveAccountingOrderResponse> operation
               = new RemoveAccountingOrder.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -177,7 +178,7 @@ public class Order {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAccountingOrderResponse updateAccountingOrder(UpdateAccountingOrderRequest request) {
+    public UpdateAccountingOrderResponse updateAccountingOrder(@Nonnull UpdateAccountingOrderRequest request) {
         RequestOperation<UpdateAccountingOrderRequest, UpdateAccountingOrderResponse> operation
               = new UpdateAccountingOrder.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

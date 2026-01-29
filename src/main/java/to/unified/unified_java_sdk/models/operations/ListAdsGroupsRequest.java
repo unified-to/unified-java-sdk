@@ -4,11 +4,11 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
@@ -20,7 +20,7 @@ public class ListAdsGroupsRequest {
      * The campaign ID to filter by
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=campaign_id")
-    private Optional<String> campaignId;
+    private String campaignId;
 
     /**
      * ID of the connection
@@ -32,37 +32,37 @@ public class ListAdsGroupsRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<ListAdsGroupsQueryParamFields>> fields;
+    private List<ListAdsGroupsQueryParamFields> fields;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
-    private Optional<Double> limit;
+    private Double limit;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
-    private Optional<Double> offset;
+    private Double offset;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
-    private Optional<String> order;
+    private String order;
 
     /**
      * The org ID to filter by (reference to AdsOrganization)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=org_id")
-    private Optional<String> orgId;
+    private String orgId;
 
     /**
      * The parent ID to filter by
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parent_id")
-    private Optional<String> parentId;
+    private String parentId;
 
     /**
      * Query string to search. eg. email address or name
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
-    private Optional<String> query;
+    private String query;
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
@@ -70,47 +70,36 @@ public class ListAdsGroupsRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
-    private Optional<String> sort;
+    private String sort;
 
     /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
-    private Optional<String> updatedGte;
+    private String updatedGte;
 
     @JsonCreator
     public ListAdsGroupsRequest(
-            Optional<String> campaignId,
-            String connectionId,
-            Optional<? extends List<ListAdsGroupsQueryParamFields>> fields,
-            Optional<Double> limit,
-            Optional<Double> offset,
-            Optional<String> order,
-            Optional<String> orgId,
-            Optional<String> parentId,
-            Optional<String> query,
-            Optional<String> raw,
-            Optional<String> sort,
-            Optional<String> updatedGte) {
-        Utils.checkNotNull(campaignId, "campaignId");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(limit, "limit");
-        Utils.checkNotNull(offset, "offset");
-        Utils.checkNotNull(order, "order");
-        Utils.checkNotNull(orgId, "orgId");
-        Utils.checkNotNull(parentId, "parentId");
-        Utils.checkNotNull(query, "query");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(sort, "sort");
-        Utils.checkNotNull(updatedGte, "updatedGte");
+            @Nullable String campaignId,
+            @Nonnull String connectionId,
+            @Nullable List<ListAdsGroupsQueryParamFields> fields,
+            @Nullable Double limit,
+            @Nullable Double offset,
+            @Nullable String order,
+            @Nullable String orgId,
+            @Nullable String parentId,
+            @Nullable String query,
+            @Nullable String raw,
+            @Nullable String sort,
+            @Nullable String updatedGte) {
         this.campaignId = campaignId;
-        this.connectionId = connectionId;
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
         this.limit = limit;
         this.offset = offset;
@@ -124,75 +113,65 @@ public class ListAdsGroupsRequest {
     }
     
     public ListAdsGroupsRequest(
-            String connectionId) {
-        this(Optional.empty(), connectionId, Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+            @Nonnull String connectionId) {
+        this(null, connectionId, null,
+            null, null, null,
+            null, null, null,
+            null, null, null);
     }
 
     /**
      * The campaign ID to filter by
      */
-    @JsonIgnore
     public Optional<String> campaignId() {
-        return campaignId;
+        return Optional.ofNullable(this.campaignId);
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<ListAdsGroupsQueryParamFields>> fields() {
-        return (Optional<List<ListAdsGroupsQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
-    @JsonIgnore
     public Optional<Double> limit() {
-        return limit;
+        return Optional.ofNullable(this.limit);
     }
 
-    @JsonIgnore
     public Optional<Double> offset() {
-        return offset;
+        return Optional.ofNullable(this.offset);
     }
 
-    @JsonIgnore
     public Optional<String> order() {
-        return order;
+        return Optional.ofNullable(this.order);
     }
 
     /**
      * The org ID to filter by (reference to AdsOrganization)
      */
-    @JsonIgnore
     public Optional<String> orgId() {
-        return orgId;
+        return Optional.ofNullable(this.orgId);
     }
 
     /**
      * The parent ID to filter by
      */
-    @JsonIgnore
     public Optional<String> parentId() {
-        return parentId;
+        return Optional.ofNullable(this.parentId);
     }
 
     /**
      * Query string to search. eg. email address or name
      */
-    @JsonIgnore
     public Optional<String> query() {
-        return query;
+        return Optional.ofNullable(this.query);
     }
 
     /**
@@ -200,23 +179,20 @@ public class ListAdsGroupsRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @JsonIgnore
     public Optional<String> sort() {
-        return sort;
+        return Optional.ofNullable(this.sort);
     }
 
     /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
-    @JsonIgnore
     public Optional<String> updatedGte() {
-        return updatedGte;
+        return Optional.ofNullable(this.updatedGte);
     }
 
     public static Builder builder() {
@@ -227,37 +203,17 @@ public class ListAdsGroupsRequest {
     /**
      * The campaign ID to filter by
      */
-    public ListAdsGroupsRequest withCampaignId(String campaignId) {
-        Utils.checkNotNull(campaignId, "campaignId");
-        this.campaignId = Optional.ofNullable(campaignId);
-        return this;
-    }
-
-
-    /**
-     * The campaign ID to filter by
-     */
-    public ListAdsGroupsRequest withCampaignId(Optional<String> campaignId) {
-        Utils.checkNotNull(campaignId, "campaignId");
+    public ListAdsGroupsRequest withCampaignId(@Nullable String campaignId) {
         this.campaignId = campaignId;
         return this;
     }
 
+
     /**
      * ID of the connection
      */
-    public ListAdsGroupsRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public ListAdsGroupsRequest withFields(List<ListAdsGroupsQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public ListAdsGroupsRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -265,164 +221,83 @@ public class ListAdsGroupsRequest {
     /**
      * Fields to return
      */
-    public ListAdsGroupsRequest withFields(Optional<? extends List<ListAdsGroupsQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public ListAdsGroupsRequest withFields(@Nullable List<ListAdsGroupsQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
-    public ListAdsGroupsRequest withLimit(double limit) {
-        Utils.checkNotNull(limit, "limit");
-        this.limit = Optional.ofNullable(limit);
-        return this;
-    }
 
-
-    public ListAdsGroupsRequest withLimit(Optional<Double> limit) {
-        Utils.checkNotNull(limit, "limit");
+    public ListAdsGroupsRequest withLimit(@Nullable Double limit) {
         this.limit = limit;
         return this;
     }
 
-    public ListAdsGroupsRequest withOffset(double offset) {
-        Utils.checkNotNull(offset, "offset");
-        this.offset = Optional.ofNullable(offset);
-        return this;
-    }
 
-
-    public ListAdsGroupsRequest withOffset(Optional<Double> offset) {
-        Utils.checkNotNull(offset, "offset");
+    public ListAdsGroupsRequest withOffset(@Nullable Double offset) {
         this.offset = offset;
         return this;
     }
 
-    public ListAdsGroupsRequest withOrder(String order) {
-        Utils.checkNotNull(order, "order");
-        this.order = Optional.ofNullable(order);
-        return this;
-    }
 
-
-    public ListAdsGroupsRequest withOrder(Optional<String> order) {
-        Utils.checkNotNull(order, "order");
+    public ListAdsGroupsRequest withOrder(@Nullable String order) {
         this.order = order;
         return this;
     }
 
-    /**
-     * The org ID to filter by (reference to AdsOrganization)
-     */
-    public ListAdsGroupsRequest withOrgId(String orgId) {
-        Utils.checkNotNull(orgId, "orgId");
-        this.orgId = Optional.ofNullable(orgId);
-        return this;
-    }
-
 
     /**
      * The org ID to filter by (reference to AdsOrganization)
      */
-    public ListAdsGroupsRequest withOrgId(Optional<String> orgId) {
-        Utils.checkNotNull(orgId, "orgId");
+    public ListAdsGroupsRequest withOrgId(@Nullable String orgId) {
         this.orgId = orgId;
         return this;
     }
 
-    /**
-     * The parent ID to filter by
-     */
-    public ListAdsGroupsRequest withParentId(String parentId) {
-        Utils.checkNotNull(parentId, "parentId");
-        this.parentId = Optional.ofNullable(parentId);
-        return this;
-    }
-
 
     /**
      * The parent ID to filter by
      */
-    public ListAdsGroupsRequest withParentId(Optional<String> parentId) {
-        Utils.checkNotNull(parentId, "parentId");
+    public ListAdsGroupsRequest withParentId(@Nullable String parentId) {
         this.parentId = parentId;
         return this;
     }
 
-    /**
-     * Query string to search. eg. email address or name
-     */
-    public ListAdsGroupsRequest withQuery(String query) {
-        Utils.checkNotNull(query, "query");
-        this.query = Optional.ofNullable(query);
-        return this;
-    }
-
 
     /**
      * Query string to search. eg. email address or name
      */
-    public ListAdsGroupsRequest withQuery(Optional<String> query) {
-        Utils.checkNotNull(query, "query");
+    public ListAdsGroupsRequest withQuery(@Nullable String query) {
         this.query = query;
         return this;
     }
 
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public ListAdsGroupsRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
-
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public ListAdsGroupsRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public ListAdsGroupsRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
 
-    public ListAdsGroupsRequest withSort(String sort) {
-        Utils.checkNotNull(sort, "sort");
-        this.sort = Optional.ofNullable(sort);
-        return this;
-    }
 
-
-    public ListAdsGroupsRequest withSort(Optional<String> sort) {
-        Utils.checkNotNull(sort, "sort");
+    public ListAdsGroupsRequest withSort(@Nullable String sort) {
         this.sort = sort;
         return this;
     }
 
-    /**
-     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
-     * YYYY-MM-DDTHH:MM:SSZ format)
-     */
-    public ListAdsGroupsRequest withUpdatedGte(String updatedGte) {
-        Utils.checkNotNull(updatedGte, "updatedGte");
-        this.updatedGte = Optional.ofNullable(updatedGte);
-        return this;
-    }
-
 
     /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
-    public ListAdsGroupsRequest withUpdatedGte(Optional<String> updatedGte) {
-        Utils.checkNotNull(updatedGte, "updatedGte");
+    public ListAdsGroupsRequest withUpdatedGte(@Nullable String updatedGte) {
         this.updatedGte = updatedGte;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -477,237 +352,122 @@ public class ListAdsGroupsRequest {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> campaignId = Optional.empty();
+        private String campaignId;
 
         private String connectionId;
 
-        private Optional<? extends List<ListAdsGroupsQueryParamFields>> fields = Optional.empty();
+        private List<ListAdsGroupsQueryParamFields> fields;
 
-        private Optional<Double> limit = Optional.empty();
+        private Double limit;
 
-        private Optional<Double> offset = Optional.empty();
+        private Double offset;
 
-        private Optional<String> order = Optional.empty();
+        private String order;
 
-        private Optional<String> orgId = Optional.empty();
+        private String orgId;
 
-        private Optional<String> parentId = Optional.empty();
+        private String parentId;
 
-        private Optional<String> query = Optional.empty();
+        private String query;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
-        private Optional<String> sort = Optional.empty();
+        private String sort;
 
-        private Optional<String> updatedGte = Optional.empty();
+        private String updatedGte;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
         /**
          * The campaign ID to filter by
          */
-        public Builder campaignId(String campaignId) {
-            Utils.checkNotNull(campaignId, "campaignId");
-            this.campaignId = Optional.ofNullable(campaignId);
-            return this;
-        }
-
-        /**
-         * The campaign ID to filter by
-         */
-        public Builder campaignId(Optional<String> campaignId) {
-            Utils.checkNotNull(campaignId, "campaignId");
+        public Builder campaignId(@Nullable String campaignId) {
             this.campaignId = campaignId;
             return this;
         }
 
-
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<ListAdsGroupsQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<ListAdsGroupsQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<ListAdsGroupsQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
-        public Builder limit(double limit) {
-            Utils.checkNotNull(limit, "limit");
-            this.limit = Optional.ofNullable(limit);
-            return this;
-        }
-
-        public Builder limit(Optional<Double> limit) {
-            Utils.checkNotNull(limit, "limit");
+        public Builder limit(@Nullable Double limit) {
             this.limit = limit;
             return this;
         }
 
-
-        public Builder offset(double offset) {
-            Utils.checkNotNull(offset, "offset");
-            this.offset = Optional.ofNullable(offset);
-            return this;
-        }
-
-        public Builder offset(Optional<Double> offset) {
-            Utils.checkNotNull(offset, "offset");
+        public Builder offset(@Nullable Double offset) {
             this.offset = offset;
             return this;
         }
 
-
-        public Builder order(String order) {
-            Utils.checkNotNull(order, "order");
-            this.order = Optional.ofNullable(order);
-            return this;
-        }
-
-        public Builder order(Optional<String> order) {
-            Utils.checkNotNull(order, "order");
+        public Builder order(@Nullable String order) {
             this.order = order;
             return this;
         }
 
-
         /**
          * The org ID to filter by (reference to AdsOrganization)
          */
-        public Builder orgId(String orgId) {
-            Utils.checkNotNull(orgId, "orgId");
-            this.orgId = Optional.ofNullable(orgId);
-            return this;
-        }
-
-        /**
-         * The org ID to filter by (reference to AdsOrganization)
-         */
-        public Builder orgId(Optional<String> orgId) {
-            Utils.checkNotNull(orgId, "orgId");
+        public Builder orgId(@Nullable String orgId) {
             this.orgId = orgId;
             return this;
         }
 
-
         /**
          * The parent ID to filter by
          */
-        public Builder parentId(String parentId) {
-            Utils.checkNotNull(parentId, "parentId");
-            this.parentId = Optional.ofNullable(parentId);
-            return this;
-        }
-
-        /**
-         * The parent ID to filter by
-         */
-        public Builder parentId(Optional<String> parentId) {
-            Utils.checkNotNull(parentId, "parentId");
+        public Builder parentId(@Nullable String parentId) {
             this.parentId = parentId;
             return this;
         }
 
-
         /**
          * Query string to search. eg. email address or name
          */
-        public Builder query(String query) {
-            Utils.checkNotNull(query, "query");
-            this.query = Optional.ofNullable(query);
-            return this;
-        }
-
-        /**
-         * Query string to search. eg. email address or name
-         */
-        public Builder query(Optional<String> query) {
-            Utils.checkNotNull(query, "query");
+        public Builder query(@Nullable String query) {
             this.query = query;
             return this;
         }
 
-
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder sort(String sort) {
-            Utils.checkNotNull(sort, "sort");
-            this.sort = Optional.ofNullable(sort);
-            return this;
-        }
-
-        public Builder sort(Optional<String> sort) {
-            Utils.checkNotNull(sort, "sort");
+        public Builder sort(@Nullable String sort) {
             this.sort = sort;
             return this;
         }
 
-
         /**
          * Return only results whose updated date is equal or greater to this value (ISO-8601 /
          * YYYY-MM-DDTHH:MM:SSZ format)
          */
-        public Builder updatedGte(String updatedGte) {
-            Utils.checkNotNull(updatedGte, "updatedGte");
-            this.updatedGte = Optional.ofNullable(updatedGte);
-            return this;
-        }
-
-        /**
-         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
-         * YYYY-MM-DDTHH:MM:SSZ format)
-         */
-        public Builder updatedGte(Optional<String> updatedGte) {
-            Utils.checkNotNull(updatedGte, "updatedGte");
+        public Builder updatedGte(@Nullable String updatedGte) {
             this.updatedGte = updatedGte;
             return this;
         }
 
         public ListAdsGroupsRequest build() {
-
             return new ListAdsGroupsRequest(
                 campaignId, connectionId, fields,
                 limit, offset, order,

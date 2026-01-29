@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedIssueRequest;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedIssueRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedIssueResponse;
@@ -51,7 +52,7 @@ public class Issue {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetUnifiedIssueResponse getUnifiedIssue(GetUnifiedIssueRequest request) {
+    public GetUnifiedIssueResponse getUnifiedIssue(@Nonnull GetUnifiedIssueRequest request) {
         RequestOperation<GetUnifiedIssueRequest, GetUnifiedIssueResponse> operation
               = new GetUnifiedIssue.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -73,7 +74,7 @@ public class Issue {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListUnifiedIssuesResponse listUnifiedIssues(ListUnifiedIssuesRequest request) {
+    public ListUnifiedIssuesResponse listUnifiedIssues(@Nonnull ListUnifiedIssuesRequest request) {
         RequestOperation<ListUnifiedIssuesRequest, ListUnifiedIssuesResponse> operation
               = new ListUnifiedIssues.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

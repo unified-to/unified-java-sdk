@@ -49,7 +49,6 @@ public class KmsPageMetadataSchemas1 {
         }
 
         public KmsPageMetadataSchemas1 build() {
-
             return new KmsPageMetadataSchemas1(
                 );
         }

@@ -5,14 +5,11 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateShippingRateRequest;
 import to.unified.unified_java_sdk.models.operations.CreateShippingRateRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateShippingRateResponse;
-import to.unified.unified_java_sdk.models.operations.GetShippingRateRequest;
-import to.unified.unified_java_sdk.models.operations.GetShippingRateRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.GetShippingRateResponse;
 import to.unified.unified_java_sdk.operations.CreateShippingRate;
-import to.unified.unified_java_sdk.operations.GetShippingRate;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -51,31 +48,9 @@ public class Rate {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateShippingRateResponse createShippingRate(CreateShippingRateRequest request) {
+    public CreateShippingRateResponse createShippingRate(@Nonnull CreateShippingRateRequest request) {
         RequestOperation<CreateShippingRateRequest, CreateShippingRateResponse> operation
               = new CreateShippingRate.Sync(sdkConfiguration, _headers);
-        return operation.handleResponse(operation.doRequest(request));
-    }
-
-    /**
-     * Retrieve a rate
-     * 
-     * @return The call builder
-     */
-    public GetShippingRateRequestBuilder getShippingRate() {
-        return new GetShippingRateRequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Retrieve a rate
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return The response from the API call
-     * @throws RuntimeException subclass if the API call fails
-     */
-    public GetShippingRateResponse getShippingRate(GetShippingRateRequest request) {
-        RequestOperation<GetShippingRateRequest, GetShippingRateResponse> operation
-              = new GetShippingRate.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

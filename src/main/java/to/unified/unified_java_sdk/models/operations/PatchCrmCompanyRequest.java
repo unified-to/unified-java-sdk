@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.CrmCompany;
@@ -32,7 +32,7 @@ public class PatchCrmCompanyRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<PatchCrmCompanyQueryParamFields>> fields;
+    private List<PatchCrmCompanyQueryParamFields> fields;
 
     /**
      * ID of the Company
@@ -46,66 +46,59 @@ public class PatchCrmCompanyRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
     @JsonCreator
     public PatchCrmCompanyRequest(
-            CrmCompany crmCompany,
-            String connectionId,
-            Optional<? extends List<PatchCrmCompanyQueryParamFields>> fields,
-            String id,
-            Optional<String> raw) {
-        Utils.checkNotNull(crmCompany, "crmCompany");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(raw, "raw");
-        this.crmCompany = crmCompany;
-        this.connectionId = connectionId;
+            @Nonnull CrmCompany crmCompany,
+            @Nonnull String connectionId,
+            @Nullable List<PatchCrmCompanyQueryParamFields> fields,
+            @Nonnull String id,
+            @Nullable String raw) {
+        this.crmCompany = Optional.ofNullable(crmCompany)
+            .orElseThrow(() -> new IllegalArgumentException("crmCompany cannot be null"));
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
-        this.id = id;
+        this.id = Optional.ofNullable(id)
+            .orElseThrow(() -> new IllegalArgumentException("id cannot be null"));
         this.raw = raw;
     }
     
     public PatchCrmCompanyRequest(
-            CrmCompany crmCompany,
-            String connectionId,
-            String id) {
-        this(crmCompany, connectionId, Optional.empty(),
-            id, Optional.empty());
+            @Nonnull CrmCompany crmCompany,
+            @Nonnull String connectionId,
+            @Nonnull String id) {
+        this(crmCompany, connectionId, null,
+            id, null);
     }
 
     /**
      * A company represents an organization that optionally is associated with a deal and/or contacts
      */
-    @JsonIgnore
     public CrmCompany crmCompany() {
-        return crmCompany;
+        return this.crmCompany;
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<PatchCrmCompanyQueryParamFields>> fields() {
-        return (Optional<List<PatchCrmCompanyQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
      * ID of the Company
      */
-    @JsonIgnore
     public String id() {
-        return id;
+        return this.id;
     }
 
     /**
@@ -113,9 +106,8 @@ public class PatchCrmCompanyRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
     public static Builder builder() {
@@ -126,27 +118,17 @@ public class PatchCrmCompanyRequest {
     /**
      * A company represents an organization that optionally is associated with a deal and/or contacts
      */
-    public PatchCrmCompanyRequest withCrmCompany(CrmCompany crmCompany) {
-        Utils.checkNotNull(crmCompany, "crmCompany");
-        this.crmCompany = crmCompany;
+    public PatchCrmCompanyRequest withCrmCompany(@Nonnull CrmCompany crmCompany) {
+        this.crmCompany = Utils.checkNotNull(crmCompany, "crmCompany");
         return this;
     }
+
 
     /**
      * ID of the connection
      */
-    public PatchCrmCompanyRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public PatchCrmCompanyRequest withFields(List<PatchCrmCompanyQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public PatchCrmCompanyRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -154,29 +136,17 @@ public class PatchCrmCompanyRequest {
     /**
      * Fields to return
      */
-    public PatchCrmCompanyRequest withFields(Optional<? extends List<PatchCrmCompanyQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public PatchCrmCompanyRequest withFields(@Nullable List<PatchCrmCompanyQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
+
     /**
      * ID of the Company
      */
-    public PatchCrmCompanyRequest withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = id;
-        return this;
-    }
-
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public PatchCrmCompanyRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
+    public PatchCrmCompanyRequest withId(@Nonnull String id) {
+        this.id = Utils.checkNotNull(id, "id");
         return this;
     }
 
@@ -186,11 +156,11 @@ public class PatchCrmCompanyRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public PatchCrmCompanyRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public PatchCrmCompanyRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -233,74 +203,45 @@ public class PatchCrmCompanyRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<PatchCrmCompanyQueryParamFields>> fields = Optional.empty();
+        private List<PatchCrmCompanyQueryParamFields> fields;
 
         private String id;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
         /**
          * A company represents an organization that optionally is associated with a deal and/or contacts
          */
-        public Builder crmCompany(CrmCompany crmCompany) {
-            Utils.checkNotNull(crmCompany, "crmCompany");
-            this.crmCompany = crmCompany;
+        public Builder crmCompany(@Nonnull CrmCompany crmCompany) {
+            this.crmCompany = Utils.checkNotNull(crmCompany, "crmCompany");
             return this;
         }
-
 
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<PatchCrmCompanyQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<PatchCrmCompanyQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<PatchCrmCompanyQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * ID of the Company
          */
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = id;
-            return this;
-        }
-
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
+        public Builder id(@Nonnull String id) {
+            this.id = Utils.checkNotNull(id, "id");
             return this;
         }
 
@@ -309,14 +250,12 @@ public class PatchCrmCompanyRequest {
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
         public PatchCrmCompanyRequest build() {
-
             return new PatchCrmCompanyRequest(
                 crmCompany, connectionId, fields,
                 id, raw);

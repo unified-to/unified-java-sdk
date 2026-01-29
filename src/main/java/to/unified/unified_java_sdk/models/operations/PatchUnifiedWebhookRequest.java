@@ -4,9 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
 import java.lang.Override;
 import java.lang.String;
+import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.Webhook;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -27,28 +28,26 @@ public class PatchUnifiedWebhookRequest {
 
     @JsonCreator
     public PatchUnifiedWebhookRequest(
-            Webhook webhook,
-            String id) {
-        Utils.checkNotNull(webhook, "webhook");
-        Utils.checkNotNull(id, "id");
-        this.webhook = webhook;
-        this.id = id;
+            @Nonnull Webhook webhook,
+            @Nonnull String id) {
+        this.webhook = Optional.ofNullable(webhook)
+            .orElseThrow(() -> new IllegalArgumentException("webhook cannot be null"));
+        this.id = Optional.ofNullable(id)
+            .orElseThrow(() -> new IllegalArgumentException("id cannot be null"));
     }
 
     /**
      * A webhook is used to POST new/updated information to your server.
      */
-    @JsonIgnore
     public Webhook webhook() {
-        return webhook;
+        return this.webhook;
     }
 
     /**
      * ID of the Webhook
      */
-    @JsonIgnore
     public String id() {
-        return id;
+        return this.id;
     }
 
     public static Builder builder() {
@@ -59,20 +58,20 @@ public class PatchUnifiedWebhookRequest {
     /**
      * A webhook is used to POST new/updated information to your server.
      */
-    public PatchUnifiedWebhookRequest withWebhook(Webhook webhook) {
-        Utils.checkNotNull(webhook, "webhook");
-        this.webhook = webhook;
+    public PatchUnifiedWebhookRequest withWebhook(@Nonnull Webhook webhook) {
+        this.webhook = Utils.checkNotNull(webhook, "webhook");
         return this;
     }
+
 
     /**
      * ID of the Webhook
      */
-    public PatchUnifiedWebhookRequest withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = id;
+    public PatchUnifiedWebhookRequest withId(@Nonnull String id) {
+        this.id = Utils.checkNotNull(id, "id");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -112,28 +111,23 @@ public class PatchUnifiedWebhookRequest {
           // force use of static builder() method
         }
 
-
         /**
          * A webhook is used to POST new/updated information to your server.
          */
-        public Builder webhook(Webhook webhook) {
-            Utils.checkNotNull(webhook, "webhook");
-            this.webhook = webhook;
+        public Builder webhook(@Nonnull Webhook webhook) {
+            this.webhook = Utils.checkNotNull(webhook, "webhook");
             return this;
         }
-
 
         /**
          * ID of the Webhook
          */
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = id;
+        public Builder id(@Nonnull String id) {
+            this.id = Utils.checkNotNull(id, "id");
             return this;
         }
 
         public PatchUnifiedWebhookRequest build() {
-
             return new PatchUnifiedWebhookRequest(
                 webhook, id);
         }

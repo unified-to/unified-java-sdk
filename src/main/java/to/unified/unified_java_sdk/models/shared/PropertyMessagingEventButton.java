@@ -4,10 +4,11 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
 import java.util.Optional;
@@ -18,7 +19,7 @@ public class PropertyMessagingEventButton {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon")
-    private Optional<String> icon;
+    private String icon;
 
 
     @JsonProperty("id")
@@ -27,39 +28,34 @@ public class PropertyMessagingEventButton {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
-    private Optional<String> text;
+    private String text;
 
     @JsonCreator
     public PropertyMessagingEventButton(
-            @JsonProperty("icon") Optional<String> icon,
-            @JsonProperty("id") String id,
-            @JsonProperty("text") Optional<String> text) {
-        Utils.checkNotNull(icon, "icon");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(text, "text");
+            @JsonProperty("icon") @Nullable String icon,
+            @JsonProperty("id") @Nonnull String id,
+            @JsonProperty("text") @Nullable String text) {
         this.icon = icon;
-        this.id = id;
+        this.id = Optional.ofNullable(id)
+            .orElseThrow(() -> new IllegalArgumentException("id cannot be null"));
         this.text = text;
     }
     
     public PropertyMessagingEventButton(
-            String id) {
-        this(Optional.empty(), id, Optional.empty());
+            @Nonnull String id) {
+        this(null, id, null);
     }
 
-    @JsonIgnore
     public Optional<String> icon() {
-        return icon;
+        return Optional.ofNullable(this.icon);
     }
 
-    @JsonIgnore
     public String id() {
-        return id;
+        return this.id;
     }
 
-    @JsonIgnore
     public Optional<String> text() {
-        return text;
+        return Optional.ofNullable(this.text);
     }
 
     public static Builder builder() {
@@ -67,37 +63,23 @@ public class PropertyMessagingEventButton {
     }
 
 
-    public PropertyMessagingEventButton withIcon(String icon) {
-        Utils.checkNotNull(icon, "icon");
-        this.icon = Optional.ofNullable(icon);
-        return this;
-    }
-
-
-    public PropertyMessagingEventButton withIcon(Optional<String> icon) {
-        Utils.checkNotNull(icon, "icon");
+    public PropertyMessagingEventButton withIcon(@Nullable String icon) {
         this.icon = icon;
         return this;
     }
 
-    public PropertyMessagingEventButton withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = id;
-        return this;
-    }
 
-    public PropertyMessagingEventButton withText(String text) {
-        Utils.checkNotNull(text, "text");
-        this.text = Optional.ofNullable(text);
+    public PropertyMessagingEventButton withId(@Nonnull String id) {
+        this.id = Utils.checkNotNull(id, "id");
         return this;
     }
 
 
-    public PropertyMessagingEventButton withText(Optional<String> text) {
-        Utils.checkNotNull(text, "text");
+    public PropertyMessagingEventButton withText(@Nullable String text) {
         this.text = text;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -131,51 +113,32 @@ public class PropertyMessagingEventButton {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> icon = Optional.empty();
+        private String icon;
 
         private String id;
 
-        private Optional<String> text = Optional.empty();
+        private String text;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder icon(String icon) {
-            Utils.checkNotNull(icon, "icon");
-            this.icon = Optional.ofNullable(icon);
-            return this;
-        }
-
-        public Builder icon(Optional<String> icon) {
-            Utils.checkNotNull(icon, "icon");
+        public Builder icon(@Nullable String icon) {
             this.icon = icon;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = id;
+        public Builder id(@Nonnull String id) {
+            this.id = Utils.checkNotNull(id, "id");
             return this;
         }
 
-
-        public Builder text(String text) {
-            Utils.checkNotNull(text, "text");
-            this.text = Optional.ofNullable(text);
-            return this;
-        }
-
-        public Builder text(Optional<String> text) {
-            Utils.checkNotNull(text, "text");
+        public Builder text(@Nullable String text) {
             this.text = text;
             return this;
         }
 
         public PropertyMessagingEventButton build() {
-
             return new PropertyMessagingEventButton(
                 icon, id, text);
         }

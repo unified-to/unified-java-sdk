@@ -5,32 +5,45 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.RemoveLmsCourse;
 import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveLmsCourseRequestBuilder {
-
-    private RemoveLmsCourseRequest request;
     private final SDKConfiguration sdkConfiguration;
-    private final Headers _headers = new Headers(); 
+    private final Headers _headers = new Headers();
+    private RemoveLmsCourseRequest request;
 
     public RemoveLmsCourseRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
 
-    public RemoveLmsCourseRequestBuilder request(RemoveLmsCourseRequest request) {
-        Utils.checkNotNull(request, "request");
-        this.request = request;
+    public RemoveLmsCourseRequestBuilder request(@Nonnull RemoveLmsCourseRequest request) {
+        this.request = Utils.checkNotNull(request, "request");
         return this;
     }
 
+    private RemoveLmsCourseRequest _buildRequest() {
+        return this.request;
+    }
+    
+    public RemoveLmsCourseRequestBuilder header(String name, String value) {
+        Utils.checkNotNull(name, "name");
+        Utils.checkNotNull(value, "value");
+        this._headers.add(name, value);
+        return this;
+    }
+
+    /**
+    * Executes the request and returns the response.
+    *
+    * @return The response from the server.
+    */
     public RemoveLmsCourseResponse call() {
-        
         RequestOperation<RemoveLmsCourseRequest, RemoveLmsCourseResponse> operation
               = new RemoveLmsCourse.Sync(sdkConfiguration, _headers);
-
-        return operation.handleResponse(operation.doRequest(request));
+        return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

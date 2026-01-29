@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
@@ -19,48 +19,42 @@ public class AccountingTrialbalanceSubItem {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_id")
-    private Optional<String> accountId;
+    private String accountId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_name")
-    private Optional<String> accountName;
+    private String accountName;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
-    private Optional<Double> amount;
+    private Double amount;
 
     @JsonCreator
     public AccountingTrialbalanceSubItem(
-            @JsonProperty("account_id") Optional<String> accountId,
-            @JsonProperty("account_name") Optional<String> accountName,
-            @JsonProperty("amount") Optional<Double> amount) {
-        Utils.checkNotNull(accountId, "accountId");
-        Utils.checkNotNull(accountName, "accountName");
-        Utils.checkNotNull(amount, "amount");
+            @JsonProperty("account_id") @Nullable String accountId,
+            @JsonProperty("account_name") @Nullable String accountName,
+            @JsonProperty("amount") @Nullable Double amount) {
         this.accountId = accountId;
         this.accountName = accountName;
         this.amount = amount;
     }
     
     public AccountingTrialbalanceSubItem() {
-        this(Optional.empty(), Optional.empty(), Optional.empty());
+        this(null, null, null);
     }
 
-    @JsonIgnore
     public Optional<String> accountId() {
-        return accountId;
+        return Optional.ofNullable(this.accountId);
     }
 
-    @JsonIgnore
     public Optional<String> accountName() {
-        return accountName;
+        return Optional.ofNullable(this.accountName);
     }
 
-    @JsonIgnore
     public Optional<Double> amount() {
-        return amount;
+        return Optional.ofNullable(this.amount);
     }
 
     public static Builder builder() {
@@ -68,44 +62,23 @@ public class AccountingTrialbalanceSubItem {
     }
 
 
-    public AccountingTrialbalanceSubItem withAccountId(String accountId) {
-        Utils.checkNotNull(accountId, "accountId");
-        this.accountId = Optional.ofNullable(accountId);
-        return this;
-    }
-
-
-    public AccountingTrialbalanceSubItem withAccountId(Optional<String> accountId) {
-        Utils.checkNotNull(accountId, "accountId");
+    public AccountingTrialbalanceSubItem withAccountId(@Nullable String accountId) {
         this.accountId = accountId;
         return this;
     }
 
-    public AccountingTrialbalanceSubItem withAccountName(String accountName) {
-        Utils.checkNotNull(accountName, "accountName");
-        this.accountName = Optional.ofNullable(accountName);
-        return this;
-    }
 
-
-    public AccountingTrialbalanceSubItem withAccountName(Optional<String> accountName) {
-        Utils.checkNotNull(accountName, "accountName");
+    public AccountingTrialbalanceSubItem withAccountName(@Nullable String accountName) {
         this.accountName = accountName;
         return this;
     }
 
-    public AccountingTrialbalanceSubItem withAmount(double amount) {
-        Utils.checkNotNull(amount, "amount");
-        this.amount = Optional.ofNullable(amount);
-        return this;
-    }
 
-
-    public AccountingTrialbalanceSubItem withAmount(Optional<Double> amount) {
-        Utils.checkNotNull(amount, "amount");
+    public AccountingTrialbalanceSubItem withAmount(@Nullable Double amount) {
         this.amount = amount;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -139,57 +112,32 @@ public class AccountingTrialbalanceSubItem {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> accountId = Optional.empty();
+        private String accountId;
 
-        private Optional<String> accountName = Optional.empty();
+        private String accountName;
 
-        private Optional<Double> amount = Optional.empty();
+        private Double amount;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder accountId(String accountId) {
-            Utils.checkNotNull(accountId, "accountId");
-            this.accountId = Optional.ofNullable(accountId);
-            return this;
-        }
-
-        public Builder accountId(Optional<String> accountId) {
-            Utils.checkNotNull(accountId, "accountId");
+        public Builder accountId(@Nullable String accountId) {
             this.accountId = accountId;
             return this;
         }
 
-
-        public Builder accountName(String accountName) {
-            Utils.checkNotNull(accountName, "accountName");
-            this.accountName = Optional.ofNullable(accountName);
-            return this;
-        }
-
-        public Builder accountName(Optional<String> accountName) {
-            Utils.checkNotNull(accountName, "accountName");
+        public Builder accountName(@Nullable String accountName) {
             this.accountName = accountName;
             return this;
         }
 
-
-        public Builder amount(double amount) {
-            Utils.checkNotNull(amount, "amount");
-            this.amount = Optional.ofNullable(amount);
-            return this;
-        }
-
-        public Builder amount(Optional<Double> amount) {
-            Utils.checkNotNull(amount, "amount");
+        public Builder amount(@Nullable Double amount) {
             this.amount = amount;
             return this;
         }
 
         public AccountingTrialbalanceSubItem build() {
-
             return new AccountingTrialbalanceSubItem(
                 accountId, accountName, amount);
         }

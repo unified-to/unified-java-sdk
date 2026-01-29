@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingTaxrateRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingTaxrateRequest;
@@ -68,7 +69,7 @@ public class AsyncTaxrate {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAccountingTaxrateResponse>} - The async response
      */
-    public CompletableFuture<CreateAccountingTaxrateResponse> createAccountingTaxrate(CreateAccountingTaxrateRequest request) {
+    public CompletableFuture<CreateAccountingTaxrateResponse> createAccountingTaxrate(@Nonnull CreateAccountingTaxrateRequest request) {
         AsyncRequestOperation<CreateAccountingTaxrateRequest, CreateAccountingTaxrateResponse> operation
               = new CreateAccountingTaxrate.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -91,7 +92,7 @@ public class AsyncTaxrate {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAccountingTaxrateResponse>} - The async response
      */
-    public CompletableFuture<GetAccountingTaxrateResponse> getAccountingTaxrate(GetAccountingTaxrateRequest request) {
+    public CompletableFuture<GetAccountingTaxrateResponse> getAccountingTaxrate(@Nonnull GetAccountingTaxrateRequest request) {
         AsyncRequestOperation<GetAccountingTaxrateRequest, GetAccountingTaxrateResponse> operation
               = new GetAccountingTaxrate.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -114,7 +115,7 @@ public class AsyncTaxrate {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAccountingTaxratesResponse>} - The async response
      */
-    public CompletableFuture<ListAccountingTaxratesResponse> listAccountingTaxrates(ListAccountingTaxratesRequest request) {
+    public CompletableFuture<ListAccountingTaxratesResponse> listAccountingTaxrates(@Nonnull ListAccountingTaxratesRequest request) {
         AsyncRequestOperation<ListAccountingTaxratesRequest, ListAccountingTaxratesResponse> operation
               = new ListAccountingTaxrates.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -137,7 +138,7 @@ public class AsyncTaxrate {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAccountingTaxrateResponse>} - The async response
      */
-    public CompletableFuture<PatchAccountingTaxrateResponse> patchAccountingTaxrate(PatchAccountingTaxrateRequest request) {
+    public CompletableFuture<PatchAccountingTaxrateResponse> patchAccountingTaxrate(@Nonnull PatchAccountingTaxrateRequest request) {
         AsyncRequestOperation<PatchAccountingTaxrateRequest, PatchAccountingTaxrateResponse> operation
               = new PatchAccountingTaxrate.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -160,7 +161,7 @@ public class AsyncTaxrate {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAccountingTaxrateResponse>} - The async response
      */
-    public CompletableFuture<RemoveAccountingTaxrateResponse> removeAccountingTaxrate(RemoveAccountingTaxrateRequest request) {
+    public CompletableFuture<RemoveAccountingTaxrateResponse> removeAccountingTaxrate(@Nonnull RemoveAccountingTaxrateRequest request) {
         AsyncRequestOperation<RemoveAccountingTaxrateRequest, RemoveAccountingTaxrateResponse> operation
               = new RemoveAccountingTaxrate.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -183,7 +184,7 @@ public class AsyncTaxrate {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAccountingTaxrateResponse>} - The async response
      */
-    public CompletableFuture<UpdateAccountingTaxrateResponse> updateAccountingTaxrate(UpdateAccountingTaxrateRequest request) {
+    public CompletableFuture<UpdateAccountingTaxrateResponse> updateAccountingTaxrate(@Nonnull UpdateAccountingTaxrateRequest request) {
         AsyncRequestOperation<UpdateAccountingTaxrateRequest, UpdateAccountingTaxrateResponse> operation
               = new UpdateAccountingTaxrate.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

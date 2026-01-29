@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingExpenseRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingExpenseRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAccountingExpenseResponse;
@@ -67,7 +68,7 @@ public class Expense {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAccountingExpenseResponse createAccountingExpense(CreateAccountingExpenseRequest request) {
+    public CreateAccountingExpenseResponse createAccountingExpense(@Nonnull CreateAccountingExpenseRequest request) {
         RequestOperation<CreateAccountingExpenseRequest, CreateAccountingExpenseResponse> operation
               = new CreateAccountingExpense.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -89,7 +90,7 @@ public class Expense {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingExpenseResponse getAccountingExpense(GetAccountingExpenseRequest request) {
+    public GetAccountingExpenseResponse getAccountingExpense(@Nonnull GetAccountingExpenseRequest request) {
         RequestOperation<GetAccountingExpenseRequest, GetAccountingExpenseResponse> operation
               = new GetAccountingExpense.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -111,7 +112,7 @@ public class Expense {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingExpensesResponse listAccountingExpenses(ListAccountingExpensesRequest request) {
+    public ListAccountingExpensesResponse listAccountingExpenses(@Nonnull ListAccountingExpensesRequest request) {
         RequestOperation<ListAccountingExpensesRequest, ListAccountingExpensesResponse> operation
               = new ListAccountingExpenses.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -133,7 +134,7 @@ public class Expense {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAccountingExpenseResponse patchAccountingExpense(PatchAccountingExpenseRequest request) {
+    public PatchAccountingExpenseResponse patchAccountingExpense(@Nonnull PatchAccountingExpenseRequest request) {
         RequestOperation<PatchAccountingExpenseRequest, PatchAccountingExpenseResponse> operation
               = new PatchAccountingExpense.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -155,7 +156,7 @@ public class Expense {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAccountingExpenseResponse removeAccountingExpense(RemoveAccountingExpenseRequest request) {
+    public RemoveAccountingExpenseResponse removeAccountingExpense(@Nonnull RemoveAccountingExpenseRequest request) {
         RequestOperation<RemoveAccountingExpenseRequest, RemoveAccountingExpenseResponse> operation
               = new RemoveAccountingExpense.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -177,7 +178,7 @@ public class Expense {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAccountingExpenseResponse updateAccountingExpense(UpdateAccountingExpenseRequest request) {
+    public UpdateAccountingExpenseResponse updateAccountingExpense(@Nonnull UpdateAccountingExpenseRequest request) {
         RequestOperation<UpdateAccountingExpenseRequest, UpdateAccountingExpenseResponse> operation
               = new UpdateAccountingExpense.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

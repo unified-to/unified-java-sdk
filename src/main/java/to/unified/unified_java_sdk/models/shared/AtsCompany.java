@@ -4,14 +4,14 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
@@ -23,22 +23,22 @@ public class AtsCompany {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
-    private Optional<? extends PropertyAtsCompanyAddress> address;
+    private PropertyAtsCompanyAddress address;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
-    private Optional<? extends List<AtsMetadata>> metadata;
+    private List<AtsMetadata> metadata;
 
 
     @JsonProperty("name")
@@ -47,62 +47,52 @@ public class AtsCompany {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_id")
-    private Optional<String> parentId;
+    private String parentId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone")
-    private Optional<String> phone;
+    private String phone;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recruiter_ids")
-    private Optional<? extends List<String>> recruiterIds;
+    private List<String> recruiterIds;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("website_url")
-    private Optional<String> websiteUrl;
+    private String websiteUrl;
 
     @JsonCreator
     public AtsCompany(
-            @JsonProperty("address") Optional<? extends PropertyAtsCompanyAddress> address,
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("metadata") Optional<? extends List<AtsMetadata>> metadata,
-            @JsonProperty("name") String name,
-            @JsonProperty("parent_id") Optional<String> parentId,
-            @JsonProperty("phone") Optional<String> phone,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("recruiter_ids") Optional<? extends List<String>> recruiterIds,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
-            @JsonProperty("website_url") Optional<String> websiteUrl) {
-        Utils.checkNotNull(address, "address");
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(metadata, "metadata");
-        Utils.checkNotNull(name, "name");
-        Utils.checkNotNull(parentId, "parentId");
-        Utils.checkNotNull(phone, "phone");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(recruiterIds, "recruiterIds");
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        Utils.checkNotNull(websiteUrl, "websiteUrl");
+            @JsonProperty("address") @Nullable PropertyAtsCompanyAddress address,
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("metadata") @Nullable List<AtsMetadata> metadata,
+            @JsonProperty("name") @Nonnull String name,
+            @JsonProperty("parent_id") @Nullable String parentId,
+            @JsonProperty("phone") @Nullable String phone,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("recruiter_ids") @Nullable List<String> recruiterIds,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
+            @JsonProperty("website_url") @Nullable String websiteUrl) {
         this.address = address;
         this.createdAt = createdAt;
         this.id = id;
         this.metadata = metadata;
-        this.name = name;
+        this.name = Optional.ofNullable(name)
+            .orElseThrow(() -> new IllegalArgumentException("name cannot be null"));
         this.parentId = parentId;
         this.phone = phone;
         this.raw = raw;
@@ -112,70 +102,55 @@ public class AtsCompany {
     }
     
     public AtsCompany(
-            String name) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), name, Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+            @Nonnull String name) {
+        this(null, null, null,
+            null, name, null,
+            null, null, null,
+            null, null);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<PropertyAtsCompanyAddress> address() {
-        return (Optional<PropertyAtsCompanyAddress>) address;
+        return Optional.ofNullable(this.address);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<AtsMetadata>> metadata() {
-        return (Optional<List<AtsMetadata>>) metadata;
+        return Optional.ofNullable(this.metadata);
     }
 
-    @JsonIgnore
     public String name() {
-        return name;
+        return this.name;
     }
 
-    @JsonIgnore
     public Optional<String> parentId() {
-        return parentId;
+        return Optional.ofNullable(this.parentId);
     }
 
-    @JsonIgnore
     public Optional<String> phone() {
-        return phone;
+        return Optional.ofNullable(this.phone);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> recruiterIds() {
-        return (Optional<List<String>>) recruiterIds;
+        return Optional.ofNullable(this.recruiterIds);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
-    @JsonIgnore
     public Optional<String> websiteUrl() {
-        return websiteUrl;
+        return Optional.ofNullable(this.websiteUrl);
     }
 
     public static Builder builder() {
@@ -183,141 +158,71 @@ public class AtsCompany {
     }
 
 
-    public AtsCompany withAddress(PropertyAtsCompanyAddress address) {
-        Utils.checkNotNull(address, "address");
-        this.address = Optional.ofNullable(address);
-        return this;
-    }
-
-
-    public AtsCompany withAddress(Optional<? extends PropertyAtsCompanyAddress> address) {
-        Utils.checkNotNull(address, "address");
+    public AtsCompany withAddress(@Nullable PropertyAtsCompanyAddress address) {
         this.address = address;
         return this;
     }
 
-    public AtsCompany withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
 
-
-    public AtsCompany withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public AtsCompany withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public AtsCompany withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public AtsCompany withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public AtsCompany withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public AtsCompany withMetadata(List<AtsMetadata> metadata) {
-        Utils.checkNotNull(metadata, "metadata");
-        this.metadata = Optional.ofNullable(metadata);
-        return this;
-    }
 
-
-    public AtsCompany withMetadata(Optional<? extends List<AtsMetadata>> metadata) {
-        Utils.checkNotNull(metadata, "metadata");
+    public AtsCompany withMetadata(@Nullable List<AtsMetadata> metadata) {
         this.metadata = metadata;
         return this;
     }
 
-    public AtsCompany withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = name;
-        return this;
-    }
 
-    public AtsCompany withParentId(String parentId) {
-        Utils.checkNotNull(parentId, "parentId");
-        this.parentId = Optional.ofNullable(parentId);
+    public AtsCompany withName(@Nonnull String name) {
+        this.name = Utils.checkNotNull(name, "name");
         return this;
     }
 
 
-    public AtsCompany withParentId(Optional<String> parentId) {
-        Utils.checkNotNull(parentId, "parentId");
+    public AtsCompany withParentId(@Nullable String parentId) {
         this.parentId = parentId;
         return this;
     }
 
-    public AtsCompany withPhone(String phone) {
-        Utils.checkNotNull(phone, "phone");
-        this.phone = Optional.ofNullable(phone);
-        return this;
-    }
 
-
-    public AtsCompany withPhone(Optional<String> phone) {
-        Utils.checkNotNull(phone, "phone");
+    public AtsCompany withPhone(@Nullable String phone) {
         this.phone = phone;
         return this;
     }
 
-    public AtsCompany withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public AtsCompany withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public AtsCompany withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public AtsCompany withRecruiterIds(List<String> recruiterIds) {
-        Utils.checkNotNull(recruiterIds, "recruiterIds");
-        this.recruiterIds = Optional.ofNullable(recruiterIds);
-        return this;
-    }
 
-
-    public AtsCompany withRecruiterIds(Optional<? extends List<String>> recruiterIds) {
-        Utils.checkNotNull(recruiterIds, "recruiterIds");
+    public AtsCompany withRecruiterIds(@Nullable List<String> recruiterIds) {
         this.recruiterIds = recruiterIds;
         return this;
     }
 
-    public AtsCompany withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public AtsCompany withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public AtsCompany withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
-    public AtsCompany withWebsiteUrl(String websiteUrl) {
-        Utils.checkNotNull(websiteUrl, "websiteUrl");
-        this.websiteUrl = Optional.ofNullable(websiteUrl);
-        return this;
-    }
 
-
-    public AtsCompany withWebsiteUrl(Optional<String> websiteUrl) {
-        Utils.checkNotNull(websiteUrl, "websiteUrl");
+    public AtsCompany withWebsiteUrl(@Nullable String websiteUrl) {
         this.websiteUrl = websiteUrl;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -370,171 +275,88 @@ public class AtsCompany {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends PropertyAtsCompanyAddress> address = Optional.empty();
+        private PropertyAtsCompanyAddress address;
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<? extends List<AtsMetadata>> metadata = Optional.empty();
+        private List<AtsMetadata> metadata;
 
         private String name;
 
-        private Optional<String> parentId = Optional.empty();
+        private String parentId;
 
-        private Optional<String> phone = Optional.empty();
+        private String phone;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<? extends List<String>> recruiterIds = Optional.empty();
+        private List<String> recruiterIds;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
-        private Optional<String> websiteUrl = Optional.empty();
+        private String websiteUrl;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder address(PropertyAtsCompanyAddress address) {
-            Utils.checkNotNull(address, "address");
-            this.address = Optional.ofNullable(address);
-            return this;
-        }
-
-        public Builder address(Optional<? extends PropertyAtsCompanyAddress> address) {
-            Utils.checkNotNull(address, "address");
+        public Builder address(@Nullable PropertyAtsCompanyAddress address) {
             this.address = address;
             return this;
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder metadata(List<AtsMetadata> metadata) {
-            Utils.checkNotNull(metadata, "metadata");
-            this.metadata = Optional.ofNullable(metadata);
-            return this;
-        }
-
-        public Builder metadata(Optional<? extends List<AtsMetadata>> metadata) {
-            Utils.checkNotNull(metadata, "metadata");
+        public Builder metadata(@Nullable List<AtsMetadata> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = name;
+        public Builder name(@Nonnull String name) {
+            this.name = Utils.checkNotNull(name, "name");
             return this;
         }
 
-
-        public Builder parentId(String parentId) {
-            Utils.checkNotNull(parentId, "parentId");
-            this.parentId = Optional.ofNullable(parentId);
-            return this;
-        }
-
-        public Builder parentId(Optional<String> parentId) {
-            Utils.checkNotNull(parentId, "parentId");
+        public Builder parentId(@Nullable String parentId) {
             this.parentId = parentId;
             return this;
         }
 
-
-        public Builder phone(String phone) {
-            Utils.checkNotNull(phone, "phone");
-            this.phone = Optional.ofNullable(phone);
-            return this;
-        }
-
-        public Builder phone(Optional<String> phone) {
-            Utils.checkNotNull(phone, "phone");
+        public Builder phone(@Nullable String phone) {
             this.phone = phone;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder recruiterIds(List<String> recruiterIds) {
-            Utils.checkNotNull(recruiterIds, "recruiterIds");
-            this.recruiterIds = Optional.ofNullable(recruiterIds);
-            return this;
-        }
-
-        public Builder recruiterIds(Optional<? extends List<String>> recruiterIds) {
-            Utils.checkNotNull(recruiterIds, "recruiterIds");
+        public Builder recruiterIds(@Nullable List<String> recruiterIds) {
             this.recruiterIds = recruiterIds;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
-
-        public Builder websiteUrl(String websiteUrl) {
-            Utils.checkNotNull(websiteUrl, "websiteUrl");
-            this.websiteUrl = Optional.ofNullable(websiteUrl);
-            return this;
-        }
-
-        public Builder websiteUrl(Optional<String> websiteUrl) {
-            Utils.checkNotNull(websiteUrl, "websiteUrl");
+        public Builder websiteUrl(@Nullable String websiteUrl) {
             this.websiteUrl = websiteUrl;
             return this;
         }
 
         public AtsCompany build() {
-
             return new AtsCompany(
                 address, createdAt, id,
                 metadata, name, parentId,

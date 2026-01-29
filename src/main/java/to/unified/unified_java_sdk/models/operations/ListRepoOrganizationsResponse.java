@@ -4,12 +4,11 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.io.InputStream;
-import java.lang.Integer;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.List;
 import java.util.Optional;
@@ -27,7 +26,7 @@ public class ListRepoOrganizationsResponse implements Response {
     /**
      * Successful
      */
-    private Optional<? extends List<RepoOrganization>> repoOrganizations;
+    private List<RepoOrganization> repoOrganizations;
 
     /**
      * HTTP response status code for this operation
@@ -41,59 +40,52 @@ public class ListRepoOrganizationsResponse implements Response {
 
     @JsonCreator
     public ListRepoOrganizationsResponse(
-            String contentType,
-            Optional<? extends List<RepoOrganization>> repoOrganizations,
+            @Nonnull String contentType,
+            @Nullable List<RepoOrganization> repoOrganizations,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(repoOrganizations, "repoOrganizations");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.contentType = contentType;
+            @Nonnull HttpResponse<InputStream> rawResponse) {
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.repoOrganizations = repoOrganizations;
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
     }
     
     public ListRepoOrganizationsResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
-        this(contentType, Optional.empty(), statusCode,
+            @Nonnull HttpResponse<InputStream> rawResponse) {
+        this(contentType, null, statusCode,
             rawResponse);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<RepoOrganization>> repoOrganizations() {
-        return (Optional<List<RepoOrganization>>) repoOrganizations;
+        return Optional.ofNullable(this.repoOrganizations);
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<InputStream> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     public static Builder builder() {
@@ -104,18 +96,8 @@ public class ListRepoOrganizationsResponse implements Response {
     /**
      * HTTP response content type for this operation
      */
-    public ListRepoOrganizationsResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
-        return this;
-    }
-
-    /**
-     * Successful
-     */
-    public ListRepoOrganizationsResponse withRepoOrganizations(List<RepoOrganization> repoOrganizations) {
-        Utils.checkNotNull(repoOrganizations, "repoOrganizations");
-        this.repoOrganizations = Optional.ofNullable(repoOrganizations);
+    public ListRepoOrganizationsResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
 
@@ -123,29 +105,29 @@ public class ListRepoOrganizationsResponse implements Response {
     /**
      * Successful
      */
-    public ListRepoOrganizationsResponse withRepoOrganizations(Optional<? extends List<RepoOrganization>> repoOrganizations) {
-        Utils.checkNotNull(repoOrganizations, "repoOrganizations");
+    public ListRepoOrganizationsResponse withRepoOrganizations(@Nullable List<RepoOrganization> repoOrganizations) {
         this.repoOrganizations = repoOrganizations;
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public ListRepoOrganizationsResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public ListRepoOrganizationsResponse withRawResponse(HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
+    public ListRepoOrganizationsResponse withRawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -184,9 +166,9 @@ public class ListRepoOrganizationsResponse implements Response {
 
         private String contentType;
 
-        private Optional<? extends List<RepoOrganization>> repoOrganizations = Optional.empty();
+        private List<RepoOrganization> repoOrganizations;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<InputStream> rawResponse;
 
@@ -194,57 +176,39 @@ public class ListRepoOrganizationsResponse implements Response {
           // force use of static builder() method
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
-            return this;
-        }
-
-
-        /**
-         * Successful
-         */
-        public Builder repoOrganizations(List<RepoOrganization> repoOrganizations) {
-            Utils.checkNotNull(repoOrganizations, "repoOrganizations");
-            this.repoOrganizations = Optional.ofNullable(repoOrganizations);
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
 
         /**
          * Successful
          */
-        public Builder repoOrganizations(Optional<? extends List<RepoOrganization>> repoOrganizations) {
-            Utils.checkNotNull(repoOrganizations, "repoOrganizations");
+        public Builder repoOrganizations(@Nullable List<RepoOrganization> repoOrganizations) {
             this.repoOrganizations = repoOrganizations;
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<InputStream> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
+        public Builder rawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         public ListRepoOrganizationsResponse build() {
-
             return new ListRepoOrganizationsResponse(
                 contentType, repoOrganizations, statusCode,
                 rawResponse);

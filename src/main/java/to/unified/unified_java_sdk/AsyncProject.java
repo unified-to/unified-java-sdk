@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateTaskProjectRequest;
 import to.unified.unified_java_sdk.models.operations.GetTaskProjectRequest;
@@ -68,7 +69,7 @@ public class AsyncProject {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateTaskProjectResponse>} - The async response
      */
-    public CompletableFuture<CreateTaskProjectResponse> createTaskProject(CreateTaskProjectRequest request) {
+    public CompletableFuture<CreateTaskProjectResponse> createTaskProject(@Nonnull CreateTaskProjectRequest request) {
         AsyncRequestOperation<CreateTaskProjectRequest, CreateTaskProjectResponse> operation
               = new CreateTaskProject.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -91,7 +92,7 @@ public class AsyncProject {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetTaskProjectResponse>} - The async response
      */
-    public CompletableFuture<GetTaskProjectResponse> getTaskProject(GetTaskProjectRequest request) {
+    public CompletableFuture<GetTaskProjectResponse> getTaskProject(@Nonnull GetTaskProjectRequest request) {
         AsyncRequestOperation<GetTaskProjectRequest, GetTaskProjectResponse> operation
               = new GetTaskProject.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -114,7 +115,7 @@ public class AsyncProject {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListTaskProjectsResponse>} - The async response
      */
-    public CompletableFuture<ListTaskProjectsResponse> listTaskProjects(ListTaskProjectsRequest request) {
+    public CompletableFuture<ListTaskProjectsResponse> listTaskProjects(@Nonnull ListTaskProjectsRequest request) {
         AsyncRequestOperation<ListTaskProjectsRequest, ListTaskProjectsResponse> operation
               = new ListTaskProjects.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -137,7 +138,7 @@ public class AsyncProject {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchTaskProjectResponse>} - The async response
      */
-    public CompletableFuture<PatchTaskProjectResponse> patchTaskProject(PatchTaskProjectRequest request) {
+    public CompletableFuture<PatchTaskProjectResponse> patchTaskProject(@Nonnull PatchTaskProjectRequest request) {
         AsyncRequestOperation<PatchTaskProjectRequest, PatchTaskProjectResponse> operation
               = new PatchTaskProject.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -160,7 +161,7 @@ public class AsyncProject {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveTaskProjectResponse>} - The async response
      */
-    public CompletableFuture<RemoveTaskProjectResponse> removeTaskProject(RemoveTaskProjectRequest request) {
+    public CompletableFuture<RemoveTaskProjectResponse> removeTaskProject(@Nonnull RemoveTaskProjectRequest request) {
         AsyncRequestOperation<RemoveTaskProjectRequest, RemoveTaskProjectResponse> operation
               = new RemoveTaskProject.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -183,7 +184,7 @@ public class AsyncProject {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateTaskProjectResponse>} - The async response
      */
-    public CompletableFuture<UpdateTaskProjectResponse> updateTaskProject(UpdateTaskProjectRequest request) {
+    public CompletableFuture<UpdateTaskProjectResponse> updateTaskProject(@Nonnull UpdateTaskProjectRequest request) {
         AsyncRequestOperation<UpdateTaskProjectRequest, UpdateTaskProjectResponse> operation
               = new UpdateTaskProject.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

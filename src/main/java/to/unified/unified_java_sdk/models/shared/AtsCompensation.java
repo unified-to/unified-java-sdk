@@ -4,14 +4,13 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -20,40 +19,35 @@ public class AtsCompensation {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
-    private Optional<String> currency;
+    private String currency;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("frequency")
-    private Optional<? extends Frequency> frequency;
+    private Frequency frequency;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max")
-    private Optional<Double> max;
+    private Double max;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("min")
-    private Optional<Double> min;
+    private Double min;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
-    private Optional<? extends AtsCompensationType> type;
+    private AtsCompensationType type;
 
     @JsonCreator
     public AtsCompensation(
-            @JsonProperty("currency") Optional<String> currency,
-            @JsonProperty("frequency") Optional<? extends Frequency> frequency,
-            @JsonProperty("max") Optional<Double> max,
-            @JsonProperty("min") Optional<Double> min,
-            @JsonProperty("type") Optional<? extends AtsCompensationType> type) {
-        Utils.checkNotNull(currency, "currency");
-        Utils.checkNotNull(frequency, "frequency");
-        Utils.checkNotNull(max, "max");
-        Utils.checkNotNull(min, "min");
-        Utils.checkNotNull(type, "type");
+            @JsonProperty("currency") @Nullable String currency,
+            @JsonProperty("frequency") @Nullable Frequency frequency,
+            @JsonProperty("max") @Nullable Double max,
+            @JsonProperty("min") @Nullable Double min,
+            @JsonProperty("type") @Nullable AtsCompensationType type) {
         this.currency = currency;
         this.frequency = frequency;
         this.max = max;
@@ -62,35 +56,28 @@ public class AtsCompensation {
     }
     
     public AtsCompensation() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null);
     }
 
-    @JsonIgnore
     public Optional<String> currency() {
-        return currency;
+        return Optional.ofNullable(this.currency);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Frequency> frequency() {
-        return (Optional<Frequency>) frequency;
+        return Optional.ofNullable(this.frequency);
     }
 
-    @JsonIgnore
     public Optional<Double> max() {
-        return max;
+        return Optional.ofNullable(this.max);
     }
 
-    @JsonIgnore
     public Optional<Double> min() {
-        return min;
+        return Optional.ofNullable(this.min);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<AtsCompensationType> type() {
-        return (Optional<AtsCompensationType>) type;
+        return Optional.ofNullable(this.type);
     }
 
     public static Builder builder() {
@@ -98,70 +85,35 @@ public class AtsCompensation {
     }
 
 
-    public AtsCompensation withCurrency(String currency) {
-        Utils.checkNotNull(currency, "currency");
-        this.currency = Optional.ofNullable(currency);
-        return this;
-    }
-
-
-    public AtsCompensation withCurrency(Optional<String> currency) {
-        Utils.checkNotNull(currency, "currency");
+    public AtsCompensation withCurrency(@Nullable String currency) {
         this.currency = currency;
         return this;
     }
 
-    public AtsCompensation withFrequency(Frequency frequency) {
-        Utils.checkNotNull(frequency, "frequency");
-        this.frequency = Optional.ofNullable(frequency);
-        return this;
-    }
 
-
-    public AtsCompensation withFrequency(Optional<? extends Frequency> frequency) {
-        Utils.checkNotNull(frequency, "frequency");
+    public AtsCompensation withFrequency(@Nullable Frequency frequency) {
         this.frequency = frequency;
         return this;
     }
 
-    public AtsCompensation withMax(double max) {
-        Utils.checkNotNull(max, "max");
-        this.max = Optional.ofNullable(max);
-        return this;
-    }
 
-
-    public AtsCompensation withMax(Optional<Double> max) {
-        Utils.checkNotNull(max, "max");
+    public AtsCompensation withMax(@Nullable Double max) {
         this.max = max;
         return this;
     }
 
-    public AtsCompensation withMin(double min) {
-        Utils.checkNotNull(min, "min");
-        this.min = Optional.ofNullable(min);
-        return this;
-    }
 
-
-    public AtsCompensation withMin(Optional<Double> min) {
-        Utils.checkNotNull(min, "min");
+    public AtsCompensation withMin(@Nullable Double min) {
         this.min = min;
         return this;
     }
 
-    public AtsCompensation withType(AtsCompensationType type) {
-        Utils.checkNotNull(type, "type");
-        this.type = Optional.ofNullable(type);
-        return this;
-    }
 
-
-    public AtsCompensation withType(Optional<? extends AtsCompensationType> type) {
-        Utils.checkNotNull(type, "type");
+    public AtsCompensation withType(@Nullable AtsCompensationType type) {
         this.type = type;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -200,87 +152,46 @@ public class AtsCompensation {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> currency = Optional.empty();
+        private String currency;
 
-        private Optional<? extends Frequency> frequency = Optional.empty();
+        private Frequency frequency;
 
-        private Optional<Double> max = Optional.empty();
+        private Double max;
 
-        private Optional<Double> min = Optional.empty();
+        private Double min;
 
-        private Optional<? extends AtsCompensationType> type = Optional.empty();
+        private AtsCompensationType type;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder currency(String currency) {
-            Utils.checkNotNull(currency, "currency");
-            this.currency = Optional.ofNullable(currency);
-            return this;
-        }
-
-        public Builder currency(Optional<String> currency) {
-            Utils.checkNotNull(currency, "currency");
+        public Builder currency(@Nullable String currency) {
             this.currency = currency;
             return this;
         }
 
-
-        public Builder frequency(Frequency frequency) {
-            Utils.checkNotNull(frequency, "frequency");
-            this.frequency = Optional.ofNullable(frequency);
-            return this;
-        }
-
-        public Builder frequency(Optional<? extends Frequency> frequency) {
-            Utils.checkNotNull(frequency, "frequency");
+        public Builder frequency(@Nullable Frequency frequency) {
             this.frequency = frequency;
             return this;
         }
 
-
-        public Builder max(double max) {
-            Utils.checkNotNull(max, "max");
-            this.max = Optional.ofNullable(max);
-            return this;
-        }
-
-        public Builder max(Optional<Double> max) {
-            Utils.checkNotNull(max, "max");
+        public Builder max(@Nullable Double max) {
             this.max = max;
             return this;
         }
 
-
-        public Builder min(double min) {
-            Utils.checkNotNull(min, "min");
-            this.min = Optional.ofNullable(min);
-            return this;
-        }
-
-        public Builder min(Optional<Double> min) {
-            Utils.checkNotNull(min, "min");
+        public Builder min(@Nullable Double min) {
             this.min = min;
             return this;
         }
 
-
-        public Builder type(AtsCompensationType type) {
-            Utils.checkNotNull(type, "type");
-            this.type = Optional.ofNullable(type);
-            return this;
-        }
-
-        public Builder type(Optional<? extends AtsCompensationType> type) {
-            Utils.checkNotNull(type, "type");
+        public Builder type(@Nullable AtsCompensationType type) {
             this.type = type;
             return this;
         }
 
         public AtsCompensation build() {
-
             return new AtsCompensation(
                 currency, frequency, max,
                 min, type);

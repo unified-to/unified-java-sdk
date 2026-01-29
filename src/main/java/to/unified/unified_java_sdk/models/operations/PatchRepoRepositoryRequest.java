@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.RepoRepository;
@@ -30,7 +30,7 @@ public class PatchRepoRepositoryRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<PatchRepoRepositoryQueryParamFields>> fields;
+    private List<PatchRepoRepositoryQueryParamFields> fields;
 
     /**
      * ID of the Repository
@@ -44,63 +44,56 @@ public class PatchRepoRepositoryRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
     @JsonCreator
     public PatchRepoRepositoryRequest(
-            RepoRepository repoRepository,
-            String connectionId,
-            Optional<? extends List<PatchRepoRepositoryQueryParamFields>> fields,
-            String id,
-            Optional<String> raw) {
-        Utils.checkNotNull(repoRepository, "repoRepository");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(raw, "raw");
-        this.repoRepository = repoRepository;
-        this.connectionId = connectionId;
+            @Nonnull RepoRepository repoRepository,
+            @Nonnull String connectionId,
+            @Nullable List<PatchRepoRepositoryQueryParamFields> fields,
+            @Nonnull String id,
+            @Nullable String raw) {
+        this.repoRepository = Optional.ofNullable(repoRepository)
+            .orElseThrow(() -> new IllegalArgumentException("repoRepository cannot be null"));
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
-        this.id = id;
+        this.id = Optional.ofNullable(id)
+            .orElseThrow(() -> new IllegalArgumentException("id cannot be null"));
         this.raw = raw;
     }
     
     public PatchRepoRepositoryRequest(
-            RepoRepository repoRepository,
-            String connectionId,
-            String id) {
-        this(repoRepository, connectionId, Optional.empty(),
-            id, Optional.empty());
+            @Nonnull RepoRepository repoRepository,
+            @Nonnull String connectionId,
+            @Nonnull String id) {
+        this(repoRepository, connectionId, null,
+            id, null);
     }
 
-    @JsonIgnore
     public RepoRepository repoRepository() {
-        return repoRepository;
+        return this.repoRepository;
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<PatchRepoRepositoryQueryParamFields>> fields() {
-        return (Optional<List<PatchRepoRepositoryQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
      * ID of the Repository
      */
-    @JsonIgnore
     public String id() {
-        return id;
+        return this.id;
     }
 
     /**
@@ -108,9 +101,8 @@ public class PatchRepoRepositoryRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
     public static Builder builder() {
@@ -118,27 +110,17 @@ public class PatchRepoRepositoryRequest {
     }
 
 
-    public PatchRepoRepositoryRequest withRepoRepository(RepoRepository repoRepository) {
-        Utils.checkNotNull(repoRepository, "repoRepository");
-        this.repoRepository = repoRepository;
+    public PatchRepoRepositoryRequest withRepoRepository(@Nonnull RepoRepository repoRepository) {
+        this.repoRepository = Utils.checkNotNull(repoRepository, "repoRepository");
         return this;
     }
+
 
     /**
      * ID of the connection
      */
-    public PatchRepoRepositoryRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public PatchRepoRepositoryRequest withFields(List<PatchRepoRepositoryQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public PatchRepoRepositoryRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -146,29 +128,17 @@ public class PatchRepoRepositoryRequest {
     /**
      * Fields to return
      */
-    public PatchRepoRepositoryRequest withFields(Optional<? extends List<PatchRepoRepositoryQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public PatchRepoRepositoryRequest withFields(@Nullable List<PatchRepoRepositoryQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
+
     /**
      * ID of the Repository
      */
-    public PatchRepoRepositoryRequest withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = id;
-        return this;
-    }
-
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public PatchRepoRepositoryRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
+    public PatchRepoRepositoryRequest withId(@Nonnull String id) {
+        this.id = Utils.checkNotNull(id, "id");
         return this;
     }
 
@@ -178,11 +148,11 @@ public class PatchRepoRepositoryRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public PatchRepoRepositoryRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public PatchRepoRepositoryRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -225,71 +195,42 @@ public class PatchRepoRepositoryRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<PatchRepoRepositoryQueryParamFields>> fields = Optional.empty();
+        private List<PatchRepoRepositoryQueryParamFields> fields;
 
         private String id;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder repoRepository(RepoRepository repoRepository) {
-            Utils.checkNotNull(repoRepository, "repoRepository");
-            this.repoRepository = repoRepository;
+        public Builder repoRepository(@Nonnull RepoRepository repoRepository) {
+            this.repoRepository = Utils.checkNotNull(repoRepository, "repoRepository");
             return this;
         }
-
 
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<PatchRepoRepositoryQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<PatchRepoRepositoryQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<PatchRepoRepositoryQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * ID of the Repository
          */
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = id;
-            return this;
-        }
-
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
+        public Builder id(@Nonnull String id) {
+            this.id = Utils.checkNotNull(id, "id");
             return this;
         }
 
@@ -298,14 +239,12 @@ public class PatchRepoRepositoryRequest {
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
         public PatchRepoRepositoryRequest build() {
-
             return new PatchRepoRepositoryRequest(
                 repoRepository, connectionId, fields,
                 id, raw);

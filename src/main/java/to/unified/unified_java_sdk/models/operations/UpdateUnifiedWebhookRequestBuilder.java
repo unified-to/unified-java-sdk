@@ -5,32 +5,45 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.UpdateUnifiedWebhook;
 import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class UpdateUnifiedWebhookRequestBuilder {
-
-    private UpdateUnifiedWebhookRequest request;
     private final SDKConfiguration sdkConfiguration;
-    private final Headers _headers = new Headers(); 
+    private final Headers _headers = new Headers();
+    private UpdateUnifiedWebhookRequest request;
 
     public UpdateUnifiedWebhookRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
 
-    public UpdateUnifiedWebhookRequestBuilder request(UpdateUnifiedWebhookRequest request) {
-        Utils.checkNotNull(request, "request");
-        this.request = request;
+    public UpdateUnifiedWebhookRequestBuilder request(@Nonnull UpdateUnifiedWebhookRequest request) {
+        this.request = Utils.checkNotNull(request, "request");
         return this;
     }
 
+    private UpdateUnifiedWebhookRequest _buildRequest() {
+        return this.request;
+    }
+    
+    public UpdateUnifiedWebhookRequestBuilder header(String name, String value) {
+        Utils.checkNotNull(name, "name");
+        Utils.checkNotNull(value, "value");
+        this._headers.add(name, value);
+        return this;
+    }
+
+    /**
+    * Executes the request and returns the response.
+    *
+    * @return The response from the server.
+    */
     public UpdateUnifiedWebhookResponse call() {
-        
         RequestOperation<UpdateUnifiedWebhookRequest, UpdateUnifiedWebhookResponse> operation
               = new UpdateUnifiedWebhook.Sync(sdkConfiguration, _headers);
-
-        return operation.handleResponse(operation.doRequest(request));
+        return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

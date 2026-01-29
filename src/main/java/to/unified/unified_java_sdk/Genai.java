@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiEmbeddingRequest;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiEmbeddingRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiEmbeddingResponse;
@@ -59,7 +60,7 @@ public class Genai {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateGenaiEmbeddingResponse createGenaiEmbedding(CreateGenaiEmbeddingRequest request) {
+    public CreateGenaiEmbeddingResponse createGenaiEmbedding(@Nonnull CreateGenaiEmbeddingRequest request) {
         RequestOperation<CreateGenaiEmbeddingRequest, CreateGenaiEmbeddingResponse> operation
               = new CreateGenaiEmbedding.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -81,7 +82,7 @@ public class Genai {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateGenaiPromptResponse createGenaiPrompt(CreateGenaiPromptRequest request) {
+    public CreateGenaiPromptResponse createGenaiPrompt(@Nonnull CreateGenaiPromptRequest request) {
         RequestOperation<CreateGenaiPromptRequest, CreateGenaiPromptResponse> operation
               = new CreateGenaiPrompt.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -103,7 +104,7 @@ public class Genai {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetGenaiModelResponse getGenaiModel(GetGenaiModelRequest request) {
+    public GetGenaiModelResponse getGenaiModel(@Nonnull GetGenaiModelRequest request) {
         RequestOperation<GetGenaiModelRequest, GetGenaiModelResponse> operation
               = new GetGenaiModel.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -125,7 +126,7 @@ public class Genai {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListGenaiModelsResponse listGenaiModels(ListGenaiModelsRequest request) {
+    public ListGenaiModelsResponse listGenaiModels(@Nonnull ListGenaiModelsRequest request) {
         RequestOperation<ListGenaiModelsRequest, ListGenaiModelsResponse> operation
               = new ListGenaiModels.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

@@ -4,11 +4,11 @@
 package to.unified.unified_java_sdk.models.operations.async;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import java.lang.Integer;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.io.InputStream;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.KmsComment;
@@ -26,7 +26,7 @@ public class CreateKmsCommentResponse implements AsyncResponse {
     /**
      * Successful
      */
-    private Optional<? extends KmsComment> kmsComment;
+    private KmsComment kmsComment;
 
     /**
      * HTTP response status code for this operation
@@ -40,59 +40,52 @@ public class CreateKmsCommentResponse implements AsyncResponse {
 
     @JsonCreator
     public CreateKmsCommentResponse(
-            String contentType,
-            Optional<? extends KmsComment> kmsComment,
+            @Nonnull String contentType,
+            @Nullable KmsComment kmsComment,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(kmsComment, "kmsComment");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.contentType = contentType;
+            @Nonnull HttpResponse<Blob> rawResponse) {
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.kmsComment = kmsComment;
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
     }
     
     public CreateKmsCommentResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
-        this(contentType, Optional.empty(), statusCode,
+            @Nonnull HttpResponse<Blob> rawResponse) {
+        this(contentType, null, statusCode,
             rawResponse);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<KmsComment> kmsComment() {
-        return (Optional<KmsComment>) kmsComment;
+        return Optional.ofNullable(this.kmsComment);
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<Blob> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     public static Builder builder() {
@@ -103,18 +96,8 @@ public class CreateKmsCommentResponse implements AsyncResponse {
     /**
      * HTTP response content type for this operation
      */
-    public CreateKmsCommentResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
-        return this;
-    }
-
-    /**
-     * Successful
-     */
-    public CreateKmsCommentResponse withKmsComment(KmsComment kmsComment) {
-        Utils.checkNotNull(kmsComment, "kmsComment");
-        this.kmsComment = Optional.ofNullable(kmsComment);
+    public CreateKmsCommentResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
 
@@ -122,29 +105,29 @@ public class CreateKmsCommentResponse implements AsyncResponse {
     /**
      * Successful
      */
-    public CreateKmsCommentResponse withKmsComment(Optional<? extends KmsComment> kmsComment) {
-        Utils.checkNotNull(kmsComment, "kmsComment");
+    public CreateKmsCommentResponse withKmsComment(@Nullable KmsComment kmsComment) {
         this.kmsComment = kmsComment;
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public CreateKmsCommentResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public CreateKmsCommentResponse withRawResponse(HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
+    public CreateKmsCommentResponse withRawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -183,9 +166,9 @@ public class CreateKmsCommentResponse implements AsyncResponse {
 
         private String contentType;
 
-        private Optional<? extends KmsComment> kmsComment = Optional.empty();
+        private KmsComment kmsComment;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<Blob> rawResponse;
 
@@ -193,57 +176,39 @@ public class CreateKmsCommentResponse implements AsyncResponse {
           // force use of static builder() method
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
-            return this;
-        }
-
-
-        /**
-         * Successful
-         */
-        public Builder kmsComment(KmsComment kmsComment) {
-            Utils.checkNotNull(kmsComment, "kmsComment");
-            this.kmsComment = Optional.ofNullable(kmsComment);
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
 
         /**
          * Successful
          */
-        public Builder kmsComment(Optional<? extends KmsComment> kmsComment) {
-            Utils.checkNotNull(kmsComment, "kmsComment");
+        public Builder kmsComment(@Nullable KmsComment kmsComment) {
             this.kmsComment = kmsComment;
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<Blob> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
+        public Builder rawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         public CreateKmsCommentResponse build() {
-
             return new CreateKmsCommentResponse(
                 contentType, kmsComment, statusCode,
                 rawResponse);

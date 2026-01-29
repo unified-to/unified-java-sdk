@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.GetFormsSubmissionRequest;
 import to.unified.unified_java_sdk.models.operations.GetFormsSubmissionRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetFormsSubmissionResponse;
@@ -51,7 +52,7 @@ public class Submission {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetFormsSubmissionResponse getFormsSubmission(GetFormsSubmissionRequest request) {
+    public GetFormsSubmissionResponse getFormsSubmission(@Nonnull GetFormsSubmissionRequest request) {
         RequestOperation<GetFormsSubmissionRequest, GetFormsSubmissionResponse> operation
               = new GetFormsSubmission.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -73,7 +74,7 @@ public class Submission {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListFormsSubmissionsResponse listFormsSubmissions(ListFormsSubmissionsRequest request) {
+    public ListFormsSubmissionsResponse listFormsSubmissions(@Nonnull ListFormsSubmissionsRequest request) {
         RequestOperation<ListFormsSubmissionsRequest, ListFormsSubmissionsResponse> operation
               = new ListFormsSubmissions.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

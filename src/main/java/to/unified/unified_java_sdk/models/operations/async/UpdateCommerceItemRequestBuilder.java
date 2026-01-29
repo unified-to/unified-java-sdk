@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceItemRequest;
@@ -13,27 +14,39 @@ import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class UpdateCommerceItemRequestBuilder {
-
-    private UpdateCommerceItemRequest request;
     private final SDKConfiguration sdkConfiguration;
-    private final Headers _headers = new Headers(); 
+    private final Headers _headers = new Headers();
+    private UpdateCommerceItemRequest request;
 
     public UpdateCommerceItemRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
 
-    public UpdateCommerceItemRequestBuilder request(UpdateCommerceItemRequest request) {
-        Utils.checkNotNull(request, "request");
-        this.request = request;
+    public UpdateCommerceItemRequestBuilder request(@Nonnull UpdateCommerceItemRequest request) {
+        this.request = Utils.checkNotNull(request, "request");
         return this;
     }
 
+    private UpdateCommerceItemRequest _buildRequest() {
+        return this.request;
+    }
+    
+    public UpdateCommerceItemRequestBuilder header(String name, String value) {
+        Utils.checkNotNull(name, "name");
+        Utils.checkNotNull(value, "value");
+        this._headers.add(name, value);
+        return this;
+    }
+
+    /**
+    * Executes the request and returns the response.
+    *
+    * @return The response from the server.
+    */
     public CompletableFuture<UpdateCommerceItemResponse> call() {
-        
         AsyncRequestOperation<UpdateCommerceItemRequest, UpdateCommerceItemResponse> operation
               = new UpdateCommerceItem.Async(sdkConfiguration, _headers);
-
-        return operation.doRequest(request)
+        return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }
 }

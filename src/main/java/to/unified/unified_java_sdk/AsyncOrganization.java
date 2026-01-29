@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAdsOrganizationRequest;
 import to.unified.unified_java_sdk.models.operations.CreateRepoOrganizationRequest;
@@ -100,7 +101,7 @@ public class AsyncOrganization {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAdsOrganizationResponse>} - The async response
      */
-    public CompletableFuture<CreateAdsOrganizationResponse> createAdsOrganization(CreateAdsOrganizationRequest request) {
+    public CompletableFuture<CreateAdsOrganizationResponse> createAdsOrganization(@Nonnull CreateAdsOrganizationRequest request) {
         AsyncRequestOperation<CreateAdsOrganizationRequest, CreateAdsOrganizationResponse> operation
               = new CreateAdsOrganization.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -123,7 +124,7 @@ public class AsyncOrganization {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateRepoOrganizationResponse>} - The async response
      */
-    public CompletableFuture<CreateRepoOrganizationResponse> createRepoOrganization(CreateRepoOrganizationRequest request) {
+    public CompletableFuture<CreateRepoOrganizationResponse> createRepoOrganization(@Nonnull CreateRepoOrganizationRequest request) {
         AsyncRequestOperation<CreateRepoOrganizationRequest, CreateRepoOrganizationResponse> operation
               = new CreateRepoOrganization.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -146,7 +147,7 @@ public class AsyncOrganization {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAccountingOrganizationResponse>} - The async response
      */
-    public CompletableFuture<GetAccountingOrganizationResponse> getAccountingOrganization(GetAccountingOrganizationRequest request) {
+    public CompletableFuture<GetAccountingOrganizationResponse> getAccountingOrganization(@Nonnull GetAccountingOrganizationRequest request) {
         AsyncRequestOperation<GetAccountingOrganizationRequest, GetAccountingOrganizationResponse> operation
               = new GetAccountingOrganization.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -169,7 +170,7 @@ public class AsyncOrganization {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAdsOrganizationResponse>} - The async response
      */
-    public CompletableFuture<GetAdsOrganizationResponse> getAdsOrganization(GetAdsOrganizationRequest request) {
+    public CompletableFuture<GetAdsOrganizationResponse> getAdsOrganization(@Nonnull GetAdsOrganizationRequest request) {
         AsyncRequestOperation<GetAdsOrganizationRequest, GetAdsOrganizationResponse> operation
               = new GetAdsOrganization.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -192,7 +193,7 @@ public class AsyncOrganization {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetRepoOrganizationResponse>} - The async response
      */
-    public CompletableFuture<GetRepoOrganizationResponse> getRepoOrganization(GetRepoOrganizationRequest request) {
+    public CompletableFuture<GetRepoOrganizationResponse> getRepoOrganization(@Nonnull GetRepoOrganizationRequest request) {
         AsyncRequestOperation<GetRepoOrganizationRequest, GetRepoOrganizationResponse> operation
               = new GetRepoOrganization.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -215,7 +216,7 @@ public class AsyncOrganization {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAccountingOrganizationsResponse>} - The async response
      */
-    public CompletableFuture<ListAccountingOrganizationsResponse> listAccountingOrganizations(ListAccountingOrganizationsRequest request) {
+    public CompletableFuture<ListAccountingOrganizationsResponse> listAccountingOrganizations(@Nonnull ListAccountingOrganizationsRequest request) {
         AsyncRequestOperation<ListAccountingOrganizationsRequest, ListAccountingOrganizationsResponse> operation
               = new ListAccountingOrganizations.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -238,7 +239,7 @@ public class AsyncOrganization {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAdsOrganizationsResponse>} - The async response
      */
-    public CompletableFuture<ListAdsOrganizationsResponse> listAdsOrganizations(ListAdsOrganizationsRequest request) {
+    public CompletableFuture<ListAdsOrganizationsResponse> listAdsOrganizations(@Nonnull ListAdsOrganizationsRequest request) {
         AsyncRequestOperation<ListAdsOrganizationsRequest, ListAdsOrganizationsResponse> operation
               = new ListAdsOrganizations.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -261,7 +262,7 @@ public class AsyncOrganization {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListRepoOrganizationsResponse>} - The async response
      */
-    public CompletableFuture<ListRepoOrganizationsResponse> listRepoOrganizations(ListRepoOrganizationsRequest request) {
+    public CompletableFuture<ListRepoOrganizationsResponse> listRepoOrganizations(@Nonnull ListRepoOrganizationsRequest request) {
         AsyncRequestOperation<ListRepoOrganizationsRequest, ListRepoOrganizationsResponse> operation
               = new ListRepoOrganizations.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -284,7 +285,7 @@ public class AsyncOrganization {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAdsOrganizationResponse>} - The async response
      */
-    public CompletableFuture<PatchAdsOrganizationResponse> patchAdsOrganization(PatchAdsOrganizationRequest request) {
+    public CompletableFuture<PatchAdsOrganizationResponse> patchAdsOrganization(@Nonnull PatchAdsOrganizationRequest request) {
         AsyncRequestOperation<PatchAdsOrganizationRequest, PatchAdsOrganizationResponse> operation
               = new PatchAdsOrganization.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -307,7 +308,7 @@ public class AsyncOrganization {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchRepoOrganizationResponse>} - The async response
      */
-    public CompletableFuture<PatchRepoOrganizationResponse> patchRepoOrganization(PatchRepoOrganizationRequest request) {
+    public CompletableFuture<PatchRepoOrganizationResponse> patchRepoOrganization(@Nonnull PatchRepoOrganizationRequest request) {
         AsyncRequestOperation<PatchRepoOrganizationRequest, PatchRepoOrganizationResponse> operation
               = new PatchRepoOrganization.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -330,7 +331,7 @@ public class AsyncOrganization {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAdsOrganizationResponse>} - The async response
      */
-    public CompletableFuture<RemoveAdsOrganizationResponse> removeAdsOrganization(RemoveAdsOrganizationRequest request) {
+    public CompletableFuture<RemoveAdsOrganizationResponse> removeAdsOrganization(@Nonnull RemoveAdsOrganizationRequest request) {
         AsyncRequestOperation<RemoveAdsOrganizationRequest, RemoveAdsOrganizationResponse> operation
               = new RemoveAdsOrganization.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -353,7 +354,7 @@ public class AsyncOrganization {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveRepoOrganizationResponse>} - The async response
      */
-    public CompletableFuture<RemoveRepoOrganizationResponse> removeRepoOrganization(RemoveRepoOrganizationRequest request) {
+    public CompletableFuture<RemoveRepoOrganizationResponse> removeRepoOrganization(@Nonnull RemoveRepoOrganizationRequest request) {
         AsyncRequestOperation<RemoveRepoOrganizationRequest, RemoveRepoOrganizationResponse> operation
               = new RemoveRepoOrganization.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -376,7 +377,7 @@ public class AsyncOrganization {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAdsOrganizationResponse>} - The async response
      */
-    public CompletableFuture<UpdateAdsOrganizationResponse> updateAdsOrganization(UpdateAdsOrganizationRequest request) {
+    public CompletableFuture<UpdateAdsOrganizationResponse> updateAdsOrganization(@Nonnull UpdateAdsOrganizationRequest request) {
         AsyncRequestOperation<UpdateAdsOrganizationRequest, UpdateAdsOrganizationResponse> operation
               = new UpdateAdsOrganization.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -399,7 +400,7 @@ public class AsyncOrganization {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateRepoOrganizationResponse>} - The async response
      */
-    public CompletableFuture<UpdateRepoOrganizationResponse> updateRepoOrganization(UpdateRepoOrganizationRequest request) {
+    public CompletableFuture<UpdateRepoOrganizationResponse> updateRepoOrganization(@Nonnull UpdateRepoOrganizationRequest request) {
         AsyncRequestOperation<UpdateRepoOrganizationRequest, UpdateRepoOrganizationResponse> operation
               = new UpdateRepoOrganization.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

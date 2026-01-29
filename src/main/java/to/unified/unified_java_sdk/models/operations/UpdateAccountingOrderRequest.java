@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.AccountingOrder;
@@ -30,7 +30,7 @@ public class UpdateAccountingOrderRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<UpdateAccountingOrderQueryParamFields>> fields;
+    private List<UpdateAccountingOrderQueryParamFields> fields;
 
     /**
      * ID of the Order
@@ -44,63 +44,56 @@ public class UpdateAccountingOrderRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
     @JsonCreator
     public UpdateAccountingOrderRequest(
-            AccountingOrder accountingOrder,
-            String connectionId,
-            Optional<? extends List<UpdateAccountingOrderQueryParamFields>> fields,
-            String id,
-            Optional<String> raw) {
-        Utils.checkNotNull(accountingOrder, "accountingOrder");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(raw, "raw");
-        this.accountingOrder = accountingOrder;
-        this.connectionId = connectionId;
+            @Nonnull AccountingOrder accountingOrder,
+            @Nonnull String connectionId,
+            @Nullable List<UpdateAccountingOrderQueryParamFields> fields,
+            @Nonnull String id,
+            @Nullable String raw) {
+        this.accountingOrder = Optional.ofNullable(accountingOrder)
+            .orElseThrow(() -> new IllegalArgumentException("accountingOrder cannot be null"));
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
-        this.id = id;
+        this.id = Optional.ofNullable(id)
+            .orElseThrow(() -> new IllegalArgumentException("id cannot be null"));
         this.raw = raw;
     }
     
     public UpdateAccountingOrderRequest(
-            AccountingOrder accountingOrder,
-            String connectionId,
-            String id) {
-        this(accountingOrder, connectionId, Optional.empty(),
-            id, Optional.empty());
+            @Nonnull AccountingOrder accountingOrder,
+            @Nonnull String connectionId,
+            @Nonnull String id) {
+        this(accountingOrder, connectionId, null,
+            id, null);
     }
 
-    @JsonIgnore
     public AccountingOrder accountingOrder() {
-        return accountingOrder;
+        return this.accountingOrder;
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<UpdateAccountingOrderQueryParamFields>> fields() {
-        return (Optional<List<UpdateAccountingOrderQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
      * ID of the Order
      */
-    @JsonIgnore
     public String id() {
-        return id;
+        return this.id;
     }
 
     /**
@@ -108,9 +101,8 @@ public class UpdateAccountingOrderRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
     public static Builder builder() {
@@ -118,27 +110,17 @@ public class UpdateAccountingOrderRequest {
     }
 
 
-    public UpdateAccountingOrderRequest withAccountingOrder(AccountingOrder accountingOrder) {
-        Utils.checkNotNull(accountingOrder, "accountingOrder");
-        this.accountingOrder = accountingOrder;
+    public UpdateAccountingOrderRequest withAccountingOrder(@Nonnull AccountingOrder accountingOrder) {
+        this.accountingOrder = Utils.checkNotNull(accountingOrder, "accountingOrder");
         return this;
     }
+
 
     /**
      * ID of the connection
      */
-    public UpdateAccountingOrderRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public UpdateAccountingOrderRequest withFields(List<UpdateAccountingOrderQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public UpdateAccountingOrderRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -146,29 +128,17 @@ public class UpdateAccountingOrderRequest {
     /**
      * Fields to return
      */
-    public UpdateAccountingOrderRequest withFields(Optional<? extends List<UpdateAccountingOrderQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public UpdateAccountingOrderRequest withFields(@Nullable List<UpdateAccountingOrderQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
+
     /**
      * ID of the Order
      */
-    public UpdateAccountingOrderRequest withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = id;
-        return this;
-    }
-
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public UpdateAccountingOrderRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
+    public UpdateAccountingOrderRequest withId(@Nonnull String id) {
+        this.id = Utils.checkNotNull(id, "id");
         return this;
     }
 
@@ -178,11 +148,11 @@ public class UpdateAccountingOrderRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public UpdateAccountingOrderRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public UpdateAccountingOrderRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -225,71 +195,42 @@ public class UpdateAccountingOrderRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<UpdateAccountingOrderQueryParamFields>> fields = Optional.empty();
+        private List<UpdateAccountingOrderQueryParamFields> fields;
 
         private String id;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder accountingOrder(AccountingOrder accountingOrder) {
-            Utils.checkNotNull(accountingOrder, "accountingOrder");
-            this.accountingOrder = accountingOrder;
+        public Builder accountingOrder(@Nonnull AccountingOrder accountingOrder) {
+            this.accountingOrder = Utils.checkNotNull(accountingOrder, "accountingOrder");
             return this;
         }
-
 
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<UpdateAccountingOrderQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<UpdateAccountingOrderQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<UpdateAccountingOrderQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * ID of the Order
          */
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = id;
-            return this;
-        }
-
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
+        public Builder id(@Nonnull String id) {
+            this.id = Utils.checkNotNull(id, "id");
             return this;
         }
 
@@ -298,14 +239,12 @@ public class UpdateAccountingOrderRequest {
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
         public UpdateAccountingOrderRequest build() {
-
             return new UpdateAccountingOrderRequest(
                 accountingOrder, connectionId, fields,
                 id, raw);

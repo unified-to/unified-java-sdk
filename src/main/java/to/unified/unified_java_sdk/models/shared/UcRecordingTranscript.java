@@ -4,10 +4,11 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
@@ -19,17 +20,17 @@ public class UcRecordingTranscript {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_id")
-    private Optional<String> contactId;
+    private String contactId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
-    private Optional<OffsetDateTime> endAt;
+    private OffsetDateTime endAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
-    private Optional<OffsetDateTime> startAt;
+    private OffsetDateTime startAt;
 
 
     @JsonProperty("text")
@@ -38,56 +39,47 @@ public class UcRecordingTranscript {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
-    private Optional<String> userId;
+    private String userId;
 
     @JsonCreator
     public UcRecordingTranscript(
-            @JsonProperty("contact_id") Optional<String> contactId,
-            @JsonProperty("end_at") Optional<OffsetDateTime> endAt,
-            @JsonProperty("start_at") Optional<OffsetDateTime> startAt,
-            @JsonProperty("text") String text,
-            @JsonProperty("user_id") Optional<String> userId) {
-        Utils.checkNotNull(contactId, "contactId");
-        Utils.checkNotNull(endAt, "endAt");
-        Utils.checkNotNull(startAt, "startAt");
-        Utils.checkNotNull(text, "text");
-        Utils.checkNotNull(userId, "userId");
+            @JsonProperty("contact_id") @Nullable String contactId,
+            @JsonProperty("end_at") @Nullable OffsetDateTime endAt,
+            @JsonProperty("start_at") @Nullable OffsetDateTime startAt,
+            @JsonProperty("text") @Nonnull String text,
+            @JsonProperty("user_id") @Nullable String userId) {
         this.contactId = contactId;
         this.endAt = endAt;
         this.startAt = startAt;
-        this.text = text;
+        this.text = Optional.ofNullable(text)
+            .orElseThrow(() -> new IllegalArgumentException("text cannot be null"));
         this.userId = userId;
     }
     
     public UcRecordingTranscript(
-            String text) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            text, Optional.empty());
+            @Nonnull String text) {
+        this(null, null, null,
+            text, null);
     }
 
-    @JsonIgnore
     public Optional<String> contactId() {
-        return contactId;
+        return Optional.ofNullable(this.contactId);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> endAt() {
-        return endAt;
+        return Optional.ofNullable(this.endAt);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> startAt() {
-        return startAt;
+        return Optional.ofNullable(this.startAt);
     }
 
-    @JsonIgnore
     public String text() {
-        return text;
+        return this.text;
     }
 
-    @JsonIgnore
     public Optional<String> userId() {
-        return userId;
+        return Optional.ofNullable(this.userId);
     }
 
     public static Builder builder() {
@@ -95,63 +87,35 @@ public class UcRecordingTranscript {
     }
 
 
-    public UcRecordingTranscript withContactId(String contactId) {
-        Utils.checkNotNull(contactId, "contactId");
-        this.contactId = Optional.ofNullable(contactId);
-        return this;
-    }
-
-
-    public UcRecordingTranscript withContactId(Optional<String> contactId) {
-        Utils.checkNotNull(contactId, "contactId");
+    public UcRecordingTranscript withContactId(@Nullable String contactId) {
         this.contactId = contactId;
         return this;
     }
 
-    public UcRecordingTranscript withEndAt(OffsetDateTime endAt) {
-        Utils.checkNotNull(endAt, "endAt");
-        this.endAt = Optional.ofNullable(endAt);
-        return this;
-    }
 
-
-    public UcRecordingTranscript withEndAt(Optional<OffsetDateTime> endAt) {
-        Utils.checkNotNull(endAt, "endAt");
+    public UcRecordingTranscript withEndAt(@Nullable OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
     }
 
-    public UcRecordingTranscript withStartAt(OffsetDateTime startAt) {
-        Utils.checkNotNull(startAt, "startAt");
-        this.startAt = Optional.ofNullable(startAt);
-        return this;
-    }
 
-
-    public UcRecordingTranscript withStartAt(Optional<OffsetDateTime> startAt) {
-        Utils.checkNotNull(startAt, "startAt");
+    public UcRecordingTranscript withStartAt(@Nullable OffsetDateTime startAt) {
         this.startAt = startAt;
         return this;
     }
 
-    public UcRecordingTranscript withText(String text) {
-        Utils.checkNotNull(text, "text");
-        this.text = text;
-        return this;
-    }
 
-    public UcRecordingTranscript withUserId(String userId) {
-        Utils.checkNotNull(userId, "userId");
-        this.userId = Optional.ofNullable(userId);
+    public UcRecordingTranscript withText(@Nonnull String text) {
+        this.text = Utils.checkNotNull(text, "text");
         return this;
     }
 
 
-    public UcRecordingTranscript withUserId(Optional<String> userId) {
-        Utils.checkNotNull(userId, "userId");
+    public UcRecordingTranscript withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -190,81 +154,46 @@ public class UcRecordingTranscript {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> contactId = Optional.empty();
+        private String contactId;
 
-        private Optional<OffsetDateTime> endAt = Optional.empty();
+        private OffsetDateTime endAt;
 
-        private Optional<OffsetDateTime> startAt = Optional.empty();
+        private OffsetDateTime startAt;
 
         private String text;
 
-        private Optional<String> userId = Optional.empty();
+        private String userId;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder contactId(String contactId) {
-            Utils.checkNotNull(contactId, "contactId");
-            this.contactId = Optional.ofNullable(contactId);
-            return this;
-        }
-
-        public Builder contactId(Optional<String> contactId) {
-            Utils.checkNotNull(contactId, "contactId");
+        public Builder contactId(@Nullable String contactId) {
             this.contactId = contactId;
             return this;
         }
 
-
-        public Builder endAt(OffsetDateTime endAt) {
-            Utils.checkNotNull(endAt, "endAt");
-            this.endAt = Optional.ofNullable(endAt);
-            return this;
-        }
-
-        public Builder endAt(Optional<OffsetDateTime> endAt) {
-            Utils.checkNotNull(endAt, "endAt");
+        public Builder endAt(@Nullable OffsetDateTime endAt) {
             this.endAt = endAt;
             return this;
         }
 
-
-        public Builder startAt(OffsetDateTime startAt) {
-            Utils.checkNotNull(startAt, "startAt");
-            this.startAt = Optional.ofNullable(startAt);
-            return this;
-        }
-
-        public Builder startAt(Optional<OffsetDateTime> startAt) {
-            Utils.checkNotNull(startAt, "startAt");
+        public Builder startAt(@Nullable OffsetDateTime startAt) {
             this.startAt = startAt;
             return this;
         }
 
-
-        public Builder text(String text) {
-            Utils.checkNotNull(text, "text");
-            this.text = text;
+        public Builder text(@Nonnull String text) {
+            this.text = Utils.checkNotNull(text, "text");
             return this;
         }
 
-
-        public Builder userId(String userId) {
-            Utils.checkNotNull(userId, "userId");
-            this.userId = Optional.ofNullable(userId);
-            return this;
-        }
-
-        public Builder userId(Optional<String> userId) {
-            Utils.checkNotNull(userId, "userId");
+        public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;
         }
 
         public UcRecordingTranscript build() {
-
             return new UcRecordingTranscript(
                 contactId, endAt, startAt,
                 text, userId);

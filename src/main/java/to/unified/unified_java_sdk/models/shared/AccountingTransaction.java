@@ -4,15 +4,14 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
@@ -24,131 +23,113 @@ public class AccountingTransaction {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_id")
-    private Optional<String> accountId;
+    private String accountId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contacts")
-    private Optional<? extends List<AccountingTransactionContact>> contacts;
+    private List<AccountingTransactionContact> contacts;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
-    private Optional<String> currency;
+    private String currency;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer_message")
-    private Optional<String> customerMessage;
+    private String customerMessage;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineitems")
-    private Optional<? extends List<AccountingTransactionLineItem>> lineitems;
+    private List<AccountingTransactionLineItem> lineitems;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memo")
-    private Optional<String> memo;
+    private String memo;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_method")
-    private Optional<String> paymentMethod;
+    private String paymentMethod;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_terms")
-    private Optional<String> paymentTerms;
+    private String paymentTerms;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
-    private Optional<String> reference;
+    private String reference;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("split_account_id")
-    private Optional<String> splitAccountId;
+    private String splitAccountId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sub_total_amount")
-    private Optional<Double> subTotalAmount;
+    private Double subTotalAmount;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax_amount")
-    private Optional<Double> taxAmount;
+    private Double taxAmount;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_amount")
-    private Optional<Double> totalAmount;
+    private Double totalAmount;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
-    private Optional<String> type;
+    private String type;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
     @JsonCreator
     public AccountingTransaction(
-            @JsonProperty("account_id") Optional<String> accountId,
-            @JsonProperty("contacts") Optional<? extends List<AccountingTransactionContact>> contacts,
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("currency") Optional<String> currency,
-            @JsonProperty("customer_message") Optional<String> customerMessage,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("lineitems") Optional<? extends List<AccountingTransactionLineItem>> lineitems,
-            @JsonProperty("memo") Optional<String> memo,
-            @JsonProperty("payment_method") Optional<String> paymentMethod,
-            @JsonProperty("payment_terms") Optional<String> paymentTerms,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("reference") Optional<String> reference,
-            @JsonProperty("split_account_id") Optional<String> splitAccountId,
-            @JsonProperty("sub_total_amount") Optional<Double> subTotalAmount,
-            @JsonProperty("tax_amount") Optional<Double> taxAmount,
-            @JsonProperty("total_amount") Optional<Double> totalAmount,
-            @JsonProperty("type") Optional<String> type,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(accountId, "accountId");
-        Utils.checkNotNull(contacts, "contacts");
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(currency, "currency");
-        Utils.checkNotNull(customerMessage, "customerMessage");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(lineitems, "lineitems");
-        Utils.checkNotNull(memo, "memo");
-        Utils.checkNotNull(paymentMethod, "paymentMethod");
-        Utils.checkNotNull(paymentTerms, "paymentTerms");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(reference, "reference");
-        Utils.checkNotNull(splitAccountId, "splitAccountId");
-        Utils.checkNotNull(subTotalAmount, "subTotalAmount");
-        Utils.checkNotNull(taxAmount, "taxAmount");
-        Utils.checkNotNull(totalAmount, "totalAmount");
-        Utils.checkNotNull(type, "type");
-        Utils.checkNotNull(updatedAt, "updatedAt");
+            @JsonProperty("account_id") @Nullable String accountId,
+            @JsonProperty("contacts") @Nullable List<AccountingTransactionContact> contacts,
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("currency") @Nullable String currency,
+            @JsonProperty("customer_message") @Nullable String customerMessage,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("lineitems") @Nullable List<AccountingTransactionLineItem> lineitems,
+            @JsonProperty("memo") @Nullable String memo,
+            @JsonProperty("payment_method") @Nullable String paymentMethod,
+            @JsonProperty("payment_terms") @Nullable String paymentTerms,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("reference") @Nullable String reference,
+            @JsonProperty("split_account_id") @Nullable String splitAccountId,
+            @JsonProperty("sub_total_amount") @Nullable Double subTotalAmount,
+            @JsonProperty("tax_amount") @Nullable Double taxAmount,
+            @JsonProperty("total_amount") @Nullable Double totalAmount,
+            @JsonProperty("type") @Nullable String type,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.accountId = accountId;
         this.contacts = contacts;
         this.createdAt = createdAt;
@@ -170,105 +151,84 @@ public class AccountingTransaction {
     }
     
     public AccountingTransaction() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null);
     }
 
-    @JsonIgnore
     public Optional<String> accountId() {
-        return accountId;
+        return Optional.ofNullable(this.accountId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<AccountingTransactionContact>> contacts() {
-        return (Optional<List<AccountingTransactionContact>>) contacts;
+        return Optional.ofNullable(this.contacts);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<String> currency() {
-        return currency;
+        return Optional.ofNullable(this.currency);
     }
 
-    @JsonIgnore
     public Optional<String> customerMessage() {
-        return customerMessage;
+        return Optional.ofNullable(this.customerMessage);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<AccountingTransactionLineItem>> lineitems() {
-        return (Optional<List<AccountingTransactionLineItem>>) lineitems;
+        return Optional.ofNullable(this.lineitems);
     }
 
-    @JsonIgnore
     public Optional<String> memo() {
-        return memo;
+        return Optional.ofNullable(this.memo);
     }
 
-    @JsonIgnore
     public Optional<String> paymentMethod() {
-        return paymentMethod;
+        return Optional.ofNullable(this.paymentMethod);
     }
 
-    @JsonIgnore
     public Optional<String> paymentTerms() {
-        return paymentTerms;
+        return Optional.ofNullable(this.paymentTerms);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @JsonIgnore
     public Optional<String> reference() {
-        return reference;
+        return Optional.ofNullable(this.reference);
     }
 
-    @JsonIgnore
     public Optional<String> splitAccountId() {
-        return splitAccountId;
+        return Optional.ofNullable(this.splitAccountId);
     }
 
-    @JsonIgnore
     public Optional<Double> subTotalAmount() {
-        return subTotalAmount;
+        return Optional.ofNullable(this.subTotalAmount);
     }
 
-    @JsonIgnore
     public Optional<Double> taxAmount() {
-        return taxAmount;
+        return Optional.ofNullable(this.taxAmount);
     }
 
-    @JsonIgnore
     public Optional<Double> totalAmount() {
-        return totalAmount;
+        return Optional.ofNullable(this.totalAmount);
     }
 
-    @JsonIgnore
     public Optional<String> type() {
-        return type;
+        return Optional.ofNullable(this.type);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
     public static Builder builder() {
@@ -276,239 +236,113 @@ public class AccountingTransaction {
     }
 
 
-    public AccountingTransaction withAccountId(String accountId) {
-        Utils.checkNotNull(accountId, "accountId");
-        this.accountId = Optional.ofNullable(accountId);
-        return this;
-    }
-
-
-    public AccountingTransaction withAccountId(Optional<String> accountId) {
-        Utils.checkNotNull(accountId, "accountId");
+    public AccountingTransaction withAccountId(@Nullable String accountId) {
         this.accountId = accountId;
         return this;
     }
 
-    public AccountingTransaction withContacts(List<AccountingTransactionContact> contacts) {
-        Utils.checkNotNull(contacts, "contacts");
-        this.contacts = Optional.ofNullable(contacts);
-        return this;
-    }
 
-
-    public AccountingTransaction withContacts(Optional<? extends List<AccountingTransactionContact>> contacts) {
-        Utils.checkNotNull(contacts, "contacts");
+    public AccountingTransaction withContacts(@Nullable List<AccountingTransactionContact> contacts) {
         this.contacts = contacts;
         return this;
     }
 
-    public AccountingTransaction withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
 
-
-    public AccountingTransaction withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public AccountingTransaction withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public AccountingTransaction withCurrency(String currency) {
-        Utils.checkNotNull(currency, "currency");
-        this.currency = Optional.ofNullable(currency);
-        return this;
-    }
 
-
-    public AccountingTransaction withCurrency(Optional<String> currency) {
-        Utils.checkNotNull(currency, "currency");
+    public AccountingTransaction withCurrency(@Nullable String currency) {
         this.currency = currency;
         return this;
     }
 
-    public AccountingTransaction withCustomerMessage(String customerMessage) {
-        Utils.checkNotNull(customerMessage, "customerMessage");
-        this.customerMessage = Optional.ofNullable(customerMessage);
-        return this;
-    }
 
-
-    public AccountingTransaction withCustomerMessage(Optional<String> customerMessage) {
-        Utils.checkNotNull(customerMessage, "customerMessage");
+    public AccountingTransaction withCustomerMessage(@Nullable String customerMessage) {
         this.customerMessage = customerMessage;
         return this;
     }
 
-    public AccountingTransaction withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public AccountingTransaction withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public AccountingTransaction withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public AccountingTransaction withLineitems(List<AccountingTransactionLineItem> lineitems) {
-        Utils.checkNotNull(lineitems, "lineitems");
-        this.lineitems = Optional.ofNullable(lineitems);
-        return this;
-    }
 
-
-    public AccountingTransaction withLineitems(Optional<? extends List<AccountingTransactionLineItem>> lineitems) {
-        Utils.checkNotNull(lineitems, "lineitems");
+    public AccountingTransaction withLineitems(@Nullable List<AccountingTransactionLineItem> lineitems) {
         this.lineitems = lineitems;
         return this;
     }
 
-    public AccountingTransaction withMemo(String memo) {
-        Utils.checkNotNull(memo, "memo");
-        this.memo = Optional.ofNullable(memo);
-        return this;
-    }
 
-
-    public AccountingTransaction withMemo(Optional<String> memo) {
-        Utils.checkNotNull(memo, "memo");
+    public AccountingTransaction withMemo(@Nullable String memo) {
         this.memo = memo;
         return this;
     }
 
-    public AccountingTransaction withPaymentMethod(String paymentMethod) {
-        Utils.checkNotNull(paymentMethod, "paymentMethod");
-        this.paymentMethod = Optional.ofNullable(paymentMethod);
-        return this;
-    }
 
-
-    public AccountingTransaction withPaymentMethod(Optional<String> paymentMethod) {
-        Utils.checkNotNull(paymentMethod, "paymentMethod");
+    public AccountingTransaction withPaymentMethod(@Nullable String paymentMethod) {
         this.paymentMethod = paymentMethod;
         return this;
     }
 
-    public AccountingTransaction withPaymentTerms(String paymentTerms) {
-        Utils.checkNotNull(paymentTerms, "paymentTerms");
-        this.paymentTerms = Optional.ofNullable(paymentTerms);
-        return this;
-    }
 
-
-    public AccountingTransaction withPaymentTerms(Optional<String> paymentTerms) {
-        Utils.checkNotNull(paymentTerms, "paymentTerms");
+    public AccountingTransaction withPaymentTerms(@Nullable String paymentTerms) {
         this.paymentTerms = paymentTerms;
         return this;
     }
 
-    public AccountingTransaction withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public AccountingTransaction withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public AccountingTransaction withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public AccountingTransaction withReference(String reference) {
-        Utils.checkNotNull(reference, "reference");
-        this.reference = Optional.ofNullable(reference);
-        return this;
-    }
 
-
-    public AccountingTransaction withReference(Optional<String> reference) {
-        Utils.checkNotNull(reference, "reference");
+    public AccountingTransaction withReference(@Nullable String reference) {
         this.reference = reference;
         return this;
     }
 
-    public AccountingTransaction withSplitAccountId(String splitAccountId) {
-        Utils.checkNotNull(splitAccountId, "splitAccountId");
-        this.splitAccountId = Optional.ofNullable(splitAccountId);
-        return this;
-    }
 
-
-    public AccountingTransaction withSplitAccountId(Optional<String> splitAccountId) {
-        Utils.checkNotNull(splitAccountId, "splitAccountId");
+    public AccountingTransaction withSplitAccountId(@Nullable String splitAccountId) {
         this.splitAccountId = splitAccountId;
         return this;
     }
 
-    public AccountingTransaction withSubTotalAmount(double subTotalAmount) {
-        Utils.checkNotNull(subTotalAmount, "subTotalAmount");
-        this.subTotalAmount = Optional.ofNullable(subTotalAmount);
-        return this;
-    }
 
-
-    public AccountingTransaction withSubTotalAmount(Optional<Double> subTotalAmount) {
-        Utils.checkNotNull(subTotalAmount, "subTotalAmount");
+    public AccountingTransaction withSubTotalAmount(@Nullable Double subTotalAmount) {
         this.subTotalAmount = subTotalAmount;
         return this;
     }
 
-    public AccountingTransaction withTaxAmount(double taxAmount) {
-        Utils.checkNotNull(taxAmount, "taxAmount");
-        this.taxAmount = Optional.ofNullable(taxAmount);
-        return this;
-    }
 
-
-    public AccountingTransaction withTaxAmount(Optional<Double> taxAmount) {
-        Utils.checkNotNull(taxAmount, "taxAmount");
+    public AccountingTransaction withTaxAmount(@Nullable Double taxAmount) {
         this.taxAmount = taxAmount;
         return this;
     }
 
-    public AccountingTransaction withTotalAmount(double totalAmount) {
-        Utils.checkNotNull(totalAmount, "totalAmount");
-        this.totalAmount = Optional.ofNullable(totalAmount);
-        return this;
-    }
 
-
-    public AccountingTransaction withTotalAmount(Optional<Double> totalAmount) {
-        Utils.checkNotNull(totalAmount, "totalAmount");
+    public AccountingTransaction withTotalAmount(@Nullable Double totalAmount) {
         this.totalAmount = totalAmount;
         return this;
     }
 
-    public AccountingTransaction withType(String type) {
-        Utils.checkNotNull(type, "type");
-        this.type = Optional.ofNullable(type);
-        return this;
-    }
 
-
-    public AccountingTransaction withType(Optional<String> type) {
-        Utils.checkNotNull(type, "type");
+    public AccountingTransaction withType(@Nullable String type) {
         this.type = type;
         return this;
     }
 
-    public AccountingTransaction withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public AccountingTransaction withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public AccountingTransaction withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -577,282 +411,137 @@ public class AccountingTransaction {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> accountId = Optional.empty();
+        private String accountId;
 
-        private Optional<? extends List<AccountingTransactionContact>> contacts = Optional.empty();
+        private List<AccountingTransactionContact> contacts;
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<String> currency = Optional.empty();
+        private String currency;
 
-        private Optional<String> customerMessage = Optional.empty();
+        private String customerMessage;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<? extends List<AccountingTransactionLineItem>> lineitems = Optional.empty();
+        private List<AccountingTransactionLineItem> lineitems;
 
-        private Optional<String> memo = Optional.empty();
+        private String memo;
 
-        private Optional<String> paymentMethod = Optional.empty();
+        private String paymentMethod;
 
-        private Optional<String> paymentTerms = Optional.empty();
+        private String paymentTerms;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<String> reference = Optional.empty();
+        private String reference;
 
-        private Optional<String> splitAccountId = Optional.empty();
+        private String splitAccountId;
 
-        private Optional<Double> subTotalAmount = Optional.empty();
+        private Double subTotalAmount;
 
-        private Optional<Double> taxAmount = Optional.empty();
+        private Double taxAmount;
 
-        private Optional<Double> totalAmount = Optional.empty();
+        private Double totalAmount;
 
-        private Optional<String> type = Optional.empty();
+        private String type;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder accountId(String accountId) {
-            Utils.checkNotNull(accountId, "accountId");
-            this.accountId = Optional.ofNullable(accountId);
-            return this;
-        }
-
-        public Builder accountId(Optional<String> accountId) {
-            Utils.checkNotNull(accountId, "accountId");
+        public Builder accountId(@Nullable String accountId) {
             this.accountId = accountId;
             return this;
         }
 
-
-        public Builder contacts(List<AccountingTransactionContact> contacts) {
-            Utils.checkNotNull(contacts, "contacts");
-            this.contacts = Optional.ofNullable(contacts);
-            return this;
-        }
-
-        public Builder contacts(Optional<? extends List<AccountingTransactionContact>> contacts) {
-            Utils.checkNotNull(contacts, "contacts");
+        public Builder contacts(@Nullable List<AccountingTransactionContact> contacts) {
             this.contacts = contacts;
             return this;
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder currency(String currency) {
-            Utils.checkNotNull(currency, "currency");
-            this.currency = Optional.ofNullable(currency);
-            return this;
-        }
-
-        public Builder currency(Optional<String> currency) {
-            Utils.checkNotNull(currency, "currency");
+        public Builder currency(@Nullable String currency) {
             this.currency = currency;
             return this;
         }
 
-
-        public Builder customerMessage(String customerMessage) {
-            Utils.checkNotNull(customerMessage, "customerMessage");
-            this.customerMessage = Optional.ofNullable(customerMessage);
-            return this;
-        }
-
-        public Builder customerMessage(Optional<String> customerMessage) {
-            Utils.checkNotNull(customerMessage, "customerMessage");
+        public Builder customerMessage(@Nullable String customerMessage) {
             this.customerMessage = customerMessage;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder lineitems(List<AccountingTransactionLineItem> lineitems) {
-            Utils.checkNotNull(lineitems, "lineitems");
-            this.lineitems = Optional.ofNullable(lineitems);
-            return this;
-        }
-
-        public Builder lineitems(Optional<? extends List<AccountingTransactionLineItem>> lineitems) {
-            Utils.checkNotNull(lineitems, "lineitems");
+        public Builder lineitems(@Nullable List<AccountingTransactionLineItem> lineitems) {
             this.lineitems = lineitems;
             return this;
         }
 
-
-        public Builder memo(String memo) {
-            Utils.checkNotNull(memo, "memo");
-            this.memo = Optional.ofNullable(memo);
-            return this;
-        }
-
-        public Builder memo(Optional<String> memo) {
-            Utils.checkNotNull(memo, "memo");
+        public Builder memo(@Nullable String memo) {
             this.memo = memo;
             return this;
         }
 
-
-        public Builder paymentMethod(String paymentMethod) {
-            Utils.checkNotNull(paymentMethod, "paymentMethod");
-            this.paymentMethod = Optional.ofNullable(paymentMethod);
-            return this;
-        }
-
-        public Builder paymentMethod(Optional<String> paymentMethod) {
-            Utils.checkNotNull(paymentMethod, "paymentMethod");
+        public Builder paymentMethod(@Nullable String paymentMethod) {
             this.paymentMethod = paymentMethod;
             return this;
         }
 
-
-        public Builder paymentTerms(String paymentTerms) {
-            Utils.checkNotNull(paymentTerms, "paymentTerms");
-            this.paymentTerms = Optional.ofNullable(paymentTerms);
-            return this;
-        }
-
-        public Builder paymentTerms(Optional<String> paymentTerms) {
-            Utils.checkNotNull(paymentTerms, "paymentTerms");
+        public Builder paymentTerms(@Nullable String paymentTerms) {
             this.paymentTerms = paymentTerms;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder reference(String reference) {
-            Utils.checkNotNull(reference, "reference");
-            this.reference = Optional.ofNullable(reference);
-            return this;
-        }
-
-        public Builder reference(Optional<String> reference) {
-            Utils.checkNotNull(reference, "reference");
+        public Builder reference(@Nullable String reference) {
             this.reference = reference;
             return this;
         }
 
-
-        public Builder splitAccountId(String splitAccountId) {
-            Utils.checkNotNull(splitAccountId, "splitAccountId");
-            this.splitAccountId = Optional.ofNullable(splitAccountId);
-            return this;
-        }
-
-        public Builder splitAccountId(Optional<String> splitAccountId) {
-            Utils.checkNotNull(splitAccountId, "splitAccountId");
+        public Builder splitAccountId(@Nullable String splitAccountId) {
             this.splitAccountId = splitAccountId;
             return this;
         }
 
-
-        public Builder subTotalAmount(double subTotalAmount) {
-            Utils.checkNotNull(subTotalAmount, "subTotalAmount");
-            this.subTotalAmount = Optional.ofNullable(subTotalAmount);
-            return this;
-        }
-
-        public Builder subTotalAmount(Optional<Double> subTotalAmount) {
-            Utils.checkNotNull(subTotalAmount, "subTotalAmount");
+        public Builder subTotalAmount(@Nullable Double subTotalAmount) {
             this.subTotalAmount = subTotalAmount;
             return this;
         }
 
-
-        public Builder taxAmount(double taxAmount) {
-            Utils.checkNotNull(taxAmount, "taxAmount");
-            this.taxAmount = Optional.ofNullable(taxAmount);
-            return this;
-        }
-
-        public Builder taxAmount(Optional<Double> taxAmount) {
-            Utils.checkNotNull(taxAmount, "taxAmount");
+        public Builder taxAmount(@Nullable Double taxAmount) {
             this.taxAmount = taxAmount;
             return this;
         }
 
-
-        public Builder totalAmount(double totalAmount) {
-            Utils.checkNotNull(totalAmount, "totalAmount");
-            this.totalAmount = Optional.ofNullable(totalAmount);
-            return this;
-        }
-
-        public Builder totalAmount(Optional<Double> totalAmount) {
-            Utils.checkNotNull(totalAmount, "totalAmount");
+        public Builder totalAmount(@Nullable Double totalAmount) {
             this.totalAmount = totalAmount;
             return this;
         }
 
-
-        public Builder type(String type) {
-            Utils.checkNotNull(type, "type");
-            this.type = Optional.ofNullable(type);
-            return this;
-        }
-
-        public Builder type(Optional<String> type) {
-            Utils.checkNotNull(type, "type");
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
         public AccountingTransaction build() {
-
             return new AccountingTransaction(
                 accountId, contacts, createdAt,
                 currency, customerMessage, id,

@@ -4,11 +4,11 @@
 package to.unified.unified_java_sdk.models.operations.async;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import java.lang.Integer;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.io.InputStream;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.List;
 import java.util.Optional;
@@ -27,7 +27,7 @@ public class ListMartechMembersResponse implements AsyncResponse {
     /**
      * Successful
      */
-    private Optional<? extends List<MarketingMember>> marketingMembers;
+    private List<MarketingMember> marketingMembers;
 
     /**
      * HTTP response status code for this operation
@@ -41,59 +41,52 @@ public class ListMartechMembersResponse implements AsyncResponse {
 
     @JsonCreator
     public ListMartechMembersResponse(
-            String contentType,
-            Optional<? extends List<MarketingMember>> marketingMembers,
+            @Nonnull String contentType,
+            @Nullable List<MarketingMember> marketingMembers,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(marketingMembers, "marketingMembers");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.contentType = contentType;
+            @Nonnull HttpResponse<Blob> rawResponse) {
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.marketingMembers = marketingMembers;
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
     }
     
     public ListMartechMembersResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
-        this(contentType, Optional.empty(), statusCode,
+            @Nonnull HttpResponse<Blob> rawResponse) {
+        this(contentType, null, statusCode,
             rawResponse);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<MarketingMember>> marketingMembers() {
-        return (Optional<List<MarketingMember>>) marketingMembers;
+        return Optional.ofNullable(this.marketingMembers);
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<Blob> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     public static Builder builder() {
@@ -104,18 +97,8 @@ public class ListMartechMembersResponse implements AsyncResponse {
     /**
      * HTTP response content type for this operation
      */
-    public ListMartechMembersResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
-        return this;
-    }
-
-    /**
-     * Successful
-     */
-    public ListMartechMembersResponse withMarketingMembers(List<MarketingMember> marketingMembers) {
-        Utils.checkNotNull(marketingMembers, "marketingMembers");
-        this.marketingMembers = Optional.ofNullable(marketingMembers);
+    public ListMartechMembersResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
 
@@ -123,29 +106,29 @@ public class ListMartechMembersResponse implements AsyncResponse {
     /**
      * Successful
      */
-    public ListMartechMembersResponse withMarketingMembers(Optional<? extends List<MarketingMember>> marketingMembers) {
-        Utils.checkNotNull(marketingMembers, "marketingMembers");
+    public ListMartechMembersResponse withMarketingMembers(@Nullable List<MarketingMember> marketingMembers) {
         this.marketingMembers = marketingMembers;
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public ListMartechMembersResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public ListMartechMembersResponse withRawResponse(HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
+    public ListMartechMembersResponse withRawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -184,9 +167,9 @@ public class ListMartechMembersResponse implements AsyncResponse {
 
         private String contentType;
 
-        private Optional<? extends List<MarketingMember>> marketingMembers = Optional.empty();
+        private List<MarketingMember> marketingMembers;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<Blob> rawResponse;
 
@@ -194,57 +177,39 @@ public class ListMartechMembersResponse implements AsyncResponse {
           // force use of static builder() method
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
-            return this;
-        }
-
-
-        /**
-         * Successful
-         */
-        public Builder marketingMembers(List<MarketingMember> marketingMembers) {
-            Utils.checkNotNull(marketingMembers, "marketingMembers");
-            this.marketingMembers = Optional.ofNullable(marketingMembers);
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
 
         /**
          * Successful
          */
-        public Builder marketingMembers(Optional<? extends List<MarketingMember>> marketingMembers) {
-            Utils.checkNotNull(marketingMembers, "marketingMembers");
+        public Builder marketingMembers(@Nullable List<MarketingMember> marketingMembers) {
             this.marketingMembers = marketingMembers;
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<Blob> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
+        public Builder rawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         public ListMartechMembersResponse build() {
-
             return new ListMartechMembersResponse(
                 contentType, marketingMembers, statusCode,
                 rawResponse);

@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceCollectionRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceInventoryRequest;
@@ -212,7 +213,7 @@ public class AsyncCommerce {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCommerceCollectionResponse>} - The async response
      */
-    public CompletableFuture<CreateCommerceCollectionResponse> createCommerceCollection(CreateCommerceCollectionRequest request) {
+    public CompletableFuture<CreateCommerceCollectionResponse> createCommerceCollection(@Nonnull CreateCommerceCollectionRequest request) {
         AsyncRequestOperation<CreateCommerceCollectionRequest, CreateCommerceCollectionResponse> operation
               = new CreateCommerceCollection.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -235,7 +236,7 @@ public class AsyncCommerce {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCommerceInventoryResponse>} - The async response
      */
-    public CompletableFuture<CreateCommerceInventoryResponse> createCommerceInventory(CreateCommerceInventoryRequest request) {
+    public CompletableFuture<CreateCommerceInventoryResponse> createCommerceInventory(@Nonnull CreateCommerceInventoryRequest request) {
         AsyncRequestOperation<CreateCommerceInventoryRequest, CreateCommerceInventoryResponse> operation
               = new CreateCommerceInventory.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -258,7 +259,7 @@ public class AsyncCommerce {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCommerceItemResponse>} - The async response
      */
-    public CompletableFuture<CreateCommerceItemResponse> createCommerceItem(CreateCommerceItemRequest request) {
+    public CompletableFuture<CreateCommerceItemResponse> createCommerceItem(@Nonnull CreateCommerceItemRequest request) {
         AsyncRequestOperation<CreateCommerceItemRequest, CreateCommerceItemResponse> operation
               = new CreateCommerceItem.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -281,7 +282,7 @@ public class AsyncCommerce {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCommerceItemvariantResponse>} - The async response
      */
-    public CompletableFuture<CreateCommerceItemvariantResponse> createCommerceItemvariant(CreateCommerceItemvariantRequest request) {
+    public CompletableFuture<CreateCommerceItemvariantResponse> createCommerceItemvariant(@Nonnull CreateCommerceItemvariantRequest request) {
         AsyncRequestOperation<CreateCommerceItemvariantRequest, CreateCommerceItemvariantResponse> operation
               = new CreateCommerceItemvariant.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -304,7 +305,7 @@ public class AsyncCommerce {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCommerceLocationResponse>} - The async response
      */
-    public CompletableFuture<CreateCommerceLocationResponse> createCommerceLocation(CreateCommerceLocationRequest request) {
+    public CompletableFuture<CreateCommerceLocationResponse> createCommerceLocation(@Nonnull CreateCommerceLocationRequest request) {
         AsyncRequestOperation<CreateCommerceLocationRequest, CreateCommerceLocationResponse> operation
               = new CreateCommerceLocation.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -327,7 +328,7 @@ public class AsyncCommerce {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCommerceReviewResponse>} - The async response
      */
-    public CompletableFuture<CreateCommerceReviewResponse> createCommerceReview(CreateCommerceReviewRequest request) {
+    public CompletableFuture<CreateCommerceReviewResponse> createCommerceReview(@Nonnull CreateCommerceReviewRequest request) {
         AsyncRequestOperation<CreateCommerceReviewRequest, CreateCommerceReviewResponse> operation
               = new CreateCommerceReview.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -350,7 +351,7 @@ public class AsyncCommerce {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCommerceSaleschannelResponse>} - The async response
      */
-    public CompletableFuture<CreateCommerceSaleschannelResponse> createCommerceSaleschannel(CreateCommerceSaleschannelRequest request) {
+    public CompletableFuture<CreateCommerceSaleschannelResponse> createCommerceSaleschannel(@Nonnull CreateCommerceSaleschannelRequest request) {
         AsyncRequestOperation<CreateCommerceSaleschannelRequest, CreateCommerceSaleschannelResponse> operation
               = new CreateCommerceSaleschannel.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -373,7 +374,7 @@ public class AsyncCommerce {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCommerceCollectionResponse>} - The async response
      */
-    public CompletableFuture<GetCommerceCollectionResponse> getCommerceCollection(GetCommerceCollectionRequest request) {
+    public CompletableFuture<GetCommerceCollectionResponse> getCommerceCollection(@Nonnull GetCommerceCollectionRequest request) {
         AsyncRequestOperation<GetCommerceCollectionRequest, GetCommerceCollectionResponse> operation
               = new GetCommerceCollection.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -396,7 +397,7 @@ public class AsyncCommerce {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCommerceInventoryResponse>} - The async response
      */
-    public CompletableFuture<GetCommerceInventoryResponse> getCommerceInventory(GetCommerceInventoryRequest request) {
+    public CompletableFuture<GetCommerceInventoryResponse> getCommerceInventory(@Nonnull GetCommerceInventoryRequest request) {
         AsyncRequestOperation<GetCommerceInventoryRequest, GetCommerceInventoryResponse> operation
               = new GetCommerceInventory.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -419,7 +420,7 @@ public class AsyncCommerce {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCommerceItemResponse>} - The async response
      */
-    public CompletableFuture<GetCommerceItemResponse> getCommerceItem(GetCommerceItemRequest request) {
+    public CompletableFuture<GetCommerceItemResponse> getCommerceItem(@Nonnull GetCommerceItemRequest request) {
         AsyncRequestOperation<GetCommerceItemRequest, GetCommerceItemResponse> operation
               = new GetCommerceItem.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -442,7 +443,7 @@ public class AsyncCommerce {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCommerceItemvariantResponse>} - The async response
      */
-    public CompletableFuture<GetCommerceItemvariantResponse> getCommerceItemvariant(GetCommerceItemvariantRequest request) {
+    public CompletableFuture<GetCommerceItemvariantResponse> getCommerceItemvariant(@Nonnull GetCommerceItemvariantRequest request) {
         AsyncRequestOperation<GetCommerceItemvariantRequest, GetCommerceItemvariantResponse> operation
               = new GetCommerceItemvariant.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -465,7 +466,7 @@ public class AsyncCommerce {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCommerceLocationResponse>} - The async response
      */
-    public CompletableFuture<GetCommerceLocationResponse> getCommerceLocation(GetCommerceLocationRequest request) {
+    public CompletableFuture<GetCommerceLocationResponse> getCommerceLocation(@Nonnull GetCommerceLocationRequest request) {
         AsyncRequestOperation<GetCommerceLocationRequest, GetCommerceLocationResponse> operation
               = new GetCommerceLocation.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -488,7 +489,7 @@ public class AsyncCommerce {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCommerceReviewResponse>} - The async response
      */
-    public CompletableFuture<GetCommerceReviewResponse> getCommerceReview(GetCommerceReviewRequest request) {
+    public CompletableFuture<GetCommerceReviewResponse> getCommerceReview(@Nonnull GetCommerceReviewRequest request) {
         AsyncRequestOperation<GetCommerceReviewRequest, GetCommerceReviewResponse> operation
               = new GetCommerceReview.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -511,7 +512,7 @@ public class AsyncCommerce {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCommerceSaleschannelResponse>} - The async response
      */
-    public CompletableFuture<GetCommerceSaleschannelResponse> getCommerceSaleschannel(GetCommerceSaleschannelRequest request) {
+    public CompletableFuture<GetCommerceSaleschannelResponse> getCommerceSaleschannel(@Nonnull GetCommerceSaleschannelRequest request) {
         AsyncRequestOperation<GetCommerceSaleschannelRequest, GetCommerceSaleschannelResponse> operation
               = new GetCommerceSaleschannel.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -534,7 +535,7 @@ public class AsyncCommerce {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCommerceCollectionsResponse>} - The async response
      */
-    public CompletableFuture<ListCommerceCollectionsResponse> listCommerceCollections(ListCommerceCollectionsRequest request) {
+    public CompletableFuture<ListCommerceCollectionsResponse> listCommerceCollections(@Nonnull ListCommerceCollectionsRequest request) {
         AsyncRequestOperation<ListCommerceCollectionsRequest, ListCommerceCollectionsResponse> operation
               = new ListCommerceCollections.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -557,7 +558,7 @@ public class AsyncCommerce {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCommerceInventoriesResponse>} - The async response
      */
-    public CompletableFuture<ListCommerceInventoriesResponse> listCommerceInventories(ListCommerceInventoriesRequest request) {
+    public CompletableFuture<ListCommerceInventoriesResponse> listCommerceInventories(@Nonnull ListCommerceInventoriesRequest request) {
         AsyncRequestOperation<ListCommerceInventoriesRequest, ListCommerceInventoriesResponse> operation
               = new ListCommerceInventories.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -580,7 +581,7 @@ public class AsyncCommerce {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCommerceItemsResponse>} - The async response
      */
-    public CompletableFuture<ListCommerceItemsResponse> listCommerceItems(ListCommerceItemsRequest request) {
+    public CompletableFuture<ListCommerceItemsResponse> listCommerceItems(@Nonnull ListCommerceItemsRequest request) {
         AsyncRequestOperation<ListCommerceItemsRequest, ListCommerceItemsResponse> operation
               = new ListCommerceItems.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -603,7 +604,7 @@ public class AsyncCommerce {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCommerceItemvariantsResponse>} - The async response
      */
-    public CompletableFuture<ListCommerceItemvariantsResponse> listCommerceItemvariants(ListCommerceItemvariantsRequest request) {
+    public CompletableFuture<ListCommerceItemvariantsResponse> listCommerceItemvariants(@Nonnull ListCommerceItemvariantsRequest request) {
         AsyncRequestOperation<ListCommerceItemvariantsRequest, ListCommerceItemvariantsResponse> operation
               = new ListCommerceItemvariants.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -626,7 +627,7 @@ public class AsyncCommerce {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCommerceLocationsResponse>} - The async response
      */
-    public CompletableFuture<ListCommerceLocationsResponse> listCommerceLocations(ListCommerceLocationsRequest request) {
+    public CompletableFuture<ListCommerceLocationsResponse> listCommerceLocations(@Nonnull ListCommerceLocationsRequest request) {
         AsyncRequestOperation<ListCommerceLocationsRequest, ListCommerceLocationsResponse> operation
               = new ListCommerceLocations.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -649,7 +650,7 @@ public class AsyncCommerce {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCommerceReviewsResponse>} - The async response
      */
-    public CompletableFuture<ListCommerceReviewsResponse> listCommerceReviews(ListCommerceReviewsRequest request) {
+    public CompletableFuture<ListCommerceReviewsResponse> listCommerceReviews(@Nonnull ListCommerceReviewsRequest request) {
         AsyncRequestOperation<ListCommerceReviewsRequest, ListCommerceReviewsResponse> operation
               = new ListCommerceReviews.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -672,7 +673,7 @@ public class AsyncCommerce {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCommerceSaleschannelsResponse>} - The async response
      */
-    public CompletableFuture<ListCommerceSaleschannelsResponse> listCommerceSaleschannels(ListCommerceSaleschannelsRequest request) {
+    public CompletableFuture<ListCommerceSaleschannelsResponse> listCommerceSaleschannels(@Nonnull ListCommerceSaleschannelsRequest request) {
         AsyncRequestOperation<ListCommerceSaleschannelsRequest, ListCommerceSaleschannelsResponse> operation
               = new ListCommerceSaleschannels.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -695,7 +696,7 @@ public class AsyncCommerce {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCommerceCollectionResponse>} - The async response
      */
-    public CompletableFuture<PatchCommerceCollectionResponse> patchCommerceCollection(PatchCommerceCollectionRequest request) {
+    public CompletableFuture<PatchCommerceCollectionResponse> patchCommerceCollection(@Nonnull PatchCommerceCollectionRequest request) {
         AsyncRequestOperation<PatchCommerceCollectionRequest, PatchCommerceCollectionResponse> operation
               = new PatchCommerceCollection.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -718,7 +719,7 @@ public class AsyncCommerce {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCommerceInventoryResponse>} - The async response
      */
-    public CompletableFuture<PatchCommerceInventoryResponse> patchCommerceInventory(PatchCommerceInventoryRequest request) {
+    public CompletableFuture<PatchCommerceInventoryResponse> patchCommerceInventory(@Nonnull PatchCommerceInventoryRequest request) {
         AsyncRequestOperation<PatchCommerceInventoryRequest, PatchCommerceInventoryResponse> operation
               = new PatchCommerceInventory.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -741,7 +742,7 @@ public class AsyncCommerce {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCommerceItemResponse>} - The async response
      */
-    public CompletableFuture<PatchCommerceItemResponse> patchCommerceItem(PatchCommerceItemRequest request) {
+    public CompletableFuture<PatchCommerceItemResponse> patchCommerceItem(@Nonnull PatchCommerceItemRequest request) {
         AsyncRequestOperation<PatchCommerceItemRequest, PatchCommerceItemResponse> operation
               = new PatchCommerceItem.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -764,7 +765,7 @@ public class AsyncCommerce {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCommerceItemvariantResponse>} - The async response
      */
-    public CompletableFuture<PatchCommerceItemvariantResponse> patchCommerceItemvariant(PatchCommerceItemvariantRequest request) {
+    public CompletableFuture<PatchCommerceItemvariantResponse> patchCommerceItemvariant(@Nonnull PatchCommerceItemvariantRequest request) {
         AsyncRequestOperation<PatchCommerceItemvariantRequest, PatchCommerceItemvariantResponse> operation
               = new PatchCommerceItemvariant.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -787,7 +788,7 @@ public class AsyncCommerce {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCommerceLocationResponse>} - The async response
      */
-    public CompletableFuture<PatchCommerceLocationResponse> patchCommerceLocation(PatchCommerceLocationRequest request) {
+    public CompletableFuture<PatchCommerceLocationResponse> patchCommerceLocation(@Nonnull PatchCommerceLocationRequest request) {
         AsyncRequestOperation<PatchCommerceLocationRequest, PatchCommerceLocationResponse> operation
               = new PatchCommerceLocation.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -810,7 +811,7 @@ public class AsyncCommerce {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCommerceReviewResponse>} - The async response
      */
-    public CompletableFuture<PatchCommerceReviewResponse> patchCommerceReview(PatchCommerceReviewRequest request) {
+    public CompletableFuture<PatchCommerceReviewResponse> patchCommerceReview(@Nonnull PatchCommerceReviewRequest request) {
         AsyncRequestOperation<PatchCommerceReviewRequest, PatchCommerceReviewResponse> operation
               = new PatchCommerceReview.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -833,7 +834,7 @@ public class AsyncCommerce {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCommerceSaleschannelResponse>} - The async response
      */
-    public CompletableFuture<PatchCommerceSaleschannelResponse> patchCommerceSaleschannel(PatchCommerceSaleschannelRequest request) {
+    public CompletableFuture<PatchCommerceSaleschannelResponse> patchCommerceSaleschannel(@Nonnull PatchCommerceSaleschannelRequest request) {
         AsyncRequestOperation<PatchCommerceSaleschannelRequest, PatchCommerceSaleschannelResponse> operation
               = new PatchCommerceSaleschannel.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -856,7 +857,7 @@ public class AsyncCommerce {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCommerceCollectionResponse>} - The async response
      */
-    public CompletableFuture<RemoveCommerceCollectionResponse> removeCommerceCollection(RemoveCommerceCollectionRequest request) {
+    public CompletableFuture<RemoveCommerceCollectionResponse> removeCommerceCollection(@Nonnull RemoveCommerceCollectionRequest request) {
         AsyncRequestOperation<RemoveCommerceCollectionRequest, RemoveCommerceCollectionResponse> operation
               = new RemoveCommerceCollection.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -879,7 +880,7 @@ public class AsyncCommerce {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCommerceInventoryResponse>} - The async response
      */
-    public CompletableFuture<RemoveCommerceInventoryResponse> removeCommerceInventory(RemoveCommerceInventoryRequest request) {
+    public CompletableFuture<RemoveCommerceInventoryResponse> removeCommerceInventory(@Nonnull RemoveCommerceInventoryRequest request) {
         AsyncRequestOperation<RemoveCommerceInventoryRequest, RemoveCommerceInventoryResponse> operation
               = new RemoveCommerceInventory.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -902,7 +903,7 @@ public class AsyncCommerce {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCommerceItemResponse>} - The async response
      */
-    public CompletableFuture<RemoveCommerceItemResponse> removeCommerceItem(RemoveCommerceItemRequest request) {
+    public CompletableFuture<RemoveCommerceItemResponse> removeCommerceItem(@Nonnull RemoveCommerceItemRequest request) {
         AsyncRequestOperation<RemoveCommerceItemRequest, RemoveCommerceItemResponse> operation
               = new RemoveCommerceItem.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -925,7 +926,7 @@ public class AsyncCommerce {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCommerceItemvariantResponse>} - The async response
      */
-    public CompletableFuture<RemoveCommerceItemvariantResponse> removeCommerceItemvariant(RemoveCommerceItemvariantRequest request) {
+    public CompletableFuture<RemoveCommerceItemvariantResponse> removeCommerceItemvariant(@Nonnull RemoveCommerceItemvariantRequest request) {
         AsyncRequestOperation<RemoveCommerceItemvariantRequest, RemoveCommerceItemvariantResponse> operation
               = new RemoveCommerceItemvariant.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -948,7 +949,7 @@ public class AsyncCommerce {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCommerceLocationResponse>} - The async response
      */
-    public CompletableFuture<RemoveCommerceLocationResponse> removeCommerceLocation(RemoveCommerceLocationRequest request) {
+    public CompletableFuture<RemoveCommerceLocationResponse> removeCommerceLocation(@Nonnull RemoveCommerceLocationRequest request) {
         AsyncRequestOperation<RemoveCommerceLocationRequest, RemoveCommerceLocationResponse> operation
               = new RemoveCommerceLocation.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -971,7 +972,7 @@ public class AsyncCommerce {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCommerceReviewResponse>} - The async response
      */
-    public CompletableFuture<RemoveCommerceReviewResponse> removeCommerceReview(RemoveCommerceReviewRequest request) {
+    public CompletableFuture<RemoveCommerceReviewResponse> removeCommerceReview(@Nonnull RemoveCommerceReviewRequest request) {
         AsyncRequestOperation<RemoveCommerceReviewRequest, RemoveCommerceReviewResponse> operation
               = new RemoveCommerceReview.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -994,7 +995,7 @@ public class AsyncCommerce {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCommerceSaleschannelResponse>} - The async response
      */
-    public CompletableFuture<RemoveCommerceSaleschannelResponse> removeCommerceSaleschannel(RemoveCommerceSaleschannelRequest request) {
+    public CompletableFuture<RemoveCommerceSaleschannelResponse> removeCommerceSaleschannel(@Nonnull RemoveCommerceSaleschannelRequest request) {
         AsyncRequestOperation<RemoveCommerceSaleschannelRequest, RemoveCommerceSaleschannelResponse> operation
               = new RemoveCommerceSaleschannel.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -1017,7 +1018,7 @@ public class AsyncCommerce {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCommerceCollectionResponse>} - The async response
      */
-    public CompletableFuture<UpdateCommerceCollectionResponse> updateCommerceCollection(UpdateCommerceCollectionRequest request) {
+    public CompletableFuture<UpdateCommerceCollectionResponse> updateCommerceCollection(@Nonnull UpdateCommerceCollectionRequest request) {
         AsyncRequestOperation<UpdateCommerceCollectionRequest, UpdateCommerceCollectionResponse> operation
               = new UpdateCommerceCollection.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -1040,7 +1041,7 @@ public class AsyncCommerce {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCommerceInventoryResponse>} - The async response
      */
-    public CompletableFuture<UpdateCommerceInventoryResponse> updateCommerceInventory(UpdateCommerceInventoryRequest request) {
+    public CompletableFuture<UpdateCommerceInventoryResponse> updateCommerceInventory(@Nonnull UpdateCommerceInventoryRequest request) {
         AsyncRequestOperation<UpdateCommerceInventoryRequest, UpdateCommerceInventoryResponse> operation
               = new UpdateCommerceInventory.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -1063,7 +1064,7 @@ public class AsyncCommerce {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCommerceItemResponse>} - The async response
      */
-    public CompletableFuture<UpdateCommerceItemResponse> updateCommerceItem(UpdateCommerceItemRequest request) {
+    public CompletableFuture<UpdateCommerceItemResponse> updateCommerceItem(@Nonnull UpdateCommerceItemRequest request) {
         AsyncRequestOperation<UpdateCommerceItemRequest, UpdateCommerceItemResponse> operation
               = new UpdateCommerceItem.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -1086,7 +1087,7 @@ public class AsyncCommerce {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCommerceItemvariantResponse>} - The async response
      */
-    public CompletableFuture<UpdateCommerceItemvariantResponse> updateCommerceItemvariant(UpdateCommerceItemvariantRequest request) {
+    public CompletableFuture<UpdateCommerceItemvariantResponse> updateCommerceItemvariant(@Nonnull UpdateCommerceItemvariantRequest request) {
         AsyncRequestOperation<UpdateCommerceItemvariantRequest, UpdateCommerceItemvariantResponse> operation
               = new UpdateCommerceItemvariant.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -1109,7 +1110,7 @@ public class AsyncCommerce {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCommerceLocationResponse>} - The async response
      */
-    public CompletableFuture<UpdateCommerceLocationResponse> updateCommerceLocation(UpdateCommerceLocationRequest request) {
+    public CompletableFuture<UpdateCommerceLocationResponse> updateCommerceLocation(@Nonnull UpdateCommerceLocationRequest request) {
         AsyncRequestOperation<UpdateCommerceLocationRequest, UpdateCommerceLocationResponse> operation
               = new UpdateCommerceLocation.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -1132,7 +1133,7 @@ public class AsyncCommerce {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCommerceReviewResponse>} - The async response
      */
-    public CompletableFuture<UpdateCommerceReviewResponse> updateCommerceReview(UpdateCommerceReviewRequest request) {
+    public CompletableFuture<UpdateCommerceReviewResponse> updateCommerceReview(@Nonnull UpdateCommerceReviewRequest request) {
         AsyncRequestOperation<UpdateCommerceReviewRequest, UpdateCommerceReviewResponse> operation
               = new UpdateCommerceReview.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -1155,7 +1156,7 @@ public class AsyncCommerce {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCommerceSaleschannelResponse>} - The async response
      */
-    public CompletableFuture<UpdateCommerceSaleschannelResponse> updateCommerceSaleschannel(UpdateCommerceSaleschannelRequest request) {
+    public CompletableFuture<UpdateCommerceSaleschannelResponse> updateCommerceSaleschannel(@Nonnull UpdateCommerceSaleschannelRequest request) {
         AsyncRequestOperation<UpdateCommerceSaleschannelRequest, UpdateCommerceSaleschannelResponse> operation
               = new UpdateCommerceSaleschannel.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

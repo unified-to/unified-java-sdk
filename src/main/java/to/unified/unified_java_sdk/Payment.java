@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreatePaymentLinkRequest;
 import to.unified.unified_java_sdk.models.operations.CreatePaymentLinkRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreatePaymentLinkResponse;
@@ -131,7 +132,7 @@ public class Payment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreatePaymentLinkResponse createPaymentLink(CreatePaymentLinkRequest request) {
+    public CreatePaymentLinkResponse createPaymentLink(@Nonnull CreatePaymentLinkRequest request) {
         RequestOperation<CreatePaymentLinkRequest, CreatePaymentLinkResponse> operation
               = new CreatePaymentLink.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -153,7 +154,7 @@ public class Payment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreatePaymentPaymentResponse createPaymentPayment(CreatePaymentPaymentRequest request) {
+    public CreatePaymentPaymentResponse createPaymentPayment(@Nonnull CreatePaymentPaymentRequest request) {
         RequestOperation<CreatePaymentPaymentRequest, CreatePaymentPaymentResponse> operation
               = new CreatePaymentPayment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -175,7 +176,7 @@ public class Payment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreatePaymentSubscriptionResponse createPaymentSubscription(CreatePaymentSubscriptionRequest request) {
+    public CreatePaymentSubscriptionResponse createPaymentSubscription(@Nonnull CreatePaymentSubscriptionRequest request) {
         RequestOperation<CreatePaymentSubscriptionRequest, CreatePaymentSubscriptionResponse> operation
               = new CreatePaymentSubscription.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -197,7 +198,7 @@ public class Payment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetPaymentLinkResponse getPaymentLink(GetPaymentLinkRequest request) {
+    public GetPaymentLinkResponse getPaymentLink(@Nonnull GetPaymentLinkRequest request) {
         RequestOperation<GetPaymentLinkRequest, GetPaymentLinkResponse> operation
               = new GetPaymentLink.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -219,7 +220,7 @@ public class Payment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetPaymentPaymentResponse getPaymentPayment(GetPaymentPaymentRequest request) {
+    public GetPaymentPaymentResponse getPaymentPayment(@Nonnull GetPaymentPaymentRequest request) {
         RequestOperation<GetPaymentPaymentRequest, GetPaymentPaymentResponse> operation
               = new GetPaymentPayment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -241,7 +242,7 @@ public class Payment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetPaymentPayoutResponse getPaymentPayout(GetPaymentPayoutRequest request) {
+    public GetPaymentPayoutResponse getPaymentPayout(@Nonnull GetPaymentPayoutRequest request) {
         RequestOperation<GetPaymentPayoutRequest, GetPaymentPayoutResponse> operation
               = new GetPaymentPayout.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -263,7 +264,7 @@ public class Payment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetPaymentRefundResponse getPaymentRefund(GetPaymentRefundRequest request) {
+    public GetPaymentRefundResponse getPaymentRefund(@Nonnull GetPaymentRefundRequest request) {
         RequestOperation<GetPaymentRefundRequest, GetPaymentRefundResponse> operation
               = new GetPaymentRefund.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -285,7 +286,7 @@ public class Payment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetPaymentSubscriptionResponse getPaymentSubscription(GetPaymentSubscriptionRequest request) {
+    public GetPaymentSubscriptionResponse getPaymentSubscription(@Nonnull GetPaymentSubscriptionRequest request) {
         RequestOperation<GetPaymentSubscriptionRequest, GetPaymentSubscriptionResponse> operation
               = new GetPaymentSubscription.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -307,7 +308,7 @@ public class Payment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListPaymentLinksResponse listPaymentLinks(ListPaymentLinksRequest request) {
+    public ListPaymentLinksResponse listPaymentLinks(@Nonnull ListPaymentLinksRequest request) {
         RequestOperation<ListPaymentLinksRequest, ListPaymentLinksResponse> operation
               = new ListPaymentLinks.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -329,7 +330,7 @@ public class Payment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListPaymentPaymentsResponse listPaymentPayments(ListPaymentPaymentsRequest request) {
+    public ListPaymentPaymentsResponse listPaymentPayments(@Nonnull ListPaymentPaymentsRequest request) {
         RequestOperation<ListPaymentPaymentsRequest, ListPaymentPaymentsResponse> operation
               = new ListPaymentPayments.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -351,7 +352,7 @@ public class Payment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListPaymentPayoutsResponse listPaymentPayouts(ListPaymentPayoutsRequest request) {
+    public ListPaymentPayoutsResponse listPaymentPayouts(@Nonnull ListPaymentPayoutsRequest request) {
         RequestOperation<ListPaymentPayoutsRequest, ListPaymentPayoutsResponse> operation
               = new ListPaymentPayouts.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -373,7 +374,7 @@ public class Payment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListPaymentRefundsResponse listPaymentRefunds(ListPaymentRefundsRequest request) {
+    public ListPaymentRefundsResponse listPaymentRefunds(@Nonnull ListPaymentRefundsRequest request) {
         RequestOperation<ListPaymentRefundsRequest, ListPaymentRefundsResponse> operation
               = new ListPaymentRefunds.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -395,7 +396,7 @@ public class Payment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListPaymentSubscriptionsResponse listPaymentSubscriptions(ListPaymentSubscriptionsRequest request) {
+    public ListPaymentSubscriptionsResponse listPaymentSubscriptions(@Nonnull ListPaymentSubscriptionsRequest request) {
         RequestOperation<ListPaymentSubscriptionsRequest, ListPaymentSubscriptionsResponse> operation
               = new ListPaymentSubscriptions.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -417,7 +418,7 @@ public class Payment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchPaymentLinkResponse patchPaymentLink(PatchPaymentLinkRequest request) {
+    public PatchPaymentLinkResponse patchPaymentLink(@Nonnull PatchPaymentLinkRequest request) {
         RequestOperation<PatchPaymentLinkRequest, PatchPaymentLinkResponse> operation
               = new PatchPaymentLink.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -439,7 +440,7 @@ public class Payment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchPaymentPaymentResponse patchPaymentPayment(PatchPaymentPaymentRequest request) {
+    public PatchPaymentPaymentResponse patchPaymentPayment(@Nonnull PatchPaymentPaymentRequest request) {
         RequestOperation<PatchPaymentPaymentRequest, PatchPaymentPaymentResponse> operation
               = new PatchPaymentPayment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -461,7 +462,7 @@ public class Payment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchPaymentSubscriptionResponse patchPaymentSubscription(PatchPaymentSubscriptionRequest request) {
+    public PatchPaymentSubscriptionResponse patchPaymentSubscription(@Nonnull PatchPaymentSubscriptionRequest request) {
         RequestOperation<PatchPaymentSubscriptionRequest, PatchPaymentSubscriptionResponse> operation
               = new PatchPaymentSubscription.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -483,7 +484,7 @@ public class Payment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemovePaymentLinkResponse removePaymentLink(RemovePaymentLinkRequest request) {
+    public RemovePaymentLinkResponse removePaymentLink(@Nonnull RemovePaymentLinkRequest request) {
         RequestOperation<RemovePaymentLinkRequest, RemovePaymentLinkResponse> operation
               = new RemovePaymentLink.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -505,7 +506,7 @@ public class Payment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemovePaymentPaymentResponse removePaymentPayment(RemovePaymentPaymentRequest request) {
+    public RemovePaymentPaymentResponse removePaymentPayment(@Nonnull RemovePaymentPaymentRequest request) {
         RequestOperation<RemovePaymentPaymentRequest, RemovePaymentPaymentResponse> operation
               = new RemovePaymentPayment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -527,7 +528,7 @@ public class Payment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemovePaymentSubscriptionResponse removePaymentSubscription(RemovePaymentSubscriptionRequest request) {
+    public RemovePaymentSubscriptionResponse removePaymentSubscription(@Nonnull RemovePaymentSubscriptionRequest request) {
         RequestOperation<RemovePaymentSubscriptionRequest, RemovePaymentSubscriptionResponse> operation
               = new RemovePaymentSubscription.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -549,7 +550,7 @@ public class Payment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdatePaymentLinkResponse updatePaymentLink(UpdatePaymentLinkRequest request) {
+    public UpdatePaymentLinkResponse updatePaymentLink(@Nonnull UpdatePaymentLinkRequest request) {
         RequestOperation<UpdatePaymentLinkRequest, UpdatePaymentLinkResponse> operation
               = new UpdatePaymentLink.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -571,7 +572,7 @@ public class Payment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdatePaymentPaymentResponse updatePaymentPayment(UpdatePaymentPaymentRequest request) {
+    public UpdatePaymentPaymentResponse updatePaymentPayment(@Nonnull UpdatePaymentPaymentRequest request) {
         RequestOperation<UpdatePaymentPaymentRequest, UpdatePaymentPaymentResponse> operation
               = new UpdatePaymentPayment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -593,7 +594,7 @@ public class Payment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdatePaymentSubscriptionResponse updatePaymentSubscription(UpdatePaymentSubscriptionRequest request) {
+    public UpdatePaymentSubscriptionResponse updatePaymentSubscription(@Nonnull UpdatePaymentSubscriptionRequest request) {
         RequestOperation<UpdatePaymentSubscriptionRequest, UpdatePaymentSubscriptionResponse> operation
               = new UpdatePaymentSubscription.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

@@ -4,11 +4,11 @@
 package to.unified.unified_java_sdk.models.operations.async;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import java.lang.Integer;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.io.InputStream;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.List;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public class ListAdsReportsResponse implements AsyncResponse {
     /**
      * Successful
      */
-    private Optional<? extends List<AdsReport>> adsReports;
+    private List<AdsReport> adsReports;
 
     /**
      * HTTP response content type for this operation
@@ -41,59 +41,52 @@ public class ListAdsReportsResponse implements AsyncResponse {
 
     @JsonCreator
     public ListAdsReportsResponse(
-            Optional<? extends List<AdsReport>> adsReports,
-            String contentType,
+            @Nullable List<AdsReport> adsReports,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(adsReports, "adsReports");
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
+            @Nonnull HttpResponse<Blob> rawResponse) {
         this.adsReports = adsReports;
-        this.contentType = contentType;
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
     }
     
     public ListAdsReportsResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
-        this(Optional.empty(), contentType, statusCode,
+            @Nonnull HttpResponse<Blob> rawResponse) {
+        this(null, contentType, statusCode,
             rawResponse);
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<AdsReport>> adsReports() {
-        return (Optional<List<AdsReport>>) adsReports;
+        return Optional.ofNullable(this.adsReports);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<Blob> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     public static Builder builder() {
@@ -104,48 +97,38 @@ public class ListAdsReportsResponse implements AsyncResponse {
     /**
      * Successful
      */
-    public ListAdsReportsResponse withAdsReports(List<AdsReport> adsReports) {
-        Utils.checkNotNull(adsReports, "adsReports");
-        this.adsReports = Optional.ofNullable(adsReports);
-        return this;
-    }
-
-
-    /**
-     * Successful
-     */
-    public ListAdsReportsResponse withAdsReports(Optional<? extends List<AdsReport>> adsReports) {
-        Utils.checkNotNull(adsReports, "adsReports");
+    public ListAdsReportsResponse withAdsReports(@Nullable List<AdsReport> adsReports) {
         this.adsReports = adsReports;
         return this;
     }
 
+
     /**
      * HTTP response content type for this operation
      */
-    public ListAdsReportsResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
+    public ListAdsReportsResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public ListAdsReportsResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public ListAdsReportsResponse withRawResponse(HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
+    public ListAdsReportsResponse withRawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -182,11 +165,11 @@ public class ListAdsReportsResponse implements AsyncResponse {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends List<AdsReport>> adsReports = Optional.empty();
+        private List<AdsReport> adsReports;
 
         private String contentType;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<Blob> rawResponse;
 
@@ -194,57 +177,39 @@ public class ListAdsReportsResponse implements AsyncResponse {
           // force use of static builder() method
         }
 
-
         /**
          * Successful
          */
-        public Builder adsReports(List<AdsReport> adsReports) {
-            Utils.checkNotNull(adsReports, "adsReports");
-            this.adsReports = Optional.ofNullable(adsReports);
-            return this;
-        }
-
-        /**
-         * Successful
-         */
-        public Builder adsReports(Optional<? extends List<AdsReport>> adsReports) {
-            Utils.checkNotNull(adsReports, "adsReports");
+        public Builder adsReports(@Nullable List<AdsReport> adsReports) {
             this.adsReports = adsReports;
             return this;
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<Blob> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
+        public Builder rawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         public ListAdsReportsResponse build() {
-
             return new ListAdsReportsResponse(
                 adsReports, contentType, statusCode,
                 rawResponse);

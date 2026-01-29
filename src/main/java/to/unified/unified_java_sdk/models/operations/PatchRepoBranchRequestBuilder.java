@@ -5,32 +5,45 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.PatchRepoBranch;
 import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchRepoBranchRequestBuilder {
-
-    private PatchRepoBranchRequest request;
     private final SDKConfiguration sdkConfiguration;
-    private final Headers _headers = new Headers(); 
+    private final Headers _headers = new Headers();
+    private PatchRepoBranchRequest request;
 
     public PatchRepoBranchRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
 
-    public PatchRepoBranchRequestBuilder request(PatchRepoBranchRequest request) {
-        Utils.checkNotNull(request, "request");
-        this.request = request;
+    public PatchRepoBranchRequestBuilder request(@Nonnull PatchRepoBranchRequest request) {
+        this.request = Utils.checkNotNull(request, "request");
         return this;
     }
 
+    private PatchRepoBranchRequest _buildRequest() {
+        return this.request;
+    }
+    
+    public PatchRepoBranchRequestBuilder header(String name, String value) {
+        Utils.checkNotNull(name, "name");
+        Utils.checkNotNull(value, "value");
+        this._headers.add(name, value);
+        return this;
+    }
+
+    /**
+    * Executes the request and returns the response.
+    *
+    * @return The response from the server.
+    */
     public PatchRepoBranchResponse call() {
-        
         RequestOperation<PatchRepoBranchRequest, PatchRepoBranchResponse> operation
               = new PatchRepoBranch.Sync(sdkConfiguration, _headers);
-
-        return operation.handleResponse(operation.doRequest(request));
+        return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

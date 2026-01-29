@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateKmsPageRequest;
 import to.unified.unified_java_sdk.models.operations.GetKmsPageRequest;
@@ -68,7 +69,7 @@ public class AsyncPage {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateKmsPageResponse>} - The async response
      */
-    public CompletableFuture<CreateKmsPageResponse> createKmsPage(CreateKmsPageRequest request) {
+    public CompletableFuture<CreateKmsPageResponse> createKmsPage(@Nonnull CreateKmsPageRequest request) {
         AsyncRequestOperation<CreateKmsPageRequest, CreateKmsPageResponse> operation
               = new CreateKmsPage.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -91,7 +92,7 @@ public class AsyncPage {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetKmsPageResponse>} - The async response
      */
-    public CompletableFuture<GetKmsPageResponse> getKmsPage(GetKmsPageRequest request) {
+    public CompletableFuture<GetKmsPageResponse> getKmsPage(@Nonnull GetKmsPageRequest request) {
         AsyncRequestOperation<GetKmsPageRequest, GetKmsPageResponse> operation
               = new GetKmsPage.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -114,7 +115,7 @@ public class AsyncPage {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListKmsPagesResponse>} - The async response
      */
-    public CompletableFuture<ListKmsPagesResponse> listKmsPages(ListKmsPagesRequest request) {
+    public CompletableFuture<ListKmsPagesResponse> listKmsPages(@Nonnull ListKmsPagesRequest request) {
         AsyncRequestOperation<ListKmsPagesRequest, ListKmsPagesResponse> operation
               = new ListKmsPages.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -137,7 +138,7 @@ public class AsyncPage {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchKmsPageResponse>} - The async response
      */
-    public CompletableFuture<PatchKmsPageResponse> patchKmsPage(PatchKmsPageRequest request) {
+    public CompletableFuture<PatchKmsPageResponse> patchKmsPage(@Nonnull PatchKmsPageRequest request) {
         AsyncRequestOperation<PatchKmsPageRequest, PatchKmsPageResponse> operation
               = new PatchKmsPage.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -160,7 +161,7 @@ public class AsyncPage {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveKmsPageResponse>} - The async response
      */
-    public CompletableFuture<RemoveKmsPageResponse> removeKmsPage(RemoveKmsPageRequest request) {
+    public CompletableFuture<RemoveKmsPageResponse> removeKmsPage(@Nonnull RemoveKmsPageRequest request) {
         AsyncRequestOperation<RemoveKmsPageRequest, RemoveKmsPageResponse> operation
               = new RemoveKmsPage.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -183,7 +184,7 @@ public class AsyncPage {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateKmsPageResponse>} - The async response
      */
-    public CompletableFuture<UpdateKmsPageResponse> updateKmsPage(UpdateKmsPageRequest request) {
+    public CompletableFuture<UpdateKmsPageResponse> updateKmsPage(@Nonnull UpdateKmsPageRequest request) {
         AsyncRequestOperation<UpdateKmsPageRequest, UpdateKmsPageResponse> operation
               = new UpdateKmsPage.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

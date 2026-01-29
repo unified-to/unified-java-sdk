@@ -4,7 +4,8 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Override;
 import java.lang.String;
@@ -25,37 +26,34 @@ public class CreateUnifiedWebhookRequest {
      * When set, all of the existing data will sent back to your server.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_all")
-    private Optional<Boolean> includeAll;
+    private Boolean includeAll;
 
     @JsonCreator
     public CreateUnifiedWebhookRequest(
-            Webhook webhook,
-            Optional<Boolean> includeAll) {
-        Utils.checkNotNull(webhook, "webhook");
-        Utils.checkNotNull(includeAll, "includeAll");
-        this.webhook = webhook;
+            @Nonnull Webhook webhook,
+            @Nullable Boolean includeAll) {
+        this.webhook = Optional.ofNullable(webhook)
+            .orElseThrow(() -> new IllegalArgumentException("webhook cannot be null"));
         this.includeAll = includeAll;
     }
     
     public CreateUnifiedWebhookRequest(
-            Webhook webhook) {
-        this(webhook, Optional.empty());
+            @Nonnull Webhook webhook) {
+        this(webhook, null);
     }
 
     /**
      * A webhook is used to POST new/updated information to your server.
      */
-    @JsonIgnore
     public Webhook webhook() {
-        return webhook;
+        return this.webhook;
     }
 
     /**
      * When set, all of the existing data will sent back to your server.
      */
-    @JsonIgnore
     public Optional<Boolean> includeAll() {
-        return includeAll;
+        return Optional.ofNullable(this.includeAll);
     }
 
     public static Builder builder() {
@@ -66,18 +64,8 @@ public class CreateUnifiedWebhookRequest {
     /**
      * A webhook is used to POST new/updated information to your server.
      */
-    public CreateUnifiedWebhookRequest withWebhook(Webhook webhook) {
-        Utils.checkNotNull(webhook, "webhook");
-        this.webhook = webhook;
-        return this;
-    }
-
-    /**
-     * When set, all of the existing data will sent back to your server.
-     */
-    public CreateUnifiedWebhookRequest withIncludeAll(boolean includeAll) {
-        Utils.checkNotNull(includeAll, "includeAll");
-        this.includeAll = Optional.ofNullable(includeAll);
+    public CreateUnifiedWebhookRequest withWebhook(@Nonnull Webhook webhook) {
+        this.webhook = Utils.checkNotNull(webhook, "webhook");
         return this;
     }
 
@@ -85,11 +73,11 @@ public class CreateUnifiedWebhookRequest {
     /**
      * When set, all of the existing data will sent back to your server.
      */
-    public CreateUnifiedWebhookRequest withIncludeAll(Optional<Boolean> includeAll) {
-        Utils.checkNotNull(includeAll, "includeAll");
+    public CreateUnifiedWebhookRequest withIncludeAll(@Nullable Boolean includeAll) {
         this.includeAll = includeAll;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -123,43 +111,29 @@ public class CreateUnifiedWebhookRequest {
 
         private Webhook webhook;
 
-        private Optional<Boolean> includeAll = Optional.empty();
+        private Boolean includeAll;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
         /**
          * A webhook is used to POST new/updated information to your server.
          */
-        public Builder webhook(Webhook webhook) {
-            Utils.checkNotNull(webhook, "webhook");
-            this.webhook = webhook;
-            return this;
-        }
-
-
-        /**
-         * When set, all of the existing data will sent back to your server.
-         */
-        public Builder includeAll(boolean includeAll) {
-            Utils.checkNotNull(includeAll, "includeAll");
-            this.includeAll = Optional.ofNullable(includeAll);
+        public Builder webhook(@Nonnull Webhook webhook) {
+            this.webhook = Utils.checkNotNull(webhook, "webhook");
             return this;
         }
 
         /**
          * When set, all of the existing data will sent back to your server.
          */
-        public Builder includeAll(Optional<Boolean> includeAll) {
-            Utils.checkNotNull(includeAll, "includeAll");
+        public Builder includeAll(@Nullable Boolean includeAll) {
             this.includeAll = includeAll;
             return this;
         }
 
         public CreateUnifiedWebhookRequest build() {
-
             return new CreateUnifiedWebhookRequest(
                 webhook, includeAll);
         }

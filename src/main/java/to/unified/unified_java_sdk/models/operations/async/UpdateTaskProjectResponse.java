@@ -4,11 +4,11 @@
 package to.unified.unified_java_sdk.models.operations.async;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import java.lang.Integer;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.io.InputStream;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.TaskProject;
@@ -36,63 +36,56 @@ public class UpdateTaskProjectResponse implements AsyncResponse {
     /**
      * Successful
      */
-    private Optional<? extends TaskProject> taskProject;
+    private TaskProject taskProject;
 
     @JsonCreator
     public UpdateTaskProjectResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<Blob> rawResponse,
-            Optional<? extends TaskProject> taskProject) {
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        Utils.checkNotNull(taskProject, "taskProject");
-        this.contentType = contentType;
+            @Nonnull HttpResponse<Blob> rawResponse,
+            @Nullable TaskProject taskProject) {
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
         this.taskProject = taskProject;
     }
     
     public UpdateTaskProjectResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
+            @Nonnull HttpResponse<Blob> rawResponse) {
         this(contentType, statusCode, rawResponse,
-            Optional.empty());
+            null);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<Blob> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<TaskProject> taskProject() {
-        return (Optional<TaskProject>) taskProject;
+        return Optional.ofNullable(this.taskProject);
     }
 
     public static Builder builder() {
@@ -103,36 +96,26 @@ public class UpdateTaskProjectResponse implements AsyncResponse {
     /**
      * HTTP response content type for this operation
      */
-    public UpdateTaskProjectResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
+    public UpdateTaskProjectResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public UpdateTaskProjectResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public UpdateTaskProjectResponse withRawResponse(HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
-        return this;
-    }
-
-    /**
-     * Successful
-     */
-    public UpdateTaskProjectResponse withTaskProject(TaskProject taskProject) {
-        Utils.checkNotNull(taskProject, "taskProject");
-        this.taskProject = Optional.ofNullable(taskProject);
+    public UpdateTaskProjectResponse withRawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
 
@@ -140,11 +123,11 @@ public class UpdateTaskProjectResponse implements AsyncResponse {
     /**
      * Successful
      */
-    public UpdateTaskProjectResponse withTaskProject(Optional<? extends TaskProject> taskProject) {
-        Utils.checkNotNull(taskProject, "taskProject");
+    public UpdateTaskProjectResponse withTaskProject(@Nullable TaskProject taskProject) {
         this.taskProject = taskProject;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -183,67 +166,49 @@ public class UpdateTaskProjectResponse implements AsyncResponse {
 
         private String contentType;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<Blob> rawResponse;
 
-        private Optional<? extends TaskProject> taskProject = Optional.empty();
+        private TaskProject taskProject;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<Blob> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
-            return this;
-        }
-
-
-        /**
-         * Successful
-         */
-        public Builder taskProject(TaskProject taskProject) {
-            Utils.checkNotNull(taskProject, "taskProject");
-            this.taskProject = Optional.ofNullable(taskProject);
+        public Builder rawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         /**
          * Successful
          */
-        public Builder taskProject(Optional<? extends TaskProject> taskProject) {
-            Utils.checkNotNull(taskProject, "taskProject");
+        public Builder taskProject(@Nullable TaskProject taskProject) {
             this.taskProject = taskProject;
             return this;
         }
 
         public UpdateTaskProjectResponse build() {
-
             return new UpdateTaskProjectResponse(
                 contentType, statusCode, rawResponse,
                 taskProject);

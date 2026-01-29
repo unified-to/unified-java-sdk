@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateAtsScorecardRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAtsScorecardRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAtsScorecardResponse;
@@ -67,7 +68,7 @@ public class Scorecard {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAtsScorecardResponse createAtsScorecard(CreateAtsScorecardRequest request) {
+    public CreateAtsScorecardResponse createAtsScorecard(@Nonnull CreateAtsScorecardRequest request) {
         RequestOperation<CreateAtsScorecardRequest, CreateAtsScorecardResponse> operation
               = new CreateAtsScorecard.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -89,7 +90,7 @@ public class Scorecard {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAtsScorecardResponse getAtsScorecard(GetAtsScorecardRequest request) {
+    public GetAtsScorecardResponse getAtsScorecard(@Nonnull GetAtsScorecardRequest request) {
         RequestOperation<GetAtsScorecardRequest, GetAtsScorecardResponse> operation
               = new GetAtsScorecard.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -111,7 +112,7 @@ public class Scorecard {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAtsScorecardsResponse listAtsScorecards(ListAtsScorecardsRequest request) {
+    public ListAtsScorecardsResponse listAtsScorecards(@Nonnull ListAtsScorecardsRequest request) {
         RequestOperation<ListAtsScorecardsRequest, ListAtsScorecardsResponse> operation
               = new ListAtsScorecards.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -133,7 +134,7 @@ public class Scorecard {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAtsScorecardResponse patchAtsScorecard(PatchAtsScorecardRequest request) {
+    public PatchAtsScorecardResponse patchAtsScorecard(@Nonnull PatchAtsScorecardRequest request) {
         RequestOperation<PatchAtsScorecardRequest, PatchAtsScorecardResponse> operation
               = new PatchAtsScorecard.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -155,7 +156,7 @@ public class Scorecard {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAtsScorecardResponse removeAtsScorecard(RemoveAtsScorecardRequest request) {
+    public RemoveAtsScorecardResponse removeAtsScorecard(@Nonnull RemoveAtsScorecardRequest request) {
         RequestOperation<RemoveAtsScorecardRequest, RemoveAtsScorecardResponse> operation
               = new RemoveAtsScorecard.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -177,7 +178,7 @@ public class Scorecard {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAtsScorecardResponse updateAtsScorecard(UpdateAtsScorecardRequest request) {
+    public UpdateAtsScorecardResponse updateAtsScorecard(@Nonnull UpdateAtsScorecardRequest request) {
         RequestOperation<UpdateAtsScorecardRequest, UpdateAtsScorecardResponse> operation
               = new UpdateAtsScorecard.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

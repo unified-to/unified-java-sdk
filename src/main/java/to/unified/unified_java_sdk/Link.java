@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateCalendarLinkRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCalendarLinkRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateCalendarLinkResponse;
@@ -91,7 +92,7 @@ public class Link {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCalendarLinkResponse createCalendarLink(CreateCalendarLinkRequest request) {
+    public CreateCalendarLinkResponse createCalendarLink(@Nonnull CreateCalendarLinkRequest request) {
         RequestOperation<CreateCalendarLinkRequest, CreateCalendarLinkResponse> operation
               = new CreateCalendarLink.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -113,7 +114,7 @@ public class Link {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreatePaymentLinkResponse createPaymentLink(CreatePaymentLinkRequest request) {
+    public CreatePaymentLinkResponse createPaymentLink(@Nonnull CreatePaymentLinkRequest request) {
         RequestOperation<CreatePaymentLinkRequest, CreatePaymentLinkResponse> operation
               = new CreatePaymentLink.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -135,7 +136,7 @@ public class Link {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetCalendarLinkResponse getCalendarLink(GetCalendarLinkRequest request) {
+    public GetCalendarLinkResponse getCalendarLink(@Nonnull GetCalendarLinkRequest request) {
         RequestOperation<GetCalendarLinkRequest, GetCalendarLinkResponse> operation
               = new GetCalendarLink.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -157,7 +158,7 @@ public class Link {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetPaymentLinkResponse getPaymentLink(GetPaymentLinkRequest request) {
+    public GetPaymentLinkResponse getPaymentLink(@Nonnull GetPaymentLinkRequest request) {
         RequestOperation<GetPaymentLinkRequest, GetPaymentLinkResponse> operation
               = new GetPaymentLink.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -179,7 +180,7 @@ public class Link {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCalendarLinksResponse listCalendarLinks(ListCalendarLinksRequest request) {
+    public ListCalendarLinksResponse listCalendarLinks(@Nonnull ListCalendarLinksRequest request) {
         RequestOperation<ListCalendarLinksRequest, ListCalendarLinksResponse> operation
               = new ListCalendarLinks.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -201,7 +202,7 @@ public class Link {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListPaymentLinksResponse listPaymentLinks(ListPaymentLinksRequest request) {
+    public ListPaymentLinksResponse listPaymentLinks(@Nonnull ListPaymentLinksRequest request) {
         RequestOperation<ListPaymentLinksRequest, ListPaymentLinksResponse> operation
               = new ListPaymentLinks.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -223,7 +224,7 @@ public class Link {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCalendarLinkResponse patchCalendarLink(PatchCalendarLinkRequest request) {
+    public PatchCalendarLinkResponse patchCalendarLink(@Nonnull PatchCalendarLinkRequest request) {
         RequestOperation<PatchCalendarLinkRequest, PatchCalendarLinkResponse> operation
               = new PatchCalendarLink.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -245,7 +246,7 @@ public class Link {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchPaymentLinkResponse patchPaymentLink(PatchPaymentLinkRequest request) {
+    public PatchPaymentLinkResponse patchPaymentLink(@Nonnull PatchPaymentLinkRequest request) {
         RequestOperation<PatchPaymentLinkRequest, PatchPaymentLinkResponse> operation
               = new PatchPaymentLink.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -267,7 +268,7 @@ public class Link {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCalendarLinkResponse removeCalendarLink(RemoveCalendarLinkRequest request) {
+    public RemoveCalendarLinkResponse removeCalendarLink(@Nonnull RemoveCalendarLinkRequest request) {
         RequestOperation<RemoveCalendarLinkRequest, RemoveCalendarLinkResponse> operation
               = new RemoveCalendarLink.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -289,7 +290,7 @@ public class Link {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemovePaymentLinkResponse removePaymentLink(RemovePaymentLinkRequest request) {
+    public RemovePaymentLinkResponse removePaymentLink(@Nonnull RemovePaymentLinkRequest request) {
         RequestOperation<RemovePaymentLinkRequest, RemovePaymentLinkResponse> operation
               = new RemovePaymentLink.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -311,7 +312,7 @@ public class Link {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCalendarLinkResponse updateCalendarLink(UpdateCalendarLinkRequest request) {
+    public UpdateCalendarLinkResponse updateCalendarLink(@Nonnull UpdateCalendarLinkRequest request) {
         RequestOperation<UpdateCalendarLinkRequest, UpdateCalendarLinkResponse> operation
               = new UpdateCalendarLink.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -333,7 +334,7 @@ public class Link {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdatePaymentLinkResponse updatePaymentLink(UpdatePaymentLinkRequest request) {
+    public UpdatePaymentLinkResponse updatePaymentLink(@Nonnull UpdatePaymentLinkRequest request) {
         RequestOperation<UpdatePaymentLinkRequest, UpdatePaymentLinkResponse> operation
               = new UpdatePaymentLink.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

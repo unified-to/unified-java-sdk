@@ -5,32 +5,45 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.GetKmsSpace;
 import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetKmsSpaceRequestBuilder {
-
-    private GetKmsSpaceRequest request;
     private final SDKConfiguration sdkConfiguration;
-    private final Headers _headers = new Headers(); 
+    private final Headers _headers = new Headers();
+    private GetKmsSpaceRequest request;
 
     public GetKmsSpaceRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
 
-    public GetKmsSpaceRequestBuilder request(GetKmsSpaceRequest request) {
-        Utils.checkNotNull(request, "request");
-        this.request = request;
+    public GetKmsSpaceRequestBuilder request(@Nonnull GetKmsSpaceRequest request) {
+        this.request = Utils.checkNotNull(request, "request");
         return this;
     }
 
+    private GetKmsSpaceRequest _buildRequest() {
+        return this.request;
+    }
+    
+    public GetKmsSpaceRequestBuilder header(String name, String value) {
+        Utils.checkNotNull(name, "name");
+        Utils.checkNotNull(value, "value");
+        this._headers.add(name, value);
+        return this;
+    }
+
+    /**
+    * Executes the request and returns the response.
+    *
+    * @return The response from the server.
+    */
     public GetKmsSpaceResponse call() {
-        
         RequestOperation<GetKmsSpaceRequest, GetKmsSpaceResponse> operation
               = new GetKmsSpace.Sync(sdkConfiguration, _headers);
-
-        return operation.handleResponse(operation.doRequest(request));
+        return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

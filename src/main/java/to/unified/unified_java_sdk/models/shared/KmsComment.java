@@ -4,14 +4,14 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.Map;
 import java.util.Optional;
@@ -26,71 +26,62 @@ public class KmsComment {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content_type")
-    private Optional<? extends ContentType> contentType;
+    private ContentType contentType;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page_id")
-    private Optional<String> pageId;
+    private String pageId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_id")
-    private Optional<String> parentId;
+    private String parentId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
-    private Optional<? extends KmsCommentType> type;
+    private KmsCommentType type;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
-    private Optional<String> userId;
+    private String userId;
 
     @JsonCreator
     public KmsComment(
-            @JsonProperty("content") String content,
-            @JsonProperty("content_type") Optional<? extends ContentType> contentType,
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("page_id") Optional<String> pageId,
-            @JsonProperty("parent_id") Optional<String> parentId,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("type") Optional<? extends KmsCommentType> type,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
-            @JsonProperty("user_id") Optional<String> userId) {
-        Utils.checkNotNull(content, "content");
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(pageId, "pageId");
-        Utils.checkNotNull(parentId, "parentId");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(type, "type");
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        Utils.checkNotNull(userId, "userId");
-        this.content = content;
+            @JsonProperty("content") @Nonnull String content,
+            @JsonProperty("content_type") @Nullable ContentType contentType,
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("page_id") @Nullable String pageId,
+            @JsonProperty("parent_id") @Nullable String parentId,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("type") @Nullable KmsCommentType type,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
+            @JsonProperty("user_id") @Nullable String userId) {
+        this.content = Optional.ofNullable(content)
+            .orElseThrow(() -> new IllegalArgumentException("content cannot be null"));
         this.contentType = contentType;
         this.createdAt = createdAt;
         this.id = id;
@@ -103,64 +94,51 @@ public class KmsComment {
     }
     
     public KmsComment(
-            String content) {
-        this(content, Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+            @Nonnull String content) {
+        this(content, null, null,
+            null, null, null,
+            null, null, null,
+            null);
     }
 
-    @JsonIgnore
     public String content() {
-        return content;
+        return this.content;
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ContentType> contentType() {
-        return (Optional<ContentType>) contentType;
+        return Optional.ofNullable(this.contentType);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<String> pageId() {
-        return pageId;
+        return Optional.ofNullable(this.pageId);
     }
 
-    @JsonIgnore
     public Optional<String> parentId() {
-        return parentId;
+        return Optional.ofNullable(this.parentId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<KmsCommentType> type() {
-        return (Optional<KmsCommentType>) type;
+        return Optional.ofNullable(this.type);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
-    @JsonIgnore
     public Optional<String> userId() {
-        return userId;
+        return Optional.ofNullable(this.userId);
     }
 
     public static Builder builder() {
@@ -168,128 +146,65 @@ public class KmsComment {
     }
 
 
-    public KmsComment withContent(String content) {
-        Utils.checkNotNull(content, "content");
-        this.content = content;
-        return this;
-    }
-
-    public KmsComment withContentType(ContentType contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = Optional.ofNullable(contentType);
+    public KmsComment withContent(@Nonnull String content) {
+        this.content = Utils.checkNotNull(content, "content");
         return this;
     }
 
 
-    public KmsComment withContentType(Optional<? extends ContentType> contentType) {
-        Utils.checkNotNull(contentType, "contentType");
+    public KmsComment withContentType(@Nullable ContentType contentType) {
         this.contentType = contentType;
         return this;
     }
 
-    public KmsComment withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
 
-
-    public KmsComment withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public KmsComment withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public KmsComment withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public KmsComment withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public KmsComment withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public KmsComment withPageId(String pageId) {
-        Utils.checkNotNull(pageId, "pageId");
-        this.pageId = Optional.ofNullable(pageId);
-        return this;
-    }
 
-
-    public KmsComment withPageId(Optional<String> pageId) {
-        Utils.checkNotNull(pageId, "pageId");
+    public KmsComment withPageId(@Nullable String pageId) {
         this.pageId = pageId;
         return this;
     }
 
-    public KmsComment withParentId(String parentId) {
-        Utils.checkNotNull(parentId, "parentId");
-        this.parentId = Optional.ofNullable(parentId);
-        return this;
-    }
 
-
-    public KmsComment withParentId(Optional<String> parentId) {
-        Utils.checkNotNull(parentId, "parentId");
+    public KmsComment withParentId(@Nullable String parentId) {
         this.parentId = parentId;
         return this;
     }
 
-    public KmsComment withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public KmsComment withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public KmsComment withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public KmsComment withType(KmsCommentType type) {
-        Utils.checkNotNull(type, "type");
-        this.type = Optional.ofNullable(type);
-        return this;
-    }
 
-
-    public KmsComment withType(Optional<? extends KmsCommentType> type) {
-        Utils.checkNotNull(type, "type");
+    public KmsComment withType(@Nullable KmsCommentType type) {
         this.type = type;
         return this;
     }
 
-    public KmsComment withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public KmsComment withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public KmsComment withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
-    public KmsComment withUserId(String userId) {
-        Utils.checkNotNull(userId, "userId");
-        this.userId = Optional.ofNullable(userId);
-        return this;
-    }
 
-
-    public KmsComment withUserId(Optional<String> userId) {
-        Utils.checkNotNull(userId, "userId");
+    public KmsComment withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -342,154 +257,79 @@ public class KmsComment {
 
         private String content;
 
-        private Optional<? extends ContentType> contentType = Optional.empty();
+        private ContentType contentType;
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<String> pageId = Optional.empty();
+        private String pageId;
 
-        private Optional<String> parentId = Optional.empty();
+        private String parentId;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<? extends KmsCommentType> type = Optional.empty();
+        private KmsCommentType type;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
-        private Optional<String> userId = Optional.empty();
+        private String userId;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder content(String content) {
-            Utils.checkNotNull(content, "content");
-            this.content = content;
+        public Builder content(@Nonnull String content) {
+            this.content = Utils.checkNotNull(content, "content");
             return this;
         }
 
-
-        public Builder contentType(ContentType contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = Optional.ofNullable(contentType);
-            return this;
-        }
-
-        public Builder contentType(Optional<? extends ContentType> contentType) {
-            Utils.checkNotNull(contentType, "contentType");
+        public Builder contentType(@Nullable ContentType contentType) {
             this.contentType = contentType;
             return this;
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder pageId(String pageId) {
-            Utils.checkNotNull(pageId, "pageId");
-            this.pageId = Optional.ofNullable(pageId);
-            return this;
-        }
-
-        public Builder pageId(Optional<String> pageId) {
-            Utils.checkNotNull(pageId, "pageId");
+        public Builder pageId(@Nullable String pageId) {
             this.pageId = pageId;
             return this;
         }
 
-
-        public Builder parentId(String parentId) {
-            Utils.checkNotNull(parentId, "parentId");
-            this.parentId = Optional.ofNullable(parentId);
-            return this;
-        }
-
-        public Builder parentId(Optional<String> parentId) {
-            Utils.checkNotNull(parentId, "parentId");
+        public Builder parentId(@Nullable String parentId) {
             this.parentId = parentId;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder type(KmsCommentType type) {
-            Utils.checkNotNull(type, "type");
-            this.type = Optional.ofNullable(type);
-            return this;
-        }
-
-        public Builder type(Optional<? extends KmsCommentType> type) {
-            Utils.checkNotNull(type, "type");
+        public Builder type(@Nullable KmsCommentType type) {
             this.type = type;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
-
-        public Builder userId(String userId) {
-            Utils.checkNotNull(userId, "userId");
-            this.userId = Optional.ofNullable(userId);
-            return this;
-        }
-
-        public Builder userId(Optional<String> userId) {
-            Utils.checkNotNull(userId, "userId");
+        public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;
         }
 
         public KmsComment build() {
-
             return new KmsComment(
                 content, contentType, createdAt,
                 id, pageId, parentId,

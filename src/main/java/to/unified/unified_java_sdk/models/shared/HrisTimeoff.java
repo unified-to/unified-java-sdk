@@ -4,15 +4,15 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.Map;
 import java.util.Optional;
@@ -23,52 +23,52 @@ public class HrisTimeoff {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approved_at")
-    private Optional<OffsetDateTime> approvedAt;
+    private OffsetDateTime approvedAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approver_user_id")
-    private Optional<String> approverUserId;
+    private String approverUserId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comments")
-    private Optional<String> comments;
+    private String comments;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_id")
-    private Optional<String> companyId;
+    private String companyId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
-    private Optional<OffsetDateTime> endAt;
+    private OffsetDateTime endAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_paid")
-    private Optional<Boolean> isPaid;
+    private Boolean isPaid;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
-    private Optional<String> reason;
+    private String reason;
 
 
     @JsonProperty("start_at")
@@ -77,48 +77,34 @@ public class HrisTimeoff {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
-    private Optional<? extends HrisTimeoffStatus> status;
+    private HrisTimeoffStatus status;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
-    private Optional<String> userId;
+    private String userId;
 
     @JsonCreator
     public HrisTimeoff(
-            @JsonProperty("approved_at") Optional<OffsetDateTime> approvedAt,
-            @JsonProperty("approver_user_id") Optional<String> approverUserId,
-            @JsonProperty("comments") Optional<String> comments,
-            @JsonProperty("company_id") Optional<String> companyId,
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("end_at") Optional<OffsetDateTime> endAt,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("is_paid") Optional<Boolean> isPaid,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("reason") Optional<String> reason,
-            @JsonProperty("start_at") OffsetDateTime startAt,
-            @JsonProperty("status") Optional<? extends HrisTimeoffStatus> status,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
-            @JsonProperty("user_id") Optional<String> userId) {
-        Utils.checkNotNull(approvedAt, "approvedAt");
-        Utils.checkNotNull(approverUserId, "approverUserId");
-        Utils.checkNotNull(comments, "comments");
-        Utils.checkNotNull(companyId, "companyId");
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(endAt, "endAt");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(isPaid, "isPaid");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(reason, "reason");
-        Utils.checkNotNull(startAt, "startAt");
-        Utils.checkNotNull(status, "status");
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        Utils.checkNotNull(userId, "userId");
+            @JsonProperty("approved_at") @Nullable OffsetDateTime approvedAt,
+            @JsonProperty("approver_user_id") @Nullable String approverUserId,
+            @JsonProperty("comments") @Nullable String comments,
+            @JsonProperty("company_id") @Nullable String companyId,
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("end_at") @Nullable OffsetDateTime endAt,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("is_paid") @Nullable Boolean isPaid,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("reason") @Nullable String reason,
+            @JsonProperty("start_at") @Nonnull OffsetDateTime startAt,
+            @JsonProperty("status") @Nullable HrisTimeoffStatus status,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
+            @JsonProperty("user_id") @Nullable String userId) {
         this.approvedAt = approvedAt;
         this.approverUserId = approverUserId;
         this.comments = comments;
@@ -129,91 +115,76 @@ public class HrisTimeoff {
         this.isPaid = isPaid;
         this.raw = raw;
         this.reason = reason;
-        this.startAt = startAt;
+        this.startAt = Optional.ofNullable(startAt)
+            .orElseThrow(() -> new IllegalArgumentException("startAt cannot be null"));
         this.status = status;
         this.updatedAt = updatedAt;
         this.userId = userId;
     }
     
     public HrisTimeoff(
-            OffsetDateTime startAt) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), startAt, Optional.empty(),
-            Optional.empty(), Optional.empty());
+            @Nonnull OffsetDateTime startAt) {
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null, startAt, null,
+            null, null);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> approvedAt() {
-        return approvedAt;
+        return Optional.ofNullable(this.approvedAt);
     }
 
-    @JsonIgnore
     public Optional<String> approverUserId() {
-        return approverUserId;
+        return Optional.ofNullable(this.approverUserId);
     }
 
-    @JsonIgnore
     public Optional<String> comments() {
-        return comments;
+        return Optional.ofNullable(this.comments);
     }
 
-    @JsonIgnore
     public Optional<String> companyId() {
-        return companyId;
+        return Optional.ofNullable(this.companyId);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> endAt() {
-        return endAt;
+        return Optional.ofNullable(this.endAt);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isPaid() {
-        return isPaid;
+        return Optional.ofNullable(this.isPaid);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @JsonIgnore
     public Optional<String> reason() {
-        return reason;
+        return Optional.ofNullable(this.reason);
     }
 
-    @JsonIgnore
     public OffsetDateTime startAt() {
-        return startAt;
+        return this.startAt;
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<HrisTimeoffStatus> status() {
-        return (Optional<HrisTimeoffStatus>) status;
+        return Optional.ofNullable(this.status);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
-    @JsonIgnore
     public Optional<String> userId() {
-        return userId;
+        return Optional.ofNullable(this.userId);
     }
 
     public static Builder builder() {
@@ -221,180 +192,89 @@ public class HrisTimeoff {
     }
 
 
-    public HrisTimeoff withApprovedAt(OffsetDateTime approvedAt) {
-        Utils.checkNotNull(approvedAt, "approvedAt");
-        this.approvedAt = Optional.ofNullable(approvedAt);
-        return this;
-    }
-
-
-    public HrisTimeoff withApprovedAt(Optional<OffsetDateTime> approvedAt) {
-        Utils.checkNotNull(approvedAt, "approvedAt");
+    public HrisTimeoff withApprovedAt(@Nullable OffsetDateTime approvedAt) {
         this.approvedAt = approvedAt;
         return this;
     }
 
-    public HrisTimeoff withApproverUserId(String approverUserId) {
-        Utils.checkNotNull(approverUserId, "approverUserId");
-        this.approverUserId = Optional.ofNullable(approverUserId);
-        return this;
-    }
 
-
-    public HrisTimeoff withApproverUserId(Optional<String> approverUserId) {
-        Utils.checkNotNull(approverUserId, "approverUserId");
+    public HrisTimeoff withApproverUserId(@Nullable String approverUserId) {
         this.approverUserId = approverUserId;
         return this;
     }
 
-    public HrisTimeoff withComments(String comments) {
-        Utils.checkNotNull(comments, "comments");
-        this.comments = Optional.ofNullable(comments);
-        return this;
-    }
 
-
-    public HrisTimeoff withComments(Optional<String> comments) {
-        Utils.checkNotNull(comments, "comments");
+    public HrisTimeoff withComments(@Nullable String comments) {
         this.comments = comments;
         return this;
     }
 
-    public HrisTimeoff withCompanyId(String companyId) {
-        Utils.checkNotNull(companyId, "companyId");
-        this.companyId = Optional.ofNullable(companyId);
-        return this;
-    }
 
-
-    public HrisTimeoff withCompanyId(Optional<String> companyId) {
-        Utils.checkNotNull(companyId, "companyId");
+    public HrisTimeoff withCompanyId(@Nullable String companyId) {
         this.companyId = companyId;
         return this;
     }
 
-    public HrisTimeoff withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
 
-
-    public HrisTimeoff withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public HrisTimeoff withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public HrisTimeoff withEndAt(OffsetDateTime endAt) {
-        Utils.checkNotNull(endAt, "endAt");
-        this.endAt = Optional.ofNullable(endAt);
-        return this;
-    }
 
-
-    public HrisTimeoff withEndAt(Optional<OffsetDateTime> endAt) {
-        Utils.checkNotNull(endAt, "endAt");
+    public HrisTimeoff withEndAt(@Nullable OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
     }
 
-    public HrisTimeoff withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public HrisTimeoff withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public HrisTimeoff withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public HrisTimeoff withIsPaid(boolean isPaid) {
-        Utils.checkNotNull(isPaid, "isPaid");
-        this.isPaid = Optional.ofNullable(isPaid);
-        return this;
-    }
 
-
-    public HrisTimeoff withIsPaid(Optional<Boolean> isPaid) {
-        Utils.checkNotNull(isPaid, "isPaid");
+    public HrisTimeoff withIsPaid(@Nullable Boolean isPaid) {
         this.isPaid = isPaid;
         return this;
     }
 
-    public HrisTimeoff withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public HrisTimeoff withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public HrisTimeoff withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public HrisTimeoff withReason(String reason) {
-        Utils.checkNotNull(reason, "reason");
-        this.reason = Optional.ofNullable(reason);
-        return this;
-    }
 
-
-    public HrisTimeoff withReason(Optional<String> reason) {
-        Utils.checkNotNull(reason, "reason");
+    public HrisTimeoff withReason(@Nullable String reason) {
         this.reason = reason;
         return this;
     }
 
-    public HrisTimeoff withStartAt(OffsetDateTime startAt) {
-        Utils.checkNotNull(startAt, "startAt");
-        this.startAt = startAt;
-        return this;
-    }
 
-    public HrisTimeoff withStatus(HrisTimeoffStatus status) {
-        Utils.checkNotNull(status, "status");
-        this.status = Optional.ofNullable(status);
+    public HrisTimeoff withStartAt(@Nonnull OffsetDateTime startAt) {
+        this.startAt = Utils.checkNotNull(startAt, "startAt");
         return this;
     }
 
 
-    public HrisTimeoff withStatus(Optional<? extends HrisTimeoffStatus> status) {
-        Utils.checkNotNull(status, "status");
+    public HrisTimeoff withStatus(@Nullable HrisTimeoffStatus status) {
         this.status = status;
         return this;
     }
 
-    public HrisTimeoff withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public HrisTimeoff withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public HrisTimeoff withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
-    public HrisTimeoff withUserId(String userId) {
-        Utils.checkNotNull(userId, "userId");
-        this.userId = Optional.ofNullable(userId);
-        return this;
-    }
 
-
-    public HrisTimeoff withUserId(Optional<String> userId) {
-        Utils.checkNotNull(userId, "userId");
+    public HrisTimeoff withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -454,216 +334,109 @@ public class HrisTimeoff {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<OffsetDateTime> approvedAt = Optional.empty();
+        private OffsetDateTime approvedAt;
 
-        private Optional<String> approverUserId = Optional.empty();
+        private String approverUserId;
 
-        private Optional<String> comments = Optional.empty();
+        private String comments;
 
-        private Optional<String> companyId = Optional.empty();
+        private String companyId;
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<OffsetDateTime> endAt = Optional.empty();
+        private OffsetDateTime endAt;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<Boolean> isPaid = Optional.empty();
+        private Boolean isPaid;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<String> reason = Optional.empty();
+        private String reason;
 
         private OffsetDateTime startAt;
 
-        private Optional<? extends HrisTimeoffStatus> status = Optional.empty();
+        private HrisTimeoffStatus status;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
-        private Optional<String> userId = Optional.empty();
+        private String userId;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder approvedAt(OffsetDateTime approvedAt) {
-            Utils.checkNotNull(approvedAt, "approvedAt");
-            this.approvedAt = Optional.ofNullable(approvedAt);
-            return this;
-        }
-
-        public Builder approvedAt(Optional<OffsetDateTime> approvedAt) {
-            Utils.checkNotNull(approvedAt, "approvedAt");
+        public Builder approvedAt(@Nullable OffsetDateTime approvedAt) {
             this.approvedAt = approvedAt;
             return this;
         }
 
-
-        public Builder approverUserId(String approverUserId) {
-            Utils.checkNotNull(approverUserId, "approverUserId");
-            this.approverUserId = Optional.ofNullable(approverUserId);
-            return this;
-        }
-
-        public Builder approverUserId(Optional<String> approverUserId) {
-            Utils.checkNotNull(approverUserId, "approverUserId");
+        public Builder approverUserId(@Nullable String approverUserId) {
             this.approverUserId = approverUserId;
             return this;
         }
 
-
-        public Builder comments(String comments) {
-            Utils.checkNotNull(comments, "comments");
-            this.comments = Optional.ofNullable(comments);
-            return this;
-        }
-
-        public Builder comments(Optional<String> comments) {
-            Utils.checkNotNull(comments, "comments");
+        public Builder comments(@Nullable String comments) {
             this.comments = comments;
             return this;
         }
 
-
-        public Builder companyId(String companyId) {
-            Utils.checkNotNull(companyId, "companyId");
-            this.companyId = Optional.ofNullable(companyId);
-            return this;
-        }
-
-        public Builder companyId(Optional<String> companyId) {
-            Utils.checkNotNull(companyId, "companyId");
+        public Builder companyId(@Nullable String companyId) {
             this.companyId = companyId;
             return this;
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder endAt(OffsetDateTime endAt) {
-            Utils.checkNotNull(endAt, "endAt");
-            this.endAt = Optional.ofNullable(endAt);
-            return this;
-        }
-
-        public Builder endAt(Optional<OffsetDateTime> endAt) {
-            Utils.checkNotNull(endAt, "endAt");
+        public Builder endAt(@Nullable OffsetDateTime endAt) {
             this.endAt = endAt;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder isPaid(boolean isPaid) {
-            Utils.checkNotNull(isPaid, "isPaid");
-            this.isPaid = Optional.ofNullable(isPaid);
-            return this;
-        }
-
-        public Builder isPaid(Optional<Boolean> isPaid) {
-            Utils.checkNotNull(isPaid, "isPaid");
+        public Builder isPaid(@Nullable Boolean isPaid) {
             this.isPaid = isPaid;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder reason(String reason) {
-            Utils.checkNotNull(reason, "reason");
-            this.reason = Optional.ofNullable(reason);
-            return this;
-        }
-
-        public Builder reason(Optional<String> reason) {
-            Utils.checkNotNull(reason, "reason");
+        public Builder reason(@Nullable String reason) {
             this.reason = reason;
             return this;
         }
 
-
-        public Builder startAt(OffsetDateTime startAt) {
-            Utils.checkNotNull(startAt, "startAt");
-            this.startAt = startAt;
+        public Builder startAt(@Nonnull OffsetDateTime startAt) {
+            this.startAt = Utils.checkNotNull(startAt, "startAt");
             return this;
         }
 
-
-        public Builder status(HrisTimeoffStatus status) {
-            Utils.checkNotNull(status, "status");
-            this.status = Optional.ofNullable(status);
-            return this;
-        }
-
-        public Builder status(Optional<? extends HrisTimeoffStatus> status) {
-            Utils.checkNotNull(status, "status");
+        public Builder status(@Nullable HrisTimeoffStatus status) {
             this.status = status;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
-
-        public Builder userId(String userId) {
-            Utils.checkNotNull(userId, "userId");
-            this.userId = Optional.ofNullable(userId);
-            return this;
-        }
-
-        public Builder userId(Optional<String> userId) {
-            Utils.checkNotNull(userId, "userId");
+        public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;
         }
 
         public HrisTimeoff build() {
-
             return new HrisTimeoff(
                 approvedAt, approverUserId, comments,
                 companyId, createdAt, endAt,

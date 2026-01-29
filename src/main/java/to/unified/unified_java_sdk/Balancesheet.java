@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.GetAccountingBalancesheetRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingBalancesheetRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetAccountingBalancesheetResponse;
@@ -51,7 +52,7 @@ public class Balancesheet {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingBalancesheetResponse getAccountingBalancesheet(GetAccountingBalancesheetRequest request) {
+    public GetAccountingBalancesheetResponse getAccountingBalancesheet(@Nonnull GetAccountingBalancesheetRequest request) {
         RequestOperation<GetAccountingBalancesheetRequest, GetAccountingBalancesheetResponse> operation
               = new GetAccountingBalancesheet.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -73,7 +74,7 @@ public class Balancesheet {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingBalancesheetsResponse listAccountingBalancesheets(ListAccountingBalancesheetsRequest request) {
+    public ListAccountingBalancesheetsResponse listAccountingBalancesheets(@Nonnull ListAccountingBalancesheetsRequest request) {
         RequestOperation<ListAccountingBalancesheetsRequest, ListAccountingBalancesheetsResponse> operation
               = new ListAccountingBalancesheets.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAtsCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCrmCompanyRequest;
@@ -120,7 +121,7 @@ public class AsyncCompany {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAtsCompanyResponse>} - The async response
      */
-    public CompletableFuture<CreateAtsCompanyResponse> createAtsCompany(CreateAtsCompanyRequest request) {
+    public CompletableFuture<CreateAtsCompanyResponse> createAtsCompany(@Nonnull CreateAtsCompanyRequest request) {
         AsyncRequestOperation<CreateAtsCompanyRequest, CreateAtsCompanyResponse> operation
               = new CreateAtsCompany.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -143,7 +144,7 @@ public class AsyncCompany {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCrmCompanyResponse>} - The async response
      */
-    public CompletableFuture<CreateCrmCompanyResponse> createCrmCompany(CreateCrmCompanyRequest request) {
+    public CompletableFuture<CreateCrmCompanyResponse> createCrmCompany(@Nonnull CreateCrmCompanyRequest request) {
         AsyncRequestOperation<CreateCrmCompanyRequest, CreateCrmCompanyResponse> operation
               = new CreateCrmCompany.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -166,7 +167,7 @@ public class AsyncCompany {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateHrisCompanyResponse>} - The async response
      */
-    public CompletableFuture<CreateHrisCompanyResponse> createHrisCompany(CreateHrisCompanyRequest request) {
+    public CompletableFuture<CreateHrisCompanyResponse> createHrisCompany(@Nonnull CreateHrisCompanyRequest request) {
         AsyncRequestOperation<CreateHrisCompanyRequest, CreateHrisCompanyResponse> operation
               = new CreateHrisCompany.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -189,7 +190,7 @@ public class AsyncCompany {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAtsCompanyResponse>} - The async response
      */
-    public CompletableFuture<GetAtsCompanyResponse> getAtsCompany(GetAtsCompanyRequest request) {
+    public CompletableFuture<GetAtsCompanyResponse> getAtsCompany(@Nonnull GetAtsCompanyRequest request) {
         AsyncRequestOperation<GetAtsCompanyRequest, GetAtsCompanyResponse> operation
               = new GetAtsCompany.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -212,7 +213,7 @@ public class AsyncCompany {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCrmCompanyResponse>} - The async response
      */
-    public CompletableFuture<GetCrmCompanyResponse> getCrmCompany(GetCrmCompanyRequest request) {
+    public CompletableFuture<GetCrmCompanyResponse> getCrmCompany(@Nonnull GetCrmCompanyRequest request) {
         AsyncRequestOperation<GetCrmCompanyRequest, GetCrmCompanyResponse> operation
               = new GetCrmCompany.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -235,7 +236,7 @@ public class AsyncCompany {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetHrisCompanyResponse>} - The async response
      */
-    public CompletableFuture<GetHrisCompanyResponse> getHrisCompany(GetHrisCompanyRequest request) {
+    public CompletableFuture<GetHrisCompanyResponse> getHrisCompany(@Nonnull GetHrisCompanyRequest request) {
         AsyncRequestOperation<GetHrisCompanyRequest, GetHrisCompanyResponse> operation
               = new GetHrisCompany.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -258,7 +259,7 @@ public class AsyncCompany {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAtsCompaniesResponse>} - The async response
      */
-    public CompletableFuture<ListAtsCompaniesResponse> listAtsCompanies(ListAtsCompaniesRequest request) {
+    public CompletableFuture<ListAtsCompaniesResponse> listAtsCompanies(@Nonnull ListAtsCompaniesRequest request) {
         AsyncRequestOperation<ListAtsCompaniesRequest, ListAtsCompaniesResponse> operation
               = new ListAtsCompanies.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -281,7 +282,7 @@ public class AsyncCompany {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCrmCompaniesResponse>} - The async response
      */
-    public CompletableFuture<ListCrmCompaniesResponse> listCrmCompanies(ListCrmCompaniesRequest request) {
+    public CompletableFuture<ListCrmCompaniesResponse> listCrmCompanies(@Nonnull ListCrmCompaniesRequest request) {
         AsyncRequestOperation<ListCrmCompaniesRequest, ListCrmCompaniesResponse> operation
               = new ListCrmCompanies.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -304,7 +305,7 @@ public class AsyncCompany {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListEnrichCompaniesResponse>} - The async response
      */
-    public CompletableFuture<ListEnrichCompaniesResponse> listEnrichCompanies(ListEnrichCompaniesRequest request) {
+    public CompletableFuture<ListEnrichCompaniesResponse> listEnrichCompanies(@Nonnull ListEnrichCompaniesRequest request) {
         AsyncRequestOperation<ListEnrichCompaniesRequest, ListEnrichCompaniesResponse> operation
               = new ListEnrichCompanies.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -327,7 +328,7 @@ public class AsyncCompany {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListHrisCompaniesResponse>} - The async response
      */
-    public CompletableFuture<ListHrisCompaniesResponse> listHrisCompanies(ListHrisCompaniesRequest request) {
+    public CompletableFuture<ListHrisCompaniesResponse> listHrisCompanies(@Nonnull ListHrisCompaniesRequest request) {
         AsyncRequestOperation<ListHrisCompaniesRequest, ListHrisCompaniesResponse> operation
               = new ListHrisCompanies.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -350,7 +351,7 @@ public class AsyncCompany {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAtsCompanyResponse>} - The async response
      */
-    public CompletableFuture<PatchAtsCompanyResponse> patchAtsCompany(PatchAtsCompanyRequest request) {
+    public CompletableFuture<PatchAtsCompanyResponse> patchAtsCompany(@Nonnull PatchAtsCompanyRequest request) {
         AsyncRequestOperation<PatchAtsCompanyRequest, PatchAtsCompanyResponse> operation
               = new PatchAtsCompany.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -373,7 +374,7 @@ public class AsyncCompany {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCrmCompanyResponse>} - The async response
      */
-    public CompletableFuture<PatchCrmCompanyResponse> patchCrmCompany(PatchCrmCompanyRequest request) {
+    public CompletableFuture<PatchCrmCompanyResponse> patchCrmCompany(@Nonnull PatchCrmCompanyRequest request) {
         AsyncRequestOperation<PatchCrmCompanyRequest, PatchCrmCompanyResponse> operation
               = new PatchCrmCompany.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -396,7 +397,7 @@ public class AsyncCompany {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchHrisCompanyResponse>} - The async response
      */
-    public CompletableFuture<PatchHrisCompanyResponse> patchHrisCompany(PatchHrisCompanyRequest request) {
+    public CompletableFuture<PatchHrisCompanyResponse> patchHrisCompany(@Nonnull PatchHrisCompanyRequest request) {
         AsyncRequestOperation<PatchHrisCompanyRequest, PatchHrisCompanyResponse> operation
               = new PatchHrisCompany.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -419,7 +420,7 @@ public class AsyncCompany {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAtsCompanyResponse>} - The async response
      */
-    public CompletableFuture<RemoveAtsCompanyResponse> removeAtsCompany(RemoveAtsCompanyRequest request) {
+    public CompletableFuture<RemoveAtsCompanyResponse> removeAtsCompany(@Nonnull RemoveAtsCompanyRequest request) {
         AsyncRequestOperation<RemoveAtsCompanyRequest, RemoveAtsCompanyResponse> operation
               = new RemoveAtsCompany.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -442,7 +443,7 @@ public class AsyncCompany {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCrmCompanyResponse>} - The async response
      */
-    public CompletableFuture<RemoveCrmCompanyResponse> removeCrmCompany(RemoveCrmCompanyRequest request) {
+    public CompletableFuture<RemoveCrmCompanyResponse> removeCrmCompany(@Nonnull RemoveCrmCompanyRequest request) {
         AsyncRequestOperation<RemoveCrmCompanyRequest, RemoveCrmCompanyResponse> operation
               = new RemoveCrmCompany.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -465,7 +466,7 @@ public class AsyncCompany {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveHrisCompanyResponse>} - The async response
      */
-    public CompletableFuture<RemoveHrisCompanyResponse> removeHrisCompany(RemoveHrisCompanyRequest request) {
+    public CompletableFuture<RemoveHrisCompanyResponse> removeHrisCompany(@Nonnull RemoveHrisCompanyRequest request) {
         AsyncRequestOperation<RemoveHrisCompanyRequest, RemoveHrisCompanyResponse> operation
               = new RemoveHrisCompany.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -488,7 +489,7 @@ public class AsyncCompany {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAtsCompanyResponse>} - The async response
      */
-    public CompletableFuture<UpdateAtsCompanyResponse> updateAtsCompany(UpdateAtsCompanyRequest request) {
+    public CompletableFuture<UpdateAtsCompanyResponse> updateAtsCompany(@Nonnull UpdateAtsCompanyRequest request) {
         AsyncRequestOperation<UpdateAtsCompanyRequest, UpdateAtsCompanyResponse> operation
               = new UpdateAtsCompany.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -511,7 +512,7 @@ public class AsyncCompany {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCrmCompanyResponse>} - The async response
      */
-    public CompletableFuture<UpdateCrmCompanyResponse> updateCrmCompany(UpdateCrmCompanyRequest request) {
+    public CompletableFuture<UpdateCrmCompanyResponse> updateCrmCompany(@Nonnull UpdateCrmCompanyRequest request) {
         AsyncRequestOperation<UpdateCrmCompanyRequest, UpdateCrmCompanyResponse> operation
               = new UpdateCrmCompany.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -534,7 +535,7 @@ public class AsyncCompany {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateHrisCompanyResponse>} - The async response
      */
-    public CompletableFuture<UpdateHrisCompanyResponse> updateHrisCompany(UpdateHrisCompanyRequest request) {
+    public CompletableFuture<UpdateHrisCompanyResponse> updateHrisCompany(@Nonnull UpdateHrisCompanyRequest request) {
         AsyncRequestOperation<UpdateHrisCompanyRequest, UpdateHrisCompanyResponse> operation
               = new UpdateHrisCompany.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

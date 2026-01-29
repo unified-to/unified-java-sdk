@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateHrisDeductionRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisDeductionRequest;
@@ -68,7 +69,7 @@ public class AsyncDeduction {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateHrisDeductionResponse>} - The async response
      */
-    public CompletableFuture<CreateHrisDeductionResponse> createHrisDeduction(CreateHrisDeductionRequest request) {
+    public CompletableFuture<CreateHrisDeductionResponse> createHrisDeduction(@Nonnull CreateHrisDeductionRequest request) {
         AsyncRequestOperation<CreateHrisDeductionRequest, CreateHrisDeductionResponse> operation
               = new CreateHrisDeduction.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -91,7 +92,7 @@ public class AsyncDeduction {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetHrisDeductionResponse>} - The async response
      */
-    public CompletableFuture<GetHrisDeductionResponse> getHrisDeduction(GetHrisDeductionRequest request) {
+    public CompletableFuture<GetHrisDeductionResponse> getHrisDeduction(@Nonnull GetHrisDeductionRequest request) {
         AsyncRequestOperation<GetHrisDeductionRequest, GetHrisDeductionResponse> operation
               = new GetHrisDeduction.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -114,7 +115,7 @@ public class AsyncDeduction {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListHrisDeductionsResponse>} - The async response
      */
-    public CompletableFuture<ListHrisDeductionsResponse> listHrisDeductions(ListHrisDeductionsRequest request) {
+    public CompletableFuture<ListHrisDeductionsResponse> listHrisDeductions(@Nonnull ListHrisDeductionsRequest request) {
         AsyncRequestOperation<ListHrisDeductionsRequest, ListHrisDeductionsResponse> operation
               = new ListHrisDeductions.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -137,7 +138,7 @@ public class AsyncDeduction {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchHrisDeductionResponse>} - The async response
      */
-    public CompletableFuture<PatchHrisDeductionResponse> patchHrisDeduction(PatchHrisDeductionRequest request) {
+    public CompletableFuture<PatchHrisDeductionResponse> patchHrisDeduction(@Nonnull PatchHrisDeductionRequest request) {
         AsyncRequestOperation<PatchHrisDeductionRequest, PatchHrisDeductionResponse> operation
               = new PatchHrisDeduction.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -160,7 +161,7 @@ public class AsyncDeduction {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveHrisDeductionResponse>} - The async response
      */
-    public CompletableFuture<RemoveHrisDeductionResponse> removeHrisDeduction(RemoveHrisDeductionRequest request) {
+    public CompletableFuture<RemoveHrisDeductionResponse> removeHrisDeduction(@Nonnull RemoveHrisDeductionRequest request) {
         AsyncRequestOperation<RemoveHrisDeductionRequest, RemoveHrisDeductionResponse> operation
               = new RemoveHrisDeduction.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -183,7 +184,7 @@ public class AsyncDeduction {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateHrisDeductionResponse>} - The async response
      */
-    public CompletableFuture<UpdateHrisDeductionResponse> updateHrisDeduction(UpdateHrisDeductionRequest request) {
+    public CompletableFuture<UpdateHrisDeductionResponse> updateHrisDeduction(@Nonnull UpdateHrisDeductionRequest request) {
         AsyncRequestOperation<UpdateHrisDeductionRequest, UpdateHrisDeductionResponse> operation
               = new UpdateHrisDeduction.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

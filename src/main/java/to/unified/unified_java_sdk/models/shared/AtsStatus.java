@@ -4,14 +4,13 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -21,40 +20,35 @@ public class AtsStatus {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
-    private Optional<String> description;
+    private String description;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("original_status")
-    private Optional<String> originalStatus;
+    private String originalStatus;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
-    private Optional<? extends AtsStatusStatus> status;
+    private AtsStatusStatus status;
 
     @JsonCreator
     public AtsStatus(
-            @JsonProperty("description") Optional<String> description,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("original_status") Optional<String> originalStatus,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("status") Optional<? extends AtsStatusStatus> status) {
-        Utils.checkNotNull(description, "description");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(originalStatus, "originalStatus");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(status, "status");
+            @JsonProperty("description") @Nullable String description,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("original_status") @Nullable String originalStatus,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("status") @Nullable AtsStatusStatus status) {
         this.description = description;
         this.id = id;
         this.originalStatus = originalStatus;
@@ -63,35 +57,28 @@ public class AtsStatus {
     }
     
     public AtsStatus() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null);
     }
 
-    @JsonIgnore
     public Optional<String> description() {
-        return description;
+        return Optional.ofNullable(this.description);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<String> originalStatus() {
-        return originalStatus;
+        return Optional.ofNullable(this.originalStatus);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<AtsStatusStatus> status() {
-        return (Optional<AtsStatusStatus>) status;
+        return Optional.ofNullable(this.status);
     }
 
     public static Builder builder() {
@@ -99,70 +86,35 @@ public class AtsStatus {
     }
 
 
-    public AtsStatus withDescription(String description) {
-        Utils.checkNotNull(description, "description");
-        this.description = Optional.ofNullable(description);
-        return this;
-    }
-
-
-    public AtsStatus withDescription(Optional<String> description) {
-        Utils.checkNotNull(description, "description");
+    public AtsStatus withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
-    public AtsStatus withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public AtsStatus withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public AtsStatus withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public AtsStatus withOriginalStatus(String originalStatus) {
-        Utils.checkNotNull(originalStatus, "originalStatus");
-        this.originalStatus = Optional.ofNullable(originalStatus);
-        return this;
-    }
 
-
-    public AtsStatus withOriginalStatus(Optional<String> originalStatus) {
-        Utils.checkNotNull(originalStatus, "originalStatus");
+    public AtsStatus withOriginalStatus(@Nullable String originalStatus) {
         this.originalStatus = originalStatus;
         return this;
     }
 
-    public AtsStatus withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public AtsStatus withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public AtsStatus withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public AtsStatus withStatus(AtsStatusStatus status) {
-        Utils.checkNotNull(status, "status");
-        this.status = Optional.ofNullable(status);
-        return this;
-    }
 
-
-    public AtsStatus withStatus(Optional<? extends AtsStatusStatus> status) {
-        Utils.checkNotNull(status, "status");
+    public AtsStatus withStatus(@Nullable AtsStatusStatus status) {
         this.status = status;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -201,87 +153,46 @@ public class AtsStatus {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> description = Optional.empty();
+        private String description;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<String> originalStatus = Optional.empty();
+        private String originalStatus;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<? extends AtsStatusStatus> status = Optional.empty();
+        private AtsStatusStatus status;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder description(String description) {
-            Utils.checkNotNull(description, "description");
-            this.description = Optional.ofNullable(description);
-            return this;
-        }
-
-        public Builder description(Optional<String> description) {
-            Utils.checkNotNull(description, "description");
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder originalStatus(String originalStatus) {
-            Utils.checkNotNull(originalStatus, "originalStatus");
-            this.originalStatus = Optional.ofNullable(originalStatus);
-            return this;
-        }
-
-        public Builder originalStatus(Optional<String> originalStatus) {
-            Utils.checkNotNull(originalStatus, "originalStatus");
+        public Builder originalStatus(@Nullable String originalStatus) {
             this.originalStatus = originalStatus;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder status(AtsStatusStatus status) {
-            Utils.checkNotNull(status, "status");
-            this.status = Optional.ofNullable(status);
-            return this;
-        }
-
-        public Builder status(Optional<? extends AtsStatusStatus> status) {
-            Utils.checkNotNull(status, "status");
+        public Builder status(@Nullable AtsStatusStatus status) {
             this.status = status;
             return this;
         }
 
         public AtsStatus build() {
-
             return new AtsStatus(
                 description, id, originalStatus,
                 raw, status);

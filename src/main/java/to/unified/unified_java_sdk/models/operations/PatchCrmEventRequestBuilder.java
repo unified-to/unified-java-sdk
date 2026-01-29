@@ -5,32 +5,45 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.PatchCrmEvent;
 import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class PatchCrmEventRequestBuilder {
-
-    private PatchCrmEventRequest request;
     private final SDKConfiguration sdkConfiguration;
-    private final Headers _headers = new Headers(); 
+    private final Headers _headers = new Headers();
+    private PatchCrmEventRequest request;
 
     public PatchCrmEventRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
 
-    public PatchCrmEventRequestBuilder request(PatchCrmEventRequest request) {
-        Utils.checkNotNull(request, "request");
-        this.request = request;
+    public PatchCrmEventRequestBuilder request(@Nonnull PatchCrmEventRequest request) {
+        this.request = Utils.checkNotNull(request, "request");
         return this;
     }
 
+    private PatchCrmEventRequest _buildRequest() {
+        return this.request;
+    }
+    
+    public PatchCrmEventRequestBuilder header(String name, String value) {
+        Utils.checkNotNull(name, "name");
+        Utils.checkNotNull(value, "value");
+        this._headers.add(name, value);
+        return this;
+    }
+
+    /**
+    * Executes the request and returns the response.
+    *
+    * @return The response from the server.
+    */
     public PatchCrmEventResponse call() {
-        
         RequestOperation<PatchCrmEventRequest, PatchCrmEventResponse> operation
               = new PatchCrmEvent.Sync(sdkConfiguration, _headers);
-
-        return operation.handleResponse(operation.doRequest(request));
+        return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

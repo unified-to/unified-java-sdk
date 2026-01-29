@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateLmsInstructorRequest;
 import to.unified.unified_java_sdk.models.operations.GetLmsInstructorRequest;
@@ -68,7 +69,7 @@ public class AsyncInstructor {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateLmsInstructorResponse>} - The async response
      */
-    public CompletableFuture<CreateLmsInstructorResponse> createLmsInstructor(CreateLmsInstructorRequest request) {
+    public CompletableFuture<CreateLmsInstructorResponse> createLmsInstructor(@Nonnull CreateLmsInstructorRequest request) {
         AsyncRequestOperation<CreateLmsInstructorRequest, CreateLmsInstructorResponse> operation
               = new CreateLmsInstructor.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -91,7 +92,7 @@ public class AsyncInstructor {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetLmsInstructorResponse>} - The async response
      */
-    public CompletableFuture<GetLmsInstructorResponse> getLmsInstructor(GetLmsInstructorRequest request) {
+    public CompletableFuture<GetLmsInstructorResponse> getLmsInstructor(@Nonnull GetLmsInstructorRequest request) {
         AsyncRequestOperation<GetLmsInstructorRequest, GetLmsInstructorResponse> operation
               = new GetLmsInstructor.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -114,7 +115,7 @@ public class AsyncInstructor {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListLmsInstructorsResponse>} - The async response
      */
-    public CompletableFuture<ListLmsInstructorsResponse> listLmsInstructors(ListLmsInstructorsRequest request) {
+    public CompletableFuture<ListLmsInstructorsResponse> listLmsInstructors(@Nonnull ListLmsInstructorsRequest request) {
         AsyncRequestOperation<ListLmsInstructorsRequest, ListLmsInstructorsResponse> operation
               = new ListLmsInstructors.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -137,7 +138,7 @@ public class AsyncInstructor {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchLmsInstructorResponse>} - The async response
      */
-    public CompletableFuture<PatchLmsInstructorResponse> patchLmsInstructor(PatchLmsInstructorRequest request) {
+    public CompletableFuture<PatchLmsInstructorResponse> patchLmsInstructor(@Nonnull PatchLmsInstructorRequest request) {
         AsyncRequestOperation<PatchLmsInstructorRequest, PatchLmsInstructorResponse> operation
               = new PatchLmsInstructor.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -160,7 +161,7 @@ public class AsyncInstructor {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveLmsInstructorResponse>} - The async response
      */
-    public CompletableFuture<RemoveLmsInstructorResponse> removeLmsInstructor(RemoveLmsInstructorRequest request) {
+    public CompletableFuture<RemoveLmsInstructorResponse> removeLmsInstructor(@Nonnull RemoveLmsInstructorRequest request) {
         AsyncRequestOperation<RemoveLmsInstructorRequest, RemoveLmsInstructorResponse> operation
               = new RemoveLmsInstructor.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -183,7 +184,7 @@ public class AsyncInstructor {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateLmsInstructorResponse>} - The async response
      */
-    public CompletableFuture<UpdateLmsInstructorResponse> updateLmsInstructor(UpdateLmsInstructorRequest request) {
+    public CompletableFuture<UpdateLmsInstructorResponse> updateLmsInstructor(@Nonnull UpdateLmsInstructorRequest request) {
         AsyncRequestOperation<UpdateLmsInstructorRequest, UpdateLmsInstructorResponse> operation
               = new UpdateLmsInstructor.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

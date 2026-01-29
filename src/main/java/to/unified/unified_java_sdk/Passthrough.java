@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreatePassthroughJsonRequest;
 import to.unified.unified_java_sdk.models.operations.CreatePassthroughJsonRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreatePassthroughJsonResponse;
@@ -75,7 +76,7 @@ public class Passthrough {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreatePassthroughJsonResponse createPassthroughJson(CreatePassthroughJsonRequest request) {
+    public CreatePassthroughJsonResponse createPassthroughJson(@Nonnull CreatePassthroughJsonRequest request) {
         RequestOperation<CreatePassthroughJsonRequest, CreatePassthroughJsonResponse> operation
               = new CreatePassthroughJson.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -97,7 +98,7 @@ public class Passthrough {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreatePassthroughRawResponse createPassthroughRaw(CreatePassthroughRawRequest request) {
+    public CreatePassthroughRawResponse createPassthroughRaw(@Nonnull CreatePassthroughRawRequest request) {
         RequestOperation<CreatePassthroughRawRequest, CreatePassthroughRawResponse> operation
               = new CreatePassthroughRaw.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -119,7 +120,7 @@ public class Passthrough {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListPassthroughsResponse listPassthroughs(ListPassthroughsRequest request) {
+    public ListPassthroughsResponse listPassthroughs(@Nonnull ListPassthroughsRequest request) {
         RequestOperation<ListPassthroughsRequest, ListPassthroughsResponse> operation
               = new ListPassthroughs.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -141,7 +142,7 @@ public class Passthrough {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchPassthroughJsonResponse patchPassthroughJson(PatchPassthroughJsonRequest request) {
+    public PatchPassthroughJsonResponse patchPassthroughJson(@Nonnull PatchPassthroughJsonRequest request) {
         RequestOperation<PatchPassthroughJsonRequest, PatchPassthroughJsonResponse> operation
               = new PatchPassthroughJson.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -163,7 +164,7 @@ public class Passthrough {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchPassthroughRawResponse patchPassthroughRaw(PatchPassthroughRawRequest request) {
+    public PatchPassthroughRawResponse patchPassthroughRaw(@Nonnull PatchPassthroughRawRequest request) {
         RequestOperation<PatchPassthroughRawRequest, PatchPassthroughRawResponse> operation
               = new PatchPassthroughRaw.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -185,7 +186,7 @@ public class Passthrough {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemovePassthroughResponse removePassthrough(RemovePassthroughRequest request) {
+    public RemovePassthroughResponse removePassthrough(@Nonnull RemovePassthroughRequest request) {
         RequestOperation<RemovePassthroughRequest, RemovePassthroughResponse> operation
               = new RemovePassthrough.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -207,7 +208,7 @@ public class Passthrough {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdatePassthroughJsonResponse updatePassthroughJson(UpdatePassthroughJsonRequest request) {
+    public UpdatePassthroughJsonResponse updatePassthroughJson(@Nonnull UpdatePassthroughJsonRequest request) {
         RequestOperation<UpdatePassthroughJsonRequest, UpdatePassthroughJsonResponse> operation
               = new UpdatePassthroughJson.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -229,7 +230,7 @@ public class Passthrough {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdatePassthroughRawResponse updatePassthroughRaw(UpdatePassthroughRawRequest request) {
+    public UpdatePassthroughRawResponse updatePassthroughRaw(@Nonnull UpdatePassthroughRawRequest request) {
         RequestOperation<UpdatePassthroughRawRequest, UpdatePassthroughRawResponse> operation
               = new UpdatePassthroughRaw.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

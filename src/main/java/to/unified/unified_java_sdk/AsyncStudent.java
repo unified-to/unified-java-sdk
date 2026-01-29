@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateLmsStudentRequest;
 import to.unified.unified_java_sdk.models.operations.GetLmsStudentRequest;
@@ -68,7 +69,7 @@ public class AsyncStudent {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateLmsStudentResponse>} - The async response
      */
-    public CompletableFuture<CreateLmsStudentResponse> createLmsStudent(CreateLmsStudentRequest request) {
+    public CompletableFuture<CreateLmsStudentResponse> createLmsStudent(@Nonnull CreateLmsStudentRequest request) {
         AsyncRequestOperation<CreateLmsStudentRequest, CreateLmsStudentResponse> operation
               = new CreateLmsStudent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -91,7 +92,7 @@ public class AsyncStudent {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetLmsStudentResponse>} - The async response
      */
-    public CompletableFuture<GetLmsStudentResponse> getLmsStudent(GetLmsStudentRequest request) {
+    public CompletableFuture<GetLmsStudentResponse> getLmsStudent(@Nonnull GetLmsStudentRequest request) {
         AsyncRequestOperation<GetLmsStudentRequest, GetLmsStudentResponse> operation
               = new GetLmsStudent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -114,7 +115,7 @@ public class AsyncStudent {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListLmsStudentsResponse>} - The async response
      */
-    public CompletableFuture<ListLmsStudentsResponse> listLmsStudents(ListLmsStudentsRequest request) {
+    public CompletableFuture<ListLmsStudentsResponse> listLmsStudents(@Nonnull ListLmsStudentsRequest request) {
         AsyncRequestOperation<ListLmsStudentsRequest, ListLmsStudentsResponse> operation
               = new ListLmsStudents.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -137,7 +138,7 @@ public class AsyncStudent {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchLmsStudentResponse>} - The async response
      */
-    public CompletableFuture<PatchLmsStudentResponse> patchLmsStudent(PatchLmsStudentRequest request) {
+    public CompletableFuture<PatchLmsStudentResponse> patchLmsStudent(@Nonnull PatchLmsStudentRequest request) {
         AsyncRequestOperation<PatchLmsStudentRequest, PatchLmsStudentResponse> operation
               = new PatchLmsStudent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -160,7 +161,7 @@ public class AsyncStudent {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveLmsStudentResponse>} - The async response
      */
-    public CompletableFuture<RemoveLmsStudentResponse> removeLmsStudent(RemoveLmsStudentRequest request) {
+    public CompletableFuture<RemoveLmsStudentResponse> removeLmsStudent(@Nonnull RemoveLmsStudentRequest request) {
         AsyncRequestOperation<RemoveLmsStudentRequest, RemoveLmsStudentResponse> operation
               = new RemoveLmsStudent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -183,7 +184,7 @@ public class AsyncStudent {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateLmsStudentResponse>} - The async response
      */
-    public CompletableFuture<UpdateLmsStudentResponse> updateLmsStudent(UpdateLmsStudentRequest request) {
+    public CompletableFuture<UpdateLmsStudentResponse> updateLmsStudent(@Nonnull UpdateLmsStudentRequest request) {
         AsyncRequestOperation<UpdateLmsStudentRequest, UpdateLmsStudentResponse> operation
               = new UpdateLmsStudent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

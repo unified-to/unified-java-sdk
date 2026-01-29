@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateCrmCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCrmContactRequest;
@@ -188,7 +189,7 @@ public class AsyncCrm {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCrmCompanyResponse>} - The async response
      */
-    public CompletableFuture<CreateCrmCompanyResponse> createCrmCompany(CreateCrmCompanyRequest request) {
+    public CompletableFuture<CreateCrmCompanyResponse> createCrmCompany(@Nonnull CreateCrmCompanyRequest request) {
         AsyncRequestOperation<CreateCrmCompanyRequest, CreateCrmCompanyResponse> operation
               = new CreateCrmCompany.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -211,7 +212,7 @@ public class AsyncCrm {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCrmContactResponse>} - The async response
      */
-    public CompletableFuture<CreateCrmContactResponse> createCrmContact(CreateCrmContactRequest request) {
+    public CompletableFuture<CreateCrmContactResponse> createCrmContact(@Nonnull CreateCrmContactRequest request) {
         AsyncRequestOperation<CreateCrmContactRequest, CreateCrmContactResponse> operation
               = new CreateCrmContact.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -234,7 +235,7 @@ public class AsyncCrm {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCrmDealResponse>} - The async response
      */
-    public CompletableFuture<CreateCrmDealResponse> createCrmDeal(CreateCrmDealRequest request) {
+    public CompletableFuture<CreateCrmDealResponse> createCrmDeal(@Nonnull CreateCrmDealRequest request) {
         AsyncRequestOperation<CreateCrmDealRequest, CreateCrmDealResponse> operation
               = new CreateCrmDeal.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -257,7 +258,7 @@ public class AsyncCrm {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCrmEventResponse>} - The async response
      */
-    public CompletableFuture<CreateCrmEventResponse> createCrmEvent(CreateCrmEventRequest request) {
+    public CompletableFuture<CreateCrmEventResponse> createCrmEvent(@Nonnull CreateCrmEventRequest request) {
         AsyncRequestOperation<CreateCrmEventRequest, CreateCrmEventResponse> operation
               = new CreateCrmEvent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -280,7 +281,7 @@ public class AsyncCrm {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCrmLeadResponse>} - The async response
      */
-    public CompletableFuture<CreateCrmLeadResponse> createCrmLead(CreateCrmLeadRequest request) {
+    public CompletableFuture<CreateCrmLeadResponse> createCrmLead(@Nonnull CreateCrmLeadRequest request) {
         AsyncRequestOperation<CreateCrmLeadRequest, CreateCrmLeadResponse> operation
               = new CreateCrmLead.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -303,7 +304,7 @@ public class AsyncCrm {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCrmPipelineResponse>} - The async response
      */
-    public CompletableFuture<CreateCrmPipelineResponse> createCrmPipeline(CreateCrmPipelineRequest request) {
+    public CompletableFuture<CreateCrmPipelineResponse> createCrmPipeline(@Nonnull CreateCrmPipelineRequest request) {
         AsyncRequestOperation<CreateCrmPipelineRequest, CreateCrmPipelineResponse> operation
               = new CreateCrmPipeline.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -326,7 +327,7 @@ public class AsyncCrm {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCrmCompanyResponse>} - The async response
      */
-    public CompletableFuture<GetCrmCompanyResponse> getCrmCompany(GetCrmCompanyRequest request) {
+    public CompletableFuture<GetCrmCompanyResponse> getCrmCompany(@Nonnull GetCrmCompanyRequest request) {
         AsyncRequestOperation<GetCrmCompanyRequest, GetCrmCompanyResponse> operation
               = new GetCrmCompany.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -349,7 +350,7 @@ public class AsyncCrm {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCrmContactResponse>} - The async response
      */
-    public CompletableFuture<GetCrmContactResponse> getCrmContact(GetCrmContactRequest request) {
+    public CompletableFuture<GetCrmContactResponse> getCrmContact(@Nonnull GetCrmContactRequest request) {
         AsyncRequestOperation<GetCrmContactRequest, GetCrmContactResponse> operation
               = new GetCrmContact.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -372,7 +373,7 @@ public class AsyncCrm {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCrmDealResponse>} - The async response
      */
-    public CompletableFuture<GetCrmDealResponse> getCrmDeal(GetCrmDealRequest request) {
+    public CompletableFuture<GetCrmDealResponse> getCrmDeal(@Nonnull GetCrmDealRequest request) {
         AsyncRequestOperation<GetCrmDealRequest, GetCrmDealResponse> operation
               = new GetCrmDeal.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -395,7 +396,7 @@ public class AsyncCrm {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCrmEventResponse>} - The async response
      */
-    public CompletableFuture<GetCrmEventResponse> getCrmEvent(GetCrmEventRequest request) {
+    public CompletableFuture<GetCrmEventResponse> getCrmEvent(@Nonnull GetCrmEventRequest request) {
         AsyncRequestOperation<GetCrmEventRequest, GetCrmEventResponse> operation
               = new GetCrmEvent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -418,7 +419,7 @@ public class AsyncCrm {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCrmLeadResponse>} - The async response
      */
-    public CompletableFuture<GetCrmLeadResponse> getCrmLead(GetCrmLeadRequest request) {
+    public CompletableFuture<GetCrmLeadResponse> getCrmLead(@Nonnull GetCrmLeadRequest request) {
         AsyncRequestOperation<GetCrmLeadRequest, GetCrmLeadResponse> operation
               = new GetCrmLead.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -441,7 +442,7 @@ public class AsyncCrm {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCrmPipelineResponse>} - The async response
      */
-    public CompletableFuture<GetCrmPipelineResponse> getCrmPipeline(GetCrmPipelineRequest request) {
+    public CompletableFuture<GetCrmPipelineResponse> getCrmPipeline(@Nonnull GetCrmPipelineRequest request) {
         AsyncRequestOperation<GetCrmPipelineRequest, GetCrmPipelineResponse> operation
               = new GetCrmPipeline.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -464,7 +465,7 @@ public class AsyncCrm {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCrmCompaniesResponse>} - The async response
      */
-    public CompletableFuture<ListCrmCompaniesResponse> listCrmCompanies(ListCrmCompaniesRequest request) {
+    public CompletableFuture<ListCrmCompaniesResponse> listCrmCompanies(@Nonnull ListCrmCompaniesRequest request) {
         AsyncRequestOperation<ListCrmCompaniesRequest, ListCrmCompaniesResponse> operation
               = new ListCrmCompanies.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -487,7 +488,7 @@ public class AsyncCrm {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCrmContactsResponse>} - The async response
      */
-    public CompletableFuture<ListCrmContactsResponse> listCrmContacts(ListCrmContactsRequest request) {
+    public CompletableFuture<ListCrmContactsResponse> listCrmContacts(@Nonnull ListCrmContactsRequest request) {
         AsyncRequestOperation<ListCrmContactsRequest, ListCrmContactsResponse> operation
               = new ListCrmContacts.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -510,7 +511,7 @@ public class AsyncCrm {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCrmDealsResponse>} - The async response
      */
-    public CompletableFuture<ListCrmDealsResponse> listCrmDeals(ListCrmDealsRequest request) {
+    public CompletableFuture<ListCrmDealsResponse> listCrmDeals(@Nonnull ListCrmDealsRequest request) {
         AsyncRequestOperation<ListCrmDealsRequest, ListCrmDealsResponse> operation
               = new ListCrmDeals.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -533,7 +534,7 @@ public class AsyncCrm {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCrmEventsResponse>} - The async response
      */
-    public CompletableFuture<ListCrmEventsResponse> listCrmEvents(ListCrmEventsRequest request) {
+    public CompletableFuture<ListCrmEventsResponse> listCrmEvents(@Nonnull ListCrmEventsRequest request) {
         AsyncRequestOperation<ListCrmEventsRequest, ListCrmEventsResponse> operation
               = new ListCrmEvents.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -556,7 +557,7 @@ public class AsyncCrm {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCrmLeadsResponse>} - The async response
      */
-    public CompletableFuture<ListCrmLeadsResponse> listCrmLeads(ListCrmLeadsRequest request) {
+    public CompletableFuture<ListCrmLeadsResponse> listCrmLeads(@Nonnull ListCrmLeadsRequest request) {
         AsyncRequestOperation<ListCrmLeadsRequest, ListCrmLeadsResponse> operation
               = new ListCrmLeads.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -579,7 +580,7 @@ public class AsyncCrm {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCrmPipelinesResponse>} - The async response
      */
-    public CompletableFuture<ListCrmPipelinesResponse> listCrmPipelines(ListCrmPipelinesRequest request) {
+    public CompletableFuture<ListCrmPipelinesResponse> listCrmPipelines(@Nonnull ListCrmPipelinesRequest request) {
         AsyncRequestOperation<ListCrmPipelinesRequest, ListCrmPipelinesResponse> operation
               = new ListCrmPipelines.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -602,7 +603,7 @@ public class AsyncCrm {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCrmCompanyResponse>} - The async response
      */
-    public CompletableFuture<PatchCrmCompanyResponse> patchCrmCompany(PatchCrmCompanyRequest request) {
+    public CompletableFuture<PatchCrmCompanyResponse> patchCrmCompany(@Nonnull PatchCrmCompanyRequest request) {
         AsyncRequestOperation<PatchCrmCompanyRequest, PatchCrmCompanyResponse> operation
               = new PatchCrmCompany.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -625,7 +626,7 @@ public class AsyncCrm {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCrmContactResponse>} - The async response
      */
-    public CompletableFuture<PatchCrmContactResponse> patchCrmContact(PatchCrmContactRequest request) {
+    public CompletableFuture<PatchCrmContactResponse> patchCrmContact(@Nonnull PatchCrmContactRequest request) {
         AsyncRequestOperation<PatchCrmContactRequest, PatchCrmContactResponse> operation
               = new PatchCrmContact.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -648,7 +649,7 @@ public class AsyncCrm {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCrmDealResponse>} - The async response
      */
-    public CompletableFuture<PatchCrmDealResponse> patchCrmDeal(PatchCrmDealRequest request) {
+    public CompletableFuture<PatchCrmDealResponse> patchCrmDeal(@Nonnull PatchCrmDealRequest request) {
         AsyncRequestOperation<PatchCrmDealRequest, PatchCrmDealResponse> operation
               = new PatchCrmDeal.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -671,7 +672,7 @@ public class AsyncCrm {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCrmEventResponse>} - The async response
      */
-    public CompletableFuture<PatchCrmEventResponse> patchCrmEvent(PatchCrmEventRequest request) {
+    public CompletableFuture<PatchCrmEventResponse> patchCrmEvent(@Nonnull PatchCrmEventRequest request) {
         AsyncRequestOperation<PatchCrmEventRequest, PatchCrmEventResponse> operation
               = new PatchCrmEvent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -694,7 +695,7 @@ public class AsyncCrm {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCrmLeadResponse>} - The async response
      */
-    public CompletableFuture<PatchCrmLeadResponse> patchCrmLead(PatchCrmLeadRequest request) {
+    public CompletableFuture<PatchCrmLeadResponse> patchCrmLead(@Nonnull PatchCrmLeadRequest request) {
         AsyncRequestOperation<PatchCrmLeadRequest, PatchCrmLeadResponse> operation
               = new PatchCrmLead.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -717,7 +718,7 @@ public class AsyncCrm {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCrmPipelineResponse>} - The async response
      */
-    public CompletableFuture<PatchCrmPipelineResponse> patchCrmPipeline(PatchCrmPipelineRequest request) {
+    public CompletableFuture<PatchCrmPipelineResponse> patchCrmPipeline(@Nonnull PatchCrmPipelineRequest request) {
         AsyncRequestOperation<PatchCrmPipelineRequest, PatchCrmPipelineResponse> operation
               = new PatchCrmPipeline.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -740,7 +741,7 @@ public class AsyncCrm {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCrmCompanyResponse>} - The async response
      */
-    public CompletableFuture<RemoveCrmCompanyResponse> removeCrmCompany(RemoveCrmCompanyRequest request) {
+    public CompletableFuture<RemoveCrmCompanyResponse> removeCrmCompany(@Nonnull RemoveCrmCompanyRequest request) {
         AsyncRequestOperation<RemoveCrmCompanyRequest, RemoveCrmCompanyResponse> operation
               = new RemoveCrmCompany.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -763,7 +764,7 @@ public class AsyncCrm {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCrmContactResponse>} - The async response
      */
-    public CompletableFuture<RemoveCrmContactResponse> removeCrmContact(RemoveCrmContactRequest request) {
+    public CompletableFuture<RemoveCrmContactResponse> removeCrmContact(@Nonnull RemoveCrmContactRequest request) {
         AsyncRequestOperation<RemoveCrmContactRequest, RemoveCrmContactResponse> operation
               = new RemoveCrmContact.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -786,7 +787,7 @@ public class AsyncCrm {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCrmDealResponse>} - The async response
      */
-    public CompletableFuture<RemoveCrmDealResponse> removeCrmDeal(RemoveCrmDealRequest request) {
+    public CompletableFuture<RemoveCrmDealResponse> removeCrmDeal(@Nonnull RemoveCrmDealRequest request) {
         AsyncRequestOperation<RemoveCrmDealRequest, RemoveCrmDealResponse> operation
               = new RemoveCrmDeal.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -809,7 +810,7 @@ public class AsyncCrm {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCrmEventResponse>} - The async response
      */
-    public CompletableFuture<RemoveCrmEventResponse> removeCrmEvent(RemoveCrmEventRequest request) {
+    public CompletableFuture<RemoveCrmEventResponse> removeCrmEvent(@Nonnull RemoveCrmEventRequest request) {
         AsyncRequestOperation<RemoveCrmEventRequest, RemoveCrmEventResponse> operation
               = new RemoveCrmEvent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -832,7 +833,7 @@ public class AsyncCrm {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCrmLeadResponse>} - The async response
      */
-    public CompletableFuture<RemoveCrmLeadResponse> removeCrmLead(RemoveCrmLeadRequest request) {
+    public CompletableFuture<RemoveCrmLeadResponse> removeCrmLead(@Nonnull RemoveCrmLeadRequest request) {
         AsyncRequestOperation<RemoveCrmLeadRequest, RemoveCrmLeadResponse> operation
               = new RemoveCrmLead.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -855,7 +856,7 @@ public class AsyncCrm {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCrmPipelineResponse>} - The async response
      */
-    public CompletableFuture<RemoveCrmPipelineResponse> removeCrmPipeline(RemoveCrmPipelineRequest request) {
+    public CompletableFuture<RemoveCrmPipelineResponse> removeCrmPipeline(@Nonnull RemoveCrmPipelineRequest request) {
         AsyncRequestOperation<RemoveCrmPipelineRequest, RemoveCrmPipelineResponse> operation
               = new RemoveCrmPipeline.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -878,7 +879,7 @@ public class AsyncCrm {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCrmCompanyResponse>} - The async response
      */
-    public CompletableFuture<UpdateCrmCompanyResponse> updateCrmCompany(UpdateCrmCompanyRequest request) {
+    public CompletableFuture<UpdateCrmCompanyResponse> updateCrmCompany(@Nonnull UpdateCrmCompanyRequest request) {
         AsyncRequestOperation<UpdateCrmCompanyRequest, UpdateCrmCompanyResponse> operation
               = new UpdateCrmCompany.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -901,7 +902,7 @@ public class AsyncCrm {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCrmContactResponse>} - The async response
      */
-    public CompletableFuture<UpdateCrmContactResponse> updateCrmContact(UpdateCrmContactRequest request) {
+    public CompletableFuture<UpdateCrmContactResponse> updateCrmContact(@Nonnull UpdateCrmContactRequest request) {
         AsyncRequestOperation<UpdateCrmContactRequest, UpdateCrmContactResponse> operation
               = new UpdateCrmContact.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -924,7 +925,7 @@ public class AsyncCrm {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCrmDealResponse>} - The async response
      */
-    public CompletableFuture<UpdateCrmDealResponse> updateCrmDeal(UpdateCrmDealRequest request) {
+    public CompletableFuture<UpdateCrmDealResponse> updateCrmDeal(@Nonnull UpdateCrmDealRequest request) {
         AsyncRequestOperation<UpdateCrmDealRequest, UpdateCrmDealResponse> operation
               = new UpdateCrmDeal.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -947,7 +948,7 @@ public class AsyncCrm {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCrmEventResponse>} - The async response
      */
-    public CompletableFuture<UpdateCrmEventResponse> updateCrmEvent(UpdateCrmEventRequest request) {
+    public CompletableFuture<UpdateCrmEventResponse> updateCrmEvent(@Nonnull UpdateCrmEventRequest request) {
         AsyncRequestOperation<UpdateCrmEventRequest, UpdateCrmEventResponse> operation
               = new UpdateCrmEvent.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -970,7 +971,7 @@ public class AsyncCrm {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCrmLeadResponse>} - The async response
      */
-    public CompletableFuture<UpdateCrmLeadResponse> updateCrmLead(UpdateCrmLeadRequest request) {
+    public CompletableFuture<UpdateCrmLeadResponse> updateCrmLead(@Nonnull UpdateCrmLeadRequest request) {
         AsyncRequestOperation<UpdateCrmLeadRequest, UpdateCrmLeadResponse> operation
               = new UpdateCrmLead.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -993,7 +994,7 @@ public class AsyncCrm {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCrmPipelineResponse>} - The async response
      */
-    public CompletableFuture<UpdateCrmPipelineResponse> updateCrmPipeline(UpdateCrmPipelineRequest request) {
+    public CompletableFuture<UpdateCrmPipelineResponse> updateCrmPipeline(@Nonnull UpdateCrmPipelineRequest request) {
         AsyncRequestOperation<UpdateCrmPipelineRequest, UpdateCrmPipelineResponse> operation
               = new UpdateCrmPipeline.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

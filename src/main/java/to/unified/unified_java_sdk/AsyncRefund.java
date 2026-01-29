@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.GetPaymentRefundRequest;
 import to.unified.unified_java_sdk.models.operations.ListPaymentRefundsRequest;
@@ -52,7 +53,7 @@ public class AsyncRefund {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetPaymentRefundResponse>} - The async response
      */
-    public CompletableFuture<GetPaymentRefundResponse> getPaymentRefund(GetPaymentRefundRequest request) {
+    public CompletableFuture<GetPaymentRefundResponse> getPaymentRefund(@Nonnull GetPaymentRefundRequest request) {
         AsyncRequestOperation<GetPaymentRefundRequest, GetPaymentRefundResponse> operation
               = new GetPaymentRefund.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -75,7 +76,7 @@ public class AsyncRefund {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListPaymentRefundsResponse>} - The async response
      */
-    public CompletableFuture<ListPaymentRefundsResponse> listPaymentRefunds(ListPaymentRefundsRequest request) {
+    public CompletableFuture<ListPaymentRefundsResponse> listPaymentRefunds(@Nonnull ListPaymentRefundsRequest request) {
         AsyncRequestOperation<ListPaymentRefundsRequest, ListPaymentRefundsResponse> operation
               = new ListPaymentRefunds.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

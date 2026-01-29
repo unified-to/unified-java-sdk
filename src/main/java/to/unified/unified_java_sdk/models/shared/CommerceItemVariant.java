@@ -4,15 +4,14 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Optional;
@@ -23,173 +22,149 @@ public class CommerceItemVariant {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("available_at")
-    private Optional<OffsetDateTime> availableAt;
+    private OffsetDateTime availableAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
-    private Optional<String> description;
+    private String description;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
-    private Optional<Double> height;
+    private Double height;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inventory_id")
-    private Optional<String> inventoryId;
+    private String inventoryId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
-    private Optional<Boolean> isActive;
+    private Boolean isActive;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_featured")
-    private Optional<Boolean> isFeatured;
+    private Boolean isFeatured;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_visible")
-    private Optional<Boolean> isVisible;
+    private Boolean isVisible;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("length")
-    private Optional<Double> length;
+    private Double length;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("media")
-    private Optional<? extends List<CommerceItemMedia>> media;
+    private List<CommerceItemMedia> media;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
-    private Optional<? extends List<CommerceMetadata>> metadata;
+    private List<CommerceMetadata> metadata;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
-    private Optional<String> name;
+    private String name;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
-    private Optional<? extends List<CommerceItemOption>> options;
+    private List<CommerceItemOption> options;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prices")
-    private Optional<? extends List<CommerceItemPrice>> prices;
+    private List<CommerceItemPrice> prices;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public_description")
-    private Optional<String> publicDescription;
+    private String publicDescription;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public_name")
-    private Optional<String> publicName;
+    private String publicName;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requires_shipping")
-    private Optional<Boolean> requiresShipping;
+    private Boolean requiresShipping;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size_unit")
-    private Optional<? extends SizeUnit> sizeUnit;
+    private SizeUnit sizeUnit;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sku")
-    private Optional<String> sku;
+    private String sku;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
-    private Optional<? extends List<String>> tags;
+    private List<String> tags;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_stock")
-    private Optional<Double> totalStock;
+    private Double totalStock;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weight")
-    private Optional<Double> weight;
+    private Double weight;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weight_unit")
-    private Optional<? extends WeightUnit> weightUnit;
+    private WeightUnit weightUnit;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
-    private Optional<Double> width;
+    private Double width;
 
     @JsonCreator
     public CommerceItemVariant(
-            @JsonProperty("available_at") Optional<OffsetDateTime> availableAt,
-            @JsonProperty("description") Optional<String> description,
-            @JsonProperty("height") Optional<Double> height,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("inventory_id") Optional<String> inventoryId,
-            @JsonProperty("is_active") Optional<Boolean> isActive,
-            @JsonProperty("is_featured") Optional<Boolean> isFeatured,
-            @JsonProperty("is_visible") Optional<Boolean> isVisible,
-            @JsonProperty("length") Optional<Double> length,
-            @JsonProperty("media") Optional<? extends List<CommerceItemMedia>> media,
-            @JsonProperty("metadata") Optional<? extends List<CommerceMetadata>> metadata,
-            @JsonProperty("name") Optional<String> name,
-            @JsonProperty("options") Optional<? extends List<CommerceItemOption>> options,
-            @JsonProperty("prices") Optional<? extends List<CommerceItemPrice>> prices,
-            @JsonProperty("public_description") Optional<String> publicDescription,
-            @JsonProperty("public_name") Optional<String> publicName,
-            @JsonProperty("requires_shipping") Optional<Boolean> requiresShipping,
-            @JsonProperty("size_unit") Optional<? extends SizeUnit> sizeUnit,
-            @JsonProperty("sku") Optional<String> sku,
-            @JsonProperty("tags") Optional<? extends List<String>> tags,
-            @JsonProperty("total_stock") Optional<Double> totalStock,
-            @JsonProperty("weight") Optional<Double> weight,
-            @JsonProperty("weight_unit") Optional<? extends WeightUnit> weightUnit,
-            @JsonProperty("width") Optional<Double> width) {
-        Utils.checkNotNull(availableAt, "availableAt");
-        Utils.checkNotNull(description, "description");
-        Utils.checkNotNull(height, "height");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(inventoryId, "inventoryId");
-        Utils.checkNotNull(isActive, "isActive");
-        Utils.checkNotNull(isFeatured, "isFeatured");
-        Utils.checkNotNull(isVisible, "isVisible");
-        Utils.checkNotNull(length, "length");
-        Utils.checkNotNull(media, "media");
-        Utils.checkNotNull(metadata, "metadata");
-        Utils.checkNotNull(name, "name");
-        Utils.checkNotNull(options, "options");
-        Utils.checkNotNull(prices, "prices");
-        Utils.checkNotNull(publicDescription, "publicDescription");
-        Utils.checkNotNull(publicName, "publicName");
-        Utils.checkNotNull(requiresShipping, "requiresShipping");
-        Utils.checkNotNull(sizeUnit, "sizeUnit");
-        Utils.checkNotNull(sku, "sku");
-        Utils.checkNotNull(tags, "tags");
-        Utils.checkNotNull(totalStock, "totalStock");
-        Utils.checkNotNull(weight, "weight");
-        Utils.checkNotNull(weightUnit, "weightUnit");
-        Utils.checkNotNull(width, "width");
+            @JsonProperty("available_at") @Nullable OffsetDateTime availableAt,
+            @JsonProperty("description") @Nullable String description,
+            @JsonProperty("height") @Nullable Double height,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("inventory_id") @Nullable String inventoryId,
+            @JsonProperty("is_active") @Nullable Boolean isActive,
+            @JsonProperty("is_featured") @Nullable Boolean isFeatured,
+            @JsonProperty("is_visible") @Nullable Boolean isVisible,
+            @JsonProperty("length") @Nullable Double length,
+            @JsonProperty("media") @Nullable List<CommerceItemMedia> media,
+            @JsonProperty("metadata") @Nullable List<CommerceMetadata> metadata,
+            @JsonProperty("name") @Nullable String name,
+            @JsonProperty("options") @Nullable List<CommerceItemOption> options,
+            @JsonProperty("prices") @Nullable List<CommerceItemPrice> prices,
+            @JsonProperty("public_description") @Nullable String publicDescription,
+            @JsonProperty("public_name") @Nullable String publicName,
+            @JsonProperty("requires_shipping") @Nullable Boolean requiresShipping,
+            @JsonProperty("size_unit") @Nullable SizeUnit sizeUnit,
+            @JsonProperty("sku") @Nullable String sku,
+            @JsonProperty("tags") @Nullable List<String> tags,
+            @JsonProperty("total_stock") @Nullable Double totalStock,
+            @JsonProperty("weight") @Nullable Double weight,
+            @JsonProperty("weight_unit") @Nullable WeightUnit weightUnit,
+            @JsonProperty("width") @Nullable Double width) {
         this.availableAt = availableAt;
         this.description = description;
         this.height = height;
@@ -217,141 +192,110 @@ public class CommerceItemVariant {
     }
     
     public CommerceItemVariant() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> availableAt() {
-        return availableAt;
+        return Optional.ofNullable(this.availableAt);
     }
 
-    @JsonIgnore
     public Optional<String> description() {
-        return description;
+        return Optional.ofNullable(this.description);
     }
 
-    @JsonIgnore
     public Optional<Double> height() {
-        return height;
+        return Optional.ofNullable(this.height);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<String> inventoryId() {
-        return inventoryId;
+        return Optional.ofNullable(this.inventoryId);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isActive() {
-        return isActive;
+        return Optional.ofNullable(this.isActive);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isFeatured() {
-        return isFeatured;
+        return Optional.ofNullable(this.isFeatured);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isVisible() {
-        return isVisible;
+        return Optional.ofNullable(this.isVisible);
     }
 
-    @JsonIgnore
     public Optional<Double> length() {
-        return length;
+        return Optional.ofNullable(this.length);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<CommerceItemMedia>> media() {
-        return (Optional<List<CommerceItemMedia>>) media;
+        return Optional.ofNullable(this.media);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<CommerceMetadata>> metadata() {
-        return (Optional<List<CommerceMetadata>>) metadata;
+        return Optional.ofNullable(this.metadata);
     }
 
-    @JsonIgnore
     public Optional<String> name() {
-        return name;
+        return Optional.ofNullable(this.name);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<CommerceItemOption>> options() {
-        return (Optional<List<CommerceItemOption>>) options;
+        return Optional.ofNullable(this.options);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<CommerceItemPrice>> prices() {
-        return (Optional<List<CommerceItemPrice>>) prices;
+        return Optional.ofNullable(this.prices);
     }
 
-    @JsonIgnore
     public Optional<String> publicDescription() {
-        return publicDescription;
+        return Optional.ofNullable(this.publicDescription);
     }
 
-    @JsonIgnore
     public Optional<String> publicName() {
-        return publicName;
+        return Optional.ofNullable(this.publicName);
     }
 
-    @JsonIgnore
     public Optional<Boolean> requiresShipping() {
-        return requiresShipping;
+        return Optional.ofNullable(this.requiresShipping);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<SizeUnit> sizeUnit() {
-        return (Optional<SizeUnit>) sizeUnit;
+        return Optional.ofNullable(this.sizeUnit);
     }
 
-    @JsonIgnore
     public Optional<String> sku() {
-        return sku;
+        return Optional.ofNullable(this.sku);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> tags() {
-        return (Optional<List<String>>) tags;
+        return Optional.ofNullable(this.tags);
     }
 
-    @JsonIgnore
     public Optional<Double> totalStock() {
-        return totalStock;
+        return Optional.ofNullable(this.totalStock);
     }
 
-    @JsonIgnore
     public Optional<Double> weight() {
-        return weight;
+        return Optional.ofNullable(this.weight);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<WeightUnit> weightUnit() {
-        return (Optional<WeightUnit>) weightUnit;
+        return Optional.ofNullable(this.weightUnit);
     }
 
-    @JsonIgnore
     public Optional<Double> width() {
-        return width;
+        return Optional.ofNullable(this.width);
     }
 
     public static Builder builder() {
@@ -359,317 +303,149 @@ public class CommerceItemVariant {
     }
 
 
-    public CommerceItemVariant withAvailableAt(OffsetDateTime availableAt) {
-        Utils.checkNotNull(availableAt, "availableAt");
-        this.availableAt = Optional.ofNullable(availableAt);
-        return this;
-    }
-
-
-    public CommerceItemVariant withAvailableAt(Optional<OffsetDateTime> availableAt) {
-        Utils.checkNotNull(availableAt, "availableAt");
+    public CommerceItemVariant withAvailableAt(@Nullable OffsetDateTime availableAt) {
         this.availableAt = availableAt;
         return this;
     }
 
-    public CommerceItemVariant withDescription(String description) {
-        Utils.checkNotNull(description, "description");
-        this.description = Optional.ofNullable(description);
-        return this;
-    }
 
-
-    public CommerceItemVariant withDescription(Optional<String> description) {
-        Utils.checkNotNull(description, "description");
+    public CommerceItemVariant withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
-    public CommerceItemVariant withHeight(double height) {
-        Utils.checkNotNull(height, "height");
-        this.height = Optional.ofNullable(height);
-        return this;
-    }
 
-
-    public CommerceItemVariant withHeight(Optional<Double> height) {
-        Utils.checkNotNull(height, "height");
+    public CommerceItemVariant withHeight(@Nullable Double height) {
         this.height = height;
         return this;
     }
 
-    public CommerceItemVariant withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public CommerceItemVariant withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public CommerceItemVariant withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public CommerceItemVariant withInventoryId(String inventoryId) {
-        Utils.checkNotNull(inventoryId, "inventoryId");
-        this.inventoryId = Optional.ofNullable(inventoryId);
-        return this;
-    }
 
-
-    public CommerceItemVariant withInventoryId(Optional<String> inventoryId) {
-        Utils.checkNotNull(inventoryId, "inventoryId");
+    public CommerceItemVariant withInventoryId(@Nullable String inventoryId) {
         this.inventoryId = inventoryId;
         return this;
     }
 
-    public CommerceItemVariant withIsActive(boolean isActive) {
-        Utils.checkNotNull(isActive, "isActive");
-        this.isActive = Optional.ofNullable(isActive);
-        return this;
-    }
 
-
-    public CommerceItemVariant withIsActive(Optional<Boolean> isActive) {
-        Utils.checkNotNull(isActive, "isActive");
+    public CommerceItemVariant withIsActive(@Nullable Boolean isActive) {
         this.isActive = isActive;
         return this;
     }
 
-    public CommerceItemVariant withIsFeatured(boolean isFeatured) {
-        Utils.checkNotNull(isFeatured, "isFeatured");
-        this.isFeatured = Optional.ofNullable(isFeatured);
-        return this;
-    }
 
-
-    public CommerceItemVariant withIsFeatured(Optional<Boolean> isFeatured) {
-        Utils.checkNotNull(isFeatured, "isFeatured");
+    public CommerceItemVariant withIsFeatured(@Nullable Boolean isFeatured) {
         this.isFeatured = isFeatured;
         return this;
     }
 
-    public CommerceItemVariant withIsVisible(boolean isVisible) {
-        Utils.checkNotNull(isVisible, "isVisible");
-        this.isVisible = Optional.ofNullable(isVisible);
-        return this;
-    }
 
-
-    public CommerceItemVariant withIsVisible(Optional<Boolean> isVisible) {
-        Utils.checkNotNull(isVisible, "isVisible");
+    public CommerceItemVariant withIsVisible(@Nullable Boolean isVisible) {
         this.isVisible = isVisible;
         return this;
     }
 
-    public CommerceItemVariant withLength(double length) {
-        Utils.checkNotNull(length, "length");
-        this.length = Optional.ofNullable(length);
-        return this;
-    }
 
-
-    public CommerceItemVariant withLength(Optional<Double> length) {
-        Utils.checkNotNull(length, "length");
+    public CommerceItemVariant withLength(@Nullable Double length) {
         this.length = length;
         return this;
     }
 
-    public CommerceItemVariant withMedia(List<CommerceItemMedia> media) {
-        Utils.checkNotNull(media, "media");
-        this.media = Optional.ofNullable(media);
-        return this;
-    }
 
-
-    public CommerceItemVariant withMedia(Optional<? extends List<CommerceItemMedia>> media) {
-        Utils.checkNotNull(media, "media");
+    public CommerceItemVariant withMedia(@Nullable List<CommerceItemMedia> media) {
         this.media = media;
         return this;
     }
 
-    public CommerceItemVariant withMetadata(List<CommerceMetadata> metadata) {
-        Utils.checkNotNull(metadata, "metadata");
-        this.metadata = Optional.ofNullable(metadata);
-        return this;
-    }
 
-
-    public CommerceItemVariant withMetadata(Optional<? extends List<CommerceMetadata>> metadata) {
-        Utils.checkNotNull(metadata, "metadata");
+    public CommerceItemVariant withMetadata(@Nullable List<CommerceMetadata> metadata) {
         this.metadata = metadata;
         return this;
     }
 
-    public CommerceItemVariant withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = Optional.ofNullable(name);
-        return this;
-    }
 
-
-    public CommerceItemVariant withName(Optional<String> name) {
-        Utils.checkNotNull(name, "name");
+    public CommerceItemVariant withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
-    public CommerceItemVariant withOptions(List<CommerceItemOption> options) {
-        Utils.checkNotNull(options, "options");
-        this.options = Optional.ofNullable(options);
-        return this;
-    }
 
-
-    public CommerceItemVariant withOptions(Optional<? extends List<CommerceItemOption>> options) {
-        Utils.checkNotNull(options, "options");
+    public CommerceItemVariant withOptions(@Nullable List<CommerceItemOption> options) {
         this.options = options;
         return this;
     }
 
-    public CommerceItemVariant withPrices(List<CommerceItemPrice> prices) {
-        Utils.checkNotNull(prices, "prices");
-        this.prices = Optional.ofNullable(prices);
-        return this;
-    }
 
-
-    public CommerceItemVariant withPrices(Optional<? extends List<CommerceItemPrice>> prices) {
-        Utils.checkNotNull(prices, "prices");
+    public CommerceItemVariant withPrices(@Nullable List<CommerceItemPrice> prices) {
         this.prices = prices;
         return this;
     }
 
-    public CommerceItemVariant withPublicDescription(String publicDescription) {
-        Utils.checkNotNull(publicDescription, "publicDescription");
-        this.publicDescription = Optional.ofNullable(publicDescription);
-        return this;
-    }
 
-
-    public CommerceItemVariant withPublicDescription(Optional<String> publicDescription) {
-        Utils.checkNotNull(publicDescription, "publicDescription");
+    public CommerceItemVariant withPublicDescription(@Nullable String publicDescription) {
         this.publicDescription = publicDescription;
         return this;
     }
 
-    public CommerceItemVariant withPublicName(String publicName) {
-        Utils.checkNotNull(publicName, "publicName");
-        this.publicName = Optional.ofNullable(publicName);
-        return this;
-    }
 
-
-    public CommerceItemVariant withPublicName(Optional<String> publicName) {
-        Utils.checkNotNull(publicName, "publicName");
+    public CommerceItemVariant withPublicName(@Nullable String publicName) {
         this.publicName = publicName;
         return this;
     }
 
-    public CommerceItemVariant withRequiresShipping(boolean requiresShipping) {
-        Utils.checkNotNull(requiresShipping, "requiresShipping");
-        this.requiresShipping = Optional.ofNullable(requiresShipping);
-        return this;
-    }
 
-
-    public CommerceItemVariant withRequiresShipping(Optional<Boolean> requiresShipping) {
-        Utils.checkNotNull(requiresShipping, "requiresShipping");
+    public CommerceItemVariant withRequiresShipping(@Nullable Boolean requiresShipping) {
         this.requiresShipping = requiresShipping;
         return this;
     }
 
-    public CommerceItemVariant withSizeUnit(SizeUnit sizeUnit) {
-        Utils.checkNotNull(sizeUnit, "sizeUnit");
-        this.sizeUnit = Optional.ofNullable(sizeUnit);
-        return this;
-    }
 
-
-    public CommerceItemVariant withSizeUnit(Optional<? extends SizeUnit> sizeUnit) {
-        Utils.checkNotNull(sizeUnit, "sizeUnit");
+    public CommerceItemVariant withSizeUnit(@Nullable SizeUnit sizeUnit) {
         this.sizeUnit = sizeUnit;
         return this;
     }
 
-    public CommerceItemVariant withSku(String sku) {
-        Utils.checkNotNull(sku, "sku");
-        this.sku = Optional.ofNullable(sku);
-        return this;
-    }
 
-
-    public CommerceItemVariant withSku(Optional<String> sku) {
-        Utils.checkNotNull(sku, "sku");
+    public CommerceItemVariant withSku(@Nullable String sku) {
         this.sku = sku;
         return this;
     }
 
-    public CommerceItemVariant withTags(List<String> tags) {
-        Utils.checkNotNull(tags, "tags");
-        this.tags = Optional.ofNullable(tags);
-        return this;
-    }
 
-
-    public CommerceItemVariant withTags(Optional<? extends List<String>> tags) {
-        Utils.checkNotNull(tags, "tags");
+    public CommerceItemVariant withTags(@Nullable List<String> tags) {
         this.tags = tags;
         return this;
     }
 
-    public CommerceItemVariant withTotalStock(double totalStock) {
-        Utils.checkNotNull(totalStock, "totalStock");
-        this.totalStock = Optional.ofNullable(totalStock);
-        return this;
-    }
 
-
-    public CommerceItemVariant withTotalStock(Optional<Double> totalStock) {
-        Utils.checkNotNull(totalStock, "totalStock");
+    public CommerceItemVariant withTotalStock(@Nullable Double totalStock) {
         this.totalStock = totalStock;
         return this;
     }
 
-    public CommerceItemVariant withWeight(double weight) {
-        Utils.checkNotNull(weight, "weight");
-        this.weight = Optional.ofNullable(weight);
-        return this;
-    }
 
-
-    public CommerceItemVariant withWeight(Optional<Double> weight) {
-        Utils.checkNotNull(weight, "weight");
+    public CommerceItemVariant withWeight(@Nullable Double weight) {
         this.weight = weight;
         return this;
     }
 
-    public CommerceItemVariant withWeightUnit(WeightUnit weightUnit) {
-        Utils.checkNotNull(weightUnit, "weightUnit");
-        this.weightUnit = Optional.ofNullable(weightUnit);
-        return this;
-    }
 
-
-    public CommerceItemVariant withWeightUnit(Optional<? extends WeightUnit> weightUnit) {
-        Utils.checkNotNull(weightUnit, "weightUnit");
+    public CommerceItemVariant withWeightUnit(@Nullable WeightUnit weightUnit) {
         this.weightUnit = weightUnit;
         return this;
     }
 
-    public CommerceItemVariant withWidth(double width) {
-        Utils.checkNotNull(width, "width");
-        this.width = Optional.ofNullable(width);
-        return this;
-    }
 
-
-    public CommerceItemVariant withWidth(Optional<Double> width) {
-        Utils.checkNotNull(width, "width");
+    public CommerceItemVariant withWidth(@Nullable Double width) {
         this.width = width;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -752,372 +528,179 @@ public class CommerceItemVariant {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<OffsetDateTime> availableAt = Optional.empty();
+        private OffsetDateTime availableAt;
 
-        private Optional<String> description = Optional.empty();
+        private String description;
 
-        private Optional<Double> height = Optional.empty();
+        private Double height;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<String> inventoryId = Optional.empty();
+        private String inventoryId;
 
-        private Optional<Boolean> isActive = Optional.empty();
+        private Boolean isActive;
 
-        private Optional<Boolean> isFeatured = Optional.empty();
+        private Boolean isFeatured;
 
-        private Optional<Boolean> isVisible = Optional.empty();
+        private Boolean isVisible;
 
-        private Optional<Double> length = Optional.empty();
+        private Double length;
 
-        private Optional<? extends List<CommerceItemMedia>> media = Optional.empty();
+        private List<CommerceItemMedia> media;
 
-        private Optional<? extends List<CommerceMetadata>> metadata = Optional.empty();
+        private List<CommerceMetadata> metadata;
 
-        private Optional<String> name = Optional.empty();
+        private String name;
 
-        private Optional<? extends List<CommerceItemOption>> options = Optional.empty();
+        private List<CommerceItemOption> options;
 
-        private Optional<? extends List<CommerceItemPrice>> prices = Optional.empty();
+        private List<CommerceItemPrice> prices;
 
-        private Optional<String> publicDescription = Optional.empty();
+        private String publicDescription;
 
-        private Optional<String> publicName = Optional.empty();
+        private String publicName;
 
-        private Optional<Boolean> requiresShipping = Optional.empty();
+        private Boolean requiresShipping;
 
-        private Optional<? extends SizeUnit> sizeUnit = Optional.empty();
+        private SizeUnit sizeUnit;
 
-        private Optional<String> sku = Optional.empty();
+        private String sku;
 
-        private Optional<? extends List<String>> tags = Optional.empty();
+        private List<String> tags;
 
-        private Optional<Double> totalStock = Optional.empty();
+        private Double totalStock;
 
-        private Optional<Double> weight = Optional.empty();
+        private Double weight;
 
-        private Optional<? extends WeightUnit> weightUnit = Optional.empty();
+        private WeightUnit weightUnit;
 
-        private Optional<Double> width = Optional.empty();
+        private Double width;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder availableAt(OffsetDateTime availableAt) {
-            Utils.checkNotNull(availableAt, "availableAt");
-            this.availableAt = Optional.ofNullable(availableAt);
-            return this;
-        }
-
-        public Builder availableAt(Optional<OffsetDateTime> availableAt) {
-            Utils.checkNotNull(availableAt, "availableAt");
+        public Builder availableAt(@Nullable OffsetDateTime availableAt) {
             this.availableAt = availableAt;
             return this;
         }
 
-
-        public Builder description(String description) {
-            Utils.checkNotNull(description, "description");
-            this.description = Optional.ofNullable(description);
-            return this;
-        }
-
-        public Builder description(Optional<String> description) {
-            Utils.checkNotNull(description, "description");
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-
-        public Builder height(double height) {
-            Utils.checkNotNull(height, "height");
-            this.height = Optional.ofNullable(height);
-            return this;
-        }
-
-        public Builder height(Optional<Double> height) {
-            Utils.checkNotNull(height, "height");
+        public Builder height(@Nullable Double height) {
             this.height = height;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder inventoryId(String inventoryId) {
-            Utils.checkNotNull(inventoryId, "inventoryId");
-            this.inventoryId = Optional.ofNullable(inventoryId);
-            return this;
-        }
-
-        public Builder inventoryId(Optional<String> inventoryId) {
-            Utils.checkNotNull(inventoryId, "inventoryId");
+        public Builder inventoryId(@Nullable String inventoryId) {
             this.inventoryId = inventoryId;
             return this;
         }
 
-
-        public Builder isActive(boolean isActive) {
-            Utils.checkNotNull(isActive, "isActive");
-            this.isActive = Optional.ofNullable(isActive);
-            return this;
-        }
-
-        public Builder isActive(Optional<Boolean> isActive) {
-            Utils.checkNotNull(isActive, "isActive");
+        public Builder isActive(@Nullable Boolean isActive) {
             this.isActive = isActive;
             return this;
         }
 
-
-        public Builder isFeatured(boolean isFeatured) {
-            Utils.checkNotNull(isFeatured, "isFeatured");
-            this.isFeatured = Optional.ofNullable(isFeatured);
-            return this;
-        }
-
-        public Builder isFeatured(Optional<Boolean> isFeatured) {
-            Utils.checkNotNull(isFeatured, "isFeatured");
+        public Builder isFeatured(@Nullable Boolean isFeatured) {
             this.isFeatured = isFeatured;
             return this;
         }
 
-
-        public Builder isVisible(boolean isVisible) {
-            Utils.checkNotNull(isVisible, "isVisible");
-            this.isVisible = Optional.ofNullable(isVisible);
-            return this;
-        }
-
-        public Builder isVisible(Optional<Boolean> isVisible) {
-            Utils.checkNotNull(isVisible, "isVisible");
+        public Builder isVisible(@Nullable Boolean isVisible) {
             this.isVisible = isVisible;
             return this;
         }
 
-
-        public Builder length(double length) {
-            Utils.checkNotNull(length, "length");
-            this.length = Optional.ofNullable(length);
-            return this;
-        }
-
-        public Builder length(Optional<Double> length) {
-            Utils.checkNotNull(length, "length");
+        public Builder length(@Nullable Double length) {
             this.length = length;
             return this;
         }
 
-
-        public Builder media(List<CommerceItemMedia> media) {
-            Utils.checkNotNull(media, "media");
-            this.media = Optional.ofNullable(media);
-            return this;
-        }
-
-        public Builder media(Optional<? extends List<CommerceItemMedia>> media) {
-            Utils.checkNotNull(media, "media");
+        public Builder media(@Nullable List<CommerceItemMedia> media) {
             this.media = media;
             return this;
         }
 
-
-        public Builder metadata(List<CommerceMetadata> metadata) {
-            Utils.checkNotNull(metadata, "metadata");
-            this.metadata = Optional.ofNullable(metadata);
-            return this;
-        }
-
-        public Builder metadata(Optional<? extends List<CommerceMetadata>> metadata) {
-            Utils.checkNotNull(metadata, "metadata");
+        public Builder metadata(@Nullable List<CommerceMetadata> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = Optional.ofNullable(name);
-            return this;
-        }
-
-        public Builder name(Optional<String> name) {
-            Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-
-        public Builder options(List<CommerceItemOption> options) {
-            Utils.checkNotNull(options, "options");
-            this.options = Optional.ofNullable(options);
-            return this;
-        }
-
-        public Builder options(Optional<? extends List<CommerceItemOption>> options) {
-            Utils.checkNotNull(options, "options");
+        public Builder options(@Nullable List<CommerceItemOption> options) {
             this.options = options;
             return this;
         }
 
-
-        public Builder prices(List<CommerceItemPrice> prices) {
-            Utils.checkNotNull(prices, "prices");
-            this.prices = Optional.ofNullable(prices);
-            return this;
-        }
-
-        public Builder prices(Optional<? extends List<CommerceItemPrice>> prices) {
-            Utils.checkNotNull(prices, "prices");
+        public Builder prices(@Nullable List<CommerceItemPrice> prices) {
             this.prices = prices;
             return this;
         }
 
-
-        public Builder publicDescription(String publicDescription) {
-            Utils.checkNotNull(publicDescription, "publicDescription");
-            this.publicDescription = Optional.ofNullable(publicDescription);
-            return this;
-        }
-
-        public Builder publicDescription(Optional<String> publicDescription) {
-            Utils.checkNotNull(publicDescription, "publicDescription");
+        public Builder publicDescription(@Nullable String publicDescription) {
             this.publicDescription = publicDescription;
             return this;
         }
 
-
-        public Builder publicName(String publicName) {
-            Utils.checkNotNull(publicName, "publicName");
-            this.publicName = Optional.ofNullable(publicName);
-            return this;
-        }
-
-        public Builder publicName(Optional<String> publicName) {
-            Utils.checkNotNull(publicName, "publicName");
+        public Builder publicName(@Nullable String publicName) {
             this.publicName = publicName;
             return this;
         }
 
-
-        public Builder requiresShipping(boolean requiresShipping) {
-            Utils.checkNotNull(requiresShipping, "requiresShipping");
-            this.requiresShipping = Optional.ofNullable(requiresShipping);
-            return this;
-        }
-
-        public Builder requiresShipping(Optional<Boolean> requiresShipping) {
-            Utils.checkNotNull(requiresShipping, "requiresShipping");
+        public Builder requiresShipping(@Nullable Boolean requiresShipping) {
             this.requiresShipping = requiresShipping;
             return this;
         }
 
-
-        public Builder sizeUnit(SizeUnit sizeUnit) {
-            Utils.checkNotNull(sizeUnit, "sizeUnit");
-            this.sizeUnit = Optional.ofNullable(sizeUnit);
-            return this;
-        }
-
-        public Builder sizeUnit(Optional<? extends SizeUnit> sizeUnit) {
-            Utils.checkNotNull(sizeUnit, "sizeUnit");
+        public Builder sizeUnit(@Nullable SizeUnit sizeUnit) {
             this.sizeUnit = sizeUnit;
             return this;
         }
 
-
-        public Builder sku(String sku) {
-            Utils.checkNotNull(sku, "sku");
-            this.sku = Optional.ofNullable(sku);
-            return this;
-        }
-
-        public Builder sku(Optional<String> sku) {
-            Utils.checkNotNull(sku, "sku");
+        public Builder sku(@Nullable String sku) {
             this.sku = sku;
             return this;
         }
 
-
-        public Builder tags(List<String> tags) {
-            Utils.checkNotNull(tags, "tags");
-            this.tags = Optional.ofNullable(tags);
-            return this;
-        }
-
-        public Builder tags(Optional<? extends List<String>> tags) {
-            Utils.checkNotNull(tags, "tags");
+        public Builder tags(@Nullable List<String> tags) {
             this.tags = tags;
             return this;
         }
 
-
-        public Builder totalStock(double totalStock) {
-            Utils.checkNotNull(totalStock, "totalStock");
-            this.totalStock = Optional.ofNullable(totalStock);
-            return this;
-        }
-
-        public Builder totalStock(Optional<Double> totalStock) {
-            Utils.checkNotNull(totalStock, "totalStock");
+        public Builder totalStock(@Nullable Double totalStock) {
             this.totalStock = totalStock;
             return this;
         }
 
-
-        public Builder weight(double weight) {
-            Utils.checkNotNull(weight, "weight");
-            this.weight = Optional.ofNullable(weight);
-            return this;
-        }
-
-        public Builder weight(Optional<Double> weight) {
-            Utils.checkNotNull(weight, "weight");
+        public Builder weight(@Nullable Double weight) {
             this.weight = weight;
             return this;
         }
 
-
-        public Builder weightUnit(WeightUnit weightUnit) {
-            Utils.checkNotNull(weightUnit, "weightUnit");
-            this.weightUnit = Optional.ofNullable(weightUnit);
-            return this;
-        }
-
-        public Builder weightUnit(Optional<? extends WeightUnit> weightUnit) {
-            Utils.checkNotNull(weightUnit, "weightUnit");
+        public Builder weightUnit(@Nullable WeightUnit weightUnit) {
             this.weightUnit = weightUnit;
             return this;
         }
 
-
-        public Builder width(double width) {
-            Utils.checkNotNull(width, "width");
-            this.width = Optional.ofNullable(width);
-            return this;
-        }
-
-        public Builder width(Optional<Double> width) {
-            Utils.checkNotNull(width, "width");
+        public Builder width(@Nullable Double width) {
             this.width = width;
             return this;
         }
 
         public CommerceItemVariant build() {
-
             return new CommerceItemVariant(
                 availableAt, description, height,
                 id, inventoryId, isActive,

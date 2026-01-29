@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.CommerceLocation;
@@ -30,7 +30,7 @@ public class UpdateCommerceLocationRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<UpdateCommerceLocationQueryParamFields>> fields;
+    private List<UpdateCommerceLocationQueryParamFields> fields;
 
     /**
      * ID of the Location
@@ -44,63 +44,56 @@ public class UpdateCommerceLocationRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
     @JsonCreator
     public UpdateCommerceLocationRequest(
-            CommerceLocation commerceLocation,
-            String connectionId,
-            Optional<? extends List<UpdateCommerceLocationQueryParamFields>> fields,
-            String id,
-            Optional<String> raw) {
-        Utils.checkNotNull(commerceLocation, "commerceLocation");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(raw, "raw");
-        this.commerceLocation = commerceLocation;
-        this.connectionId = connectionId;
+            @Nonnull CommerceLocation commerceLocation,
+            @Nonnull String connectionId,
+            @Nullable List<UpdateCommerceLocationQueryParamFields> fields,
+            @Nonnull String id,
+            @Nullable String raw) {
+        this.commerceLocation = Optional.ofNullable(commerceLocation)
+            .orElseThrow(() -> new IllegalArgumentException("commerceLocation cannot be null"));
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
-        this.id = id;
+        this.id = Optional.ofNullable(id)
+            .orElseThrow(() -> new IllegalArgumentException("id cannot be null"));
         this.raw = raw;
     }
     
     public UpdateCommerceLocationRequest(
-            CommerceLocation commerceLocation,
-            String connectionId,
-            String id) {
-        this(commerceLocation, connectionId, Optional.empty(),
-            id, Optional.empty());
+            @Nonnull CommerceLocation commerceLocation,
+            @Nonnull String connectionId,
+            @Nonnull String id) {
+        this(commerceLocation, connectionId, null,
+            id, null);
     }
 
-    @JsonIgnore
     public CommerceLocation commerceLocation() {
-        return commerceLocation;
+        return this.commerceLocation;
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<UpdateCommerceLocationQueryParamFields>> fields() {
-        return (Optional<List<UpdateCommerceLocationQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
      * ID of the Location
      */
-    @JsonIgnore
     public String id() {
-        return id;
+        return this.id;
     }
 
     /**
@@ -108,9 +101,8 @@ public class UpdateCommerceLocationRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
     public static Builder builder() {
@@ -118,27 +110,17 @@ public class UpdateCommerceLocationRequest {
     }
 
 
-    public UpdateCommerceLocationRequest withCommerceLocation(CommerceLocation commerceLocation) {
-        Utils.checkNotNull(commerceLocation, "commerceLocation");
-        this.commerceLocation = commerceLocation;
+    public UpdateCommerceLocationRequest withCommerceLocation(@Nonnull CommerceLocation commerceLocation) {
+        this.commerceLocation = Utils.checkNotNull(commerceLocation, "commerceLocation");
         return this;
     }
+
 
     /**
      * ID of the connection
      */
-    public UpdateCommerceLocationRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public UpdateCommerceLocationRequest withFields(List<UpdateCommerceLocationQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public UpdateCommerceLocationRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -146,29 +128,17 @@ public class UpdateCommerceLocationRequest {
     /**
      * Fields to return
      */
-    public UpdateCommerceLocationRequest withFields(Optional<? extends List<UpdateCommerceLocationQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public UpdateCommerceLocationRequest withFields(@Nullable List<UpdateCommerceLocationQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
+
     /**
      * ID of the Location
      */
-    public UpdateCommerceLocationRequest withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = id;
-        return this;
-    }
-
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public UpdateCommerceLocationRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
+    public UpdateCommerceLocationRequest withId(@Nonnull String id) {
+        this.id = Utils.checkNotNull(id, "id");
         return this;
     }
 
@@ -178,11 +148,11 @@ public class UpdateCommerceLocationRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public UpdateCommerceLocationRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public UpdateCommerceLocationRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -225,71 +195,42 @@ public class UpdateCommerceLocationRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<UpdateCommerceLocationQueryParamFields>> fields = Optional.empty();
+        private List<UpdateCommerceLocationQueryParamFields> fields;
 
         private String id;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder commerceLocation(CommerceLocation commerceLocation) {
-            Utils.checkNotNull(commerceLocation, "commerceLocation");
-            this.commerceLocation = commerceLocation;
+        public Builder commerceLocation(@Nonnull CommerceLocation commerceLocation) {
+            this.commerceLocation = Utils.checkNotNull(commerceLocation, "commerceLocation");
             return this;
         }
-
 
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<UpdateCommerceLocationQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<UpdateCommerceLocationQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<UpdateCommerceLocationQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * ID of the Location
          */
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = id;
-            return this;
-        }
-
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
+        public Builder id(@Nonnull String id) {
+            this.id = Utils.checkNotNull(id, "id");
             return this;
         }
 
@@ -298,14 +239,12 @@ public class UpdateCommerceLocationRequest {
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
         public UpdateCommerceLocationRequest build() {
-
             return new UpdateCommerceLocationRequest(
                 commerceLocation, connectionId, fields,
                 id, raw);

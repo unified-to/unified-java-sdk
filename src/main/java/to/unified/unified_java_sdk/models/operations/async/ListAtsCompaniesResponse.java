@@ -4,11 +4,11 @@
 package to.unified.unified_java_sdk.models.operations.async;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import java.lang.Integer;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.io.InputStream;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.List;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public class ListAtsCompaniesResponse implements AsyncResponse {
     /**
      * Successful
      */
-    private Optional<? extends List<AtsCompany>> atsCompanies;
+    private List<AtsCompany> atsCompanies;
 
     /**
      * HTTP response content type for this operation
@@ -41,59 +41,52 @@ public class ListAtsCompaniesResponse implements AsyncResponse {
 
     @JsonCreator
     public ListAtsCompaniesResponse(
-            Optional<? extends List<AtsCompany>> atsCompanies,
-            String contentType,
+            @Nullable List<AtsCompany> atsCompanies,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(atsCompanies, "atsCompanies");
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
+            @Nonnull HttpResponse<Blob> rawResponse) {
         this.atsCompanies = atsCompanies;
-        this.contentType = contentType;
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
     }
     
     public ListAtsCompaniesResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
-        this(Optional.empty(), contentType, statusCode,
+            @Nonnull HttpResponse<Blob> rawResponse) {
+        this(null, contentType, statusCode,
             rawResponse);
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<AtsCompany>> atsCompanies() {
-        return (Optional<List<AtsCompany>>) atsCompanies;
+        return Optional.ofNullable(this.atsCompanies);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<Blob> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     public static Builder builder() {
@@ -104,48 +97,38 @@ public class ListAtsCompaniesResponse implements AsyncResponse {
     /**
      * Successful
      */
-    public ListAtsCompaniesResponse withAtsCompanies(List<AtsCompany> atsCompanies) {
-        Utils.checkNotNull(atsCompanies, "atsCompanies");
-        this.atsCompanies = Optional.ofNullable(atsCompanies);
-        return this;
-    }
-
-
-    /**
-     * Successful
-     */
-    public ListAtsCompaniesResponse withAtsCompanies(Optional<? extends List<AtsCompany>> atsCompanies) {
-        Utils.checkNotNull(atsCompanies, "atsCompanies");
+    public ListAtsCompaniesResponse withAtsCompanies(@Nullable List<AtsCompany> atsCompanies) {
         this.atsCompanies = atsCompanies;
         return this;
     }
 
+
     /**
      * HTTP response content type for this operation
      */
-    public ListAtsCompaniesResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
+    public ListAtsCompaniesResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public ListAtsCompaniesResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public ListAtsCompaniesResponse withRawResponse(HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
+    public ListAtsCompaniesResponse withRawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -182,11 +165,11 @@ public class ListAtsCompaniesResponse implements AsyncResponse {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends List<AtsCompany>> atsCompanies = Optional.empty();
+        private List<AtsCompany> atsCompanies;
 
         private String contentType;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<Blob> rawResponse;
 
@@ -194,57 +177,39 @@ public class ListAtsCompaniesResponse implements AsyncResponse {
           // force use of static builder() method
         }
 
-
         /**
          * Successful
          */
-        public Builder atsCompanies(List<AtsCompany> atsCompanies) {
-            Utils.checkNotNull(atsCompanies, "atsCompanies");
-            this.atsCompanies = Optional.ofNullable(atsCompanies);
-            return this;
-        }
-
-        /**
-         * Successful
-         */
-        public Builder atsCompanies(Optional<? extends List<AtsCompany>> atsCompanies) {
-            Utils.checkNotNull(atsCompanies, "atsCompanies");
+        public Builder atsCompanies(@Nullable List<AtsCompany> atsCompanies) {
             this.atsCompanies = atsCompanies;
             return this;
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<Blob> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
+        public Builder rawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         public ListAtsCompaniesResponse build() {
-
             return new ListAtsCompaniesResponse(
                 atsCompanies, contentType, statusCode,
                 rawResponse);

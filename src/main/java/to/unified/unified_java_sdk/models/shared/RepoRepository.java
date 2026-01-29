@@ -4,15 +4,15 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.Map;
 import java.util.Optional;
@@ -23,22 +23,22 @@ public class RepoRepository {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
-    private Optional<String> description;
+    private String description;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_private")
-    private Optional<Boolean> isPrivate;
+    private Boolean isPrivate;
 
 
     @JsonProperty("name")
@@ -47,55 +47,46 @@ public class RepoRepository {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("org_id")
-    private Optional<String> orgId;
+    private String orgId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner")
-    private Optional<String> owner;
+    private String owner;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("web_url")
-    private Optional<String> webUrl;
+    private String webUrl;
 
     @JsonCreator
     public RepoRepository(
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("description") Optional<String> description,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("is_private") Optional<Boolean> isPrivate,
-            @JsonProperty("name") String name,
-            @JsonProperty("org_id") Optional<String> orgId,
-            @JsonProperty("owner") Optional<String> owner,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
-            @JsonProperty("web_url") Optional<String> webUrl) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(description, "description");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(isPrivate, "isPrivate");
-        Utils.checkNotNull(name, "name");
-        Utils.checkNotNull(orgId, "orgId");
-        Utils.checkNotNull(owner, "owner");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        Utils.checkNotNull(webUrl, "webUrl");
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("description") @Nullable String description,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("is_private") @Nullable Boolean isPrivate,
+            @JsonProperty("name") @Nonnull String name,
+            @JsonProperty("org_id") @Nullable String orgId,
+            @JsonProperty("owner") @Nullable String owner,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
+            @JsonProperty("web_url") @Nullable String webUrl) {
         this.createdAt = createdAt;
         this.description = description;
         this.id = id;
         this.isPrivate = isPrivate;
-        this.name = name;
+        this.name = Optional.ofNullable(name)
+            .orElseThrow(() -> new IllegalArgumentException("name cannot be null"));
         this.orgId = orgId;
         this.owner = owner;
         this.raw = raw;
@@ -104,62 +95,51 @@ public class RepoRepository {
     }
     
     public RepoRepository(
-            String name) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), name, Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+            @Nonnull String name) {
+        this(null, null, null,
+            null, name, null,
+            null, null, null,
+            null);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<String> description() {
-        return description;
+        return Optional.ofNullable(this.description);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isPrivate() {
-        return isPrivate;
+        return Optional.ofNullable(this.isPrivate);
     }
 
-    @JsonIgnore
     public String name() {
-        return name;
+        return this.name;
     }
 
-    @JsonIgnore
     public Optional<String> orgId() {
-        return orgId;
+        return Optional.ofNullable(this.orgId);
     }
 
-    @JsonIgnore
     public Optional<String> owner() {
-        return owner;
+        return Optional.ofNullable(this.owner);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
-    @JsonIgnore
     public Optional<String> webUrl() {
-        return webUrl;
+        return Optional.ofNullable(this.webUrl);
     }
 
     public static Builder builder() {
@@ -167,128 +147,65 @@ public class RepoRepository {
     }
 
 
-    public RepoRepository withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
-
-
-    public RepoRepository withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public RepoRepository withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public RepoRepository withDescription(String description) {
-        Utils.checkNotNull(description, "description");
-        this.description = Optional.ofNullable(description);
-        return this;
-    }
 
-
-    public RepoRepository withDescription(Optional<String> description) {
-        Utils.checkNotNull(description, "description");
+    public RepoRepository withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
-    public RepoRepository withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public RepoRepository withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public RepoRepository withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public RepoRepository withIsPrivate(boolean isPrivate) {
-        Utils.checkNotNull(isPrivate, "isPrivate");
-        this.isPrivate = Optional.ofNullable(isPrivate);
-        return this;
-    }
 
-
-    public RepoRepository withIsPrivate(Optional<Boolean> isPrivate) {
-        Utils.checkNotNull(isPrivate, "isPrivate");
+    public RepoRepository withIsPrivate(@Nullable Boolean isPrivate) {
         this.isPrivate = isPrivate;
         return this;
     }
 
-    public RepoRepository withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = name;
-        return this;
-    }
 
-    public RepoRepository withOrgId(String orgId) {
-        Utils.checkNotNull(orgId, "orgId");
-        this.orgId = Optional.ofNullable(orgId);
+    public RepoRepository withName(@Nonnull String name) {
+        this.name = Utils.checkNotNull(name, "name");
         return this;
     }
 
 
-    public RepoRepository withOrgId(Optional<String> orgId) {
-        Utils.checkNotNull(orgId, "orgId");
+    public RepoRepository withOrgId(@Nullable String orgId) {
         this.orgId = orgId;
         return this;
     }
 
-    public RepoRepository withOwner(String owner) {
-        Utils.checkNotNull(owner, "owner");
-        this.owner = Optional.ofNullable(owner);
-        return this;
-    }
 
-
-    public RepoRepository withOwner(Optional<String> owner) {
-        Utils.checkNotNull(owner, "owner");
+    public RepoRepository withOwner(@Nullable String owner) {
         this.owner = owner;
         return this;
     }
 
-    public RepoRepository withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public RepoRepository withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public RepoRepository withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public RepoRepository withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public RepoRepository withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public RepoRepository withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
-    public RepoRepository withWebUrl(String webUrl) {
-        Utils.checkNotNull(webUrl, "webUrl");
-        this.webUrl = Optional.ofNullable(webUrl);
-        return this;
-    }
 
-
-    public RepoRepository withWebUrl(Optional<String> webUrl) {
-        Utils.checkNotNull(webUrl, "webUrl");
+    public RepoRepository withWebUrl(@Nullable String webUrl) {
         this.webUrl = webUrl;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -339,156 +256,81 @@ public class RepoRepository {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<String> description = Optional.empty();
+        private String description;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<Boolean> isPrivate = Optional.empty();
+        private Boolean isPrivate;
 
         private String name;
 
-        private Optional<String> orgId = Optional.empty();
+        private String orgId;
 
-        private Optional<String> owner = Optional.empty();
+        private String owner;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
-        private Optional<String> webUrl = Optional.empty();
+        private String webUrl;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder description(String description) {
-            Utils.checkNotNull(description, "description");
-            this.description = Optional.ofNullable(description);
-            return this;
-        }
-
-        public Builder description(Optional<String> description) {
-            Utils.checkNotNull(description, "description");
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder isPrivate(boolean isPrivate) {
-            Utils.checkNotNull(isPrivate, "isPrivate");
-            this.isPrivate = Optional.ofNullable(isPrivate);
-            return this;
-        }
-
-        public Builder isPrivate(Optional<Boolean> isPrivate) {
-            Utils.checkNotNull(isPrivate, "isPrivate");
+        public Builder isPrivate(@Nullable Boolean isPrivate) {
             this.isPrivate = isPrivate;
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = name;
+        public Builder name(@Nonnull String name) {
+            this.name = Utils.checkNotNull(name, "name");
             return this;
         }
 
-
-        public Builder orgId(String orgId) {
-            Utils.checkNotNull(orgId, "orgId");
-            this.orgId = Optional.ofNullable(orgId);
-            return this;
-        }
-
-        public Builder orgId(Optional<String> orgId) {
-            Utils.checkNotNull(orgId, "orgId");
+        public Builder orgId(@Nullable String orgId) {
             this.orgId = orgId;
             return this;
         }
 
-
-        public Builder owner(String owner) {
-            Utils.checkNotNull(owner, "owner");
-            this.owner = Optional.ofNullable(owner);
-            return this;
-        }
-
-        public Builder owner(Optional<String> owner) {
-            Utils.checkNotNull(owner, "owner");
+        public Builder owner(@Nullable String owner) {
             this.owner = owner;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
-
-        public Builder webUrl(String webUrl) {
-            Utils.checkNotNull(webUrl, "webUrl");
-            this.webUrl = Optional.ofNullable(webUrl);
-            return this;
-        }
-
-        public Builder webUrl(Optional<String> webUrl) {
-            Utils.checkNotNull(webUrl, "webUrl");
+        public Builder webUrl(@Nullable String webUrl) {
             this.webUrl = webUrl;
             return this;
         }
 
         public RepoRepository build() {
-
             return new RepoRepository(
                 createdAt, description, id,
                 isPrivate, name, orgId,

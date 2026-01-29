@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateKmsSpaceRequest;
 import to.unified.unified_java_sdk.models.operations.GetKmsSpaceRequest;
@@ -68,7 +69,7 @@ public class AsyncSpace {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateKmsSpaceResponse>} - The async response
      */
-    public CompletableFuture<CreateKmsSpaceResponse> createKmsSpace(CreateKmsSpaceRequest request) {
+    public CompletableFuture<CreateKmsSpaceResponse> createKmsSpace(@Nonnull CreateKmsSpaceRequest request) {
         AsyncRequestOperation<CreateKmsSpaceRequest, CreateKmsSpaceResponse> operation
               = new CreateKmsSpace.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -91,7 +92,7 @@ public class AsyncSpace {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetKmsSpaceResponse>} - The async response
      */
-    public CompletableFuture<GetKmsSpaceResponse> getKmsSpace(GetKmsSpaceRequest request) {
+    public CompletableFuture<GetKmsSpaceResponse> getKmsSpace(@Nonnull GetKmsSpaceRequest request) {
         AsyncRequestOperation<GetKmsSpaceRequest, GetKmsSpaceResponse> operation
               = new GetKmsSpace.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -114,7 +115,7 @@ public class AsyncSpace {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListKmsSpacesResponse>} - The async response
      */
-    public CompletableFuture<ListKmsSpacesResponse> listKmsSpaces(ListKmsSpacesRequest request) {
+    public CompletableFuture<ListKmsSpacesResponse> listKmsSpaces(@Nonnull ListKmsSpacesRequest request) {
         AsyncRequestOperation<ListKmsSpacesRequest, ListKmsSpacesResponse> operation
               = new ListKmsSpaces.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -137,7 +138,7 @@ public class AsyncSpace {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchKmsSpaceResponse>} - The async response
      */
-    public CompletableFuture<PatchKmsSpaceResponse> patchKmsSpace(PatchKmsSpaceRequest request) {
+    public CompletableFuture<PatchKmsSpaceResponse> patchKmsSpace(@Nonnull PatchKmsSpaceRequest request) {
         AsyncRequestOperation<PatchKmsSpaceRequest, PatchKmsSpaceResponse> operation
               = new PatchKmsSpace.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -160,7 +161,7 @@ public class AsyncSpace {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveKmsSpaceResponse>} - The async response
      */
-    public CompletableFuture<RemoveKmsSpaceResponse> removeKmsSpace(RemoveKmsSpaceRequest request) {
+    public CompletableFuture<RemoveKmsSpaceResponse> removeKmsSpace(@Nonnull RemoveKmsSpaceRequest request) {
         AsyncRequestOperation<RemoveKmsSpaceRequest, RemoveKmsSpaceResponse> operation
               = new RemoveKmsSpace.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -183,7 +184,7 @@ public class AsyncSpace {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateKmsSpaceResponse>} - The async response
      */
-    public CompletableFuture<UpdateKmsSpaceResponse> updateKmsSpace(UpdateKmsSpaceRequest request) {
+    public CompletableFuture<UpdateKmsSpaceResponse> updateKmsSpace(@Nonnull UpdateKmsSpaceRequest request) {
         AsyncRequestOperation<UpdateKmsSpaceRequest, UpdateKmsSpaceResponse> operation
               = new UpdateKmsSpace.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

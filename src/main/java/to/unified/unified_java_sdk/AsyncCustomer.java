@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateTicketingCustomerRequest;
 import to.unified.unified_java_sdk.models.operations.GetTicketingCustomerRequest;
@@ -68,7 +69,7 @@ public class AsyncCustomer {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateTicketingCustomerResponse>} - The async response
      */
-    public CompletableFuture<CreateTicketingCustomerResponse> createTicketingCustomer(CreateTicketingCustomerRequest request) {
+    public CompletableFuture<CreateTicketingCustomerResponse> createTicketingCustomer(@Nonnull CreateTicketingCustomerRequest request) {
         AsyncRequestOperation<CreateTicketingCustomerRequest, CreateTicketingCustomerResponse> operation
               = new CreateTicketingCustomer.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -91,7 +92,7 @@ public class AsyncCustomer {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetTicketingCustomerResponse>} - The async response
      */
-    public CompletableFuture<GetTicketingCustomerResponse> getTicketingCustomer(GetTicketingCustomerRequest request) {
+    public CompletableFuture<GetTicketingCustomerResponse> getTicketingCustomer(@Nonnull GetTicketingCustomerRequest request) {
         AsyncRequestOperation<GetTicketingCustomerRequest, GetTicketingCustomerResponse> operation
               = new GetTicketingCustomer.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -114,7 +115,7 @@ public class AsyncCustomer {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListTicketingCustomersResponse>} - The async response
      */
-    public CompletableFuture<ListTicketingCustomersResponse> listTicketingCustomers(ListTicketingCustomersRequest request) {
+    public CompletableFuture<ListTicketingCustomersResponse> listTicketingCustomers(@Nonnull ListTicketingCustomersRequest request) {
         AsyncRequestOperation<ListTicketingCustomersRequest, ListTicketingCustomersResponse> operation
               = new ListTicketingCustomers.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -137,7 +138,7 @@ public class AsyncCustomer {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchTicketingCustomerResponse>} - The async response
      */
-    public CompletableFuture<PatchTicketingCustomerResponse> patchTicketingCustomer(PatchTicketingCustomerRequest request) {
+    public CompletableFuture<PatchTicketingCustomerResponse> patchTicketingCustomer(@Nonnull PatchTicketingCustomerRequest request) {
         AsyncRequestOperation<PatchTicketingCustomerRequest, PatchTicketingCustomerResponse> operation
               = new PatchTicketingCustomer.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -160,7 +161,7 @@ public class AsyncCustomer {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveTicketingCustomerResponse>} - The async response
      */
-    public CompletableFuture<RemoveTicketingCustomerResponse> removeTicketingCustomer(RemoveTicketingCustomerRequest request) {
+    public CompletableFuture<RemoveTicketingCustomerResponse> removeTicketingCustomer(@Nonnull RemoveTicketingCustomerRequest request) {
         AsyncRequestOperation<RemoveTicketingCustomerRequest, RemoveTicketingCustomerResponse> operation
               = new RemoveTicketingCustomer.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -183,7 +184,7 @@ public class AsyncCustomer {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateTicketingCustomerResponse>} - The async response
      */
-    public CompletableFuture<UpdateTicketingCustomerResponse> updateTicketingCustomer(UpdateTicketingCustomerRequest request) {
+    public CompletableFuture<UpdateTicketingCustomerResponse> updateTicketingCustomer(@Nonnull UpdateTicketingCustomerRequest request) {
         AsyncRequestOperation<UpdateTicketingCustomerRequest, UpdateTicketingCustomerResponse> operation
               = new UpdateTicketingCustomer.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

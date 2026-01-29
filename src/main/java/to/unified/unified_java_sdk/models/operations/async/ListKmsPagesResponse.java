@@ -4,11 +4,11 @@
 package to.unified.unified_java_sdk.models.operations.async;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import java.lang.Integer;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.io.InputStream;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.List;
 import java.util.Optional;
@@ -27,7 +27,7 @@ public class ListKmsPagesResponse implements AsyncResponse {
     /**
      * Successful
      */
-    private Optional<? extends List<KmsPage>> kmsPages;
+    private List<KmsPage> kmsPages;
 
     /**
      * HTTP response status code for this operation
@@ -41,59 +41,52 @@ public class ListKmsPagesResponse implements AsyncResponse {
 
     @JsonCreator
     public ListKmsPagesResponse(
-            String contentType,
-            Optional<? extends List<KmsPage>> kmsPages,
+            @Nonnull String contentType,
+            @Nullable List<KmsPage> kmsPages,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(kmsPages, "kmsPages");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.contentType = contentType;
+            @Nonnull HttpResponse<Blob> rawResponse) {
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.kmsPages = kmsPages;
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
     }
     
     public ListKmsPagesResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
-        this(contentType, Optional.empty(), statusCode,
+            @Nonnull HttpResponse<Blob> rawResponse) {
+        this(contentType, null, statusCode,
             rawResponse);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<KmsPage>> kmsPages() {
-        return (Optional<List<KmsPage>>) kmsPages;
+        return Optional.ofNullable(this.kmsPages);
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<Blob> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     public static Builder builder() {
@@ -104,18 +97,8 @@ public class ListKmsPagesResponse implements AsyncResponse {
     /**
      * HTTP response content type for this operation
      */
-    public ListKmsPagesResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
-        return this;
-    }
-
-    /**
-     * Successful
-     */
-    public ListKmsPagesResponse withKmsPages(List<KmsPage> kmsPages) {
-        Utils.checkNotNull(kmsPages, "kmsPages");
-        this.kmsPages = Optional.ofNullable(kmsPages);
+    public ListKmsPagesResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
 
@@ -123,29 +106,29 @@ public class ListKmsPagesResponse implements AsyncResponse {
     /**
      * Successful
      */
-    public ListKmsPagesResponse withKmsPages(Optional<? extends List<KmsPage>> kmsPages) {
-        Utils.checkNotNull(kmsPages, "kmsPages");
+    public ListKmsPagesResponse withKmsPages(@Nullable List<KmsPage> kmsPages) {
         this.kmsPages = kmsPages;
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public ListKmsPagesResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public ListKmsPagesResponse withRawResponse(HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
+    public ListKmsPagesResponse withRawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -184,9 +167,9 @@ public class ListKmsPagesResponse implements AsyncResponse {
 
         private String contentType;
 
-        private Optional<? extends List<KmsPage>> kmsPages = Optional.empty();
+        private List<KmsPage> kmsPages;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<Blob> rawResponse;
 
@@ -194,57 +177,39 @@ public class ListKmsPagesResponse implements AsyncResponse {
           // force use of static builder() method
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
-            return this;
-        }
-
-
-        /**
-         * Successful
-         */
-        public Builder kmsPages(List<KmsPage> kmsPages) {
-            Utils.checkNotNull(kmsPages, "kmsPages");
-            this.kmsPages = Optional.ofNullable(kmsPages);
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
 
         /**
          * Successful
          */
-        public Builder kmsPages(Optional<? extends List<KmsPage>> kmsPages) {
-            Utils.checkNotNull(kmsPages, "kmsPages");
+        public Builder kmsPages(@Nullable List<KmsPage> kmsPages) {
             this.kmsPages = kmsPages;
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<Blob> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
+        public Builder rawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         public ListKmsPagesResponse build() {
-
             return new ListKmsPagesResponse(
                 contentType, kmsPages, statusCode,
                 rawResponse);

@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.AccountingInvoice;
@@ -30,7 +30,7 @@ public class CreateAccountingInvoiceRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<CreateAccountingInvoiceQueryParamFields>> fields;
+    private List<CreateAccountingInvoiceQueryParamFields> fields;
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
@@ -38,51 +38,45 @@ public class CreateAccountingInvoiceRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
     @JsonCreator
     public CreateAccountingInvoiceRequest(
-            AccountingInvoice accountingInvoice,
-            String connectionId,
-            Optional<? extends List<CreateAccountingInvoiceQueryParamFields>> fields,
-            Optional<String> raw) {
-        Utils.checkNotNull(accountingInvoice, "accountingInvoice");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(raw, "raw");
-        this.accountingInvoice = accountingInvoice;
-        this.connectionId = connectionId;
+            @Nonnull AccountingInvoice accountingInvoice,
+            @Nonnull String connectionId,
+            @Nullable List<CreateAccountingInvoiceQueryParamFields> fields,
+            @Nullable String raw) {
+        this.accountingInvoice = Optional.ofNullable(accountingInvoice)
+            .orElseThrow(() -> new IllegalArgumentException("accountingInvoice cannot be null"));
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
         this.raw = raw;
     }
     
     public CreateAccountingInvoiceRequest(
-            AccountingInvoice accountingInvoice,
-            String connectionId) {
-        this(accountingInvoice, connectionId, Optional.empty(),
-            Optional.empty());
+            @Nonnull AccountingInvoice accountingInvoice,
+            @Nonnull String connectionId) {
+        this(accountingInvoice, connectionId, null,
+            null);
     }
 
-    @JsonIgnore
     public AccountingInvoice accountingInvoice() {
-        return accountingInvoice;
+        return this.accountingInvoice;
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<CreateAccountingInvoiceQueryParamFields>> fields() {
-        return (Optional<List<CreateAccountingInvoiceQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
@@ -90,9 +84,8 @@ public class CreateAccountingInvoiceRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
     public static Builder builder() {
@@ -100,27 +93,17 @@ public class CreateAccountingInvoiceRequest {
     }
 
 
-    public CreateAccountingInvoiceRequest withAccountingInvoice(AccountingInvoice accountingInvoice) {
-        Utils.checkNotNull(accountingInvoice, "accountingInvoice");
-        this.accountingInvoice = accountingInvoice;
+    public CreateAccountingInvoiceRequest withAccountingInvoice(@Nonnull AccountingInvoice accountingInvoice) {
+        this.accountingInvoice = Utils.checkNotNull(accountingInvoice, "accountingInvoice");
         return this;
     }
+
 
     /**
      * ID of the connection
      */
-    public CreateAccountingInvoiceRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public CreateAccountingInvoiceRequest withFields(List<CreateAccountingInvoiceQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public CreateAccountingInvoiceRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -128,34 +111,22 @@ public class CreateAccountingInvoiceRequest {
     /**
      * Fields to return
      */
-    public CreateAccountingInvoiceRequest withFields(Optional<? extends List<CreateAccountingInvoiceQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public CreateAccountingInvoiceRequest withFields(@Nullable List<CreateAccountingInvoiceQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public CreateAccountingInvoiceRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
-
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public CreateAccountingInvoiceRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public CreateAccountingInvoiceRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -196,75 +167,46 @@ public class CreateAccountingInvoiceRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<CreateAccountingInvoiceQueryParamFields>> fields = Optional.empty();
+        private List<CreateAccountingInvoiceQueryParamFields> fields;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder accountingInvoice(AccountingInvoice accountingInvoice) {
-            Utils.checkNotNull(accountingInvoice, "accountingInvoice");
-            this.accountingInvoice = accountingInvoice;
+        public Builder accountingInvoice(@Nonnull AccountingInvoice accountingInvoice) {
+            this.accountingInvoice = Utils.checkNotNull(accountingInvoice, "accountingInvoice");
             return this;
         }
-
 
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<CreateAccountingInvoiceQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<CreateAccountingInvoiceQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<CreateAccountingInvoiceQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
         public CreateAccountingInvoiceRequest build() {
-
             return new CreateAccountingInvoiceRequest(
                 accountingInvoice, connectionId, fields,
                 raw);

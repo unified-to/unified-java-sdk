@@ -5,32 +5,45 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.UpdateLmsStudent;
 import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class UpdateLmsStudentRequestBuilder {
-
-    private UpdateLmsStudentRequest request;
     private final SDKConfiguration sdkConfiguration;
-    private final Headers _headers = new Headers(); 
+    private final Headers _headers = new Headers();
+    private UpdateLmsStudentRequest request;
 
     public UpdateLmsStudentRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
 
-    public UpdateLmsStudentRequestBuilder request(UpdateLmsStudentRequest request) {
-        Utils.checkNotNull(request, "request");
-        this.request = request;
+    public UpdateLmsStudentRequestBuilder request(@Nonnull UpdateLmsStudentRequest request) {
+        this.request = Utils.checkNotNull(request, "request");
         return this;
     }
 
+    private UpdateLmsStudentRequest _buildRequest() {
+        return this.request;
+    }
+    
+    public UpdateLmsStudentRequestBuilder header(String name, String value) {
+        Utils.checkNotNull(name, "name");
+        Utils.checkNotNull(value, "value");
+        this._headers.add(name, value);
+        return this;
+    }
+
+    /**
+    * Executes the request and returns the response.
+    *
+    * @return The response from the server.
+    */
     public UpdateLmsStudentResponse call() {
-        
         RequestOperation<UpdateLmsStudentRequest, UpdateLmsStudentResponse> operation
               = new UpdateLmsStudent.Sync(sdkConfiguration, _headers);
-
-        return operation.handleResponse(operation.doRequest(request));
+        return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

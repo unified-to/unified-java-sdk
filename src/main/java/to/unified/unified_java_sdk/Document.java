@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateAtsDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAtsDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAtsDocumentResponse;
@@ -67,7 +68,7 @@ public class Document {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAtsDocumentResponse createAtsDocument(CreateAtsDocumentRequest request) {
+    public CreateAtsDocumentResponse createAtsDocument(@Nonnull CreateAtsDocumentRequest request) {
         RequestOperation<CreateAtsDocumentRequest, CreateAtsDocumentResponse> operation
               = new CreateAtsDocument.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -89,7 +90,7 @@ public class Document {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAtsDocumentResponse getAtsDocument(GetAtsDocumentRequest request) {
+    public GetAtsDocumentResponse getAtsDocument(@Nonnull GetAtsDocumentRequest request) {
         RequestOperation<GetAtsDocumentRequest, GetAtsDocumentResponse> operation
               = new GetAtsDocument.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -111,7 +112,7 @@ public class Document {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAtsDocumentsResponse listAtsDocuments(ListAtsDocumentsRequest request) {
+    public ListAtsDocumentsResponse listAtsDocuments(@Nonnull ListAtsDocumentsRequest request) {
         RequestOperation<ListAtsDocumentsRequest, ListAtsDocumentsResponse> operation
               = new ListAtsDocuments.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -133,7 +134,7 @@ public class Document {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAtsDocumentResponse patchAtsDocument(PatchAtsDocumentRequest request) {
+    public PatchAtsDocumentResponse patchAtsDocument(@Nonnull PatchAtsDocumentRequest request) {
         RequestOperation<PatchAtsDocumentRequest, PatchAtsDocumentResponse> operation
               = new PatchAtsDocument.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -155,7 +156,7 @@ public class Document {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAtsDocumentResponse removeAtsDocument(RemoveAtsDocumentRequest request) {
+    public RemoveAtsDocumentResponse removeAtsDocument(@Nonnull RemoveAtsDocumentRequest request) {
         RequestOperation<RemoveAtsDocumentRequest, RemoveAtsDocumentResponse> operation
               = new RemoveAtsDocument.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -177,7 +178,7 @@ public class Document {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAtsDocumentResponse updateAtsDocument(UpdateAtsDocumentRequest request) {
+    public UpdateAtsDocumentResponse updateAtsDocument(@Nonnull UpdateAtsDocumentRequest request) {
         RequestOperation<UpdateAtsDocumentRequest, UpdateAtsDocumentResponse> operation
               = new UpdateAtsDocument.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

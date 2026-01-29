@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateStorageFileRequest;
 import to.unified.unified_java_sdk.models.operations.GetStorageFileRequest;
@@ -68,7 +69,7 @@ public class AsyncStorage {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateStorageFileResponse>} - The async response
      */
-    public CompletableFuture<CreateStorageFileResponse> createStorageFile(CreateStorageFileRequest request) {
+    public CompletableFuture<CreateStorageFileResponse> createStorageFile(@Nonnull CreateStorageFileRequest request) {
         AsyncRequestOperation<CreateStorageFileRequest, CreateStorageFileResponse> operation
               = new CreateStorageFile.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -91,7 +92,7 @@ public class AsyncStorage {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetStorageFileResponse>} - The async response
      */
-    public CompletableFuture<GetStorageFileResponse> getStorageFile(GetStorageFileRequest request) {
+    public CompletableFuture<GetStorageFileResponse> getStorageFile(@Nonnull GetStorageFileRequest request) {
         AsyncRequestOperation<GetStorageFileRequest, GetStorageFileResponse> operation
               = new GetStorageFile.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -114,7 +115,7 @@ public class AsyncStorage {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListStorageFilesResponse>} - The async response
      */
-    public CompletableFuture<ListStorageFilesResponse> listStorageFiles(ListStorageFilesRequest request) {
+    public CompletableFuture<ListStorageFilesResponse> listStorageFiles(@Nonnull ListStorageFilesRequest request) {
         AsyncRequestOperation<ListStorageFilesRequest, ListStorageFilesResponse> operation
               = new ListStorageFiles.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -137,7 +138,7 @@ public class AsyncStorage {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchStorageFileResponse>} - The async response
      */
-    public CompletableFuture<PatchStorageFileResponse> patchStorageFile(PatchStorageFileRequest request) {
+    public CompletableFuture<PatchStorageFileResponse> patchStorageFile(@Nonnull PatchStorageFileRequest request) {
         AsyncRequestOperation<PatchStorageFileRequest, PatchStorageFileResponse> operation
               = new PatchStorageFile.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -160,7 +161,7 @@ public class AsyncStorage {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveStorageFileResponse>} - The async response
      */
-    public CompletableFuture<RemoveStorageFileResponse> removeStorageFile(RemoveStorageFileRequest request) {
+    public CompletableFuture<RemoveStorageFileResponse> removeStorageFile(@Nonnull RemoveStorageFileRequest request) {
         AsyncRequestOperation<RemoveStorageFileRequest, RemoveStorageFileResponse> operation
               = new RemoveStorageFile.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -183,7 +184,7 @@ public class AsyncStorage {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateStorageFileResponse>} - The async response
      */
-    public CompletableFuture<UpdateStorageFileResponse> updateStorageFile(UpdateStorageFileRequest request) {
+    public CompletableFuture<UpdateStorageFileResponse> updateStorageFile(@Nonnull UpdateStorageFileRequest request) {
         AsyncRequestOperation<UpdateStorageFileRequest, UpdateStorageFileResponse> operation
               = new UpdateStorageFile.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

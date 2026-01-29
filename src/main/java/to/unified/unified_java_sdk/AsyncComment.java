@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateKmsCommentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateTaskCommentRequest;
@@ -116,7 +117,7 @@ public class AsyncComment {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateKmsCommentResponse>} - The async response
      */
-    public CompletableFuture<CreateKmsCommentResponse> createKmsComment(CreateKmsCommentRequest request) {
+    public CompletableFuture<CreateKmsCommentResponse> createKmsComment(@Nonnull CreateKmsCommentRequest request) {
         AsyncRequestOperation<CreateKmsCommentRequest, CreateKmsCommentResponse> operation
               = new CreateKmsComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -139,7 +140,7 @@ public class AsyncComment {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateTaskCommentResponse>} - The async response
      */
-    public CompletableFuture<CreateTaskCommentResponse> createTaskComment(CreateTaskCommentRequest request) {
+    public CompletableFuture<CreateTaskCommentResponse> createTaskComment(@Nonnull CreateTaskCommentRequest request) {
         AsyncRequestOperation<CreateTaskCommentRequest, CreateTaskCommentResponse> operation
               = new CreateTaskComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -162,7 +163,7 @@ public class AsyncComment {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateUcCommentResponse>} - The async response
      */
-    public CompletableFuture<CreateUcCommentResponse> createUcComment(CreateUcCommentRequest request) {
+    public CompletableFuture<CreateUcCommentResponse> createUcComment(@Nonnull CreateUcCommentRequest request) {
         AsyncRequestOperation<CreateUcCommentRequest, CreateUcCommentResponse> operation
               = new CreateUcComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -185,7 +186,7 @@ public class AsyncComment {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetKmsCommentResponse>} - The async response
      */
-    public CompletableFuture<GetKmsCommentResponse> getKmsComment(GetKmsCommentRequest request) {
+    public CompletableFuture<GetKmsCommentResponse> getKmsComment(@Nonnull GetKmsCommentRequest request) {
         AsyncRequestOperation<GetKmsCommentRequest, GetKmsCommentResponse> operation
               = new GetKmsComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -208,7 +209,7 @@ public class AsyncComment {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetTaskCommentResponse>} - The async response
      */
-    public CompletableFuture<GetTaskCommentResponse> getTaskComment(GetTaskCommentRequest request) {
+    public CompletableFuture<GetTaskCommentResponse> getTaskComment(@Nonnull GetTaskCommentRequest request) {
         AsyncRequestOperation<GetTaskCommentRequest, GetTaskCommentResponse> operation
               = new GetTaskComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -231,7 +232,7 @@ public class AsyncComment {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetUcCommentResponse>} - The async response
      */
-    public CompletableFuture<GetUcCommentResponse> getUcComment(GetUcCommentRequest request) {
+    public CompletableFuture<GetUcCommentResponse> getUcComment(@Nonnull GetUcCommentRequest request) {
         AsyncRequestOperation<GetUcCommentRequest, GetUcCommentResponse> operation
               = new GetUcComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -254,7 +255,7 @@ public class AsyncComment {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListKmsCommentsResponse>} - The async response
      */
-    public CompletableFuture<ListKmsCommentsResponse> listKmsComments(ListKmsCommentsRequest request) {
+    public CompletableFuture<ListKmsCommentsResponse> listKmsComments(@Nonnull ListKmsCommentsRequest request) {
         AsyncRequestOperation<ListKmsCommentsRequest, ListKmsCommentsResponse> operation
               = new ListKmsComments.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -277,7 +278,7 @@ public class AsyncComment {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListTaskCommentsResponse>} - The async response
      */
-    public CompletableFuture<ListTaskCommentsResponse> listTaskComments(ListTaskCommentsRequest request) {
+    public CompletableFuture<ListTaskCommentsResponse> listTaskComments(@Nonnull ListTaskCommentsRequest request) {
         AsyncRequestOperation<ListTaskCommentsRequest, ListTaskCommentsResponse> operation
               = new ListTaskComments.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -300,7 +301,7 @@ public class AsyncComment {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListUcCommentsResponse>} - The async response
      */
-    public CompletableFuture<ListUcCommentsResponse> listUcComments(ListUcCommentsRequest request) {
+    public CompletableFuture<ListUcCommentsResponse> listUcComments(@Nonnull ListUcCommentsRequest request) {
         AsyncRequestOperation<ListUcCommentsRequest, ListUcCommentsResponse> operation
               = new ListUcComments.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -323,7 +324,7 @@ public class AsyncComment {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchKmsCommentResponse>} - The async response
      */
-    public CompletableFuture<PatchKmsCommentResponse> patchKmsComment(PatchKmsCommentRequest request) {
+    public CompletableFuture<PatchKmsCommentResponse> patchKmsComment(@Nonnull PatchKmsCommentRequest request) {
         AsyncRequestOperation<PatchKmsCommentRequest, PatchKmsCommentResponse> operation
               = new PatchKmsComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -346,7 +347,7 @@ public class AsyncComment {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchTaskCommentResponse>} - The async response
      */
-    public CompletableFuture<PatchTaskCommentResponse> patchTaskComment(PatchTaskCommentRequest request) {
+    public CompletableFuture<PatchTaskCommentResponse> patchTaskComment(@Nonnull PatchTaskCommentRequest request) {
         AsyncRequestOperation<PatchTaskCommentRequest, PatchTaskCommentResponse> operation
               = new PatchTaskComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -369,7 +370,7 @@ public class AsyncComment {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchUcCommentResponse>} - The async response
      */
-    public CompletableFuture<PatchUcCommentResponse> patchUcComment(PatchUcCommentRequest request) {
+    public CompletableFuture<PatchUcCommentResponse> patchUcComment(@Nonnull PatchUcCommentRequest request) {
         AsyncRequestOperation<PatchUcCommentRequest, PatchUcCommentResponse> operation
               = new PatchUcComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -392,7 +393,7 @@ public class AsyncComment {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveKmsCommentResponse>} - The async response
      */
-    public CompletableFuture<RemoveKmsCommentResponse> removeKmsComment(RemoveKmsCommentRequest request) {
+    public CompletableFuture<RemoveKmsCommentResponse> removeKmsComment(@Nonnull RemoveKmsCommentRequest request) {
         AsyncRequestOperation<RemoveKmsCommentRequest, RemoveKmsCommentResponse> operation
               = new RemoveKmsComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -415,7 +416,7 @@ public class AsyncComment {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveTaskCommentResponse>} - The async response
      */
-    public CompletableFuture<RemoveTaskCommentResponse> removeTaskComment(RemoveTaskCommentRequest request) {
+    public CompletableFuture<RemoveTaskCommentResponse> removeTaskComment(@Nonnull RemoveTaskCommentRequest request) {
         AsyncRequestOperation<RemoveTaskCommentRequest, RemoveTaskCommentResponse> operation
               = new RemoveTaskComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -438,7 +439,7 @@ public class AsyncComment {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveUcCommentResponse>} - The async response
      */
-    public CompletableFuture<RemoveUcCommentResponse> removeUcComment(RemoveUcCommentRequest request) {
+    public CompletableFuture<RemoveUcCommentResponse> removeUcComment(@Nonnull RemoveUcCommentRequest request) {
         AsyncRequestOperation<RemoveUcCommentRequest, RemoveUcCommentResponse> operation
               = new RemoveUcComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -461,7 +462,7 @@ public class AsyncComment {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateKmsCommentResponse>} - The async response
      */
-    public CompletableFuture<UpdateKmsCommentResponse> updateKmsComment(UpdateKmsCommentRequest request) {
+    public CompletableFuture<UpdateKmsCommentResponse> updateKmsComment(@Nonnull UpdateKmsCommentRequest request) {
         AsyncRequestOperation<UpdateKmsCommentRequest, UpdateKmsCommentResponse> operation
               = new UpdateKmsComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -484,7 +485,7 @@ public class AsyncComment {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateTaskCommentResponse>} - The async response
      */
-    public CompletableFuture<UpdateTaskCommentResponse> updateTaskComment(UpdateTaskCommentRequest request) {
+    public CompletableFuture<UpdateTaskCommentResponse> updateTaskComment(@Nonnull UpdateTaskCommentRequest request) {
         AsyncRequestOperation<UpdateTaskCommentRequest, UpdateTaskCommentResponse> operation
               = new UpdateTaskComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -507,7 +508,7 @@ public class AsyncComment {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateUcCommentResponse>} - The async response
      */
-    public CompletableFuture<UpdateUcCommentResponse> updateUcComment(UpdateUcCommentRequest request) {
+    public CompletableFuture<UpdateUcCommentResponse> updateUcComment(@Nonnull UpdateUcCommentRequest request) {
         AsyncRequestOperation<UpdateUcCommentRequest, UpdateUcCommentResponse> operation
               = new UpdateUcComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

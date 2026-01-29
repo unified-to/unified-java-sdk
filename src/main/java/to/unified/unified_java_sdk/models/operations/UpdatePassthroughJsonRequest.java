@@ -4,11 +4,11 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
@@ -20,7 +20,7 @@ public class UpdatePassthroughJsonRequest {
      * integration-specific payload
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private Optional<? extends Object> requestBody;
+    private Object requestBody;
 
     /**
      * ID of the connection
@@ -34,57 +34,49 @@ public class UpdatePassthroughJsonRequest {
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
-    private Optional<? extends Map<String, Object>> query;
+    private Map<String, Object> query;
 
     @JsonCreator
     public UpdatePassthroughJsonRequest(
-            Optional<? extends Object> requestBody,
-            String connectionId,
-            String path,
-            Optional<? extends Map<String, Object>> query) {
-        Utils.checkNotNull(requestBody, "requestBody");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(path, "path");
-        Utils.checkNotNull(query, "query");
+            @Nullable Object requestBody,
+            @Nonnull String connectionId,
+            @Nonnull String path,
+            @Nullable Map<String, Object> query) {
         this.requestBody = requestBody;
-        this.connectionId = connectionId;
-        this.path = path;
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
+        this.path = Optional.ofNullable(path)
+            .orElseThrow(() -> new IllegalArgumentException("path cannot be null"));
         this.query = query;
     }
     
     public UpdatePassthroughJsonRequest(
-            String connectionId,
-            String path) {
-        this(Optional.empty(), connectionId, path,
-            Optional.empty());
+            @Nonnull String connectionId,
+            @Nonnull String path) {
+        this(null, connectionId, path,
+            null);
     }
 
     /**
      * integration-specific payload
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Object> requestBody() {
-        return (Optional<Object>) requestBody;
+        return Optional.ofNullable(this.requestBody);
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
-    @JsonIgnore
     public String path() {
-        return path;
+        return this.path;
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> query() {
-        return (Optional<Map<String, Object>>) query;
+        return Optional.ofNullable(this.query);
     }
 
     public static Builder builder() {
@@ -95,49 +87,32 @@ public class UpdatePassthroughJsonRequest {
     /**
      * integration-specific payload
      */
-    public UpdatePassthroughJsonRequest withRequestBody(Object requestBody) {
-        Utils.checkNotNull(requestBody, "requestBody");
-        this.requestBody = Optional.ofNullable(requestBody);
-        return this;
-    }
-
-
-    /**
-     * integration-specific payload
-     */
-    public UpdatePassthroughJsonRequest withRequestBody(Optional<? extends Object> requestBody) {
-        Utils.checkNotNull(requestBody, "requestBody");
+    public UpdatePassthroughJsonRequest withRequestBody(@Nullable Object requestBody) {
         this.requestBody = requestBody;
         return this;
     }
 
+
     /**
      * ID of the connection
      */
-    public UpdatePassthroughJsonRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    public UpdatePassthroughJsonRequest withPath(String path) {
-        Utils.checkNotNull(path, "path");
-        this.path = path;
-        return this;
-    }
-
-    public UpdatePassthroughJsonRequest withQuery(Map<String, Object> query) {
-        Utils.checkNotNull(query, "query");
-        this.query = Optional.ofNullable(query);
+    public UpdatePassthroughJsonRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
 
-    public UpdatePassthroughJsonRequest withQuery(Optional<? extends Map<String, Object>> query) {
-        Utils.checkNotNull(query, "query");
+    public UpdatePassthroughJsonRequest withPath(@Nonnull String path) {
+        this.path = Utils.checkNotNull(path, "path");
+        return this;
+    }
+
+
+    public UpdatePassthroughJsonRequest withQuery(@Nullable Map<String, Object> query) {
         this.query = query;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -174,69 +149,45 @@ public class UpdatePassthroughJsonRequest {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends Object> requestBody = Optional.empty();
+        private Object requestBody;
 
         private String connectionId;
 
         private String path;
 
-        private Optional<? extends Map<String, Object>> query = Optional.empty();
+        private Map<String, Object> query;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
         /**
          * integration-specific payload
          */
-        public Builder requestBody(Object requestBody) {
-            Utils.checkNotNull(requestBody, "requestBody");
-            this.requestBody = Optional.ofNullable(requestBody);
-            return this;
-        }
-
-        /**
-         * integration-specific payload
-         */
-        public Builder requestBody(Optional<? extends Object> requestBody) {
-            Utils.checkNotNull(requestBody, "requestBody");
+        public Builder requestBody(@Nullable Object requestBody) {
             this.requestBody = requestBody;
             return this;
         }
 
-
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
-
-        public Builder path(String path) {
-            Utils.checkNotNull(path, "path");
-            this.path = path;
+        public Builder path(@Nonnull String path) {
+            this.path = Utils.checkNotNull(path, "path");
             return this;
         }
 
-
-        public Builder query(Map<String, Object> query) {
-            Utils.checkNotNull(query, "query");
-            this.query = Optional.ofNullable(query);
-            return this;
-        }
-
-        public Builder query(Optional<? extends Map<String, Object>> query) {
-            Utils.checkNotNull(query, "query");
+        public Builder query(@Nullable Map<String, Object> query) {
             this.query = query;
             return this;
         }
 
         public UpdatePassthroughJsonRequest build() {
-
             return new UpdatePassthroughJsonRequest(
                 requestBody, connectionId, path,
                 query);

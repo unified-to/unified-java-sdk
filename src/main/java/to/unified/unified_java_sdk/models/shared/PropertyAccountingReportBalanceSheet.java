@@ -4,15 +4,14 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
@@ -24,89 +23,77 @@ public class PropertyAccountingReportBalanceSheet {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assets")
-    private Optional<? extends List<AccountingBalancesheetItem>> assets;
+    private List<AccountingBalancesheetItem> assets;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
-    private Optional<String> currency;
+    private String currency;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
-    private Optional<OffsetDateTime> endAt;
+    private OffsetDateTime endAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("equity")
-    private Optional<? extends List<AccountingBalancesheetItem>> equity;
+    private List<AccountingBalancesheetItem> equity;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("liabilities")
-    private Optional<? extends List<AccountingBalancesheetItem>> liabilities;
+    private List<AccountingBalancesheetItem> liabilities;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
-    private Optional<String> name;
+    private String name;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("net_assets_amount")
-    private Optional<Double> netAssetsAmount;
+    private Double netAssetsAmount;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
-    private Optional<OffsetDateTime> startAt;
+    private OffsetDateTime startAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
     @JsonCreator
     public PropertyAccountingReportBalanceSheet(
-            @JsonProperty("assets") Optional<? extends List<AccountingBalancesheetItem>> assets,
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("currency") Optional<String> currency,
-            @JsonProperty("end_at") Optional<OffsetDateTime> endAt,
-            @JsonProperty("equity") Optional<? extends List<AccountingBalancesheetItem>> equity,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("liabilities") Optional<? extends List<AccountingBalancesheetItem>> liabilities,
-            @JsonProperty("name") Optional<String> name,
-            @JsonProperty("net_assets_amount") Optional<Double> netAssetsAmount,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("start_at") Optional<OffsetDateTime> startAt,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(assets, "assets");
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(currency, "currency");
-        Utils.checkNotNull(endAt, "endAt");
-        Utils.checkNotNull(equity, "equity");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(liabilities, "liabilities");
-        Utils.checkNotNull(name, "name");
-        Utils.checkNotNull(netAssetsAmount, "netAssetsAmount");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(startAt, "startAt");
-        Utils.checkNotNull(updatedAt, "updatedAt");
+            @JsonProperty("assets") @Nullable List<AccountingBalancesheetItem> assets,
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("currency") @Nullable String currency,
+            @JsonProperty("end_at") @Nullable OffsetDateTime endAt,
+            @JsonProperty("equity") @Nullable List<AccountingBalancesheetItem> equity,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("liabilities") @Nullable List<AccountingBalancesheetItem> liabilities,
+            @JsonProperty("name") @Nullable String name,
+            @JsonProperty("net_assets_amount") @Nullable Double netAssetsAmount,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("start_at") @Nullable OffsetDateTime startAt,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.assets = assets;
         this.createdAt = createdAt;
         this.currency = currency;
@@ -122,74 +109,58 @@ public class PropertyAccountingReportBalanceSheet {
     }
     
     public PropertyAccountingReportBalanceSheet() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<AccountingBalancesheetItem>> assets() {
-        return (Optional<List<AccountingBalancesheetItem>>) assets;
+        return Optional.ofNullable(this.assets);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<String> currency() {
-        return currency;
+        return Optional.ofNullable(this.currency);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> endAt() {
-        return endAt;
+        return Optional.ofNullable(this.endAt);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<AccountingBalancesheetItem>> equity() {
-        return (Optional<List<AccountingBalancesheetItem>>) equity;
+        return Optional.ofNullable(this.equity);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<AccountingBalancesheetItem>> liabilities() {
-        return (Optional<List<AccountingBalancesheetItem>>) liabilities;
+        return Optional.ofNullable(this.liabilities);
     }
 
-    @JsonIgnore
     public Optional<String> name() {
-        return name;
+        return Optional.ofNullable(this.name);
     }
 
-    @JsonIgnore
     public Optional<Double> netAssetsAmount() {
-        return netAssetsAmount;
+        return Optional.ofNullable(this.netAssetsAmount);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> startAt() {
-        return startAt;
+        return Optional.ofNullable(this.startAt);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
     public static Builder builder() {
@@ -197,161 +168,77 @@ public class PropertyAccountingReportBalanceSheet {
     }
 
 
-    public PropertyAccountingReportBalanceSheet withAssets(List<AccountingBalancesheetItem> assets) {
-        Utils.checkNotNull(assets, "assets");
-        this.assets = Optional.ofNullable(assets);
-        return this;
-    }
-
-
-    public PropertyAccountingReportBalanceSheet withAssets(Optional<? extends List<AccountingBalancesheetItem>> assets) {
-        Utils.checkNotNull(assets, "assets");
+    public PropertyAccountingReportBalanceSheet withAssets(@Nullable List<AccountingBalancesheetItem> assets) {
         this.assets = assets;
         return this;
     }
 
-    public PropertyAccountingReportBalanceSheet withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
 
-
-    public PropertyAccountingReportBalanceSheet withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public PropertyAccountingReportBalanceSheet withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public PropertyAccountingReportBalanceSheet withCurrency(String currency) {
-        Utils.checkNotNull(currency, "currency");
-        this.currency = Optional.ofNullable(currency);
-        return this;
-    }
 
-
-    public PropertyAccountingReportBalanceSheet withCurrency(Optional<String> currency) {
-        Utils.checkNotNull(currency, "currency");
+    public PropertyAccountingReportBalanceSheet withCurrency(@Nullable String currency) {
         this.currency = currency;
         return this;
     }
 
-    public PropertyAccountingReportBalanceSheet withEndAt(OffsetDateTime endAt) {
-        Utils.checkNotNull(endAt, "endAt");
-        this.endAt = Optional.ofNullable(endAt);
-        return this;
-    }
 
-
-    public PropertyAccountingReportBalanceSheet withEndAt(Optional<OffsetDateTime> endAt) {
-        Utils.checkNotNull(endAt, "endAt");
+    public PropertyAccountingReportBalanceSheet withEndAt(@Nullable OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
     }
 
-    public PropertyAccountingReportBalanceSheet withEquity(List<AccountingBalancesheetItem> equity) {
-        Utils.checkNotNull(equity, "equity");
-        this.equity = Optional.ofNullable(equity);
-        return this;
-    }
 
-
-    public PropertyAccountingReportBalanceSheet withEquity(Optional<? extends List<AccountingBalancesheetItem>> equity) {
-        Utils.checkNotNull(equity, "equity");
+    public PropertyAccountingReportBalanceSheet withEquity(@Nullable List<AccountingBalancesheetItem> equity) {
         this.equity = equity;
         return this;
     }
 
-    public PropertyAccountingReportBalanceSheet withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public PropertyAccountingReportBalanceSheet withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public PropertyAccountingReportBalanceSheet withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public PropertyAccountingReportBalanceSheet withLiabilities(List<AccountingBalancesheetItem> liabilities) {
-        Utils.checkNotNull(liabilities, "liabilities");
-        this.liabilities = Optional.ofNullable(liabilities);
-        return this;
-    }
 
-
-    public PropertyAccountingReportBalanceSheet withLiabilities(Optional<? extends List<AccountingBalancesheetItem>> liabilities) {
-        Utils.checkNotNull(liabilities, "liabilities");
+    public PropertyAccountingReportBalanceSheet withLiabilities(@Nullable List<AccountingBalancesheetItem> liabilities) {
         this.liabilities = liabilities;
         return this;
     }
 
-    public PropertyAccountingReportBalanceSheet withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = Optional.ofNullable(name);
-        return this;
-    }
 
-
-    public PropertyAccountingReportBalanceSheet withName(Optional<String> name) {
-        Utils.checkNotNull(name, "name");
+    public PropertyAccountingReportBalanceSheet withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
-    public PropertyAccountingReportBalanceSheet withNetAssetsAmount(double netAssetsAmount) {
-        Utils.checkNotNull(netAssetsAmount, "netAssetsAmount");
-        this.netAssetsAmount = Optional.ofNullable(netAssetsAmount);
-        return this;
-    }
 
-
-    public PropertyAccountingReportBalanceSheet withNetAssetsAmount(Optional<Double> netAssetsAmount) {
-        Utils.checkNotNull(netAssetsAmount, "netAssetsAmount");
+    public PropertyAccountingReportBalanceSheet withNetAssetsAmount(@Nullable Double netAssetsAmount) {
         this.netAssetsAmount = netAssetsAmount;
         return this;
     }
 
-    public PropertyAccountingReportBalanceSheet withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public PropertyAccountingReportBalanceSheet withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public PropertyAccountingReportBalanceSheet withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public PropertyAccountingReportBalanceSheet withStartAt(OffsetDateTime startAt) {
-        Utils.checkNotNull(startAt, "startAt");
-        this.startAt = Optional.ofNullable(startAt);
-        return this;
-    }
 
-
-    public PropertyAccountingReportBalanceSheet withStartAt(Optional<OffsetDateTime> startAt) {
-        Utils.checkNotNull(startAt, "startAt");
+    public PropertyAccountingReportBalanceSheet withStartAt(@Nullable OffsetDateTime startAt) {
         this.startAt = startAt;
         return this;
     }
 
-    public PropertyAccountingReportBalanceSheet withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public PropertyAccountingReportBalanceSheet withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public PropertyAccountingReportBalanceSheet withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -406,192 +293,95 @@ public class PropertyAccountingReportBalanceSheet {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends List<AccountingBalancesheetItem>> assets = Optional.empty();
+        private List<AccountingBalancesheetItem> assets;
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<String> currency = Optional.empty();
+        private String currency;
 
-        private Optional<OffsetDateTime> endAt = Optional.empty();
+        private OffsetDateTime endAt;
 
-        private Optional<? extends List<AccountingBalancesheetItem>> equity = Optional.empty();
+        private List<AccountingBalancesheetItem> equity;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<? extends List<AccountingBalancesheetItem>> liabilities = Optional.empty();
+        private List<AccountingBalancesheetItem> liabilities;
 
-        private Optional<String> name = Optional.empty();
+        private String name;
 
-        private Optional<Double> netAssetsAmount = Optional.empty();
+        private Double netAssetsAmount;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<OffsetDateTime> startAt = Optional.empty();
+        private OffsetDateTime startAt;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder assets(List<AccountingBalancesheetItem> assets) {
-            Utils.checkNotNull(assets, "assets");
-            this.assets = Optional.ofNullable(assets);
-            return this;
-        }
-
-        public Builder assets(Optional<? extends List<AccountingBalancesheetItem>> assets) {
-            Utils.checkNotNull(assets, "assets");
+        public Builder assets(@Nullable List<AccountingBalancesheetItem> assets) {
             this.assets = assets;
             return this;
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder currency(String currency) {
-            Utils.checkNotNull(currency, "currency");
-            this.currency = Optional.ofNullable(currency);
-            return this;
-        }
-
-        public Builder currency(Optional<String> currency) {
-            Utils.checkNotNull(currency, "currency");
+        public Builder currency(@Nullable String currency) {
             this.currency = currency;
             return this;
         }
 
-
-        public Builder endAt(OffsetDateTime endAt) {
-            Utils.checkNotNull(endAt, "endAt");
-            this.endAt = Optional.ofNullable(endAt);
-            return this;
-        }
-
-        public Builder endAt(Optional<OffsetDateTime> endAt) {
-            Utils.checkNotNull(endAt, "endAt");
+        public Builder endAt(@Nullable OffsetDateTime endAt) {
             this.endAt = endAt;
             return this;
         }
 
-
-        public Builder equity(List<AccountingBalancesheetItem> equity) {
-            Utils.checkNotNull(equity, "equity");
-            this.equity = Optional.ofNullable(equity);
-            return this;
-        }
-
-        public Builder equity(Optional<? extends List<AccountingBalancesheetItem>> equity) {
-            Utils.checkNotNull(equity, "equity");
+        public Builder equity(@Nullable List<AccountingBalancesheetItem> equity) {
             this.equity = equity;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder liabilities(List<AccountingBalancesheetItem> liabilities) {
-            Utils.checkNotNull(liabilities, "liabilities");
-            this.liabilities = Optional.ofNullable(liabilities);
-            return this;
-        }
-
-        public Builder liabilities(Optional<? extends List<AccountingBalancesheetItem>> liabilities) {
-            Utils.checkNotNull(liabilities, "liabilities");
+        public Builder liabilities(@Nullable List<AccountingBalancesheetItem> liabilities) {
             this.liabilities = liabilities;
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = Optional.ofNullable(name);
-            return this;
-        }
-
-        public Builder name(Optional<String> name) {
-            Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-
-        public Builder netAssetsAmount(double netAssetsAmount) {
-            Utils.checkNotNull(netAssetsAmount, "netAssetsAmount");
-            this.netAssetsAmount = Optional.ofNullable(netAssetsAmount);
-            return this;
-        }
-
-        public Builder netAssetsAmount(Optional<Double> netAssetsAmount) {
-            Utils.checkNotNull(netAssetsAmount, "netAssetsAmount");
+        public Builder netAssetsAmount(@Nullable Double netAssetsAmount) {
             this.netAssetsAmount = netAssetsAmount;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder startAt(OffsetDateTime startAt) {
-            Utils.checkNotNull(startAt, "startAt");
-            this.startAt = Optional.ofNullable(startAt);
-            return this;
-        }
-
-        public Builder startAt(Optional<OffsetDateTime> startAt) {
-            Utils.checkNotNull(startAt, "startAt");
+        public Builder startAt(@Nullable OffsetDateTime startAt) {
             this.startAt = startAt;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
         public PropertyAccountingReportBalanceSheet build() {
-
             return new PropertyAccountingReportBalanceSheet(
                 assets, createdAt, currency,
                 endAt, equity, id,

@@ -5,32 +5,45 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.UpdateCrmPipeline;
 import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class UpdateCrmPipelineRequestBuilder {
-
-    private UpdateCrmPipelineRequest request;
     private final SDKConfiguration sdkConfiguration;
-    private final Headers _headers = new Headers(); 
+    private final Headers _headers = new Headers();
+    private UpdateCrmPipelineRequest request;
 
     public UpdateCrmPipelineRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
 
-    public UpdateCrmPipelineRequestBuilder request(UpdateCrmPipelineRequest request) {
-        Utils.checkNotNull(request, "request");
-        this.request = request;
+    public UpdateCrmPipelineRequestBuilder request(@Nonnull UpdateCrmPipelineRequest request) {
+        this.request = Utils.checkNotNull(request, "request");
         return this;
     }
 
+    private UpdateCrmPipelineRequest _buildRequest() {
+        return this.request;
+    }
+    
+    public UpdateCrmPipelineRequestBuilder header(String name, String value) {
+        Utils.checkNotNull(name, "name");
+        Utils.checkNotNull(value, "value");
+        this._headers.add(name, value);
+        return this;
+    }
+
+    /**
+    * Executes the request and returns the response.
+    *
+    * @return The response from the server.
+    */
     public UpdateCrmPipelineResponse call() {
-        
         RequestOperation<UpdateCrmPipelineRequest, UpdateCrmPipelineResponse> operation
               = new UpdateCrmPipeline.Sync(sdkConfiguration, _headers);
-
-        return operation.handleResponse(operation.doRequest(request));
+        return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

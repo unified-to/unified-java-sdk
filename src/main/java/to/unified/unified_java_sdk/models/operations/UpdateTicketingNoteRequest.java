@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.TicketingNote;
@@ -30,7 +30,7 @@ public class UpdateTicketingNoteRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<UpdateTicketingNoteQueryParamFields>> fields;
+    private List<UpdateTicketingNoteQueryParamFields> fields;
 
     /**
      * ID of the Note
@@ -44,63 +44,56 @@ public class UpdateTicketingNoteRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
     @JsonCreator
     public UpdateTicketingNoteRequest(
-            TicketingNote ticketingNote,
-            String connectionId,
-            Optional<? extends List<UpdateTicketingNoteQueryParamFields>> fields,
-            String id,
-            Optional<String> raw) {
-        Utils.checkNotNull(ticketingNote, "ticketingNote");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(raw, "raw");
-        this.ticketingNote = ticketingNote;
-        this.connectionId = connectionId;
+            @Nonnull TicketingNote ticketingNote,
+            @Nonnull String connectionId,
+            @Nullable List<UpdateTicketingNoteQueryParamFields> fields,
+            @Nonnull String id,
+            @Nullable String raw) {
+        this.ticketingNote = Optional.ofNullable(ticketingNote)
+            .orElseThrow(() -> new IllegalArgumentException("ticketingNote cannot be null"));
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
-        this.id = id;
+        this.id = Optional.ofNullable(id)
+            .orElseThrow(() -> new IllegalArgumentException("id cannot be null"));
         this.raw = raw;
     }
     
     public UpdateTicketingNoteRequest(
-            TicketingNote ticketingNote,
-            String connectionId,
-            String id) {
-        this(ticketingNote, connectionId, Optional.empty(),
-            id, Optional.empty());
+            @Nonnull TicketingNote ticketingNote,
+            @Nonnull String connectionId,
+            @Nonnull String id) {
+        this(ticketingNote, connectionId, null,
+            id, null);
     }
 
-    @JsonIgnore
     public TicketingNote ticketingNote() {
-        return ticketingNote;
+        return this.ticketingNote;
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<UpdateTicketingNoteQueryParamFields>> fields() {
-        return (Optional<List<UpdateTicketingNoteQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
      * ID of the Note
      */
-    @JsonIgnore
     public String id() {
-        return id;
+        return this.id;
     }
 
     /**
@@ -108,9 +101,8 @@ public class UpdateTicketingNoteRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
     public static Builder builder() {
@@ -118,27 +110,17 @@ public class UpdateTicketingNoteRequest {
     }
 
 
-    public UpdateTicketingNoteRequest withTicketingNote(TicketingNote ticketingNote) {
-        Utils.checkNotNull(ticketingNote, "ticketingNote");
-        this.ticketingNote = ticketingNote;
+    public UpdateTicketingNoteRequest withTicketingNote(@Nonnull TicketingNote ticketingNote) {
+        this.ticketingNote = Utils.checkNotNull(ticketingNote, "ticketingNote");
         return this;
     }
+
 
     /**
      * ID of the connection
      */
-    public UpdateTicketingNoteRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public UpdateTicketingNoteRequest withFields(List<UpdateTicketingNoteQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public UpdateTicketingNoteRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -146,29 +128,17 @@ public class UpdateTicketingNoteRequest {
     /**
      * Fields to return
      */
-    public UpdateTicketingNoteRequest withFields(Optional<? extends List<UpdateTicketingNoteQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public UpdateTicketingNoteRequest withFields(@Nullable List<UpdateTicketingNoteQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
+
     /**
      * ID of the Note
      */
-    public UpdateTicketingNoteRequest withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = id;
-        return this;
-    }
-
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public UpdateTicketingNoteRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
+    public UpdateTicketingNoteRequest withId(@Nonnull String id) {
+        this.id = Utils.checkNotNull(id, "id");
         return this;
     }
 
@@ -178,11 +148,11 @@ public class UpdateTicketingNoteRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public UpdateTicketingNoteRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public UpdateTicketingNoteRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -225,71 +195,42 @@ public class UpdateTicketingNoteRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<UpdateTicketingNoteQueryParamFields>> fields = Optional.empty();
+        private List<UpdateTicketingNoteQueryParamFields> fields;
 
         private String id;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder ticketingNote(TicketingNote ticketingNote) {
-            Utils.checkNotNull(ticketingNote, "ticketingNote");
-            this.ticketingNote = ticketingNote;
+        public Builder ticketingNote(@Nonnull TicketingNote ticketingNote) {
+            this.ticketingNote = Utils.checkNotNull(ticketingNote, "ticketingNote");
             return this;
         }
-
 
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<UpdateTicketingNoteQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<UpdateTicketingNoteQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<UpdateTicketingNoteQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * ID of the Note
          */
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = id;
-            return this;
-        }
-
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
+        public Builder id(@Nonnull String id) {
+            this.id = Utils.checkNotNull(id, "id");
             return this;
         }
 
@@ -298,14 +239,12 @@ public class UpdateTicketingNoteRequest {
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
         public UpdateTicketingNoteRequest build() {
-
             return new UpdateTicketingNoteRequest(
                 ticketingNote, connectionId, fields,
                 id, raw);

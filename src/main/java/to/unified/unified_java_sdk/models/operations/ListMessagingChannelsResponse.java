@@ -4,12 +4,11 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.io.InputStream;
-import java.lang.Integer;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.List;
 import java.util.Optional;
@@ -27,7 +26,7 @@ public class ListMessagingChannelsResponse implements Response {
     /**
      * Successful
      */
-    private Optional<? extends List<MessagingChannel>> messagingChannels;
+    private List<MessagingChannel> messagingChannels;
 
     /**
      * HTTP response status code for this operation
@@ -41,59 +40,52 @@ public class ListMessagingChannelsResponse implements Response {
 
     @JsonCreator
     public ListMessagingChannelsResponse(
-            String contentType,
-            Optional<? extends List<MessagingChannel>> messagingChannels,
+            @Nonnull String contentType,
+            @Nullable List<MessagingChannel> messagingChannels,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(messagingChannels, "messagingChannels");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.contentType = contentType;
+            @Nonnull HttpResponse<InputStream> rawResponse) {
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.messagingChannels = messagingChannels;
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
     }
     
     public ListMessagingChannelsResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
-        this(contentType, Optional.empty(), statusCode,
+            @Nonnull HttpResponse<InputStream> rawResponse) {
+        this(contentType, null, statusCode,
             rawResponse);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<MessagingChannel>> messagingChannels() {
-        return (Optional<List<MessagingChannel>>) messagingChannels;
+        return Optional.ofNullable(this.messagingChannels);
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<InputStream> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     public static Builder builder() {
@@ -104,18 +96,8 @@ public class ListMessagingChannelsResponse implements Response {
     /**
      * HTTP response content type for this operation
      */
-    public ListMessagingChannelsResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
-        return this;
-    }
-
-    /**
-     * Successful
-     */
-    public ListMessagingChannelsResponse withMessagingChannels(List<MessagingChannel> messagingChannels) {
-        Utils.checkNotNull(messagingChannels, "messagingChannels");
-        this.messagingChannels = Optional.ofNullable(messagingChannels);
+    public ListMessagingChannelsResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
 
@@ -123,29 +105,29 @@ public class ListMessagingChannelsResponse implements Response {
     /**
      * Successful
      */
-    public ListMessagingChannelsResponse withMessagingChannels(Optional<? extends List<MessagingChannel>> messagingChannels) {
-        Utils.checkNotNull(messagingChannels, "messagingChannels");
+    public ListMessagingChannelsResponse withMessagingChannels(@Nullable List<MessagingChannel> messagingChannels) {
         this.messagingChannels = messagingChannels;
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public ListMessagingChannelsResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public ListMessagingChannelsResponse withRawResponse(HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
+    public ListMessagingChannelsResponse withRawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -184,9 +166,9 @@ public class ListMessagingChannelsResponse implements Response {
 
         private String contentType;
 
-        private Optional<? extends List<MessagingChannel>> messagingChannels = Optional.empty();
+        private List<MessagingChannel> messagingChannels;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<InputStream> rawResponse;
 
@@ -194,57 +176,39 @@ public class ListMessagingChannelsResponse implements Response {
           // force use of static builder() method
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
-            return this;
-        }
-
-
-        /**
-         * Successful
-         */
-        public Builder messagingChannels(List<MessagingChannel> messagingChannels) {
-            Utils.checkNotNull(messagingChannels, "messagingChannels");
-            this.messagingChannels = Optional.ofNullable(messagingChannels);
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
 
         /**
          * Successful
          */
-        public Builder messagingChannels(Optional<? extends List<MessagingChannel>> messagingChannels) {
-            Utils.checkNotNull(messagingChannels, "messagingChannels");
+        public Builder messagingChannels(@Nullable List<MessagingChannel> messagingChannels) {
             this.messagingChannels = messagingChannels;
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<InputStream> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
+        public Builder rawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         public ListMessagingChannelsResponse build() {
-
             return new ListMessagingChannelsResponse(
                 contentType, messagingChannels, statusCode,
                 rawResponse);

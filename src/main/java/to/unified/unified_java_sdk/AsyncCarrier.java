@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.GetShippingCarrierRequest;
 import to.unified.unified_java_sdk.models.operations.ListShippingCarriersRequest;
@@ -52,7 +53,7 @@ public class AsyncCarrier {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetShippingCarrierResponse>} - The async response
      */
-    public CompletableFuture<GetShippingCarrierResponse> getShippingCarrier(GetShippingCarrierRequest request) {
+    public CompletableFuture<GetShippingCarrierResponse> getShippingCarrier(@Nonnull GetShippingCarrierRequest request) {
         AsyncRequestOperation<GetShippingCarrierRequest, GetShippingCarrierResponse> operation
               = new GetShippingCarrier.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -75,7 +76,7 @@ public class AsyncCarrier {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListShippingCarriersResponse>} - The async response
      */
-    public CompletableFuture<ListShippingCarriersResponse> listShippingCarriers(ListShippingCarriersRequest request) {
+    public CompletableFuture<ListShippingCarriersResponse> listShippingCarriers(@Nonnull ListShippingCarriersRequest request) {
         AsyncRequestOperation<ListShippingCarriersRequest, ListShippingCarriersResponse> operation
               = new ListShippingCarriers.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

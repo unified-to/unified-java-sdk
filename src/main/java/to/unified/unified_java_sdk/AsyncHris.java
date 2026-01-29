@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateHrisBenefitRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisCompanyRequest;
@@ -252,7 +253,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateHrisBenefitResponse>} - The async response
      */
-    public CompletableFuture<CreateHrisBenefitResponse> createHrisBenefit(CreateHrisBenefitRequest request) {
+    public CompletableFuture<CreateHrisBenefitResponse> createHrisBenefit(@Nonnull CreateHrisBenefitRequest request) {
         AsyncRequestOperation<CreateHrisBenefitRequest, CreateHrisBenefitResponse> operation
               = new CreateHrisBenefit.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -275,7 +276,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateHrisCompanyResponse>} - The async response
      */
-    public CompletableFuture<CreateHrisCompanyResponse> createHrisCompany(CreateHrisCompanyRequest request) {
+    public CompletableFuture<CreateHrisCompanyResponse> createHrisCompany(@Nonnull CreateHrisCompanyRequest request) {
         AsyncRequestOperation<CreateHrisCompanyRequest, CreateHrisCompanyResponse> operation
               = new CreateHrisCompany.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -298,7 +299,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateHrisDeductionResponse>} - The async response
      */
-    public CompletableFuture<CreateHrisDeductionResponse> createHrisDeduction(CreateHrisDeductionRequest request) {
+    public CompletableFuture<CreateHrisDeductionResponse> createHrisDeduction(@Nonnull CreateHrisDeductionRequest request) {
         AsyncRequestOperation<CreateHrisDeductionRequest, CreateHrisDeductionResponse> operation
               = new CreateHrisDeduction.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -321,7 +322,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateHrisDeviceResponse>} - The async response
      */
-    public CompletableFuture<CreateHrisDeviceResponse> createHrisDevice(CreateHrisDeviceRequest request) {
+    public CompletableFuture<CreateHrisDeviceResponse> createHrisDevice(@Nonnull CreateHrisDeviceRequest request) {
         AsyncRequestOperation<CreateHrisDeviceRequest, CreateHrisDeviceResponse> operation
               = new CreateHrisDevice.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -344,7 +345,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateHrisEmployeeResponse>} - The async response
      */
-    public CompletableFuture<CreateHrisEmployeeResponse> createHrisEmployee(CreateHrisEmployeeRequest request) {
+    public CompletableFuture<CreateHrisEmployeeResponse> createHrisEmployee(@Nonnull CreateHrisEmployeeRequest request) {
         AsyncRequestOperation<CreateHrisEmployeeRequest, CreateHrisEmployeeResponse> operation
               = new CreateHrisEmployee.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -367,7 +368,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateHrisGroupResponse>} - The async response
      */
-    public CompletableFuture<CreateHrisGroupResponse> createHrisGroup(CreateHrisGroupRequest request) {
+    public CompletableFuture<CreateHrisGroupResponse> createHrisGroup(@Nonnull CreateHrisGroupRequest request) {
         AsyncRequestOperation<CreateHrisGroupRequest, CreateHrisGroupResponse> operation
               = new CreateHrisGroup.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -390,7 +391,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateHrisLocationResponse>} - The async response
      */
-    public CompletableFuture<CreateHrisLocationResponse> createHrisLocation(CreateHrisLocationRequest request) {
+    public CompletableFuture<CreateHrisLocationResponse> createHrisLocation(@Nonnull CreateHrisLocationRequest request) {
         AsyncRequestOperation<CreateHrisLocationRequest, CreateHrisLocationResponse> operation
               = new CreateHrisLocation.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -413,7 +414,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateHrisTimeshiftResponse>} - The async response
      */
-    public CompletableFuture<CreateHrisTimeshiftResponse> createHrisTimeshift(CreateHrisTimeshiftRequest request) {
+    public CompletableFuture<CreateHrisTimeshiftResponse> createHrisTimeshift(@Nonnull CreateHrisTimeshiftRequest request) {
         AsyncRequestOperation<CreateHrisTimeshiftRequest, CreateHrisTimeshiftResponse> operation
               = new CreateHrisTimeshift.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -436,7 +437,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetHrisBenefitResponse>} - The async response
      */
-    public CompletableFuture<GetHrisBenefitResponse> getHrisBenefit(GetHrisBenefitRequest request) {
+    public CompletableFuture<GetHrisBenefitResponse> getHrisBenefit(@Nonnull GetHrisBenefitRequest request) {
         AsyncRequestOperation<GetHrisBenefitRequest, GetHrisBenefitResponse> operation
               = new GetHrisBenefit.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -459,7 +460,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetHrisCompanyResponse>} - The async response
      */
-    public CompletableFuture<GetHrisCompanyResponse> getHrisCompany(GetHrisCompanyRequest request) {
+    public CompletableFuture<GetHrisCompanyResponse> getHrisCompany(@Nonnull GetHrisCompanyRequest request) {
         AsyncRequestOperation<GetHrisCompanyRequest, GetHrisCompanyResponse> operation
               = new GetHrisCompany.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -482,7 +483,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetHrisDeductionResponse>} - The async response
      */
-    public CompletableFuture<GetHrisDeductionResponse> getHrisDeduction(GetHrisDeductionRequest request) {
+    public CompletableFuture<GetHrisDeductionResponse> getHrisDeduction(@Nonnull GetHrisDeductionRequest request) {
         AsyncRequestOperation<GetHrisDeductionRequest, GetHrisDeductionResponse> operation
               = new GetHrisDeduction.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -505,7 +506,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetHrisDeviceResponse>} - The async response
      */
-    public CompletableFuture<GetHrisDeviceResponse> getHrisDevice(GetHrisDeviceRequest request) {
+    public CompletableFuture<GetHrisDeviceResponse> getHrisDevice(@Nonnull GetHrisDeviceRequest request) {
         AsyncRequestOperation<GetHrisDeviceRequest, GetHrisDeviceResponse> operation
               = new GetHrisDevice.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -528,7 +529,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetHrisEmployeeResponse>} - The async response
      */
-    public CompletableFuture<GetHrisEmployeeResponse> getHrisEmployee(GetHrisEmployeeRequest request) {
+    public CompletableFuture<GetHrisEmployeeResponse> getHrisEmployee(@Nonnull GetHrisEmployeeRequest request) {
         AsyncRequestOperation<GetHrisEmployeeRequest, GetHrisEmployeeResponse> operation
               = new GetHrisEmployee.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -551,7 +552,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetHrisGroupResponse>} - The async response
      */
-    public CompletableFuture<GetHrisGroupResponse> getHrisGroup(GetHrisGroupRequest request) {
+    public CompletableFuture<GetHrisGroupResponse> getHrisGroup(@Nonnull GetHrisGroupRequest request) {
         AsyncRequestOperation<GetHrisGroupRequest, GetHrisGroupResponse> operation
               = new GetHrisGroup.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -574,7 +575,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetHrisLocationResponse>} - The async response
      */
-    public CompletableFuture<GetHrisLocationResponse> getHrisLocation(GetHrisLocationRequest request) {
+    public CompletableFuture<GetHrisLocationResponse> getHrisLocation(@Nonnull GetHrisLocationRequest request) {
         AsyncRequestOperation<GetHrisLocationRequest, GetHrisLocationResponse> operation
               = new GetHrisLocation.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -597,7 +598,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetHrisPayslipResponse>} - The async response
      */
-    public CompletableFuture<GetHrisPayslipResponse> getHrisPayslip(GetHrisPayslipRequest request) {
+    public CompletableFuture<GetHrisPayslipResponse> getHrisPayslip(@Nonnull GetHrisPayslipRequest request) {
         AsyncRequestOperation<GetHrisPayslipRequest, GetHrisPayslipResponse> operation
               = new GetHrisPayslip.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -620,7 +621,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetHrisTimeoffResponse>} - The async response
      */
-    public CompletableFuture<GetHrisTimeoffResponse> getHrisTimeoff(GetHrisTimeoffRequest request) {
+    public CompletableFuture<GetHrisTimeoffResponse> getHrisTimeoff(@Nonnull GetHrisTimeoffRequest request) {
         AsyncRequestOperation<GetHrisTimeoffRequest, GetHrisTimeoffResponse> operation
               = new GetHrisTimeoff.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -643,7 +644,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetHrisTimeshiftResponse>} - The async response
      */
-    public CompletableFuture<GetHrisTimeshiftResponse> getHrisTimeshift(GetHrisTimeshiftRequest request) {
+    public CompletableFuture<GetHrisTimeshiftResponse> getHrisTimeshift(@Nonnull GetHrisTimeshiftRequest request) {
         AsyncRequestOperation<GetHrisTimeshiftRequest, GetHrisTimeshiftResponse> operation
               = new GetHrisTimeshift.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -666,7 +667,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListHrisBenefitsResponse>} - The async response
      */
-    public CompletableFuture<ListHrisBenefitsResponse> listHrisBenefits(ListHrisBenefitsRequest request) {
+    public CompletableFuture<ListHrisBenefitsResponse> listHrisBenefits(@Nonnull ListHrisBenefitsRequest request) {
         AsyncRequestOperation<ListHrisBenefitsRequest, ListHrisBenefitsResponse> operation
               = new ListHrisBenefits.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -689,7 +690,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListHrisCompaniesResponse>} - The async response
      */
-    public CompletableFuture<ListHrisCompaniesResponse> listHrisCompanies(ListHrisCompaniesRequest request) {
+    public CompletableFuture<ListHrisCompaniesResponse> listHrisCompanies(@Nonnull ListHrisCompaniesRequest request) {
         AsyncRequestOperation<ListHrisCompaniesRequest, ListHrisCompaniesResponse> operation
               = new ListHrisCompanies.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -712,7 +713,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListHrisDeductionsResponse>} - The async response
      */
-    public CompletableFuture<ListHrisDeductionsResponse> listHrisDeductions(ListHrisDeductionsRequest request) {
+    public CompletableFuture<ListHrisDeductionsResponse> listHrisDeductions(@Nonnull ListHrisDeductionsRequest request) {
         AsyncRequestOperation<ListHrisDeductionsRequest, ListHrisDeductionsResponse> operation
               = new ListHrisDeductions.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -735,7 +736,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListHrisDevicesResponse>} - The async response
      */
-    public CompletableFuture<ListHrisDevicesResponse> listHrisDevices(ListHrisDevicesRequest request) {
+    public CompletableFuture<ListHrisDevicesResponse> listHrisDevices(@Nonnull ListHrisDevicesRequest request) {
         AsyncRequestOperation<ListHrisDevicesRequest, ListHrisDevicesResponse> operation
               = new ListHrisDevices.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -758,7 +759,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListHrisEmployeesResponse>} - The async response
      */
-    public CompletableFuture<ListHrisEmployeesResponse> listHrisEmployees(ListHrisEmployeesRequest request) {
+    public CompletableFuture<ListHrisEmployeesResponse> listHrisEmployees(@Nonnull ListHrisEmployeesRequest request) {
         AsyncRequestOperation<ListHrisEmployeesRequest, ListHrisEmployeesResponse> operation
               = new ListHrisEmployees.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -781,7 +782,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListHrisGroupsResponse>} - The async response
      */
-    public CompletableFuture<ListHrisGroupsResponse> listHrisGroups(ListHrisGroupsRequest request) {
+    public CompletableFuture<ListHrisGroupsResponse> listHrisGroups(@Nonnull ListHrisGroupsRequest request) {
         AsyncRequestOperation<ListHrisGroupsRequest, ListHrisGroupsResponse> operation
               = new ListHrisGroups.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -804,7 +805,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListHrisLocationsResponse>} - The async response
      */
-    public CompletableFuture<ListHrisLocationsResponse> listHrisLocations(ListHrisLocationsRequest request) {
+    public CompletableFuture<ListHrisLocationsResponse> listHrisLocations(@Nonnull ListHrisLocationsRequest request) {
         AsyncRequestOperation<ListHrisLocationsRequest, ListHrisLocationsResponse> operation
               = new ListHrisLocations.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -827,7 +828,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListHrisPayslipsResponse>} - The async response
      */
-    public CompletableFuture<ListHrisPayslipsResponse> listHrisPayslips(ListHrisPayslipsRequest request) {
+    public CompletableFuture<ListHrisPayslipsResponse> listHrisPayslips(@Nonnull ListHrisPayslipsRequest request) {
         AsyncRequestOperation<ListHrisPayslipsRequest, ListHrisPayslipsResponse> operation
               = new ListHrisPayslips.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -850,7 +851,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListHrisTimeoffsResponse>} - The async response
      */
-    public CompletableFuture<ListHrisTimeoffsResponse> listHrisTimeoffs(ListHrisTimeoffsRequest request) {
+    public CompletableFuture<ListHrisTimeoffsResponse> listHrisTimeoffs(@Nonnull ListHrisTimeoffsRequest request) {
         AsyncRequestOperation<ListHrisTimeoffsRequest, ListHrisTimeoffsResponse> operation
               = new ListHrisTimeoffs.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -873,7 +874,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListHrisTimeshiftsResponse>} - The async response
      */
-    public CompletableFuture<ListHrisTimeshiftsResponse> listHrisTimeshifts(ListHrisTimeshiftsRequest request) {
+    public CompletableFuture<ListHrisTimeshiftsResponse> listHrisTimeshifts(@Nonnull ListHrisTimeshiftsRequest request) {
         AsyncRequestOperation<ListHrisTimeshiftsRequest, ListHrisTimeshiftsResponse> operation
               = new ListHrisTimeshifts.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -896,7 +897,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchHrisBenefitResponse>} - The async response
      */
-    public CompletableFuture<PatchHrisBenefitResponse> patchHrisBenefit(PatchHrisBenefitRequest request) {
+    public CompletableFuture<PatchHrisBenefitResponse> patchHrisBenefit(@Nonnull PatchHrisBenefitRequest request) {
         AsyncRequestOperation<PatchHrisBenefitRequest, PatchHrisBenefitResponse> operation
               = new PatchHrisBenefit.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -919,7 +920,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchHrisCompanyResponse>} - The async response
      */
-    public CompletableFuture<PatchHrisCompanyResponse> patchHrisCompany(PatchHrisCompanyRequest request) {
+    public CompletableFuture<PatchHrisCompanyResponse> patchHrisCompany(@Nonnull PatchHrisCompanyRequest request) {
         AsyncRequestOperation<PatchHrisCompanyRequest, PatchHrisCompanyResponse> operation
               = new PatchHrisCompany.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -942,7 +943,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchHrisDeductionResponse>} - The async response
      */
-    public CompletableFuture<PatchHrisDeductionResponse> patchHrisDeduction(PatchHrisDeductionRequest request) {
+    public CompletableFuture<PatchHrisDeductionResponse> patchHrisDeduction(@Nonnull PatchHrisDeductionRequest request) {
         AsyncRequestOperation<PatchHrisDeductionRequest, PatchHrisDeductionResponse> operation
               = new PatchHrisDeduction.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -965,7 +966,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchHrisDeviceResponse>} - The async response
      */
-    public CompletableFuture<PatchHrisDeviceResponse> patchHrisDevice(PatchHrisDeviceRequest request) {
+    public CompletableFuture<PatchHrisDeviceResponse> patchHrisDevice(@Nonnull PatchHrisDeviceRequest request) {
         AsyncRequestOperation<PatchHrisDeviceRequest, PatchHrisDeviceResponse> operation
               = new PatchHrisDevice.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -988,7 +989,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchHrisEmployeeResponse>} - The async response
      */
-    public CompletableFuture<PatchHrisEmployeeResponse> patchHrisEmployee(PatchHrisEmployeeRequest request) {
+    public CompletableFuture<PatchHrisEmployeeResponse> patchHrisEmployee(@Nonnull PatchHrisEmployeeRequest request) {
         AsyncRequestOperation<PatchHrisEmployeeRequest, PatchHrisEmployeeResponse> operation
               = new PatchHrisEmployee.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -1011,7 +1012,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchHrisGroupResponse>} - The async response
      */
-    public CompletableFuture<PatchHrisGroupResponse> patchHrisGroup(PatchHrisGroupRequest request) {
+    public CompletableFuture<PatchHrisGroupResponse> patchHrisGroup(@Nonnull PatchHrisGroupRequest request) {
         AsyncRequestOperation<PatchHrisGroupRequest, PatchHrisGroupResponse> operation
               = new PatchHrisGroup.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -1034,7 +1035,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchHrisLocationResponse>} - The async response
      */
-    public CompletableFuture<PatchHrisLocationResponse> patchHrisLocation(PatchHrisLocationRequest request) {
+    public CompletableFuture<PatchHrisLocationResponse> patchHrisLocation(@Nonnull PatchHrisLocationRequest request) {
         AsyncRequestOperation<PatchHrisLocationRequest, PatchHrisLocationResponse> operation
               = new PatchHrisLocation.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -1057,7 +1058,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchHrisTimeshiftResponse>} - The async response
      */
-    public CompletableFuture<PatchHrisTimeshiftResponse> patchHrisTimeshift(PatchHrisTimeshiftRequest request) {
+    public CompletableFuture<PatchHrisTimeshiftResponse> patchHrisTimeshift(@Nonnull PatchHrisTimeshiftRequest request) {
         AsyncRequestOperation<PatchHrisTimeshiftRequest, PatchHrisTimeshiftResponse> operation
               = new PatchHrisTimeshift.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -1080,7 +1081,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveHrisBenefitResponse>} - The async response
      */
-    public CompletableFuture<RemoveHrisBenefitResponse> removeHrisBenefit(RemoveHrisBenefitRequest request) {
+    public CompletableFuture<RemoveHrisBenefitResponse> removeHrisBenefit(@Nonnull RemoveHrisBenefitRequest request) {
         AsyncRequestOperation<RemoveHrisBenefitRequest, RemoveHrisBenefitResponse> operation
               = new RemoveHrisBenefit.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -1103,7 +1104,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveHrisCompanyResponse>} - The async response
      */
-    public CompletableFuture<RemoveHrisCompanyResponse> removeHrisCompany(RemoveHrisCompanyRequest request) {
+    public CompletableFuture<RemoveHrisCompanyResponse> removeHrisCompany(@Nonnull RemoveHrisCompanyRequest request) {
         AsyncRequestOperation<RemoveHrisCompanyRequest, RemoveHrisCompanyResponse> operation
               = new RemoveHrisCompany.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -1126,7 +1127,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveHrisDeductionResponse>} - The async response
      */
-    public CompletableFuture<RemoveHrisDeductionResponse> removeHrisDeduction(RemoveHrisDeductionRequest request) {
+    public CompletableFuture<RemoveHrisDeductionResponse> removeHrisDeduction(@Nonnull RemoveHrisDeductionRequest request) {
         AsyncRequestOperation<RemoveHrisDeductionRequest, RemoveHrisDeductionResponse> operation
               = new RemoveHrisDeduction.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -1149,7 +1150,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveHrisDeviceResponse>} - The async response
      */
-    public CompletableFuture<RemoveHrisDeviceResponse> removeHrisDevice(RemoveHrisDeviceRequest request) {
+    public CompletableFuture<RemoveHrisDeviceResponse> removeHrisDevice(@Nonnull RemoveHrisDeviceRequest request) {
         AsyncRequestOperation<RemoveHrisDeviceRequest, RemoveHrisDeviceResponse> operation
               = new RemoveHrisDevice.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -1172,7 +1173,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveHrisEmployeeResponse>} - The async response
      */
-    public CompletableFuture<RemoveHrisEmployeeResponse> removeHrisEmployee(RemoveHrisEmployeeRequest request) {
+    public CompletableFuture<RemoveHrisEmployeeResponse> removeHrisEmployee(@Nonnull RemoveHrisEmployeeRequest request) {
         AsyncRequestOperation<RemoveHrisEmployeeRequest, RemoveHrisEmployeeResponse> operation
               = new RemoveHrisEmployee.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -1195,7 +1196,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveHrisGroupResponse>} - The async response
      */
-    public CompletableFuture<RemoveHrisGroupResponse> removeHrisGroup(RemoveHrisGroupRequest request) {
+    public CompletableFuture<RemoveHrisGroupResponse> removeHrisGroup(@Nonnull RemoveHrisGroupRequest request) {
         AsyncRequestOperation<RemoveHrisGroupRequest, RemoveHrisGroupResponse> operation
               = new RemoveHrisGroup.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -1218,7 +1219,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveHrisLocationResponse>} - The async response
      */
-    public CompletableFuture<RemoveHrisLocationResponse> removeHrisLocation(RemoveHrisLocationRequest request) {
+    public CompletableFuture<RemoveHrisLocationResponse> removeHrisLocation(@Nonnull RemoveHrisLocationRequest request) {
         AsyncRequestOperation<RemoveHrisLocationRequest, RemoveHrisLocationResponse> operation
               = new RemoveHrisLocation.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -1241,7 +1242,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveHrisTimeshiftResponse>} - The async response
      */
-    public CompletableFuture<RemoveHrisTimeshiftResponse> removeHrisTimeshift(RemoveHrisTimeshiftRequest request) {
+    public CompletableFuture<RemoveHrisTimeshiftResponse> removeHrisTimeshift(@Nonnull RemoveHrisTimeshiftRequest request) {
         AsyncRequestOperation<RemoveHrisTimeshiftRequest, RemoveHrisTimeshiftResponse> operation
               = new RemoveHrisTimeshift.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -1264,7 +1265,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateHrisBenefitResponse>} - The async response
      */
-    public CompletableFuture<UpdateHrisBenefitResponse> updateHrisBenefit(UpdateHrisBenefitRequest request) {
+    public CompletableFuture<UpdateHrisBenefitResponse> updateHrisBenefit(@Nonnull UpdateHrisBenefitRequest request) {
         AsyncRequestOperation<UpdateHrisBenefitRequest, UpdateHrisBenefitResponse> operation
               = new UpdateHrisBenefit.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -1287,7 +1288,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateHrisCompanyResponse>} - The async response
      */
-    public CompletableFuture<UpdateHrisCompanyResponse> updateHrisCompany(UpdateHrisCompanyRequest request) {
+    public CompletableFuture<UpdateHrisCompanyResponse> updateHrisCompany(@Nonnull UpdateHrisCompanyRequest request) {
         AsyncRequestOperation<UpdateHrisCompanyRequest, UpdateHrisCompanyResponse> operation
               = new UpdateHrisCompany.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -1310,7 +1311,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateHrisDeductionResponse>} - The async response
      */
-    public CompletableFuture<UpdateHrisDeductionResponse> updateHrisDeduction(UpdateHrisDeductionRequest request) {
+    public CompletableFuture<UpdateHrisDeductionResponse> updateHrisDeduction(@Nonnull UpdateHrisDeductionRequest request) {
         AsyncRequestOperation<UpdateHrisDeductionRequest, UpdateHrisDeductionResponse> operation
               = new UpdateHrisDeduction.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -1333,7 +1334,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateHrisDeviceResponse>} - The async response
      */
-    public CompletableFuture<UpdateHrisDeviceResponse> updateHrisDevice(UpdateHrisDeviceRequest request) {
+    public CompletableFuture<UpdateHrisDeviceResponse> updateHrisDevice(@Nonnull UpdateHrisDeviceRequest request) {
         AsyncRequestOperation<UpdateHrisDeviceRequest, UpdateHrisDeviceResponse> operation
               = new UpdateHrisDevice.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -1356,7 +1357,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateHrisEmployeeResponse>} - The async response
      */
-    public CompletableFuture<UpdateHrisEmployeeResponse> updateHrisEmployee(UpdateHrisEmployeeRequest request) {
+    public CompletableFuture<UpdateHrisEmployeeResponse> updateHrisEmployee(@Nonnull UpdateHrisEmployeeRequest request) {
         AsyncRequestOperation<UpdateHrisEmployeeRequest, UpdateHrisEmployeeResponse> operation
               = new UpdateHrisEmployee.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -1379,7 +1380,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateHrisGroupResponse>} - The async response
      */
-    public CompletableFuture<UpdateHrisGroupResponse> updateHrisGroup(UpdateHrisGroupRequest request) {
+    public CompletableFuture<UpdateHrisGroupResponse> updateHrisGroup(@Nonnull UpdateHrisGroupRequest request) {
         AsyncRequestOperation<UpdateHrisGroupRequest, UpdateHrisGroupResponse> operation
               = new UpdateHrisGroup.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -1402,7 +1403,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateHrisLocationResponse>} - The async response
      */
-    public CompletableFuture<UpdateHrisLocationResponse> updateHrisLocation(UpdateHrisLocationRequest request) {
+    public CompletableFuture<UpdateHrisLocationResponse> updateHrisLocation(@Nonnull UpdateHrisLocationRequest request) {
         AsyncRequestOperation<UpdateHrisLocationRequest, UpdateHrisLocationResponse> operation
               = new UpdateHrisLocation.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -1425,7 +1426,7 @@ public class AsyncHris {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateHrisTimeshiftResponse>} - The async response
      */
-    public CompletableFuture<UpdateHrisTimeshiftResponse> updateHrisTimeshift(UpdateHrisTimeshiftRequest request) {
+    public CompletableFuture<UpdateHrisTimeshiftResponse> updateHrisTimeshift(@Nonnull UpdateHrisTimeshiftRequest request) {
         AsyncRequestOperation<UpdateHrisTimeshiftRequest, UpdateHrisTimeshiftResponse> operation
               = new UpdateHrisTimeshift.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

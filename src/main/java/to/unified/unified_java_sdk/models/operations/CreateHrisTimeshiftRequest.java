@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.HrisTimeshift;
@@ -30,7 +30,7 @@ public class CreateHrisTimeshiftRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<CreateHrisTimeshiftQueryParamFields>> fields;
+    private List<CreateHrisTimeshiftQueryParamFields> fields;
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
@@ -38,51 +38,45 @@ public class CreateHrisTimeshiftRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
     @JsonCreator
     public CreateHrisTimeshiftRequest(
-            HrisTimeshift hrisTimeshift,
-            String connectionId,
-            Optional<? extends List<CreateHrisTimeshiftQueryParamFields>> fields,
-            Optional<String> raw) {
-        Utils.checkNotNull(hrisTimeshift, "hrisTimeshift");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(raw, "raw");
-        this.hrisTimeshift = hrisTimeshift;
-        this.connectionId = connectionId;
+            @Nonnull HrisTimeshift hrisTimeshift,
+            @Nonnull String connectionId,
+            @Nullable List<CreateHrisTimeshiftQueryParamFields> fields,
+            @Nullable String raw) {
+        this.hrisTimeshift = Optional.ofNullable(hrisTimeshift)
+            .orElseThrow(() -> new IllegalArgumentException("hrisTimeshift cannot be null"));
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
         this.raw = raw;
     }
     
     public CreateHrisTimeshiftRequest(
-            HrisTimeshift hrisTimeshift,
-            String connectionId) {
-        this(hrisTimeshift, connectionId, Optional.empty(),
-            Optional.empty());
+            @Nonnull HrisTimeshift hrisTimeshift,
+            @Nonnull String connectionId) {
+        this(hrisTimeshift, connectionId, null,
+            null);
     }
 
-    @JsonIgnore
     public HrisTimeshift hrisTimeshift() {
-        return hrisTimeshift;
+        return this.hrisTimeshift;
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<CreateHrisTimeshiftQueryParamFields>> fields() {
-        return (Optional<List<CreateHrisTimeshiftQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
@@ -90,9 +84,8 @@ public class CreateHrisTimeshiftRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
     public static Builder builder() {
@@ -100,27 +93,17 @@ public class CreateHrisTimeshiftRequest {
     }
 
 
-    public CreateHrisTimeshiftRequest withHrisTimeshift(HrisTimeshift hrisTimeshift) {
-        Utils.checkNotNull(hrisTimeshift, "hrisTimeshift");
-        this.hrisTimeshift = hrisTimeshift;
+    public CreateHrisTimeshiftRequest withHrisTimeshift(@Nonnull HrisTimeshift hrisTimeshift) {
+        this.hrisTimeshift = Utils.checkNotNull(hrisTimeshift, "hrisTimeshift");
         return this;
     }
+
 
     /**
      * ID of the connection
      */
-    public CreateHrisTimeshiftRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public CreateHrisTimeshiftRequest withFields(List<CreateHrisTimeshiftQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public CreateHrisTimeshiftRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -128,34 +111,22 @@ public class CreateHrisTimeshiftRequest {
     /**
      * Fields to return
      */
-    public CreateHrisTimeshiftRequest withFields(Optional<? extends List<CreateHrisTimeshiftQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public CreateHrisTimeshiftRequest withFields(@Nullable List<CreateHrisTimeshiftQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public CreateHrisTimeshiftRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
-
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public CreateHrisTimeshiftRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public CreateHrisTimeshiftRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -196,75 +167,46 @@ public class CreateHrisTimeshiftRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<CreateHrisTimeshiftQueryParamFields>> fields = Optional.empty();
+        private List<CreateHrisTimeshiftQueryParamFields> fields;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder hrisTimeshift(HrisTimeshift hrisTimeshift) {
-            Utils.checkNotNull(hrisTimeshift, "hrisTimeshift");
-            this.hrisTimeshift = hrisTimeshift;
+        public Builder hrisTimeshift(@Nonnull HrisTimeshift hrisTimeshift) {
+            this.hrisTimeshift = Utils.checkNotNull(hrisTimeshift, "hrisTimeshift");
             return this;
         }
-
 
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<CreateHrisTimeshiftQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<CreateHrisTimeshiftQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<CreateHrisTimeshiftQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
         public CreateHrisTimeshiftRequest build() {
-
             return new CreateHrisTimeshiftRequest(
                 hrisTimeshift, connectionId, fields,
                 raw);

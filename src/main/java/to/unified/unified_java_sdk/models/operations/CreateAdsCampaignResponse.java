@@ -4,12 +4,11 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.io.InputStream;
-import java.lang.Integer;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.AdsCampaign;
@@ -21,7 +20,7 @@ public class CreateAdsCampaignResponse implements Response {
     /**
      * Successful
      */
-    private Optional<? extends AdsCampaign> adsCampaign;
+    private AdsCampaign adsCampaign;
 
     /**
      * HTTP response content type for this operation
@@ -40,59 +39,52 @@ public class CreateAdsCampaignResponse implements Response {
 
     @JsonCreator
     public CreateAdsCampaignResponse(
-            Optional<? extends AdsCampaign> adsCampaign,
-            String contentType,
+            @Nullable AdsCampaign adsCampaign,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(adsCampaign, "adsCampaign");
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
+            @Nonnull HttpResponse<InputStream> rawResponse) {
         this.adsCampaign = adsCampaign;
-        this.contentType = contentType;
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
     }
     
     public CreateAdsCampaignResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
-        this(Optional.empty(), contentType, statusCode,
+            @Nonnull HttpResponse<InputStream> rawResponse) {
+        this(null, contentType, statusCode,
             rawResponse);
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<AdsCampaign> adsCampaign() {
-        return (Optional<AdsCampaign>) adsCampaign;
+        return Optional.ofNullable(this.adsCampaign);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<InputStream> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     public static Builder builder() {
@@ -103,48 +95,38 @@ public class CreateAdsCampaignResponse implements Response {
     /**
      * Successful
      */
-    public CreateAdsCampaignResponse withAdsCampaign(AdsCampaign adsCampaign) {
-        Utils.checkNotNull(adsCampaign, "adsCampaign");
-        this.adsCampaign = Optional.ofNullable(adsCampaign);
-        return this;
-    }
-
-
-    /**
-     * Successful
-     */
-    public CreateAdsCampaignResponse withAdsCampaign(Optional<? extends AdsCampaign> adsCampaign) {
-        Utils.checkNotNull(adsCampaign, "adsCampaign");
+    public CreateAdsCampaignResponse withAdsCampaign(@Nullable AdsCampaign adsCampaign) {
         this.adsCampaign = adsCampaign;
         return this;
     }
 
+
     /**
      * HTTP response content type for this operation
      */
-    public CreateAdsCampaignResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
+    public CreateAdsCampaignResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public CreateAdsCampaignResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public CreateAdsCampaignResponse withRawResponse(HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
+    public CreateAdsCampaignResponse withRawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -181,11 +163,11 @@ public class CreateAdsCampaignResponse implements Response {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends AdsCampaign> adsCampaign = Optional.empty();
+        private AdsCampaign adsCampaign;
 
         private String contentType;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<InputStream> rawResponse;
 
@@ -193,57 +175,39 @@ public class CreateAdsCampaignResponse implements Response {
           // force use of static builder() method
         }
 
-
         /**
          * Successful
          */
-        public Builder adsCampaign(AdsCampaign adsCampaign) {
-            Utils.checkNotNull(adsCampaign, "adsCampaign");
-            this.adsCampaign = Optional.ofNullable(adsCampaign);
-            return this;
-        }
-
-        /**
-         * Successful
-         */
-        public Builder adsCampaign(Optional<? extends AdsCampaign> adsCampaign) {
-            Utils.checkNotNull(adsCampaign, "adsCampaign");
+        public Builder adsCampaign(@Nullable AdsCampaign adsCampaign) {
             this.adsCampaign = adsCampaign;
             return this;
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<InputStream> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
+        public Builder rawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         public CreateAdsCampaignResponse build() {
-
             return new CreateAdsCampaignResponse(
                 adsCampaign, contentType, statusCode,
                 rawResponse);

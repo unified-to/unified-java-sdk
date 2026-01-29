@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.RepoPullrequest;
@@ -30,7 +30,7 @@ public class UpdateRepoPullrequestRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<UpdateRepoPullrequestQueryParamFields>> fields;
+    private List<UpdateRepoPullrequestQueryParamFields> fields;
 
     /**
      * ID of the Pullrequest
@@ -44,63 +44,56 @@ public class UpdateRepoPullrequestRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
     @JsonCreator
     public UpdateRepoPullrequestRequest(
-            RepoPullrequest repoPullrequest,
-            String connectionId,
-            Optional<? extends List<UpdateRepoPullrequestQueryParamFields>> fields,
-            String id,
-            Optional<String> raw) {
-        Utils.checkNotNull(repoPullrequest, "repoPullrequest");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(raw, "raw");
-        this.repoPullrequest = repoPullrequest;
-        this.connectionId = connectionId;
+            @Nonnull RepoPullrequest repoPullrequest,
+            @Nonnull String connectionId,
+            @Nullable List<UpdateRepoPullrequestQueryParamFields> fields,
+            @Nonnull String id,
+            @Nullable String raw) {
+        this.repoPullrequest = Optional.ofNullable(repoPullrequest)
+            .orElseThrow(() -> new IllegalArgumentException("repoPullrequest cannot be null"));
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
-        this.id = id;
+        this.id = Optional.ofNullable(id)
+            .orElseThrow(() -> new IllegalArgumentException("id cannot be null"));
         this.raw = raw;
     }
     
     public UpdateRepoPullrequestRequest(
-            RepoPullrequest repoPullrequest,
-            String connectionId,
-            String id) {
-        this(repoPullrequest, connectionId, Optional.empty(),
-            id, Optional.empty());
+            @Nonnull RepoPullrequest repoPullrequest,
+            @Nonnull String connectionId,
+            @Nonnull String id) {
+        this(repoPullrequest, connectionId, null,
+            id, null);
     }
 
-    @JsonIgnore
     public RepoPullrequest repoPullrequest() {
-        return repoPullrequest;
+        return this.repoPullrequest;
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<UpdateRepoPullrequestQueryParamFields>> fields() {
-        return (Optional<List<UpdateRepoPullrequestQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
      * ID of the Pullrequest
      */
-    @JsonIgnore
     public String id() {
-        return id;
+        return this.id;
     }
 
     /**
@@ -108,9 +101,8 @@ public class UpdateRepoPullrequestRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
     public static Builder builder() {
@@ -118,27 +110,17 @@ public class UpdateRepoPullrequestRequest {
     }
 
 
-    public UpdateRepoPullrequestRequest withRepoPullrequest(RepoPullrequest repoPullrequest) {
-        Utils.checkNotNull(repoPullrequest, "repoPullrequest");
-        this.repoPullrequest = repoPullrequest;
+    public UpdateRepoPullrequestRequest withRepoPullrequest(@Nonnull RepoPullrequest repoPullrequest) {
+        this.repoPullrequest = Utils.checkNotNull(repoPullrequest, "repoPullrequest");
         return this;
     }
+
 
     /**
      * ID of the connection
      */
-    public UpdateRepoPullrequestRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public UpdateRepoPullrequestRequest withFields(List<UpdateRepoPullrequestQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public UpdateRepoPullrequestRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -146,29 +128,17 @@ public class UpdateRepoPullrequestRequest {
     /**
      * Fields to return
      */
-    public UpdateRepoPullrequestRequest withFields(Optional<? extends List<UpdateRepoPullrequestQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public UpdateRepoPullrequestRequest withFields(@Nullable List<UpdateRepoPullrequestQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
+
     /**
      * ID of the Pullrequest
      */
-    public UpdateRepoPullrequestRequest withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = id;
-        return this;
-    }
-
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public UpdateRepoPullrequestRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
+    public UpdateRepoPullrequestRequest withId(@Nonnull String id) {
+        this.id = Utils.checkNotNull(id, "id");
         return this;
     }
 
@@ -178,11 +148,11 @@ public class UpdateRepoPullrequestRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public UpdateRepoPullrequestRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public UpdateRepoPullrequestRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -225,71 +195,42 @@ public class UpdateRepoPullrequestRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<UpdateRepoPullrequestQueryParamFields>> fields = Optional.empty();
+        private List<UpdateRepoPullrequestQueryParamFields> fields;
 
         private String id;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder repoPullrequest(RepoPullrequest repoPullrequest) {
-            Utils.checkNotNull(repoPullrequest, "repoPullrequest");
-            this.repoPullrequest = repoPullrequest;
+        public Builder repoPullrequest(@Nonnull RepoPullrequest repoPullrequest) {
+            this.repoPullrequest = Utils.checkNotNull(repoPullrequest, "repoPullrequest");
             return this;
         }
-
 
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<UpdateRepoPullrequestQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<UpdateRepoPullrequestQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<UpdateRepoPullrequestQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * ID of the Pullrequest
          */
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = id;
-            return this;
-        }
-
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
+        public Builder id(@Nonnull String id) {
+            this.id = Utils.checkNotNull(id, "id");
             return this;
         }
 
@@ -298,14 +239,12 @@ public class UpdateRepoPullrequestRequest {
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
         public UpdateRepoPullrequestRequest build() {
-
             return new UpdateRepoPullrequestRequest(
                 repoPullrequest, connectionId, fields,
                 id, raw);

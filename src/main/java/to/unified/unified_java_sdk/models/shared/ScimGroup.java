@@ -4,13 +4,13 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -24,54 +24,48 @@ public class ScimGroup {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalId")
-    private Optional<String> externalId;
+    private String externalId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupType")
-    private Optional<String> groupType;
+    private String groupType;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
     /**
      * An array of members
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("members")
-    private Optional<? extends List<ScimGroupMember>> members;
+    private List<ScimGroupMember> members;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
-    private Optional<? extends PropertyScimGroupMeta> meta;
+    private PropertyScimGroupMeta meta;
 
     /**
      * Array of schema URIs
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemas")
-    private Optional<? extends List<PropertyScimGroupSchemas>> schemas;
+    private List<PropertyScimGroupSchemas> schemas;
 
     @JsonCreator
     public ScimGroup(
-            @JsonProperty("displayName") String displayName,
-            @JsonProperty("externalId") Optional<String> externalId,
-            @JsonProperty("groupType") Optional<String> groupType,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("members") Optional<? extends List<ScimGroupMember>> members,
-            @JsonProperty("meta") Optional<? extends PropertyScimGroupMeta> meta,
-            @JsonProperty("schemas") Optional<? extends List<PropertyScimGroupSchemas>> schemas) {
-        Utils.checkNotNull(displayName, "displayName");
-        Utils.checkNotNull(externalId, "externalId");
-        Utils.checkNotNull(groupType, "groupType");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(members, "members");
-        Utils.checkNotNull(meta, "meta");
-        Utils.checkNotNull(schemas, "schemas");
-        this.displayName = displayName;
+            @JsonProperty("displayName") @Nonnull String displayName,
+            @JsonProperty("externalId") @Nullable String externalId,
+            @JsonProperty("groupType") @Nullable String groupType,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("members") @Nullable List<ScimGroupMember> members,
+            @JsonProperty("meta") @Nullable PropertyScimGroupMeta meta,
+            @JsonProperty("schemas") @Nullable List<PropertyScimGroupSchemas> schemas) {
+        this.displayName = Optional.ofNullable(displayName)
+            .orElseThrow(() -> new IllegalArgumentException("displayName cannot be null"));
         this.externalId = externalId;
         this.groupType = groupType;
         this.id = id;
@@ -81,54 +75,44 @@ public class ScimGroup {
     }
     
     public ScimGroup(
-            String displayName) {
-        this(displayName, Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+            @Nonnull String displayName) {
+        this(displayName, null, null,
+            null, null, null,
+            null);
     }
 
-    @JsonIgnore
     public String displayName() {
-        return displayName;
+        return this.displayName;
     }
 
-    @JsonIgnore
     public Optional<String> externalId() {
-        return externalId;
+        return Optional.ofNullable(this.externalId);
     }
 
-    @JsonIgnore
     public Optional<String> groupType() {
-        return groupType;
+        return Optional.ofNullable(this.groupType);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
     /**
      * An array of members
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<ScimGroupMember>> members() {
-        return (Optional<List<ScimGroupMember>>) members;
+        return Optional.ofNullable(this.members);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<PropertyScimGroupMeta> meta() {
-        return (Optional<PropertyScimGroupMeta>) meta;
+        return Optional.ofNullable(this.meta);
     }
 
     /**
      * Array of schema URIs
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<PropertyScimGroupSchemas>> schemas() {
-        return (Optional<List<PropertyScimGroupSchemas>>) schemas;
+        return Optional.ofNullable(this.schemas);
     }
 
     public static Builder builder() {
@@ -136,101 +120,53 @@ public class ScimGroup {
     }
 
 
-    public ScimGroup withDisplayName(String displayName) {
-        Utils.checkNotNull(displayName, "displayName");
-        this.displayName = displayName;
-        return this;
-    }
-
-    public ScimGroup withExternalId(String externalId) {
-        Utils.checkNotNull(externalId, "externalId");
-        this.externalId = Optional.ofNullable(externalId);
+    public ScimGroup withDisplayName(@Nonnull String displayName) {
+        this.displayName = Utils.checkNotNull(displayName, "displayName");
         return this;
     }
 
 
-    public ScimGroup withExternalId(Optional<String> externalId) {
-        Utils.checkNotNull(externalId, "externalId");
+    public ScimGroup withExternalId(@Nullable String externalId) {
         this.externalId = externalId;
         return this;
     }
 
-    public ScimGroup withGroupType(String groupType) {
-        Utils.checkNotNull(groupType, "groupType");
-        this.groupType = Optional.ofNullable(groupType);
-        return this;
-    }
 
-
-    public ScimGroup withGroupType(Optional<String> groupType) {
-        Utils.checkNotNull(groupType, "groupType");
+    public ScimGroup withGroupType(@Nullable String groupType) {
         this.groupType = groupType;
         return this;
     }
 
-    public ScimGroup withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public ScimGroup withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public ScimGroup withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    /**
-     * An array of members
-     */
-    public ScimGroup withMembers(List<ScimGroupMember> members) {
-        Utils.checkNotNull(members, "members");
-        this.members = Optional.ofNullable(members);
-        return this;
-    }
-
 
     /**
      * An array of members
      */
-    public ScimGroup withMembers(Optional<? extends List<ScimGroupMember>> members) {
-        Utils.checkNotNull(members, "members");
+    public ScimGroup withMembers(@Nullable List<ScimGroupMember> members) {
         this.members = members;
         return this;
     }
 
-    public ScimGroup withMeta(PropertyScimGroupMeta meta) {
-        Utils.checkNotNull(meta, "meta");
-        this.meta = Optional.ofNullable(meta);
-        return this;
-    }
 
-
-    public ScimGroup withMeta(Optional<? extends PropertyScimGroupMeta> meta) {
-        Utils.checkNotNull(meta, "meta");
+    public ScimGroup withMeta(@Nullable PropertyScimGroupMeta meta) {
         this.meta = meta;
         return this;
     }
 
-    /**
-     * Array of schema URIs
-     */
-    public ScimGroup withSchemas(List<PropertyScimGroupSchemas> schemas) {
-        Utils.checkNotNull(schemas, "schemas");
-        this.schemas = Optional.ofNullable(schemas);
-        return this;
-    }
-
 
     /**
      * Array of schema URIs
      */
-    public ScimGroup withSchemas(Optional<? extends List<PropertyScimGroupSchemas>> schemas) {
-        Utils.checkNotNull(schemas, "schemas");
+    public ScimGroup withSchemas(@Nullable List<PropertyScimGroupSchemas> schemas) {
         this.schemas = schemas;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -276,121 +212,64 @@ public class ScimGroup {
 
         private String displayName;
 
-        private Optional<String> externalId = Optional.empty();
+        private String externalId;
 
-        private Optional<String> groupType = Optional.empty();
+        private String groupType;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<? extends List<ScimGroupMember>> members = Optional.empty();
+        private List<ScimGroupMember> members;
 
-        private Optional<? extends PropertyScimGroupMeta> meta = Optional.empty();
+        private PropertyScimGroupMeta meta;
 
-        private Optional<? extends List<PropertyScimGroupSchemas>> schemas = Optional.empty();
+        private List<PropertyScimGroupSchemas> schemas;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder displayName(String displayName) {
-            Utils.checkNotNull(displayName, "displayName");
-            this.displayName = displayName;
+        public Builder displayName(@Nonnull String displayName) {
+            this.displayName = Utils.checkNotNull(displayName, "displayName");
             return this;
         }
 
-
-        public Builder externalId(String externalId) {
-            Utils.checkNotNull(externalId, "externalId");
-            this.externalId = Optional.ofNullable(externalId);
-            return this;
-        }
-
-        public Builder externalId(Optional<String> externalId) {
-            Utils.checkNotNull(externalId, "externalId");
+        public Builder externalId(@Nullable String externalId) {
             this.externalId = externalId;
             return this;
         }
 
-
-        public Builder groupType(String groupType) {
-            Utils.checkNotNull(groupType, "groupType");
-            this.groupType = Optional.ofNullable(groupType);
-            return this;
-        }
-
-        public Builder groupType(Optional<String> groupType) {
-            Utils.checkNotNull(groupType, "groupType");
+        public Builder groupType(@Nullable String groupType) {
             this.groupType = groupType;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
         /**
          * An array of members
          */
-        public Builder members(List<ScimGroupMember> members) {
-            Utils.checkNotNull(members, "members");
-            this.members = Optional.ofNullable(members);
-            return this;
-        }
-
-        /**
-         * An array of members
-         */
-        public Builder members(Optional<? extends List<ScimGroupMember>> members) {
-            Utils.checkNotNull(members, "members");
+        public Builder members(@Nullable List<ScimGroupMember> members) {
             this.members = members;
             return this;
         }
 
-
-        public Builder meta(PropertyScimGroupMeta meta) {
-            Utils.checkNotNull(meta, "meta");
-            this.meta = Optional.ofNullable(meta);
-            return this;
-        }
-
-        public Builder meta(Optional<? extends PropertyScimGroupMeta> meta) {
-            Utils.checkNotNull(meta, "meta");
+        public Builder meta(@Nullable PropertyScimGroupMeta meta) {
             this.meta = meta;
             return this;
         }
 
-
         /**
          * Array of schema URIs
          */
-        public Builder schemas(List<PropertyScimGroupSchemas> schemas) {
-            Utils.checkNotNull(schemas, "schemas");
-            this.schemas = Optional.ofNullable(schemas);
-            return this;
-        }
-
-        /**
-         * Array of schema URIs
-         */
-        public Builder schemas(Optional<? extends List<PropertyScimGroupSchemas>> schemas) {
-            Utils.checkNotNull(schemas, "schemas");
+        public Builder schemas(@Nullable List<PropertyScimGroupSchemas> schemas) {
             this.schemas = schemas;
             return this;
         }
 
         public ScimGroup build() {
-
             return new ScimGroup(
                 displayName, externalId, groupType,
                 id, members, meta,

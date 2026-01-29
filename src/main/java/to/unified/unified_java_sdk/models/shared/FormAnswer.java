@@ -4,13 +4,13 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -24,64 +24,56 @@ public class FormAnswer {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field_name")
-    private Optional<String> fieldName;
+    private String fieldName;
 
     /**
      * references StorageFile ID
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file_ids")
-    private Optional<? extends List<String>> fileIds;
+    private List<String> fileIds;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
-    private Optional<String> value;
+    private String value;
 
     @JsonCreator
     public FormAnswer(
-            @JsonProperty("field_id") String fieldId,
-            @JsonProperty("field_name") Optional<String> fieldName,
-            @JsonProperty("file_ids") Optional<? extends List<String>> fileIds,
-            @JsonProperty("value") Optional<String> value) {
-        Utils.checkNotNull(fieldId, "fieldId");
-        Utils.checkNotNull(fieldName, "fieldName");
-        Utils.checkNotNull(fileIds, "fileIds");
-        Utils.checkNotNull(value, "value");
-        this.fieldId = fieldId;
+            @JsonProperty("field_id") @Nonnull String fieldId,
+            @JsonProperty("field_name") @Nullable String fieldName,
+            @JsonProperty("file_ids") @Nullable List<String> fileIds,
+            @JsonProperty("value") @Nullable String value) {
+        this.fieldId = Optional.ofNullable(fieldId)
+            .orElseThrow(() -> new IllegalArgumentException("fieldId cannot be null"));
         this.fieldName = fieldName;
         this.fileIds = fileIds;
         this.value = value;
     }
     
     public FormAnswer(
-            String fieldId) {
-        this(fieldId, Optional.empty(), Optional.empty(),
-            Optional.empty());
+            @Nonnull String fieldId) {
+        this(fieldId, null, null,
+            null);
     }
 
-    @JsonIgnore
     public String fieldId() {
-        return fieldId;
+        return this.fieldId;
     }
 
-    @JsonIgnore
     public Optional<String> fieldName() {
-        return fieldName;
+        return Optional.ofNullable(this.fieldName);
     }
 
     /**
      * references StorageFile ID
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> fileIds() {
-        return (Optional<List<String>>) fileIds;
+        return Optional.ofNullable(this.fileIds);
     }
 
-    @JsonIgnore
     public Optional<String> value() {
-        return value;
+        return Optional.ofNullable(this.value);
     }
 
     public static Builder builder() {
@@ -89,56 +81,32 @@ public class FormAnswer {
     }
 
 
-    public FormAnswer withFieldId(String fieldId) {
-        Utils.checkNotNull(fieldId, "fieldId");
-        this.fieldId = fieldId;
-        return this;
-    }
-
-    public FormAnswer withFieldName(String fieldName) {
-        Utils.checkNotNull(fieldName, "fieldName");
-        this.fieldName = Optional.ofNullable(fieldName);
+    public FormAnswer withFieldId(@Nonnull String fieldId) {
+        this.fieldId = Utils.checkNotNull(fieldId, "fieldId");
         return this;
     }
 
 
-    public FormAnswer withFieldName(Optional<String> fieldName) {
-        Utils.checkNotNull(fieldName, "fieldName");
+    public FormAnswer withFieldName(@Nullable String fieldName) {
         this.fieldName = fieldName;
         return this;
     }
 
-    /**
-     * references StorageFile ID
-     */
-    public FormAnswer withFileIds(List<String> fileIds) {
-        Utils.checkNotNull(fileIds, "fileIds");
-        this.fileIds = Optional.ofNullable(fileIds);
-        return this;
-    }
-
 
     /**
      * references StorageFile ID
      */
-    public FormAnswer withFileIds(Optional<? extends List<String>> fileIds) {
-        Utils.checkNotNull(fileIds, "fileIds");
+    public FormAnswer withFileIds(@Nullable List<String> fileIds) {
         this.fileIds = fileIds;
         return this;
     }
 
-    public FormAnswer withValue(String value) {
-        Utils.checkNotNull(value, "value");
-        this.value = Optional.ofNullable(value);
-        return this;
-    }
 
-
-    public FormAnswer withValue(Optional<String> value) {
-        Utils.checkNotNull(value, "value");
+    public FormAnswer withValue(@Nullable String value) {
         this.value = value;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -177,70 +145,40 @@ public class FormAnswer {
 
         private String fieldId;
 
-        private Optional<String> fieldName = Optional.empty();
+        private String fieldName;
 
-        private Optional<? extends List<String>> fileIds = Optional.empty();
+        private List<String> fileIds;
 
-        private Optional<String> value = Optional.empty();
+        private String value;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder fieldId(String fieldId) {
-            Utils.checkNotNull(fieldId, "fieldId");
-            this.fieldId = fieldId;
+        public Builder fieldId(@Nonnull String fieldId) {
+            this.fieldId = Utils.checkNotNull(fieldId, "fieldId");
             return this;
         }
 
-
-        public Builder fieldName(String fieldName) {
-            Utils.checkNotNull(fieldName, "fieldName");
-            this.fieldName = Optional.ofNullable(fieldName);
-            return this;
-        }
-
-        public Builder fieldName(Optional<String> fieldName) {
-            Utils.checkNotNull(fieldName, "fieldName");
+        public Builder fieldName(@Nullable String fieldName) {
             this.fieldName = fieldName;
             return this;
         }
 
-
         /**
          * references StorageFile ID
          */
-        public Builder fileIds(List<String> fileIds) {
-            Utils.checkNotNull(fileIds, "fileIds");
-            this.fileIds = Optional.ofNullable(fileIds);
-            return this;
-        }
-
-        /**
-         * references StorageFile ID
-         */
-        public Builder fileIds(Optional<? extends List<String>> fileIds) {
-            Utils.checkNotNull(fileIds, "fileIds");
+        public Builder fileIds(@Nullable List<String> fileIds) {
             this.fileIds = fileIds;
             return this;
         }
 
-
-        public Builder value(String value) {
-            Utils.checkNotNull(value, "value");
-            this.value = Optional.ofNullable(value);
-            return this;
-        }
-
-        public Builder value(Optional<String> value) {
-            Utils.checkNotNull(value, "value");
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }
 
         public FormAnswer build() {
-
             return new FormAnswer(
                 fieldId, fieldName, fileIds,
                 value);

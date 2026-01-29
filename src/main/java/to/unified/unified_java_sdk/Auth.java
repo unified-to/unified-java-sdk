@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationAuthRequest;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationAuthRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedIntegrationAuthResponse;
@@ -57,7 +58,7 @@ public class Auth {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetUnifiedIntegrationAuthResponse getUnifiedIntegrationAuth(GetUnifiedIntegrationAuthRequest request) {
+    public GetUnifiedIntegrationAuthResponse getUnifiedIntegrationAuth(@Nonnull GetUnifiedIntegrationAuthRequest request) {
         RequestOperation<GetUnifiedIntegrationAuthRequest, GetUnifiedIntegrationAuthResponse> operation
               = new GetUnifiedIntegrationAuth.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -87,7 +88,7 @@ public class Auth {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetUnifiedIntegrationLoginResponse getUnifiedIntegrationLogin(GetUnifiedIntegrationLoginRequest request) {
+    public GetUnifiedIntegrationLoginResponse getUnifiedIntegrationLogin(@Nonnull GetUnifiedIntegrationLoginRequest request) {
         RequestOperation<GetUnifiedIntegrationLoginRequest, GetUnifiedIntegrationLoginResponse> operation
               = new GetUnifiedIntegrationLogin.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

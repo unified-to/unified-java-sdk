@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceReviewRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceReviewRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceReviewResponse;
@@ -67,7 +68,7 @@ public class Review {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCommerceReviewResponse createCommerceReview(CreateCommerceReviewRequest request) {
+    public CreateCommerceReviewResponse createCommerceReview(@Nonnull CreateCommerceReviewRequest request) {
         RequestOperation<CreateCommerceReviewRequest, CreateCommerceReviewResponse> operation
               = new CreateCommerceReview.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -89,7 +90,7 @@ public class Review {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetCommerceReviewResponse getCommerceReview(GetCommerceReviewRequest request) {
+    public GetCommerceReviewResponse getCommerceReview(@Nonnull GetCommerceReviewRequest request) {
         RequestOperation<GetCommerceReviewRequest, GetCommerceReviewResponse> operation
               = new GetCommerceReview.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -111,7 +112,7 @@ public class Review {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCommerceReviewsResponse listCommerceReviews(ListCommerceReviewsRequest request) {
+    public ListCommerceReviewsResponse listCommerceReviews(@Nonnull ListCommerceReviewsRequest request) {
         RequestOperation<ListCommerceReviewsRequest, ListCommerceReviewsResponse> operation
               = new ListCommerceReviews.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -133,7 +134,7 @@ public class Review {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCommerceReviewResponse patchCommerceReview(PatchCommerceReviewRequest request) {
+    public PatchCommerceReviewResponse patchCommerceReview(@Nonnull PatchCommerceReviewRequest request) {
         RequestOperation<PatchCommerceReviewRequest, PatchCommerceReviewResponse> operation
               = new PatchCommerceReview.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -155,7 +156,7 @@ public class Review {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCommerceReviewResponse removeCommerceReview(RemoveCommerceReviewRequest request) {
+    public RemoveCommerceReviewResponse removeCommerceReview(@Nonnull RemoveCommerceReviewRequest request) {
         RequestOperation<RemoveCommerceReviewRequest, RemoveCommerceReviewResponse> operation
               = new RemoveCommerceReview.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -177,7 +178,7 @@ public class Review {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCommerceReviewResponse updateCommerceReview(UpdateCommerceReviewRequest request) {
+    public UpdateCommerceReviewResponse updateCommerceReview(@Nonnull UpdateCommerceReviewRequest request) {
         RequestOperation<UpdateCommerceReviewRequest, UpdateCommerceReviewResponse> operation
               = new UpdateCommerceReview.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

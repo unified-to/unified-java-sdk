@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.CommerceItem;
@@ -30,7 +30,7 @@ public class PatchCommerceItemRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<PatchCommerceItemQueryParamFields>> fields;
+    private List<PatchCommerceItemQueryParamFields> fields;
 
     /**
      * ID of the Item
@@ -44,63 +44,56 @@ public class PatchCommerceItemRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
     @JsonCreator
     public PatchCommerceItemRequest(
-            CommerceItem commerceItem,
-            String connectionId,
-            Optional<? extends List<PatchCommerceItemQueryParamFields>> fields,
-            String id,
-            Optional<String> raw) {
-        Utils.checkNotNull(commerceItem, "commerceItem");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(raw, "raw");
-        this.commerceItem = commerceItem;
-        this.connectionId = connectionId;
+            @Nonnull CommerceItem commerceItem,
+            @Nonnull String connectionId,
+            @Nullable List<PatchCommerceItemQueryParamFields> fields,
+            @Nonnull String id,
+            @Nullable String raw) {
+        this.commerceItem = Optional.ofNullable(commerceItem)
+            .orElseThrow(() -> new IllegalArgumentException("commerceItem cannot be null"));
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
-        this.id = id;
+        this.id = Optional.ofNullable(id)
+            .orElseThrow(() -> new IllegalArgumentException("id cannot be null"));
         this.raw = raw;
     }
     
     public PatchCommerceItemRequest(
-            CommerceItem commerceItem,
-            String connectionId,
-            String id) {
-        this(commerceItem, connectionId, Optional.empty(),
-            id, Optional.empty());
+            @Nonnull CommerceItem commerceItem,
+            @Nonnull String connectionId,
+            @Nonnull String id) {
+        this(commerceItem, connectionId, null,
+            id, null);
     }
 
-    @JsonIgnore
     public CommerceItem commerceItem() {
-        return commerceItem;
+        return this.commerceItem;
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<PatchCommerceItemQueryParamFields>> fields() {
-        return (Optional<List<PatchCommerceItemQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
      * ID of the Item
      */
-    @JsonIgnore
     public String id() {
-        return id;
+        return this.id;
     }
 
     /**
@@ -108,9 +101,8 @@ public class PatchCommerceItemRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
     public static Builder builder() {
@@ -118,27 +110,17 @@ public class PatchCommerceItemRequest {
     }
 
 
-    public PatchCommerceItemRequest withCommerceItem(CommerceItem commerceItem) {
-        Utils.checkNotNull(commerceItem, "commerceItem");
-        this.commerceItem = commerceItem;
+    public PatchCommerceItemRequest withCommerceItem(@Nonnull CommerceItem commerceItem) {
+        this.commerceItem = Utils.checkNotNull(commerceItem, "commerceItem");
         return this;
     }
+
 
     /**
      * ID of the connection
      */
-    public PatchCommerceItemRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public PatchCommerceItemRequest withFields(List<PatchCommerceItemQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public PatchCommerceItemRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -146,29 +128,17 @@ public class PatchCommerceItemRequest {
     /**
      * Fields to return
      */
-    public PatchCommerceItemRequest withFields(Optional<? extends List<PatchCommerceItemQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public PatchCommerceItemRequest withFields(@Nullable List<PatchCommerceItemQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
+
     /**
      * ID of the Item
      */
-    public PatchCommerceItemRequest withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = id;
-        return this;
-    }
-
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public PatchCommerceItemRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
+    public PatchCommerceItemRequest withId(@Nonnull String id) {
+        this.id = Utils.checkNotNull(id, "id");
         return this;
     }
 
@@ -178,11 +148,11 @@ public class PatchCommerceItemRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public PatchCommerceItemRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public PatchCommerceItemRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -225,71 +195,42 @@ public class PatchCommerceItemRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<PatchCommerceItemQueryParamFields>> fields = Optional.empty();
+        private List<PatchCommerceItemQueryParamFields> fields;
 
         private String id;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder commerceItem(CommerceItem commerceItem) {
-            Utils.checkNotNull(commerceItem, "commerceItem");
-            this.commerceItem = commerceItem;
+        public Builder commerceItem(@Nonnull CommerceItem commerceItem) {
+            this.commerceItem = Utils.checkNotNull(commerceItem, "commerceItem");
             return this;
         }
-
 
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<PatchCommerceItemQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<PatchCommerceItemQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<PatchCommerceItemQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * ID of the Item
          */
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = id;
-            return this;
-        }
-
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
+        public Builder id(@Nonnull String id) {
+            this.id = Utils.checkNotNull(id, "id");
             return this;
         }
 
@@ -298,14 +239,12 @@ public class PatchCommerceItemRequest {
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
         public PatchCommerceItemRequest build() {
-
             return new PatchCommerceItemRequest(
                 commerceItem, connectionId, fields,
                 id, raw);

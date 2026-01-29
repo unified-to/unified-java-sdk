@@ -4,13 +4,13 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -19,17 +19,17 @@ public class ScimUserGroups {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("$ref")
-    private Optional<String> dollarRef;
+    private String dollarRef;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display")
-    private Optional<String> display;
+    private String display;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
-    private Optional<? extends ScimUserGroupsType> type;
+    private ScimUserGroupsType type;
 
 
     @JsonProperty("value")
@@ -37,45 +37,37 @@ public class ScimUserGroups {
 
     @JsonCreator
     public ScimUserGroups(
-            @JsonProperty("$ref") Optional<String> dollarRef,
-            @JsonProperty("display") Optional<String> display,
-            @JsonProperty("type") Optional<? extends ScimUserGroupsType> type,
-            @JsonProperty("value") String value) {
-        Utils.checkNotNull(dollarRef, "dollarRef");
-        Utils.checkNotNull(display, "display");
-        Utils.checkNotNull(type, "type");
-        Utils.checkNotNull(value, "value");
+            @JsonProperty("$ref") @Nullable String dollarRef,
+            @JsonProperty("display") @Nullable String display,
+            @JsonProperty("type") @Nullable ScimUserGroupsType type,
+            @JsonProperty("value") @Nonnull String value) {
         this.dollarRef = dollarRef;
         this.display = display;
         this.type = type;
-        this.value = value;
+        this.value = Optional.ofNullable(value)
+            .orElseThrow(() -> new IllegalArgumentException("value cannot be null"));
     }
     
     public ScimUserGroups(
-            String value) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            @Nonnull String value) {
+        this(null, null, null,
             value);
     }
 
-    @JsonIgnore
     public Optional<String> dollarRef() {
-        return dollarRef;
+        return Optional.ofNullable(this.dollarRef);
     }
 
-    @JsonIgnore
     public Optional<String> display() {
-        return display;
+        return Optional.ofNullable(this.display);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ScimUserGroupsType> type() {
-        return (Optional<ScimUserGroupsType>) type;
+        return Optional.ofNullable(this.type);
     }
 
-    @JsonIgnore
     public String value() {
-        return value;
+        return this.value;
     }
 
     public static Builder builder() {
@@ -83,50 +75,29 @@ public class ScimUserGroups {
     }
 
 
-    public ScimUserGroups withDollarRef(String dollarRef) {
-        Utils.checkNotNull(dollarRef, "dollarRef");
-        this.dollarRef = Optional.ofNullable(dollarRef);
-        return this;
-    }
-
-
-    public ScimUserGroups withDollarRef(Optional<String> dollarRef) {
-        Utils.checkNotNull(dollarRef, "dollarRef");
+    public ScimUserGroups withDollarRef(@Nullable String dollarRef) {
         this.dollarRef = dollarRef;
         return this;
     }
 
-    public ScimUserGroups withDisplay(String display) {
-        Utils.checkNotNull(display, "display");
-        this.display = Optional.ofNullable(display);
-        return this;
-    }
 
-
-    public ScimUserGroups withDisplay(Optional<String> display) {
-        Utils.checkNotNull(display, "display");
+    public ScimUserGroups withDisplay(@Nullable String display) {
         this.display = display;
         return this;
     }
 
-    public ScimUserGroups withType(ScimUserGroupsType type) {
-        Utils.checkNotNull(type, "type");
-        this.type = Optional.ofNullable(type);
-        return this;
-    }
 
-
-    public ScimUserGroups withType(Optional<? extends ScimUserGroupsType> type) {
-        Utils.checkNotNull(type, "type");
+    public ScimUserGroups withType(@Nullable ScimUserGroupsType type) {
         this.type = type;
         return this;
     }
 
-    public ScimUserGroups withValue(String value) {
-        Utils.checkNotNull(value, "value");
-        this.value = value;
+
+    public ScimUserGroups withValue(@Nonnull String value) {
+        this.value = Utils.checkNotNull(value, "value");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -163,11 +134,11 @@ public class ScimUserGroups {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> dollarRef = Optional.empty();
+        private String dollarRef;
 
-        private Optional<String> display = Optional.empty();
+        private String display;
 
-        private Optional<? extends ScimUserGroupsType> type = Optional.empty();
+        private ScimUserGroupsType type;
 
         private String value;
 
@@ -175,54 +146,27 @@ public class ScimUserGroups {
           // force use of static builder() method
         }
 
-
-        public Builder dollarRef(String dollarRef) {
-            Utils.checkNotNull(dollarRef, "dollarRef");
-            this.dollarRef = Optional.ofNullable(dollarRef);
-            return this;
-        }
-
-        public Builder dollarRef(Optional<String> dollarRef) {
-            Utils.checkNotNull(dollarRef, "dollarRef");
+        public Builder dollarRef(@Nullable String dollarRef) {
             this.dollarRef = dollarRef;
             return this;
         }
 
-
-        public Builder display(String display) {
-            Utils.checkNotNull(display, "display");
-            this.display = Optional.ofNullable(display);
-            return this;
-        }
-
-        public Builder display(Optional<String> display) {
-            Utils.checkNotNull(display, "display");
+        public Builder display(@Nullable String display) {
             this.display = display;
             return this;
         }
 
-
-        public Builder type(ScimUserGroupsType type) {
-            Utils.checkNotNull(type, "type");
-            this.type = Optional.ofNullable(type);
-            return this;
-        }
-
-        public Builder type(Optional<? extends ScimUserGroupsType> type) {
-            Utils.checkNotNull(type, "type");
+        public Builder type(@Nullable ScimUserGroupsType type) {
             this.type = type;
             return this;
         }
 
-
-        public Builder value(String value) {
-            Utils.checkNotNull(value, "value");
-            this.value = value;
+        public Builder value(@Nonnull String value) {
+            this.value = Utils.checkNotNull(value, "value");
             return this;
         }
 
         public ScimUserGroups build() {
-
             return new ScimUserGroups(
                 dollarRef, display, type,
                 value);

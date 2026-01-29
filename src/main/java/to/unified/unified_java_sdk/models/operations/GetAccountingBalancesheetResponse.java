@@ -4,12 +4,11 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.io.InputStream;
-import java.lang.Integer;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.AccountingBalancesheet;
@@ -21,7 +20,7 @@ public class GetAccountingBalancesheetResponse implements Response {
     /**
      * Successful
      */
-    private Optional<? extends AccountingBalancesheet> accountingBalancesheet;
+    private AccountingBalancesheet accountingBalancesheet;
 
     /**
      * HTTP response content type for this operation
@@ -40,59 +39,52 @@ public class GetAccountingBalancesheetResponse implements Response {
 
     @JsonCreator
     public GetAccountingBalancesheetResponse(
-            Optional<? extends AccountingBalancesheet> accountingBalancesheet,
-            String contentType,
+            @Nullable AccountingBalancesheet accountingBalancesheet,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(accountingBalancesheet, "accountingBalancesheet");
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
+            @Nonnull HttpResponse<InputStream> rawResponse) {
         this.accountingBalancesheet = accountingBalancesheet;
-        this.contentType = contentType;
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
     }
     
     public GetAccountingBalancesheetResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
-        this(Optional.empty(), contentType, statusCode,
+            @Nonnull HttpResponse<InputStream> rawResponse) {
+        this(null, contentType, statusCode,
             rawResponse);
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<AccountingBalancesheet> accountingBalancesheet() {
-        return (Optional<AccountingBalancesheet>) accountingBalancesheet;
+        return Optional.ofNullable(this.accountingBalancesheet);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<InputStream> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     public static Builder builder() {
@@ -103,48 +95,38 @@ public class GetAccountingBalancesheetResponse implements Response {
     /**
      * Successful
      */
-    public GetAccountingBalancesheetResponse withAccountingBalancesheet(AccountingBalancesheet accountingBalancesheet) {
-        Utils.checkNotNull(accountingBalancesheet, "accountingBalancesheet");
-        this.accountingBalancesheet = Optional.ofNullable(accountingBalancesheet);
-        return this;
-    }
-
-
-    /**
-     * Successful
-     */
-    public GetAccountingBalancesheetResponse withAccountingBalancesheet(Optional<? extends AccountingBalancesheet> accountingBalancesheet) {
-        Utils.checkNotNull(accountingBalancesheet, "accountingBalancesheet");
+    public GetAccountingBalancesheetResponse withAccountingBalancesheet(@Nullable AccountingBalancesheet accountingBalancesheet) {
         this.accountingBalancesheet = accountingBalancesheet;
         return this;
     }
 
+
     /**
      * HTTP response content type for this operation
      */
-    public GetAccountingBalancesheetResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
+    public GetAccountingBalancesheetResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public GetAccountingBalancesheetResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public GetAccountingBalancesheetResponse withRawResponse(HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
+    public GetAccountingBalancesheetResponse withRawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -181,11 +163,11 @@ public class GetAccountingBalancesheetResponse implements Response {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends AccountingBalancesheet> accountingBalancesheet = Optional.empty();
+        private AccountingBalancesheet accountingBalancesheet;
 
         private String contentType;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<InputStream> rawResponse;
 
@@ -193,57 +175,39 @@ public class GetAccountingBalancesheetResponse implements Response {
           // force use of static builder() method
         }
 
-
         /**
          * Successful
          */
-        public Builder accountingBalancesheet(AccountingBalancesheet accountingBalancesheet) {
-            Utils.checkNotNull(accountingBalancesheet, "accountingBalancesheet");
-            this.accountingBalancesheet = Optional.ofNullable(accountingBalancesheet);
-            return this;
-        }
-
-        /**
-         * Successful
-         */
-        public Builder accountingBalancesheet(Optional<? extends AccountingBalancesheet> accountingBalancesheet) {
-            Utils.checkNotNull(accountingBalancesheet, "accountingBalancesheet");
+        public Builder accountingBalancesheet(@Nullable AccountingBalancesheet accountingBalancesheet) {
             this.accountingBalancesheet = accountingBalancesheet;
             return this;
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<InputStream> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
+        public Builder rawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         public GetAccountingBalancesheetResponse build() {
-
             return new GetAccountingBalancesheetResponse(
                 accountingBalancesheet, contentType, statusCode,
                 rawResponse);

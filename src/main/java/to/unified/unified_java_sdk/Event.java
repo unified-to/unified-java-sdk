@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateCalendarEventRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCalendarEventRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateCalendarEventResponse;
@@ -99,7 +100,7 @@ public class Event {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCalendarEventResponse createCalendarEvent(CreateCalendarEventRequest request) {
+    public CreateCalendarEventResponse createCalendarEvent(@Nonnull CreateCalendarEventRequest request) {
         RequestOperation<CreateCalendarEventRequest, CreateCalendarEventResponse> operation
               = new CreateCalendarEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -121,7 +122,7 @@ public class Event {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCrmEventResponse createCrmEvent(CreateCrmEventRequest request) {
+    public CreateCrmEventResponse createCrmEvent(@Nonnull CreateCrmEventRequest request) {
         RequestOperation<CreateCrmEventRequest, CreateCrmEventResponse> operation
               = new CreateCrmEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -143,7 +144,7 @@ public class Event {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetCalendarEventResponse getCalendarEvent(GetCalendarEventRequest request) {
+    public GetCalendarEventResponse getCalendarEvent(@Nonnull GetCalendarEventRequest request) {
         RequestOperation<GetCalendarEventRequest, GetCalendarEventResponse> operation
               = new GetCalendarEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -165,7 +166,7 @@ public class Event {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetCrmEventResponse getCrmEvent(GetCrmEventRequest request) {
+    public GetCrmEventResponse getCrmEvent(@Nonnull GetCrmEventRequest request) {
         RequestOperation<GetCrmEventRequest, GetCrmEventResponse> operation
               = new GetCrmEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -187,7 +188,7 @@ public class Event {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCalendarEventsResponse listCalendarEvents(ListCalendarEventsRequest request) {
+    public ListCalendarEventsResponse listCalendarEvents(@Nonnull ListCalendarEventsRequest request) {
         RequestOperation<ListCalendarEventsRequest, ListCalendarEventsResponse> operation
               = new ListCalendarEvents.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -209,7 +210,7 @@ public class Event {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCrmEventsResponse listCrmEvents(ListCrmEventsRequest request) {
+    public ListCrmEventsResponse listCrmEvents(@Nonnull ListCrmEventsRequest request) {
         RequestOperation<ListCrmEventsRequest, ListCrmEventsResponse> operation
               = new ListCrmEvents.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -231,7 +232,7 @@ public class Event {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCalendarEventResponse patchCalendarEvent(PatchCalendarEventRequest request) {
+    public PatchCalendarEventResponse patchCalendarEvent(@Nonnull PatchCalendarEventRequest request) {
         RequestOperation<PatchCalendarEventRequest, PatchCalendarEventResponse> operation
               = new PatchCalendarEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -253,7 +254,7 @@ public class Event {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCrmEventResponse patchCrmEvent(PatchCrmEventRequest request) {
+    public PatchCrmEventResponse patchCrmEvent(@Nonnull PatchCrmEventRequest request) {
         RequestOperation<PatchCrmEventRequest, PatchCrmEventResponse> operation
               = new PatchCrmEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -275,7 +276,7 @@ public class Event {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchMessagingEventResponse patchMessagingEvent(PatchMessagingEventRequest request) {
+    public PatchMessagingEventResponse patchMessagingEvent(@Nonnull PatchMessagingEventRequest request) {
         RequestOperation<PatchMessagingEventRequest, PatchMessagingEventResponse> operation
               = new PatchMessagingEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -297,7 +298,7 @@ public class Event {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCalendarEventResponse removeCalendarEvent(RemoveCalendarEventRequest request) {
+    public RemoveCalendarEventResponse removeCalendarEvent(@Nonnull RemoveCalendarEventRequest request) {
         RequestOperation<RemoveCalendarEventRequest, RemoveCalendarEventResponse> operation
               = new RemoveCalendarEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -319,7 +320,7 @@ public class Event {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCrmEventResponse removeCrmEvent(RemoveCrmEventRequest request) {
+    public RemoveCrmEventResponse removeCrmEvent(@Nonnull RemoveCrmEventRequest request) {
         RequestOperation<RemoveCrmEventRequest, RemoveCrmEventResponse> operation
               = new RemoveCrmEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -341,7 +342,7 @@ public class Event {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCalendarEventResponse updateCalendarEvent(UpdateCalendarEventRequest request) {
+    public UpdateCalendarEventResponse updateCalendarEvent(@Nonnull UpdateCalendarEventRequest request) {
         RequestOperation<UpdateCalendarEventRequest, UpdateCalendarEventResponse> operation
               = new UpdateCalendarEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -363,7 +364,7 @@ public class Event {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCrmEventResponse updateCrmEvent(UpdateCrmEventRequest request) {
+    public UpdateCrmEventResponse updateCrmEvent(@Nonnull UpdateCrmEventRequest request) {
         RequestOperation<UpdateCrmEventRequest, UpdateCrmEventResponse> operation
               = new UpdateCrmEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -385,7 +386,7 @@ public class Event {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateMessagingEventResponse updateMessagingEvent(UpdateMessagingEventRequest request) {
+    public UpdateMessagingEventResponse updateMessagingEvent(@Nonnull UpdateMessagingEventRequest request) {
         RequestOperation<UpdateMessagingEventRequest, UpdateMessagingEventResponse> operation
               = new UpdateMessagingEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

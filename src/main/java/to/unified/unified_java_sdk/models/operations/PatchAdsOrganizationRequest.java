@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.AdsOrganization;
@@ -30,7 +30,7 @@ public class PatchAdsOrganizationRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<PatchAdsOrganizationQueryParamFields>> fields;
+    private List<PatchAdsOrganizationQueryParamFields> fields;
 
     /**
      * ID of the Organization
@@ -44,63 +44,56 @@ public class PatchAdsOrganizationRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
     @JsonCreator
     public PatchAdsOrganizationRequest(
-            AdsOrganization adsOrganization,
-            String connectionId,
-            Optional<? extends List<PatchAdsOrganizationQueryParamFields>> fields,
-            String id,
-            Optional<String> raw) {
-        Utils.checkNotNull(adsOrganization, "adsOrganization");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(raw, "raw");
-        this.adsOrganization = adsOrganization;
-        this.connectionId = connectionId;
+            @Nonnull AdsOrganization adsOrganization,
+            @Nonnull String connectionId,
+            @Nullable List<PatchAdsOrganizationQueryParamFields> fields,
+            @Nonnull String id,
+            @Nullable String raw) {
+        this.adsOrganization = Optional.ofNullable(adsOrganization)
+            .orElseThrow(() -> new IllegalArgumentException("adsOrganization cannot be null"));
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
-        this.id = id;
+        this.id = Optional.ofNullable(id)
+            .orElseThrow(() -> new IllegalArgumentException("id cannot be null"));
         this.raw = raw;
     }
     
     public PatchAdsOrganizationRequest(
-            AdsOrganization adsOrganization,
-            String connectionId,
-            String id) {
-        this(adsOrganization, connectionId, Optional.empty(),
-            id, Optional.empty());
+            @Nonnull AdsOrganization adsOrganization,
+            @Nonnull String connectionId,
+            @Nonnull String id) {
+        this(adsOrganization, connectionId, null,
+            id, null);
     }
 
-    @JsonIgnore
     public AdsOrganization adsOrganization() {
-        return adsOrganization;
+        return this.adsOrganization;
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<PatchAdsOrganizationQueryParamFields>> fields() {
-        return (Optional<List<PatchAdsOrganizationQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
      * ID of the Organization
      */
-    @JsonIgnore
     public String id() {
-        return id;
+        return this.id;
     }
 
     /**
@@ -108,9 +101,8 @@ public class PatchAdsOrganizationRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
     public static Builder builder() {
@@ -118,27 +110,17 @@ public class PatchAdsOrganizationRequest {
     }
 
 
-    public PatchAdsOrganizationRequest withAdsOrganization(AdsOrganization adsOrganization) {
-        Utils.checkNotNull(adsOrganization, "adsOrganization");
-        this.adsOrganization = adsOrganization;
+    public PatchAdsOrganizationRequest withAdsOrganization(@Nonnull AdsOrganization adsOrganization) {
+        this.adsOrganization = Utils.checkNotNull(adsOrganization, "adsOrganization");
         return this;
     }
+
 
     /**
      * ID of the connection
      */
-    public PatchAdsOrganizationRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public PatchAdsOrganizationRequest withFields(List<PatchAdsOrganizationQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public PatchAdsOrganizationRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -146,29 +128,17 @@ public class PatchAdsOrganizationRequest {
     /**
      * Fields to return
      */
-    public PatchAdsOrganizationRequest withFields(Optional<? extends List<PatchAdsOrganizationQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public PatchAdsOrganizationRequest withFields(@Nullable List<PatchAdsOrganizationQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
+
     /**
      * ID of the Organization
      */
-    public PatchAdsOrganizationRequest withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = id;
-        return this;
-    }
-
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public PatchAdsOrganizationRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
+    public PatchAdsOrganizationRequest withId(@Nonnull String id) {
+        this.id = Utils.checkNotNull(id, "id");
         return this;
     }
 
@@ -178,11 +148,11 @@ public class PatchAdsOrganizationRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public PatchAdsOrganizationRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public PatchAdsOrganizationRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -225,71 +195,42 @@ public class PatchAdsOrganizationRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<PatchAdsOrganizationQueryParamFields>> fields = Optional.empty();
+        private List<PatchAdsOrganizationQueryParamFields> fields;
 
         private String id;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder adsOrganization(AdsOrganization adsOrganization) {
-            Utils.checkNotNull(adsOrganization, "adsOrganization");
-            this.adsOrganization = adsOrganization;
+        public Builder adsOrganization(@Nonnull AdsOrganization adsOrganization) {
+            this.adsOrganization = Utils.checkNotNull(adsOrganization, "adsOrganization");
             return this;
         }
-
 
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<PatchAdsOrganizationQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<PatchAdsOrganizationQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<PatchAdsOrganizationQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * ID of the Organization
          */
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = id;
-            return this;
-        }
-
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
+        public Builder id(@Nonnull String id) {
+            this.id = Utils.checkNotNull(id, "id");
             return this;
         }
 
@@ -298,14 +239,12 @@ public class PatchAdsOrganizationRequest {
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
         public PatchAdsOrganizationRequest build() {
-
             return new PatchAdsOrganizationRequest(
                 adsOrganization, connectionId, fields,
                 id, raw);

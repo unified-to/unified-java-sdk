@@ -4,9 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
 import java.lang.Override;
 import java.lang.String;
+import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.Connection;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -27,28 +28,26 @@ public class UpdateUnifiedConnectionRequest {
 
     @JsonCreator
     public UpdateUnifiedConnectionRequest(
-            Connection connection,
-            String id) {
-        Utils.checkNotNull(connection, "connection");
-        Utils.checkNotNull(id, "id");
-        this.connection = connection;
-        this.id = id;
+            @Nonnull Connection connection,
+            @Nonnull String id) {
+        this.connection = Optional.ofNullable(connection)
+            .orElseThrow(() -> new IllegalArgumentException("connection cannot be null"));
+        this.id = Optional.ofNullable(id)
+            .orElseThrow(() -> new IllegalArgumentException("id cannot be null"));
     }
 
     /**
      * A connection represents a specific authentication of an integration.
      */
-    @JsonIgnore
     public Connection connection() {
-        return connection;
+        return this.connection;
     }
 
     /**
      * ID of the Connection
      */
-    @JsonIgnore
     public String id() {
-        return id;
+        return this.id;
     }
 
     public static Builder builder() {
@@ -59,20 +58,20 @@ public class UpdateUnifiedConnectionRequest {
     /**
      * A connection represents a specific authentication of an integration.
      */
-    public UpdateUnifiedConnectionRequest withConnection(Connection connection) {
-        Utils.checkNotNull(connection, "connection");
-        this.connection = connection;
+    public UpdateUnifiedConnectionRequest withConnection(@Nonnull Connection connection) {
+        this.connection = Utils.checkNotNull(connection, "connection");
         return this;
     }
+
 
     /**
      * ID of the Connection
      */
-    public UpdateUnifiedConnectionRequest withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = id;
+    public UpdateUnifiedConnectionRequest withId(@Nonnull String id) {
+        this.id = Utils.checkNotNull(id, "id");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -112,28 +111,23 @@ public class UpdateUnifiedConnectionRequest {
           // force use of static builder() method
         }
 
-
         /**
          * A connection represents a specific authentication of an integration.
          */
-        public Builder connection(Connection connection) {
-            Utils.checkNotNull(connection, "connection");
-            this.connection = connection;
+        public Builder connection(@Nonnull Connection connection) {
+            this.connection = Utils.checkNotNull(connection, "connection");
             return this;
         }
-
 
         /**
          * ID of the Connection
          */
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = id;
+        public Builder id(@Nonnull String id) {
+            this.id = Utils.checkNotNull(id, "id");
             return this;
         }
 
         public UpdateUnifiedConnectionRequest build() {
-
             return new UpdateUnifiedConnectionRequest(
                 connection, id);
         }

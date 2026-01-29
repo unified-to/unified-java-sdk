@@ -4,13 +4,12 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -19,40 +18,35 @@ public class PropertyScimGroupMeta {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created")
-    private Optional<String> created;
+    private String created;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModified")
-    private Optional<String> lastModified;
+    private String lastModified;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
-    private Optional<String> location;
+    private String location;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
-    private Optional<? extends ResourceType> resourceType;
+    private ResourceType resourceType;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
-    private Optional<String> version;
+    private String version;
 
     @JsonCreator
     public PropertyScimGroupMeta(
-            @JsonProperty("created") Optional<String> created,
-            @JsonProperty("lastModified") Optional<String> lastModified,
-            @JsonProperty("location") Optional<String> location,
-            @JsonProperty("resourceType") Optional<? extends ResourceType> resourceType,
-            @JsonProperty("version") Optional<String> version) {
-        Utils.checkNotNull(created, "created");
-        Utils.checkNotNull(lastModified, "lastModified");
-        Utils.checkNotNull(location, "location");
-        Utils.checkNotNull(resourceType, "resourceType");
-        Utils.checkNotNull(version, "version");
+            @JsonProperty("created") @Nullable String created,
+            @JsonProperty("lastModified") @Nullable String lastModified,
+            @JsonProperty("location") @Nullable String location,
+            @JsonProperty("resourceType") @Nullable ResourceType resourceType,
+            @JsonProperty("version") @Nullable String version) {
         this.created = created;
         this.lastModified = lastModified;
         this.location = location;
@@ -61,34 +55,28 @@ public class PropertyScimGroupMeta {
     }
     
     public PropertyScimGroupMeta() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null);
     }
 
-    @JsonIgnore
     public Optional<String> created() {
-        return created;
+        return Optional.ofNullable(this.created);
     }
 
-    @JsonIgnore
     public Optional<String> lastModified() {
-        return lastModified;
+        return Optional.ofNullable(this.lastModified);
     }
 
-    @JsonIgnore
     public Optional<String> location() {
-        return location;
+        return Optional.ofNullable(this.location);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ResourceType> resourceType() {
-        return (Optional<ResourceType>) resourceType;
+        return Optional.ofNullable(this.resourceType);
     }
 
-    @JsonIgnore
     public Optional<String> version() {
-        return version;
+        return Optional.ofNullable(this.version);
     }
 
     public static Builder builder() {
@@ -96,70 +84,35 @@ public class PropertyScimGroupMeta {
     }
 
 
-    public PropertyScimGroupMeta withCreated(String created) {
-        Utils.checkNotNull(created, "created");
-        this.created = Optional.ofNullable(created);
-        return this;
-    }
-
-
-    public PropertyScimGroupMeta withCreated(Optional<String> created) {
-        Utils.checkNotNull(created, "created");
+    public PropertyScimGroupMeta withCreated(@Nullable String created) {
         this.created = created;
         return this;
     }
 
-    public PropertyScimGroupMeta withLastModified(String lastModified) {
-        Utils.checkNotNull(lastModified, "lastModified");
-        this.lastModified = Optional.ofNullable(lastModified);
-        return this;
-    }
 
-
-    public PropertyScimGroupMeta withLastModified(Optional<String> lastModified) {
-        Utils.checkNotNull(lastModified, "lastModified");
+    public PropertyScimGroupMeta withLastModified(@Nullable String lastModified) {
         this.lastModified = lastModified;
         return this;
     }
 
-    public PropertyScimGroupMeta withLocation(String location) {
-        Utils.checkNotNull(location, "location");
-        this.location = Optional.ofNullable(location);
-        return this;
-    }
 
-
-    public PropertyScimGroupMeta withLocation(Optional<String> location) {
-        Utils.checkNotNull(location, "location");
+    public PropertyScimGroupMeta withLocation(@Nullable String location) {
         this.location = location;
         return this;
     }
 
-    public PropertyScimGroupMeta withResourceType(ResourceType resourceType) {
-        Utils.checkNotNull(resourceType, "resourceType");
-        this.resourceType = Optional.ofNullable(resourceType);
-        return this;
-    }
 
-
-    public PropertyScimGroupMeta withResourceType(Optional<? extends ResourceType> resourceType) {
-        Utils.checkNotNull(resourceType, "resourceType");
+    public PropertyScimGroupMeta withResourceType(@Nullable ResourceType resourceType) {
         this.resourceType = resourceType;
         return this;
     }
 
-    public PropertyScimGroupMeta withVersion(String version) {
-        Utils.checkNotNull(version, "version");
-        this.version = Optional.ofNullable(version);
-        return this;
-    }
 
-
-    public PropertyScimGroupMeta withVersion(Optional<String> version) {
-        Utils.checkNotNull(version, "version");
+    public PropertyScimGroupMeta withVersion(@Nullable String version) {
         this.version = version;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -198,87 +151,46 @@ public class PropertyScimGroupMeta {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> created = Optional.empty();
+        private String created;
 
-        private Optional<String> lastModified = Optional.empty();
+        private String lastModified;
 
-        private Optional<String> location = Optional.empty();
+        private String location;
 
-        private Optional<? extends ResourceType> resourceType = Optional.empty();
+        private ResourceType resourceType;
 
-        private Optional<String> version = Optional.empty();
+        private String version;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder created(String created) {
-            Utils.checkNotNull(created, "created");
-            this.created = Optional.ofNullable(created);
-            return this;
-        }
-
-        public Builder created(Optional<String> created) {
-            Utils.checkNotNull(created, "created");
+        public Builder created(@Nullable String created) {
             this.created = created;
             return this;
         }
 
-
-        public Builder lastModified(String lastModified) {
-            Utils.checkNotNull(lastModified, "lastModified");
-            this.lastModified = Optional.ofNullable(lastModified);
-            return this;
-        }
-
-        public Builder lastModified(Optional<String> lastModified) {
-            Utils.checkNotNull(lastModified, "lastModified");
+        public Builder lastModified(@Nullable String lastModified) {
             this.lastModified = lastModified;
             return this;
         }
 
-
-        public Builder location(String location) {
-            Utils.checkNotNull(location, "location");
-            this.location = Optional.ofNullable(location);
-            return this;
-        }
-
-        public Builder location(Optional<String> location) {
-            Utils.checkNotNull(location, "location");
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-
-        public Builder resourceType(ResourceType resourceType) {
-            Utils.checkNotNull(resourceType, "resourceType");
-            this.resourceType = Optional.ofNullable(resourceType);
-            return this;
-        }
-
-        public Builder resourceType(Optional<? extends ResourceType> resourceType) {
-            Utils.checkNotNull(resourceType, "resourceType");
+        public Builder resourceType(@Nullable ResourceType resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
-
-        public Builder version(String version) {
-            Utils.checkNotNull(version, "version");
-            this.version = Optional.ofNullable(version);
-            return this;
-        }
-
-        public Builder version(Optional<String> version) {
-            Utils.checkNotNull(version, "version");
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }
 
         public PropertyScimGroupMeta build() {
-
             return new PropertyScimGroupMeta(
                 created, lastModified, location,
                 resourceType, version);

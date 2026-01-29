@@ -4,13 +4,12 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -20,75 +19,65 @@ public class ShippingTrackingEvent {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carrier_status_code")
-    private Optional<String> carrierStatusCode;
+    private String carrierStatusCode;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
-    private Optional<String> description;
+    private String description;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event_code")
-    private Optional<String> eventCode;
+    private String eventCode;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_address")
-    private Optional<? extends PropertyShippingTrackingEventLocationAddress> locationAddress;
+    private PropertyShippingTrackingEventLocationAddress locationAddress;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_id")
-    private Optional<String> locationId;
+    private String locationId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_name")
-    private Optional<String> locationName;
+    private String locationName;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
-    private Optional<String> notes;
+    private String notes;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signed_by")
-    private Optional<String> signedBy;
+    private String signedBy;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
-    private Optional<? extends ShippingTrackingEventStatus> status;
+    private ShippingTrackingEventStatus status;
 
     @JsonCreator
     public ShippingTrackingEvent(
-            @JsonProperty("carrier_status_code") Optional<String> carrierStatusCode,
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("description") Optional<String> description,
-            @JsonProperty("event_code") Optional<String> eventCode,
-            @JsonProperty("location_address") Optional<? extends PropertyShippingTrackingEventLocationAddress> locationAddress,
-            @JsonProperty("location_id") Optional<String> locationId,
-            @JsonProperty("location_name") Optional<String> locationName,
-            @JsonProperty("notes") Optional<String> notes,
-            @JsonProperty("signed_by") Optional<String> signedBy,
-            @JsonProperty("status") Optional<? extends ShippingTrackingEventStatus> status) {
-        Utils.checkNotNull(carrierStatusCode, "carrierStatusCode");
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(description, "description");
-        Utils.checkNotNull(eventCode, "eventCode");
-        Utils.checkNotNull(locationAddress, "locationAddress");
-        Utils.checkNotNull(locationId, "locationId");
-        Utils.checkNotNull(locationName, "locationName");
-        Utils.checkNotNull(notes, "notes");
-        Utils.checkNotNull(signedBy, "signedBy");
-        Utils.checkNotNull(status, "status");
+            @JsonProperty("carrier_status_code") @Nullable String carrierStatusCode,
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("description") @Nullable String description,
+            @JsonProperty("event_code") @Nullable String eventCode,
+            @JsonProperty("location_address") @Nullable PropertyShippingTrackingEventLocationAddress locationAddress,
+            @JsonProperty("location_id") @Nullable String locationId,
+            @JsonProperty("location_name") @Nullable String locationName,
+            @JsonProperty("notes") @Nullable String notes,
+            @JsonProperty("signed_by") @Nullable String signedBy,
+            @JsonProperty("status") @Nullable ShippingTrackingEventStatus status) {
         this.carrierStatusCode = carrierStatusCode;
         this.createdAt = createdAt;
         this.description = description;
@@ -102,62 +91,50 @@ public class ShippingTrackingEvent {
     }
     
     public ShippingTrackingEvent() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null);
     }
 
-    @JsonIgnore
     public Optional<String> carrierStatusCode() {
-        return carrierStatusCode;
+        return Optional.ofNullable(this.carrierStatusCode);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<String> description() {
-        return description;
+        return Optional.ofNullable(this.description);
     }
 
-    @JsonIgnore
     public Optional<String> eventCode() {
-        return eventCode;
+        return Optional.ofNullable(this.eventCode);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<PropertyShippingTrackingEventLocationAddress> locationAddress() {
-        return (Optional<PropertyShippingTrackingEventLocationAddress>) locationAddress;
+        return Optional.ofNullable(this.locationAddress);
     }
 
-    @JsonIgnore
     public Optional<String> locationId() {
-        return locationId;
+        return Optional.ofNullable(this.locationId);
     }
 
-    @JsonIgnore
     public Optional<String> locationName() {
-        return locationName;
+        return Optional.ofNullable(this.locationName);
     }
 
-    @JsonIgnore
     public Optional<String> notes() {
-        return notes;
+        return Optional.ofNullable(this.notes);
     }
 
-    @JsonIgnore
     public Optional<String> signedBy() {
-        return signedBy;
+        return Optional.ofNullable(this.signedBy);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ShippingTrackingEventStatus> status() {
-        return (Optional<ShippingTrackingEventStatus>) status;
+        return Optional.ofNullable(this.status);
     }
 
     public static Builder builder() {
@@ -165,135 +142,65 @@ public class ShippingTrackingEvent {
     }
 
 
-    public ShippingTrackingEvent withCarrierStatusCode(String carrierStatusCode) {
-        Utils.checkNotNull(carrierStatusCode, "carrierStatusCode");
-        this.carrierStatusCode = Optional.ofNullable(carrierStatusCode);
-        return this;
-    }
-
-
-    public ShippingTrackingEvent withCarrierStatusCode(Optional<String> carrierStatusCode) {
-        Utils.checkNotNull(carrierStatusCode, "carrierStatusCode");
+    public ShippingTrackingEvent withCarrierStatusCode(@Nullable String carrierStatusCode) {
         this.carrierStatusCode = carrierStatusCode;
         return this;
     }
 
-    public ShippingTrackingEvent withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
 
-
-    public ShippingTrackingEvent withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public ShippingTrackingEvent withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public ShippingTrackingEvent withDescription(String description) {
-        Utils.checkNotNull(description, "description");
-        this.description = Optional.ofNullable(description);
-        return this;
-    }
 
-
-    public ShippingTrackingEvent withDescription(Optional<String> description) {
-        Utils.checkNotNull(description, "description");
+    public ShippingTrackingEvent withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
-    public ShippingTrackingEvent withEventCode(String eventCode) {
-        Utils.checkNotNull(eventCode, "eventCode");
-        this.eventCode = Optional.ofNullable(eventCode);
-        return this;
-    }
 
-
-    public ShippingTrackingEvent withEventCode(Optional<String> eventCode) {
-        Utils.checkNotNull(eventCode, "eventCode");
+    public ShippingTrackingEvent withEventCode(@Nullable String eventCode) {
         this.eventCode = eventCode;
         return this;
     }
 
-    public ShippingTrackingEvent withLocationAddress(PropertyShippingTrackingEventLocationAddress locationAddress) {
-        Utils.checkNotNull(locationAddress, "locationAddress");
-        this.locationAddress = Optional.ofNullable(locationAddress);
-        return this;
-    }
 
-
-    public ShippingTrackingEvent withLocationAddress(Optional<? extends PropertyShippingTrackingEventLocationAddress> locationAddress) {
-        Utils.checkNotNull(locationAddress, "locationAddress");
+    public ShippingTrackingEvent withLocationAddress(@Nullable PropertyShippingTrackingEventLocationAddress locationAddress) {
         this.locationAddress = locationAddress;
         return this;
     }
 
-    public ShippingTrackingEvent withLocationId(String locationId) {
-        Utils.checkNotNull(locationId, "locationId");
-        this.locationId = Optional.ofNullable(locationId);
-        return this;
-    }
 
-
-    public ShippingTrackingEvent withLocationId(Optional<String> locationId) {
-        Utils.checkNotNull(locationId, "locationId");
+    public ShippingTrackingEvent withLocationId(@Nullable String locationId) {
         this.locationId = locationId;
         return this;
     }
 
-    public ShippingTrackingEvent withLocationName(String locationName) {
-        Utils.checkNotNull(locationName, "locationName");
-        this.locationName = Optional.ofNullable(locationName);
-        return this;
-    }
 
-
-    public ShippingTrackingEvent withLocationName(Optional<String> locationName) {
-        Utils.checkNotNull(locationName, "locationName");
+    public ShippingTrackingEvent withLocationName(@Nullable String locationName) {
         this.locationName = locationName;
         return this;
     }
 
-    public ShippingTrackingEvent withNotes(String notes) {
-        Utils.checkNotNull(notes, "notes");
-        this.notes = Optional.ofNullable(notes);
-        return this;
-    }
 
-
-    public ShippingTrackingEvent withNotes(Optional<String> notes) {
-        Utils.checkNotNull(notes, "notes");
+    public ShippingTrackingEvent withNotes(@Nullable String notes) {
         this.notes = notes;
         return this;
     }
 
-    public ShippingTrackingEvent withSignedBy(String signedBy) {
-        Utils.checkNotNull(signedBy, "signedBy");
-        this.signedBy = Optional.ofNullable(signedBy);
-        return this;
-    }
 
-
-    public ShippingTrackingEvent withSignedBy(Optional<String> signedBy) {
-        Utils.checkNotNull(signedBy, "signedBy");
+    public ShippingTrackingEvent withSignedBy(@Nullable String signedBy) {
         this.signedBy = signedBy;
         return this;
     }
 
-    public ShippingTrackingEvent withStatus(ShippingTrackingEventStatus status) {
-        Utils.checkNotNull(status, "status");
-        this.status = Optional.ofNullable(status);
-        return this;
-    }
 
-
-    public ShippingTrackingEvent withStatus(Optional<? extends ShippingTrackingEventStatus> status) {
-        Utils.checkNotNull(status, "status");
+    public ShippingTrackingEvent withStatus(@Nullable ShippingTrackingEventStatus status) {
         this.status = status;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -344,162 +251,81 @@ public class ShippingTrackingEvent {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> carrierStatusCode = Optional.empty();
+        private String carrierStatusCode;
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<String> description = Optional.empty();
+        private String description;
 
-        private Optional<String> eventCode = Optional.empty();
+        private String eventCode;
 
-        private Optional<? extends PropertyShippingTrackingEventLocationAddress> locationAddress = Optional.empty();
+        private PropertyShippingTrackingEventLocationAddress locationAddress;
 
-        private Optional<String> locationId = Optional.empty();
+        private String locationId;
 
-        private Optional<String> locationName = Optional.empty();
+        private String locationName;
 
-        private Optional<String> notes = Optional.empty();
+        private String notes;
 
-        private Optional<String> signedBy = Optional.empty();
+        private String signedBy;
 
-        private Optional<? extends ShippingTrackingEventStatus> status = Optional.empty();
+        private ShippingTrackingEventStatus status;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder carrierStatusCode(String carrierStatusCode) {
-            Utils.checkNotNull(carrierStatusCode, "carrierStatusCode");
-            this.carrierStatusCode = Optional.ofNullable(carrierStatusCode);
-            return this;
-        }
-
-        public Builder carrierStatusCode(Optional<String> carrierStatusCode) {
-            Utils.checkNotNull(carrierStatusCode, "carrierStatusCode");
+        public Builder carrierStatusCode(@Nullable String carrierStatusCode) {
             this.carrierStatusCode = carrierStatusCode;
             return this;
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder description(String description) {
-            Utils.checkNotNull(description, "description");
-            this.description = Optional.ofNullable(description);
-            return this;
-        }
-
-        public Builder description(Optional<String> description) {
-            Utils.checkNotNull(description, "description");
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-
-        public Builder eventCode(String eventCode) {
-            Utils.checkNotNull(eventCode, "eventCode");
-            this.eventCode = Optional.ofNullable(eventCode);
-            return this;
-        }
-
-        public Builder eventCode(Optional<String> eventCode) {
-            Utils.checkNotNull(eventCode, "eventCode");
+        public Builder eventCode(@Nullable String eventCode) {
             this.eventCode = eventCode;
             return this;
         }
 
-
-        public Builder locationAddress(PropertyShippingTrackingEventLocationAddress locationAddress) {
-            Utils.checkNotNull(locationAddress, "locationAddress");
-            this.locationAddress = Optional.ofNullable(locationAddress);
-            return this;
-        }
-
-        public Builder locationAddress(Optional<? extends PropertyShippingTrackingEventLocationAddress> locationAddress) {
-            Utils.checkNotNull(locationAddress, "locationAddress");
+        public Builder locationAddress(@Nullable PropertyShippingTrackingEventLocationAddress locationAddress) {
             this.locationAddress = locationAddress;
             return this;
         }
 
-
-        public Builder locationId(String locationId) {
-            Utils.checkNotNull(locationId, "locationId");
-            this.locationId = Optional.ofNullable(locationId);
-            return this;
-        }
-
-        public Builder locationId(Optional<String> locationId) {
-            Utils.checkNotNull(locationId, "locationId");
+        public Builder locationId(@Nullable String locationId) {
             this.locationId = locationId;
             return this;
         }
 
-
-        public Builder locationName(String locationName) {
-            Utils.checkNotNull(locationName, "locationName");
-            this.locationName = Optional.ofNullable(locationName);
-            return this;
-        }
-
-        public Builder locationName(Optional<String> locationName) {
-            Utils.checkNotNull(locationName, "locationName");
+        public Builder locationName(@Nullable String locationName) {
             this.locationName = locationName;
             return this;
         }
 
-
-        public Builder notes(String notes) {
-            Utils.checkNotNull(notes, "notes");
-            this.notes = Optional.ofNullable(notes);
-            return this;
-        }
-
-        public Builder notes(Optional<String> notes) {
-            Utils.checkNotNull(notes, "notes");
+        public Builder notes(@Nullable String notes) {
             this.notes = notes;
             return this;
         }
 
-
-        public Builder signedBy(String signedBy) {
-            Utils.checkNotNull(signedBy, "signedBy");
-            this.signedBy = Optional.ofNullable(signedBy);
-            return this;
-        }
-
-        public Builder signedBy(Optional<String> signedBy) {
-            Utils.checkNotNull(signedBy, "signedBy");
+        public Builder signedBy(@Nullable String signedBy) {
             this.signedBy = signedBy;
             return this;
         }
 
-
-        public Builder status(ShippingTrackingEventStatus status) {
-            Utils.checkNotNull(status, "status");
-            this.status = Optional.ofNullable(status);
-            return this;
-        }
-
-        public Builder status(Optional<? extends ShippingTrackingEventStatus> status) {
-            Utils.checkNotNull(status, "status");
+        public Builder status(@Nullable ShippingTrackingEventStatus status) {
             this.status = status;
             return this;
         }
 
         public ShippingTrackingEvent build() {
-
             return new ShippingTrackingEvent(
                 carrierStatusCode, createdAt, description,
                 eventCode, locationAddress, locationId,

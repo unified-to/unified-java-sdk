@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateKmsCommentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateKmsPageRequest;
@@ -116,7 +117,7 @@ public class AsyncKms {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateKmsCommentResponse>} - The async response
      */
-    public CompletableFuture<CreateKmsCommentResponse> createKmsComment(CreateKmsCommentRequest request) {
+    public CompletableFuture<CreateKmsCommentResponse> createKmsComment(@Nonnull CreateKmsCommentRequest request) {
         AsyncRequestOperation<CreateKmsCommentRequest, CreateKmsCommentResponse> operation
               = new CreateKmsComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -139,7 +140,7 @@ public class AsyncKms {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateKmsPageResponse>} - The async response
      */
-    public CompletableFuture<CreateKmsPageResponse> createKmsPage(CreateKmsPageRequest request) {
+    public CompletableFuture<CreateKmsPageResponse> createKmsPage(@Nonnull CreateKmsPageRequest request) {
         AsyncRequestOperation<CreateKmsPageRequest, CreateKmsPageResponse> operation
               = new CreateKmsPage.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -162,7 +163,7 @@ public class AsyncKms {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateKmsSpaceResponse>} - The async response
      */
-    public CompletableFuture<CreateKmsSpaceResponse> createKmsSpace(CreateKmsSpaceRequest request) {
+    public CompletableFuture<CreateKmsSpaceResponse> createKmsSpace(@Nonnull CreateKmsSpaceRequest request) {
         AsyncRequestOperation<CreateKmsSpaceRequest, CreateKmsSpaceResponse> operation
               = new CreateKmsSpace.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -185,7 +186,7 @@ public class AsyncKms {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetKmsCommentResponse>} - The async response
      */
-    public CompletableFuture<GetKmsCommentResponse> getKmsComment(GetKmsCommentRequest request) {
+    public CompletableFuture<GetKmsCommentResponse> getKmsComment(@Nonnull GetKmsCommentRequest request) {
         AsyncRequestOperation<GetKmsCommentRequest, GetKmsCommentResponse> operation
               = new GetKmsComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -208,7 +209,7 @@ public class AsyncKms {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetKmsPageResponse>} - The async response
      */
-    public CompletableFuture<GetKmsPageResponse> getKmsPage(GetKmsPageRequest request) {
+    public CompletableFuture<GetKmsPageResponse> getKmsPage(@Nonnull GetKmsPageRequest request) {
         AsyncRequestOperation<GetKmsPageRequest, GetKmsPageResponse> operation
               = new GetKmsPage.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -231,7 +232,7 @@ public class AsyncKms {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetKmsSpaceResponse>} - The async response
      */
-    public CompletableFuture<GetKmsSpaceResponse> getKmsSpace(GetKmsSpaceRequest request) {
+    public CompletableFuture<GetKmsSpaceResponse> getKmsSpace(@Nonnull GetKmsSpaceRequest request) {
         AsyncRequestOperation<GetKmsSpaceRequest, GetKmsSpaceResponse> operation
               = new GetKmsSpace.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -254,7 +255,7 @@ public class AsyncKms {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListKmsCommentsResponse>} - The async response
      */
-    public CompletableFuture<ListKmsCommentsResponse> listKmsComments(ListKmsCommentsRequest request) {
+    public CompletableFuture<ListKmsCommentsResponse> listKmsComments(@Nonnull ListKmsCommentsRequest request) {
         AsyncRequestOperation<ListKmsCommentsRequest, ListKmsCommentsResponse> operation
               = new ListKmsComments.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -277,7 +278,7 @@ public class AsyncKms {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListKmsPagesResponse>} - The async response
      */
-    public CompletableFuture<ListKmsPagesResponse> listKmsPages(ListKmsPagesRequest request) {
+    public CompletableFuture<ListKmsPagesResponse> listKmsPages(@Nonnull ListKmsPagesRequest request) {
         AsyncRequestOperation<ListKmsPagesRequest, ListKmsPagesResponse> operation
               = new ListKmsPages.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -300,7 +301,7 @@ public class AsyncKms {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListKmsSpacesResponse>} - The async response
      */
-    public CompletableFuture<ListKmsSpacesResponse> listKmsSpaces(ListKmsSpacesRequest request) {
+    public CompletableFuture<ListKmsSpacesResponse> listKmsSpaces(@Nonnull ListKmsSpacesRequest request) {
         AsyncRequestOperation<ListKmsSpacesRequest, ListKmsSpacesResponse> operation
               = new ListKmsSpaces.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -323,7 +324,7 @@ public class AsyncKms {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchKmsCommentResponse>} - The async response
      */
-    public CompletableFuture<PatchKmsCommentResponse> patchKmsComment(PatchKmsCommentRequest request) {
+    public CompletableFuture<PatchKmsCommentResponse> patchKmsComment(@Nonnull PatchKmsCommentRequest request) {
         AsyncRequestOperation<PatchKmsCommentRequest, PatchKmsCommentResponse> operation
               = new PatchKmsComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -346,7 +347,7 @@ public class AsyncKms {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchKmsPageResponse>} - The async response
      */
-    public CompletableFuture<PatchKmsPageResponse> patchKmsPage(PatchKmsPageRequest request) {
+    public CompletableFuture<PatchKmsPageResponse> patchKmsPage(@Nonnull PatchKmsPageRequest request) {
         AsyncRequestOperation<PatchKmsPageRequest, PatchKmsPageResponse> operation
               = new PatchKmsPage.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -369,7 +370,7 @@ public class AsyncKms {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchKmsSpaceResponse>} - The async response
      */
-    public CompletableFuture<PatchKmsSpaceResponse> patchKmsSpace(PatchKmsSpaceRequest request) {
+    public CompletableFuture<PatchKmsSpaceResponse> patchKmsSpace(@Nonnull PatchKmsSpaceRequest request) {
         AsyncRequestOperation<PatchKmsSpaceRequest, PatchKmsSpaceResponse> operation
               = new PatchKmsSpace.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -392,7 +393,7 @@ public class AsyncKms {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveKmsCommentResponse>} - The async response
      */
-    public CompletableFuture<RemoveKmsCommentResponse> removeKmsComment(RemoveKmsCommentRequest request) {
+    public CompletableFuture<RemoveKmsCommentResponse> removeKmsComment(@Nonnull RemoveKmsCommentRequest request) {
         AsyncRequestOperation<RemoveKmsCommentRequest, RemoveKmsCommentResponse> operation
               = new RemoveKmsComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -415,7 +416,7 @@ public class AsyncKms {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveKmsPageResponse>} - The async response
      */
-    public CompletableFuture<RemoveKmsPageResponse> removeKmsPage(RemoveKmsPageRequest request) {
+    public CompletableFuture<RemoveKmsPageResponse> removeKmsPage(@Nonnull RemoveKmsPageRequest request) {
         AsyncRequestOperation<RemoveKmsPageRequest, RemoveKmsPageResponse> operation
               = new RemoveKmsPage.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -438,7 +439,7 @@ public class AsyncKms {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveKmsSpaceResponse>} - The async response
      */
-    public CompletableFuture<RemoveKmsSpaceResponse> removeKmsSpace(RemoveKmsSpaceRequest request) {
+    public CompletableFuture<RemoveKmsSpaceResponse> removeKmsSpace(@Nonnull RemoveKmsSpaceRequest request) {
         AsyncRequestOperation<RemoveKmsSpaceRequest, RemoveKmsSpaceResponse> operation
               = new RemoveKmsSpace.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -461,7 +462,7 @@ public class AsyncKms {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateKmsCommentResponse>} - The async response
      */
-    public CompletableFuture<UpdateKmsCommentResponse> updateKmsComment(UpdateKmsCommentRequest request) {
+    public CompletableFuture<UpdateKmsCommentResponse> updateKmsComment(@Nonnull UpdateKmsCommentRequest request) {
         AsyncRequestOperation<UpdateKmsCommentRequest, UpdateKmsCommentResponse> operation
               = new UpdateKmsComment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -484,7 +485,7 @@ public class AsyncKms {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateKmsPageResponse>} - The async response
      */
-    public CompletableFuture<UpdateKmsPageResponse> updateKmsPage(UpdateKmsPageRequest request) {
+    public CompletableFuture<UpdateKmsPageResponse> updateKmsPage(@Nonnull UpdateKmsPageRequest request) {
         AsyncRequestOperation<UpdateKmsPageRequest, UpdateKmsPageResponse> operation
               = new UpdateKmsPage.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -507,7 +508,7 @@ public class AsyncKms {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateKmsSpaceResponse>} - The async response
      */
-    public CompletableFuture<UpdateKmsSpaceResponse> updateKmsSpace(UpdateKmsSpaceRequest request) {
+    public CompletableFuture<UpdateKmsSpaceResponse> updateKmsSpace(@Nonnull UpdateKmsSpaceRequest request) {
         AsyncRequestOperation<UpdateKmsSpaceRequest, UpdateKmsSpaceResponse> operation
               = new UpdateKmsSpace.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

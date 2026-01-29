@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 import static to.unified.unified_java_sdk.operations.Operations.RequestlessOperation;
 
+import jakarta.annotation.Nonnull;
 import java.lang.String;
 import java.util.List;
 import to.unified.unified_java_sdk.models.operations.CreateUnifiedEnvironmentRequestBuilder;
@@ -56,7 +57,7 @@ public class Environment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateUnifiedEnvironmentResponse createUnifiedEnvironment(List<String> request) {
+    public CreateUnifiedEnvironmentResponse createUnifiedEnvironment(@Nonnull List<String> request) {
         RequestOperation<List<String>, CreateUnifiedEnvironmentResponse> operation
               = new CreateUnifiedEnvironment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -99,7 +100,7 @@ public class Environment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveUnifiedEnvironmentResponse removeUnifiedEnvironment(RemoveUnifiedEnvironmentRequest request) {
+    public RemoveUnifiedEnvironmentResponse removeUnifiedEnvironment(@Nonnull RemoveUnifiedEnvironmentRequest request) {
         RequestOperation<RemoveUnifiedEnvironmentRequest, RemoveUnifiedEnvironmentResponse> operation
               = new RemoveUnifiedEnvironment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

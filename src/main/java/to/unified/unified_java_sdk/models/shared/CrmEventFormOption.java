@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
 import java.util.Optional;
@@ -18,35 +18,31 @@ public class CrmEventFormOption {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
-    private Optional<String> label;
+    private String label;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
-    private Optional<String> value;
+    private String value;
 
     @JsonCreator
     public CrmEventFormOption(
-            @JsonProperty("label") Optional<String> label,
-            @JsonProperty("value") Optional<String> value) {
-        Utils.checkNotNull(label, "label");
-        Utils.checkNotNull(value, "value");
+            @JsonProperty("label") @Nullable String label,
+            @JsonProperty("value") @Nullable String value) {
         this.label = label;
         this.value = value;
     }
     
     public CrmEventFormOption() {
-        this(Optional.empty(), Optional.empty());
+        this(null, null);
     }
 
-    @JsonIgnore
     public Optional<String> label() {
-        return label;
+        return Optional.ofNullable(this.label);
     }
 
-    @JsonIgnore
     public Optional<String> value() {
-        return value;
+        return Optional.ofNullable(this.value);
     }
 
     public static Builder builder() {
@@ -54,31 +50,17 @@ public class CrmEventFormOption {
     }
 
 
-    public CrmEventFormOption withLabel(String label) {
-        Utils.checkNotNull(label, "label");
-        this.label = Optional.ofNullable(label);
-        return this;
-    }
-
-
-    public CrmEventFormOption withLabel(Optional<String> label) {
-        Utils.checkNotNull(label, "label");
+    public CrmEventFormOption withLabel(@Nullable String label) {
         this.label = label;
         return this;
     }
 
-    public CrmEventFormOption withValue(String value) {
-        Utils.checkNotNull(value, "value");
-        this.value = Optional.ofNullable(value);
-        return this;
-    }
 
-
-    public CrmEventFormOption withValue(Optional<String> value) {
-        Utils.checkNotNull(value, "value");
+    public CrmEventFormOption withValue(@Nullable String value) {
         this.value = value;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -110,42 +92,25 @@ public class CrmEventFormOption {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> label = Optional.empty();
+        private String label;
 
-        private Optional<String> value = Optional.empty();
+        private String value;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder label(String label) {
-            Utils.checkNotNull(label, "label");
-            this.label = Optional.ofNullable(label);
-            return this;
-        }
-
-        public Builder label(Optional<String> label) {
-            Utils.checkNotNull(label, "label");
+        public Builder label(@Nullable String label) {
             this.label = label;
             return this;
         }
 
-
-        public Builder value(String value) {
-            Utils.checkNotNull(value, "value");
-            this.value = Optional.ofNullable(value);
-            return this;
-        }
-
-        public Builder value(Optional<String> value) {
-            Utils.checkNotNull(value, "value");
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }
 
         public CrmEventFormOption build() {
-
             return new CrmEventFormOption(
                 label, value);
         }

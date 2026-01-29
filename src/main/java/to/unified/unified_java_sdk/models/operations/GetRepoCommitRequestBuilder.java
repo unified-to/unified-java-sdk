@@ -5,32 +5,45 @@ package to.unified.unified_java_sdk.models.operations;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.GetRepoCommit;
 import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class GetRepoCommitRequestBuilder {
-
-    private GetRepoCommitRequest request;
     private final SDKConfiguration sdkConfiguration;
-    private final Headers _headers = new Headers(); 
+    private final Headers _headers = new Headers();
+    private GetRepoCommitRequest request;
 
     public GetRepoCommitRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
 
-    public GetRepoCommitRequestBuilder request(GetRepoCommitRequest request) {
-        Utils.checkNotNull(request, "request");
-        this.request = request;
+    public GetRepoCommitRequestBuilder request(@Nonnull GetRepoCommitRequest request) {
+        this.request = Utils.checkNotNull(request, "request");
         return this;
     }
 
+    private GetRepoCommitRequest _buildRequest() {
+        return this.request;
+    }
+    
+    public GetRepoCommitRequestBuilder header(String name, String value) {
+        Utils.checkNotNull(name, "name");
+        Utils.checkNotNull(value, "value");
+        this._headers.add(name, value);
+        return this;
+    }
+
+    /**
+    * Executes the request and returns the response.
+    *
+    * @return The response from the server.
+    */
     public GetRepoCommitResponse call() {
-        
         RequestOperation<GetRepoCommitRequest, GetRepoCommitResponse> operation
               = new GetRepoCommit.Sync(sdkConfiguration, _headers);
-
-        return operation.handleResponse(operation.doRequest(request));
+        return operation.handleResponse(operation.doRequest(this._buildRequest()));
     }
 }

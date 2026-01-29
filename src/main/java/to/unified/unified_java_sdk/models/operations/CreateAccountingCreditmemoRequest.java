@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.AccountingCreditmemo;
@@ -30,7 +30,7 @@ public class CreateAccountingCreditmemoRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<CreateAccountingCreditmemoQueryParamFields>> fields;
+    private List<CreateAccountingCreditmemoQueryParamFields> fields;
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
@@ -38,51 +38,45 @@ public class CreateAccountingCreditmemoRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
     @JsonCreator
     public CreateAccountingCreditmemoRequest(
-            AccountingCreditmemo accountingCreditmemo,
-            String connectionId,
-            Optional<? extends List<CreateAccountingCreditmemoQueryParamFields>> fields,
-            Optional<String> raw) {
-        Utils.checkNotNull(accountingCreditmemo, "accountingCreditmemo");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(raw, "raw");
-        this.accountingCreditmemo = accountingCreditmemo;
-        this.connectionId = connectionId;
+            @Nonnull AccountingCreditmemo accountingCreditmemo,
+            @Nonnull String connectionId,
+            @Nullable List<CreateAccountingCreditmemoQueryParamFields> fields,
+            @Nullable String raw) {
+        this.accountingCreditmemo = Optional.ofNullable(accountingCreditmemo)
+            .orElseThrow(() -> new IllegalArgumentException("accountingCreditmemo cannot be null"));
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
         this.raw = raw;
     }
     
     public CreateAccountingCreditmemoRequest(
-            AccountingCreditmemo accountingCreditmemo,
-            String connectionId) {
-        this(accountingCreditmemo, connectionId, Optional.empty(),
-            Optional.empty());
+            @Nonnull AccountingCreditmemo accountingCreditmemo,
+            @Nonnull String connectionId) {
+        this(accountingCreditmemo, connectionId, null,
+            null);
     }
 
-    @JsonIgnore
     public AccountingCreditmemo accountingCreditmemo() {
-        return accountingCreditmemo;
+        return this.accountingCreditmemo;
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<CreateAccountingCreditmemoQueryParamFields>> fields() {
-        return (Optional<List<CreateAccountingCreditmemoQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
@@ -90,9 +84,8 @@ public class CreateAccountingCreditmemoRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
     public static Builder builder() {
@@ -100,27 +93,17 @@ public class CreateAccountingCreditmemoRequest {
     }
 
 
-    public CreateAccountingCreditmemoRequest withAccountingCreditmemo(AccountingCreditmemo accountingCreditmemo) {
-        Utils.checkNotNull(accountingCreditmemo, "accountingCreditmemo");
-        this.accountingCreditmemo = accountingCreditmemo;
+    public CreateAccountingCreditmemoRequest withAccountingCreditmemo(@Nonnull AccountingCreditmemo accountingCreditmemo) {
+        this.accountingCreditmemo = Utils.checkNotNull(accountingCreditmemo, "accountingCreditmemo");
         return this;
     }
+
 
     /**
      * ID of the connection
      */
-    public CreateAccountingCreditmemoRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public CreateAccountingCreditmemoRequest withFields(List<CreateAccountingCreditmemoQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public CreateAccountingCreditmemoRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -128,34 +111,22 @@ public class CreateAccountingCreditmemoRequest {
     /**
      * Fields to return
      */
-    public CreateAccountingCreditmemoRequest withFields(Optional<? extends List<CreateAccountingCreditmemoQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public CreateAccountingCreditmemoRequest withFields(@Nullable List<CreateAccountingCreditmemoQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public CreateAccountingCreditmemoRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
-
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public CreateAccountingCreditmemoRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public CreateAccountingCreditmemoRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -196,75 +167,46 @@ public class CreateAccountingCreditmemoRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<CreateAccountingCreditmemoQueryParamFields>> fields = Optional.empty();
+        private List<CreateAccountingCreditmemoQueryParamFields> fields;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder accountingCreditmemo(AccountingCreditmemo accountingCreditmemo) {
-            Utils.checkNotNull(accountingCreditmemo, "accountingCreditmemo");
-            this.accountingCreditmemo = accountingCreditmemo;
+        public Builder accountingCreditmemo(@Nonnull AccountingCreditmemo accountingCreditmemo) {
+            this.accountingCreditmemo = Utils.checkNotNull(accountingCreditmemo, "accountingCreditmemo");
             return this;
         }
-
 
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<CreateAccountingCreditmemoQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<CreateAccountingCreditmemoQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<CreateAccountingCreditmemoQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
         public CreateAccountingCreditmemoRequest build() {
-
             return new CreateAccountingCreditmemoRequest(
                 accountingCreditmemo, connectionId, fields,
                 raw);

@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateStorageFileRequest;
 import to.unified.unified_java_sdk.models.operations.CreateStorageFileRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateStorageFileResponse;
@@ -67,7 +68,7 @@ public class File {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateStorageFileResponse createStorageFile(CreateStorageFileRequest request) {
+    public CreateStorageFileResponse createStorageFile(@Nonnull CreateStorageFileRequest request) {
         RequestOperation<CreateStorageFileRequest, CreateStorageFileResponse> operation
               = new CreateStorageFile.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -89,7 +90,7 @@ public class File {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetStorageFileResponse getStorageFile(GetStorageFileRequest request) {
+    public GetStorageFileResponse getStorageFile(@Nonnull GetStorageFileRequest request) {
         RequestOperation<GetStorageFileRequest, GetStorageFileResponse> operation
               = new GetStorageFile.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -111,7 +112,7 @@ public class File {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListStorageFilesResponse listStorageFiles(ListStorageFilesRequest request) {
+    public ListStorageFilesResponse listStorageFiles(@Nonnull ListStorageFilesRequest request) {
         RequestOperation<ListStorageFilesRequest, ListStorageFilesResponse> operation
               = new ListStorageFiles.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -133,7 +134,7 @@ public class File {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchStorageFileResponse patchStorageFile(PatchStorageFileRequest request) {
+    public PatchStorageFileResponse patchStorageFile(@Nonnull PatchStorageFileRequest request) {
         RequestOperation<PatchStorageFileRequest, PatchStorageFileResponse> operation
               = new PatchStorageFile.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -155,7 +156,7 @@ public class File {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveStorageFileResponse removeStorageFile(RemoveStorageFileRequest request) {
+    public RemoveStorageFileResponse removeStorageFile(@Nonnull RemoveStorageFileRequest request) {
         RequestOperation<RemoveStorageFileRequest, RemoveStorageFileResponse> operation
               = new RemoveStorageFile.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -177,7 +178,7 @@ public class File {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateStorageFileResponse updateStorageFile(UpdateStorageFileRequest request) {
+    public UpdateStorageFileResponse updateStorageFile(@Nonnull UpdateStorageFileRequest request) {
         RequestOperation<UpdateStorageFileRequest, UpdateStorageFileResponse> operation
               = new UpdateStorageFile.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

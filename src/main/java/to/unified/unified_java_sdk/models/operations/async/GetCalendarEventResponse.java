@@ -4,11 +4,11 @@
 package to.unified.unified_java_sdk.models.operations.async;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import java.lang.Integer;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.io.InputStream;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.CalendarEvent;
@@ -21,7 +21,7 @@ public class GetCalendarEventResponse implements AsyncResponse {
     /**
      * Successful
      */
-    private Optional<? extends CalendarEvent> calendarEvent;
+    private CalendarEvent calendarEvent;
 
     /**
      * HTTP response content type for this operation
@@ -40,59 +40,52 @@ public class GetCalendarEventResponse implements AsyncResponse {
 
     @JsonCreator
     public GetCalendarEventResponse(
-            Optional<? extends CalendarEvent> calendarEvent,
-            String contentType,
+            @Nullable CalendarEvent calendarEvent,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(calendarEvent, "calendarEvent");
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
+            @Nonnull HttpResponse<Blob> rawResponse) {
         this.calendarEvent = calendarEvent;
-        this.contentType = contentType;
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
     }
     
     public GetCalendarEventResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
-        this(Optional.empty(), contentType, statusCode,
+            @Nonnull HttpResponse<Blob> rawResponse) {
+        this(null, contentType, statusCode,
             rawResponse);
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<CalendarEvent> calendarEvent() {
-        return (Optional<CalendarEvent>) calendarEvent;
+        return Optional.ofNullable(this.calendarEvent);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<Blob> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     public static Builder builder() {
@@ -103,48 +96,38 @@ public class GetCalendarEventResponse implements AsyncResponse {
     /**
      * Successful
      */
-    public GetCalendarEventResponse withCalendarEvent(CalendarEvent calendarEvent) {
-        Utils.checkNotNull(calendarEvent, "calendarEvent");
-        this.calendarEvent = Optional.ofNullable(calendarEvent);
-        return this;
-    }
-
-
-    /**
-     * Successful
-     */
-    public GetCalendarEventResponse withCalendarEvent(Optional<? extends CalendarEvent> calendarEvent) {
-        Utils.checkNotNull(calendarEvent, "calendarEvent");
+    public GetCalendarEventResponse withCalendarEvent(@Nullable CalendarEvent calendarEvent) {
         this.calendarEvent = calendarEvent;
         return this;
     }
 
+
     /**
      * HTTP response content type for this operation
      */
-    public GetCalendarEventResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
+    public GetCalendarEventResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public GetCalendarEventResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public GetCalendarEventResponse withRawResponse(HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
+    public GetCalendarEventResponse withRawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -181,11 +164,11 @@ public class GetCalendarEventResponse implements AsyncResponse {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends CalendarEvent> calendarEvent = Optional.empty();
+        private CalendarEvent calendarEvent;
 
         private String contentType;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<Blob> rawResponse;
 
@@ -193,57 +176,39 @@ public class GetCalendarEventResponse implements AsyncResponse {
           // force use of static builder() method
         }
 
-
         /**
          * Successful
          */
-        public Builder calendarEvent(CalendarEvent calendarEvent) {
-            Utils.checkNotNull(calendarEvent, "calendarEvent");
-            this.calendarEvent = Optional.ofNullable(calendarEvent);
-            return this;
-        }
-
-        /**
-         * Successful
-         */
-        public Builder calendarEvent(Optional<? extends CalendarEvent> calendarEvent) {
-            Utils.checkNotNull(calendarEvent, "calendarEvent");
+        public Builder calendarEvent(@Nullable CalendarEvent calendarEvent) {
             this.calendarEvent = calendarEvent;
             return this;
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<Blob> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
+        public Builder rawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         public GetCalendarEventResponse build() {
-
             return new GetCalendarEventResponse(
                 calendarEvent, contentType, statusCode,
                 rawResponse);

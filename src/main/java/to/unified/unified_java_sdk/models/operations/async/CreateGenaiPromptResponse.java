@@ -4,11 +4,11 @@
 package to.unified.unified_java_sdk.models.operations.async;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import java.lang.Integer;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.io.InputStream;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.GenaiPrompt;
@@ -26,7 +26,7 @@ public class CreateGenaiPromptResponse implements AsyncResponse {
     /**
      * Successful
      */
-    private Optional<? extends GenaiPrompt> genaiPrompt;
+    private GenaiPrompt genaiPrompt;
 
     /**
      * HTTP response status code for this operation
@@ -40,59 +40,52 @@ public class CreateGenaiPromptResponse implements AsyncResponse {
 
     @JsonCreator
     public CreateGenaiPromptResponse(
-            String contentType,
-            Optional<? extends GenaiPrompt> genaiPrompt,
+            @Nonnull String contentType,
+            @Nullable GenaiPrompt genaiPrompt,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(genaiPrompt, "genaiPrompt");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.contentType = contentType;
+            @Nonnull HttpResponse<Blob> rawResponse) {
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.genaiPrompt = genaiPrompt;
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
     }
     
     public CreateGenaiPromptResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
-        this(contentType, Optional.empty(), statusCode,
+            @Nonnull HttpResponse<Blob> rawResponse) {
+        this(contentType, null, statusCode,
             rawResponse);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<GenaiPrompt> genaiPrompt() {
-        return (Optional<GenaiPrompt>) genaiPrompt;
+        return Optional.ofNullable(this.genaiPrompt);
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<Blob> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     public static Builder builder() {
@@ -103,18 +96,8 @@ public class CreateGenaiPromptResponse implements AsyncResponse {
     /**
      * HTTP response content type for this operation
      */
-    public CreateGenaiPromptResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
-        return this;
-    }
-
-    /**
-     * Successful
-     */
-    public CreateGenaiPromptResponse withGenaiPrompt(GenaiPrompt genaiPrompt) {
-        Utils.checkNotNull(genaiPrompt, "genaiPrompt");
-        this.genaiPrompt = Optional.ofNullable(genaiPrompt);
+    public CreateGenaiPromptResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
 
@@ -122,29 +105,29 @@ public class CreateGenaiPromptResponse implements AsyncResponse {
     /**
      * Successful
      */
-    public CreateGenaiPromptResponse withGenaiPrompt(Optional<? extends GenaiPrompt> genaiPrompt) {
-        Utils.checkNotNull(genaiPrompt, "genaiPrompt");
+    public CreateGenaiPromptResponse withGenaiPrompt(@Nullable GenaiPrompt genaiPrompt) {
         this.genaiPrompt = genaiPrompt;
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public CreateGenaiPromptResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public CreateGenaiPromptResponse withRawResponse(HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
+    public CreateGenaiPromptResponse withRawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -183,9 +166,9 @@ public class CreateGenaiPromptResponse implements AsyncResponse {
 
         private String contentType;
 
-        private Optional<? extends GenaiPrompt> genaiPrompt = Optional.empty();
+        private GenaiPrompt genaiPrompt;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<Blob> rawResponse;
 
@@ -193,57 +176,39 @@ public class CreateGenaiPromptResponse implements AsyncResponse {
           // force use of static builder() method
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
-            return this;
-        }
-
-
-        /**
-         * Successful
-         */
-        public Builder genaiPrompt(GenaiPrompt genaiPrompt) {
-            Utils.checkNotNull(genaiPrompt, "genaiPrompt");
-            this.genaiPrompt = Optional.ofNullable(genaiPrompt);
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
 
         /**
          * Successful
          */
-        public Builder genaiPrompt(Optional<? extends GenaiPrompt> genaiPrompt) {
-            Utils.checkNotNull(genaiPrompt, "genaiPrompt");
+        public Builder genaiPrompt(@Nullable GenaiPrompt genaiPrompt) {
             this.genaiPrompt = genaiPrompt;
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<Blob> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
+        public Builder rawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         public CreateGenaiPromptResponse build() {
-
             return new CreateGenaiPromptResponse(
                 contentType, genaiPrompt, statusCode,
                 rawResponse);

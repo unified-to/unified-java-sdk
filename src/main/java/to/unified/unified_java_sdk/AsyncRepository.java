@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateRepoRepositoryRequest;
 import to.unified.unified_java_sdk.models.operations.GetRepoRepositoryRequest;
@@ -68,7 +69,7 @@ public class AsyncRepository {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateRepoRepositoryResponse>} - The async response
      */
-    public CompletableFuture<CreateRepoRepositoryResponse> createRepoRepository(CreateRepoRepositoryRequest request) {
+    public CompletableFuture<CreateRepoRepositoryResponse> createRepoRepository(@Nonnull CreateRepoRepositoryRequest request) {
         AsyncRequestOperation<CreateRepoRepositoryRequest, CreateRepoRepositoryResponse> operation
               = new CreateRepoRepository.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -91,7 +92,7 @@ public class AsyncRepository {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetRepoRepositoryResponse>} - The async response
      */
-    public CompletableFuture<GetRepoRepositoryResponse> getRepoRepository(GetRepoRepositoryRequest request) {
+    public CompletableFuture<GetRepoRepositoryResponse> getRepoRepository(@Nonnull GetRepoRepositoryRequest request) {
         AsyncRequestOperation<GetRepoRepositoryRequest, GetRepoRepositoryResponse> operation
               = new GetRepoRepository.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -114,7 +115,7 @@ public class AsyncRepository {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListRepoRepositoriesResponse>} - The async response
      */
-    public CompletableFuture<ListRepoRepositoriesResponse> listRepoRepositories(ListRepoRepositoriesRequest request) {
+    public CompletableFuture<ListRepoRepositoriesResponse> listRepoRepositories(@Nonnull ListRepoRepositoriesRequest request) {
         AsyncRequestOperation<ListRepoRepositoriesRequest, ListRepoRepositoriesResponse> operation
               = new ListRepoRepositories.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -137,7 +138,7 @@ public class AsyncRepository {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchRepoRepositoryResponse>} - The async response
      */
-    public CompletableFuture<PatchRepoRepositoryResponse> patchRepoRepository(PatchRepoRepositoryRequest request) {
+    public CompletableFuture<PatchRepoRepositoryResponse> patchRepoRepository(@Nonnull PatchRepoRepositoryRequest request) {
         AsyncRequestOperation<PatchRepoRepositoryRequest, PatchRepoRepositoryResponse> operation
               = new PatchRepoRepository.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -160,7 +161,7 @@ public class AsyncRepository {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveRepoRepositoryResponse>} - The async response
      */
-    public CompletableFuture<RemoveRepoRepositoryResponse> removeRepoRepository(RemoveRepoRepositoryRequest request) {
+    public CompletableFuture<RemoveRepoRepositoryResponse> removeRepoRepository(@Nonnull RemoveRepoRepositoryRequest request) {
         AsyncRequestOperation<RemoveRepoRepositoryRequest, RemoveRepoRepositoryResponse> operation
               = new RemoveRepoRepository.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -183,7 +184,7 @@ public class AsyncRepository {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateRepoRepositoryResponse>} - The async response
      */
-    public CompletableFuture<UpdateRepoRepositoryResponse> updateRepoRepository(UpdateRepoRepositoryRequest request) {
+    public CompletableFuture<UpdateRepoRepositoryResponse> updateRepoRepository(@Nonnull UpdateRepoRepositoryRequest request) {
         AsyncRequestOperation<UpdateRepoRepositoryRequest, UpdateRepoRepositoryResponse> operation
               = new UpdateRepoRepository.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

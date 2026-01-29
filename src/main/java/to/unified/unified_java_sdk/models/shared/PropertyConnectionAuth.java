@@ -4,15 +4,14 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
@@ -28,77 +27,77 @@ public class PropertyConnectionAuth {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("access_token")
-    private Optional<String> accessToken;
+    private String accessToken;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("api_url")
-    private Optional<String> apiUrl;
+    private String apiUrl;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("app_id")
-    private Optional<String> appId;
+    private String appId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorize_url")
-    private Optional<String> authorizeUrl;
+    private String authorizeUrl;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_id")
-    private Optional<String> clientId;
+    private String clientId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_secret")
-    private Optional<String> clientSecret;
+    private String clientSecret;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumer_key")
-    private Optional<String> consumerKey;
+    private String consumerKey;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumer_secret")
-    private Optional<String> consumerSecret;
+    private String consumerSecret;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dev_api_key")
-    private Optional<String> devApiKey;
+    private String devApiKey;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emails")
-    private Optional<? extends List<String>> emails;
+    private List<String> emails;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expires_in")
-    private Optional<Double> expiresIn;
+    private Double expiresIn;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiry_date")
-    private Optional<OffsetDateTime> expiryDate;
+    private OffsetDateTime expiryDate;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
-    private Optional<String> key;
+    private String key;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
-    private Optional<? extends Map<String, Object>> meta;
+    private Map<String, Object> meta;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
-    private Optional<String> name;
+    private String name;
 
     /**
      * When integration.auth_type = "other", this field contains the authentication credentials in the same
@@ -106,105 +105,80 @@ public class PropertyConnectionAuth {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("other_auth_info")
-    private Optional<? extends List<String>> otherAuthInfo;
+    private List<String> otherAuthInfo;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pem")
-    private Optional<String> pem;
+    private String pem;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refresh_token")
-    private Optional<String> refreshToken;
+    private String refreshToken;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refresh_token_expires_date")
-    private Optional<OffsetDateTime> refreshTokenExpiresDate;
+    private OffsetDateTime refreshTokenExpiresDate;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refresh_token_expires_in")
-    private Optional<Double> refreshTokenExpiresIn;
+    private Double refreshTokenExpiresIn;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refresh_url")
-    private Optional<String> refreshUrl;
+    private String refreshUrl;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
-    private Optional<String> state;
+    private String state;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token")
-    private Optional<String> token;
+    private String token;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token_url")
-    private Optional<String> tokenUrl;
+    private String tokenUrl;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
-    private Optional<String> userId;
+    private String userId;
 
     @JsonCreator
     public PropertyConnectionAuth(
-            @JsonProperty("access_token") Optional<String> accessToken,
-            @JsonProperty("api_url") Optional<String> apiUrl,
-            @JsonProperty("app_id") Optional<String> appId,
-            @JsonProperty("authorize_url") Optional<String> authorizeUrl,
-            @JsonProperty("client_id") Optional<String> clientId,
-            @JsonProperty("client_secret") Optional<String> clientSecret,
-            @JsonProperty("consumer_key") Optional<String> consumerKey,
-            @JsonProperty("consumer_secret") Optional<String> consumerSecret,
-            @JsonProperty("dev_api_key") Optional<String> devApiKey,
-            @JsonProperty("emails") Optional<? extends List<String>> emails,
-            @JsonProperty("expires_in") Optional<Double> expiresIn,
-            @JsonProperty("expiry_date") Optional<OffsetDateTime> expiryDate,
-            @JsonProperty("key") Optional<String> key,
-            @JsonProperty("meta") Optional<? extends Map<String, Object>> meta,
-            @JsonProperty("name") Optional<String> name,
-            @JsonProperty("other_auth_info") Optional<? extends List<String>> otherAuthInfo,
-            @JsonProperty("pem") Optional<String> pem,
-            @JsonProperty("refresh_token") Optional<String> refreshToken,
-            @JsonProperty("refresh_token_expires_date") Optional<OffsetDateTime> refreshTokenExpiresDate,
-            @JsonProperty("refresh_token_expires_in") Optional<Double> refreshTokenExpiresIn,
-            @JsonProperty("refresh_url") Optional<String> refreshUrl,
-            @JsonProperty("state") Optional<String> state,
-            @JsonProperty("token") Optional<String> token,
-            @JsonProperty("token_url") Optional<String> tokenUrl,
-            @JsonProperty("user_id") Optional<String> userId) {
-        Utils.checkNotNull(accessToken, "accessToken");
-        Utils.checkNotNull(apiUrl, "apiUrl");
-        Utils.checkNotNull(appId, "appId");
-        Utils.checkNotNull(authorizeUrl, "authorizeUrl");
-        Utils.checkNotNull(clientId, "clientId");
-        Utils.checkNotNull(clientSecret, "clientSecret");
-        Utils.checkNotNull(consumerKey, "consumerKey");
-        Utils.checkNotNull(consumerSecret, "consumerSecret");
-        Utils.checkNotNull(devApiKey, "devApiKey");
-        Utils.checkNotNull(emails, "emails");
-        Utils.checkNotNull(expiresIn, "expiresIn");
-        Utils.checkNotNull(expiryDate, "expiryDate");
-        Utils.checkNotNull(key, "key");
-        Utils.checkNotNull(meta, "meta");
-        Utils.checkNotNull(name, "name");
-        Utils.checkNotNull(otherAuthInfo, "otherAuthInfo");
-        Utils.checkNotNull(pem, "pem");
-        Utils.checkNotNull(refreshToken, "refreshToken");
-        Utils.checkNotNull(refreshTokenExpiresDate, "refreshTokenExpiresDate");
-        Utils.checkNotNull(refreshTokenExpiresIn, "refreshTokenExpiresIn");
-        Utils.checkNotNull(refreshUrl, "refreshUrl");
-        Utils.checkNotNull(state, "state");
-        Utils.checkNotNull(token, "token");
-        Utils.checkNotNull(tokenUrl, "tokenUrl");
-        Utils.checkNotNull(userId, "userId");
+            @JsonProperty("access_token") @Nullable String accessToken,
+            @JsonProperty("api_url") @Nullable String apiUrl,
+            @JsonProperty("app_id") @Nullable String appId,
+            @JsonProperty("authorize_url") @Nullable String authorizeUrl,
+            @JsonProperty("client_id") @Nullable String clientId,
+            @JsonProperty("client_secret") @Nullable String clientSecret,
+            @JsonProperty("consumer_key") @Nullable String consumerKey,
+            @JsonProperty("consumer_secret") @Nullable String consumerSecret,
+            @JsonProperty("dev_api_key") @Nullable String devApiKey,
+            @JsonProperty("emails") @Nullable List<String> emails,
+            @JsonProperty("expires_in") @Nullable Double expiresIn,
+            @JsonProperty("expiry_date") @Nullable OffsetDateTime expiryDate,
+            @JsonProperty("key") @Nullable String key,
+            @JsonProperty("meta") @Nullable Map<String, Object> meta,
+            @JsonProperty("name") @Nullable String name,
+            @JsonProperty("other_auth_info") @Nullable List<String> otherAuthInfo,
+            @JsonProperty("pem") @Nullable String pem,
+            @JsonProperty("refresh_token") @Nullable String refreshToken,
+            @JsonProperty("refresh_token_expires_date") @Nullable OffsetDateTime refreshTokenExpiresDate,
+            @JsonProperty("refresh_token_expires_in") @Nullable Double refreshTokenExpiresIn,
+            @JsonProperty("refresh_url") @Nullable String refreshUrl,
+            @JsonProperty("state") @Nullable String state,
+            @JsonProperty("token") @Nullable String token,
+            @JsonProperty("token_url") @Nullable String tokenUrl,
+            @JsonProperty("user_id") @Nullable String userId) {
         this.accessToken = accessToken;
         this.apiUrl = apiUrl;
         this.appId = appId;
@@ -233,147 +207,119 @@ public class PropertyConnectionAuth {
     }
     
     public PropertyConnectionAuth() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null);
     }
 
-    @JsonIgnore
     public Optional<String> accessToken() {
-        return accessToken;
+        return Optional.ofNullable(this.accessToken);
     }
 
-    @JsonIgnore
     public Optional<String> apiUrl() {
-        return apiUrl;
+        return Optional.ofNullable(this.apiUrl);
     }
 
-    @JsonIgnore
     public Optional<String> appId() {
-        return appId;
+        return Optional.ofNullable(this.appId);
     }
 
-    @JsonIgnore
     public Optional<String> authorizeUrl() {
-        return authorizeUrl;
+        return Optional.ofNullable(this.authorizeUrl);
     }
 
-    @JsonIgnore
     public Optional<String> clientId() {
-        return clientId;
+        return Optional.ofNullable(this.clientId);
     }
 
-    @JsonIgnore
     public Optional<String> clientSecret() {
-        return clientSecret;
+        return Optional.ofNullable(this.clientSecret);
     }
 
-    @JsonIgnore
     public Optional<String> consumerKey() {
-        return consumerKey;
+        return Optional.ofNullable(this.consumerKey);
     }
 
-    @JsonIgnore
     public Optional<String> consumerSecret() {
-        return consumerSecret;
+        return Optional.ofNullable(this.consumerSecret);
     }
 
-    @JsonIgnore
     public Optional<String> devApiKey() {
-        return devApiKey;
+        return Optional.ofNullable(this.devApiKey);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> emails() {
-        return (Optional<List<String>>) emails;
+        return Optional.ofNullable(this.emails);
     }
 
-    @JsonIgnore
     public Optional<Double> expiresIn() {
-        return expiresIn;
+        return Optional.ofNullable(this.expiresIn);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> expiryDate() {
-        return expiryDate;
+        return Optional.ofNullable(this.expiryDate);
     }
 
-    @JsonIgnore
     public Optional<String> key() {
-        return key;
+        return Optional.ofNullable(this.key);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> meta() {
-        return (Optional<Map<String, Object>>) meta;
+        return Optional.ofNullable(this.meta);
     }
 
-    @JsonIgnore
     public Optional<String> name() {
-        return name;
+        return Optional.ofNullable(this.name);
     }
 
     /**
      * When integration.auth_type = "other", this field contains the authentication credentials in the same
      * order as token_names
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> otherAuthInfo() {
-        return (Optional<List<String>>) otherAuthInfo;
+        return Optional.ofNullable(this.otherAuthInfo);
     }
 
-    @JsonIgnore
     public Optional<String> pem() {
-        return pem;
+        return Optional.ofNullable(this.pem);
     }
 
-    @JsonIgnore
     public Optional<String> refreshToken() {
-        return refreshToken;
+        return Optional.ofNullable(this.refreshToken);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> refreshTokenExpiresDate() {
-        return refreshTokenExpiresDate;
+        return Optional.ofNullable(this.refreshTokenExpiresDate);
     }
 
-    @JsonIgnore
     public Optional<Double> refreshTokenExpiresIn() {
-        return refreshTokenExpiresIn;
+        return Optional.ofNullable(this.refreshTokenExpiresIn);
     }
 
-    @JsonIgnore
     public Optional<String> refreshUrl() {
-        return refreshUrl;
+        return Optional.ofNullable(this.refreshUrl);
     }
 
-    @JsonIgnore
     public Optional<String> state() {
-        return state;
+        return Optional.ofNullable(this.state);
     }
 
-    @JsonIgnore
     public Optional<String> token() {
-        return token;
+        return Optional.ofNullable(this.token);
     }
 
-    @JsonIgnore
     public Optional<String> tokenUrl() {
-        return tokenUrl;
+        return Optional.ofNullable(this.tokenUrl);
     }
 
-    @JsonIgnore
     public Optional<String> userId() {
-        return userId;
+        return Optional.ofNullable(this.userId);
     }
 
     public static Builder builder() {
@@ -381,338 +327,159 @@ public class PropertyConnectionAuth {
     }
 
 
-    public PropertyConnectionAuth withAccessToken(String accessToken) {
-        Utils.checkNotNull(accessToken, "accessToken");
-        this.accessToken = Optional.ofNullable(accessToken);
-        return this;
-    }
-
-
-    public PropertyConnectionAuth withAccessToken(Optional<String> accessToken) {
-        Utils.checkNotNull(accessToken, "accessToken");
+    public PropertyConnectionAuth withAccessToken(@Nullable String accessToken) {
         this.accessToken = accessToken;
         return this;
     }
 
-    public PropertyConnectionAuth withApiUrl(String apiUrl) {
-        Utils.checkNotNull(apiUrl, "apiUrl");
-        this.apiUrl = Optional.ofNullable(apiUrl);
-        return this;
-    }
 
-
-    public PropertyConnectionAuth withApiUrl(Optional<String> apiUrl) {
-        Utils.checkNotNull(apiUrl, "apiUrl");
+    public PropertyConnectionAuth withApiUrl(@Nullable String apiUrl) {
         this.apiUrl = apiUrl;
         return this;
     }
 
-    public PropertyConnectionAuth withAppId(String appId) {
-        Utils.checkNotNull(appId, "appId");
-        this.appId = Optional.ofNullable(appId);
-        return this;
-    }
 
-
-    public PropertyConnectionAuth withAppId(Optional<String> appId) {
-        Utils.checkNotNull(appId, "appId");
+    public PropertyConnectionAuth withAppId(@Nullable String appId) {
         this.appId = appId;
         return this;
     }
 
-    public PropertyConnectionAuth withAuthorizeUrl(String authorizeUrl) {
-        Utils.checkNotNull(authorizeUrl, "authorizeUrl");
-        this.authorizeUrl = Optional.ofNullable(authorizeUrl);
-        return this;
-    }
 
-
-    public PropertyConnectionAuth withAuthorizeUrl(Optional<String> authorizeUrl) {
-        Utils.checkNotNull(authorizeUrl, "authorizeUrl");
+    public PropertyConnectionAuth withAuthorizeUrl(@Nullable String authorizeUrl) {
         this.authorizeUrl = authorizeUrl;
         return this;
     }
 
-    public PropertyConnectionAuth withClientId(String clientId) {
-        Utils.checkNotNull(clientId, "clientId");
-        this.clientId = Optional.ofNullable(clientId);
-        return this;
-    }
 
-
-    public PropertyConnectionAuth withClientId(Optional<String> clientId) {
-        Utils.checkNotNull(clientId, "clientId");
+    public PropertyConnectionAuth withClientId(@Nullable String clientId) {
         this.clientId = clientId;
         return this;
     }
 
-    public PropertyConnectionAuth withClientSecret(String clientSecret) {
-        Utils.checkNotNull(clientSecret, "clientSecret");
-        this.clientSecret = Optional.ofNullable(clientSecret);
-        return this;
-    }
 
-
-    public PropertyConnectionAuth withClientSecret(Optional<String> clientSecret) {
-        Utils.checkNotNull(clientSecret, "clientSecret");
+    public PropertyConnectionAuth withClientSecret(@Nullable String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
     }
 
-    public PropertyConnectionAuth withConsumerKey(String consumerKey) {
-        Utils.checkNotNull(consumerKey, "consumerKey");
-        this.consumerKey = Optional.ofNullable(consumerKey);
-        return this;
-    }
 
-
-    public PropertyConnectionAuth withConsumerKey(Optional<String> consumerKey) {
-        Utils.checkNotNull(consumerKey, "consumerKey");
+    public PropertyConnectionAuth withConsumerKey(@Nullable String consumerKey) {
         this.consumerKey = consumerKey;
         return this;
     }
 
-    public PropertyConnectionAuth withConsumerSecret(String consumerSecret) {
-        Utils.checkNotNull(consumerSecret, "consumerSecret");
-        this.consumerSecret = Optional.ofNullable(consumerSecret);
-        return this;
-    }
 
-
-    public PropertyConnectionAuth withConsumerSecret(Optional<String> consumerSecret) {
-        Utils.checkNotNull(consumerSecret, "consumerSecret");
+    public PropertyConnectionAuth withConsumerSecret(@Nullable String consumerSecret) {
         this.consumerSecret = consumerSecret;
         return this;
     }
 
-    public PropertyConnectionAuth withDevApiKey(String devApiKey) {
-        Utils.checkNotNull(devApiKey, "devApiKey");
-        this.devApiKey = Optional.ofNullable(devApiKey);
-        return this;
-    }
 
-
-    public PropertyConnectionAuth withDevApiKey(Optional<String> devApiKey) {
-        Utils.checkNotNull(devApiKey, "devApiKey");
+    public PropertyConnectionAuth withDevApiKey(@Nullable String devApiKey) {
         this.devApiKey = devApiKey;
         return this;
     }
 
-    public PropertyConnectionAuth withEmails(List<String> emails) {
-        Utils.checkNotNull(emails, "emails");
-        this.emails = Optional.ofNullable(emails);
-        return this;
-    }
 
-
-    public PropertyConnectionAuth withEmails(Optional<? extends List<String>> emails) {
-        Utils.checkNotNull(emails, "emails");
+    public PropertyConnectionAuth withEmails(@Nullable List<String> emails) {
         this.emails = emails;
         return this;
     }
 
-    public PropertyConnectionAuth withExpiresIn(double expiresIn) {
-        Utils.checkNotNull(expiresIn, "expiresIn");
-        this.expiresIn = Optional.ofNullable(expiresIn);
-        return this;
-    }
 
-
-    public PropertyConnectionAuth withExpiresIn(Optional<Double> expiresIn) {
-        Utils.checkNotNull(expiresIn, "expiresIn");
+    public PropertyConnectionAuth withExpiresIn(@Nullable Double expiresIn) {
         this.expiresIn = expiresIn;
         return this;
     }
 
-    public PropertyConnectionAuth withExpiryDate(OffsetDateTime expiryDate) {
-        Utils.checkNotNull(expiryDate, "expiryDate");
-        this.expiryDate = Optional.ofNullable(expiryDate);
-        return this;
-    }
 
-
-    public PropertyConnectionAuth withExpiryDate(Optional<OffsetDateTime> expiryDate) {
-        Utils.checkNotNull(expiryDate, "expiryDate");
+    public PropertyConnectionAuth withExpiryDate(@Nullable OffsetDateTime expiryDate) {
         this.expiryDate = expiryDate;
         return this;
     }
 
-    public PropertyConnectionAuth withKey(String key) {
-        Utils.checkNotNull(key, "key");
-        this.key = Optional.ofNullable(key);
-        return this;
-    }
 
-
-    public PropertyConnectionAuth withKey(Optional<String> key) {
-        Utils.checkNotNull(key, "key");
+    public PropertyConnectionAuth withKey(@Nullable String key) {
         this.key = key;
         return this;
     }
 
-    public PropertyConnectionAuth withMeta(Map<String, Object> meta) {
-        Utils.checkNotNull(meta, "meta");
-        this.meta = Optional.ofNullable(meta);
-        return this;
-    }
 
-
-    public PropertyConnectionAuth withMeta(Optional<? extends Map<String, Object>> meta) {
-        Utils.checkNotNull(meta, "meta");
+    public PropertyConnectionAuth withMeta(@Nullable Map<String, Object> meta) {
         this.meta = meta;
         return this;
     }
 
-    public PropertyConnectionAuth withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = Optional.ofNullable(name);
-        return this;
-    }
 
-
-    public PropertyConnectionAuth withName(Optional<String> name) {
-        Utils.checkNotNull(name, "name");
+    public PropertyConnectionAuth withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
-    /**
-     * When integration.auth_type = "other", this field contains the authentication credentials in the same
-     * order as token_names
-     */
-    public PropertyConnectionAuth withOtherAuthInfo(List<String> otherAuthInfo) {
-        Utils.checkNotNull(otherAuthInfo, "otherAuthInfo");
-        this.otherAuthInfo = Optional.ofNullable(otherAuthInfo);
-        return this;
-    }
-
 
     /**
      * When integration.auth_type = "other", this field contains the authentication credentials in the same
      * order as token_names
      */
-    public PropertyConnectionAuth withOtherAuthInfo(Optional<? extends List<String>> otherAuthInfo) {
-        Utils.checkNotNull(otherAuthInfo, "otherAuthInfo");
+    public PropertyConnectionAuth withOtherAuthInfo(@Nullable List<String> otherAuthInfo) {
         this.otherAuthInfo = otherAuthInfo;
         return this;
     }
 
-    public PropertyConnectionAuth withPem(String pem) {
-        Utils.checkNotNull(pem, "pem");
-        this.pem = Optional.ofNullable(pem);
-        return this;
-    }
 
-
-    public PropertyConnectionAuth withPem(Optional<String> pem) {
-        Utils.checkNotNull(pem, "pem");
+    public PropertyConnectionAuth withPem(@Nullable String pem) {
         this.pem = pem;
         return this;
     }
 
-    public PropertyConnectionAuth withRefreshToken(String refreshToken) {
-        Utils.checkNotNull(refreshToken, "refreshToken");
-        this.refreshToken = Optional.ofNullable(refreshToken);
-        return this;
-    }
 
-
-    public PropertyConnectionAuth withRefreshToken(Optional<String> refreshToken) {
-        Utils.checkNotNull(refreshToken, "refreshToken");
+    public PropertyConnectionAuth withRefreshToken(@Nullable String refreshToken) {
         this.refreshToken = refreshToken;
         return this;
     }
 
-    public PropertyConnectionAuth withRefreshTokenExpiresDate(OffsetDateTime refreshTokenExpiresDate) {
-        Utils.checkNotNull(refreshTokenExpiresDate, "refreshTokenExpiresDate");
-        this.refreshTokenExpiresDate = Optional.ofNullable(refreshTokenExpiresDate);
-        return this;
-    }
 
-
-    public PropertyConnectionAuth withRefreshTokenExpiresDate(Optional<OffsetDateTime> refreshTokenExpiresDate) {
-        Utils.checkNotNull(refreshTokenExpiresDate, "refreshTokenExpiresDate");
+    public PropertyConnectionAuth withRefreshTokenExpiresDate(@Nullable OffsetDateTime refreshTokenExpiresDate) {
         this.refreshTokenExpiresDate = refreshTokenExpiresDate;
         return this;
     }
 
-    public PropertyConnectionAuth withRefreshTokenExpiresIn(double refreshTokenExpiresIn) {
-        Utils.checkNotNull(refreshTokenExpiresIn, "refreshTokenExpiresIn");
-        this.refreshTokenExpiresIn = Optional.ofNullable(refreshTokenExpiresIn);
-        return this;
-    }
 
-
-    public PropertyConnectionAuth withRefreshTokenExpiresIn(Optional<Double> refreshTokenExpiresIn) {
-        Utils.checkNotNull(refreshTokenExpiresIn, "refreshTokenExpiresIn");
+    public PropertyConnectionAuth withRefreshTokenExpiresIn(@Nullable Double refreshTokenExpiresIn) {
         this.refreshTokenExpiresIn = refreshTokenExpiresIn;
         return this;
     }
 
-    public PropertyConnectionAuth withRefreshUrl(String refreshUrl) {
-        Utils.checkNotNull(refreshUrl, "refreshUrl");
-        this.refreshUrl = Optional.ofNullable(refreshUrl);
-        return this;
-    }
 
-
-    public PropertyConnectionAuth withRefreshUrl(Optional<String> refreshUrl) {
-        Utils.checkNotNull(refreshUrl, "refreshUrl");
+    public PropertyConnectionAuth withRefreshUrl(@Nullable String refreshUrl) {
         this.refreshUrl = refreshUrl;
         return this;
     }
 
-    public PropertyConnectionAuth withState(String state) {
-        Utils.checkNotNull(state, "state");
-        this.state = Optional.ofNullable(state);
-        return this;
-    }
 
-
-    public PropertyConnectionAuth withState(Optional<String> state) {
-        Utils.checkNotNull(state, "state");
+    public PropertyConnectionAuth withState(@Nullable String state) {
         this.state = state;
         return this;
     }
 
-    public PropertyConnectionAuth withToken(String token) {
-        Utils.checkNotNull(token, "token");
-        this.token = Optional.ofNullable(token);
-        return this;
-    }
 
-
-    public PropertyConnectionAuth withToken(Optional<String> token) {
-        Utils.checkNotNull(token, "token");
+    public PropertyConnectionAuth withToken(@Nullable String token) {
         this.token = token;
         return this;
     }
 
-    public PropertyConnectionAuth withTokenUrl(String tokenUrl) {
-        Utils.checkNotNull(tokenUrl, "tokenUrl");
-        this.tokenUrl = Optional.ofNullable(tokenUrl);
-        return this;
-    }
 
-
-    public PropertyConnectionAuth withTokenUrl(Optional<String> tokenUrl) {
-        Utils.checkNotNull(tokenUrl, "tokenUrl");
+    public PropertyConnectionAuth withTokenUrl(@Nullable String tokenUrl) {
         this.tokenUrl = tokenUrl;
         return this;
     }
 
-    public PropertyConnectionAuth withUserId(String userId) {
-        Utils.checkNotNull(userId, "userId");
-        this.userId = Optional.ofNullable(userId);
-        return this;
-    }
 
-
-    public PropertyConnectionAuth withUserId(Optional<String> userId) {
-        Utils.checkNotNull(userId, "userId");
+    public PropertyConnectionAuth withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -798,395 +565,190 @@ public class PropertyConnectionAuth {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> accessToken = Optional.empty();
+        private String accessToken;
 
-        private Optional<String> apiUrl = Optional.empty();
+        private String apiUrl;
 
-        private Optional<String> appId = Optional.empty();
+        private String appId;
 
-        private Optional<String> authorizeUrl = Optional.empty();
+        private String authorizeUrl;
 
-        private Optional<String> clientId = Optional.empty();
+        private String clientId;
 
-        private Optional<String> clientSecret = Optional.empty();
+        private String clientSecret;
 
-        private Optional<String> consumerKey = Optional.empty();
+        private String consumerKey;
 
-        private Optional<String> consumerSecret = Optional.empty();
+        private String consumerSecret;
 
-        private Optional<String> devApiKey = Optional.empty();
+        private String devApiKey;
 
-        private Optional<? extends List<String>> emails = Optional.empty();
+        private List<String> emails;
 
-        private Optional<Double> expiresIn = Optional.empty();
+        private Double expiresIn;
 
-        private Optional<OffsetDateTime> expiryDate = Optional.empty();
+        private OffsetDateTime expiryDate;
 
-        private Optional<String> key = Optional.empty();
+        private String key;
 
-        private Optional<? extends Map<String, Object>> meta = Optional.empty();
+        private Map<String, Object> meta;
 
-        private Optional<String> name = Optional.empty();
+        private String name;
 
-        private Optional<? extends List<String>> otherAuthInfo = Optional.empty();
+        private List<String> otherAuthInfo;
 
-        private Optional<String> pem = Optional.empty();
+        private String pem;
 
-        private Optional<String> refreshToken = Optional.empty();
+        private String refreshToken;
 
-        private Optional<OffsetDateTime> refreshTokenExpiresDate = Optional.empty();
+        private OffsetDateTime refreshTokenExpiresDate;
 
-        private Optional<Double> refreshTokenExpiresIn = Optional.empty();
+        private Double refreshTokenExpiresIn;
 
-        private Optional<String> refreshUrl = Optional.empty();
+        private String refreshUrl;
 
-        private Optional<String> state = Optional.empty();
+        private String state;
 
-        private Optional<String> token = Optional.empty();
+        private String token;
 
-        private Optional<String> tokenUrl = Optional.empty();
+        private String tokenUrl;
 
-        private Optional<String> userId = Optional.empty();
+        private String userId;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder accessToken(String accessToken) {
-            Utils.checkNotNull(accessToken, "accessToken");
-            this.accessToken = Optional.ofNullable(accessToken);
-            return this;
-        }
-
-        public Builder accessToken(Optional<String> accessToken) {
-            Utils.checkNotNull(accessToken, "accessToken");
+        public Builder accessToken(@Nullable String accessToken) {
             this.accessToken = accessToken;
             return this;
         }
 
-
-        public Builder apiUrl(String apiUrl) {
-            Utils.checkNotNull(apiUrl, "apiUrl");
-            this.apiUrl = Optional.ofNullable(apiUrl);
-            return this;
-        }
-
-        public Builder apiUrl(Optional<String> apiUrl) {
-            Utils.checkNotNull(apiUrl, "apiUrl");
+        public Builder apiUrl(@Nullable String apiUrl) {
             this.apiUrl = apiUrl;
             return this;
         }
 
-
-        public Builder appId(String appId) {
-            Utils.checkNotNull(appId, "appId");
-            this.appId = Optional.ofNullable(appId);
-            return this;
-        }
-
-        public Builder appId(Optional<String> appId) {
-            Utils.checkNotNull(appId, "appId");
+        public Builder appId(@Nullable String appId) {
             this.appId = appId;
             return this;
         }
 
-
-        public Builder authorizeUrl(String authorizeUrl) {
-            Utils.checkNotNull(authorizeUrl, "authorizeUrl");
-            this.authorizeUrl = Optional.ofNullable(authorizeUrl);
-            return this;
-        }
-
-        public Builder authorizeUrl(Optional<String> authorizeUrl) {
-            Utils.checkNotNull(authorizeUrl, "authorizeUrl");
+        public Builder authorizeUrl(@Nullable String authorizeUrl) {
             this.authorizeUrl = authorizeUrl;
             return this;
         }
 
-
-        public Builder clientId(String clientId) {
-            Utils.checkNotNull(clientId, "clientId");
-            this.clientId = Optional.ofNullable(clientId);
-            return this;
-        }
-
-        public Builder clientId(Optional<String> clientId) {
-            Utils.checkNotNull(clientId, "clientId");
+        public Builder clientId(@Nullable String clientId) {
             this.clientId = clientId;
             return this;
         }
 
-
-        public Builder clientSecret(String clientSecret) {
-            Utils.checkNotNull(clientSecret, "clientSecret");
-            this.clientSecret = Optional.ofNullable(clientSecret);
-            return this;
-        }
-
-        public Builder clientSecret(Optional<String> clientSecret) {
-            Utils.checkNotNull(clientSecret, "clientSecret");
+        public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
 
-
-        public Builder consumerKey(String consumerKey) {
-            Utils.checkNotNull(consumerKey, "consumerKey");
-            this.consumerKey = Optional.ofNullable(consumerKey);
-            return this;
-        }
-
-        public Builder consumerKey(Optional<String> consumerKey) {
-            Utils.checkNotNull(consumerKey, "consumerKey");
+        public Builder consumerKey(@Nullable String consumerKey) {
             this.consumerKey = consumerKey;
             return this;
         }
 
-
-        public Builder consumerSecret(String consumerSecret) {
-            Utils.checkNotNull(consumerSecret, "consumerSecret");
-            this.consumerSecret = Optional.ofNullable(consumerSecret);
-            return this;
-        }
-
-        public Builder consumerSecret(Optional<String> consumerSecret) {
-            Utils.checkNotNull(consumerSecret, "consumerSecret");
+        public Builder consumerSecret(@Nullable String consumerSecret) {
             this.consumerSecret = consumerSecret;
             return this;
         }
 
-
-        public Builder devApiKey(String devApiKey) {
-            Utils.checkNotNull(devApiKey, "devApiKey");
-            this.devApiKey = Optional.ofNullable(devApiKey);
-            return this;
-        }
-
-        public Builder devApiKey(Optional<String> devApiKey) {
-            Utils.checkNotNull(devApiKey, "devApiKey");
+        public Builder devApiKey(@Nullable String devApiKey) {
             this.devApiKey = devApiKey;
             return this;
         }
 
-
-        public Builder emails(List<String> emails) {
-            Utils.checkNotNull(emails, "emails");
-            this.emails = Optional.ofNullable(emails);
-            return this;
-        }
-
-        public Builder emails(Optional<? extends List<String>> emails) {
-            Utils.checkNotNull(emails, "emails");
+        public Builder emails(@Nullable List<String> emails) {
             this.emails = emails;
             return this;
         }
 
-
-        public Builder expiresIn(double expiresIn) {
-            Utils.checkNotNull(expiresIn, "expiresIn");
-            this.expiresIn = Optional.ofNullable(expiresIn);
-            return this;
-        }
-
-        public Builder expiresIn(Optional<Double> expiresIn) {
-            Utils.checkNotNull(expiresIn, "expiresIn");
+        public Builder expiresIn(@Nullable Double expiresIn) {
             this.expiresIn = expiresIn;
             return this;
         }
 
-
-        public Builder expiryDate(OffsetDateTime expiryDate) {
-            Utils.checkNotNull(expiryDate, "expiryDate");
-            this.expiryDate = Optional.ofNullable(expiryDate);
-            return this;
-        }
-
-        public Builder expiryDate(Optional<OffsetDateTime> expiryDate) {
-            Utils.checkNotNull(expiryDate, "expiryDate");
+        public Builder expiryDate(@Nullable OffsetDateTime expiryDate) {
             this.expiryDate = expiryDate;
             return this;
         }
 
-
-        public Builder key(String key) {
-            Utils.checkNotNull(key, "key");
-            this.key = Optional.ofNullable(key);
-            return this;
-        }
-
-        public Builder key(Optional<String> key) {
-            Utils.checkNotNull(key, "key");
+        public Builder key(@Nullable String key) {
             this.key = key;
             return this;
         }
 
-
-        public Builder meta(Map<String, Object> meta) {
-            Utils.checkNotNull(meta, "meta");
-            this.meta = Optional.ofNullable(meta);
-            return this;
-        }
-
-        public Builder meta(Optional<? extends Map<String, Object>> meta) {
-            Utils.checkNotNull(meta, "meta");
+        public Builder meta(@Nullable Map<String, Object> meta) {
             this.meta = meta;
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = Optional.ofNullable(name);
-            return this;
-        }
-
-        public Builder name(Optional<String> name) {
-            Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-
         /**
          * When integration.auth_type = "other", this field contains the authentication credentials in the same
          * order as token_names
          */
-        public Builder otherAuthInfo(List<String> otherAuthInfo) {
-            Utils.checkNotNull(otherAuthInfo, "otherAuthInfo");
-            this.otherAuthInfo = Optional.ofNullable(otherAuthInfo);
-            return this;
-        }
-
-        /**
-         * When integration.auth_type = "other", this field contains the authentication credentials in the same
-         * order as token_names
-         */
-        public Builder otherAuthInfo(Optional<? extends List<String>> otherAuthInfo) {
-            Utils.checkNotNull(otherAuthInfo, "otherAuthInfo");
+        public Builder otherAuthInfo(@Nullable List<String> otherAuthInfo) {
             this.otherAuthInfo = otherAuthInfo;
             return this;
         }
 
-
-        public Builder pem(String pem) {
-            Utils.checkNotNull(pem, "pem");
-            this.pem = Optional.ofNullable(pem);
-            return this;
-        }
-
-        public Builder pem(Optional<String> pem) {
-            Utils.checkNotNull(pem, "pem");
+        public Builder pem(@Nullable String pem) {
             this.pem = pem;
             return this;
         }
 
-
-        public Builder refreshToken(String refreshToken) {
-            Utils.checkNotNull(refreshToken, "refreshToken");
-            this.refreshToken = Optional.ofNullable(refreshToken);
-            return this;
-        }
-
-        public Builder refreshToken(Optional<String> refreshToken) {
-            Utils.checkNotNull(refreshToken, "refreshToken");
+        public Builder refreshToken(@Nullable String refreshToken) {
             this.refreshToken = refreshToken;
             return this;
         }
 
-
-        public Builder refreshTokenExpiresDate(OffsetDateTime refreshTokenExpiresDate) {
-            Utils.checkNotNull(refreshTokenExpiresDate, "refreshTokenExpiresDate");
-            this.refreshTokenExpiresDate = Optional.ofNullable(refreshTokenExpiresDate);
-            return this;
-        }
-
-        public Builder refreshTokenExpiresDate(Optional<OffsetDateTime> refreshTokenExpiresDate) {
-            Utils.checkNotNull(refreshTokenExpiresDate, "refreshTokenExpiresDate");
+        public Builder refreshTokenExpiresDate(@Nullable OffsetDateTime refreshTokenExpiresDate) {
             this.refreshTokenExpiresDate = refreshTokenExpiresDate;
             return this;
         }
 
-
-        public Builder refreshTokenExpiresIn(double refreshTokenExpiresIn) {
-            Utils.checkNotNull(refreshTokenExpiresIn, "refreshTokenExpiresIn");
-            this.refreshTokenExpiresIn = Optional.ofNullable(refreshTokenExpiresIn);
-            return this;
-        }
-
-        public Builder refreshTokenExpiresIn(Optional<Double> refreshTokenExpiresIn) {
-            Utils.checkNotNull(refreshTokenExpiresIn, "refreshTokenExpiresIn");
+        public Builder refreshTokenExpiresIn(@Nullable Double refreshTokenExpiresIn) {
             this.refreshTokenExpiresIn = refreshTokenExpiresIn;
             return this;
         }
 
-
-        public Builder refreshUrl(String refreshUrl) {
-            Utils.checkNotNull(refreshUrl, "refreshUrl");
-            this.refreshUrl = Optional.ofNullable(refreshUrl);
-            return this;
-        }
-
-        public Builder refreshUrl(Optional<String> refreshUrl) {
-            Utils.checkNotNull(refreshUrl, "refreshUrl");
+        public Builder refreshUrl(@Nullable String refreshUrl) {
             this.refreshUrl = refreshUrl;
             return this;
         }
 
-
-        public Builder state(String state) {
-            Utils.checkNotNull(state, "state");
-            this.state = Optional.ofNullable(state);
-            return this;
-        }
-
-        public Builder state(Optional<String> state) {
-            Utils.checkNotNull(state, "state");
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
 
-
-        public Builder token(String token) {
-            Utils.checkNotNull(token, "token");
-            this.token = Optional.ofNullable(token);
-            return this;
-        }
-
-        public Builder token(Optional<String> token) {
-            Utils.checkNotNull(token, "token");
+        public Builder token(@Nullable String token) {
             this.token = token;
             return this;
         }
 
-
-        public Builder tokenUrl(String tokenUrl) {
-            Utils.checkNotNull(tokenUrl, "tokenUrl");
-            this.tokenUrl = Optional.ofNullable(tokenUrl);
-            return this;
-        }
-
-        public Builder tokenUrl(Optional<String> tokenUrl) {
-            Utils.checkNotNull(tokenUrl, "tokenUrl");
+        public Builder tokenUrl(@Nullable String tokenUrl) {
             this.tokenUrl = tokenUrl;
             return this;
         }
 
-
-        public Builder userId(String userId) {
-            Utils.checkNotNull(userId, "userId");
-            this.userId = Optional.ofNullable(userId);
-            return this;
-        }
-
-        public Builder userId(Optional<String> userId) {
-            Utils.checkNotNull(userId, "userId");
+        public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;
         }
 
         public PropertyConnectionAuth build() {
-
             return new PropertyConnectionAuth(
                 accessToken, apiUrl, appId,
                 authorizeUrl, clientId, clientSecret,

@@ -4,11 +4,11 @@
 package to.unified.unified_java_sdk.models.operations.async;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import java.lang.Integer;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.io.InputStream;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.CommerceCollection;
@@ -21,7 +21,7 @@ public class GetCommerceCollectionResponse implements AsyncResponse {
     /**
      * Successful
      */
-    private Optional<? extends CommerceCollection> commerceCollection;
+    private CommerceCollection commerceCollection;
 
     /**
      * HTTP response content type for this operation
@@ -40,59 +40,52 @@ public class GetCommerceCollectionResponse implements AsyncResponse {
 
     @JsonCreator
     public GetCommerceCollectionResponse(
-            Optional<? extends CommerceCollection> commerceCollection,
-            String contentType,
+            @Nullable CommerceCollection commerceCollection,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(commerceCollection, "commerceCollection");
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
+            @Nonnull HttpResponse<Blob> rawResponse) {
         this.commerceCollection = commerceCollection;
-        this.contentType = contentType;
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
     }
     
     public GetCommerceCollectionResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
-        this(Optional.empty(), contentType, statusCode,
+            @Nonnull HttpResponse<Blob> rawResponse) {
+        this(null, contentType, statusCode,
             rawResponse);
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<CommerceCollection> commerceCollection() {
-        return (Optional<CommerceCollection>) commerceCollection;
+        return Optional.ofNullable(this.commerceCollection);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<Blob> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     public static Builder builder() {
@@ -103,48 +96,38 @@ public class GetCommerceCollectionResponse implements AsyncResponse {
     /**
      * Successful
      */
-    public GetCommerceCollectionResponse withCommerceCollection(CommerceCollection commerceCollection) {
-        Utils.checkNotNull(commerceCollection, "commerceCollection");
-        this.commerceCollection = Optional.ofNullable(commerceCollection);
-        return this;
-    }
-
-
-    /**
-     * Successful
-     */
-    public GetCommerceCollectionResponse withCommerceCollection(Optional<? extends CommerceCollection> commerceCollection) {
-        Utils.checkNotNull(commerceCollection, "commerceCollection");
+    public GetCommerceCollectionResponse withCommerceCollection(@Nullable CommerceCollection commerceCollection) {
         this.commerceCollection = commerceCollection;
         return this;
     }
 
+
     /**
      * HTTP response content type for this operation
      */
-    public GetCommerceCollectionResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
+    public GetCommerceCollectionResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public GetCommerceCollectionResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public GetCommerceCollectionResponse withRawResponse(HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
+    public GetCommerceCollectionResponse withRawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -181,11 +164,11 @@ public class GetCommerceCollectionResponse implements AsyncResponse {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends CommerceCollection> commerceCollection = Optional.empty();
+        private CommerceCollection commerceCollection;
 
         private String contentType;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<Blob> rawResponse;
 
@@ -193,57 +176,39 @@ public class GetCommerceCollectionResponse implements AsyncResponse {
           // force use of static builder() method
         }
 
-
         /**
          * Successful
          */
-        public Builder commerceCollection(CommerceCollection commerceCollection) {
-            Utils.checkNotNull(commerceCollection, "commerceCollection");
-            this.commerceCollection = Optional.ofNullable(commerceCollection);
-            return this;
-        }
-
-        /**
-         * Successful
-         */
-        public Builder commerceCollection(Optional<? extends CommerceCollection> commerceCollection) {
-            Utils.checkNotNull(commerceCollection, "commerceCollection");
+        public Builder commerceCollection(@Nullable CommerceCollection commerceCollection) {
             this.commerceCollection = commerceCollection;
             return this;
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<Blob> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
+        public Builder rawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         public GetCommerceCollectionResponse build() {
-
             return new GetCommerceCollectionResponse(
                 commerceCollection, contentType, statusCode,
                 rawResponse);

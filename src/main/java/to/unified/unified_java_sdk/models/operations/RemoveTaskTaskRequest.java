@@ -4,9 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
 import java.lang.Override;
 import java.lang.String;
+import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -26,28 +27,26 @@ public class RemoveTaskTaskRequest {
 
     @JsonCreator
     public RemoveTaskTaskRequest(
-            String connectionId,
-            String id) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(id, "id");
-        this.connectionId = connectionId;
-        this.id = id;
+            @Nonnull String connectionId,
+            @Nonnull String id) {
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
+        this.id = Optional.ofNullable(id)
+            .orElseThrow(() -> new IllegalArgumentException("id cannot be null"));
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * ID of the Task
      */
-    @JsonIgnore
     public String id() {
-        return id;
+        return this.id;
     }
 
     public static Builder builder() {
@@ -58,20 +57,20 @@ public class RemoveTaskTaskRequest {
     /**
      * ID of the connection
      */
-    public RemoveTaskTaskRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
+    public RemoveTaskTaskRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
+
 
     /**
      * ID of the Task
      */
-    public RemoveTaskTaskRequest withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = id;
+    public RemoveTaskTaskRequest withId(@Nonnull String id) {
+        this.id = Utils.checkNotNull(id, "id");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -111,28 +110,23 @@ public class RemoveTaskTaskRequest {
           // force use of static builder() method
         }
 
-
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
-
 
         /**
          * ID of the Task
          */
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = id;
+        public Builder id(@Nonnull String id) {
+            this.id = Utils.checkNotNull(id, "id");
             return this;
         }
 
         public RemoveTaskTaskRequest build() {
-
             return new RemoveTaskTaskRequest(
                 connectionId, id);
         }

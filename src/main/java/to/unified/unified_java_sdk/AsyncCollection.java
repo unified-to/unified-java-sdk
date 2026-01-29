@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceCollectionRequest;
 import to.unified.unified_java_sdk.models.operations.GetCommerceCollectionRequest;
@@ -68,7 +69,7 @@ public class AsyncCollection {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCommerceCollectionResponse>} - The async response
      */
-    public CompletableFuture<CreateCommerceCollectionResponse> createCommerceCollection(CreateCommerceCollectionRequest request) {
+    public CompletableFuture<CreateCommerceCollectionResponse> createCommerceCollection(@Nonnull CreateCommerceCollectionRequest request) {
         AsyncRequestOperation<CreateCommerceCollectionRequest, CreateCommerceCollectionResponse> operation
               = new CreateCommerceCollection.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -91,7 +92,7 @@ public class AsyncCollection {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCommerceCollectionResponse>} - The async response
      */
-    public CompletableFuture<GetCommerceCollectionResponse> getCommerceCollection(GetCommerceCollectionRequest request) {
+    public CompletableFuture<GetCommerceCollectionResponse> getCommerceCollection(@Nonnull GetCommerceCollectionRequest request) {
         AsyncRequestOperation<GetCommerceCollectionRequest, GetCommerceCollectionResponse> operation
               = new GetCommerceCollection.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -114,7 +115,7 @@ public class AsyncCollection {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCommerceCollectionsResponse>} - The async response
      */
-    public CompletableFuture<ListCommerceCollectionsResponse> listCommerceCollections(ListCommerceCollectionsRequest request) {
+    public CompletableFuture<ListCommerceCollectionsResponse> listCommerceCollections(@Nonnull ListCommerceCollectionsRequest request) {
         AsyncRequestOperation<ListCommerceCollectionsRequest, ListCommerceCollectionsResponse> operation
               = new ListCommerceCollections.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -137,7 +138,7 @@ public class AsyncCollection {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCommerceCollectionResponse>} - The async response
      */
-    public CompletableFuture<PatchCommerceCollectionResponse> patchCommerceCollection(PatchCommerceCollectionRequest request) {
+    public CompletableFuture<PatchCommerceCollectionResponse> patchCommerceCollection(@Nonnull PatchCommerceCollectionRequest request) {
         AsyncRequestOperation<PatchCommerceCollectionRequest, PatchCommerceCollectionResponse> operation
               = new PatchCommerceCollection.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -160,7 +161,7 @@ public class AsyncCollection {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCommerceCollectionResponse>} - The async response
      */
-    public CompletableFuture<RemoveCommerceCollectionResponse> removeCommerceCollection(RemoveCommerceCollectionRequest request) {
+    public CompletableFuture<RemoveCommerceCollectionResponse> removeCommerceCollection(@Nonnull RemoveCommerceCollectionRequest request) {
         AsyncRequestOperation<RemoveCommerceCollectionRequest, RemoveCommerceCollectionResponse> operation
               = new RemoveCommerceCollection.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -183,7 +184,7 @@ public class AsyncCollection {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCommerceCollectionResponse>} - The async response
      */
-    public CompletableFuture<UpdateCommerceCollectionResponse> updateCommerceCollection(UpdateCommerceCollectionRequest request) {
+    public CompletableFuture<UpdateCommerceCollectionResponse> updateCommerceCollection(@Nonnull UpdateCommerceCollectionRequest request) {
         AsyncRequestOperation<UpdateCommerceCollectionRequest, UpdateCommerceCollectionResponse> operation
               = new UpdateCommerceCollection.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

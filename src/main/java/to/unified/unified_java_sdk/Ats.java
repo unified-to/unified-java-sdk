@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateAtsActivityRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAtsActivityRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAtsActivityResponse;
@@ -239,7 +240,7 @@ public class Ats {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAtsActivityResponse createAtsActivity(CreateAtsActivityRequest request) {
+    public CreateAtsActivityResponse createAtsActivity(@Nonnull CreateAtsActivityRequest request) {
         RequestOperation<CreateAtsActivityRequest, CreateAtsActivityResponse> operation
               = new CreateAtsActivity.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -261,7 +262,7 @@ public class Ats {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAtsApplicationResponse createAtsApplication(CreateAtsApplicationRequest request) {
+    public CreateAtsApplicationResponse createAtsApplication(@Nonnull CreateAtsApplicationRequest request) {
         RequestOperation<CreateAtsApplicationRequest, CreateAtsApplicationResponse> operation
               = new CreateAtsApplication.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -283,7 +284,7 @@ public class Ats {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAtsCandidateResponse createAtsCandidate(CreateAtsCandidateRequest request) {
+    public CreateAtsCandidateResponse createAtsCandidate(@Nonnull CreateAtsCandidateRequest request) {
         RequestOperation<CreateAtsCandidateRequest, CreateAtsCandidateResponse> operation
               = new CreateAtsCandidate.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -305,7 +306,7 @@ public class Ats {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAtsCompanyResponse createAtsCompany(CreateAtsCompanyRequest request) {
+    public CreateAtsCompanyResponse createAtsCompany(@Nonnull CreateAtsCompanyRequest request) {
         RequestOperation<CreateAtsCompanyRequest, CreateAtsCompanyResponse> operation
               = new CreateAtsCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -327,7 +328,7 @@ public class Ats {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAtsDocumentResponse createAtsDocument(CreateAtsDocumentRequest request) {
+    public CreateAtsDocumentResponse createAtsDocument(@Nonnull CreateAtsDocumentRequest request) {
         RequestOperation<CreateAtsDocumentRequest, CreateAtsDocumentResponse> operation
               = new CreateAtsDocument.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -349,7 +350,7 @@ public class Ats {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAtsInterviewResponse createAtsInterview(CreateAtsInterviewRequest request) {
+    public CreateAtsInterviewResponse createAtsInterview(@Nonnull CreateAtsInterviewRequest request) {
         RequestOperation<CreateAtsInterviewRequest, CreateAtsInterviewResponse> operation
               = new CreateAtsInterview.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -371,7 +372,7 @@ public class Ats {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAtsJobResponse createAtsJob(CreateAtsJobRequest request) {
+    public CreateAtsJobResponse createAtsJob(@Nonnull CreateAtsJobRequest request) {
         RequestOperation<CreateAtsJobRequest, CreateAtsJobResponse> operation
               = new CreateAtsJob.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -393,7 +394,7 @@ public class Ats {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAtsScorecardResponse createAtsScorecard(CreateAtsScorecardRequest request) {
+    public CreateAtsScorecardResponse createAtsScorecard(@Nonnull CreateAtsScorecardRequest request) {
         RequestOperation<CreateAtsScorecardRequest, CreateAtsScorecardResponse> operation
               = new CreateAtsScorecard.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -415,7 +416,7 @@ public class Ats {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAtsActivityResponse getAtsActivity(GetAtsActivityRequest request) {
+    public GetAtsActivityResponse getAtsActivity(@Nonnull GetAtsActivityRequest request) {
         RequestOperation<GetAtsActivityRequest, GetAtsActivityResponse> operation
               = new GetAtsActivity.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -437,7 +438,7 @@ public class Ats {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAtsApplicationResponse getAtsApplication(GetAtsApplicationRequest request) {
+    public GetAtsApplicationResponse getAtsApplication(@Nonnull GetAtsApplicationRequest request) {
         RequestOperation<GetAtsApplicationRequest, GetAtsApplicationResponse> operation
               = new GetAtsApplication.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -459,7 +460,7 @@ public class Ats {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAtsCandidateResponse getAtsCandidate(GetAtsCandidateRequest request) {
+    public GetAtsCandidateResponse getAtsCandidate(@Nonnull GetAtsCandidateRequest request) {
         RequestOperation<GetAtsCandidateRequest, GetAtsCandidateResponse> operation
               = new GetAtsCandidate.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -481,7 +482,7 @@ public class Ats {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAtsCompanyResponse getAtsCompany(GetAtsCompanyRequest request) {
+    public GetAtsCompanyResponse getAtsCompany(@Nonnull GetAtsCompanyRequest request) {
         RequestOperation<GetAtsCompanyRequest, GetAtsCompanyResponse> operation
               = new GetAtsCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -503,7 +504,7 @@ public class Ats {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAtsDocumentResponse getAtsDocument(GetAtsDocumentRequest request) {
+    public GetAtsDocumentResponse getAtsDocument(@Nonnull GetAtsDocumentRequest request) {
         RequestOperation<GetAtsDocumentRequest, GetAtsDocumentResponse> operation
               = new GetAtsDocument.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -525,7 +526,7 @@ public class Ats {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAtsInterviewResponse getAtsInterview(GetAtsInterviewRequest request) {
+    public GetAtsInterviewResponse getAtsInterview(@Nonnull GetAtsInterviewRequest request) {
         RequestOperation<GetAtsInterviewRequest, GetAtsInterviewResponse> operation
               = new GetAtsInterview.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -547,7 +548,7 @@ public class Ats {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAtsJobResponse getAtsJob(GetAtsJobRequest request) {
+    public GetAtsJobResponse getAtsJob(@Nonnull GetAtsJobRequest request) {
         RequestOperation<GetAtsJobRequest, GetAtsJobResponse> operation
               = new GetAtsJob.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -569,7 +570,7 @@ public class Ats {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAtsScorecardResponse getAtsScorecard(GetAtsScorecardRequest request) {
+    public GetAtsScorecardResponse getAtsScorecard(@Nonnull GetAtsScorecardRequest request) {
         RequestOperation<GetAtsScorecardRequest, GetAtsScorecardResponse> operation
               = new GetAtsScorecard.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -591,7 +592,7 @@ public class Ats {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAtsActivitiesResponse listAtsActivities(ListAtsActivitiesRequest request) {
+    public ListAtsActivitiesResponse listAtsActivities(@Nonnull ListAtsActivitiesRequest request) {
         RequestOperation<ListAtsActivitiesRequest, ListAtsActivitiesResponse> operation
               = new ListAtsActivities.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -613,7 +614,7 @@ public class Ats {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAtsApplicationsResponse listAtsApplications(ListAtsApplicationsRequest request) {
+    public ListAtsApplicationsResponse listAtsApplications(@Nonnull ListAtsApplicationsRequest request) {
         RequestOperation<ListAtsApplicationsRequest, ListAtsApplicationsResponse> operation
               = new ListAtsApplications.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -635,7 +636,7 @@ public class Ats {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAtsApplicationstatusesResponse listAtsApplicationstatuses(ListAtsApplicationstatusesRequest request) {
+    public ListAtsApplicationstatusesResponse listAtsApplicationstatuses(@Nonnull ListAtsApplicationstatusesRequest request) {
         RequestOperation<ListAtsApplicationstatusesRequest, ListAtsApplicationstatusesResponse> operation
               = new ListAtsApplicationstatuses.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -657,7 +658,7 @@ public class Ats {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAtsCandidatesResponse listAtsCandidates(ListAtsCandidatesRequest request) {
+    public ListAtsCandidatesResponse listAtsCandidates(@Nonnull ListAtsCandidatesRequest request) {
         RequestOperation<ListAtsCandidatesRequest, ListAtsCandidatesResponse> operation
               = new ListAtsCandidates.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -679,7 +680,7 @@ public class Ats {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAtsCompaniesResponse listAtsCompanies(ListAtsCompaniesRequest request) {
+    public ListAtsCompaniesResponse listAtsCompanies(@Nonnull ListAtsCompaniesRequest request) {
         RequestOperation<ListAtsCompaniesRequest, ListAtsCompaniesResponse> operation
               = new ListAtsCompanies.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -701,7 +702,7 @@ public class Ats {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAtsDocumentsResponse listAtsDocuments(ListAtsDocumentsRequest request) {
+    public ListAtsDocumentsResponse listAtsDocuments(@Nonnull ListAtsDocumentsRequest request) {
         RequestOperation<ListAtsDocumentsRequest, ListAtsDocumentsResponse> operation
               = new ListAtsDocuments.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -723,7 +724,7 @@ public class Ats {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAtsInterviewsResponse listAtsInterviews(ListAtsInterviewsRequest request) {
+    public ListAtsInterviewsResponse listAtsInterviews(@Nonnull ListAtsInterviewsRequest request) {
         RequestOperation<ListAtsInterviewsRequest, ListAtsInterviewsResponse> operation
               = new ListAtsInterviews.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -745,7 +746,7 @@ public class Ats {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAtsJobsResponse listAtsJobs(ListAtsJobsRequest request) {
+    public ListAtsJobsResponse listAtsJobs(@Nonnull ListAtsJobsRequest request) {
         RequestOperation<ListAtsJobsRequest, ListAtsJobsResponse> operation
               = new ListAtsJobs.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -767,7 +768,7 @@ public class Ats {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAtsScorecardsResponse listAtsScorecards(ListAtsScorecardsRequest request) {
+    public ListAtsScorecardsResponse listAtsScorecards(@Nonnull ListAtsScorecardsRequest request) {
         RequestOperation<ListAtsScorecardsRequest, ListAtsScorecardsResponse> operation
               = new ListAtsScorecards.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -789,7 +790,7 @@ public class Ats {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAtsActivityResponse patchAtsActivity(PatchAtsActivityRequest request) {
+    public PatchAtsActivityResponse patchAtsActivity(@Nonnull PatchAtsActivityRequest request) {
         RequestOperation<PatchAtsActivityRequest, PatchAtsActivityResponse> operation
               = new PatchAtsActivity.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -811,7 +812,7 @@ public class Ats {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAtsApplicationResponse patchAtsApplication(PatchAtsApplicationRequest request) {
+    public PatchAtsApplicationResponse patchAtsApplication(@Nonnull PatchAtsApplicationRequest request) {
         RequestOperation<PatchAtsApplicationRequest, PatchAtsApplicationResponse> operation
               = new PatchAtsApplication.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -833,7 +834,7 @@ public class Ats {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAtsCandidateResponse patchAtsCandidate(PatchAtsCandidateRequest request) {
+    public PatchAtsCandidateResponse patchAtsCandidate(@Nonnull PatchAtsCandidateRequest request) {
         RequestOperation<PatchAtsCandidateRequest, PatchAtsCandidateResponse> operation
               = new PatchAtsCandidate.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -855,7 +856,7 @@ public class Ats {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAtsCompanyResponse patchAtsCompany(PatchAtsCompanyRequest request) {
+    public PatchAtsCompanyResponse patchAtsCompany(@Nonnull PatchAtsCompanyRequest request) {
         RequestOperation<PatchAtsCompanyRequest, PatchAtsCompanyResponse> operation
               = new PatchAtsCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -877,7 +878,7 @@ public class Ats {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAtsDocumentResponse patchAtsDocument(PatchAtsDocumentRequest request) {
+    public PatchAtsDocumentResponse patchAtsDocument(@Nonnull PatchAtsDocumentRequest request) {
         RequestOperation<PatchAtsDocumentRequest, PatchAtsDocumentResponse> operation
               = new PatchAtsDocument.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -899,7 +900,7 @@ public class Ats {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAtsInterviewResponse patchAtsInterview(PatchAtsInterviewRequest request) {
+    public PatchAtsInterviewResponse patchAtsInterview(@Nonnull PatchAtsInterviewRequest request) {
         RequestOperation<PatchAtsInterviewRequest, PatchAtsInterviewResponse> operation
               = new PatchAtsInterview.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -921,7 +922,7 @@ public class Ats {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAtsJobResponse patchAtsJob(PatchAtsJobRequest request) {
+    public PatchAtsJobResponse patchAtsJob(@Nonnull PatchAtsJobRequest request) {
         RequestOperation<PatchAtsJobRequest, PatchAtsJobResponse> operation
               = new PatchAtsJob.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -943,7 +944,7 @@ public class Ats {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAtsScorecardResponse patchAtsScorecard(PatchAtsScorecardRequest request) {
+    public PatchAtsScorecardResponse patchAtsScorecard(@Nonnull PatchAtsScorecardRequest request) {
         RequestOperation<PatchAtsScorecardRequest, PatchAtsScorecardResponse> operation
               = new PatchAtsScorecard.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -965,7 +966,7 @@ public class Ats {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAtsActivityResponse removeAtsActivity(RemoveAtsActivityRequest request) {
+    public RemoveAtsActivityResponse removeAtsActivity(@Nonnull RemoveAtsActivityRequest request) {
         RequestOperation<RemoveAtsActivityRequest, RemoveAtsActivityResponse> operation
               = new RemoveAtsActivity.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -987,7 +988,7 @@ public class Ats {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAtsApplicationResponse removeAtsApplication(RemoveAtsApplicationRequest request) {
+    public RemoveAtsApplicationResponse removeAtsApplication(@Nonnull RemoveAtsApplicationRequest request) {
         RequestOperation<RemoveAtsApplicationRequest, RemoveAtsApplicationResponse> operation
               = new RemoveAtsApplication.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1009,7 +1010,7 @@ public class Ats {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAtsCandidateResponse removeAtsCandidate(RemoveAtsCandidateRequest request) {
+    public RemoveAtsCandidateResponse removeAtsCandidate(@Nonnull RemoveAtsCandidateRequest request) {
         RequestOperation<RemoveAtsCandidateRequest, RemoveAtsCandidateResponse> operation
               = new RemoveAtsCandidate.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1031,7 +1032,7 @@ public class Ats {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAtsCompanyResponse removeAtsCompany(RemoveAtsCompanyRequest request) {
+    public RemoveAtsCompanyResponse removeAtsCompany(@Nonnull RemoveAtsCompanyRequest request) {
         RequestOperation<RemoveAtsCompanyRequest, RemoveAtsCompanyResponse> operation
               = new RemoveAtsCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1053,7 +1054,7 @@ public class Ats {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAtsDocumentResponse removeAtsDocument(RemoveAtsDocumentRequest request) {
+    public RemoveAtsDocumentResponse removeAtsDocument(@Nonnull RemoveAtsDocumentRequest request) {
         RequestOperation<RemoveAtsDocumentRequest, RemoveAtsDocumentResponse> operation
               = new RemoveAtsDocument.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1075,7 +1076,7 @@ public class Ats {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAtsInterviewResponse removeAtsInterview(RemoveAtsInterviewRequest request) {
+    public RemoveAtsInterviewResponse removeAtsInterview(@Nonnull RemoveAtsInterviewRequest request) {
         RequestOperation<RemoveAtsInterviewRequest, RemoveAtsInterviewResponse> operation
               = new RemoveAtsInterview.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1097,7 +1098,7 @@ public class Ats {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAtsJobResponse removeAtsJob(RemoveAtsJobRequest request) {
+    public RemoveAtsJobResponse removeAtsJob(@Nonnull RemoveAtsJobRequest request) {
         RequestOperation<RemoveAtsJobRequest, RemoveAtsJobResponse> operation
               = new RemoveAtsJob.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1119,7 +1120,7 @@ public class Ats {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAtsScorecardResponse removeAtsScorecard(RemoveAtsScorecardRequest request) {
+    public RemoveAtsScorecardResponse removeAtsScorecard(@Nonnull RemoveAtsScorecardRequest request) {
         RequestOperation<RemoveAtsScorecardRequest, RemoveAtsScorecardResponse> operation
               = new RemoveAtsScorecard.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1141,7 +1142,7 @@ public class Ats {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAtsActivityResponse updateAtsActivity(UpdateAtsActivityRequest request) {
+    public UpdateAtsActivityResponse updateAtsActivity(@Nonnull UpdateAtsActivityRequest request) {
         RequestOperation<UpdateAtsActivityRequest, UpdateAtsActivityResponse> operation
               = new UpdateAtsActivity.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1163,7 +1164,7 @@ public class Ats {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAtsApplicationResponse updateAtsApplication(UpdateAtsApplicationRequest request) {
+    public UpdateAtsApplicationResponse updateAtsApplication(@Nonnull UpdateAtsApplicationRequest request) {
         RequestOperation<UpdateAtsApplicationRequest, UpdateAtsApplicationResponse> operation
               = new UpdateAtsApplication.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1185,7 +1186,7 @@ public class Ats {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAtsCandidateResponse updateAtsCandidate(UpdateAtsCandidateRequest request) {
+    public UpdateAtsCandidateResponse updateAtsCandidate(@Nonnull UpdateAtsCandidateRequest request) {
         RequestOperation<UpdateAtsCandidateRequest, UpdateAtsCandidateResponse> operation
               = new UpdateAtsCandidate.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1207,7 +1208,7 @@ public class Ats {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAtsCompanyResponse updateAtsCompany(UpdateAtsCompanyRequest request) {
+    public UpdateAtsCompanyResponse updateAtsCompany(@Nonnull UpdateAtsCompanyRequest request) {
         RequestOperation<UpdateAtsCompanyRequest, UpdateAtsCompanyResponse> operation
               = new UpdateAtsCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1229,7 +1230,7 @@ public class Ats {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAtsDocumentResponse updateAtsDocument(UpdateAtsDocumentRequest request) {
+    public UpdateAtsDocumentResponse updateAtsDocument(@Nonnull UpdateAtsDocumentRequest request) {
         RequestOperation<UpdateAtsDocumentRequest, UpdateAtsDocumentResponse> operation
               = new UpdateAtsDocument.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1251,7 +1252,7 @@ public class Ats {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAtsInterviewResponse updateAtsInterview(UpdateAtsInterviewRequest request) {
+    public UpdateAtsInterviewResponse updateAtsInterview(@Nonnull UpdateAtsInterviewRequest request) {
         RequestOperation<UpdateAtsInterviewRequest, UpdateAtsInterviewResponse> operation
               = new UpdateAtsInterview.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1273,7 +1274,7 @@ public class Ats {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAtsJobResponse updateAtsJob(UpdateAtsJobRequest request) {
+    public UpdateAtsJobResponse updateAtsJob(@Nonnull UpdateAtsJobRequest request) {
         RequestOperation<UpdateAtsJobRequest, UpdateAtsJobResponse> operation
               = new UpdateAtsJob.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -1295,7 +1296,7 @@ public class Ats {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAtsScorecardResponse updateAtsScorecard(UpdateAtsScorecardRequest request) {
+    public UpdateAtsScorecardResponse updateAtsScorecard(@Nonnull UpdateAtsScorecardRequest request) {
         RequestOperation<UpdateAtsScorecardRequest, UpdateAtsScorecardResponse> operation
               = new UpdateAtsScorecard.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

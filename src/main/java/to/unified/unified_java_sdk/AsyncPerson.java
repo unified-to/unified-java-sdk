@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.ListEnrichPeopleRequest;
 import to.unified.unified_java_sdk.models.operations.async.ListEnrichPeopleRequestBuilder;
@@ -48,7 +49,7 @@ public class AsyncPerson {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListEnrichPeopleResponse>} - The async response
      */
-    public CompletableFuture<ListEnrichPeopleResponse> listEnrichPeople(ListEnrichPeopleRequest request) {
+    public CompletableFuture<ListEnrichPeopleResponse> listEnrichPeople(@Nonnull ListEnrichPeopleRequest request) {
         AsyncRequestOperation<ListEnrichPeopleRequest, ListEnrichPeopleResponse> operation
               = new ListEnrichPeople.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

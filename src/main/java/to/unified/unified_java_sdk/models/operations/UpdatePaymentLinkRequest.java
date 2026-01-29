@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.PaymentLink;
@@ -30,7 +30,7 @@ public class UpdatePaymentLinkRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<UpdatePaymentLinkQueryParamFields>> fields;
+    private List<UpdatePaymentLinkQueryParamFields> fields;
 
     /**
      * ID of the Link
@@ -44,63 +44,56 @@ public class UpdatePaymentLinkRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
     @JsonCreator
     public UpdatePaymentLinkRequest(
-            PaymentLink paymentLink,
-            String connectionId,
-            Optional<? extends List<UpdatePaymentLinkQueryParamFields>> fields,
-            String id,
-            Optional<String> raw) {
-        Utils.checkNotNull(paymentLink, "paymentLink");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(raw, "raw");
-        this.paymentLink = paymentLink;
-        this.connectionId = connectionId;
+            @Nonnull PaymentLink paymentLink,
+            @Nonnull String connectionId,
+            @Nullable List<UpdatePaymentLinkQueryParamFields> fields,
+            @Nonnull String id,
+            @Nullable String raw) {
+        this.paymentLink = Optional.ofNullable(paymentLink)
+            .orElseThrow(() -> new IllegalArgumentException("paymentLink cannot be null"));
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
-        this.id = id;
+        this.id = Optional.ofNullable(id)
+            .orElseThrow(() -> new IllegalArgumentException("id cannot be null"));
         this.raw = raw;
     }
     
     public UpdatePaymentLinkRequest(
-            PaymentLink paymentLink,
-            String connectionId,
-            String id) {
-        this(paymentLink, connectionId, Optional.empty(),
-            id, Optional.empty());
+            @Nonnull PaymentLink paymentLink,
+            @Nonnull String connectionId,
+            @Nonnull String id) {
+        this(paymentLink, connectionId, null,
+            id, null);
     }
 
-    @JsonIgnore
     public PaymentLink paymentLink() {
-        return paymentLink;
+        return this.paymentLink;
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<UpdatePaymentLinkQueryParamFields>> fields() {
-        return (Optional<List<UpdatePaymentLinkQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
      * ID of the Link
      */
-    @JsonIgnore
     public String id() {
-        return id;
+        return this.id;
     }
 
     /**
@@ -108,9 +101,8 @@ public class UpdatePaymentLinkRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
     public static Builder builder() {
@@ -118,27 +110,17 @@ public class UpdatePaymentLinkRequest {
     }
 
 
-    public UpdatePaymentLinkRequest withPaymentLink(PaymentLink paymentLink) {
-        Utils.checkNotNull(paymentLink, "paymentLink");
-        this.paymentLink = paymentLink;
+    public UpdatePaymentLinkRequest withPaymentLink(@Nonnull PaymentLink paymentLink) {
+        this.paymentLink = Utils.checkNotNull(paymentLink, "paymentLink");
         return this;
     }
+
 
     /**
      * ID of the connection
      */
-    public UpdatePaymentLinkRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public UpdatePaymentLinkRequest withFields(List<UpdatePaymentLinkQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public UpdatePaymentLinkRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -146,29 +128,17 @@ public class UpdatePaymentLinkRequest {
     /**
      * Fields to return
      */
-    public UpdatePaymentLinkRequest withFields(Optional<? extends List<UpdatePaymentLinkQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public UpdatePaymentLinkRequest withFields(@Nullable List<UpdatePaymentLinkQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
+
     /**
      * ID of the Link
      */
-    public UpdatePaymentLinkRequest withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = id;
-        return this;
-    }
-
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public UpdatePaymentLinkRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
+    public UpdatePaymentLinkRequest withId(@Nonnull String id) {
+        this.id = Utils.checkNotNull(id, "id");
         return this;
     }
 
@@ -178,11 +148,11 @@ public class UpdatePaymentLinkRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public UpdatePaymentLinkRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public UpdatePaymentLinkRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -225,71 +195,42 @@ public class UpdatePaymentLinkRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<UpdatePaymentLinkQueryParamFields>> fields = Optional.empty();
+        private List<UpdatePaymentLinkQueryParamFields> fields;
 
         private String id;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder paymentLink(PaymentLink paymentLink) {
-            Utils.checkNotNull(paymentLink, "paymentLink");
-            this.paymentLink = paymentLink;
+        public Builder paymentLink(@Nonnull PaymentLink paymentLink) {
+            this.paymentLink = Utils.checkNotNull(paymentLink, "paymentLink");
             return this;
         }
-
 
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<UpdatePaymentLinkQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<UpdatePaymentLinkQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<UpdatePaymentLinkQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * ID of the Link
          */
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = id;
-            return this;
-        }
-
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
+        public Builder id(@Nonnull String id) {
+            this.id = Utils.checkNotNull(id, "id");
             return this;
         }
 
@@ -298,14 +239,12 @@ public class UpdatePaymentLinkRequest {
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
         public UpdatePaymentLinkRequest build() {
-
             return new UpdatePaymentLinkRequest(
                 paymentLink, connectionId, fields,
                 id, raw);

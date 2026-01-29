@@ -4,14 +4,13 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
@@ -23,82 +22,71 @@ public class LmsInstructor {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emails")
-    private Optional<? extends List<LmsEmail>> emails;
+    private List<LmsEmail> emails;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first_name")
-    private Optional<String> firstName;
+    private String firstName;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image_url")
-    private Optional<String> imageUrl;
+    private String imageUrl;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_name")
-    private Optional<String> lastName;
+    private String lastName;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
-    private Optional<String> name;
+    private String name;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("telephones")
-    private Optional<? extends List<LmsTelephone>> telephones;
+    private List<LmsTelephone> telephones;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
-    private Optional<String> title;
+    private String title;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
     @JsonCreator
     public LmsInstructor(
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("emails") Optional<? extends List<LmsEmail>> emails,
-            @JsonProperty("first_name") Optional<String> firstName,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("image_url") Optional<String> imageUrl,
-            @JsonProperty("last_name") Optional<String> lastName,
-            @JsonProperty("name") Optional<String> name,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("telephones") Optional<? extends List<LmsTelephone>> telephones,
-            @JsonProperty("title") Optional<String> title,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(emails, "emails");
-        Utils.checkNotNull(firstName, "firstName");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(imageUrl, "imageUrl");
-        Utils.checkNotNull(lastName, "lastName");
-        Utils.checkNotNull(name, "name");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(telephones, "telephones");
-        Utils.checkNotNull(title, "title");
-        Utils.checkNotNull(updatedAt, "updatedAt");
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("emails") @Nullable List<LmsEmail> emails,
+            @JsonProperty("first_name") @Nullable String firstName,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("image_url") @Nullable String imageUrl,
+            @JsonProperty("last_name") @Nullable String lastName,
+            @JsonProperty("name") @Nullable String name,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("telephones") @Nullable List<LmsTelephone> telephones,
+            @JsonProperty("title") @Nullable String title,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.createdAt = createdAt;
         this.emails = emails;
         this.firstName = firstName;
@@ -113,68 +101,54 @@ public class LmsInstructor {
     }
     
     public LmsInstructor() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<LmsEmail>> emails() {
-        return (Optional<List<LmsEmail>>) emails;
+        return Optional.ofNullable(this.emails);
     }
 
-    @JsonIgnore
     public Optional<String> firstName() {
-        return firstName;
+        return Optional.ofNullable(this.firstName);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<String> imageUrl() {
-        return imageUrl;
+        return Optional.ofNullable(this.imageUrl);
     }
 
-    @JsonIgnore
     public Optional<String> lastName() {
-        return lastName;
+        return Optional.ofNullable(this.lastName);
     }
 
-    @JsonIgnore
     public Optional<String> name() {
-        return name;
+        return Optional.ofNullable(this.name);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<LmsTelephone>> telephones() {
-        return (Optional<List<LmsTelephone>>) telephones;
+        return Optional.ofNullable(this.telephones);
     }
 
-    @JsonIgnore
     public Optional<String> title() {
-        return title;
+        return Optional.ofNullable(this.title);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
     public static Builder builder() {
@@ -182,148 +156,71 @@ public class LmsInstructor {
     }
 
 
-    public LmsInstructor withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
-
-
-    public LmsInstructor withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public LmsInstructor withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public LmsInstructor withEmails(List<LmsEmail> emails) {
-        Utils.checkNotNull(emails, "emails");
-        this.emails = Optional.ofNullable(emails);
-        return this;
-    }
 
-
-    public LmsInstructor withEmails(Optional<? extends List<LmsEmail>> emails) {
-        Utils.checkNotNull(emails, "emails");
+    public LmsInstructor withEmails(@Nullable List<LmsEmail> emails) {
         this.emails = emails;
         return this;
     }
 
-    public LmsInstructor withFirstName(String firstName) {
-        Utils.checkNotNull(firstName, "firstName");
-        this.firstName = Optional.ofNullable(firstName);
-        return this;
-    }
 
-
-    public LmsInstructor withFirstName(Optional<String> firstName) {
-        Utils.checkNotNull(firstName, "firstName");
+    public LmsInstructor withFirstName(@Nullable String firstName) {
         this.firstName = firstName;
         return this;
     }
 
-    public LmsInstructor withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public LmsInstructor withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public LmsInstructor withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public LmsInstructor withImageUrl(String imageUrl) {
-        Utils.checkNotNull(imageUrl, "imageUrl");
-        this.imageUrl = Optional.ofNullable(imageUrl);
-        return this;
-    }
 
-
-    public LmsInstructor withImageUrl(Optional<String> imageUrl) {
-        Utils.checkNotNull(imageUrl, "imageUrl");
+    public LmsInstructor withImageUrl(@Nullable String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
     }
 
-    public LmsInstructor withLastName(String lastName) {
-        Utils.checkNotNull(lastName, "lastName");
-        this.lastName = Optional.ofNullable(lastName);
-        return this;
-    }
 
-
-    public LmsInstructor withLastName(Optional<String> lastName) {
-        Utils.checkNotNull(lastName, "lastName");
+    public LmsInstructor withLastName(@Nullable String lastName) {
         this.lastName = lastName;
         return this;
     }
 
-    public LmsInstructor withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = Optional.ofNullable(name);
-        return this;
-    }
 
-
-    public LmsInstructor withName(Optional<String> name) {
-        Utils.checkNotNull(name, "name");
+    public LmsInstructor withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
-    public LmsInstructor withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public LmsInstructor withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public LmsInstructor withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public LmsInstructor withTelephones(List<LmsTelephone> telephones) {
-        Utils.checkNotNull(telephones, "telephones");
-        this.telephones = Optional.ofNullable(telephones);
-        return this;
-    }
 
-
-    public LmsInstructor withTelephones(Optional<? extends List<LmsTelephone>> telephones) {
-        Utils.checkNotNull(telephones, "telephones");
+    public LmsInstructor withTelephones(@Nullable List<LmsTelephone> telephones) {
         this.telephones = telephones;
         return this;
     }
 
-    public LmsInstructor withTitle(String title) {
-        Utils.checkNotNull(title, "title");
-        this.title = Optional.ofNullable(title);
-        return this;
-    }
 
-
-    public LmsInstructor withTitle(Optional<String> title) {
-        Utils.checkNotNull(title, "title");
+    public LmsInstructor withTitle(@Nullable String title) {
         this.title = title;
         return this;
     }
 
-    public LmsInstructor withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public LmsInstructor withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public LmsInstructor withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -376,177 +273,88 @@ public class LmsInstructor {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<? extends List<LmsEmail>> emails = Optional.empty();
+        private List<LmsEmail> emails;
 
-        private Optional<String> firstName = Optional.empty();
+        private String firstName;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<String> imageUrl = Optional.empty();
+        private String imageUrl;
 
-        private Optional<String> lastName = Optional.empty();
+        private String lastName;
 
-        private Optional<String> name = Optional.empty();
+        private String name;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<? extends List<LmsTelephone>> telephones = Optional.empty();
+        private List<LmsTelephone> telephones;
 
-        private Optional<String> title = Optional.empty();
+        private String title;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder emails(List<LmsEmail> emails) {
-            Utils.checkNotNull(emails, "emails");
-            this.emails = Optional.ofNullable(emails);
-            return this;
-        }
-
-        public Builder emails(Optional<? extends List<LmsEmail>> emails) {
-            Utils.checkNotNull(emails, "emails");
+        public Builder emails(@Nullable List<LmsEmail> emails) {
             this.emails = emails;
             return this;
         }
 
-
-        public Builder firstName(String firstName) {
-            Utils.checkNotNull(firstName, "firstName");
-            this.firstName = Optional.ofNullable(firstName);
-            return this;
-        }
-
-        public Builder firstName(Optional<String> firstName) {
-            Utils.checkNotNull(firstName, "firstName");
+        public Builder firstName(@Nullable String firstName) {
             this.firstName = firstName;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder imageUrl(String imageUrl) {
-            Utils.checkNotNull(imageUrl, "imageUrl");
-            this.imageUrl = Optional.ofNullable(imageUrl);
-            return this;
-        }
-
-        public Builder imageUrl(Optional<String> imageUrl) {
-            Utils.checkNotNull(imageUrl, "imageUrl");
+        public Builder imageUrl(@Nullable String imageUrl) {
             this.imageUrl = imageUrl;
             return this;
         }
 
-
-        public Builder lastName(String lastName) {
-            Utils.checkNotNull(lastName, "lastName");
-            this.lastName = Optional.ofNullable(lastName);
-            return this;
-        }
-
-        public Builder lastName(Optional<String> lastName) {
-            Utils.checkNotNull(lastName, "lastName");
+        public Builder lastName(@Nullable String lastName) {
             this.lastName = lastName;
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = Optional.ofNullable(name);
-            return this;
-        }
-
-        public Builder name(Optional<String> name) {
-            Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder telephones(List<LmsTelephone> telephones) {
-            Utils.checkNotNull(telephones, "telephones");
-            this.telephones = Optional.ofNullable(telephones);
-            return this;
-        }
-
-        public Builder telephones(Optional<? extends List<LmsTelephone>> telephones) {
-            Utils.checkNotNull(telephones, "telephones");
+        public Builder telephones(@Nullable List<LmsTelephone> telephones) {
             this.telephones = telephones;
             return this;
         }
 
-
-        public Builder title(String title) {
-            Utils.checkNotNull(title, "title");
-            this.title = Optional.ofNullable(title);
-            return this;
-        }
-
-        public Builder title(Optional<String> title) {
-            Utils.checkNotNull(title, "title");
+        public Builder title(@Nullable String title) {
             this.title = title;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
         public LmsInstructor build() {
-
             return new LmsInstructor(
                 createdAt, emails, firstName,
                 id, imageUrl, lastName,

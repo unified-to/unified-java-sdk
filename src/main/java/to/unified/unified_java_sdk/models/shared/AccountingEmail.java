@@ -4,13 +4,12 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -19,36 +18,31 @@ public class AccountingEmail {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
-    private Optional<String> email;
+    private String email;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
-    private Optional<? extends AccountingEmailType> type;
+    private AccountingEmailType type;
 
     @JsonCreator
     public AccountingEmail(
-            @JsonProperty("email") Optional<String> email,
-            @JsonProperty("type") Optional<? extends AccountingEmailType> type) {
-        Utils.checkNotNull(email, "email");
-        Utils.checkNotNull(type, "type");
+            @JsonProperty("email") @Nullable String email,
+            @JsonProperty("type") @Nullable AccountingEmailType type) {
         this.email = email;
         this.type = type;
     }
     
     public AccountingEmail() {
-        this(Optional.empty(), Optional.empty());
+        this(null, null);
     }
 
-    @JsonIgnore
     public Optional<String> email() {
-        return email;
+        return Optional.ofNullable(this.email);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<AccountingEmailType> type() {
-        return (Optional<AccountingEmailType>) type;
+        return Optional.ofNullable(this.type);
     }
 
     public static Builder builder() {
@@ -56,31 +50,17 @@ public class AccountingEmail {
     }
 
 
-    public AccountingEmail withEmail(String email) {
-        Utils.checkNotNull(email, "email");
-        this.email = Optional.ofNullable(email);
-        return this;
-    }
-
-
-    public AccountingEmail withEmail(Optional<String> email) {
-        Utils.checkNotNull(email, "email");
+    public AccountingEmail withEmail(@Nullable String email) {
         this.email = email;
         return this;
     }
 
-    public AccountingEmail withType(AccountingEmailType type) {
-        Utils.checkNotNull(type, "type");
-        this.type = Optional.ofNullable(type);
-        return this;
-    }
 
-
-    public AccountingEmail withType(Optional<? extends AccountingEmailType> type) {
-        Utils.checkNotNull(type, "type");
+    public AccountingEmail withType(@Nullable AccountingEmailType type) {
         this.type = type;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -112,42 +92,25 @@ public class AccountingEmail {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> email = Optional.empty();
+        private String email;
 
-        private Optional<? extends AccountingEmailType> type = Optional.empty();
+        private AccountingEmailType type;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder email(String email) {
-            Utils.checkNotNull(email, "email");
-            this.email = Optional.ofNullable(email);
-            return this;
-        }
-
-        public Builder email(Optional<String> email) {
-            Utils.checkNotNull(email, "email");
+        public Builder email(@Nullable String email) {
             this.email = email;
             return this;
         }
 
-
-        public Builder type(AccountingEmailType type) {
-            Utils.checkNotNull(type, "type");
-            this.type = Optional.ofNullable(type);
-            return this;
-        }
-
-        public Builder type(Optional<? extends AccountingEmailType> type) {
-            Utils.checkNotNull(type, "type");
+        public Builder type(@Nullable AccountingEmailType type) {
             this.type = type;
             return this;
         }
 
         public AccountingEmail build() {
-
             return new AccountingEmail(
                 email, type);
         }

@@ -4,13 +4,12 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -19,61 +18,53 @@ public class TaskMetadata {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extra_data")
-    private Optional<? extends TaskMetadataExtraData> extraData;
+    private TaskMetadataExtraData extraData;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
-    private Optional<? extends TaskMetadataFormat> format;
+    private TaskMetadataFormat format;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
-    private Optional<String> key;
+    private String key;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespace")
-    private Optional<String> namespace;
+    private String namespace;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slug")
-    private Optional<String> slug;
+    private String slug;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
-    private Optional<String> type;
+    private String type;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
-    private Optional<? extends TaskMetadataValue> value;
+    private TaskMetadataValue value;
 
     @JsonCreator
     public TaskMetadata(
-            @JsonProperty("extra_data") Optional<? extends TaskMetadataExtraData> extraData,
-            @JsonProperty("format") Optional<? extends TaskMetadataFormat> format,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("key") Optional<String> key,
-            @JsonProperty("namespace") Optional<String> namespace,
-            @JsonProperty("slug") Optional<String> slug,
-            @JsonProperty("type") Optional<String> type,
-            @JsonProperty("value") Optional<? extends TaskMetadataValue> value) {
-        Utils.checkNotNull(extraData, "extraData");
-        Utils.checkNotNull(format, "format");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(key, "key");
-        Utils.checkNotNull(namespace, "namespace");
-        Utils.checkNotNull(slug, "slug");
-        Utils.checkNotNull(type, "type");
-        Utils.checkNotNull(value, "value");
+            @JsonProperty("extra_data") @Nullable TaskMetadataExtraData extraData,
+            @JsonProperty("format") @Nullable TaskMetadataFormat format,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("key") @Nullable String key,
+            @JsonProperty("namespace") @Nullable String namespace,
+            @JsonProperty("slug") @Nullable String slug,
+            @JsonProperty("type") @Nullable String type,
+            @JsonProperty("value") @Nullable TaskMetadataValue value) {
         this.extraData = extraData;
         this.format = format;
         this.id = id;
@@ -85,52 +76,41 @@ public class TaskMetadata {
     }
     
     public TaskMetadata() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<TaskMetadataExtraData> extraData() {
-        return (Optional<TaskMetadataExtraData>) extraData;
+        return Optional.ofNullable(this.extraData);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<TaskMetadataFormat> format() {
-        return (Optional<TaskMetadataFormat>) format;
+        return Optional.ofNullable(this.format);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<String> key() {
-        return key;
+        return Optional.ofNullable(this.key);
     }
 
-    @JsonIgnore
     public Optional<String> namespace() {
-        return namespace;
+        return Optional.ofNullable(this.namespace);
     }
 
-    @JsonIgnore
     public Optional<String> slug() {
-        return slug;
+        return Optional.ofNullable(this.slug);
     }
 
-    @JsonIgnore
     public Optional<String> type() {
-        return type;
+        return Optional.ofNullable(this.type);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<TaskMetadataValue> value() {
-        return (Optional<TaskMetadataValue>) value;
+        return Optional.ofNullable(this.value);
     }
 
     public static Builder builder() {
@@ -138,109 +118,53 @@ public class TaskMetadata {
     }
 
 
-    public TaskMetadata withExtraData(TaskMetadataExtraData extraData) {
-        Utils.checkNotNull(extraData, "extraData");
-        this.extraData = Optional.ofNullable(extraData);
-        return this;
-    }
-
-
-    public TaskMetadata withExtraData(Optional<? extends TaskMetadataExtraData> extraData) {
-        Utils.checkNotNull(extraData, "extraData");
+    public TaskMetadata withExtraData(@Nullable TaskMetadataExtraData extraData) {
         this.extraData = extraData;
         return this;
     }
 
-    public TaskMetadata withFormat(TaskMetadataFormat format) {
-        Utils.checkNotNull(format, "format");
-        this.format = Optional.ofNullable(format);
-        return this;
-    }
 
-
-    public TaskMetadata withFormat(Optional<? extends TaskMetadataFormat> format) {
-        Utils.checkNotNull(format, "format");
+    public TaskMetadata withFormat(@Nullable TaskMetadataFormat format) {
         this.format = format;
         return this;
     }
 
-    public TaskMetadata withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public TaskMetadata withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public TaskMetadata withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public TaskMetadata withKey(String key) {
-        Utils.checkNotNull(key, "key");
-        this.key = Optional.ofNullable(key);
-        return this;
-    }
 
-
-    public TaskMetadata withKey(Optional<String> key) {
-        Utils.checkNotNull(key, "key");
+    public TaskMetadata withKey(@Nullable String key) {
         this.key = key;
         return this;
     }
 
-    public TaskMetadata withNamespace(String namespace) {
-        Utils.checkNotNull(namespace, "namespace");
-        this.namespace = Optional.ofNullable(namespace);
-        return this;
-    }
 
-
-    public TaskMetadata withNamespace(Optional<String> namespace) {
-        Utils.checkNotNull(namespace, "namespace");
+    public TaskMetadata withNamespace(@Nullable String namespace) {
         this.namespace = namespace;
         return this;
     }
 
-    public TaskMetadata withSlug(String slug) {
-        Utils.checkNotNull(slug, "slug");
-        this.slug = Optional.ofNullable(slug);
-        return this;
-    }
 
-
-    public TaskMetadata withSlug(Optional<String> slug) {
-        Utils.checkNotNull(slug, "slug");
+    public TaskMetadata withSlug(@Nullable String slug) {
         this.slug = slug;
         return this;
     }
 
-    public TaskMetadata withType(String type) {
-        Utils.checkNotNull(type, "type");
-        this.type = Optional.ofNullable(type);
-        return this;
-    }
 
-
-    public TaskMetadata withType(Optional<String> type) {
-        Utils.checkNotNull(type, "type");
+    public TaskMetadata withType(@Nullable String type) {
         this.type = type;
         return this;
     }
 
-    public TaskMetadata withValue(TaskMetadataValue value) {
-        Utils.checkNotNull(value, "value");
-        this.value = Optional.ofNullable(value);
-        return this;
-    }
 
-
-    public TaskMetadata withValue(Optional<? extends TaskMetadataValue> value) {
-        Utils.checkNotNull(value, "value");
+    public TaskMetadata withValue(@Nullable TaskMetadataValue value) {
         this.value = value;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -286,132 +210,67 @@ public class TaskMetadata {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends TaskMetadataExtraData> extraData = Optional.empty();
+        private TaskMetadataExtraData extraData;
 
-        private Optional<? extends TaskMetadataFormat> format = Optional.empty();
+        private TaskMetadataFormat format;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<String> key = Optional.empty();
+        private String key;
 
-        private Optional<String> namespace = Optional.empty();
+        private String namespace;
 
-        private Optional<String> slug = Optional.empty();
+        private String slug;
 
-        private Optional<String> type = Optional.empty();
+        private String type;
 
-        private Optional<? extends TaskMetadataValue> value = Optional.empty();
+        private TaskMetadataValue value;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder extraData(TaskMetadataExtraData extraData) {
-            Utils.checkNotNull(extraData, "extraData");
-            this.extraData = Optional.ofNullable(extraData);
-            return this;
-        }
-
-        public Builder extraData(Optional<? extends TaskMetadataExtraData> extraData) {
-            Utils.checkNotNull(extraData, "extraData");
+        public Builder extraData(@Nullable TaskMetadataExtraData extraData) {
             this.extraData = extraData;
             return this;
         }
 
-
-        public Builder format(TaskMetadataFormat format) {
-            Utils.checkNotNull(format, "format");
-            this.format = Optional.ofNullable(format);
-            return this;
-        }
-
-        public Builder format(Optional<? extends TaskMetadataFormat> format) {
-            Utils.checkNotNull(format, "format");
+        public Builder format(@Nullable TaskMetadataFormat format) {
             this.format = format;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder key(String key) {
-            Utils.checkNotNull(key, "key");
-            this.key = Optional.ofNullable(key);
-            return this;
-        }
-
-        public Builder key(Optional<String> key) {
-            Utils.checkNotNull(key, "key");
+        public Builder key(@Nullable String key) {
             this.key = key;
             return this;
         }
 
-
-        public Builder namespace(String namespace) {
-            Utils.checkNotNull(namespace, "namespace");
-            this.namespace = Optional.ofNullable(namespace);
-            return this;
-        }
-
-        public Builder namespace(Optional<String> namespace) {
-            Utils.checkNotNull(namespace, "namespace");
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }
 
-
-        public Builder slug(String slug) {
-            Utils.checkNotNull(slug, "slug");
-            this.slug = Optional.ofNullable(slug);
-            return this;
-        }
-
-        public Builder slug(Optional<String> slug) {
-            Utils.checkNotNull(slug, "slug");
+        public Builder slug(@Nullable String slug) {
             this.slug = slug;
             return this;
         }
 
-
-        public Builder type(String type) {
-            Utils.checkNotNull(type, "type");
-            this.type = Optional.ofNullable(type);
-            return this;
-        }
-
-        public Builder type(Optional<String> type) {
-            Utils.checkNotNull(type, "type");
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-
-        public Builder value(TaskMetadataValue value) {
-            Utils.checkNotNull(value, "value");
-            this.value = Optional.ofNullable(value);
-            return this;
-        }
-
-        public Builder value(Optional<? extends TaskMetadataValue> value) {
-            Utils.checkNotNull(value, "value");
+        public Builder value(@Nullable TaskMetadataValue value) {
             this.value = value;
             return this;
         }
 
         public TaskMetadata build() {
-
             return new TaskMetadata(
                 extraData, format, id,
                 key, namespace, slug,

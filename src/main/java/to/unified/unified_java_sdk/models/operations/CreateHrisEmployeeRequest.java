@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.HrisEmployee;
@@ -30,7 +30,7 @@ public class CreateHrisEmployeeRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<CreateHrisEmployeeQueryParamFields>> fields;
+    private List<CreateHrisEmployeeQueryParamFields> fields;
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
@@ -38,51 +38,45 @@ public class CreateHrisEmployeeRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
     @JsonCreator
     public CreateHrisEmployeeRequest(
-            HrisEmployee hrisEmployee,
-            String connectionId,
-            Optional<? extends List<CreateHrisEmployeeQueryParamFields>> fields,
-            Optional<String> raw) {
-        Utils.checkNotNull(hrisEmployee, "hrisEmployee");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(raw, "raw");
-        this.hrisEmployee = hrisEmployee;
-        this.connectionId = connectionId;
+            @Nonnull HrisEmployee hrisEmployee,
+            @Nonnull String connectionId,
+            @Nullable List<CreateHrisEmployeeQueryParamFields> fields,
+            @Nullable String raw) {
+        this.hrisEmployee = Optional.ofNullable(hrisEmployee)
+            .orElseThrow(() -> new IllegalArgumentException("hrisEmployee cannot be null"));
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
         this.raw = raw;
     }
     
     public CreateHrisEmployeeRequest(
-            HrisEmployee hrisEmployee,
-            String connectionId) {
-        this(hrisEmployee, connectionId, Optional.empty(),
-            Optional.empty());
+            @Nonnull HrisEmployee hrisEmployee,
+            @Nonnull String connectionId) {
+        this(hrisEmployee, connectionId, null,
+            null);
     }
 
-    @JsonIgnore
     public HrisEmployee hrisEmployee() {
-        return hrisEmployee;
+        return this.hrisEmployee;
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<CreateHrisEmployeeQueryParamFields>> fields() {
-        return (Optional<List<CreateHrisEmployeeQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
@@ -90,9 +84,8 @@ public class CreateHrisEmployeeRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
     public static Builder builder() {
@@ -100,27 +93,17 @@ public class CreateHrisEmployeeRequest {
     }
 
 
-    public CreateHrisEmployeeRequest withHrisEmployee(HrisEmployee hrisEmployee) {
-        Utils.checkNotNull(hrisEmployee, "hrisEmployee");
-        this.hrisEmployee = hrisEmployee;
+    public CreateHrisEmployeeRequest withHrisEmployee(@Nonnull HrisEmployee hrisEmployee) {
+        this.hrisEmployee = Utils.checkNotNull(hrisEmployee, "hrisEmployee");
         return this;
     }
+
 
     /**
      * ID of the connection
      */
-    public CreateHrisEmployeeRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public CreateHrisEmployeeRequest withFields(List<CreateHrisEmployeeQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public CreateHrisEmployeeRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -128,34 +111,22 @@ public class CreateHrisEmployeeRequest {
     /**
      * Fields to return
      */
-    public CreateHrisEmployeeRequest withFields(Optional<? extends List<CreateHrisEmployeeQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public CreateHrisEmployeeRequest withFields(@Nullable List<CreateHrisEmployeeQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public CreateHrisEmployeeRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
-
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public CreateHrisEmployeeRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public CreateHrisEmployeeRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -196,75 +167,46 @@ public class CreateHrisEmployeeRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<CreateHrisEmployeeQueryParamFields>> fields = Optional.empty();
+        private List<CreateHrisEmployeeQueryParamFields> fields;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder hrisEmployee(HrisEmployee hrisEmployee) {
-            Utils.checkNotNull(hrisEmployee, "hrisEmployee");
-            this.hrisEmployee = hrisEmployee;
+        public Builder hrisEmployee(@Nonnull HrisEmployee hrisEmployee) {
+            this.hrisEmployee = Utils.checkNotNull(hrisEmployee, "hrisEmployee");
             return this;
         }
-
 
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<CreateHrisEmployeeQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<CreateHrisEmployeeQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<CreateHrisEmployeeQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
         public CreateHrisEmployeeRequest build() {
-
             return new CreateHrisEmployeeRequest(
                 hrisEmployee, connectionId, fields,
                 raw);

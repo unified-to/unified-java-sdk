@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.GetFormsSubmissionRequest;
 import to.unified.unified_java_sdk.models.operations.ListFormsSubmissionsRequest;
@@ -52,7 +53,7 @@ public class AsyncSubmission {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetFormsSubmissionResponse>} - The async response
      */
-    public CompletableFuture<GetFormsSubmissionResponse> getFormsSubmission(GetFormsSubmissionRequest request) {
+    public CompletableFuture<GetFormsSubmissionResponse> getFormsSubmission(@Nonnull GetFormsSubmissionRequest request) {
         AsyncRequestOperation<GetFormsSubmissionRequest, GetFormsSubmissionResponse> operation
               = new GetFormsSubmission.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -75,7 +76,7 @@ public class AsyncSubmission {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListFormsSubmissionsResponse>} - The async response
      */
-    public CompletableFuture<ListFormsSubmissionsResponse> listFormsSubmissions(ListFormsSubmissionsRequest request) {
+    public CompletableFuture<ListFormsSubmissionsResponse> listFormsSubmissions(@Nonnull ListFormsSubmissionsRequest request) {
         AsyncRequestOperation<ListFormsSubmissionsRequest, ListFormsSubmissionsResponse> operation
               = new ListFormsSubmissions.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

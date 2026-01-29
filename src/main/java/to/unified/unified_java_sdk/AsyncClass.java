@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateLmsClassRequest;
 import to.unified.unified_java_sdk.models.operations.GetLmsClassRequest;
@@ -68,7 +69,7 @@ public class AsyncClass {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateLmsClassResponse>} - The async response
      */
-    public CompletableFuture<CreateLmsClassResponse> createLmsClass(CreateLmsClassRequest request) {
+    public CompletableFuture<CreateLmsClassResponse> createLmsClass(@Nonnull CreateLmsClassRequest request) {
         AsyncRequestOperation<CreateLmsClassRequest, CreateLmsClassResponse> operation
               = new CreateLmsClass.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -91,7 +92,7 @@ public class AsyncClass {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetLmsClassResponse>} - The async response
      */
-    public CompletableFuture<GetLmsClassResponse> getLmsClass(GetLmsClassRequest request) {
+    public CompletableFuture<GetLmsClassResponse> getLmsClass(@Nonnull GetLmsClassRequest request) {
         AsyncRequestOperation<GetLmsClassRequest, GetLmsClassResponse> operation
               = new GetLmsClass.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -114,7 +115,7 @@ public class AsyncClass {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListLmsClassesResponse>} - The async response
      */
-    public CompletableFuture<ListLmsClassesResponse> listLmsClasses(ListLmsClassesRequest request) {
+    public CompletableFuture<ListLmsClassesResponse> listLmsClasses(@Nonnull ListLmsClassesRequest request) {
         AsyncRequestOperation<ListLmsClassesRequest, ListLmsClassesResponse> operation
               = new ListLmsClasses.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -137,7 +138,7 @@ public class AsyncClass {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchLmsClassResponse>} - The async response
      */
-    public CompletableFuture<PatchLmsClassResponse> patchLmsClass(PatchLmsClassRequest request) {
+    public CompletableFuture<PatchLmsClassResponse> patchLmsClass(@Nonnull PatchLmsClassRequest request) {
         AsyncRequestOperation<PatchLmsClassRequest, PatchLmsClassResponse> operation
               = new PatchLmsClass.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -160,7 +161,7 @@ public class AsyncClass {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveLmsClassResponse>} - The async response
      */
-    public CompletableFuture<RemoveLmsClassResponse> removeLmsClass(RemoveLmsClassRequest request) {
+    public CompletableFuture<RemoveLmsClassResponse> removeLmsClass(@Nonnull RemoveLmsClassRequest request) {
         AsyncRequestOperation<RemoveLmsClassRequest, RemoveLmsClassResponse> operation
               = new RemoveLmsClass.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -183,7 +184,7 @@ public class AsyncClass {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateLmsClassResponse>} - The async response
      */
-    public CompletableFuture<UpdateLmsClassResponse> updateLmsClass(UpdateLmsClassRequest request) {
+    public CompletableFuture<UpdateLmsClassResponse> updateLmsClass(@Nonnull UpdateLmsClassRequest request) {
         AsyncRequestOperation<UpdateLmsClassRequest, UpdateLmsClassResponse> operation
               = new UpdateLmsClass.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

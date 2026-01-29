@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.GetAccountingTrialbalanceRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingTrialbalancesRequest;
@@ -52,7 +53,7 @@ public class AsyncTrialbalance {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAccountingTrialbalanceResponse>} - The async response
      */
-    public CompletableFuture<GetAccountingTrialbalanceResponse> getAccountingTrialbalance(GetAccountingTrialbalanceRequest request) {
+    public CompletableFuture<GetAccountingTrialbalanceResponse> getAccountingTrialbalance(@Nonnull GetAccountingTrialbalanceRequest request) {
         AsyncRequestOperation<GetAccountingTrialbalanceRequest, GetAccountingTrialbalanceResponse> operation
               = new GetAccountingTrialbalance.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -75,7 +76,7 @@ public class AsyncTrialbalance {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAccountingTrialbalancesResponse>} - The async response
      */
-    public CompletableFuture<ListAccountingTrialbalancesResponse> listAccountingTrialbalances(ListAccountingTrialbalancesRequest request) {
+    public CompletableFuture<ListAccountingTrialbalancesResponse> listAccountingTrialbalances(@Nonnull ListAccountingTrialbalancesRequest request) {
         AsyncRequestOperation<ListAccountingTrialbalancesRequest, ListAccountingTrialbalancesResponse> operation
               = new ListAccountingTrialbalances.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

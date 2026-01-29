@@ -49,7 +49,6 @@ public class LmsEmail {
         }
 
         public LmsEmail build() {
-
             return new LmsEmail(
                 );
         }

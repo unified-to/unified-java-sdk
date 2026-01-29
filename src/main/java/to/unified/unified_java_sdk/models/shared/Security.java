@@ -4,9 +4,10 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
 import java.lang.Override;
 import java.lang.String;
+import java.util.Optional;
 import to.unified.unified_java_sdk.utils.HasSecurity;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -19,14 +20,13 @@ public class Security implements HasSecurity {
 
     @JsonCreator
     public Security(
-            String jwt) {
-        Utils.checkNotNull(jwt, "jwt");
-        this.jwt = jwt;
+            @Nonnull String jwt) {
+        this.jwt = Optional.ofNullable(jwt)
+            .orElseThrow(() -> new IllegalArgumentException("jwt cannot be null"));
     }
 
-    @JsonIgnore
     public String jwt() {
-        return jwt;
+        return this.jwt;
     }
 
     public static Builder builder() {
@@ -34,11 +34,11 @@ public class Security implements HasSecurity {
     }
 
 
-    public Security withJwt(String jwt) {
-        Utils.checkNotNull(jwt, "jwt");
-        this.jwt = jwt;
+    public Security withJwt(@Nonnull String jwt) {
+        this.jwt = Utils.checkNotNull(jwt, "jwt");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -74,15 +74,12 @@ public class Security implements HasSecurity {
           // force use of static builder() method
         }
 
-
-        public Builder jwt(String jwt) {
-            Utils.checkNotNull(jwt, "jwt");
-            this.jwt = jwt;
+        public Builder jwt(@Nonnull String jwt) {
+            this.jwt = Utils.checkNotNull(jwt, "jwt");
             return this;
         }
 
         public Security build() {
-
             return new Security(
                 jwt);
         }

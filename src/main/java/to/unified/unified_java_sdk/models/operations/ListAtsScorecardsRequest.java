@@ -4,11 +4,11 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
@@ -20,13 +20,13 @@ public class ListAtsScorecardsRequest {
      * The application ID to filter by
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=application_id")
-    private Optional<String> applicationId;
+    private String applicationId;
 
     /**
      * The candidate ID to filter by
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=candidate_id")
-    private Optional<String> candidateId;
+    private String candidateId;
 
     /**
      * ID of the connection
@@ -38,37 +38,37 @@ public class ListAtsScorecardsRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<ListAtsScorecardsQueryParamFields>> fields;
+    private List<ListAtsScorecardsQueryParamFields> fields;
 
     /**
      * The interview ID to filter by
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=interview_id")
-    private Optional<String> interviewId;
+    private String interviewId;
 
     /**
      * The job ID to filter by
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=job_id")
-    private Optional<String> jobId;
+    private String jobId;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
-    private Optional<Double> limit;
+    private Double limit;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
-    private Optional<Double> offset;
+    private Double offset;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
-    private Optional<String> order;
+    private String order;
 
     /**
      * Query string to search. eg. email address or name
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
-    private Optional<String> query;
+    private String query;
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
@@ -76,50 +76,38 @@ public class ListAtsScorecardsRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
-    private Optional<String> sort;
+    private String sort;
 
     /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
-    private Optional<String> updatedGte;
+    private String updatedGte;
 
     @JsonCreator
     public ListAtsScorecardsRequest(
-            Optional<String> applicationId,
-            Optional<String> candidateId,
-            String connectionId,
-            Optional<? extends List<ListAtsScorecardsQueryParamFields>> fields,
-            Optional<String> interviewId,
-            Optional<String> jobId,
-            Optional<Double> limit,
-            Optional<Double> offset,
-            Optional<String> order,
-            Optional<String> query,
-            Optional<String> raw,
-            Optional<String> sort,
-            Optional<String> updatedGte) {
-        Utils.checkNotNull(applicationId, "applicationId");
-        Utils.checkNotNull(candidateId, "candidateId");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(interviewId, "interviewId");
-        Utils.checkNotNull(jobId, "jobId");
-        Utils.checkNotNull(limit, "limit");
-        Utils.checkNotNull(offset, "offset");
-        Utils.checkNotNull(order, "order");
-        Utils.checkNotNull(query, "query");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(sort, "sort");
-        Utils.checkNotNull(updatedGte, "updatedGte");
+            @Nullable String applicationId,
+            @Nullable String candidateId,
+            @Nonnull String connectionId,
+            @Nullable List<ListAtsScorecardsQueryParamFields> fields,
+            @Nullable String interviewId,
+            @Nullable String jobId,
+            @Nullable Double limit,
+            @Nullable Double offset,
+            @Nullable String order,
+            @Nullable String query,
+            @Nullable String raw,
+            @Nullable String sort,
+            @Nullable String updatedGte) {
         this.applicationId = applicationId;
         this.candidateId = candidateId;
-        this.connectionId = connectionId;
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
         this.interviewId = interviewId;
         this.jobId = jobId;
@@ -133,84 +121,73 @@ public class ListAtsScorecardsRequest {
     }
     
     public ListAtsScorecardsRequest(
-            String connectionId) {
-        this(Optional.empty(), Optional.empty(), connectionId,
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+            @Nonnull String connectionId) {
+        this(null, null, connectionId,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null);
     }
 
     /**
      * The application ID to filter by
      */
-    @JsonIgnore
     public Optional<String> applicationId() {
-        return applicationId;
+        return Optional.ofNullable(this.applicationId);
     }
 
     /**
      * The candidate ID to filter by
      */
-    @JsonIgnore
     public Optional<String> candidateId() {
-        return candidateId;
+        return Optional.ofNullable(this.candidateId);
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<ListAtsScorecardsQueryParamFields>> fields() {
-        return (Optional<List<ListAtsScorecardsQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
      * The interview ID to filter by
      */
-    @JsonIgnore
     public Optional<String> interviewId() {
-        return interviewId;
+        return Optional.ofNullable(this.interviewId);
     }
 
     /**
      * The job ID to filter by
      */
-    @JsonIgnore
     public Optional<String> jobId() {
-        return jobId;
+        return Optional.ofNullable(this.jobId);
     }
 
-    @JsonIgnore
     public Optional<Double> limit() {
-        return limit;
+        return Optional.ofNullable(this.limit);
     }
 
-    @JsonIgnore
     public Optional<Double> offset() {
-        return offset;
+        return Optional.ofNullable(this.offset);
     }
 
-    @JsonIgnore
     public Optional<String> order() {
-        return order;
+        return Optional.ofNullable(this.order);
     }
 
     /**
      * Query string to search. eg. email address or name
      */
-    @JsonIgnore
     public Optional<String> query() {
-        return query;
+        return Optional.ofNullable(this.query);
     }
 
     /**
@@ -218,23 +195,20 @@ public class ListAtsScorecardsRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @JsonIgnore
     public Optional<String> sort() {
-        return sort;
+        return Optional.ofNullable(this.sort);
     }
 
     /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
-    @JsonIgnore
     public Optional<String> updatedGte() {
-        return updatedGte;
+        return Optional.ofNullable(this.updatedGte);
     }
 
     public static Builder builder() {
@@ -245,56 +219,26 @@ public class ListAtsScorecardsRequest {
     /**
      * The application ID to filter by
      */
-    public ListAtsScorecardsRequest withApplicationId(String applicationId) {
-        Utils.checkNotNull(applicationId, "applicationId");
-        this.applicationId = Optional.ofNullable(applicationId);
-        return this;
-    }
-
-
-    /**
-     * The application ID to filter by
-     */
-    public ListAtsScorecardsRequest withApplicationId(Optional<String> applicationId) {
-        Utils.checkNotNull(applicationId, "applicationId");
+    public ListAtsScorecardsRequest withApplicationId(@Nullable String applicationId) {
         this.applicationId = applicationId;
         return this;
     }
 
-    /**
-     * The candidate ID to filter by
-     */
-    public ListAtsScorecardsRequest withCandidateId(String candidateId) {
-        Utils.checkNotNull(candidateId, "candidateId");
-        this.candidateId = Optional.ofNullable(candidateId);
-        return this;
-    }
-
 
     /**
      * The candidate ID to filter by
      */
-    public ListAtsScorecardsRequest withCandidateId(Optional<String> candidateId) {
-        Utils.checkNotNull(candidateId, "candidateId");
+    public ListAtsScorecardsRequest withCandidateId(@Nullable String candidateId) {
         this.candidateId = candidateId;
         return this;
     }
 
+
     /**
      * ID of the connection
      */
-    public ListAtsScorecardsRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public ListAtsScorecardsRequest withFields(List<ListAtsScorecardsQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public ListAtsScorecardsRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -302,164 +246,83 @@ public class ListAtsScorecardsRequest {
     /**
      * Fields to return
      */
-    public ListAtsScorecardsRequest withFields(Optional<? extends List<ListAtsScorecardsQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public ListAtsScorecardsRequest withFields(@Nullable List<ListAtsScorecardsQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
-    /**
-     * The interview ID to filter by
-     */
-    public ListAtsScorecardsRequest withInterviewId(String interviewId) {
-        Utils.checkNotNull(interviewId, "interviewId");
-        this.interviewId = Optional.ofNullable(interviewId);
-        return this;
-    }
-
 
     /**
      * The interview ID to filter by
      */
-    public ListAtsScorecardsRequest withInterviewId(Optional<String> interviewId) {
-        Utils.checkNotNull(interviewId, "interviewId");
+    public ListAtsScorecardsRequest withInterviewId(@Nullable String interviewId) {
         this.interviewId = interviewId;
         return this;
     }
 
-    /**
-     * The job ID to filter by
-     */
-    public ListAtsScorecardsRequest withJobId(String jobId) {
-        Utils.checkNotNull(jobId, "jobId");
-        this.jobId = Optional.ofNullable(jobId);
-        return this;
-    }
-
 
     /**
      * The job ID to filter by
      */
-    public ListAtsScorecardsRequest withJobId(Optional<String> jobId) {
-        Utils.checkNotNull(jobId, "jobId");
+    public ListAtsScorecardsRequest withJobId(@Nullable String jobId) {
         this.jobId = jobId;
         return this;
     }
 
-    public ListAtsScorecardsRequest withLimit(double limit) {
-        Utils.checkNotNull(limit, "limit");
-        this.limit = Optional.ofNullable(limit);
-        return this;
-    }
 
-
-    public ListAtsScorecardsRequest withLimit(Optional<Double> limit) {
-        Utils.checkNotNull(limit, "limit");
+    public ListAtsScorecardsRequest withLimit(@Nullable Double limit) {
         this.limit = limit;
         return this;
     }
 
-    public ListAtsScorecardsRequest withOffset(double offset) {
-        Utils.checkNotNull(offset, "offset");
-        this.offset = Optional.ofNullable(offset);
-        return this;
-    }
 
-
-    public ListAtsScorecardsRequest withOffset(Optional<Double> offset) {
-        Utils.checkNotNull(offset, "offset");
+    public ListAtsScorecardsRequest withOffset(@Nullable Double offset) {
         this.offset = offset;
         return this;
     }
 
-    public ListAtsScorecardsRequest withOrder(String order) {
-        Utils.checkNotNull(order, "order");
-        this.order = Optional.ofNullable(order);
-        return this;
-    }
 
-
-    public ListAtsScorecardsRequest withOrder(Optional<String> order) {
-        Utils.checkNotNull(order, "order");
+    public ListAtsScorecardsRequest withOrder(@Nullable String order) {
         this.order = order;
         return this;
     }
 
-    /**
-     * Query string to search. eg. email address or name
-     */
-    public ListAtsScorecardsRequest withQuery(String query) {
-        Utils.checkNotNull(query, "query");
-        this.query = Optional.ofNullable(query);
-        return this;
-    }
-
 
     /**
      * Query string to search. eg. email address or name
      */
-    public ListAtsScorecardsRequest withQuery(Optional<String> query) {
-        Utils.checkNotNull(query, "query");
+    public ListAtsScorecardsRequest withQuery(@Nullable String query) {
         this.query = query;
         return this;
     }
 
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public ListAtsScorecardsRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
-
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public ListAtsScorecardsRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public ListAtsScorecardsRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
 
-    public ListAtsScorecardsRequest withSort(String sort) {
-        Utils.checkNotNull(sort, "sort");
-        this.sort = Optional.ofNullable(sort);
-        return this;
-    }
 
-
-    public ListAtsScorecardsRequest withSort(Optional<String> sort) {
-        Utils.checkNotNull(sort, "sort");
+    public ListAtsScorecardsRequest withSort(@Nullable String sort) {
         this.sort = sort;
         return this;
     }
 
-    /**
-     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
-     * YYYY-MM-DDTHH:MM:SSZ format)
-     */
-    public ListAtsScorecardsRequest withUpdatedGte(String updatedGte) {
-        Utils.checkNotNull(updatedGte, "updatedGte");
-        this.updatedGte = Optional.ofNullable(updatedGte);
-        return this;
-    }
-
 
     /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
-    public ListAtsScorecardsRequest withUpdatedGte(Optional<String> updatedGte) {
-        Utils.checkNotNull(updatedGte, "updatedGte");
+    public ListAtsScorecardsRequest withUpdatedGte(@Nullable String updatedGte) {
         this.updatedGte = updatedGte;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -517,258 +380,132 @@ public class ListAtsScorecardsRequest {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> applicationId = Optional.empty();
+        private String applicationId;
 
-        private Optional<String> candidateId = Optional.empty();
+        private String candidateId;
 
         private String connectionId;
 
-        private Optional<? extends List<ListAtsScorecardsQueryParamFields>> fields = Optional.empty();
+        private List<ListAtsScorecardsQueryParamFields> fields;
 
-        private Optional<String> interviewId = Optional.empty();
+        private String interviewId;
 
-        private Optional<String> jobId = Optional.empty();
+        private String jobId;
 
-        private Optional<Double> limit = Optional.empty();
+        private Double limit;
 
-        private Optional<Double> offset = Optional.empty();
+        private Double offset;
 
-        private Optional<String> order = Optional.empty();
+        private String order;
 
-        private Optional<String> query = Optional.empty();
+        private String query;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
-        private Optional<String> sort = Optional.empty();
+        private String sort;
 
-        private Optional<String> updatedGte = Optional.empty();
+        private String updatedGte;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
         /**
          * The application ID to filter by
          */
-        public Builder applicationId(String applicationId) {
-            Utils.checkNotNull(applicationId, "applicationId");
-            this.applicationId = Optional.ofNullable(applicationId);
-            return this;
-        }
-
-        /**
-         * The application ID to filter by
-         */
-        public Builder applicationId(Optional<String> applicationId) {
-            Utils.checkNotNull(applicationId, "applicationId");
+        public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = applicationId;
             return this;
         }
 
-
         /**
          * The candidate ID to filter by
          */
-        public Builder candidateId(String candidateId) {
-            Utils.checkNotNull(candidateId, "candidateId");
-            this.candidateId = Optional.ofNullable(candidateId);
-            return this;
-        }
-
-        /**
-         * The candidate ID to filter by
-         */
-        public Builder candidateId(Optional<String> candidateId) {
-            Utils.checkNotNull(candidateId, "candidateId");
+        public Builder candidateId(@Nullable String candidateId) {
             this.candidateId = candidateId;
             return this;
         }
 
-
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<ListAtsScorecardsQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<ListAtsScorecardsQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<ListAtsScorecardsQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * The interview ID to filter by
          */
-        public Builder interviewId(String interviewId) {
-            Utils.checkNotNull(interviewId, "interviewId");
-            this.interviewId = Optional.ofNullable(interviewId);
-            return this;
-        }
-
-        /**
-         * The interview ID to filter by
-         */
-        public Builder interviewId(Optional<String> interviewId) {
-            Utils.checkNotNull(interviewId, "interviewId");
+        public Builder interviewId(@Nullable String interviewId) {
             this.interviewId = interviewId;
             return this;
         }
 
-
         /**
          * The job ID to filter by
          */
-        public Builder jobId(String jobId) {
-            Utils.checkNotNull(jobId, "jobId");
-            this.jobId = Optional.ofNullable(jobId);
-            return this;
-        }
-
-        /**
-         * The job ID to filter by
-         */
-        public Builder jobId(Optional<String> jobId) {
-            Utils.checkNotNull(jobId, "jobId");
+        public Builder jobId(@Nullable String jobId) {
             this.jobId = jobId;
             return this;
         }
 
-
-        public Builder limit(double limit) {
-            Utils.checkNotNull(limit, "limit");
-            this.limit = Optional.ofNullable(limit);
-            return this;
-        }
-
-        public Builder limit(Optional<Double> limit) {
-            Utils.checkNotNull(limit, "limit");
+        public Builder limit(@Nullable Double limit) {
             this.limit = limit;
             return this;
         }
 
-
-        public Builder offset(double offset) {
-            Utils.checkNotNull(offset, "offset");
-            this.offset = Optional.ofNullable(offset);
-            return this;
-        }
-
-        public Builder offset(Optional<Double> offset) {
-            Utils.checkNotNull(offset, "offset");
+        public Builder offset(@Nullable Double offset) {
             this.offset = offset;
             return this;
         }
 
-
-        public Builder order(String order) {
-            Utils.checkNotNull(order, "order");
-            this.order = Optional.ofNullable(order);
-            return this;
-        }
-
-        public Builder order(Optional<String> order) {
-            Utils.checkNotNull(order, "order");
+        public Builder order(@Nullable String order) {
             this.order = order;
             return this;
         }
 
-
         /**
          * Query string to search. eg. email address or name
          */
-        public Builder query(String query) {
-            Utils.checkNotNull(query, "query");
-            this.query = Optional.ofNullable(query);
-            return this;
-        }
-
-        /**
-         * Query string to search. eg. email address or name
-         */
-        public Builder query(Optional<String> query) {
-            Utils.checkNotNull(query, "query");
+        public Builder query(@Nullable String query) {
             this.query = query;
             return this;
         }
 
-
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder sort(String sort) {
-            Utils.checkNotNull(sort, "sort");
-            this.sort = Optional.ofNullable(sort);
-            return this;
-        }
-
-        public Builder sort(Optional<String> sort) {
-            Utils.checkNotNull(sort, "sort");
+        public Builder sort(@Nullable String sort) {
             this.sort = sort;
             return this;
         }
 
-
         /**
          * Return only results whose updated date is equal or greater to this value (ISO-8601 /
          * YYYY-MM-DDTHH:MM:SSZ format)
          */
-        public Builder updatedGte(String updatedGte) {
-            Utils.checkNotNull(updatedGte, "updatedGte");
-            this.updatedGte = Optional.ofNullable(updatedGte);
-            return this;
-        }
-
-        /**
-         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
-         * YYYY-MM-DDTHH:MM:SSZ format)
-         */
-        public Builder updatedGte(Optional<String> updatedGte) {
-            Utils.checkNotNull(updatedGte, "updatedGte");
+        public Builder updatedGte(@Nullable String updatedGte) {
             this.updatedGte = updatedGte;
             return this;
         }
 
         public ListAtsScorecardsRequest build() {
-
             return new ListAtsScorecardsRequest(
                 applicationId, candidateId, connectionId,
                 fields, interviewId, jobId,

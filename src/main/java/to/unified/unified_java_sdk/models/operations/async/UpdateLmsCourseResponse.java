@@ -4,11 +4,11 @@
 package to.unified.unified_java_sdk.models.operations.async;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import java.lang.Integer;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.io.InputStream;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.LmsCourse;
@@ -26,7 +26,7 @@ public class UpdateLmsCourseResponse implements AsyncResponse {
     /**
      * Successful
      */
-    private Optional<? extends LmsCourse> lmsCourse;
+    private LmsCourse lmsCourse;
 
     /**
      * HTTP response status code for this operation
@@ -40,59 +40,52 @@ public class UpdateLmsCourseResponse implements AsyncResponse {
 
     @JsonCreator
     public UpdateLmsCourseResponse(
-            String contentType,
-            Optional<? extends LmsCourse> lmsCourse,
+            @Nonnull String contentType,
+            @Nullable LmsCourse lmsCourse,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(lmsCourse, "lmsCourse");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.contentType = contentType;
+            @Nonnull HttpResponse<Blob> rawResponse) {
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.lmsCourse = lmsCourse;
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
     }
     
     public UpdateLmsCourseResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
-        this(contentType, Optional.empty(), statusCode,
+            @Nonnull HttpResponse<Blob> rawResponse) {
+        this(contentType, null, statusCode,
             rawResponse);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<LmsCourse> lmsCourse() {
-        return (Optional<LmsCourse>) lmsCourse;
+        return Optional.ofNullable(this.lmsCourse);
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<Blob> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     public static Builder builder() {
@@ -103,18 +96,8 @@ public class UpdateLmsCourseResponse implements AsyncResponse {
     /**
      * HTTP response content type for this operation
      */
-    public UpdateLmsCourseResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
-        return this;
-    }
-
-    /**
-     * Successful
-     */
-    public UpdateLmsCourseResponse withLmsCourse(LmsCourse lmsCourse) {
-        Utils.checkNotNull(lmsCourse, "lmsCourse");
-        this.lmsCourse = Optional.ofNullable(lmsCourse);
+    public UpdateLmsCourseResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
 
@@ -122,29 +105,29 @@ public class UpdateLmsCourseResponse implements AsyncResponse {
     /**
      * Successful
      */
-    public UpdateLmsCourseResponse withLmsCourse(Optional<? extends LmsCourse> lmsCourse) {
-        Utils.checkNotNull(lmsCourse, "lmsCourse");
+    public UpdateLmsCourseResponse withLmsCourse(@Nullable LmsCourse lmsCourse) {
         this.lmsCourse = lmsCourse;
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public UpdateLmsCourseResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public UpdateLmsCourseResponse withRawResponse(HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
+    public UpdateLmsCourseResponse withRawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -183,9 +166,9 @@ public class UpdateLmsCourseResponse implements AsyncResponse {
 
         private String contentType;
 
-        private Optional<? extends LmsCourse> lmsCourse = Optional.empty();
+        private LmsCourse lmsCourse;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<Blob> rawResponse;
 
@@ -193,57 +176,39 @@ public class UpdateLmsCourseResponse implements AsyncResponse {
           // force use of static builder() method
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
-            return this;
-        }
-
-
-        /**
-         * Successful
-         */
-        public Builder lmsCourse(LmsCourse lmsCourse) {
-            Utils.checkNotNull(lmsCourse, "lmsCourse");
-            this.lmsCourse = Optional.ofNullable(lmsCourse);
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
 
         /**
          * Successful
          */
-        public Builder lmsCourse(Optional<? extends LmsCourse> lmsCourse) {
-            Utils.checkNotNull(lmsCourse, "lmsCourse");
+        public Builder lmsCourse(@Nullable LmsCourse lmsCourse) {
             this.lmsCourse = lmsCourse;
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<Blob> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
+        public Builder rawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         public UpdateLmsCourseResponse build() {
-
             return new UpdateLmsCourseResponse(
                 contentType, lmsCourse, statusCode,
                 rawResponse);

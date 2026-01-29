@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateScimUsersRequest;
 import to.unified.unified_java_sdk.models.operations.GetScimUsersRequest;
@@ -68,7 +69,7 @@ public class AsyncUser {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateScimUsersResponse>} - The async response
      */
-    public CompletableFuture<CreateScimUsersResponse> createScimUsers(CreateScimUsersRequest request) {
+    public CompletableFuture<CreateScimUsersResponse> createScimUsers(@Nonnull CreateScimUsersRequest request) {
         AsyncRequestOperation<CreateScimUsersRequest, CreateScimUsersResponse> operation
               = new CreateScimUsers.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -91,7 +92,7 @@ public class AsyncUser {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetScimUsersResponse>} - The async response
      */
-    public CompletableFuture<GetScimUsersResponse> getScimUsers(GetScimUsersRequest request) {
+    public CompletableFuture<GetScimUsersResponse> getScimUsers(@Nonnull GetScimUsersRequest request) {
         AsyncRequestOperation<GetScimUsersRequest, GetScimUsersResponse> operation
               = new GetScimUsers.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -114,7 +115,7 @@ public class AsyncUser {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListScimUsersResponse>} - The async response
      */
-    public CompletableFuture<ListScimUsersResponse> listScimUsers(ListScimUsersRequest request) {
+    public CompletableFuture<ListScimUsersResponse> listScimUsers(@Nonnull ListScimUsersRequest request) {
         AsyncRequestOperation<ListScimUsersRequest, ListScimUsersResponse> operation
               = new ListScimUsers.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -137,7 +138,7 @@ public class AsyncUser {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchScimUsersResponse>} - The async response
      */
-    public CompletableFuture<PatchScimUsersResponse> patchScimUsers(PatchScimUsersRequest request) {
+    public CompletableFuture<PatchScimUsersResponse> patchScimUsers(@Nonnull PatchScimUsersRequest request) {
         AsyncRequestOperation<PatchScimUsersRequest, PatchScimUsersResponse> operation
               = new PatchScimUsers.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -160,7 +161,7 @@ public class AsyncUser {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveScimUsersResponse>} - The async response
      */
-    public CompletableFuture<RemoveScimUsersResponse> removeScimUsers(RemoveScimUsersRequest request) {
+    public CompletableFuture<RemoveScimUsersResponse> removeScimUsers(@Nonnull RemoveScimUsersRequest request) {
         AsyncRequestOperation<RemoveScimUsersRequest, RemoveScimUsersResponse> operation
               = new RemoveScimUsers.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -183,7 +184,7 @@ public class AsyncUser {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateScimUsersResponse>} - The async response
      */
-    public CompletableFuture<UpdateScimUsersResponse> updateScimUsers(UpdateScimUsersRequest request) {
+    public CompletableFuture<UpdateScimUsersResponse> updateScimUsers(@Nonnull UpdateScimUsersRequest request) {
         AsyncRequestOperation<UpdateScimUsersRequest, UpdateScimUsersResponse> operation
               = new UpdateScimUsers.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

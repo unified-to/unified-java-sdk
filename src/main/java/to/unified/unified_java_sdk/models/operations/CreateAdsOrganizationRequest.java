@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.AdsOrganization;
@@ -30,7 +30,7 @@ public class CreateAdsOrganizationRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<CreateAdsOrganizationQueryParamFields>> fields;
+    private List<CreateAdsOrganizationQueryParamFields> fields;
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
@@ -38,51 +38,45 @@ public class CreateAdsOrganizationRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
     @JsonCreator
     public CreateAdsOrganizationRequest(
-            AdsOrganization adsOrganization,
-            String connectionId,
-            Optional<? extends List<CreateAdsOrganizationQueryParamFields>> fields,
-            Optional<String> raw) {
-        Utils.checkNotNull(adsOrganization, "adsOrganization");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(raw, "raw");
-        this.adsOrganization = adsOrganization;
-        this.connectionId = connectionId;
+            @Nonnull AdsOrganization adsOrganization,
+            @Nonnull String connectionId,
+            @Nullable List<CreateAdsOrganizationQueryParamFields> fields,
+            @Nullable String raw) {
+        this.adsOrganization = Optional.ofNullable(adsOrganization)
+            .orElseThrow(() -> new IllegalArgumentException("adsOrganization cannot be null"));
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
         this.raw = raw;
     }
     
     public CreateAdsOrganizationRequest(
-            AdsOrganization adsOrganization,
-            String connectionId) {
-        this(adsOrganization, connectionId, Optional.empty(),
-            Optional.empty());
+            @Nonnull AdsOrganization adsOrganization,
+            @Nonnull String connectionId) {
+        this(adsOrganization, connectionId, null,
+            null);
     }
 
-    @JsonIgnore
     public AdsOrganization adsOrganization() {
-        return adsOrganization;
+        return this.adsOrganization;
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<CreateAdsOrganizationQueryParamFields>> fields() {
-        return (Optional<List<CreateAdsOrganizationQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
@@ -90,9 +84,8 @@ public class CreateAdsOrganizationRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
     public static Builder builder() {
@@ -100,27 +93,17 @@ public class CreateAdsOrganizationRequest {
     }
 
 
-    public CreateAdsOrganizationRequest withAdsOrganization(AdsOrganization adsOrganization) {
-        Utils.checkNotNull(adsOrganization, "adsOrganization");
-        this.adsOrganization = adsOrganization;
+    public CreateAdsOrganizationRequest withAdsOrganization(@Nonnull AdsOrganization adsOrganization) {
+        this.adsOrganization = Utils.checkNotNull(adsOrganization, "adsOrganization");
         return this;
     }
+
 
     /**
      * ID of the connection
      */
-    public CreateAdsOrganizationRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public CreateAdsOrganizationRequest withFields(List<CreateAdsOrganizationQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public CreateAdsOrganizationRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -128,34 +111,22 @@ public class CreateAdsOrganizationRequest {
     /**
      * Fields to return
      */
-    public CreateAdsOrganizationRequest withFields(Optional<? extends List<CreateAdsOrganizationQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public CreateAdsOrganizationRequest withFields(@Nullable List<CreateAdsOrganizationQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public CreateAdsOrganizationRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
-
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public CreateAdsOrganizationRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public CreateAdsOrganizationRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -196,75 +167,46 @@ public class CreateAdsOrganizationRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<CreateAdsOrganizationQueryParamFields>> fields = Optional.empty();
+        private List<CreateAdsOrganizationQueryParamFields> fields;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder adsOrganization(AdsOrganization adsOrganization) {
-            Utils.checkNotNull(adsOrganization, "adsOrganization");
-            this.adsOrganization = adsOrganization;
+        public Builder adsOrganization(@Nonnull AdsOrganization adsOrganization) {
+            this.adsOrganization = Utils.checkNotNull(adsOrganization, "adsOrganization");
             return this;
         }
-
 
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<CreateAdsOrganizationQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<CreateAdsOrganizationQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<CreateAdsOrganizationQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
         public CreateAdsOrganizationRequest build() {
-
             return new CreateAdsOrganizationRequest(
                 adsOrganization, connectionId, fields,
                 raw);

@@ -4,11 +4,11 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
@@ -20,13 +20,13 @@ public class ListHrisDeductionsRequest {
      * The benefit ID to filter by
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=benefit_id")
-    private Optional<String> benefitId;
+    private String benefitId;
 
     /**
      * The company ID to filter by (reference to HrisCompany)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=company_id")
-    private Optional<String> companyId;
+    private String companyId;
 
     /**
      * ID of the connection
@@ -38,31 +38,31 @@ public class ListHrisDeductionsRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<ListHrisDeductionsQueryParamFields>> fields;
+    private List<ListHrisDeductionsQueryParamFields> fields;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
-    private Optional<Double> limit;
+    private Double limit;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
-    private Optional<Double> offset;
+    private Double offset;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
-    private Optional<String> order;
+    private String order;
 
     /**
      * The payslip ID to filter by
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=payslip_id")
-    private Optional<String> payslipId;
+    private String payslipId;
 
     /**
      * Query string to search. eg. email address or name
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
-    private Optional<String> query;
+    private String query;
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
@@ -70,56 +70,44 @@ public class ListHrisDeductionsRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
-    private Optional<String> sort;
+    private String sort;
 
     /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
-    private Optional<String> updatedGte;
+    private String updatedGte;
 
     /**
      * The user/employee ID to filter by (reference to HrisEmployee)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_id")
-    private Optional<String> userId;
+    private String userId;
 
     @JsonCreator
     public ListHrisDeductionsRequest(
-            Optional<String> benefitId,
-            Optional<String> companyId,
-            String connectionId,
-            Optional<? extends List<ListHrisDeductionsQueryParamFields>> fields,
-            Optional<Double> limit,
-            Optional<Double> offset,
-            Optional<String> order,
-            Optional<String> payslipId,
-            Optional<String> query,
-            Optional<String> raw,
-            Optional<String> sort,
-            Optional<String> updatedGte,
-            Optional<String> userId) {
-        Utils.checkNotNull(benefitId, "benefitId");
-        Utils.checkNotNull(companyId, "companyId");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(limit, "limit");
-        Utils.checkNotNull(offset, "offset");
-        Utils.checkNotNull(order, "order");
-        Utils.checkNotNull(payslipId, "payslipId");
-        Utils.checkNotNull(query, "query");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(sort, "sort");
-        Utils.checkNotNull(updatedGte, "updatedGte");
-        Utils.checkNotNull(userId, "userId");
+            @Nullable String benefitId,
+            @Nullable String companyId,
+            @Nonnull String connectionId,
+            @Nullable List<ListHrisDeductionsQueryParamFields> fields,
+            @Nullable Double limit,
+            @Nullable Double offset,
+            @Nullable String order,
+            @Nullable String payslipId,
+            @Nullable String query,
+            @Nullable String raw,
+            @Nullable String sort,
+            @Nullable String updatedGte,
+            @Nullable String userId) {
         this.benefitId = benefitId;
         this.companyId = companyId;
-        this.connectionId = connectionId;
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
         this.limit = limit;
         this.offset = offset;
@@ -133,76 +121,66 @@ public class ListHrisDeductionsRequest {
     }
     
     public ListHrisDeductionsRequest(
-            String connectionId) {
-        this(Optional.empty(), Optional.empty(), connectionId,
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+            @Nonnull String connectionId) {
+        this(null, null, connectionId,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null);
     }
 
     /**
      * The benefit ID to filter by
      */
-    @JsonIgnore
     public Optional<String> benefitId() {
-        return benefitId;
+        return Optional.ofNullable(this.benefitId);
     }
 
     /**
      * The company ID to filter by (reference to HrisCompany)
      */
-    @JsonIgnore
     public Optional<String> companyId() {
-        return companyId;
+        return Optional.ofNullable(this.companyId);
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<ListHrisDeductionsQueryParamFields>> fields() {
-        return (Optional<List<ListHrisDeductionsQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
-    @JsonIgnore
     public Optional<Double> limit() {
-        return limit;
+        return Optional.ofNullable(this.limit);
     }
 
-    @JsonIgnore
     public Optional<Double> offset() {
-        return offset;
+        return Optional.ofNullable(this.offset);
     }
 
-    @JsonIgnore
     public Optional<String> order() {
-        return order;
+        return Optional.ofNullable(this.order);
     }
 
     /**
      * The payslip ID to filter by
      */
-    @JsonIgnore
     public Optional<String> payslipId() {
-        return payslipId;
+        return Optional.ofNullable(this.payslipId);
     }
 
     /**
      * Query string to search. eg. email address or name
      */
-    @JsonIgnore
     public Optional<String> query() {
-        return query;
+        return Optional.ofNullable(this.query);
     }
 
     /**
@@ -210,31 +188,27 @@ public class ListHrisDeductionsRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @JsonIgnore
     public Optional<String> sort() {
-        return sort;
+        return Optional.ofNullable(this.sort);
     }
 
     /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
-    @JsonIgnore
     public Optional<String> updatedGte() {
-        return updatedGte;
+        return Optional.ofNullable(this.updatedGte);
     }
 
     /**
      * The user/employee ID to filter by (reference to HrisEmployee)
      */
-    @JsonIgnore
     public Optional<String> userId() {
-        return userId;
+        return Optional.ofNullable(this.userId);
     }
 
     public static Builder builder() {
@@ -245,56 +219,26 @@ public class ListHrisDeductionsRequest {
     /**
      * The benefit ID to filter by
      */
-    public ListHrisDeductionsRequest withBenefitId(String benefitId) {
-        Utils.checkNotNull(benefitId, "benefitId");
-        this.benefitId = Optional.ofNullable(benefitId);
-        return this;
-    }
-
-
-    /**
-     * The benefit ID to filter by
-     */
-    public ListHrisDeductionsRequest withBenefitId(Optional<String> benefitId) {
-        Utils.checkNotNull(benefitId, "benefitId");
+    public ListHrisDeductionsRequest withBenefitId(@Nullable String benefitId) {
         this.benefitId = benefitId;
         return this;
     }
 
-    /**
-     * The company ID to filter by (reference to HrisCompany)
-     */
-    public ListHrisDeductionsRequest withCompanyId(String companyId) {
-        Utils.checkNotNull(companyId, "companyId");
-        this.companyId = Optional.ofNullable(companyId);
-        return this;
-    }
-
 
     /**
      * The company ID to filter by (reference to HrisCompany)
      */
-    public ListHrisDeductionsRequest withCompanyId(Optional<String> companyId) {
-        Utils.checkNotNull(companyId, "companyId");
+    public ListHrisDeductionsRequest withCompanyId(@Nullable String companyId) {
         this.companyId = companyId;
         return this;
     }
 
+
     /**
      * ID of the connection
      */
-    public ListHrisDeductionsRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public ListHrisDeductionsRequest withFields(List<ListHrisDeductionsQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public ListHrisDeductionsRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -302,164 +246,83 @@ public class ListHrisDeductionsRequest {
     /**
      * Fields to return
      */
-    public ListHrisDeductionsRequest withFields(Optional<? extends List<ListHrisDeductionsQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public ListHrisDeductionsRequest withFields(@Nullable List<ListHrisDeductionsQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
-    public ListHrisDeductionsRequest withLimit(double limit) {
-        Utils.checkNotNull(limit, "limit");
-        this.limit = Optional.ofNullable(limit);
-        return this;
-    }
 
-
-    public ListHrisDeductionsRequest withLimit(Optional<Double> limit) {
-        Utils.checkNotNull(limit, "limit");
+    public ListHrisDeductionsRequest withLimit(@Nullable Double limit) {
         this.limit = limit;
         return this;
     }
 
-    public ListHrisDeductionsRequest withOffset(double offset) {
-        Utils.checkNotNull(offset, "offset");
-        this.offset = Optional.ofNullable(offset);
-        return this;
-    }
 
-
-    public ListHrisDeductionsRequest withOffset(Optional<Double> offset) {
-        Utils.checkNotNull(offset, "offset");
+    public ListHrisDeductionsRequest withOffset(@Nullable Double offset) {
         this.offset = offset;
         return this;
     }
 
-    public ListHrisDeductionsRequest withOrder(String order) {
-        Utils.checkNotNull(order, "order");
-        this.order = Optional.ofNullable(order);
-        return this;
-    }
 
-
-    public ListHrisDeductionsRequest withOrder(Optional<String> order) {
-        Utils.checkNotNull(order, "order");
+    public ListHrisDeductionsRequest withOrder(@Nullable String order) {
         this.order = order;
         return this;
     }
 
-    /**
-     * The payslip ID to filter by
-     */
-    public ListHrisDeductionsRequest withPayslipId(String payslipId) {
-        Utils.checkNotNull(payslipId, "payslipId");
-        this.payslipId = Optional.ofNullable(payslipId);
-        return this;
-    }
-
 
     /**
      * The payslip ID to filter by
      */
-    public ListHrisDeductionsRequest withPayslipId(Optional<String> payslipId) {
-        Utils.checkNotNull(payslipId, "payslipId");
+    public ListHrisDeductionsRequest withPayslipId(@Nullable String payslipId) {
         this.payslipId = payslipId;
         return this;
     }
 
-    /**
-     * Query string to search. eg. email address or name
-     */
-    public ListHrisDeductionsRequest withQuery(String query) {
-        Utils.checkNotNull(query, "query");
-        this.query = Optional.ofNullable(query);
-        return this;
-    }
-
 
     /**
      * Query string to search. eg. email address or name
      */
-    public ListHrisDeductionsRequest withQuery(Optional<String> query) {
-        Utils.checkNotNull(query, "query");
+    public ListHrisDeductionsRequest withQuery(@Nullable String query) {
         this.query = query;
         return this;
     }
 
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public ListHrisDeductionsRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
-
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public ListHrisDeductionsRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public ListHrisDeductionsRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
 
-    public ListHrisDeductionsRequest withSort(String sort) {
-        Utils.checkNotNull(sort, "sort");
-        this.sort = Optional.ofNullable(sort);
-        return this;
-    }
 
-
-    public ListHrisDeductionsRequest withSort(Optional<String> sort) {
-        Utils.checkNotNull(sort, "sort");
+    public ListHrisDeductionsRequest withSort(@Nullable String sort) {
         this.sort = sort;
         return this;
     }
 
-    /**
-     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
-     * YYYY-MM-DDTHH:MM:SSZ format)
-     */
-    public ListHrisDeductionsRequest withUpdatedGte(String updatedGte) {
-        Utils.checkNotNull(updatedGte, "updatedGte");
-        this.updatedGte = Optional.ofNullable(updatedGte);
-        return this;
-    }
-
 
     /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
-    public ListHrisDeductionsRequest withUpdatedGte(Optional<String> updatedGte) {
-        Utils.checkNotNull(updatedGte, "updatedGte");
+    public ListHrisDeductionsRequest withUpdatedGte(@Nullable String updatedGte) {
         this.updatedGte = updatedGte;
         return this;
     }
 
-    /**
-     * The user/employee ID to filter by (reference to HrisEmployee)
-     */
-    public ListHrisDeductionsRequest withUserId(String userId) {
-        Utils.checkNotNull(userId, "userId");
-        this.userId = Optional.ofNullable(userId);
-        return this;
-    }
-
 
     /**
      * The user/employee ID to filter by (reference to HrisEmployee)
      */
-    public ListHrisDeductionsRequest withUserId(Optional<String> userId) {
-        Utils.checkNotNull(userId, "userId");
+    public ListHrisDeductionsRequest withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -517,258 +380,132 @@ public class ListHrisDeductionsRequest {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> benefitId = Optional.empty();
+        private String benefitId;
 
-        private Optional<String> companyId = Optional.empty();
+        private String companyId;
 
         private String connectionId;
 
-        private Optional<? extends List<ListHrisDeductionsQueryParamFields>> fields = Optional.empty();
+        private List<ListHrisDeductionsQueryParamFields> fields;
 
-        private Optional<Double> limit = Optional.empty();
+        private Double limit;
 
-        private Optional<Double> offset = Optional.empty();
+        private Double offset;
 
-        private Optional<String> order = Optional.empty();
+        private String order;
 
-        private Optional<String> payslipId = Optional.empty();
+        private String payslipId;
 
-        private Optional<String> query = Optional.empty();
+        private String query;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
-        private Optional<String> sort = Optional.empty();
+        private String sort;
 
-        private Optional<String> updatedGte = Optional.empty();
+        private String updatedGte;
 
-        private Optional<String> userId = Optional.empty();
+        private String userId;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
         /**
          * The benefit ID to filter by
          */
-        public Builder benefitId(String benefitId) {
-            Utils.checkNotNull(benefitId, "benefitId");
-            this.benefitId = Optional.ofNullable(benefitId);
-            return this;
-        }
-
-        /**
-         * The benefit ID to filter by
-         */
-        public Builder benefitId(Optional<String> benefitId) {
-            Utils.checkNotNull(benefitId, "benefitId");
+        public Builder benefitId(@Nullable String benefitId) {
             this.benefitId = benefitId;
             return this;
         }
 
-
         /**
          * The company ID to filter by (reference to HrisCompany)
          */
-        public Builder companyId(String companyId) {
-            Utils.checkNotNull(companyId, "companyId");
-            this.companyId = Optional.ofNullable(companyId);
-            return this;
-        }
-
-        /**
-         * The company ID to filter by (reference to HrisCompany)
-         */
-        public Builder companyId(Optional<String> companyId) {
-            Utils.checkNotNull(companyId, "companyId");
+        public Builder companyId(@Nullable String companyId) {
             this.companyId = companyId;
             return this;
         }
 
-
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<ListHrisDeductionsQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<ListHrisDeductionsQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<ListHrisDeductionsQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
-        public Builder limit(double limit) {
-            Utils.checkNotNull(limit, "limit");
-            this.limit = Optional.ofNullable(limit);
-            return this;
-        }
-
-        public Builder limit(Optional<Double> limit) {
-            Utils.checkNotNull(limit, "limit");
+        public Builder limit(@Nullable Double limit) {
             this.limit = limit;
             return this;
         }
 
-
-        public Builder offset(double offset) {
-            Utils.checkNotNull(offset, "offset");
-            this.offset = Optional.ofNullable(offset);
-            return this;
-        }
-
-        public Builder offset(Optional<Double> offset) {
-            Utils.checkNotNull(offset, "offset");
+        public Builder offset(@Nullable Double offset) {
             this.offset = offset;
             return this;
         }
 
-
-        public Builder order(String order) {
-            Utils.checkNotNull(order, "order");
-            this.order = Optional.ofNullable(order);
-            return this;
-        }
-
-        public Builder order(Optional<String> order) {
-            Utils.checkNotNull(order, "order");
+        public Builder order(@Nullable String order) {
             this.order = order;
             return this;
         }
 
-
         /**
          * The payslip ID to filter by
          */
-        public Builder payslipId(String payslipId) {
-            Utils.checkNotNull(payslipId, "payslipId");
-            this.payslipId = Optional.ofNullable(payslipId);
-            return this;
-        }
-
-        /**
-         * The payslip ID to filter by
-         */
-        public Builder payslipId(Optional<String> payslipId) {
-            Utils.checkNotNull(payslipId, "payslipId");
+        public Builder payslipId(@Nullable String payslipId) {
             this.payslipId = payslipId;
             return this;
         }
 
-
         /**
          * Query string to search. eg. email address or name
          */
-        public Builder query(String query) {
-            Utils.checkNotNull(query, "query");
-            this.query = Optional.ofNullable(query);
-            return this;
-        }
-
-        /**
-         * Query string to search. eg. email address or name
-         */
-        public Builder query(Optional<String> query) {
-            Utils.checkNotNull(query, "query");
+        public Builder query(@Nullable String query) {
             this.query = query;
             return this;
         }
 
-
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder sort(String sort) {
-            Utils.checkNotNull(sort, "sort");
-            this.sort = Optional.ofNullable(sort);
-            return this;
-        }
-
-        public Builder sort(Optional<String> sort) {
-            Utils.checkNotNull(sort, "sort");
+        public Builder sort(@Nullable String sort) {
             this.sort = sort;
             return this;
         }
 
-
         /**
          * Return only results whose updated date is equal or greater to this value (ISO-8601 /
          * YYYY-MM-DDTHH:MM:SSZ format)
          */
-        public Builder updatedGte(String updatedGte) {
-            Utils.checkNotNull(updatedGte, "updatedGte");
-            this.updatedGte = Optional.ofNullable(updatedGte);
-            return this;
-        }
-
-        /**
-         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
-         * YYYY-MM-DDTHH:MM:SSZ format)
-         */
-        public Builder updatedGte(Optional<String> updatedGte) {
-            Utils.checkNotNull(updatedGte, "updatedGte");
+        public Builder updatedGte(@Nullable String updatedGte) {
             this.updatedGte = updatedGte;
             return this;
         }
 
-
         /**
          * The user/employee ID to filter by (reference to HrisEmployee)
          */
-        public Builder userId(String userId) {
-            Utils.checkNotNull(userId, "userId");
-            this.userId = Optional.ofNullable(userId);
-            return this;
-        }
-
-        /**
-         * The user/employee ID to filter by (reference to HrisEmployee)
-         */
-        public Builder userId(Optional<String> userId) {
-            Utils.checkNotNull(userId, "userId");
+        public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;
         }
 
         public ListHrisDeductionsRequest build() {
-
             return new ListHrisDeductionsRequest(
                 benefitId, companyId, connectionId,
                 fields, limit, offset,

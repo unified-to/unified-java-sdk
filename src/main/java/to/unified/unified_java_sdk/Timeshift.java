@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTimeshiftRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTimeshiftRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTimeshiftResponse;
@@ -67,7 +68,7 @@ public class Timeshift {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateHrisTimeshiftResponse createHrisTimeshift(CreateHrisTimeshiftRequest request) {
+    public CreateHrisTimeshiftResponse createHrisTimeshift(@Nonnull CreateHrisTimeshiftRequest request) {
         RequestOperation<CreateHrisTimeshiftRequest, CreateHrisTimeshiftResponse> operation
               = new CreateHrisTimeshift.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -89,7 +90,7 @@ public class Timeshift {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetHrisTimeshiftResponse getHrisTimeshift(GetHrisTimeshiftRequest request) {
+    public GetHrisTimeshiftResponse getHrisTimeshift(@Nonnull GetHrisTimeshiftRequest request) {
         RequestOperation<GetHrisTimeshiftRequest, GetHrisTimeshiftResponse> operation
               = new GetHrisTimeshift.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -111,7 +112,7 @@ public class Timeshift {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListHrisTimeshiftsResponse listHrisTimeshifts(ListHrisTimeshiftsRequest request) {
+    public ListHrisTimeshiftsResponse listHrisTimeshifts(@Nonnull ListHrisTimeshiftsRequest request) {
         RequestOperation<ListHrisTimeshiftsRequest, ListHrisTimeshiftsResponse> operation
               = new ListHrisTimeshifts.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -133,7 +134,7 @@ public class Timeshift {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchHrisTimeshiftResponse patchHrisTimeshift(PatchHrisTimeshiftRequest request) {
+    public PatchHrisTimeshiftResponse patchHrisTimeshift(@Nonnull PatchHrisTimeshiftRequest request) {
         RequestOperation<PatchHrisTimeshiftRequest, PatchHrisTimeshiftResponse> operation
               = new PatchHrisTimeshift.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -155,7 +156,7 @@ public class Timeshift {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveHrisTimeshiftResponse removeHrisTimeshift(RemoveHrisTimeshiftRequest request) {
+    public RemoveHrisTimeshiftResponse removeHrisTimeshift(@Nonnull RemoveHrisTimeshiftRequest request) {
         RequestOperation<RemoveHrisTimeshiftRequest, RemoveHrisTimeshiftResponse> operation
               = new RemoveHrisTimeshift.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -177,7 +178,7 @@ public class Timeshift {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateHrisTimeshiftResponse updateHrisTimeshift(UpdateHrisTimeshiftRequest request) {
+    public UpdateHrisTimeshiftResponse updateHrisTimeshift(@Nonnull UpdateHrisTimeshiftRequest request) {
         RequestOperation<UpdateHrisTimeshiftRequest, UpdateHrisTimeshiftResponse> operation
               = new UpdateHrisTimeshift.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

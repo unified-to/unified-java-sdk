@@ -49,7 +49,6 @@ public class TaskMetadata1 {
         }
 
         public TaskMetadata1 build() {
-
             return new TaskMetadata1(
                 );
         }

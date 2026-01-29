@@ -4,10 +4,11 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nonnull;
 import java.lang.Override;
 import java.lang.String;
+import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
@@ -22,22 +23,20 @@ public class MessagingReaction {
 
     @JsonCreator
     public MessagingReaction(
-            @JsonProperty("member") PropertyMessagingReactionMember member,
-            @JsonProperty("reaction") String reaction) {
-        Utils.checkNotNull(member, "member");
-        Utils.checkNotNull(reaction, "reaction");
-        this.member = member;
-        this.reaction = reaction;
+            @JsonProperty("member") @Nonnull PropertyMessagingReactionMember member,
+            @JsonProperty("reaction") @Nonnull String reaction) {
+        this.member = Optional.ofNullable(member)
+            .orElseThrow(() -> new IllegalArgumentException("member cannot be null"));
+        this.reaction = Optional.ofNullable(reaction)
+            .orElseThrow(() -> new IllegalArgumentException("reaction cannot be null"));
     }
 
-    @JsonIgnore
     public PropertyMessagingReactionMember member() {
-        return member;
+        return this.member;
     }
 
-    @JsonIgnore
     public String reaction() {
-        return reaction;
+        return this.reaction;
     }
 
     public static Builder builder() {
@@ -45,17 +44,17 @@ public class MessagingReaction {
     }
 
 
-    public MessagingReaction withMember(PropertyMessagingReactionMember member) {
-        Utils.checkNotNull(member, "member");
-        this.member = member;
+    public MessagingReaction withMember(@Nonnull PropertyMessagingReactionMember member) {
+        this.member = Utils.checkNotNull(member, "member");
         return this;
     }
 
-    public MessagingReaction withReaction(String reaction) {
-        Utils.checkNotNull(reaction, "reaction");
-        this.reaction = reaction;
+
+    public MessagingReaction withReaction(@Nonnull String reaction) {
+        this.reaction = Utils.checkNotNull(reaction, "reaction");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -95,22 +94,17 @@ public class MessagingReaction {
           // force use of static builder() method
         }
 
-
-        public Builder member(PropertyMessagingReactionMember member) {
-            Utils.checkNotNull(member, "member");
-            this.member = member;
+        public Builder member(@Nonnull PropertyMessagingReactionMember member) {
+            this.member = Utils.checkNotNull(member, "member");
             return this;
         }
 
-
-        public Builder reaction(String reaction) {
-            Utils.checkNotNull(reaction, "reaction");
-            this.reaction = reaction;
+        public Builder reaction(@Nonnull String reaction) {
+            this.reaction = Utils.checkNotNull(reaction, "reaction");
             return this;
         }
 
         public MessagingReaction build() {
-
             return new MessagingReaction(
                 member, reaction);
         }

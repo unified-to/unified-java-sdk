@@ -4,11 +4,11 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
@@ -20,7 +20,7 @@ public class ListHrisTimeoffsRequest {
      * The company ID to filter by (reference to HrisCompany)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=company_id")
-    private Optional<String> companyId;
+    private String companyId;
 
     /**
      * ID of the connection
@@ -32,31 +32,31 @@ public class ListHrisTimeoffsRequest {
      * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_lt")
-    private Optional<String> endLt;
+    private String endLt;
 
     /**
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<ListHrisTimeoffsQueryParamFields>> fields;
+    private List<ListHrisTimeoffsQueryParamFields> fields;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
-    private Optional<Double> limit;
+    private Double limit;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
-    private Optional<Double> offset;
+    private Double offset;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
-    private Optional<String> order;
+    private String order;
 
     /**
      * Query string to search. eg. email address or name
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
-    private Optional<String> query;
+    private String query;
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
@@ -64,61 +64,49 @@ public class ListHrisTimeoffsRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
-    private Optional<String> sort;
+    private String sort;
 
     /**
      * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_gte")
-    private Optional<String> startGte;
+    private String startGte;
 
     /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
-    private Optional<String> updatedGte;
+    private String updatedGte;
 
     /**
      * The user/employee ID to filter by (reference to HrisEmployee)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_id")
-    private Optional<String> userId;
+    private String userId;
 
     @JsonCreator
     public ListHrisTimeoffsRequest(
-            Optional<String> companyId,
-            String connectionId,
-            Optional<String> endLt,
-            Optional<? extends List<ListHrisTimeoffsQueryParamFields>> fields,
-            Optional<Double> limit,
-            Optional<Double> offset,
-            Optional<String> order,
-            Optional<String> query,
-            Optional<String> raw,
-            Optional<String> sort,
-            Optional<String> startGte,
-            Optional<String> updatedGte,
-            Optional<String> userId) {
-        Utils.checkNotNull(companyId, "companyId");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(endLt, "endLt");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(limit, "limit");
-        Utils.checkNotNull(offset, "offset");
-        Utils.checkNotNull(order, "order");
-        Utils.checkNotNull(query, "query");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(sort, "sort");
-        Utils.checkNotNull(startGte, "startGte");
-        Utils.checkNotNull(updatedGte, "updatedGte");
-        Utils.checkNotNull(userId, "userId");
+            @Nullable String companyId,
+            @Nonnull String connectionId,
+            @Nullable String endLt,
+            @Nullable List<ListHrisTimeoffsQueryParamFields> fields,
+            @Nullable Double limit,
+            @Nullable Double offset,
+            @Nullable String order,
+            @Nullable String query,
+            @Nullable String raw,
+            @Nullable String sort,
+            @Nullable String startGte,
+            @Nullable String updatedGte,
+            @Nullable String userId) {
         this.companyId = companyId;
-        this.connectionId = connectionId;
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.endLt = endLt;
         this.fields = fields;
         this.limit = limit;
@@ -133,68 +121,59 @@ public class ListHrisTimeoffsRequest {
     }
     
     public ListHrisTimeoffsRequest(
-            String connectionId) {
-        this(Optional.empty(), connectionId, Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+            @Nonnull String connectionId) {
+        this(null, connectionId, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null);
     }
 
     /**
      * The company ID to filter by (reference to HrisCompany)
      */
-    @JsonIgnore
     public Optional<String> companyId() {
-        return companyId;
+        return Optional.ofNullable(this.companyId);
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
-    @JsonIgnore
     public Optional<String> endLt() {
-        return endLt;
+        return Optional.ofNullable(this.endLt);
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<ListHrisTimeoffsQueryParamFields>> fields() {
-        return (Optional<List<ListHrisTimeoffsQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
-    @JsonIgnore
     public Optional<Double> limit() {
-        return limit;
+        return Optional.ofNullable(this.limit);
     }
 
-    @JsonIgnore
     public Optional<Double> offset() {
-        return offset;
+        return Optional.ofNullable(this.offset);
     }
 
-    @JsonIgnore
     public Optional<String> order() {
-        return order;
+        return Optional.ofNullable(this.order);
     }
 
     /**
      * Query string to search. eg. email address or name
      */
-    @JsonIgnore
     public Optional<String> query() {
-        return query;
+        return Optional.ofNullable(this.query);
     }
 
     /**
@@ -202,39 +181,34 @@ public class ListHrisTimeoffsRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @JsonIgnore
     public Optional<String> sort() {
-        return sort;
+        return Optional.ofNullable(this.sort);
     }
 
     /**
      * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
-    @JsonIgnore
     public Optional<String> startGte() {
-        return startGte;
+        return Optional.ofNullable(this.startGte);
     }
 
     /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
-    @JsonIgnore
     public Optional<String> updatedGte() {
-        return updatedGte;
+        return Optional.ofNullable(this.updatedGte);
     }
 
     /**
      * The user/employee ID to filter by (reference to HrisEmployee)
      */
-    @JsonIgnore
     public Optional<String> userId() {
-        return userId;
+        return Optional.ofNullable(this.userId);
     }
 
     public static Builder builder() {
@@ -245,37 +219,17 @@ public class ListHrisTimeoffsRequest {
     /**
      * The company ID to filter by (reference to HrisCompany)
      */
-    public ListHrisTimeoffsRequest withCompanyId(String companyId) {
-        Utils.checkNotNull(companyId, "companyId");
-        this.companyId = Optional.ofNullable(companyId);
-        return this;
-    }
-
-
-    /**
-     * The company ID to filter by (reference to HrisCompany)
-     */
-    public ListHrisTimeoffsRequest withCompanyId(Optional<String> companyId) {
-        Utils.checkNotNull(companyId, "companyId");
+    public ListHrisTimeoffsRequest withCompanyId(@Nullable String companyId) {
         this.companyId = companyId;
         return this;
     }
 
+
     /**
      * ID of the connection
      */
-    public ListHrisTimeoffsRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-     */
-    public ListHrisTimeoffsRequest withEndLt(String endLt) {
-        Utils.checkNotNull(endLt, "endLt");
-        this.endLt = Optional.ofNullable(endLt);
+    public ListHrisTimeoffsRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -283,183 +237,92 @@ public class ListHrisTimeoffsRequest {
     /**
      * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
-    public ListHrisTimeoffsRequest withEndLt(Optional<String> endLt) {
-        Utils.checkNotNull(endLt, "endLt");
+    public ListHrisTimeoffsRequest withEndLt(@Nullable String endLt) {
         this.endLt = endLt;
         return this;
     }
 
-    /**
-     * Fields to return
-     */
-    public ListHrisTimeoffsRequest withFields(List<ListHrisTimeoffsQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
-        return this;
-    }
-
 
     /**
      * Fields to return
      */
-    public ListHrisTimeoffsRequest withFields(Optional<? extends List<ListHrisTimeoffsQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public ListHrisTimeoffsRequest withFields(@Nullable List<ListHrisTimeoffsQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
-    public ListHrisTimeoffsRequest withLimit(double limit) {
-        Utils.checkNotNull(limit, "limit");
-        this.limit = Optional.ofNullable(limit);
-        return this;
-    }
 
-
-    public ListHrisTimeoffsRequest withLimit(Optional<Double> limit) {
-        Utils.checkNotNull(limit, "limit");
+    public ListHrisTimeoffsRequest withLimit(@Nullable Double limit) {
         this.limit = limit;
         return this;
     }
 
-    public ListHrisTimeoffsRequest withOffset(double offset) {
-        Utils.checkNotNull(offset, "offset");
-        this.offset = Optional.ofNullable(offset);
-        return this;
-    }
 
-
-    public ListHrisTimeoffsRequest withOffset(Optional<Double> offset) {
-        Utils.checkNotNull(offset, "offset");
+    public ListHrisTimeoffsRequest withOffset(@Nullable Double offset) {
         this.offset = offset;
         return this;
     }
 
-    public ListHrisTimeoffsRequest withOrder(String order) {
-        Utils.checkNotNull(order, "order");
-        this.order = Optional.ofNullable(order);
-        return this;
-    }
 
-
-    public ListHrisTimeoffsRequest withOrder(Optional<String> order) {
-        Utils.checkNotNull(order, "order");
+    public ListHrisTimeoffsRequest withOrder(@Nullable String order) {
         this.order = order;
         return this;
     }
 
-    /**
-     * Query string to search. eg. email address or name
-     */
-    public ListHrisTimeoffsRequest withQuery(String query) {
-        Utils.checkNotNull(query, "query");
-        this.query = Optional.ofNullable(query);
-        return this;
-    }
-
 
     /**
      * Query string to search. eg. email address or name
      */
-    public ListHrisTimeoffsRequest withQuery(Optional<String> query) {
-        Utils.checkNotNull(query, "query");
+    public ListHrisTimeoffsRequest withQuery(@Nullable String query) {
         this.query = query;
         return this;
     }
 
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public ListHrisTimeoffsRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
-
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public ListHrisTimeoffsRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public ListHrisTimeoffsRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
 
-    public ListHrisTimeoffsRequest withSort(String sort) {
-        Utils.checkNotNull(sort, "sort");
-        this.sort = Optional.ofNullable(sort);
-        return this;
-    }
 
-
-    public ListHrisTimeoffsRequest withSort(Optional<String> sort) {
-        Utils.checkNotNull(sort, "sort");
+    public ListHrisTimeoffsRequest withSort(@Nullable String sort) {
         this.sort = sort;
         return this;
     }
 
-    /**
-     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-     */
-    public ListHrisTimeoffsRequest withStartGte(String startGte) {
-        Utils.checkNotNull(startGte, "startGte");
-        this.startGte = Optional.ofNullable(startGte);
-        return this;
-    }
-
 
     /**
      * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
-    public ListHrisTimeoffsRequest withStartGte(Optional<String> startGte) {
-        Utils.checkNotNull(startGte, "startGte");
+    public ListHrisTimeoffsRequest withStartGte(@Nullable String startGte) {
         this.startGte = startGte;
         return this;
     }
 
-    /**
-     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
-     * YYYY-MM-DDTHH:MM:SSZ format)
-     */
-    public ListHrisTimeoffsRequest withUpdatedGte(String updatedGte) {
-        Utils.checkNotNull(updatedGte, "updatedGte");
-        this.updatedGte = Optional.ofNullable(updatedGte);
-        return this;
-    }
-
 
     /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
-    public ListHrisTimeoffsRequest withUpdatedGte(Optional<String> updatedGte) {
-        Utils.checkNotNull(updatedGte, "updatedGte");
+    public ListHrisTimeoffsRequest withUpdatedGte(@Nullable String updatedGte) {
         this.updatedGte = updatedGte;
         return this;
     }
 
-    /**
-     * The user/employee ID to filter by (reference to HrisEmployee)
-     */
-    public ListHrisTimeoffsRequest withUserId(String userId) {
-        Utils.checkNotNull(userId, "userId");
-        this.userId = Optional.ofNullable(userId);
-        return this;
-    }
-
 
     /**
      * The user/employee ID to filter by (reference to HrisEmployee)
      */
-    public ListHrisTimeoffsRequest withUserId(Optional<String> userId) {
-        Utils.checkNotNull(userId, "userId");
+    public ListHrisTimeoffsRequest withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -517,258 +380,132 @@ public class ListHrisTimeoffsRequest {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> companyId = Optional.empty();
+        private String companyId;
 
         private String connectionId;
 
-        private Optional<String> endLt = Optional.empty();
+        private String endLt;
 
-        private Optional<? extends List<ListHrisTimeoffsQueryParamFields>> fields = Optional.empty();
+        private List<ListHrisTimeoffsQueryParamFields> fields;
 
-        private Optional<Double> limit = Optional.empty();
+        private Double limit;
 
-        private Optional<Double> offset = Optional.empty();
+        private Double offset;
 
-        private Optional<String> order = Optional.empty();
+        private String order;
 
-        private Optional<String> query = Optional.empty();
+        private String query;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
-        private Optional<String> sort = Optional.empty();
+        private String sort;
 
-        private Optional<String> startGte = Optional.empty();
+        private String startGte;
 
-        private Optional<String> updatedGte = Optional.empty();
+        private String updatedGte;
 
-        private Optional<String> userId = Optional.empty();
+        private String userId;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
         /**
          * The company ID to filter by (reference to HrisCompany)
          */
-        public Builder companyId(String companyId) {
-            Utils.checkNotNull(companyId, "companyId");
-            this.companyId = Optional.ofNullable(companyId);
-            return this;
-        }
-
-        /**
-         * The company ID to filter by (reference to HrisCompany)
-         */
-        public Builder companyId(Optional<String> companyId) {
-            Utils.checkNotNull(companyId, "companyId");
+        public Builder companyId(@Nullable String companyId) {
             this.companyId = companyId;
             return this;
         }
 
-
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-         */
-        public Builder endLt(String endLt) {
-            Utils.checkNotNull(endLt, "endLt");
-            this.endLt = Optional.ofNullable(endLt);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
          */
-        public Builder endLt(Optional<String> endLt) {
-            Utils.checkNotNull(endLt, "endLt");
+        public Builder endLt(@Nullable String endLt) {
             this.endLt = endLt;
             return this;
         }
 
-
         /**
          * Fields to return
          */
-        public Builder fields(List<ListHrisTimeoffsQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
-            return this;
-        }
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(Optional<? extends List<ListHrisTimeoffsQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<ListHrisTimeoffsQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
-        public Builder limit(double limit) {
-            Utils.checkNotNull(limit, "limit");
-            this.limit = Optional.ofNullable(limit);
-            return this;
-        }
-
-        public Builder limit(Optional<Double> limit) {
-            Utils.checkNotNull(limit, "limit");
+        public Builder limit(@Nullable Double limit) {
             this.limit = limit;
             return this;
         }
 
-
-        public Builder offset(double offset) {
-            Utils.checkNotNull(offset, "offset");
-            this.offset = Optional.ofNullable(offset);
-            return this;
-        }
-
-        public Builder offset(Optional<Double> offset) {
-            Utils.checkNotNull(offset, "offset");
+        public Builder offset(@Nullable Double offset) {
             this.offset = offset;
             return this;
         }
 
-
-        public Builder order(String order) {
-            Utils.checkNotNull(order, "order");
-            this.order = Optional.ofNullable(order);
-            return this;
-        }
-
-        public Builder order(Optional<String> order) {
-            Utils.checkNotNull(order, "order");
+        public Builder order(@Nullable String order) {
             this.order = order;
             return this;
         }
 
-
         /**
          * Query string to search. eg. email address or name
          */
-        public Builder query(String query) {
-            Utils.checkNotNull(query, "query");
-            this.query = Optional.ofNullable(query);
-            return this;
-        }
-
-        /**
-         * Query string to search. eg. email address or name
-         */
-        public Builder query(Optional<String> query) {
-            Utils.checkNotNull(query, "query");
+        public Builder query(@Nullable String query) {
             this.query = query;
             return this;
         }
 
-
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder sort(String sort) {
-            Utils.checkNotNull(sort, "sort");
-            this.sort = Optional.ofNullable(sort);
-            return this;
-        }
-
-        public Builder sort(Optional<String> sort) {
-            Utils.checkNotNull(sort, "sort");
+        public Builder sort(@Nullable String sort) {
             this.sort = sort;
             return this;
         }
 
-
         /**
          * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
          */
-        public Builder startGte(String startGte) {
-            Utils.checkNotNull(startGte, "startGte");
-            this.startGte = Optional.ofNullable(startGte);
-            return this;
-        }
-
-        /**
-         * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-         */
-        public Builder startGte(Optional<String> startGte) {
-            Utils.checkNotNull(startGte, "startGte");
+        public Builder startGte(@Nullable String startGte) {
             this.startGte = startGte;
             return this;
         }
 
-
         /**
          * Return only results whose updated date is equal or greater to this value (ISO-8601 /
          * YYYY-MM-DDTHH:MM:SSZ format)
          */
-        public Builder updatedGte(String updatedGte) {
-            Utils.checkNotNull(updatedGte, "updatedGte");
-            this.updatedGte = Optional.ofNullable(updatedGte);
-            return this;
-        }
-
-        /**
-         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
-         * YYYY-MM-DDTHH:MM:SSZ format)
-         */
-        public Builder updatedGte(Optional<String> updatedGte) {
-            Utils.checkNotNull(updatedGte, "updatedGte");
+        public Builder updatedGte(@Nullable String updatedGte) {
             this.updatedGte = updatedGte;
             return this;
         }
 
-
         /**
          * The user/employee ID to filter by (reference to HrisEmployee)
          */
-        public Builder userId(String userId) {
-            Utils.checkNotNull(userId, "userId");
-            this.userId = Optional.ofNullable(userId);
-            return this;
-        }
-
-        /**
-         * The user/employee ID to filter by (reference to HrisEmployee)
-         */
-        public Builder userId(Optional<String> userId) {
-            Utils.checkNotNull(userId, "userId");
+        public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;
         }
 
         public ListHrisTimeoffsRequest build() {
-
             return new ListHrisTimeoffsRequest(
                 companyId, connectionId, endLt,
                 fields, limit, offset,

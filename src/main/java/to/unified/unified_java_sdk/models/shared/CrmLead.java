@@ -4,15 +4,14 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
@@ -24,145 +23,125 @@ public class CrmLead {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
-    private Optional<? extends PropertyCrmLeadAddress> address;
+    private PropertyCrmLeadAddress address;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_id")
-    private Optional<String> companyId;
+    private String companyId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_name")
-    private Optional<String> companyName;
+    private String companyName;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_id")
-    private Optional<String> contactId;
+    private String contactId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creator_user_id")
-    private Optional<String> creatorUserId;
+    private String creatorUserId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emails")
-    private Optional<? extends List<CrmEmail>> emails;
+    private List<CrmEmail> emails;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first_name")
-    private Optional<String> firstName;
+    private String firstName;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
-    private Optional<Boolean> isActive;
+    private Boolean isActive;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_name")
-    private Optional<String> lastName;
+    private String lastName;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link_urls")
-    private Optional<? extends List<String>> linkUrls;
+    private List<String> linkUrls;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
-    private Optional<? extends List<CrmMetadata>> metadata;
+    private List<CrmMetadata> metadata;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
-    private Optional<String> name;
+    private String name;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
-    private Optional<String> source;
+    private String source;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
-    private Optional<String> status;
+    private String status;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("telephones")
-    private Optional<? extends List<CrmTelephone>> telephones;
+    private List<CrmTelephone> telephones;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
-    private Optional<String> userId;
+    private String userId;
 
     @JsonCreator
     public CrmLead(
-            @JsonProperty("address") Optional<? extends PropertyCrmLeadAddress> address,
-            @JsonProperty("company_id") Optional<String> companyId,
-            @JsonProperty("company_name") Optional<String> companyName,
-            @JsonProperty("contact_id") Optional<String> contactId,
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("creator_user_id") Optional<String> creatorUserId,
-            @JsonProperty("emails") Optional<? extends List<CrmEmail>> emails,
-            @JsonProperty("first_name") Optional<String> firstName,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("is_active") Optional<Boolean> isActive,
-            @JsonProperty("last_name") Optional<String> lastName,
-            @JsonProperty("link_urls") Optional<? extends List<String>> linkUrls,
-            @JsonProperty("metadata") Optional<? extends List<CrmMetadata>> metadata,
-            @JsonProperty("name") Optional<String> name,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("source") Optional<String> source,
-            @JsonProperty("status") Optional<String> status,
-            @JsonProperty("telephones") Optional<? extends List<CrmTelephone>> telephones,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
-            @JsonProperty("user_id") Optional<String> userId) {
-        Utils.checkNotNull(address, "address");
-        Utils.checkNotNull(companyId, "companyId");
-        Utils.checkNotNull(companyName, "companyName");
-        Utils.checkNotNull(contactId, "contactId");
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(creatorUserId, "creatorUserId");
-        Utils.checkNotNull(emails, "emails");
-        Utils.checkNotNull(firstName, "firstName");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(isActive, "isActive");
-        Utils.checkNotNull(lastName, "lastName");
-        Utils.checkNotNull(linkUrls, "linkUrls");
-        Utils.checkNotNull(metadata, "metadata");
-        Utils.checkNotNull(name, "name");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(source, "source");
-        Utils.checkNotNull(status, "status");
-        Utils.checkNotNull(telephones, "telephones");
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        Utils.checkNotNull(userId, "userId");
+            @JsonProperty("address") @Nullable PropertyCrmLeadAddress address,
+            @JsonProperty("company_id") @Nullable String companyId,
+            @JsonProperty("company_name") @Nullable String companyName,
+            @JsonProperty("contact_id") @Nullable String contactId,
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("creator_user_id") @Nullable String creatorUserId,
+            @JsonProperty("emails") @Nullable List<CrmEmail> emails,
+            @JsonProperty("first_name") @Nullable String firstName,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("is_active") @Nullable Boolean isActive,
+            @JsonProperty("last_name") @Nullable String lastName,
+            @JsonProperty("link_urls") @Nullable List<String> linkUrls,
+            @JsonProperty("metadata") @Nullable List<CrmMetadata> metadata,
+            @JsonProperty("name") @Nullable String name,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("source") @Nullable String source,
+            @JsonProperty("status") @Nullable String status,
+            @JsonProperty("telephones") @Nullable List<CrmTelephone> telephones,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
+            @JsonProperty("user_id") @Nullable String userId) {
         this.address = address;
         this.companyId = companyId;
         this.companyName = companyName;
@@ -186,119 +165,93 @@ public class CrmLead {
     }
     
     public CrmLead() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<PropertyCrmLeadAddress> address() {
-        return (Optional<PropertyCrmLeadAddress>) address;
+        return Optional.ofNullable(this.address);
     }
 
-    @JsonIgnore
     public Optional<String> companyId() {
-        return companyId;
+        return Optional.ofNullable(this.companyId);
     }
 
-    @JsonIgnore
     public Optional<String> companyName() {
-        return companyName;
+        return Optional.ofNullable(this.companyName);
     }
 
-    @JsonIgnore
     public Optional<String> contactId() {
-        return contactId;
+        return Optional.ofNullable(this.contactId);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<String> creatorUserId() {
-        return creatorUserId;
+        return Optional.ofNullable(this.creatorUserId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<CrmEmail>> emails() {
-        return (Optional<List<CrmEmail>>) emails;
+        return Optional.ofNullable(this.emails);
     }
 
-    @JsonIgnore
     public Optional<String> firstName() {
-        return firstName;
+        return Optional.ofNullable(this.firstName);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isActive() {
-        return isActive;
+        return Optional.ofNullable(this.isActive);
     }
 
-    @JsonIgnore
     public Optional<String> lastName() {
-        return lastName;
+        return Optional.ofNullable(this.lastName);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> linkUrls() {
-        return (Optional<List<String>>) linkUrls;
+        return Optional.ofNullable(this.linkUrls);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<CrmMetadata>> metadata() {
-        return (Optional<List<CrmMetadata>>) metadata;
+        return Optional.ofNullable(this.metadata);
     }
 
-    @JsonIgnore
     public Optional<String> name() {
-        return name;
+        return Optional.ofNullable(this.name);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @JsonIgnore
     public Optional<String> source() {
-        return source;
+        return Optional.ofNullable(this.source);
     }
 
-    @JsonIgnore
     public Optional<String> status() {
-        return status;
+        return Optional.ofNullable(this.status);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<CrmTelephone>> telephones() {
-        return (Optional<List<CrmTelephone>>) telephones;
+        return Optional.ofNullable(this.telephones);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
-    @JsonIgnore
     public Optional<String> userId() {
-        return userId;
+        return Optional.ofNullable(this.userId);
     }
 
     public static Builder builder() {
@@ -306,265 +259,125 @@ public class CrmLead {
     }
 
 
-    public CrmLead withAddress(PropertyCrmLeadAddress address) {
-        Utils.checkNotNull(address, "address");
-        this.address = Optional.ofNullable(address);
-        return this;
-    }
-
-
-    public CrmLead withAddress(Optional<? extends PropertyCrmLeadAddress> address) {
-        Utils.checkNotNull(address, "address");
+    public CrmLead withAddress(@Nullable PropertyCrmLeadAddress address) {
         this.address = address;
         return this;
     }
 
-    public CrmLead withCompanyId(String companyId) {
-        Utils.checkNotNull(companyId, "companyId");
-        this.companyId = Optional.ofNullable(companyId);
-        return this;
-    }
 
-
-    public CrmLead withCompanyId(Optional<String> companyId) {
-        Utils.checkNotNull(companyId, "companyId");
+    public CrmLead withCompanyId(@Nullable String companyId) {
         this.companyId = companyId;
         return this;
     }
 
-    public CrmLead withCompanyName(String companyName) {
-        Utils.checkNotNull(companyName, "companyName");
-        this.companyName = Optional.ofNullable(companyName);
-        return this;
-    }
 
-
-    public CrmLead withCompanyName(Optional<String> companyName) {
-        Utils.checkNotNull(companyName, "companyName");
+    public CrmLead withCompanyName(@Nullable String companyName) {
         this.companyName = companyName;
         return this;
     }
 
-    public CrmLead withContactId(String contactId) {
-        Utils.checkNotNull(contactId, "contactId");
-        this.contactId = Optional.ofNullable(contactId);
-        return this;
-    }
 
-
-    public CrmLead withContactId(Optional<String> contactId) {
-        Utils.checkNotNull(contactId, "contactId");
+    public CrmLead withContactId(@Nullable String contactId) {
         this.contactId = contactId;
         return this;
     }
 
-    public CrmLead withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
 
-
-    public CrmLead withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public CrmLead withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public CrmLead withCreatorUserId(String creatorUserId) {
-        Utils.checkNotNull(creatorUserId, "creatorUserId");
-        this.creatorUserId = Optional.ofNullable(creatorUserId);
-        return this;
-    }
 
-
-    public CrmLead withCreatorUserId(Optional<String> creatorUserId) {
-        Utils.checkNotNull(creatorUserId, "creatorUserId");
+    public CrmLead withCreatorUserId(@Nullable String creatorUserId) {
         this.creatorUserId = creatorUserId;
         return this;
     }
 
-    public CrmLead withEmails(List<CrmEmail> emails) {
-        Utils.checkNotNull(emails, "emails");
-        this.emails = Optional.ofNullable(emails);
-        return this;
-    }
 
-
-    public CrmLead withEmails(Optional<? extends List<CrmEmail>> emails) {
-        Utils.checkNotNull(emails, "emails");
+    public CrmLead withEmails(@Nullable List<CrmEmail> emails) {
         this.emails = emails;
         return this;
     }
 
-    public CrmLead withFirstName(String firstName) {
-        Utils.checkNotNull(firstName, "firstName");
-        this.firstName = Optional.ofNullable(firstName);
-        return this;
-    }
 
-
-    public CrmLead withFirstName(Optional<String> firstName) {
-        Utils.checkNotNull(firstName, "firstName");
+    public CrmLead withFirstName(@Nullable String firstName) {
         this.firstName = firstName;
         return this;
     }
 
-    public CrmLead withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public CrmLead withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public CrmLead withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public CrmLead withIsActive(boolean isActive) {
-        Utils.checkNotNull(isActive, "isActive");
-        this.isActive = Optional.ofNullable(isActive);
-        return this;
-    }
 
-
-    public CrmLead withIsActive(Optional<Boolean> isActive) {
-        Utils.checkNotNull(isActive, "isActive");
+    public CrmLead withIsActive(@Nullable Boolean isActive) {
         this.isActive = isActive;
         return this;
     }
 
-    public CrmLead withLastName(String lastName) {
-        Utils.checkNotNull(lastName, "lastName");
-        this.lastName = Optional.ofNullable(lastName);
-        return this;
-    }
 
-
-    public CrmLead withLastName(Optional<String> lastName) {
-        Utils.checkNotNull(lastName, "lastName");
+    public CrmLead withLastName(@Nullable String lastName) {
         this.lastName = lastName;
         return this;
     }
 
-    public CrmLead withLinkUrls(List<String> linkUrls) {
-        Utils.checkNotNull(linkUrls, "linkUrls");
-        this.linkUrls = Optional.ofNullable(linkUrls);
-        return this;
-    }
 
-
-    public CrmLead withLinkUrls(Optional<? extends List<String>> linkUrls) {
-        Utils.checkNotNull(linkUrls, "linkUrls");
+    public CrmLead withLinkUrls(@Nullable List<String> linkUrls) {
         this.linkUrls = linkUrls;
         return this;
     }
 
-    public CrmLead withMetadata(List<CrmMetadata> metadata) {
-        Utils.checkNotNull(metadata, "metadata");
-        this.metadata = Optional.ofNullable(metadata);
-        return this;
-    }
 
-
-    public CrmLead withMetadata(Optional<? extends List<CrmMetadata>> metadata) {
-        Utils.checkNotNull(metadata, "metadata");
+    public CrmLead withMetadata(@Nullable List<CrmMetadata> metadata) {
         this.metadata = metadata;
         return this;
     }
 
-    public CrmLead withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = Optional.ofNullable(name);
-        return this;
-    }
 
-
-    public CrmLead withName(Optional<String> name) {
-        Utils.checkNotNull(name, "name");
+    public CrmLead withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
-    public CrmLead withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public CrmLead withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public CrmLead withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public CrmLead withSource(String source) {
-        Utils.checkNotNull(source, "source");
-        this.source = Optional.ofNullable(source);
-        return this;
-    }
 
-
-    public CrmLead withSource(Optional<String> source) {
-        Utils.checkNotNull(source, "source");
+    public CrmLead withSource(@Nullable String source) {
         this.source = source;
         return this;
     }
 
-    public CrmLead withStatus(String status) {
-        Utils.checkNotNull(status, "status");
-        this.status = Optional.ofNullable(status);
-        return this;
-    }
 
-
-    public CrmLead withStatus(Optional<String> status) {
-        Utils.checkNotNull(status, "status");
+    public CrmLead withStatus(@Nullable String status) {
         this.status = status;
         return this;
     }
 
-    public CrmLead withTelephones(List<CrmTelephone> telephones) {
-        Utils.checkNotNull(telephones, "telephones");
-        this.telephones = Optional.ofNullable(telephones);
-        return this;
-    }
 
-
-    public CrmLead withTelephones(Optional<? extends List<CrmTelephone>> telephones) {
-        Utils.checkNotNull(telephones, "telephones");
+    public CrmLead withTelephones(@Nullable List<CrmTelephone> telephones) {
         this.telephones = telephones;
         return this;
     }
 
-    public CrmLead withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public CrmLead withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public CrmLead withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
-    public CrmLead withUserId(String userId) {
-        Utils.checkNotNull(userId, "userId");
-        this.userId = Optional.ofNullable(userId);
-        return this;
-    }
 
-
-    public CrmLead withUserId(Optional<String> userId) {
-        Utils.checkNotNull(userId, "userId");
+    public CrmLead withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -638,312 +451,151 @@ public class CrmLead {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends PropertyCrmLeadAddress> address = Optional.empty();
+        private PropertyCrmLeadAddress address;
 
-        private Optional<String> companyId = Optional.empty();
+        private String companyId;
 
-        private Optional<String> companyName = Optional.empty();
+        private String companyName;
 
-        private Optional<String> contactId = Optional.empty();
+        private String contactId;
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<String> creatorUserId = Optional.empty();
+        private String creatorUserId;
 
-        private Optional<? extends List<CrmEmail>> emails = Optional.empty();
+        private List<CrmEmail> emails;
 
-        private Optional<String> firstName = Optional.empty();
+        private String firstName;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<Boolean> isActive = Optional.empty();
+        private Boolean isActive;
 
-        private Optional<String> lastName = Optional.empty();
+        private String lastName;
 
-        private Optional<? extends List<String>> linkUrls = Optional.empty();
+        private List<String> linkUrls;
 
-        private Optional<? extends List<CrmMetadata>> metadata = Optional.empty();
+        private List<CrmMetadata> metadata;
 
-        private Optional<String> name = Optional.empty();
+        private String name;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<String> source = Optional.empty();
+        private String source;
 
-        private Optional<String> status = Optional.empty();
+        private String status;
 
-        private Optional<? extends List<CrmTelephone>> telephones = Optional.empty();
+        private List<CrmTelephone> telephones;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
-        private Optional<String> userId = Optional.empty();
+        private String userId;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder address(PropertyCrmLeadAddress address) {
-            Utils.checkNotNull(address, "address");
-            this.address = Optional.ofNullable(address);
-            return this;
-        }
-
-        public Builder address(Optional<? extends PropertyCrmLeadAddress> address) {
-            Utils.checkNotNull(address, "address");
+        public Builder address(@Nullable PropertyCrmLeadAddress address) {
             this.address = address;
             return this;
         }
 
-
-        public Builder companyId(String companyId) {
-            Utils.checkNotNull(companyId, "companyId");
-            this.companyId = Optional.ofNullable(companyId);
-            return this;
-        }
-
-        public Builder companyId(Optional<String> companyId) {
-            Utils.checkNotNull(companyId, "companyId");
+        public Builder companyId(@Nullable String companyId) {
             this.companyId = companyId;
             return this;
         }
 
-
-        public Builder companyName(String companyName) {
-            Utils.checkNotNull(companyName, "companyName");
-            this.companyName = Optional.ofNullable(companyName);
-            return this;
-        }
-
-        public Builder companyName(Optional<String> companyName) {
-            Utils.checkNotNull(companyName, "companyName");
+        public Builder companyName(@Nullable String companyName) {
             this.companyName = companyName;
             return this;
         }
 
-
-        public Builder contactId(String contactId) {
-            Utils.checkNotNull(contactId, "contactId");
-            this.contactId = Optional.ofNullable(contactId);
-            return this;
-        }
-
-        public Builder contactId(Optional<String> contactId) {
-            Utils.checkNotNull(contactId, "contactId");
+        public Builder contactId(@Nullable String contactId) {
             this.contactId = contactId;
             return this;
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder creatorUserId(String creatorUserId) {
-            Utils.checkNotNull(creatorUserId, "creatorUserId");
-            this.creatorUserId = Optional.ofNullable(creatorUserId);
-            return this;
-        }
-
-        public Builder creatorUserId(Optional<String> creatorUserId) {
-            Utils.checkNotNull(creatorUserId, "creatorUserId");
+        public Builder creatorUserId(@Nullable String creatorUserId) {
             this.creatorUserId = creatorUserId;
             return this;
         }
 
-
-        public Builder emails(List<CrmEmail> emails) {
-            Utils.checkNotNull(emails, "emails");
-            this.emails = Optional.ofNullable(emails);
-            return this;
-        }
-
-        public Builder emails(Optional<? extends List<CrmEmail>> emails) {
-            Utils.checkNotNull(emails, "emails");
+        public Builder emails(@Nullable List<CrmEmail> emails) {
             this.emails = emails;
             return this;
         }
 
-
-        public Builder firstName(String firstName) {
-            Utils.checkNotNull(firstName, "firstName");
-            this.firstName = Optional.ofNullable(firstName);
-            return this;
-        }
-
-        public Builder firstName(Optional<String> firstName) {
-            Utils.checkNotNull(firstName, "firstName");
+        public Builder firstName(@Nullable String firstName) {
             this.firstName = firstName;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder isActive(boolean isActive) {
-            Utils.checkNotNull(isActive, "isActive");
-            this.isActive = Optional.ofNullable(isActive);
-            return this;
-        }
-
-        public Builder isActive(Optional<Boolean> isActive) {
-            Utils.checkNotNull(isActive, "isActive");
+        public Builder isActive(@Nullable Boolean isActive) {
             this.isActive = isActive;
             return this;
         }
 
-
-        public Builder lastName(String lastName) {
-            Utils.checkNotNull(lastName, "lastName");
-            this.lastName = Optional.ofNullable(lastName);
-            return this;
-        }
-
-        public Builder lastName(Optional<String> lastName) {
-            Utils.checkNotNull(lastName, "lastName");
+        public Builder lastName(@Nullable String lastName) {
             this.lastName = lastName;
             return this;
         }
 
-
-        public Builder linkUrls(List<String> linkUrls) {
-            Utils.checkNotNull(linkUrls, "linkUrls");
-            this.linkUrls = Optional.ofNullable(linkUrls);
-            return this;
-        }
-
-        public Builder linkUrls(Optional<? extends List<String>> linkUrls) {
-            Utils.checkNotNull(linkUrls, "linkUrls");
+        public Builder linkUrls(@Nullable List<String> linkUrls) {
             this.linkUrls = linkUrls;
             return this;
         }
 
-
-        public Builder metadata(List<CrmMetadata> metadata) {
-            Utils.checkNotNull(metadata, "metadata");
-            this.metadata = Optional.ofNullable(metadata);
-            return this;
-        }
-
-        public Builder metadata(Optional<? extends List<CrmMetadata>> metadata) {
-            Utils.checkNotNull(metadata, "metadata");
+        public Builder metadata(@Nullable List<CrmMetadata> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = Optional.ofNullable(name);
-            return this;
-        }
-
-        public Builder name(Optional<String> name) {
-            Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder source(String source) {
-            Utils.checkNotNull(source, "source");
-            this.source = Optional.ofNullable(source);
-            return this;
-        }
-
-        public Builder source(Optional<String> source) {
-            Utils.checkNotNull(source, "source");
+        public Builder source(@Nullable String source) {
             this.source = source;
             return this;
         }
 
-
-        public Builder status(String status) {
-            Utils.checkNotNull(status, "status");
-            this.status = Optional.ofNullable(status);
-            return this;
-        }
-
-        public Builder status(Optional<String> status) {
-            Utils.checkNotNull(status, "status");
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-
-        public Builder telephones(List<CrmTelephone> telephones) {
-            Utils.checkNotNull(telephones, "telephones");
-            this.telephones = Optional.ofNullable(telephones);
-            return this;
-        }
-
-        public Builder telephones(Optional<? extends List<CrmTelephone>> telephones) {
-            Utils.checkNotNull(telephones, "telephones");
+        public Builder telephones(@Nullable List<CrmTelephone> telephones) {
             this.telephones = telephones;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
-
-        public Builder userId(String userId) {
-            Utils.checkNotNull(userId, "userId");
-            this.userId = Optional.ofNullable(userId);
-            return this;
-        }
-
-        public Builder userId(Optional<String> userId) {
-            Utils.checkNotNull(userId, "userId");
+        public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;
         }
 
         public CrmLead build() {
-
             return new CrmLead(
                 address, companyId, companyName,
                 contactId, createdAt, creatorUserId,

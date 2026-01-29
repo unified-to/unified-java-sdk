@@ -4,11 +4,11 @@
 package to.unified.unified_java_sdk.models.operations.async;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import java.lang.Integer;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.io.InputStream;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.AccountingProfitloss;
@@ -21,7 +21,7 @@ public class GetAccountingProfitlossResponse implements AsyncResponse {
     /**
      * Successful
      */
-    private Optional<? extends AccountingProfitloss> accountingProfitloss;
+    private AccountingProfitloss accountingProfitloss;
 
     /**
      * HTTP response content type for this operation
@@ -40,59 +40,52 @@ public class GetAccountingProfitlossResponse implements AsyncResponse {
 
     @JsonCreator
     public GetAccountingProfitlossResponse(
-            Optional<? extends AccountingProfitloss> accountingProfitloss,
-            String contentType,
+            @Nullable AccountingProfitloss accountingProfitloss,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(accountingProfitloss, "accountingProfitloss");
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
+            @Nonnull HttpResponse<Blob> rawResponse) {
         this.accountingProfitloss = accountingProfitloss;
-        this.contentType = contentType;
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
     }
     
     public GetAccountingProfitlossResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
-        this(Optional.empty(), contentType, statusCode,
+            @Nonnull HttpResponse<Blob> rawResponse) {
+        this(null, contentType, statusCode,
             rawResponse);
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<AccountingProfitloss> accountingProfitloss() {
-        return (Optional<AccountingProfitloss>) accountingProfitloss;
+        return Optional.ofNullable(this.accountingProfitloss);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<Blob> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     public static Builder builder() {
@@ -103,48 +96,38 @@ public class GetAccountingProfitlossResponse implements AsyncResponse {
     /**
      * Successful
      */
-    public GetAccountingProfitlossResponse withAccountingProfitloss(AccountingProfitloss accountingProfitloss) {
-        Utils.checkNotNull(accountingProfitloss, "accountingProfitloss");
-        this.accountingProfitloss = Optional.ofNullable(accountingProfitloss);
-        return this;
-    }
-
-
-    /**
-     * Successful
-     */
-    public GetAccountingProfitlossResponse withAccountingProfitloss(Optional<? extends AccountingProfitloss> accountingProfitloss) {
-        Utils.checkNotNull(accountingProfitloss, "accountingProfitloss");
+    public GetAccountingProfitlossResponse withAccountingProfitloss(@Nullable AccountingProfitloss accountingProfitloss) {
         this.accountingProfitloss = accountingProfitloss;
         return this;
     }
 
+
     /**
      * HTTP response content type for this operation
      */
-    public GetAccountingProfitlossResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
+    public GetAccountingProfitlossResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public GetAccountingProfitlossResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public GetAccountingProfitlossResponse withRawResponse(HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
+    public GetAccountingProfitlossResponse withRawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -181,11 +164,11 @@ public class GetAccountingProfitlossResponse implements AsyncResponse {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends AccountingProfitloss> accountingProfitloss = Optional.empty();
+        private AccountingProfitloss accountingProfitloss;
 
         private String contentType;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<Blob> rawResponse;
 
@@ -193,57 +176,39 @@ public class GetAccountingProfitlossResponse implements AsyncResponse {
           // force use of static builder() method
         }
 
-
         /**
          * Successful
          */
-        public Builder accountingProfitloss(AccountingProfitloss accountingProfitloss) {
-            Utils.checkNotNull(accountingProfitloss, "accountingProfitloss");
-            this.accountingProfitloss = Optional.ofNullable(accountingProfitloss);
-            return this;
-        }
-
-        /**
-         * Successful
-         */
-        public Builder accountingProfitloss(Optional<? extends AccountingProfitloss> accountingProfitloss) {
-            Utils.checkNotNull(accountingProfitloss, "accountingProfitloss");
+        public Builder accountingProfitloss(@Nullable AccountingProfitloss accountingProfitloss) {
             this.accountingProfitloss = accountingProfitloss;
             return this;
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<Blob> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
+        public Builder rawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         public GetAccountingProfitlossResponse build() {
-
             return new GetAccountingProfitlossResponse(
                 accountingProfitloss, contentType, statusCode,
                 rawResponse);

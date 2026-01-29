@@ -4,15 +4,14 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
@@ -24,84 +23,73 @@ public class AccountingJournal {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
-    private Optional<String> currency;
+    private String currency;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
-    private Optional<String> description;
+    private String description;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
     /**
      * new field name
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineitems")
-    private Optional<? extends List<AccountingJournalLineitem>> lineitems;
+    private List<AccountingJournalLineitem> lineitems;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("posted_at")
-    private Optional<OffsetDateTime> postedAt;
+    private OffsetDateTime postedAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
-    private Optional<String> reference;
+    private String reference;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax_amount")
-    private Optional<Double> taxAmount;
+    private Double taxAmount;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxrate_id")
-    private Optional<String> taxrateId;
+    private String taxrateId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
     @JsonCreator
     public AccountingJournal(
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("currency") Optional<String> currency,
-            @JsonProperty("description") Optional<String> description,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("lineitems") Optional<? extends List<AccountingJournalLineitem>> lineitems,
-            @JsonProperty("posted_at") Optional<OffsetDateTime> postedAt,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("reference") Optional<String> reference,
-            @JsonProperty("tax_amount") Optional<Double> taxAmount,
-            @JsonProperty("taxrate_id") Optional<String> taxrateId,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(currency, "currency");
-        Utils.checkNotNull(description, "description");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(lineitems, "lineitems");
-        Utils.checkNotNull(postedAt, "postedAt");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(reference, "reference");
-        Utils.checkNotNull(taxAmount, "taxAmount");
-        Utils.checkNotNull(taxrateId, "taxrateId");
-        Utils.checkNotNull(updatedAt, "updatedAt");
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("currency") @Nullable String currency,
+            @JsonProperty("description") @Nullable String description,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("lineitems") @Nullable List<AccountingJournalLineitem> lineitems,
+            @JsonProperty("posted_at") @Nullable OffsetDateTime postedAt,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("reference") @Nullable String reference,
+            @JsonProperty("tax_amount") @Nullable Double taxAmount,
+            @JsonProperty("taxrate_id") @Nullable String taxrateId,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.createdAt = createdAt;
         this.currency = currency;
         this.description = description;
@@ -116,70 +104,57 @@ public class AccountingJournal {
     }
     
     public AccountingJournal() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<String> currency() {
-        return currency;
+        return Optional.ofNullable(this.currency);
     }
 
-    @JsonIgnore
     public Optional<String> description() {
-        return description;
+        return Optional.ofNullable(this.description);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
     /**
      * new field name
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<AccountingJournalLineitem>> lineitems() {
-        return (Optional<List<AccountingJournalLineitem>>) lineitems;
+        return Optional.ofNullable(this.lineitems);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> postedAt() {
-        return postedAt;
+        return Optional.ofNullable(this.postedAt);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @JsonIgnore
     public Optional<String> reference() {
-        return reference;
+        return Optional.ofNullable(this.reference);
     }
 
-    @JsonIgnore
     public Optional<Double> taxAmount() {
-        return taxAmount;
+        return Optional.ofNullable(this.taxAmount);
     }
 
-    @JsonIgnore
     public Optional<String> taxrateId() {
-        return taxrateId;
+        return Optional.ofNullable(this.taxrateId);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
     public static Builder builder() {
@@ -187,154 +162,74 @@ public class AccountingJournal {
     }
 
 
-    public AccountingJournal withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
-
-
-    public AccountingJournal withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public AccountingJournal withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public AccountingJournal withCurrency(String currency) {
-        Utils.checkNotNull(currency, "currency");
-        this.currency = Optional.ofNullable(currency);
-        return this;
-    }
 
-
-    public AccountingJournal withCurrency(Optional<String> currency) {
-        Utils.checkNotNull(currency, "currency");
+    public AccountingJournal withCurrency(@Nullable String currency) {
         this.currency = currency;
         return this;
     }
 
-    public AccountingJournal withDescription(String description) {
-        Utils.checkNotNull(description, "description");
-        this.description = Optional.ofNullable(description);
-        return this;
-    }
 
-
-    public AccountingJournal withDescription(Optional<String> description) {
-        Utils.checkNotNull(description, "description");
+    public AccountingJournal withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
-    public AccountingJournal withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public AccountingJournal withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public AccountingJournal withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    /**
-     * new field name
-     */
-    public AccountingJournal withLineitems(List<AccountingJournalLineitem> lineitems) {
-        Utils.checkNotNull(lineitems, "lineitems");
-        this.lineitems = Optional.ofNullable(lineitems);
-        return this;
-    }
-
 
     /**
      * new field name
      */
-    public AccountingJournal withLineitems(Optional<? extends List<AccountingJournalLineitem>> lineitems) {
-        Utils.checkNotNull(lineitems, "lineitems");
+    public AccountingJournal withLineitems(@Nullable List<AccountingJournalLineitem> lineitems) {
         this.lineitems = lineitems;
         return this;
     }
 
-    public AccountingJournal withPostedAt(OffsetDateTime postedAt) {
-        Utils.checkNotNull(postedAt, "postedAt");
-        this.postedAt = Optional.ofNullable(postedAt);
-        return this;
-    }
 
-
-    public AccountingJournal withPostedAt(Optional<OffsetDateTime> postedAt) {
-        Utils.checkNotNull(postedAt, "postedAt");
+    public AccountingJournal withPostedAt(@Nullable OffsetDateTime postedAt) {
         this.postedAt = postedAt;
         return this;
     }
 
-    public AccountingJournal withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public AccountingJournal withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public AccountingJournal withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public AccountingJournal withReference(String reference) {
-        Utils.checkNotNull(reference, "reference");
-        this.reference = Optional.ofNullable(reference);
-        return this;
-    }
 
-
-    public AccountingJournal withReference(Optional<String> reference) {
-        Utils.checkNotNull(reference, "reference");
+    public AccountingJournal withReference(@Nullable String reference) {
         this.reference = reference;
         return this;
     }
 
-    public AccountingJournal withTaxAmount(double taxAmount) {
-        Utils.checkNotNull(taxAmount, "taxAmount");
-        this.taxAmount = Optional.ofNullable(taxAmount);
-        return this;
-    }
 
-
-    public AccountingJournal withTaxAmount(Optional<Double> taxAmount) {
-        Utils.checkNotNull(taxAmount, "taxAmount");
+    public AccountingJournal withTaxAmount(@Nullable Double taxAmount) {
         this.taxAmount = taxAmount;
         return this;
     }
 
-    public AccountingJournal withTaxrateId(String taxrateId) {
-        Utils.checkNotNull(taxrateId, "taxrateId");
-        this.taxrateId = Optional.ofNullable(taxrateId);
-        return this;
-    }
 
-
-    public AccountingJournal withTaxrateId(Optional<String> taxrateId) {
-        Utils.checkNotNull(taxrateId, "taxrateId");
+    public AccountingJournal withTaxrateId(@Nullable String taxrateId) {
         this.taxrateId = taxrateId;
         return this;
     }
 
-    public AccountingJournal withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public AccountingJournal withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public AccountingJournal withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -387,183 +282,91 @@ public class AccountingJournal {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<String> currency = Optional.empty();
+        private String currency;
 
-        private Optional<String> description = Optional.empty();
+        private String description;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<? extends List<AccountingJournalLineitem>> lineitems = Optional.empty();
+        private List<AccountingJournalLineitem> lineitems;
 
-        private Optional<OffsetDateTime> postedAt = Optional.empty();
+        private OffsetDateTime postedAt;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<String> reference = Optional.empty();
+        private String reference;
 
-        private Optional<Double> taxAmount = Optional.empty();
+        private Double taxAmount;
 
-        private Optional<String> taxrateId = Optional.empty();
+        private String taxrateId;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder currency(String currency) {
-            Utils.checkNotNull(currency, "currency");
-            this.currency = Optional.ofNullable(currency);
-            return this;
-        }
-
-        public Builder currency(Optional<String> currency) {
-            Utils.checkNotNull(currency, "currency");
+        public Builder currency(@Nullable String currency) {
             this.currency = currency;
             return this;
         }
 
-
-        public Builder description(String description) {
-            Utils.checkNotNull(description, "description");
-            this.description = Optional.ofNullable(description);
-            return this;
-        }
-
-        public Builder description(Optional<String> description) {
-            Utils.checkNotNull(description, "description");
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
         /**
          * new field name
          */
-        public Builder lineitems(List<AccountingJournalLineitem> lineitems) {
-            Utils.checkNotNull(lineitems, "lineitems");
-            this.lineitems = Optional.ofNullable(lineitems);
-            return this;
-        }
-
-        /**
-         * new field name
-         */
-        public Builder lineitems(Optional<? extends List<AccountingJournalLineitem>> lineitems) {
-            Utils.checkNotNull(lineitems, "lineitems");
+        public Builder lineitems(@Nullable List<AccountingJournalLineitem> lineitems) {
             this.lineitems = lineitems;
             return this;
         }
 
-
-        public Builder postedAt(OffsetDateTime postedAt) {
-            Utils.checkNotNull(postedAt, "postedAt");
-            this.postedAt = Optional.ofNullable(postedAt);
-            return this;
-        }
-
-        public Builder postedAt(Optional<OffsetDateTime> postedAt) {
-            Utils.checkNotNull(postedAt, "postedAt");
+        public Builder postedAt(@Nullable OffsetDateTime postedAt) {
             this.postedAt = postedAt;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder reference(String reference) {
-            Utils.checkNotNull(reference, "reference");
-            this.reference = Optional.ofNullable(reference);
-            return this;
-        }
-
-        public Builder reference(Optional<String> reference) {
-            Utils.checkNotNull(reference, "reference");
+        public Builder reference(@Nullable String reference) {
             this.reference = reference;
             return this;
         }
 
-
-        public Builder taxAmount(double taxAmount) {
-            Utils.checkNotNull(taxAmount, "taxAmount");
-            this.taxAmount = Optional.ofNullable(taxAmount);
-            return this;
-        }
-
-        public Builder taxAmount(Optional<Double> taxAmount) {
-            Utils.checkNotNull(taxAmount, "taxAmount");
+        public Builder taxAmount(@Nullable Double taxAmount) {
             this.taxAmount = taxAmount;
             return this;
         }
 
-
-        public Builder taxrateId(String taxrateId) {
-            Utils.checkNotNull(taxrateId, "taxrateId");
-            this.taxrateId = Optional.ofNullable(taxrateId);
-            return this;
-        }
-
-        public Builder taxrateId(Optional<String> taxrateId) {
-            Utils.checkNotNull(taxrateId, "taxrateId");
+        public Builder taxrateId(@Nullable String taxrateId) {
             this.taxrateId = taxrateId;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
         public AccountingJournal build() {
-
             return new AccountingJournal(
                 createdAt, currency, description,
                 id, lineitems, postedAt,

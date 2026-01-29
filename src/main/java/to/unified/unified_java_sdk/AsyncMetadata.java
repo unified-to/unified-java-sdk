@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateMetadataMetadataRequest;
 import to.unified.unified_java_sdk.models.operations.GetMetadataMetadataRequest;
@@ -68,7 +69,7 @@ public class AsyncMetadata {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateMetadataMetadataResponse>} - The async response
      */
-    public CompletableFuture<CreateMetadataMetadataResponse> createMetadataMetadata(CreateMetadataMetadataRequest request) {
+    public CompletableFuture<CreateMetadataMetadataResponse> createMetadataMetadata(@Nonnull CreateMetadataMetadataRequest request) {
         AsyncRequestOperation<CreateMetadataMetadataRequest, CreateMetadataMetadataResponse> operation
               = new CreateMetadataMetadata.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -91,7 +92,7 @@ public class AsyncMetadata {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetMetadataMetadataResponse>} - The async response
      */
-    public CompletableFuture<GetMetadataMetadataResponse> getMetadataMetadata(GetMetadataMetadataRequest request) {
+    public CompletableFuture<GetMetadataMetadataResponse> getMetadataMetadata(@Nonnull GetMetadataMetadataRequest request) {
         AsyncRequestOperation<GetMetadataMetadataRequest, GetMetadataMetadataResponse> operation
               = new GetMetadataMetadata.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -114,7 +115,7 @@ public class AsyncMetadata {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListMetadataMetadatasResponse>} - The async response
      */
-    public CompletableFuture<ListMetadataMetadatasResponse> listMetadataMetadatas(ListMetadataMetadatasRequest request) {
+    public CompletableFuture<ListMetadataMetadatasResponse> listMetadataMetadatas(@Nonnull ListMetadataMetadatasRequest request) {
         AsyncRequestOperation<ListMetadataMetadatasRequest, ListMetadataMetadatasResponse> operation
               = new ListMetadataMetadatas.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -137,7 +138,7 @@ public class AsyncMetadata {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchMetadataMetadataResponse>} - The async response
      */
-    public CompletableFuture<PatchMetadataMetadataResponse> patchMetadataMetadata(PatchMetadataMetadataRequest request) {
+    public CompletableFuture<PatchMetadataMetadataResponse> patchMetadataMetadata(@Nonnull PatchMetadataMetadataRequest request) {
         AsyncRequestOperation<PatchMetadataMetadataRequest, PatchMetadataMetadataResponse> operation
               = new PatchMetadataMetadata.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -160,7 +161,7 @@ public class AsyncMetadata {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveMetadataMetadataResponse>} - The async response
      */
-    public CompletableFuture<RemoveMetadataMetadataResponse> removeMetadataMetadata(RemoveMetadataMetadataRequest request) {
+    public CompletableFuture<RemoveMetadataMetadataResponse> removeMetadataMetadata(@Nonnull RemoveMetadataMetadataRequest request) {
         AsyncRequestOperation<RemoveMetadataMetadataRequest, RemoveMetadataMetadataResponse> operation
               = new RemoveMetadataMetadata.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -183,7 +184,7 @@ public class AsyncMetadata {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateMetadataMetadataResponse>} - The async response
      */
-    public CompletableFuture<UpdateMetadataMetadataResponse> updateMetadataMetadata(UpdateMetadataMetadataRequest request) {
+    public CompletableFuture<UpdateMetadataMetadataResponse> updateMetadataMetadata(@Nonnull UpdateMetadataMetadataRequest request) {
         AsyncRequestOperation<UpdateMetadataMetadataRequest, UpdateMetadataMetadataResponse> operation
               = new UpdateMetadataMetadata.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

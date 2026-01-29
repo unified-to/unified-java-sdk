@@ -4,13 +4,13 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -19,22 +19,22 @@ public class ScimGroupMember {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("$ref")
-    private Optional<String> dollarRef;
+    private String dollarRef;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display")
-    private Optional<String> display;
+    private String display;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operation")
-    private Optional<? extends Operation> operation;
+    private Operation operation;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
-    private Optional<? extends ScimGroupMemberType> type;
+    private ScimGroupMemberType type;
 
 
     @JsonProperty("value")
@@ -42,54 +42,43 @@ public class ScimGroupMember {
 
     @JsonCreator
     public ScimGroupMember(
-            @JsonProperty("$ref") Optional<String> dollarRef,
-            @JsonProperty("display") Optional<String> display,
-            @JsonProperty("operation") Optional<? extends Operation> operation,
-            @JsonProperty("type") Optional<? extends ScimGroupMemberType> type,
-            @JsonProperty("value") String value) {
-        Utils.checkNotNull(dollarRef, "dollarRef");
-        Utils.checkNotNull(display, "display");
-        Utils.checkNotNull(operation, "operation");
-        Utils.checkNotNull(type, "type");
-        Utils.checkNotNull(value, "value");
+            @JsonProperty("$ref") @Nullable String dollarRef,
+            @JsonProperty("display") @Nullable String display,
+            @JsonProperty("operation") @Nullable Operation operation,
+            @JsonProperty("type") @Nullable ScimGroupMemberType type,
+            @JsonProperty("value") @Nonnull String value) {
         this.dollarRef = dollarRef;
         this.display = display;
         this.operation = operation;
         this.type = type;
-        this.value = value;
+        this.value = Optional.ofNullable(value)
+            .orElseThrow(() -> new IllegalArgumentException("value cannot be null"));
     }
     
     public ScimGroupMember(
-            String value) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), value);
+            @Nonnull String value) {
+        this(null, null, null,
+            null, value);
     }
 
-    @JsonIgnore
     public Optional<String> dollarRef() {
-        return dollarRef;
+        return Optional.ofNullable(this.dollarRef);
     }
 
-    @JsonIgnore
     public Optional<String> display() {
-        return display;
+        return Optional.ofNullable(this.display);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Operation> operation() {
-        return (Optional<Operation>) operation;
+        return Optional.ofNullable(this.operation);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ScimGroupMemberType> type() {
-        return (Optional<ScimGroupMemberType>) type;
+        return Optional.ofNullable(this.type);
     }
 
-    @JsonIgnore
     public String value() {
-        return value;
+        return this.value;
     }
 
     public static Builder builder() {
@@ -97,63 +86,35 @@ public class ScimGroupMember {
     }
 
 
-    public ScimGroupMember withDollarRef(String dollarRef) {
-        Utils.checkNotNull(dollarRef, "dollarRef");
-        this.dollarRef = Optional.ofNullable(dollarRef);
-        return this;
-    }
-
-
-    public ScimGroupMember withDollarRef(Optional<String> dollarRef) {
-        Utils.checkNotNull(dollarRef, "dollarRef");
+    public ScimGroupMember withDollarRef(@Nullable String dollarRef) {
         this.dollarRef = dollarRef;
         return this;
     }
 
-    public ScimGroupMember withDisplay(String display) {
-        Utils.checkNotNull(display, "display");
-        this.display = Optional.ofNullable(display);
-        return this;
-    }
 
-
-    public ScimGroupMember withDisplay(Optional<String> display) {
-        Utils.checkNotNull(display, "display");
+    public ScimGroupMember withDisplay(@Nullable String display) {
         this.display = display;
         return this;
     }
 
-    public ScimGroupMember withOperation(Operation operation) {
-        Utils.checkNotNull(operation, "operation");
-        this.operation = Optional.ofNullable(operation);
-        return this;
-    }
 
-
-    public ScimGroupMember withOperation(Optional<? extends Operation> operation) {
-        Utils.checkNotNull(operation, "operation");
+    public ScimGroupMember withOperation(@Nullable Operation operation) {
         this.operation = operation;
         return this;
     }
 
-    public ScimGroupMember withType(ScimGroupMemberType type) {
-        Utils.checkNotNull(type, "type");
-        this.type = Optional.ofNullable(type);
-        return this;
-    }
 
-
-    public ScimGroupMember withType(Optional<? extends ScimGroupMemberType> type) {
-        Utils.checkNotNull(type, "type");
+    public ScimGroupMember withType(@Nullable ScimGroupMemberType type) {
         this.type = type;
         return this;
     }
 
-    public ScimGroupMember withValue(String value) {
-        Utils.checkNotNull(value, "value");
-        this.value = value;
+
+    public ScimGroupMember withValue(@Nonnull String value) {
+        this.value = Utils.checkNotNull(value, "value");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -192,13 +153,13 @@ public class ScimGroupMember {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> dollarRef = Optional.empty();
+        private String dollarRef;
 
-        private Optional<String> display = Optional.empty();
+        private String display;
 
-        private Optional<? extends Operation> operation = Optional.empty();
+        private Operation operation;
 
-        private Optional<? extends ScimGroupMemberType> type = Optional.empty();
+        private ScimGroupMemberType type;
 
         private String value;
 
@@ -206,67 +167,32 @@ public class ScimGroupMember {
           // force use of static builder() method
         }
 
-
-        public Builder dollarRef(String dollarRef) {
-            Utils.checkNotNull(dollarRef, "dollarRef");
-            this.dollarRef = Optional.ofNullable(dollarRef);
-            return this;
-        }
-
-        public Builder dollarRef(Optional<String> dollarRef) {
-            Utils.checkNotNull(dollarRef, "dollarRef");
+        public Builder dollarRef(@Nullable String dollarRef) {
             this.dollarRef = dollarRef;
             return this;
         }
 
-
-        public Builder display(String display) {
-            Utils.checkNotNull(display, "display");
-            this.display = Optional.ofNullable(display);
-            return this;
-        }
-
-        public Builder display(Optional<String> display) {
-            Utils.checkNotNull(display, "display");
+        public Builder display(@Nullable String display) {
             this.display = display;
             return this;
         }
 
-
-        public Builder operation(Operation operation) {
-            Utils.checkNotNull(operation, "operation");
-            this.operation = Optional.ofNullable(operation);
-            return this;
-        }
-
-        public Builder operation(Optional<? extends Operation> operation) {
-            Utils.checkNotNull(operation, "operation");
+        public Builder operation(@Nullable Operation operation) {
             this.operation = operation;
             return this;
         }
 
-
-        public Builder type(ScimGroupMemberType type) {
-            Utils.checkNotNull(type, "type");
-            this.type = Optional.ofNullable(type);
-            return this;
-        }
-
-        public Builder type(Optional<? extends ScimGroupMemberType> type) {
-            Utils.checkNotNull(type, "type");
+        public Builder type(@Nullable ScimGroupMemberType type) {
             this.type = type;
             return this;
         }
 
-
-        public Builder value(String value) {
-            Utils.checkNotNull(value, "value");
-            this.value = value;
+        public Builder value(@Nonnull String value) {
+            this.value = Utils.checkNotNull(value, "value");
             return this;
         }
 
         public ScimGroupMember build() {
-
             return new ScimGroupMember(
                 dollarRef, display, operation,
                 type, value);

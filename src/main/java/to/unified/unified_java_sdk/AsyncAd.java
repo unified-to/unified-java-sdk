@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAdsAdRequest;
 import to.unified.unified_java_sdk.models.operations.GetAdsAdRequest;
@@ -68,7 +69,7 @@ public class AsyncAd {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAdsAdResponse>} - The async response
      */
-    public CompletableFuture<CreateAdsAdResponse> createAdsAd(CreateAdsAdRequest request) {
+    public CompletableFuture<CreateAdsAdResponse> createAdsAd(@Nonnull CreateAdsAdRequest request) {
         AsyncRequestOperation<CreateAdsAdRequest, CreateAdsAdResponse> operation
               = new CreateAdsAd.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -91,7 +92,7 @@ public class AsyncAd {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAdsAdResponse>} - The async response
      */
-    public CompletableFuture<GetAdsAdResponse> getAdsAd(GetAdsAdRequest request) {
+    public CompletableFuture<GetAdsAdResponse> getAdsAd(@Nonnull GetAdsAdRequest request) {
         AsyncRequestOperation<GetAdsAdRequest, GetAdsAdResponse> operation
               = new GetAdsAd.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -114,7 +115,7 @@ public class AsyncAd {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAdsAdsResponse>} - The async response
      */
-    public CompletableFuture<ListAdsAdsResponse> listAdsAds(ListAdsAdsRequest request) {
+    public CompletableFuture<ListAdsAdsResponse> listAdsAds(@Nonnull ListAdsAdsRequest request) {
         AsyncRequestOperation<ListAdsAdsRequest, ListAdsAdsResponse> operation
               = new ListAdsAds.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -137,7 +138,7 @@ public class AsyncAd {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAdsAdResponse>} - The async response
      */
-    public CompletableFuture<PatchAdsAdResponse> patchAdsAd(PatchAdsAdRequest request) {
+    public CompletableFuture<PatchAdsAdResponse> patchAdsAd(@Nonnull PatchAdsAdRequest request) {
         AsyncRequestOperation<PatchAdsAdRequest, PatchAdsAdResponse> operation
               = new PatchAdsAd.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -160,7 +161,7 @@ public class AsyncAd {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAdsAdResponse>} - The async response
      */
-    public CompletableFuture<RemoveAdsAdResponse> removeAdsAd(RemoveAdsAdRequest request) {
+    public CompletableFuture<RemoveAdsAdResponse> removeAdsAd(@Nonnull RemoveAdsAdRequest request) {
         AsyncRequestOperation<RemoveAdsAdRequest, RemoveAdsAdResponse> operation
               = new RemoveAdsAd.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -183,7 +184,7 @@ public class AsyncAd {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAdsAdResponse>} - The async response
      */
-    public CompletableFuture<UpdateAdsAdResponse> updateAdsAd(UpdateAdsAdRequest request) {
+    public CompletableFuture<UpdateAdsAdResponse> updateAdsAd(@Nonnull UpdateAdsAdRequest request) {
         AsyncRequestOperation<UpdateAdsAdRequest, UpdateAdsAdResponse> operation
               = new UpdateAdsAd.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

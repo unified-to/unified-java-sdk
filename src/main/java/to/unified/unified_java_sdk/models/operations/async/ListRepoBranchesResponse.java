@@ -4,11 +4,11 @@
 package to.unified.unified_java_sdk.models.operations.async;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import java.lang.Integer;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.io.InputStream;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.List;
 import java.util.Optional;
@@ -27,7 +27,7 @@ public class ListRepoBranchesResponse implements AsyncResponse {
     /**
      * Successful
      */
-    private Optional<? extends List<RepoBranch>> repoBranches;
+    private List<RepoBranch> repoBranches;
 
     /**
      * HTTP response status code for this operation
@@ -41,59 +41,52 @@ public class ListRepoBranchesResponse implements AsyncResponse {
 
     @JsonCreator
     public ListRepoBranchesResponse(
-            String contentType,
-            Optional<? extends List<RepoBranch>> repoBranches,
+            @Nonnull String contentType,
+            @Nullable List<RepoBranch> repoBranches,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(repoBranches, "repoBranches");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.contentType = contentType;
+            @Nonnull HttpResponse<Blob> rawResponse) {
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.repoBranches = repoBranches;
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
     }
     
     public ListRepoBranchesResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
-        this(contentType, Optional.empty(), statusCode,
+            @Nonnull HttpResponse<Blob> rawResponse) {
+        this(contentType, null, statusCode,
             rawResponse);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<RepoBranch>> repoBranches() {
-        return (Optional<List<RepoBranch>>) repoBranches;
+        return Optional.ofNullable(this.repoBranches);
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<Blob> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     public static Builder builder() {
@@ -104,18 +97,8 @@ public class ListRepoBranchesResponse implements AsyncResponse {
     /**
      * HTTP response content type for this operation
      */
-    public ListRepoBranchesResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
-        return this;
-    }
-
-    /**
-     * Successful
-     */
-    public ListRepoBranchesResponse withRepoBranches(List<RepoBranch> repoBranches) {
-        Utils.checkNotNull(repoBranches, "repoBranches");
-        this.repoBranches = Optional.ofNullable(repoBranches);
+    public ListRepoBranchesResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
 
@@ -123,29 +106,29 @@ public class ListRepoBranchesResponse implements AsyncResponse {
     /**
      * Successful
      */
-    public ListRepoBranchesResponse withRepoBranches(Optional<? extends List<RepoBranch>> repoBranches) {
-        Utils.checkNotNull(repoBranches, "repoBranches");
+    public ListRepoBranchesResponse withRepoBranches(@Nullable List<RepoBranch> repoBranches) {
         this.repoBranches = repoBranches;
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public ListRepoBranchesResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public ListRepoBranchesResponse withRawResponse(HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
+    public ListRepoBranchesResponse withRawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -184,9 +167,9 @@ public class ListRepoBranchesResponse implements AsyncResponse {
 
         private String contentType;
 
-        private Optional<? extends List<RepoBranch>> repoBranches = Optional.empty();
+        private List<RepoBranch> repoBranches;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<Blob> rawResponse;
 
@@ -194,57 +177,39 @@ public class ListRepoBranchesResponse implements AsyncResponse {
           // force use of static builder() method
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
-            return this;
-        }
-
-
-        /**
-         * Successful
-         */
-        public Builder repoBranches(List<RepoBranch> repoBranches) {
-            Utils.checkNotNull(repoBranches, "repoBranches");
-            this.repoBranches = Optional.ofNullable(repoBranches);
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
 
         /**
          * Successful
          */
-        public Builder repoBranches(Optional<? extends List<RepoBranch>> repoBranches) {
-            Utils.checkNotNull(repoBranches, "repoBranches");
+        public Builder repoBranches(@Nullable List<RepoBranch> repoBranches) {
             this.repoBranches = repoBranches;
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<Blob> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
+        public Builder rawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         public ListRepoBranchesResponse build() {
-
             return new ListRepoBranchesResponse(
                 contentType, repoBranches, statusCode,
                 rawResponse);

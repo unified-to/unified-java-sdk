@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.GetTaskChangeRequest;
 import to.unified.unified_java_sdk.models.operations.ListTaskChangesRequest;
@@ -52,7 +53,7 @@ public class AsyncChange {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetTaskChangeResponse>} - The async response
      */
-    public CompletableFuture<GetTaskChangeResponse> getTaskChange(GetTaskChangeRequest request) {
+    public CompletableFuture<GetTaskChangeResponse> getTaskChange(@Nonnull GetTaskChangeRequest request) {
         AsyncRequestOperation<GetTaskChangeRequest, GetTaskChangeResponse> operation
               = new GetTaskChange.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -75,7 +76,7 @@ public class AsyncChange {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListTaskChangesResponse>} - The async response
      */
-    public CompletableFuture<ListTaskChangesResponse> listTaskChanges(ListTaskChangesRequest request) {
+    public CompletableFuture<ListTaskChangesResponse> listTaskChanges(@Nonnull ListTaskChangesRequest request) {
         AsyncRequestOperation<ListTaskChangesRequest, ListTaskChangesResponse> operation
               = new ListTaskChanges.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

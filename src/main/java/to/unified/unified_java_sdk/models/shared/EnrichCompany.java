@@ -4,15 +4,14 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
@@ -30,196 +29,169 @@ public class EnrichCompany {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
-    private Optional<? extends PropertyEnrichCompanyAddress> address;
+    private PropertyEnrichCompanyAddress address;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alexa_rank")
-    private Optional<Double> alexaRank;
+    private Double alexaRank;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crunchbase_url")
-    private Optional<String> crunchbaseUrl;
+    private String crunchbaseUrl;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
-    private Optional<String> description;
+    private String description;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
-    private Optional<String> domain;
+    private String domain;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employees")
-    private Optional<String> employees;
+    private String employees;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exchange")
-    private Optional<String> exchange;
+    private String exchange;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("facebook_url")
-    private Optional<String> facebookUrl;
+    private String facebookUrl;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("industry")
-    private Optional<String> industry;
+    private String industry;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instagram_url")
-    private Optional<String> instagramUrl;
+    private String instagramUrl;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkedin_url")
-    private Optional<String> linkedinUrl;
+    private String linkedinUrl;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logo_url")
-    private Optional<String> logoUrl;
+    private String logoUrl;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("naics_code")
-    private Optional<Double> naicsCode;
+    private Double naicsCode;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
-    private Optional<String> name;
+    private String name;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revenue")
-    private Optional<String> revenue;
+    private String revenue;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sic_code")
-    private Optional<Double> sicCode;
+    private Double sicCode;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stock")
-    private Optional<String> stock;
+    private String stock;
 
     /**
      * An array of telephones for this company
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("telephones")
-    private Optional<? extends List<EnrichTelephone>> telephones;
+    private List<EnrichTelephone> telephones;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("twitter_handle")
-    private Optional<String> twitterHandle;
+    private String twitterHandle;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("twitter_url")
-    private Optional<String> twitterUrl;
+    private String twitterUrl;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("year_founded")
-    private Optional<Double> yearFounded;
+    private Double yearFounded;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("yelp_url")
-    private Optional<String> yelpUrl;
+    private String yelpUrl;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("youtube_url")
-    private Optional<String> youtubeUrl;
+    private String youtubeUrl;
 
     @JsonCreator
     public EnrichCompany(
-            @JsonProperty("address") Optional<? extends PropertyEnrichCompanyAddress> address,
-            @JsonProperty("alexa_rank") Optional<Double> alexaRank,
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("crunchbase_url") Optional<String> crunchbaseUrl,
-            @JsonProperty("description") Optional<String> description,
-            @JsonProperty("domain") Optional<String> domain,
-            @JsonProperty("employees") Optional<String> employees,
-            @JsonProperty("exchange") Optional<String> exchange,
-            @JsonProperty("facebook_url") Optional<String> facebookUrl,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("industry") Optional<String> industry,
-            @JsonProperty("instagram_url") Optional<String> instagramUrl,
-            @JsonProperty("linkedin_url") Optional<String> linkedinUrl,
-            @JsonProperty("logo_url") Optional<String> logoUrl,
-            @JsonProperty("naics_code") Optional<Double> naicsCode,
-            @JsonProperty("name") Optional<String> name,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("revenue") Optional<String> revenue,
-            @JsonProperty("sic_code") Optional<Double> sicCode,
-            @JsonProperty("stock") Optional<String> stock,
-            @JsonProperty("telephones") Optional<? extends List<EnrichTelephone>> telephones,
-            @JsonProperty("twitter_handle") Optional<String> twitterHandle,
-            @JsonProperty("twitter_url") Optional<String> twitterUrl,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
-            @JsonProperty("year_founded") Optional<Double> yearFounded,
-            @JsonProperty("yelp_url") Optional<String> yelpUrl,
-            @JsonProperty("youtube_url") Optional<String> youtubeUrl) {
-        Utils.checkNotNull(address, "address");
-        Utils.checkNotNull(alexaRank, "alexaRank");
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(crunchbaseUrl, "crunchbaseUrl");
-        Utils.checkNotNull(description, "description");
-        Utils.checkNotNull(domain, "domain");
-        Utils.checkNotNull(employees, "employees");
-        Utils.checkNotNull(exchange, "exchange");
-        Utils.checkNotNull(facebookUrl, "facebookUrl");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(industry, "industry");
-        Utils.checkNotNull(instagramUrl, "instagramUrl");
-        Utils.checkNotNull(linkedinUrl, "linkedinUrl");
-        Utils.checkNotNull(logoUrl, "logoUrl");
-        Utils.checkNotNull(naicsCode, "naicsCode");
-        Utils.checkNotNull(name, "name");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(revenue, "revenue");
-        Utils.checkNotNull(sicCode, "sicCode");
-        Utils.checkNotNull(stock, "stock");
-        Utils.checkNotNull(telephones, "telephones");
-        Utils.checkNotNull(twitterHandle, "twitterHandle");
-        Utils.checkNotNull(twitterUrl, "twitterUrl");
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        Utils.checkNotNull(yearFounded, "yearFounded");
-        Utils.checkNotNull(yelpUrl, "yelpUrl");
-        Utils.checkNotNull(youtubeUrl, "youtubeUrl");
+            @JsonProperty("address") @Nullable PropertyEnrichCompanyAddress address,
+            @JsonProperty("alexa_rank") @Nullable Double alexaRank,
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("crunchbase_url") @Nullable String crunchbaseUrl,
+            @JsonProperty("description") @Nullable String description,
+            @JsonProperty("domain") @Nullable String domain,
+            @JsonProperty("employees") @Nullable String employees,
+            @JsonProperty("exchange") @Nullable String exchange,
+            @JsonProperty("facebook_url") @Nullable String facebookUrl,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("industry") @Nullable String industry,
+            @JsonProperty("instagram_url") @Nullable String instagramUrl,
+            @JsonProperty("linkedin_url") @Nullable String linkedinUrl,
+            @JsonProperty("logo_url") @Nullable String logoUrl,
+            @JsonProperty("naics_code") @Nullable Double naicsCode,
+            @JsonProperty("name") @Nullable String name,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("revenue") @Nullable String revenue,
+            @JsonProperty("sic_code") @Nullable Double sicCode,
+            @JsonProperty("stock") @Nullable String stock,
+            @JsonProperty("telephones") @Nullable List<EnrichTelephone> telephones,
+            @JsonProperty("twitter_handle") @Nullable String twitterHandle,
+            @JsonProperty("twitter_url") @Nullable String twitterUrl,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
+            @JsonProperty("year_founded") @Nullable Double yearFounded,
+            @JsonProperty("yelp_url") @Nullable String yelpUrl,
+            @JsonProperty("youtube_url") @Nullable String youtubeUrl) {
         this.address = address;
         this.alexaRank = alexaRank;
         this.createdAt = createdAt;
@@ -250,159 +222,129 @@ public class EnrichCompany {
     }
     
     public EnrichCompany() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null);
     }
 
     /**
      * The address of the company
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<PropertyEnrichCompanyAddress> address() {
-        return (Optional<PropertyEnrichCompanyAddress>) address;
+        return Optional.ofNullable(this.address);
     }
 
-    @JsonIgnore
     public Optional<Double> alexaRank() {
-        return alexaRank;
+        return Optional.ofNullable(this.alexaRank);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<String> crunchbaseUrl() {
-        return crunchbaseUrl;
+        return Optional.ofNullable(this.crunchbaseUrl);
     }
 
-    @JsonIgnore
     public Optional<String> description() {
-        return description;
+        return Optional.ofNullable(this.description);
     }
 
-    @JsonIgnore
     public Optional<String> domain() {
-        return domain;
+        return Optional.ofNullable(this.domain);
     }
 
-    @JsonIgnore
     public Optional<String> employees() {
-        return employees;
+        return Optional.ofNullable(this.employees);
     }
 
-    @JsonIgnore
     public Optional<String> exchange() {
-        return exchange;
+        return Optional.ofNullable(this.exchange);
     }
 
-    @JsonIgnore
     public Optional<String> facebookUrl() {
-        return facebookUrl;
+        return Optional.ofNullable(this.facebookUrl);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<String> industry() {
-        return industry;
+        return Optional.ofNullable(this.industry);
     }
 
-    @JsonIgnore
     public Optional<String> instagramUrl() {
-        return instagramUrl;
+        return Optional.ofNullable(this.instagramUrl);
     }
 
-    @JsonIgnore
     public Optional<String> linkedinUrl() {
-        return linkedinUrl;
+        return Optional.ofNullable(this.linkedinUrl);
     }
 
-    @JsonIgnore
     public Optional<String> logoUrl() {
-        return logoUrl;
+        return Optional.ofNullable(this.logoUrl);
     }
 
-    @JsonIgnore
     public Optional<Double> naicsCode() {
-        return naicsCode;
+        return Optional.ofNullable(this.naicsCode);
     }
 
-    @JsonIgnore
     public Optional<String> name() {
-        return name;
+        return Optional.ofNullable(this.name);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @JsonIgnore
     public Optional<String> revenue() {
-        return revenue;
+        return Optional.ofNullable(this.revenue);
     }
 
-    @JsonIgnore
     public Optional<Double> sicCode() {
-        return sicCode;
+        return Optional.ofNullable(this.sicCode);
     }
 
-    @JsonIgnore
     public Optional<String> stock() {
-        return stock;
+        return Optional.ofNullable(this.stock);
     }
 
     /**
      * An array of telephones for this company
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<EnrichTelephone>> telephones() {
-        return (Optional<List<EnrichTelephone>>) telephones;
+        return Optional.ofNullable(this.telephones);
     }
 
-    @JsonIgnore
     public Optional<String> twitterHandle() {
-        return twitterHandle;
+        return Optional.ofNullable(this.twitterHandle);
     }
 
-    @JsonIgnore
     public Optional<String> twitterUrl() {
-        return twitterUrl;
+        return Optional.ofNullable(this.twitterUrl);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
-    @JsonIgnore
     public Optional<Double> yearFounded() {
-        return yearFounded;
+        return Optional.ofNullable(this.yearFounded);
     }
 
-    @JsonIgnore
     public Optional<String> yelpUrl() {
-        return yelpUrl;
+        return Optional.ofNullable(this.yelpUrl);
     }
 
-    @JsonIgnore
     public Optional<String> youtubeUrl() {
-        return youtubeUrl;
+        return Optional.ofNullable(this.youtubeUrl);
     }
 
     public static Builder builder() {
@@ -413,365 +355,170 @@ public class EnrichCompany {
     /**
      * The address of the company
      */
-    public EnrichCompany withAddress(PropertyEnrichCompanyAddress address) {
-        Utils.checkNotNull(address, "address");
-        this.address = Optional.ofNullable(address);
-        return this;
-    }
-
-
-    /**
-     * The address of the company
-     */
-    public EnrichCompany withAddress(Optional<? extends PropertyEnrichCompanyAddress> address) {
-        Utils.checkNotNull(address, "address");
+    public EnrichCompany withAddress(@Nullable PropertyEnrichCompanyAddress address) {
         this.address = address;
         return this;
     }
 
-    public EnrichCompany withAlexaRank(double alexaRank) {
-        Utils.checkNotNull(alexaRank, "alexaRank");
-        this.alexaRank = Optional.ofNullable(alexaRank);
-        return this;
-    }
 
-
-    public EnrichCompany withAlexaRank(Optional<Double> alexaRank) {
-        Utils.checkNotNull(alexaRank, "alexaRank");
+    public EnrichCompany withAlexaRank(@Nullable Double alexaRank) {
         this.alexaRank = alexaRank;
         return this;
     }
 
-    public EnrichCompany withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
 
-
-    public EnrichCompany withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public EnrichCompany withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public EnrichCompany withCrunchbaseUrl(String crunchbaseUrl) {
-        Utils.checkNotNull(crunchbaseUrl, "crunchbaseUrl");
-        this.crunchbaseUrl = Optional.ofNullable(crunchbaseUrl);
-        return this;
-    }
 
-
-    public EnrichCompany withCrunchbaseUrl(Optional<String> crunchbaseUrl) {
-        Utils.checkNotNull(crunchbaseUrl, "crunchbaseUrl");
+    public EnrichCompany withCrunchbaseUrl(@Nullable String crunchbaseUrl) {
         this.crunchbaseUrl = crunchbaseUrl;
         return this;
     }
 
-    public EnrichCompany withDescription(String description) {
-        Utils.checkNotNull(description, "description");
-        this.description = Optional.ofNullable(description);
-        return this;
-    }
 
-
-    public EnrichCompany withDescription(Optional<String> description) {
-        Utils.checkNotNull(description, "description");
+    public EnrichCompany withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
-    public EnrichCompany withDomain(String domain) {
-        Utils.checkNotNull(domain, "domain");
-        this.domain = Optional.ofNullable(domain);
-        return this;
-    }
 
-
-    public EnrichCompany withDomain(Optional<String> domain) {
-        Utils.checkNotNull(domain, "domain");
+    public EnrichCompany withDomain(@Nullable String domain) {
         this.domain = domain;
         return this;
     }
 
-    public EnrichCompany withEmployees(String employees) {
-        Utils.checkNotNull(employees, "employees");
-        this.employees = Optional.ofNullable(employees);
-        return this;
-    }
 
-
-    public EnrichCompany withEmployees(Optional<String> employees) {
-        Utils.checkNotNull(employees, "employees");
+    public EnrichCompany withEmployees(@Nullable String employees) {
         this.employees = employees;
         return this;
     }
 
-    public EnrichCompany withExchange(String exchange) {
-        Utils.checkNotNull(exchange, "exchange");
-        this.exchange = Optional.ofNullable(exchange);
-        return this;
-    }
 
-
-    public EnrichCompany withExchange(Optional<String> exchange) {
-        Utils.checkNotNull(exchange, "exchange");
+    public EnrichCompany withExchange(@Nullable String exchange) {
         this.exchange = exchange;
         return this;
     }
 
-    public EnrichCompany withFacebookUrl(String facebookUrl) {
-        Utils.checkNotNull(facebookUrl, "facebookUrl");
-        this.facebookUrl = Optional.ofNullable(facebookUrl);
-        return this;
-    }
 
-
-    public EnrichCompany withFacebookUrl(Optional<String> facebookUrl) {
-        Utils.checkNotNull(facebookUrl, "facebookUrl");
+    public EnrichCompany withFacebookUrl(@Nullable String facebookUrl) {
         this.facebookUrl = facebookUrl;
         return this;
     }
 
-    public EnrichCompany withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public EnrichCompany withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public EnrichCompany withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public EnrichCompany withIndustry(String industry) {
-        Utils.checkNotNull(industry, "industry");
-        this.industry = Optional.ofNullable(industry);
-        return this;
-    }
 
-
-    public EnrichCompany withIndustry(Optional<String> industry) {
-        Utils.checkNotNull(industry, "industry");
+    public EnrichCompany withIndustry(@Nullable String industry) {
         this.industry = industry;
         return this;
     }
 
-    public EnrichCompany withInstagramUrl(String instagramUrl) {
-        Utils.checkNotNull(instagramUrl, "instagramUrl");
-        this.instagramUrl = Optional.ofNullable(instagramUrl);
-        return this;
-    }
 
-
-    public EnrichCompany withInstagramUrl(Optional<String> instagramUrl) {
-        Utils.checkNotNull(instagramUrl, "instagramUrl");
+    public EnrichCompany withInstagramUrl(@Nullable String instagramUrl) {
         this.instagramUrl = instagramUrl;
         return this;
     }
 
-    public EnrichCompany withLinkedinUrl(String linkedinUrl) {
-        Utils.checkNotNull(linkedinUrl, "linkedinUrl");
-        this.linkedinUrl = Optional.ofNullable(linkedinUrl);
-        return this;
-    }
 
-
-    public EnrichCompany withLinkedinUrl(Optional<String> linkedinUrl) {
-        Utils.checkNotNull(linkedinUrl, "linkedinUrl");
+    public EnrichCompany withLinkedinUrl(@Nullable String linkedinUrl) {
         this.linkedinUrl = linkedinUrl;
         return this;
     }
 
-    public EnrichCompany withLogoUrl(String logoUrl) {
-        Utils.checkNotNull(logoUrl, "logoUrl");
-        this.logoUrl = Optional.ofNullable(logoUrl);
-        return this;
-    }
 
-
-    public EnrichCompany withLogoUrl(Optional<String> logoUrl) {
-        Utils.checkNotNull(logoUrl, "logoUrl");
+    public EnrichCompany withLogoUrl(@Nullable String logoUrl) {
         this.logoUrl = logoUrl;
         return this;
     }
 
-    public EnrichCompany withNaicsCode(double naicsCode) {
-        Utils.checkNotNull(naicsCode, "naicsCode");
-        this.naicsCode = Optional.ofNullable(naicsCode);
-        return this;
-    }
 
-
-    public EnrichCompany withNaicsCode(Optional<Double> naicsCode) {
-        Utils.checkNotNull(naicsCode, "naicsCode");
+    public EnrichCompany withNaicsCode(@Nullable Double naicsCode) {
         this.naicsCode = naicsCode;
         return this;
     }
 
-    public EnrichCompany withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = Optional.ofNullable(name);
-        return this;
-    }
 
-
-    public EnrichCompany withName(Optional<String> name) {
-        Utils.checkNotNull(name, "name");
+    public EnrichCompany withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
-    public EnrichCompany withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public EnrichCompany withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public EnrichCompany withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public EnrichCompany withRevenue(String revenue) {
-        Utils.checkNotNull(revenue, "revenue");
-        this.revenue = Optional.ofNullable(revenue);
-        return this;
-    }
 
-
-    public EnrichCompany withRevenue(Optional<String> revenue) {
-        Utils.checkNotNull(revenue, "revenue");
+    public EnrichCompany withRevenue(@Nullable String revenue) {
         this.revenue = revenue;
         return this;
     }
 
-    public EnrichCompany withSicCode(double sicCode) {
-        Utils.checkNotNull(sicCode, "sicCode");
-        this.sicCode = Optional.ofNullable(sicCode);
-        return this;
-    }
 
-
-    public EnrichCompany withSicCode(Optional<Double> sicCode) {
-        Utils.checkNotNull(sicCode, "sicCode");
+    public EnrichCompany withSicCode(@Nullable Double sicCode) {
         this.sicCode = sicCode;
         return this;
     }
 
-    public EnrichCompany withStock(String stock) {
-        Utils.checkNotNull(stock, "stock");
-        this.stock = Optional.ofNullable(stock);
-        return this;
-    }
 
-
-    public EnrichCompany withStock(Optional<String> stock) {
-        Utils.checkNotNull(stock, "stock");
+    public EnrichCompany withStock(@Nullable String stock) {
         this.stock = stock;
         return this;
     }
 
-    /**
-     * An array of telephones for this company
-     */
-    public EnrichCompany withTelephones(List<EnrichTelephone> telephones) {
-        Utils.checkNotNull(telephones, "telephones");
-        this.telephones = Optional.ofNullable(telephones);
-        return this;
-    }
-
 
     /**
      * An array of telephones for this company
      */
-    public EnrichCompany withTelephones(Optional<? extends List<EnrichTelephone>> telephones) {
-        Utils.checkNotNull(telephones, "telephones");
+    public EnrichCompany withTelephones(@Nullable List<EnrichTelephone> telephones) {
         this.telephones = telephones;
         return this;
     }
 
-    public EnrichCompany withTwitterHandle(String twitterHandle) {
-        Utils.checkNotNull(twitterHandle, "twitterHandle");
-        this.twitterHandle = Optional.ofNullable(twitterHandle);
-        return this;
-    }
 
-
-    public EnrichCompany withTwitterHandle(Optional<String> twitterHandle) {
-        Utils.checkNotNull(twitterHandle, "twitterHandle");
+    public EnrichCompany withTwitterHandle(@Nullable String twitterHandle) {
         this.twitterHandle = twitterHandle;
         return this;
     }
 
-    public EnrichCompany withTwitterUrl(String twitterUrl) {
-        Utils.checkNotNull(twitterUrl, "twitterUrl");
-        this.twitterUrl = Optional.ofNullable(twitterUrl);
-        return this;
-    }
 
-
-    public EnrichCompany withTwitterUrl(Optional<String> twitterUrl) {
-        Utils.checkNotNull(twitterUrl, "twitterUrl");
+    public EnrichCompany withTwitterUrl(@Nullable String twitterUrl) {
         this.twitterUrl = twitterUrl;
         return this;
     }
 
-    public EnrichCompany withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public EnrichCompany withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public EnrichCompany withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
-    public EnrichCompany withYearFounded(double yearFounded) {
-        Utils.checkNotNull(yearFounded, "yearFounded");
-        this.yearFounded = Optional.ofNullable(yearFounded);
-        return this;
-    }
 
-
-    public EnrichCompany withYearFounded(Optional<Double> yearFounded) {
-        Utils.checkNotNull(yearFounded, "yearFounded");
+    public EnrichCompany withYearFounded(@Nullable Double yearFounded) {
         this.yearFounded = yearFounded;
         return this;
     }
 
-    public EnrichCompany withYelpUrl(String yelpUrl) {
-        Utils.checkNotNull(yelpUrl, "yelpUrl");
-        this.yelpUrl = Optional.ofNullable(yelpUrl);
-        return this;
-    }
 
-
-    public EnrichCompany withYelpUrl(Optional<String> yelpUrl) {
-        Utils.checkNotNull(yelpUrl, "yelpUrl");
+    public EnrichCompany withYelpUrl(@Nullable String yelpUrl) {
         this.yelpUrl = yelpUrl;
         return this;
     }
 
-    public EnrichCompany withYoutubeUrl(String youtubeUrl) {
-        Utils.checkNotNull(youtubeUrl, "youtubeUrl");
-        this.youtubeUrl = Optional.ofNullable(youtubeUrl);
-        return this;
-    }
 
-
-    public EnrichCompany withYoutubeUrl(Optional<String> youtubeUrl) {
-        Utils.checkNotNull(youtubeUrl, "youtubeUrl");
+    public EnrichCompany withYoutubeUrl(@Nullable String youtubeUrl) {
         this.youtubeUrl = youtubeUrl;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -861,429 +608,206 @@ public class EnrichCompany {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends PropertyEnrichCompanyAddress> address = Optional.empty();
+        private PropertyEnrichCompanyAddress address;
 
-        private Optional<Double> alexaRank = Optional.empty();
+        private Double alexaRank;
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<String> crunchbaseUrl = Optional.empty();
+        private String crunchbaseUrl;
 
-        private Optional<String> description = Optional.empty();
+        private String description;
 
-        private Optional<String> domain = Optional.empty();
+        private String domain;
 
-        private Optional<String> employees = Optional.empty();
+        private String employees;
 
-        private Optional<String> exchange = Optional.empty();
+        private String exchange;
 
-        private Optional<String> facebookUrl = Optional.empty();
+        private String facebookUrl;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<String> industry = Optional.empty();
+        private String industry;
 
-        private Optional<String> instagramUrl = Optional.empty();
+        private String instagramUrl;
 
-        private Optional<String> linkedinUrl = Optional.empty();
+        private String linkedinUrl;
 
-        private Optional<String> logoUrl = Optional.empty();
+        private String logoUrl;
 
-        private Optional<Double> naicsCode = Optional.empty();
+        private Double naicsCode;
 
-        private Optional<String> name = Optional.empty();
+        private String name;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<String> revenue = Optional.empty();
+        private String revenue;
 
-        private Optional<Double> sicCode = Optional.empty();
+        private Double sicCode;
 
-        private Optional<String> stock = Optional.empty();
+        private String stock;
 
-        private Optional<? extends List<EnrichTelephone>> telephones = Optional.empty();
+        private List<EnrichTelephone> telephones;
 
-        private Optional<String> twitterHandle = Optional.empty();
+        private String twitterHandle;
 
-        private Optional<String> twitterUrl = Optional.empty();
+        private String twitterUrl;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
-        private Optional<Double> yearFounded = Optional.empty();
+        private Double yearFounded;
 
-        private Optional<String> yelpUrl = Optional.empty();
+        private String yelpUrl;
 
-        private Optional<String> youtubeUrl = Optional.empty();
+        private String youtubeUrl;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
         /**
          * The address of the company
          */
-        public Builder address(PropertyEnrichCompanyAddress address) {
-            Utils.checkNotNull(address, "address");
-            this.address = Optional.ofNullable(address);
-            return this;
-        }
-
-        /**
-         * The address of the company
-         */
-        public Builder address(Optional<? extends PropertyEnrichCompanyAddress> address) {
-            Utils.checkNotNull(address, "address");
+        public Builder address(@Nullable PropertyEnrichCompanyAddress address) {
             this.address = address;
             return this;
         }
 
-
-        public Builder alexaRank(double alexaRank) {
-            Utils.checkNotNull(alexaRank, "alexaRank");
-            this.alexaRank = Optional.ofNullable(alexaRank);
-            return this;
-        }
-
-        public Builder alexaRank(Optional<Double> alexaRank) {
-            Utils.checkNotNull(alexaRank, "alexaRank");
+        public Builder alexaRank(@Nullable Double alexaRank) {
             this.alexaRank = alexaRank;
             return this;
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder crunchbaseUrl(String crunchbaseUrl) {
-            Utils.checkNotNull(crunchbaseUrl, "crunchbaseUrl");
-            this.crunchbaseUrl = Optional.ofNullable(crunchbaseUrl);
-            return this;
-        }
-
-        public Builder crunchbaseUrl(Optional<String> crunchbaseUrl) {
-            Utils.checkNotNull(crunchbaseUrl, "crunchbaseUrl");
+        public Builder crunchbaseUrl(@Nullable String crunchbaseUrl) {
             this.crunchbaseUrl = crunchbaseUrl;
             return this;
         }
 
-
-        public Builder description(String description) {
-            Utils.checkNotNull(description, "description");
-            this.description = Optional.ofNullable(description);
-            return this;
-        }
-
-        public Builder description(Optional<String> description) {
-            Utils.checkNotNull(description, "description");
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-
-        public Builder domain(String domain) {
-            Utils.checkNotNull(domain, "domain");
-            this.domain = Optional.ofNullable(domain);
-            return this;
-        }
-
-        public Builder domain(Optional<String> domain) {
-            Utils.checkNotNull(domain, "domain");
+        public Builder domain(@Nullable String domain) {
             this.domain = domain;
             return this;
         }
 
-
-        public Builder employees(String employees) {
-            Utils.checkNotNull(employees, "employees");
-            this.employees = Optional.ofNullable(employees);
-            return this;
-        }
-
-        public Builder employees(Optional<String> employees) {
-            Utils.checkNotNull(employees, "employees");
+        public Builder employees(@Nullable String employees) {
             this.employees = employees;
             return this;
         }
 
-
-        public Builder exchange(String exchange) {
-            Utils.checkNotNull(exchange, "exchange");
-            this.exchange = Optional.ofNullable(exchange);
-            return this;
-        }
-
-        public Builder exchange(Optional<String> exchange) {
-            Utils.checkNotNull(exchange, "exchange");
+        public Builder exchange(@Nullable String exchange) {
             this.exchange = exchange;
             return this;
         }
 
-
-        public Builder facebookUrl(String facebookUrl) {
-            Utils.checkNotNull(facebookUrl, "facebookUrl");
-            this.facebookUrl = Optional.ofNullable(facebookUrl);
-            return this;
-        }
-
-        public Builder facebookUrl(Optional<String> facebookUrl) {
-            Utils.checkNotNull(facebookUrl, "facebookUrl");
+        public Builder facebookUrl(@Nullable String facebookUrl) {
             this.facebookUrl = facebookUrl;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder industry(String industry) {
-            Utils.checkNotNull(industry, "industry");
-            this.industry = Optional.ofNullable(industry);
-            return this;
-        }
-
-        public Builder industry(Optional<String> industry) {
-            Utils.checkNotNull(industry, "industry");
+        public Builder industry(@Nullable String industry) {
             this.industry = industry;
             return this;
         }
 
-
-        public Builder instagramUrl(String instagramUrl) {
-            Utils.checkNotNull(instagramUrl, "instagramUrl");
-            this.instagramUrl = Optional.ofNullable(instagramUrl);
-            return this;
-        }
-
-        public Builder instagramUrl(Optional<String> instagramUrl) {
-            Utils.checkNotNull(instagramUrl, "instagramUrl");
+        public Builder instagramUrl(@Nullable String instagramUrl) {
             this.instagramUrl = instagramUrl;
             return this;
         }
 
-
-        public Builder linkedinUrl(String linkedinUrl) {
-            Utils.checkNotNull(linkedinUrl, "linkedinUrl");
-            this.linkedinUrl = Optional.ofNullable(linkedinUrl);
-            return this;
-        }
-
-        public Builder linkedinUrl(Optional<String> linkedinUrl) {
-            Utils.checkNotNull(linkedinUrl, "linkedinUrl");
+        public Builder linkedinUrl(@Nullable String linkedinUrl) {
             this.linkedinUrl = linkedinUrl;
             return this;
         }
 
-
-        public Builder logoUrl(String logoUrl) {
-            Utils.checkNotNull(logoUrl, "logoUrl");
-            this.logoUrl = Optional.ofNullable(logoUrl);
-            return this;
-        }
-
-        public Builder logoUrl(Optional<String> logoUrl) {
-            Utils.checkNotNull(logoUrl, "logoUrl");
+        public Builder logoUrl(@Nullable String logoUrl) {
             this.logoUrl = logoUrl;
             return this;
         }
 
-
-        public Builder naicsCode(double naicsCode) {
-            Utils.checkNotNull(naicsCode, "naicsCode");
-            this.naicsCode = Optional.ofNullable(naicsCode);
-            return this;
-        }
-
-        public Builder naicsCode(Optional<Double> naicsCode) {
-            Utils.checkNotNull(naicsCode, "naicsCode");
+        public Builder naicsCode(@Nullable Double naicsCode) {
             this.naicsCode = naicsCode;
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = Optional.ofNullable(name);
-            return this;
-        }
-
-        public Builder name(Optional<String> name) {
-            Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder revenue(String revenue) {
-            Utils.checkNotNull(revenue, "revenue");
-            this.revenue = Optional.ofNullable(revenue);
-            return this;
-        }
-
-        public Builder revenue(Optional<String> revenue) {
-            Utils.checkNotNull(revenue, "revenue");
+        public Builder revenue(@Nullable String revenue) {
             this.revenue = revenue;
             return this;
         }
 
-
-        public Builder sicCode(double sicCode) {
-            Utils.checkNotNull(sicCode, "sicCode");
-            this.sicCode = Optional.ofNullable(sicCode);
-            return this;
-        }
-
-        public Builder sicCode(Optional<Double> sicCode) {
-            Utils.checkNotNull(sicCode, "sicCode");
+        public Builder sicCode(@Nullable Double sicCode) {
             this.sicCode = sicCode;
             return this;
         }
 
-
-        public Builder stock(String stock) {
-            Utils.checkNotNull(stock, "stock");
-            this.stock = Optional.ofNullable(stock);
-            return this;
-        }
-
-        public Builder stock(Optional<String> stock) {
-            Utils.checkNotNull(stock, "stock");
+        public Builder stock(@Nullable String stock) {
             this.stock = stock;
             return this;
         }
 
-
         /**
          * An array of telephones for this company
          */
-        public Builder telephones(List<EnrichTelephone> telephones) {
-            Utils.checkNotNull(telephones, "telephones");
-            this.telephones = Optional.ofNullable(telephones);
-            return this;
-        }
-
-        /**
-         * An array of telephones for this company
-         */
-        public Builder telephones(Optional<? extends List<EnrichTelephone>> telephones) {
-            Utils.checkNotNull(telephones, "telephones");
+        public Builder telephones(@Nullable List<EnrichTelephone> telephones) {
             this.telephones = telephones;
             return this;
         }
 
-
-        public Builder twitterHandle(String twitterHandle) {
-            Utils.checkNotNull(twitterHandle, "twitterHandle");
-            this.twitterHandle = Optional.ofNullable(twitterHandle);
-            return this;
-        }
-
-        public Builder twitterHandle(Optional<String> twitterHandle) {
-            Utils.checkNotNull(twitterHandle, "twitterHandle");
+        public Builder twitterHandle(@Nullable String twitterHandle) {
             this.twitterHandle = twitterHandle;
             return this;
         }
 
-
-        public Builder twitterUrl(String twitterUrl) {
-            Utils.checkNotNull(twitterUrl, "twitterUrl");
-            this.twitterUrl = Optional.ofNullable(twitterUrl);
-            return this;
-        }
-
-        public Builder twitterUrl(Optional<String> twitterUrl) {
-            Utils.checkNotNull(twitterUrl, "twitterUrl");
+        public Builder twitterUrl(@Nullable String twitterUrl) {
             this.twitterUrl = twitterUrl;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
-
-        public Builder yearFounded(double yearFounded) {
-            Utils.checkNotNull(yearFounded, "yearFounded");
-            this.yearFounded = Optional.ofNullable(yearFounded);
-            return this;
-        }
-
-        public Builder yearFounded(Optional<Double> yearFounded) {
-            Utils.checkNotNull(yearFounded, "yearFounded");
+        public Builder yearFounded(@Nullable Double yearFounded) {
             this.yearFounded = yearFounded;
             return this;
         }
 
-
-        public Builder yelpUrl(String yelpUrl) {
-            Utils.checkNotNull(yelpUrl, "yelpUrl");
-            this.yelpUrl = Optional.ofNullable(yelpUrl);
-            return this;
-        }
-
-        public Builder yelpUrl(Optional<String> yelpUrl) {
-            Utils.checkNotNull(yelpUrl, "yelpUrl");
+        public Builder yelpUrl(@Nullable String yelpUrl) {
             this.yelpUrl = yelpUrl;
             return this;
         }
 
-
-        public Builder youtubeUrl(String youtubeUrl) {
-            Utils.checkNotNull(youtubeUrl, "youtubeUrl");
-            this.youtubeUrl = Optional.ofNullable(youtubeUrl);
-            return this;
-        }
-
-        public Builder youtubeUrl(Optional<String> youtubeUrl) {
-            Utils.checkNotNull(youtubeUrl, "youtubeUrl");
+        public Builder youtubeUrl(@Nullable String youtubeUrl) {
             this.youtubeUrl = youtubeUrl;
             return this;
         }
 
         public EnrichCompany build() {
-
             return new EnrichCompany(
                 address, alexaRank, createdAt,
                 crunchbaseUrl, description, domain,

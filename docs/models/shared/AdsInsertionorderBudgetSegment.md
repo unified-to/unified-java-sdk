@@ -1,0 +1,11 @@
+# AdsInsertionorderBudgetSegment
+
+
+## Fields
+
+| Field                                                                                     | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `budgetAmount`                                                                            | *Optional\<Double>*                                                                       | :heavy_minus_sign:                                                                        | N/A                                                                                       |
+| `description`                                                                             | *Optional\<String>*                                                                       | :heavy_minus_sign:                                                                        | N/A                                                                                       |
+| `endAt`                                                                                   | [OffsetDateTime](https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html) | :heavy_minus_sign:                                                                        | N/A                                                                                       |
+| `startAt`                                                                                 | [OffsetDateTime](https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html) | :heavy_minus_sign:                                                                        | N/A                                                                                       |

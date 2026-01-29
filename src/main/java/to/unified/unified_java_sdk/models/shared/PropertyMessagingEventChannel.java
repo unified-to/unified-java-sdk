@@ -4,15 +4,15 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
@@ -24,37 +24,37 @@ public class PropertyMessagingEventChannel {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
-    private Optional<String> description;
+    private String description;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_subchannels")
-    private Optional<Boolean> hasSubchannels;
+    private Boolean hasSubchannels;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
-    private Optional<Boolean> isActive;
+    private Boolean isActive;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_private")
-    private Optional<Boolean> isPrivate;
+    private Boolean isPrivate;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("members")
-    private Optional<? extends List<MessagingMember>> members;
+    private List<MessagingMember> members;
 
 
     @JsonProperty("name")
@@ -63,56 +63,43 @@ public class PropertyMessagingEventChannel {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_channel_id")
-    private Optional<String> parentChannelId;
+    private String parentChannelId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_id")
-    private Optional<String> parentId;
+    private String parentId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("web_url")
-    private Optional<String> webUrl;
+    private String webUrl;
 
     @JsonCreator
     public PropertyMessagingEventChannel(
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("description") Optional<String> description,
-            @JsonProperty("has_subchannels") Optional<Boolean> hasSubchannels,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("is_active") Optional<Boolean> isActive,
-            @JsonProperty("is_private") Optional<Boolean> isPrivate,
-            @JsonProperty("members") Optional<? extends List<MessagingMember>> members,
-            @JsonProperty("name") String name,
-            @JsonProperty("parent_channel_id") Optional<String> parentChannelId,
-            @JsonProperty("parent_id") Optional<String> parentId,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
-            @JsonProperty("web_url") Optional<String> webUrl) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(description, "description");
-        Utils.checkNotNull(hasSubchannels, "hasSubchannels");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(isActive, "isActive");
-        Utils.checkNotNull(isPrivate, "isPrivate");
-        Utils.checkNotNull(members, "members");
-        Utils.checkNotNull(name, "name");
-        Utils.checkNotNull(parentChannelId, "parentChannelId");
-        Utils.checkNotNull(parentId, "parentId");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        Utils.checkNotNull(webUrl, "webUrl");
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("description") @Nullable String description,
+            @JsonProperty("has_subchannels") @Nullable Boolean hasSubchannels,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("is_active") @Nullable Boolean isActive,
+            @JsonProperty("is_private") @Nullable Boolean isPrivate,
+            @JsonProperty("members") @Nullable List<MessagingMember> members,
+            @JsonProperty("name") @Nonnull String name,
+            @JsonProperty("parent_channel_id") @Nullable String parentChannelId,
+            @JsonProperty("parent_id") @Nullable String parentId,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
+            @JsonProperty("web_url") @Nullable String webUrl) {
         this.createdAt = createdAt;
         this.description = description;
         this.hasSubchannels = hasSubchannels;
@@ -120,7 +107,8 @@ public class PropertyMessagingEventChannel {
         this.isActive = isActive;
         this.isPrivate = isPrivate;
         this.members = members;
-        this.name = name;
+        this.name = Optional.ofNullable(name)
+            .orElseThrow(() -> new IllegalArgumentException("name cannot be null"));
         this.parentChannelId = parentChannelId;
         this.parentId = parentId;
         this.raw = raw;
@@ -129,79 +117,64 @@ public class PropertyMessagingEventChannel {
     }
     
     public PropertyMessagingEventChannel(
-            String name) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), name, Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+            @Nonnull String name) {
+        this(null, null, null,
+            null, null, null,
+            null, name, null,
+            null, null, null,
+            null);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<String> description() {
-        return description;
+        return Optional.ofNullable(this.description);
     }
 
-    @JsonIgnore
     public Optional<Boolean> hasSubchannels() {
-        return hasSubchannels;
+        return Optional.ofNullable(this.hasSubchannels);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isActive() {
-        return isActive;
+        return Optional.ofNullable(this.isActive);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isPrivate() {
-        return isPrivate;
+        return Optional.ofNullable(this.isPrivate);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<MessagingMember>> members() {
-        return (Optional<List<MessagingMember>>) members;
+        return Optional.ofNullable(this.members);
     }
 
-    @JsonIgnore
     public String name() {
-        return name;
+        return this.name;
     }
 
-    @JsonIgnore
     public Optional<String> parentChannelId() {
-        return parentChannelId;
+        return Optional.ofNullable(this.parentChannelId);
     }
 
-    @JsonIgnore
     public Optional<String> parentId() {
-        return parentId;
+        return Optional.ofNullable(this.parentId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
-    @JsonIgnore
     public Optional<String> webUrl() {
-        return webUrl;
+        return Optional.ofNullable(this.webUrl);
     }
 
     public static Builder builder() {
@@ -209,167 +182,83 @@ public class PropertyMessagingEventChannel {
     }
 
 
-    public PropertyMessagingEventChannel withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
-
-
-    public PropertyMessagingEventChannel withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public PropertyMessagingEventChannel withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public PropertyMessagingEventChannel withDescription(String description) {
-        Utils.checkNotNull(description, "description");
-        this.description = Optional.ofNullable(description);
-        return this;
-    }
 
-
-    public PropertyMessagingEventChannel withDescription(Optional<String> description) {
-        Utils.checkNotNull(description, "description");
+    public PropertyMessagingEventChannel withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
-    public PropertyMessagingEventChannel withHasSubchannels(boolean hasSubchannels) {
-        Utils.checkNotNull(hasSubchannels, "hasSubchannels");
-        this.hasSubchannels = Optional.ofNullable(hasSubchannels);
-        return this;
-    }
 
-
-    public PropertyMessagingEventChannel withHasSubchannels(Optional<Boolean> hasSubchannels) {
-        Utils.checkNotNull(hasSubchannels, "hasSubchannels");
+    public PropertyMessagingEventChannel withHasSubchannels(@Nullable Boolean hasSubchannels) {
         this.hasSubchannels = hasSubchannels;
         return this;
     }
 
-    public PropertyMessagingEventChannel withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public PropertyMessagingEventChannel withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public PropertyMessagingEventChannel withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public PropertyMessagingEventChannel withIsActive(boolean isActive) {
-        Utils.checkNotNull(isActive, "isActive");
-        this.isActive = Optional.ofNullable(isActive);
-        return this;
-    }
 
-
-    public PropertyMessagingEventChannel withIsActive(Optional<Boolean> isActive) {
-        Utils.checkNotNull(isActive, "isActive");
+    public PropertyMessagingEventChannel withIsActive(@Nullable Boolean isActive) {
         this.isActive = isActive;
         return this;
     }
 
-    public PropertyMessagingEventChannel withIsPrivate(boolean isPrivate) {
-        Utils.checkNotNull(isPrivate, "isPrivate");
-        this.isPrivate = Optional.ofNullable(isPrivate);
-        return this;
-    }
 
-
-    public PropertyMessagingEventChannel withIsPrivate(Optional<Boolean> isPrivate) {
-        Utils.checkNotNull(isPrivate, "isPrivate");
+    public PropertyMessagingEventChannel withIsPrivate(@Nullable Boolean isPrivate) {
         this.isPrivate = isPrivate;
         return this;
     }
 
-    public PropertyMessagingEventChannel withMembers(List<MessagingMember> members) {
-        Utils.checkNotNull(members, "members");
-        this.members = Optional.ofNullable(members);
-        return this;
-    }
 
-
-    public PropertyMessagingEventChannel withMembers(Optional<? extends List<MessagingMember>> members) {
-        Utils.checkNotNull(members, "members");
+    public PropertyMessagingEventChannel withMembers(@Nullable List<MessagingMember> members) {
         this.members = members;
         return this;
     }
 
-    public PropertyMessagingEventChannel withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = name;
-        return this;
-    }
 
-    public PropertyMessagingEventChannel withParentChannelId(String parentChannelId) {
-        Utils.checkNotNull(parentChannelId, "parentChannelId");
-        this.parentChannelId = Optional.ofNullable(parentChannelId);
+    public PropertyMessagingEventChannel withName(@Nonnull String name) {
+        this.name = Utils.checkNotNull(name, "name");
         return this;
     }
 
 
-    public PropertyMessagingEventChannel withParentChannelId(Optional<String> parentChannelId) {
-        Utils.checkNotNull(parentChannelId, "parentChannelId");
+    public PropertyMessagingEventChannel withParentChannelId(@Nullable String parentChannelId) {
         this.parentChannelId = parentChannelId;
         return this;
     }
 
-    public PropertyMessagingEventChannel withParentId(String parentId) {
-        Utils.checkNotNull(parentId, "parentId");
-        this.parentId = Optional.ofNullable(parentId);
-        return this;
-    }
 
-
-    public PropertyMessagingEventChannel withParentId(Optional<String> parentId) {
-        Utils.checkNotNull(parentId, "parentId");
+    public PropertyMessagingEventChannel withParentId(@Nullable String parentId) {
         this.parentId = parentId;
         return this;
     }
 
-    public PropertyMessagingEventChannel withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public PropertyMessagingEventChannel withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public PropertyMessagingEventChannel withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public PropertyMessagingEventChannel withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public PropertyMessagingEventChannel withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public PropertyMessagingEventChannel withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
-    public PropertyMessagingEventChannel withWebUrl(String webUrl) {
-        Utils.checkNotNull(webUrl, "webUrl");
-        this.webUrl = Optional.ofNullable(webUrl);
-        return this;
-    }
 
-
-    public PropertyMessagingEventChannel withWebUrl(Optional<String> webUrl) {
-        Utils.checkNotNull(webUrl, "webUrl");
+    public PropertyMessagingEventChannel withWebUrl(@Nullable String webUrl) {
         this.webUrl = webUrl;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -427,201 +316,102 @@ public class PropertyMessagingEventChannel {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<String> description = Optional.empty();
+        private String description;
 
-        private Optional<Boolean> hasSubchannels = Optional.empty();
+        private Boolean hasSubchannels;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<Boolean> isActive = Optional.empty();
+        private Boolean isActive;
 
-        private Optional<Boolean> isPrivate = Optional.empty();
+        private Boolean isPrivate;
 
-        private Optional<? extends List<MessagingMember>> members = Optional.empty();
+        private List<MessagingMember> members;
 
         private String name;
 
-        private Optional<String> parentChannelId = Optional.empty();
+        private String parentChannelId;
 
-        private Optional<String> parentId = Optional.empty();
+        private String parentId;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
-        private Optional<String> webUrl = Optional.empty();
+        private String webUrl;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder description(String description) {
-            Utils.checkNotNull(description, "description");
-            this.description = Optional.ofNullable(description);
-            return this;
-        }
-
-        public Builder description(Optional<String> description) {
-            Utils.checkNotNull(description, "description");
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-
-        public Builder hasSubchannels(boolean hasSubchannels) {
-            Utils.checkNotNull(hasSubchannels, "hasSubchannels");
-            this.hasSubchannels = Optional.ofNullable(hasSubchannels);
-            return this;
-        }
-
-        public Builder hasSubchannels(Optional<Boolean> hasSubchannels) {
-            Utils.checkNotNull(hasSubchannels, "hasSubchannels");
+        public Builder hasSubchannels(@Nullable Boolean hasSubchannels) {
             this.hasSubchannels = hasSubchannels;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder isActive(boolean isActive) {
-            Utils.checkNotNull(isActive, "isActive");
-            this.isActive = Optional.ofNullable(isActive);
-            return this;
-        }
-
-        public Builder isActive(Optional<Boolean> isActive) {
-            Utils.checkNotNull(isActive, "isActive");
+        public Builder isActive(@Nullable Boolean isActive) {
             this.isActive = isActive;
             return this;
         }
 
-
-        public Builder isPrivate(boolean isPrivate) {
-            Utils.checkNotNull(isPrivate, "isPrivate");
-            this.isPrivate = Optional.ofNullable(isPrivate);
-            return this;
-        }
-
-        public Builder isPrivate(Optional<Boolean> isPrivate) {
-            Utils.checkNotNull(isPrivate, "isPrivate");
+        public Builder isPrivate(@Nullable Boolean isPrivate) {
             this.isPrivate = isPrivate;
             return this;
         }
 
-
-        public Builder members(List<MessagingMember> members) {
-            Utils.checkNotNull(members, "members");
-            this.members = Optional.ofNullable(members);
-            return this;
-        }
-
-        public Builder members(Optional<? extends List<MessagingMember>> members) {
-            Utils.checkNotNull(members, "members");
+        public Builder members(@Nullable List<MessagingMember> members) {
             this.members = members;
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = name;
+        public Builder name(@Nonnull String name) {
+            this.name = Utils.checkNotNull(name, "name");
             return this;
         }
 
-
-        public Builder parentChannelId(String parentChannelId) {
-            Utils.checkNotNull(parentChannelId, "parentChannelId");
-            this.parentChannelId = Optional.ofNullable(parentChannelId);
-            return this;
-        }
-
-        public Builder parentChannelId(Optional<String> parentChannelId) {
-            Utils.checkNotNull(parentChannelId, "parentChannelId");
+        public Builder parentChannelId(@Nullable String parentChannelId) {
             this.parentChannelId = parentChannelId;
             return this;
         }
 
-
-        public Builder parentId(String parentId) {
-            Utils.checkNotNull(parentId, "parentId");
-            this.parentId = Optional.ofNullable(parentId);
-            return this;
-        }
-
-        public Builder parentId(Optional<String> parentId) {
-            Utils.checkNotNull(parentId, "parentId");
+        public Builder parentId(@Nullable String parentId) {
             this.parentId = parentId;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
-
-        public Builder webUrl(String webUrl) {
-            Utils.checkNotNull(webUrl, "webUrl");
-            this.webUrl = Optional.ofNullable(webUrl);
-            return this;
-        }
-
-        public Builder webUrl(Optional<String> webUrl) {
-            Utils.checkNotNull(webUrl, "webUrl");
+        public Builder webUrl(@Nullable String webUrl) {
             this.webUrl = webUrl;
             return this;
         }
 
         public PropertyMessagingEventChannel build() {
-
             return new PropertyMessagingEventChannel(
                 createdAt, description, hasSubchannels,
                 id, isActive, isPrivate,

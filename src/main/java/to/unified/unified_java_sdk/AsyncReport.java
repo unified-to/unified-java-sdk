@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.GetAccountingReportRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingReportsRequest;
@@ -56,7 +57,7 @@ public class AsyncReport {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAccountingReportResponse>} - The async response
      */
-    public CompletableFuture<GetAccountingReportResponse> getAccountingReport(GetAccountingReportRequest request) {
+    public CompletableFuture<GetAccountingReportResponse> getAccountingReport(@Nonnull GetAccountingReportRequest request) {
         AsyncRequestOperation<GetAccountingReportRequest, GetAccountingReportResponse> operation
               = new GetAccountingReport.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -79,7 +80,7 @@ public class AsyncReport {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAccountingReportsResponse>} - The async response
      */
-    public CompletableFuture<ListAccountingReportsResponse> listAccountingReports(ListAccountingReportsRequest request) {
+    public CompletableFuture<ListAccountingReportsResponse> listAccountingReports(@Nonnull ListAccountingReportsRequest request) {
         AsyncRequestOperation<ListAccountingReportsRequest, ListAccountingReportsResponse> operation
               = new ListAccountingReports.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -102,7 +103,7 @@ public class AsyncReport {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAdsReportsResponse>} - The async response
      */
-    public CompletableFuture<ListAdsReportsResponse> listAdsReports(ListAdsReportsRequest request) {
+    public CompletableFuture<ListAdsReportsResponse> listAdsReports(@Nonnull ListAdsReportsRequest request) {
         AsyncRequestOperation<ListAdsReportsRequest, ListAdsReportsResponse> operation
               = new ListAdsReports.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

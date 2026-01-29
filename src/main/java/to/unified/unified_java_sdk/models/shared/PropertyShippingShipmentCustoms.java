@@ -4,14 +4,13 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -25,100 +24,87 @@ public class PropertyShippingShipmentCustoms {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
-    private Optional<Double> amount;
+    private Double amount;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contents_type")
-    private Optional<? extends ContentsType> contentsType;
+    private ContentsType contentsType;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
-    private Optional<String> currency;
+    private String currency;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
-    private Optional<String> description;
+    private String description;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duties_paid_by")
-    private Optional<? extends DutiesPaidBy> dutiesPaidBy;
+    private DutiesPaidBy dutiesPaidBy;
 
     /**
      * Customs items
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
-    private Optional<? extends List<ShippingCustomsItem>> items;
+    private List<ShippingCustomsItem> items;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("non_delivery_option")
-    private Optional<? extends NonDeliveryOption> nonDeliveryOption;
+    private NonDeliveryOption nonDeliveryOption;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recipient_eori")
-    private Optional<String> recipientEori;
+    private String recipientEori;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recipient_tax_number")
-    private Optional<String> recipientTaxNumber;
+    private String recipientTaxNumber;
 
     /**
      * Any restrictions
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restrictions")
-    private Optional<? extends List<String>> restrictions;
+    private List<String> restrictions;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipper_eori")
-    private Optional<String> shipperEori;
+    private String shipperEori;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipper_tax_number")
-    private Optional<String> shipperTaxNumber;
+    private String shipperTaxNumber;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxes_paid_by")
-    private Optional<? extends TaxesPaidBy> taxesPaidBy;
+    private TaxesPaidBy taxesPaidBy;
 
     @JsonCreator
     public PropertyShippingShipmentCustoms(
-            @JsonProperty("amount") Optional<Double> amount,
-            @JsonProperty("contents_type") Optional<? extends ContentsType> contentsType,
-            @JsonProperty("currency") Optional<String> currency,
-            @JsonProperty("description") Optional<String> description,
-            @JsonProperty("duties_paid_by") Optional<? extends DutiesPaidBy> dutiesPaidBy,
-            @JsonProperty("items") Optional<? extends List<ShippingCustomsItem>> items,
-            @JsonProperty("non_delivery_option") Optional<? extends NonDeliveryOption> nonDeliveryOption,
-            @JsonProperty("recipient_eori") Optional<String> recipientEori,
-            @JsonProperty("recipient_tax_number") Optional<String> recipientTaxNumber,
-            @JsonProperty("restrictions") Optional<? extends List<String>> restrictions,
-            @JsonProperty("shipper_eori") Optional<String> shipperEori,
-            @JsonProperty("shipper_tax_number") Optional<String> shipperTaxNumber,
-            @JsonProperty("taxes_paid_by") Optional<? extends TaxesPaidBy> taxesPaidBy) {
-        Utils.checkNotNull(amount, "amount");
-        Utils.checkNotNull(contentsType, "contentsType");
-        Utils.checkNotNull(currency, "currency");
-        Utils.checkNotNull(description, "description");
-        Utils.checkNotNull(dutiesPaidBy, "dutiesPaidBy");
-        Utils.checkNotNull(items, "items");
-        Utils.checkNotNull(nonDeliveryOption, "nonDeliveryOption");
-        Utils.checkNotNull(recipientEori, "recipientEori");
-        Utils.checkNotNull(recipientTaxNumber, "recipientTaxNumber");
-        Utils.checkNotNull(restrictions, "restrictions");
-        Utils.checkNotNull(shipperEori, "shipperEori");
-        Utils.checkNotNull(shipperTaxNumber, "shipperTaxNumber");
-        Utils.checkNotNull(taxesPaidBy, "taxesPaidBy");
+            @JsonProperty("amount") @Nullable Double amount,
+            @JsonProperty("contents_type") @Nullable ContentsType contentsType,
+            @JsonProperty("currency") @Nullable String currency,
+            @JsonProperty("description") @Nullable String description,
+            @JsonProperty("duties_paid_by") @Nullable DutiesPaidBy dutiesPaidBy,
+            @JsonProperty("items") @Nullable List<ShippingCustomsItem> items,
+            @JsonProperty("non_delivery_option") @Nullable NonDeliveryOption nonDeliveryOption,
+            @JsonProperty("recipient_eori") @Nullable String recipientEori,
+            @JsonProperty("recipient_tax_number") @Nullable String recipientTaxNumber,
+            @JsonProperty("restrictions") @Nullable List<String> restrictions,
+            @JsonProperty("shipper_eori") @Nullable String shipperEori,
+            @JsonProperty("shipper_tax_number") @Nullable String shipperTaxNumber,
+            @JsonProperty("taxes_paid_by") @Nullable TaxesPaidBy taxesPaidBy) {
         this.amount = amount;
         this.contentsType = contentsType;
         this.currency = currency;
@@ -135,88 +121,69 @@ public class PropertyShippingShipmentCustoms {
     }
     
     public PropertyShippingShipmentCustoms() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null);
     }
 
-    @JsonIgnore
     public Optional<Double> amount() {
-        return amount;
+        return Optional.ofNullable(this.amount);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ContentsType> contentsType() {
-        return (Optional<ContentsType>) contentsType;
+        return Optional.ofNullable(this.contentsType);
     }
 
-    @JsonIgnore
     public Optional<String> currency() {
-        return currency;
+        return Optional.ofNullable(this.currency);
     }
 
-    @JsonIgnore
     public Optional<String> description() {
-        return description;
+        return Optional.ofNullable(this.description);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<DutiesPaidBy> dutiesPaidBy() {
-        return (Optional<DutiesPaidBy>) dutiesPaidBy;
+        return Optional.ofNullable(this.dutiesPaidBy);
     }
 
     /**
      * Customs items
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<ShippingCustomsItem>> items() {
-        return (Optional<List<ShippingCustomsItem>>) items;
+        return Optional.ofNullable(this.items);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<NonDeliveryOption> nonDeliveryOption() {
-        return (Optional<NonDeliveryOption>) nonDeliveryOption;
+        return Optional.ofNullable(this.nonDeliveryOption);
     }
 
-    @JsonIgnore
     public Optional<String> recipientEori() {
-        return recipientEori;
+        return Optional.ofNullable(this.recipientEori);
     }
 
-    @JsonIgnore
     public Optional<String> recipientTaxNumber() {
-        return recipientTaxNumber;
+        return Optional.ofNullable(this.recipientTaxNumber);
     }
 
     /**
      * Any restrictions
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> restrictions() {
-        return (Optional<List<String>>) restrictions;
+        return Optional.ofNullable(this.restrictions);
     }
 
-    @JsonIgnore
     public Optional<String> shipperEori() {
-        return shipperEori;
+        return Optional.ofNullable(this.shipperEori);
     }
 
-    @JsonIgnore
     public Optional<String> shipperTaxNumber() {
-        return shipperTaxNumber;
+        return Optional.ofNullable(this.shipperTaxNumber);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<TaxesPaidBy> taxesPaidBy() {
-        return (Optional<TaxesPaidBy>) taxesPaidBy;
+        return Optional.ofNullable(this.taxesPaidBy);
     }
 
     public static Builder builder() {
@@ -224,186 +191,89 @@ public class PropertyShippingShipmentCustoms {
     }
 
 
-    public PropertyShippingShipmentCustoms withAmount(double amount) {
-        Utils.checkNotNull(amount, "amount");
-        this.amount = Optional.ofNullable(amount);
-        return this;
-    }
-
-
-    public PropertyShippingShipmentCustoms withAmount(Optional<Double> amount) {
-        Utils.checkNotNull(amount, "amount");
+    public PropertyShippingShipmentCustoms withAmount(@Nullable Double amount) {
         this.amount = amount;
         return this;
     }
 
-    public PropertyShippingShipmentCustoms withContentsType(ContentsType contentsType) {
-        Utils.checkNotNull(contentsType, "contentsType");
-        this.contentsType = Optional.ofNullable(contentsType);
-        return this;
-    }
 
-
-    public PropertyShippingShipmentCustoms withContentsType(Optional<? extends ContentsType> contentsType) {
-        Utils.checkNotNull(contentsType, "contentsType");
+    public PropertyShippingShipmentCustoms withContentsType(@Nullable ContentsType contentsType) {
         this.contentsType = contentsType;
         return this;
     }
 
-    public PropertyShippingShipmentCustoms withCurrency(String currency) {
-        Utils.checkNotNull(currency, "currency");
-        this.currency = Optional.ofNullable(currency);
-        return this;
-    }
 
-
-    public PropertyShippingShipmentCustoms withCurrency(Optional<String> currency) {
-        Utils.checkNotNull(currency, "currency");
+    public PropertyShippingShipmentCustoms withCurrency(@Nullable String currency) {
         this.currency = currency;
         return this;
     }
 
-    public PropertyShippingShipmentCustoms withDescription(String description) {
-        Utils.checkNotNull(description, "description");
-        this.description = Optional.ofNullable(description);
-        return this;
-    }
 
-
-    public PropertyShippingShipmentCustoms withDescription(Optional<String> description) {
-        Utils.checkNotNull(description, "description");
+    public PropertyShippingShipmentCustoms withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
-    public PropertyShippingShipmentCustoms withDutiesPaidBy(DutiesPaidBy dutiesPaidBy) {
-        Utils.checkNotNull(dutiesPaidBy, "dutiesPaidBy");
-        this.dutiesPaidBy = Optional.ofNullable(dutiesPaidBy);
-        return this;
-    }
 
-
-    public PropertyShippingShipmentCustoms withDutiesPaidBy(Optional<? extends DutiesPaidBy> dutiesPaidBy) {
-        Utils.checkNotNull(dutiesPaidBy, "dutiesPaidBy");
+    public PropertyShippingShipmentCustoms withDutiesPaidBy(@Nullable DutiesPaidBy dutiesPaidBy) {
         this.dutiesPaidBy = dutiesPaidBy;
         return this;
     }
 
-    /**
-     * Customs items
-     */
-    public PropertyShippingShipmentCustoms withItems(List<ShippingCustomsItem> items) {
-        Utils.checkNotNull(items, "items");
-        this.items = Optional.ofNullable(items);
-        return this;
-    }
-
 
     /**
      * Customs items
      */
-    public PropertyShippingShipmentCustoms withItems(Optional<? extends List<ShippingCustomsItem>> items) {
-        Utils.checkNotNull(items, "items");
+    public PropertyShippingShipmentCustoms withItems(@Nullable List<ShippingCustomsItem> items) {
         this.items = items;
         return this;
     }
 
-    public PropertyShippingShipmentCustoms withNonDeliveryOption(NonDeliveryOption nonDeliveryOption) {
-        Utils.checkNotNull(nonDeliveryOption, "nonDeliveryOption");
-        this.nonDeliveryOption = Optional.ofNullable(nonDeliveryOption);
-        return this;
-    }
 
-
-    public PropertyShippingShipmentCustoms withNonDeliveryOption(Optional<? extends NonDeliveryOption> nonDeliveryOption) {
-        Utils.checkNotNull(nonDeliveryOption, "nonDeliveryOption");
+    public PropertyShippingShipmentCustoms withNonDeliveryOption(@Nullable NonDeliveryOption nonDeliveryOption) {
         this.nonDeliveryOption = nonDeliveryOption;
         return this;
     }
 
-    public PropertyShippingShipmentCustoms withRecipientEori(String recipientEori) {
-        Utils.checkNotNull(recipientEori, "recipientEori");
-        this.recipientEori = Optional.ofNullable(recipientEori);
-        return this;
-    }
 
-
-    public PropertyShippingShipmentCustoms withRecipientEori(Optional<String> recipientEori) {
-        Utils.checkNotNull(recipientEori, "recipientEori");
+    public PropertyShippingShipmentCustoms withRecipientEori(@Nullable String recipientEori) {
         this.recipientEori = recipientEori;
         return this;
     }
 
-    public PropertyShippingShipmentCustoms withRecipientTaxNumber(String recipientTaxNumber) {
-        Utils.checkNotNull(recipientTaxNumber, "recipientTaxNumber");
-        this.recipientTaxNumber = Optional.ofNullable(recipientTaxNumber);
-        return this;
-    }
 
-
-    public PropertyShippingShipmentCustoms withRecipientTaxNumber(Optional<String> recipientTaxNumber) {
-        Utils.checkNotNull(recipientTaxNumber, "recipientTaxNumber");
+    public PropertyShippingShipmentCustoms withRecipientTaxNumber(@Nullable String recipientTaxNumber) {
         this.recipientTaxNumber = recipientTaxNumber;
         return this;
     }
 
-    /**
-     * Any restrictions
-     */
-    public PropertyShippingShipmentCustoms withRestrictions(List<String> restrictions) {
-        Utils.checkNotNull(restrictions, "restrictions");
-        this.restrictions = Optional.ofNullable(restrictions);
-        return this;
-    }
-
 
     /**
      * Any restrictions
      */
-    public PropertyShippingShipmentCustoms withRestrictions(Optional<? extends List<String>> restrictions) {
-        Utils.checkNotNull(restrictions, "restrictions");
+    public PropertyShippingShipmentCustoms withRestrictions(@Nullable List<String> restrictions) {
         this.restrictions = restrictions;
         return this;
     }
 
-    public PropertyShippingShipmentCustoms withShipperEori(String shipperEori) {
-        Utils.checkNotNull(shipperEori, "shipperEori");
-        this.shipperEori = Optional.ofNullable(shipperEori);
-        return this;
-    }
 
-
-    public PropertyShippingShipmentCustoms withShipperEori(Optional<String> shipperEori) {
-        Utils.checkNotNull(shipperEori, "shipperEori");
+    public PropertyShippingShipmentCustoms withShipperEori(@Nullable String shipperEori) {
         this.shipperEori = shipperEori;
         return this;
     }
 
-    public PropertyShippingShipmentCustoms withShipperTaxNumber(String shipperTaxNumber) {
-        Utils.checkNotNull(shipperTaxNumber, "shipperTaxNumber");
-        this.shipperTaxNumber = Optional.ofNullable(shipperTaxNumber);
-        return this;
-    }
 
-
-    public PropertyShippingShipmentCustoms withShipperTaxNumber(Optional<String> shipperTaxNumber) {
-        Utils.checkNotNull(shipperTaxNumber, "shipperTaxNumber");
+    public PropertyShippingShipmentCustoms withShipperTaxNumber(@Nullable String shipperTaxNumber) {
         this.shipperTaxNumber = shipperTaxNumber;
         return this;
     }
 
-    public PropertyShippingShipmentCustoms withTaxesPaidBy(TaxesPaidBy taxesPaidBy) {
-        Utils.checkNotNull(taxesPaidBy, "taxesPaidBy");
-        this.taxesPaidBy = Optional.ofNullable(taxesPaidBy);
-        return this;
-    }
 
-
-    public PropertyShippingShipmentCustoms withTaxesPaidBy(Optional<? extends TaxesPaidBy> taxesPaidBy) {
-        Utils.checkNotNull(taxesPaidBy, "taxesPaidBy");
+    public PropertyShippingShipmentCustoms withTaxesPaidBy(@Nullable TaxesPaidBy taxesPaidBy) {
         this.taxesPaidBy = taxesPaidBy;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -461,219 +331,108 @@ public class PropertyShippingShipmentCustoms {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<Double> amount = Optional.empty();
+        private Double amount;
 
-        private Optional<? extends ContentsType> contentsType = Optional.empty();
+        private ContentsType contentsType;
 
-        private Optional<String> currency = Optional.empty();
+        private String currency;
 
-        private Optional<String> description = Optional.empty();
+        private String description;
 
-        private Optional<? extends DutiesPaidBy> dutiesPaidBy = Optional.empty();
+        private DutiesPaidBy dutiesPaidBy;
 
-        private Optional<? extends List<ShippingCustomsItem>> items = Optional.empty();
+        private List<ShippingCustomsItem> items;
 
-        private Optional<? extends NonDeliveryOption> nonDeliveryOption = Optional.empty();
+        private NonDeliveryOption nonDeliveryOption;
 
-        private Optional<String> recipientEori = Optional.empty();
+        private String recipientEori;
 
-        private Optional<String> recipientTaxNumber = Optional.empty();
+        private String recipientTaxNumber;
 
-        private Optional<? extends List<String>> restrictions = Optional.empty();
+        private List<String> restrictions;
 
-        private Optional<String> shipperEori = Optional.empty();
+        private String shipperEori;
 
-        private Optional<String> shipperTaxNumber = Optional.empty();
+        private String shipperTaxNumber;
 
-        private Optional<? extends TaxesPaidBy> taxesPaidBy = Optional.empty();
+        private TaxesPaidBy taxesPaidBy;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder amount(double amount) {
-            Utils.checkNotNull(amount, "amount");
-            this.amount = Optional.ofNullable(amount);
-            return this;
-        }
-
-        public Builder amount(Optional<Double> amount) {
-            Utils.checkNotNull(amount, "amount");
+        public Builder amount(@Nullable Double amount) {
             this.amount = amount;
             return this;
         }
 
-
-        public Builder contentsType(ContentsType contentsType) {
-            Utils.checkNotNull(contentsType, "contentsType");
-            this.contentsType = Optional.ofNullable(contentsType);
-            return this;
-        }
-
-        public Builder contentsType(Optional<? extends ContentsType> contentsType) {
-            Utils.checkNotNull(contentsType, "contentsType");
+        public Builder contentsType(@Nullable ContentsType contentsType) {
             this.contentsType = contentsType;
             return this;
         }
 
-
-        public Builder currency(String currency) {
-            Utils.checkNotNull(currency, "currency");
-            this.currency = Optional.ofNullable(currency);
-            return this;
-        }
-
-        public Builder currency(Optional<String> currency) {
-            Utils.checkNotNull(currency, "currency");
+        public Builder currency(@Nullable String currency) {
             this.currency = currency;
             return this;
         }
 
-
-        public Builder description(String description) {
-            Utils.checkNotNull(description, "description");
-            this.description = Optional.ofNullable(description);
-            return this;
-        }
-
-        public Builder description(Optional<String> description) {
-            Utils.checkNotNull(description, "description");
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-
-        public Builder dutiesPaidBy(DutiesPaidBy dutiesPaidBy) {
-            Utils.checkNotNull(dutiesPaidBy, "dutiesPaidBy");
-            this.dutiesPaidBy = Optional.ofNullable(dutiesPaidBy);
-            return this;
-        }
-
-        public Builder dutiesPaidBy(Optional<? extends DutiesPaidBy> dutiesPaidBy) {
-            Utils.checkNotNull(dutiesPaidBy, "dutiesPaidBy");
+        public Builder dutiesPaidBy(@Nullable DutiesPaidBy dutiesPaidBy) {
             this.dutiesPaidBy = dutiesPaidBy;
             return this;
         }
 
-
         /**
          * Customs items
          */
-        public Builder items(List<ShippingCustomsItem> items) {
-            Utils.checkNotNull(items, "items");
-            this.items = Optional.ofNullable(items);
-            return this;
-        }
-
-        /**
-         * Customs items
-         */
-        public Builder items(Optional<? extends List<ShippingCustomsItem>> items) {
-            Utils.checkNotNull(items, "items");
+        public Builder items(@Nullable List<ShippingCustomsItem> items) {
             this.items = items;
             return this;
         }
 
-
-        public Builder nonDeliveryOption(NonDeliveryOption nonDeliveryOption) {
-            Utils.checkNotNull(nonDeliveryOption, "nonDeliveryOption");
-            this.nonDeliveryOption = Optional.ofNullable(nonDeliveryOption);
-            return this;
-        }
-
-        public Builder nonDeliveryOption(Optional<? extends NonDeliveryOption> nonDeliveryOption) {
-            Utils.checkNotNull(nonDeliveryOption, "nonDeliveryOption");
+        public Builder nonDeliveryOption(@Nullable NonDeliveryOption nonDeliveryOption) {
             this.nonDeliveryOption = nonDeliveryOption;
             return this;
         }
 
-
-        public Builder recipientEori(String recipientEori) {
-            Utils.checkNotNull(recipientEori, "recipientEori");
-            this.recipientEori = Optional.ofNullable(recipientEori);
-            return this;
-        }
-
-        public Builder recipientEori(Optional<String> recipientEori) {
-            Utils.checkNotNull(recipientEori, "recipientEori");
+        public Builder recipientEori(@Nullable String recipientEori) {
             this.recipientEori = recipientEori;
             return this;
         }
 
-
-        public Builder recipientTaxNumber(String recipientTaxNumber) {
-            Utils.checkNotNull(recipientTaxNumber, "recipientTaxNumber");
-            this.recipientTaxNumber = Optional.ofNullable(recipientTaxNumber);
-            return this;
-        }
-
-        public Builder recipientTaxNumber(Optional<String> recipientTaxNumber) {
-            Utils.checkNotNull(recipientTaxNumber, "recipientTaxNumber");
+        public Builder recipientTaxNumber(@Nullable String recipientTaxNumber) {
             this.recipientTaxNumber = recipientTaxNumber;
             return this;
         }
 
-
         /**
          * Any restrictions
          */
-        public Builder restrictions(List<String> restrictions) {
-            Utils.checkNotNull(restrictions, "restrictions");
-            this.restrictions = Optional.ofNullable(restrictions);
-            return this;
-        }
-
-        /**
-         * Any restrictions
-         */
-        public Builder restrictions(Optional<? extends List<String>> restrictions) {
-            Utils.checkNotNull(restrictions, "restrictions");
+        public Builder restrictions(@Nullable List<String> restrictions) {
             this.restrictions = restrictions;
             return this;
         }
 
-
-        public Builder shipperEori(String shipperEori) {
-            Utils.checkNotNull(shipperEori, "shipperEori");
-            this.shipperEori = Optional.ofNullable(shipperEori);
-            return this;
-        }
-
-        public Builder shipperEori(Optional<String> shipperEori) {
-            Utils.checkNotNull(shipperEori, "shipperEori");
+        public Builder shipperEori(@Nullable String shipperEori) {
             this.shipperEori = shipperEori;
             return this;
         }
 
-
-        public Builder shipperTaxNumber(String shipperTaxNumber) {
-            Utils.checkNotNull(shipperTaxNumber, "shipperTaxNumber");
-            this.shipperTaxNumber = Optional.ofNullable(shipperTaxNumber);
-            return this;
-        }
-
-        public Builder shipperTaxNumber(Optional<String> shipperTaxNumber) {
-            Utils.checkNotNull(shipperTaxNumber, "shipperTaxNumber");
+        public Builder shipperTaxNumber(@Nullable String shipperTaxNumber) {
             this.shipperTaxNumber = shipperTaxNumber;
             return this;
         }
 
-
-        public Builder taxesPaidBy(TaxesPaidBy taxesPaidBy) {
-            Utils.checkNotNull(taxesPaidBy, "taxesPaidBy");
-            this.taxesPaidBy = Optional.ofNullable(taxesPaidBy);
-            return this;
-        }
-
-        public Builder taxesPaidBy(Optional<? extends TaxesPaidBy> taxesPaidBy) {
-            Utils.checkNotNull(taxesPaidBy, "taxesPaidBy");
+        public Builder taxesPaidBy(@Nullable TaxesPaidBy taxesPaidBy) {
             this.taxesPaidBy = taxesPaidBy;
             return this;
         }
 
         public PropertyShippingShipmentCustoms build() {
-
             return new PropertyShippingShipmentCustoms(
                 amount, contentsType, currency,
                 description, dutiesPaidBy, items,

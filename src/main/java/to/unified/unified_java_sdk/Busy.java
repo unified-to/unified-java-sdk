@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.ListCalendarBusiesRequest;
 import to.unified.unified_java_sdk.models.operations.ListCalendarBusiesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListCalendarBusiesResponse;
@@ -47,7 +48,7 @@ public class Busy {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCalendarBusiesResponse listCalendarBusies(ListCalendarBusiesRequest request) {
+    public ListCalendarBusiesResponse listCalendarBusies(@Nonnull ListCalendarBusiesRequest request) {
         RequestOperation<ListCalendarBusiesRequest, ListCalendarBusiesResponse> operation
               = new ListCalendarBusies.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

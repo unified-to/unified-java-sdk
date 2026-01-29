@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.KmsSpace;
@@ -30,7 +30,7 @@ public class PatchKmsSpaceRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<PatchKmsSpaceQueryParamFields>> fields;
+    private List<PatchKmsSpaceQueryParamFields> fields;
 
     /**
      * ID of the Space
@@ -44,63 +44,56 @@ public class PatchKmsSpaceRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
     @JsonCreator
     public PatchKmsSpaceRequest(
-            KmsSpace kmsSpace,
-            String connectionId,
-            Optional<? extends List<PatchKmsSpaceQueryParamFields>> fields,
-            String id,
-            Optional<String> raw) {
-        Utils.checkNotNull(kmsSpace, "kmsSpace");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(raw, "raw");
-        this.kmsSpace = kmsSpace;
-        this.connectionId = connectionId;
+            @Nonnull KmsSpace kmsSpace,
+            @Nonnull String connectionId,
+            @Nullable List<PatchKmsSpaceQueryParamFields> fields,
+            @Nonnull String id,
+            @Nullable String raw) {
+        this.kmsSpace = Optional.ofNullable(kmsSpace)
+            .orElseThrow(() -> new IllegalArgumentException("kmsSpace cannot be null"));
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
-        this.id = id;
+        this.id = Optional.ofNullable(id)
+            .orElseThrow(() -> new IllegalArgumentException("id cannot be null"));
         this.raw = raw;
     }
     
     public PatchKmsSpaceRequest(
-            KmsSpace kmsSpace,
-            String connectionId,
-            String id) {
-        this(kmsSpace, connectionId, Optional.empty(),
-            id, Optional.empty());
+            @Nonnull KmsSpace kmsSpace,
+            @Nonnull String connectionId,
+            @Nonnull String id) {
+        this(kmsSpace, connectionId, null,
+            id, null);
     }
 
-    @JsonIgnore
     public KmsSpace kmsSpace() {
-        return kmsSpace;
+        return this.kmsSpace;
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<PatchKmsSpaceQueryParamFields>> fields() {
-        return (Optional<List<PatchKmsSpaceQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
      * ID of the Space
      */
-    @JsonIgnore
     public String id() {
-        return id;
+        return this.id;
     }
 
     /**
@@ -108,9 +101,8 @@ public class PatchKmsSpaceRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
     public static Builder builder() {
@@ -118,27 +110,17 @@ public class PatchKmsSpaceRequest {
     }
 
 
-    public PatchKmsSpaceRequest withKmsSpace(KmsSpace kmsSpace) {
-        Utils.checkNotNull(kmsSpace, "kmsSpace");
-        this.kmsSpace = kmsSpace;
+    public PatchKmsSpaceRequest withKmsSpace(@Nonnull KmsSpace kmsSpace) {
+        this.kmsSpace = Utils.checkNotNull(kmsSpace, "kmsSpace");
         return this;
     }
+
 
     /**
      * ID of the connection
      */
-    public PatchKmsSpaceRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public PatchKmsSpaceRequest withFields(List<PatchKmsSpaceQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public PatchKmsSpaceRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -146,29 +128,17 @@ public class PatchKmsSpaceRequest {
     /**
      * Fields to return
      */
-    public PatchKmsSpaceRequest withFields(Optional<? extends List<PatchKmsSpaceQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public PatchKmsSpaceRequest withFields(@Nullable List<PatchKmsSpaceQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
+
     /**
      * ID of the Space
      */
-    public PatchKmsSpaceRequest withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = id;
-        return this;
-    }
-
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public PatchKmsSpaceRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
+    public PatchKmsSpaceRequest withId(@Nonnull String id) {
+        this.id = Utils.checkNotNull(id, "id");
         return this;
     }
 
@@ -178,11 +148,11 @@ public class PatchKmsSpaceRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public PatchKmsSpaceRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public PatchKmsSpaceRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -225,71 +195,42 @@ public class PatchKmsSpaceRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<PatchKmsSpaceQueryParamFields>> fields = Optional.empty();
+        private List<PatchKmsSpaceQueryParamFields> fields;
 
         private String id;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder kmsSpace(KmsSpace kmsSpace) {
-            Utils.checkNotNull(kmsSpace, "kmsSpace");
-            this.kmsSpace = kmsSpace;
+        public Builder kmsSpace(@Nonnull KmsSpace kmsSpace) {
+            this.kmsSpace = Utils.checkNotNull(kmsSpace, "kmsSpace");
             return this;
         }
-
 
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<PatchKmsSpaceQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<PatchKmsSpaceQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<PatchKmsSpaceQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * ID of the Space
          */
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = id;
-            return this;
-        }
-
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
+        public Builder id(@Nonnull String id) {
+            this.id = Utils.checkNotNull(id, "id");
             return this;
         }
 
@@ -298,14 +239,12 @@ public class PatchKmsSpaceRequest {
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
         public PatchKmsSpaceRequest build() {
-
             return new PatchKmsSpaceRequest(
                 kmsSpace, connectionId, fields,
                 id, raw);

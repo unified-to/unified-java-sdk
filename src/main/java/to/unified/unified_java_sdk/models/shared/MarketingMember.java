@@ -4,14 +4,13 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
@@ -27,81 +26,71 @@ public class MarketingMember {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
     /**
      * An array of email addresses for this member
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emails")
-    private Optional<? extends List<MarketingEmail>> emails;
+    private List<MarketingEmail> emails;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first_name")
-    private Optional<String> firstName;
+    private String firstName;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_name")
-    private Optional<String> lastName;
+    private String lastName;
 
     /**
      * An array of list IDs associated with this member
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_ids")
-    private Optional<? extends List<String>> listIds;
+    private List<String> listIds;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
-    private Optional<String> name;
+    private String name;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
     /**
      * An array of tags associated with this member
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
-    private Optional<? extends List<String>> tags;
+    private List<String> tags;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
     @JsonCreator
     public MarketingMember(
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("emails") Optional<? extends List<MarketingEmail>> emails,
-            @JsonProperty("first_name") Optional<String> firstName,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("last_name") Optional<String> lastName,
-            @JsonProperty("list_ids") Optional<? extends List<String>> listIds,
-            @JsonProperty("name") Optional<String> name,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("tags") Optional<? extends List<String>> tags,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(emails, "emails");
-        Utils.checkNotNull(firstName, "firstName");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(lastName, "lastName");
-        Utils.checkNotNull(listIds, "listIds");
-        Utils.checkNotNull(name, "name");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(tags, "tags");
-        Utils.checkNotNull(updatedAt, "updatedAt");
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("emails") @Nullable List<MarketingEmail> emails,
+            @JsonProperty("first_name") @Nullable String firstName,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("last_name") @Nullable String lastName,
+            @JsonProperty("list_ids") @Nullable List<String> listIds,
+            @JsonProperty("name") @Nullable String name,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("tags") @Nullable List<String> tags,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.createdAt = createdAt;
         this.emails = emails;
         this.firstName = firstName;
@@ -115,73 +104,59 @@ public class MarketingMember {
     }
     
     public MarketingMember() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
     /**
      * An array of email addresses for this member
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<MarketingEmail>> emails() {
-        return (Optional<List<MarketingEmail>>) emails;
+        return Optional.ofNullable(this.emails);
     }
 
-    @JsonIgnore
     public Optional<String> firstName() {
-        return firstName;
+        return Optional.ofNullable(this.firstName);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<String> lastName() {
-        return lastName;
+        return Optional.ofNullable(this.lastName);
     }
 
     /**
      * An array of list IDs associated with this member
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> listIds() {
-        return (Optional<List<String>>) listIds;
+        return Optional.ofNullable(this.listIds);
     }
 
-    @JsonIgnore
     public Optional<String> name() {
-        return name;
+        return Optional.ofNullable(this.name);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
     /**
      * An array of tags associated with this member
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> tags() {
-        return (Optional<List<String>>) tags;
+        return Optional.ofNullable(this.tags);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
     public static Builder builder() {
@@ -189,153 +164,74 @@ public class MarketingMember {
     }
 
 
-    public MarketingMember withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
-
-
-    public MarketingMember withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public MarketingMember withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    /**
-     * An array of email addresses for this member
-     */
-    public MarketingMember withEmails(List<MarketingEmail> emails) {
-        Utils.checkNotNull(emails, "emails");
-        this.emails = Optional.ofNullable(emails);
-        return this;
-    }
-
 
     /**
      * An array of email addresses for this member
      */
-    public MarketingMember withEmails(Optional<? extends List<MarketingEmail>> emails) {
-        Utils.checkNotNull(emails, "emails");
+    public MarketingMember withEmails(@Nullable List<MarketingEmail> emails) {
         this.emails = emails;
         return this;
     }
 
-    public MarketingMember withFirstName(String firstName) {
-        Utils.checkNotNull(firstName, "firstName");
-        this.firstName = Optional.ofNullable(firstName);
-        return this;
-    }
 
-
-    public MarketingMember withFirstName(Optional<String> firstName) {
-        Utils.checkNotNull(firstName, "firstName");
+    public MarketingMember withFirstName(@Nullable String firstName) {
         this.firstName = firstName;
         return this;
     }
 
-    public MarketingMember withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public MarketingMember withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public MarketingMember withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public MarketingMember withLastName(String lastName) {
-        Utils.checkNotNull(lastName, "lastName");
-        this.lastName = Optional.ofNullable(lastName);
-        return this;
-    }
 
-
-    public MarketingMember withLastName(Optional<String> lastName) {
-        Utils.checkNotNull(lastName, "lastName");
+    public MarketingMember withLastName(@Nullable String lastName) {
         this.lastName = lastName;
         return this;
     }
 
-    /**
-     * An array of list IDs associated with this member
-     */
-    public MarketingMember withListIds(List<String> listIds) {
-        Utils.checkNotNull(listIds, "listIds");
-        this.listIds = Optional.ofNullable(listIds);
-        return this;
-    }
-
 
     /**
      * An array of list IDs associated with this member
      */
-    public MarketingMember withListIds(Optional<? extends List<String>> listIds) {
-        Utils.checkNotNull(listIds, "listIds");
+    public MarketingMember withListIds(@Nullable List<String> listIds) {
         this.listIds = listIds;
         return this;
     }
 
-    public MarketingMember withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = Optional.ofNullable(name);
-        return this;
-    }
 
-
-    public MarketingMember withName(Optional<String> name) {
-        Utils.checkNotNull(name, "name");
+    public MarketingMember withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
-    public MarketingMember withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public MarketingMember withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public MarketingMember withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    /**
-     * An array of tags associated with this member
-     */
-    public MarketingMember withTags(List<String> tags) {
-        Utils.checkNotNull(tags, "tags");
-        this.tags = Optional.ofNullable(tags);
-        return this;
-    }
-
 
     /**
      * An array of tags associated with this member
      */
-    public MarketingMember withTags(Optional<? extends List<String>> tags) {
-        Utils.checkNotNull(tags, "tags");
+    public MarketingMember withTags(@Nullable List<String> tags) {
         this.tags = tags;
         return this;
     }
 
-    public MarketingMember withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public MarketingMember withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public MarketingMember withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -386,180 +282,90 @@ public class MarketingMember {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<? extends List<MarketingEmail>> emails = Optional.empty();
+        private List<MarketingEmail> emails;
 
-        private Optional<String> firstName = Optional.empty();
+        private String firstName;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<String> lastName = Optional.empty();
+        private String lastName;
 
-        private Optional<? extends List<String>> listIds = Optional.empty();
+        private List<String> listIds;
 
-        private Optional<String> name = Optional.empty();
+        private String name;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<? extends List<String>> tags = Optional.empty();
+        private List<String> tags;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
         /**
          * An array of email addresses for this member
          */
-        public Builder emails(List<MarketingEmail> emails) {
-            Utils.checkNotNull(emails, "emails");
-            this.emails = Optional.ofNullable(emails);
-            return this;
-        }
-
-        /**
-         * An array of email addresses for this member
-         */
-        public Builder emails(Optional<? extends List<MarketingEmail>> emails) {
-            Utils.checkNotNull(emails, "emails");
+        public Builder emails(@Nullable List<MarketingEmail> emails) {
             this.emails = emails;
             return this;
         }
 
-
-        public Builder firstName(String firstName) {
-            Utils.checkNotNull(firstName, "firstName");
-            this.firstName = Optional.ofNullable(firstName);
-            return this;
-        }
-
-        public Builder firstName(Optional<String> firstName) {
-            Utils.checkNotNull(firstName, "firstName");
+        public Builder firstName(@Nullable String firstName) {
             this.firstName = firstName;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder lastName(String lastName) {
-            Utils.checkNotNull(lastName, "lastName");
-            this.lastName = Optional.ofNullable(lastName);
-            return this;
-        }
-
-        public Builder lastName(Optional<String> lastName) {
-            Utils.checkNotNull(lastName, "lastName");
+        public Builder lastName(@Nullable String lastName) {
             this.lastName = lastName;
             return this;
         }
 
-
         /**
          * An array of list IDs associated with this member
          */
-        public Builder listIds(List<String> listIds) {
-            Utils.checkNotNull(listIds, "listIds");
-            this.listIds = Optional.ofNullable(listIds);
-            return this;
-        }
-
-        /**
-         * An array of list IDs associated with this member
-         */
-        public Builder listIds(Optional<? extends List<String>> listIds) {
-            Utils.checkNotNull(listIds, "listIds");
+        public Builder listIds(@Nullable List<String> listIds) {
             this.listIds = listIds;
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = Optional.ofNullable(name);
-            return this;
-        }
-
-        public Builder name(Optional<String> name) {
-            Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
         /**
          * An array of tags associated with this member
          */
-        public Builder tags(List<String> tags) {
-            Utils.checkNotNull(tags, "tags");
-            this.tags = Optional.ofNullable(tags);
-            return this;
-        }
-
-        /**
-         * An array of tags associated with this member
-         */
-        public Builder tags(Optional<? extends List<String>> tags) {
-            Utils.checkNotNull(tags, "tags");
+        public Builder tags(@Nullable List<String> tags) {
             this.tags = tags;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
         public MarketingMember build() {
-
             return new MarketingMember(
                 createdAt, emails, firstName,
                 id, lastName, listIds,

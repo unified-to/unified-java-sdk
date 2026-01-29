@@ -4,7 +4,7 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
@@ -18,75 +18,65 @@ public class ListUnifiedWebhooksRequest {
      * Filter the results to just this integration
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=connection_id")
-    private Optional<String> connectionId;
+    private String connectionId;
 
     /**
      * Return only results whose created date is equal or less to this value
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=created_lte")
-    private Optional<String> createdLte;
+    private String createdLte;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=env")
-    private Optional<String> env;
+    private String env;
 
     /**
      * Filter the results to just this integration
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=integration_type")
-    private Optional<String> integrationType;
+    private String integrationType;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
-    private Optional<Double> limit;
+    private Double limit;
 
     /**
      * Filter the results for webhooks for only this object
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=object")
-    private Optional<String> object;
+    private String object;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
-    private Optional<Double> offset;
+    private Double offset;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
-    private Optional<String> order;
+    private String order;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
-    private Optional<String> sort;
+    private String sort;
 
     /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
-    private Optional<String> updatedGte;
+    private String updatedGte;
 
     @JsonCreator
     public ListUnifiedWebhooksRequest(
-            Optional<String> connectionId,
-            Optional<String> createdLte,
-            Optional<String> env,
-            Optional<String> integrationType,
-            Optional<Double> limit,
-            Optional<String> object,
-            Optional<Double> offset,
-            Optional<String> order,
-            Optional<String> sort,
-            Optional<String> updatedGte) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(createdLte, "createdLte");
-        Utils.checkNotNull(env, "env");
-        Utils.checkNotNull(integrationType, "integrationType");
-        Utils.checkNotNull(limit, "limit");
-        Utils.checkNotNull(object, "object");
-        Utils.checkNotNull(offset, "offset");
-        Utils.checkNotNull(order, "order");
-        Utils.checkNotNull(sort, "sort");
-        Utils.checkNotNull(updatedGte, "updatedGte");
+            @Nullable String connectionId,
+            @Nullable String createdLte,
+            @Nullable String env,
+            @Nullable String integrationType,
+            @Nullable Double limit,
+            @Nullable String object,
+            @Nullable Double offset,
+            @Nullable String order,
+            @Nullable String sort,
+            @Nullable String updatedGte) {
         this.connectionId = connectionId;
         this.createdLte = createdLte;
         this.env = env;
@@ -100,76 +90,66 @@ public class ListUnifiedWebhooksRequest {
     }
     
     public ListUnifiedWebhooksRequest() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null);
     }
 
     /**
      * Filter the results to just this integration
      */
-    @JsonIgnore
     public Optional<String> connectionId() {
-        return connectionId;
+        return Optional.ofNullable(this.connectionId);
     }
 
     /**
      * Return only results whose created date is equal or less to this value
      */
-    @JsonIgnore
     public Optional<String> createdLte() {
-        return createdLte;
+        return Optional.ofNullable(this.createdLte);
     }
 
-    @JsonIgnore
     public Optional<String> env() {
-        return env;
+        return Optional.ofNullable(this.env);
     }
 
     /**
      * Filter the results to just this integration
      */
-    @JsonIgnore
     public Optional<String> integrationType() {
-        return integrationType;
+        return Optional.ofNullable(this.integrationType);
     }
 
-    @JsonIgnore
     public Optional<Double> limit() {
-        return limit;
+        return Optional.ofNullable(this.limit);
     }
 
     /**
      * Filter the results for webhooks for only this object
      */
-    @JsonIgnore
     public Optional<String> object() {
-        return object;
+        return Optional.ofNullable(this.object);
     }
 
-    @JsonIgnore
     public Optional<Double> offset() {
-        return offset;
+        return Optional.ofNullable(this.offset);
     }
 
-    @JsonIgnore
     public Optional<String> order() {
-        return order;
+        return Optional.ofNullable(this.order);
     }
 
-    @JsonIgnore
     public Optional<String> sort() {
-        return sort;
+        return Optional.ofNullable(this.sort);
     }
 
     /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
-    @JsonIgnore
     public Optional<String> updatedGte() {
-        return updatedGte;
+        return Optional.ofNullable(this.updatedGte);
     }
 
     public static Builder builder() {
@@ -180,164 +160,78 @@ public class ListUnifiedWebhooksRequest {
     /**
      * Filter the results to just this integration
      */
-    public ListUnifiedWebhooksRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = Optional.ofNullable(connectionId);
-        return this;
-    }
-
-
-    /**
-     * Filter the results to just this integration
-     */
-    public ListUnifiedWebhooksRequest withConnectionId(Optional<String> connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
+    public ListUnifiedWebhooksRequest withConnectionId(@Nullable String connectionId) {
         this.connectionId = connectionId;
         return this;
     }
 
-    /**
-     * Return only results whose created date is equal or less to this value
-     */
-    public ListUnifiedWebhooksRequest withCreatedLte(String createdLte) {
-        Utils.checkNotNull(createdLte, "createdLte");
-        this.createdLte = Optional.ofNullable(createdLte);
-        return this;
-    }
-
 
     /**
      * Return only results whose created date is equal or less to this value
      */
-    public ListUnifiedWebhooksRequest withCreatedLte(Optional<String> createdLte) {
-        Utils.checkNotNull(createdLte, "createdLte");
+    public ListUnifiedWebhooksRequest withCreatedLte(@Nullable String createdLte) {
         this.createdLte = createdLte;
         return this;
     }
 
-    public ListUnifiedWebhooksRequest withEnv(String env) {
-        Utils.checkNotNull(env, "env");
-        this.env = Optional.ofNullable(env);
-        return this;
-    }
 
-
-    public ListUnifiedWebhooksRequest withEnv(Optional<String> env) {
-        Utils.checkNotNull(env, "env");
+    public ListUnifiedWebhooksRequest withEnv(@Nullable String env) {
         this.env = env;
         return this;
     }
 
-    /**
-     * Filter the results to just this integration
-     */
-    public ListUnifiedWebhooksRequest withIntegrationType(String integrationType) {
-        Utils.checkNotNull(integrationType, "integrationType");
-        this.integrationType = Optional.ofNullable(integrationType);
-        return this;
-    }
-
 
     /**
      * Filter the results to just this integration
      */
-    public ListUnifiedWebhooksRequest withIntegrationType(Optional<String> integrationType) {
-        Utils.checkNotNull(integrationType, "integrationType");
+    public ListUnifiedWebhooksRequest withIntegrationType(@Nullable String integrationType) {
         this.integrationType = integrationType;
         return this;
     }
 
-    public ListUnifiedWebhooksRequest withLimit(double limit) {
-        Utils.checkNotNull(limit, "limit");
-        this.limit = Optional.ofNullable(limit);
-        return this;
-    }
 
-
-    public ListUnifiedWebhooksRequest withLimit(Optional<Double> limit) {
-        Utils.checkNotNull(limit, "limit");
+    public ListUnifiedWebhooksRequest withLimit(@Nullable Double limit) {
         this.limit = limit;
         return this;
     }
 
-    /**
-     * Filter the results for webhooks for only this object
-     */
-    public ListUnifiedWebhooksRequest withObject(String object) {
-        Utils.checkNotNull(object, "object");
-        this.object = Optional.ofNullable(object);
-        return this;
-    }
-
 
     /**
      * Filter the results for webhooks for only this object
      */
-    public ListUnifiedWebhooksRequest withObject(Optional<String> object) {
-        Utils.checkNotNull(object, "object");
+    public ListUnifiedWebhooksRequest withObject(@Nullable String object) {
         this.object = object;
         return this;
     }
 
-    public ListUnifiedWebhooksRequest withOffset(double offset) {
-        Utils.checkNotNull(offset, "offset");
-        this.offset = Optional.ofNullable(offset);
-        return this;
-    }
 
-
-    public ListUnifiedWebhooksRequest withOffset(Optional<Double> offset) {
-        Utils.checkNotNull(offset, "offset");
+    public ListUnifiedWebhooksRequest withOffset(@Nullable Double offset) {
         this.offset = offset;
         return this;
     }
 
-    public ListUnifiedWebhooksRequest withOrder(String order) {
-        Utils.checkNotNull(order, "order");
-        this.order = Optional.ofNullable(order);
-        return this;
-    }
 
-
-    public ListUnifiedWebhooksRequest withOrder(Optional<String> order) {
-        Utils.checkNotNull(order, "order");
+    public ListUnifiedWebhooksRequest withOrder(@Nullable String order) {
         this.order = order;
         return this;
     }
 
-    public ListUnifiedWebhooksRequest withSort(String sort) {
-        Utils.checkNotNull(sort, "sort");
-        this.sort = Optional.ofNullable(sort);
-        return this;
-    }
 
-
-    public ListUnifiedWebhooksRequest withSort(Optional<String> sort) {
-        Utils.checkNotNull(sort, "sort");
+    public ListUnifiedWebhooksRequest withSort(@Nullable String sort) {
         this.sort = sort;
         return this;
     }
 
-    /**
-     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
-     * YYYY-MM-DDTHH:MM:SSZ format)
-     */
-    public ListUnifiedWebhooksRequest withUpdatedGte(String updatedGte) {
-        Utils.checkNotNull(updatedGte, "updatedGte");
-        this.updatedGte = Optional.ofNullable(updatedGte);
-        return this;
-    }
-
 
     /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
-    public ListUnifiedWebhooksRequest withUpdatedGte(Optional<String> updatedGte) {
-        Utils.checkNotNull(updatedGte, "updatedGte");
+    public ListUnifiedWebhooksRequest withUpdatedGte(@Nullable String updatedGte) {
         this.updatedGte = updatedGte;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -388,194 +282,97 @@ public class ListUnifiedWebhooksRequest {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> connectionId = Optional.empty();
+        private String connectionId;
 
-        private Optional<String> createdLte = Optional.empty();
+        private String createdLte;
 
-        private Optional<String> env = Optional.empty();
+        private String env;
 
-        private Optional<String> integrationType = Optional.empty();
+        private String integrationType;
 
-        private Optional<Double> limit = Optional.empty();
+        private Double limit;
 
-        private Optional<String> object = Optional.empty();
+        private String object;
 
-        private Optional<Double> offset = Optional.empty();
+        private Double offset;
 
-        private Optional<String> order = Optional.empty();
+        private String order;
 
-        private Optional<String> sort = Optional.empty();
+        private String sort;
 
-        private Optional<String> updatedGte = Optional.empty();
+        private String updatedGte;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
         /**
          * Filter the results to just this integration
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = Optional.ofNullable(connectionId);
-            return this;
-        }
-
-        /**
-         * Filter the results to just this integration
-         */
-        public Builder connectionId(Optional<String> connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
+        public Builder connectionId(@Nullable String connectionId) {
             this.connectionId = connectionId;
             return this;
         }
 
-
         /**
          * Return only results whose created date is equal or less to this value
          */
-        public Builder createdLte(String createdLte) {
-            Utils.checkNotNull(createdLte, "createdLte");
-            this.createdLte = Optional.ofNullable(createdLte);
-            return this;
-        }
-
-        /**
-         * Return only results whose created date is equal or less to this value
-         */
-        public Builder createdLte(Optional<String> createdLte) {
-            Utils.checkNotNull(createdLte, "createdLte");
+        public Builder createdLte(@Nullable String createdLte) {
             this.createdLte = createdLte;
             return this;
         }
 
-
-        public Builder env(String env) {
-            Utils.checkNotNull(env, "env");
-            this.env = Optional.ofNullable(env);
-            return this;
-        }
-
-        public Builder env(Optional<String> env) {
-            Utils.checkNotNull(env, "env");
+        public Builder env(@Nullable String env) {
             this.env = env;
             return this;
         }
 
-
         /**
          * Filter the results to just this integration
          */
-        public Builder integrationType(String integrationType) {
-            Utils.checkNotNull(integrationType, "integrationType");
-            this.integrationType = Optional.ofNullable(integrationType);
-            return this;
-        }
-
-        /**
-         * Filter the results to just this integration
-         */
-        public Builder integrationType(Optional<String> integrationType) {
-            Utils.checkNotNull(integrationType, "integrationType");
+        public Builder integrationType(@Nullable String integrationType) {
             this.integrationType = integrationType;
             return this;
         }
 
-
-        public Builder limit(double limit) {
-            Utils.checkNotNull(limit, "limit");
-            this.limit = Optional.ofNullable(limit);
-            return this;
-        }
-
-        public Builder limit(Optional<Double> limit) {
-            Utils.checkNotNull(limit, "limit");
+        public Builder limit(@Nullable Double limit) {
             this.limit = limit;
             return this;
         }
 
-
         /**
          * Filter the results for webhooks for only this object
          */
-        public Builder object(String object) {
-            Utils.checkNotNull(object, "object");
-            this.object = Optional.ofNullable(object);
-            return this;
-        }
-
-        /**
-         * Filter the results for webhooks for only this object
-         */
-        public Builder object(Optional<String> object) {
-            Utils.checkNotNull(object, "object");
+        public Builder object(@Nullable String object) {
             this.object = object;
             return this;
         }
 
-
-        public Builder offset(double offset) {
-            Utils.checkNotNull(offset, "offset");
-            this.offset = Optional.ofNullable(offset);
-            return this;
-        }
-
-        public Builder offset(Optional<Double> offset) {
-            Utils.checkNotNull(offset, "offset");
+        public Builder offset(@Nullable Double offset) {
             this.offset = offset;
             return this;
         }
 
-
-        public Builder order(String order) {
-            Utils.checkNotNull(order, "order");
-            this.order = Optional.ofNullable(order);
-            return this;
-        }
-
-        public Builder order(Optional<String> order) {
-            Utils.checkNotNull(order, "order");
+        public Builder order(@Nullable String order) {
             this.order = order;
             return this;
         }
 
-
-        public Builder sort(String sort) {
-            Utils.checkNotNull(sort, "sort");
-            this.sort = Optional.ofNullable(sort);
-            return this;
-        }
-
-        public Builder sort(Optional<String> sort) {
-            Utils.checkNotNull(sort, "sort");
+        public Builder sort(@Nullable String sort) {
             this.sort = sort;
             return this;
         }
 
-
         /**
          * Return only results whose updated date is equal or greater to this value (ISO-8601 /
          * YYYY-MM-DDTHH:MM:SSZ format)
          */
-        public Builder updatedGte(String updatedGte) {
-            Utils.checkNotNull(updatedGte, "updatedGte");
-            this.updatedGte = Optional.ofNullable(updatedGte);
-            return this;
-        }
-
-        /**
-         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
-         * YYYY-MM-DDTHH:MM:SSZ format)
-         */
-        public Builder updatedGte(Optional<String> updatedGte) {
-            Utils.checkNotNull(updatedGte, "updatedGte");
+        public Builder updatedGte(@Nullable String updatedGte) {
             this.updatedGte = updatedGte;
             return this;
         }
 
         public ListUnifiedWebhooksRequest build() {
-
             return new ListUnifiedWebhooksRequest(
                 connectionId, createdLte, env,
                 integrationType, limit, object,

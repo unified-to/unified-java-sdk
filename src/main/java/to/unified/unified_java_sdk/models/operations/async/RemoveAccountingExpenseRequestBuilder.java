@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.RemoveAccountingExpenseRequest;
@@ -13,27 +14,39 @@ import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class RemoveAccountingExpenseRequestBuilder {
-
-    private RemoveAccountingExpenseRequest request;
     private final SDKConfiguration sdkConfiguration;
-    private final Headers _headers = new Headers(); 
+    private final Headers _headers = new Headers();
+    private RemoveAccountingExpenseRequest request;
 
     public RemoveAccountingExpenseRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
 
-    public RemoveAccountingExpenseRequestBuilder request(RemoveAccountingExpenseRequest request) {
-        Utils.checkNotNull(request, "request");
-        this.request = request;
+    public RemoveAccountingExpenseRequestBuilder request(@Nonnull RemoveAccountingExpenseRequest request) {
+        this.request = Utils.checkNotNull(request, "request");
         return this;
     }
 
+    private RemoveAccountingExpenseRequest _buildRequest() {
+        return this.request;
+    }
+    
+    public RemoveAccountingExpenseRequestBuilder header(String name, String value) {
+        Utils.checkNotNull(name, "name");
+        Utils.checkNotNull(value, "value");
+        this._headers.add(name, value);
+        return this;
+    }
+
+    /**
+    * Executes the request and returns the response.
+    *
+    * @return The response from the server.
+    */
     public CompletableFuture<RemoveAccountingExpenseResponse> call() {
-        
         AsyncRequestOperation<RemoveAccountingExpenseRequest, RemoveAccountingExpenseResponse> operation
               = new RemoveAccountingExpense.Async(sdkConfiguration, _headers);
-
-        return operation.doRequest(request)
+        return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }
 }

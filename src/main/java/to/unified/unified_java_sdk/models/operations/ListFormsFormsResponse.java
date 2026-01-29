@@ -4,12 +4,11 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.io.InputStream;
-import java.lang.Integer;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.List;
 import java.util.Optional;
@@ -27,7 +26,7 @@ public class ListFormsFormsResponse implements Response {
     /**
      * Successful
      */
-    private Optional<? extends List<FormsForm>> formsForms;
+    private List<FormsForm> formsForms;
 
     /**
      * HTTP response status code for this operation
@@ -41,59 +40,52 @@ public class ListFormsFormsResponse implements Response {
 
     @JsonCreator
     public ListFormsFormsResponse(
-            String contentType,
-            Optional<? extends List<FormsForm>> formsForms,
+            @Nonnull String contentType,
+            @Nullable List<FormsForm> formsForms,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(formsForms, "formsForms");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.contentType = contentType;
+            @Nonnull HttpResponse<InputStream> rawResponse) {
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.formsForms = formsForms;
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
     }
     
     public ListFormsFormsResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
-        this(contentType, Optional.empty(), statusCode,
+            @Nonnull HttpResponse<InputStream> rawResponse) {
+        this(contentType, null, statusCode,
             rawResponse);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<FormsForm>> formsForms() {
-        return (Optional<List<FormsForm>>) formsForms;
+        return Optional.ofNullable(this.formsForms);
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<InputStream> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     public static Builder builder() {
@@ -104,18 +96,8 @@ public class ListFormsFormsResponse implements Response {
     /**
      * HTTP response content type for this operation
      */
-    public ListFormsFormsResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
-        return this;
-    }
-
-    /**
-     * Successful
-     */
-    public ListFormsFormsResponse withFormsForms(List<FormsForm> formsForms) {
-        Utils.checkNotNull(formsForms, "formsForms");
-        this.formsForms = Optional.ofNullable(formsForms);
+    public ListFormsFormsResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
 
@@ -123,29 +105,29 @@ public class ListFormsFormsResponse implements Response {
     /**
      * Successful
      */
-    public ListFormsFormsResponse withFormsForms(Optional<? extends List<FormsForm>> formsForms) {
-        Utils.checkNotNull(formsForms, "formsForms");
+    public ListFormsFormsResponse withFormsForms(@Nullable List<FormsForm> formsForms) {
         this.formsForms = formsForms;
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public ListFormsFormsResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public ListFormsFormsResponse withRawResponse(HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
+    public ListFormsFormsResponse withRawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -184,9 +166,9 @@ public class ListFormsFormsResponse implements Response {
 
         private String contentType;
 
-        private Optional<? extends List<FormsForm>> formsForms = Optional.empty();
+        private List<FormsForm> formsForms;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<InputStream> rawResponse;
 
@@ -194,57 +176,39 @@ public class ListFormsFormsResponse implements Response {
           // force use of static builder() method
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
-            return this;
-        }
-
-
-        /**
-         * Successful
-         */
-        public Builder formsForms(List<FormsForm> formsForms) {
-            Utils.checkNotNull(formsForms, "formsForms");
-            this.formsForms = Optional.ofNullable(formsForms);
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
 
         /**
          * Successful
          */
-        public Builder formsForms(Optional<? extends List<FormsForm>> formsForms) {
-            Utils.checkNotNull(formsForms, "formsForms");
+        public Builder formsForms(@Nullable List<FormsForm> formsForms) {
             this.formsForms = formsForms;
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<InputStream> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
+        public Builder rawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         public ListFormsFormsResponse build() {
-
             return new ListFormsFormsResponse(
                 contentType, formsForms, statusCode,
                 rawResponse);

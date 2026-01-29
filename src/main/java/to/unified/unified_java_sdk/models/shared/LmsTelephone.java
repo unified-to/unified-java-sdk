@@ -4,13 +4,13 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -23,32 +23,28 @@ public class LmsTelephone {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
-    private Optional<? extends LmsTelephoneType> type;
+    private LmsTelephoneType type;
 
     @JsonCreator
     public LmsTelephone(
-            @JsonProperty("telephone") String telephone,
-            @JsonProperty("type") Optional<? extends LmsTelephoneType> type) {
-        Utils.checkNotNull(telephone, "telephone");
-        Utils.checkNotNull(type, "type");
-        this.telephone = telephone;
+            @JsonProperty("telephone") @Nonnull String telephone,
+            @JsonProperty("type") @Nullable LmsTelephoneType type) {
+        this.telephone = Optional.ofNullable(telephone)
+            .orElseThrow(() -> new IllegalArgumentException("telephone cannot be null"));
         this.type = type;
     }
     
     public LmsTelephone(
-            String telephone) {
-        this(telephone, Optional.empty());
+            @Nonnull String telephone) {
+        this(telephone, null);
     }
 
-    @JsonIgnore
     public String telephone() {
-        return telephone;
+        return this.telephone;
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<LmsTelephoneType> type() {
-        return (Optional<LmsTelephoneType>) type;
+        return Optional.ofNullable(this.type);
     }
 
     public static Builder builder() {
@@ -56,24 +52,17 @@ public class LmsTelephone {
     }
 
 
-    public LmsTelephone withTelephone(String telephone) {
-        Utils.checkNotNull(telephone, "telephone");
-        this.telephone = telephone;
-        return this;
-    }
-
-    public LmsTelephone withType(LmsTelephoneType type) {
-        Utils.checkNotNull(type, "type");
-        this.type = Optional.ofNullable(type);
+    public LmsTelephone withTelephone(@Nonnull String telephone) {
+        this.telephone = Utils.checkNotNull(telephone, "telephone");
         return this;
     }
 
 
-    public LmsTelephone withType(Optional<? extends LmsTelephoneType> type) {
-        Utils.checkNotNull(type, "type");
+    public LmsTelephone withType(@Nullable LmsTelephoneType type) {
         this.type = type;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -107,34 +96,23 @@ public class LmsTelephone {
 
         private String telephone;
 
-        private Optional<? extends LmsTelephoneType> type = Optional.empty();
+        private LmsTelephoneType type;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder telephone(String telephone) {
-            Utils.checkNotNull(telephone, "telephone");
-            this.telephone = telephone;
+        public Builder telephone(@Nonnull String telephone) {
+            this.telephone = Utils.checkNotNull(telephone, "telephone");
             return this;
         }
 
-
-        public Builder type(LmsTelephoneType type) {
-            Utils.checkNotNull(type, "type");
-            this.type = Optional.ofNullable(type);
-            return this;
-        }
-
-        public Builder type(Optional<? extends LmsTelephoneType> type) {
-            Utils.checkNotNull(type, "type");
+        public Builder type(@Nullable LmsTelephoneType type) {
             this.type = type;
             return this;
         }
 
         public LmsTelephone build() {
-
             return new LmsTelephone(
                 telephone, type);
         }

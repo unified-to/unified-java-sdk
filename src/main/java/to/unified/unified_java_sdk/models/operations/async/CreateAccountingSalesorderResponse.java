@@ -4,11 +4,11 @@
 package to.unified.unified_java_sdk.models.operations.async;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import java.lang.Integer;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.io.InputStream;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.AccountingSalesorder;
@@ -21,7 +21,7 @@ public class CreateAccountingSalesorderResponse implements AsyncResponse {
     /**
      * Successful
      */
-    private Optional<? extends AccountingSalesorder> accountingSalesorder;
+    private AccountingSalesorder accountingSalesorder;
 
     /**
      * HTTP response content type for this operation
@@ -40,59 +40,52 @@ public class CreateAccountingSalesorderResponse implements AsyncResponse {
 
     @JsonCreator
     public CreateAccountingSalesorderResponse(
-            Optional<? extends AccountingSalesorder> accountingSalesorder,
-            String contentType,
+            @Nullable AccountingSalesorder accountingSalesorder,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(accountingSalesorder, "accountingSalesorder");
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
+            @Nonnull HttpResponse<Blob> rawResponse) {
         this.accountingSalesorder = accountingSalesorder;
-        this.contentType = contentType;
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
     }
     
     public CreateAccountingSalesorderResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
-        this(Optional.empty(), contentType, statusCode,
+            @Nonnull HttpResponse<Blob> rawResponse) {
+        this(null, contentType, statusCode,
             rawResponse);
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<AccountingSalesorder> accountingSalesorder() {
-        return (Optional<AccountingSalesorder>) accountingSalesorder;
+        return Optional.ofNullable(this.accountingSalesorder);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<Blob> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     public static Builder builder() {
@@ -103,48 +96,38 @@ public class CreateAccountingSalesorderResponse implements AsyncResponse {
     /**
      * Successful
      */
-    public CreateAccountingSalesorderResponse withAccountingSalesorder(AccountingSalesorder accountingSalesorder) {
-        Utils.checkNotNull(accountingSalesorder, "accountingSalesorder");
-        this.accountingSalesorder = Optional.ofNullable(accountingSalesorder);
-        return this;
-    }
-
-
-    /**
-     * Successful
-     */
-    public CreateAccountingSalesorderResponse withAccountingSalesorder(Optional<? extends AccountingSalesorder> accountingSalesorder) {
-        Utils.checkNotNull(accountingSalesorder, "accountingSalesorder");
+    public CreateAccountingSalesorderResponse withAccountingSalesorder(@Nullable AccountingSalesorder accountingSalesorder) {
         this.accountingSalesorder = accountingSalesorder;
         return this;
     }
 
+
     /**
      * HTTP response content type for this operation
      */
-    public CreateAccountingSalesorderResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
+    public CreateAccountingSalesorderResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public CreateAccountingSalesorderResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public CreateAccountingSalesorderResponse withRawResponse(HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
+    public CreateAccountingSalesorderResponse withRawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -181,11 +164,11 @@ public class CreateAccountingSalesorderResponse implements AsyncResponse {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends AccountingSalesorder> accountingSalesorder = Optional.empty();
+        private AccountingSalesorder accountingSalesorder;
 
         private String contentType;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<Blob> rawResponse;
 
@@ -193,57 +176,39 @@ public class CreateAccountingSalesorderResponse implements AsyncResponse {
           // force use of static builder() method
         }
 
-
         /**
          * Successful
          */
-        public Builder accountingSalesorder(AccountingSalesorder accountingSalesorder) {
-            Utils.checkNotNull(accountingSalesorder, "accountingSalesorder");
-            this.accountingSalesorder = Optional.ofNullable(accountingSalesorder);
-            return this;
-        }
-
-        /**
-         * Successful
-         */
-        public Builder accountingSalesorder(Optional<? extends AccountingSalesorder> accountingSalesorder) {
-            Utils.checkNotNull(accountingSalesorder, "accountingSalesorder");
+        public Builder accountingSalesorder(@Nullable AccountingSalesorder accountingSalesorder) {
             this.accountingSalesorder = accountingSalesorder;
             return this;
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<Blob> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
+        public Builder rawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         public CreateAccountingSalesorderResponse build() {
-
             return new CreateAccountingSalesorderResponse(
                 accountingSalesorder, contentType, statusCode,
                 rawResponse);

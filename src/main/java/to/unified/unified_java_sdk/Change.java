@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.GetTaskChangeRequest;
 import to.unified.unified_java_sdk.models.operations.GetTaskChangeRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetTaskChangeResponse;
@@ -51,7 +52,7 @@ public class Change {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetTaskChangeResponse getTaskChange(GetTaskChangeRequest request) {
+    public GetTaskChangeResponse getTaskChange(@Nonnull GetTaskChangeRequest request) {
         RequestOperation<GetTaskChangeRequest, GetTaskChangeResponse> operation
               = new GetTaskChange.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -73,7 +74,7 @@ public class Change {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListTaskChangesResponse listTaskChanges(ListTaskChangesRequest request) {
+    public ListTaskChangesResponse listTaskChanges(@Nonnull ListTaskChangesRequest request) {
         RequestOperation<ListTaskChangesRequest, ListTaskChangesResponse> operation
               = new ListTaskChanges.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

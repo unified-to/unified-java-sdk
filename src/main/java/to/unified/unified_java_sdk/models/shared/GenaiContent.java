@@ -4,13 +4,13 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -23,32 +23,28 @@ public class GenaiContent {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
-    private Optional<? extends Role> role;
+    private Role role;
 
     @JsonCreator
     public GenaiContent(
-            @JsonProperty("content") String content,
-            @JsonProperty("role") Optional<? extends Role> role) {
-        Utils.checkNotNull(content, "content");
-        Utils.checkNotNull(role, "role");
-        this.content = content;
+            @JsonProperty("content") @Nonnull String content,
+            @JsonProperty("role") @Nullable Role role) {
+        this.content = Optional.ofNullable(content)
+            .orElseThrow(() -> new IllegalArgumentException("content cannot be null"));
         this.role = role;
     }
     
     public GenaiContent(
-            String content) {
-        this(content, Optional.empty());
+            @Nonnull String content) {
+        this(content, null);
     }
 
-    @JsonIgnore
     public String content() {
-        return content;
+        return this.content;
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Role> role() {
-        return (Optional<Role>) role;
+        return Optional.ofNullable(this.role);
     }
 
     public static Builder builder() {
@@ -56,24 +52,17 @@ public class GenaiContent {
     }
 
 
-    public GenaiContent withContent(String content) {
-        Utils.checkNotNull(content, "content");
-        this.content = content;
-        return this;
-    }
-
-    public GenaiContent withRole(Role role) {
-        Utils.checkNotNull(role, "role");
-        this.role = Optional.ofNullable(role);
+    public GenaiContent withContent(@Nonnull String content) {
+        this.content = Utils.checkNotNull(content, "content");
         return this;
     }
 
 
-    public GenaiContent withRole(Optional<? extends Role> role) {
-        Utils.checkNotNull(role, "role");
+    public GenaiContent withRole(@Nullable Role role) {
         this.role = role;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -107,34 +96,23 @@ public class GenaiContent {
 
         private String content;
 
-        private Optional<? extends Role> role = Optional.empty();
+        private Role role;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder content(String content) {
-            Utils.checkNotNull(content, "content");
-            this.content = content;
+        public Builder content(@Nonnull String content) {
+            this.content = Utils.checkNotNull(content, "content");
             return this;
         }
 
-
-        public Builder role(Role role) {
-            Utils.checkNotNull(role, "role");
-            this.role = Optional.ofNullable(role);
-            return this;
-        }
-
-        public Builder role(Optional<? extends Role> role) {
-            Utils.checkNotNull(role, "role");
+        public Builder role(@Nullable Role role) {
             this.role = role;
             return this;
         }
 
         public GenaiContent build() {
-
             return new GenaiContent(
                 content, role);
         }

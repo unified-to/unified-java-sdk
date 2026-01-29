@@ -4,14 +4,13 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
@@ -23,124 +22,107 @@ public class AtsApplication {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("answers")
-    private Optional<? extends List<AtsApplicationAnswer>> answers;
+    private List<AtsApplicationAnswer> answers;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applied_at")
-    private Optional<OffsetDateTime> appliedAt;
+    private OffsetDateTime appliedAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_id")
-    private Optional<String> candidateId;
+    private String candidateId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hired_at")
-    private Optional<OffsetDateTime> hiredAt;
+    private OffsetDateTime hiredAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("job_id")
-    private Optional<String> jobId;
+    private String jobId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
-    private Optional<? extends List<AtsMetadata>> metadata;
+    private List<AtsMetadata> metadata;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offers")
-    private Optional<? extends List<AtsOffer>> offers;
+    private List<AtsOffer> offers;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("original_status")
-    private Optional<String> originalStatus;
+    private String originalStatus;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rejected_at")
-    private Optional<OffsetDateTime> rejectedAt;
+    private OffsetDateTime rejectedAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rejected_reason")
-    private Optional<String> rejectedReason;
+    private String rejectedReason;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
-    private Optional<String> source;
+    private String source;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
-    private Optional<? extends AtsApplicationStatus> status;
+    private AtsApplicationStatus status;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
-    private Optional<String> userId;
+    private String userId;
 
     @JsonCreator
     public AtsApplication(
-            @JsonProperty("answers") Optional<? extends List<AtsApplicationAnswer>> answers,
-            @JsonProperty("applied_at") Optional<OffsetDateTime> appliedAt,
-            @JsonProperty("candidate_id") Optional<String> candidateId,
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("hired_at") Optional<OffsetDateTime> hiredAt,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("job_id") Optional<String> jobId,
-            @JsonProperty("metadata") Optional<? extends List<AtsMetadata>> metadata,
-            @JsonProperty("offers") Optional<? extends List<AtsOffer>> offers,
-            @JsonProperty("original_status") Optional<String> originalStatus,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("rejected_at") Optional<OffsetDateTime> rejectedAt,
-            @JsonProperty("rejected_reason") Optional<String> rejectedReason,
-            @JsonProperty("source") Optional<String> source,
-            @JsonProperty("status") Optional<? extends AtsApplicationStatus> status,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
-            @JsonProperty("user_id") Optional<String> userId) {
-        Utils.checkNotNull(answers, "answers");
-        Utils.checkNotNull(appliedAt, "appliedAt");
-        Utils.checkNotNull(candidateId, "candidateId");
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(hiredAt, "hiredAt");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(jobId, "jobId");
-        Utils.checkNotNull(metadata, "metadata");
-        Utils.checkNotNull(offers, "offers");
-        Utils.checkNotNull(originalStatus, "originalStatus");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(rejectedAt, "rejectedAt");
-        Utils.checkNotNull(rejectedReason, "rejectedReason");
-        Utils.checkNotNull(source, "source");
-        Utils.checkNotNull(status, "status");
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        Utils.checkNotNull(userId, "userId");
+            @JsonProperty("answers") @Nullable List<AtsApplicationAnswer> answers,
+            @JsonProperty("applied_at") @Nullable OffsetDateTime appliedAt,
+            @JsonProperty("candidate_id") @Nullable String candidateId,
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("hired_at") @Nullable OffsetDateTime hiredAt,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("job_id") @Nullable String jobId,
+            @JsonProperty("metadata") @Nullable List<AtsMetadata> metadata,
+            @JsonProperty("offers") @Nullable List<AtsOffer> offers,
+            @JsonProperty("original_status") @Nullable String originalStatus,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("rejected_at") @Nullable OffsetDateTime rejectedAt,
+            @JsonProperty("rejected_reason") @Nullable String rejectedReason,
+            @JsonProperty("source") @Nullable String source,
+            @JsonProperty("status") @Nullable AtsApplicationStatus status,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
+            @JsonProperty("user_id") @Nullable String userId) {
         this.answers = answers;
         this.appliedAt = appliedAt;
         this.candidateId = candidateId;
@@ -161,102 +143,80 @@ public class AtsApplication {
     }
     
     public AtsApplication() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<AtsApplicationAnswer>> answers() {
-        return (Optional<List<AtsApplicationAnswer>>) answers;
+        return Optional.ofNullable(this.answers);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> appliedAt() {
-        return appliedAt;
+        return Optional.ofNullable(this.appliedAt);
     }
 
-    @JsonIgnore
     public Optional<String> candidateId() {
-        return candidateId;
+        return Optional.ofNullable(this.candidateId);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> hiredAt() {
-        return hiredAt;
+        return Optional.ofNullable(this.hiredAt);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<String> jobId() {
-        return jobId;
+        return Optional.ofNullable(this.jobId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<AtsMetadata>> metadata() {
-        return (Optional<List<AtsMetadata>>) metadata;
+        return Optional.ofNullable(this.metadata);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<AtsOffer>> offers() {
-        return (Optional<List<AtsOffer>>) offers;
+        return Optional.ofNullable(this.offers);
     }
 
-    @JsonIgnore
     public Optional<String> originalStatus() {
-        return originalStatus;
+        return Optional.ofNullable(this.originalStatus);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> rejectedAt() {
-        return rejectedAt;
+        return Optional.ofNullable(this.rejectedAt);
     }
 
-    @JsonIgnore
     public Optional<String> rejectedReason() {
-        return rejectedReason;
+        return Optional.ofNullable(this.rejectedReason);
     }
 
-    @JsonIgnore
     public Optional<String> source() {
-        return source;
+        return Optional.ofNullable(this.source);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<AtsApplicationStatus> status() {
-        return (Optional<AtsApplicationStatus>) status;
+        return Optional.ofNullable(this.status);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
-    @JsonIgnore
     public Optional<String> userId() {
-        return userId;
+        return Optional.ofNullable(this.userId);
     }
 
     public static Builder builder() {
@@ -264,226 +224,107 @@ public class AtsApplication {
     }
 
 
-    public AtsApplication withAnswers(List<AtsApplicationAnswer> answers) {
-        Utils.checkNotNull(answers, "answers");
-        this.answers = Optional.ofNullable(answers);
-        return this;
-    }
-
-
-    public AtsApplication withAnswers(Optional<? extends List<AtsApplicationAnswer>> answers) {
-        Utils.checkNotNull(answers, "answers");
+    public AtsApplication withAnswers(@Nullable List<AtsApplicationAnswer> answers) {
         this.answers = answers;
         return this;
     }
 
-    public AtsApplication withAppliedAt(OffsetDateTime appliedAt) {
-        Utils.checkNotNull(appliedAt, "appliedAt");
-        this.appliedAt = Optional.ofNullable(appliedAt);
-        return this;
-    }
 
-
-    public AtsApplication withAppliedAt(Optional<OffsetDateTime> appliedAt) {
-        Utils.checkNotNull(appliedAt, "appliedAt");
+    public AtsApplication withAppliedAt(@Nullable OffsetDateTime appliedAt) {
         this.appliedAt = appliedAt;
         return this;
     }
 
-    public AtsApplication withCandidateId(String candidateId) {
-        Utils.checkNotNull(candidateId, "candidateId");
-        this.candidateId = Optional.ofNullable(candidateId);
-        return this;
-    }
 
-
-    public AtsApplication withCandidateId(Optional<String> candidateId) {
-        Utils.checkNotNull(candidateId, "candidateId");
+    public AtsApplication withCandidateId(@Nullable String candidateId) {
         this.candidateId = candidateId;
         return this;
     }
 
-    public AtsApplication withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
 
-
-    public AtsApplication withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public AtsApplication withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public AtsApplication withHiredAt(OffsetDateTime hiredAt) {
-        Utils.checkNotNull(hiredAt, "hiredAt");
-        this.hiredAt = Optional.ofNullable(hiredAt);
-        return this;
-    }
 
-
-    public AtsApplication withHiredAt(Optional<OffsetDateTime> hiredAt) {
-        Utils.checkNotNull(hiredAt, "hiredAt");
+    public AtsApplication withHiredAt(@Nullable OffsetDateTime hiredAt) {
         this.hiredAt = hiredAt;
         return this;
     }
 
-    public AtsApplication withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public AtsApplication withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public AtsApplication withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public AtsApplication withJobId(String jobId) {
-        Utils.checkNotNull(jobId, "jobId");
-        this.jobId = Optional.ofNullable(jobId);
-        return this;
-    }
 
-
-    public AtsApplication withJobId(Optional<String> jobId) {
-        Utils.checkNotNull(jobId, "jobId");
+    public AtsApplication withJobId(@Nullable String jobId) {
         this.jobId = jobId;
         return this;
     }
 
-    public AtsApplication withMetadata(List<AtsMetadata> metadata) {
-        Utils.checkNotNull(metadata, "metadata");
-        this.metadata = Optional.ofNullable(metadata);
-        return this;
-    }
 
-
-    public AtsApplication withMetadata(Optional<? extends List<AtsMetadata>> metadata) {
-        Utils.checkNotNull(metadata, "metadata");
+    public AtsApplication withMetadata(@Nullable List<AtsMetadata> metadata) {
         this.metadata = metadata;
         return this;
     }
 
-    public AtsApplication withOffers(List<AtsOffer> offers) {
-        Utils.checkNotNull(offers, "offers");
-        this.offers = Optional.ofNullable(offers);
-        return this;
-    }
 
-
-    public AtsApplication withOffers(Optional<? extends List<AtsOffer>> offers) {
-        Utils.checkNotNull(offers, "offers");
+    public AtsApplication withOffers(@Nullable List<AtsOffer> offers) {
         this.offers = offers;
         return this;
     }
 
-    public AtsApplication withOriginalStatus(String originalStatus) {
-        Utils.checkNotNull(originalStatus, "originalStatus");
-        this.originalStatus = Optional.ofNullable(originalStatus);
-        return this;
-    }
 
-
-    public AtsApplication withOriginalStatus(Optional<String> originalStatus) {
-        Utils.checkNotNull(originalStatus, "originalStatus");
+    public AtsApplication withOriginalStatus(@Nullable String originalStatus) {
         this.originalStatus = originalStatus;
         return this;
     }
 
-    public AtsApplication withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public AtsApplication withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public AtsApplication withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public AtsApplication withRejectedAt(OffsetDateTime rejectedAt) {
-        Utils.checkNotNull(rejectedAt, "rejectedAt");
-        this.rejectedAt = Optional.ofNullable(rejectedAt);
-        return this;
-    }
 
-
-    public AtsApplication withRejectedAt(Optional<OffsetDateTime> rejectedAt) {
-        Utils.checkNotNull(rejectedAt, "rejectedAt");
+    public AtsApplication withRejectedAt(@Nullable OffsetDateTime rejectedAt) {
         this.rejectedAt = rejectedAt;
         return this;
     }
 
-    public AtsApplication withRejectedReason(String rejectedReason) {
-        Utils.checkNotNull(rejectedReason, "rejectedReason");
-        this.rejectedReason = Optional.ofNullable(rejectedReason);
-        return this;
-    }
 
-
-    public AtsApplication withRejectedReason(Optional<String> rejectedReason) {
-        Utils.checkNotNull(rejectedReason, "rejectedReason");
+    public AtsApplication withRejectedReason(@Nullable String rejectedReason) {
         this.rejectedReason = rejectedReason;
         return this;
     }
 
-    public AtsApplication withSource(String source) {
-        Utils.checkNotNull(source, "source");
-        this.source = Optional.ofNullable(source);
-        return this;
-    }
 
-
-    public AtsApplication withSource(Optional<String> source) {
-        Utils.checkNotNull(source, "source");
+    public AtsApplication withSource(@Nullable String source) {
         this.source = source;
         return this;
     }
 
-    public AtsApplication withStatus(AtsApplicationStatus status) {
-        Utils.checkNotNull(status, "status");
-        this.status = Optional.ofNullable(status);
-        return this;
-    }
 
-
-    public AtsApplication withStatus(Optional<? extends AtsApplicationStatus> status) {
-        Utils.checkNotNull(status, "status");
+    public AtsApplication withStatus(@Nullable AtsApplicationStatus status) {
         this.status = status;
         return this;
     }
 
-    public AtsApplication withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public AtsApplication withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public AtsApplication withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
-    public AtsApplication withUserId(String userId) {
-        Utils.checkNotNull(userId, "userId");
-        this.userId = Optional.ofNullable(userId);
-        return this;
-    }
 
-
-    public AtsApplication withUserId(Optional<String> userId) {
-        Utils.checkNotNull(userId, "userId");
+    public AtsApplication withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -550,267 +391,130 @@ public class AtsApplication {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends List<AtsApplicationAnswer>> answers = Optional.empty();
+        private List<AtsApplicationAnswer> answers;
 
-        private Optional<OffsetDateTime> appliedAt = Optional.empty();
+        private OffsetDateTime appliedAt;
 
-        private Optional<String> candidateId = Optional.empty();
+        private String candidateId;
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<OffsetDateTime> hiredAt = Optional.empty();
+        private OffsetDateTime hiredAt;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<String> jobId = Optional.empty();
+        private String jobId;
 
-        private Optional<? extends List<AtsMetadata>> metadata = Optional.empty();
+        private List<AtsMetadata> metadata;
 
-        private Optional<? extends List<AtsOffer>> offers = Optional.empty();
+        private List<AtsOffer> offers;
 
-        private Optional<String> originalStatus = Optional.empty();
+        private String originalStatus;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<OffsetDateTime> rejectedAt = Optional.empty();
+        private OffsetDateTime rejectedAt;
 
-        private Optional<String> rejectedReason = Optional.empty();
+        private String rejectedReason;
 
-        private Optional<String> source = Optional.empty();
+        private String source;
 
-        private Optional<? extends AtsApplicationStatus> status = Optional.empty();
+        private AtsApplicationStatus status;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
-        private Optional<String> userId = Optional.empty();
+        private String userId;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder answers(List<AtsApplicationAnswer> answers) {
-            Utils.checkNotNull(answers, "answers");
-            this.answers = Optional.ofNullable(answers);
-            return this;
-        }
-
-        public Builder answers(Optional<? extends List<AtsApplicationAnswer>> answers) {
-            Utils.checkNotNull(answers, "answers");
+        public Builder answers(@Nullable List<AtsApplicationAnswer> answers) {
             this.answers = answers;
             return this;
         }
 
-
-        public Builder appliedAt(OffsetDateTime appliedAt) {
-            Utils.checkNotNull(appliedAt, "appliedAt");
-            this.appliedAt = Optional.ofNullable(appliedAt);
-            return this;
-        }
-
-        public Builder appliedAt(Optional<OffsetDateTime> appliedAt) {
-            Utils.checkNotNull(appliedAt, "appliedAt");
+        public Builder appliedAt(@Nullable OffsetDateTime appliedAt) {
             this.appliedAt = appliedAt;
             return this;
         }
 
-
-        public Builder candidateId(String candidateId) {
-            Utils.checkNotNull(candidateId, "candidateId");
-            this.candidateId = Optional.ofNullable(candidateId);
-            return this;
-        }
-
-        public Builder candidateId(Optional<String> candidateId) {
-            Utils.checkNotNull(candidateId, "candidateId");
+        public Builder candidateId(@Nullable String candidateId) {
             this.candidateId = candidateId;
             return this;
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder hiredAt(OffsetDateTime hiredAt) {
-            Utils.checkNotNull(hiredAt, "hiredAt");
-            this.hiredAt = Optional.ofNullable(hiredAt);
-            return this;
-        }
-
-        public Builder hiredAt(Optional<OffsetDateTime> hiredAt) {
-            Utils.checkNotNull(hiredAt, "hiredAt");
+        public Builder hiredAt(@Nullable OffsetDateTime hiredAt) {
             this.hiredAt = hiredAt;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder jobId(String jobId) {
-            Utils.checkNotNull(jobId, "jobId");
-            this.jobId = Optional.ofNullable(jobId);
-            return this;
-        }
-
-        public Builder jobId(Optional<String> jobId) {
-            Utils.checkNotNull(jobId, "jobId");
+        public Builder jobId(@Nullable String jobId) {
             this.jobId = jobId;
             return this;
         }
 
-
-        public Builder metadata(List<AtsMetadata> metadata) {
-            Utils.checkNotNull(metadata, "metadata");
-            this.metadata = Optional.ofNullable(metadata);
-            return this;
-        }
-
-        public Builder metadata(Optional<? extends List<AtsMetadata>> metadata) {
-            Utils.checkNotNull(metadata, "metadata");
+        public Builder metadata(@Nullable List<AtsMetadata> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-
-        public Builder offers(List<AtsOffer> offers) {
-            Utils.checkNotNull(offers, "offers");
-            this.offers = Optional.ofNullable(offers);
-            return this;
-        }
-
-        public Builder offers(Optional<? extends List<AtsOffer>> offers) {
-            Utils.checkNotNull(offers, "offers");
+        public Builder offers(@Nullable List<AtsOffer> offers) {
             this.offers = offers;
             return this;
         }
 
-
-        public Builder originalStatus(String originalStatus) {
-            Utils.checkNotNull(originalStatus, "originalStatus");
-            this.originalStatus = Optional.ofNullable(originalStatus);
-            return this;
-        }
-
-        public Builder originalStatus(Optional<String> originalStatus) {
-            Utils.checkNotNull(originalStatus, "originalStatus");
+        public Builder originalStatus(@Nullable String originalStatus) {
             this.originalStatus = originalStatus;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder rejectedAt(OffsetDateTime rejectedAt) {
-            Utils.checkNotNull(rejectedAt, "rejectedAt");
-            this.rejectedAt = Optional.ofNullable(rejectedAt);
-            return this;
-        }
-
-        public Builder rejectedAt(Optional<OffsetDateTime> rejectedAt) {
-            Utils.checkNotNull(rejectedAt, "rejectedAt");
+        public Builder rejectedAt(@Nullable OffsetDateTime rejectedAt) {
             this.rejectedAt = rejectedAt;
             return this;
         }
 
-
-        public Builder rejectedReason(String rejectedReason) {
-            Utils.checkNotNull(rejectedReason, "rejectedReason");
-            this.rejectedReason = Optional.ofNullable(rejectedReason);
-            return this;
-        }
-
-        public Builder rejectedReason(Optional<String> rejectedReason) {
-            Utils.checkNotNull(rejectedReason, "rejectedReason");
+        public Builder rejectedReason(@Nullable String rejectedReason) {
             this.rejectedReason = rejectedReason;
             return this;
         }
 
-
-        public Builder source(String source) {
-            Utils.checkNotNull(source, "source");
-            this.source = Optional.ofNullable(source);
-            return this;
-        }
-
-        public Builder source(Optional<String> source) {
-            Utils.checkNotNull(source, "source");
+        public Builder source(@Nullable String source) {
             this.source = source;
             return this;
         }
 
-
-        public Builder status(AtsApplicationStatus status) {
-            Utils.checkNotNull(status, "status");
-            this.status = Optional.ofNullable(status);
-            return this;
-        }
-
-        public Builder status(Optional<? extends AtsApplicationStatus> status) {
-            Utils.checkNotNull(status, "status");
+        public Builder status(@Nullable AtsApplicationStatus status) {
             this.status = status;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
-
-        public Builder userId(String userId) {
-            Utils.checkNotNull(userId, "userId");
-            this.userId = Optional.ofNullable(userId);
-            return this;
-        }
-
-        public Builder userId(Optional<String> userId) {
-            Utils.checkNotNull(userId, "userId");
+        public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;
         }
 
         public AtsApplication build() {
-
             return new AtsApplication(
                 answers, appliedAt, candidateId,
                 createdAt, hiredAt, id,

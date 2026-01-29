@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateFormsFormRequest;
 import to.unified.unified_java_sdk.models.operations.CreateFormsFormRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateFormsFormResponse;
@@ -75,7 +76,7 @@ public class Forms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateFormsFormResponse createFormsForm(CreateFormsFormRequest request) {
+    public CreateFormsFormResponse createFormsForm(@Nonnull CreateFormsFormRequest request) {
         RequestOperation<CreateFormsFormRequest, CreateFormsFormResponse> operation
               = new CreateFormsForm.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -97,7 +98,7 @@ public class Forms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetFormsFormResponse getFormsForm(GetFormsFormRequest request) {
+    public GetFormsFormResponse getFormsForm(@Nonnull GetFormsFormRequest request) {
         RequestOperation<GetFormsFormRequest, GetFormsFormResponse> operation
               = new GetFormsForm.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -119,7 +120,7 @@ public class Forms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetFormsSubmissionResponse getFormsSubmission(GetFormsSubmissionRequest request) {
+    public GetFormsSubmissionResponse getFormsSubmission(@Nonnull GetFormsSubmissionRequest request) {
         RequestOperation<GetFormsSubmissionRequest, GetFormsSubmissionResponse> operation
               = new GetFormsSubmission.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -141,7 +142,7 @@ public class Forms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListFormsFormsResponse listFormsForms(ListFormsFormsRequest request) {
+    public ListFormsFormsResponse listFormsForms(@Nonnull ListFormsFormsRequest request) {
         RequestOperation<ListFormsFormsRequest, ListFormsFormsResponse> operation
               = new ListFormsForms.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -163,7 +164,7 @@ public class Forms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListFormsSubmissionsResponse listFormsSubmissions(ListFormsSubmissionsRequest request) {
+    public ListFormsSubmissionsResponse listFormsSubmissions(@Nonnull ListFormsSubmissionsRequest request) {
         RequestOperation<ListFormsSubmissionsRequest, ListFormsSubmissionsResponse> operation
               = new ListFormsSubmissions.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -185,7 +186,7 @@ public class Forms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchFormsFormResponse patchFormsForm(PatchFormsFormRequest request) {
+    public PatchFormsFormResponse patchFormsForm(@Nonnull PatchFormsFormRequest request) {
         RequestOperation<PatchFormsFormRequest, PatchFormsFormResponse> operation
               = new PatchFormsForm.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -207,7 +208,7 @@ public class Forms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveFormsFormResponse removeFormsForm(RemoveFormsFormRequest request) {
+    public RemoveFormsFormResponse removeFormsForm(@Nonnull RemoveFormsFormRequest request) {
         RequestOperation<RemoveFormsFormRequest, RemoveFormsFormResponse> operation
               = new RemoveFormsForm.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -229,7 +230,7 @@ public class Forms {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateFormsFormResponse updateFormsForm(UpdateFormsFormRequest request) {
+    public UpdateFormsFormResponse updateFormsForm(@Nonnull UpdateFormsFormRequest request) {
         RequestOperation<UpdateFormsFormRequest, UpdateFormsFormResponse> operation
               = new UpdateFormsForm.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

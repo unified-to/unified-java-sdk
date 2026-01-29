@@ -4,12 +4,11 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.io.InputStream;
-import java.lang.Integer;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.List;
 import java.util.Optional;
@@ -37,63 +36,56 @@ public class ListTicketingTicketsResponse implements Response {
     /**
      * Successful
      */
-    private Optional<? extends List<TicketingTicket>> ticketingTickets;
+    private List<TicketingTicket> ticketingTickets;
 
     @JsonCreator
     public ListTicketingTicketsResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<InputStream> rawResponse,
-            Optional<? extends List<TicketingTicket>> ticketingTickets) {
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        Utils.checkNotNull(ticketingTickets, "ticketingTickets");
-        this.contentType = contentType;
+            @Nonnull HttpResponse<InputStream> rawResponse,
+            @Nullable List<TicketingTicket> ticketingTickets) {
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
         this.ticketingTickets = ticketingTickets;
     }
     
     public ListTicketingTicketsResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
+            @Nonnull HttpResponse<InputStream> rawResponse) {
         this(contentType, statusCode, rawResponse,
-            Optional.empty());
+            null);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<InputStream> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<TicketingTicket>> ticketingTickets() {
-        return (Optional<List<TicketingTicket>>) ticketingTickets;
+        return Optional.ofNullable(this.ticketingTickets);
     }
 
     public static Builder builder() {
@@ -104,36 +96,26 @@ public class ListTicketingTicketsResponse implements Response {
     /**
      * HTTP response content type for this operation
      */
-    public ListTicketingTicketsResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
+    public ListTicketingTicketsResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public ListTicketingTicketsResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public ListTicketingTicketsResponse withRawResponse(HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
-        return this;
-    }
-
-    /**
-     * Successful
-     */
-    public ListTicketingTicketsResponse withTicketingTickets(List<TicketingTicket> ticketingTickets) {
-        Utils.checkNotNull(ticketingTickets, "ticketingTickets");
-        this.ticketingTickets = Optional.ofNullable(ticketingTickets);
+    public ListTicketingTicketsResponse withRawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
 
@@ -141,11 +123,11 @@ public class ListTicketingTicketsResponse implements Response {
     /**
      * Successful
      */
-    public ListTicketingTicketsResponse withTicketingTickets(Optional<? extends List<TicketingTicket>> ticketingTickets) {
-        Utils.checkNotNull(ticketingTickets, "ticketingTickets");
+    public ListTicketingTicketsResponse withTicketingTickets(@Nullable List<TicketingTicket> ticketingTickets) {
         this.ticketingTickets = ticketingTickets;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -184,67 +166,49 @@ public class ListTicketingTicketsResponse implements Response {
 
         private String contentType;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<InputStream> rawResponse;
 
-        private Optional<? extends List<TicketingTicket>> ticketingTickets = Optional.empty();
+        private List<TicketingTicket> ticketingTickets;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<InputStream> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
-            return this;
-        }
-
-
-        /**
-         * Successful
-         */
-        public Builder ticketingTickets(List<TicketingTicket> ticketingTickets) {
-            Utils.checkNotNull(ticketingTickets, "ticketingTickets");
-            this.ticketingTickets = Optional.ofNullable(ticketingTickets);
+        public Builder rawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         /**
          * Successful
          */
-        public Builder ticketingTickets(Optional<? extends List<TicketingTicket>> ticketingTickets) {
-            Utils.checkNotNull(ticketingTickets, "ticketingTickets");
+        public Builder ticketingTickets(@Nullable List<TicketingTicket> ticketingTickets) {
             this.ticketingTickets = ticketingTickets;
             return this;
         }
 
         public ListTicketingTicketsResponse build() {
-
             return new ListTicketingTicketsResponse(
                 contentType, statusCode, rawResponse,
                 ticketingTickets);

@@ -4,12 +4,11 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.io.InputStream;
-import java.lang.Integer;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.List;
 import java.util.Optional;
@@ -27,7 +26,7 @@ public class ListUnifiedIntegrationsResponse implements Response {
     /**
      * Successful
      */
-    private Optional<? extends List<Integration>> integrations;
+    private List<Integration> integrations;
 
     /**
      * HTTP response status code for this operation
@@ -41,59 +40,52 @@ public class ListUnifiedIntegrationsResponse implements Response {
 
     @JsonCreator
     public ListUnifiedIntegrationsResponse(
-            String contentType,
-            Optional<? extends List<Integration>> integrations,
+            @Nonnull String contentType,
+            @Nullable List<Integration> integrations,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(integrations, "integrations");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.contentType = contentType;
+            @Nonnull HttpResponse<InputStream> rawResponse) {
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.integrations = integrations;
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
     }
     
     public ListUnifiedIntegrationsResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
-        this(contentType, Optional.empty(), statusCode,
+            @Nonnull HttpResponse<InputStream> rawResponse) {
+        this(contentType, null, statusCode,
             rawResponse);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<Integration>> integrations() {
-        return (Optional<List<Integration>>) integrations;
+        return Optional.ofNullable(this.integrations);
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<InputStream> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     public static Builder builder() {
@@ -104,18 +96,8 @@ public class ListUnifiedIntegrationsResponse implements Response {
     /**
      * HTTP response content type for this operation
      */
-    public ListUnifiedIntegrationsResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
-        return this;
-    }
-
-    /**
-     * Successful
-     */
-    public ListUnifiedIntegrationsResponse withIntegrations(List<Integration> integrations) {
-        Utils.checkNotNull(integrations, "integrations");
-        this.integrations = Optional.ofNullable(integrations);
+    public ListUnifiedIntegrationsResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
 
@@ -123,29 +105,29 @@ public class ListUnifiedIntegrationsResponse implements Response {
     /**
      * Successful
      */
-    public ListUnifiedIntegrationsResponse withIntegrations(Optional<? extends List<Integration>> integrations) {
-        Utils.checkNotNull(integrations, "integrations");
+    public ListUnifiedIntegrationsResponse withIntegrations(@Nullable List<Integration> integrations) {
         this.integrations = integrations;
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public ListUnifiedIntegrationsResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public ListUnifiedIntegrationsResponse withRawResponse(HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
+    public ListUnifiedIntegrationsResponse withRawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -184,9 +166,9 @@ public class ListUnifiedIntegrationsResponse implements Response {
 
         private String contentType;
 
-        private Optional<? extends List<Integration>> integrations = Optional.empty();
+        private List<Integration> integrations;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<InputStream> rawResponse;
 
@@ -194,57 +176,39 @@ public class ListUnifiedIntegrationsResponse implements Response {
           // force use of static builder() method
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
-            return this;
-        }
-
-
-        /**
-         * Successful
-         */
-        public Builder integrations(List<Integration> integrations) {
-            Utils.checkNotNull(integrations, "integrations");
-            this.integrations = Optional.ofNullable(integrations);
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
 
         /**
          * Successful
          */
-        public Builder integrations(Optional<? extends List<Integration>> integrations) {
-            Utils.checkNotNull(integrations, "integrations");
+        public Builder integrations(@Nullable List<Integration> integrations) {
             this.integrations = integrations;
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<InputStream> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
+        public Builder rawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         public ListUnifiedIntegrationsResponse build() {
-
             return new ListUnifiedIntegrationsResponse(
                 contentType, integrations, statusCode,
                 rawResponse);

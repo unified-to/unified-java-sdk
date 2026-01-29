@@ -9,21 +9,32 @@ import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.operations.ListUnifiedEnvironments;
 import to.unified.unified_java_sdk.utils.Headers;
+import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListUnifiedEnvironmentsRequestBuilder {
-
     private final SDKConfiguration sdkConfiguration;
-    private final Headers _headers = new Headers(); 
+    private final Headers _headers = new Headers();
 
     public ListUnifiedEnvironmentsRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
 
+    
+    public ListUnifiedEnvironmentsRequestBuilder header(String name, String value) {
+        Utils.checkNotNull(name, "name");
+        Utils.checkNotNull(value, "value");
+        this._headers.add(name, value);
+        return this;
+    }
+
+    /**
+    * Executes the request and returns the response.
+    *
+    * @return The response from the server.
+    */
     public CompletableFuture<ListUnifiedEnvironmentsResponse> call() {
-        
         AsyncRequestlessOperation<ListUnifiedEnvironmentsResponse> operation
             = new ListUnifiedEnvironments.Async(sdkConfiguration, _headers);
-
         return operation.doRequest()
             .thenCompose(operation::handleResponse);
     }

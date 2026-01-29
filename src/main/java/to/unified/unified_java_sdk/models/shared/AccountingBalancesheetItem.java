@@ -4,14 +4,13 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -21,33 +20,29 @@ public class AccountingBalancesheetItem {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_id")
-    private Optional<String> accountId;
+    private String accountId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
-    private Optional<Double> amount;
+    private Double amount;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
-    private Optional<String> name;
+    private String name;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sub_items")
-    private Optional<? extends List<AccountingBalancesheetItem>> subItems;
+    private List<AccountingBalancesheetItem> subItems;
 
     @JsonCreator
     public AccountingBalancesheetItem(
-            @JsonProperty("account_id") Optional<String> accountId,
-            @JsonProperty("amount") Optional<Double> amount,
-            @JsonProperty("name") Optional<String> name,
-            @JsonProperty("sub_items") Optional<? extends List<AccountingBalancesheetItem>> subItems) {
-        Utils.checkNotNull(accountId, "accountId");
-        Utils.checkNotNull(amount, "amount");
-        Utils.checkNotNull(name, "name");
-        Utils.checkNotNull(subItems, "subItems");
+            @JsonProperty("account_id") @Nullable String accountId,
+            @JsonProperty("amount") @Nullable Double amount,
+            @JsonProperty("name") @Nullable String name,
+            @JsonProperty("sub_items") @Nullable List<AccountingBalancesheetItem> subItems) {
         this.accountId = accountId;
         this.amount = amount;
         this.name = name;
@@ -55,29 +50,24 @@ public class AccountingBalancesheetItem {
     }
     
     public AccountingBalancesheetItem() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+        this(null, null, null,
+            null);
     }
 
-    @JsonIgnore
     public Optional<String> accountId() {
-        return accountId;
+        return Optional.ofNullable(this.accountId);
     }
 
-    @JsonIgnore
     public Optional<Double> amount() {
-        return amount;
+        return Optional.ofNullable(this.amount);
     }
 
-    @JsonIgnore
     public Optional<String> name() {
-        return name;
+        return Optional.ofNullable(this.name);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<AccountingBalancesheetItem>> subItems() {
-        return (Optional<List<AccountingBalancesheetItem>>) subItems;
+        return Optional.ofNullable(this.subItems);
     }
 
     public static Builder builder() {
@@ -85,57 +75,29 @@ public class AccountingBalancesheetItem {
     }
 
 
-    public AccountingBalancesheetItem withAccountId(String accountId) {
-        Utils.checkNotNull(accountId, "accountId");
-        this.accountId = Optional.ofNullable(accountId);
-        return this;
-    }
-
-
-    public AccountingBalancesheetItem withAccountId(Optional<String> accountId) {
-        Utils.checkNotNull(accountId, "accountId");
+    public AccountingBalancesheetItem withAccountId(@Nullable String accountId) {
         this.accountId = accountId;
         return this;
     }
 
-    public AccountingBalancesheetItem withAmount(double amount) {
-        Utils.checkNotNull(amount, "amount");
-        this.amount = Optional.ofNullable(amount);
-        return this;
-    }
 
-
-    public AccountingBalancesheetItem withAmount(Optional<Double> amount) {
-        Utils.checkNotNull(amount, "amount");
+    public AccountingBalancesheetItem withAmount(@Nullable Double amount) {
         this.amount = amount;
         return this;
     }
 
-    public AccountingBalancesheetItem withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = Optional.ofNullable(name);
-        return this;
-    }
 
-
-    public AccountingBalancesheetItem withName(Optional<String> name) {
-        Utils.checkNotNull(name, "name");
+    public AccountingBalancesheetItem withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
-    public AccountingBalancesheetItem withSubItems(List<AccountingBalancesheetItem> subItems) {
-        Utils.checkNotNull(subItems, "subItems");
-        this.subItems = Optional.ofNullable(subItems);
-        return this;
-    }
 
-
-    public AccountingBalancesheetItem withSubItems(Optional<? extends List<AccountingBalancesheetItem>> subItems) {
-        Utils.checkNotNull(subItems, "subItems");
+    public AccountingBalancesheetItem withSubItems(@Nullable List<AccountingBalancesheetItem> subItems) {
         this.subItems = subItems;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -172,72 +134,39 @@ public class AccountingBalancesheetItem {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> accountId = Optional.empty();
+        private String accountId;
 
-        private Optional<Double> amount = Optional.empty();
+        private Double amount;
 
-        private Optional<String> name = Optional.empty();
+        private String name;
 
-        private Optional<? extends List<AccountingBalancesheetItem>> subItems = Optional.empty();
+        private List<AccountingBalancesheetItem> subItems;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder accountId(String accountId) {
-            Utils.checkNotNull(accountId, "accountId");
-            this.accountId = Optional.ofNullable(accountId);
-            return this;
-        }
-
-        public Builder accountId(Optional<String> accountId) {
-            Utils.checkNotNull(accountId, "accountId");
+        public Builder accountId(@Nullable String accountId) {
             this.accountId = accountId;
             return this;
         }
 
-
-        public Builder amount(double amount) {
-            Utils.checkNotNull(amount, "amount");
-            this.amount = Optional.ofNullable(amount);
-            return this;
-        }
-
-        public Builder amount(Optional<Double> amount) {
-            Utils.checkNotNull(amount, "amount");
+        public Builder amount(@Nullable Double amount) {
             this.amount = amount;
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = Optional.ofNullable(name);
-            return this;
-        }
-
-        public Builder name(Optional<String> name) {
-            Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-
-        public Builder subItems(List<AccountingBalancesheetItem> subItems) {
-            Utils.checkNotNull(subItems, "subItems");
-            this.subItems = Optional.ofNullable(subItems);
-            return this;
-        }
-
-        public Builder subItems(Optional<? extends List<AccountingBalancesheetItem>> subItems) {
-            Utils.checkNotNull(subItems, "subItems");
+        public Builder subItems(@Nullable List<AccountingBalancesheetItem> subItems) {
             this.subItems = subItems;
             return this;
         }
 
         public AccountingBalancesheetItem build() {
-
             return new AccountingBalancesheetItem(
                 accountId, amount, name,
                 subItems);

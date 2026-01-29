@@ -4,14 +4,13 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Optional;
@@ -22,50 +21,50 @@ public class CalendarEventRecurrence {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
-    private Optional<Double> count;
+    private Double count;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
-    private Optional<OffsetDateTime> endAt;
+    private OffsetDateTime endAt;
 
     /**
      * dates to exclude from the recurrence, defaults to undefined (no exclusions)
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excluded_dates")
-    private Optional<? extends List<String>> excludedDates;
+    private List<String> excludedDates;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("frequency")
-    private Optional<? extends CalendarEventRecurrenceFrequency> frequency;
+    private CalendarEventRecurrenceFrequency frequency;
 
     /**
      * dates to include in the recurrence, defaults to undefined (no inclusions)
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("included_dates")
-    private Optional<? extends List<String>> includedDates;
+    private List<String> includedDates;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interval")
-    private Optional<Double> interval;
+    private Double interval;
 
     /**
      * days of the week to repeat on, defaults to undefined (every day), only used if frequency is WEEKLY
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("on_days")
-    private Optional<? extends List<PropertyCalendarEventRecurrenceOnDays>> onDays;
+    private List<PropertyCalendarEventRecurrenceOnDays> onDays;
 
     /**
      * days of the month to repeat on, defaults to undefined (every day), only used if frequency is MONTHLY
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("on_month_days")
-    private Optional<? extends List<Double>> onMonthDays;
+    private List<Double> onMonthDays;
 
     /**
      * months of the year to repeat on, defaults to undefined (every month), only used if frequency is
@@ -73,7 +72,7 @@ public class CalendarEventRecurrence {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("on_months")
-    private Optional<? extends List<Double>> onMonths;
+    private List<Double> onMonths;
 
     /**
      * week ordinals for BYDAY (e.g., -1 for last, -2 for second-to-last, 1 for first, 2 for second), only
@@ -81,53 +80,40 @@ public class CalendarEventRecurrence {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("on_weeks")
-    private Optional<? extends List<Double>> onWeeks;
+    private List<Double> onWeeks;
 
     /**
      * days of the year to repeat on, defaults to undefined (every day), only used if frequency is YEARLY
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("on_year_days")
-    private Optional<? extends List<Double>> onYearDays;
+    private List<Double> onYearDays;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
-    private Optional<String> timezone;
+    private String timezone;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("week_start")
-    private Optional<? extends WeekStart> weekStart;
+    private WeekStart weekStart;
 
     @JsonCreator
     public CalendarEventRecurrence(
-            @JsonProperty("count") Optional<Double> count,
-            @JsonProperty("end_at") Optional<OffsetDateTime> endAt,
-            @JsonProperty("excluded_dates") Optional<? extends List<String>> excludedDates,
-            @JsonProperty("frequency") Optional<? extends CalendarEventRecurrenceFrequency> frequency,
-            @JsonProperty("included_dates") Optional<? extends List<String>> includedDates,
-            @JsonProperty("interval") Optional<Double> interval,
-            @JsonProperty("on_days") Optional<? extends List<PropertyCalendarEventRecurrenceOnDays>> onDays,
-            @JsonProperty("on_month_days") Optional<? extends List<Double>> onMonthDays,
-            @JsonProperty("on_months") Optional<? extends List<Double>> onMonths,
-            @JsonProperty("on_weeks") Optional<? extends List<Double>> onWeeks,
-            @JsonProperty("on_year_days") Optional<? extends List<Double>> onYearDays,
-            @JsonProperty("timezone") Optional<String> timezone,
-            @JsonProperty("week_start") Optional<? extends WeekStart> weekStart) {
-        Utils.checkNotNull(count, "count");
-        Utils.checkNotNull(endAt, "endAt");
-        Utils.checkNotNull(excludedDates, "excludedDates");
-        Utils.checkNotNull(frequency, "frequency");
-        Utils.checkNotNull(includedDates, "includedDates");
-        Utils.checkNotNull(interval, "interval");
-        Utils.checkNotNull(onDays, "onDays");
-        Utils.checkNotNull(onMonthDays, "onMonthDays");
-        Utils.checkNotNull(onMonths, "onMonths");
-        Utils.checkNotNull(onWeeks, "onWeeks");
-        Utils.checkNotNull(onYearDays, "onYearDays");
-        Utils.checkNotNull(timezone, "timezone");
-        Utils.checkNotNull(weekStart, "weekStart");
+            @JsonProperty("count") @Nullable Double count,
+            @JsonProperty("end_at") @Nullable OffsetDateTime endAt,
+            @JsonProperty("excluded_dates") @Nullable List<String> excludedDates,
+            @JsonProperty("frequency") @Nullable CalendarEventRecurrenceFrequency frequency,
+            @JsonProperty("included_dates") @Nullable List<String> includedDates,
+            @JsonProperty("interval") @Nullable Double interval,
+            @JsonProperty("on_days") @Nullable List<PropertyCalendarEventRecurrenceOnDays> onDays,
+            @JsonProperty("on_month_days") @Nullable List<Double> onMonthDays,
+            @JsonProperty("on_months") @Nullable List<Double> onMonths,
+            @JsonProperty("on_weeks") @Nullable List<Double> onWeeks,
+            @JsonProperty("on_year_days") @Nullable List<Double> onYearDays,
+            @JsonProperty("timezone") @Nullable String timezone,
+            @JsonProperty("week_start") @Nullable WeekStart weekStart) {
         this.count = count;
         this.endAt = endAt;
         this.excludedDates = excludedDates;
@@ -144,108 +130,86 @@ public class CalendarEventRecurrence {
     }
     
     public CalendarEventRecurrence() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null);
     }
 
-    @JsonIgnore
     public Optional<Double> count() {
-        return count;
+        return Optional.ofNullable(this.count);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> endAt() {
-        return endAt;
+        return Optional.ofNullable(this.endAt);
     }
 
     /**
      * dates to exclude from the recurrence, defaults to undefined (no exclusions)
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> excludedDates() {
-        return (Optional<List<String>>) excludedDates;
+        return Optional.ofNullable(this.excludedDates);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<CalendarEventRecurrenceFrequency> frequency() {
-        return (Optional<CalendarEventRecurrenceFrequency>) frequency;
+        return Optional.ofNullable(this.frequency);
     }
 
     /**
      * dates to include in the recurrence, defaults to undefined (no inclusions)
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> includedDates() {
-        return (Optional<List<String>>) includedDates;
+        return Optional.ofNullable(this.includedDates);
     }
 
-    @JsonIgnore
     public Optional<Double> interval() {
-        return interval;
+        return Optional.ofNullable(this.interval);
     }
 
     /**
      * days of the week to repeat on, defaults to undefined (every day), only used if frequency is WEEKLY
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<PropertyCalendarEventRecurrenceOnDays>> onDays() {
-        return (Optional<List<PropertyCalendarEventRecurrenceOnDays>>) onDays;
+        return Optional.ofNullable(this.onDays);
     }
 
     /**
      * days of the month to repeat on, defaults to undefined (every day), only used if frequency is MONTHLY
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<Double>> onMonthDays() {
-        return (Optional<List<Double>>) onMonthDays;
+        return Optional.ofNullable(this.onMonthDays);
     }
 
     /**
      * months of the year to repeat on, defaults to undefined (every month), only used if frequency is
      * YEARLY, January is 1
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<Double>> onMonths() {
-        return (Optional<List<Double>>) onMonths;
+        return Optional.ofNullable(this.onMonths);
     }
 
     /**
      * week ordinals for BYDAY (e.g., -1 for last, -2 for second-to-last, 1 for first, 2 for second), only
      * used with on_days. 0 is used for days without week ordinals.
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<Double>> onWeeks() {
-        return (Optional<List<Double>>) onWeeks;
+        return Optional.ofNullable(this.onWeeks);
     }
 
     /**
      * days of the year to repeat on, defaults to undefined (every day), only used if frequency is YEARLY
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<Double>> onYearDays() {
-        return (Optional<List<Double>>) onYearDays;
+        return Optional.ofNullable(this.onYearDays);
     }
 
-    @JsonIgnore
     public Optional<String> timezone() {
-        return timezone;
+        return Optional.ofNullable(this.timezone);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<WeekStart> weekStart() {
-        return (Optional<WeekStart>) weekStart;
+        return Optional.ofNullable(this.weekStart);
     }
 
     public static Builder builder() {
@@ -253,220 +217,106 @@ public class CalendarEventRecurrence {
     }
 
 
-    public CalendarEventRecurrence withCount(double count) {
-        Utils.checkNotNull(count, "count");
-        this.count = Optional.ofNullable(count);
-        return this;
-    }
-
-
-    public CalendarEventRecurrence withCount(Optional<Double> count) {
-        Utils.checkNotNull(count, "count");
+    public CalendarEventRecurrence withCount(@Nullable Double count) {
         this.count = count;
         return this;
     }
 
-    public CalendarEventRecurrence withEndAt(OffsetDateTime endAt) {
-        Utils.checkNotNull(endAt, "endAt");
-        this.endAt = Optional.ofNullable(endAt);
-        return this;
-    }
 
-
-    public CalendarEventRecurrence withEndAt(Optional<OffsetDateTime> endAt) {
-        Utils.checkNotNull(endAt, "endAt");
+    public CalendarEventRecurrence withEndAt(@Nullable OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
     }
 
-    /**
-     * dates to exclude from the recurrence, defaults to undefined (no exclusions)
-     */
-    public CalendarEventRecurrence withExcludedDates(List<String> excludedDates) {
-        Utils.checkNotNull(excludedDates, "excludedDates");
-        this.excludedDates = Optional.ofNullable(excludedDates);
-        return this;
-    }
-
 
     /**
      * dates to exclude from the recurrence, defaults to undefined (no exclusions)
      */
-    public CalendarEventRecurrence withExcludedDates(Optional<? extends List<String>> excludedDates) {
-        Utils.checkNotNull(excludedDates, "excludedDates");
+    public CalendarEventRecurrence withExcludedDates(@Nullable List<String> excludedDates) {
         this.excludedDates = excludedDates;
         return this;
     }
 
-    public CalendarEventRecurrence withFrequency(CalendarEventRecurrenceFrequency frequency) {
-        Utils.checkNotNull(frequency, "frequency");
-        this.frequency = Optional.ofNullable(frequency);
-        return this;
-    }
 
-
-    public CalendarEventRecurrence withFrequency(Optional<? extends CalendarEventRecurrenceFrequency> frequency) {
-        Utils.checkNotNull(frequency, "frequency");
+    public CalendarEventRecurrence withFrequency(@Nullable CalendarEventRecurrenceFrequency frequency) {
         this.frequency = frequency;
         return this;
     }
 
-    /**
-     * dates to include in the recurrence, defaults to undefined (no inclusions)
-     */
-    public CalendarEventRecurrence withIncludedDates(List<String> includedDates) {
-        Utils.checkNotNull(includedDates, "includedDates");
-        this.includedDates = Optional.ofNullable(includedDates);
-        return this;
-    }
-
 
     /**
      * dates to include in the recurrence, defaults to undefined (no inclusions)
      */
-    public CalendarEventRecurrence withIncludedDates(Optional<? extends List<String>> includedDates) {
-        Utils.checkNotNull(includedDates, "includedDates");
+    public CalendarEventRecurrence withIncludedDates(@Nullable List<String> includedDates) {
         this.includedDates = includedDates;
         return this;
     }
 
-    public CalendarEventRecurrence withInterval(double interval) {
-        Utils.checkNotNull(interval, "interval");
-        this.interval = Optional.ofNullable(interval);
-        return this;
-    }
 
-
-    public CalendarEventRecurrence withInterval(Optional<Double> interval) {
-        Utils.checkNotNull(interval, "interval");
+    public CalendarEventRecurrence withInterval(@Nullable Double interval) {
         this.interval = interval;
         return this;
     }
 
-    /**
-     * days of the week to repeat on, defaults to undefined (every day), only used if frequency is WEEKLY
-     */
-    public CalendarEventRecurrence withOnDays(List<PropertyCalendarEventRecurrenceOnDays> onDays) {
-        Utils.checkNotNull(onDays, "onDays");
-        this.onDays = Optional.ofNullable(onDays);
-        return this;
-    }
-
 
     /**
      * days of the week to repeat on, defaults to undefined (every day), only used if frequency is WEEKLY
      */
-    public CalendarEventRecurrence withOnDays(Optional<? extends List<PropertyCalendarEventRecurrenceOnDays>> onDays) {
-        Utils.checkNotNull(onDays, "onDays");
+    public CalendarEventRecurrence withOnDays(@Nullable List<PropertyCalendarEventRecurrenceOnDays> onDays) {
         this.onDays = onDays;
         return this;
     }
 
-    /**
-     * days of the month to repeat on, defaults to undefined (every day), only used if frequency is MONTHLY
-     */
-    public CalendarEventRecurrence withOnMonthDays(List<Double> onMonthDays) {
-        Utils.checkNotNull(onMonthDays, "onMonthDays");
-        this.onMonthDays = Optional.ofNullable(onMonthDays);
-        return this;
-    }
-
 
     /**
      * days of the month to repeat on, defaults to undefined (every day), only used if frequency is MONTHLY
      */
-    public CalendarEventRecurrence withOnMonthDays(Optional<? extends List<Double>> onMonthDays) {
-        Utils.checkNotNull(onMonthDays, "onMonthDays");
+    public CalendarEventRecurrence withOnMonthDays(@Nullable List<Double> onMonthDays) {
         this.onMonthDays = onMonthDays;
         return this;
     }
 
-    /**
-     * months of the year to repeat on, defaults to undefined (every month), only used if frequency is
-     * YEARLY, January is 1
-     */
-    public CalendarEventRecurrence withOnMonths(List<Double> onMonths) {
-        Utils.checkNotNull(onMonths, "onMonths");
-        this.onMonths = Optional.ofNullable(onMonths);
-        return this;
-    }
-
 
     /**
      * months of the year to repeat on, defaults to undefined (every month), only used if frequency is
      * YEARLY, January is 1
      */
-    public CalendarEventRecurrence withOnMonths(Optional<? extends List<Double>> onMonths) {
-        Utils.checkNotNull(onMonths, "onMonths");
+    public CalendarEventRecurrence withOnMonths(@Nullable List<Double> onMonths) {
         this.onMonths = onMonths;
         return this;
     }
 
-    /**
-     * week ordinals for BYDAY (e.g., -1 for last, -2 for second-to-last, 1 for first, 2 for second), only
-     * used with on_days. 0 is used for days without week ordinals.
-     */
-    public CalendarEventRecurrence withOnWeeks(List<Double> onWeeks) {
-        Utils.checkNotNull(onWeeks, "onWeeks");
-        this.onWeeks = Optional.ofNullable(onWeeks);
-        return this;
-    }
-
 
     /**
      * week ordinals for BYDAY (e.g., -1 for last, -2 for second-to-last, 1 for first, 2 for second), only
      * used with on_days. 0 is used for days without week ordinals.
      */
-    public CalendarEventRecurrence withOnWeeks(Optional<? extends List<Double>> onWeeks) {
-        Utils.checkNotNull(onWeeks, "onWeeks");
+    public CalendarEventRecurrence withOnWeeks(@Nullable List<Double> onWeeks) {
         this.onWeeks = onWeeks;
         return this;
     }
 
-    /**
-     * days of the year to repeat on, defaults to undefined (every day), only used if frequency is YEARLY
-     */
-    public CalendarEventRecurrence withOnYearDays(List<Double> onYearDays) {
-        Utils.checkNotNull(onYearDays, "onYearDays");
-        this.onYearDays = Optional.ofNullable(onYearDays);
-        return this;
-    }
-
 
     /**
      * days of the year to repeat on, defaults to undefined (every day), only used if frequency is YEARLY
      */
-    public CalendarEventRecurrence withOnYearDays(Optional<? extends List<Double>> onYearDays) {
-        Utils.checkNotNull(onYearDays, "onYearDays");
+    public CalendarEventRecurrence withOnYearDays(@Nullable List<Double> onYearDays) {
         this.onYearDays = onYearDays;
         return this;
     }
 
-    public CalendarEventRecurrence withTimezone(String timezone) {
-        Utils.checkNotNull(timezone, "timezone");
-        this.timezone = Optional.ofNullable(timezone);
-        return this;
-    }
 
-
-    public CalendarEventRecurrence withTimezone(Optional<String> timezone) {
-        Utils.checkNotNull(timezone, "timezone");
+    public CalendarEventRecurrence withTimezone(@Nullable String timezone) {
         this.timezone = timezone;
         return this;
     }
 
-    public CalendarEventRecurrence withWeekStart(WeekStart weekStart) {
-        Utils.checkNotNull(weekStart, "weekStart");
-        this.weekStart = Optional.ofNullable(weekStart);
-        return this;
-    }
 
-
-    public CalendarEventRecurrence withWeekStart(Optional<? extends WeekStart> weekStart) {
-        Utils.checkNotNull(weekStart, "weekStart");
+    public CalendarEventRecurrence withWeekStart(@Nullable WeekStart weekStart) {
         this.weekStart = weekStart;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -524,253 +374,125 @@ public class CalendarEventRecurrence {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<Double> count = Optional.empty();
+        private Double count;
 
-        private Optional<OffsetDateTime> endAt = Optional.empty();
+        private OffsetDateTime endAt;
 
-        private Optional<? extends List<String>> excludedDates = Optional.empty();
+        private List<String> excludedDates;
 
-        private Optional<? extends CalendarEventRecurrenceFrequency> frequency = Optional.empty();
+        private CalendarEventRecurrenceFrequency frequency;
 
-        private Optional<? extends List<String>> includedDates = Optional.empty();
+        private List<String> includedDates;
 
-        private Optional<Double> interval = Optional.empty();
+        private Double interval;
 
-        private Optional<? extends List<PropertyCalendarEventRecurrenceOnDays>> onDays = Optional.empty();
+        private List<PropertyCalendarEventRecurrenceOnDays> onDays;
 
-        private Optional<? extends List<Double>> onMonthDays = Optional.empty();
+        private List<Double> onMonthDays;
 
-        private Optional<? extends List<Double>> onMonths = Optional.empty();
+        private List<Double> onMonths;
 
-        private Optional<? extends List<Double>> onWeeks = Optional.empty();
+        private List<Double> onWeeks;
 
-        private Optional<? extends List<Double>> onYearDays = Optional.empty();
+        private List<Double> onYearDays;
 
-        private Optional<String> timezone = Optional.empty();
+        private String timezone;
 
-        private Optional<? extends WeekStart> weekStart = Optional.empty();
+        private WeekStart weekStart;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder count(double count) {
-            Utils.checkNotNull(count, "count");
-            this.count = Optional.ofNullable(count);
-            return this;
-        }
-
-        public Builder count(Optional<Double> count) {
-            Utils.checkNotNull(count, "count");
+        public Builder count(@Nullable Double count) {
             this.count = count;
             return this;
         }
 
-
-        public Builder endAt(OffsetDateTime endAt) {
-            Utils.checkNotNull(endAt, "endAt");
-            this.endAt = Optional.ofNullable(endAt);
-            return this;
-        }
-
-        public Builder endAt(Optional<OffsetDateTime> endAt) {
-            Utils.checkNotNull(endAt, "endAt");
+        public Builder endAt(@Nullable OffsetDateTime endAt) {
             this.endAt = endAt;
             return this;
         }
 
-
         /**
          * dates to exclude from the recurrence, defaults to undefined (no exclusions)
          */
-        public Builder excludedDates(List<String> excludedDates) {
-            Utils.checkNotNull(excludedDates, "excludedDates");
-            this.excludedDates = Optional.ofNullable(excludedDates);
-            return this;
-        }
-
-        /**
-         * dates to exclude from the recurrence, defaults to undefined (no exclusions)
-         */
-        public Builder excludedDates(Optional<? extends List<String>> excludedDates) {
-            Utils.checkNotNull(excludedDates, "excludedDates");
+        public Builder excludedDates(@Nullable List<String> excludedDates) {
             this.excludedDates = excludedDates;
             return this;
         }
 
-
-        public Builder frequency(CalendarEventRecurrenceFrequency frequency) {
-            Utils.checkNotNull(frequency, "frequency");
-            this.frequency = Optional.ofNullable(frequency);
-            return this;
-        }
-
-        public Builder frequency(Optional<? extends CalendarEventRecurrenceFrequency> frequency) {
-            Utils.checkNotNull(frequency, "frequency");
+        public Builder frequency(@Nullable CalendarEventRecurrenceFrequency frequency) {
             this.frequency = frequency;
             return this;
         }
 
-
         /**
          * dates to include in the recurrence, defaults to undefined (no inclusions)
          */
-        public Builder includedDates(List<String> includedDates) {
-            Utils.checkNotNull(includedDates, "includedDates");
-            this.includedDates = Optional.ofNullable(includedDates);
-            return this;
-        }
-
-        /**
-         * dates to include in the recurrence, defaults to undefined (no inclusions)
-         */
-        public Builder includedDates(Optional<? extends List<String>> includedDates) {
-            Utils.checkNotNull(includedDates, "includedDates");
+        public Builder includedDates(@Nullable List<String> includedDates) {
             this.includedDates = includedDates;
             return this;
         }
 
-
-        public Builder interval(double interval) {
-            Utils.checkNotNull(interval, "interval");
-            this.interval = Optional.ofNullable(interval);
-            return this;
-        }
-
-        public Builder interval(Optional<Double> interval) {
-            Utils.checkNotNull(interval, "interval");
+        public Builder interval(@Nullable Double interval) {
             this.interval = interval;
             return this;
         }
 
-
         /**
          * days of the week to repeat on, defaults to undefined (every day), only used if frequency is WEEKLY
          */
-        public Builder onDays(List<PropertyCalendarEventRecurrenceOnDays> onDays) {
-            Utils.checkNotNull(onDays, "onDays");
-            this.onDays = Optional.ofNullable(onDays);
-            return this;
-        }
-
-        /**
-         * days of the week to repeat on, defaults to undefined (every day), only used if frequency is WEEKLY
-         */
-        public Builder onDays(Optional<? extends List<PropertyCalendarEventRecurrenceOnDays>> onDays) {
-            Utils.checkNotNull(onDays, "onDays");
+        public Builder onDays(@Nullable List<PropertyCalendarEventRecurrenceOnDays> onDays) {
             this.onDays = onDays;
             return this;
         }
 
-
         /**
          * days of the month to repeat on, defaults to undefined (every day), only used if frequency is MONTHLY
          */
-        public Builder onMonthDays(List<Double> onMonthDays) {
-            Utils.checkNotNull(onMonthDays, "onMonthDays");
-            this.onMonthDays = Optional.ofNullable(onMonthDays);
-            return this;
-        }
-
-        /**
-         * days of the month to repeat on, defaults to undefined (every day), only used if frequency is MONTHLY
-         */
-        public Builder onMonthDays(Optional<? extends List<Double>> onMonthDays) {
-            Utils.checkNotNull(onMonthDays, "onMonthDays");
+        public Builder onMonthDays(@Nullable List<Double> onMonthDays) {
             this.onMonthDays = onMonthDays;
             return this;
         }
 
-
         /**
          * months of the year to repeat on, defaults to undefined (every month), only used if frequency is
          * YEARLY, January is 1
          */
-        public Builder onMonths(List<Double> onMonths) {
-            Utils.checkNotNull(onMonths, "onMonths");
-            this.onMonths = Optional.ofNullable(onMonths);
-            return this;
-        }
-
-        /**
-         * months of the year to repeat on, defaults to undefined (every month), only used if frequency is
-         * YEARLY, January is 1
-         */
-        public Builder onMonths(Optional<? extends List<Double>> onMonths) {
-            Utils.checkNotNull(onMonths, "onMonths");
+        public Builder onMonths(@Nullable List<Double> onMonths) {
             this.onMonths = onMonths;
             return this;
         }
 
-
         /**
          * week ordinals for BYDAY (e.g., -1 for last, -2 for second-to-last, 1 for first, 2 for second), only
          * used with on_days. 0 is used for days without week ordinals.
          */
-        public Builder onWeeks(List<Double> onWeeks) {
-            Utils.checkNotNull(onWeeks, "onWeeks");
-            this.onWeeks = Optional.ofNullable(onWeeks);
-            return this;
-        }
-
-        /**
-         * week ordinals for BYDAY (e.g., -1 for last, -2 for second-to-last, 1 for first, 2 for second), only
-         * used with on_days. 0 is used for days without week ordinals.
-         */
-        public Builder onWeeks(Optional<? extends List<Double>> onWeeks) {
-            Utils.checkNotNull(onWeeks, "onWeeks");
+        public Builder onWeeks(@Nullable List<Double> onWeeks) {
             this.onWeeks = onWeeks;
             return this;
         }
 
-
         /**
          * days of the year to repeat on, defaults to undefined (every day), only used if frequency is YEARLY
          */
-        public Builder onYearDays(List<Double> onYearDays) {
-            Utils.checkNotNull(onYearDays, "onYearDays");
-            this.onYearDays = Optional.ofNullable(onYearDays);
-            return this;
-        }
-
-        /**
-         * days of the year to repeat on, defaults to undefined (every day), only used if frequency is YEARLY
-         */
-        public Builder onYearDays(Optional<? extends List<Double>> onYearDays) {
-            Utils.checkNotNull(onYearDays, "onYearDays");
+        public Builder onYearDays(@Nullable List<Double> onYearDays) {
             this.onYearDays = onYearDays;
             return this;
         }
 
-
-        public Builder timezone(String timezone) {
-            Utils.checkNotNull(timezone, "timezone");
-            this.timezone = Optional.ofNullable(timezone);
-            return this;
-        }
-
-        public Builder timezone(Optional<String> timezone) {
-            Utils.checkNotNull(timezone, "timezone");
+        public Builder timezone(@Nullable String timezone) {
             this.timezone = timezone;
             return this;
         }
 
-
-        public Builder weekStart(WeekStart weekStart) {
-            Utils.checkNotNull(weekStart, "weekStart");
-            this.weekStart = Optional.ofNullable(weekStart);
-            return this;
-        }
-
-        public Builder weekStart(Optional<? extends WeekStart> weekStart) {
-            Utils.checkNotNull(weekStart, "weekStart");
+        public Builder weekStart(@Nullable WeekStart weekStart) {
             this.weekStart = weekStart;
             return this;
         }
 
         public CalendarEventRecurrence build() {
-
             return new CalendarEventRecurrence(
                 count, endAt, excludedDates,
                 frequency, includedDates, interval,

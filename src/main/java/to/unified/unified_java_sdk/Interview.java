@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateAtsInterviewRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAtsInterviewRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAtsInterviewResponse;
@@ -67,7 +68,7 @@ public class Interview {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAtsInterviewResponse createAtsInterview(CreateAtsInterviewRequest request) {
+    public CreateAtsInterviewResponse createAtsInterview(@Nonnull CreateAtsInterviewRequest request) {
         RequestOperation<CreateAtsInterviewRequest, CreateAtsInterviewResponse> operation
               = new CreateAtsInterview.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -89,7 +90,7 @@ public class Interview {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAtsInterviewResponse getAtsInterview(GetAtsInterviewRequest request) {
+    public GetAtsInterviewResponse getAtsInterview(@Nonnull GetAtsInterviewRequest request) {
         RequestOperation<GetAtsInterviewRequest, GetAtsInterviewResponse> operation
               = new GetAtsInterview.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -111,7 +112,7 @@ public class Interview {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAtsInterviewsResponse listAtsInterviews(ListAtsInterviewsRequest request) {
+    public ListAtsInterviewsResponse listAtsInterviews(@Nonnull ListAtsInterviewsRequest request) {
         RequestOperation<ListAtsInterviewsRequest, ListAtsInterviewsResponse> operation
               = new ListAtsInterviews.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -133,7 +134,7 @@ public class Interview {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAtsInterviewResponse patchAtsInterview(PatchAtsInterviewRequest request) {
+    public PatchAtsInterviewResponse patchAtsInterview(@Nonnull PatchAtsInterviewRequest request) {
         RequestOperation<PatchAtsInterviewRequest, PatchAtsInterviewResponse> operation
               = new PatchAtsInterview.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -155,7 +156,7 @@ public class Interview {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAtsInterviewResponse removeAtsInterview(RemoveAtsInterviewRequest request) {
+    public RemoveAtsInterviewResponse removeAtsInterview(@Nonnull RemoveAtsInterviewRequest request) {
         RequestOperation<RemoveAtsInterviewRequest, RemoveAtsInterviewResponse> operation
               = new RemoveAtsInterview.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -177,7 +178,7 @@ public class Interview {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAtsInterviewResponse updateAtsInterview(UpdateAtsInterviewRequest request) {
+    public UpdateAtsInterviewResponse updateAtsInterview(@Nonnull UpdateAtsInterviewRequest request) {
         RequestOperation<UpdateAtsInterviewRequest, UpdateAtsInterviewResponse> operation
               = new UpdateAtsInterview.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

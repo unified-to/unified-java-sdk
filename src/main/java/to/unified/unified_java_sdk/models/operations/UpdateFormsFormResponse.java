@@ -4,12 +4,11 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.io.InputStream;
-import java.lang.Integer;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.FormsForm;
@@ -26,7 +25,7 @@ public class UpdateFormsFormResponse implements Response {
     /**
      * Successful
      */
-    private Optional<? extends FormsForm> formsForm;
+    private FormsForm formsForm;
 
     /**
      * HTTP response status code for this operation
@@ -40,59 +39,52 @@ public class UpdateFormsFormResponse implements Response {
 
     @JsonCreator
     public UpdateFormsFormResponse(
-            String contentType,
-            Optional<? extends FormsForm> formsForm,
+            @Nonnull String contentType,
+            @Nullable FormsForm formsForm,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(formsForm, "formsForm");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.contentType = contentType;
+            @Nonnull HttpResponse<InputStream> rawResponse) {
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.formsForm = formsForm;
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
     }
     
     public UpdateFormsFormResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
-        this(contentType, Optional.empty(), statusCode,
+            @Nonnull HttpResponse<InputStream> rawResponse) {
+        this(contentType, null, statusCode,
             rawResponse);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<FormsForm> formsForm() {
-        return (Optional<FormsForm>) formsForm;
+        return Optional.ofNullable(this.formsForm);
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<InputStream> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     public static Builder builder() {
@@ -103,18 +95,8 @@ public class UpdateFormsFormResponse implements Response {
     /**
      * HTTP response content type for this operation
      */
-    public UpdateFormsFormResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
-        return this;
-    }
-
-    /**
-     * Successful
-     */
-    public UpdateFormsFormResponse withFormsForm(FormsForm formsForm) {
-        Utils.checkNotNull(formsForm, "formsForm");
-        this.formsForm = Optional.ofNullable(formsForm);
+    public UpdateFormsFormResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
 
@@ -122,29 +104,29 @@ public class UpdateFormsFormResponse implements Response {
     /**
      * Successful
      */
-    public UpdateFormsFormResponse withFormsForm(Optional<? extends FormsForm> formsForm) {
-        Utils.checkNotNull(formsForm, "formsForm");
+    public UpdateFormsFormResponse withFormsForm(@Nullable FormsForm formsForm) {
         this.formsForm = formsForm;
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public UpdateFormsFormResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public UpdateFormsFormResponse withRawResponse(HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
+    public UpdateFormsFormResponse withRawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -183,9 +165,9 @@ public class UpdateFormsFormResponse implements Response {
 
         private String contentType;
 
-        private Optional<? extends FormsForm> formsForm = Optional.empty();
+        private FormsForm formsForm;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<InputStream> rawResponse;
 
@@ -193,57 +175,39 @@ public class UpdateFormsFormResponse implements Response {
           // force use of static builder() method
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
-            return this;
-        }
-
-
-        /**
-         * Successful
-         */
-        public Builder formsForm(FormsForm formsForm) {
-            Utils.checkNotNull(formsForm, "formsForm");
-            this.formsForm = Optional.ofNullable(formsForm);
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
 
         /**
          * Successful
          */
-        public Builder formsForm(Optional<? extends FormsForm> formsForm) {
-            Utils.checkNotNull(formsForm, "formsForm");
+        public Builder formsForm(@Nullable FormsForm formsForm) {
             this.formsForm = formsForm;
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<InputStream> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
+        public Builder rawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         public UpdateFormsFormResponse build() {
-
             return new UpdateFormsFormResponse(
                 contentType, formsForm, statusCode,
                 rawResponse);

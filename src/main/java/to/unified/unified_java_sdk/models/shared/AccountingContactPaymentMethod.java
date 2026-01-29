@@ -4,10 +4,11 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Override;
 import java.lang.String;
@@ -19,17 +20,17 @@ public class AccountingContactPaymentMethod {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("default")
-    private Optional<Boolean> default_;
+    private Boolean default_;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
-    private Optional<String> name;
+    private String name;
 
 
     @JsonProperty("type")
@@ -37,44 +38,37 @@ public class AccountingContactPaymentMethod {
 
     @JsonCreator
     public AccountingContactPaymentMethod(
-            @JsonProperty("default") Optional<Boolean> default_,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("name") Optional<String> name,
-            @JsonProperty("type") AccountingContactPaymentMethodType type) {
-        Utils.checkNotNull(default_, "default_");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(name, "name");
-        Utils.checkNotNull(type, "type");
+            @JsonProperty("default") @Nullable Boolean default_,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("name") @Nullable String name,
+            @JsonProperty("type") @Nonnull AccountingContactPaymentMethodType type) {
         this.default_ = default_;
         this.id = id;
         this.name = name;
-        this.type = type;
+        this.type = Optional.ofNullable(type)
+            .orElseThrow(() -> new IllegalArgumentException("type cannot be null"));
     }
     
     public AccountingContactPaymentMethod(
-            AccountingContactPaymentMethodType type) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
+            @Nonnull AccountingContactPaymentMethodType type) {
+        this(null, null, null,
             type);
     }
 
-    @JsonIgnore
     public Optional<Boolean> default_() {
-        return default_;
+        return Optional.ofNullable(this.default_);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<String> name() {
-        return name;
+        return Optional.ofNullable(this.name);
     }
 
-    @JsonIgnore
     public AccountingContactPaymentMethodType type() {
-        return type;
+        return this.type;
     }
 
     public static Builder builder() {
@@ -82,50 +76,29 @@ public class AccountingContactPaymentMethod {
     }
 
 
-    public AccountingContactPaymentMethod withDefault(boolean default_) {
-        Utils.checkNotNull(default_, "default_");
-        this.default_ = Optional.ofNullable(default_);
-        return this;
-    }
-
-
-    public AccountingContactPaymentMethod withDefault(Optional<Boolean> default_) {
-        Utils.checkNotNull(default_, "default_");
+    public AccountingContactPaymentMethod withDefault(@Nullable Boolean default_) {
         this.default_ = default_;
         return this;
     }
 
-    public AccountingContactPaymentMethod withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public AccountingContactPaymentMethod withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public AccountingContactPaymentMethod withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public AccountingContactPaymentMethod withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = Optional.ofNullable(name);
-        return this;
-    }
 
-
-    public AccountingContactPaymentMethod withName(Optional<String> name) {
-        Utils.checkNotNull(name, "name");
+    public AccountingContactPaymentMethod withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
-    public AccountingContactPaymentMethod withType(AccountingContactPaymentMethodType type) {
-        Utils.checkNotNull(type, "type");
-        this.type = type;
+
+    public AccountingContactPaymentMethod withType(@Nonnull AccountingContactPaymentMethodType type) {
+        this.type = Utils.checkNotNull(type, "type");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -162,11 +135,11 @@ public class AccountingContactPaymentMethod {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<Boolean> default_ = Optional.empty();
+        private Boolean default_;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<String> name = Optional.empty();
+        private String name;
 
         private AccountingContactPaymentMethodType type;
 
@@ -174,54 +147,27 @@ public class AccountingContactPaymentMethod {
           // force use of static builder() method
         }
 
-
-        public Builder default_(boolean default_) {
-            Utils.checkNotNull(default_, "default_");
-            this.default_ = Optional.ofNullable(default_);
-            return this;
-        }
-
-        public Builder default_(Optional<Boolean> default_) {
-            Utils.checkNotNull(default_, "default_");
+        public Builder default_(@Nullable Boolean default_) {
             this.default_ = default_;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = Optional.ofNullable(name);
-            return this;
-        }
-
-        public Builder name(Optional<String> name) {
-            Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-
-        public Builder type(AccountingContactPaymentMethodType type) {
-            Utils.checkNotNull(type, "type");
-            this.type = type;
+        public Builder type(@Nonnull AccountingContactPaymentMethodType type) {
+            this.type = Utils.checkNotNull(type, "type");
             return this;
         }
 
         public AccountingContactPaymentMethod build() {
-
             return new AccountingContactPaymentMethod(
                 default_, id, name,
                 type);

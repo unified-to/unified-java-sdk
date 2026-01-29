@@ -4,15 +4,14 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
@@ -24,142 +23,123 @@ public class AtsActivity {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("application_id")
-    private Optional<String> applicationId;
+    private String applicationId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bcc")
-    private Optional<? extends List<AtsEmail>> bcc;
+    private List<AtsEmail> bcc;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_id")
-    private Optional<String> candidateId;
+    private String candidateId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cc")
-    private Optional<? extends List<AtsEmail>> cc;
+    private List<AtsEmail> cc;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
-    private Optional<String> description;
+    private String description;
 
     /**
      * IDs for AtsDocument.get
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document_ids")
-    private Optional<? extends List<String>> documentIds;
+    private List<String> documentIds;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("from")
-    private Optional<? extends PropertyAtsActivityFrom> from;
+    private PropertyAtsActivityFrom from;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interview_id")
-    private Optional<String> interviewId;
+    private String interviewId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_private")
-    private Optional<Boolean> isPrivate;
+    private Boolean isPrivate;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("job_id")
-    private Optional<String> jobId;
+    private String jobId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sub_type")
-    private Optional<String> subType;
+    private String subType;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
-    private Optional<String> title;
+    private String title;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("to")
-    private Optional<? extends List<AtsEmail>> to;
+    private List<AtsEmail> to;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
-    private Optional<? extends AtsActivityType> type;
+    private AtsActivityType type;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
     /**
      * id values of the recruiters associated with the activity.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_ids")
-    private Optional<? extends List<String>> userIds;
+    private List<String> userIds;
 
     @JsonCreator
     public AtsActivity(
-            @JsonProperty("application_id") Optional<String> applicationId,
-            @JsonProperty("bcc") Optional<? extends List<AtsEmail>> bcc,
-            @JsonProperty("candidate_id") Optional<String> candidateId,
-            @JsonProperty("cc") Optional<? extends List<AtsEmail>> cc,
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("description") Optional<String> description,
-            @JsonProperty("document_ids") Optional<? extends List<String>> documentIds,
-            @JsonProperty("from") Optional<? extends PropertyAtsActivityFrom> from,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("interview_id") Optional<String> interviewId,
-            @JsonProperty("is_private") Optional<Boolean> isPrivate,
-            @JsonProperty("job_id") Optional<String> jobId,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("sub_type") Optional<String> subType,
-            @JsonProperty("title") Optional<String> title,
-            @JsonProperty("to") Optional<? extends List<AtsEmail>> to,
-            @JsonProperty("type") Optional<? extends AtsActivityType> type,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
-            @JsonProperty("user_ids") Optional<? extends List<String>> userIds) {
-        Utils.checkNotNull(applicationId, "applicationId");
-        Utils.checkNotNull(bcc, "bcc");
-        Utils.checkNotNull(candidateId, "candidateId");
-        Utils.checkNotNull(cc, "cc");
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(description, "description");
-        Utils.checkNotNull(documentIds, "documentIds");
-        Utils.checkNotNull(from, "from");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(interviewId, "interviewId");
-        Utils.checkNotNull(isPrivate, "isPrivate");
-        Utils.checkNotNull(jobId, "jobId");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(subType, "subType");
-        Utils.checkNotNull(title, "title");
-        Utils.checkNotNull(to, "to");
-        Utils.checkNotNull(type, "type");
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        Utils.checkNotNull(userIds, "userIds");
+            @JsonProperty("application_id") @Nullable String applicationId,
+            @JsonProperty("bcc") @Nullable List<AtsEmail> bcc,
+            @JsonProperty("candidate_id") @Nullable String candidateId,
+            @JsonProperty("cc") @Nullable List<AtsEmail> cc,
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("description") @Nullable String description,
+            @JsonProperty("document_ids") @Nullable List<String> documentIds,
+            @JsonProperty("from") @Nullable PropertyAtsActivityFrom from,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("interview_id") @Nullable String interviewId,
+            @JsonProperty("is_private") @Nullable Boolean isPrivate,
+            @JsonProperty("job_id") @Nullable String jobId,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("sub_type") @Nullable String subType,
+            @JsonProperty("title") @Nullable String title,
+            @JsonProperty("to") @Nullable List<AtsEmail> to,
+            @JsonProperty("type") @Nullable AtsActivityType type,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
+            @JsonProperty("user_ids") @Nullable List<String> userIds) {
         this.applicationId = applicationId;
         this.bcc = bcc;
         this.candidateId = candidateId;
@@ -182,122 +162,95 @@ public class AtsActivity {
     }
     
     public AtsActivity() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null);
     }
 
-    @JsonIgnore
     public Optional<String> applicationId() {
-        return applicationId;
+        return Optional.ofNullable(this.applicationId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<AtsEmail>> bcc() {
-        return (Optional<List<AtsEmail>>) bcc;
+        return Optional.ofNullable(this.bcc);
     }
 
-    @JsonIgnore
     public Optional<String> candidateId() {
-        return candidateId;
+        return Optional.ofNullable(this.candidateId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<AtsEmail>> cc() {
-        return (Optional<List<AtsEmail>>) cc;
+        return Optional.ofNullable(this.cc);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<String> description() {
-        return description;
+        return Optional.ofNullable(this.description);
     }
 
     /**
      * IDs for AtsDocument.get
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> documentIds() {
-        return (Optional<List<String>>) documentIds;
+        return Optional.ofNullable(this.documentIds);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<PropertyAtsActivityFrom> from() {
-        return (Optional<PropertyAtsActivityFrom>) from;
+        return Optional.ofNullable(this.from);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<String> interviewId() {
-        return interviewId;
+        return Optional.ofNullable(this.interviewId);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isPrivate() {
-        return isPrivate;
+        return Optional.ofNullable(this.isPrivate);
     }
 
-    @JsonIgnore
     public Optional<String> jobId() {
-        return jobId;
+        return Optional.ofNullable(this.jobId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @JsonIgnore
     public Optional<String> subType() {
-        return subType;
+        return Optional.ofNullable(this.subType);
     }
 
-    @JsonIgnore
     public Optional<String> title() {
-        return title;
+        return Optional.ofNullable(this.title);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<AtsEmail>> to() {
-        return (Optional<List<AtsEmail>>) to;
+        return Optional.ofNullable(this.to);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<AtsActivityType> type() {
-        return (Optional<AtsActivityType>) type;
+        return Optional.ofNullable(this.type);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
     /**
      * id values of the recruiters associated with the activity.
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> userIds() {
-        return (Optional<List<String>>) userIds;
+        return Optional.ofNullable(this.userIds);
     }
 
     public static Builder builder() {
@@ -305,264 +258,125 @@ public class AtsActivity {
     }
 
 
-    public AtsActivity withApplicationId(String applicationId) {
-        Utils.checkNotNull(applicationId, "applicationId");
-        this.applicationId = Optional.ofNullable(applicationId);
-        return this;
-    }
-
-
-    public AtsActivity withApplicationId(Optional<String> applicationId) {
-        Utils.checkNotNull(applicationId, "applicationId");
+    public AtsActivity withApplicationId(@Nullable String applicationId) {
         this.applicationId = applicationId;
         return this;
     }
 
-    public AtsActivity withBcc(List<AtsEmail> bcc) {
-        Utils.checkNotNull(bcc, "bcc");
-        this.bcc = Optional.ofNullable(bcc);
-        return this;
-    }
 
-
-    public AtsActivity withBcc(Optional<? extends List<AtsEmail>> bcc) {
-        Utils.checkNotNull(bcc, "bcc");
+    public AtsActivity withBcc(@Nullable List<AtsEmail> bcc) {
         this.bcc = bcc;
         return this;
     }
 
-    public AtsActivity withCandidateId(String candidateId) {
-        Utils.checkNotNull(candidateId, "candidateId");
-        this.candidateId = Optional.ofNullable(candidateId);
-        return this;
-    }
 
-
-    public AtsActivity withCandidateId(Optional<String> candidateId) {
-        Utils.checkNotNull(candidateId, "candidateId");
+    public AtsActivity withCandidateId(@Nullable String candidateId) {
         this.candidateId = candidateId;
         return this;
     }
 
-    public AtsActivity withCc(List<AtsEmail> cc) {
-        Utils.checkNotNull(cc, "cc");
-        this.cc = Optional.ofNullable(cc);
-        return this;
-    }
 
-
-    public AtsActivity withCc(Optional<? extends List<AtsEmail>> cc) {
-        Utils.checkNotNull(cc, "cc");
+    public AtsActivity withCc(@Nullable List<AtsEmail> cc) {
         this.cc = cc;
         return this;
     }
 
-    public AtsActivity withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
 
-
-    public AtsActivity withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public AtsActivity withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public AtsActivity withDescription(String description) {
-        Utils.checkNotNull(description, "description");
-        this.description = Optional.ofNullable(description);
-        return this;
-    }
 
-
-    public AtsActivity withDescription(Optional<String> description) {
-        Utils.checkNotNull(description, "description");
+    public AtsActivity withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
-    /**
-     * IDs for AtsDocument.get
-     */
-    public AtsActivity withDocumentIds(List<String> documentIds) {
-        Utils.checkNotNull(documentIds, "documentIds");
-        this.documentIds = Optional.ofNullable(documentIds);
-        return this;
-    }
-
 
     /**
      * IDs for AtsDocument.get
      */
-    public AtsActivity withDocumentIds(Optional<? extends List<String>> documentIds) {
-        Utils.checkNotNull(documentIds, "documentIds");
+    public AtsActivity withDocumentIds(@Nullable List<String> documentIds) {
         this.documentIds = documentIds;
         return this;
     }
 
-    public AtsActivity withFrom(PropertyAtsActivityFrom from) {
-        Utils.checkNotNull(from, "from");
-        this.from = Optional.ofNullable(from);
-        return this;
-    }
 
-
-    public AtsActivity withFrom(Optional<? extends PropertyAtsActivityFrom> from) {
-        Utils.checkNotNull(from, "from");
+    public AtsActivity withFrom(@Nullable PropertyAtsActivityFrom from) {
         this.from = from;
         return this;
     }
 
-    public AtsActivity withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public AtsActivity withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public AtsActivity withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public AtsActivity withInterviewId(String interviewId) {
-        Utils.checkNotNull(interviewId, "interviewId");
-        this.interviewId = Optional.ofNullable(interviewId);
-        return this;
-    }
 
-
-    public AtsActivity withInterviewId(Optional<String> interviewId) {
-        Utils.checkNotNull(interviewId, "interviewId");
+    public AtsActivity withInterviewId(@Nullable String interviewId) {
         this.interviewId = interviewId;
         return this;
     }
 
-    public AtsActivity withIsPrivate(boolean isPrivate) {
-        Utils.checkNotNull(isPrivate, "isPrivate");
-        this.isPrivate = Optional.ofNullable(isPrivate);
-        return this;
-    }
 
-
-    public AtsActivity withIsPrivate(Optional<Boolean> isPrivate) {
-        Utils.checkNotNull(isPrivate, "isPrivate");
+    public AtsActivity withIsPrivate(@Nullable Boolean isPrivate) {
         this.isPrivate = isPrivate;
         return this;
     }
 
-    public AtsActivity withJobId(String jobId) {
-        Utils.checkNotNull(jobId, "jobId");
-        this.jobId = Optional.ofNullable(jobId);
-        return this;
-    }
 
-
-    public AtsActivity withJobId(Optional<String> jobId) {
-        Utils.checkNotNull(jobId, "jobId");
+    public AtsActivity withJobId(@Nullable String jobId) {
         this.jobId = jobId;
         return this;
     }
 
-    public AtsActivity withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public AtsActivity withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public AtsActivity withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public AtsActivity withSubType(String subType) {
-        Utils.checkNotNull(subType, "subType");
-        this.subType = Optional.ofNullable(subType);
-        return this;
-    }
 
-
-    public AtsActivity withSubType(Optional<String> subType) {
-        Utils.checkNotNull(subType, "subType");
+    public AtsActivity withSubType(@Nullable String subType) {
         this.subType = subType;
         return this;
     }
 
-    public AtsActivity withTitle(String title) {
-        Utils.checkNotNull(title, "title");
-        this.title = Optional.ofNullable(title);
-        return this;
-    }
 
-
-    public AtsActivity withTitle(Optional<String> title) {
-        Utils.checkNotNull(title, "title");
+    public AtsActivity withTitle(@Nullable String title) {
         this.title = title;
         return this;
     }
 
-    public AtsActivity withTo(List<AtsEmail> to) {
-        Utils.checkNotNull(to, "to");
-        this.to = Optional.ofNullable(to);
-        return this;
-    }
 
-
-    public AtsActivity withTo(Optional<? extends List<AtsEmail>> to) {
-        Utils.checkNotNull(to, "to");
+    public AtsActivity withTo(@Nullable List<AtsEmail> to) {
         this.to = to;
         return this;
     }
 
-    public AtsActivity withType(AtsActivityType type) {
-        Utils.checkNotNull(type, "type");
-        this.type = Optional.ofNullable(type);
-        return this;
-    }
 
-
-    public AtsActivity withType(Optional<? extends AtsActivityType> type) {
-        Utils.checkNotNull(type, "type");
+    public AtsActivity withType(@Nullable AtsActivityType type) {
         this.type = type;
         return this;
     }
 
-    public AtsActivity withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public AtsActivity withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public AtsActivity withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
-    /**
-     * id values of the recruiters associated with the activity.
-     */
-    public AtsActivity withUserIds(List<String> userIds) {
-        Utils.checkNotNull(userIds, "userIds");
-        this.userIds = Optional.ofNullable(userIds);
-        return this;
-    }
-
 
     /**
      * id values of the recruiters associated with the activity.
      */
-    public AtsActivity withUserIds(Optional<? extends List<String>> userIds) {
-        Utils.checkNotNull(userIds, "userIds");
+    public AtsActivity withUserIds(@Nullable List<String> userIds) {
         this.userIds = userIds;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -634,309 +448,150 @@ public class AtsActivity {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> applicationId = Optional.empty();
+        private String applicationId;
 
-        private Optional<? extends List<AtsEmail>> bcc = Optional.empty();
+        private List<AtsEmail> bcc;
 
-        private Optional<String> candidateId = Optional.empty();
+        private String candidateId;
 
-        private Optional<? extends List<AtsEmail>> cc = Optional.empty();
+        private List<AtsEmail> cc;
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<String> description = Optional.empty();
+        private String description;
 
-        private Optional<? extends List<String>> documentIds = Optional.empty();
+        private List<String> documentIds;
 
-        private Optional<? extends PropertyAtsActivityFrom> from = Optional.empty();
+        private PropertyAtsActivityFrom from;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<String> interviewId = Optional.empty();
+        private String interviewId;
 
-        private Optional<Boolean> isPrivate = Optional.empty();
+        private Boolean isPrivate;
 
-        private Optional<String> jobId = Optional.empty();
+        private String jobId;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<String> subType = Optional.empty();
+        private String subType;
 
-        private Optional<String> title = Optional.empty();
+        private String title;
 
-        private Optional<? extends List<AtsEmail>> to = Optional.empty();
+        private List<AtsEmail> to;
 
-        private Optional<? extends AtsActivityType> type = Optional.empty();
+        private AtsActivityType type;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
-        private Optional<? extends List<String>> userIds = Optional.empty();
+        private List<String> userIds;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder applicationId(String applicationId) {
-            Utils.checkNotNull(applicationId, "applicationId");
-            this.applicationId = Optional.ofNullable(applicationId);
-            return this;
-        }
-
-        public Builder applicationId(Optional<String> applicationId) {
-            Utils.checkNotNull(applicationId, "applicationId");
+        public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = applicationId;
             return this;
         }
 
-
-        public Builder bcc(List<AtsEmail> bcc) {
-            Utils.checkNotNull(bcc, "bcc");
-            this.bcc = Optional.ofNullable(bcc);
-            return this;
-        }
-
-        public Builder bcc(Optional<? extends List<AtsEmail>> bcc) {
-            Utils.checkNotNull(bcc, "bcc");
+        public Builder bcc(@Nullable List<AtsEmail> bcc) {
             this.bcc = bcc;
             return this;
         }
 
-
-        public Builder candidateId(String candidateId) {
-            Utils.checkNotNull(candidateId, "candidateId");
-            this.candidateId = Optional.ofNullable(candidateId);
-            return this;
-        }
-
-        public Builder candidateId(Optional<String> candidateId) {
-            Utils.checkNotNull(candidateId, "candidateId");
+        public Builder candidateId(@Nullable String candidateId) {
             this.candidateId = candidateId;
             return this;
         }
 
-
-        public Builder cc(List<AtsEmail> cc) {
-            Utils.checkNotNull(cc, "cc");
-            this.cc = Optional.ofNullable(cc);
-            return this;
-        }
-
-        public Builder cc(Optional<? extends List<AtsEmail>> cc) {
-            Utils.checkNotNull(cc, "cc");
+        public Builder cc(@Nullable List<AtsEmail> cc) {
             this.cc = cc;
             return this;
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder description(String description) {
-            Utils.checkNotNull(description, "description");
-            this.description = Optional.ofNullable(description);
-            return this;
-        }
-
-        public Builder description(Optional<String> description) {
-            Utils.checkNotNull(description, "description");
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-
         /**
          * IDs for AtsDocument.get
          */
-        public Builder documentIds(List<String> documentIds) {
-            Utils.checkNotNull(documentIds, "documentIds");
-            this.documentIds = Optional.ofNullable(documentIds);
-            return this;
-        }
-
-        /**
-         * IDs for AtsDocument.get
-         */
-        public Builder documentIds(Optional<? extends List<String>> documentIds) {
-            Utils.checkNotNull(documentIds, "documentIds");
+        public Builder documentIds(@Nullable List<String> documentIds) {
             this.documentIds = documentIds;
             return this;
         }
 
-
-        public Builder from(PropertyAtsActivityFrom from) {
-            Utils.checkNotNull(from, "from");
-            this.from = Optional.ofNullable(from);
-            return this;
-        }
-
-        public Builder from(Optional<? extends PropertyAtsActivityFrom> from) {
-            Utils.checkNotNull(from, "from");
+        public Builder from(@Nullable PropertyAtsActivityFrom from) {
             this.from = from;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder interviewId(String interviewId) {
-            Utils.checkNotNull(interviewId, "interviewId");
-            this.interviewId = Optional.ofNullable(interviewId);
-            return this;
-        }
-
-        public Builder interviewId(Optional<String> interviewId) {
-            Utils.checkNotNull(interviewId, "interviewId");
+        public Builder interviewId(@Nullable String interviewId) {
             this.interviewId = interviewId;
             return this;
         }
 
-
-        public Builder isPrivate(boolean isPrivate) {
-            Utils.checkNotNull(isPrivate, "isPrivate");
-            this.isPrivate = Optional.ofNullable(isPrivate);
-            return this;
-        }
-
-        public Builder isPrivate(Optional<Boolean> isPrivate) {
-            Utils.checkNotNull(isPrivate, "isPrivate");
+        public Builder isPrivate(@Nullable Boolean isPrivate) {
             this.isPrivate = isPrivate;
             return this;
         }
 
-
-        public Builder jobId(String jobId) {
-            Utils.checkNotNull(jobId, "jobId");
-            this.jobId = Optional.ofNullable(jobId);
-            return this;
-        }
-
-        public Builder jobId(Optional<String> jobId) {
-            Utils.checkNotNull(jobId, "jobId");
+        public Builder jobId(@Nullable String jobId) {
             this.jobId = jobId;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder subType(String subType) {
-            Utils.checkNotNull(subType, "subType");
-            this.subType = Optional.ofNullable(subType);
-            return this;
-        }
-
-        public Builder subType(Optional<String> subType) {
-            Utils.checkNotNull(subType, "subType");
+        public Builder subType(@Nullable String subType) {
             this.subType = subType;
             return this;
         }
 
-
-        public Builder title(String title) {
-            Utils.checkNotNull(title, "title");
-            this.title = Optional.ofNullable(title);
-            return this;
-        }
-
-        public Builder title(Optional<String> title) {
-            Utils.checkNotNull(title, "title");
+        public Builder title(@Nullable String title) {
             this.title = title;
             return this;
         }
 
-
-        public Builder to(List<AtsEmail> to) {
-            Utils.checkNotNull(to, "to");
-            this.to = Optional.ofNullable(to);
-            return this;
-        }
-
-        public Builder to(Optional<? extends List<AtsEmail>> to) {
-            Utils.checkNotNull(to, "to");
+        public Builder to(@Nullable List<AtsEmail> to) {
             this.to = to;
             return this;
         }
 
-
-        public Builder type(AtsActivityType type) {
-            Utils.checkNotNull(type, "type");
-            this.type = Optional.ofNullable(type);
-            return this;
-        }
-
-        public Builder type(Optional<? extends AtsActivityType> type) {
-            Utils.checkNotNull(type, "type");
+        public Builder type(@Nullable AtsActivityType type) {
             this.type = type;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
-
         /**
          * id values of the recruiters associated with the activity.
          */
-        public Builder userIds(List<String> userIds) {
-            Utils.checkNotNull(userIds, "userIds");
-            this.userIds = Optional.ofNullable(userIds);
-            return this;
-        }
-
-        /**
-         * id values of the recruiters associated with the activity.
-         */
-        public Builder userIds(Optional<? extends List<String>> userIds) {
-            Utils.checkNotNull(userIds, "userIds");
+        public Builder userIds(@Nullable List<String> userIds) {
             this.userIds = userIds;
             return this;
         }
 
         public AtsActivity build() {
-
             return new AtsActivity(
                 applicationId, bcc, candidateId,
                 cc, createdAt, description,

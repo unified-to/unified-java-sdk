@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateKmsSpaceRequest;
 import to.unified.unified_java_sdk.models.operations.CreateKmsSpaceRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateKmsSpaceResponse;
@@ -67,7 +68,7 @@ public class Space {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateKmsSpaceResponse createKmsSpace(CreateKmsSpaceRequest request) {
+    public CreateKmsSpaceResponse createKmsSpace(@Nonnull CreateKmsSpaceRequest request) {
         RequestOperation<CreateKmsSpaceRequest, CreateKmsSpaceResponse> operation
               = new CreateKmsSpace.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -89,7 +90,7 @@ public class Space {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetKmsSpaceResponse getKmsSpace(GetKmsSpaceRequest request) {
+    public GetKmsSpaceResponse getKmsSpace(@Nonnull GetKmsSpaceRequest request) {
         RequestOperation<GetKmsSpaceRequest, GetKmsSpaceResponse> operation
               = new GetKmsSpace.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -111,7 +112,7 @@ public class Space {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListKmsSpacesResponse listKmsSpaces(ListKmsSpacesRequest request) {
+    public ListKmsSpacesResponse listKmsSpaces(@Nonnull ListKmsSpacesRequest request) {
         RequestOperation<ListKmsSpacesRequest, ListKmsSpacesResponse> operation
               = new ListKmsSpaces.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -133,7 +134,7 @@ public class Space {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchKmsSpaceResponse patchKmsSpace(PatchKmsSpaceRequest request) {
+    public PatchKmsSpaceResponse patchKmsSpace(@Nonnull PatchKmsSpaceRequest request) {
         RequestOperation<PatchKmsSpaceRequest, PatchKmsSpaceResponse> operation
               = new PatchKmsSpace.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -155,7 +156,7 @@ public class Space {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveKmsSpaceResponse removeKmsSpace(RemoveKmsSpaceRequest request) {
+    public RemoveKmsSpaceResponse removeKmsSpace(@Nonnull RemoveKmsSpaceRequest request) {
         RequestOperation<RemoveKmsSpaceRequest, RemoveKmsSpaceResponse> operation
               = new RemoveKmsSpace.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -177,7 +178,7 @@ public class Space {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateKmsSpaceResponse updateKmsSpace(UpdateKmsSpaceRequest request) {
+    public UpdateKmsSpaceResponse updateKmsSpace(@Nonnull UpdateKmsSpaceRequest request) {
         RequestOperation<UpdateKmsSpaceRequest, UpdateKmsSpaceResponse> operation
               = new UpdateKmsSpace.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

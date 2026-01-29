@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateShippingShipmentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateShippingShipmentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateShippingShipmentResponse;
@@ -67,7 +68,7 @@ public class Shipment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateShippingShipmentResponse createShippingShipment(CreateShippingShipmentRequest request) {
+    public CreateShippingShipmentResponse createShippingShipment(@Nonnull CreateShippingShipmentRequest request) {
         RequestOperation<CreateShippingShipmentRequest, CreateShippingShipmentResponse> operation
               = new CreateShippingShipment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -89,7 +90,7 @@ public class Shipment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetShippingShipmentResponse getShippingShipment(GetShippingShipmentRequest request) {
+    public GetShippingShipmentResponse getShippingShipment(@Nonnull GetShippingShipmentRequest request) {
         RequestOperation<GetShippingShipmentRequest, GetShippingShipmentResponse> operation
               = new GetShippingShipment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -111,7 +112,7 @@ public class Shipment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListShippingShipmentsResponse listShippingShipments(ListShippingShipmentsRequest request) {
+    public ListShippingShipmentsResponse listShippingShipments(@Nonnull ListShippingShipmentsRequest request) {
         RequestOperation<ListShippingShipmentsRequest, ListShippingShipmentsResponse> operation
               = new ListShippingShipments.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -133,7 +134,7 @@ public class Shipment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchShippingShipmentResponse patchShippingShipment(PatchShippingShipmentRequest request) {
+    public PatchShippingShipmentResponse patchShippingShipment(@Nonnull PatchShippingShipmentRequest request) {
         RequestOperation<PatchShippingShipmentRequest, PatchShippingShipmentResponse> operation
               = new PatchShippingShipment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -155,7 +156,7 @@ public class Shipment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveShippingShipmentResponse removeShippingShipment(RemoveShippingShipmentRequest request) {
+    public RemoveShippingShipmentResponse removeShippingShipment(@Nonnull RemoveShippingShipmentRequest request) {
         RequestOperation<RemoveShippingShipmentRequest, RemoveShippingShipmentResponse> operation
               = new RemoveShippingShipment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -177,7 +178,7 @@ public class Shipment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateShippingShipmentResponse updateShippingShipment(UpdateShippingShipmentRequest request) {
+    public UpdateShippingShipmentResponse updateShippingShipment(@Nonnull UpdateShippingShipmentRequest request) {
         RequestOperation<UpdateShippingShipmentRequest, UpdateShippingShipmentResponse> operation
               = new UpdateShippingShipment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

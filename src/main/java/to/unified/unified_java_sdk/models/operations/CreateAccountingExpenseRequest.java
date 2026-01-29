@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.AccountingExpense;
@@ -30,7 +30,7 @@ public class CreateAccountingExpenseRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<CreateAccountingExpenseQueryParamFields>> fields;
+    private List<CreateAccountingExpenseQueryParamFields> fields;
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
@@ -38,51 +38,45 @@ public class CreateAccountingExpenseRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
     @JsonCreator
     public CreateAccountingExpenseRequest(
-            AccountingExpense accountingExpense,
-            String connectionId,
-            Optional<? extends List<CreateAccountingExpenseQueryParamFields>> fields,
-            Optional<String> raw) {
-        Utils.checkNotNull(accountingExpense, "accountingExpense");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(raw, "raw");
-        this.accountingExpense = accountingExpense;
-        this.connectionId = connectionId;
+            @Nonnull AccountingExpense accountingExpense,
+            @Nonnull String connectionId,
+            @Nullable List<CreateAccountingExpenseQueryParamFields> fields,
+            @Nullable String raw) {
+        this.accountingExpense = Optional.ofNullable(accountingExpense)
+            .orElseThrow(() -> new IllegalArgumentException("accountingExpense cannot be null"));
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
         this.raw = raw;
     }
     
     public CreateAccountingExpenseRequest(
-            AccountingExpense accountingExpense,
-            String connectionId) {
-        this(accountingExpense, connectionId, Optional.empty(),
-            Optional.empty());
+            @Nonnull AccountingExpense accountingExpense,
+            @Nonnull String connectionId) {
+        this(accountingExpense, connectionId, null,
+            null);
     }
 
-    @JsonIgnore
     public AccountingExpense accountingExpense() {
-        return accountingExpense;
+        return this.accountingExpense;
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<CreateAccountingExpenseQueryParamFields>> fields() {
-        return (Optional<List<CreateAccountingExpenseQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
@@ -90,9 +84,8 @@ public class CreateAccountingExpenseRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
     public static Builder builder() {
@@ -100,27 +93,17 @@ public class CreateAccountingExpenseRequest {
     }
 
 
-    public CreateAccountingExpenseRequest withAccountingExpense(AccountingExpense accountingExpense) {
-        Utils.checkNotNull(accountingExpense, "accountingExpense");
-        this.accountingExpense = accountingExpense;
+    public CreateAccountingExpenseRequest withAccountingExpense(@Nonnull AccountingExpense accountingExpense) {
+        this.accountingExpense = Utils.checkNotNull(accountingExpense, "accountingExpense");
         return this;
     }
+
 
     /**
      * ID of the connection
      */
-    public CreateAccountingExpenseRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public CreateAccountingExpenseRequest withFields(List<CreateAccountingExpenseQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public CreateAccountingExpenseRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -128,34 +111,22 @@ public class CreateAccountingExpenseRequest {
     /**
      * Fields to return
      */
-    public CreateAccountingExpenseRequest withFields(Optional<? extends List<CreateAccountingExpenseQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public CreateAccountingExpenseRequest withFields(@Nullable List<CreateAccountingExpenseQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public CreateAccountingExpenseRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
-
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public CreateAccountingExpenseRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public CreateAccountingExpenseRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -196,75 +167,46 @@ public class CreateAccountingExpenseRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<CreateAccountingExpenseQueryParamFields>> fields = Optional.empty();
+        private List<CreateAccountingExpenseQueryParamFields> fields;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder accountingExpense(AccountingExpense accountingExpense) {
-            Utils.checkNotNull(accountingExpense, "accountingExpense");
-            this.accountingExpense = accountingExpense;
+        public Builder accountingExpense(@Nonnull AccountingExpense accountingExpense) {
+            this.accountingExpense = Utils.checkNotNull(accountingExpense, "accountingExpense");
             return this;
         }
-
 
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<CreateAccountingExpenseQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<CreateAccountingExpenseQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<CreateAccountingExpenseQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
         public CreateAccountingExpenseRequest build() {
-
             return new CreateAccountingExpenseRequest(
                 accountingExpense, connectionId, fields,
                 raw);

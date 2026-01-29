@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.GetAccountingCashflowRequest;
 import to.unified.unified_java_sdk.models.operations.GetAccountingCashflowRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetAccountingCashflowResponse;
@@ -51,7 +52,7 @@ public class Cashflow {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingCashflowResponse getAccountingCashflow(GetAccountingCashflowRequest request) {
+    public GetAccountingCashflowResponse getAccountingCashflow(@Nonnull GetAccountingCashflowRequest request) {
         RequestOperation<GetAccountingCashflowRequest, GetAccountingCashflowResponse> operation
               = new GetAccountingCashflow.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -73,7 +74,7 @@ public class Cashflow {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingCashflowsResponse listAccountingCashflows(ListAccountingCashflowsRequest request) {
+    public ListAccountingCashflowsResponse listAccountingCashflows(@Nonnull ListAccountingCashflowsRequest request) {
         RequestOperation<ListAccountingCashflowsRequest, ListAccountingCashflowsResponse> operation
               = new ListAccountingCashflows.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

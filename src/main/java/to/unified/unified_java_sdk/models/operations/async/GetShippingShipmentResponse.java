@@ -4,11 +4,11 @@
 package to.unified.unified_java_sdk.models.operations.async;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import java.lang.Integer;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.io.InputStream;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.ShippingShipment;
@@ -26,7 +26,7 @@ public class GetShippingShipmentResponse implements AsyncResponse {
     /**
      * Successful
      */
-    private Optional<? extends ShippingShipment> shippingShipment;
+    private ShippingShipment shippingShipment;
 
     /**
      * HTTP response status code for this operation
@@ -40,59 +40,52 @@ public class GetShippingShipmentResponse implements AsyncResponse {
 
     @JsonCreator
     public GetShippingShipmentResponse(
-            String contentType,
-            Optional<? extends ShippingShipment> shippingShipment,
+            @Nonnull String contentType,
+            @Nullable ShippingShipment shippingShipment,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(shippingShipment, "shippingShipment");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.contentType = contentType;
+            @Nonnull HttpResponse<Blob> rawResponse) {
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.shippingShipment = shippingShipment;
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
     }
     
     public GetShippingShipmentResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
-        this(contentType, Optional.empty(), statusCode,
+            @Nonnull HttpResponse<Blob> rawResponse) {
+        this(contentType, null, statusCode,
             rawResponse);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ShippingShipment> shippingShipment() {
-        return (Optional<ShippingShipment>) shippingShipment;
+        return Optional.ofNullable(this.shippingShipment);
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<Blob> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     public static Builder builder() {
@@ -103,18 +96,8 @@ public class GetShippingShipmentResponse implements AsyncResponse {
     /**
      * HTTP response content type for this operation
      */
-    public GetShippingShipmentResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
-        return this;
-    }
-
-    /**
-     * Successful
-     */
-    public GetShippingShipmentResponse withShippingShipment(ShippingShipment shippingShipment) {
-        Utils.checkNotNull(shippingShipment, "shippingShipment");
-        this.shippingShipment = Optional.ofNullable(shippingShipment);
+    public GetShippingShipmentResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
 
@@ -122,29 +105,29 @@ public class GetShippingShipmentResponse implements AsyncResponse {
     /**
      * Successful
      */
-    public GetShippingShipmentResponse withShippingShipment(Optional<? extends ShippingShipment> shippingShipment) {
-        Utils.checkNotNull(shippingShipment, "shippingShipment");
+    public GetShippingShipmentResponse withShippingShipment(@Nullable ShippingShipment shippingShipment) {
         this.shippingShipment = shippingShipment;
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public GetShippingShipmentResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public GetShippingShipmentResponse withRawResponse(HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
+    public GetShippingShipmentResponse withRawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -183,9 +166,9 @@ public class GetShippingShipmentResponse implements AsyncResponse {
 
         private String contentType;
 
-        private Optional<? extends ShippingShipment> shippingShipment = Optional.empty();
+        private ShippingShipment shippingShipment;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<Blob> rawResponse;
 
@@ -193,57 +176,39 @@ public class GetShippingShipmentResponse implements AsyncResponse {
           // force use of static builder() method
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
-            return this;
-        }
-
-
-        /**
-         * Successful
-         */
-        public Builder shippingShipment(ShippingShipment shippingShipment) {
-            Utils.checkNotNull(shippingShipment, "shippingShipment");
-            this.shippingShipment = Optional.ofNullable(shippingShipment);
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
 
         /**
          * Successful
          */
-        public Builder shippingShipment(Optional<? extends ShippingShipment> shippingShipment) {
-            Utils.checkNotNull(shippingShipment, "shippingShipment");
+        public Builder shippingShipment(@Nullable ShippingShipment shippingShipment) {
             this.shippingShipment = shippingShipment;
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<Blob> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
+        public Builder rawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         public GetShippingShipmentResponse build() {
-
             return new GetShippingShipmentResponse(
                 contentType, shippingShipment, statusCode,
                 rawResponse);

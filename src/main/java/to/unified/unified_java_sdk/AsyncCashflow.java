@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.GetAccountingCashflowRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingCashflowsRequest;
@@ -52,7 +53,7 @@ public class AsyncCashflow {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAccountingCashflowResponse>} - The async response
      */
-    public CompletableFuture<GetAccountingCashflowResponse> getAccountingCashflow(GetAccountingCashflowRequest request) {
+    public CompletableFuture<GetAccountingCashflowResponse> getAccountingCashflow(@Nonnull GetAccountingCashflowRequest request) {
         AsyncRequestOperation<GetAccountingCashflowRequest, GetAccountingCashflowResponse> operation
               = new GetAccountingCashflow.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -75,7 +76,7 @@ public class AsyncCashflow {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAccountingCashflowsResponse>} - The async response
      */
-    public CompletableFuture<ListAccountingCashflowsResponse> listAccountingCashflows(ListAccountingCashflowsRequest request) {
+    public CompletableFuture<ListAccountingCashflowsResponse> listAccountingCashflows(@Nonnull ListAccountingCashflowsRequest request) {
         AsyncRequestOperation<ListAccountingCashflowsRequest, ListAccountingCashflowsResponse> operation
               = new ListAccountingCashflows.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

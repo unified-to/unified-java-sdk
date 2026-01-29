@@ -4,14 +4,13 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -21,33 +20,29 @@ public class AccountingProfitlossSection {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accounts")
-    private Optional<? extends List<AccountingProfitlossAccount>> accounts;
+    private List<AccountingProfitlossAccount> accounts;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("section_name")
-    private Optional<String> sectionName;
+    private String sectionName;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("section_type")
-    private Optional<String> sectionType;
+    private String sectionType;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_amount")
-    private Optional<Double> totalAmount;
+    private Double totalAmount;
 
     @JsonCreator
     public AccountingProfitlossSection(
-            @JsonProperty("accounts") Optional<? extends List<AccountingProfitlossAccount>> accounts,
-            @JsonProperty("section_name") Optional<String> sectionName,
-            @JsonProperty("section_type") Optional<String> sectionType,
-            @JsonProperty("total_amount") Optional<Double> totalAmount) {
-        Utils.checkNotNull(accounts, "accounts");
-        Utils.checkNotNull(sectionName, "sectionName");
-        Utils.checkNotNull(sectionType, "sectionType");
-        Utils.checkNotNull(totalAmount, "totalAmount");
+            @JsonProperty("accounts") @Nullable List<AccountingProfitlossAccount> accounts,
+            @JsonProperty("section_name") @Nullable String sectionName,
+            @JsonProperty("section_type") @Nullable String sectionType,
+            @JsonProperty("total_amount") @Nullable Double totalAmount) {
         this.accounts = accounts;
         this.sectionName = sectionName;
         this.sectionType = sectionType;
@@ -55,29 +50,24 @@ public class AccountingProfitlossSection {
     }
     
     public AccountingProfitlossSection() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+        this(null, null, null,
+            null);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<AccountingProfitlossAccount>> accounts() {
-        return (Optional<List<AccountingProfitlossAccount>>) accounts;
+        return Optional.ofNullable(this.accounts);
     }
 
-    @JsonIgnore
     public Optional<String> sectionName() {
-        return sectionName;
+        return Optional.ofNullable(this.sectionName);
     }
 
-    @JsonIgnore
     public Optional<String> sectionType() {
-        return sectionType;
+        return Optional.ofNullable(this.sectionType);
     }
 
-    @JsonIgnore
     public Optional<Double> totalAmount() {
-        return totalAmount;
+        return Optional.ofNullable(this.totalAmount);
     }
 
     public static Builder builder() {
@@ -85,57 +75,29 @@ public class AccountingProfitlossSection {
     }
 
 
-    public AccountingProfitlossSection withAccounts(List<AccountingProfitlossAccount> accounts) {
-        Utils.checkNotNull(accounts, "accounts");
-        this.accounts = Optional.ofNullable(accounts);
-        return this;
-    }
-
-
-    public AccountingProfitlossSection withAccounts(Optional<? extends List<AccountingProfitlossAccount>> accounts) {
-        Utils.checkNotNull(accounts, "accounts");
+    public AccountingProfitlossSection withAccounts(@Nullable List<AccountingProfitlossAccount> accounts) {
         this.accounts = accounts;
         return this;
     }
 
-    public AccountingProfitlossSection withSectionName(String sectionName) {
-        Utils.checkNotNull(sectionName, "sectionName");
-        this.sectionName = Optional.ofNullable(sectionName);
-        return this;
-    }
 
-
-    public AccountingProfitlossSection withSectionName(Optional<String> sectionName) {
-        Utils.checkNotNull(sectionName, "sectionName");
+    public AccountingProfitlossSection withSectionName(@Nullable String sectionName) {
         this.sectionName = sectionName;
         return this;
     }
 
-    public AccountingProfitlossSection withSectionType(String sectionType) {
-        Utils.checkNotNull(sectionType, "sectionType");
-        this.sectionType = Optional.ofNullable(sectionType);
-        return this;
-    }
 
-
-    public AccountingProfitlossSection withSectionType(Optional<String> sectionType) {
-        Utils.checkNotNull(sectionType, "sectionType");
+    public AccountingProfitlossSection withSectionType(@Nullable String sectionType) {
         this.sectionType = sectionType;
         return this;
     }
 
-    public AccountingProfitlossSection withTotalAmount(double totalAmount) {
-        Utils.checkNotNull(totalAmount, "totalAmount");
-        this.totalAmount = Optional.ofNullable(totalAmount);
-        return this;
-    }
 
-
-    public AccountingProfitlossSection withTotalAmount(Optional<Double> totalAmount) {
-        Utils.checkNotNull(totalAmount, "totalAmount");
+    public AccountingProfitlossSection withTotalAmount(@Nullable Double totalAmount) {
         this.totalAmount = totalAmount;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -172,72 +134,39 @@ public class AccountingProfitlossSection {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends List<AccountingProfitlossAccount>> accounts = Optional.empty();
+        private List<AccountingProfitlossAccount> accounts;
 
-        private Optional<String> sectionName = Optional.empty();
+        private String sectionName;
 
-        private Optional<String> sectionType = Optional.empty();
+        private String sectionType;
 
-        private Optional<Double> totalAmount = Optional.empty();
+        private Double totalAmount;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder accounts(List<AccountingProfitlossAccount> accounts) {
-            Utils.checkNotNull(accounts, "accounts");
-            this.accounts = Optional.ofNullable(accounts);
-            return this;
-        }
-
-        public Builder accounts(Optional<? extends List<AccountingProfitlossAccount>> accounts) {
-            Utils.checkNotNull(accounts, "accounts");
+        public Builder accounts(@Nullable List<AccountingProfitlossAccount> accounts) {
             this.accounts = accounts;
             return this;
         }
 
-
-        public Builder sectionName(String sectionName) {
-            Utils.checkNotNull(sectionName, "sectionName");
-            this.sectionName = Optional.ofNullable(sectionName);
-            return this;
-        }
-
-        public Builder sectionName(Optional<String> sectionName) {
-            Utils.checkNotNull(sectionName, "sectionName");
+        public Builder sectionName(@Nullable String sectionName) {
             this.sectionName = sectionName;
             return this;
         }
 
-
-        public Builder sectionType(String sectionType) {
-            Utils.checkNotNull(sectionType, "sectionType");
-            this.sectionType = Optional.ofNullable(sectionType);
-            return this;
-        }
-
-        public Builder sectionType(Optional<String> sectionType) {
-            Utils.checkNotNull(sectionType, "sectionType");
+        public Builder sectionType(@Nullable String sectionType) {
             this.sectionType = sectionType;
             return this;
         }
 
-
-        public Builder totalAmount(double totalAmount) {
-            Utils.checkNotNull(totalAmount, "totalAmount");
-            this.totalAmount = Optional.ofNullable(totalAmount);
-            return this;
-        }
-
-        public Builder totalAmount(Optional<Double> totalAmount) {
-            Utils.checkNotNull(totalAmount, "totalAmount");
+        public Builder totalAmount(@Nullable Double totalAmount) {
             this.totalAmount = totalAmount;
             return this;
         }
 
         public AccountingProfitlossSection build() {
-
             return new AccountingProfitlossSection(
                 accounts, sectionName, sectionType,
                 totalAmount);

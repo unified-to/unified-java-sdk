@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.GetPaymentPayoutRequest;
 import to.unified.unified_java_sdk.models.operations.GetPaymentPayoutRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetPaymentPayoutResponse;
@@ -51,7 +52,7 @@ public class Payout {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetPaymentPayoutResponse getPaymentPayout(GetPaymentPayoutRequest request) {
+    public GetPaymentPayoutResponse getPaymentPayout(@Nonnull GetPaymentPayoutRequest request) {
         RequestOperation<GetPaymentPayoutRequest, GetPaymentPayoutResponse> operation
               = new GetPaymentPayout.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -73,7 +74,7 @@ public class Payout {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListPaymentPayoutsResponse listPaymentPayouts(ListPaymentPayoutsRequest request) {
+    public ListPaymentPayoutsResponse listPaymentPayouts(@Nonnull ListPaymentPayoutsRequest request) {
         RequestOperation<ListPaymentPayoutsRequest, ListPaymentPayoutsResponse> operation
               = new ListPaymentPayouts.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

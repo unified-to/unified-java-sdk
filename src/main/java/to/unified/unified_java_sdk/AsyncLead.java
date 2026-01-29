@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateCrmLeadRequest;
 import to.unified.unified_java_sdk.models.operations.GetCrmLeadRequest;
@@ -68,7 +69,7 @@ public class AsyncLead {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCrmLeadResponse>} - The async response
      */
-    public CompletableFuture<CreateCrmLeadResponse> createCrmLead(CreateCrmLeadRequest request) {
+    public CompletableFuture<CreateCrmLeadResponse> createCrmLead(@Nonnull CreateCrmLeadRequest request) {
         AsyncRequestOperation<CreateCrmLeadRequest, CreateCrmLeadResponse> operation
               = new CreateCrmLead.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -91,7 +92,7 @@ public class AsyncLead {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCrmLeadResponse>} - The async response
      */
-    public CompletableFuture<GetCrmLeadResponse> getCrmLead(GetCrmLeadRequest request) {
+    public CompletableFuture<GetCrmLeadResponse> getCrmLead(@Nonnull GetCrmLeadRequest request) {
         AsyncRequestOperation<GetCrmLeadRequest, GetCrmLeadResponse> operation
               = new GetCrmLead.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -114,7 +115,7 @@ public class AsyncLead {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCrmLeadsResponse>} - The async response
      */
-    public CompletableFuture<ListCrmLeadsResponse> listCrmLeads(ListCrmLeadsRequest request) {
+    public CompletableFuture<ListCrmLeadsResponse> listCrmLeads(@Nonnull ListCrmLeadsRequest request) {
         AsyncRequestOperation<ListCrmLeadsRequest, ListCrmLeadsResponse> operation
               = new ListCrmLeads.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -137,7 +138,7 @@ public class AsyncLead {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCrmLeadResponse>} - The async response
      */
-    public CompletableFuture<PatchCrmLeadResponse> patchCrmLead(PatchCrmLeadRequest request) {
+    public CompletableFuture<PatchCrmLeadResponse> patchCrmLead(@Nonnull PatchCrmLeadRequest request) {
         AsyncRequestOperation<PatchCrmLeadRequest, PatchCrmLeadResponse> operation
               = new PatchCrmLead.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -160,7 +161,7 @@ public class AsyncLead {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCrmLeadResponse>} - The async response
      */
-    public CompletableFuture<RemoveCrmLeadResponse> removeCrmLead(RemoveCrmLeadRequest request) {
+    public CompletableFuture<RemoveCrmLeadResponse> removeCrmLead(@Nonnull RemoveCrmLeadRequest request) {
         AsyncRequestOperation<RemoveCrmLeadRequest, RemoveCrmLeadResponse> operation
               = new RemoveCrmLead.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -183,7 +184,7 @@ public class AsyncLead {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCrmLeadResponse>} - The async response
      */
-    public CompletableFuture<UpdateCrmLeadResponse> updateCrmLead(UpdateCrmLeadRequest request) {
+    public CompletableFuture<UpdateCrmLeadResponse> updateCrmLead(@Nonnull UpdateCrmLeadRequest request) {
         AsyncRequestOperation<UpdateCrmLeadRequest, UpdateCrmLeadResponse> operation
               = new UpdateCrmLead.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

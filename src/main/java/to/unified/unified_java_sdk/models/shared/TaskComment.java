@@ -4,14 +4,14 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.Map;
 import java.util.Optional;
@@ -22,17 +22,17 @@ public class TaskComment {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonProperty("task_id")
@@ -45,93 +45,78 @@ public class TaskComment {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
-    private Optional<String> userId;
+    private String userId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_name")
-    private Optional<String> userName;
+    private String userName;
 
     @JsonCreator
     public TaskComment(
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("task_id") String taskId,
-            @JsonProperty("text") String text,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
-            @JsonProperty("user_id") Optional<String> userId,
-            @JsonProperty("user_name") Optional<String> userName) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(taskId, "taskId");
-        Utils.checkNotNull(text, "text");
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        Utils.checkNotNull(userId, "userId");
-        Utils.checkNotNull(userName, "userName");
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("task_id") @Nonnull String taskId,
+            @JsonProperty("text") @Nonnull String text,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
+            @JsonProperty("user_id") @Nullable String userId,
+            @JsonProperty("user_name") @Nullable String userName) {
         this.createdAt = createdAt;
         this.id = id;
         this.raw = raw;
-        this.taskId = taskId;
-        this.text = text;
+        this.taskId = Optional.ofNullable(taskId)
+            .orElseThrow(() -> new IllegalArgumentException("taskId cannot be null"));
+        this.text = Optional.ofNullable(text)
+            .orElseThrow(() -> new IllegalArgumentException("text cannot be null"));
         this.updatedAt = updatedAt;
         this.userId = userId;
         this.userName = userName;
     }
     
     public TaskComment(
-            String taskId,
-            String text) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            taskId, text, Optional.empty(),
-            Optional.empty(), Optional.empty());
+            @Nonnull String taskId,
+            @Nonnull String text) {
+        this(null, null, null,
+            taskId, text, null,
+            null, null);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @JsonIgnore
     public String taskId() {
-        return taskId;
+        return this.taskId;
     }
 
-    @JsonIgnore
     public String text() {
-        return text;
+        return this.text;
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
-    @JsonIgnore
     public Optional<String> userId() {
-        return userId;
+        return Optional.ofNullable(this.userId);
     }
 
-    @JsonIgnore
     public Optional<String> userName() {
-        return userName;
+        return Optional.ofNullable(this.userName);
     }
 
     public static Builder builder() {
@@ -139,95 +124,53 @@ public class TaskComment {
     }
 
 
-    public TaskComment withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
-
-
-    public TaskComment withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public TaskComment withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public TaskComment withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public TaskComment withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public TaskComment withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public TaskComment withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public TaskComment withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public TaskComment withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public TaskComment withTaskId(String taskId) {
-        Utils.checkNotNull(taskId, "taskId");
-        this.taskId = taskId;
-        return this;
-    }
 
-    public TaskComment withText(String text) {
-        Utils.checkNotNull(text, "text");
-        this.text = text;
-        return this;
-    }
-
-    public TaskComment withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
+    public TaskComment withTaskId(@Nonnull String taskId) {
+        this.taskId = Utils.checkNotNull(taskId, "taskId");
         return this;
     }
 
 
-    public TaskComment withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public TaskComment withText(@Nonnull String text) {
+        this.text = Utils.checkNotNull(text, "text");
+        return this;
+    }
+
+
+    public TaskComment withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
-    public TaskComment withUserId(String userId) {
-        Utils.checkNotNull(userId, "userId");
-        this.userId = Optional.ofNullable(userId);
-        return this;
-    }
 
-
-    public TaskComment withUserId(Optional<String> userId) {
-        Utils.checkNotNull(userId, "userId");
+    public TaskComment withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
     }
 
-    public TaskComment withUserName(String userName) {
-        Utils.checkNotNull(userName, "userName");
-        this.userName = Optional.ofNullable(userName);
-        return this;
-    }
 
-
-    public TaskComment withUserName(Optional<String> userName) {
-        Utils.checkNotNull(userName, "userName");
+    public TaskComment withUserName(@Nullable String userName) {
         this.userName = userName;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -273,120 +216,67 @@ public class TaskComment {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
         private String taskId;
 
         private String text;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
-        private Optional<String> userId = Optional.empty();
+        private String userId;
 
-        private Optional<String> userName = Optional.empty();
+        private String userName;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder taskId(String taskId) {
-            Utils.checkNotNull(taskId, "taskId");
-            this.taskId = taskId;
+        public Builder taskId(@Nonnull String taskId) {
+            this.taskId = Utils.checkNotNull(taskId, "taskId");
             return this;
         }
 
-
-        public Builder text(String text) {
-            Utils.checkNotNull(text, "text");
-            this.text = text;
+        public Builder text(@Nonnull String text) {
+            this.text = Utils.checkNotNull(text, "text");
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
-
-        public Builder userId(String userId) {
-            Utils.checkNotNull(userId, "userId");
-            this.userId = Optional.ofNullable(userId);
-            return this;
-        }
-
-        public Builder userId(Optional<String> userId) {
-            Utils.checkNotNull(userId, "userId");
+        public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;
         }
 
-
-        public Builder userName(String userName) {
-            Utils.checkNotNull(userName, "userName");
-            this.userName = Optional.ofNullable(userName);
-            return this;
-        }
-
-        public Builder userName(Optional<String> userName) {
-            Utils.checkNotNull(userName, "userName");
+        public Builder userName(@Nullable String userName) {
             this.userName = userName;
             return this;
         }
 
         public TaskComment build() {
-
             return new TaskComment(
                 createdAt, id, raw,
                 taskId, text, updatedAt,

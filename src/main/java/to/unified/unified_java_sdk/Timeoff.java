@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.GetHrisTimeoffRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisTimeoffRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetHrisTimeoffResponse;
@@ -51,7 +52,7 @@ public class Timeoff {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetHrisTimeoffResponse getHrisTimeoff(GetHrisTimeoffRequest request) {
+    public GetHrisTimeoffResponse getHrisTimeoff(@Nonnull GetHrisTimeoffRequest request) {
         RequestOperation<GetHrisTimeoffRequest, GetHrisTimeoffResponse> operation
               = new GetHrisTimeoff.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -73,7 +74,7 @@ public class Timeoff {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListHrisTimeoffsResponse listHrisTimeoffs(ListHrisTimeoffsRequest request) {
+    public ListHrisTimeoffsResponse listHrisTimeoffs(@Nonnull ListHrisTimeoffsRequest request) {
         RequestOperation<ListHrisTimeoffsRequest, ListHrisTimeoffsResponse> operation
               = new ListHrisTimeoffs.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

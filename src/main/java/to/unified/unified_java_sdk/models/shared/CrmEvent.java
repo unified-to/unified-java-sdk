@@ -4,14 +4,13 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
@@ -30,145 +29,127 @@ public class CrmEvent {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("call")
-    private Optional<? extends PropertyCrmEventCall> call;
+    private PropertyCrmEventCall call;
 
     /**
      * An array of company IDs associated with this event
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_ids")
-    private Optional<? extends List<String>> companyIds;
+    private List<String> companyIds;
 
     /**
      * An array of contact IDs associated with this event
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_ids")
-    private Optional<? extends List<String>> contactIds;
+    private List<String> contactIds;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
     /**
      * An array of deal IDs associated with this event
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deal_ids")
-    private Optional<? extends List<String>> dealIds;
+    private List<String> dealIds;
 
     /**
      * The email object, when type = email
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
-    private Optional<? extends PropertyCrmEventEmail> email;
+    private PropertyCrmEventEmail email;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("form")
-    private Optional<? extends PropertyCrmEventForm> form;
+    private PropertyCrmEventForm form;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lead_ids")
-    private Optional<? extends List<String>> leadIds;
+    private List<String> leadIds;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketing_email")
-    private Optional<? extends PropertyCrmEventMarketingEmail> marketingEmail;
+    private PropertyCrmEventMarketingEmail marketingEmail;
 
     /**
      * The meeting object, when type = meeting
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meeting")
-    private Optional<? extends PropertyCrmEventMeeting> meeting;
+    private PropertyCrmEventMeeting meeting;
 
     /**
      * The note object, when type = note
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
-    private Optional<? extends PropertyCrmEventNote> note;
+    private PropertyCrmEventNote note;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page_view")
-    private Optional<? extends PropertyCrmEventPageView> pageView;
+    private PropertyCrmEventPageView pageView;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
     /**
      * The task object, when type = task
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("task")
-    private Optional<? extends PropertyCrmEventTask> task;
+    private PropertyCrmEventTask task;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
-    private Optional<? extends CrmEventType> type;
+    private CrmEventType type;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
-    private Optional<String> userId;
+    private String userId;
 
     @JsonCreator
     public CrmEvent(
-            @JsonProperty("call") Optional<? extends PropertyCrmEventCall> call,
-            @JsonProperty("company_ids") Optional<? extends List<String>> companyIds,
-            @JsonProperty("contact_ids") Optional<? extends List<String>> contactIds,
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("deal_ids") Optional<? extends List<String>> dealIds,
-            @JsonProperty("email") Optional<? extends PropertyCrmEventEmail> email,
-            @JsonProperty("form") Optional<? extends PropertyCrmEventForm> form,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("lead_ids") Optional<? extends List<String>> leadIds,
-            @JsonProperty("marketing_email") Optional<? extends PropertyCrmEventMarketingEmail> marketingEmail,
-            @JsonProperty("meeting") Optional<? extends PropertyCrmEventMeeting> meeting,
-            @JsonProperty("note") Optional<? extends PropertyCrmEventNote> note,
-            @JsonProperty("page_view") Optional<? extends PropertyCrmEventPageView> pageView,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("task") Optional<? extends PropertyCrmEventTask> task,
-            @JsonProperty("type") Optional<? extends CrmEventType> type,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
-            @JsonProperty("user_id") Optional<String> userId) {
-        Utils.checkNotNull(call, "call");
-        Utils.checkNotNull(companyIds, "companyIds");
-        Utils.checkNotNull(contactIds, "contactIds");
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(dealIds, "dealIds");
-        Utils.checkNotNull(email, "email");
-        Utils.checkNotNull(form, "form");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(leadIds, "leadIds");
-        Utils.checkNotNull(marketingEmail, "marketingEmail");
-        Utils.checkNotNull(meeting, "meeting");
-        Utils.checkNotNull(note, "note");
-        Utils.checkNotNull(pageView, "pageView");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(task, "task");
-        Utils.checkNotNull(type, "type");
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        Utils.checkNotNull(userId, "userId");
+            @JsonProperty("call") @Nullable PropertyCrmEventCall call,
+            @JsonProperty("company_ids") @Nullable List<String> companyIds,
+            @JsonProperty("contact_ids") @Nullable List<String> contactIds,
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("deal_ids") @Nullable List<String> dealIds,
+            @JsonProperty("email") @Nullable PropertyCrmEventEmail email,
+            @JsonProperty("form") @Nullable PropertyCrmEventForm form,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("lead_ids") @Nullable List<String> leadIds,
+            @JsonProperty("marketing_email") @Nullable PropertyCrmEventMarketingEmail marketingEmail,
+            @JsonProperty("meeting") @Nullable PropertyCrmEventMeeting meeting,
+            @JsonProperty("note") @Nullable PropertyCrmEventNote note,
+            @JsonProperty("page_view") @Nullable PropertyCrmEventPageView pageView,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("task") @Nullable PropertyCrmEventTask task,
+            @JsonProperty("type") @Nullable CrmEventType type,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
+            @JsonProperty("user_id") @Nullable String userId) {
         this.call = call;
         this.companyIds = companyIds;
         this.contactIds = contactIds;
@@ -190,140 +171,108 @@ public class CrmEvent {
     }
     
     public CrmEvent() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null);
     }
 
     /**
      * The call object, when type = call
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<PropertyCrmEventCall> call() {
-        return (Optional<PropertyCrmEventCall>) call;
+        return Optional.ofNullable(this.call);
     }
 
     /**
      * An array of company IDs associated with this event
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> companyIds() {
-        return (Optional<List<String>>) companyIds;
+        return Optional.ofNullable(this.companyIds);
     }
 
     /**
      * An array of contact IDs associated with this event
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> contactIds() {
-        return (Optional<List<String>>) contactIds;
+        return Optional.ofNullable(this.contactIds);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
     /**
      * An array of deal IDs associated with this event
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> dealIds() {
-        return (Optional<List<String>>) dealIds;
+        return Optional.ofNullable(this.dealIds);
     }
 
     /**
      * The email object, when type = email
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<PropertyCrmEventEmail> email() {
-        return (Optional<PropertyCrmEventEmail>) email;
+        return Optional.ofNullable(this.email);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<PropertyCrmEventForm> form() {
-        return (Optional<PropertyCrmEventForm>) form;
+        return Optional.ofNullable(this.form);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> leadIds() {
-        return (Optional<List<String>>) leadIds;
+        return Optional.ofNullable(this.leadIds);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<PropertyCrmEventMarketingEmail> marketingEmail() {
-        return (Optional<PropertyCrmEventMarketingEmail>) marketingEmail;
+        return Optional.ofNullable(this.marketingEmail);
     }
 
     /**
      * The meeting object, when type = meeting
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<PropertyCrmEventMeeting> meeting() {
-        return (Optional<PropertyCrmEventMeeting>) meeting;
+        return Optional.ofNullable(this.meeting);
     }
 
     /**
      * The note object, when type = note
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<PropertyCrmEventNote> note() {
-        return (Optional<PropertyCrmEventNote>) note;
+        return Optional.ofNullable(this.note);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<PropertyCrmEventPageView> pageView() {
-        return (Optional<PropertyCrmEventPageView>) pageView;
+        return Optional.ofNullable(this.pageView);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
     /**
      * The task object, when type = task
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<PropertyCrmEventTask> task() {
-        return (Optional<PropertyCrmEventTask>) task;
+        return Optional.ofNullable(this.task);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<CrmEventType> type() {
-        return (Optional<CrmEventType>) type;
+        return Optional.ofNullable(this.type);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
-    @JsonIgnore
     public Optional<String> userId() {
-        return userId;
+        return Optional.ofNullable(this.userId);
     }
 
     public static Builder builder() {
@@ -334,284 +283,134 @@ public class CrmEvent {
     /**
      * The call object, when type = call
      */
-    public CrmEvent withCall(PropertyCrmEventCall call) {
-        Utils.checkNotNull(call, "call");
-        this.call = Optional.ofNullable(call);
-        return this;
-    }
-
-
-    /**
-     * The call object, when type = call
-     */
-    public CrmEvent withCall(Optional<? extends PropertyCrmEventCall> call) {
-        Utils.checkNotNull(call, "call");
+    public CrmEvent withCall(@Nullable PropertyCrmEventCall call) {
         this.call = call;
         return this;
     }
 
-    /**
-     * An array of company IDs associated with this event
-     */
-    public CrmEvent withCompanyIds(List<String> companyIds) {
-        Utils.checkNotNull(companyIds, "companyIds");
-        this.companyIds = Optional.ofNullable(companyIds);
-        return this;
-    }
-
 
     /**
      * An array of company IDs associated with this event
      */
-    public CrmEvent withCompanyIds(Optional<? extends List<String>> companyIds) {
-        Utils.checkNotNull(companyIds, "companyIds");
+    public CrmEvent withCompanyIds(@Nullable List<String> companyIds) {
         this.companyIds = companyIds;
         return this;
     }
 
-    /**
-     * An array of contact IDs associated with this event
-     */
-    public CrmEvent withContactIds(List<String> contactIds) {
-        Utils.checkNotNull(contactIds, "contactIds");
-        this.contactIds = Optional.ofNullable(contactIds);
-        return this;
-    }
-
 
     /**
      * An array of contact IDs associated with this event
      */
-    public CrmEvent withContactIds(Optional<? extends List<String>> contactIds) {
-        Utils.checkNotNull(contactIds, "contactIds");
+    public CrmEvent withContactIds(@Nullable List<String> contactIds) {
         this.contactIds = contactIds;
         return this;
     }
 
-    public CrmEvent withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
 
-
-    public CrmEvent withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public CrmEvent withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    /**
-     * An array of deal IDs associated with this event
-     */
-    public CrmEvent withDealIds(List<String> dealIds) {
-        Utils.checkNotNull(dealIds, "dealIds");
-        this.dealIds = Optional.ofNullable(dealIds);
-        return this;
-    }
-
 
     /**
      * An array of deal IDs associated with this event
      */
-    public CrmEvent withDealIds(Optional<? extends List<String>> dealIds) {
-        Utils.checkNotNull(dealIds, "dealIds");
+    public CrmEvent withDealIds(@Nullable List<String> dealIds) {
         this.dealIds = dealIds;
         return this;
     }
 
-    /**
-     * The email object, when type = email
-     */
-    public CrmEvent withEmail(PropertyCrmEventEmail email) {
-        Utils.checkNotNull(email, "email");
-        this.email = Optional.ofNullable(email);
-        return this;
-    }
-
 
     /**
      * The email object, when type = email
      */
-    public CrmEvent withEmail(Optional<? extends PropertyCrmEventEmail> email) {
-        Utils.checkNotNull(email, "email");
+    public CrmEvent withEmail(@Nullable PropertyCrmEventEmail email) {
         this.email = email;
         return this;
     }
 
-    public CrmEvent withForm(PropertyCrmEventForm form) {
-        Utils.checkNotNull(form, "form");
-        this.form = Optional.ofNullable(form);
-        return this;
-    }
 
-
-    public CrmEvent withForm(Optional<? extends PropertyCrmEventForm> form) {
-        Utils.checkNotNull(form, "form");
+    public CrmEvent withForm(@Nullable PropertyCrmEventForm form) {
         this.form = form;
         return this;
     }
 
-    public CrmEvent withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public CrmEvent withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public CrmEvent withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public CrmEvent withLeadIds(List<String> leadIds) {
-        Utils.checkNotNull(leadIds, "leadIds");
-        this.leadIds = Optional.ofNullable(leadIds);
-        return this;
-    }
 
-
-    public CrmEvent withLeadIds(Optional<? extends List<String>> leadIds) {
-        Utils.checkNotNull(leadIds, "leadIds");
+    public CrmEvent withLeadIds(@Nullable List<String> leadIds) {
         this.leadIds = leadIds;
         return this;
     }
 
-    public CrmEvent withMarketingEmail(PropertyCrmEventMarketingEmail marketingEmail) {
-        Utils.checkNotNull(marketingEmail, "marketingEmail");
-        this.marketingEmail = Optional.ofNullable(marketingEmail);
-        return this;
-    }
 
-
-    public CrmEvent withMarketingEmail(Optional<? extends PropertyCrmEventMarketingEmail> marketingEmail) {
-        Utils.checkNotNull(marketingEmail, "marketingEmail");
+    public CrmEvent withMarketingEmail(@Nullable PropertyCrmEventMarketingEmail marketingEmail) {
         this.marketingEmail = marketingEmail;
         return this;
     }
 
-    /**
-     * The meeting object, when type = meeting
-     */
-    public CrmEvent withMeeting(PropertyCrmEventMeeting meeting) {
-        Utils.checkNotNull(meeting, "meeting");
-        this.meeting = Optional.ofNullable(meeting);
-        return this;
-    }
-
 
     /**
      * The meeting object, when type = meeting
      */
-    public CrmEvent withMeeting(Optional<? extends PropertyCrmEventMeeting> meeting) {
-        Utils.checkNotNull(meeting, "meeting");
+    public CrmEvent withMeeting(@Nullable PropertyCrmEventMeeting meeting) {
         this.meeting = meeting;
         return this;
     }
 
-    /**
-     * The note object, when type = note
-     */
-    public CrmEvent withNote(PropertyCrmEventNote note) {
-        Utils.checkNotNull(note, "note");
-        this.note = Optional.ofNullable(note);
-        return this;
-    }
-
 
     /**
      * The note object, when type = note
      */
-    public CrmEvent withNote(Optional<? extends PropertyCrmEventNote> note) {
-        Utils.checkNotNull(note, "note");
+    public CrmEvent withNote(@Nullable PropertyCrmEventNote note) {
         this.note = note;
         return this;
     }
 
-    public CrmEvent withPageView(PropertyCrmEventPageView pageView) {
-        Utils.checkNotNull(pageView, "pageView");
-        this.pageView = Optional.ofNullable(pageView);
-        return this;
-    }
 
-
-    public CrmEvent withPageView(Optional<? extends PropertyCrmEventPageView> pageView) {
-        Utils.checkNotNull(pageView, "pageView");
+    public CrmEvent withPageView(@Nullable PropertyCrmEventPageView pageView) {
         this.pageView = pageView;
         return this;
     }
 
-    public CrmEvent withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public CrmEvent withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public CrmEvent withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    /**
-     * The task object, when type = task
-     */
-    public CrmEvent withTask(PropertyCrmEventTask task) {
-        Utils.checkNotNull(task, "task");
-        this.task = Optional.ofNullable(task);
-        return this;
-    }
-
 
     /**
      * The task object, when type = task
      */
-    public CrmEvent withTask(Optional<? extends PropertyCrmEventTask> task) {
-        Utils.checkNotNull(task, "task");
+    public CrmEvent withTask(@Nullable PropertyCrmEventTask task) {
         this.task = task;
         return this;
     }
 
-    public CrmEvent withType(CrmEventType type) {
-        Utils.checkNotNull(type, "type");
-        this.type = Optional.ofNullable(type);
-        return this;
-    }
 
-
-    public CrmEvent withType(Optional<? extends CrmEventType> type) {
-        Utils.checkNotNull(type, "type");
+    public CrmEvent withType(@Nullable CrmEventType type) {
         this.type = type;
         return this;
     }
 
-    public CrmEvent withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public CrmEvent withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public CrmEvent withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
-    public CrmEvent withUserId(String userId) {
-        Utils.checkNotNull(userId, "userId");
-        this.userId = Optional.ofNullable(userId);
-        return this;
-    }
 
-
-    public CrmEvent withUserId(Optional<String> userId) {
-        Utils.checkNotNull(userId, "userId");
+    public CrmEvent withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -680,330 +479,161 @@ public class CrmEvent {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends PropertyCrmEventCall> call = Optional.empty();
+        private PropertyCrmEventCall call;
 
-        private Optional<? extends List<String>> companyIds = Optional.empty();
+        private List<String> companyIds;
 
-        private Optional<? extends List<String>> contactIds = Optional.empty();
+        private List<String> contactIds;
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<? extends List<String>> dealIds = Optional.empty();
+        private List<String> dealIds;
 
-        private Optional<? extends PropertyCrmEventEmail> email = Optional.empty();
+        private PropertyCrmEventEmail email;
 
-        private Optional<? extends PropertyCrmEventForm> form = Optional.empty();
+        private PropertyCrmEventForm form;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<? extends List<String>> leadIds = Optional.empty();
+        private List<String> leadIds;
 
-        private Optional<? extends PropertyCrmEventMarketingEmail> marketingEmail = Optional.empty();
+        private PropertyCrmEventMarketingEmail marketingEmail;
 
-        private Optional<? extends PropertyCrmEventMeeting> meeting = Optional.empty();
+        private PropertyCrmEventMeeting meeting;
 
-        private Optional<? extends PropertyCrmEventNote> note = Optional.empty();
+        private PropertyCrmEventNote note;
 
-        private Optional<? extends PropertyCrmEventPageView> pageView = Optional.empty();
+        private PropertyCrmEventPageView pageView;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<? extends PropertyCrmEventTask> task = Optional.empty();
+        private PropertyCrmEventTask task;
 
-        private Optional<? extends CrmEventType> type = Optional.empty();
+        private CrmEventType type;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
-        private Optional<String> userId = Optional.empty();
+        private String userId;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
         /**
          * The call object, when type = call
          */
-        public Builder call(PropertyCrmEventCall call) {
-            Utils.checkNotNull(call, "call");
-            this.call = Optional.ofNullable(call);
-            return this;
-        }
-
-        /**
-         * The call object, when type = call
-         */
-        public Builder call(Optional<? extends PropertyCrmEventCall> call) {
-            Utils.checkNotNull(call, "call");
+        public Builder call(@Nullable PropertyCrmEventCall call) {
             this.call = call;
             return this;
         }
 
-
         /**
          * An array of company IDs associated with this event
          */
-        public Builder companyIds(List<String> companyIds) {
-            Utils.checkNotNull(companyIds, "companyIds");
-            this.companyIds = Optional.ofNullable(companyIds);
-            return this;
-        }
-
-        /**
-         * An array of company IDs associated with this event
-         */
-        public Builder companyIds(Optional<? extends List<String>> companyIds) {
-            Utils.checkNotNull(companyIds, "companyIds");
+        public Builder companyIds(@Nullable List<String> companyIds) {
             this.companyIds = companyIds;
             return this;
         }
 
-
         /**
          * An array of contact IDs associated with this event
          */
-        public Builder contactIds(List<String> contactIds) {
-            Utils.checkNotNull(contactIds, "contactIds");
-            this.contactIds = Optional.ofNullable(contactIds);
-            return this;
-        }
-
-        /**
-         * An array of contact IDs associated with this event
-         */
-        public Builder contactIds(Optional<? extends List<String>> contactIds) {
-            Utils.checkNotNull(contactIds, "contactIds");
+        public Builder contactIds(@Nullable List<String> contactIds) {
             this.contactIds = contactIds;
             return this;
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
         /**
          * An array of deal IDs associated with this event
          */
-        public Builder dealIds(List<String> dealIds) {
-            Utils.checkNotNull(dealIds, "dealIds");
-            this.dealIds = Optional.ofNullable(dealIds);
-            return this;
-        }
-
-        /**
-         * An array of deal IDs associated with this event
-         */
-        public Builder dealIds(Optional<? extends List<String>> dealIds) {
-            Utils.checkNotNull(dealIds, "dealIds");
+        public Builder dealIds(@Nullable List<String> dealIds) {
             this.dealIds = dealIds;
             return this;
         }
 
-
         /**
          * The email object, when type = email
          */
-        public Builder email(PropertyCrmEventEmail email) {
-            Utils.checkNotNull(email, "email");
-            this.email = Optional.ofNullable(email);
-            return this;
-        }
-
-        /**
-         * The email object, when type = email
-         */
-        public Builder email(Optional<? extends PropertyCrmEventEmail> email) {
-            Utils.checkNotNull(email, "email");
+        public Builder email(@Nullable PropertyCrmEventEmail email) {
             this.email = email;
             return this;
         }
 
-
-        public Builder form(PropertyCrmEventForm form) {
-            Utils.checkNotNull(form, "form");
-            this.form = Optional.ofNullable(form);
-            return this;
-        }
-
-        public Builder form(Optional<? extends PropertyCrmEventForm> form) {
-            Utils.checkNotNull(form, "form");
+        public Builder form(@Nullable PropertyCrmEventForm form) {
             this.form = form;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder leadIds(List<String> leadIds) {
-            Utils.checkNotNull(leadIds, "leadIds");
-            this.leadIds = Optional.ofNullable(leadIds);
-            return this;
-        }
-
-        public Builder leadIds(Optional<? extends List<String>> leadIds) {
-            Utils.checkNotNull(leadIds, "leadIds");
+        public Builder leadIds(@Nullable List<String> leadIds) {
             this.leadIds = leadIds;
             return this;
         }
 
-
-        public Builder marketingEmail(PropertyCrmEventMarketingEmail marketingEmail) {
-            Utils.checkNotNull(marketingEmail, "marketingEmail");
-            this.marketingEmail = Optional.ofNullable(marketingEmail);
-            return this;
-        }
-
-        public Builder marketingEmail(Optional<? extends PropertyCrmEventMarketingEmail> marketingEmail) {
-            Utils.checkNotNull(marketingEmail, "marketingEmail");
+        public Builder marketingEmail(@Nullable PropertyCrmEventMarketingEmail marketingEmail) {
             this.marketingEmail = marketingEmail;
             return this;
         }
 
-
         /**
          * The meeting object, when type = meeting
          */
-        public Builder meeting(PropertyCrmEventMeeting meeting) {
-            Utils.checkNotNull(meeting, "meeting");
-            this.meeting = Optional.ofNullable(meeting);
-            return this;
-        }
-
-        /**
-         * The meeting object, when type = meeting
-         */
-        public Builder meeting(Optional<? extends PropertyCrmEventMeeting> meeting) {
-            Utils.checkNotNull(meeting, "meeting");
+        public Builder meeting(@Nullable PropertyCrmEventMeeting meeting) {
             this.meeting = meeting;
             return this;
         }
 
-
         /**
          * The note object, when type = note
          */
-        public Builder note(PropertyCrmEventNote note) {
-            Utils.checkNotNull(note, "note");
-            this.note = Optional.ofNullable(note);
-            return this;
-        }
-
-        /**
-         * The note object, when type = note
-         */
-        public Builder note(Optional<? extends PropertyCrmEventNote> note) {
-            Utils.checkNotNull(note, "note");
+        public Builder note(@Nullable PropertyCrmEventNote note) {
             this.note = note;
             return this;
         }
 
-
-        public Builder pageView(PropertyCrmEventPageView pageView) {
-            Utils.checkNotNull(pageView, "pageView");
-            this.pageView = Optional.ofNullable(pageView);
-            return this;
-        }
-
-        public Builder pageView(Optional<? extends PropertyCrmEventPageView> pageView) {
-            Utils.checkNotNull(pageView, "pageView");
+        public Builder pageView(@Nullable PropertyCrmEventPageView pageView) {
             this.pageView = pageView;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
         /**
          * The task object, when type = task
          */
-        public Builder task(PropertyCrmEventTask task) {
-            Utils.checkNotNull(task, "task");
-            this.task = Optional.ofNullable(task);
-            return this;
-        }
-
-        /**
-         * The task object, when type = task
-         */
-        public Builder task(Optional<? extends PropertyCrmEventTask> task) {
-            Utils.checkNotNull(task, "task");
+        public Builder task(@Nullable PropertyCrmEventTask task) {
             this.task = task;
             return this;
         }
 
-
-        public Builder type(CrmEventType type) {
-            Utils.checkNotNull(type, "type");
-            this.type = Optional.ofNullable(type);
-            return this;
-        }
-
-        public Builder type(Optional<? extends CrmEventType> type) {
-            Utils.checkNotNull(type, "type");
+        public Builder type(@Nullable CrmEventType type) {
             this.type = type;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
-
-        public Builder userId(String userId) {
-            Utils.checkNotNull(userId, "userId");
-            this.userId = Optional.ofNullable(userId);
-            return this;
-        }
-
-        public Builder userId(Optional<String> userId) {
-            Utils.checkNotNull(userId, "userId");
+        public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;
         }
 
         public CrmEvent build() {
-
             return new CrmEvent(
                 call, companyIds, contactIds,
                 createdAt, dealIds, email,

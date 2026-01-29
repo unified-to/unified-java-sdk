@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.GetUcCallRequest;
 import to.unified.unified_java_sdk.models.operations.GetUcCallRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetUcCallResponse;
@@ -51,7 +52,7 @@ public class Call {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetUcCallResponse getUcCall(GetUcCallRequest request) {
+    public GetUcCallResponse getUcCall(@Nonnull GetUcCallRequest request) {
         RequestOperation<GetUcCallRequest, GetUcCallResponse> operation
               = new GetUcCall.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -73,7 +74,7 @@ public class Call {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListUcCallsResponse listUcCalls(ListUcCallsRequest request) {
+    public ListUcCallsResponse listUcCalls(@Nonnull ListUcCallsRequest request) {
         RequestOperation<ListUcCallsRequest, ListUcCallsResponse> operation
               = new ListUcCalls.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

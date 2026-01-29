@@ -4,11 +4,11 @@
 package to.unified.unified_java_sdk.models.operations.async;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import java.lang.Integer;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.io.InputStream;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.CrmEvent;
@@ -26,7 +26,7 @@ public class PatchCrmEventResponse implements AsyncResponse {
     /**
      * Successful
      */
-    private Optional<? extends CrmEvent> crmEvent;
+    private CrmEvent crmEvent;
 
     /**
      * HTTP response status code for this operation
@@ -40,59 +40,52 @@ public class PatchCrmEventResponse implements AsyncResponse {
 
     @JsonCreator
     public PatchCrmEventResponse(
-            String contentType,
-            Optional<? extends CrmEvent> crmEvent,
+            @Nonnull String contentType,
+            @Nullable CrmEvent crmEvent,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(crmEvent, "crmEvent");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.contentType = contentType;
+            @Nonnull HttpResponse<Blob> rawResponse) {
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.crmEvent = crmEvent;
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
     }
     
     public PatchCrmEventResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
-        this(contentType, Optional.empty(), statusCode,
+            @Nonnull HttpResponse<Blob> rawResponse) {
+        this(contentType, null, statusCode,
             rawResponse);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<CrmEvent> crmEvent() {
-        return (Optional<CrmEvent>) crmEvent;
+        return Optional.ofNullable(this.crmEvent);
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<Blob> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     public static Builder builder() {
@@ -103,18 +96,8 @@ public class PatchCrmEventResponse implements AsyncResponse {
     /**
      * HTTP response content type for this operation
      */
-    public PatchCrmEventResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
-        return this;
-    }
-
-    /**
-     * Successful
-     */
-    public PatchCrmEventResponse withCrmEvent(CrmEvent crmEvent) {
-        Utils.checkNotNull(crmEvent, "crmEvent");
-        this.crmEvent = Optional.ofNullable(crmEvent);
+    public PatchCrmEventResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
 
@@ -122,29 +105,29 @@ public class PatchCrmEventResponse implements AsyncResponse {
     /**
      * Successful
      */
-    public PatchCrmEventResponse withCrmEvent(Optional<? extends CrmEvent> crmEvent) {
-        Utils.checkNotNull(crmEvent, "crmEvent");
+    public PatchCrmEventResponse withCrmEvent(@Nullable CrmEvent crmEvent) {
         this.crmEvent = crmEvent;
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public PatchCrmEventResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public PatchCrmEventResponse withRawResponse(HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
+    public PatchCrmEventResponse withRawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -183,9 +166,9 @@ public class PatchCrmEventResponse implements AsyncResponse {
 
         private String contentType;
 
-        private Optional<? extends CrmEvent> crmEvent = Optional.empty();
+        private CrmEvent crmEvent;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<Blob> rawResponse;
 
@@ -193,57 +176,39 @@ public class PatchCrmEventResponse implements AsyncResponse {
           // force use of static builder() method
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
-            return this;
-        }
-
-
-        /**
-         * Successful
-         */
-        public Builder crmEvent(CrmEvent crmEvent) {
-            Utils.checkNotNull(crmEvent, "crmEvent");
-            this.crmEvent = Optional.ofNullable(crmEvent);
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
 
         /**
          * Successful
          */
-        public Builder crmEvent(Optional<? extends CrmEvent> crmEvent) {
-            Utils.checkNotNull(crmEvent, "crmEvent");
+        public Builder crmEvent(@Nullable CrmEvent crmEvent) {
             this.crmEvent = crmEvent;
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<Blob> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
+        public Builder rawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         public PatchCrmEventResponse build() {
-
             return new PatchCrmEventResponse(
                 contentType, crmEvent, statusCode,
                 rawResponse);

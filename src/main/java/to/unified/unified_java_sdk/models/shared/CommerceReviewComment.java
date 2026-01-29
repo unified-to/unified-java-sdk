@@ -4,16 +4,16 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
@@ -25,22 +25,22 @@ public class CommerceReviewComment {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author_avatar_url")
-    private Optional<String> authorAvatarUrl;
+    private String authorAvatarUrl;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author_email")
-    private Optional<String> authorEmail;
+    private String authorEmail;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author_location")
-    private Optional<String> authorLocation;
+    private String authorLocation;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author_name")
-    private Optional<String> authorName;
+    private String authorName;
 
 
     @JsonProperty("content")
@@ -49,90 +49,76 @@ public class CommerceReviewComment {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("helpful_votes")
-    private Optional<Double> helpfulVotes;
+    private Double helpfulVotes;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_public")
-    private Optional<Boolean> isPublic;
+    private Boolean isPublic;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_verified")
-    private Optional<Boolean> isVerified;
+    private Boolean isVerified;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
-    private Optional<? extends List<CommerceMetadata>> metadata;
+    private List<CommerceMetadata> metadata;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
-    private Optional<? extends CommerceReviewCommentStatus> status;
+    private CommerceReviewCommentStatus status;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unhelpful_votes")
-    private Optional<Double> unhelpfulVotes;
+    private Double unhelpfulVotes;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
     @JsonCreator
     public CommerceReviewComment(
-            @JsonProperty("author_avatar_url") Optional<String> authorAvatarUrl,
-            @JsonProperty("author_email") Optional<String> authorEmail,
-            @JsonProperty("author_location") Optional<String> authorLocation,
-            @JsonProperty("author_name") Optional<String> authorName,
-            @JsonProperty("content") String content,
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("helpful_votes") Optional<Double> helpfulVotes,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("is_public") Optional<Boolean> isPublic,
-            @JsonProperty("is_verified") Optional<Boolean> isVerified,
-            @JsonProperty("metadata") Optional<? extends List<CommerceMetadata>> metadata,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("status") Optional<? extends CommerceReviewCommentStatus> status,
-            @JsonProperty("unhelpful_votes") Optional<Double> unhelpfulVotes,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(authorAvatarUrl, "authorAvatarUrl");
-        Utils.checkNotNull(authorEmail, "authorEmail");
-        Utils.checkNotNull(authorLocation, "authorLocation");
-        Utils.checkNotNull(authorName, "authorName");
-        Utils.checkNotNull(content, "content");
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(helpfulVotes, "helpfulVotes");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(isPublic, "isPublic");
-        Utils.checkNotNull(isVerified, "isVerified");
-        Utils.checkNotNull(metadata, "metadata");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(status, "status");
-        Utils.checkNotNull(unhelpfulVotes, "unhelpfulVotes");
-        Utils.checkNotNull(updatedAt, "updatedAt");
+            @JsonProperty("author_avatar_url") @Nullable String authorAvatarUrl,
+            @JsonProperty("author_email") @Nullable String authorEmail,
+            @JsonProperty("author_location") @Nullable String authorLocation,
+            @JsonProperty("author_name") @Nullable String authorName,
+            @JsonProperty("content") @Nonnull String content,
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("helpful_votes") @Nullable Double helpfulVotes,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("is_public") @Nullable Boolean isPublic,
+            @JsonProperty("is_verified") @Nullable Boolean isVerified,
+            @JsonProperty("metadata") @Nullable List<CommerceMetadata> metadata,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("status") @Nullable CommerceReviewCommentStatus status,
+            @JsonProperty("unhelpful_votes") @Nullable Double unhelpfulVotes,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.authorAvatarUrl = authorAvatarUrl;
         this.authorEmail = authorEmail;
         this.authorLocation = authorLocation;
         this.authorName = authorName;
-        this.content = content;
+        this.content = Optional.ofNullable(content)
+            .orElseThrow(() -> new IllegalArgumentException("content cannot be null"));
         this.createdAt = createdAt;
         this.helpfulVotes = helpfulVotes;
         this.id = id;
@@ -146,90 +132,72 @@ public class CommerceReviewComment {
     }
     
     public CommerceReviewComment(
-            String content) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), content, Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+            @Nonnull String content) {
+        this(null, null, null,
+            null, content, null,
+            null, null, null,
+            null, null, null,
+            null, null, null);
     }
 
-    @JsonIgnore
     public Optional<String> authorAvatarUrl() {
-        return authorAvatarUrl;
+        return Optional.ofNullable(this.authorAvatarUrl);
     }
 
-    @JsonIgnore
     public Optional<String> authorEmail() {
-        return authorEmail;
+        return Optional.ofNullable(this.authorEmail);
     }
 
-    @JsonIgnore
     public Optional<String> authorLocation() {
-        return authorLocation;
+        return Optional.ofNullable(this.authorLocation);
     }
 
-    @JsonIgnore
     public Optional<String> authorName() {
-        return authorName;
+        return Optional.ofNullable(this.authorName);
     }
 
-    @JsonIgnore
     public String content() {
-        return content;
+        return this.content;
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<Double> helpfulVotes() {
-        return helpfulVotes;
+        return Optional.ofNullable(this.helpfulVotes);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isPublic() {
-        return isPublic;
+        return Optional.ofNullable(this.isPublic);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isVerified() {
-        return isVerified;
+        return Optional.ofNullable(this.isVerified);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<CommerceMetadata>> metadata() {
-        return (Optional<List<CommerceMetadata>>) metadata;
+        return Optional.ofNullable(this.metadata);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<CommerceReviewCommentStatus> status() {
-        return (Optional<CommerceReviewCommentStatus>) status;
+        return Optional.ofNullable(this.status);
     }
 
-    @JsonIgnore
     public Optional<Double> unhelpfulVotes() {
-        return unhelpfulVotes;
+        return Optional.ofNullable(this.unhelpfulVotes);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
     public static Builder builder() {
@@ -237,193 +205,95 @@ public class CommerceReviewComment {
     }
 
 
-    public CommerceReviewComment withAuthorAvatarUrl(String authorAvatarUrl) {
-        Utils.checkNotNull(authorAvatarUrl, "authorAvatarUrl");
-        this.authorAvatarUrl = Optional.ofNullable(authorAvatarUrl);
-        return this;
-    }
-
-
-    public CommerceReviewComment withAuthorAvatarUrl(Optional<String> authorAvatarUrl) {
-        Utils.checkNotNull(authorAvatarUrl, "authorAvatarUrl");
+    public CommerceReviewComment withAuthorAvatarUrl(@Nullable String authorAvatarUrl) {
         this.authorAvatarUrl = authorAvatarUrl;
         return this;
     }
 
-    public CommerceReviewComment withAuthorEmail(String authorEmail) {
-        Utils.checkNotNull(authorEmail, "authorEmail");
-        this.authorEmail = Optional.ofNullable(authorEmail);
-        return this;
-    }
 
-
-    public CommerceReviewComment withAuthorEmail(Optional<String> authorEmail) {
-        Utils.checkNotNull(authorEmail, "authorEmail");
+    public CommerceReviewComment withAuthorEmail(@Nullable String authorEmail) {
         this.authorEmail = authorEmail;
         return this;
     }
 
-    public CommerceReviewComment withAuthorLocation(String authorLocation) {
-        Utils.checkNotNull(authorLocation, "authorLocation");
-        this.authorLocation = Optional.ofNullable(authorLocation);
-        return this;
-    }
 
-
-    public CommerceReviewComment withAuthorLocation(Optional<String> authorLocation) {
-        Utils.checkNotNull(authorLocation, "authorLocation");
+    public CommerceReviewComment withAuthorLocation(@Nullable String authorLocation) {
         this.authorLocation = authorLocation;
         return this;
     }
 
-    public CommerceReviewComment withAuthorName(String authorName) {
-        Utils.checkNotNull(authorName, "authorName");
-        this.authorName = Optional.ofNullable(authorName);
-        return this;
-    }
 
-
-    public CommerceReviewComment withAuthorName(Optional<String> authorName) {
-        Utils.checkNotNull(authorName, "authorName");
+    public CommerceReviewComment withAuthorName(@Nullable String authorName) {
         this.authorName = authorName;
         return this;
     }
 
-    public CommerceReviewComment withContent(String content) {
-        Utils.checkNotNull(content, "content");
-        this.content = content;
-        return this;
-    }
 
-    public CommerceReviewComment withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
+    public CommerceReviewComment withContent(@Nonnull String content) {
+        this.content = Utils.checkNotNull(content, "content");
         return this;
     }
 
 
-    public CommerceReviewComment withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public CommerceReviewComment withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public CommerceReviewComment withHelpfulVotes(double helpfulVotes) {
-        Utils.checkNotNull(helpfulVotes, "helpfulVotes");
-        this.helpfulVotes = Optional.ofNullable(helpfulVotes);
-        return this;
-    }
 
-
-    public CommerceReviewComment withHelpfulVotes(Optional<Double> helpfulVotes) {
-        Utils.checkNotNull(helpfulVotes, "helpfulVotes");
+    public CommerceReviewComment withHelpfulVotes(@Nullable Double helpfulVotes) {
         this.helpfulVotes = helpfulVotes;
         return this;
     }
 
-    public CommerceReviewComment withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public CommerceReviewComment withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public CommerceReviewComment withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public CommerceReviewComment withIsPublic(boolean isPublic) {
-        Utils.checkNotNull(isPublic, "isPublic");
-        this.isPublic = Optional.ofNullable(isPublic);
-        return this;
-    }
 
-
-    public CommerceReviewComment withIsPublic(Optional<Boolean> isPublic) {
-        Utils.checkNotNull(isPublic, "isPublic");
+    public CommerceReviewComment withIsPublic(@Nullable Boolean isPublic) {
         this.isPublic = isPublic;
         return this;
     }
 
-    public CommerceReviewComment withIsVerified(boolean isVerified) {
-        Utils.checkNotNull(isVerified, "isVerified");
-        this.isVerified = Optional.ofNullable(isVerified);
-        return this;
-    }
 
-
-    public CommerceReviewComment withIsVerified(Optional<Boolean> isVerified) {
-        Utils.checkNotNull(isVerified, "isVerified");
+    public CommerceReviewComment withIsVerified(@Nullable Boolean isVerified) {
         this.isVerified = isVerified;
         return this;
     }
 
-    public CommerceReviewComment withMetadata(List<CommerceMetadata> metadata) {
-        Utils.checkNotNull(metadata, "metadata");
-        this.metadata = Optional.ofNullable(metadata);
-        return this;
-    }
 
-
-    public CommerceReviewComment withMetadata(Optional<? extends List<CommerceMetadata>> metadata) {
-        Utils.checkNotNull(metadata, "metadata");
+    public CommerceReviewComment withMetadata(@Nullable List<CommerceMetadata> metadata) {
         this.metadata = metadata;
         return this;
     }
 
-    public CommerceReviewComment withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public CommerceReviewComment withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public CommerceReviewComment withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public CommerceReviewComment withStatus(CommerceReviewCommentStatus status) {
-        Utils.checkNotNull(status, "status");
-        this.status = Optional.ofNullable(status);
-        return this;
-    }
 
-
-    public CommerceReviewComment withStatus(Optional<? extends CommerceReviewCommentStatus> status) {
-        Utils.checkNotNull(status, "status");
+    public CommerceReviewComment withStatus(@Nullable CommerceReviewCommentStatus status) {
         this.status = status;
         return this;
     }
 
-    public CommerceReviewComment withUnhelpfulVotes(double unhelpfulVotes) {
-        Utils.checkNotNull(unhelpfulVotes, "unhelpfulVotes");
-        this.unhelpfulVotes = Optional.ofNullable(unhelpfulVotes);
-        return this;
-    }
 
-
-    public CommerceReviewComment withUnhelpfulVotes(Optional<Double> unhelpfulVotes) {
-        Utils.checkNotNull(unhelpfulVotes, "unhelpfulVotes");
+    public CommerceReviewComment withUnhelpfulVotes(@Nullable Double unhelpfulVotes) {
         this.unhelpfulVotes = unhelpfulVotes;
         return this;
     }
 
-    public CommerceReviewComment withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public CommerceReviewComment withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public CommerceReviewComment withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -485,231 +355,116 @@ public class CommerceReviewComment {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> authorAvatarUrl = Optional.empty();
+        private String authorAvatarUrl;
 
-        private Optional<String> authorEmail = Optional.empty();
+        private String authorEmail;
 
-        private Optional<String> authorLocation = Optional.empty();
+        private String authorLocation;
 
-        private Optional<String> authorName = Optional.empty();
+        private String authorName;
 
         private String content;
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<Double> helpfulVotes = Optional.empty();
+        private Double helpfulVotes;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<Boolean> isPublic = Optional.empty();
+        private Boolean isPublic;
 
-        private Optional<Boolean> isVerified = Optional.empty();
+        private Boolean isVerified;
 
-        private Optional<? extends List<CommerceMetadata>> metadata = Optional.empty();
+        private List<CommerceMetadata> metadata;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<? extends CommerceReviewCommentStatus> status = Optional.empty();
+        private CommerceReviewCommentStatus status;
 
-        private Optional<Double> unhelpfulVotes = Optional.empty();
+        private Double unhelpfulVotes;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder authorAvatarUrl(String authorAvatarUrl) {
-            Utils.checkNotNull(authorAvatarUrl, "authorAvatarUrl");
-            this.authorAvatarUrl = Optional.ofNullable(authorAvatarUrl);
-            return this;
-        }
-
-        public Builder authorAvatarUrl(Optional<String> authorAvatarUrl) {
-            Utils.checkNotNull(authorAvatarUrl, "authorAvatarUrl");
+        public Builder authorAvatarUrl(@Nullable String authorAvatarUrl) {
             this.authorAvatarUrl = authorAvatarUrl;
             return this;
         }
 
-
-        public Builder authorEmail(String authorEmail) {
-            Utils.checkNotNull(authorEmail, "authorEmail");
-            this.authorEmail = Optional.ofNullable(authorEmail);
-            return this;
-        }
-
-        public Builder authorEmail(Optional<String> authorEmail) {
-            Utils.checkNotNull(authorEmail, "authorEmail");
+        public Builder authorEmail(@Nullable String authorEmail) {
             this.authorEmail = authorEmail;
             return this;
         }
 
-
-        public Builder authorLocation(String authorLocation) {
-            Utils.checkNotNull(authorLocation, "authorLocation");
-            this.authorLocation = Optional.ofNullable(authorLocation);
-            return this;
-        }
-
-        public Builder authorLocation(Optional<String> authorLocation) {
-            Utils.checkNotNull(authorLocation, "authorLocation");
+        public Builder authorLocation(@Nullable String authorLocation) {
             this.authorLocation = authorLocation;
             return this;
         }
 
-
-        public Builder authorName(String authorName) {
-            Utils.checkNotNull(authorName, "authorName");
-            this.authorName = Optional.ofNullable(authorName);
-            return this;
-        }
-
-        public Builder authorName(Optional<String> authorName) {
-            Utils.checkNotNull(authorName, "authorName");
+        public Builder authorName(@Nullable String authorName) {
             this.authorName = authorName;
             return this;
         }
 
-
-        public Builder content(String content) {
-            Utils.checkNotNull(content, "content");
-            this.content = content;
+        public Builder content(@Nonnull String content) {
+            this.content = Utils.checkNotNull(content, "content");
             return this;
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder helpfulVotes(double helpfulVotes) {
-            Utils.checkNotNull(helpfulVotes, "helpfulVotes");
-            this.helpfulVotes = Optional.ofNullable(helpfulVotes);
-            return this;
-        }
-
-        public Builder helpfulVotes(Optional<Double> helpfulVotes) {
-            Utils.checkNotNull(helpfulVotes, "helpfulVotes");
+        public Builder helpfulVotes(@Nullable Double helpfulVotes) {
             this.helpfulVotes = helpfulVotes;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder isPublic(boolean isPublic) {
-            Utils.checkNotNull(isPublic, "isPublic");
-            this.isPublic = Optional.ofNullable(isPublic);
-            return this;
-        }
-
-        public Builder isPublic(Optional<Boolean> isPublic) {
-            Utils.checkNotNull(isPublic, "isPublic");
+        public Builder isPublic(@Nullable Boolean isPublic) {
             this.isPublic = isPublic;
             return this;
         }
 
-
-        public Builder isVerified(boolean isVerified) {
-            Utils.checkNotNull(isVerified, "isVerified");
-            this.isVerified = Optional.ofNullable(isVerified);
-            return this;
-        }
-
-        public Builder isVerified(Optional<Boolean> isVerified) {
-            Utils.checkNotNull(isVerified, "isVerified");
+        public Builder isVerified(@Nullable Boolean isVerified) {
             this.isVerified = isVerified;
             return this;
         }
 
-
-        public Builder metadata(List<CommerceMetadata> metadata) {
-            Utils.checkNotNull(metadata, "metadata");
-            this.metadata = Optional.ofNullable(metadata);
-            return this;
-        }
-
-        public Builder metadata(Optional<? extends List<CommerceMetadata>> metadata) {
-            Utils.checkNotNull(metadata, "metadata");
+        public Builder metadata(@Nullable List<CommerceMetadata> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder status(CommerceReviewCommentStatus status) {
-            Utils.checkNotNull(status, "status");
-            this.status = Optional.ofNullable(status);
-            return this;
-        }
-
-        public Builder status(Optional<? extends CommerceReviewCommentStatus> status) {
-            Utils.checkNotNull(status, "status");
+        public Builder status(@Nullable CommerceReviewCommentStatus status) {
             this.status = status;
             return this;
         }
 
-
-        public Builder unhelpfulVotes(double unhelpfulVotes) {
-            Utils.checkNotNull(unhelpfulVotes, "unhelpfulVotes");
-            this.unhelpfulVotes = Optional.ofNullable(unhelpfulVotes);
-            return this;
-        }
-
-        public Builder unhelpfulVotes(Optional<Double> unhelpfulVotes) {
-            Utils.checkNotNull(unhelpfulVotes, "unhelpfulVotes");
+        public Builder unhelpfulVotes(@Nullable Double unhelpfulVotes) {
             this.unhelpfulVotes = unhelpfulVotes;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
         public CommerceReviewComment build() {
-
             return new CommerceReviewComment(
                 authorAvatarUrl, authorEmail, authorLocation,
                 authorName, content, createdAt,

@@ -4,11 +4,11 @@
 package to.unified.unified_java_sdk.models.operations.async;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import java.lang.Integer;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.io.InputStream;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.AccountingCategory;
@@ -21,7 +21,7 @@ public class GetAccountingCategoryResponse implements AsyncResponse {
     /**
      * Successful
      */
-    private Optional<? extends AccountingCategory> accountingCategory;
+    private AccountingCategory accountingCategory;
 
     /**
      * HTTP response content type for this operation
@@ -40,59 +40,52 @@ public class GetAccountingCategoryResponse implements AsyncResponse {
 
     @JsonCreator
     public GetAccountingCategoryResponse(
-            Optional<? extends AccountingCategory> accountingCategory,
-            String contentType,
+            @Nullable AccountingCategory accountingCategory,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(accountingCategory, "accountingCategory");
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
+            @Nonnull HttpResponse<Blob> rawResponse) {
         this.accountingCategory = accountingCategory;
-        this.contentType = contentType;
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
     }
     
     public GetAccountingCategoryResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
-        this(Optional.empty(), contentType, statusCode,
+            @Nonnull HttpResponse<Blob> rawResponse) {
+        this(null, contentType, statusCode,
             rawResponse);
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<AccountingCategory> accountingCategory() {
-        return (Optional<AccountingCategory>) accountingCategory;
+        return Optional.ofNullable(this.accountingCategory);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<Blob> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     public static Builder builder() {
@@ -103,48 +96,38 @@ public class GetAccountingCategoryResponse implements AsyncResponse {
     /**
      * Successful
      */
-    public GetAccountingCategoryResponse withAccountingCategory(AccountingCategory accountingCategory) {
-        Utils.checkNotNull(accountingCategory, "accountingCategory");
-        this.accountingCategory = Optional.ofNullable(accountingCategory);
-        return this;
-    }
-
-
-    /**
-     * Successful
-     */
-    public GetAccountingCategoryResponse withAccountingCategory(Optional<? extends AccountingCategory> accountingCategory) {
-        Utils.checkNotNull(accountingCategory, "accountingCategory");
+    public GetAccountingCategoryResponse withAccountingCategory(@Nullable AccountingCategory accountingCategory) {
         this.accountingCategory = accountingCategory;
         return this;
     }
 
+
     /**
      * HTTP response content type for this operation
      */
-    public GetAccountingCategoryResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
+    public GetAccountingCategoryResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public GetAccountingCategoryResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public GetAccountingCategoryResponse withRawResponse(HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
+    public GetAccountingCategoryResponse withRawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -181,11 +164,11 @@ public class GetAccountingCategoryResponse implements AsyncResponse {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends AccountingCategory> accountingCategory = Optional.empty();
+        private AccountingCategory accountingCategory;
 
         private String contentType;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<Blob> rawResponse;
 
@@ -193,57 +176,39 @@ public class GetAccountingCategoryResponse implements AsyncResponse {
           // force use of static builder() method
         }
 
-
         /**
          * Successful
          */
-        public Builder accountingCategory(AccountingCategory accountingCategory) {
-            Utils.checkNotNull(accountingCategory, "accountingCategory");
-            this.accountingCategory = Optional.ofNullable(accountingCategory);
-            return this;
-        }
-
-        /**
-         * Successful
-         */
-        public Builder accountingCategory(Optional<? extends AccountingCategory> accountingCategory) {
-            Utils.checkNotNull(accountingCategory, "accountingCategory");
+        public Builder accountingCategory(@Nullable AccountingCategory accountingCategory) {
             this.accountingCategory = accountingCategory;
             return this;
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<Blob> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
+        public Builder rawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         public GetAccountingCategoryResponse build() {
-
             return new GetAccountingCategoryResponse(
                 accountingCategory, contentType, statusCode,
                 rawResponse);

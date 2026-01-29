@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateAtsApplicationRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAtsApplicationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAtsApplicationResponse;
@@ -67,7 +68,7 @@ public class Application {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAtsApplicationResponse createAtsApplication(CreateAtsApplicationRequest request) {
+    public CreateAtsApplicationResponse createAtsApplication(@Nonnull CreateAtsApplicationRequest request) {
         RequestOperation<CreateAtsApplicationRequest, CreateAtsApplicationResponse> operation
               = new CreateAtsApplication.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -89,7 +90,7 @@ public class Application {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAtsApplicationResponse getAtsApplication(GetAtsApplicationRequest request) {
+    public GetAtsApplicationResponse getAtsApplication(@Nonnull GetAtsApplicationRequest request) {
         RequestOperation<GetAtsApplicationRequest, GetAtsApplicationResponse> operation
               = new GetAtsApplication.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -111,7 +112,7 @@ public class Application {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAtsApplicationsResponse listAtsApplications(ListAtsApplicationsRequest request) {
+    public ListAtsApplicationsResponse listAtsApplications(@Nonnull ListAtsApplicationsRequest request) {
         RequestOperation<ListAtsApplicationsRequest, ListAtsApplicationsResponse> operation
               = new ListAtsApplications.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -133,7 +134,7 @@ public class Application {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAtsApplicationResponse patchAtsApplication(PatchAtsApplicationRequest request) {
+    public PatchAtsApplicationResponse patchAtsApplication(@Nonnull PatchAtsApplicationRequest request) {
         RequestOperation<PatchAtsApplicationRequest, PatchAtsApplicationResponse> operation
               = new PatchAtsApplication.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -155,7 +156,7 @@ public class Application {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAtsApplicationResponse removeAtsApplication(RemoveAtsApplicationRequest request) {
+    public RemoveAtsApplicationResponse removeAtsApplication(@Nonnull RemoveAtsApplicationRequest request) {
         RequestOperation<RemoveAtsApplicationRequest, RemoveAtsApplicationResponse> operation
               = new RemoveAtsApplication.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -177,7 +178,7 @@ public class Application {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAtsApplicationResponse updateAtsApplication(UpdateAtsApplicationRequest request) {
+    public UpdateAtsApplicationResponse updateAtsApplication(@Nonnull UpdateAtsApplicationRequest request) {
         RequestOperation<UpdateAtsApplicationRequest, UpdateAtsApplicationResponse> operation
               = new UpdateAtsApplication.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

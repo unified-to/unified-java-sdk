@@ -4,15 +4,14 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -23,173 +22,149 @@ public class CalendarEvent {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachments")
-    private Optional<? extends List<CalendarAttachment>> attachments;
+    private List<CalendarAttachment> attachments;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attendees")
-    private Optional<? extends List<CalendarAttendee>> attendees;
+    private List<CalendarAttendee> attendees;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("calendar_id")
-    private Optional<String> calendarId;
+    private String calendarId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conference")
-    private Optional<? extends List<CalendarConference>> conference;
+    private List<CalendarConference> conference;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<String> createdAt;
+    private String createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
-    private Optional<String> endAt;
+    private String endAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_conference")
-    private Optional<Boolean> hasConference;
+    private Boolean hasConference;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_all_day")
-    private Optional<Boolean> isAllDay;
+    private Boolean isAllDay;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_free")
-    private Optional<Boolean> isFree;
+    private Boolean isFree;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_private")
-    private Optional<Boolean> isPrivate;
+    private Boolean isPrivate;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
-    private Optional<String> location;
+    private String location;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
-    private Optional<String> notes;
+    private String notes;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organizer")
-    private Optional<? extends PropertyCalendarEventOrganizer> organizer;
+    private PropertyCalendarEventOrganizer organizer;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recurrence")
-    private Optional<? extends List<CalendarEventRecurrence>> recurrence;
+    private List<CalendarEventRecurrence> recurrence;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recurring_event_id")
-    private Optional<String> recurringEventId;
+    private String recurringEventId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("send_notifications")
-    private Optional<Boolean> sendNotifications;
+    private Boolean sendNotifications;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
-    private Optional<String> startAt;
+    private String startAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
-    private Optional<? extends CalendarEventStatus> status;
+    private CalendarEventStatus status;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subject")
-    private Optional<String> subject;
+    private String subject;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
-    private Optional<String> timezone;
+    private String timezone;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<String> updatedAt;
+    private String updatedAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("web_url")
-    private Optional<String> webUrl;
+    private String webUrl;
 
     @JsonCreator
     public CalendarEvent(
-            @JsonProperty("attachments") Optional<? extends List<CalendarAttachment>> attachments,
-            @JsonProperty("attendees") Optional<? extends List<CalendarAttendee>> attendees,
-            @JsonProperty("calendar_id") Optional<String> calendarId,
-            @JsonProperty("conference") Optional<? extends List<CalendarConference>> conference,
-            @JsonProperty("created_at") Optional<String> createdAt,
-            @JsonProperty("end_at") Optional<String> endAt,
-            @JsonProperty("has_conference") Optional<Boolean> hasConference,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("is_all_day") Optional<Boolean> isAllDay,
-            @JsonProperty("is_free") Optional<Boolean> isFree,
-            @JsonProperty("is_private") Optional<Boolean> isPrivate,
-            @JsonProperty("location") Optional<String> location,
-            @JsonProperty("notes") Optional<String> notes,
-            @JsonProperty("organizer") Optional<? extends PropertyCalendarEventOrganizer> organizer,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("recurrence") Optional<? extends List<CalendarEventRecurrence>> recurrence,
-            @JsonProperty("recurring_event_id") Optional<String> recurringEventId,
-            @JsonProperty("send_notifications") Optional<Boolean> sendNotifications,
-            @JsonProperty("start_at") Optional<String> startAt,
-            @JsonProperty("status") Optional<? extends CalendarEventStatus> status,
-            @JsonProperty("subject") Optional<String> subject,
-            @JsonProperty("timezone") Optional<String> timezone,
-            @JsonProperty("updated_at") Optional<String> updatedAt,
-            @JsonProperty("web_url") Optional<String> webUrl) {
-        Utils.checkNotNull(attachments, "attachments");
-        Utils.checkNotNull(attendees, "attendees");
-        Utils.checkNotNull(calendarId, "calendarId");
-        Utils.checkNotNull(conference, "conference");
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(endAt, "endAt");
-        Utils.checkNotNull(hasConference, "hasConference");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(isAllDay, "isAllDay");
-        Utils.checkNotNull(isFree, "isFree");
-        Utils.checkNotNull(isPrivate, "isPrivate");
-        Utils.checkNotNull(location, "location");
-        Utils.checkNotNull(notes, "notes");
-        Utils.checkNotNull(organizer, "organizer");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(recurrence, "recurrence");
-        Utils.checkNotNull(recurringEventId, "recurringEventId");
-        Utils.checkNotNull(sendNotifications, "sendNotifications");
-        Utils.checkNotNull(startAt, "startAt");
-        Utils.checkNotNull(status, "status");
-        Utils.checkNotNull(subject, "subject");
-        Utils.checkNotNull(timezone, "timezone");
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        Utils.checkNotNull(webUrl, "webUrl");
+            @JsonProperty("attachments") @Nullable List<CalendarAttachment> attachments,
+            @JsonProperty("attendees") @Nullable List<CalendarAttendee> attendees,
+            @JsonProperty("calendar_id") @Nullable String calendarId,
+            @JsonProperty("conference") @Nullable List<CalendarConference> conference,
+            @JsonProperty("created_at") @Nullable String createdAt,
+            @JsonProperty("end_at") @Nullable String endAt,
+            @JsonProperty("has_conference") @Nullable Boolean hasConference,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("is_all_day") @Nullable Boolean isAllDay,
+            @JsonProperty("is_free") @Nullable Boolean isFree,
+            @JsonProperty("is_private") @Nullable Boolean isPrivate,
+            @JsonProperty("location") @Nullable String location,
+            @JsonProperty("notes") @Nullable String notes,
+            @JsonProperty("organizer") @Nullable PropertyCalendarEventOrganizer organizer,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("recurrence") @Nullable List<CalendarEventRecurrence> recurrence,
+            @JsonProperty("recurring_event_id") @Nullable String recurringEventId,
+            @JsonProperty("send_notifications") @Nullable Boolean sendNotifications,
+            @JsonProperty("start_at") @Nullable String startAt,
+            @JsonProperty("status") @Nullable CalendarEventStatus status,
+            @JsonProperty("subject") @Nullable String subject,
+            @JsonProperty("timezone") @Nullable String timezone,
+            @JsonProperty("updated_at") @Nullable String updatedAt,
+            @JsonProperty("web_url") @Nullable String webUrl) {
         this.attachments = attachments;
         this.attendees = attendees;
         this.calendarId = calendarId;
@@ -217,141 +192,110 @@ public class CalendarEvent {
     }
     
     public CalendarEvent() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<CalendarAttachment>> attachments() {
-        return (Optional<List<CalendarAttachment>>) attachments;
+        return Optional.ofNullable(this.attachments);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<CalendarAttendee>> attendees() {
-        return (Optional<List<CalendarAttendee>>) attendees;
+        return Optional.ofNullable(this.attendees);
     }
 
-    @JsonIgnore
     public Optional<String> calendarId() {
-        return calendarId;
+        return Optional.ofNullable(this.calendarId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<CalendarConference>> conference() {
-        return (Optional<List<CalendarConference>>) conference;
+        return Optional.ofNullable(this.conference);
     }
 
-    @JsonIgnore
     public Optional<String> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<String> endAt() {
-        return endAt;
+        return Optional.ofNullable(this.endAt);
     }
 
-    @JsonIgnore
     public Optional<Boolean> hasConference() {
-        return hasConference;
+        return Optional.ofNullable(this.hasConference);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isAllDay() {
-        return isAllDay;
+        return Optional.ofNullable(this.isAllDay);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isFree() {
-        return isFree;
+        return Optional.ofNullable(this.isFree);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isPrivate() {
-        return isPrivate;
+        return Optional.ofNullable(this.isPrivate);
     }
 
-    @JsonIgnore
     public Optional<String> location() {
-        return location;
+        return Optional.ofNullable(this.location);
     }
 
-    @JsonIgnore
     public Optional<String> notes() {
-        return notes;
+        return Optional.ofNullable(this.notes);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<PropertyCalendarEventOrganizer> organizer() {
-        return (Optional<PropertyCalendarEventOrganizer>) organizer;
+        return Optional.ofNullable(this.organizer);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<CalendarEventRecurrence>> recurrence() {
-        return (Optional<List<CalendarEventRecurrence>>) recurrence;
+        return Optional.ofNullable(this.recurrence);
     }
 
-    @JsonIgnore
     public Optional<String> recurringEventId() {
-        return recurringEventId;
+        return Optional.ofNullable(this.recurringEventId);
     }
 
-    @JsonIgnore
     public Optional<Boolean> sendNotifications() {
-        return sendNotifications;
+        return Optional.ofNullable(this.sendNotifications);
     }
 
-    @JsonIgnore
     public Optional<String> startAt() {
-        return startAt;
+        return Optional.ofNullable(this.startAt);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<CalendarEventStatus> status() {
-        return (Optional<CalendarEventStatus>) status;
+        return Optional.ofNullable(this.status);
     }
 
-    @JsonIgnore
     public Optional<String> subject() {
-        return subject;
+        return Optional.ofNullable(this.subject);
     }
 
-    @JsonIgnore
     public Optional<String> timezone() {
-        return timezone;
+        return Optional.ofNullable(this.timezone);
     }
 
-    @JsonIgnore
     public Optional<String> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
-    @JsonIgnore
     public Optional<String> webUrl() {
-        return webUrl;
+        return Optional.ofNullable(this.webUrl);
     }
 
     public static Builder builder() {
@@ -359,317 +303,149 @@ public class CalendarEvent {
     }
 
 
-    public CalendarEvent withAttachments(List<CalendarAttachment> attachments) {
-        Utils.checkNotNull(attachments, "attachments");
-        this.attachments = Optional.ofNullable(attachments);
-        return this;
-    }
-
-
-    public CalendarEvent withAttachments(Optional<? extends List<CalendarAttachment>> attachments) {
-        Utils.checkNotNull(attachments, "attachments");
+    public CalendarEvent withAttachments(@Nullable List<CalendarAttachment> attachments) {
         this.attachments = attachments;
         return this;
     }
 
-    public CalendarEvent withAttendees(List<CalendarAttendee> attendees) {
-        Utils.checkNotNull(attendees, "attendees");
-        this.attendees = Optional.ofNullable(attendees);
-        return this;
-    }
 
-
-    public CalendarEvent withAttendees(Optional<? extends List<CalendarAttendee>> attendees) {
-        Utils.checkNotNull(attendees, "attendees");
+    public CalendarEvent withAttendees(@Nullable List<CalendarAttendee> attendees) {
         this.attendees = attendees;
         return this;
     }
 
-    public CalendarEvent withCalendarId(String calendarId) {
-        Utils.checkNotNull(calendarId, "calendarId");
-        this.calendarId = Optional.ofNullable(calendarId);
-        return this;
-    }
 
-
-    public CalendarEvent withCalendarId(Optional<String> calendarId) {
-        Utils.checkNotNull(calendarId, "calendarId");
+    public CalendarEvent withCalendarId(@Nullable String calendarId) {
         this.calendarId = calendarId;
         return this;
     }
 
-    public CalendarEvent withConference(List<CalendarConference> conference) {
-        Utils.checkNotNull(conference, "conference");
-        this.conference = Optional.ofNullable(conference);
-        return this;
-    }
 
-
-    public CalendarEvent withConference(Optional<? extends List<CalendarConference>> conference) {
-        Utils.checkNotNull(conference, "conference");
+    public CalendarEvent withConference(@Nullable List<CalendarConference> conference) {
         this.conference = conference;
         return this;
     }
 
-    public CalendarEvent withCreatedAt(String createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
 
-
-    public CalendarEvent withCreatedAt(Optional<String> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public CalendarEvent withCreatedAt(@Nullable String createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public CalendarEvent withEndAt(String endAt) {
-        Utils.checkNotNull(endAt, "endAt");
-        this.endAt = Optional.ofNullable(endAt);
-        return this;
-    }
 
-
-    public CalendarEvent withEndAt(Optional<String> endAt) {
-        Utils.checkNotNull(endAt, "endAt");
+    public CalendarEvent withEndAt(@Nullable String endAt) {
         this.endAt = endAt;
         return this;
     }
 
-    public CalendarEvent withHasConference(boolean hasConference) {
-        Utils.checkNotNull(hasConference, "hasConference");
-        this.hasConference = Optional.ofNullable(hasConference);
-        return this;
-    }
 
-
-    public CalendarEvent withHasConference(Optional<Boolean> hasConference) {
-        Utils.checkNotNull(hasConference, "hasConference");
+    public CalendarEvent withHasConference(@Nullable Boolean hasConference) {
         this.hasConference = hasConference;
         return this;
     }
 
-    public CalendarEvent withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public CalendarEvent withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public CalendarEvent withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public CalendarEvent withIsAllDay(boolean isAllDay) {
-        Utils.checkNotNull(isAllDay, "isAllDay");
-        this.isAllDay = Optional.ofNullable(isAllDay);
-        return this;
-    }
 
-
-    public CalendarEvent withIsAllDay(Optional<Boolean> isAllDay) {
-        Utils.checkNotNull(isAllDay, "isAllDay");
+    public CalendarEvent withIsAllDay(@Nullable Boolean isAllDay) {
         this.isAllDay = isAllDay;
         return this;
     }
 
-    public CalendarEvent withIsFree(boolean isFree) {
-        Utils.checkNotNull(isFree, "isFree");
-        this.isFree = Optional.ofNullable(isFree);
-        return this;
-    }
 
-
-    public CalendarEvent withIsFree(Optional<Boolean> isFree) {
-        Utils.checkNotNull(isFree, "isFree");
+    public CalendarEvent withIsFree(@Nullable Boolean isFree) {
         this.isFree = isFree;
         return this;
     }
 
-    public CalendarEvent withIsPrivate(boolean isPrivate) {
-        Utils.checkNotNull(isPrivate, "isPrivate");
-        this.isPrivate = Optional.ofNullable(isPrivate);
-        return this;
-    }
 
-
-    public CalendarEvent withIsPrivate(Optional<Boolean> isPrivate) {
-        Utils.checkNotNull(isPrivate, "isPrivate");
+    public CalendarEvent withIsPrivate(@Nullable Boolean isPrivate) {
         this.isPrivate = isPrivate;
         return this;
     }
 
-    public CalendarEvent withLocation(String location) {
-        Utils.checkNotNull(location, "location");
-        this.location = Optional.ofNullable(location);
-        return this;
-    }
 
-
-    public CalendarEvent withLocation(Optional<String> location) {
-        Utils.checkNotNull(location, "location");
+    public CalendarEvent withLocation(@Nullable String location) {
         this.location = location;
         return this;
     }
 
-    public CalendarEvent withNotes(String notes) {
-        Utils.checkNotNull(notes, "notes");
-        this.notes = Optional.ofNullable(notes);
-        return this;
-    }
 
-
-    public CalendarEvent withNotes(Optional<String> notes) {
-        Utils.checkNotNull(notes, "notes");
+    public CalendarEvent withNotes(@Nullable String notes) {
         this.notes = notes;
         return this;
     }
 
-    public CalendarEvent withOrganizer(PropertyCalendarEventOrganizer organizer) {
-        Utils.checkNotNull(organizer, "organizer");
-        this.organizer = Optional.ofNullable(organizer);
-        return this;
-    }
 
-
-    public CalendarEvent withOrganizer(Optional<? extends PropertyCalendarEventOrganizer> organizer) {
-        Utils.checkNotNull(organizer, "organizer");
+    public CalendarEvent withOrganizer(@Nullable PropertyCalendarEventOrganizer organizer) {
         this.organizer = organizer;
         return this;
     }
 
-    public CalendarEvent withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public CalendarEvent withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public CalendarEvent withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public CalendarEvent withRecurrence(List<CalendarEventRecurrence> recurrence) {
-        Utils.checkNotNull(recurrence, "recurrence");
-        this.recurrence = Optional.ofNullable(recurrence);
-        return this;
-    }
 
-
-    public CalendarEvent withRecurrence(Optional<? extends List<CalendarEventRecurrence>> recurrence) {
-        Utils.checkNotNull(recurrence, "recurrence");
+    public CalendarEvent withRecurrence(@Nullable List<CalendarEventRecurrence> recurrence) {
         this.recurrence = recurrence;
         return this;
     }
 
-    public CalendarEvent withRecurringEventId(String recurringEventId) {
-        Utils.checkNotNull(recurringEventId, "recurringEventId");
-        this.recurringEventId = Optional.ofNullable(recurringEventId);
-        return this;
-    }
 
-
-    public CalendarEvent withRecurringEventId(Optional<String> recurringEventId) {
-        Utils.checkNotNull(recurringEventId, "recurringEventId");
+    public CalendarEvent withRecurringEventId(@Nullable String recurringEventId) {
         this.recurringEventId = recurringEventId;
         return this;
     }
 
-    public CalendarEvent withSendNotifications(boolean sendNotifications) {
-        Utils.checkNotNull(sendNotifications, "sendNotifications");
-        this.sendNotifications = Optional.ofNullable(sendNotifications);
-        return this;
-    }
 
-
-    public CalendarEvent withSendNotifications(Optional<Boolean> sendNotifications) {
-        Utils.checkNotNull(sendNotifications, "sendNotifications");
+    public CalendarEvent withSendNotifications(@Nullable Boolean sendNotifications) {
         this.sendNotifications = sendNotifications;
         return this;
     }
 
-    public CalendarEvent withStartAt(String startAt) {
-        Utils.checkNotNull(startAt, "startAt");
-        this.startAt = Optional.ofNullable(startAt);
-        return this;
-    }
 
-
-    public CalendarEvent withStartAt(Optional<String> startAt) {
-        Utils.checkNotNull(startAt, "startAt");
+    public CalendarEvent withStartAt(@Nullable String startAt) {
         this.startAt = startAt;
         return this;
     }
 
-    public CalendarEvent withStatus(CalendarEventStatus status) {
-        Utils.checkNotNull(status, "status");
-        this.status = Optional.ofNullable(status);
-        return this;
-    }
 
-
-    public CalendarEvent withStatus(Optional<? extends CalendarEventStatus> status) {
-        Utils.checkNotNull(status, "status");
+    public CalendarEvent withStatus(@Nullable CalendarEventStatus status) {
         this.status = status;
         return this;
     }
 
-    public CalendarEvent withSubject(String subject) {
-        Utils.checkNotNull(subject, "subject");
-        this.subject = Optional.ofNullable(subject);
-        return this;
-    }
 
-
-    public CalendarEvent withSubject(Optional<String> subject) {
-        Utils.checkNotNull(subject, "subject");
+    public CalendarEvent withSubject(@Nullable String subject) {
         this.subject = subject;
         return this;
     }
 
-    public CalendarEvent withTimezone(String timezone) {
-        Utils.checkNotNull(timezone, "timezone");
-        this.timezone = Optional.ofNullable(timezone);
-        return this;
-    }
 
-
-    public CalendarEvent withTimezone(Optional<String> timezone) {
-        Utils.checkNotNull(timezone, "timezone");
+    public CalendarEvent withTimezone(@Nullable String timezone) {
         this.timezone = timezone;
         return this;
     }
 
-    public CalendarEvent withUpdatedAt(String updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public CalendarEvent withUpdatedAt(Optional<String> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public CalendarEvent withUpdatedAt(@Nullable String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
-    public CalendarEvent withWebUrl(String webUrl) {
-        Utils.checkNotNull(webUrl, "webUrl");
-        this.webUrl = Optional.ofNullable(webUrl);
-        return this;
-    }
 
-
-    public CalendarEvent withWebUrl(Optional<String> webUrl) {
-        Utils.checkNotNull(webUrl, "webUrl");
+    public CalendarEvent withWebUrl(@Nullable String webUrl) {
         this.webUrl = webUrl;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -752,372 +528,179 @@ public class CalendarEvent {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends List<CalendarAttachment>> attachments = Optional.empty();
+        private List<CalendarAttachment> attachments;
 
-        private Optional<? extends List<CalendarAttendee>> attendees = Optional.empty();
+        private List<CalendarAttendee> attendees;
 
-        private Optional<String> calendarId = Optional.empty();
+        private String calendarId;
 
-        private Optional<? extends List<CalendarConference>> conference = Optional.empty();
+        private List<CalendarConference> conference;
 
-        private Optional<String> createdAt = Optional.empty();
+        private String createdAt;
 
-        private Optional<String> endAt = Optional.empty();
+        private String endAt;
 
-        private Optional<Boolean> hasConference = Optional.empty();
+        private Boolean hasConference;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<Boolean> isAllDay = Optional.empty();
+        private Boolean isAllDay;
 
-        private Optional<Boolean> isFree = Optional.empty();
+        private Boolean isFree;
 
-        private Optional<Boolean> isPrivate = Optional.empty();
+        private Boolean isPrivate;
 
-        private Optional<String> location = Optional.empty();
+        private String location;
 
-        private Optional<String> notes = Optional.empty();
+        private String notes;
 
-        private Optional<? extends PropertyCalendarEventOrganizer> organizer = Optional.empty();
+        private PropertyCalendarEventOrganizer organizer;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<? extends List<CalendarEventRecurrence>> recurrence = Optional.empty();
+        private List<CalendarEventRecurrence> recurrence;
 
-        private Optional<String> recurringEventId = Optional.empty();
+        private String recurringEventId;
 
-        private Optional<Boolean> sendNotifications = Optional.empty();
+        private Boolean sendNotifications;
 
-        private Optional<String> startAt = Optional.empty();
+        private String startAt;
 
-        private Optional<? extends CalendarEventStatus> status = Optional.empty();
+        private CalendarEventStatus status;
 
-        private Optional<String> subject = Optional.empty();
+        private String subject;
 
-        private Optional<String> timezone = Optional.empty();
+        private String timezone;
 
-        private Optional<String> updatedAt = Optional.empty();
+        private String updatedAt;
 
-        private Optional<String> webUrl = Optional.empty();
+        private String webUrl;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder attachments(List<CalendarAttachment> attachments) {
-            Utils.checkNotNull(attachments, "attachments");
-            this.attachments = Optional.ofNullable(attachments);
-            return this;
-        }
-
-        public Builder attachments(Optional<? extends List<CalendarAttachment>> attachments) {
-            Utils.checkNotNull(attachments, "attachments");
+        public Builder attachments(@Nullable List<CalendarAttachment> attachments) {
             this.attachments = attachments;
             return this;
         }
 
-
-        public Builder attendees(List<CalendarAttendee> attendees) {
-            Utils.checkNotNull(attendees, "attendees");
-            this.attendees = Optional.ofNullable(attendees);
-            return this;
-        }
-
-        public Builder attendees(Optional<? extends List<CalendarAttendee>> attendees) {
-            Utils.checkNotNull(attendees, "attendees");
+        public Builder attendees(@Nullable List<CalendarAttendee> attendees) {
             this.attendees = attendees;
             return this;
         }
 
-
-        public Builder calendarId(String calendarId) {
-            Utils.checkNotNull(calendarId, "calendarId");
-            this.calendarId = Optional.ofNullable(calendarId);
-            return this;
-        }
-
-        public Builder calendarId(Optional<String> calendarId) {
-            Utils.checkNotNull(calendarId, "calendarId");
+        public Builder calendarId(@Nullable String calendarId) {
             this.calendarId = calendarId;
             return this;
         }
 
-
-        public Builder conference(List<CalendarConference> conference) {
-            Utils.checkNotNull(conference, "conference");
-            this.conference = Optional.ofNullable(conference);
-            return this;
-        }
-
-        public Builder conference(Optional<? extends List<CalendarConference>> conference) {
-            Utils.checkNotNull(conference, "conference");
+        public Builder conference(@Nullable List<CalendarConference> conference) {
             this.conference = conference;
             return this;
         }
 
-
-        public Builder createdAt(String createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<String> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder endAt(String endAt) {
-            Utils.checkNotNull(endAt, "endAt");
-            this.endAt = Optional.ofNullable(endAt);
-            return this;
-        }
-
-        public Builder endAt(Optional<String> endAt) {
-            Utils.checkNotNull(endAt, "endAt");
+        public Builder endAt(@Nullable String endAt) {
             this.endAt = endAt;
             return this;
         }
 
-
-        public Builder hasConference(boolean hasConference) {
-            Utils.checkNotNull(hasConference, "hasConference");
-            this.hasConference = Optional.ofNullable(hasConference);
-            return this;
-        }
-
-        public Builder hasConference(Optional<Boolean> hasConference) {
-            Utils.checkNotNull(hasConference, "hasConference");
+        public Builder hasConference(@Nullable Boolean hasConference) {
             this.hasConference = hasConference;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder isAllDay(boolean isAllDay) {
-            Utils.checkNotNull(isAllDay, "isAllDay");
-            this.isAllDay = Optional.ofNullable(isAllDay);
-            return this;
-        }
-
-        public Builder isAllDay(Optional<Boolean> isAllDay) {
-            Utils.checkNotNull(isAllDay, "isAllDay");
+        public Builder isAllDay(@Nullable Boolean isAllDay) {
             this.isAllDay = isAllDay;
             return this;
         }
 
-
-        public Builder isFree(boolean isFree) {
-            Utils.checkNotNull(isFree, "isFree");
-            this.isFree = Optional.ofNullable(isFree);
-            return this;
-        }
-
-        public Builder isFree(Optional<Boolean> isFree) {
-            Utils.checkNotNull(isFree, "isFree");
+        public Builder isFree(@Nullable Boolean isFree) {
             this.isFree = isFree;
             return this;
         }
 
-
-        public Builder isPrivate(boolean isPrivate) {
-            Utils.checkNotNull(isPrivate, "isPrivate");
-            this.isPrivate = Optional.ofNullable(isPrivate);
-            return this;
-        }
-
-        public Builder isPrivate(Optional<Boolean> isPrivate) {
-            Utils.checkNotNull(isPrivate, "isPrivate");
+        public Builder isPrivate(@Nullable Boolean isPrivate) {
             this.isPrivate = isPrivate;
             return this;
         }
 
-
-        public Builder location(String location) {
-            Utils.checkNotNull(location, "location");
-            this.location = Optional.ofNullable(location);
-            return this;
-        }
-
-        public Builder location(Optional<String> location) {
-            Utils.checkNotNull(location, "location");
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-
-        public Builder notes(String notes) {
-            Utils.checkNotNull(notes, "notes");
-            this.notes = Optional.ofNullable(notes);
-            return this;
-        }
-
-        public Builder notes(Optional<String> notes) {
-            Utils.checkNotNull(notes, "notes");
+        public Builder notes(@Nullable String notes) {
             this.notes = notes;
             return this;
         }
 
-
-        public Builder organizer(PropertyCalendarEventOrganizer organizer) {
-            Utils.checkNotNull(organizer, "organizer");
-            this.organizer = Optional.ofNullable(organizer);
-            return this;
-        }
-
-        public Builder organizer(Optional<? extends PropertyCalendarEventOrganizer> organizer) {
-            Utils.checkNotNull(organizer, "organizer");
+        public Builder organizer(@Nullable PropertyCalendarEventOrganizer organizer) {
             this.organizer = organizer;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder recurrence(List<CalendarEventRecurrence> recurrence) {
-            Utils.checkNotNull(recurrence, "recurrence");
-            this.recurrence = Optional.ofNullable(recurrence);
-            return this;
-        }
-
-        public Builder recurrence(Optional<? extends List<CalendarEventRecurrence>> recurrence) {
-            Utils.checkNotNull(recurrence, "recurrence");
+        public Builder recurrence(@Nullable List<CalendarEventRecurrence> recurrence) {
             this.recurrence = recurrence;
             return this;
         }
 
-
-        public Builder recurringEventId(String recurringEventId) {
-            Utils.checkNotNull(recurringEventId, "recurringEventId");
-            this.recurringEventId = Optional.ofNullable(recurringEventId);
-            return this;
-        }
-
-        public Builder recurringEventId(Optional<String> recurringEventId) {
-            Utils.checkNotNull(recurringEventId, "recurringEventId");
+        public Builder recurringEventId(@Nullable String recurringEventId) {
             this.recurringEventId = recurringEventId;
             return this;
         }
 
-
-        public Builder sendNotifications(boolean sendNotifications) {
-            Utils.checkNotNull(sendNotifications, "sendNotifications");
-            this.sendNotifications = Optional.ofNullable(sendNotifications);
-            return this;
-        }
-
-        public Builder sendNotifications(Optional<Boolean> sendNotifications) {
-            Utils.checkNotNull(sendNotifications, "sendNotifications");
+        public Builder sendNotifications(@Nullable Boolean sendNotifications) {
             this.sendNotifications = sendNotifications;
             return this;
         }
 
-
-        public Builder startAt(String startAt) {
-            Utils.checkNotNull(startAt, "startAt");
-            this.startAt = Optional.ofNullable(startAt);
-            return this;
-        }
-
-        public Builder startAt(Optional<String> startAt) {
-            Utils.checkNotNull(startAt, "startAt");
+        public Builder startAt(@Nullable String startAt) {
             this.startAt = startAt;
             return this;
         }
 
-
-        public Builder status(CalendarEventStatus status) {
-            Utils.checkNotNull(status, "status");
-            this.status = Optional.ofNullable(status);
-            return this;
-        }
-
-        public Builder status(Optional<? extends CalendarEventStatus> status) {
-            Utils.checkNotNull(status, "status");
+        public Builder status(@Nullable CalendarEventStatus status) {
             this.status = status;
             return this;
         }
 
-
-        public Builder subject(String subject) {
-            Utils.checkNotNull(subject, "subject");
-            this.subject = Optional.ofNullable(subject);
-            return this;
-        }
-
-        public Builder subject(Optional<String> subject) {
-            Utils.checkNotNull(subject, "subject");
+        public Builder subject(@Nullable String subject) {
             this.subject = subject;
             return this;
         }
 
-
-        public Builder timezone(String timezone) {
-            Utils.checkNotNull(timezone, "timezone");
-            this.timezone = Optional.ofNullable(timezone);
-            return this;
-        }
-
-        public Builder timezone(Optional<String> timezone) {
-            Utils.checkNotNull(timezone, "timezone");
+        public Builder timezone(@Nullable String timezone) {
             this.timezone = timezone;
             return this;
         }
 
-
-        public Builder updatedAt(String updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<String> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable String updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
-
-        public Builder webUrl(String webUrl) {
-            Utils.checkNotNull(webUrl, "webUrl");
-            this.webUrl = Optional.ofNullable(webUrl);
-            return this;
-        }
-
-        public Builder webUrl(Optional<String> webUrl) {
-            Utils.checkNotNull(webUrl, "webUrl");
+        public Builder webUrl(@Nullable String webUrl) {
             this.webUrl = webUrl;
             return this;
         }
 
         public CalendarEvent build() {
-
             return new CalendarEvent(
                 attachments, attendees, calendarId,
                 conference, createdAt, endAt,

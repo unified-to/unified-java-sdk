@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.GetGenaiModelRequest;
 import to.unified.unified_java_sdk.models.operations.GetGenaiModelRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetGenaiModelResponse;
@@ -51,7 +52,7 @@ public class Model {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetGenaiModelResponse getGenaiModel(GetGenaiModelRequest request) {
+    public GetGenaiModelResponse getGenaiModel(@Nonnull GetGenaiModelRequest request) {
         RequestOperation<GetGenaiModelRequest, GetGenaiModelResponse> operation
               = new GetGenaiModel.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -73,7 +74,7 @@ public class Model {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListGenaiModelsResponse listGenaiModels(ListGenaiModelsRequest request) {
+    public ListGenaiModelsResponse listGenaiModels(@Nonnull ListGenaiModelsRequest request) {
         RequestOperation<ListGenaiModelsRequest, ListGenaiModelsResponse> operation
               = new ListGenaiModels.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

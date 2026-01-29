@@ -4,12 +4,11 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.io.InputStream;
-import java.lang.Integer;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.List;
 import java.util.Optional;
@@ -27,7 +26,7 @@ public class ListHrisEmployeesResponse implements Response {
     /**
      * Successful
      */
-    private Optional<? extends List<HrisEmployee>> hrisEmployees;
+    private List<HrisEmployee> hrisEmployees;
 
     /**
      * HTTP response status code for this operation
@@ -41,59 +40,52 @@ public class ListHrisEmployeesResponse implements Response {
 
     @JsonCreator
     public ListHrisEmployeesResponse(
-            String contentType,
-            Optional<? extends List<HrisEmployee>> hrisEmployees,
+            @Nonnull String contentType,
+            @Nullable List<HrisEmployee> hrisEmployees,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(hrisEmployees, "hrisEmployees");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.contentType = contentType;
+            @Nonnull HttpResponse<InputStream> rawResponse) {
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.hrisEmployees = hrisEmployees;
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
     }
     
     public ListHrisEmployeesResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
-        this(contentType, Optional.empty(), statusCode,
+            @Nonnull HttpResponse<InputStream> rawResponse) {
+        this(contentType, null, statusCode,
             rawResponse);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<HrisEmployee>> hrisEmployees() {
-        return (Optional<List<HrisEmployee>>) hrisEmployees;
+        return Optional.ofNullable(this.hrisEmployees);
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<InputStream> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     public static Builder builder() {
@@ -104,18 +96,8 @@ public class ListHrisEmployeesResponse implements Response {
     /**
      * HTTP response content type for this operation
      */
-    public ListHrisEmployeesResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
-        return this;
-    }
-
-    /**
-     * Successful
-     */
-    public ListHrisEmployeesResponse withHrisEmployees(List<HrisEmployee> hrisEmployees) {
-        Utils.checkNotNull(hrisEmployees, "hrisEmployees");
-        this.hrisEmployees = Optional.ofNullable(hrisEmployees);
+    public ListHrisEmployeesResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
 
@@ -123,29 +105,29 @@ public class ListHrisEmployeesResponse implements Response {
     /**
      * Successful
      */
-    public ListHrisEmployeesResponse withHrisEmployees(Optional<? extends List<HrisEmployee>> hrisEmployees) {
-        Utils.checkNotNull(hrisEmployees, "hrisEmployees");
+    public ListHrisEmployeesResponse withHrisEmployees(@Nullable List<HrisEmployee> hrisEmployees) {
         this.hrisEmployees = hrisEmployees;
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public ListHrisEmployeesResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public ListHrisEmployeesResponse withRawResponse(HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
+    public ListHrisEmployeesResponse withRawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -184,9 +166,9 @@ public class ListHrisEmployeesResponse implements Response {
 
         private String contentType;
 
-        private Optional<? extends List<HrisEmployee>> hrisEmployees = Optional.empty();
+        private List<HrisEmployee> hrisEmployees;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<InputStream> rawResponse;
 
@@ -194,57 +176,39 @@ public class ListHrisEmployeesResponse implements Response {
           // force use of static builder() method
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
-            return this;
-        }
-
-
-        /**
-         * Successful
-         */
-        public Builder hrisEmployees(List<HrisEmployee> hrisEmployees) {
-            Utils.checkNotNull(hrisEmployees, "hrisEmployees");
-            this.hrisEmployees = Optional.ofNullable(hrisEmployees);
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
 
         /**
          * Successful
          */
-        public Builder hrisEmployees(Optional<? extends List<HrisEmployee>> hrisEmployees) {
-            Utils.checkNotNull(hrisEmployees, "hrisEmployees");
+        public Builder hrisEmployees(@Nullable List<HrisEmployee> hrisEmployees) {
             this.hrisEmployees = hrisEmployees;
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<InputStream> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
+        public Builder rawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         public ListHrisEmployeesResponse build() {
-
             return new ListHrisEmployeesResponse(
                 contentType, hrisEmployees, statusCode,
                 rawResponse);

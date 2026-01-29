@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
 import java.util.Optional;
@@ -18,33 +18,29 @@ public class MessagingMember {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
-    private Optional<String> email;
+    private String email;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image_url")
-    private Optional<String> imageUrl;
+    private String imageUrl;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
-    private Optional<String> name;
+    private String name;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
-    private Optional<String> userId;
+    private String userId;
 
     @JsonCreator
     public MessagingMember(
-            @JsonProperty("email") Optional<String> email,
-            @JsonProperty("image_url") Optional<String> imageUrl,
-            @JsonProperty("name") Optional<String> name,
-            @JsonProperty("user_id") Optional<String> userId) {
-        Utils.checkNotNull(email, "email");
-        Utils.checkNotNull(imageUrl, "imageUrl");
-        Utils.checkNotNull(name, "name");
-        Utils.checkNotNull(userId, "userId");
+            @JsonProperty("email") @Nullable String email,
+            @JsonProperty("image_url") @Nullable String imageUrl,
+            @JsonProperty("name") @Nullable String name,
+            @JsonProperty("user_id") @Nullable String userId) {
         this.email = email;
         this.imageUrl = imageUrl;
         this.name = name;
@@ -52,28 +48,24 @@ public class MessagingMember {
     }
     
     public MessagingMember() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+        this(null, null, null,
+            null);
     }
 
-    @JsonIgnore
     public Optional<String> email() {
-        return email;
+        return Optional.ofNullable(this.email);
     }
 
-    @JsonIgnore
     public Optional<String> imageUrl() {
-        return imageUrl;
+        return Optional.ofNullable(this.imageUrl);
     }
 
-    @JsonIgnore
     public Optional<String> name() {
-        return name;
+        return Optional.ofNullable(this.name);
     }
 
-    @JsonIgnore
     public Optional<String> userId() {
-        return userId;
+        return Optional.ofNullable(this.userId);
     }
 
     public static Builder builder() {
@@ -81,57 +73,29 @@ public class MessagingMember {
     }
 
 
-    public MessagingMember withEmail(String email) {
-        Utils.checkNotNull(email, "email");
-        this.email = Optional.ofNullable(email);
-        return this;
-    }
-
-
-    public MessagingMember withEmail(Optional<String> email) {
-        Utils.checkNotNull(email, "email");
+    public MessagingMember withEmail(@Nullable String email) {
         this.email = email;
         return this;
     }
 
-    public MessagingMember withImageUrl(String imageUrl) {
-        Utils.checkNotNull(imageUrl, "imageUrl");
-        this.imageUrl = Optional.ofNullable(imageUrl);
-        return this;
-    }
 
-
-    public MessagingMember withImageUrl(Optional<String> imageUrl) {
-        Utils.checkNotNull(imageUrl, "imageUrl");
+    public MessagingMember withImageUrl(@Nullable String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
     }
 
-    public MessagingMember withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = Optional.ofNullable(name);
-        return this;
-    }
 
-
-    public MessagingMember withName(Optional<String> name) {
-        Utils.checkNotNull(name, "name");
+    public MessagingMember withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
-    public MessagingMember withUserId(String userId) {
-        Utils.checkNotNull(userId, "userId");
-        this.userId = Optional.ofNullable(userId);
-        return this;
-    }
 
-
-    public MessagingMember withUserId(Optional<String> userId) {
-        Utils.checkNotNull(userId, "userId");
+    public MessagingMember withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -168,72 +132,39 @@ public class MessagingMember {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> email = Optional.empty();
+        private String email;
 
-        private Optional<String> imageUrl = Optional.empty();
+        private String imageUrl;
 
-        private Optional<String> name = Optional.empty();
+        private String name;
 
-        private Optional<String> userId = Optional.empty();
+        private String userId;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder email(String email) {
-            Utils.checkNotNull(email, "email");
-            this.email = Optional.ofNullable(email);
-            return this;
-        }
-
-        public Builder email(Optional<String> email) {
-            Utils.checkNotNull(email, "email");
+        public Builder email(@Nullable String email) {
             this.email = email;
             return this;
         }
 
-
-        public Builder imageUrl(String imageUrl) {
-            Utils.checkNotNull(imageUrl, "imageUrl");
-            this.imageUrl = Optional.ofNullable(imageUrl);
-            return this;
-        }
-
-        public Builder imageUrl(Optional<String> imageUrl) {
-            Utils.checkNotNull(imageUrl, "imageUrl");
+        public Builder imageUrl(@Nullable String imageUrl) {
             this.imageUrl = imageUrl;
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = Optional.ofNullable(name);
-            return this;
-        }
-
-        public Builder name(Optional<String> name) {
-            Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-
-        public Builder userId(String userId) {
-            Utils.checkNotNull(userId, "userId");
-            this.userId = Optional.ofNullable(userId);
-            return this;
-        }
-
-        public Builder userId(Optional<String> userId) {
-            Utils.checkNotNull(userId, "userId");
+        public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;
         }
 
         public MessagingMember build() {
-
             return new MessagingMember(
                 email, imageUrl, name,
                 userId);

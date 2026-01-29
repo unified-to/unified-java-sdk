@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateTicketingCategoryRequest;
 import to.unified.unified_java_sdk.models.operations.CreateTicketingCategoryRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateTicketingCategoryResponse;
@@ -139,7 +140,7 @@ public class Ticketing {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateTicketingCategoryResponse createTicketingCategory(CreateTicketingCategoryRequest request) {
+    public CreateTicketingCategoryResponse createTicketingCategory(@Nonnull CreateTicketingCategoryRequest request) {
         RequestOperation<CreateTicketingCategoryRequest, CreateTicketingCategoryResponse> operation
               = new CreateTicketingCategory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -161,7 +162,7 @@ public class Ticketing {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateTicketingCustomerResponse createTicketingCustomer(CreateTicketingCustomerRequest request) {
+    public CreateTicketingCustomerResponse createTicketingCustomer(@Nonnull CreateTicketingCustomerRequest request) {
         RequestOperation<CreateTicketingCustomerRequest, CreateTicketingCustomerResponse> operation
               = new CreateTicketingCustomer.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -183,7 +184,7 @@ public class Ticketing {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateTicketingNoteResponse createTicketingNote(CreateTicketingNoteRequest request) {
+    public CreateTicketingNoteResponse createTicketingNote(@Nonnull CreateTicketingNoteRequest request) {
         RequestOperation<CreateTicketingNoteRequest, CreateTicketingNoteResponse> operation
               = new CreateTicketingNote.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -205,7 +206,7 @@ public class Ticketing {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateTicketingTicketResponse createTicketingTicket(CreateTicketingTicketRequest request) {
+    public CreateTicketingTicketResponse createTicketingTicket(@Nonnull CreateTicketingTicketRequest request) {
         RequestOperation<CreateTicketingTicketRequest, CreateTicketingTicketResponse> operation
               = new CreateTicketingTicket.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -227,7 +228,7 @@ public class Ticketing {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetTicketingCategoryResponse getTicketingCategory(GetTicketingCategoryRequest request) {
+    public GetTicketingCategoryResponse getTicketingCategory(@Nonnull GetTicketingCategoryRequest request) {
         RequestOperation<GetTicketingCategoryRequest, GetTicketingCategoryResponse> operation
               = new GetTicketingCategory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -249,7 +250,7 @@ public class Ticketing {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetTicketingCustomerResponse getTicketingCustomer(GetTicketingCustomerRequest request) {
+    public GetTicketingCustomerResponse getTicketingCustomer(@Nonnull GetTicketingCustomerRequest request) {
         RequestOperation<GetTicketingCustomerRequest, GetTicketingCustomerResponse> operation
               = new GetTicketingCustomer.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -271,7 +272,7 @@ public class Ticketing {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetTicketingNoteResponse getTicketingNote(GetTicketingNoteRequest request) {
+    public GetTicketingNoteResponse getTicketingNote(@Nonnull GetTicketingNoteRequest request) {
         RequestOperation<GetTicketingNoteRequest, GetTicketingNoteResponse> operation
               = new GetTicketingNote.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -293,7 +294,7 @@ public class Ticketing {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetTicketingTicketResponse getTicketingTicket(GetTicketingTicketRequest request) {
+    public GetTicketingTicketResponse getTicketingTicket(@Nonnull GetTicketingTicketRequest request) {
         RequestOperation<GetTicketingTicketRequest, GetTicketingTicketResponse> operation
               = new GetTicketingTicket.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -315,7 +316,7 @@ public class Ticketing {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListTicketingCategoriesResponse listTicketingCategories(ListTicketingCategoriesRequest request) {
+    public ListTicketingCategoriesResponse listTicketingCategories(@Nonnull ListTicketingCategoriesRequest request) {
         RequestOperation<ListTicketingCategoriesRequest, ListTicketingCategoriesResponse> operation
               = new ListTicketingCategories.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -337,7 +338,7 @@ public class Ticketing {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListTicketingCustomersResponse listTicketingCustomers(ListTicketingCustomersRequest request) {
+    public ListTicketingCustomersResponse listTicketingCustomers(@Nonnull ListTicketingCustomersRequest request) {
         RequestOperation<ListTicketingCustomersRequest, ListTicketingCustomersResponse> operation
               = new ListTicketingCustomers.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -359,7 +360,7 @@ public class Ticketing {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListTicketingNotesResponse listTicketingNotes(ListTicketingNotesRequest request) {
+    public ListTicketingNotesResponse listTicketingNotes(@Nonnull ListTicketingNotesRequest request) {
         RequestOperation<ListTicketingNotesRequest, ListTicketingNotesResponse> operation
               = new ListTicketingNotes.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -381,7 +382,7 @@ public class Ticketing {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListTicketingTicketsResponse listTicketingTickets(ListTicketingTicketsRequest request) {
+    public ListTicketingTicketsResponse listTicketingTickets(@Nonnull ListTicketingTicketsRequest request) {
         RequestOperation<ListTicketingTicketsRequest, ListTicketingTicketsResponse> operation
               = new ListTicketingTickets.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -403,7 +404,7 @@ public class Ticketing {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchTicketingCategoryResponse patchTicketingCategory(PatchTicketingCategoryRequest request) {
+    public PatchTicketingCategoryResponse patchTicketingCategory(@Nonnull PatchTicketingCategoryRequest request) {
         RequestOperation<PatchTicketingCategoryRequest, PatchTicketingCategoryResponse> operation
               = new PatchTicketingCategory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -425,7 +426,7 @@ public class Ticketing {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchTicketingCustomerResponse patchTicketingCustomer(PatchTicketingCustomerRequest request) {
+    public PatchTicketingCustomerResponse patchTicketingCustomer(@Nonnull PatchTicketingCustomerRequest request) {
         RequestOperation<PatchTicketingCustomerRequest, PatchTicketingCustomerResponse> operation
               = new PatchTicketingCustomer.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -447,7 +448,7 @@ public class Ticketing {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchTicketingNoteResponse patchTicketingNote(PatchTicketingNoteRequest request) {
+    public PatchTicketingNoteResponse patchTicketingNote(@Nonnull PatchTicketingNoteRequest request) {
         RequestOperation<PatchTicketingNoteRequest, PatchTicketingNoteResponse> operation
               = new PatchTicketingNote.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -469,7 +470,7 @@ public class Ticketing {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchTicketingTicketResponse patchTicketingTicket(PatchTicketingTicketRequest request) {
+    public PatchTicketingTicketResponse patchTicketingTicket(@Nonnull PatchTicketingTicketRequest request) {
         RequestOperation<PatchTicketingTicketRequest, PatchTicketingTicketResponse> operation
               = new PatchTicketingTicket.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -491,7 +492,7 @@ public class Ticketing {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveTicketingCategoryResponse removeTicketingCategory(RemoveTicketingCategoryRequest request) {
+    public RemoveTicketingCategoryResponse removeTicketingCategory(@Nonnull RemoveTicketingCategoryRequest request) {
         RequestOperation<RemoveTicketingCategoryRequest, RemoveTicketingCategoryResponse> operation
               = new RemoveTicketingCategory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -513,7 +514,7 @@ public class Ticketing {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveTicketingCustomerResponse removeTicketingCustomer(RemoveTicketingCustomerRequest request) {
+    public RemoveTicketingCustomerResponse removeTicketingCustomer(@Nonnull RemoveTicketingCustomerRequest request) {
         RequestOperation<RemoveTicketingCustomerRequest, RemoveTicketingCustomerResponse> operation
               = new RemoveTicketingCustomer.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -535,7 +536,7 @@ public class Ticketing {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveTicketingNoteResponse removeTicketingNote(RemoveTicketingNoteRequest request) {
+    public RemoveTicketingNoteResponse removeTicketingNote(@Nonnull RemoveTicketingNoteRequest request) {
         RequestOperation<RemoveTicketingNoteRequest, RemoveTicketingNoteResponse> operation
               = new RemoveTicketingNote.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -557,7 +558,7 @@ public class Ticketing {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveTicketingTicketResponse removeTicketingTicket(RemoveTicketingTicketRequest request) {
+    public RemoveTicketingTicketResponse removeTicketingTicket(@Nonnull RemoveTicketingTicketRequest request) {
         RequestOperation<RemoveTicketingTicketRequest, RemoveTicketingTicketResponse> operation
               = new RemoveTicketingTicket.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -579,7 +580,7 @@ public class Ticketing {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateTicketingCategoryResponse updateTicketingCategory(UpdateTicketingCategoryRequest request) {
+    public UpdateTicketingCategoryResponse updateTicketingCategory(@Nonnull UpdateTicketingCategoryRequest request) {
         RequestOperation<UpdateTicketingCategoryRequest, UpdateTicketingCategoryResponse> operation
               = new UpdateTicketingCategory.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -601,7 +602,7 @@ public class Ticketing {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateTicketingCustomerResponse updateTicketingCustomer(UpdateTicketingCustomerRequest request) {
+    public UpdateTicketingCustomerResponse updateTicketingCustomer(@Nonnull UpdateTicketingCustomerRequest request) {
         RequestOperation<UpdateTicketingCustomerRequest, UpdateTicketingCustomerResponse> operation
               = new UpdateTicketingCustomer.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -623,7 +624,7 @@ public class Ticketing {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateTicketingNoteResponse updateTicketingNote(UpdateTicketingNoteRequest request) {
+    public UpdateTicketingNoteResponse updateTicketingNote(@Nonnull UpdateTicketingNoteRequest request) {
         RequestOperation<UpdateTicketingNoteRequest, UpdateTicketingNoteResponse> operation
               = new UpdateTicketingNote.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -645,7 +646,7 @@ public class Ticketing {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateTicketingTicketResponse updateTicketingTicket(UpdateTicketingTicketRequest request) {
+    public UpdateTicketingTicketResponse updateTicketingTicket(@Nonnull UpdateTicketingTicketRequest request) {
         RequestOperation<UpdateTicketingTicketRequest, UpdateTicketingTicketResponse> operation
               = new UpdateTicketingTicket.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

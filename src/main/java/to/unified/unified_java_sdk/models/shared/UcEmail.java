@@ -4,13 +4,13 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -23,32 +23,28 @@ public class UcEmail {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
-    private Optional<? extends UcEmailType> type;
+    private UcEmailType type;
 
     @JsonCreator
     public UcEmail(
-            @JsonProperty("email") String email,
-            @JsonProperty("type") Optional<? extends UcEmailType> type) {
-        Utils.checkNotNull(email, "email");
-        Utils.checkNotNull(type, "type");
-        this.email = email;
+            @JsonProperty("email") @Nonnull String email,
+            @JsonProperty("type") @Nullable UcEmailType type) {
+        this.email = Optional.ofNullable(email)
+            .orElseThrow(() -> new IllegalArgumentException("email cannot be null"));
         this.type = type;
     }
     
     public UcEmail(
-            String email) {
-        this(email, Optional.empty());
+            @Nonnull String email) {
+        this(email, null);
     }
 
-    @JsonIgnore
     public String email() {
-        return email;
+        return this.email;
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<UcEmailType> type() {
-        return (Optional<UcEmailType>) type;
+        return Optional.ofNullable(this.type);
     }
 
     public static Builder builder() {
@@ -56,24 +52,17 @@ public class UcEmail {
     }
 
 
-    public UcEmail withEmail(String email) {
-        Utils.checkNotNull(email, "email");
-        this.email = email;
-        return this;
-    }
-
-    public UcEmail withType(UcEmailType type) {
-        Utils.checkNotNull(type, "type");
-        this.type = Optional.ofNullable(type);
+    public UcEmail withEmail(@Nonnull String email) {
+        this.email = Utils.checkNotNull(email, "email");
         return this;
     }
 
 
-    public UcEmail withType(Optional<? extends UcEmailType> type) {
-        Utils.checkNotNull(type, "type");
+    public UcEmail withType(@Nullable UcEmailType type) {
         this.type = type;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -107,34 +96,23 @@ public class UcEmail {
 
         private String email;
 
-        private Optional<? extends UcEmailType> type = Optional.empty();
+        private UcEmailType type;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder email(String email) {
-            Utils.checkNotNull(email, "email");
-            this.email = email;
+        public Builder email(@Nonnull String email) {
+            this.email = Utils.checkNotNull(email, "email");
             return this;
         }
 
-
-        public Builder type(UcEmailType type) {
-            Utils.checkNotNull(type, "type");
-            this.type = Optional.ofNullable(type);
-            return this;
-        }
-
-        public Builder type(Optional<? extends UcEmailType> type) {
-            Utils.checkNotNull(type, "type");
+        public Builder type(@Nullable UcEmailType type) {
             this.type = type;
             return this;
         }
 
         public UcEmail build() {
-
             return new UcEmail(
                 email, type);
         }

@@ -4,14 +4,13 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -20,82 +19,71 @@ public class ShippingPackage {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
-    private Optional<String> currency;
+    private String currency;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
-    private Optional<String> description;
+    private String description;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
-    private Optional<Double> height;
+    private Double height;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insured_amount")
-    private Optional<Double> insuredAmount;
+    private Double insuredAmount;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("length")
-    private Optional<Double> length;
+    private Double length;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size_unit")
-    private Optional<? extends ShippingPackageSizeUnit> sizeUnit;
+    private ShippingPackageSizeUnit sizeUnit;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tracking_number")
-    private Optional<String> trackingNumber;
+    private String trackingNumber;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
-    private Optional<Double> value;
+    private Double value;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weight")
-    private Optional<Double> weight;
+    private Double weight;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weight_unit")
-    private Optional<? extends ShippingPackageWeightUnit> weightUnit;
+    private ShippingPackageWeightUnit weightUnit;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
-    private Optional<Double> width;
+    private Double width;
 
     @JsonCreator
     public ShippingPackage(
-            @JsonProperty("currency") Optional<String> currency,
-            @JsonProperty("description") Optional<String> description,
-            @JsonProperty("height") Optional<Double> height,
-            @JsonProperty("insured_amount") Optional<Double> insuredAmount,
-            @JsonProperty("length") Optional<Double> length,
-            @JsonProperty("size_unit") Optional<? extends ShippingPackageSizeUnit> sizeUnit,
-            @JsonProperty("tracking_number") Optional<String> trackingNumber,
-            @JsonProperty("value") Optional<Double> value,
-            @JsonProperty("weight") Optional<Double> weight,
-            @JsonProperty("weight_unit") Optional<? extends ShippingPackageWeightUnit> weightUnit,
-            @JsonProperty("width") Optional<Double> width) {
-        Utils.checkNotNull(currency, "currency");
-        Utils.checkNotNull(description, "description");
-        Utils.checkNotNull(height, "height");
-        Utils.checkNotNull(insuredAmount, "insuredAmount");
-        Utils.checkNotNull(length, "length");
-        Utils.checkNotNull(sizeUnit, "sizeUnit");
-        Utils.checkNotNull(trackingNumber, "trackingNumber");
-        Utils.checkNotNull(value, "value");
-        Utils.checkNotNull(weight, "weight");
-        Utils.checkNotNull(weightUnit, "weightUnit");
-        Utils.checkNotNull(width, "width");
+            @JsonProperty("currency") @Nullable String currency,
+            @JsonProperty("description") @Nullable String description,
+            @JsonProperty("height") @Nullable Double height,
+            @JsonProperty("insured_amount") @Nullable Double insuredAmount,
+            @JsonProperty("length") @Nullable Double length,
+            @JsonProperty("size_unit") @Nullable ShippingPackageSizeUnit sizeUnit,
+            @JsonProperty("tracking_number") @Nullable String trackingNumber,
+            @JsonProperty("value") @Nullable Double value,
+            @JsonProperty("weight") @Nullable Double weight,
+            @JsonProperty("weight_unit") @Nullable ShippingPackageWeightUnit weightUnit,
+            @JsonProperty("width") @Nullable Double width) {
         this.currency = currency;
         this.description = description;
         this.height = height;
@@ -110,67 +98,54 @@ public class ShippingPackage {
     }
     
     public ShippingPackage() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null);
     }
 
-    @JsonIgnore
     public Optional<String> currency() {
-        return currency;
+        return Optional.ofNullable(this.currency);
     }
 
-    @JsonIgnore
     public Optional<String> description() {
-        return description;
+        return Optional.ofNullable(this.description);
     }
 
-    @JsonIgnore
     public Optional<Double> height() {
-        return height;
+        return Optional.ofNullable(this.height);
     }
 
-    @JsonIgnore
     public Optional<Double> insuredAmount() {
-        return insuredAmount;
+        return Optional.ofNullable(this.insuredAmount);
     }
 
-    @JsonIgnore
     public Optional<Double> length() {
-        return length;
+        return Optional.ofNullable(this.length);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ShippingPackageSizeUnit> sizeUnit() {
-        return (Optional<ShippingPackageSizeUnit>) sizeUnit;
+        return Optional.ofNullable(this.sizeUnit);
     }
 
-    @JsonIgnore
     public Optional<String> trackingNumber() {
-        return trackingNumber;
+        return Optional.ofNullable(this.trackingNumber);
     }
 
-    @JsonIgnore
     public Optional<Double> value() {
-        return value;
+        return Optional.ofNullable(this.value);
     }
 
-    @JsonIgnore
     public Optional<Double> weight() {
-        return weight;
+        return Optional.ofNullable(this.weight);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ShippingPackageWeightUnit> weightUnit() {
-        return (Optional<ShippingPackageWeightUnit>) weightUnit;
+        return Optional.ofNullable(this.weightUnit);
     }
 
-    @JsonIgnore
     public Optional<Double> width() {
-        return width;
+        return Optional.ofNullable(this.width);
     }
 
     public static Builder builder() {
@@ -178,148 +153,71 @@ public class ShippingPackage {
     }
 
 
-    public ShippingPackage withCurrency(String currency) {
-        Utils.checkNotNull(currency, "currency");
-        this.currency = Optional.ofNullable(currency);
-        return this;
-    }
-
-
-    public ShippingPackage withCurrency(Optional<String> currency) {
-        Utils.checkNotNull(currency, "currency");
+    public ShippingPackage withCurrency(@Nullable String currency) {
         this.currency = currency;
         return this;
     }
 
-    public ShippingPackage withDescription(String description) {
-        Utils.checkNotNull(description, "description");
-        this.description = Optional.ofNullable(description);
-        return this;
-    }
 
-
-    public ShippingPackage withDescription(Optional<String> description) {
-        Utils.checkNotNull(description, "description");
+    public ShippingPackage withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
-    public ShippingPackage withHeight(double height) {
-        Utils.checkNotNull(height, "height");
-        this.height = Optional.ofNullable(height);
-        return this;
-    }
 
-
-    public ShippingPackage withHeight(Optional<Double> height) {
-        Utils.checkNotNull(height, "height");
+    public ShippingPackage withHeight(@Nullable Double height) {
         this.height = height;
         return this;
     }
 
-    public ShippingPackage withInsuredAmount(double insuredAmount) {
-        Utils.checkNotNull(insuredAmount, "insuredAmount");
-        this.insuredAmount = Optional.ofNullable(insuredAmount);
-        return this;
-    }
 
-
-    public ShippingPackage withInsuredAmount(Optional<Double> insuredAmount) {
-        Utils.checkNotNull(insuredAmount, "insuredAmount");
+    public ShippingPackage withInsuredAmount(@Nullable Double insuredAmount) {
         this.insuredAmount = insuredAmount;
         return this;
     }
 
-    public ShippingPackage withLength(double length) {
-        Utils.checkNotNull(length, "length");
-        this.length = Optional.ofNullable(length);
-        return this;
-    }
 
-
-    public ShippingPackage withLength(Optional<Double> length) {
-        Utils.checkNotNull(length, "length");
+    public ShippingPackage withLength(@Nullable Double length) {
         this.length = length;
         return this;
     }
 
-    public ShippingPackage withSizeUnit(ShippingPackageSizeUnit sizeUnit) {
-        Utils.checkNotNull(sizeUnit, "sizeUnit");
-        this.sizeUnit = Optional.ofNullable(sizeUnit);
-        return this;
-    }
 
-
-    public ShippingPackage withSizeUnit(Optional<? extends ShippingPackageSizeUnit> sizeUnit) {
-        Utils.checkNotNull(sizeUnit, "sizeUnit");
+    public ShippingPackage withSizeUnit(@Nullable ShippingPackageSizeUnit sizeUnit) {
         this.sizeUnit = sizeUnit;
         return this;
     }
 
-    public ShippingPackage withTrackingNumber(String trackingNumber) {
-        Utils.checkNotNull(trackingNumber, "trackingNumber");
-        this.trackingNumber = Optional.ofNullable(trackingNumber);
-        return this;
-    }
 
-
-    public ShippingPackage withTrackingNumber(Optional<String> trackingNumber) {
-        Utils.checkNotNull(trackingNumber, "trackingNumber");
+    public ShippingPackage withTrackingNumber(@Nullable String trackingNumber) {
         this.trackingNumber = trackingNumber;
         return this;
     }
 
-    public ShippingPackage withValue(double value) {
-        Utils.checkNotNull(value, "value");
-        this.value = Optional.ofNullable(value);
-        return this;
-    }
 
-
-    public ShippingPackage withValue(Optional<Double> value) {
-        Utils.checkNotNull(value, "value");
+    public ShippingPackage withValue(@Nullable Double value) {
         this.value = value;
         return this;
     }
 
-    public ShippingPackage withWeight(double weight) {
-        Utils.checkNotNull(weight, "weight");
-        this.weight = Optional.ofNullable(weight);
-        return this;
-    }
 
-
-    public ShippingPackage withWeight(Optional<Double> weight) {
-        Utils.checkNotNull(weight, "weight");
+    public ShippingPackage withWeight(@Nullable Double weight) {
         this.weight = weight;
         return this;
     }
 
-    public ShippingPackage withWeightUnit(ShippingPackageWeightUnit weightUnit) {
-        Utils.checkNotNull(weightUnit, "weightUnit");
-        this.weightUnit = Optional.ofNullable(weightUnit);
-        return this;
-    }
 
-
-    public ShippingPackage withWeightUnit(Optional<? extends ShippingPackageWeightUnit> weightUnit) {
-        Utils.checkNotNull(weightUnit, "weightUnit");
+    public ShippingPackage withWeightUnit(@Nullable ShippingPackageWeightUnit weightUnit) {
         this.weightUnit = weightUnit;
         return this;
     }
 
-    public ShippingPackage withWidth(double width) {
-        Utils.checkNotNull(width, "width");
-        this.width = Optional.ofNullable(width);
-        return this;
-    }
 
-
-    public ShippingPackage withWidth(Optional<Double> width) {
-        Utils.checkNotNull(width, "width");
+    public ShippingPackage withWidth(@Nullable Double width) {
         this.width = width;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -372,177 +270,88 @@ public class ShippingPackage {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> currency = Optional.empty();
+        private String currency;
 
-        private Optional<String> description = Optional.empty();
+        private String description;
 
-        private Optional<Double> height = Optional.empty();
+        private Double height;
 
-        private Optional<Double> insuredAmount = Optional.empty();
+        private Double insuredAmount;
 
-        private Optional<Double> length = Optional.empty();
+        private Double length;
 
-        private Optional<? extends ShippingPackageSizeUnit> sizeUnit = Optional.empty();
+        private ShippingPackageSizeUnit sizeUnit;
 
-        private Optional<String> trackingNumber = Optional.empty();
+        private String trackingNumber;
 
-        private Optional<Double> value = Optional.empty();
+        private Double value;
 
-        private Optional<Double> weight = Optional.empty();
+        private Double weight;
 
-        private Optional<? extends ShippingPackageWeightUnit> weightUnit = Optional.empty();
+        private ShippingPackageWeightUnit weightUnit;
 
-        private Optional<Double> width = Optional.empty();
+        private Double width;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder currency(String currency) {
-            Utils.checkNotNull(currency, "currency");
-            this.currency = Optional.ofNullable(currency);
-            return this;
-        }
-
-        public Builder currency(Optional<String> currency) {
-            Utils.checkNotNull(currency, "currency");
+        public Builder currency(@Nullable String currency) {
             this.currency = currency;
             return this;
         }
 
-
-        public Builder description(String description) {
-            Utils.checkNotNull(description, "description");
-            this.description = Optional.ofNullable(description);
-            return this;
-        }
-
-        public Builder description(Optional<String> description) {
-            Utils.checkNotNull(description, "description");
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-
-        public Builder height(double height) {
-            Utils.checkNotNull(height, "height");
-            this.height = Optional.ofNullable(height);
-            return this;
-        }
-
-        public Builder height(Optional<Double> height) {
-            Utils.checkNotNull(height, "height");
+        public Builder height(@Nullable Double height) {
             this.height = height;
             return this;
         }
 
-
-        public Builder insuredAmount(double insuredAmount) {
-            Utils.checkNotNull(insuredAmount, "insuredAmount");
-            this.insuredAmount = Optional.ofNullable(insuredAmount);
-            return this;
-        }
-
-        public Builder insuredAmount(Optional<Double> insuredAmount) {
-            Utils.checkNotNull(insuredAmount, "insuredAmount");
+        public Builder insuredAmount(@Nullable Double insuredAmount) {
             this.insuredAmount = insuredAmount;
             return this;
         }
 
-
-        public Builder length(double length) {
-            Utils.checkNotNull(length, "length");
-            this.length = Optional.ofNullable(length);
-            return this;
-        }
-
-        public Builder length(Optional<Double> length) {
-            Utils.checkNotNull(length, "length");
+        public Builder length(@Nullable Double length) {
             this.length = length;
             return this;
         }
 
-
-        public Builder sizeUnit(ShippingPackageSizeUnit sizeUnit) {
-            Utils.checkNotNull(sizeUnit, "sizeUnit");
-            this.sizeUnit = Optional.ofNullable(sizeUnit);
-            return this;
-        }
-
-        public Builder sizeUnit(Optional<? extends ShippingPackageSizeUnit> sizeUnit) {
-            Utils.checkNotNull(sizeUnit, "sizeUnit");
+        public Builder sizeUnit(@Nullable ShippingPackageSizeUnit sizeUnit) {
             this.sizeUnit = sizeUnit;
             return this;
         }
 
-
-        public Builder trackingNumber(String trackingNumber) {
-            Utils.checkNotNull(trackingNumber, "trackingNumber");
-            this.trackingNumber = Optional.ofNullable(trackingNumber);
-            return this;
-        }
-
-        public Builder trackingNumber(Optional<String> trackingNumber) {
-            Utils.checkNotNull(trackingNumber, "trackingNumber");
+        public Builder trackingNumber(@Nullable String trackingNumber) {
             this.trackingNumber = trackingNumber;
             return this;
         }
 
-
-        public Builder value(double value) {
-            Utils.checkNotNull(value, "value");
-            this.value = Optional.ofNullable(value);
-            return this;
-        }
-
-        public Builder value(Optional<Double> value) {
-            Utils.checkNotNull(value, "value");
+        public Builder value(@Nullable Double value) {
             this.value = value;
             return this;
         }
 
-
-        public Builder weight(double weight) {
-            Utils.checkNotNull(weight, "weight");
-            this.weight = Optional.ofNullable(weight);
-            return this;
-        }
-
-        public Builder weight(Optional<Double> weight) {
-            Utils.checkNotNull(weight, "weight");
+        public Builder weight(@Nullable Double weight) {
             this.weight = weight;
             return this;
         }
 
-
-        public Builder weightUnit(ShippingPackageWeightUnit weightUnit) {
-            Utils.checkNotNull(weightUnit, "weightUnit");
-            this.weightUnit = Optional.ofNullable(weightUnit);
-            return this;
-        }
-
-        public Builder weightUnit(Optional<? extends ShippingPackageWeightUnit> weightUnit) {
-            Utils.checkNotNull(weightUnit, "weightUnit");
+        public Builder weightUnit(@Nullable ShippingPackageWeightUnit weightUnit) {
             this.weightUnit = weightUnit;
             return this;
         }
 
-
-        public Builder width(double width) {
-            Utils.checkNotNull(width, "width");
-            this.width = Optional.ofNullable(width);
-            return this;
-        }
-
-        public Builder width(Optional<Double> width) {
-            Utils.checkNotNull(width, "width");
+        public Builder width(@Nullable Double width) {
             this.width = width;
             return this;
         }
 
         public ShippingPackage build() {
-
             return new ShippingPackage(
                 currency, description, height,
                 insuredAmount, length, sizeUnit,

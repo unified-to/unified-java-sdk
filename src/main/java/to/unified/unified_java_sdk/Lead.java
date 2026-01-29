@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateCrmLeadRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCrmLeadRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateCrmLeadResponse;
@@ -67,7 +68,7 @@ public class Lead {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCrmLeadResponse createCrmLead(CreateCrmLeadRequest request) {
+    public CreateCrmLeadResponse createCrmLead(@Nonnull CreateCrmLeadRequest request) {
         RequestOperation<CreateCrmLeadRequest, CreateCrmLeadResponse> operation
               = new CreateCrmLead.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -89,7 +90,7 @@ public class Lead {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetCrmLeadResponse getCrmLead(GetCrmLeadRequest request) {
+    public GetCrmLeadResponse getCrmLead(@Nonnull GetCrmLeadRequest request) {
         RequestOperation<GetCrmLeadRequest, GetCrmLeadResponse> operation
               = new GetCrmLead.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -111,7 +112,7 @@ public class Lead {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCrmLeadsResponse listCrmLeads(ListCrmLeadsRequest request) {
+    public ListCrmLeadsResponse listCrmLeads(@Nonnull ListCrmLeadsRequest request) {
         RequestOperation<ListCrmLeadsRequest, ListCrmLeadsResponse> operation
               = new ListCrmLeads.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -133,7 +134,7 @@ public class Lead {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCrmLeadResponse patchCrmLead(PatchCrmLeadRequest request) {
+    public PatchCrmLeadResponse patchCrmLead(@Nonnull PatchCrmLeadRequest request) {
         RequestOperation<PatchCrmLeadRequest, PatchCrmLeadResponse> operation
               = new PatchCrmLead.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -155,7 +156,7 @@ public class Lead {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCrmLeadResponse removeCrmLead(RemoveCrmLeadRequest request) {
+    public RemoveCrmLeadResponse removeCrmLead(@Nonnull RemoveCrmLeadRequest request) {
         RequestOperation<RemoveCrmLeadRequest, RemoveCrmLeadResponse> operation
               = new RemoveCrmLead.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -177,7 +178,7 @@ public class Lead {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCrmLeadResponse updateCrmLead(UpdateCrmLeadRequest request) {
+    public UpdateCrmLeadResponse updateCrmLead(@Nonnull UpdateCrmLeadRequest request) {
         RequestOperation<UpdateCrmLeadRequest, UpdateCrmLeadResponse> operation
               = new UpdateCrmLead.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

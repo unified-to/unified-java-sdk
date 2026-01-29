@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateCrmCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCrmCompanyRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateCrmCompanyResponse;
@@ -187,7 +188,7 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCrmCompanyResponse createCrmCompany(CreateCrmCompanyRequest request) {
+    public CreateCrmCompanyResponse createCrmCompany(@Nonnull CreateCrmCompanyRequest request) {
         RequestOperation<CreateCrmCompanyRequest, CreateCrmCompanyResponse> operation
               = new CreateCrmCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -209,7 +210,7 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCrmContactResponse createCrmContact(CreateCrmContactRequest request) {
+    public CreateCrmContactResponse createCrmContact(@Nonnull CreateCrmContactRequest request) {
         RequestOperation<CreateCrmContactRequest, CreateCrmContactResponse> operation
               = new CreateCrmContact.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -231,7 +232,7 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCrmDealResponse createCrmDeal(CreateCrmDealRequest request) {
+    public CreateCrmDealResponse createCrmDeal(@Nonnull CreateCrmDealRequest request) {
         RequestOperation<CreateCrmDealRequest, CreateCrmDealResponse> operation
               = new CreateCrmDeal.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -253,7 +254,7 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCrmEventResponse createCrmEvent(CreateCrmEventRequest request) {
+    public CreateCrmEventResponse createCrmEvent(@Nonnull CreateCrmEventRequest request) {
         RequestOperation<CreateCrmEventRequest, CreateCrmEventResponse> operation
               = new CreateCrmEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -275,7 +276,7 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCrmLeadResponse createCrmLead(CreateCrmLeadRequest request) {
+    public CreateCrmLeadResponse createCrmLead(@Nonnull CreateCrmLeadRequest request) {
         RequestOperation<CreateCrmLeadRequest, CreateCrmLeadResponse> operation
               = new CreateCrmLead.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -297,7 +298,7 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateCrmPipelineResponse createCrmPipeline(CreateCrmPipelineRequest request) {
+    public CreateCrmPipelineResponse createCrmPipeline(@Nonnull CreateCrmPipelineRequest request) {
         RequestOperation<CreateCrmPipelineRequest, CreateCrmPipelineResponse> operation
               = new CreateCrmPipeline.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -319,7 +320,7 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetCrmCompanyResponse getCrmCompany(GetCrmCompanyRequest request) {
+    public GetCrmCompanyResponse getCrmCompany(@Nonnull GetCrmCompanyRequest request) {
         RequestOperation<GetCrmCompanyRequest, GetCrmCompanyResponse> operation
               = new GetCrmCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -341,7 +342,7 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetCrmContactResponse getCrmContact(GetCrmContactRequest request) {
+    public GetCrmContactResponse getCrmContact(@Nonnull GetCrmContactRequest request) {
         RequestOperation<GetCrmContactRequest, GetCrmContactResponse> operation
               = new GetCrmContact.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -363,7 +364,7 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetCrmDealResponse getCrmDeal(GetCrmDealRequest request) {
+    public GetCrmDealResponse getCrmDeal(@Nonnull GetCrmDealRequest request) {
         RequestOperation<GetCrmDealRequest, GetCrmDealResponse> operation
               = new GetCrmDeal.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -385,7 +386,7 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetCrmEventResponse getCrmEvent(GetCrmEventRequest request) {
+    public GetCrmEventResponse getCrmEvent(@Nonnull GetCrmEventRequest request) {
         RequestOperation<GetCrmEventRequest, GetCrmEventResponse> operation
               = new GetCrmEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -407,7 +408,7 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetCrmLeadResponse getCrmLead(GetCrmLeadRequest request) {
+    public GetCrmLeadResponse getCrmLead(@Nonnull GetCrmLeadRequest request) {
         RequestOperation<GetCrmLeadRequest, GetCrmLeadResponse> operation
               = new GetCrmLead.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -429,7 +430,7 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetCrmPipelineResponse getCrmPipeline(GetCrmPipelineRequest request) {
+    public GetCrmPipelineResponse getCrmPipeline(@Nonnull GetCrmPipelineRequest request) {
         RequestOperation<GetCrmPipelineRequest, GetCrmPipelineResponse> operation
               = new GetCrmPipeline.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -451,7 +452,7 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCrmCompaniesResponse listCrmCompanies(ListCrmCompaniesRequest request) {
+    public ListCrmCompaniesResponse listCrmCompanies(@Nonnull ListCrmCompaniesRequest request) {
         RequestOperation<ListCrmCompaniesRequest, ListCrmCompaniesResponse> operation
               = new ListCrmCompanies.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -473,7 +474,7 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCrmContactsResponse listCrmContacts(ListCrmContactsRequest request) {
+    public ListCrmContactsResponse listCrmContacts(@Nonnull ListCrmContactsRequest request) {
         RequestOperation<ListCrmContactsRequest, ListCrmContactsResponse> operation
               = new ListCrmContacts.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -495,7 +496,7 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCrmDealsResponse listCrmDeals(ListCrmDealsRequest request) {
+    public ListCrmDealsResponse listCrmDeals(@Nonnull ListCrmDealsRequest request) {
         RequestOperation<ListCrmDealsRequest, ListCrmDealsResponse> operation
               = new ListCrmDeals.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -517,7 +518,7 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCrmEventsResponse listCrmEvents(ListCrmEventsRequest request) {
+    public ListCrmEventsResponse listCrmEvents(@Nonnull ListCrmEventsRequest request) {
         RequestOperation<ListCrmEventsRequest, ListCrmEventsResponse> operation
               = new ListCrmEvents.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -539,7 +540,7 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCrmLeadsResponse listCrmLeads(ListCrmLeadsRequest request) {
+    public ListCrmLeadsResponse listCrmLeads(@Nonnull ListCrmLeadsRequest request) {
         RequestOperation<ListCrmLeadsRequest, ListCrmLeadsResponse> operation
               = new ListCrmLeads.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -561,7 +562,7 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListCrmPipelinesResponse listCrmPipelines(ListCrmPipelinesRequest request) {
+    public ListCrmPipelinesResponse listCrmPipelines(@Nonnull ListCrmPipelinesRequest request) {
         RequestOperation<ListCrmPipelinesRequest, ListCrmPipelinesResponse> operation
               = new ListCrmPipelines.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -583,7 +584,7 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCrmCompanyResponse patchCrmCompany(PatchCrmCompanyRequest request) {
+    public PatchCrmCompanyResponse patchCrmCompany(@Nonnull PatchCrmCompanyRequest request) {
         RequestOperation<PatchCrmCompanyRequest, PatchCrmCompanyResponse> operation
               = new PatchCrmCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -605,7 +606,7 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCrmContactResponse patchCrmContact(PatchCrmContactRequest request) {
+    public PatchCrmContactResponse patchCrmContact(@Nonnull PatchCrmContactRequest request) {
         RequestOperation<PatchCrmContactRequest, PatchCrmContactResponse> operation
               = new PatchCrmContact.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -627,7 +628,7 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCrmDealResponse patchCrmDeal(PatchCrmDealRequest request) {
+    public PatchCrmDealResponse patchCrmDeal(@Nonnull PatchCrmDealRequest request) {
         RequestOperation<PatchCrmDealRequest, PatchCrmDealResponse> operation
               = new PatchCrmDeal.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -649,7 +650,7 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCrmEventResponse patchCrmEvent(PatchCrmEventRequest request) {
+    public PatchCrmEventResponse patchCrmEvent(@Nonnull PatchCrmEventRequest request) {
         RequestOperation<PatchCrmEventRequest, PatchCrmEventResponse> operation
               = new PatchCrmEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -671,7 +672,7 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCrmLeadResponse patchCrmLead(PatchCrmLeadRequest request) {
+    public PatchCrmLeadResponse patchCrmLead(@Nonnull PatchCrmLeadRequest request) {
         RequestOperation<PatchCrmLeadRequest, PatchCrmLeadResponse> operation
               = new PatchCrmLead.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -693,7 +694,7 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchCrmPipelineResponse patchCrmPipeline(PatchCrmPipelineRequest request) {
+    public PatchCrmPipelineResponse patchCrmPipeline(@Nonnull PatchCrmPipelineRequest request) {
         RequestOperation<PatchCrmPipelineRequest, PatchCrmPipelineResponse> operation
               = new PatchCrmPipeline.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -715,7 +716,7 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCrmCompanyResponse removeCrmCompany(RemoveCrmCompanyRequest request) {
+    public RemoveCrmCompanyResponse removeCrmCompany(@Nonnull RemoveCrmCompanyRequest request) {
         RequestOperation<RemoveCrmCompanyRequest, RemoveCrmCompanyResponse> operation
               = new RemoveCrmCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -737,7 +738,7 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCrmContactResponse removeCrmContact(RemoveCrmContactRequest request) {
+    public RemoveCrmContactResponse removeCrmContact(@Nonnull RemoveCrmContactRequest request) {
         RequestOperation<RemoveCrmContactRequest, RemoveCrmContactResponse> operation
               = new RemoveCrmContact.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -759,7 +760,7 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCrmDealResponse removeCrmDeal(RemoveCrmDealRequest request) {
+    public RemoveCrmDealResponse removeCrmDeal(@Nonnull RemoveCrmDealRequest request) {
         RequestOperation<RemoveCrmDealRequest, RemoveCrmDealResponse> operation
               = new RemoveCrmDeal.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -781,7 +782,7 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCrmEventResponse removeCrmEvent(RemoveCrmEventRequest request) {
+    public RemoveCrmEventResponse removeCrmEvent(@Nonnull RemoveCrmEventRequest request) {
         RequestOperation<RemoveCrmEventRequest, RemoveCrmEventResponse> operation
               = new RemoveCrmEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -803,7 +804,7 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCrmLeadResponse removeCrmLead(RemoveCrmLeadRequest request) {
+    public RemoveCrmLeadResponse removeCrmLead(@Nonnull RemoveCrmLeadRequest request) {
         RequestOperation<RemoveCrmLeadRequest, RemoveCrmLeadResponse> operation
               = new RemoveCrmLead.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -825,7 +826,7 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveCrmPipelineResponse removeCrmPipeline(RemoveCrmPipelineRequest request) {
+    public RemoveCrmPipelineResponse removeCrmPipeline(@Nonnull RemoveCrmPipelineRequest request) {
         RequestOperation<RemoveCrmPipelineRequest, RemoveCrmPipelineResponse> operation
               = new RemoveCrmPipeline.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -847,7 +848,7 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCrmCompanyResponse updateCrmCompany(UpdateCrmCompanyRequest request) {
+    public UpdateCrmCompanyResponse updateCrmCompany(@Nonnull UpdateCrmCompanyRequest request) {
         RequestOperation<UpdateCrmCompanyRequest, UpdateCrmCompanyResponse> operation
               = new UpdateCrmCompany.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -869,7 +870,7 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCrmContactResponse updateCrmContact(UpdateCrmContactRequest request) {
+    public UpdateCrmContactResponse updateCrmContact(@Nonnull UpdateCrmContactRequest request) {
         RequestOperation<UpdateCrmContactRequest, UpdateCrmContactResponse> operation
               = new UpdateCrmContact.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -891,7 +892,7 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCrmDealResponse updateCrmDeal(UpdateCrmDealRequest request) {
+    public UpdateCrmDealResponse updateCrmDeal(@Nonnull UpdateCrmDealRequest request) {
         RequestOperation<UpdateCrmDealRequest, UpdateCrmDealResponse> operation
               = new UpdateCrmDeal.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -913,7 +914,7 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCrmEventResponse updateCrmEvent(UpdateCrmEventRequest request) {
+    public UpdateCrmEventResponse updateCrmEvent(@Nonnull UpdateCrmEventRequest request) {
         RequestOperation<UpdateCrmEventRequest, UpdateCrmEventResponse> operation
               = new UpdateCrmEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -935,7 +936,7 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCrmLeadResponse updateCrmLead(UpdateCrmLeadRequest request) {
+    public UpdateCrmLeadResponse updateCrmLead(@Nonnull UpdateCrmLeadRequest request) {
         RequestOperation<UpdateCrmLeadRequest, UpdateCrmLeadResponse> operation
               = new UpdateCrmLead.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -957,7 +958,7 @@ public class Crm {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateCrmPipelineResponse updateCrmPipeline(UpdateCrmPipelineRequest request) {
+    public UpdateCrmPipelineResponse updateCrmPipeline(@Nonnull UpdateCrmPipelineRequest request) {
         RequestOperation<UpdateCrmPipelineRequest, UpdateCrmPipelineResponse> operation
               = new UpdateCrmPipeline.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

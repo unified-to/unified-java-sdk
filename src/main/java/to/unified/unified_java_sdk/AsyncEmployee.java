@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateHrisEmployeeRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisEmployeeRequest;
@@ -68,7 +69,7 @@ public class AsyncEmployee {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateHrisEmployeeResponse>} - The async response
      */
-    public CompletableFuture<CreateHrisEmployeeResponse> createHrisEmployee(CreateHrisEmployeeRequest request) {
+    public CompletableFuture<CreateHrisEmployeeResponse> createHrisEmployee(@Nonnull CreateHrisEmployeeRequest request) {
         AsyncRequestOperation<CreateHrisEmployeeRequest, CreateHrisEmployeeResponse> operation
               = new CreateHrisEmployee.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -91,7 +92,7 @@ public class AsyncEmployee {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetHrisEmployeeResponse>} - The async response
      */
-    public CompletableFuture<GetHrisEmployeeResponse> getHrisEmployee(GetHrisEmployeeRequest request) {
+    public CompletableFuture<GetHrisEmployeeResponse> getHrisEmployee(@Nonnull GetHrisEmployeeRequest request) {
         AsyncRequestOperation<GetHrisEmployeeRequest, GetHrisEmployeeResponse> operation
               = new GetHrisEmployee.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -114,7 +115,7 @@ public class AsyncEmployee {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListHrisEmployeesResponse>} - The async response
      */
-    public CompletableFuture<ListHrisEmployeesResponse> listHrisEmployees(ListHrisEmployeesRequest request) {
+    public CompletableFuture<ListHrisEmployeesResponse> listHrisEmployees(@Nonnull ListHrisEmployeesRequest request) {
         AsyncRequestOperation<ListHrisEmployeesRequest, ListHrisEmployeesResponse> operation
               = new ListHrisEmployees.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -137,7 +138,7 @@ public class AsyncEmployee {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchHrisEmployeeResponse>} - The async response
      */
-    public CompletableFuture<PatchHrisEmployeeResponse> patchHrisEmployee(PatchHrisEmployeeRequest request) {
+    public CompletableFuture<PatchHrisEmployeeResponse> patchHrisEmployee(@Nonnull PatchHrisEmployeeRequest request) {
         AsyncRequestOperation<PatchHrisEmployeeRequest, PatchHrisEmployeeResponse> operation
               = new PatchHrisEmployee.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -160,7 +161,7 @@ public class AsyncEmployee {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveHrisEmployeeResponse>} - The async response
      */
-    public CompletableFuture<RemoveHrisEmployeeResponse> removeHrisEmployee(RemoveHrisEmployeeRequest request) {
+    public CompletableFuture<RemoveHrisEmployeeResponse> removeHrisEmployee(@Nonnull RemoveHrisEmployeeRequest request) {
         AsyncRequestOperation<RemoveHrisEmployeeRequest, RemoveHrisEmployeeResponse> operation
               = new RemoveHrisEmployee.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -183,7 +184,7 @@ public class AsyncEmployee {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateHrisEmployeeResponse>} - The async response
      */
-    public CompletableFuture<UpdateHrisEmployeeResponse> updateHrisEmployee(UpdateHrisEmployeeRequest request) {
+    public CompletableFuture<UpdateHrisEmployeeResponse> updateHrisEmployee(@Nonnull UpdateHrisEmployeeRequest request) {
         AsyncRequestOperation<UpdateHrisEmployeeRequest, UpdateHrisEmployeeResponse> operation
               = new UpdateHrisEmployee.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateMartechListRequest;
 import to.unified.unified_java_sdk.models.operations.CreateMartechListRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateMartechListResponse;
@@ -91,7 +92,7 @@ public class Martech {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateMartechListResponse createMartechList(CreateMartechListRequest request) {
+    public CreateMartechListResponse createMartechList(@Nonnull CreateMartechListRequest request) {
         RequestOperation<CreateMartechListRequest, CreateMartechListResponse> operation
               = new CreateMartechList.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -113,7 +114,7 @@ public class Martech {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateMartechMemberResponse createMartechMember(CreateMartechMemberRequest request) {
+    public CreateMartechMemberResponse createMartechMember(@Nonnull CreateMartechMemberRequest request) {
         RequestOperation<CreateMartechMemberRequest, CreateMartechMemberResponse> operation
               = new CreateMartechMember.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -135,7 +136,7 @@ public class Martech {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetMartechListResponse getMartechList(GetMartechListRequest request) {
+    public GetMartechListResponse getMartechList(@Nonnull GetMartechListRequest request) {
         RequestOperation<GetMartechListRequest, GetMartechListResponse> operation
               = new GetMartechList.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -157,7 +158,7 @@ public class Martech {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetMartechMemberResponse getMartechMember(GetMartechMemberRequest request) {
+    public GetMartechMemberResponse getMartechMember(@Nonnull GetMartechMemberRequest request) {
         RequestOperation<GetMartechMemberRequest, GetMartechMemberResponse> operation
               = new GetMartechMember.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -179,7 +180,7 @@ public class Martech {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListMartechListsResponse listMartechLists(ListMartechListsRequest request) {
+    public ListMartechListsResponse listMartechLists(@Nonnull ListMartechListsRequest request) {
         RequestOperation<ListMartechListsRequest, ListMartechListsResponse> operation
               = new ListMartechLists.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -201,7 +202,7 @@ public class Martech {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListMartechMembersResponse listMartechMembers(ListMartechMembersRequest request) {
+    public ListMartechMembersResponse listMartechMembers(@Nonnull ListMartechMembersRequest request) {
         RequestOperation<ListMartechMembersRequest, ListMartechMembersResponse> operation
               = new ListMartechMembers.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -223,7 +224,7 @@ public class Martech {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchMartechListResponse patchMartechList(PatchMartechListRequest request) {
+    public PatchMartechListResponse patchMartechList(@Nonnull PatchMartechListRequest request) {
         RequestOperation<PatchMartechListRequest, PatchMartechListResponse> operation
               = new PatchMartechList.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -245,7 +246,7 @@ public class Martech {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchMartechMemberResponse patchMartechMember(PatchMartechMemberRequest request) {
+    public PatchMartechMemberResponse patchMartechMember(@Nonnull PatchMartechMemberRequest request) {
         RequestOperation<PatchMartechMemberRequest, PatchMartechMemberResponse> operation
               = new PatchMartechMember.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -267,7 +268,7 @@ public class Martech {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveMartechListResponse removeMartechList(RemoveMartechListRequest request) {
+    public RemoveMartechListResponse removeMartechList(@Nonnull RemoveMartechListRequest request) {
         RequestOperation<RemoveMartechListRequest, RemoveMartechListResponse> operation
               = new RemoveMartechList.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -289,7 +290,7 @@ public class Martech {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveMartechMemberResponse removeMartechMember(RemoveMartechMemberRequest request) {
+    public RemoveMartechMemberResponse removeMartechMember(@Nonnull RemoveMartechMemberRequest request) {
         RequestOperation<RemoveMartechMemberRequest, RemoveMartechMemberResponse> operation
               = new RemoveMartechMember.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -311,7 +312,7 @@ public class Martech {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateMartechListResponse updateMartechList(UpdateMartechListRequest request) {
+    public UpdateMartechListResponse updateMartechList(@Nonnull UpdateMartechListRequest request) {
         RequestOperation<UpdateMartechListRequest, UpdateMartechListResponse> operation
               = new UpdateMartechList.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -333,7 +334,7 @@ public class Martech {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateMartechMemberResponse updateMartechMember(UpdateMartechMemberRequest request) {
+    public UpdateMartechMemberResponse updateMartechMember(@Nonnull UpdateMartechMemberRequest request) {
         RequestOperation<UpdateMartechMemberRequest, UpdateMartechMemberResponse> operation
               = new UpdateMartechMember.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

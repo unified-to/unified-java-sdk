@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAdsCampaignRequest;
 import to.unified.unified_java_sdk.models.operations.GetAdsCampaignRequest;
@@ -68,7 +69,7 @@ public class AsyncCampaign {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAdsCampaignResponse>} - The async response
      */
-    public CompletableFuture<CreateAdsCampaignResponse> createAdsCampaign(CreateAdsCampaignRequest request) {
+    public CompletableFuture<CreateAdsCampaignResponse> createAdsCampaign(@Nonnull CreateAdsCampaignRequest request) {
         AsyncRequestOperation<CreateAdsCampaignRequest, CreateAdsCampaignResponse> operation
               = new CreateAdsCampaign.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -91,7 +92,7 @@ public class AsyncCampaign {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAdsCampaignResponse>} - The async response
      */
-    public CompletableFuture<GetAdsCampaignResponse> getAdsCampaign(GetAdsCampaignRequest request) {
+    public CompletableFuture<GetAdsCampaignResponse> getAdsCampaign(@Nonnull GetAdsCampaignRequest request) {
         AsyncRequestOperation<GetAdsCampaignRequest, GetAdsCampaignResponse> operation
               = new GetAdsCampaign.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -114,7 +115,7 @@ public class AsyncCampaign {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAdsCampaignsResponse>} - The async response
      */
-    public CompletableFuture<ListAdsCampaignsResponse> listAdsCampaigns(ListAdsCampaignsRequest request) {
+    public CompletableFuture<ListAdsCampaignsResponse> listAdsCampaigns(@Nonnull ListAdsCampaignsRequest request) {
         AsyncRequestOperation<ListAdsCampaignsRequest, ListAdsCampaignsResponse> operation
               = new ListAdsCampaigns.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -137,7 +138,7 @@ public class AsyncCampaign {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAdsCampaignResponse>} - The async response
      */
-    public CompletableFuture<PatchAdsCampaignResponse> patchAdsCampaign(PatchAdsCampaignRequest request) {
+    public CompletableFuture<PatchAdsCampaignResponse> patchAdsCampaign(@Nonnull PatchAdsCampaignRequest request) {
         AsyncRequestOperation<PatchAdsCampaignRequest, PatchAdsCampaignResponse> operation
               = new PatchAdsCampaign.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -160,7 +161,7 @@ public class AsyncCampaign {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAdsCampaignResponse>} - The async response
      */
-    public CompletableFuture<RemoveAdsCampaignResponse> removeAdsCampaign(RemoveAdsCampaignRequest request) {
+    public CompletableFuture<RemoveAdsCampaignResponse> removeAdsCampaign(@Nonnull RemoveAdsCampaignRequest request) {
         AsyncRequestOperation<RemoveAdsCampaignRequest, RemoveAdsCampaignResponse> operation
               = new RemoveAdsCampaign.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -183,7 +184,7 @@ public class AsyncCampaign {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAdsCampaignResponse>} - The async response
      */
-    public CompletableFuture<UpdateAdsCampaignResponse> updateAdsCampaign(UpdateAdsCampaignRequest request) {
+    public CompletableFuture<UpdateAdsCampaignResponse> updateAdsCampaign(@Nonnull UpdateAdsCampaignRequest request) {
         AsyncRequestOperation<UpdateAdsCampaignRequest, UpdateAdsCampaignResponse> operation
               = new UpdateAdsCampaign.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

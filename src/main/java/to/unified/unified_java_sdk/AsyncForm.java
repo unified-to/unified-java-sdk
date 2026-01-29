@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateFormsFormRequest;
 import to.unified.unified_java_sdk.models.operations.GetFormsFormRequest;
@@ -68,7 +69,7 @@ public class AsyncForm {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateFormsFormResponse>} - The async response
      */
-    public CompletableFuture<CreateFormsFormResponse> createFormsForm(CreateFormsFormRequest request) {
+    public CompletableFuture<CreateFormsFormResponse> createFormsForm(@Nonnull CreateFormsFormRequest request) {
         AsyncRequestOperation<CreateFormsFormRequest, CreateFormsFormResponse> operation
               = new CreateFormsForm.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -91,7 +92,7 @@ public class AsyncForm {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetFormsFormResponse>} - The async response
      */
-    public CompletableFuture<GetFormsFormResponse> getFormsForm(GetFormsFormRequest request) {
+    public CompletableFuture<GetFormsFormResponse> getFormsForm(@Nonnull GetFormsFormRequest request) {
         AsyncRequestOperation<GetFormsFormRequest, GetFormsFormResponse> operation
               = new GetFormsForm.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -114,7 +115,7 @@ public class AsyncForm {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListFormsFormsResponse>} - The async response
      */
-    public CompletableFuture<ListFormsFormsResponse> listFormsForms(ListFormsFormsRequest request) {
+    public CompletableFuture<ListFormsFormsResponse> listFormsForms(@Nonnull ListFormsFormsRequest request) {
         AsyncRequestOperation<ListFormsFormsRequest, ListFormsFormsResponse> operation
               = new ListFormsForms.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -137,7 +138,7 @@ public class AsyncForm {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchFormsFormResponse>} - The async response
      */
-    public CompletableFuture<PatchFormsFormResponse> patchFormsForm(PatchFormsFormRequest request) {
+    public CompletableFuture<PatchFormsFormResponse> patchFormsForm(@Nonnull PatchFormsFormRequest request) {
         AsyncRequestOperation<PatchFormsFormRequest, PatchFormsFormResponse> operation
               = new PatchFormsForm.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -160,7 +161,7 @@ public class AsyncForm {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveFormsFormResponse>} - The async response
      */
-    public CompletableFuture<RemoveFormsFormResponse> removeFormsForm(RemoveFormsFormRequest request) {
+    public CompletableFuture<RemoveFormsFormResponse> removeFormsForm(@Nonnull RemoveFormsFormRequest request) {
         AsyncRequestOperation<RemoveFormsFormRequest, RemoveFormsFormResponse> operation
               = new RemoveFormsForm.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -183,7 +184,7 @@ public class AsyncForm {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateFormsFormResponse>} - The async response
      */
-    public CompletableFuture<UpdateFormsFormResponse> updateFormsForm(UpdateFormsFormRequest request) {
+    public CompletableFuture<UpdateFormsFormResponse> updateFormsForm(@Nonnull UpdateFormsFormRequest request) {
         AsyncRequestOperation<UpdateFormsFormRequest, UpdateFormsFormResponse> operation
               = new UpdateFormsForm.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

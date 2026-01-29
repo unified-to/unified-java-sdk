@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateRepoRepositoryRequest;
 import to.unified.unified_java_sdk.models.operations.CreateRepoRepositoryRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateRepoRepositoryResponse;
@@ -67,7 +68,7 @@ public class Repository {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateRepoRepositoryResponse createRepoRepository(CreateRepoRepositoryRequest request) {
+    public CreateRepoRepositoryResponse createRepoRepository(@Nonnull CreateRepoRepositoryRequest request) {
         RequestOperation<CreateRepoRepositoryRequest, CreateRepoRepositoryResponse> operation
               = new CreateRepoRepository.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -89,7 +90,7 @@ public class Repository {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetRepoRepositoryResponse getRepoRepository(GetRepoRepositoryRequest request) {
+    public GetRepoRepositoryResponse getRepoRepository(@Nonnull GetRepoRepositoryRequest request) {
         RequestOperation<GetRepoRepositoryRequest, GetRepoRepositoryResponse> operation
               = new GetRepoRepository.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -111,7 +112,7 @@ public class Repository {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListRepoRepositoriesResponse listRepoRepositories(ListRepoRepositoriesRequest request) {
+    public ListRepoRepositoriesResponse listRepoRepositories(@Nonnull ListRepoRepositoriesRequest request) {
         RequestOperation<ListRepoRepositoriesRequest, ListRepoRepositoriesResponse> operation
               = new ListRepoRepositories.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -133,7 +134,7 @@ public class Repository {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchRepoRepositoryResponse patchRepoRepository(PatchRepoRepositoryRequest request) {
+    public PatchRepoRepositoryResponse patchRepoRepository(@Nonnull PatchRepoRepositoryRequest request) {
         RequestOperation<PatchRepoRepositoryRequest, PatchRepoRepositoryResponse> operation
               = new PatchRepoRepository.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -155,7 +156,7 @@ public class Repository {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveRepoRepositoryResponse removeRepoRepository(RemoveRepoRepositoryRequest request) {
+    public RemoveRepoRepositoryResponse removeRepoRepository(@Nonnull RemoveRepoRepositoryRequest request) {
         RequestOperation<RemoveRepoRepositoryRequest, RemoveRepoRepositoryResponse> operation
               = new RemoveRepoRepository.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -177,7 +178,7 @@ public class Repository {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateRepoRepositoryResponse updateRepoRepository(UpdateRepoRepositoryRequest request) {
+    public UpdateRepoRepositoryResponse updateRepoRepository(@Nonnull UpdateRepoRepositoryRequest request) {
         RequestOperation<UpdateRepoRepositoryRequest, UpdateRepoRepositoryResponse> operation
               = new UpdateRepoRepository.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

@@ -4,15 +4,14 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
@@ -24,105 +23,98 @@ public class AccountingExpense {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approved_at")
-    private Optional<OffsetDateTime> approvedAt;
+    private OffsetDateTime approvedAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approver_user_id")
-    private Optional<String> approverUserId;
+    private String approverUserId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("contact_id")
+    private String contactId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
-    private Optional<String> currency;
+    private String currency;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineitems")
-    private Optional<? extends List<AccountingLineitem>> lineitems;
+    private List<AccountingLineitem> lineitems;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
-    private Optional<String> name;
+    private String name;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reimbursed_amount")
-    private Optional<Double> reimbursedAmount;
+    private Double reimbursedAmount;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reimbursed_at")
-    private Optional<OffsetDateTime> reimbursedAt;
+    private OffsetDateTime reimbursedAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax_amount")
-    private Optional<Double> taxAmount;
+    private Double taxAmount;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_amount")
-    private Optional<Double> totalAmount;
+    private Double totalAmount;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
-    private Optional<String> userId;
+    private String userId;
 
     @JsonCreator
     public AccountingExpense(
-            @JsonProperty("approved_at") Optional<OffsetDateTime> approvedAt,
-            @JsonProperty("approver_user_id") Optional<String> approverUserId,
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("currency") Optional<String> currency,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("lineitems") Optional<? extends List<AccountingLineitem>> lineitems,
-            @JsonProperty("name") Optional<String> name,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("reimbursed_amount") Optional<Double> reimbursedAmount,
-            @JsonProperty("reimbursed_at") Optional<OffsetDateTime> reimbursedAt,
-            @JsonProperty("tax_amount") Optional<Double> taxAmount,
-            @JsonProperty("total_amount") Optional<Double> totalAmount,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
-            @JsonProperty("user_id") Optional<String> userId) {
-        Utils.checkNotNull(approvedAt, "approvedAt");
-        Utils.checkNotNull(approverUserId, "approverUserId");
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(currency, "currency");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(lineitems, "lineitems");
-        Utils.checkNotNull(name, "name");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(reimbursedAmount, "reimbursedAmount");
-        Utils.checkNotNull(reimbursedAt, "reimbursedAt");
-        Utils.checkNotNull(taxAmount, "taxAmount");
-        Utils.checkNotNull(totalAmount, "totalAmount");
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        Utils.checkNotNull(userId, "userId");
+            @JsonProperty("approved_at") @Nullable OffsetDateTime approvedAt,
+            @JsonProperty("approver_user_id") @Nullable String approverUserId,
+            @JsonProperty("contact_id") @Nullable String contactId,
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("currency") @Nullable String currency,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("lineitems") @Nullable List<AccountingLineitem> lineitems,
+            @JsonProperty("name") @Nullable String name,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("reimbursed_amount") @Nullable Double reimbursedAmount,
+            @JsonProperty("reimbursed_at") @Nullable OffsetDateTime reimbursedAt,
+            @JsonProperty("tax_amount") @Nullable Double taxAmount,
+            @JsonProperty("total_amount") @Nullable Double totalAmount,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
+            @JsonProperty("user_id") @Nullable String userId) {
         this.approvedAt = approvedAt;
         this.approverUserId = approverUserId;
+        this.contactId = contactId;
         this.createdAt = createdAt;
         this.currency = currency;
         this.id = id;
@@ -138,83 +130,71 @@ public class AccountingExpense {
     }
     
     public AccountingExpense() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> approvedAt() {
-        return approvedAt;
+        return Optional.ofNullable(this.approvedAt);
     }
 
-    @JsonIgnore
     public Optional<String> approverUserId() {
-        return approverUserId;
+        return Optional.ofNullable(this.approverUserId);
     }
 
-    @JsonIgnore
+    public Optional<String> contactId() {
+        return Optional.ofNullable(this.contactId);
+    }
+
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<String> currency() {
-        return currency;
+        return Optional.ofNullable(this.currency);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<AccountingLineitem>> lineitems() {
-        return (Optional<List<AccountingLineitem>>) lineitems;
+        return Optional.ofNullable(this.lineitems);
     }
 
-    @JsonIgnore
     public Optional<String> name() {
-        return name;
+        return Optional.ofNullable(this.name);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @JsonIgnore
     public Optional<Double> reimbursedAmount() {
-        return reimbursedAmount;
+        return Optional.ofNullable(this.reimbursedAmount);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> reimbursedAt() {
-        return reimbursedAt;
+        return Optional.ofNullable(this.reimbursedAt);
     }
 
-    @JsonIgnore
     public Optional<Double> taxAmount() {
-        return taxAmount;
+        return Optional.ofNullable(this.taxAmount);
     }
 
-    @JsonIgnore
     public Optional<Double> totalAmount() {
-        return totalAmount;
+        return Optional.ofNullable(this.totalAmount);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
-    @JsonIgnore
     public Optional<String> userId() {
-        return userId;
+        return Optional.ofNullable(this.userId);
     }
 
     public static Builder builder() {
@@ -222,187 +202,95 @@ public class AccountingExpense {
     }
 
 
-    public AccountingExpense withApprovedAt(OffsetDateTime approvedAt) {
-        Utils.checkNotNull(approvedAt, "approvedAt");
-        this.approvedAt = Optional.ofNullable(approvedAt);
-        return this;
-    }
-
-
-    public AccountingExpense withApprovedAt(Optional<OffsetDateTime> approvedAt) {
-        Utils.checkNotNull(approvedAt, "approvedAt");
+    public AccountingExpense withApprovedAt(@Nullable OffsetDateTime approvedAt) {
         this.approvedAt = approvedAt;
         return this;
     }
 
-    public AccountingExpense withApproverUserId(String approverUserId) {
-        Utils.checkNotNull(approverUserId, "approverUserId");
-        this.approverUserId = Optional.ofNullable(approverUserId);
-        return this;
-    }
 
-
-    public AccountingExpense withApproverUserId(Optional<String> approverUserId) {
-        Utils.checkNotNull(approverUserId, "approverUserId");
+    public AccountingExpense withApproverUserId(@Nullable String approverUserId) {
         this.approverUserId = approverUserId;
         return this;
     }
 
-    public AccountingExpense withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
+
+    public AccountingExpense withContactId(@Nullable String contactId) {
+        this.contactId = contactId;
         return this;
     }
 
 
-    public AccountingExpense withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public AccountingExpense withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public AccountingExpense withCurrency(String currency) {
-        Utils.checkNotNull(currency, "currency");
-        this.currency = Optional.ofNullable(currency);
-        return this;
-    }
 
-
-    public AccountingExpense withCurrency(Optional<String> currency) {
-        Utils.checkNotNull(currency, "currency");
+    public AccountingExpense withCurrency(@Nullable String currency) {
         this.currency = currency;
         return this;
     }
 
-    public AccountingExpense withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public AccountingExpense withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public AccountingExpense withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public AccountingExpense withLineitems(List<AccountingLineitem> lineitems) {
-        Utils.checkNotNull(lineitems, "lineitems");
-        this.lineitems = Optional.ofNullable(lineitems);
-        return this;
-    }
 
-
-    public AccountingExpense withLineitems(Optional<? extends List<AccountingLineitem>> lineitems) {
-        Utils.checkNotNull(lineitems, "lineitems");
+    public AccountingExpense withLineitems(@Nullable List<AccountingLineitem> lineitems) {
         this.lineitems = lineitems;
         return this;
     }
 
-    public AccountingExpense withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = Optional.ofNullable(name);
-        return this;
-    }
 
-
-    public AccountingExpense withName(Optional<String> name) {
-        Utils.checkNotNull(name, "name");
+    public AccountingExpense withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
-    public AccountingExpense withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public AccountingExpense withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public AccountingExpense withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public AccountingExpense withReimbursedAmount(double reimbursedAmount) {
-        Utils.checkNotNull(reimbursedAmount, "reimbursedAmount");
-        this.reimbursedAmount = Optional.ofNullable(reimbursedAmount);
-        return this;
-    }
 
-
-    public AccountingExpense withReimbursedAmount(Optional<Double> reimbursedAmount) {
-        Utils.checkNotNull(reimbursedAmount, "reimbursedAmount");
+    public AccountingExpense withReimbursedAmount(@Nullable Double reimbursedAmount) {
         this.reimbursedAmount = reimbursedAmount;
         return this;
     }
 
-    public AccountingExpense withReimbursedAt(OffsetDateTime reimbursedAt) {
-        Utils.checkNotNull(reimbursedAt, "reimbursedAt");
-        this.reimbursedAt = Optional.ofNullable(reimbursedAt);
-        return this;
-    }
 
-
-    public AccountingExpense withReimbursedAt(Optional<OffsetDateTime> reimbursedAt) {
-        Utils.checkNotNull(reimbursedAt, "reimbursedAt");
+    public AccountingExpense withReimbursedAt(@Nullable OffsetDateTime reimbursedAt) {
         this.reimbursedAt = reimbursedAt;
         return this;
     }
 
-    public AccountingExpense withTaxAmount(double taxAmount) {
-        Utils.checkNotNull(taxAmount, "taxAmount");
-        this.taxAmount = Optional.ofNullable(taxAmount);
-        return this;
-    }
 
-
-    public AccountingExpense withTaxAmount(Optional<Double> taxAmount) {
-        Utils.checkNotNull(taxAmount, "taxAmount");
+    public AccountingExpense withTaxAmount(@Nullable Double taxAmount) {
         this.taxAmount = taxAmount;
         return this;
     }
 
-    public AccountingExpense withTotalAmount(double totalAmount) {
-        Utils.checkNotNull(totalAmount, "totalAmount");
-        this.totalAmount = Optional.ofNullable(totalAmount);
-        return this;
-    }
 
-
-    public AccountingExpense withTotalAmount(Optional<Double> totalAmount) {
-        Utils.checkNotNull(totalAmount, "totalAmount");
+    public AccountingExpense withTotalAmount(@Nullable Double totalAmount) {
         this.totalAmount = totalAmount;
         return this;
     }
 
-    public AccountingExpense withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public AccountingExpense withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public AccountingExpense withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
-    public AccountingExpense withUserId(String userId) {
-        Utils.checkNotNull(userId, "userId");
-        this.userId = Optional.ofNullable(userId);
-        return this;
-    }
 
-
-    public AccountingExpense withUserId(Optional<String> userId) {
-        Utils.checkNotNull(userId, "userId");
+    public AccountingExpense withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -416,6 +304,7 @@ public class AccountingExpense {
         return 
             Utils.enhancedDeepEquals(this.approvedAt, other.approvedAt) &&
             Utils.enhancedDeepEquals(this.approverUserId, other.approverUserId) &&
+            Utils.enhancedDeepEquals(this.contactId, other.contactId) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
@@ -433,11 +322,11 @@ public class AccountingExpense {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            approvedAt, approverUserId, createdAt,
-            currency, id, lineitems,
-            name, raw, reimbursedAmount,
-            reimbursedAt, taxAmount, totalAmount,
-            updatedAt, userId);
+            approvedAt, approverUserId, contactId,
+            createdAt, currency, id,
+            lineitems, name, raw,
+            reimbursedAmount, reimbursedAt, taxAmount,
+            totalAmount, updatedAt, userId);
     }
     
     @Override
@@ -445,6 +334,7 @@ public class AccountingExpense {
         return Utils.toString(AccountingExpense.class,
                 "approvedAt", approvedAt,
                 "approverUserId", approverUserId,
+                "contactId", contactId,
                 "createdAt", createdAt,
                 "currency", currency,
                 "id", id,
@@ -462,228 +352,122 @@ public class AccountingExpense {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<OffsetDateTime> approvedAt = Optional.empty();
+        private OffsetDateTime approvedAt;
 
-        private Optional<String> approverUserId = Optional.empty();
+        private String approverUserId;
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private String contactId;
 
-        private Optional<String> currency = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<String> id = Optional.empty();
+        private String currency;
 
-        private Optional<? extends List<AccountingLineitem>> lineitems = Optional.empty();
+        private String id;
 
-        private Optional<String> name = Optional.empty();
+        private List<AccountingLineitem> lineitems;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private String name;
 
-        private Optional<Double> reimbursedAmount = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<OffsetDateTime> reimbursedAt = Optional.empty();
+        private Double reimbursedAmount;
 
-        private Optional<Double> taxAmount = Optional.empty();
+        private OffsetDateTime reimbursedAt;
 
-        private Optional<Double> totalAmount = Optional.empty();
+        private Double taxAmount;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private Double totalAmount;
 
-        private Optional<String> userId = Optional.empty();
+        private OffsetDateTime updatedAt;
+
+        private String userId;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder approvedAt(OffsetDateTime approvedAt) {
-            Utils.checkNotNull(approvedAt, "approvedAt");
-            this.approvedAt = Optional.ofNullable(approvedAt);
-            return this;
-        }
-
-        public Builder approvedAt(Optional<OffsetDateTime> approvedAt) {
-            Utils.checkNotNull(approvedAt, "approvedAt");
+        public Builder approvedAt(@Nullable OffsetDateTime approvedAt) {
             this.approvedAt = approvedAt;
             return this;
         }
 
-
-        public Builder approverUserId(String approverUserId) {
-            Utils.checkNotNull(approverUserId, "approverUserId");
-            this.approverUserId = Optional.ofNullable(approverUserId);
-            return this;
-        }
-
-        public Builder approverUserId(Optional<String> approverUserId) {
-            Utils.checkNotNull(approverUserId, "approverUserId");
+        public Builder approverUserId(@Nullable String approverUserId) {
             this.approverUserId = approverUserId;
             return this;
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
+        public Builder contactId(@Nullable String contactId) {
+            this.contactId = contactId;
             return this;
         }
 
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder currency(String currency) {
-            Utils.checkNotNull(currency, "currency");
-            this.currency = Optional.ofNullable(currency);
-            return this;
-        }
-
-        public Builder currency(Optional<String> currency) {
-            Utils.checkNotNull(currency, "currency");
+        public Builder currency(@Nullable String currency) {
             this.currency = currency;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder lineitems(List<AccountingLineitem> lineitems) {
-            Utils.checkNotNull(lineitems, "lineitems");
-            this.lineitems = Optional.ofNullable(lineitems);
-            return this;
-        }
-
-        public Builder lineitems(Optional<? extends List<AccountingLineitem>> lineitems) {
-            Utils.checkNotNull(lineitems, "lineitems");
+        public Builder lineitems(@Nullable List<AccountingLineitem> lineitems) {
             this.lineitems = lineitems;
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = Optional.ofNullable(name);
-            return this;
-        }
-
-        public Builder name(Optional<String> name) {
-            Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder reimbursedAmount(double reimbursedAmount) {
-            Utils.checkNotNull(reimbursedAmount, "reimbursedAmount");
-            this.reimbursedAmount = Optional.ofNullable(reimbursedAmount);
-            return this;
-        }
-
-        public Builder reimbursedAmount(Optional<Double> reimbursedAmount) {
-            Utils.checkNotNull(reimbursedAmount, "reimbursedAmount");
+        public Builder reimbursedAmount(@Nullable Double reimbursedAmount) {
             this.reimbursedAmount = reimbursedAmount;
             return this;
         }
 
-
-        public Builder reimbursedAt(OffsetDateTime reimbursedAt) {
-            Utils.checkNotNull(reimbursedAt, "reimbursedAt");
-            this.reimbursedAt = Optional.ofNullable(reimbursedAt);
-            return this;
-        }
-
-        public Builder reimbursedAt(Optional<OffsetDateTime> reimbursedAt) {
-            Utils.checkNotNull(reimbursedAt, "reimbursedAt");
+        public Builder reimbursedAt(@Nullable OffsetDateTime reimbursedAt) {
             this.reimbursedAt = reimbursedAt;
             return this;
         }
 
-
-        public Builder taxAmount(double taxAmount) {
-            Utils.checkNotNull(taxAmount, "taxAmount");
-            this.taxAmount = Optional.ofNullable(taxAmount);
-            return this;
-        }
-
-        public Builder taxAmount(Optional<Double> taxAmount) {
-            Utils.checkNotNull(taxAmount, "taxAmount");
+        public Builder taxAmount(@Nullable Double taxAmount) {
             this.taxAmount = taxAmount;
             return this;
         }
 
-
-        public Builder totalAmount(double totalAmount) {
-            Utils.checkNotNull(totalAmount, "totalAmount");
-            this.totalAmount = Optional.ofNullable(totalAmount);
-            return this;
-        }
-
-        public Builder totalAmount(Optional<Double> totalAmount) {
-            Utils.checkNotNull(totalAmount, "totalAmount");
+        public Builder totalAmount(@Nullable Double totalAmount) {
             this.totalAmount = totalAmount;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
-
-        public Builder userId(String userId) {
-            Utils.checkNotNull(userId, "userId");
-            this.userId = Optional.ofNullable(userId);
-            return this;
-        }
-
-        public Builder userId(Optional<String> userId) {
-            Utils.checkNotNull(userId, "userId");
+        public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;
         }
 
         public AccountingExpense build() {
-
             return new AccountingExpense(
-                approvedAt, approverUserId, createdAt,
-                currency, id, lineitems,
-                name, raw, reimbursedAmount,
-                reimbursedAt, taxAmount, totalAmount,
-                updatedAt, userId);
+                approvedAt, approverUserId, contactId,
+                createdAt, currency, id,
+                lineitems, name, raw,
+                reimbursedAmount, reimbursedAt, taxAmount,
+                totalAmount, updatedAt, userId);
         }
 
     }

@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateAtsJobRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAtsJobRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAtsJobResponse;
@@ -67,7 +68,7 @@ public class Job {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAtsJobResponse createAtsJob(CreateAtsJobRequest request) {
+    public CreateAtsJobResponse createAtsJob(@Nonnull CreateAtsJobRequest request) {
         RequestOperation<CreateAtsJobRequest, CreateAtsJobResponse> operation
               = new CreateAtsJob.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -89,7 +90,7 @@ public class Job {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAtsJobResponse getAtsJob(GetAtsJobRequest request) {
+    public GetAtsJobResponse getAtsJob(@Nonnull GetAtsJobRequest request) {
         RequestOperation<GetAtsJobRequest, GetAtsJobResponse> operation
               = new GetAtsJob.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -111,7 +112,7 @@ public class Job {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAtsJobsResponse listAtsJobs(ListAtsJobsRequest request) {
+    public ListAtsJobsResponse listAtsJobs(@Nonnull ListAtsJobsRequest request) {
         RequestOperation<ListAtsJobsRequest, ListAtsJobsResponse> operation
               = new ListAtsJobs.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -133,7 +134,7 @@ public class Job {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAtsJobResponse patchAtsJob(PatchAtsJobRequest request) {
+    public PatchAtsJobResponse patchAtsJob(@Nonnull PatchAtsJobRequest request) {
         RequestOperation<PatchAtsJobRequest, PatchAtsJobResponse> operation
               = new PatchAtsJob.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -155,7 +156,7 @@ public class Job {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAtsJobResponse removeAtsJob(RemoveAtsJobRequest request) {
+    public RemoveAtsJobResponse removeAtsJob(@Nonnull RemoveAtsJobRequest request) {
         RequestOperation<RemoveAtsJobRequest, RemoveAtsJobResponse> operation
               = new RemoveAtsJob.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -177,7 +178,7 @@ public class Job {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAtsJobResponse updateAtsJob(UpdateAtsJobRequest request) {
+    public UpdateAtsJobResponse updateAtsJob(@Nonnull UpdateAtsJobRequest request) {
         RequestOperation<UpdateAtsJobRequest, UpdateAtsJobResponse> operation
               = new UpdateAtsJob.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

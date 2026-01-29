@@ -4,15 +4,14 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.lang.Double;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.Map;
 import java.util.Optional;
@@ -23,22 +22,22 @@ public class PaymentRefund {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
-    private Optional<String> currency;
+    private String currency;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
-    private Optional<String> notes;
+    private String notes;
 
 
     @JsonProperty("payment_id")
@@ -47,17 +46,17 @@ public class PaymentRefund {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
-    private Optional<String> reference;
+    private String reference;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
-    private Optional<? extends PaymentRefundStatus> status;
+    private PaymentRefundStatus status;
 
 
     @JsonProperty("total_amount")
@@ -66,35 +65,26 @@ public class PaymentRefund {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
     @JsonCreator
     public PaymentRefund(
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("currency") Optional<String> currency,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("notes") Optional<String> notes,
-            @JsonProperty("payment_id") String paymentId,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("reference") Optional<String> reference,
-            @JsonProperty("status") Optional<? extends PaymentRefundStatus> status,
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("currency") @Nullable String currency,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("notes") @Nullable String notes,
+            @JsonProperty("payment_id") @Nonnull String paymentId,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("reference") @Nullable String reference,
+            @JsonProperty("status") @Nullable PaymentRefundStatus status,
             @JsonProperty("total_amount") double totalAmount,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(currency, "currency");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(notes, "notes");
-        Utils.checkNotNull(paymentId, "paymentId");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(reference, "reference");
-        Utils.checkNotNull(status, "status");
-        Utils.checkNotNull(totalAmount, "totalAmount");
-        Utils.checkNotNull(updatedAt, "updatedAt");
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.createdAt = createdAt;
         this.currency = currency;
         this.id = id;
         this.notes = notes;
-        this.paymentId = paymentId;
+        this.paymentId = Optional.ofNullable(paymentId)
+            .orElseThrow(() -> new IllegalArgumentException("paymentId cannot be null"));
         this.raw = raw;
         this.reference = reference;
         this.status = status;
@@ -103,64 +93,52 @@ public class PaymentRefund {
     }
     
     public PaymentRefund(
-            String paymentId,
+            @Nonnull String paymentId,
             double totalAmount) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), paymentId, Optional.empty(),
-            Optional.empty(), Optional.empty(), totalAmount,
-            Optional.empty());
+        this(null, null, null,
+            null, paymentId, null,
+            null, null, totalAmount,
+            null);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<String> currency() {
-        return currency;
+        return Optional.ofNullable(this.currency);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<String> notes() {
-        return notes;
+        return Optional.ofNullable(this.notes);
     }
 
-    @JsonIgnore
     public String paymentId() {
-        return paymentId;
+        return this.paymentId;
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @JsonIgnore
     public Optional<String> reference() {
-        return reference;
+        return Optional.ofNullable(this.reference);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<PaymentRefundStatus> status() {
-        return (Optional<PaymentRefundStatus>) status;
+        return Optional.ofNullable(this.status);
     }
 
-    @JsonIgnore
     public double totalAmount() {
-        return totalAmount;
+        return this.totalAmount;
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
     public static Builder builder() {
@@ -168,121 +146,65 @@ public class PaymentRefund {
     }
 
 
-    public PaymentRefund withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
-
-
-    public PaymentRefund withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public PaymentRefund withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public PaymentRefund withCurrency(String currency) {
-        Utils.checkNotNull(currency, "currency");
-        this.currency = Optional.ofNullable(currency);
-        return this;
-    }
 
-
-    public PaymentRefund withCurrency(Optional<String> currency) {
-        Utils.checkNotNull(currency, "currency");
+    public PaymentRefund withCurrency(@Nullable String currency) {
         this.currency = currency;
         return this;
     }
 
-    public PaymentRefund withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public PaymentRefund withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public PaymentRefund withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public PaymentRefund withNotes(String notes) {
-        Utils.checkNotNull(notes, "notes");
-        this.notes = Optional.ofNullable(notes);
-        return this;
-    }
 
-
-    public PaymentRefund withNotes(Optional<String> notes) {
-        Utils.checkNotNull(notes, "notes");
+    public PaymentRefund withNotes(@Nullable String notes) {
         this.notes = notes;
         return this;
     }
 
-    public PaymentRefund withPaymentId(String paymentId) {
-        Utils.checkNotNull(paymentId, "paymentId");
-        this.paymentId = paymentId;
-        return this;
-    }
 
-    public PaymentRefund withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
+    public PaymentRefund withPaymentId(@Nonnull String paymentId) {
+        this.paymentId = Utils.checkNotNull(paymentId, "paymentId");
         return this;
     }
 
 
-    public PaymentRefund withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public PaymentRefund withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public PaymentRefund withReference(String reference) {
-        Utils.checkNotNull(reference, "reference");
-        this.reference = Optional.ofNullable(reference);
-        return this;
-    }
 
-
-    public PaymentRefund withReference(Optional<String> reference) {
-        Utils.checkNotNull(reference, "reference");
+    public PaymentRefund withReference(@Nullable String reference) {
         this.reference = reference;
         return this;
     }
 
-    public PaymentRefund withStatus(PaymentRefundStatus status) {
-        Utils.checkNotNull(status, "status");
-        this.status = Optional.ofNullable(status);
-        return this;
-    }
 
-
-    public PaymentRefund withStatus(Optional<? extends PaymentRefundStatus> status) {
-        Utils.checkNotNull(status, "status");
+    public PaymentRefund withStatus(@Nullable PaymentRefundStatus status) {
         this.status = status;
         return this;
     }
 
+
     public PaymentRefund withTotalAmount(double totalAmount) {
-        Utils.checkNotNull(totalAmount, "totalAmount");
         this.totalAmount = totalAmount;
         return this;
     }
 
-    public PaymentRefund withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public PaymentRefund withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public PaymentRefund withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -333,150 +255,81 @@ public class PaymentRefund {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<String> currency = Optional.empty();
+        private String currency;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<String> notes = Optional.empty();
+        private String notes;
 
         private String paymentId;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<String> reference = Optional.empty();
+        private String reference;
 
-        private Optional<? extends PaymentRefundStatus> status = Optional.empty();
+        private PaymentRefundStatus status;
 
-        private Double totalAmount;
+        private double totalAmount;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder currency(String currency) {
-            Utils.checkNotNull(currency, "currency");
-            this.currency = Optional.ofNullable(currency);
-            return this;
-        }
-
-        public Builder currency(Optional<String> currency) {
-            Utils.checkNotNull(currency, "currency");
+        public Builder currency(@Nullable String currency) {
             this.currency = currency;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder notes(String notes) {
-            Utils.checkNotNull(notes, "notes");
-            this.notes = Optional.ofNullable(notes);
-            return this;
-        }
-
-        public Builder notes(Optional<String> notes) {
-            Utils.checkNotNull(notes, "notes");
+        public Builder notes(@Nullable String notes) {
             this.notes = notes;
             return this;
         }
 
-
-        public Builder paymentId(String paymentId) {
-            Utils.checkNotNull(paymentId, "paymentId");
-            this.paymentId = paymentId;
+        public Builder paymentId(@Nonnull String paymentId) {
+            this.paymentId = Utils.checkNotNull(paymentId, "paymentId");
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder reference(String reference) {
-            Utils.checkNotNull(reference, "reference");
-            this.reference = Optional.ofNullable(reference);
-            return this;
-        }
-
-        public Builder reference(Optional<String> reference) {
-            Utils.checkNotNull(reference, "reference");
+        public Builder reference(@Nullable String reference) {
             this.reference = reference;
             return this;
         }
 
-
-        public Builder status(PaymentRefundStatus status) {
-            Utils.checkNotNull(status, "status");
-            this.status = Optional.ofNullable(status);
-            return this;
-        }
-
-        public Builder status(Optional<? extends PaymentRefundStatus> status) {
-            Utils.checkNotNull(status, "status");
+        public Builder status(@Nullable PaymentRefundStatus status) {
             this.status = status;
             return this;
         }
 
-
         public Builder totalAmount(double totalAmount) {
-            Utils.checkNotNull(totalAmount, "totalAmount");
             this.totalAmount = totalAmount;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
         public PaymentRefund build() {
-
             return new PaymentRefund(
                 createdAt, currency, id,
                 notes, paymentId, raw,

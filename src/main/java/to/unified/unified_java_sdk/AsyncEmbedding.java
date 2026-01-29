@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateGenaiEmbeddingRequest;
 import to.unified.unified_java_sdk.models.operations.async.CreateGenaiEmbeddingRequestBuilder;
@@ -48,7 +49,7 @@ public class AsyncEmbedding {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateGenaiEmbeddingResponse>} - The async response
      */
-    public CompletableFuture<CreateGenaiEmbeddingResponse> createGenaiEmbedding(CreateGenaiEmbeddingRequest request) {
+    public CompletableFuture<CreateGenaiEmbeddingResponse> createGenaiEmbedding(@Nonnull CreateGenaiEmbeddingRequest request) {
         AsyncRequestOperation<CreateGenaiEmbeddingRequest, CreateGenaiEmbeddingResponse> operation
               = new CreateGenaiEmbedding.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

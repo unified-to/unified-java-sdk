@@ -4,14 +4,13 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -20,68 +19,59 @@ public class ShippingCustomsItem {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
-    private Optional<Double> amount;
+    private Double amount;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country_of_origin")
-    private Optional<String> countryOfOrigin;
+    private String countryOfOrigin;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
-    private Optional<String> currency;
+    private String currency;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
-    private Optional<String> description;
+    private String description;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("harmonized_tariff_code")
-    private Optional<String> harmonizedTariffCode;
+    private String harmonizedTariffCode;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
-    private Optional<Double> quantity;
+    private Double quantity;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sku")
-    private Optional<String> sku;
+    private String sku;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weight")
-    private Optional<Double> weight;
+    private Double weight;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weight_unit")
-    private Optional<? extends ShippingCustomsItemWeightUnit> weightUnit;
+    private ShippingCustomsItemWeightUnit weightUnit;
 
     @JsonCreator
     public ShippingCustomsItem(
-            @JsonProperty("amount") Optional<Double> amount,
-            @JsonProperty("country_of_origin") Optional<String> countryOfOrigin,
-            @JsonProperty("currency") Optional<String> currency,
-            @JsonProperty("description") Optional<String> description,
-            @JsonProperty("harmonized_tariff_code") Optional<String> harmonizedTariffCode,
-            @JsonProperty("quantity") Optional<Double> quantity,
-            @JsonProperty("sku") Optional<String> sku,
-            @JsonProperty("weight") Optional<Double> weight,
-            @JsonProperty("weight_unit") Optional<? extends ShippingCustomsItemWeightUnit> weightUnit) {
-        Utils.checkNotNull(amount, "amount");
-        Utils.checkNotNull(countryOfOrigin, "countryOfOrigin");
-        Utils.checkNotNull(currency, "currency");
-        Utils.checkNotNull(description, "description");
-        Utils.checkNotNull(harmonizedTariffCode, "harmonizedTariffCode");
-        Utils.checkNotNull(quantity, "quantity");
-        Utils.checkNotNull(sku, "sku");
-        Utils.checkNotNull(weight, "weight");
-        Utils.checkNotNull(weightUnit, "weightUnit");
+            @JsonProperty("amount") @Nullable Double amount,
+            @JsonProperty("country_of_origin") @Nullable String countryOfOrigin,
+            @JsonProperty("currency") @Nullable String currency,
+            @JsonProperty("description") @Nullable String description,
+            @JsonProperty("harmonized_tariff_code") @Nullable String harmonizedTariffCode,
+            @JsonProperty("quantity") @Nullable Double quantity,
+            @JsonProperty("sku") @Nullable String sku,
+            @JsonProperty("weight") @Nullable Double weight,
+            @JsonProperty("weight_unit") @Nullable ShippingCustomsItemWeightUnit weightUnit) {
         this.amount = amount;
         this.countryOfOrigin = countryOfOrigin;
         this.currency = currency;
@@ -94,55 +84,45 @@ public class ShippingCustomsItem {
     }
     
     public ShippingCustomsItem() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null);
     }
 
-    @JsonIgnore
     public Optional<Double> amount() {
-        return amount;
+        return Optional.ofNullable(this.amount);
     }
 
-    @JsonIgnore
     public Optional<String> countryOfOrigin() {
-        return countryOfOrigin;
+        return Optional.ofNullable(this.countryOfOrigin);
     }
 
-    @JsonIgnore
     public Optional<String> currency() {
-        return currency;
+        return Optional.ofNullable(this.currency);
     }
 
-    @JsonIgnore
     public Optional<String> description() {
-        return description;
+        return Optional.ofNullable(this.description);
     }
 
-    @JsonIgnore
     public Optional<String> harmonizedTariffCode() {
-        return harmonizedTariffCode;
+        return Optional.ofNullable(this.harmonizedTariffCode);
     }
 
-    @JsonIgnore
     public Optional<Double> quantity() {
-        return quantity;
+        return Optional.ofNullable(this.quantity);
     }
 
-    @JsonIgnore
     public Optional<String> sku() {
-        return sku;
+        return Optional.ofNullable(this.sku);
     }
 
-    @JsonIgnore
     public Optional<Double> weight() {
-        return weight;
+        return Optional.ofNullable(this.weight);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ShippingCustomsItemWeightUnit> weightUnit() {
-        return (Optional<ShippingCustomsItemWeightUnit>) weightUnit;
+        return Optional.ofNullable(this.weightUnit);
     }
 
     public static Builder builder() {
@@ -150,122 +130,59 @@ public class ShippingCustomsItem {
     }
 
 
-    public ShippingCustomsItem withAmount(double amount) {
-        Utils.checkNotNull(amount, "amount");
-        this.amount = Optional.ofNullable(amount);
-        return this;
-    }
-
-
-    public ShippingCustomsItem withAmount(Optional<Double> amount) {
-        Utils.checkNotNull(amount, "amount");
+    public ShippingCustomsItem withAmount(@Nullable Double amount) {
         this.amount = amount;
         return this;
     }
 
-    public ShippingCustomsItem withCountryOfOrigin(String countryOfOrigin) {
-        Utils.checkNotNull(countryOfOrigin, "countryOfOrigin");
-        this.countryOfOrigin = Optional.ofNullable(countryOfOrigin);
-        return this;
-    }
 
-
-    public ShippingCustomsItem withCountryOfOrigin(Optional<String> countryOfOrigin) {
-        Utils.checkNotNull(countryOfOrigin, "countryOfOrigin");
+    public ShippingCustomsItem withCountryOfOrigin(@Nullable String countryOfOrigin) {
         this.countryOfOrigin = countryOfOrigin;
         return this;
     }
 
-    public ShippingCustomsItem withCurrency(String currency) {
-        Utils.checkNotNull(currency, "currency");
-        this.currency = Optional.ofNullable(currency);
-        return this;
-    }
 
-
-    public ShippingCustomsItem withCurrency(Optional<String> currency) {
-        Utils.checkNotNull(currency, "currency");
+    public ShippingCustomsItem withCurrency(@Nullable String currency) {
         this.currency = currency;
         return this;
     }
 
-    public ShippingCustomsItem withDescription(String description) {
-        Utils.checkNotNull(description, "description");
-        this.description = Optional.ofNullable(description);
-        return this;
-    }
 
-
-    public ShippingCustomsItem withDescription(Optional<String> description) {
-        Utils.checkNotNull(description, "description");
+    public ShippingCustomsItem withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
-    public ShippingCustomsItem withHarmonizedTariffCode(String harmonizedTariffCode) {
-        Utils.checkNotNull(harmonizedTariffCode, "harmonizedTariffCode");
-        this.harmonizedTariffCode = Optional.ofNullable(harmonizedTariffCode);
-        return this;
-    }
 
-
-    public ShippingCustomsItem withHarmonizedTariffCode(Optional<String> harmonizedTariffCode) {
-        Utils.checkNotNull(harmonizedTariffCode, "harmonizedTariffCode");
+    public ShippingCustomsItem withHarmonizedTariffCode(@Nullable String harmonizedTariffCode) {
         this.harmonizedTariffCode = harmonizedTariffCode;
         return this;
     }
 
-    public ShippingCustomsItem withQuantity(double quantity) {
-        Utils.checkNotNull(quantity, "quantity");
-        this.quantity = Optional.ofNullable(quantity);
-        return this;
-    }
 
-
-    public ShippingCustomsItem withQuantity(Optional<Double> quantity) {
-        Utils.checkNotNull(quantity, "quantity");
+    public ShippingCustomsItem withQuantity(@Nullable Double quantity) {
         this.quantity = quantity;
         return this;
     }
 
-    public ShippingCustomsItem withSku(String sku) {
-        Utils.checkNotNull(sku, "sku");
-        this.sku = Optional.ofNullable(sku);
-        return this;
-    }
 
-
-    public ShippingCustomsItem withSku(Optional<String> sku) {
-        Utils.checkNotNull(sku, "sku");
+    public ShippingCustomsItem withSku(@Nullable String sku) {
         this.sku = sku;
         return this;
     }
 
-    public ShippingCustomsItem withWeight(double weight) {
-        Utils.checkNotNull(weight, "weight");
-        this.weight = Optional.ofNullable(weight);
-        return this;
-    }
 
-
-    public ShippingCustomsItem withWeight(Optional<Double> weight) {
-        Utils.checkNotNull(weight, "weight");
+    public ShippingCustomsItem withWeight(@Nullable Double weight) {
         this.weight = weight;
         return this;
     }
 
-    public ShippingCustomsItem withWeightUnit(ShippingCustomsItemWeightUnit weightUnit) {
-        Utils.checkNotNull(weightUnit, "weightUnit");
-        this.weightUnit = Optional.ofNullable(weightUnit);
-        return this;
-    }
 
-
-    public ShippingCustomsItem withWeightUnit(Optional<? extends ShippingCustomsItemWeightUnit> weightUnit) {
-        Utils.checkNotNull(weightUnit, "weightUnit");
+    public ShippingCustomsItem withWeightUnit(@Nullable ShippingCustomsItemWeightUnit weightUnit) {
         this.weightUnit = weightUnit;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -313,147 +230,74 @@ public class ShippingCustomsItem {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<Double> amount = Optional.empty();
+        private Double amount;
 
-        private Optional<String> countryOfOrigin = Optional.empty();
+        private String countryOfOrigin;
 
-        private Optional<String> currency = Optional.empty();
+        private String currency;
 
-        private Optional<String> description = Optional.empty();
+        private String description;
 
-        private Optional<String> harmonizedTariffCode = Optional.empty();
+        private String harmonizedTariffCode;
 
-        private Optional<Double> quantity = Optional.empty();
+        private Double quantity;
 
-        private Optional<String> sku = Optional.empty();
+        private String sku;
 
-        private Optional<Double> weight = Optional.empty();
+        private Double weight;
 
-        private Optional<? extends ShippingCustomsItemWeightUnit> weightUnit = Optional.empty();
+        private ShippingCustomsItemWeightUnit weightUnit;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder amount(double amount) {
-            Utils.checkNotNull(amount, "amount");
-            this.amount = Optional.ofNullable(amount);
-            return this;
-        }
-
-        public Builder amount(Optional<Double> amount) {
-            Utils.checkNotNull(amount, "amount");
+        public Builder amount(@Nullable Double amount) {
             this.amount = amount;
             return this;
         }
 
-
-        public Builder countryOfOrigin(String countryOfOrigin) {
-            Utils.checkNotNull(countryOfOrigin, "countryOfOrigin");
-            this.countryOfOrigin = Optional.ofNullable(countryOfOrigin);
-            return this;
-        }
-
-        public Builder countryOfOrigin(Optional<String> countryOfOrigin) {
-            Utils.checkNotNull(countryOfOrigin, "countryOfOrigin");
+        public Builder countryOfOrigin(@Nullable String countryOfOrigin) {
             this.countryOfOrigin = countryOfOrigin;
             return this;
         }
 
-
-        public Builder currency(String currency) {
-            Utils.checkNotNull(currency, "currency");
-            this.currency = Optional.ofNullable(currency);
-            return this;
-        }
-
-        public Builder currency(Optional<String> currency) {
-            Utils.checkNotNull(currency, "currency");
+        public Builder currency(@Nullable String currency) {
             this.currency = currency;
             return this;
         }
 
-
-        public Builder description(String description) {
-            Utils.checkNotNull(description, "description");
-            this.description = Optional.ofNullable(description);
-            return this;
-        }
-
-        public Builder description(Optional<String> description) {
-            Utils.checkNotNull(description, "description");
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-
-        public Builder harmonizedTariffCode(String harmonizedTariffCode) {
-            Utils.checkNotNull(harmonizedTariffCode, "harmonizedTariffCode");
-            this.harmonizedTariffCode = Optional.ofNullable(harmonizedTariffCode);
-            return this;
-        }
-
-        public Builder harmonizedTariffCode(Optional<String> harmonizedTariffCode) {
-            Utils.checkNotNull(harmonizedTariffCode, "harmonizedTariffCode");
+        public Builder harmonizedTariffCode(@Nullable String harmonizedTariffCode) {
             this.harmonizedTariffCode = harmonizedTariffCode;
             return this;
         }
 
-
-        public Builder quantity(double quantity) {
-            Utils.checkNotNull(quantity, "quantity");
-            this.quantity = Optional.ofNullable(quantity);
-            return this;
-        }
-
-        public Builder quantity(Optional<Double> quantity) {
-            Utils.checkNotNull(quantity, "quantity");
+        public Builder quantity(@Nullable Double quantity) {
             this.quantity = quantity;
             return this;
         }
 
-
-        public Builder sku(String sku) {
-            Utils.checkNotNull(sku, "sku");
-            this.sku = Optional.ofNullable(sku);
-            return this;
-        }
-
-        public Builder sku(Optional<String> sku) {
-            Utils.checkNotNull(sku, "sku");
+        public Builder sku(@Nullable String sku) {
             this.sku = sku;
             return this;
         }
 
-
-        public Builder weight(double weight) {
-            Utils.checkNotNull(weight, "weight");
-            this.weight = Optional.ofNullable(weight);
-            return this;
-        }
-
-        public Builder weight(Optional<Double> weight) {
-            Utils.checkNotNull(weight, "weight");
+        public Builder weight(@Nullable Double weight) {
             this.weight = weight;
             return this;
         }
 
-
-        public Builder weightUnit(ShippingCustomsItemWeightUnit weightUnit) {
-            Utils.checkNotNull(weightUnit, "weightUnit");
-            this.weightUnit = Optional.ofNullable(weightUnit);
-            return this;
-        }
-
-        public Builder weightUnit(Optional<? extends ShippingCustomsItemWeightUnit> weightUnit) {
-            Utils.checkNotNull(weightUnit, "weightUnit");
+        public Builder weightUnit(@Nullable ShippingCustomsItemWeightUnit weightUnit) {
             this.weightUnit = weightUnit;
             return this;
         }
 
         public ShippingCustomsItem build() {
-
             return new ShippingCustomsItem(
                 amount, countryOfOrigin, currency,
                 description, harmonizedTariffCode, quantity,

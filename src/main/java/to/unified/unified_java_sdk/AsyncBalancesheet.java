@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.GetAccountingBalancesheetRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingBalancesheetsRequest;
@@ -52,7 +53,7 @@ public class AsyncBalancesheet {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAccountingBalancesheetResponse>} - The async response
      */
-    public CompletableFuture<GetAccountingBalancesheetResponse> getAccountingBalancesheet(GetAccountingBalancesheetRequest request) {
+    public CompletableFuture<GetAccountingBalancesheetResponse> getAccountingBalancesheet(@Nonnull GetAccountingBalancesheetRequest request) {
         AsyncRequestOperation<GetAccountingBalancesheetRequest, GetAccountingBalancesheetResponse> operation
               = new GetAccountingBalancesheet.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -75,7 +76,7 @@ public class AsyncBalancesheet {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAccountingBalancesheetsResponse>} - The async response
      */
-    public CompletableFuture<ListAccountingBalancesheetsResponse> listAccountingBalancesheets(ListAccountingBalancesheetsRequest request) {
+    public CompletableFuture<ListAccountingBalancesheetsResponse> listAccountingBalancesheets(@Nonnull ListAccountingBalancesheetsRequest request) {
         AsyncRequestOperation<ListAccountingBalancesheetsRequest, ListAccountingBalancesheetsResponse> operation
               = new ListAccountingBalancesheets.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

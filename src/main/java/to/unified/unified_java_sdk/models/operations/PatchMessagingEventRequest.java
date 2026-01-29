@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.MessagingEvent;
@@ -30,7 +30,7 @@ public class PatchMessagingEventRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<PatchMessagingEventQueryParamFields>> fields;
+    private List<PatchMessagingEventQueryParamFields> fields;
 
     /**
      * ID of the Event
@@ -44,63 +44,56 @@ public class PatchMessagingEventRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
     @JsonCreator
     public PatchMessagingEventRequest(
-            MessagingEvent messagingEvent,
-            String connectionId,
-            Optional<? extends List<PatchMessagingEventQueryParamFields>> fields,
-            String id,
-            Optional<String> raw) {
-        Utils.checkNotNull(messagingEvent, "messagingEvent");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(raw, "raw");
-        this.messagingEvent = messagingEvent;
-        this.connectionId = connectionId;
+            @Nonnull MessagingEvent messagingEvent,
+            @Nonnull String connectionId,
+            @Nullable List<PatchMessagingEventQueryParamFields> fields,
+            @Nonnull String id,
+            @Nullable String raw) {
+        this.messagingEvent = Optional.ofNullable(messagingEvent)
+            .orElseThrow(() -> new IllegalArgumentException("messagingEvent cannot be null"));
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
-        this.id = id;
+        this.id = Optional.ofNullable(id)
+            .orElseThrow(() -> new IllegalArgumentException("id cannot be null"));
         this.raw = raw;
     }
     
     public PatchMessagingEventRequest(
-            MessagingEvent messagingEvent,
-            String connectionId,
-            String id) {
-        this(messagingEvent, connectionId, Optional.empty(),
-            id, Optional.empty());
+            @Nonnull MessagingEvent messagingEvent,
+            @Nonnull String connectionId,
+            @Nonnull String id) {
+        this(messagingEvent, connectionId, null,
+            id, null);
     }
 
-    @JsonIgnore
     public MessagingEvent messagingEvent() {
-        return messagingEvent;
+        return this.messagingEvent;
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<PatchMessagingEventQueryParamFields>> fields() {
-        return (Optional<List<PatchMessagingEventQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
      * ID of the Event
      */
-    @JsonIgnore
     public String id() {
-        return id;
+        return this.id;
     }
 
     /**
@@ -108,9 +101,8 @@ public class PatchMessagingEventRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
     public static Builder builder() {
@@ -118,27 +110,17 @@ public class PatchMessagingEventRequest {
     }
 
 
-    public PatchMessagingEventRequest withMessagingEvent(MessagingEvent messagingEvent) {
-        Utils.checkNotNull(messagingEvent, "messagingEvent");
-        this.messagingEvent = messagingEvent;
+    public PatchMessagingEventRequest withMessagingEvent(@Nonnull MessagingEvent messagingEvent) {
+        this.messagingEvent = Utils.checkNotNull(messagingEvent, "messagingEvent");
         return this;
     }
+
 
     /**
      * ID of the connection
      */
-    public PatchMessagingEventRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public PatchMessagingEventRequest withFields(List<PatchMessagingEventQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public PatchMessagingEventRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -146,29 +128,17 @@ public class PatchMessagingEventRequest {
     /**
      * Fields to return
      */
-    public PatchMessagingEventRequest withFields(Optional<? extends List<PatchMessagingEventQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public PatchMessagingEventRequest withFields(@Nullable List<PatchMessagingEventQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
+
     /**
      * ID of the Event
      */
-    public PatchMessagingEventRequest withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = id;
-        return this;
-    }
-
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public PatchMessagingEventRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
+    public PatchMessagingEventRequest withId(@Nonnull String id) {
+        this.id = Utils.checkNotNull(id, "id");
         return this;
     }
 
@@ -178,11 +148,11 @@ public class PatchMessagingEventRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public PatchMessagingEventRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public PatchMessagingEventRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -225,71 +195,42 @@ public class PatchMessagingEventRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<PatchMessagingEventQueryParamFields>> fields = Optional.empty();
+        private List<PatchMessagingEventQueryParamFields> fields;
 
         private String id;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder messagingEvent(MessagingEvent messagingEvent) {
-            Utils.checkNotNull(messagingEvent, "messagingEvent");
-            this.messagingEvent = messagingEvent;
+        public Builder messagingEvent(@Nonnull MessagingEvent messagingEvent) {
+            this.messagingEvent = Utils.checkNotNull(messagingEvent, "messagingEvent");
             return this;
         }
-
 
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<PatchMessagingEventQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<PatchMessagingEventQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<PatchMessagingEventQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * ID of the Event
          */
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = id;
-            return this;
-        }
-
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
+        public Builder id(@Nonnull String id) {
+            this.id = Utils.checkNotNull(id, "id");
             return this;
         }
 
@@ -298,14 +239,12 @@ public class PatchMessagingEventRequest {
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
         public PatchMessagingEventRequest build() {
-
             return new PatchMessagingEventRequest(
                 messagingEvent, connectionId, fields,
                 id, raw);

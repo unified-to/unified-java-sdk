@@ -4,15 +4,14 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -23,75 +22,65 @@ public class GenaiEmbedding {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
-    private Optional<? extends List<GenaiEmbeddingContent>> content;
+    private List<GenaiEmbeddingContent> content;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimension")
-    private Optional<Double> dimension;
+    private Double dimension;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("embeddings")
-    private Optional<String> embeddings;
+    private String embeddings;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enconding_format")
-    private Optional<? extends EncondingFormat> encondingFormat;
+    private EncondingFormat encondingFormat;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max_tokens")
-    private Optional<Double> maxTokens;
+    private Double maxTokens;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model_id")
-    private Optional<String> modelId;
+    private String modelId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokens_used")
-    private Optional<Double> tokensUsed;
+    private Double tokensUsed;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
-    private Optional<String> type;
+    private String type;
 
     @JsonCreator
     public GenaiEmbedding(
-            @JsonProperty("content") Optional<? extends List<GenaiEmbeddingContent>> content,
-            @JsonProperty("dimension") Optional<Double> dimension,
-            @JsonProperty("embeddings") Optional<String> embeddings,
-            @JsonProperty("enconding_format") Optional<? extends EncondingFormat> encondingFormat,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("max_tokens") Optional<Double> maxTokens,
-            @JsonProperty("model_id") Optional<String> modelId,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("tokens_used") Optional<Double> tokensUsed,
-            @JsonProperty("type") Optional<String> type) {
-        Utils.checkNotNull(content, "content");
-        Utils.checkNotNull(dimension, "dimension");
-        Utils.checkNotNull(embeddings, "embeddings");
-        Utils.checkNotNull(encondingFormat, "encondingFormat");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(maxTokens, "maxTokens");
-        Utils.checkNotNull(modelId, "modelId");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(tokensUsed, "tokensUsed");
-        Utils.checkNotNull(type, "type");
+            @JsonProperty("content") @Nullable List<GenaiEmbeddingContent> content,
+            @JsonProperty("dimension") @Nullable Double dimension,
+            @JsonProperty("embeddings") @Nullable String embeddings,
+            @JsonProperty("enconding_format") @Nullable EncondingFormat encondingFormat,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("max_tokens") @Nullable Double maxTokens,
+            @JsonProperty("model_id") @Nullable String modelId,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("tokens_used") @Nullable Double tokensUsed,
+            @JsonProperty("type") @Nullable String type) {
         this.content = content;
         this.dimension = dimension;
         this.embeddings = embeddings;
@@ -105,63 +94,50 @@ public class GenaiEmbedding {
     }
     
     public GenaiEmbedding() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<GenaiEmbeddingContent>> content() {
-        return (Optional<List<GenaiEmbeddingContent>>) content;
+        return Optional.ofNullable(this.content);
     }
 
-    @JsonIgnore
     public Optional<Double> dimension() {
-        return dimension;
+        return Optional.ofNullable(this.dimension);
     }
 
-    @JsonIgnore
     public Optional<String> embeddings() {
-        return embeddings;
+        return Optional.ofNullable(this.embeddings);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<EncondingFormat> encondingFormat() {
-        return (Optional<EncondingFormat>) encondingFormat;
+        return Optional.ofNullable(this.encondingFormat);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<Double> maxTokens() {
-        return maxTokens;
+        return Optional.ofNullable(this.maxTokens);
     }
 
-    @JsonIgnore
     public Optional<String> modelId() {
-        return modelId;
+        return Optional.ofNullable(this.modelId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @JsonIgnore
     public Optional<Double> tokensUsed() {
-        return tokensUsed;
+        return Optional.ofNullable(this.tokensUsed);
     }
 
-    @JsonIgnore
     public Optional<String> type() {
-        return type;
+        return Optional.ofNullable(this.type);
     }
 
     public static Builder builder() {
@@ -169,135 +145,65 @@ public class GenaiEmbedding {
     }
 
 
-    public GenaiEmbedding withContent(List<GenaiEmbeddingContent> content) {
-        Utils.checkNotNull(content, "content");
-        this.content = Optional.ofNullable(content);
-        return this;
-    }
-
-
-    public GenaiEmbedding withContent(Optional<? extends List<GenaiEmbeddingContent>> content) {
-        Utils.checkNotNull(content, "content");
+    public GenaiEmbedding withContent(@Nullable List<GenaiEmbeddingContent> content) {
         this.content = content;
         return this;
     }
 
-    public GenaiEmbedding withDimension(double dimension) {
-        Utils.checkNotNull(dimension, "dimension");
-        this.dimension = Optional.ofNullable(dimension);
-        return this;
-    }
 
-
-    public GenaiEmbedding withDimension(Optional<Double> dimension) {
-        Utils.checkNotNull(dimension, "dimension");
+    public GenaiEmbedding withDimension(@Nullable Double dimension) {
         this.dimension = dimension;
         return this;
     }
 
-    public GenaiEmbedding withEmbeddings(String embeddings) {
-        Utils.checkNotNull(embeddings, "embeddings");
-        this.embeddings = Optional.ofNullable(embeddings);
-        return this;
-    }
 
-
-    public GenaiEmbedding withEmbeddings(Optional<String> embeddings) {
-        Utils.checkNotNull(embeddings, "embeddings");
+    public GenaiEmbedding withEmbeddings(@Nullable String embeddings) {
         this.embeddings = embeddings;
         return this;
     }
 
-    public GenaiEmbedding withEncondingFormat(EncondingFormat encondingFormat) {
-        Utils.checkNotNull(encondingFormat, "encondingFormat");
-        this.encondingFormat = Optional.ofNullable(encondingFormat);
-        return this;
-    }
 
-
-    public GenaiEmbedding withEncondingFormat(Optional<? extends EncondingFormat> encondingFormat) {
-        Utils.checkNotNull(encondingFormat, "encondingFormat");
+    public GenaiEmbedding withEncondingFormat(@Nullable EncondingFormat encondingFormat) {
         this.encondingFormat = encondingFormat;
         return this;
     }
 
-    public GenaiEmbedding withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public GenaiEmbedding withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public GenaiEmbedding withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public GenaiEmbedding withMaxTokens(double maxTokens) {
-        Utils.checkNotNull(maxTokens, "maxTokens");
-        this.maxTokens = Optional.ofNullable(maxTokens);
-        return this;
-    }
 
-
-    public GenaiEmbedding withMaxTokens(Optional<Double> maxTokens) {
-        Utils.checkNotNull(maxTokens, "maxTokens");
+    public GenaiEmbedding withMaxTokens(@Nullable Double maxTokens) {
         this.maxTokens = maxTokens;
         return this;
     }
 
-    public GenaiEmbedding withModelId(String modelId) {
-        Utils.checkNotNull(modelId, "modelId");
-        this.modelId = Optional.ofNullable(modelId);
-        return this;
-    }
 
-
-    public GenaiEmbedding withModelId(Optional<String> modelId) {
-        Utils.checkNotNull(modelId, "modelId");
+    public GenaiEmbedding withModelId(@Nullable String modelId) {
         this.modelId = modelId;
         return this;
     }
 
-    public GenaiEmbedding withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public GenaiEmbedding withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public GenaiEmbedding withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public GenaiEmbedding withTokensUsed(double tokensUsed) {
-        Utils.checkNotNull(tokensUsed, "tokensUsed");
-        this.tokensUsed = Optional.ofNullable(tokensUsed);
-        return this;
-    }
 
-
-    public GenaiEmbedding withTokensUsed(Optional<Double> tokensUsed) {
-        Utils.checkNotNull(tokensUsed, "tokensUsed");
+    public GenaiEmbedding withTokensUsed(@Nullable Double tokensUsed) {
         this.tokensUsed = tokensUsed;
         return this;
     }
 
-    public GenaiEmbedding withType(String type) {
-        Utils.checkNotNull(type, "type");
-        this.type = Optional.ofNullable(type);
-        return this;
-    }
 
-
-    public GenaiEmbedding withType(Optional<String> type) {
-        Utils.checkNotNull(type, "type");
+    public GenaiEmbedding withType(@Nullable String type) {
         this.type = type;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -348,162 +254,81 @@ public class GenaiEmbedding {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends List<GenaiEmbeddingContent>> content = Optional.empty();
+        private List<GenaiEmbeddingContent> content;
 
-        private Optional<Double> dimension = Optional.empty();
+        private Double dimension;
 
-        private Optional<String> embeddings = Optional.empty();
+        private String embeddings;
 
-        private Optional<? extends EncondingFormat> encondingFormat = Optional.empty();
+        private EncondingFormat encondingFormat;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<Double> maxTokens = Optional.empty();
+        private Double maxTokens;
 
-        private Optional<String> modelId = Optional.empty();
+        private String modelId;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<Double> tokensUsed = Optional.empty();
+        private Double tokensUsed;
 
-        private Optional<String> type = Optional.empty();
+        private String type;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder content(List<GenaiEmbeddingContent> content) {
-            Utils.checkNotNull(content, "content");
-            this.content = Optional.ofNullable(content);
-            return this;
-        }
-
-        public Builder content(Optional<? extends List<GenaiEmbeddingContent>> content) {
-            Utils.checkNotNull(content, "content");
+        public Builder content(@Nullable List<GenaiEmbeddingContent> content) {
             this.content = content;
             return this;
         }
 
-
-        public Builder dimension(double dimension) {
-            Utils.checkNotNull(dimension, "dimension");
-            this.dimension = Optional.ofNullable(dimension);
-            return this;
-        }
-
-        public Builder dimension(Optional<Double> dimension) {
-            Utils.checkNotNull(dimension, "dimension");
+        public Builder dimension(@Nullable Double dimension) {
             this.dimension = dimension;
             return this;
         }
 
-
-        public Builder embeddings(String embeddings) {
-            Utils.checkNotNull(embeddings, "embeddings");
-            this.embeddings = Optional.ofNullable(embeddings);
-            return this;
-        }
-
-        public Builder embeddings(Optional<String> embeddings) {
-            Utils.checkNotNull(embeddings, "embeddings");
+        public Builder embeddings(@Nullable String embeddings) {
             this.embeddings = embeddings;
             return this;
         }
 
-
-        public Builder encondingFormat(EncondingFormat encondingFormat) {
-            Utils.checkNotNull(encondingFormat, "encondingFormat");
-            this.encondingFormat = Optional.ofNullable(encondingFormat);
-            return this;
-        }
-
-        public Builder encondingFormat(Optional<? extends EncondingFormat> encondingFormat) {
-            Utils.checkNotNull(encondingFormat, "encondingFormat");
+        public Builder encondingFormat(@Nullable EncondingFormat encondingFormat) {
             this.encondingFormat = encondingFormat;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder maxTokens(double maxTokens) {
-            Utils.checkNotNull(maxTokens, "maxTokens");
-            this.maxTokens = Optional.ofNullable(maxTokens);
-            return this;
-        }
-
-        public Builder maxTokens(Optional<Double> maxTokens) {
-            Utils.checkNotNull(maxTokens, "maxTokens");
+        public Builder maxTokens(@Nullable Double maxTokens) {
             this.maxTokens = maxTokens;
             return this;
         }
 
-
-        public Builder modelId(String modelId) {
-            Utils.checkNotNull(modelId, "modelId");
-            this.modelId = Optional.ofNullable(modelId);
-            return this;
-        }
-
-        public Builder modelId(Optional<String> modelId) {
-            Utils.checkNotNull(modelId, "modelId");
+        public Builder modelId(@Nullable String modelId) {
             this.modelId = modelId;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder tokensUsed(double tokensUsed) {
-            Utils.checkNotNull(tokensUsed, "tokensUsed");
-            this.tokensUsed = Optional.ofNullable(tokensUsed);
-            return this;
-        }
-
-        public Builder tokensUsed(Optional<Double> tokensUsed) {
-            Utils.checkNotNull(tokensUsed, "tokensUsed");
+        public Builder tokensUsed(@Nullable Double tokensUsed) {
             this.tokensUsed = tokensUsed;
             return this;
         }
 
-
-        public Builder type(String type) {
-            Utils.checkNotNull(type, "type");
-            this.type = Optional.ofNullable(type);
-            return this;
-        }
-
-        public Builder type(Optional<String> type) {
-            Utils.checkNotNull(type, "type");
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
         public GenaiEmbedding build() {
-
             return new GenaiEmbedding(
                 content, dimension, embeddings,
                 encondingFormat, id, maxTokens,

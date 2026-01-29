@@ -4,15 +4,15 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
@@ -28,47 +28,47 @@ public class CommerceCollection {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
-    private Optional<String> description;
+    private String description;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
-    private Optional<Boolean> isActive;
+    private Boolean isActive;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_featured")
-    private Optional<Boolean> isFeatured;
+    private Boolean isFeatured;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_visible")
-    private Optional<Boolean> isVisible;
+    private Boolean isVisible;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_metadata")
-    private Optional<? extends List<CommerceMetadata>> itemMetadata;
+    private List<CommerceMetadata> itemMetadata;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("media")
-    private Optional<? extends List<CommerceItemMedia>> media;
+    private List<CommerceItemMedia> media;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
-    private Optional<? extends List<CommerceMetadata>> metadata;
+    private List<CommerceMetadata> metadata;
 
 
     @JsonProperty("name")
@@ -77,74 +77,57 @@ public class CommerceCollection {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_id")
-    private Optional<String> parentId;
+    private String parentId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public_description")
-    private Optional<String> publicDescription;
+    private String publicDescription;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public_name")
-    private Optional<String> publicName;
+    private String publicName;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
-    private Optional<? extends List<String>> tags;
+    private List<String> tags;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
-    private Optional<? extends CommerceCollectionType> type;
+    private CommerceCollectionType type;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
     @JsonCreator
     public CommerceCollection(
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("description") Optional<String> description,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("is_active") Optional<Boolean> isActive,
-            @JsonProperty("is_featured") Optional<Boolean> isFeatured,
-            @JsonProperty("is_visible") Optional<Boolean> isVisible,
-            @JsonProperty("item_metadata") Optional<? extends List<CommerceMetadata>> itemMetadata,
-            @JsonProperty("media") Optional<? extends List<CommerceItemMedia>> media,
-            @JsonProperty("metadata") Optional<? extends List<CommerceMetadata>> metadata,
-            @JsonProperty("name") String name,
-            @JsonProperty("parent_id") Optional<String> parentId,
-            @JsonProperty("public_description") Optional<String> publicDescription,
-            @JsonProperty("public_name") Optional<String> publicName,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("tags") Optional<? extends List<String>> tags,
-            @JsonProperty("type") Optional<? extends CommerceCollectionType> type,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(description, "description");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(isActive, "isActive");
-        Utils.checkNotNull(isFeatured, "isFeatured");
-        Utils.checkNotNull(isVisible, "isVisible");
-        Utils.checkNotNull(itemMetadata, "itemMetadata");
-        Utils.checkNotNull(media, "media");
-        Utils.checkNotNull(metadata, "metadata");
-        Utils.checkNotNull(name, "name");
-        Utils.checkNotNull(parentId, "parentId");
-        Utils.checkNotNull(publicDescription, "publicDescription");
-        Utils.checkNotNull(publicName, "publicName");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(tags, "tags");
-        Utils.checkNotNull(type, "type");
-        Utils.checkNotNull(updatedAt, "updatedAt");
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("description") @Nullable String description,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("is_active") @Nullable Boolean isActive,
+            @JsonProperty("is_featured") @Nullable Boolean isFeatured,
+            @JsonProperty("is_visible") @Nullable Boolean isVisible,
+            @JsonProperty("item_metadata") @Nullable List<CommerceMetadata> itemMetadata,
+            @JsonProperty("media") @Nullable List<CommerceItemMedia> media,
+            @JsonProperty("metadata") @Nullable List<CommerceMetadata> metadata,
+            @JsonProperty("name") @Nonnull String name,
+            @JsonProperty("parent_id") @Nullable String parentId,
+            @JsonProperty("public_description") @Nullable String publicDescription,
+            @JsonProperty("public_name") @Nullable String publicName,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("tags") @Nullable List<String> tags,
+            @JsonProperty("type") @Nullable CommerceCollectionType type,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.createdAt = createdAt;
         this.description = description;
         this.id = id;
@@ -154,7 +137,8 @@ public class CommerceCollection {
         this.itemMetadata = itemMetadata;
         this.media = media;
         this.metadata = metadata;
-        this.name = name;
+        this.name = Optional.ofNullable(name)
+            .orElseThrow(() -> new IllegalArgumentException("name cannot be null"));
         this.parentId = parentId;
         this.publicDescription = publicDescription;
         this.publicName = publicName;
@@ -165,104 +149,81 @@ public class CommerceCollection {
     }
     
     public CommerceCollection(
-            String name) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            name, Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+            @Nonnull String name) {
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            name, null, null,
+            null, null, null,
+            null, null);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<String> description() {
-        return description;
+        return Optional.ofNullable(this.description);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isActive() {
-        return isActive;
+        return Optional.ofNullable(this.isActive);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isFeatured() {
-        return isFeatured;
+        return Optional.ofNullable(this.isFeatured);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isVisible() {
-        return isVisible;
+        return Optional.ofNullable(this.isVisible);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<CommerceMetadata>> itemMetadata() {
-        return (Optional<List<CommerceMetadata>>) itemMetadata;
+        return Optional.ofNullable(this.itemMetadata);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<CommerceItemMedia>> media() {
-        return (Optional<List<CommerceItemMedia>>) media;
+        return Optional.ofNullable(this.media);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<CommerceMetadata>> metadata() {
-        return (Optional<List<CommerceMetadata>>) metadata;
+        return Optional.ofNullable(this.metadata);
     }
 
-    @JsonIgnore
     public String name() {
-        return name;
+        return this.name;
     }
 
-    @JsonIgnore
     public Optional<String> parentId() {
-        return parentId;
+        return Optional.ofNullable(this.parentId);
     }
 
-    @JsonIgnore
     public Optional<String> publicDescription() {
-        return publicDescription;
+        return Optional.ofNullable(this.publicDescription);
     }
 
-    @JsonIgnore
     public Optional<String> publicName() {
-        return publicName;
+        return Optional.ofNullable(this.publicName);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> tags() {
-        return (Optional<List<String>>) tags;
+        return Optional.ofNullable(this.tags);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<CommerceCollectionType> type() {
-        return (Optional<CommerceCollectionType>) type;
+        return Optional.ofNullable(this.type);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
     public static Builder builder() {
@@ -270,219 +231,107 @@ public class CommerceCollection {
     }
 
 
-    public CommerceCollection withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
-
-
-    public CommerceCollection withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public CommerceCollection withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public CommerceCollection withDescription(String description) {
-        Utils.checkNotNull(description, "description");
-        this.description = Optional.ofNullable(description);
-        return this;
-    }
 
-
-    public CommerceCollection withDescription(Optional<String> description) {
-        Utils.checkNotNull(description, "description");
+    public CommerceCollection withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
-    public CommerceCollection withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public CommerceCollection withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public CommerceCollection withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public CommerceCollection withIsActive(boolean isActive) {
-        Utils.checkNotNull(isActive, "isActive");
-        this.isActive = Optional.ofNullable(isActive);
-        return this;
-    }
 
-
-    public CommerceCollection withIsActive(Optional<Boolean> isActive) {
-        Utils.checkNotNull(isActive, "isActive");
+    public CommerceCollection withIsActive(@Nullable Boolean isActive) {
         this.isActive = isActive;
         return this;
     }
 
-    public CommerceCollection withIsFeatured(boolean isFeatured) {
-        Utils.checkNotNull(isFeatured, "isFeatured");
-        this.isFeatured = Optional.ofNullable(isFeatured);
-        return this;
-    }
 
-
-    public CommerceCollection withIsFeatured(Optional<Boolean> isFeatured) {
-        Utils.checkNotNull(isFeatured, "isFeatured");
+    public CommerceCollection withIsFeatured(@Nullable Boolean isFeatured) {
         this.isFeatured = isFeatured;
         return this;
     }
 
-    public CommerceCollection withIsVisible(boolean isVisible) {
-        Utils.checkNotNull(isVisible, "isVisible");
-        this.isVisible = Optional.ofNullable(isVisible);
-        return this;
-    }
 
-
-    public CommerceCollection withIsVisible(Optional<Boolean> isVisible) {
-        Utils.checkNotNull(isVisible, "isVisible");
+    public CommerceCollection withIsVisible(@Nullable Boolean isVisible) {
         this.isVisible = isVisible;
         return this;
     }
 
-    public CommerceCollection withItemMetadata(List<CommerceMetadata> itemMetadata) {
-        Utils.checkNotNull(itemMetadata, "itemMetadata");
-        this.itemMetadata = Optional.ofNullable(itemMetadata);
-        return this;
-    }
 
-
-    public CommerceCollection withItemMetadata(Optional<? extends List<CommerceMetadata>> itemMetadata) {
-        Utils.checkNotNull(itemMetadata, "itemMetadata");
+    public CommerceCollection withItemMetadata(@Nullable List<CommerceMetadata> itemMetadata) {
         this.itemMetadata = itemMetadata;
         return this;
     }
 
-    public CommerceCollection withMedia(List<CommerceItemMedia> media) {
-        Utils.checkNotNull(media, "media");
-        this.media = Optional.ofNullable(media);
-        return this;
-    }
 
-
-    public CommerceCollection withMedia(Optional<? extends List<CommerceItemMedia>> media) {
-        Utils.checkNotNull(media, "media");
+    public CommerceCollection withMedia(@Nullable List<CommerceItemMedia> media) {
         this.media = media;
         return this;
     }
 
-    public CommerceCollection withMetadata(List<CommerceMetadata> metadata) {
-        Utils.checkNotNull(metadata, "metadata");
-        this.metadata = Optional.ofNullable(metadata);
-        return this;
-    }
 
-
-    public CommerceCollection withMetadata(Optional<? extends List<CommerceMetadata>> metadata) {
-        Utils.checkNotNull(metadata, "metadata");
+    public CommerceCollection withMetadata(@Nullable List<CommerceMetadata> metadata) {
         this.metadata = metadata;
         return this;
     }
 
-    public CommerceCollection withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = name;
-        return this;
-    }
 
-    public CommerceCollection withParentId(String parentId) {
-        Utils.checkNotNull(parentId, "parentId");
-        this.parentId = Optional.ofNullable(parentId);
+    public CommerceCollection withName(@Nonnull String name) {
+        this.name = Utils.checkNotNull(name, "name");
         return this;
     }
 
 
-    public CommerceCollection withParentId(Optional<String> parentId) {
-        Utils.checkNotNull(parentId, "parentId");
+    public CommerceCollection withParentId(@Nullable String parentId) {
         this.parentId = parentId;
         return this;
     }
 
-    public CommerceCollection withPublicDescription(String publicDescription) {
-        Utils.checkNotNull(publicDescription, "publicDescription");
-        this.publicDescription = Optional.ofNullable(publicDescription);
-        return this;
-    }
 
-
-    public CommerceCollection withPublicDescription(Optional<String> publicDescription) {
-        Utils.checkNotNull(publicDescription, "publicDescription");
+    public CommerceCollection withPublicDescription(@Nullable String publicDescription) {
         this.publicDescription = publicDescription;
         return this;
     }
 
-    public CommerceCollection withPublicName(String publicName) {
-        Utils.checkNotNull(publicName, "publicName");
-        this.publicName = Optional.ofNullable(publicName);
-        return this;
-    }
 
-
-    public CommerceCollection withPublicName(Optional<String> publicName) {
-        Utils.checkNotNull(publicName, "publicName");
+    public CommerceCollection withPublicName(@Nullable String publicName) {
         this.publicName = publicName;
         return this;
     }
 
-    public CommerceCollection withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public CommerceCollection withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public CommerceCollection withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public CommerceCollection withTags(List<String> tags) {
-        Utils.checkNotNull(tags, "tags");
-        this.tags = Optional.ofNullable(tags);
-        return this;
-    }
 
-
-    public CommerceCollection withTags(Optional<? extends List<String>> tags) {
-        Utils.checkNotNull(tags, "tags");
+    public CommerceCollection withTags(@Nullable List<String> tags) {
         this.tags = tags;
         return this;
     }
 
-    public CommerceCollection withType(CommerceCollectionType type) {
-        Utils.checkNotNull(type, "type");
-        this.type = Optional.ofNullable(type);
-        return this;
-    }
 
-
-    public CommerceCollection withType(Optional<? extends CommerceCollectionType> type) {
-        Utils.checkNotNull(type, "type");
+    public CommerceCollection withType(@Nullable CommerceCollectionType type) {
         this.type = type;
         return this;
     }
 
-    public CommerceCollection withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public CommerceCollection withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public CommerceCollection withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -549,261 +398,130 @@ public class CommerceCollection {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<String> description = Optional.empty();
+        private String description;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<Boolean> isActive = Optional.empty();
+        private Boolean isActive;
 
-        private Optional<Boolean> isFeatured = Optional.empty();
+        private Boolean isFeatured;
 
-        private Optional<Boolean> isVisible = Optional.empty();
+        private Boolean isVisible;
 
-        private Optional<? extends List<CommerceMetadata>> itemMetadata = Optional.empty();
+        private List<CommerceMetadata> itemMetadata;
 
-        private Optional<? extends List<CommerceItemMedia>> media = Optional.empty();
+        private List<CommerceItemMedia> media;
 
-        private Optional<? extends List<CommerceMetadata>> metadata = Optional.empty();
+        private List<CommerceMetadata> metadata;
 
         private String name;
 
-        private Optional<String> parentId = Optional.empty();
+        private String parentId;
 
-        private Optional<String> publicDescription = Optional.empty();
+        private String publicDescription;
 
-        private Optional<String> publicName = Optional.empty();
+        private String publicName;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<? extends List<String>> tags = Optional.empty();
+        private List<String> tags;
 
-        private Optional<? extends CommerceCollectionType> type = Optional.empty();
+        private CommerceCollectionType type;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder description(String description) {
-            Utils.checkNotNull(description, "description");
-            this.description = Optional.ofNullable(description);
-            return this;
-        }
-
-        public Builder description(Optional<String> description) {
-            Utils.checkNotNull(description, "description");
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder isActive(boolean isActive) {
-            Utils.checkNotNull(isActive, "isActive");
-            this.isActive = Optional.ofNullable(isActive);
-            return this;
-        }
-
-        public Builder isActive(Optional<Boolean> isActive) {
-            Utils.checkNotNull(isActive, "isActive");
+        public Builder isActive(@Nullable Boolean isActive) {
             this.isActive = isActive;
             return this;
         }
 
-
-        public Builder isFeatured(boolean isFeatured) {
-            Utils.checkNotNull(isFeatured, "isFeatured");
-            this.isFeatured = Optional.ofNullable(isFeatured);
-            return this;
-        }
-
-        public Builder isFeatured(Optional<Boolean> isFeatured) {
-            Utils.checkNotNull(isFeatured, "isFeatured");
+        public Builder isFeatured(@Nullable Boolean isFeatured) {
             this.isFeatured = isFeatured;
             return this;
         }
 
-
-        public Builder isVisible(boolean isVisible) {
-            Utils.checkNotNull(isVisible, "isVisible");
-            this.isVisible = Optional.ofNullable(isVisible);
-            return this;
-        }
-
-        public Builder isVisible(Optional<Boolean> isVisible) {
-            Utils.checkNotNull(isVisible, "isVisible");
+        public Builder isVisible(@Nullable Boolean isVisible) {
             this.isVisible = isVisible;
             return this;
         }
 
-
-        public Builder itemMetadata(List<CommerceMetadata> itemMetadata) {
-            Utils.checkNotNull(itemMetadata, "itemMetadata");
-            this.itemMetadata = Optional.ofNullable(itemMetadata);
-            return this;
-        }
-
-        public Builder itemMetadata(Optional<? extends List<CommerceMetadata>> itemMetadata) {
-            Utils.checkNotNull(itemMetadata, "itemMetadata");
+        public Builder itemMetadata(@Nullable List<CommerceMetadata> itemMetadata) {
             this.itemMetadata = itemMetadata;
             return this;
         }
 
-
-        public Builder media(List<CommerceItemMedia> media) {
-            Utils.checkNotNull(media, "media");
-            this.media = Optional.ofNullable(media);
-            return this;
-        }
-
-        public Builder media(Optional<? extends List<CommerceItemMedia>> media) {
-            Utils.checkNotNull(media, "media");
+        public Builder media(@Nullable List<CommerceItemMedia> media) {
             this.media = media;
             return this;
         }
 
-
-        public Builder metadata(List<CommerceMetadata> metadata) {
-            Utils.checkNotNull(metadata, "metadata");
-            this.metadata = Optional.ofNullable(metadata);
-            return this;
-        }
-
-        public Builder metadata(Optional<? extends List<CommerceMetadata>> metadata) {
-            Utils.checkNotNull(metadata, "metadata");
+        public Builder metadata(@Nullable List<CommerceMetadata> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = name;
+        public Builder name(@Nonnull String name) {
+            this.name = Utils.checkNotNull(name, "name");
             return this;
         }
 
-
-        public Builder parentId(String parentId) {
-            Utils.checkNotNull(parentId, "parentId");
-            this.parentId = Optional.ofNullable(parentId);
-            return this;
-        }
-
-        public Builder parentId(Optional<String> parentId) {
-            Utils.checkNotNull(parentId, "parentId");
+        public Builder parentId(@Nullable String parentId) {
             this.parentId = parentId;
             return this;
         }
 
-
-        public Builder publicDescription(String publicDescription) {
-            Utils.checkNotNull(publicDescription, "publicDescription");
-            this.publicDescription = Optional.ofNullable(publicDescription);
-            return this;
-        }
-
-        public Builder publicDescription(Optional<String> publicDescription) {
-            Utils.checkNotNull(publicDescription, "publicDescription");
+        public Builder publicDescription(@Nullable String publicDescription) {
             this.publicDescription = publicDescription;
             return this;
         }
 
-
-        public Builder publicName(String publicName) {
-            Utils.checkNotNull(publicName, "publicName");
-            this.publicName = Optional.ofNullable(publicName);
-            return this;
-        }
-
-        public Builder publicName(Optional<String> publicName) {
-            Utils.checkNotNull(publicName, "publicName");
+        public Builder publicName(@Nullable String publicName) {
             this.publicName = publicName;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder tags(List<String> tags) {
-            Utils.checkNotNull(tags, "tags");
-            this.tags = Optional.ofNullable(tags);
-            return this;
-        }
-
-        public Builder tags(Optional<? extends List<String>> tags) {
-            Utils.checkNotNull(tags, "tags");
+        public Builder tags(@Nullable List<String> tags) {
             this.tags = tags;
             return this;
         }
 
-
-        public Builder type(CommerceCollectionType type) {
-            Utils.checkNotNull(type, "type");
-            this.type = Optional.ofNullable(type);
-            return this;
-        }
-
-        public Builder type(Optional<? extends CommerceCollectionType> type) {
-            Utils.checkNotNull(type, "type");
+        public Builder type(@Nullable CommerceCollectionType type) {
             this.type = type;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
         public CommerceCollection build() {
-
             return new CommerceCollection(
                 createdAt, description, id,
                 isActive, isFeatured, isVisible,

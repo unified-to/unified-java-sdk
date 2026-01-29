@@ -4,12 +4,12 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
@@ -21,7 +21,7 @@ public class ListCalendarEventsRequest {
      * The calendar ID to filter by (reference to CalendarCalendar)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=calendar_id")
-    private Optional<String> calendarId;
+    private String calendarId;
 
     /**
      * ID of the connection
@@ -33,37 +33,37 @@ public class ListCalendarEventsRequest {
      * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_lt")
-    private Optional<String> endLt;
+    private String endLt;
 
     /**
      * Whether to flatten grouped or recurring items into individual entries.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
-    private Optional<Boolean> expand;
+    private Boolean expand;
 
     /**
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<ListCalendarEventsQueryParamFields>> fields;
+    private List<ListCalendarEventsQueryParamFields> fields;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
-    private Optional<Double> limit;
+    private Double limit;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
-    private Optional<Double> offset;
+    private Double offset;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
-    private Optional<String> order;
+    private String order;
 
     /**
      * Query string to search. eg. email address or name
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
-    private Optional<String> query;
+    private String query;
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
@@ -71,55 +71,43 @@ public class ListCalendarEventsRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
-    private Optional<String> sort;
+    private String sort;
 
     /**
      * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_gte")
-    private Optional<String> startGte;
+    private String startGte;
 
     /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
-    private Optional<String> updatedGte;
+    private String updatedGte;
 
     @JsonCreator
     public ListCalendarEventsRequest(
-            Optional<String> calendarId,
-            String connectionId,
-            Optional<String> endLt,
-            Optional<Boolean> expand,
-            Optional<? extends List<ListCalendarEventsQueryParamFields>> fields,
-            Optional<Double> limit,
-            Optional<Double> offset,
-            Optional<String> order,
-            Optional<String> query,
-            Optional<String> raw,
-            Optional<String> sort,
-            Optional<String> startGte,
-            Optional<String> updatedGte) {
-        Utils.checkNotNull(calendarId, "calendarId");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(endLt, "endLt");
-        Utils.checkNotNull(expand, "expand");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(limit, "limit");
-        Utils.checkNotNull(offset, "offset");
-        Utils.checkNotNull(order, "order");
-        Utils.checkNotNull(query, "query");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(sort, "sort");
-        Utils.checkNotNull(startGte, "startGte");
-        Utils.checkNotNull(updatedGte, "updatedGte");
+            @Nullable String calendarId,
+            @Nonnull String connectionId,
+            @Nullable String endLt,
+            @Nullable Boolean expand,
+            @Nullable List<ListCalendarEventsQueryParamFields> fields,
+            @Nullable Double limit,
+            @Nullable Double offset,
+            @Nullable String order,
+            @Nullable String query,
+            @Nullable String raw,
+            @Nullable String sort,
+            @Nullable String startGte,
+            @Nullable String updatedGte) {
         this.calendarId = calendarId;
-        this.connectionId = connectionId;
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.endLt = endLt;
         this.expand = expand;
         this.fields = fields;
@@ -134,76 +122,66 @@ public class ListCalendarEventsRequest {
     }
     
     public ListCalendarEventsRequest(
-            String connectionId) {
-        this(Optional.empty(), connectionId, Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+            @Nonnull String connectionId) {
+        this(null, connectionId, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null);
     }
 
     /**
      * The calendar ID to filter by (reference to CalendarCalendar)
      */
-    @JsonIgnore
     public Optional<String> calendarId() {
-        return calendarId;
+        return Optional.ofNullable(this.calendarId);
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
-    @JsonIgnore
     public Optional<String> endLt() {
-        return endLt;
+        return Optional.ofNullable(this.endLt);
     }
 
     /**
      * Whether to flatten grouped or recurring items into individual entries.
      */
-    @JsonIgnore
     public Optional<Boolean> expand() {
-        return expand;
+        return Optional.ofNullable(this.expand);
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<ListCalendarEventsQueryParamFields>> fields() {
-        return (Optional<List<ListCalendarEventsQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
-    @JsonIgnore
     public Optional<Double> limit() {
-        return limit;
+        return Optional.ofNullable(this.limit);
     }
 
-    @JsonIgnore
     public Optional<Double> offset() {
-        return offset;
+        return Optional.ofNullable(this.offset);
     }
 
-    @JsonIgnore
     public Optional<String> order() {
-        return order;
+        return Optional.ofNullable(this.order);
     }
 
     /**
      * Query string to search. eg. email address or name
      */
-    @JsonIgnore
     public Optional<String> query() {
-        return query;
+        return Optional.ofNullable(this.query);
     }
 
     /**
@@ -211,31 +189,27 @@ public class ListCalendarEventsRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @JsonIgnore
     public Optional<String> sort() {
-        return sort;
+        return Optional.ofNullable(this.sort);
     }
 
     /**
      * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
-    @JsonIgnore
     public Optional<String> startGte() {
-        return startGte;
+        return Optional.ofNullable(this.startGte);
     }
 
     /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
-    @JsonIgnore
     public Optional<String> updatedGte() {
-        return updatedGte;
+        return Optional.ofNullable(this.updatedGte);
     }
 
     public static Builder builder() {
@@ -246,37 +220,17 @@ public class ListCalendarEventsRequest {
     /**
      * The calendar ID to filter by (reference to CalendarCalendar)
      */
-    public ListCalendarEventsRequest withCalendarId(String calendarId) {
-        Utils.checkNotNull(calendarId, "calendarId");
-        this.calendarId = Optional.ofNullable(calendarId);
-        return this;
-    }
-
-
-    /**
-     * The calendar ID to filter by (reference to CalendarCalendar)
-     */
-    public ListCalendarEventsRequest withCalendarId(Optional<String> calendarId) {
-        Utils.checkNotNull(calendarId, "calendarId");
+    public ListCalendarEventsRequest withCalendarId(@Nullable String calendarId) {
         this.calendarId = calendarId;
         return this;
     }
 
+
     /**
      * ID of the connection
      */
-    public ListCalendarEventsRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-     */
-    public ListCalendarEventsRequest withEndLt(String endLt) {
-        Utils.checkNotNull(endLt, "endLt");
-        this.endLt = Optional.ofNullable(endLt);
+    public ListCalendarEventsRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -284,183 +238,92 @@ public class ListCalendarEventsRequest {
     /**
      * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
-    public ListCalendarEventsRequest withEndLt(Optional<String> endLt) {
-        Utils.checkNotNull(endLt, "endLt");
+    public ListCalendarEventsRequest withEndLt(@Nullable String endLt) {
         this.endLt = endLt;
         return this;
     }
 
-    /**
-     * Whether to flatten grouped or recurring items into individual entries.
-     */
-    public ListCalendarEventsRequest withExpand(boolean expand) {
-        Utils.checkNotNull(expand, "expand");
-        this.expand = Optional.ofNullable(expand);
-        return this;
-    }
-
 
     /**
      * Whether to flatten grouped or recurring items into individual entries.
      */
-    public ListCalendarEventsRequest withExpand(Optional<Boolean> expand) {
-        Utils.checkNotNull(expand, "expand");
+    public ListCalendarEventsRequest withExpand(@Nullable Boolean expand) {
         this.expand = expand;
         return this;
     }
 
-    /**
-     * Fields to return
-     */
-    public ListCalendarEventsRequest withFields(List<ListCalendarEventsQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
-        return this;
-    }
-
 
     /**
      * Fields to return
      */
-    public ListCalendarEventsRequest withFields(Optional<? extends List<ListCalendarEventsQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public ListCalendarEventsRequest withFields(@Nullable List<ListCalendarEventsQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
-    public ListCalendarEventsRequest withLimit(double limit) {
-        Utils.checkNotNull(limit, "limit");
-        this.limit = Optional.ofNullable(limit);
-        return this;
-    }
 
-
-    public ListCalendarEventsRequest withLimit(Optional<Double> limit) {
-        Utils.checkNotNull(limit, "limit");
+    public ListCalendarEventsRequest withLimit(@Nullable Double limit) {
         this.limit = limit;
         return this;
     }
 
-    public ListCalendarEventsRequest withOffset(double offset) {
-        Utils.checkNotNull(offset, "offset");
-        this.offset = Optional.ofNullable(offset);
-        return this;
-    }
 
-
-    public ListCalendarEventsRequest withOffset(Optional<Double> offset) {
-        Utils.checkNotNull(offset, "offset");
+    public ListCalendarEventsRequest withOffset(@Nullable Double offset) {
         this.offset = offset;
         return this;
     }
 
-    public ListCalendarEventsRequest withOrder(String order) {
-        Utils.checkNotNull(order, "order");
-        this.order = Optional.ofNullable(order);
-        return this;
-    }
 
-
-    public ListCalendarEventsRequest withOrder(Optional<String> order) {
-        Utils.checkNotNull(order, "order");
+    public ListCalendarEventsRequest withOrder(@Nullable String order) {
         this.order = order;
         return this;
     }
 
-    /**
-     * Query string to search. eg. email address or name
-     */
-    public ListCalendarEventsRequest withQuery(String query) {
-        Utils.checkNotNull(query, "query");
-        this.query = Optional.ofNullable(query);
-        return this;
-    }
-
 
     /**
      * Query string to search. eg. email address or name
      */
-    public ListCalendarEventsRequest withQuery(Optional<String> query) {
-        Utils.checkNotNull(query, "query");
+    public ListCalendarEventsRequest withQuery(@Nullable String query) {
         this.query = query;
         return this;
     }
 
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public ListCalendarEventsRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
-
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public ListCalendarEventsRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public ListCalendarEventsRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
 
-    public ListCalendarEventsRequest withSort(String sort) {
-        Utils.checkNotNull(sort, "sort");
-        this.sort = Optional.ofNullable(sort);
-        return this;
-    }
 
-
-    public ListCalendarEventsRequest withSort(Optional<String> sort) {
-        Utils.checkNotNull(sort, "sort");
+    public ListCalendarEventsRequest withSort(@Nullable String sort) {
         this.sort = sort;
         return this;
     }
 
-    /**
-     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-     */
-    public ListCalendarEventsRequest withStartGte(String startGte) {
-        Utils.checkNotNull(startGte, "startGte");
-        this.startGte = Optional.ofNullable(startGte);
-        return this;
-    }
-
 
     /**
      * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
-    public ListCalendarEventsRequest withStartGte(Optional<String> startGte) {
-        Utils.checkNotNull(startGte, "startGte");
+    public ListCalendarEventsRequest withStartGte(@Nullable String startGte) {
         this.startGte = startGte;
         return this;
     }
 
-    /**
-     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
-     * YYYY-MM-DDTHH:MM:SSZ format)
-     */
-    public ListCalendarEventsRequest withUpdatedGte(String updatedGte) {
-        Utils.checkNotNull(updatedGte, "updatedGte");
-        this.updatedGte = Optional.ofNullable(updatedGte);
-        return this;
-    }
-
 
     /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
-    public ListCalendarEventsRequest withUpdatedGte(Optional<String> updatedGte) {
-        Utils.checkNotNull(updatedGte, "updatedGte");
+    public ListCalendarEventsRequest withUpdatedGte(@Nullable String updatedGte) {
         this.updatedGte = updatedGte;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -518,258 +381,132 @@ public class ListCalendarEventsRequest {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> calendarId = Optional.empty();
+        private String calendarId;
 
         private String connectionId;
 
-        private Optional<String> endLt = Optional.empty();
+        private String endLt;
 
-        private Optional<Boolean> expand = Optional.empty();
+        private Boolean expand;
 
-        private Optional<? extends List<ListCalendarEventsQueryParamFields>> fields = Optional.empty();
+        private List<ListCalendarEventsQueryParamFields> fields;
 
-        private Optional<Double> limit = Optional.empty();
+        private Double limit;
 
-        private Optional<Double> offset = Optional.empty();
+        private Double offset;
 
-        private Optional<String> order = Optional.empty();
+        private String order;
 
-        private Optional<String> query = Optional.empty();
+        private String query;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
-        private Optional<String> sort = Optional.empty();
+        private String sort;
 
-        private Optional<String> startGte = Optional.empty();
+        private String startGte;
 
-        private Optional<String> updatedGte = Optional.empty();
+        private String updatedGte;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
         /**
          * The calendar ID to filter by (reference to CalendarCalendar)
          */
-        public Builder calendarId(String calendarId) {
-            Utils.checkNotNull(calendarId, "calendarId");
-            this.calendarId = Optional.ofNullable(calendarId);
-            return this;
-        }
-
-        /**
-         * The calendar ID to filter by (reference to CalendarCalendar)
-         */
-        public Builder calendarId(Optional<String> calendarId) {
-            Utils.checkNotNull(calendarId, "calendarId");
+        public Builder calendarId(@Nullable String calendarId) {
             this.calendarId = calendarId;
             return this;
         }
 
-
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-         */
-        public Builder endLt(String endLt) {
-            Utils.checkNotNull(endLt, "endLt");
-            this.endLt = Optional.ofNullable(endLt);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
          */
-        public Builder endLt(Optional<String> endLt) {
-            Utils.checkNotNull(endLt, "endLt");
+        public Builder endLt(@Nullable String endLt) {
             this.endLt = endLt;
             return this;
         }
 
-
         /**
          * Whether to flatten grouped or recurring items into individual entries.
          */
-        public Builder expand(boolean expand) {
-            Utils.checkNotNull(expand, "expand");
-            this.expand = Optional.ofNullable(expand);
-            return this;
-        }
-
-        /**
-         * Whether to flatten grouped or recurring items into individual entries.
-         */
-        public Builder expand(Optional<Boolean> expand) {
-            Utils.checkNotNull(expand, "expand");
+        public Builder expand(@Nullable Boolean expand) {
             this.expand = expand;
             return this;
         }
 
-
         /**
          * Fields to return
          */
-        public Builder fields(List<ListCalendarEventsQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
-            return this;
-        }
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(Optional<? extends List<ListCalendarEventsQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<ListCalendarEventsQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
-        public Builder limit(double limit) {
-            Utils.checkNotNull(limit, "limit");
-            this.limit = Optional.ofNullable(limit);
-            return this;
-        }
-
-        public Builder limit(Optional<Double> limit) {
-            Utils.checkNotNull(limit, "limit");
+        public Builder limit(@Nullable Double limit) {
             this.limit = limit;
             return this;
         }
 
-
-        public Builder offset(double offset) {
-            Utils.checkNotNull(offset, "offset");
-            this.offset = Optional.ofNullable(offset);
-            return this;
-        }
-
-        public Builder offset(Optional<Double> offset) {
-            Utils.checkNotNull(offset, "offset");
+        public Builder offset(@Nullable Double offset) {
             this.offset = offset;
             return this;
         }
 
-
-        public Builder order(String order) {
-            Utils.checkNotNull(order, "order");
-            this.order = Optional.ofNullable(order);
-            return this;
-        }
-
-        public Builder order(Optional<String> order) {
-            Utils.checkNotNull(order, "order");
+        public Builder order(@Nullable String order) {
             this.order = order;
             return this;
         }
 
-
         /**
          * Query string to search. eg. email address or name
          */
-        public Builder query(String query) {
-            Utils.checkNotNull(query, "query");
-            this.query = Optional.ofNullable(query);
-            return this;
-        }
-
-        /**
-         * Query string to search. eg. email address or name
-         */
-        public Builder query(Optional<String> query) {
-            Utils.checkNotNull(query, "query");
+        public Builder query(@Nullable String query) {
             this.query = query;
             return this;
         }
 
-
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder sort(String sort) {
-            Utils.checkNotNull(sort, "sort");
-            this.sort = Optional.ofNullable(sort);
-            return this;
-        }
-
-        public Builder sort(Optional<String> sort) {
-            Utils.checkNotNull(sort, "sort");
+        public Builder sort(@Nullable String sort) {
             this.sort = sort;
             return this;
         }
 
-
         /**
          * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
          */
-        public Builder startGte(String startGte) {
-            Utils.checkNotNull(startGte, "startGte");
-            this.startGte = Optional.ofNullable(startGte);
-            return this;
-        }
-
-        /**
-         * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-         */
-        public Builder startGte(Optional<String> startGte) {
-            Utils.checkNotNull(startGte, "startGte");
+        public Builder startGte(@Nullable String startGte) {
             this.startGte = startGte;
             return this;
         }
 
-
         /**
          * Return only results whose updated date is equal or greater to this value (ISO-8601 /
          * YYYY-MM-DDTHH:MM:SSZ format)
          */
-        public Builder updatedGte(String updatedGte) {
-            Utils.checkNotNull(updatedGte, "updatedGte");
-            this.updatedGte = Optional.ofNullable(updatedGte);
-            return this;
-        }
-
-        /**
-         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
-         * YYYY-MM-DDTHH:MM:SSZ format)
-         */
-        public Builder updatedGte(Optional<String> updatedGte) {
-            Utils.checkNotNull(updatedGte, "updatedGte");
+        public Builder updatedGte(@Nullable String updatedGte) {
             this.updatedGte = updatedGte;
             return this;
         }
 
         public ListCalendarEventsRequest build() {
-
             return new ListCalendarEventsRequest(
                 calendarId, connectionId, endLt,
                 expand, fields, limit,

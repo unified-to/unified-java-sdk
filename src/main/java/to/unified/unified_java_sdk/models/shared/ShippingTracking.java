@@ -4,14 +4,13 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
@@ -23,105 +22,91 @@ public class ShippingTracking {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actual_delivery_at")
-    private Optional<OffsetDateTime> actualDeliveryAt;
+    private OffsetDateTime actualDeliveryAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carrier_id")
-    private Optional<String> carrierId;
+    private String carrierId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carrier_status_code")
-    private Optional<String> carrierStatusCode;
+    private String carrierStatusCode;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carrier_status_description")
-    private Optional<String> carrierStatusDescription;
+    private String carrierStatusDescription;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimated_delivery")
-    private Optional<OffsetDateTime> estimatedDelivery;
+    private OffsetDateTime estimatedDelivery;
 
     /**
      * Array of tracking events
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("events")
-    private Optional<? extends List<ShippingTrackingEvent>> events;
+    private List<ShippingTrackingEvent> events;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipment_id")
-    private Optional<String> shipmentId;
+    private String shipmentId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
-    private Optional<? extends ShippingTrackingStatus> status;
+    private ShippingTrackingStatus status;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_description")
-    private Optional<String> statusDescription;
+    private String statusDescription;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tracking_number")
-    private Optional<String> trackingNumber;
+    private String trackingNumber;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
     @JsonCreator
     public ShippingTracking(
-            @JsonProperty("actual_delivery_at") Optional<OffsetDateTime> actualDeliveryAt,
-            @JsonProperty("carrier_id") Optional<String> carrierId,
-            @JsonProperty("carrier_status_code") Optional<String> carrierStatusCode,
-            @JsonProperty("carrier_status_description") Optional<String> carrierStatusDescription,
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("estimated_delivery") Optional<OffsetDateTime> estimatedDelivery,
-            @JsonProperty("events") Optional<? extends List<ShippingTrackingEvent>> events,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("shipment_id") Optional<String> shipmentId,
-            @JsonProperty("status") Optional<? extends ShippingTrackingStatus> status,
-            @JsonProperty("status_description") Optional<String> statusDescription,
-            @JsonProperty("tracking_number") Optional<String> trackingNumber,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(actualDeliveryAt, "actualDeliveryAt");
-        Utils.checkNotNull(carrierId, "carrierId");
-        Utils.checkNotNull(carrierStatusCode, "carrierStatusCode");
-        Utils.checkNotNull(carrierStatusDescription, "carrierStatusDescription");
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(estimatedDelivery, "estimatedDelivery");
-        Utils.checkNotNull(events, "events");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(shipmentId, "shipmentId");
-        Utils.checkNotNull(status, "status");
-        Utils.checkNotNull(statusDescription, "statusDescription");
-        Utils.checkNotNull(trackingNumber, "trackingNumber");
-        Utils.checkNotNull(updatedAt, "updatedAt");
+            @JsonProperty("actual_delivery_at") @Nullable OffsetDateTime actualDeliveryAt,
+            @JsonProperty("carrier_id") @Nullable String carrierId,
+            @JsonProperty("carrier_status_code") @Nullable String carrierStatusCode,
+            @JsonProperty("carrier_status_description") @Nullable String carrierStatusDescription,
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("estimated_delivery") @Nullable OffsetDateTime estimatedDelivery,
+            @JsonProperty("events") @Nullable List<ShippingTrackingEvent> events,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("shipment_id") @Nullable String shipmentId,
+            @JsonProperty("status") @Nullable ShippingTrackingStatus status,
+            @JsonProperty("status_description") @Nullable String statusDescription,
+            @JsonProperty("tracking_number") @Nullable String trackingNumber,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.actualDeliveryAt = actualDeliveryAt;
         this.carrierId = carrierId;
         this.carrierStatusCode = carrierStatusCode;
@@ -139,87 +124,70 @@ public class ShippingTracking {
     }
     
     public ShippingTracking() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> actualDeliveryAt() {
-        return actualDeliveryAt;
+        return Optional.ofNullable(this.actualDeliveryAt);
     }
 
-    @JsonIgnore
     public Optional<String> carrierId() {
-        return carrierId;
+        return Optional.ofNullable(this.carrierId);
     }
 
-    @JsonIgnore
     public Optional<String> carrierStatusCode() {
-        return carrierStatusCode;
+        return Optional.ofNullable(this.carrierStatusCode);
     }
 
-    @JsonIgnore
     public Optional<String> carrierStatusDescription() {
-        return carrierStatusDescription;
+        return Optional.ofNullable(this.carrierStatusDescription);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> estimatedDelivery() {
-        return estimatedDelivery;
+        return Optional.ofNullable(this.estimatedDelivery);
     }
 
     /**
      * Array of tracking events
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<ShippingTrackingEvent>> events() {
-        return (Optional<List<ShippingTrackingEvent>>) events;
+        return Optional.ofNullable(this.events);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @JsonIgnore
     public Optional<String> shipmentId() {
-        return shipmentId;
+        return Optional.ofNullable(this.shipmentId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ShippingTrackingStatus> status() {
-        return (Optional<ShippingTrackingStatus>) status;
+        return Optional.ofNullable(this.status);
     }
 
-    @JsonIgnore
     public Optional<String> statusDescription() {
-        return statusDescription;
+        return Optional.ofNullable(this.statusDescription);
     }
 
-    @JsonIgnore
     public Optional<String> trackingNumber() {
-        return trackingNumber;
+        return Optional.ofNullable(this.trackingNumber);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
     public static Builder builder() {
@@ -227,193 +195,92 @@ public class ShippingTracking {
     }
 
 
-    public ShippingTracking withActualDeliveryAt(OffsetDateTime actualDeliveryAt) {
-        Utils.checkNotNull(actualDeliveryAt, "actualDeliveryAt");
-        this.actualDeliveryAt = Optional.ofNullable(actualDeliveryAt);
-        return this;
-    }
-
-
-    public ShippingTracking withActualDeliveryAt(Optional<OffsetDateTime> actualDeliveryAt) {
-        Utils.checkNotNull(actualDeliveryAt, "actualDeliveryAt");
+    public ShippingTracking withActualDeliveryAt(@Nullable OffsetDateTime actualDeliveryAt) {
         this.actualDeliveryAt = actualDeliveryAt;
         return this;
     }
 
-    public ShippingTracking withCarrierId(String carrierId) {
-        Utils.checkNotNull(carrierId, "carrierId");
-        this.carrierId = Optional.ofNullable(carrierId);
-        return this;
-    }
 
-
-    public ShippingTracking withCarrierId(Optional<String> carrierId) {
-        Utils.checkNotNull(carrierId, "carrierId");
+    public ShippingTracking withCarrierId(@Nullable String carrierId) {
         this.carrierId = carrierId;
         return this;
     }
 
-    public ShippingTracking withCarrierStatusCode(String carrierStatusCode) {
-        Utils.checkNotNull(carrierStatusCode, "carrierStatusCode");
-        this.carrierStatusCode = Optional.ofNullable(carrierStatusCode);
-        return this;
-    }
 
-
-    public ShippingTracking withCarrierStatusCode(Optional<String> carrierStatusCode) {
-        Utils.checkNotNull(carrierStatusCode, "carrierStatusCode");
+    public ShippingTracking withCarrierStatusCode(@Nullable String carrierStatusCode) {
         this.carrierStatusCode = carrierStatusCode;
         return this;
     }
 
-    public ShippingTracking withCarrierStatusDescription(String carrierStatusDescription) {
-        Utils.checkNotNull(carrierStatusDescription, "carrierStatusDescription");
-        this.carrierStatusDescription = Optional.ofNullable(carrierStatusDescription);
-        return this;
-    }
 
-
-    public ShippingTracking withCarrierStatusDescription(Optional<String> carrierStatusDescription) {
-        Utils.checkNotNull(carrierStatusDescription, "carrierStatusDescription");
+    public ShippingTracking withCarrierStatusDescription(@Nullable String carrierStatusDescription) {
         this.carrierStatusDescription = carrierStatusDescription;
         return this;
     }
 
-    public ShippingTracking withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
 
-
-    public ShippingTracking withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public ShippingTracking withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public ShippingTracking withEstimatedDelivery(OffsetDateTime estimatedDelivery) {
-        Utils.checkNotNull(estimatedDelivery, "estimatedDelivery");
-        this.estimatedDelivery = Optional.ofNullable(estimatedDelivery);
-        return this;
-    }
 
-
-    public ShippingTracking withEstimatedDelivery(Optional<OffsetDateTime> estimatedDelivery) {
-        Utils.checkNotNull(estimatedDelivery, "estimatedDelivery");
+    public ShippingTracking withEstimatedDelivery(@Nullable OffsetDateTime estimatedDelivery) {
         this.estimatedDelivery = estimatedDelivery;
         return this;
     }
 
-    /**
-     * Array of tracking events
-     */
-    public ShippingTracking withEvents(List<ShippingTrackingEvent> events) {
-        Utils.checkNotNull(events, "events");
-        this.events = Optional.ofNullable(events);
-        return this;
-    }
-
 
     /**
      * Array of tracking events
      */
-    public ShippingTracking withEvents(Optional<? extends List<ShippingTrackingEvent>> events) {
-        Utils.checkNotNull(events, "events");
+    public ShippingTracking withEvents(@Nullable List<ShippingTrackingEvent> events) {
         this.events = events;
         return this;
     }
 
-    public ShippingTracking withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public ShippingTracking withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public ShippingTracking withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public ShippingTracking withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public ShippingTracking withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public ShippingTracking withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public ShippingTracking withShipmentId(String shipmentId) {
-        Utils.checkNotNull(shipmentId, "shipmentId");
-        this.shipmentId = Optional.ofNullable(shipmentId);
-        return this;
-    }
 
-
-    public ShippingTracking withShipmentId(Optional<String> shipmentId) {
-        Utils.checkNotNull(shipmentId, "shipmentId");
+    public ShippingTracking withShipmentId(@Nullable String shipmentId) {
         this.shipmentId = shipmentId;
         return this;
     }
 
-    public ShippingTracking withStatus(ShippingTrackingStatus status) {
-        Utils.checkNotNull(status, "status");
-        this.status = Optional.ofNullable(status);
-        return this;
-    }
 
-
-    public ShippingTracking withStatus(Optional<? extends ShippingTrackingStatus> status) {
-        Utils.checkNotNull(status, "status");
+    public ShippingTracking withStatus(@Nullable ShippingTrackingStatus status) {
         this.status = status;
         return this;
     }
 
-    public ShippingTracking withStatusDescription(String statusDescription) {
-        Utils.checkNotNull(statusDescription, "statusDescription");
-        this.statusDescription = Optional.ofNullable(statusDescription);
-        return this;
-    }
 
-
-    public ShippingTracking withStatusDescription(Optional<String> statusDescription) {
-        Utils.checkNotNull(statusDescription, "statusDescription");
+    public ShippingTracking withStatusDescription(@Nullable String statusDescription) {
         this.statusDescription = statusDescription;
         return this;
     }
 
-    public ShippingTracking withTrackingNumber(String trackingNumber) {
-        Utils.checkNotNull(trackingNumber, "trackingNumber");
-        this.trackingNumber = Optional.ofNullable(trackingNumber);
-        return this;
-    }
 
-
-    public ShippingTracking withTrackingNumber(Optional<String> trackingNumber) {
-        Utils.checkNotNull(trackingNumber, "trackingNumber");
+    public ShippingTracking withTrackingNumber(@Nullable String trackingNumber) {
         this.trackingNumber = trackingNumber;
         return this;
     }
 
-    public ShippingTracking withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public ShippingTracking withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public ShippingTracking withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -473,228 +340,112 @@ public class ShippingTracking {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<OffsetDateTime> actualDeliveryAt = Optional.empty();
+        private OffsetDateTime actualDeliveryAt;
 
-        private Optional<String> carrierId = Optional.empty();
+        private String carrierId;
 
-        private Optional<String> carrierStatusCode = Optional.empty();
+        private String carrierStatusCode;
 
-        private Optional<String> carrierStatusDescription = Optional.empty();
+        private String carrierStatusDescription;
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<OffsetDateTime> estimatedDelivery = Optional.empty();
+        private OffsetDateTime estimatedDelivery;
 
-        private Optional<? extends List<ShippingTrackingEvent>> events = Optional.empty();
+        private List<ShippingTrackingEvent> events;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<String> shipmentId = Optional.empty();
+        private String shipmentId;
 
-        private Optional<? extends ShippingTrackingStatus> status = Optional.empty();
+        private ShippingTrackingStatus status;
 
-        private Optional<String> statusDescription = Optional.empty();
+        private String statusDescription;
 
-        private Optional<String> trackingNumber = Optional.empty();
+        private String trackingNumber;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder actualDeliveryAt(OffsetDateTime actualDeliveryAt) {
-            Utils.checkNotNull(actualDeliveryAt, "actualDeliveryAt");
-            this.actualDeliveryAt = Optional.ofNullable(actualDeliveryAt);
-            return this;
-        }
-
-        public Builder actualDeliveryAt(Optional<OffsetDateTime> actualDeliveryAt) {
-            Utils.checkNotNull(actualDeliveryAt, "actualDeliveryAt");
+        public Builder actualDeliveryAt(@Nullable OffsetDateTime actualDeliveryAt) {
             this.actualDeliveryAt = actualDeliveryAt;
             return this;
         }
 
-
-        public Builder carrierId(String carrierId) {
-            Utils.checkNotNull(carrierId, "carrierId");
-            this.carrierId = Optional.ofNullable(carrierId);
-            return this;
-        }
-
-        public Builder carrierId(Optional<String> carrierId) {
-            Utils.checkNotNull(carrierId, "carrierId");
+        public Builder carrierId(@Nullable String carrierId) {
             this.carrierId = carrierId;
             return this;
         }
 
-
-        public Builder carrierStatusCode(String carrierStatusCode) {
-            Utils.checkNotNull(carrierStatusCode, "carrierStatusCode");
-            this.carrierStatusCode = Optional.ofNullable(carrierStatusCode);
-            return this;
-        }
-
-        public Builder carrierStatusCode(Optional<String> carrierStatusCode) {
-            Utils.checkNotNull(carrierStatusCode, "carrierStatusCode");
+        public Builder carrierStatusCode(@Nullable String carrierStatusCode) {
             this.carrierStatusCode = carrierStatusCode;
             return this;
         }
 
-
-        public Builder carrierStatusDescription(String carrierStatusDescription) {
-            Utils.checkNotNull(carrierStatusDescription, "carrierStatusDescription");
-            this.carrierStatusDescription = Optional.ofNullable(carrierStatusDescription);
-            return this;
-        }
-
-        public Builder carrierStatusDescription(Optional<String> carrierStatusDescription) {
-            Utils.checkNotNull(carrierStatusDescription, "carrierStatusDescription");
+        public Builder carrierStatusDescription(@Nullable String carrierStatusDescription) {
             this.carrierStatusDescription = carrierStatusDescription;
             return this;
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder estimatedDelivery(OffsetDateTime estimatedDelivery) {
-            Utils.checkNotNull(estimatedDelivery, "estimatedDelivery");
-            this.estimatedDelivery = Optional.ofNullable(estimatedDelivery);
-            return this;
-        }
-
-        public Builder estimatedDelivery(Optional<OffsetDateTime> estimatedDelivery) {
-            Utils.checkNotNull(estimatedDelivery, "estimatedDelivery");
+        public Builder estimatedDelivery(@Nullable OffsetDateTime estimatedDelivery) {
             this.estimatedDelivery = estimatedDelivery;
             return this;
         }
 
-
         /**
          * Array of tracking events
          */
-        public Builder events(List<ShippingTrackingEvent> events) {
-            Utils.checkNotNull(events, "events");
-            this.events = Optional.ofNullable(events);
-            return this;
-        }
-
-        /**
-         * Array of tracking events
-         */
-        public Builder events(Optional<? extends List<ShippingTrackingEvent>> events) {
-            Utils.checkNotNull(events, "events");
+        public Builder events(@Nullable List<ShippingTrackingEvent> events) {
             this.events = events;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder shipmentId(String shipmentId) {
-            Utils.checkNotNull(shipmentId, "shipmentId");
-            this.shipmentId = Optional.ofNullable(shipmentId);
-            return this;
-        }
-
-        public Builder shipmentId(Optional<String> shipmentId) {
-            Utils.checkNotNull(shipmentId, "shipmentId");
+        public Builder shipmentId(@Nullable String shipmentId) {
             this.shipmentId = shipmentId;
             return this;
         }
 
-
-        public Builder status(ShippingTrackingStatus status) {
-            Utils.checkNotNull(status, "status");
-            this.status = Optional.ofNullable(status);
-            return this;
-        }
-
-        public Builder status(Optional<? extends ShippingTrackingStatus> status) {
-            Utils.checkNotNull(status, "status");
+        public Builder status(@Nullable ShippingTrackingStatus status) {
             this.status = status;
             return this;
         }
 
-
-        public Builder statusDescription(String statusDescription) {
-            Utils.checkNotNull(statusDescription, "statusDescription");
-            this.statusDescription = Optional.ofNullable(statusDescription);
-            return this;
-        }
-
-        public Builder statusDescription(Optional<String> statusDescription) {
-            Utils.checkNotNull(statusDescription, "statusDescription");
+        public Builder statusDescription(@Nullable String statusDescription) {
             this.statusDescription = statusDescription;
             return this;
         }
 
-
-        public Builder trackingNumber(String trackingNumber) {
-            Utils.checkNotNull(trackingNumber, "trackingNumber");
-            this.trackingNumber = Optional.ofNullable(trackingNumber);
-            return this;
-        }
-
-        public Builder trackingNumber(Optional<String> trackingNumber) {
-            Utils.checkNotNull(trackingNumber, "trackingNumber");
+        public Builder trackingNumber(@Nullable String trackingNumber) {
             this.trackingNumber = trackingNumber;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
         public ShippingTracking build() {
-
             return new ShippingTracking(
                 actualDeliveryAt, carrierId, carrierStatusCode,
                 carrierStatusDescription, createdAt, estimatedDelivery,

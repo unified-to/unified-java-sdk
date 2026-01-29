@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateShippingShipmentRequest;
 import to.unified.unified_java_sdk.models.operations.GetShippingShipmentRequest;
@@ -68,7 +69,7 @@ public class AsyncShipment {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateShippingShipmentResponse>} - The async response
      */
-    public CompletableFuture<CreateShippingShipmentResponse> createShippingShipment(CreateShippingShipmentRequest request) {
+    public CompletableFuture<CreateShippingShipmentResponse> createShippingShipment(@Nonnull CreateShippingShipmentRequest request) {
         AsyncRequestOperation<CreateShippingShipmentRequest, CreateShippingShipmentResponse> operation
               = new CreateShippingShipment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -91,7 +92,7 @@ public class AsyncShipment {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetShippingShipmentResponse>} - The async response
      */
-    public CompletableFuture<GetShippingShipmentResponse> getShippingShipment(GetShippingShipmentRequest request) {
+    public CompletableFuture<GetShippingShipmentResponse> getShippingShipment(@Nonnull GetShippingShipmentRequest request) {
         AsyncRequestOperation<GetShippingShipmentRequest, GetShippingShipmentResponse> operation
               = new GetShippingShipment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -114,7 +115,7 @@ public class AsyncShipment {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListShippingShipmentsResponse>} - The async response
      */
-    public CompletableFuture<ListShippingShipmentsResponse> listShippingShipments(ListShippingShipmentsRequest request) {
+    public CompletableFuture<ListShippingShipmentsResponse> listShippingShipments(@Nonnull ListShippingShipmentsRequest request) {
         AsyncRequestOperation<ListShippingShipmentsRequest, ListShippingShipmentsResponse> operation
               = new ListShippingShipments.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -137,7 +138,7 @@ public class AsyncShipment {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchShippingShipmentResponse>} - The async response
      */
-    public CompletableFuture<PatchShippingShipmentResponse> patchShippingShipment(PatchShippingShipmentRequest request) {
+    public CompletableFuture<PatchShippingShipmentResponse> patchShippingShipment(@Nonnull PatchShippingShipmentRequest request) {
         AsyncRequestOperation<PatchShippingShipmentRequest, PatchShippingShipmentResponse> operation
               = new PatchShippingShipment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -160,7 +161,7 @@ public class AsyncShipment {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveShippingShipmentResponse>} - The async response
      */
-    public CompletableFuture<RemoveShippingShipmentResponse> removeShippingShipment(RemoveShippingShipmentRequest request) {
+    public CompletableFuture<RemoveShippingShipmentResponse> removeShippingShipment(@Nonnull RemoveShippingShipmentRequest request) {
         AsyncRequestOperation<RemoveShippingShipmentRequest, RemoveShippingShipmentResponse> operation
               = new RemoveShippingShipment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -183,7 +184,7 @@ public class AsyncShipment {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateShippingShipmentResponse>} - The async response
      */
-    public CompletableFuture<UpdateShippingShipmentResponse> updateShippingShipment(UpdateShippingShipmentRequest request) {
+    public CompletableFuture<UpdateShippingShipmentResponse> updateShippingShipment(@Nonnull UpdateShippingShipmentRequest request) {
         AsyncRequestOperation<UpdateShippingShipmentRequest, UpdateShippingShipmentResponse> operation
               = new UpdateShippingShipment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

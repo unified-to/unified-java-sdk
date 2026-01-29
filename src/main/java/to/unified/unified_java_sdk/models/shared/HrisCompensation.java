@@ -4,14 +4,13 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -20,40 +19,35 @@ public class HrisCompensation {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
-    private Optional<Double> amount;
+    private Double amount;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
-    private Optional<String> currency;
+    private String currency;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("frequency")
-    private Optional<? extends HrisCompensationFrequency> frequency;
+    private HrisCompensationFrequency frequency;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group_id")
-    private Optional<String> groupId;
+    private String groupId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
-    private Optional<? extends HrisCompensationType> type;
+    private HrisCompensationType type;
 
     @JsonCreator
     public HrisCompensation(
-            @JsonProperty("amount") Optional<Double> amount,
-            @JsonProperty("currency") Optional<String> currency,
-            @JsonProperty("frequency") Optional<? extends HrisCompensationFrequency> frequency,
-            @JsonProperty("group_id") Optional<String> groupId,
-            @JsonProperty("type") Optional<? extends HrisCompensationType> type) {
-        Utils.checkNotNull(amount, "amount");
-        Utils.checkNotNull(currency, "currency");
-        Utils.checkNotNull(frequency, "frequency");
-        Utils.checkNotNull(groupId, "groupId");
-        Utils.checkNotNull(type, "type");
+            @JsonProperty("amount") @Nullable Double amount,
+            @JsonProperty("currency") @Nullable String currency,
+            @JsonProperty("frequency") @Nullable HrisCompensationFrequency frequency,
+            @JsonProperty("group_id") @Nullable String groupId,
+            @JsonProperty("type") @Nullable HrisCompensationType type) {
         this.amount = amount;
         this.currency = currency;
         this.frequency = frequency;
@@ -62,35 +56,28 @@ public class HrisCompensation {
     }
     
     public HrisCompensation() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null);
     }
 
-    @JsonIgnore
     public Optional<Double> amount() {
-        return amount;
+        return Optional.ofNullable(this.amount);
     }
 
-    @JsonIgnore
     public Optional<String> currency() {
-        return currency;
+        return Optional.ofNullable(this.currency);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<HrisCompensationFrequency> frequency() {
-        return (Optional<HrisCompensationFrequency>) frequency;
+        return Optional.ofNullable(this.frequency);
     }
 
-    @JsonIgnore
     public Optional<String> groupId() {
-        return groupId;
+        return Optional.ofNullable(this.groupId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<HrisCompensationType> type() {
-        return (Optional<HrisCompensationType>) type;
+        return Optional.ofNullable(this.type);
     }
 
     public static Builder builder() {
@@ -98,70 +85,35 @@ public class HrisCompensation {
     }
 
 
-    public HrisCompensation withAmount(double amount) {
-        Utils.checkNotNull(amount, "amount");
-        this.amount = Optional.ofNullable(amount);
-        return this;
-    }
-
-
-    public HrisCompensation withAmount(Optional<Double> amount) {
-        Utils.checkNotNull(amount, "amount");
+    public HrisCompensation withAmount(@Nullable Double amount) {
         this.amount = amount;
         return this;
     }
 
-    public HrisCompensation withCurrency(String currency) {
-        Utils.checkNotNull(currency, "currency");
-        this.currency = Optional.ofNullable(currency);
-        return this;
-    }
 
-
-    public HrisCompensation withCurrency(Optional<String> currency) {
-        Utils.checkNotNull(currency, "currency");
+    public HrisCompensation withCurrency(@Nullable String currency) {
         this.currency = currency;
         return this;
     }
 
-    public HrisCompensation withFrequency(HrisCompensationFrequency frequency) {
-        Utils.checkNotNull(frequency, "frequency");
-        this.frequency = Optional.ofNullable(frequency);
-        return this;
-    }
 
-
-    public HrisCompensation withFrequency(Optional<? extends HrisCompensationFrequency> frequency) {
-        Utils.checkNotNull(frequency, "frequency");
+    public HrisCompensation withFrequency(@Nullable HrisCompensationFrequency frequency) {
         this.frequency = frequency;
         return this;
     }
 
-    public HrisCompensation withGroupId(String groupId) {
-        Utils.checkNotNull(groupId, "groupId");
-        this.groupId = Optional.ofNullable(groupId);
-        return this;
-    }
 
-
-    public HrisCompensation withGroupId(Optional<String> groupId) {
-        Utils.checkNotNull(groupId, "groupId");
+    public HrisCompensation withGroupId(@Nullable String groupId) {
         this.groupId = groupId;
         return this;
     }
 
-    public HrisCompensation withType(HrisCompensationType type) {
-        Utils.checkNotNull(type, "type");
-        this.type = Optional.ofNullable(type);
-        return this;
-    }
 
-
-    public HrisCompensation withType(Optional<? extends HrisCompensationType> type) {
-        Utils.checkNotNull(type, "type");
+    public HrisCompensation withType(@Nullable HrisCompensationType type) {
         this.type = type;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -200,87 +152,46 @@ public class HrisCompensation {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<Double> amount = Optional.empty();
+        private Double amount;
 
-        private Optional<String> currency = Optional.empty();
+        private String currency;
 
-        private Optional<? extends HrisCompensationFrequency> frequency = Optional.empty();
+        private HrisCompensationFrequency frequency;
 
-        private Optional<String> groupId = Optional.empty();
+        private String groupId;
 
-        private Optional<? extends HrisCompensationType> type = Optional.empty();
+        private HrisCompensationType type;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder amount(double amount) {
-            Utils.checkNotNull(amount, "amount");
-            this.amount = Optional.ofNullable(amount);
-            return this;
-        }
-
-        public Builder amount(Optional<Double> amount) {
-            Utils.checkNotNull(amount, "amount");
+        public Builder amount(@Nullable Double amount) {
             this.amount = amount;
             return this;
         }
 
-
-        public Builder currency(String currency) {
-            Utils.checkNotNull(currency, "currency");
-            this.currency = Optional.ofNullable(currency);
-            return this;
-        }
-
-        public Builder currency(Optional<String> currency) {
-            Utils.checkNotNull(currency, "currency");
+        public Builder currency(@Nullable String currency) {
             this.currency = currency;
             return this;
         }
 
-
-        public Builder frequency(HrisCompensationFrequency frequency) {
-            Utils.checkNotNull(frequency, "frequency");
-            this.frequency = Optional.ofNullable(frequency);
-            return this;
-        }
-
-        public Builder frequency(Optional<? extends HrisCompensationFrequency> frequency) {
-            Utils.checkNotNull(frequency, "frequency");
+        public Builder frequency(@Nullable HrisCompensationFrequency frequency) {
             this.frequency = frequency;
             return this;
         }
 
-
-        public Builder groupId(String groupId) {
-            Utils.checkNotNull(groupId, "groupId");
-            this.groupId = Optional.ofNullable(groupId);
-            return this;
-        }
-
-        public Builder groupId(Optional<String> groupId) {
-            Utils.checkNotNull(groupId, "groupId");
+        public Builder groupId(@Nullable String groupId) {
             this.groupId = groupId;
             return this;
         }
 
-
-        public Builder type(HrisCompensationType type) {
-            Utils.checkNotNull(type, "type");
-            this.type = Optional.ofNullable(type);
-            return this;
-        }
-
-        public Builder type(Optional<? extends HrisCompensationType> type) {
-            Utils.checkNotNull(type, "type");
+        public Builder type(@Nullable HrisCompensationType type) {
             this.type = type;
             return this;
         }
 
         public HrisCompensation build() {
-
             return new HrisCompensation(
                 amount, currency, frequency,
                 groupId, type);

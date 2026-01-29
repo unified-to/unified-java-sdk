@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateKmsCommentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateKmsCommentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateKmsCommentResponse;
@@ -115,7 +116,7 @@ public class Comment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateKmsCommentResponse createKmsComment(CreateKmsCommentRequest request) {
+    public CreateKmsCommentResponse createKmsComment(@Nonnull CreateKmsCommentRequest request) {
         RequestOperation<CreateKmsCommentRequest, CreateKmsCommentResponse> operation
               = new CreateKmsComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -137,7 +138,7 @@ public class Comment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateTaskCommentResponse createTaskComment(CreateTaskCommentRequest request) {
+    public CreateTaskCommentResponse createTaskComment(@Nonnull CreateTaskCommentRequest request) {
         RequestOperation<CreateTaskCommentRequest, CreateTaskCommentResponse> operation
               = new CreateTaskComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -159,7 +160,7 @@ public class Comment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateUcCommentResponse createUcComment(CreateUcCommentRequest request) {
+    public CreateUcCommentResponse createUcComment(@Nonnull CreateUcCommentRequest request) {
         RequestOperation<CreateUcCommentRequest, CreateUcCommentResponse> operation
               = new CreateUcComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -181,7 +182,7 @@ public class Comment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetKmsCommentResponse getKmsComment(GetKmsCommentRequest request) {
+    public GetKmsCommentResponse getKmsComment(@Nonnull GetKmsCommentRequest request) {
         RequestOperation<GetKmsCommentRequest, GetKmsCommentResponse> operation
               = new GetKmsComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -203,7 +204,7 @@ public class Comment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetTaskCommentResponse getTaskComment(GetTaskCommentRequest request) {
+    public GetTaskCommentResponse getTaskComment(@Nonnull GetTaskCommentRequest request) {
         RequestOperation<GetTaskCommentRequest, GetTaskCommentResponse> operation
               = new GetTaskComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -225,7 +226,7 @@ public class Comment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetUcCommentResponse getUcComment(GetUcCommentRequest request) {
+    public GetUcCommentResponse getUcComment(@Nonnull GetUcCommentRequest request) {
         RequestOperation<GetUcCommentRequest, GetUcCommentResponse> operation
               = new GetUcComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -247,7 +248,7 @@ public class Comment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListKmsCommentsResponse listKmsComments(ListKmsCommentsRequest request) {
+    public ListKmsCommentsResponse listKmsComments(@Nonnull ListKmsCommentsRequest request) {
         RequestOperation<ListKmsCommentsRequest, ListKmsCommentsResponse> operation
               = new ListKmsComments.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -269,7 +270,7 @@ public class Comment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListTaskCommentsResponse listTaskComments(ListTaskCommentsRequest request) {
+    public ListTaskCommentsResponse listTaskComments(@Nonnull ListTaskCommentsRequest request) {
         RequestOperation<ListTaskCommentsRequest, ListTaskCommentsResponse> operation
               = new ListTaskComments.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -291,7 +292,7 @@ public class Comment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListUcCommentsResponse listUcComments(ListUcCommentsRequest request) {
+    public ListUcCommentsResponse listUcComments(@Nonnull ListUcCommentsRequest request) {
         RequestOperation<ListUcCommentsRequest, ListUcCommentsResponse> operation
               = new ListUcComments.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -313,7 +314,7 @@ public class Comment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchKmsCommentResponse patchKmsComment(PatchKmsCommentRequest request) {
+    public PatchKmsCommentResponse patchKmsComment(@Nonnull PatchKmsCommentRequest request) {
         RequestOperation<PatchKmsCommentRequest, PatchKmsCommentResponse> operation
               = new PatchKmsComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -335,7 +336,7 @@ public class Comment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchTaskCommentResponse patchTaskComment(PatchTaskCommentRequest request) {
+    public PatchTaskCommentResponse patchTaskComment(@Nonnull PatchTaskCommentRequest request) {
         RequestOperation<PatchTaskCommentRequest, PatchTaskCommentResponse> operation
               = new PatchTaskComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -357,7 +358,7 @@ public class Comment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchUcCommentResponse patchUcComment(PatchUcCommentRequest request) {
+    public PatchUcCommentResponse patchUcComment(@Nonnull PatchUcCommentRequest request) {
         RequestOperation<PatchUcCommentRequest, PatchUcCommentResponse> operation
               = new PatchUcComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -379,7 +380,7 @@ public class Comment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveKmsCommentResponse removeKmsComment(RemoveKmsCommentRequest request) {
+    public RemoveKmsCommentResponse removeKmsComment(@Nonnull RemoveKmsCommentRequest request) {
         RequestOperation<RemoveKmsCommentRequest, RemoveKmsCommentResponse> operation
               = new RemoveKmsComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -401,7 +402,7 @@ public class Comment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveTaskCommentResponse removeTaskComment(RemoveTaskCommentRequest request) {
+    public RemoveTaskCommentResponse removeTaskComment(@Nonnull RemoveTaskCommentRequest request) {
         RequestOperation<RemoveTaskCommentRequest, RemoveTaskCommentResponse> operation
               = new RemoveTaskComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -423,7 +424,7 @@ public class Comment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveUcCommentResponse removeUcComment(RemoveUcCommentRequest request) {
+    public RemoveUcCommentResponse removeUcComment(@Nonnull RemoveUcCommentRequest request) {
         RequestOperation<RemoveUcCommentRequest, RemoveUcCommentResponse> operation
               = new RemoveUcComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -445,7 +446,7 @@ public class Comment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateKmsCommentResponse updateKmsComment(UpdateKmsCommentRequest request) {
+    public UpdateKmsCommentResponse updateKmsComment(@Nonnull UpdateKmsCommentRequest request) {
         RequestOperation<UpdateKmsCommentRequest, UpdateKmsCommentResponse> operation
               = new UpdateKmsComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -467,7 +468,7 @@ public class Comment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateTaskCommentResponse updateTaskComment(UpdateTaskCommentRequest request) {
+    public UpdateTaskCommentResponse updateTaskComment(@Nonnull UpdateTaskCommentRequest request) {
         RequestOperation<UpdateTaskCommentRequest, UpdateTaskCommentResponse> operation
               = new UpdateTaskComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -489,7 +490,7 @@ public class Comment {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateUcCommentResponse updateUcComment(UpdateUcCommentRequest request) {
+    public UpdateUcCommentResponse updateUcComment(@Nonnull UpdateUcCommentRequest request) {
         RequestOperation<UpdateUcCommentRequest, UpdateUcCommentResponse> operation
               = new UpdateUcComment.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

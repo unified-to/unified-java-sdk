@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateMessagingMessageRequest;
 import to.unified.unified_java_sdk.models.operations.CreateMessagingMessageRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateMessagingMessageResponse;
@@ -83,7 +84,7 @@ public class Messaging {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateMessagingMessageResponse createMessagingMessage(CreateMessagingMessageRequest request) {
+    public CreateMessagingMessageResponse createMessagingMessage(@Nonnull CreateMessagingMessageRequest request) {
         RequestOperation<CreateMessagingMessageRequest, CreateMessagingMessageResponse> operation
               = new CreateMessagingMessage.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -105,7 +106,7 @@ public class Messaging {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetMessagingChannelResponse getMessagingChannel(GetMessagingChannelRequest request) {
+    public GetMessagingChannelResponse getMessagingChannel(@Nonnull GetMessagingChannelRequest request) {
         RequestOperation<GetMessagingChannelRequest, GetMessagingChannelResponse> operation
               = new GetMessagingChannel.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -127,7 +128,7 @@ public class Messaging {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetMessagingMessageResponse getMessagingMessage(GetMessagingMessageRequest request) {
+    public GetMessagingMessageResponse getMessagingMessage(@Nonnull GetMessagingMessageRequest request) {
         RequestOperation<GetMessagingMessageRequest, GetMessagingMessageResponse> operation
               = new GetMessagingMessage.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -149,7 +150,7 @@ public class Messaging {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListMessagingChannelsResponse listMessagingChannels(ListMessagingChannelsRequest request) {
+    public ListMessagingChannelsResponse listMessagingChannels(@Nonnull ListMessagingChannelsRequest request) {
         RequestOperation<ListMessagingChannelsRequest, ListMessagingChannelsResponse> operation
               = new ListMessagingChannels.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -171,7 +172,7 @@ public class Messaging {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListMessagingMessagesResponse listMessagingMessages(ListMessagingMessagesRequest request) {
+    public ListMessagingMessagesResponse listMessagingMessages(@Nonnull ListMessagingMessagesRequest request) {
         RequestOperation<ListMessagingMessagesRequest, ListMessagingMessagesResponse> operation
               = new ListMessagingMessages.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -193,7 +194,7 @@ public class Messaging {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchMessagingEventResponse patchMessagingEvent(PatchMessagingEventRequest request) {
+    public PatchMessagingEventResponse patchMessagingEvent(@Nonnull PatchMessagingEventRequest request) {
         RequestOperation<PatchMessagingEventRequest, PatchMessagingEventResponse> operation
               = new PatchMessagingEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -215,7 +216,7 @@ public class Messaging {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchMessagingMessageResponse patchMessagingMessage(PatchMessagingMessageRequest request) {
+    public PatchMessagingMessageResponse patchMessagingMessage(@Nonnull PatchMessagingMessageRequest request) {
         RequestOperation<PatchMessagingMessageRequest, PatchMessagingMessageResponse> operation
               = new PatchMessagingMessage.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -237,7 +238,7 @@ public class Messaging {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveMessagingMessageResponse removeMessagingMessage(RemoveMessagingMessageRequest request) {
+    public RemoveMessagingMessageResponse removeMessagingMessage(@Nonnull RemoveMessagingMessageRequest request) {
         RequestOperation<RemoveMessagingMessageRequest, RemoveMessagingMessageResponse> operation
               = new RemoveMessagingMessage.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -259,7 +260,7 @@ public class Messaging {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateMessagingEventResponse updateMessagingEvent(UpdateMessagingEventRequest request) {
+    public UpdateMessagingEventResponse updateMessagingEvent(@Nonnull UpdateMessagingEventRequest request) {
         RequestOperation<UpdateMessagingEventRequest, UpdateMessagingEventResponse> operation
               = new UpdateMessagingEvent.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -281,7 +282,7 @@ public class Messaging {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateMessagingMessageResponse updateMessagingMessage(UpdateMessagingMessageRequest request) {
+    public UpdateMessagingMessageResponse updateMessagingMessage(@Nonnull UpdateMessagingMessageRequest request) {
         RequestOperation<UpdateMessagingMessageRequest, UpdateMessagingMessageResponse> operation
               = new UpdateMessagingMessage.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

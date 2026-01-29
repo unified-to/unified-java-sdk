@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.CrmContact;
@@ -32,7 +32,7 @@ public class UpdateCrmContactRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<UpdateCrmContactQueryParamFields>> fields;
+    private List<UpdateCrmContactQueryParamFields> fields;
 
     /**
      * ID of the Contact
@@ -46,66 +46,59 @@ public class UpdateCrmContactRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
     @JsonCreator
     public UpdateCrmContactRequest(
-            CrmContact crmContact,
-            String connectionId,
-            Optional<? extends List<UpdateCrmContactQueryParamFields>> fields,
-            String id,
-            Optional<String> raw) {
-        Utils.checkNotNull(crmContact, "crmContact");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(raw, "raw");
-        this.crmContact = crmContact;
-        this.connectionId = connectionId;
+            @Nonnull CrmContact crmContact,
+            @Nonnull String connectionId,
+            @Nullable List<UpdateCrmContactQueryParamFields> fields,
+            @Nonnull String id,
+            @Nullable String raw) {
+        this.crmContact = Optional.ofNullable(crmContact)
+            .orElseThrow(() -> new IllegalArgumentException("crmContact cannot be null"));
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
-        this.id = id;
+        this.id = Optional.ofNullable(id)
+            .orElseThrow(() -> new IllegalArgumentException("id cannot be null"));
         this.raw = raw;
     }
     
     public UpdateCrmContactRequest(
-            CrmContact crmContact,
-            String connectionId,
-            String id) {
-        this(crmContact, connectionId, Optional.empty(),
-            id, Optional.empty());
+            @Nonnull CrmContact crmContact,
+            @Nonnull String connectionId,
+            @Nonnull String id) {
+        this(crmContact, connectionId, null,
+            id, null);
     }
 
     /**
      * A contact represents a person that optionally is associated with a deal and/or a company
      */
-    @JsonIgnore
     public CrmContact crmContact() {
-        return crmContact;
+        return this.crmContact;
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<UpdateCrmContactQueryParamFields>> fields() {
-        return (Optional<List<UpdateCrmContactQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
      * ID of the Contact
      */
-    @JsonIgnore
     public String id() {
-        return id;
+        return this.id;
     }
 
     /**
@@ -113,9 +106,8 @@ public class UpdateCrmContactRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
     public static Builder builder() {
@@ -126,27 +118,17 @@ public class UpdateCrmContactRequest {
     /**
      * A contact represents a person that optionally is associated with a deal and/or a company
      */
-    public UpdateCrmContactRequest withCrmContact(CrmContact crmContact) {
-        Utils.checkNotNull(crmContact, "crmContact");
-        this.crmContact = crmContact;
+    public UpdateCrmContactRequest withCrmContact(@Nonnull CrmContact crmContact) {
+        this.crmContact = Utils.checkNotNull(crmContact, "crmContact");
         return this;
     }
+
 
     /**
      * ID of the connection
      */
-    public UpdateCrmContactRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public UpdateCrmContactRequest withFields(List<UpdateCrmContactQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public UpdateCrmContactRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -154,29 +136,17 @@ public class UpdateCrmContactRequest {
     /**
      * Fields to return
      */
-    public UpdateCrmContactRequest withFields(Optional<? extends List<UpdateCrmContactQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public UpdateCrmContactRequest withFields(@Nullable List<UpdateCrmContactQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
+
     /**
      * ID of the Contact
      */
-    public UpdateCrmContactRequest withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = id;
-        return this;
-    }
-
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public UpdateCrmContactRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
+    public UpdateCrmContactRequest withId(@Nonnull String id) {
+        this.id = Utils.checkNotNull(id, "id");
         return this;
     }
 
@@ -186,11 +156,11 @@ public class UpdateCrmContactRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public UpdateCrmContactRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public UpdateCrmContactRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -233,74 +203,45 @@ public class UpdateCrmContactRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<UpdateCrmContactQueryParamFields>> fields = Optional.empty();
+        private List<UpdateCrmContactQueryParamFields> fields;
 
         private String id;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
         /**
          * A contact represents a person that optionally is associated with a deal and/or a company
          */
-        public Builder crmContact(CrmContact crmContact) {
-            Utils.checkNotNull(crmContact, "crmContact");
-            this.crmContact = crmContact;
+        public Builder crmContact(@Nonnull CrmContact crmContact) {
+            this.crmContact = Utils.checkNotNull(crmContact, "crmContact");
             return this;
         }
-
 
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<UpdateCrmContactQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<UpdateCrmContactQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<UpdateCrmContactQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * ID of the Contact
          */
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = id;
-            return this;
-        }
-
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
+        public Builder id(@Nonnull String id) {
+            this.id = Utils.checkNotNull(id, "id");
             return this;
         }
 
@@ -309,14 +250,12 @@ public class UpdateCrmContactRequest {
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
         public UpdateCrmContactRequest build() {
-
             return new UpdateCrmContactRequest(
                 crmContact, connectionId, fields,
                 id, raw);

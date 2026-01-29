@@ -49,7 +49,6 @@ public class Integration1 {
         }
 
         public Integration1 build() {
-
             return new Integration1(
                 );
         }

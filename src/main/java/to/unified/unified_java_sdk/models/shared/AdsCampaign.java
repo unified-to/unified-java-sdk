@@ -4,16 +4,15 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.Map;
 import java.util.Optional;
@@ -24,185 +23,201 @@ public class AdsCampaign {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("budget_amount")
-    private Optional<Double> budgetAmount;
+    private Double budgetAmount;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("budget_period")
-    private Optional<? extends BudgetPeriod> budgetPeriod;
+    private BudgetPeriod budgetPeriod;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
-    private Optional<OffsetDateTime> endAt;
+    private OffsetDateTime endAt;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("frequency_cap")
+    private PropertyAdsCampaignFrequencyCap frequencyCap;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("goal")
+    private Goal goal;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
-    private Optional<Boolean> isActive;
+    private Boolean isActive;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
-    private Optional<String> name;
+    private String name;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_id")
-    private Optional<String> organizationId;
+    private String organizationId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("planned_spend_amount")
+    private Double plannedSpendAmount;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
-    private Optional<OffsetDateTime> startAt;
+    private OffsetDateTime startAt;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("status")
+    private AdsCampaignStatus status;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targeting")
-    private Optional<? extends PropertyAdsCampaignTargeting> targeting;
+    private PropertyAdsCampaignTargeting targeting;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_spend_amount")
-    private Optional<Double> totalSpendAmount;
+    private Double totalSpendAmount;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
     @JsonCreator
     public AdsCampaign(
-            @JsonProperty("budget_amount") Optional<Double> budgetAmount,
-            @JsonProperty("budget_period") Optional<? extends BudgetPeriod> budgetPeriod,
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("end_at") Optional<OffsetDateTime> endAt,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("is_active") Optional<Boolean> isActive,
-            @JsonProperty("name") Optional<String> name,
-            @JsonProperty("organization_id") Optional<String> organizationId,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("start_at") Optional<OffsetDateTime> startAt,
-            @JsonProperty("targeting") Optional<? extends PropertyAdsCampaignTargeting> targeting,
-            @JsonProperty("total_spend_amount") Optional<Double> totalSpendAmount,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(budgetAmount, "budgetAmount");
-        Utils.checkNotNull(budgetPeriod, "budgetPeriod");
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(endAt, "endAt");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(isActive, "isActive");
-        Utils.checkNotNull(name, "name");
-        Utils.checkNotNull(organizationId, "organizationId");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(startAt, "startAt");
-        Utils.checkNotNull(targeting, "targeting");
-        Utils.checkNotNull(totalSpendAmount, "totalSpendAmount");
-        Utils.checkNotNull(updatedAt, "updatedAt");
+            @JsonProperty("budget_amount") @Nullable Double budgetAmount,
+            @JsonProperty("budget_period") @Nullable BudgetPeriod budgetPeriod,
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("end_at") @Nullable OffsetDateTime endAt,
+            @JsonProperty("frequency_cap") @Nullable PropertyAdsCampaignFrequencyCap frequencyCap,
+            @JsonProperty("goal") @Nullable Goal goal,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("is_active") @Nullable Boolean isActive,
+            @JsonProperty("name") @Nullable String name,
+            @JsonProperty("organization_id") @Nullable String organizationId,
+            @JsonProperty("planned_spend_amount") @Nullable Double plannedSpendAmount,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("start_at") @Nullable OffsetDateTime startAt,
+            @JsonProperty("status") @Nullable AdsCampaignStatus status,
+            @JsonProperty("targeting") @Nullable PropertyAdsCampaignTargeting targeting,
+            @JsonProperty("total_spend_amount") @Nullable Double totalSpendAmount,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.budgetAmount = budgetAmount;
         this.budgetPeriod = budgetPeriod;
         this.createdAt = createdAt;
         this.endAt = endAt;
+        this.frequencyCap = frequencyCap;
+        this.goal = goal;
         this.id = id;
         this.isActive = isActive;
         this.name = name;
         this.organizationId = organizationId;
+        this.plannedSpendAmount = plannedSpendAmount;
         this.raw = raw;
         this.startAt = startAt;
+        this.status = status;
         this.targeting = targeting;
         this.totalSpendAmount = totalSpendAmount;
         this.updatedAt = updatedAt;
     }
     
     public AdsCampaign() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null);
     }
 
-    @JsonIgnore
     public Optional<Double> budgetAmount() {
-        return budgetAmount;
+        return Optional.ofNullable(this.budgetAmount);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<BudgetPeriod> budgetPeriod() {
-        return (Optional<BudgetPeriod>) budgetPeriod;
+        return Optional.ofNullable(this.budgetPeriod);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> endAt() {
-        return endAt;
+        return Optional.ofNullable(this.endAt);
     }
 
-    @JsonIgnore
+    public Optional<PropertyAdsCampaignFrequencyCap> frequencyCap() {
+        return Optional.ofNullable(this.frequencyCap);
+    }
+
+    public Optional<Goal> goal() {
+        return Optional.ofNullable(this.goal);
+    }
+
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isActive() {
-        return isActive;
+        return Optional.ofNullable(this.isActive);
     }
 
-    @JsonIgnore
     public Optional<String> name() {
-        return name;
+        return Optional.ofNullable(this.name);
     }
 
-    @JsonIgnore
     public Optional<String> organizationId() {
-        return organizationId;
+        return Optional.ofNullable(this.organizationId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
+    public Optional<Double> plannedSpendAmount() {
+        return Optional.ofNullable(this.plannedSpendAmount);
+    }
+
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> startAt() {
-        return startAt;
+        return Optional.ofNullable(this.startAt);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
+    public Optional<AdsCampaignStatus> status() {
+        return Optional.ofNullable(this.status);
+    }
+
     public Optional<PropertyAdsCampaignTargeting> targeting() {
-        return (Optional<PropertyAdsCampaignTargeting>) targeting;
+        return Optional.ofNullable(this.targeting);
     }
 
-    @JsonIgnore
     public Optional<Double> totalSpendAmount() {
-        return totalSpendAmount;
+        return Optional.ofNullable(this.totalSpendAmount);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
     public static Builder builder() {
@@ -210,174 +225,107 @@ public class AdsCampaign {
     }
 
 
-    public AdsCampaign withBudgetAmount(double budgetAmount) {
-        Utils.checkNotNull(budgetAmount, "budgetAmount");
-        this.budgetAmount = Optional.ofNullable(budgetAmount);
-        return this;
-    }
-
-
-    public AdsCampaign withBudgetAmount(Optional<Double> budgetAmount) {
-        Utils.checkNotNull(budgetAmount, "budgetAmount");
+    public AdsCampaign withBudgetAmount(@Nullable Double budgetAmount) {
         this.budgetAmount = budgetAmount;
         return this;
     }
 
-    public AdsCampaign withBudgetPeriod(BudgetPeriod budgetPeriod) {
-        Utils.checkNotNull(budgetPeriod, "budgetPeriod");
-        this.budgetPeriod = Optional.ofNullable(budgetPeriod);
-        return this;
-    }
 
-
-    public AdsCampaign withBudgetPeriod(Optional<? extends BudgetPeriod> budgetPeriod) {
-        Utils.checkNotNull(budgetPeriod, "budgetPeriod");
+    public AdsCampaign withBudgetPeriod(@Nullable BudgetPeriod budgetPeriod) {
         this.budgetPeriod = budgetPeriod;
         return this;
     }
 
-    public AdsCampaign withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
 
-
-    public AdsCampaign withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public AdsCampaign withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public AdsCampaign withEndAt(OffsetDateTime endAt) {
-        Utils.checkNotNull(endAt, "endAt");
-        this.endAt = Optional.ofNullable(endAt);
-        return this;
-    }
 
-
-    public AdsCampaign withEndAt(Optional<OffsetDateTime> endAt) {
-        Utils.checkNotNull(endAt, "endAt");
+    public AdsCampaign withEndAt(@Nullable OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
     }
 
-    public AdsCampaign withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
+
+    public AdsCampaign withFrequencyCap(@Nullable PropertyAdsCampaignFrequencyCap frequencyCap) {
+        this.frequencyCap = frequencyCap;
         return this;
     }
 
 
-    public AdsCampaign withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public AdsCampaign withGoal(@Nullable Goal goal) {
+        this.goal = goal;
+        return this;
+    }
+
+
+    public AdsCampaign withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public AdsCampaign withIsActive(boolean isActive) {
-        Utils.checkNotNull(isActive, "isActive");
-        this.isActive = Optional.ofNullable(isActive);
-        return this;
-    }
 
-
-    public AdsCampaign withIsActive(Optional<Boolean> isActive) {
-        Utils.checkNotNull(isActive, "isActive");
+    public AdsCampaign withIsActive(@Nullable Boolean isActive) {
         this.isActive = isActive;
         return this;
     }
 
-    public AdsCampaign withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = Optional.ofNullable(name);
-        return this;
-    }
 
-
-    public AdsCampaign withName(Optional<String> name) {
-        Utils.checkNotNull(name, "name");
+    public AdsCampaign withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
-    public AdsCampaign withOrganizationId(String organizationId) {
-        Utils.checkNotNull(organizationId, "organizationId");
-        this.organizationId = Optional.ofNullable(organizationId);
-        return this;
-    }
 
-
-    public AdsCampaign withOrganizationId(Optional<String> organizationId) {
-        Utils.checkNotNull(organizationId, "organizationId");
+    public AdsCampaign withOrganizationId(@Nullable String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
 
-    public AdsCampaign withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
+
+    public AdsCampaign withPlannedSpendAmount(@Nullable Double plannedSpendAmount) {
+        this.plannedSpendAmount = plannedSpendAmount;
         return this;
     }
 
 
-    public AdsCampaign withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public AdsCampaign withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public AdsCampaign withStartAt(OffsetDateTime startAt) {
-        Utils.checkNotNull(startAt, "startAt");
-        this.startAt = Optional.ofNullable(startAt);
-        return this;
-    }
 
-
-    public AdsCampaign withStartAt(Optional<OffsetDateTime> startAt) {
-        Utils.checkNotNull(startAt, "startAt");
+    public AdsCampaign withStartAt(@Nullable OffsetDateTime startAt) {
         this.startAt = startAt;
         return this;
     }
 
-    public AdsCampaign withTargeting(PropertyAdsCampaignTargeting targeting) {
-        Utils.checkNotNull(targeting, "targeting");
-        this.targeting = Optional.ofNullable(targeting);
+
+    public AdsCampaign withStatus(@Nullable AdsCampaignStatus status) {
+        this.status = status;
         return this;
     }
 
 
-    public AdsCampaign withTargeting(Optional<? extends PropertyAdsCampaignTargeting> targeting) {
-        Utils.checkNotNull(targeting, "targeting");
+    public AdsCampaign withTargeting(@Nullable PropertyAdsCampaignTargeting targeting) {
         this.targeting = targeting;
         return this;
     }
 
-    public AdsCampaign withTotalSpendAmount(double totalSpendAmount) {
-        Utils.checkNotNull(totalSpendAmount, "totalSpendAmount");
-        this.totalSpendAmount = Optional.ofNullable(totalSpendAmount);
-        return this;
-    }
 
-
-    public AdsCampaign withTotalSpendAmount(Optional<Double> totalSpendAmount) {
-        Utils.checkNotNull(totalSpendAmount, "totalSpendAmount");
+    public AdsCampaign withTotalSpendAmount(@Nullable Double totalSpendAmount) {
         this.totalSpendAmount = totalSpendAmount;
         return this;
     }
 
-    public AdsCampaign withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public AdsCampaign withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public AdsCampaign withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -393,12 +341,16 @@ public class AdsCampaign {
             Utils.enhancedDeepEquals(this.budgetPeriod, other.budgetPeriod) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.endAt, other.endAt) &&
+            Utils.enhancedDeepEquals(this.frequencyCap, other.frequencyCap) &&
+            Utils.enhancedDeepEquals(this.goal, other.goal) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
+            Utils.enhancedDeepEquals(this.plannedSpendAmount, other.plannedSpendAmount) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.startAt, other.startAt) &&
+            Utils.enhancedDeepEquals(this.status, other.status) &&
             Utils.enhancedDeepEquals(this.targeting, other.targeting) &&
             Utils.enhancedDeepEquals(this.totalSpendAmount, other.totalSpendAmount) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
@@ -408,10 +360,11 @@ public class AdsCampaign {
     public int hashCode() {
         return Utils.enhancedHash(
             budgetAmount, budgetPeriod, createdAt,
-            endAt, id, isActive,
-            name, organizationId, raw,
-            startAt, targeting, totalSpendAmount,
-            updatedAt);
+            endAt, frequencyCap, goal,
+            id, isActive, name,
+            organizationId, plannedSpendAmount, raw,
+            startAt, status, targeting,
+            totalSpendAmount, updatedAt);
     }
     
     @Override
@@ -421,12 +374,16 @@ public class AdsCampaign {
                 "budgetPeriod", budgetPeriod,
                 "createdAt", createdAt,
                 "endAt", endAt,
+                "frequencyCap", frequencyCap,
+                "goal", goal,
                 "id", id,
                 "isActive", isActive,
                 "name", name,
                 "organizationId", organizationId,
+                "plannedSpendAmount", plannedSpendAmount,
                 "raw", raw,
                 "startAt", startAt,
+                "status", status,
                 "targeting", targeting,
                 "totalSpendAmount", totalSpendAmount,
                 "updatedAt", updatedAt);
@@ -435,213 +392,137 @@ public class AdsCampaign {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<Double> budgetAmount = Optional.empty();
+        private Double budgetAmount;
 
-        private Optional<? extends BudgetPeriod> budgetPeriod = Optional.empty();
+        private BudgetPeriod budgetPeriod;
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<OffsetDateTime> endAt = Optional.empty();
+        private OffsetDateTime endAt;
 
-        private Optional<String> id = Optional.empty();
+        private PropertyAdsCampaignFrequencyCap frequencyCap;
 
-        private Optional<Boolean> isActive = Optional.empty();
+        private Goal goal;
 
-        private Optional<String> name = Optional.empty();
+        private String id;
 
-        private Optional<String> organizationId = Optional.empty();
+        private Boolean isActive;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private String name;
 
-        private Optional<OffsetDateTime> startAt = Optional.empty();
+        private String organizationId;
 
-        private Optional<? extends PropertyAdsCampaignTargeting> targeting = Optional.empty();
+        private Double plannedSpendAmount;
 
-        private Optional<Double> totalSpendAmount = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime startAt;
+
+        private AdsCampaignStatus status;
+
+        private PropertyAdsCampaignTargeting targeting;
+
+        private Double totalSpendAmount;
+
+        private OffsetDateTime updatedAt;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder budgetAmount(double budgetAmount) {
-            Utils.checkNotNull(budgetAmount, "budgetAmount");
-            this.budgetAmount = Optional.ofNullable(budgetAmount);
-            return this;
-        }
-
-        public Builder budgetAmount(Optional<Double> budgetAmount) {
-            Utils.checkNotNull(budgetAmount, "budgetAmount");
+        public Builder budgetAmount(@Nullable Double budgetAmount) {
             this.budgetAmount = budgetAmount;
             return this;
         }
 
-
-        public Builder budgetPeriod(BudgetPeriod budgetPeriod) {
-            Utils.checkNotNull(budgetPeriod, "budgetPeriod");
-            this.budgetPeriod = Optional.ofNullable(budgetPeriod);
-            return this;
-        }
-
-        public Builder budgetPeriod(Optional<? extends BudgetPeriod> budgetPeriod) {
-            Utils.checkNotNull(budgetPeriod, "budgetPeriod");
+        public Builder budgetPeriod(@Nullable BudgetPeriod budgetPeriod) {
             this.budgetPeriod = budgetPeriod;
             return this;
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder endAt(OffsetDateTime endAt) {
-            Utils.checkNotNull(endAt, "endAt");
-            this.endAt = Optional.ofNullable(endAt);
-            return this;
-        }
-
-        public Builder endAt(Optional<OffsetDateTime> endAt) {
-            Utils.checkNotNull(endAt, "endAt");
+        public Builder endAt(@Nullable OffsetDateTime endAt) {
             this.endAt = endAt;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
+        public Builder frequencyCap(@Nullable PropertyAdsCampaignFrequencyCap frequencyCap) {
+            this.frequencyCap = frequencyCap;
             return this;
         }
 
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder goal(@Nullable Goal goal) {
+            this.goal = goal;
+            return this;
+        }
+
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder isActive(boolean isActive) {
-            Utils.checkNotNull(isActive, "isActive");
-            this.isActive = Optional.ofNullable(isActive);
-            return this;
-        }
-
-        public Builder isActive(Optional<Boolean> isActive) {
-            Utils.checkNotNull(isActive, "isActive");
+        public Builder isActive(@Nullable Boolean isActive) {
             this.isActive = isActive;
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = Optional.ofNullable(name);
-            return this;
-        }
-
-        public Builder name(Optional<String> name) {
-            Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-
-        public Builder organizationId(String organizationId) {
-            Utils.checkNotNull(organizationId, "organizationId");
-            this.organizationId = Optional.ofNullable(organizationId);
-            return this;
-        }
-
-        public Builder organizationId(Optional<String> organizationId) {
-            Utils.checkNotNull(organizationId, "organizationId");
+        public Builder organizationId(@Nullable String organizationId) {
             this.organizationId = organizationId;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
+        public Builder plannedSpendAmount(@Nullable Double plannedSpendAmount) {
+            this.plannedSpendAmount = plannedSpendAmount;
             return this;
         }
 
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder startAt(OffsetDateTime startAt) {
-            Utils.checkNotNull(startAt, "startAt");
-            this.startAt = Optional.ofNullable(startAt);
-            return this;
-        }
-
-        public Builder startAt(Optional<OffsetDateTime> startAt) {
-            Utils.checkNotNull(startAt, "startAt");
+        public Builder startAt(@Nullable OffsetDateTime startAt) {
             this.startAt = startAt;
             return this;
         }
 
-
-        public Builder targeting(PropertyAdsCampaignTargeting targeting) {
-            Utils.checkNotNull(targeting, "targeting");
-            this.targeting = Optional.ofNullable(targeting);
+        public Builder status(@Nullable AdsCampaignStatus status) {
+            this.status = status;
             return this;
         }
 
-        public Builder targeting(Optional<? extends PropertyAdsCampaignTargeting> targeting) {
-            Utils.checkNotNull(targeting, "targeting");
+        public Builder targeting(@Nullable PropertyAdsCampaignTargeting targeting) {
             this.targeting = targeting;
             return this;
         }
 
-
-        public Builder totalSpendAmount(double totalSpendAmount) {
-            Utils.checkNotNull(totalSpendAmount, "totalSpendAmount");
-            this.totalSpendAmount = Optional.ofNullable(totalSpendAmount);
-            return this;
-        }
-
-        public Builder totalSpendAmount(Optional<Double> totalSpendAmount) {
-            Utils.checkNotNull(totalSpendAmount, "totalSpendAmount");
+        public Builder totalSpendAmount(@Nullable Double totalSpendAmount) {
             this.totalSpendAmount = totalSpendAmount;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
         public AdsCampaign build() {
-
             return new AdsCampaign(
                 budgetAmount, budgetPeriod, createdAt,
-                endAt, id, isActive,
-                name, organizationId, raw,
-                startAt, targeting, totalSpendAmount,
-                updatedAt);
+                endAt, frequencyCap, goal,
+                id, isActive, name,
+                organizationId, plannedSpendAmount, raw,
+                startAt, status, targeting,
+                totalSpendAmount, updatedAt);
         }
 
     }

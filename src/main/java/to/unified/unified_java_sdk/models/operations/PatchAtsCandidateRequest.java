@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.AtsCandidate;
@@ -30,7 +30,7 @@ public class PatchAtsCandidateRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<PatchAtsCandidateQueryParamFields>> fields;
+    private List<PatchAtsCandidateQueryParamFields> fields;
 
     /**
      * ID of the Candidate
@@ -44,63 +44,56 @@ public class PatchAtsCandidateRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
     @JsonCreator
     public PatchAtsCandidateRequest(
-            AtsCandidate atsCandidate,
-            String connectionId,
-            Optional<? extends List<PatchAtsCandidateQueryParamFields>> fields,
-            String id,
-            Optional<String> raw) {
-        Utils.checkNotNull(atsCandidate, "atsCandidate");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(raw, "raw");
-        this.atsCandidate = atsCandidate;
-        this.connectionId = connectionId;
+            @Nonnull AtsCandidate atsCandidate,
+            @Nonnull String connectionId,
+            @Nullable List<PatchAtsCandidateQueryParamFields> fields,
+            @Nonnull String id,
+            @Nullable String raw) {
+        this.atsCandidate = Optional.ofNullable(atsCandidate)
+            .orElseThrow(() -> new IllegalArgumentException("atsCandidate cannot be null"));
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
-        this.id = id;
+        this.id = Optional.ofNullable(id)
+            .orElseThrow(() -> new IllegalArgumentException("id cannot be null"));
         this.raw = raw;
     }
     
     public PatchAtsCandidateRequest(
-            AtsCandidate atsCandidate,
-            String connectionId,
-            String id) {
-        this(atsCandidate, connectionId, Optional.empty(),
-            id, Optional.empty());
+            @Nonnull AtsCandidate atsCandidate,
+            @Nonnull String connectionId,
+            @Nonnull String id) {
+        this(atsCandidate, connectionId, null,
+            id, null);
     }
 
-    @JsonIgnore
     public AtsCandidate atsCandidate() {
-        return atsCandidate;
+        return this.atsCandidate;
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<PatchAtsCandidateQueryParamFields>> fields() {
-        return (Optional<List<PatchAtsCandidateQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
      * ID of the Candidate
      */
-    @JsonIgnore
     public String id() {
-        return id;
+        return this.id;
     }
 
     /**
@@ -108,9 +101,8 @@ public class PatchAtsCandidateRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
     public static Builder builder() {
@@ -118,27 +110,17 @@ public class PatchAtsCandidateRequest {
     }
 
 
-    public PatchAtsCandidateRequest withAtsCandidate(AtsCandidate atsCandidate) {
-        Utils.checkNotNull(atsCandidate, "atsCandidate");
-        this.atsCandidate = atsCandidate;
+    public PatchAtsCandidateRequest withAtsCandidate(@Nonnull AtsCandidate atsCandidate) {
+        this.atsCandidate = Utils.checkNotNull(atsCandidate, "atsCandidate");
         return this;
     }
+
 
     /**
      * ID of the connection
      */
-    public PatchAtsCandidateRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public PatchAtsCandidateRequest withFields(List<PatchAtsCandidateQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public PatchAtsCandidateRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -146,29 +128,17 @@ public class PatchAtsCandidateRequest {
     /**
      * Fields to return
      */
-    public PatchAtsCandidateRequest withFields(Optional<? extends List<PatchAtsCandidateQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public PatchAtsCandidateRequest withFields(@Nullable List<PatchAtsCandidateQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
+
     /**
      * ID of the Candidate
      */
-    public PatchAtsCandidateRequest withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = id;
-        return this;
-    }
-
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public PatchAtsCandidateRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
+    public PatchAtsCandidateRequest withId(@Nonnull String id) {
+        this.id = Utils.checkNotNull(id, "id");
         return this;
     }
 
@@ -178,11 +148,11 @@ public class PatchAtsCandidateRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public PatchAtsCandidateRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public PatchAtsCandidateRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -225,71 +195,42 @@ public class PatchAtsCandidateRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<PatchAtsCandidateQueryParamFields>> fields = Optional.empty();
+        private List<PatchAtsCandidateQueryParamFields> fields;
 
         private String id;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder atsCandidate(AtsCandidate atsCandidate) {
-            Utils.checkNotNull(atsCandidate, "atsCandidate");
-            this.atsCandidate = atsCandidate;
+        public Builder atsCandidate(@Nonnull AtsCandidate atsCandidate) {
+            this.atsCandidate = Utils.checkNotNull(atsCandidate, "atsCandidate");
             return this;
         }
-
 
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<PatchAtsCandidateQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<PatchAtsCandidateQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<PatchAtsCandidateQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * ID of the Candidate
          */
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = id;
-            return this;
-        }
-
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
+        public Builder id(@Nonnull String id) {
+            this.id = Utils.checkNotNull(id, "id");
             return this;
         }
 
@@ -298,14 +239,12 @@ public class PatchAtsCandidateRequest {
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
         public PatchAtsCandidateRequest build() {
-
             return new PatchAtsCandidateRequest(
                 atsCandidate, connectionId, fields,
                 id, raw);

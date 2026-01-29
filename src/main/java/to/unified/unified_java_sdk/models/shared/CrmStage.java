@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Override;
@@ -21,61 +21,53 @@ public class CrmStage {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
-    private Optional<Boolean> active;
+    private Boolean active;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deal_probability")
-    private Optional<Double> dealProbability;
+    private Double dealProbability;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display_order")
-    private Optional<Double> displayOrder;
+    private Double displayOrder;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_closed")
-    private Optional<Boolean> isClosed;
+    private Boolean isClosed;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
-    private Optional<String> name;
+    private String name;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
     @JsonCreator
     public CrmStage(
-            @JsonProperty("active") Optional<Boolean> active,
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("deal_probability") Optional<Double> dealProbability,
-            @JsonProperty("display_order") Optional<Double> displayOrder,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("is_closed") Optional<Boolean> isClosed,
-            @JsonProperty("name") Optional<String> name,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(active, "active");
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(dealProbability, "dealProbability");
-        Utils.checkNotNull(displayOrder, "displayOrder");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(isClosed, "isClosed");
-        Utils.checkNotNull(name, "name");
-        Utils.checkNotNull(updatedAt, "updatedAt");
+            @JsonProperty("active") @Nullable Boolean active,
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("deal_probability") @Nullable Double dealProbability,
+            @JsonProperty("display_order") @Nullable Double displayOrder,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("is_closed") @Nullable Boolean isClosed,
+            @JsonProperty("name") @Nullable String name,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.active = active;
         this.createdAt = createdAt;
         this.dealProbability = dealProbability;
@@ -87,49 +79,41 @@ public class CrmStage {
     }
     
     public CrmStage() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null);
     }
 
-    @JsonIgnore
     public Optional<Boolean> active() {
-        return active;
+        return Optional.ofNullable(this.active);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<Double> dealProbability() {
-        return dealProbability;
+        return Optional.ofNullable(this.dealProbability);
     }
 
-    @JsonIgnore
     public Optional<Double> displayOrder() {
-        return displayOrder;
+        return Optional.ofNullable(this.displayOrder);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isClosed() {
-        return isClosed;
+        return Optional.ofNullable(this.isClosed);
     }
 
-    @JsonIgnore
     public Optional<String> name() {
-        return name;
+        return Optional.ofNullable(this.name);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
     public static Builder builder() {
@@ -137,109 +121,53 @@ public class CrmStage {
     }
 
 
-    public CrmStage withActive(boolean active) {
-        Utils.checkNotNull(active, "active");
-        this.active = Optional.ofNullable(active);
-        return this;
-    }
-
-
-    public CrmStage withActive(Optional<Boolean> active) {
-        Utils.checkNotNull(active, "active");
+    public CrmStage withActive(@Nullable Boolean active) {
         this.active = active;
         return this;
     }
 
-    public CrmStage withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
 
-
-    public CrmStage withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public CrmStage withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public CrmStage withDealProbability(double dealProbability) {
-        Utils.checkNotNull(dealProbability, "dealProbability");
-        this.dealProbability = Optional.ofNullable(dealProbability);
-        return this;
-    }
 
-
-    public CrmStage withDealProbability(Optional<Double> dealProbability) {
-        Utils.checkNotNull(dealProbability, "dealProbability");
+    public CrmStage withDealProbability(@Nullable Double dealProbability) {
         this.dealProbability = dealProbability;
         return this;
     }
 
-    public CrmStage withDisplayOrder(double displayOrder) {
-        Utils.checkNotNull(displayOrder, "displayOrder");
-        this.displayOrder = Optional.ofNullable(displayOrder);
-        return this;
-    }
 
-
-    public CrmStage withDisplayOrder(Optional<Double> displayOrder) {
-        Utils.checkNotNull(displayOrder, "displayOrder");
+    public CrmStage withDisplayOrder(@Nullable Double displayOrder) {
         this.displayOrder = displayOrder;
         return this;
     }
 
-    public CrmStage withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public CrmStage withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public CrmStage withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public CrmStage withIsClosed(boolean isClosed) {
-        Utils.checkNotNull(isClosed, "isClosed");
-        this.isClosed = Optional.ofNullable(isClosed);
-        return this;
-    }
 
-
-    public CrmStage withIsClosed(Optional<Boolean> isClosed) {
-        Utils.checkNotNull(isClosed, "isClosed");
+    public CrmStage withIsClosed(@Nullable Boolean isClosed) {
         this.isClosed = isClosed;
         return this;
     }
 
-    public CrmStage withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = Optional.ofNullable(name);
-        return this;
-    }
 
-
-    public CrmStage withName(Optional<String> name) {
-        Utils.checkNotNull(name, "name");
+    public CrmStage withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
-    public CrmStage withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public CrmStage withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public CrmStage withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -285,132 +213,67 @@ public class CrmStage {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<Boolean> active = Optional.empty();
+        private Boolean active;
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<Double> dealProbability = Optional.empty();
+        private Double dealProbability;
 
-        private Optional<Double> displayOrder = Optional.empty();
+        private Double displayOrder;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<Boolean> isClosed = Optional.empty();
+        private Boolean isClosed;
 
-        private Optional<String> name = Optional.empty();
+        private String name;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder active(boolean active) {
-            Utils.checkNotNull(active, "active");
-            this.active = Optional.ofNullable(active);
-            return this;
-        }
-
-        public Builder active(Optional<Boolean> active) {
-            Utils.checkNotNull(active, "active");
+        public Builder active(@Nullable Boolean active) {
             this.active = active;
             return this;
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder dealProbability(double dealProbability) {
-            Utils.checkNotNull(dealProbability, "dealProbability");
-            this.dealProbability = Optional.ofNullable(dealProbability);
-            return this;
-        }
-
-        public Builder dealProbability(Optional<Double> dealProbability) {
-            Utils.checkNotNull(dealProbability, "dealProbability");
+        public Builder dealProbability(@Nullable Double dealProbability) {
             this.dealProbability = dealProbability;
             return this;
         }
 
-
-        public Builder displayOrder(double displayOrder) {
-            Utils.checkNotNull(displayOrder, "displayOrder");
-            this.displayOrder = Optional.ofNullable(displayOrder);
-            return this;
-        }
-
-        public Builder displayOrder(Optional<Double> displayOrder) {
-            Utils.checkNotNull(displayOrder, "displayOrder");
+        public Builder displayOrder(@Nullable Double displayOrder) {
             this.displayOrder = displayOrder;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder isClosed(boolean isClosed) {
-            Utils.checkNotNull(isClosed, "isClosed");
-            this.isClosed = Optional.ofNullable(isClosed);
-            return this;
-        }
-
-        public Builder isClosed(Optional<Boolean> isClosed) {
-            Utils.checkNotNull(isClosed, "isClosed");
+        public Builder isClosed(@Nullable Boolean isClosed) {
             this.isClosed = isClosed;
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = Optional.ofNullable(name);
-            return this;
-        }
-
-        public Builder name(Optional<String> name) {
-            Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
         public CrmStage build() {
-
             return new CrmStage(
                 active, createdAt, dealProbability,
                 displayOrder, id, isClosed,

@@ -4,14 +4,14 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -21,27 +21,27 @@ public class Issue {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<String> createdAt;
+    private String createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importance")
-    private Optional<Double> importance;
+    private Double importance;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resolution_time")
-    private Optional<Double> resolutionTime;
+    private Double resolutionTime;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
-    private Optional<Double> size;
+    private Double size;
 
 
     @JsonProperty("status")
@@ -58,17 +58,17 @@ public class Issue {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
-    private Optional<? extends List<String>> type;
+    private List<String> type;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<String> updatedAt;
+    private String updatedAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
-    private Optional<String> url;
+    private String url;
 
 
     @JsonProperty("workspace_id")
@@ -76,114 +76,93 @@ public class Issue {
 
     @JsonCreator
     public Issue(
-            @JsonProperty("created_at") Optional<String> createdAt,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("importance") Optional<Double> importance,
-            @JsonProperty("resolution_time") Optional<Double> resolutionTime,
-            @JsonProperty("size") Optional<Double> size,
-            @JsonProperty("status") IssueStatus status,
-            @JsonProperty("ticket_ref") String ticketRef,
-            @JsonProperty("title") String title,
-            @JsonProperty("type") Optional<? extends List<String>> type,
-            @JsonProperty("updated_at") Optional<String> updatedAt,
-            @JsonProperty("url") Optional<String> url,
-            @JsonProperty("workspace_id") String workspaceId) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(importance, "importance");
-        Utils.checkNotNull(resolutionTime, "resolutionTime");
-        Utils.checkNotNull(size, "size");
-        Utils.checkNotNull(status, "status");
-        Utils.checkNotNull(ticketRef, "ticketRef");
-        Utils.checkNotNull(title, "title");
-        Utils.checkNotNull(type, "type");
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        Utils.checkNotNull(url, "url");
-        Utils.checkNotNull(workspaceId, "workspaceId");
+            @JsonProperty("created_at") @Nullable String createdAt,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("importance") @Nullable Double importance,
+            @JsonProperty("resolution_time") @Nullable Double resolutionTime,
+            @JsonProperty("size") @Nullable Double size,
+            @JsonProperty("status") @Nonnull IssueStatus status,
+            @JsonProperty("ticket_ref") @Nonnull String ticketRef,
+            @JsonProperty("title") @Nonnull String title,
+            @JsonProperty("type") @Nullable List<String> type,
+            @JsonProperty("updated_at") @Nullable String updatedAt,
+            @JsonProperty("url") @Nullable String url,
+            @JsonProperty("workspace_id") @Nonnull String workspaceId) {
         this.createdAt = createdAt;
         this.id = id;
         this.importance = importance;
         this.resolutionTime = resolutionTime;
         this.size = size;
-        this.status = status;
-        this.ticketRef = ticketRef;
-        this.title = title;
+        this.status = Optional.ofNullable(status)
+            .orElseThrow(() -> new IllegalArgumentException("status cannot be null"));
+        this.ticketRef = Optional.ofNullable(ticketRef)
+            .orElseThrow(() -> new IllegalArgumentException("ticketRef cannot be null"));
+        this.title = Optional.ofNullable(title)
+            .orElseThrow(() -> new IllegalArgumentException("title cannot be null"));
         this.type = type;
         this.updatedAt = updatedAt;
         this.url = url;
-        this.workspaceId = workspaceId;
+        this.workspaceId = Optional.ofNullable(workspaceId)
+            .orElseThrow(() -> new IllegalArgumentException("workspaceId cannot be null"));
     }
     
     public Issue(
-            IssueStatus status,
-            String ticketRef,
-            String title,
-            String workspaceId) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), status,
-            ticketRef, title, Optional.empty(),
-            Optional.empty(), Optional.empty(), workspaceId);
+            @Nonnull IssueStatus status,
+            @Nonnull String ticketRef,
+            @Nonnull String title,
+            @Nonnull String workspaceId) {
+        this(null, null, null,
+            null, null, status,
+            ticketRef, title, null,
+            null, null, workspaceId);
     }
 
-    @JsonIgnore
     public Optional<String> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<Double> importance() {
-        return importance;
+        return Optional.ofNullable(this.importance);
     }
 
-    @JsonIgnore
     public Optional<Double> resolutionTime() {
-        return resolutionTime;
+        return Optional.ofNullable(this.resolutionTime);
     }
 
-    @JsonIgnore
     public Optional<Double> size() {
-        return size;
+        return Optional.ofNullable(this.size);
     }
 
-    @JsonIgnore
     public IssueStatus status() {
-        return status;
+        return this.status;
     }
 
-    @JsonIgnore
     public String ticketRef() {
-        return ticketRef;
+        return this.ticketRef;
     }
 
-    @JsonIgnore
     public String title() {
-        return title;
+        return this.title;
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> type() {
-        return (Optional<List<String>>) type;
+        return Optional.ofNullable(this.type);
     }
 
-    @JsonIgnore
     public Optional<String> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
-    @JsonIgnore
     public Optional<String> url() {
-        return url;
+        return Optional.ofNullable(this.url);
     }
 
-    @JsonIgnore
     public String workspaceId() {
-        return workspaceId;
+        return this.workspaceId;
     }
 
     public static Builder builder() {
@@ -191,133 +170,77 @@ public class Issue {
     }
 
 
-    public Issue withCreatedAt(String createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
-
-
-    public Issue withCreatedAt(Optional<String> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public Issue withCreatedAt(@Nullable String createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public Issue withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public Issue withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public Issue withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public Issue withImportance(double importance) {
-        Utils.checkNotNull(importance, "importance");
-        this.importance = Optional.ofNullable(importance);
-        return this;
-    }
 
-
-    public Issue withImportance(Optional<Double> importance) {
-        Utils.checkNotNull(importance, "importance");
+    public Issue withImportance(@Nullable Double importance) {
         this.importance = importance;
         return this;
     }
 
-    public Issue withResolutionTime(double resolutionTime) {
-        Utils.checkNotNull(resolutionTime, "resolutionTime");
-        this.resolutionTime = Optional.ofNullable(resolutionTime);
-        return this;
-    }
 
-
-    public Issue withResolutionTime(Optional<Double> resolutionTime) {
-        Utils.checkNotNull(resolutionTime, "resolutionTime");
+    public Issue withResolutionTime(@Nullable Double resolutionTime) {
         this.resolutionTime = resolutionTime;
         return this;
     }
 
-    public Issue withSize(double size) {
-        Utils.checkNotNull(size, "size");
-        this.size = Optional.ofNullable(size);
-        return this;
-    }
 
-
-    public Issue withSize(Optional<Double> size) {
-        Utils.checkNotNull(size, "size");
+    public Issue withSize(@Nullable Double size) {
         this.size = size;
         return this;
     }
 
-    public Issue withStatus(IssueStatus status) {
-        Utils.checkNotNull(status, "status");
-        this.status = status;
-        return this;
-    }
 
-    public Issue withTicketRef(String ticketRef) {
-        Utils.checkNotNull(ticketRef, "ticketRef");
-        this.ticketRef = ticketRef;
-        return this;
-    }
-
-    public Issue withTitle(String title) {
-        Utils.checkNotNull(title, "title");
-        this.title = title;
-        return this;
-    }
-
-    public Issue withType(List<String> type) {
-        Utils.checkNotNull(type, "type");
-        this.type = Optional.ofNullable(type);
+    public Issue withStatus(@Nonnull IssueStatus status) {
+        this.status = Utils.checkNotNull(status, "status");
         return this;
     }
 
 
-    public Issue withType(Optional<? extends List<String>> type) {
-        Utils.checkNotNull(type, "type");
+    public Issue withTicketRef(@Nonnull String ticketRef) {
+        this.ticketRef = Utils.checkNotNull(ticketRef, "ticketRef");
+        return this;
+    }
+
+
+    public Issue withTitle(@Nonnull String title) {
+        this.title = Utils.checkNotNull(title, "title");
+        return this;
+    }
+
+
+    public Issue withType(@Nullable List<String> type) {
         this.type = type;
         return this;
     }
 
-    public Issue withUpdatedAt(String updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public Issue withUpdatedAt(Optional<String> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public Issue withUpdatedAt(@Nullable String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
-    public Issue withUrl(String url) {
-        Utils.checkNotNull(url, "url");
-        this.url = Optional.ofNullable(url);
-        return this;
-    }
 
-
-    public Issue withUrl(Optional<String> url) {
-        Utils.checkNotNull(url, "url");
+    public Issue withUrl(@Nullable String url) {
         this.url = url;
         return this;
     }
 
-    public Issue withWorkspaceId(String workspaceId) {
-        Utils.checkNotNull(workspaceId, "workspaceId");
-        this.workspaceId = workspaceId;
+
+    public Issue withWorkspaceId(@Nonnull String workspaceId) {
+        this.workspaceId = Utils.checkNotNull(workspaceId, "workspaceId");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -372,15 +295,15 @@ public class Issue {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> createdAt = Optional.empty();
+        private String createdAt;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<Double> importance = Optional.empty();
+        private Double importance;
 
-        private Optional<Double> resolutionTime = Optional.empty();
+        private Double resolutionTime;
 
-        private Optional<Double> size = Optional.empty();
+        private Double size;
 
         private IssueStatus status;
 
@@ -388,11 +311,11 @@ public class Issue {
 
         private String title;
 
-        private Optional<? extends List<String>> type = Optional.empty();
+        private List<String> type;
 
-        private Optional<String> updatedAt = Optional.empty();
+        private String updatedAt;
 
-        private Optional<String> url = Optional.empty();
+        private String url;
 
         private String workspaceId;
 
@@ -400,140 +323,67 @@ public class Issue {
           // force use of static builder() method
         }
 
-
-        public Builder createdAt(String createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<String> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder importance(double importance) {
-            Utils.checkNotNull(importance, "importance");
-            this.importance = Optional.ofNullable(importance);
-            return this;
-        }
-
-        public Builder importance(Optional<Double> importance) {
-            Utils.checkNotNull(importance, "importance");
+        public Builder importance(@Nullable Double importance) {
             this.importance = importance;
             return this;
         }
 
-
-        public Builder resolutionTime(double resolutionTime) {
-            Utils.checkNotNull(resolutionTime, "resolutionTime");
-            this.resolutionTime = Optional.ofNullable(resolutionTime);
-            return this;
-        }
-
-        public Builder resolutionTime(Optional<Double> resolutionTime) {
-            Utils.checkNotNull(resolutionTime, "resolutionTime");
+        public Builder resolutionTime(@Nullable Double resolutionTime) {
             this.resolutionTime = resolutionTime;
             return this;
         }
 
-
-        public Builder size(double size) {
-            Utils.checkNotNull(size, "size");
-            this.size = Optional.ofNullable(size);
-            return this;
-        }
-
-        public Builder size(Optional<Double> size) {
-            Utils.checkNotNull(size, "size");
+        public Builder size(@Nullable Double size) {
             this.size = size;
             return this;
         }
 
-
-        public Builder status(IssueStatus status) {
-            Utils.checkNotNull(status, "status");
-            this.status = status;
+        public Builder status(@Nonnull IssueStatus status) {
+            this.status = Utils.checkNotNull(status, "status");
             return this;
         }
 
-
-        public Builder ticketRef(String ticketRef) {
-            Utils.checkNotNull(ticketRef, "ticketRef");
-            this.ticketRef = ticketRef;
+        public Builder ticketRef(@Nonnull String ticketRef) {
+            this.ticketRef = Utils.checkNotNull(ticketRef, "ticketRef");
             return this;
         }
 
-
-        public Builder title(String title) {
-            Utils.checkNotNull(title, "title");
-            this.title = title;
+        public Builder title(@Nonnull String title) {
+            this.title = Utils.checkNotNull(title, "title");
             return this;
         }
 
-
-        public Builder type(List<String> type) {
-            Utils.checkNotNull(type, "type");
-            this.type = Optional.ofNullable(type);
-            return this;
-        }
-
-        public Builder type(Optional<? extends List<String>> type) {
-            Utils.checkNotNull(type, "type");
+        public Builder type(@Nullable List<String> type) {
             this.type = type;
             return this;
         }
 
-
-        public Builder updatedAt(String updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<String> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable String updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
-
-        public Builder url(String url) {
-            Utils.checkNotNull(url, "url");
-            this.url = Optional.ofNullable(url);
-            return this;
-        }
-
-        public Builder url(Optional<String> url) {
-            Utils.checkNotNull(url, "url");
+        public Builder url(@Nullable String url) {
             this.url = url;
             return this;
         }
 
-
-        public Builder workspaceId(String workspaceId) {
-            Utils.checkNotNull(workspaceId, "workspaceId");
-            this.workspaceId = workspaceId;
+        public Builder workspaceId(@Nonnull String workspaceId) {
+            this.workspaceId = Utils.checkNotNull(workspaceId, "workspaceId");
             return this;
         }
 
         public Issue build() {
-
             return new Issue(
                 createdAt, id, importance,
                 resolutionTime, size, status,

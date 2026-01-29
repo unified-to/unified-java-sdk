@@ -5,23 +5,23 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateShippingLabelRequest;
 import to.unified.unified_java_sdk.models.operations.CreateShippingRateRequest;
 import to.unified.unified_java_sdk.models.operations.CreateShippingShipmentRequest;
-import to.unified.unified_java_sdk.models.operations.CreateShippingTrackingRequest;
 import to.unified.unified_java_sdk.models.operations.GetShippingCarrierRequest;
 import to.unified.unified_java_sdk.models.operations.GetShippingLabelRequest;
-import to.unified.unified_java_sdk.models.operations.GetShippingRateRequest;
 import to.unified.unified_java_sdk.models.operations.GetShippingShipmentRequest;
 import to.unified.unified_java_sdk.models.operations.GetShippingTrackingRequest;
 import to.unified.unified_java_sdk.models.operations.ListShippingCarriersRequest;
 import to.unified.unified_java_sdk.models.operations.ListShippingLabelsRequest;
 import to.unified.unified_java_sdk.models.operations.ListShippingShipmentsRequest;
-import to.unified.unified_java_sdk.models.operations.ListShippingTrackingsRequest;
+import to.unified.unified_java_sdk.models.operations.PatchShippingLabelRequest;
 import to.unified.unified_java_sdk.models.operations.PatchShippingShipmentRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveShippingLabelRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveShippingShipmentRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateShippingLabelRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateShippingShipmentRequest;
 import to.unified.unified_java_sdk.models.operations.async.CreateShippingLabelRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateShippingLabelResponse;
@@ -29,14 +29,10 @@ import to.unified.unified_java_sdk.models.operations.async.CreateShippingRateReq
 import to.unified.unified_java_sdk.models.operations.async.CreateShippingRateResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateShippingShipmentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateShippingShipmentResponse;
-import to.unified.unified_java_sdk.models.operations.async.CreateShippingTrackingRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.CreateShippingTrackingResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetShippingCarrierRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetShippingCarrierResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetShippingLabelRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetShippingLabelResponse;
-import to.unified.unified_java_sdk.models.operations.async.GetShippingRateRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.GetShippingRateResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetShippingShipmentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetShippingShipmentResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetShippingTrackingRequestBuilder;
@@ -47,32 +43,33 @@ import to.unified.unified_java_sdk.models.operations.async.ListShippingLabelsReq
 import to.unified.unified_java_sdk.models.operations.async.ListShippingLabelsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListShippingShipmentsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListShippingShipmentsResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListShippingTrackingsRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListShippingTrackingsResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchShippingLabelRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchShippingLabelResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchShippingShipmentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchShippingShipmentResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveShippingLabelRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.RemoveShippingLabelResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveShippingShipmentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.RemoveShippingShipmentResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateShippingLabelRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateShippingLabelResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateShippingShipmentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateShippingShipmentResponse;
 import to.unified.unified_java_sdk.operations.CreateShippingLabel;
 import to.unified.unified_java_sdk.operations.CreateShippingRate;
 import to.unified.unified_java_sdk.operations.CreateShippingShipment;
-import to.unified.unified_java_sdk.operations.CreateShippingTracking;
 import to.unified.unified_java_sdk.operations.GetShippingCarrier;
 import to.unified.unified_java_sdk.operations.GetShippingLabel;
-import to.unified.unified_java_sdk.operations.GetShippingRate;
 import to.unified.unified_java_sdk.operations.GetShippingShipment;
 import to.unified.unified_java_sdk.operations.GetShippingTracking;
 import to.unified.unified_java_sdk.operations.ListShippingCarriers;
 import to.unified.unified_java_sdk.operations.ListShippingLabels;
 import to.unified.unified_java_sdk.operations.ListShippingShipments;
-import to.unified.unified_java_sdk.operations.ListShippingTrackings;
+import to.unified.unified_java_sdk.operations.PatchShippingLabel;
 import to.unified.unified_java_sdk.operations.PatchShippingShipment;
 import to.unified.unified_java_sdk.operations.RemoveShippingLabel;
 import to.unified.unified_java_sdk.operations.RemoveShippingShipment;
+import to.unified.unified_java_sdk.operations.UpdateShippingLabel;
 import to.unified.unified_java_sdk.operations.UpdateShippingShipment;
 import to.unified.unified_java_sdk.utils.Headers;
 
@@ -112,7 +109,7 @@ public class AsyncShipping {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateShippingLabelResponse>} - The async response
      */
-    public CompletableFuture<CreateShippingLabelResponse> createShippingLabel(CreateShippingLabelRequest request) {
+    public CompletableFuture<CreateShippingLabelResponse> createShippingLabel(@Nonnull CreateShippingLabelRequest request) {
         AsyncRequestOperation<CreateShippingLabelRequest, CreateShippingLabelResponse> operation
               = new CreateShippingLabel.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -135,7 +132,7 @@ public class AsyncShipping {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateShippingRateResponse>} - The async response
      */
-    public CompletableFuture<CreateShippingRateResponse> createShippingRate(CreateShippingRateRequest request) {
+    public CompletableFuture<CreateShippingRateResponse> createShippingRate(@Nonnull CreateShippingRateRequest request) {
         AsyncRequestOperation<CreateShippingRateRequest, CreateShippingRateResponse> operation
               = new CreateShippingRate.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -158,32 +155,9 @@ public class AsyncShipping {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateShippingShipmentResponse>} - The async response
      */
-    public CompletableFuture<CreateShippingShipmentResponse> createShippingShipment(CreateShippingShipmentRequest request) {
+    public CompletableFuture<CreateShippingShipmentResponse> createShippingShipment(@Nonnull CreateShippingShipmentRequest request) {
         AsyncRequestOperation<CreateShippingShipmentRequest, CreateShippingShipmentResponse> operation
               = new CreateShippingShipment.Async(sdkConfiguration, _headers);
-        return operation.doRequest(request)
-            .thenCompose(operation::handleResponse);
-    }
-
-
-    /**
-     * Create a tracking
-     * 
-     * @return The async call builder
-     */
-    public CreateShippingTrackingRequestBuilder createShippingTracking() {
-        return new CreateShippingTrackingRequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Create a tracking
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<CreateShippingTrackingResponse>} - The async response
-     */
-    public CompletableFuture<CreateShippingTrackingResponse> createShippingTracking(CreateShippingTrackingRequest request) {
-        AsyncRequestOperation<CreateShippingTrackingRequest, CreateShippingTrackingResponse> operation
-              = new CreateShippingTracking.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -204,7 +178,7 @@ public class AsyncShipping {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetShippingCarrierResponse>} - The async response
      */
-    public CompletableFuture<GetShippingCarrierResponse> getShippingCarrier(GetShippingCarrierRequest request) {
+    public CompletableFuture<GetShippingCarrierResponse> getShippingCarrier(@Nonnull GetShippingCarrierRequest request) {
         AsyncRequestOperation<GetShippingCarrierRequest, GetShippingCarrierResponse> operation
               = new GetShippingCarrier.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -227,32 +201,9 @@ public class AsyncShipping {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetShippingLabelResponse>} - The async response
      */
-    public CompletableFuture<GetShippingLabelResponse> getShippingLabel(GetShippingLabelRequest request) {
+    public CompletableFuture<GetShippingLabelResponse> getShippingLabel(@Nonnull GetShippingLabelRequest request) {
         AsyncRequestOperation<GetShippingLabelRequest, GetShippingLabelResponse> operation
               = new GetShippingLabel.Async(sdkConfiguration, _headers);
-        return operation.doRequest(request)
-            .thenCompose(operation::handleResponse);
-    }
-
-
-    /**
-     * Retrieve a rate
-     * 
-     * @return The async call builder
-     */
-    public GetShippingRateRequestBuilder getShippingRate() {
-        return new GetShippingRateRequestBuilder(sdkConfiguration);
-    }
-
-    /**
-     * Retrieve a rate
-     * 
-     * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<GetShippingRateResponse>} - The async response
-     */
-    public CompletableFuture<GetShippingRateResponse> getShippingRate(GetShippingRateRequest request) {
-        AsyncRequestOperation<GetShippingRateRequest, GetShippingRateResponse> operation
-              = new GetShippingRate.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -273,7 +224,7 @@ public class AsyncShipping {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetShippingShipmentResponse>} - The async response
      */
-    public CompletableFuture<GetShippingShipmentResponse> getShippingShipment(GetShippingShipmentRequest request) {
+    public CompletableFuture<GetShippingShipmentResponse> getShippingShipment(@Nonnull GetShippingShipmentRequest request) {
         AsyncRequestOperation<GetShippingShipmentRequest, GetShippingShipmentResponse> operation
               = new GetShippingShipment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -296,7 +247,7 @@ public class AsyncShipping {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetShippingTrackingResponse>} - The async response
      */
-    public CompletableFuture<GetShippingTrackingResponse> getShippingTracking(GetShippingTrackingRequest request) {
+    public CompletableFuture<GetShippingTrackingResponse> getShippingTracking(@Nonnull GetShippingTrackingRequest request) {
         AsyncRequestOperation<GetShippingTrackingRequest, GetShippingTrackingResponse> operation
               = new GetShippingTracking.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -319,7 +270,7 @@ public class AsyncShipping {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListShippingCarriersResponse>} - The async response
      */
-    public CompletableFuture<ListShippingCarriersResponse> listShippingCarriers(ListShippingCarriersRequest request) {
+    public CompletableFuture<ListShippingCarriersResponse> listShippingCarriers(@Nonnull ListShippingCarriersRequest request) {
         AsyncRequestOperation<ListShippingCarriersRequest, ListShippingCarriersResponse> operation
               = new ListShippingCarriers.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -342,7 +293,7 @@ public class AsyncShipping {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListShippingLabelsResponse>} - The async response
      */
-    public CompletableFuture<ListShippingLabelsResponse> listShippingLabels(ListShippingLabelsRequest request) {
+    public CompletableFuture<ListShippingLabelsResponse> listShippingLabels(@Nonnull ListShippingLabelsRequest request) {
         AsyncRequestOperation<ListShippingLabelsRequest, ListShippingLabelsResponse> operation
               = new ListShippingLabels.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -365,7 +316,7 @@ public class AsyncShipping {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListShippingShipmentsResponse>} - The async response
      */
-    public CompletableFuture<ListShippingShipmentsResponse> listShippingShipments(ListShippingShipmentsRequest request) {
+    public CompletableFuture<ListShippingShipmentsResponse> listShippingShipments(@Nonnull ListShippingShipmentsRequest request) {
         AsyncRequestOperation<ListShippingShipmentsRequest, ListShippingShipmentsResponse> operation
               = new ListShippingShipments.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -374,23 +325,23 @@ public class AsyncShipping {
 
 
     /**
-     * List all trackings
+     * Update a label
      * 
      * @return The async call builder
      */
-    public ListShippingTrackingsRequestBuilder listShippingTrackings() {
-        return new ListShippingTrackingsRequestBuilder(sdkConfiguration);
+    public PatchShippingLabelRequestBuilder patchShippingLabel() {
+        return new PatchShippingLabelRequestBuilder(sdkConfiguration);
     }
 
     /**
-     * List all trackings
+     * Update a label
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListShippingTrackingsResponse>} - The async response
+     * @return {@code CompletableFuture<PatchShippingLabelResponse>} - The async response
      */
-    public CompletableFuture<ListShippingTrackingsResponse> listShippingTrackings(ListShippingTrackingsRequest request) {
-        AsyncRequestOperation<ListShippingTrackingsRequest, ListShippingTrackingsResponse> operation
-              = new ListShippingTrackings.Async(sdkConfiguration, _headers);
+    public CompletableFuture<PatchShippingLabelResponse> patchShippingLabel(@Nonnull PatchShippingLabelRequest request) {
+        AsyncRequestOperation<PatchShippingLabelRequest, PatchShippingLabelResponse> operation
+              = new PatchShippingLabel.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -411,7 +362,7 @@ public class AsyncShipping {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchShippingShipmentResponse>} - The async response
      */
-    public CompletableFuture<PatchShippingShipmentResponse> patchShippingShipment(PatchShippingShipmentRequest request) {
+    public CompletableFuture<PatchShippingShipmentResponse> patchShippingShipment(@Nonnull PatchShippingShipmentRequest request) {
         AsyncRequestOperation<PatchShippingShipmentRequest, PatchShippingShipmentResponse> operation
               = new PatchShippingShipment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -434,7 +385,7 @@ public class AsyncShipping {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveShippingLabelResponse>} - The async response
      */
-    public CompletableFuture<RemoveShippingLabelResponse> removeShippingLabel(RemoveShippingLabelRequest request) {
+    public CompletableFuture<RemoveShippingLabelResponse> removeShippingLabel(@Nonnull RemoveShippingLabelRequest request) {
         AsyncRequestOperation<RemoveShippingLabelRequest, RemoveShippingLabelResponse> operation
               = new RemoveShippingLabel.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -457,9 +408,32 @@ public class AsyncShipping {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveShippingShipmentResponse>} - The async response
      */
-    public CompletableFuture<RemoveShippingShipmentResponse> removeShippingShipment(RemoveShippingShipmentRequest request) {
+    public CompletableFuture<RemoveShippingShipmentResponse> removeShippingShipment(@Nonnull RemoveShippingShipmentRequest request) {
         AsyncRequestOperation<RemoveShippingShipmentRequest, RemoveShippingShipmentResponse> operation
               = new RemoveShippingShipment.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update a label
+     * 
+     * @return The async call builder
+     */
+    public UpdateShippingLabelRequestBuilder updateShippingLabel() {
+        return new UpdateShippingLabelRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a label
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<UpdateShippingLabelResponse>} - The async response
+     */
+    public CompletableFuture<UpdateShippingLabelResponse> updateShippingLabel(@Nonnull UpdateShippingLabelRequest request) {
+        AsyncRequestOperation<UpdateShippingLabelRequest, UpdateShippingLabelResponse> operation
+              = new UpdateShippingLabel.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -480,7 +454,7 @@ public class AsyncShipping {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateShippingShipmentResponse>} - The async response
      */
-    public CompletableFuture<UpdateShippingShipmentResponse> updateShippingShipment(UpdateShippingShipmentRequest request) {
+    public CompletableFuture<UpdateShippingShipmentResponse> updateShippingShipment(@Nonnull UpdateShippingShipmentRequest request) {
         AsyncRequestOperation<UpdateShippingShipmentRequest, UpdateShippingShipmentResponse> operation
               = new UpdateShippingShipment.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

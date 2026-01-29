@@ -4,16 +4,15 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
@@ -25,96 +24,83 @@ public class PaymentLink {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
-    private Optional<Double> amount;
+    private Double amount;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_id")
-    private Optional<String> contactId;
+    private String contactId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
-    private Optional<String> currency;
+    private String currency;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
-    private Optional<Boolean> isActive;
+    private Boolean isActive;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_chargeable_now")
-    private Optional<Boolean> isChargeableNow;
+    private Boolean isChargeableNow;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineitems")
-    private Optional<? extends List<PaymentLineitem>> lineitems;
+    private List<PaymentLineitem> lineitems;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_id")
-    private Optional<String> paymentId;
+    private String paymentId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success_url")
-    private Optional<String> successUrl;
+    private String successUrl;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
-    private Optional<String> url;
+    private String url;
 
     @JsonCreator
     public PaymentLink(
-            @JsonProperty("amount") Optional<Double> amount,
-            @JsonProperty("contact_id") Optional<String> contactId,
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("currency") Optional<String> currency,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("is_active") Optional<Boolean> isActive,
-            @JsonProperty("is_chargeable_now") Optional<Boolean> isChargeableNow,
-            @JsonProperty("lineitems") Optional<? extends List<PaymentLineitem>> lineitems,
-            @JsonProperty("payment_id") Optional<String> paymentId,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("success_url") Optional<String> successUrl,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
-            @JsonProperty("url") Optional<String> url) {
-        Utils.checkNotNull(amount, "amount");
-        Utils.checkNotNull(contactId, "contactId");
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(currency, "currency");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(isActive, "isActive");
-        Utils.checkNotNull(isChargeableNow, "isChargeableNow");
-        Utils.checkNotNull(lineitems, "lineitems");
-        Utils.checkNotNull(paymentId, "paymentId");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(successUrl, "successUrl");
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        Utils.checkNotNull(url, "url");
+            @JsonProperty("amount") @Nullable Double amount,
+            @JsonProperty("contact_id") @Nullable String contactId,
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("currency") @Nullable String currency,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("is_active") @Nullable Boolean isActive,
+            @JsonProperty("is_chargeable_now") @Nullable Boolean isChargeableNow,
+            @JsonProperty("lineitems") @Nullable List<PaymentLineitem> lineitems,
+            @JsonProperty("payment_id") @Nullable String paymentId,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("success_url") @Nullable String successUrl,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
+            @JsonProperty("url") @Nullable String url) {
         this.amount = amount;
         this.contactId = contactId;
         this.createdAt = createdAt;
@@ -131,78 +117,63 @@ public class PaymentLink {
     }
     
     public PaymentLink() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null);
     }
 
-    @JsonIgnore
     public Optional<Double> amount() {
-        return amount;
+        return Optional.ofNullable(this.amount);
     }
 
-    @JsonIgnore
     public Optional<String> contactId() {
-        return contactId;
+        return Optional.ofNullable(this.contactId);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<String> currency() {
-        return currency;
+        return Optional.ofNullable(this.currency);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isActive() {
-        return isActive;
+        return Optional.ofNullable(this.isActive);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isChargeableNow() {
-        return isChargeableNow;
+        return Optional.ofNullable(this.isChargeableNow);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<PaymentLineitem>> lineitems() {
-        return (Optional<List<PaymentLineitem>>) lineitems;
+        return Optional.ofNullable(this.lineitems);
     }
 
-    @JsonIgnore
     public Optional<String> paymentId() {
-        return paymentId;
+        return Optional.ofNullable(this.paymentId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @JsonIgnore
     public Optional<String> successUrl() {
-        return successUrl;
+        return Optional.ofNullable(this.successUrl);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
-    @JsonIgnore
     public Optional<String> url() {
-        return url;
+        return Optional.ofNullable(this.url);
     }
 
     public static Builder builder() {
@@ -210,174 +181,83 @@ public class PaymentLink {
     }
 
 
-    public PaymentLink withAmount(double amount) {
-        Utils.checkNotNull(amount, "amount");
-        this.amount = Optional.ofNullable(amount);
-        return this;
-    }
-
-
-    public PaymentLink withAmount(Optional<Double> amount) {
-        Utils.checkNotNull(amount, "amount");
+    public PaymentLink withAmount(@Nullable Double amount) {
         this.amount = amount;
         return this;
     }
 
-    public PaymentLink withContactId(String contactId) {
-        Utils.checkNotNull(contactId, "contactId");
-        this.contactId = Optional.ofNullable(contactId);
-        return this;
-    }
 
-
-    public PaymentLink withContactId(Optional<String> contactId) {
-        Utils.checkNotNull(contactId, "contactId");
+    public PaymentLink withContactId(@Nullable String contactId) {
         this.contactId = contactId;
         return this;
     }
 
-    public PaymentLink withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
 
-
-    public PaymentLink withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public PaymentLink withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public PaymentLink withCurrency(String currency) {
-        Utils.checkNotNull(currency, "currency");
-        this.currency = Optional.ofNullable(currency);
-        return this;
-    }
 
-
-    public PaymentLink withCurrency(Optional<String> currency) {
-        Utils.checkNotNull(currency, "currency");
+    public PaymentLink withCurrency(@Nullable String currency) {
         this.currency = currency;
         return this;
     }
 
-    public PaymentLink withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public PaymentLink withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public PaymentLink withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public PaymentLink withIsActive(boolean isActive) {
-        Utils.checkNotNull(isActive, "isActive");
-        this.isActive = Optional.ofNullable(isActive);
-        return this;
-    }
 
-
-    public PaymentLink withIsActive(Optional<Boolean> isActive) {
-        Utils.checkNotNull(isActive, "isActive");
+    public PaymentLink withIsActive(@Nullable Boolean isActive) {
         this.isActive = isActive;
         return this;
     }
 
-    public PaymentLink withIsChargeableNow(boolean isChargeableNow) {
-        Utils.checkNotNull(isChargeableNow, "isChargeableNow");
-        this.isChargeableNow = Optional.ofNullable(isChargeableNow);
-        return this;
-    }
 
-
-    public PaymentLink withIsChargeableNow(Optional<Boolean> isChargeableNow) {
-        Utils.checkNotNull(isChargeableNow, "isChargeableNow");
+    public PaymentLink withIsChargeableNow(@Nullable Boolean isChargeableNow) {
         this.isChargeableNow = isChargeableNow;
         return this;
     }
 
-    public PaymentLink withLineitems(List<PaymentLineitem> lineitems) {
-        Utils.checkNotNull(lineitems, "lineitems");
-        this.lineitems = Optional.ofNullable(lineitems);
-        return this;
-    }
 
-
-    public PaymentLink withLineitems(Optional<? extends List<PaymentLineitem>> lineitems) {
-        Utils.checkNotNull(lineitems, "lineitems");
+    public PaymentLink withLineitems(@Nullable List<PaymentLineitem> lineitems) {
         this.lineitems = lineitems;
         return this;
     }
 
-    public PaymentLink withPaymentId(String paymentId) {
-        Utils.checkNotNull(paymentId, "paymentId");
-        this.paymentId = Optional.ofNullable(paymentId);
-        return this;
-    }
 
-
-    public PaymentLink withPaymentId(Optional<String> paymentId) {
-        Utils.checkNotNull(paymentId, "paymentId");
+    public PaymentLink withPaymentId(@Nullable String paymentId) {
         this.paymentId = paymentId;
         return this;
     }
 
-    public PaymentLink withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public PaymentLink withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public PaymentLink withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public PaymentLink withSuccessUrl(String successUrl) {
-        Utils.checkNotNull(successUrl, "successUrl");
-        this.successUrl = Optional.ofNullable(successUrl);
-        return this;
-    }
 
-
-    public PaymentLink withSuccessUrl(Optional<String> successUrl) {
-        Utils.checkNotNull(successUrl, "successUrl");
+    public PaymentLink withSuccessUrl(@Nullable String successUrl) {
         this.successUrl = successUrl;
         return this;
     }
 
-    public PaymentLink withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public PaymentLink withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public PaymentLink withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
-    public PaymentLink withUrl(String url) {
-        Utils.checkNotNull(url, "url");
-        this.url = Optional.ofNullable(url);
-        return this;
-    }
 
-
-    public PaymentLink withUrl(Optional<String> url) {
-        Utils.checkNotNull(url, "url");
+    public PaymentLink withUrl(@Nullable String url) {
         this.url = url;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -435,207 +315,102 @@ public class PaymentLink {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<Double> amount = Optional.empty();
+        private Double amount;
 
-        private Optional<String> contactId = Optional.empty();
+        private String contactId;
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<String> currency = Optional.empty();
+        private String currency;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<Boolean> isActive = Optional.empty();
+        private Boolean isActive;
 
-        private Optional<Boolean> isChargeableNow = Optional.empty();
+        private Boolean isChargeableNow;
 
-        private Optional<? extends List<PaymentLineitem>> lineitems = Optional.empty();
+        private List<PaymentLineitem> lineitems;
 
-        private Optional<String> paymentId = Optional.empty();
+        private String paymentId;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<String> successUrl = Optional.empty();
+        private String successUrl;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
-        private Optional<String> url = Optional.empty();
+        private String url;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder amount(double amount) {
-            Utils.checkNotNull(amount, "amount");
-            this.amount = Optional.ofNullable(amount);
-            return this;
-        }
-
-        public Builder amount(Optional<Double> amount) {
-            Utils.checkNotNull(amount, "amount");
+        public Builder amount(@Nullable Double amount) {
             this.amount = amount;
             return this;
         }
 
-
-        public Builder contactId(String contactId) {
-            Utils.checkNotNull(contactId, "contactId");
-            this.contactId = Optional.ofNullable(contactId);
-            return this;
-        }
-
-        public Builder contactId(Optional<String> contactId) {
-            Utils.checkNotNull(contactId, "contactId");
+        public Builder contactId(@Nullable String contactId) {
             this.contactId = contactId;
             return this;
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder currency(String currency) {
-            Utils.checkNotNull(currency, "currency");
-            this.currency = Optional.ofNullable(currency);
-            return this;
-        }
-
-        public Builder currency(Optional<String> currency) {
-            Utils.checkNotNull(currency, "currency");
+        public Builder currency(@Nullable String currency) {
             this.currency = currency;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder isActive(boolean isActive) {
-            Utils.checkNotNull(isActive, "isActive");
-            this.isActive = Optional.ofNullable(isActive);
-            return this;
-        }
-
-        public Builder isActive(Optional<Boolean> isActive) {
-            Utils.checkNotNull(isActive, "isActive");
+        public Builder isActive(@Nullable Boolean isActive) {
             this.isActive = isActive;
             return this;
         }
 
-
-        public Builder isChargeableNow(boolean isChargeableNow) {
-            Utils.checkNotNull(isChargeableNow, "isChargeableNow");
-            this.isChargeableNow = Optional.ofNullable(isChargeableNow);
-            return this;
-        }
-
-        public Builder isChargeableNow(Optional<Boolean> isChargeableNow) {
-            Utils.checkNotNull(isChargeableNow, "isChargeableNow");
+        public Builder isChargeableNow(@Nullable Boolean isChargeableNow) {
             this.isChargeableNow = isChargeableNow;
             return this;
         }
 
-
-        public Builder lineitems(List<PaymentLineitem> lineitems) {
-            Utils.checkNotNull(lineitems, "lineitems");
-            this.lineitems = Optional.ofNullable(lineitems);
-            return this;
-        }
-
-        public Builder lineitems(Optional<? extends List<PaymentLineitem>> lineitems) {
-            Utils.checkNotNull(lineitems, "lineitems");
+        public Builder lineitems(@Nullable List<PaymentLineitem> lineitems) {
             this.lineitems = lineitems;
             return this;
         }
 
-
-        public Builder paymentId(String paymentId) {
-            Utils.checkNotNull(paymentId, "paymentId");
-            this.paymentId = Optional.ofNullable(paymentId);
-            return this;
-        }
-
-        public Builder paymentId(Optional<String> paymentId) {
-            Utils.checkNotNull(paymentId, "paymentId");
+        public Builder paymentId(@Nullable String paymentId) {
             this.paymentId = paymentId;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder successUrl(String successUrl) {
-            Utils.checkNotNull(successUrl, "successUrl");
-            this.successUrl = Optional.ofNullable(successUrl);
-            return this;
-        }
-
-        public Builder successUrl(Optional<String> successUrl) {
-            Utils.checkNotNull(successUrl, "successUrl");
+        public Builder successUrl(@Nullable String successUrl) {
             this.successUrl = successUrl;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
-
-        public Builder url(String url) {
-            Utils.checkNotNull(url, "url");
-            this.url = Optional.ofNullable(url);
-            return this;
-        }
-
-        public Builder url(Optional<String> url) {
-            Utils.checkNotNull(url, "url");
+        public Builder url(@Nullable String url) {
             this.url = url;
             return this;
         }
 
         public PaymentLink build() {
-
             return new PaymentLink(
                 amount, contactId, createdAt,
                 currency, id, isActive,

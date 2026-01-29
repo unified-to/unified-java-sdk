@@ -4,11 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
@@ -20,59 +19,51 @@ public class ListUnifiedConnectionsRequest {
      * Filter the results on these categories
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=categories")
-    private Optional<? extends List<Categories>> categories;
+    private List<Categories> categories;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=env")
-    private Optional<String> env;
+    private String env;
 
     /**
      * Filter the results to only those integrations for your user referenced by this value
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=external_xref")
-    private Optional<String> externalXref;
+    private String externalXref;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
-    private Optional<Double> limit;
+    private Double limit;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
-    private Optional<Double> offset;
+    private Double offset;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
-    private Optional<String> order;
+    private String order;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
-    private Optional<String> sort;
+    private String sort;
 
     /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
-    private Optional<String> updatedGte;
+    private String updatedGte;
 
     @JsonCreator
     public ListUnifiedConnectionsRequest(
-            Optional<? extends List<Categories>> categories,
-            Optional<String> env,
-            Optional<String> externalXref,
-            Optional<Double> limit,
-            Optional<Double> offset,
-            Optional<String> order,
-            Optional<String> sort,
-            Optional<String> updatedGte) {
-        Utils.checkNotNull(categories, "categories");
-        Utils.checkNotNull(env, "env");
-        Utils.checkNotNull(externalXref, "externalXref");
-        Utils.checkNotNull(limit, "limit");
-        Utils.checkNotNull(offset, "offset");
-        Utils.checkNotNull(order, "order");
-        Utils.checkNotNull(sort, "sort");
-        Utils.checkNotNull(updatedGte, "updatedGte");
+            @Nullable List<Categories> categories,
+            @Nullable String env,
+            @Nullable String externalXref,
+            @Nullable Double limit,
+            @Nullable Double offset,
+            @Nullable String order,
+            @Nullable String sort,
+            @Nullable String updatedGte) {
         this.categories = categories;
         this.env = env;
         this.externalXref = externalXref;
@@ -84,60 +75,51 @@ public class ListUnifiedConnectionsRequest {
     }
     
     public ListUnifiedConnectionsRequest() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null);
     }
 
     /**
      * Filter the results on these categories
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<Categories>> categories() {
-        return (Optional<List<Categories>>) categories;
+        return Optional.ofNullable(this.categories);
     }
 
-    @JsonIgnore
     public Optional<String> env() {
-        return env;
+        return Optional.ofNullable(this.env);
     }
 
     /**
      * Filter the results to only those integrations for your user referenced by this value
      */
-    @JsonIgnore
     public Optional<String> externalXref() {
-        return externalXref;
+        return Optional.ofNullable(this.externalXref);
     }
 
-    @JsonIgnore
     public Optional<Double> limit() {
-        return limit;
+        return Optional.ofNullable(this.limit);
     }
 
-    @JsonIgnore
     public Optional<Double> offset() {
-        return offset;
+        return Optional.ofNullable(this.offset);
     }
 
-    @JsonIgnore
     public Optional<String> order() {
-        return order;
+        return Optional.ofNullable(this.order);
     }
 
-    @JsonIgnore
     public Optional<String> sort() {
-        return sort;
+        return Optional.ofNullable(this.sort);
     }
 
     /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
-    @JsonIgnore
     public Optional<String> updatedGte() {
-        return updatedGte;
+        return Optional.ofNullable(this.updatedGte);
     }
 
     public static Builder builder() {
@@ -148,126 +130,60 @@ public class ListUnifiedConnectionsRequest {
     /**
      * Filter the results on these categories
      */
-    public ListUnifiedConnectionsRequest withCategories(List<Categories> categories) {
-        Utils.checkNotNull(categories, "categories");
-        this.categories = Optional.ofNullable(categories);
-        return this;
-    }
-
-
-    /**
-     * Filter the results on these categories
-     */
-    public ListUnifiedConnectionsRequest withCategories(Optional<? extends List<Categories>> categories) {
-        Utils.checkNotNull(categories, "categories");
+    public ListUnifiedConnectionsRequest withCategories(@Nullable List<Categories> categories) {
         this.categories = categories;
         return this;
     }
 
-    public ListUnifiedConnectionsRequest withEnv(String env) {
-        Utils.checkNotNull(env, "env");
-        this.env = Optional.ofNullable(env);
-        return this;
-    }
 
-
-    public ListUnifiedConnectionsRequest withEnv(Optional<String> env) {
-        Utils.checkNotNull(env, "env");
+    public ListUnifiedConnectionsRequest withEnv(@Nullable String env) {
         this.env = env;
         return this;
     }
 
-    /**
-     * Filter the results to only those integrations for your user referenced by this value
-     */
-    public ListUnifiedConnectionsRequest withExternalXref(String externalXref) {
-        Utils.checkNotNull(externalXref, "externalXref");
-        this.externalXref = Optional.ofNullable(externalXref);
-        return this;
-    }
-
 
     /**
      * Filter the results to only those integrations for your user referenced by this value
      */
-    public ListUnifiedConnectionsRequest withExternalXref(Optional<String> externalXref) {
-        Utils.checkNotNull(externalXref, "externalXref");
+    public ListUnifiedConnectionsRequest withExternalXref(@Nullable String externalXref) {
         this.externalXref = externalXref;
         return this;
     }
 
-    public ListUnifiedConnectionsRequest withLimit(double limit) {
-        Utils.checkNotNull(limit, "limit");
-        this.limit = Optional.ofNullable(limit);
-        return this;
-    }
 
-
-    public ListUnifiedConnectionsRequest withLimit(Optional<Double> limit) {
-        Utils.checkNotNull(limit, "limit");
+    public ListUnifiedConnectionsRequest withLimit(@Nullable Double limit) {
         this.limit = limit;
         return this;
     }
 
-    public ListUnifiedConnectionsRequest withOffset(double offset) {
-        Utils.checkNotNull(offset, "offset");
-        this.offset = Optional.ofNullable(offset);
-        return this;
-    }
 
-
-    public ListUnifiedConnectionsRequest withOffset(Optional<Double> offset) {
-        Utils.checkNotNull(offset, "offset");
+    public ListUnifiedConnectionsRequest withOffset(@Nullable Double offset) {
         this.offset = offset;
         return this;
     }
 
-    public ListUnifiedConnectionsRequest withOrder(String order) {
-        Utils.checkNotNull(order, "order");
-        this.order = Optional.ofNullable(order);
-        return this;
-    }
 
-
-    public ListUnifiedConnectionsRequest withOrder(Optional<String> order) {
-        Utils.checkNotNull(order, "order");
+    public ListUnifiedConnectionsRequest withOrder(@Nullable String order) {
         this.order = order;
         return this;
     }
 
-    public ListUnifiedConnectionsRequest withSort(String sort) {
-        Utils.checkNotNull(sort, "sort");
-        this.sort = Optional.ofNullable(sort);
-        return this;
-    }
 
-
-    public ListUnifiedConnectionsRequest withSort(Optional<String> sort) {
-        Utils.checkNotNull(sort, "sort");
+    public ListUnifiedConnectionsRequest withSort(@Nullable String sort) {
         this.sort = sort;
         return this;
     }
 
-    /**
-     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
-     * YYYY-MM-DDTHH:MM:SSZ format)
-     */
-    public ListUnifiedConnectionsRequest withUpdatedGte(String updatedGte) {
-        Utils.checkNotNull(updatedGte, "updatedGte");
-        this.updatedGte = Optional.ofNullable(updatedGte);
-        return this;
-    }
-
 
     /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
-    public ListUnifiedConnectionsRequest withUpdatedGte(Optional<String> updatedGte) {
-        Utils.checkNotNull(updatedGte, "updatedGte");
+    public ListUnifiedConnectionsRequest withUpdatedGte(@Nullable String updatedGte) {
         this.updatedGte = updatedGte;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -313,152 +229,77 @@ public class ListUnifiedConnectionsRequest {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends List<Categories>> categories = Optional.empty();
+        private List<Categories> categories;
 
-        private Optional<String> env = Optional.empty();
+        private String env;
 
-        private Optional<String> externalXref = Optional.empty();
+        private String externalXref;
 
-        private Optional<Double> limit = Optional.empty();
+        private Double limit;
 
-        private Optional<Double> offset = Optional.empty();
+        private Double offset;
 
-        private Optional<String> order = Optional.empty();
+        private String order;
 
-        private Optional<String> sort = Optional.empty();
+        private String sort;
 
-        private Optional<String> updatedGte = Optional.empty();
+        private String updatedGte;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
         /**
          * Filter the results on these categories
          */
-        public Builder categories(List<Categories> categories) {
-            Utils.checkNotNull(categories, "categories");
-            this.categories = Optional.ofNullable(categories);
-            return this;
-        }
-
-        /**
-         * Filter the results on these categories
-         */
-        public Builder categories(Optional<? extends List<Categories>> categories) {
-            Utils.checkNotNull(categories, "categories");
+        public Builder categories(@Nullable List<Categories> categories) {
             this.categories = categories;
             return this;
         }
 
-
-        public Builder env(String env) {
-            Utils.checkNotNull(env, "env");
-            this.env = Optional.ofNullable(env);
-            return this;
-        }
-
-        public Builder env(Optional<String> env) {
-            Utils.checkNotNull(env, "env");
+        public Builder env(@Nullable String env) {
             this.env = env;
             return this;
         }
 
-
         /**
          * Filter the results to only those integrations for your user referenced by this value
          */
-        public Builder externalXref(String externalXref) {
-            Utils.checkNotNull(externalXref, "externalXref");
-            this.externalXref = Optional.ofNullable(externalXref);
-            return this;
-        }
-
-        /**
-         * Filter the results to only those integrations for your user referenced by this value
-         */
-        public Builder externalXref(Optional<String> externalXref) {
-            Utils.checkNotNull(externalXref, "externalXref");
+        public Builder externalXref(@Nullable String externalXref) {
             this.externalXref = externalXref;
             return this;
         }
 
-
-        public Builder limit(double limit) {
-            Utils.checkNotNull(limit, "limit");
-            this.limit = Optional.ofNullable(limit);
-            return this;
-        }
-
-        public Builder limit(Optional<Double> limit) {
-            Utils.checkNotNull(limit, "limit");
+        public Builder limit(@Nullable Double limit) {
             this.limit = limit;
             return this;
         }
 
-
-        public Builder offset(double offset) {
-            Utils.checkNotNull(offset, "offset");
-            this.offset = Optional.ofNullable(offset);
-            return this;
-        }
-
-        public Builder offset(Optional<Double> offset) {
-            Utils.checkNotNull(offset, "offset");
+        public Builder offset(@Nullable Double offset) {
             this.offset = offset;
             return this;
         }
 
-
-        public Builder order(String order) {
-            Utils.checkNotNull(order, "order");
-            this.order = Optional.ofNullable(order);
-            return this;
-        }
-
-        public Builder order(Optional<String> order) {
-            Utils.checkNotNull(order, "order");
+        public Builder order(@Nullable String order) {
             this.order = order;
             return this;
         }
 
-
-        public Builder sort(String sort) {
-            Utils.checkNotNull(sort, "sort");
-            this.sort = Optional.ofNullable(sort);
-            return this;
-        }
-
-        public Builder sort(Optional<String> sort) {
-            Utils.checkNotNull(sort, "sort");
+        public Builder sort(@Nullable String sort) {
             this.sort = sort;
             return this;
         }
 
-
         /**
          * Return only results whose updated date is equal or greater to this value (ISO-8601 /
          * YYYY-MM-DDTHH:MM:SSZ format)
          */
-        public Builder updatedGte(String updatedGte) {
-            Utils.checkNotNull(updatedGte, "updatedGte");
-            this.updatedGte = Optional.ofNullable(updatedGte);
-            return this;
-        }
-
-        /**
-         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
-         * YYYY-MM-DDTHH:MM:SSZ format)
-         */
-        public Builder updatedGte(Optional<String> updatedGte) {
-            Utils.checkNotNull(updatedGte, "updatedGte");
+        public Builder updatedGte(@Nullable String updatedGte) {
             this.updatedGte = updatedGte;
             return this;
         }
 
         public ListUnifiedConnectionsRequest build() {
-
             return new ListUnifiedConnectionsRequest(
                 categories, env, externalXref,
                 limit, offset, order,

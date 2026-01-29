@@ -4,10 +4,11 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Override;
 import java.lang.String;
@@ -23,44 +24,39 @@ public class AccountingTransactionContact {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_customer")
-    private Optional<Boolean> isCustomer;
+    private Boolean isCustomer;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_supplier")
-    private Optional<Boolean> isSupplier;
+    private Boolean isSupplier;
 
     @JsonCreator
     public AccountingTransactionContact(
-            @JsonProperty("id") String id,
-            @JsonProperty("is_customer") Optional<Boolean> isCustomer,
-            @JsonProperty("is_supplier") Optional<Boolean> isSupplier) {
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(isCustomer, "isCustomer");
-        Utils.checkNotNull(isSupplier, "isSupplier");
-        this.id = id;
+            @JsonProperty("id") @Nonnull String id,
+            @JsonProperty("is_customer") @Nullable Boolean isCustomer,
+            @JsonProperty("is_supplier") @Nullable Boolean isSupplier) {
+        this.id = Optional.ofNullable(id)
+            .orElseThrow(() -> new IllegalArgumentException("id cannot be null"));
         this.isCustomer = isCustomer;
         this.isSupplier = isSupplier;
     }
     
     public AccountingTransactionContact(
-            String id) {
-        this(id, Optional.empty(), Optional.empty());
+            @Nonnull String id) {
+        this(id, null, null);
     }
 
-    @JsonIgnore
     public String id() {
-        return id;
+        return this.id;
     }
 
-    @JsonIgnore
     public Optional<Boolean> isCustomer() {
-        return isCustomer;
+        return Optional.ofNullable(this.isCustomer);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isSupplier() {
-        return isSupplier;
+        return Optional.ofNullable(this.isSupplier);
     }
 
     public static Builder builder() {
@@ -68,37 +64,23 @@ public class AccountingTransactionContact {
     }
 
 
-    public AccountingTransactionContact withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = id;
-        return this;
-    }
-
-    public AccountingTransactionContact withIsCustomer(boolean isCustomer) {
-        Utils.checkNotNull(isCustomer, "isCustomer");
-        this.isCustomer = Optional.ofNullable(isCustomer);
+    public AccountingTransactionContact withId(@Nonnull String id) {
+        this.id = Utils.checkNotNull(id, "id");
         return this;
     }
 
 
-    public AccountingTransactionContact withIsCustomer(Optional<Boolean> isCustomer) {
-        Utils.checkNotNull(isCustomer, "isCustomer");
+    public AccountingTransactionContact withIsCustomer(@Nullable Boolean isCustomer) {
         this.isCustomer = isCustomer;
         return this;
     }
 
-    public AccountingTransactionContact withIsSupplier(boolean isSupplier) {
-        Utils.checkNotNull(isSupplier, "isSupplier");
-        this.isSupplier = Optional.ofNullable(isSupplier);
-        return this;
-    }
 
-
-    public AccountingTransactionContact withIsSupplier(Optional<Boolean> isSupplier) {
-        Utils.checkNotNull(isSupplier, "isSupplier");
+    public AccountingTransactionContact withIsSupplier(@Nullable Boolean isSupplier) {
         this.isSupplier = isSupplier;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -134,49 +116,30 @@ public class AccountingTransactionContact {
 
         private String id;
 
-        private Optional<Boolean> isCustomer = Optional.empty();
+        private Boolean isCustomer;
 
-        private Optional<Boolean> isSupplier = Optional.empty();
+        private Boolean isSupplier;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = id;
+        public Builder id(@Nonnull String id) {
+            this.id = Utils.checkNotNull(id, "id");
             return this;
         }
 
-
-        public Builder isCustomer(boolean isCustomer) {
-            Utils.checkNotNull(isCustomer, "isCustomer");
-            this.isCustomer = Optional.ofNullable(isCustomer);
-            return this;
-        }
-
-        public Builder isCustomer(Optional<Boolean> isCustomer) {
-            Utils.checkNotNull(isCustomer, "isCustomer");
+        public Builder isCustomer(@Nullable Boolean isCustomer) {
             this.isCustomer = isCustomer;
             return this;
         }
 
-
-        public Builder isSupplier(boolean isSupplier) {
-            Utils.checkNotNull(isSupplier, "isSupplier");
-            this.isSupplier = Optional.ofNullable(isSupplier);
-            return this;
-        }
-
-        public Builder isSupplier(Optional<Boolean> isSupplier) {
-            Utils.checkNotNull(isSupplier, "isSupplier");
+        public Builder isSupplier(@Nullable Boolean isSupplier) {
             this.isSupplier = isSupplier;
             return this;
         }
 
         public AccountingTransactionContact build() {
-
             return new AccountingTransactionContact(
                 id, isCustomer, isSupplier);
         }

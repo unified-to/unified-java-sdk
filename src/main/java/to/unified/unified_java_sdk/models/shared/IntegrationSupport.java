@@ -4,14 +4,13 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -22,973 +21,835 @@ public class IntegrationSupport {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("from_webhook")
-    private Optional<? extends FromWebhook> fromWebhook;
+    private FromWebhook fromWebhook;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inbound_fields")
-    private Optional<? extends Map<String, String>> inboundFields;
+    private Map<String, String> inboundFields;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_account_id")
-    private Optional<? extends ListAccountId> listAccountId;
+    private ListAccountId listAccountId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_ad_id")
-    private Optional<? extends ListAdId> listAdId;
+    private ListAdId listAdId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_application_id")
-    private Optional<? extends ListApplicationId> listApplicationId;
+    private ListApplicationId listApplicationId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_benefit_id")
-    private Optional<? extends ListBenefitId> listBenefitId;
+    private ListBenefitId listBenefitId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_branch_id")
-    private Optional<? extends ListBranchId> listBranchId;
+    private ListBranchId listBranchId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_calendar_id")
-    private Optional<? extends ListCalendarId> listCalendarId;
+    private ListCalendarId listCalendarId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_call_id")
-    private Optional<? extends ListCallId> listCallId;
+    private ListCallId listCallId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_campaign_id")
-    private Optional<? extends ListCampaignId> listCampaignId;
+    private ListCampaignId listCampaignId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_candidate_id")
-    private Optional<? extends ListCandidateId> listCandidateId;
+    private ListCandidateId listCandidateId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_carrier_id")
-    private Optional<? extends ListCarrierId> listCarrierId;
+    private ListCarrierId listCarrierId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_category_id")
-    private Optional<? extends ListCategoryId> listCategoryId;
+    private ListCategoryId listCategoryId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_channel_id")
-    private Optional<? extends ListChannelId> listChannelId;
+    private ListChannelId listChannelId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_class_id")
-    private Optional<? extends ListClassId> listClassId;
+    private ListClassId listClassId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_collection_id")
-    private Optional<? extends ListCollectionId> listCollectionId;
+    private ListCollectionId listCollectionId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_company_id")
-    private Optional<? extends ListCompanyId> listCompanyId;
+    private ListCompanyId listCompanyId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_contact_id")
-    private Optional<? extends ListContactId> listContactId;
+    private ListContactId listContactId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_course_id")
-    private Optional<? extends ListCourseId> listCourseId;
+    private ListCourseId listCourseId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_customer_id")
-    private Optional<? extends ListCustomerId> listCustomerId;
+    private ListCustomerId listCustomerId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_deal_id")
-    private Optional<? extends ListDealId> listDealId;
+    private ListDealId listDealId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_document_id")
-    private Optional<? extends ListDocumentId> listDocumentId;
+    private ListDocumentId listDocumentId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_end_lt")
-    private Optional<? extends ListEndLt> listEndLt;
+    private ListEndLt listEndLt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_event_id")
-    private Optional<? extends ListEventId> listEventId;
+    private ListEventId listEventId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_expand")
-    private Optional<? extends ListExpand> listExpand;
+    private ListExpand listExpand;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_form_id")
-    private Optional<? extends ListFormId> listFormId;
+    private ListFormId listFormId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_group_id")
-    private Optional<? extends ListGroupId> listGroupId;
+    private ListGroupId listGroupId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_instructor_id")
-    private Optional<? extends ListInstructorId> listInstructorId;
+    private ListInstructorId listInstructorId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_interview_id")
-    private Optional<? extends ListInterviewId> listInterviewId;
+    private ListInterviewId listInterviewId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_invoice_id")
-    private Optional<? extends ListInvoiceId> listInvoiceId;
+    private ListInvoiceId listInvoiceId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_item_id")
-    private Optional<? extends ListItemId> listItemId;
+    private ListItemId listItemId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_item_variant_id")
-    private Optional<? extends ListItemVariantId> listItemVariantId;
+    private ListItemVariantId listItemVariantId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_job_id")
-    private Optional<? extends ListJobId> listJobId;
+    private ListJobId listJobId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_label_id")
-    private Optional<? extends ListLabelId> listLabelId;
+    private ListLabelId listLabelId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_lead_id")
-    private Optional<? extends ListLeadId> listLeadId;
+    private ListLeadId listLeadId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_limit")
-    private Optional<? extends ListLimit> listLimit;
+    private ListLimit listLimit;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_link_id")
-    private Optional<? extends ListLinkId> listLinkId;
+    private ListLinkId listLinkId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_list_id")
-    private Optional<? extends ListListId> listListId;
+    private ListListId listListId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_location_id")
-    private Optional<? extends ListLocationId> listLocationId;
+    private ListLocationId listLocationId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_offset")
-    private Optional<? extends ListOffset> listOffset;
+    private ListOffset listOffset;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_order")
-    private Optional<? extends ListOrder> listOrder;
+    private ListOrder listOrder;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_order_id")
-    private Optional<? extends ListOrderId> listOrderId;
+    private ListOrderId listOrderId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_org_id")
-    private Optional<? extends ListOrgId> listOrgId;
+    private ListOrgId listOrgId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_package_id")
-    private Optional<? extends ListPackageId> listPackageId;
+    private ListPackageId listPackageId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_page_id")
-    private Optional<? extends ListPageId> listPageId;
+    private ListPageId listPageId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_parent_id")
-    private Optional<? extends ListParentId> listParentId;
+    private ListParentId listParentId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_payment_id")
-    private Optional<? extends ListPaymentId> listPaymentId;
+    private ListPaymentId listPaymentId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_payslip_id")
-    private Optional<? extends ListPayslipId> listPayslipId;
+    private ListPayslipId listPayslipId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_pipeline_id")
-    private Optional<? extends ListPipelineId> listPipelineId;
+    private ListPipelineId listPipelineId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_project_id")
-    private Optional<? extends ListProjectId> listProjectId;
+    private ListProjectId listProjectId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_query")
-    private Optional<? extends ListQuery> listQuery;
+    private ListQuery listQuery;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_raw_fields")
-    private Optional<? extends ListRawFields> listRawFields;
+    private ListRawFields listRawFields;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_repo_id")
-    private Optional<? extends ListRepoId> listRepoId;
+    private ListRepoId listRepoId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_root_id")
-    private Optional<? extends ListRootId> listRootId;
+    private ListRootId listRootId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_saleschannel_id")
-    private Optional<? extends ListSaleschannelId> listSaleschannelId;
+    private ListSaleschannelId listSaleschannelId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_shipment_id")
-    private Optional<? extends ListShipmentId> listShipmentId;
+    private ListShipmentId listShipmentId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_sort_by_created_at")
-    private Optional<? extends ListSortByCreatedAt> listSortByCreatedAt;
+    private ListSortByCreatedAt listSortByCreatedAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_sort_by_name")
-    private Optional<? extends ListSortByName> listSortByName;
+    private ListSortByName listSortByName;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_sort_by_updated_at")
-    private Optional<? extends ListSortByUpdatedAt> listSortByUpdatedAt;
+    private ListSortByUpdatedAt listSortByUpdatedAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_space_id")
-    private Optional<? extends ListSpaceId> listSpaceId;
+    private ListSpaceId listSpaceId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_start_gte")
-    private Optional<? extends ListStartGte> listStartGte;
+    private ListStartGte listStartGte;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_status")
-    private Optional<? extends ListStatus> listStatus;
+    private ListStatus listStatus;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_student_id")
-    private Optional<? extends ListStudentId> listStudentId;
+    private ListStudentId listStudentId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_task_id")
-    private Optional<? extends ListTaskId> listTaskId;
+    private ListTaskId listTaskId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_teacher_id")
-    private Optional<? extends ListTeacherId> listTeacherId;
+    private ListTeacherId listTeacherId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_ticket_id")
-    private Optional<? extends ListTicketId> listTicketId;
+    private ListTicketId listTicketId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_type")
-    private Optional<? extends ListType> listType;
+    private ListType listType;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_updated_gte")
-    private Optional<? extends ListUpdatedGte> listUpdatedGte;
+    private ListUpdatedGte listUpdatedGte;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_user_id")
-    private Optional<? extends ListUserId> listUserId;
+    private ListUserId listUserId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_user_mentioned_id")
-    private Optional<? extends ListUserMentionedId> listUserMentionedId;
+    private ListUserMentionedId listUserMentionedId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("methods")
-    private Optional<? extends Map<String, Boolean>> methods;
+    private Map<String, Boolean> methods;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("native_webhook_calendar_id")
-    private Optional<? extends NativeWebhookCalendarId> nativeWebhookCalendarId;
+    private NativeWebhookCalendarId nativeWebhookCalendarId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("native_webhook_carrier_id")
-    private Optional<? extends NativeWebhookCarrierId> nativeWebhookCarrierId;
+    private NativeWebhookCarrierId nativeWebhookCarrierId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("native_webhook_channel_id")
-    private Optional<? extends NativeWebhookChannelId> nativeWebhookChannelId;
+    private NativeWebhookChannelId nativeWebhookChannelId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("native_webhook_company_id")
-    private Optional<? extends NativeWebhookCompanyId> nativeWebhookCompanyId;
+    private NativeWebhookCompanyId nativeWebhookCompanyId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("native_webhook_event_id")
-    private Optional<? extends NativeWebhookEventId> nativeWebhookEventId;
+    private NativeWebhookEventId nativeWebhookEventId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("native_webhook_form_id")
-    private Optional<? extends NativeWebhookFormId> nativeWebhookFormId;
+    private NativeWebhookFormId nativeWebhookFormId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("native_webhook_label_id")
-    private Optional<? extends NativeWebhookLabelId> nativeWebhookLabelId;
+    private NativeWebhookLabelId nativeWebhookLabelId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("native_webhook_order_id")
-    private Optional<? extends NativeWebhookOrderId> nativeWebhookOrderId;
+    private NativeWebhookOrderId nativeWebhookOrderId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("native_webhook_parent_id")
-    private Optional<? extends NativeWebhookParentId> nativeWebhookParentId;
+    private NativeWebhookParentId nativeWebhookParentId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("native_webhook_project_id")
-    private Optional<? extends NativeWebhookProjectId> nativeWebhookProjectId;
+    private NativeWebhookProjectId nativeWebhookProjectId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("native_webhook_shipment_id")
-    private Optional<? extends NativeWebhookShipmentId> nativeWebhookShipmentId;
+    private NativeWebhookShipmentId nativeWebhookShipmentId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("native_webhook_task_id")
-    private Optional<? extends NativeWebhookTaskId> nativeWebhookTaskId;
+    private NativeWebhookTaskId nativeWebhookTaskId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outbound_fields")
-    private Optional<? extends Map<String, String>> outboundFields;
+    private Map<String, String> outboundFields;
 
     /**
      * objects that we map from in the integration
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw_objects")
-    private Optional<? extends List<String>> rawObjects;
+    private List<String> rawObjects;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("search_domain")
-    private Optional<? extends SearchDomain> searchDomain;
+    private SearchDomain searchDomain;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("search_email")
-    private Optional<? extends SearchEmail> searchEmail;
+    private SearchEmail searchEmail;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("search_linkedinurl")
-    private Optional<? extends SearchLinkedinurl> searchLinkedinurl;
+    private SearchLinkedinurl searchLinkedinurl;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("search_name")
-    private Optional<? extends SearchName> searchName;
+    private SearchName searchName;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("search_twitter")
-    private Optional<? extends SearchTwitter> searchTwitter;
+    private SearchTwitter searchTwitter;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slow_fields")
-    private Optional<? extends List<String>> slowFields;
+    private List<String> slowFields;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtual_webhook_ad_id")
-    private Optional<? extends VirtualWebhookAdId> virtualWebhookAdId;
+    private VirtualWebhookAdId virtualWebhookAdId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtual_webhook_application_id")
-    private Optional<? extends VirtualWebhookApplicationId> virtualWebhookApplicationId;
+    private VirtualWebhookApplicationId virtualWebhookApplicationId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtual_webhook_branch_id")
-    private Optional<? extends VirtualWebhookBranchId> virtualWebhookBranchId;
+    private VirtualWebhookBranchId virtualWebhookBranchId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtual_webhook_calendar_id")
-    private Optional<? extends VirtualWebhookCalendarId> virtualWebhookCalendarId;
+    private VirtualWebhookCalendarId virtualWebhookCalendarId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtual_webhook_call_id")
-    private Optional<? extends VirtualWebhookCallId> virtualWebhookCallId;
+    private VirtualWebhookCallId virtualWebhookCallId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtual_webhook_campaign_id")
-    private Optional<? extends VirtualWebhookCampaignId> virtualWebhookCampaignId;
+    private VirtualWebhookCampaignId virtualWebhookCampaignId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtual_webhook_candidate_id")
-    private Optional<? extends VirtualWebhookCandidateId> virtualWebhookCandidateId;
+    private VirtualWebhookCandidateId virtualWebhookCandidateId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtual_webhook_carrier_id")
-    private Optional<? extends VirtualWebhookCarrierId> virtualWebhookCarrierId;
+    private VirtualWebhookCarrierId virtualWebhookCarrierId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtual_webhook_channel_id")
-    private Optional<? extends VirtualWebhookChannelId> virtualWebhookChannelId;
+    private VirtualWebhookChannelId virtualWebhookChannelId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtual_webhook_collection_id")
-    private Optional<? extends VirtualWebhookCollectionId> virtualWebhookCollectionId;
+    private VirtualWebhookCollectionId virtualWebhookCollectionId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtual_webhook_company_id")
-    private Optional<? extends VirtualWebhookCompanyId> virtualWebhookCompanyId;
+    private VirtualWebhookCompanyId virtualWebhookCompanyId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtual_webhook_contact_id")
-    private Optional<? extends VirtualWebhookContactId> virtualWebhookContactId;
+    private VirtualWebhookContactId virtualWebhookContactId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtual_webhook_customer_id")
-    private Optional<? extends VirtualWebhookCustomerId> virtualWebhookCustomerId;
+    private VirtualWebhookCustomerId virtualWebhookCustomerId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtual_webhook_deal_id")
-    private Optional<? extends VirtualWebhookDealId> virtualWebhookDealId;
+    private VirtualWebhookDealId virtualWebhookDealId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtual_webhook_end_lt")
-    private Optional<? extends VirtualWebhookEndLt> virtualWebhookEndLt;
+    private VirtualWebhookEndLt virtualWebhookEndLt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtual_webhook_event_id")
-    private Optional<? extends VirtualWebhookEventId> virtualWebhookEventId;
+    private VirtualWebhookEventId virtualWebhookEventId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtual_webhook_expand")
-    private Optional<? extends VirtualWebhookExpand> virtualWebhookExpand;
+    private VirtualWebhookExpand virtualWebhookExpand;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtual_webhook_fields")
-    private Optional<? extends VirtualWebhookFields> virtualWebhookFields;
+    private VirtualWebhookFields virtualWebhookFields;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtual_webhook_form_id")
-    private Optional<? extends VirtualWebhookFormId> virtualWebhookFormId;
+    private VirtualWebhookFormId virtualWebhookFormId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtual_webhook_group_id")
-    private Optional<? extends VirtualWebhookGroupId> virtualWebhookGroupId;
+    private VirtualWebhookGroupId virtualWebhookGroupId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtual_webhook_item_id")
-    private Optional<? extends VirtualWebhookItemId> virtualWebhookItemId;
+    private VirtualWebhookItemId virtualWebhookItemId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtual_webhook_item_variant_id")
-    private Optional<? extends VirtualWebhookItemVariantId> virtualWebhookItemVariantId;
+    private VirtualWebhookItemVariantId virtualWebhookItemVariantId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtual_webhook_job_id")
-    private Optional<? extends VirtualWebhookJobId> virtualWebhookJobId;
+    private VirtualWebhookJobId virtualWebhookJobId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtual_webhook_label_id")
-    private Optional<? extends VirtualWebhookLabelId> virtualWebhookLabelId;
+    private VirtualWebhookLabelId virtualWebhookLabelId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtual_webhook_lead_id")
-    private Optional<? extends VirtualWebhookLeadId> virtualWebhookLeadId;
+    private VirtualWebhookLeadId virtualWebhookLeadId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtual_webhook_limit")
-    private Optional<? extends VirtualWebhookLimit> virtualWebhookLimit;
+    private VirtualWebhookLimit virtualWebhookLimit;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtual_webhook_list_id")
-    private Optional<? extends VirtualWebhookListId> virtualWebhookListId;
+    private VirtualWebhookListId virtualWebhookListId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtual_webhook_location_id")
-    private Optional<? extends VirtualWebhookLocationId> virtualWebhookLocationId;
+    private VirtualWebhookLocationId virtualWebhookLocationId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtual_webhook_order_id")
-    private Optional<? extends VirtualWebhookOrderId> virtualWebhookOrderId;
+    private VirtualWebhookOrderId virtualWebhookOrderId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtual_webhook_org_id")
-    private Optional<? extends VirtualWebhookOrgId> virtualWebhookOrgId;
+    private VirtualWebhookOrgId virtualWebhookOrgId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtual_webhook_page_id")
-    private Optional<? extends VirtualWebhookPageId> virtualWebhookPageId;
+    private VirtualWebhookPageId virtualWebhookPageId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtual_webhook_parent_id")
-    private Optional<? extends VirtualWebhookParentId> virtualWebhookParentId;
+    private VirtualWebhookParentId virtualWebhookParentId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtual_webhook_pipeline_id")
-    private Optional<? extends VirtualWebhookPipelineId> virtualWebhookPipelineId;
+    private VirtualWebhookPipelineId virtualWebhookPipelineId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtual_webhook_project_id")
-    private Optional<? extends VirtualWebhookProjectId> virtualWebhookProjectId;
+    private VirtualWebhookProjectId virtualWebhookProjectId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtual_webhook_repo_id")
-    private Optional<? extends VirtualWebhookRepoId> virtualWebhookRepoId;
+    private VirtualWebhookRepoId virtualWebhookRepoId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtual_webhook_saleschannel_id")
-    private Optional<? extends VirtualWebhookSaleschannelId> virtualWebhookSaleschannelId;
+    private VirtualWebhookSaleschannelId virtualWebhookSaleschannelId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtual_webhook_shipment_id")
-    private Optional<? extends VirtualWebhookShipmentId> virtualWebhookShipmentId;
+    private VirtualWebhookShipmentId virtualWebhookShipmentId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtual_webhook_space_id")
-    private Optional<? extends VirtualWebhookSpaceId> virtualWebhookSpaceId;
+    private VirtualWebhookSpaceId virtualWebhookSpaceId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtual_webhook_start_gte")
-    private Optional<? extends VirtualWebhookStartGte> virtualWebhookStartGte;
+    private VirtualWebhookStartGte virtualWebhookStartGte;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtual_webhook_status")
-    private Optional<? extends VirtualWebhookStatus> virtualWebhookStatus;
+    private VirtualWebhookStatus virtualWebhookStatus;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtual_webhook_task_id")
-    private Optional<? extends VirtualWebhookTaskId> virtualWebhookTaskId;
+    private VirtualWebhookTaskId virtualWebhookTaskId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtual_webhook_ticket_id")
-    private Optional<? extends VirtualWebhookTicketId> virtualWebhookTicketId;
+    private VirtualWebhookTicketId virtualWebhookTicketId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtual_webhook_type")
-    private Optional<? extends VirtualWebhookType> virtualWebhookType;
+    private VirtualWebhookType virtualWebhookType;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtual_webhook_updated_gte")
-    private Optional<? extends VirtualWebhookUpdatedGte> virtualWebhookUpdatedGte;
+    private VirtualWebhookUpdatedGte virtualWebhookUpdatedGte;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtual_webhook_user_id")
-    private Optional<? extends VirtualWebhookUserId> virtualWebhookUserId;
+    private VirtualWebhookUserId virtualWebhookUserId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtual_webhook_user_mentioned_id")
-    private Optional<? extends VirtualWebhookUserMentionedId> virtualWebhookUserMentionedId;
+    private VirtualWebhookUserMentionedId virtualWebhookUserMentionedId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webhook_events")
-    private Optional<? extends PropertyIntegrationSupportWebhookEvents> webhookEvents;
+    private PropertyIntegrationSupportWebhookEvents webhookEvents;
 
     @JsonCreator
     public IntegrationSupport(
-            @JsonProperty("from_webhook") Optional<? extends FromWebhook> fromWebhook,
-            @JsonProperty("inbound_fields") Optional<? extends Map<String, String>> inboundFields,
-            @JsonProperty("list_account_id") Optional<? extends ListAccountId> listAccountId,
-            @JsonProperty("list_ad_id") Optional<? extends ListAdId> listAdId,
-            @JsonProperty("list_application_id") Optional<? extends ListApplicationId> listApplicationId,
-            @JsonProperty("list_benefit_id") Optional<? extends ListBenefitId> listBenefitId,
-            @JsonProperty("list_branch_id") Optional<? extends ListBranchId> listBranchId,
-            @JsonProperty("list_calendar_id") Optional<? extends ListCalendarId> listCalendarId,
-            @JsonProperty("list_call_id") Optional<? extends ListCallId> listCallId,
-            @JsonProperty("list_campaign_id") Optional<? extends ListCampaignId> listCampaignId,
-            @JsonProperty("list_candidate_id") Optional<? extends ListCandidateId> listCandidateId,
-            @JsonProperty("list_carrier_id") Optional<? extends ListCarrierId> listCarrierId,
-            @JsonProperty("list_category_id") Optional<? extends ListCategoryId> listCategoryId,
-            @JsonProperty("list_channel_id") Optional<? extends ListChannelId> listChannelId,
-            @JsonProperty("list_class_id") Optional<? extends ListClassId> listClassId,
-            @JsonProperty("list_collection_id") Optional<? extends ListCollectionId> listCollectionId,
-            @JsonProperty("list_company_id") Optional<? extends ListCompanyId> listCompanyId,
-            @JsonProperty("list_contact_id") Optional<? extends ListContactId> listContactId,
-            @JsonProperty("list_course_id") Optional<? extends ListCourseId> listCourseId,
-            @JsonProperty("list_customer_id") Optional<? extends ListCustomerId> listCustomerId,
-            @JsonProperty("list_deal_id") Optional<? extends ListDealId> listDealId,
-            @JsonProperty("list_document_id") Optional<? extends ListDocumentId> listDocumentId,
-            @JsonProperty("list_end_lt") Optional<? extends ListEndLt> listEndLt,
-            @JsonProperty("list_event_id") Optional<? extends ListEventId> listEventId,
-            @JsonProperty("list_expand") Optional<? extends ListExpand> listExpand,
-            @JsonProperty("list_form_id") Optional<? extends ListFormId> listFormId,
-            @JsonProperty("list_group_id") Optional<? extends ListGroupId> listGroupId,
-            @JsonProperty("list_instructor_id") Optional<? extends ListInstructorId> listInstructorId,
-            @JsonProperty("list_interview_id") Optional<? extends ListInterviewId> listInterviewId,
-            @JsonProperty("list_invoice_id") Optional<? extends ListInvoiceId> listInvoiceId,
-            @JsonProperty("list_item_id") Optional<? extends ListItemId> listItemId,
-            @JsonProperty("list_item_variant_id") Optional<? extends ListItemVariantId> listItemVariantId,
-            @JsonProperty("list_job_id") Optional<? extends ListJobId> listJobId,
-            @JsonProperty("list_label_id") Optional<? extends ListLabelId> listLabelId,
-            @JsonProperty("list_lead_id") Optional<? extends ListLeadId> listLeadId,
-            @JsonProperty("list_limit") Optional<? extends ListLimit> listLimit,
-            @JsonProperty("list_link_id") Optional<? extends ListLinkId> listLinkId,
-            @JsonProperty("list_list_id") Optional<? extends ListListId> listListId,
-            @JsonProperty("list_location_id") Optional<? extends ListLocationId> listLocationId,
-            @JsonProperty("list_offset") Optional<? extends ListOffset> listOffset,
-            @JsonProperty("list_order") Optional<? extends ListOrder> listOrder,
-            @JsonProperty("list_order_id") Optional<? extends ListOrderId> listOrderId,
-            @JsonProperty("list_org_id") Optional<? extends ListOrgId> listOrgId,
-            @JsonProperty("list_package_id") Optional<? extends ListPackageId> listPackageId,
-            @JsonProperty("list_page_id") Optional<? extends ListPageId> listPageId,
-            @JsonProperty("list_parent_id") Optional<? extends ListParentId> listParentId,
-            @JsonProperty("list_payment_id") Optional<? extends ListPaymentId> listPaymentId,
-            @JsonProperty("list_payslip_id") Optional<? extends ListPayslipId> listPayslipId,
-            @JsonProperty("list_pipeline_id") Optional<? extends ListPipelineId> listPipelineId,
-            @JsonProperty("list_project_id") Optional<? extends ListProjectId> listProjectId,
-            @JsonProperty("list_query") Optional<? extends ListQuery> listQuery,
-            @JsonProperty("list_raw_fields") Optional<? extends ListRawFields> listRawFields,
-            @JsonProperty("list_repo_id") Optional<? extends ListRepoId> listRepoId,
-            @JsonProperty("list_root_id") Optional<? extends ListRootId> listRootId,
-            @JsonProperty("list_saleschannel_id") Optional<? extends ListSaleschannelId> listSaleschannelId,
-            @JsonProperty("list_shipment_id") Optional<? extends ListShipmentId> listShipmentId,
-            @JsonProperty("list_sort_by_created_at") Optional<? extends ListSortByCreatedAt> listSortByCreatedAt,
-            @JsonProperty("list_sort_by_name") Optional<? extends ListSortByName> listSortByName,
-            @JsonProperty("list_sort_by_updated_at") Optional<? extends ListSortByUpdatedAt> listSortByUpdatedAt,
-            @JsonProperty("list_space_id") Optional<? extends ListSpaceId> listSpaceId,
-            @JsonProperty("list_start_gte") Optional<? extends ListStartGte> listStartGte,
-            @JsonProperty("list_status") Optional<? extends ListStatus> listStatus,
-            @JsonProperty("list_student_id") Optional<? extends ListStudentId> listStudentId,
-            @JsonProperty("list_task_id") Optional<? extends ListTaskId> listTaskId,
-            @JsonProperty("list_teacher_id") Optional<? extends ListTeacherId> listTeacherId,
-            @JsonProperty("list_ticket_id") Optional<? extends ListTicketId> listTicketId,
-            @JsonProperty("list_type") Optional<? extends ListType> listType,
-            @JsonProperty("list_updated_gte") Optional<? extends ListUpdatedGte> listUpdatedGte,
-            @JsonProperty("list_user_id") Optional<? extends ListUserId> listUserId,
-            @JsonProperty("list_user_mentioned_id") Optional<? extends ListUserMentionedId> listUserMentionedId,
-            @JsonProperty("methods") Optional<? extends Map<String, Boolean>> methods,
-            @JsonProperty("native_webhook_calendar_id") Optional<? extends NativeWebhookCalendarId> nativeWebhookCalendarId,
-            @JsonProperty("native_webhook_carrier_id") Optional<? extends NativeWebhookCarrierId> nativeWebhookCarrierId,
-            @JsonProperty("native_webhook_channel_id") Optional<? extends NativeWebhookChannelId> nativeWebhookChannelId,
-            @JsonProperty("native_webhook_company_id") Optional<? extends NativeWebhookCompanyId> nativeWebhookCompanyId,
-            @JsonProperty("native_webhook_event_id") Optional<? extends NativeWebhookEventId> nativeWebhookEventId,
-            @JsonProperty("native_webhook_form_id") Optional<? extends NativeWebhookFormId> nativeWebhookFormId,
-            @JsonProperty("native_webhook_label_id") Optional<? extends NativeWebhookLabelId> nativeWebhookLabelId,
-            @JsonProperty("native_webhook_order_id") Optional<? extends NativeWebhookOrderId> nativeWebhookOrderId,
-            @JsonProperty("native_webhook_parent_id") Optional<? extends NativeWebhookParentId> nativeWebhookParentId,
-            @JsonProperty("native_webhook_project_id") Optional<? extends NativeWebhookProjectId> nativeWebhookProjectId,
-            @JsonProperty("native_webhook_shipment_id") Optional<? extends NativeWebhookShipmentId> nativeWebhookShipmentId,
-            @JsonProperty("native_webhook_task_id") Optional<? extends NativeWebhookTaskId> nativeWebhookTaskId,
-            @JsonProperty("outbound_fields") Optional<? extends Map<String, String>> outboundFields,
-            @JsonProperty("raw_objects") Optional<? extends List<String>> rawObjects,
-            @JsonProperty("search_domain") Optional<? extends SearchDomain> searchDomain,
-            @JsonProperty("search_email") Optional<? extends SearchEmail> searchEmail,
-            @JsonProperty("search_linkedinurl") Optional<? extends SearchLinkedinurl> searchLinkedinurl,
-            @JsonProperty("search_name") Optional<? extends SearchName> searchName,
-            @JsonProperty("search_twitter") Optional<? extends SearchTwitter> searchTwitter,
-            @JsonProperty("slow_fields") Optional<? extends List<String>> slowFields,
-            @JsonProperty("virtual_webhook_ad_id") Optional<? extends VirtualWebhookAdId> virtualWebhookAdId,
-            @JsonProperty("virtual_webhook_application_id") Optional<? extends VirtualWebhookApplicationId> virtualWebhookApplicationId,
-            @JsonProperty("virtual_webhook_branch_id") Optional<? extends VirtualWebhookBranchId> virtualWebhookBranchId,
-            @JsonProperty("virtual_webhook_calendar_id") Optional<? extends VirtualWebhookCalendarId> virtualWebhookCalendarId,
-            @JsonProperty("virtual_webhook_call_id") Optional<? extends VirtualWebhookCallId> virtualWebhookCallId,
-            @JsonProperty("virtual_webhook_campaign_id") Optional<? extends VirtualWebhookCampaignId> virtualWebhookCampaignId,
-            @JsonProperty("virtual_webhook_candidate_id") Optional<? extends VirtualWebhookCandidateId> virtualWebhookCandidateId,
-            @JsonProperty("virtual_webhook_carrier_id") Optional<? extends VirtualWebhookCarrierId> virtualWebhookCarrierId,
-            @JsonProperty("virtual_webhook_channel_id") Optional<? extends VirtualWebhookChannelId> virtualWebhookChannelId,
-            @JsonProperty("virtual_webhook_collection_id") Optional<? extends VirtualWebhookCollectionId> virtualWebhookCollectionId,
-            @JsonProperty("virtual_webhook_company_id") Optional<? extends VirtualWebhookCompanyId> virtualWebhookCompanyId,
-            @JsonProperty("virtual_webhook_contact_id") Optional<? extends VirtualWebhookContactId> virtualWebhookContactId,
-            @JsonProperty("virtual_webhook_customer_id") Optional<? extends VirtualWebhookCustomerId> virtualWebhookCustomerId,
-            @JsonProperty("virtual_webhook_deal_id") Optional<? extends VirtualWebhookDealId> virtualWebhookDealId,
-            @JsonProperty("virtual_webhook_end_lt") Optional<? extends VirtualWebhookEndLt> virtualWebhookEndLt,
-            @JsonProperty("virtual_webhook_event_id") Optional<? extends VirtualWebhookEventId> virtualWebhookEventId,
-            @JsonProperty("virtual_webhook_expand") Optional<? extends VirtualWebhookExpand> virtualWebhookExpand,
-            @JsonProperty("virtual_webhook_fields") Optional<? extends VirtualWebhookFields> virtualWebhookFields,
-            @JsonProperty("virtual_webhook_form_id") Optional<? extends VirtualWebhookFormId> virtualWebhookFormId,
-            @JsonProperty("virtual_webhook_group_id") Optional<? extends VirtualWebhookGroupId> virtualWebhookGroupId,
-            @JsonProperty("virtual_webhook_item_id") Optional<? extends VirtualWebhookItemId> virtualWebhookItemId,
-            @JsonProperty("virtual_webhook_item_variant_id") Optional<? extends VirtualWebhookItemVariantId> virtualWebhookItemVariantId,
-            @JsonProperty("virtual_webhook_job_id") Optional<? extends VirtualWebhookJobId> virtualWebhookJobId,
-            @JsonProperty("virtual_webhook_label_id") Optional<? extends VirtualWebhookLabelId> virtualWebhookLabelId,
-            @JsonProperty("virtual_webhook_lead_id") Optional<? extends VirtualWebhookLeadId> virtualWebhookLeadId,
-            @JsonProperty("virtual_webhook_limit") Optional<? extends VirtualWebhookLimit> virtualWebhookLimit,
-            @JsonProperty("virtual_webhook_list_id") Optional<? extends VirtualWebhookListId> virtualWebhookListId,
-            @JsonProperty("virtual_webhook_location_id") Optional<? extends VirtualWebhookLocationId> virtualWebhookLocationId,
-            @JsonProperty("virtual_webhook_order_id") Optional<? extends VirtualWebhookOrderId> virtualWebhookOrderId,
-            @JsonProperty("virtual_webhook_org_id") Optional<? extends VirtualWebhookOrgId> virtualWebhookOrgId,
-            @JsonProperty("virtual_webhook_page_id") Optional<? extends VirtualWebhookPageId> virtualWebhookPageId,
-            @JsonProperty("virtual_webhook_parent_id") Optional<? extends VirtualWebhookParentId> virtualWebhookParentId,
-            @JsonProperty("virtual_webhook_pipeline_id") Optional<? extends VirtualWebhookPipelineId> virtualWebhookPipelineId,
-            @JsonProperty("virtual_webhook_project_id") Optional<? extends VirtualWebhookProjectId> virtualWebhookProjectId,
-            @JsonProperty("virtual_webhook_repo_id") Optional<? extends VirtualWebhookRepoId> virtualWebhookRepoId,
-            @JsonProperty("virtual_webhook_saleschannel_id") Optional<? extends VirtualWebhookSaleschannelId> virtualWebhookSaleschannelId,
-            @JsonProperty("virtual_webhook_shipment_id") Optional<? extends VirtualWebhookShipmentId> virtualWebhookShipmentId,
-            @JsonProperty("virtual_webhook_space_id") Optional<? extends VirtualWebhookSpaceId> virtualWebhookSpaceId,
-            @JsonProperty("virtual_webhook_start_gte") Optional<? extends VirtualWebhookStartGte> virtualWebhookStartGte,
-            @JsonProperty("virtual_webhook_status") Optional<? extends VirtualWebhookStatus> virtualWebhookStatus,
-            @JsonProperty("virtual_webhook_task_id") Optional<? extends VirtualWebhookTaskId> virtualWebhookTaskId,
-            @JsonProperty("virtual_webhook_ticket_id") Optional<? extends VirtualWebhookTicketId> virtualWebhookTicketId,
-            @JsonProperty("virtual_webhook_type") Optional<? extends VirtualWebhookType> virtualWebhookType,
-            @JsonProperty("virtual_webhook_updated_gte") Optional<? extends VirtualWebhookUpdatedGte> virtualWebhookUpdatedGte,
-            @JsonProperty("virtual_webhook_user_id") Optional<? extends VirtualWebhookUserId> virtualWebhookUserId,
-            @JsonProperty("virtual_webhook_user_mentioned_id") Optional<? extends VirtualWebhookUserMentionedId> virtualWebhookUserMentionedId,
-            @JsonProperty("webhook_events") Optional<? extends PropertyIntegrationSupportWebhookEvents> webhookEvents) {
-        Utils.checkNotNull(fromWebhook, "fromWebhook");
-        Utils.checkNotNull(inboundFields, "inboundFields");
-        Utils.checkNotNull(listAccountId, "listAccountId");
-        Utils.checkNotNull(listAdId, "listAdId");
-        Utils.checkNotNull(listApplicationId, "listApplicationId");
-        Utils.checkNotNull(listBenefitId, "listBenefitId");
-        Utils.checkNotNull(listBranchId, "listBranchId");
-        Utils.checkNotNull(listCalendarId, "listCalendarId");
-        Utils.checkNotNull(listCallId, "listCallId");
-        Utils.checkNotNull(listCampaignId, "listCampaignId");
-        Utils.checkNotNull(listCandidateId, "listCandidateId");
-        Utils.checkNotNull(listCarrierId, "listCarrierId");
-        Utils.checkNotNull(listCategoryId, "listCategoryId");
-        Utils.checkNotNull(listChannelId, "listChannelId");
-        Utils.checkNotNull(listClassId, "listClassId");
-        Utils.checkNotNull(listCollectionId, "listCollectionId");
-        Utils.checkNotNull(listCompanyId, "listCompanyId");
-        Utils.checkNotNull(listContactId, "listContactId");
-        Utils.checkNotNull(listCourseId, "listCourseId");
-        Utils.checkNotNull(listCustomerId, "listCustomerId");
-        Utils.checkNotNull(listDealId, "listDealId");
-        Utils.checkNotNull(listDocumentId, "listDocumentId");
-        Utils.checkNotNull(listEndLt, "listEndLt");
-        Utils.checkNotNull(listEventId, "listEventId");
-        Utils.checkNotNull(listExpand, "listExpand");
-        Utils.checkNotNull(listFormId, "listFormId");
-        Utils.checkNotNull(listGroupId, "listGroupId");
-        Utils.checkNotNull(listInstructorId, "listInstructorId");
-        Utils.checkNotNull(listInterviewId, "listInterviewId");
-        Utils.checkNotNull(listInvoiceId, "listInvoiceId");
-        Utils.checkNotNull(listItemId, "listItemId");
-        Utils.checkNotNull(listItemVariantId, "listItemVariantId");
-        Utils.checkNotNull(listJobId, "listJobId");
-        Utils.checkNotNull(listLabelId, "listLabelId");
-        Utils.checkNotNull(listLeadId, "listLeadId");
-        Utils.checkNotNull(listLimit, "listLimit");
-        Utils.checkNotNull(listLinkId, "listLinkId");
-        Utils.checkNotNull(listListId, "listListId");
-        Utils.checkNotNull(listLocationId, "listLocationId");
-        Utils.checkNotNull(listOffset, "listOffset");
-        Utils.checkNotNull(listOrder, "listOrder");
-        Utils.checkNotNull(listOrderId, "listOrderId");
-        Utils.checkNotNull(listOrgId, "listOrgId");
-        Utils.checkNotNull(listPackageId, "listPackageId");
-        Utils.checkNotNull(listPageId, "listPageId");
-        Utils.checkNotNull(listParentId, "listParentId");
-        Utils.checkNotNull(listPaymentId, "listPaymentId");
-        Utils.checkNotNull(listPayslipId, "listPayslipId");
-        Utils.checkNotNull(listPipelineId, "listPipelineId");
-        Utils.checkNotNull(listProjectId, "listProjectId");
-        Utils.checkNotNull(listQuery, "listQuery");
-        Utils.checkNotNull(listRawFields, "listRawFields");
-        Utils.checkNotNull(listRepoId, "listRepoId");
-        Utils.checkNotNull(listRootId, "listRootId");
-        Utils.checkNotNull(listSaleschannelId, "listSaleschannelId");
-        Utils.checkNotNull(listShipmentId, "listShipmentId");
-        Utils.checkNotNull(listSortByCreatedAt, "listSortByCreatedAt");
-        Utils.checkNotNull(listSortByName, "listSortByName");
-        Utils.checkNotNull(listSortByUpdatedAt, "listSortByUpdatedAt");
-        Utils.checkNotNull(listSpaceId, "listSpaceId");
-        Utils.checkNotNull(listStartGte, "listStartGte");
-        Utils.checkNotNull(listStatus, "listStatus");
-        Utils.checkNotNull(listStudentId, "listStudentId");
-        Utils.checkNotNull(listTaskId, "listTaskId");
-        Utils.checkNotNull(listTeacherId, "listTeacherId");
-        Utils.checkNotNull(listTicketId, "listTicketId");
-        Utils.checkNotNull(listType, "listType");
-        Utils.checkNotNull(listUpdatedGte, "listUpdatedGte");
-        Utils.checkNotNull(listUserId, "listUserId");
-        Utils.checkNotNull(listUserMentionedId, "listUserMentionedId");
-        Utils.checkNotNull(methods, "methods");
-        Utils.checkNotNull(nativeWebhookCalendarId, "nativeWebhookCalendarId");
-        Utils.checkNotNull(nativeWebhookCarrierId, "nativeWebhookCarrierId");
-        Utils.checkNotNull(nativeWebhookChannelId, "nativeWebhookChannelId");
-        Utils.checkNotNull(nativeWebhookCompanyId, "nativeWebhookCompanyId");
-        Utils.checkNotNull(nativeWebhookEventId, "nativeWebhookEventId");
-        Utils.checkNotNull(nativeWebhookFormId, "nativeWebhookFormId");
-        Utils.checkNotNull(nativeWebhookLabelId, "nativeWebhookLabelId");
-        Utils.checkNotNull(nativeWebhookOrderId, "nativeWebhookOrderId");
-        Utils.checkNotNull(nativeWebhookParentId, "nativeWebhookParentId");
-        Utils.checkNotNull(nativeWebhookProjectId, "nativeWebhookProjectId");
-        Utils.checkNotNull(nativeWebhookShipmentId, "nativeWebhookShipmentId");
-        Utils.checkNotNull(nativeWebhookTaskId, "nativeWebhookTaskId");
-        Utils.checkNotNull(outboundFields, "outboundFields");
-        Utils.checkNotNull(rawObjects, "rawObjects");
-        Utils.checkNotNull(searchDomain, "searchDomain");
-        Utils.checkNotNull(searchEmail, "searchEmail");
-        Utils.checkNotNull(searchLinkedinurl, "searchLinkedinurl");
-        Utils.checkNotNull(searchName, "searchName");
-        Utils.checkNotNull(searchTwitter, "searchTwitter");
-        Utils.checkNotNull(slowFields, "slowFields");
-        Utils.checkNotNull(virtualWebhookAdId, "virtualWebhookAdId");
-        Utils.checkNotNull(virtualWebhookApplicationId, "virtualWebhookApplicationId");
-        Utils.checkNotNull(virtualWebhookBranchId, "virtualWebhookBranchId");
-        Utils.checkNotNull(virtualWebhookCalendarId, "virtualWebhookCalendarId");
-        Utils.checkNotNull(virtualWebhookCallId, "virtualWebhookCallId");
-        Utils.checkNotNull(virtualWebhookCampaignId, "virtualWebhookCampaignId");
-        Utils.checkNotNull(virtualWebhookCandidateId, "virtualWebhookCandidateId");
-        Utils.checkNotNull(virtualWebhookCarrierId, "virtualWebhookCarrierId");
-        Utils.checkNotNull(virtualWebhookChannelId, "virtualWebhookChannelId");
-        Utils.checkNotNull(virtualWebhookCollectionId, "virtualWebhookCollectionId");
-        Utils.checkNotNull(virtualWebhookCompanyId, "virtualWebhookCompanyId");
-        Utils.checkNotNull(virtualWebhookContactId, "virtualWebhookContactId");
-        Utils.checkNotNull(virtualWebhookCustomerId, "virtualWebhookCustomerId");
-        Utils.checkNotNull(virtualWebhookDealId, "virtualWebhookDealId");
-        Utils.checkNotNull(virtualWebhookEndLt, "virtualWebhookEndLt");
-        Utils.checkNotNull(virtualWebhookEventId, "virtualWebhookEventId");
-        Utils.checkNotNull(virtualWebhookExpand, "virtualWebhookExpand");
-        Utils.checkNotNull(virtualWebhookFields, "virtualWebhookFields");
-        Utils.checkNotNull(virtualWebhookFormId, "virtualWebhookFormId");
-        Utils.checkNotNull(virtualWebhookGroupId, "virtualWebhookGroupId");
-        Utils.checkNotNull(virtualWebhookItemId, "virtualWebhookItemId");
-        Utils.checkNotNull(virtualWebhookItemVariantId, "virtualWebhookItemVariantId");
-        Utils.checkNotNull(virtualWebhookJobId, "virtualWebhookJobId");
-        Utils.checkNotNull(virtualWebhookLabelId, "virtualWebhookLabelId");
-        Utils.checkNotNull(virtualWebhookLeadId, "virtualWebhookLeadId");
-        Utils.checkNotNull(virtualWebhookLimit, "virtualWebhookLimit");
-        Utils.checkNotNull(virtualWebhookListId, "virtualWebhookListId");
-        Utils.checkNotNull(virtualWebhookLocationId, "virtualWebhookLocationId");
-        Utils.checkNotNull(virtualWebhookOrderId, "virtualWebhookOrderId");
-        Utils.checkNotNull(virtualWebhookOrgId, "virtualWebhookOrgId");
-        Utils.checkNotNull(virtualWebhookPageId, "virtualWebhookPageId");
-        Utils.checkNotNull(virtualWebhookParentId, "virtualWebhookParentId");
-        Utils.checkNotNull(virtualWebhookPipelineId, "virtualWebhookPipelineId");
-        Utils.checkNotNull(virtualWebhookProjectId, "virtualWebhookProjectId");
-        Utils.checkNotNull(virtualWebhookRepoId, "virtualWebhookRepoId");
-        Utils.checkNotNull(virtualWebhookSaleschannelId, "virtualWebhookSaleschannelId");
-        Utils.checkNotNull(virtualWebhookShipmentId, "virtualWebhookShipmentId");
-        Utils.checkNotNull(virtualWebhookSpaceId, "virtualWebhookSpaceId");
-        Utils.checkNotNull(virtualWebhookStartGte, "virtualWebhookStartGte");
-        Utils.checkNotNull(virtualWebhookStatus, "virtualWebhookStatus");
-        Utils.checkNotNull(virtualWebhookTaskId, "virtualWebhookTaskId");
-        Utils.checkNotNull(virtualWebhookTicketId, "virtualWebhookTicketId");
-        Utils.checkNotNull(virtualWebhookType, "virtualWebhookType");
-        Utils.checkNotNull(virtualWebhookUpdatedGte, "virtualWebhookUpdatedGte");
-        Utils.checkNotNull(virtualWebhookUserId, "virtualWebhookUserId");
-        Utils.checkNotNull(virtualWebhookUserMentionedId, "virtualWebhookUserMentionedId");
-        Utils.checkNotNull(webhookEvents, "webhookEvents");
+            @JsonProperty("from_webhook") @Nullable FromWebhook fromWebhook,
+            @JsonProperty("inbound_fields") @Nullable Map<String, String> inboundFields,
+            @JsonProperty("list_account_id") @Nullable ListAccountId listAccountId,
+            @JsonProperty("list_ad_id") @Nullable ListAdId listAdId,
+            @JsonProperty("list_application_id") @Nullable ListApplicationId listApplicationId,
+            @JsonProperty("list_benefit_id") @Nullable ListBenefitId listBenefitId,
+            @JsonProperty("list_branch_id") @Nullable ListBranchId listBranchId,
+            @JsonProperty("list_calendar_id") @Nullable ListCalendarId listCalendarId,
+            @JsonProperty("list_call_id") @Nullable ListCallId listCallId,
+            @JsonProperty("list_campaign_id") @Nullable ListCampaignId listCampaignId,
+            @JsonProperty("list_candidate_id") @Nullable ListCandidateId listCandidateId,
+            @JsonProperty("list_carrier_id") @Nullable ListCarrierId listCarrierId,
+            @JsonProperty("list_category_id") @Nullable ListCategoryId listCategoryId,
+            @JsonProperty("list_channel_id") @Nullable ListChannelId listChannelId,
+            @JsonProperty("list_class_id") @Nullable ListClassId listClassId,
+            @JsonProperty("list_collection_id") @Nullable ListCollectionId listCollectionId,
+            @JsonProperty("list_company_id") @Nullable ListCompanyId listCompanyId,
+            @JsonProperty("list_contact_id") @Nullable ListContactId listContactId,
+            @JsonProperty("list_course_id") @Nullable ListCourseId listCourseId,
+            @JsonProperty("list_customer_id") @Nullable ListCustomerId listCustomerId,
+            @JsonProperty("list_deal_id") @Nullable ListDealId listDealId,
+            @JsonProperty("list_document_id") @Nullable ListDocumentId listDocumentId,
+            @JsonProperty("list_end_lt") @Nullable ListEndLt listEndLt,
+            @JsonProperty("list_event_id") @Nullable ListEventId listEventId,
+            @JsonProperty("list_expand") @Nullable ListExpand listExpand,
+            @JsonProperty("list_form_id") @Nullable ListFormId listFormId,
+            @JsonProperty("list_group_id") @Nullable ListGroupId listGroupId,
+            @JsonProperty("list_instructor_id") @Nullable ListInstructorId listInstructorId,
+            @JsonProperty("list_interview_id") @Nullable ListInterviewId listInterviewId,
+            @JsonProperty("list_invoice_id") @Nullable ListInvoiceId listInvoiceId,
+            @JsonProperty("list_item_id") @Nullable ListItemId listItemId,
+            @JsonProperty("list_item_variant_id") @Nullable ListItemVariantId listItemVariantId,
+            @JsonProperty("list_job_id") @Nullable ListJobId listJobId,
+            @JsonProperty("list_label_id") @Nullable ListLabelId listLabelId,
+            @JsonProperty("list_lead_id") @Nullable ListLeadId listLeadId,
+            @JsonProperty("list_limit") @Nullable ListLimit listLimit,
+            @JsonProperty("list_link_id") @Nullable ListLinkId listLinkId,
+            @JsonProperty("list_list_id") @Nullable ListListId listListId,
+            @JsonProperty("list_location_id") @Nullable ListLocationId listLocationId,
+            @JsonProperty("list_offset") @Nullable ListOffset listOffset,
+            @JsonProperty("list_order") @Nullable ListOrder listOrder,
+            @JsonProperty("list_order_id") @Nullable ListOrderId listOrderId,
+            @JsonProperty("list_org_id") @Nullable ListOrgId listOrgId,
+            @JsonProperty("list_package_id") @Nullable ListPackageId listPackageId,
+            @JsonProperty("list_page_id") @Nullable ListPageId listPageId,
+            @JsonProperty("list_parent_id") @Nullable ListParentId listParentId,
+            @JsonProperty("list_payment_id") @Nullable ListPaymentId listPaymentId,
+            @JsonProperty("list_payslip_id") @Nullable ListPayslipId listPayslipId,
+            @JsonProperty("list_pipeline_id") @Nullable ListPipelineId listPipelineId,
+            @JsonProperty("list_project_id") @Nullable ListProjectId listProjectId,
+            @JsonProperty("list_query") @Nullable ListQuery listQuery,
+            @JsonProperty("list_raw_fields") @Nullable ListRawFields listRawFields,
+            @JsonProperty("list_repo_id") @Nullable ListRepoId listRepoId,
+            @JsonProperty("list_root_id") @Nullable ListRootId listRootId,
+            @JsonProperty("list_saleschannel_id") @Nullable ListSaleschannelId listSaleschannelId,
+            @JsonProperty("list_shipment_id") @Nullable ListShipmentId listShipmentId,
+            @JsonProperty("list_sort_by_created_at") @Nullable ListSortByCreatedAt listSortByCreatedAt,
+            @JsonProperty("list_sort_by_name") @Nullable ListSortByName listSortByName,
+            @JsonProperty("list_sort_by_updated_at") @Nullable ListSortByUpdatedAt listSortByUpdatedAt,
+            @JsonProperty("list_space_id") @Nullable ListSpaceId listSpaceId,
+            @JsonProperty("list_start_gte") @Nullable ListStartGte listStartGte,
+            @JsonProperty("list_status") @Nullable ListStatus listStatus,
+            @JsonProperty("list_student_id") @Nullable ListStudentId listStudentId,
+            @JsonProperty("list_task_id") @Nullable ListTaskId listTaskId,
+            @JsonProperty("list_teacher_id") @Nullable ListTeacherId listTeacherId,
+            @JsonProperty("list_ticket_id") @Nullable ListTicketId listTicketId,
+            @JsonProperty("list_type") @Nullable ListType listType,
+            @JsonProperty("list_updated_gte") @Nullable ListUpdatedGte listUpdatedGte,
+            @JsonProperty("list_user_id") @Nullable ListUserId listUserId,
+            @JsonProperty("list_user_mentioned_id") @Nullable ListUserMentionedId listUserMentionedId,
+            @JsonProperty("methods") @Nullable Map<String, Boolean> methods,
+            @JsonProperty("native_webhook_calendar_id") @Nullable NativeWebhookCalendarId nativeWebhookCalendarId,
+            @JsonProperty("native_webhook_carrier_id") @Nullable NativeWebhookCarrierId nativeWebhookCarrierId,
+            @JsonProperty("native_webhook_channel_id") @Nullable NativeWebhookChannelId nativeWebhookChannelId,
+            @JsonProperty("native_webhook_company_id") @Nullable NativeWebhookCompanyId nativeWebhookCompanyId,
+            @JsonProperty("native_webhook_event_id") @Nullable NativeWebhookEventId nativeWebhookEventId,
+            @JsonProperty("native_webhook_form_id") @Nullable NativeWebhookFormId nativeWebhookFormId,
+            @JsonProperty("native_webhook_label_id") @Nullable NativeWebhookLabelId nativeWebhookLabelId,
+            @JsonProperty("native_webhook_order_id") @Nullable NativeWebhookOrderId nativeWebhookOrderId,
+            @JsonProperty("native_webhook_parent_id") @Nullable NativeWebhookParentId nativeWebhookParentId,
+            @JsonProperty("native_webhook_project_id") @Nullable NativeWebhookProjectId nativeWebhookProjectId,
+            @JsonProperty("native_webhook_shipment_id") @Nullable NativeWebhookShipmentId nativeWebhookShipmentId,
+            @JsonProperty("native_webhook_task_id") @Nullable NativeWebhookTaskId nativeWebhookTaskId,
+            @JsonProperty("outbound_fields") @Nullable Map<String, String> outboundFields,
+            @JsonProperty("raw_objects") @Nullable List<String> rawObjects,
+            @JsonProperty("search_domain") @Nullable SearchDomain searchDomain,
+            @JsonProperty("search_email") @Nullable SearchEmail searchEmail,
+            @JsonProperty("search_linkedinurl") @Nullable SearchLinkedinurl searchLinkedinurl,
+            @JsonProperty("search_name") @Nullable SearchName searchName,
+            @JsonProperty("search_twitter") @Nullable SearchTwitter searchTwitter,
+            @JsonProperty("slow_fields") @Nullable List<String> slowFields,
+            @JsonProperty("virtual_webhook_ad_id") @Nullable VirtualWebhookAdId virtualWebhookAdId,
+            @JsonProperty("virtual_webhook_application_id") @Nullable VirtualWebhookApplicationId virtualWebhookApplicationId,
+            @JsonProperty("virtual_webhook_branch_id") @Nullable VirtualWebhookBranchId virtualWebhookBranchId,
+            @JsonProperty("virtual_webhook_calendar_id") @Nullable VirtualWebhookCalendarId virtualWebhookCalendarId,
+            @JsonProperty("virtual_webhook_call_id") @Nullable VirtualWebhookCallId virtualWebhookCallId,
+            @JsonProperty("virtual_webhook_campaign_id") @Nullable VirtualWebhookCampaignId virtualWebhookCampaignId,
+            @JsonProperty("virtual_webhook_candidate_id") @Nullable VirtualWebhookCandidateId virtualWebhookCandidateId,
+            @JsonProperty("virtual_webhook_carrier_id") @Nullable VirtualWebhookCarrierId virtualWebhookCarrierId,
+            @JsonProperty("virtual_webhook_channel_id") @Nullable VirtualWebhookChannelId virtualWebhookChannelId,
+            @JsonProperty("virtual_webhook_collection_id") @Nullable VirtualWebhookCollectionId virtualWebhookCollectionId,
+            @JsonProperty("virtual_webhook_company_id") @Nullable VirtualWebhookCompanyId virtualWebhookCompanyId,
+            @JsonProperty("virtual_webhook_contact_id") @Nullable VirtualWebhookContactId virtualWebhookContactId,
+            @JsonProperty("virtual_webhook_customer_id") @Nullable VirtualWebhookCustomerId virtualWebhookCustomerId,
+            @JsonProperty("virtual_webhook_deal_id") @Nullable VirtualWebhookDealId virtualWebhookDealId,
+            @JsonProperty("virtual_webhook_end_lt") @Nullable VirtualWebhookEndLt virtualWebhookEndLt,
+            @JsonProperty("virtual_webhook_event_id") @Nullable VirtualWebhookEventId virtualWebhookEventId,
+            @JsonProperty("virtual_webhook_expand") @Nullable VirtualWebhookExpand virtualWebhookExpand,
+            @JsonProperty("virtual_webhook_fields") @Nullable VirtualWebhookFields virtualWebhookFields,
+            @JsonProperty("virtual_webhook_form_id") @Nullable VirtualWebhookFormId virtualWebhookFormId,
+            @JsonProperty("virtual_webhook_group_id") @Nullable VirtualWebhookGroupId virtualWebhookGroupId,
+            @JsonProperty("virtual_webhook_item_id") @Nullable VirtualWebhookItemId virtualWebhookItemId,
+            @JsonProperty("virtual_webhook_item_variant_id") @Nullable VirtualWebhookItemVariantId virtualWebhookItemVariantId,
+            @JsonProperty("virtual_webhook_job_id") @Nullable VirtualWebhookJobId virtualWebhookJobId,
+            @JsonProperty("virtual_webhook_label_id") @Nullable VirtualWebhookLabelId virtualWebhookLabelId,
+            @JsonProperty("virtual_webhook_lead_id") @Nullable VirtualWebhookLeadId virtualWebhookLeadId,
+            @JsonProperty("virtual_webhook_limit") @Nullable VirtualWebhookLimit virtualWebhookLimit,
+            @JsonProperty("virtual_webhook_list_id") @Nullable VirtualWebhookListId virtualWebhookListId,
+            @JsonProperty("virtual_webhook_location_id") @Nullable VirtualWebhookLocationId virtualWebhookLocationId,
+            @JsonProperty("virtual_webhook_order_id") @Nullable VirtualWebhookOrderId virtualWebhookOrderId,
+            @JsonProperty("virtual_webhook_org_id") @Nullable VirtualWebhookOrgId virtualWebhookOrgId,
+            @JsonProperty("virtual_webhook_page_id") @Nullable VirtualWebhookPageId virtualWebhookPageId,
+            @JsonProperty("virtual_webhook_parent_id") @Nullable VirtualWebhookParentId virtualWebhookParentId,
+            @JsonProperty("virtual_webhook_pipeline_id") @Nullable VirtualWebhookPipelineId virtualWebhookPipelineId,
+            @JsonProperty("virtual_webhook_project_id") @Nullable VirtualWebhookProjectId virtualWebhookProjectId,
+            @JsonProperty("virtual_webhook_repo_id") @Nullable VirtualWebhookRepoId virtualWebhookRepoId,
+            @JsonProperty("virtual_webhook_saleschannel_id") @Nullable VirtualWebhookSaleschannelId virtualWebhookSaleschannelId,
+            @JsonProperty("virtual_webhook_shipment_id") @Nullable VirtualWebhookShipmentId virtualWebhookShipmentId,
+            @JsonProperty("virtual_webhook_space_id") @Nullable VirtualWebhookSpaceId virtualWebhookSpaceId,
+            @JsonProperty("virtual_webhook_start_gte") @Nullable VirtualWebhookStartGte virtualWebhookStartGte,
+            @JsonProperty("virtual_webhook_status") @Nullable VirtualWebhookStatus virtualWebhookStatus,
+            @JsonProperty("virtual_webhook_task_id") @Nullable VirtualWebhookTaskId virtualWebhookTaskId,
+            @JsonProperty("virtual_webhook_ticket_id") @Nullable VirtualWebhookTicketId virtualWebhookTicketId,
+            @JsonProperty("virtual_webhook_type") @Nullable VirtualWebhookType virtualWebhookType,
+            @JsonProperty("virtual_webhook_updated_gte") @Nullable VirtualWebhookUpdatedGte virtualWebhookUpdatedGte,
+            @JsonProperty("virtual_webhook_user_id") @Nullable VirtualWebhookUserId virtualWebhookUserId,
+            @JsonProperty("virtual_webhook_user_mentioned_id") @Nullable VirtualWebhookUserMentionedId virtualWebhookUserMentionedId,
+            @JsonProperty("webhook_events") @Nullable PropertyIntegrationSupportWebhookEvents webhookEvents) {
         this.fromWebhook = fromWebhook;
         this.inboundFields = inboundFields;
         this.listAccountId = listAccountId;
@@ -1130,883 +991,607 @@ public class IntegrationSupport {
     }
     
     public IntegrationSupport() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<FromWebhook> fromWebhook() {
-        return (Optional<FromWebhook>) fromWebhook;
+        return Optional.ofNullable(this.fromWebhook);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, String>> inboundFields() {
-        return (Optional<Map<String, String>>) inboundFields;
+        return Optional.ofNullable(this.inboundFields);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListAccountId> listAccountId() {
-        return (Optional<ListAccountId>) listAccountId;
+        return Optional.ofNullable(this.listAccountId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListAdId> listAdId() {
-        return (Optional<ListAdId>) listAdId;
+        return Optional.ofNullable(this.listAdId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListApplicationId> listApplicationId() {
-        return (Optional<ListApplicationId>) listApplicationId;
+        return Optional.ofNullable(this.listApplicationId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListBenefitId> listBenefitId() {
-        return (Optional<ListBenefitId>) listBenefitId;
+        return Optional.ofNullable(this.listBenefitId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListBranchId> listBranchId() {
-        return (Optional<ListBranchId>) listBranchId;
+        return Optional.ofNullable(this.listBranchId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListCalendarId> listCalendarId() {
-        return (Optional<ListCalendarId>) listCalendarId;
+        return Optional.ofNullable(this.listCalendarId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListCallId> listCallId() {
-        return (Optional<ListCallId>) listCallId;
+        return Optional.ofNullable(this.listCallId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListCampaignId> listCampaignId() {
-        return (Optional<ListCampaignId>) listCampaignId;
+        return Optional.ofNullable(this.listCampaignId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListCandidateId> listCandidateId() {
-        return (Optional<ListCandidateId>) listCandidateId;
+        return Optional.ofNullable(this.listCandidateId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListCarrierId> listCarrierId() {
-        return (Optional<ListCarrierId>) listCarrierId;
+        return Optional.ofNullable(this.listCarrierId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListCategoryId> listCategoryId() {
-        return (Optional<ListCategoryId>) listCategoryId;
+        return Optional.ofNullable(this.listCategoryId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListChannelId> listChannelId() {
-        return (Optional<ListChannelId>) listChannelId;
+        return Optional.ofNullable(this.listChannelId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListClassId> listClassId() {
-        return (Optional<ListClassId>) listClassId;
+        return Optional.ofNullable(this.listClassId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListCollectionId> listCollectionId() {
-        return (Optional<ListCollectionId>) listCollectionId;
+        return Optional.ofNullable(this.listCollectionId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListCompanyId> listCompanyId() {
-        return (Optional<ListCompanyId>) listCompanyId;
+        return Optional.ofNullable(this.listCompanyId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListContactId> listContactId() {
-        return (Optional<ListContactId>) listContactId;
+        return Optional.ofNullable(this.listContactId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListCourseId> listCourseId() {
-        return (Optional<ListCourseId>) listCourseId;
+        return Optional.ofNullable(this.listCourseId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListCustomerId> listCustomerId() {
-        return (Optional<ListCustomerId>) listCustomerId;
+        return Optional.ofNullable(this.listCustomerId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListDealId> listDealId() {
-        return (Optional<ListDealId>) listDealId;
+        return Optional.ofNullable(this.listDealId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListDocumentId> listDocumentId() {
-        return (Optional<ListDocumentId>) listDocumentId;
+        return Optional.ofNullable(this.listDocumentId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListEndLt> listEndLt() {
-        return (Optional<ListEndLt>) listEndLt;
+        return Optional.ofNullable(this.listEndLt);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListEventId> listEventId() {
-        return (Optional<ListEventId>) listEventId;
+        return Optional.ofNullable(this.listEventId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListExpand> listExpand() {
-        return (Optional<ListExpand>) listExpand;
+        return Optional.ofNullable(this.listExpand);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListFormId> listFormId() {
-        return (Optional<ListFormId>) listFormId;
+        return Optional.ofNullable(this.listFormId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListGroupId> listGroupId() {
-        return (Optional<ListGroupId>) listGroupId;
+        return Optional.ofNullable(this.listGroupId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListInstructorId> listInstructorId() {
-        return (Optional<ListInstructorId>) listInstructorId;
+        return Optional.ofNullable(this.listInstructorId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListInterviewId> listInterviewId() {
-        return (Optional<ListInterviewId>) listInterviewId;
+        return Optional.ofNullable(this.listInterviewId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListInvoiceId> listInvoiceId() {
-        return (Optional<ListInvoiceId>) listInvoiceId;
+        return Optional.ofNullable(this.listInvoiceId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListItemId> listItemId() {
-        return (Optional<ListItemId>) listItemId;
+        return Optional.ofNullable(this.listItemId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListItemVariantId> listItemVariantId() {
-        return (Optional<ListItemVariantId>) listItemVariantId;
+        return Optional.ofNullable(this.listItemVariantId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListJobId> listJobId() {
-        return (Optional<ListJobId>) listJobId;
+        return Optional.ofNullable(this.listJobId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListLabelId> listLabelId() {
-        return (Optional<ListLabelId>) listLabelId;
+        return Optional.ofNullable(this.listLabelId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListLeadId> listLeadId() {
-        return (Optional<ListLeadId>) listLeadId;
+        return Optional.ofNullable(this.listLeadId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListLimit> listLimit() {
-        return (Optional<ListLimit>) listLimit;
+        return Optional.ofNullable(this.listLimit);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListLinkId> listLinkId() {
-        return (Optional<ListLinkId>) listLinkId;
+        return Optional.ofNullable(this.listLinkId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListListId> listListId() {
-        return (Optional<ListListId>) listListId;
+        return Optional.ofNullable(this.listListId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListLocationId> listLocationId() {
-        return (Optional<ListLocationId>) listLocationId;
+        return Optional.ofNullable(this.listLocationId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListOffset> listOffset() {
-        return (Optional<ListOffset>) listOffset;
+        return Optional.ofNullable(this.listOffset);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListOrder> listOrder() {
-        return (Optional<ListOrder>) listOrder;
+        return Optional.ofNullable(this.listOrder);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListOrderId> listOrderId() {
-        return (Optional<ListOrderId>) listOrderId;
+        return Optional.ofNullable(this.listOrderId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListOrgId> listOrgId() {
-        return (Optional<ListOrgId>) listOrgId;
+        return Optional.ofNullable(this.listOrgId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListPackageId> listPackageId() {
-        return (Optional<ListPackageId>) listPackageId;
+        return Optional.ofNullable(this.listPackageId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListPageId> listPageId() {
-        return (Optional<ListPageId>) listPageId;
+        return Optional.ofNullable(this.listPageId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListParentId> listParentId() {
-        return (Optional<ListParentId>) listParentId;
+        return Optional.ofNullable(this.listParentId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListPaymentId> listPaymentId() {
-        return (Optional<ListPaymentId>) listPaymentId;
+        return Optional.ofNullable(this.listPaymentId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListPayslipId> listPayslipId() {
-        return (Optional<ListPayslipId>) listPayslipId;
+        return Optional.ofNullable(this.listPayslipId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListPipelineId> listPipelineId() {
-        return (Optional<ListPipelineId>) listPipelineId;
+        return Optional.ofNullable(this.listPipelineId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListProjectId> listProjectId() {
-        return (Optional<ListProjectId>) listProjectId;
+        return Optional.ofNullable(this.listProjectId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListQuery> listQuery() {
-        return (Optional<ListQuery>) listQuery;
+        return Optional.ofNullable(this.listQuery);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListRawFields> listRawFields() {
-        return (Optional<ListRawFields>) listRawFields;
+        return Optional.ofNullable(this.listRawFields);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListRepoId> listRepoId() {
-        return (Optional<ListRepoId>) listRepoId;
+        return Optional.ofNullable(this.listRepoId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListRootId> listRootId() {
-        return (Optional<ListRootId>) listRootId;
+        return Optional.ofNullable(this.listRootId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListSaleschannelId> listSaleschannelId() {
-        return (Optional<ListSaleschannelId>) listSaleschannelId;
+        return Optional.ofNullable(this.listSaleschannelId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListShipmentId> listShipmentId() {
-        return (Optional<ListShipmentId>) listShipmentId;
+        return Optional.ofNullable(this.listShipmentId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListSortByCreatedAt> listSortByCreatedAt() {
-        return (Optional<ListSortByCreatedAt>) listSortByCreatedAt;
+        return Optional.ofNullable(this.listSortByCreatedAt);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListSortByName> listSortByName() {
-        return (Optional<ListSortByName>) listSortByName;
+        return Optional.ofNullable(this.listSortByName);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListSortByUpdatedAt> listSortByUpdatedAt() {
-        return (Optional<ListSortByUpdatedAt>) listSortByUpdatedAt;
+        return Optional.ofNullable(this.listSortByUpdatedAt);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListSpaceId> listSpaceId() {
-        return (Optional<ListSpaceId>) listSpaceId;
+        return Optional.ofNullable(this.listSpaceId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListStartGte> listStartGte() {
-        return (Optional<ListStartGte>) listStartGte;
+        return Optional.ofNullable(this.listStartGte);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListStatus> listStatus() {
-        return (Optional<ListStatus>) listStatus;
+        return Optional.ofNullable(this.listStatus);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListStudentId> listStudentId() {
-        return (Optional<ListStudentId>) listStudentId;
+        return Optional.ofNullable(this.listStudentId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListTaskId> listTaskId() {
-        return (Optional<ListTaskId>) listTaskId;
+        return Optional.ofNullable(this.listTaskId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListTeacherId> listTeacherId() {
-        return (Optional<ListTeacherId>) listTeacherId;
+        return Optional.ofNullable(this.listTeacherId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListTicketId> listTicketId() {
-        return (Optional<ListTicketId>) listTicketId;
+        return Optional.ofNullable(this.listTicketId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListType> listType() {
-        return (Optional<ListType>) listType;
+        return Optional.ofNullable(this.listType);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListUpdatedGte> listUpdatedGte() {
-        return (Optional<ListUpdatedGte>) listUpdatedGte;
+        return Optional.ofNullable(this.listUpdatedGte);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListUserId> listUserId() {
-        return (Optional<ListUserId>) listUserId;
+        return Optional.ofNullable(this.listUserId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ListUserMentionedId> listUserMentionedId() {
-        return (Optional<ListUserMentionedId>) listUserMentionedId;
+        return Optional.ofNullable(this.listUserMentionedId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Boolean>> methods() {
-        return (Optional<Map<String, Boolean>>) methods;
+        return Optional.ofNullable(this.methods);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<NativeWebhookCalendarId> nativeWebhookCalendarId() {
-        return (Optional<NativeWebhookCalendarId>) nativeWebhookCalendarId;
+        return Optional.ofNullable(this.nativeWebhookCalendarId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<NativeWebhookCarrierId> nativeWebhookCarrierId() {
-        return (Optional<NativeWebhookCarrierId>) nativeWebhookCarrierId;
+        return Optional.ofNullable(this.nativeWebhookCarrierId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<NativeWebhookChannelId> nativeWebhookChannelId() {
-        return (Optional<NativeWebhookChannelId>) nativeWebhookChannelId;
+        return Optional.ofNullable(this.nativeWebhookChannelId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<NativeWebhookCompanyId> nativeWebhookCompanyId() {
-        return (Optional<NativeWebhookCompanyId>) nativeWebhookCompanyId;
+        return Optional.ofNullable(this.nativeWebhookCompanyId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<NativeWebhookEventId> nativeWebhookEventId() {
-        return (Optional<NativeWebhookEventId>) nativeWebhookEventId;
+        return Optional.ofNullable(this.nativeWebhookEventId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<NativeWebhookFormId> nativeWebhookFormId() {
-        return (Optional<NativeWebhookFormId>) nativeWebhookFormId;
+        return Optional.ofNullable(this.nativeWebhookFormId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<NativeWebhookLabelId> nativeWebhookLabelId() {
-        return (Optional<NativeWebhookLabelId>) nativeWebhookLabelId;
+        return Optional.ofNullable(this.nativeWebhookLabelId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<NativeWebhookOrderId> nativeWebhookOrderId() {
-        return (Optional<NativeWebhookOrderId>) nativeWebhookOrderId;
+        return Optional.ofNullable(this.nativeWebhookOrderId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<NativeWebhookParentId> nativeWebhookParentId() {
-        return (Optional<NativeWebhookParentId>) nativeWebhookParentId;
+        return Optional.ofNullable(this.nativeWebhookParentId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<NativeWebhookProjectId> nativeWebhookProjectId() {
-        return (Optional<NativeWebhookProjectId>) nativeWebhookProjectId;
+        return Optional.ofNullable(this.nativeWebhookProjectId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<NativeWebhookShipmentId> nativeWebhookShipmentId() {
-        return (Optional<NativeWebhookShipmentId>) nativeWebhookShipmentId;
+        return Optional.ofNullable(this.nativeWebhookShipmentId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<NativeWebhookTaskId> nativeWebhookTaskId() {
-        return (Optional<NativeWebhookTaskId>) nativeWebhookTaskId;
+        return Optional.ofNullable(this.nativeWebhookTaskId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, String>> outboundFields() {
-        return (Optional<Map<String, String>>) outboundFields;
+        return Optional.ofNullable(this.outboundFields);
     }
 
     /**
      * objects that we map from in the integration
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> rawObjects() {
-        return (Optional<List<String>>) rawObjects;
+        return Optional.ofNullable(this.rawObjects);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<SearchDomain> searchDomain() {
-        return (Optional<SearchDomain>) searchDomain;
+        return Optional.ofNullable(this.searchDomain);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<SearchEmail> searchEmail() {
-        return (Optional<SearchEmail>) searchEmail;
+        return Optional.ofNullable(this.searchEmail);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<SearchLinkedinurl> searchLinkedinurl() {
-        return (Optional<SearchLinkedinurl>) searchLinkedinurl;
+        return Optional.ofNullable(this.searchLinkedinurl);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<SearchName> searchName() {
-        return (Optional<SearchName>) searchName;
+        return Optional.ofNullable(this.searchName);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<SearchTwitter> searchTwitter() {
-        return (Optional<SearchTwitter>) searchTwitter;
+        return Optional.ofNullable(this.searchTwitter);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> slowFields() {
-        return (Optional<List<String>>) slowFields;
+        return Optional.ofNullable(this.slowFields);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<VirtualWebhookAdId> virtualWebhookAdId() {
-        return (Optional<VirtualWebhookAdId>) virtualWebhookAdId;
+        return Optional.ofNullable(this.virtualWebhookAdId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<VirtualWebhookApplicationId> virtualWebhookApplicationId() {
-        return (Optional<VirtualWebhookApplicationId>) virtualWebhookApplicationId;
+        return Optional.ofNullable(this.virtualWebhookApplicationId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<VirtualWebhookBranchId> virtualWebhookBranchId() {
-        return (Optional<VirtualWebhookBranchId>) virtualWebhookBranchId;
+        return Optional.ofNullable(this.virtualWebhookBranchId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<VirtualWebhookCalendarId> virtualWebhookCalendarId() {
-        return (Optional<VirtualWebhookCalendarId>) virtualWebhookCalendarId;
+        return Optional.ofNullable(this.virtualWebhookCalendarId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<VirtualWebhookCallId> virtualWebhookCallId() {
-        return (Optional<VirtualWebhookCallId>) virtualWebhookCallId;
+        return Optional.ofNullable(this.virtualWebhookCallId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<VirtualWebhookCampaignId> virtualWebhookCampaignId() {
-        return (Optional<VirtualWebhookCampaignId>) virtualWebhookCampaignId;
+        return Optional.ofNullable(this.virtualWebhookCampaignId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<VirtualWebhookCandidateId> virtualWebhookCandidateId() {
-        return (Optional<VirtualWebhookCandidateId>) virtualWebhookCandidateId;
+        return Optional.ofNullable(this.virtualWebhookCandidateId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<VirtualWebhookCarrierId> virtualWebhookCarrierId() {
-        return (Optional<VirtualWebhookCarrierId>) virtualWebhookCarrierId;
+        return Optional.ofNullable(this.virtualWebhookCarrierId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<VirtualWebhookChannelId> virtualWebhookChannelId() {
-        return (Optional<VirtualWebhookChannelId>) virtualWebhookChannelId;
+        return Optional.ofNullable(this.virtualWebhookChannelId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<VirtualWebhookCollectionId> virtualWebhookCollectionId() {
-        return (Optional<VirtualWebhookCollectionId>) virtualWebhookCollectionId;
+        return Optional.ofNullable(this.virtualWebhookCollectionId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<VirtualWebhookCompanyId> virtualWebhookCompanyId() {
-        return (Optional<VirtualWebhookCompanyId>) virtualWebhookCompanyId;
+        return Optional.ofNullable(this.virtualWebhookCompanyId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<VirtualWebhookContactId> virtualWebhookContactId() {
-        return (Optional<VirtualWebhookContactId>) virtualWebhookContactId;
+        return Optional.ofNullable(this.virtualWebhookContactId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<VirtualWebhookCustomerId> virtualWebhookCustomerId() {
-        return (Optional<VirtualWebhookCustomerId>) virtualWebhookCustomerId;
+        return Optional.ofNullable(this.virtualWebhookCustomerId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<VirtualWebhookDealId> virtualWebhookDealId() {
-        return (Optional<VirtualWebhookDealId>) virtualWebhookDealId;
+        return Optional.ofNullable(this.virtualWebhookDealId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<VirtualWebhookEndLt> virtualWebhookEndLt() {
-        return (Optional<VirtualWebhookEndLt>) virtualWebhookEndLt;
+        return Optional.ofNullable(this.virtualWebhookEndLt);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<VirtualWebhookEventId> virtualWebhookEventId() {
-        return (Optional<VirtualWebhookEventId>) virtualWebhookEventId;
+        return Optional.ofNullable(this.virtualWebhookEventId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<VirtualWebhookExpand> virtualWebhookExpand() {
-        return (Optional<VirtualWebhookExpand>) virtualWebhookExpand;
+        return Optional.ofNullable(this.virtualWebhookExpand);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<VirtualWebhookFields> virtualWebhookFields() {
-        return (Optional<VirtualWebhookFields>) virtualWebhookFields;
+        return Optional.ofNullable(this.virtualWebhookFields);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<VirtualWebhookFormId> virtualWebhookFormId() {
-        return (Optional<VirtualWebhookFormId>) virtualWebhookFormId;
+        return Optional.ofNullable(this.virtualWebhookFormId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<VirtualWebhookGroupId> virtualWebhookGroupId() {
-        return (Optional<VirtualWebhookGroupId>) virtualWebhookGroupId;
+        return Optional.ofNullable(this.virtualWebhookGroupId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<VirtualWebhookItemId> virtualWebhookItemId() {
-        return (Optional<VirtualWebhookItemId>) virtualWebhookItemId;
+        return Optional.ofNullable(this.virtualWebhookItemId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<VirtualWebhookItemVariantId> virtualWebhookItemVariantId() {
-        return (Optional<VirtualWebhookItemVariantId>) virtualWebhookItemVariantId;
+        return Optional.ofNullable(this.virtualWebhookItemVariantId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<VirtualWebhookJobId> virtualWebhookJobId() {
-        return (Optional<VirtualWebhookJobId>) virtualWebhookJobId;
+        return Optional.ofNullable(this.virtualWebhookJobId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<VirtualWebhookLabelId> virtualWebhookLabelId() {
-        return (Optional<VirtualWebhookLabelId>) virtualWebhookLabelId;
+        return Optional.ofNullable(this.virtualWebhookLabelId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<VirtualWebhookLeadId> virtualWebhookLeadId() {
-        return (Optional<VirtualWebhookLeadId>) virtualWebhookLeadId;
+        return Optional.ofNullable(this.virtualWebhookLeadId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<VirtualWebhookLimit> virtualWebhookLimit() {
-        return (Optional<VirtualWebhookLimit>) virtualWebhookLimit;
+        return Optional.ofNullable(this.virtualWebhookLimit);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<VirtualWebhookListId> virtualWebhookListId() {
-        return (Optional<VirtualWebhookListId>) virtualWebhookListId;
+        return Optional.ofNullable(this.virtualWebhookListId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<VirtualWebhookLocationId> virtualWebhookLocationId() {
-        return (Optional<VirtualWebhookLocationId>) virtualWebhookLocationId;
+        return Optional.ofNullable(this.virtualWebhookLocationId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<VirtualWebhookOrderId> virtualWebhookOrderId() {
-        return (Optional<VirtualWebhookOrderId>) virtualWebhookOrderId;
+        return Optional.ofNullable(this.virtualWebhookOrderId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<VirtualWebhookOrgId> virtualWebhookOrgId() {
-        return (Optional<VirtualWebhookOrgId>) virtualWebhookOrgId;
+        return Optional.ofNullable(this.virtualWebhookOrgId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<VirtualWebhookPageId> virtualWebhookPageId() {
-        return (Optional<VirtualWebhookPageId>) virtualWebhookPageId;
+        return Optional.ofNullable(this.virtualWebhookPageId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<VirtualWebhookParentId> virtualWebhookParentId() {
-        return (Optional<VirtualWebhookParentId>) virtualWebhookParentId;
+        return Optional.ofNullable(this.virtualWebhookParentId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<VirtualWebhookPipelineId> virtualWebhookPipelineId() {
-        return (Optional<VirtualWebhookPipelineId>) virtualWebhookPipelineId;
+        return Optional.ofNullable(this.virtualWebhookPipelineId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<VirtualWebhookProjectId> virtualWebhookProjectId() {
-        return (Optional<VirtualWebhookProjectId>) virtualWebhookProjectId;
+        return Optional.ofNullable(this.virtualWebhookProjectId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<VirtualWebhookRepoId> virtualWebhookRepoId() {
-        return (Optional<VirtualWebhookRepoId>) virtualWebhookRepoId;
+        return Optional.ofNullable(this.virtualWebhookRepoId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<VirtualWebhookSaleschannelId> virtualWebhookSaleschannelId() {
-        return (Optional<VirtualWebhookSaleschannelId>) virtualWebhookSaleschannelId;
+        return Optional.ofNullable(this.virtualWebhookSaleschannelId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<VirtualWebhookShipmentId> virtualWebhookShipmentId() {
-        return (Optional<VirtualWebhookShipmentId>) virtualWebhookShipmentId;
+        return Optional.ofNullable(this.virtualWebhookShipmentId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<VirtualWebhookSpaceId> virtualWebhookSpaceId() {
-        return (Optional<VirtualWebhookSpaceId>) virtualWebhookSpaceId;
+        return Optional.ofNullable(this.virtualWebhookSpaceId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<VirtualWebhookStartGte> virtualWebhookStartGte() {
-        return (Optional<VirtualWebhookStartGte>) virtualWebhookStartGte;
+        return Optional.ofNullable(this.virtualWebhookStartGte);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<VirtualWebhookStatus> virtualWebhookStatus() {
-        return (Optional<VirtualWebhookStatus>) virtualWebhookStatus;
+        return Optional.ofNullable(this.virtualWebhookStatus);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<VirtualWebhookTaskId> virtualWebhookTaskId() {
-        return (Optional<VirtualWebhookTaskId>) virtualWebhookTaskId;
+        return Optional.ofNullable(this.virtualWebhookTaskId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<VirtualWebhookTicketId> virtualWebhookTicketId() {
-        return (Optional<VirtualWebhookTicketId>) virtualWebhookTicketId;
+        return Optional.ofNullable(this.virtualWebhookTicketId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<VirtualWebhookType> virtualWebhookType() {
-        return (Optional<VirtualWebhookType>) virtualWebhookType;
+        return Optional.ofNullable(this.virtualWebhookType);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<VirtualWebhookUpdatedGte> virtualWebhookUpdatedGte() {
-        return (Optional<VirtualWebhookUpdatedGte>) virtualWebhookUpdatedGte;
+        return Optional.ofNullable(this.virtualWebhookUpdatedGte);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<VirtualWebhookUserId> virtualWebhookUserId() {
-        return (Optional<VirtualWebhookUserId>) virtualWebhookUserId;
+        return Optional.ofNullable(this.virtualWebhookUserId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<VirtualWebhookUserMentionedId> virtualWebhookUserMentionedId() {
-        return (Optional<VirtualWebhookUserMentionedId>) virtualWebhookUserMentionedId;
+        return Optional.ofNullable(this.virtualWebhookUserMentionedId);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<PropertyIntegrationSupportWebhookEvents> webhookEvents() {
-        return (Optional<PropertyIntegrationSupportWebhookEvents>) webhookEvents;
+        return Optional.ofNullable(this.webhookEvents);
     }
 
     public static Builder builder() {
@@ -2014,1805 +1599,836 @@ public class IntegrationSupport {
     }
 
 
-    public IntegrationSupport withFromWebhook(FromWebhook fromWebhook) {
-        Utils.checkNotNull(fromWebhook, "fromWebhook");
-        this.fromWebhook = Optional.ofNullable(fromWebhook);
-        return this;
-    }
-
-
-    public IntegrationSupport withFromWebhook(Optional<? extends FromWebhook> fromWebhook) {
-        Utils.checkNotNull(fromWebhook, "fromWebhook");
+    public IntegrationSupport withFromWebhook(@Nullable FromWebhook fromWebhook) {
         this.fromWebhook = fromWebhook;
         return this;
     }
 
-    public IntegrationSupport withInboundFields(Map<String, String> inboundFields) {
-        Utils.checkNotNull(inboundFields, "inboundFields");
-        this.inboundFields = Optional.ofNullable(inboundFields);
-        return this;
-    }
 
-
-    public IntegrationSupport withInboundFields(Optional<? extends Map<String, String>> inboundFields) {
-        Utils.checkNotNull(inboundFields, "inboundFields");
+    public IntegrationSupport withInboundFields(@Nullable Map<String, String> inboundFields) {
         this.inboundFields = inboundFields;
         return this;
     }
 
-    public IntegrationSupport withListAccountId(ListAccountId listAccountId) {
-        Utils.checkNotNull(listAccountId, "listAccountId");
-        this.listAccountId = Optional.ofNullable(listAccountId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListAccountId(Optional<? extends ListAccountId> listAccountId) {
-        Utils.checkNotNull(listAccountId, "listAccountId");
+    public IntegrationSupport withListAccountId(@Nullable ListAccountId listAccountId) {
         this.listAccountId = listAccountId;
         return this;
     }
 
-    public IntegrationSupport withListAdId(ListAdId listAdId) {
-        Utils.checkNotNull(listAdId, "listAdId");
-        this.listAdId = Optional.ofNullable(listAdId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListAdId(Optional<? extends ListAdId> listAdId) {
-        Utils.checkNotNull(listAdId, "listAdId");
+    public IntegrationSupport withListAdId(@Nullable ListAdId listAdId) {
         this.listAdId = listAdId;
         return this;
     }
 
-    public IntegrationSupport withListApplicationId(ListApplicationId listApplicationId) {
-        Utils.checkNotNull(listApplicationId, "listApplicationId");
-        this.listApplicationId = Optional.ofNullable(listApplicationId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListApplicationId(Optional<? extends ListApplicationId> listApplicationId) {
-        Utils.checkNotNull(listApplicationId, "listApplicationId");
+    public IntegrationSupport withListApplicationId(@Nullable ListApplicationId listApplicationId) {
         this.listApplicationId = listApplicationId;
         return this;
     }
 
-    public IntegrationSupport withListBenefitId(ListBenefitId listBenefitId) {
-        Utils.checkNotNull(listBenefitId, "listBenefitId");
-        this.listBenefitId = Optional.ofNullable(listBenefitId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListBenefitId(Optional<? extends ListBenefitId> listBenefitId) {
-        Utils.checkNotNull(listBenefitId, "listBenefitId");
+    public IntegrationSupport withListBenefitId(@Nullable ListBenefitId listBenefitId) {
         this.listBenefitId = listBenefitId;
         return this;
     }
 
-    public IntegrationSupport withListBranchId(ListBranchId listBranchId) {
-        Utils.checkNotNull(listBranchId, "listBranchId");
-        this.listBranchId = Optional.ofNullable(listBranchId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListBranchId(Optional<? extends ListBranchId> listBranchId) {
-        Utils.checkNotNull(listBranchId, "listBranchId");
+    public IntegrationSupport withListBranchId(@Nullable ListBranchId listBranchId) {
         this.listBranchId = listBranchId;
         return this;
     }
 
-    public IntegrationSupport withListCalendarId(ListCalendarId listCalendarId) {
-        Utils.checkNotNull(listCalendarId, "listCalendarId");
-        this.listCalendarId = Optional.ofNullable(listCalendarId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListCalendarId(Optional<? extends ListCalendarId> listCalendarId) {
-        Utils.checkNotNull(listCalendarId, "listCalendarId");
+    public IntegrationSupport withListCalendarId(@Nullable ListCalendarId listCalendarId) {
         this.listCalendarId = listCalendarId;
         return this;
     }
 
-    public IntegrationSupport withListCallId(ListCallId listCallId) {
-        Utils.checkNotNull(listCallId, "listCallId");
-        this.listCallId = Optional.ofNullable(listCallId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListCallId(Optional<? extends ListCallId> listCallId) {
-        Utils.checkNotNull(listCallId, "listCallId");
+    public IntegrationSupport withListCallId(@Nullable ListCallId listCallId) {
         this.listCallId = listCallId;
         return this;
     }
 
-    public IntegrationSupport withListCampaignId(ListCampaignId listCampaignId) {
-        Utils.checkNotNull(listCampaignId, "listCampaignId");
-        this.listCampaignId = Optional.ofNullable(listCampaignId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListCampaignId(Optional<? extends ListCampaignId> listCampaignId) {
-        Utils.checkNotNull(listCampaignId, "listCampaignId");
+    public IntegrationSupport withListCampaignId(@Nullable ListCampaignId listCampaignId) {
         this.listCampaignId = listCampaignId;
         return this;
     }
 
-    public IntegrationSupport withListCandidateId(ListCandidateId listCandidateId) {
-        Utils.checkNotNull(listCandidateId, "listCandidateId");
-        this.listCandidateId = Optional.ofNullable(listCandidateId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListCandidateId(Optional<? extends ListCandidateId> listCandidateId) {
-        Utils.checkNotNull(listCandidateId, "listCandidateId");
+    public IntegrationSupport withListCandidateId(@Nullable ListCandidateId listCandidateId) {
         this.listCandidateId = listCandidateId;
         return this;
     }
 
-    public IntegrationSupport withListCarrierId(ListCarrierId listCarrierId) {
-        Utils.checkNotNull(listCarrierId, "listCarrierId");
-        this.listCarrierId = Optional.ofNullable(listCarrierId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListCarrierId(Optional<? extends ListCarrierId> listCarrierId) {
-        Utils.checkNotNull(listCarrierId, "listCarrierId");
+    public IntegrationSupport withListCarrierId(@Nullable ListCarrierId listCarrierId) {
         this.listCarrierId = listCarrierId;
         return this;
     }
 
-    public IntegrationSupport withListCategoryId(ListCategoryId listCategoryId) {
-        Utils.checkNotNull(listCategoryId, "listCategoryId");
-        this.listCategoryId = Optional.ofNullable(listCategoryId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListCategoryId(Optional<? extends ListCategoryId> listCategoryId) {
-        Utils.checkNotNull(listCategoryId, "listCategoryId");
+    public IntegrationSupport withListCategoryId(@Nullable ListCategoryId listCategoryId) {
         this.listCategoryId = listCategoryId;
         return this;
     }
 
-    public IntegrationSupport withListChannelId(ListChannelId listChannelId) {
-        Utils.checkNotNull(listChannelId, "listChannelId");
-        this.listChannelId = Optional.ofNullable(listChannelId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListChannelId(Optional<? extends ListChannelId> listChannelId) {
-        Utils.checkNotNull(listChannelId, "listChannelId");
+    public IntegrationSupport withListChannelId(@Nullable ListChannelId listChannelId) {
         this.listChannelId = listChannelId;
         return this;
     }
 
-    public IntegrationSupport withListClassId(ListClassId listClassId) {
-        Utils.checkNotNull(listClassId, "listClassId");
-        this.listClassId = Optional.ofNullable(listClassId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListClassId(Optional<? extends ListClassId> listClassId) {
-        Utils.checkNotNull(listClassId, "listClassId");
+    public IntegrationSupport withListClassId(@Nullable ListClassId listClassId) {
         this.listClassId = listClassId;
         return this;
     }
 
-    public IntegrationSupport withListCollectionId(ListCollectionId listCollectionId) {
-        Utils.checkNotNull(listCollectionId, "listCollectionId");
-        this.listCollectionId = Optional.ofNullable(listCollectionId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListCollectionId(Optional<? extends ListCollectionId> listCollectionId) {
-        Utils.checkNotNull(listCollectionId, "listCollectionId");
+    public IntegrationSupport withListCollectionId(@Nullable ListCollectionId listCollectionId) {
         this.listCollectionId = listCollectionId;
         return this;
     }
 
-    public IntegrationSupport withListCompanyId(ListCompanyId listCompanyId) {
-        Utils.checkNotNull(listCompanyId, "listCompanyId");
-        this.listCompanyId = Optional.ofNullable(listCompanyId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListCompanyId(Optional<? extends ListCompanyId> listCompanyId) {
-        Utils.checkNotNull(listCompanyId, "listCompanyId");
+    public IntegrationSupport withListCompanyId(@Nullable ListCompanyId listCompanyId) {
         this.listCompanyId = listCompanyId;
         return this;
     }
 
-    public IntegrationSupport withListContactId(ListContactId listContactId) {
-        Utils.checkNotNull(listContactId, "listContactId");
-        this.listContactId = Optional.ofNullable(listContactId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListContactId(Optional<? extends ListContactId> listContactId) {
-        Utils.checkNotNull(listContactId, "listContactId");
+    public IntegrationSupport withListContactId(@Nullable ListContactId listContactId) {
         this.listContactId = listContactId;
         return this;
     }
 
-    public IntegrationSupport withListCourseId(ListCourseId listCourseId) {
-        Utils.checkNotNull(listCourseId, "listCourseId");
-        this.listCourseId = Optional.ofNullable(listCourseId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListCourseId(Optional<? extends ListCourseId> listCourseId) {
-        Utils.checkNotNull(listCourseId, "listCourseId");
+    public IntegrationSupport withListCourseId(@Nullable ListCourseId listCourseId) {
         this.listCourseId = listCourseId;
         return this;
     }
 
-    public IntegrationSupport withListCustomerId(ListCustomerId listCustomerId) {
-        Utils.checkNotNull(listCustomerId, "listCustomerId");
-        this.listCustomerId = Optional.ofNullable(listCustomerId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListCustomerId(Optional<? extends ListCustomerId> listCustomerId) {
-        Utils.checkNotNull(listCustomerId, "listCustomerId");
+    public IntegrationSupport withListCustomerId(@Nullable ListCustomerId listCustomerId) {
         this.listCustomerId = listCustomerId;
         return this;
     }
 
-    public IntegrationSupport withListDealId(ListDealId listDealId) {
-        Utils.checkNotNull(listDealId, "listDealId");
-        this.listDealId = Optional.ofNullable(listDealId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListDealId(Optional<? extends ListDealId> listDealId) {
-        Utils.checkNotNull(listDealId, "listDealId");
+    public IntegrationSupport withListDealId(@Nullable ListDealId listDealId) {
         this.listDealId = listDealId;
         return this;
     }
 
-    public IntegrationSupport withListDocumentId(ListDocumentId listDocumentId) {
-        Utils.checkNotNull(listDocumentId, "listDocumentId");
-        this.listDocumentId = Optional.ofNullable(listDocumentId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListDocumentId(Optional<? extends ListDocumentId> listDocumentId) {
-        Utils.checkNotNull(listDocumentId, "listDocumentId");
+    public IntegrationSupport withListDocumentId(@Nullable ListDocumentId listDocumentId) {
         this.listDocumentId = listDocumentId;
         return this;
     }
 
-    public IntegrationSupport withListEndLt(ListEndLt listEndLt) {
-        Utils.checkNotNull(listEndLt, "listEndLt");
-        this.listEndLt = Optional.ofNullable(listEndLt);
-        return this;
-    }
 
-
-    public IntegrationSupport withListEndLt(Optional<? extends ListEndLt> listEndLt) {
-        Utils.checkNotNull(listEndLt, "listEndLt");
+    public IntegrationSupport withListEndLt(@Nullable ListEndLt listEndLt) {
         this.listEndLt = listEndLt;
         return this;
     }
 
-    public IntegrationSupport withListEventId(ListEventId listEventId) {
-        Utils.checkNotNull(listEventId, "listEventId");
-        this.listEventId = Optional.ofNullable(listEventId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListEventId(Optional<? extends ListEventId> listEventId) {
-        Utils.checkNotNull(listEventId, "listEventId");
+    public IntegrationSupport withListEventId(@Nullable ListEventId listEventId) {
         this.listEventId = listEventId;
         return this;
     }
 
-    public IntegrationSupport withListExpand(ListExpand listExpand) {
-        Utils.checkNotNull(listExpand, "listExpand");
-        this.listExpand = Optional.ofNullable(listExpand);
-        return this;
-    }
 
-
-    public IntegrationSupport withListExpand(Optional<? extends ListExpand> listExpand) {
-        Utils.checkNotNull(listExpand, "listExpand");
+    public IntegrationSupport withListExpand(@Nullable ListExpand listExpand) {
         this.listExpand = listExpand;
         return this;
     }
 
-    public IntegrationSupport withListFormId(ListFormId listFormId) {
-        Utils.checkNotNull(listFormId, "listFormId");
-        this.listFormId = Optional.ofNullable(listFormId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListFormId(Optional<? extends ListFormId> listFormId) {
-        Utils.checkNotNull(listFormId, "listFormId");
+    public IntegrationSupport withListFormId(@Nullable ListFormId listFormId) {
         this.listFormId = listFormId;
         return this;
     }
 
-    public IntegrationSupport withListGroupId(ListGroupId listGroupId) {
-        Utils.checkNotNull(listGroupId, "listGroupId");
-        this.listGroupId = Optional.ofNullable(listGroupId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListGroupId(Optional<? extends ListGroupId> listGroupId) {
-        Utils.checkNotNull(listGroupId, "listGroupId");
+    public IntegrationSupport withListGroupId(@Nullable ListGroupId listGroupId) {
         this.listGroupId = listGroupId;
         return this;
     }
 
-    public IntegrationSupport withListInstructorId(ListInstructorId listInstructorId) {
-        Utils.checkNotNull(listInstructorId, "listInstructorId");
-        this.listInstructorId = Optional.ofNullable(listInstructorId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListInstructorId(Optional<? extends ListInstructorId> listInstructorId) {
-        Utils.checkNotNull(listInstructorId, "listInstructorId");
+    public IntegrationSupport withListInstructorId(@Nullable ListInstructorId listInstructorId) {
         this.listInstructorId = listInstructorId;
         return this;
     }
 
-    public IntegrationSupport withListInterviewId(ListInterviewId listInterviewId) {
-        Utils.checkNotNull(listInterviewId, "listInterviewId");
-        this.listInterviewId = Optional.ofNullable(listInterviewId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListInterviewId(Optional<? extends ListInterviewId> listInterviewId) {
-        Utils.checkNotNull(listInterviewId, "listInterviewId");
+    public IntegrationSupport withListInterviewId(@Nullable ListInterviewId listInterviewId) {
         this.listInterviewId = listInterviewId;
         return this;
     }
 
-    public IntegrationSupport withListInvoiceId(ListInvoiceId listInvoiceId) {
-        Utils.checkNotNull(listInvoiceId, "listInvoiceId");
-        this.listInvoiceId = Optional.ofNullable(listInvoiceId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListInvoiceId(Optional<? extends ListInvoiceId> listInvoiceId) {
-        Utils.checkNotNull(listInvoiceId, "listInvoiceId");
+    public IntegrationSupport withListInvoiceId(@Nullable ListInvoiceId listInvoiceId) {
         this.listInvoiceId = listInvoiceId;
         return this;
     }
 
-    public IntegrationSupport withListItemId(ListItemId listItemId) {
-        Utils.checkNotNull(listItemId, "listItemId");
-        this.listItemId = Optional.ofNullable(listItemId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListItemId(Optional<? extends ListItemId> listItemId) {
-        Utils.checkNotNull(listItemId, "listItemId");
+    public IntegrationSupport withListItemId(@Nullable ListItemId listItemId) {
         this.listItemId = listItemId;
         return this;
     }
 
-    public IntegrationSupport withListItemVariantId(ListItemVariantId listItemVariantId) {
-        Utils.checkNotNull(listItemVariantId, "listItemVariantId");
-        this.listItemVariantId = Optional.ofNullable(listItemVariantId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListItemVariantId(Optional<? extends ListItemVariantId> listItemVariantId) {
-        Utils.checkNotNull(listItemVariantId, "listItemVariantId");
+    public IntegrationSupport withListItemVariantId(@Nullable ListItemVariantId listItemVariantId) {
         this.listItemVariantId = listItemVariantId;
         return this;
     }
 
-    public IntegrationSupport withListJobId(ListJobId listJobId) {
-        Utils.checkNotNull(listJobId, "listJobId");
-        this.listJobId = Optional.ofNullable(listJobId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListJobId(Optional<? extends ListJobId> listJobId) {
-        Utils.checkNotNull(listJobId, "listJobId");
+    public IntegrationSupport withListJobId(@Nullable ListJobId listJobId) {
         this.listJobId = listJobId;
         return this;
     }
 
-    public IntegrationSupport withListLabelId(ListLabelId listLabelId) {
-        Utils.checkNotNull(listLabelId, "listLabelId");
-        this.listLabelId = Optional.ofNullable(listLabelId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListLabelId(Optional<? extends ListLabelId> listLabelId) {
-        Utils.checkNotNull(listLabelId, "listLabelId");
+    public IntegrationSupport withListLabelId(@Nullable ListLabelId listLabelId) {
         this.listLabelId = listLabelId;
         return this;
     }
 
-    public IntegrationSupport withListLeadId(ListLeadId listLeadId) {
-        Utils.checkNotNull(listLeadId, "listLeadId");
-        this.listLeadId = Optional.ofNullable(listLeadId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListLeadId(Optional<? extends ListLeadId> listLeadId) {
-        Utils.checkNotNull(listLeadId, "listLeadId");
+    public IntegrationSupport withListLeadId(@Nullable ListLeadId listLeadId) {
         this.listLeadId = listLeadId;
         return this;
     }
 
-    public IntegrationSupport withListLimit(ListLimit listLimit) {
-        Utils.checkNotNull(listLimit, "listLimit");
-        this.listLimit = Optional.ofNullable(listLimit);
-        return this;
-    }
 
-
-    public IntegrationSupport withListLimit(Optional<? extends ListLimit> listLimit) {
-        Utils.checkNotNull(listLimit, "listLimit");
+    public IntegrationSupport withListLimit(@Nullable ListLimit listLimit) {
         this.listLimit = listLimit;
         return this;
     }
 
-    public IntegrationSupport withListLinkId(ListLinkId listLinkId) {
-        Utils.checkNotNull(listLinkId, "listLinkId");
-        this.listLinkId = Optional.ofNullable(listLinkId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListLinkId(Optional<? extends ListLinkId> listLinkId) {
-        Utils.checkNotNull(listLinkId, "listLinkId");
+    public IntegrationSupport withListLinkId(@Nullable ListLinkId listLinkId) {
         this.listLinkId = listLinkId;
         return this;
     }
 
-    public IntegrationSupport withListListId(ListListId listListId) {
-        Utils.checkNotNull(listListId, "listListId");
-        this.listListId = Optional.ofNullable(listListId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListListId(Optional<? extends ListListId> listListId) {
-        Utils.checkNotNull(listListId, "listListId");
+    public IntegrationSupport withListListId(@Nullable ListListId listListId) {
         this.listListId = listListId;
         return this;
     }
 
-    public IntegrationSupport withListLocationId(ListLocationId listLocationId) {
-        Utils.checkNotNull(listLocationId, "listLocationId");
-        this.listLocationId = Optional.ofNullable(listLocationId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListLocationId(Optional<? extends ListLocationId> listLocationId) {
-        Utils.checkNotNull(listLocationId, "listLocationId");
+    public IntegrationSupport withListLocationId(@Nullable ListLocationId listLocationId) {
         this.listLocationId = listLocationId;
         return this;
     }
 
-    public IntegrationSupport withListOffset(ListOffset listOffset) {
-        Utils.checkNotNull(listOffset, "listOffset");
-        this.listOffset = Optional.ofNullable(listOffset);
-        return this;
-    }
 
-
-    public IntegrationSupport withListOffset(Optional<? extends ListOffset> listOffset) {
-        Utils.checkNotNull(listOffset, "listOffset");
+    public IntegrationSupport withListOffset(@Nullable ListOffset listOffset) {
         this.listOffset = listOffset;
         return this;
     }
 
-    public IntegrationSupport withListOrder(ListOrder listOrder) {
-        Utils.checkNotNull(listOrder, "listOrder");
-        this.listOrder = Optional.ofNullable(listOrder);
-        return this;
-    }
 
-
-    public IntegrationSupport withListOrder(Optional<? extends ListOrder> listOrder) {
-        Utils.checkNotNull(listOrder, "listOrder");
+    public IntegrationSupport withListOrder(@Nullable ListOrder listOrder) {
         this.listOrder = listOrder;
         return this;
     }
 
-    public IntegrationSupport withListOrderId(ListOrderId listOrderId) {
-        Utils.checkNotNull(listOrderId, "listOrderId");
-        this.listOrderId = Optional.ofNullable(listOrderId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListOrderId(Optional<? extends ListOrderId> listOrderId) {
-        Utils.checkNotNull(listOrderId, "listOrderId");
+    public IntegrationSupport withListOrderId(@Nullable ListOrderId listOrderId) {
         this.listOrderId = listOrderId;
         return this;
     }
 
-    public IntegrationSupport withListOrgId(ListOrgId listOrgId) {
-        Utils.checkNotNull(listOrgId, "listOrgId");
-        this.listOrgId = Optional.ofNullable(listOrgId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListOrgId(Optional<? extends ListOrgId> listOrgId) {
-        Utils.checkNotNull(listOrgId, "listOrgId");
+    public IntegrationSupport withListOrgId(@Nullable ListOrgId listOrgId) {
         this.listOrgId = listOrgId;
         return this;
     }
 
-    public IntegrationSupport withListPackageId(ListPackageId listPackageId) {
-        Utils.checkNotNull(listPackageId, "listPackageId");
-        this.listPackageId = Optional.ofNullable(listPackageId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListPackageId(Optional<? extends ListPackageId> listPackageId) {
-        Utils.checkNotNull(listPackageId, "listPackageId");
+    public IntegrationSupport withListPackageId(@Nullable ListPackageId listPackageId) {
         this.listPackageId = listPackageId;
         return this;
     }
 
-    public IntegrationSupport withListPageId(ListPageId listPageId) {
-        Utils.checkNotNull(listPageId, "listPageId");
-        this.listPageId = Optional.ofNullable(listPageId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListPageId(Optional<? extends ListPageId> listPageId) {
-        Utils.checkNotNull(listPageId, "listPageId");
+    public IntegrationSupport withListPageId(@Nullable ListPageId listPageId) {
         this.listPageId = listPageId;
         return this;
     }
 
-    public IntegrationSupport withListParentId(ListParentId listParentId) {
-        Utils.checkNotNull(listParentId, "listParentId");
-        this.listParentId = Optional.ofNullable(listParentId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListParentId(Optional<? extends ListParentId> listParentId) {
-        Utils.checkNotNull(listParentId, "listParentId");
+    public IntegrationSupport withListParentId(@Nullable ListParentId listParentId) {
         this.listParentId = listParentId;
         return this;
     }
 
-    public IntegrationSupport withListPaymentId(ListPaymentId listPaymentId) {
-        Utils.checkNotNull(listPaymentId, "listPaymentId");
-        this.listPaymentId = Optional.ofNullable(listPaymentId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListPaymentId(Optional<? extends ListPaymentId> listPaymentId) {
-        Utils.checkNotNull(listPaymentId, "listPaymentId");
+    public IntegrationSupport withListPaymentId(@Nullable ListPaymentId listPaymentId) {
         this.listPaymentId = listPaymentId;
         return this;
     }
 
-    public IntegrationSupport withListPayslipId(ListPayslipId listPayslipId) {
-        Utils.checkNotNull(listPayslipId, "listPayslipId");
-        this.listPayslipId = Optional.ofNullable(listPayslipId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListPayslipId(Optional<? extends ListPayslipId> listPayslipId) {
-        Utils.checkNotNull(listPayslipId, "listPayslipId");
+    public IntegrationSupport withListPayslipId(@Nullable ListPayslipId listPayslipId) {
         this.listPayslipId = listPayslipId;
         return this;
     }
 
-    public IntegrationSupport withListPipelineId(ListPipelineId listPipelineId) {
-        Utils.checkNotNull(listPipelineId, "listPipelineId");
-        this.listPipelineId = Optional.ofNullable(listPipelineId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListPipelineId(Optional<? extends ListPipelineId> listPipelineId) {
-        Utils.checkNotNull(listPipelineId, "listPipelineId");
+    public IntegrationSupport withListPipelineId(@Nullable ListPipelineId listPipelineId) {
         this.listPipelineId = listPipelineId;
         return this;
     }
 
-    public IntegrationSupport withListProjectId(ListProjectId listProjectId) {
-        Utils.checkNotNull(listProjectId, "listProjectId");
-        this.listProjectId = Optional.ofNullable(listProjectId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListProjectId(Optional<? extends ListProjectId> listProjectId) {
-        Utils.checkNotNull(listProjectId, "listProjectId");
+    public IntegrationSupport withListProjectId(@Nullable ListProjectId listProjectId) {
         this.listProjectId = listProjectId;
         return this;
     }
 
-    public IntegrationSupport withListQuery(ListQuery listQuery) {
-        Utils.checkNotNull(listQuery, "listQuery");
-        this.listQuery = Optional.ofNullable(listQuery);
-        return this;
-    }
 
-
-    public IntegrationSupport withListQuery(Optional<? extends ListQuery> listQuery) {
-        Utils.checkNotNull(listQuery, "listQuery");
+    public IntegrationSupport withListQuery(@Nullable ListQuery listQuery) {
         this.listQuery = listQuery;
         return this;
     }
 
-    public IntegrationSupport withListRawFields(ListRawFields listRawFields) {
-        Utils.checkNotNull(listRawFields, "listRawFields");
-        this.listRawFields = Optional.ofNullable(listRawFields);
-        return this;
-    }
 
-
-    public IntegrationSupport withListRawFields(Optional<? extends ListRawFields> listRawFields) {
-        Utils.checkNotNull(listRawFields, "listRawFields");
+    public IntegrationSupport withListRawFields(@Nullable ListRawFields listRawFields) {
         this.listRawFields = listRawFields;
         return this;
     }
 
-    public IntegrationSupport withListRepoId(ListRepoId listRepoId) {
-        Utils.checkNotNull(listRepoId, "listRepoId");
-        this.listRepoId = Optional.ofNullable(listRepoId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListRepoId(Optional<? extends ListRepoId> listRepoId) {
-        Utils.checkNotNull(listRepoId, "listRepoId");
+    public IntegrationSupport withListRepoId(@Nullable ListRepoId listRepoId) {
         this.listRepoId = listRepoId;
         return this;
     }
 
-    public IntegrationSupport withListRootId(ListRootId listRootId) {
-        Utils.checkNotNull(listRootId, "listRootId");
-        this.listRootId = Optional.ofNullable(listRootId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListRootId(Optional<? extends ListRootId> listRootId) {
-        Utils.checkNotNull(listRootId, "listRootId");
+    public IntegrationSupport withListRootId(@Nullable ListRootId listRootId) {
         this.listRootId = listRootId;
         return this;
     }
 
-    public IntegrationSupport withListSaleschannelId(ListSaleschannelId listSaleschannelId) {
-        Utils.checkNotNull(listSaleschannelId, "listSaleschannelId");
-        this.listSaleschannelId = Optional.ofNullable(listSaleschannelId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListSaleschannelId(Optional<? extends ListSaleschannelId> listSaleschannelId) {
-        Utils.checkNotNull(listSaleschannelId, "listSaleschannelId");
+    public IntegrationSupport withListSaleschannelId(@Nullable ListSaleschannelId listSaleschannelId) {
         this.listSaleschannelId = listSaleschannelId;
         return this;
     }
 
-    public IntegrationSupport withListShipmentId(ListShipmentId listShipmentId) {
-        Utils.checkNotNull(listShipmentId, "listShipmentId");
-        this.listShipmentId = Optional.ofNullable(listShipmentId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListShipmentId(Optional<? extends ListShipmentId> listShipmentId) {
-        Utils.checkNotNull(listShipmentId, "listShipmentId");
+    public IntegrationSupport withListShipmentId(@Nullable ListShipmentId listShipmentId) {
         this.listShipmentId = listShipmentId;
         return this;
     }
 
-    public IntegrationSupport withListSortByCreatedAt(ListSortByCreatedAt listSortByCreatedAt) {
-        Utils.checkNotNull(listSortByCreatedAt, "listSortByCreatedAt");
-        this.listSortByCreatedAt = Optional.ofNullable(listSortByCreatedAt);
-        return this;
-    }
 
-
-    public IntegrationSupport withListSortByCreatedAt(Optional<? extends ListSortByCreatedAt> listSortByCreatedAt) {
-        Utils.checkNotNull(listSortByCreatedAt, "listSortByCreatedAt");
+    public IntegrationSupport withListSortByCreatedAt(@Nullable ListSortByCreatedAt listSortByCreatedAt) {
         this.listSortByCreatedAt = listSortByCreatedAt;
         return this;
     }
 
-    public IntegrationSupport withListSortByName(ListSortByName listSortByName) {
-        Utils.checkNotNull(listSortByName, "listSortByName");
-        this.listSortByName = Optional.ofNullable(listSortByName);
-        return this;
-    }
 
-
-    public IntegrationSupport withListSortByName(Optional<? extends ListSortByName> listSortByName) {
-        Utils.checkNotNull(listSortByName, "listSortByName");
+    public IntegrationSupport withListSortByName(@Nullable ListSortByName listSortByName) {
         this.listSortByName = listSortByName;
         return this;
     }
 
-    public IntegrationSupport withListSortByUpdatedAt(ListSortByUpdatedAt listSortByUpdatedAt) {
-        Utils.checkNotNull(listSortByUpdatedAt, "listSortByUpdatedAt");
-        this.listSortByUpdatedAt = Optional.ofNullable(listSortByUpdatedAt);
-        return this;
-    }
 
-
-    public IntegrationSupport withListSortByUpdatedAt(Optional<? extends ListSortByUpdatedAt> listSortByUpdatedAt) {
-        Utils.checkNotNull(listSortByUpdatedAt, "listSortByUpdatedAt");
+    public IntegrationSupport withListSortByUpdatedAt(@Nullable ListSortByUpdatedAt listSortByUpdatedAt) {
         this.listSortByUpdatedAt = listSortByUpdatedAt;
         return this;
     }
 
-    public IntegrationSupport withListSpaceId(ListSpaceId listSpaceId) {
-        Utils.checkNotNull(listSpaceId, "listSpaceId");
-        this.listSpaceId = Optional.ofNullable(listSpaceId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListSpaceId(Optional<? extends ListSpaceId> listSpaceId) {
-        Utils.checkNotNull(listSpaceId, "listSpaceId");
+    public IntegrationSupport withListSpaceId(@Nullable ListSpaceId listSpaceId) {
         this.listSpaceId = listSpaceId;
         return this;
     }
 
-    public IntegrationSupport withListStartGte(ListStartGte listStartGte) {
-        Utils.checkNotNull(listStartGte, "listStartGte");
-        this.listStartGte = Optional.ofNullable(listStartGte);
-        return this;
-    }
 
-
-    public IntegrationSupport withListStartGte(Optional<? extends ListStartGte> listStartGte) {
-        Utils.checkNotNull(listStartGte, "listStartGte");
+    public IntegrationSupport withListStartGte(@Nullable ListStartGte listStartGte) {
         this.listStartGte = listStartGte;
         return this;
     }
 
-    public IntegrationSupport withListStatus(ListStatus listStatus) {
-        Utils.checkNotNull(listStatus, "listStatus");
-        this.listStatus = Optional.ofNullable(listStatus);
-        return this;
-    }
 
-
-    public IntegrationSupport withListStatus(Optional<? extends ListStatus> listStatus) {
-        Utils.checkNotNull(listStatus, "listStatus");
+    public IntegrationSupport withListStatus(@Nullable ListStatus listStatus) {
         this.listStatus = listStatus;
         return this;
     }
 
-    public IntegrationSupport withListStudentId(ListStudentId listStudentId) {
-        Utils.checkNotNull(listStudentId, "listStudentId");
-        this.listStudentId = Optional.ofNullable(listStudentId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListStudentId(Optional<? extends ListStudentId> listStudentId) {
-        Utils.checkNotNull(listStudentId, "listStudentId");
+    public IntegrationSupport withListStudentId(@Nullable ListStudentId listStudentId) {
         this.listStudentId = listStudentId;
         return this;
     }
 
-    public IntegrationSupport withListTaskId(ListTaskId listTaskId) {
-        Utils.checkNotNull(listTaskId, "listTaskId");
-        this.listTaskId = Optional.ofNullable(listTaskId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListTaskId(Optional<? extends ListTaskId> listTaskId) {
-        Utils.checkNotNull(listTaskId, "listTaskId");
+    public IntegrationSupport withListTaskId(@Nullable ListTaskId listTaskId) {
         this.listTaskId = listTaskId;
         return this;
     }
 
-    public IntegrationSupport withListTeacherId(ListTeacherId listTeacherId) {
-        Utils.checkNotNull(listTeacherId, "listTeacherId");
-        this.listTeacherId = Optional.ofNullable(listTeacherId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListTeacherId(Optional<? extends ListTeacherId> listTeacherId) {
-        Utils.checkNotNull(listTeacherId, "listTeacherId");
+    public IntegrationSupport withListTeacherId(@Nullable ListTeacherId listTeacherId) {
         this.listTeacherId = listTeacherId;
         return this;
     }
 
-    public IntegrationSupport withListTicketId(ListTicketId listTicketId) {
-        Utils.checkNotNull(listTicketId, "listTicketId");
-        this.listTicketId = Optional.ofNullable(listTicketId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListTicketId(Optional<? extends ListTicketId> listTicketId) {
-        Utils.checkNotNull(listTicketId, "listTicketId");
+    public IntegrationSupport withListTicketId(@Nullable ListTicketId listTicketId) {
         this.listTicketId = listTicketId;
         return this;
     }
 
-    public IntegrationSupport withListType(ListType listType) {
-        Utils.checkNotNull(listType, "listType");
-        this.listType = Optional.ofNullable(listType);
-        return this;
-    }
 
-
-    public IntegrationSupport withListType(Optional<? extends ListType> listType) {
-        Utils.checkNotNull(listType, "listType");
+    public IntegrationSupport withListType(@Nullable ListType listType) {
         this.listType = listType;
         return this;
     }
 
-    public IntegrationSupport withListUpdatedGte(ListUpdatedGte listUpdatedGte) {
-        Utils.checkNotNull(listUpdatedGte, "listUpdatedGte");
-        this.listUpdatedGte = Optional.ofNullable(listUpdatedGte);
-        return this;
-    }
 
-
-    public IntegrationSupport withListUpdatedGte(Optional<? extends ListUpdatedGte> listUpdatedGte) {
-        Utils.checkNotNull(listUpdatedGte, "listUpdatedGte");
+    public IntegrationSupport withListUpdatedGte(@Nullable ListUpdatedGte listUpdatedGte) {
         this.listUpdatedGte = listUpdatedGte;
         return this;
     }
 
-    public IntegrationSupport withListUserId(ListUserId listUserId) {
-        Utils.checkNotNull(listUserId, "listUserId");
-        this.listUserId = Optional.ofNullable(listUserId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListUserId(Optional<? extends ListUserId> listUserId) {
-        Utils.checkNotNull(listUserId, "listUserId");
+    public IntegrationSupport withListUserId(@Nullable ListUserId listUserId) {
         this.listUserId = listUserId;
         return this;
     }
 
-    public IntegrationSupport withListUserMentionedId(ListUserMentionedId listUserMentionedId) {
-        Utils.checkNotNull(listUserMentionedId, "listUserMentionedId");
-        this.listUserMentionedId = Optional.ofNullable(listUserMentionedId);
-        return this;
-    }
 
-
-    public IntegrationSupport withListUserMentionedId(Optional<? extends ListUserMentionedId> listUserMentionedId) {
-        Utils.checkNotNull(listUserMentionedId, "listUserMentionedId");
+    public IntegrationSupport withListUserMentionedId(@Nullable ListUserMentionedId listUserMentionedId) {
         this.listUserMentionedId = listUserMentionedId;
         return this;
     }
 
-    public IntegrationSupport withMethods(Map<String, Boolean> methods) {
-        Utils.checkNotNull(methods, "methods");
-        this.methods = Optional.ofNullable(methods);
-        return this;
-    }
 
-
-    public IntegrationSupport withMethods(Optional<? extends Map<String, Boolean>> methods) {
-        Utils.checkNotNull(methods, "methods");
+    public IntegrationSupport withMethods(@Nullable Map<String, Boolean> methods) {
         this.methods = methods;
         return this;
     }
 
-    public IntegrationSupport withNativeWebhookCalendarId(NativeWebhookCalendarId nativeWebhookCalendarId) {
-        Utils.checkNotNull(nativeWebhookCalendarId, "nativeWebhookCalendarId");
-        this.nativeWebhookCalendarId = Optional.ofNullable(nativeWebhookCalendarId);
-        return this;
-    }
 
-
-    public IntegrationSupport withNativeWebhookCalendarId(Optional<? extends NativeWebhookCalendarId> nativeWebhookCalendarId) {
-        Utils.checkNotNull(nativeWebhookCalendarId, "nativeWebhookCalendarId");
+    public IntegrationSupport withNativeWebhookCalendarId(@Nullable NativeWebhookCalendarId nativeWebhookCalendarId) {
         this.nativeWebhookCalendarId = nativeWebhookCalendarId;
         return this;
     }
 
-    public IntegrationSupport withNativeWebhookCarrierId(NativeWebhookCarrierId nativeWebhookCarrierId) {
-        Utils.checkNotNull(nativeWebhookCarrierId, "nativeWebhookCarrierId");
-        this.nativeWebhookCarrierId = Optional.ofNullable(nativeWebhookCarrierId);
-        return this;
-    }
 
-
-    public IntegrationSupport withNativeWebhookCarrierId(Optional<? extends NativeWebhookCarrierId> nativeWebhookCarrierId) {
-        Utils.checkNotNull(nativeWebhookCarrierId, "nativeWebhookCarrierId");
+    public IntegrationSupport withNativeWebhookCarrierId(@Nullable NativeWebhookCarrierId nativeWebhookCarrierId) {
         this.nativeWebhookCarrierId = nativeWebhookCarrierId;
         return this;
     }
 
-    public IntegrationSupport withNativeWebhookChannelId(NativeWebhookChannelId nativeWebhookChannelId) {
-        Utils.checkNotNull(nativeWebhookChannelId, "nativeWebhookChannelId");
-        this.nativeWebhookChannelId = Optional.ofNullable(nativeWebhookChannelId);
-        return this;
-    }
 
-
-    public IntegrationSupport withNativeWebhookChannelId(Optional<? extends NativeWebhookChannelId> nativeWebhookChannelId) {
-        Utils.checkNotNull(nativeWebhookChannelId, "nativeWebhookChannelId");
+    public IntegrationSupport withNativeWebhookChannelId(@Nullable NativeWebhookChannelId nativeWebhookChannelId) {
         this.nativeWebhookChannelId = nativeWebhookChannelId;
         return this;
     }
 
-    public IntegrationSupport withNativeWebhookCompanyId(NativeWebhookCompanyId nativeWebhookCompanyId) {
-        Utils.checkNotNull(nativeWebhookCompanyId, "nativeWebhookCompanyId");
-        this.nativeWebhookCompanyId = Optional.ofNullable(nativeWebhookCompanyId);
-        return this;
-    }
 
-
-    public IntegrationSupport withNativeWebhookCompanyId(Optional<? extends NativeWebhookCompanyId> nativeWebhookCompanyId) {
-        Utils.checkNotNull(nativeWebhookCompanyId, "nativeWebhookCompanyId");
+    public IntegrationSupport withNativeWebhookCompanyId(@Nullable NativeWebhookCompanyId nativeWebhookCompanyId) {
         this.nativeWebhookCompanyId = nativeWebhookCompanyId;
         return this;
     }
 
-    public IntegrationSupport withNativeWebhookEventId(NativeWebhookEventId nativeWebhookEventId) {
-        Utils.checkNotNull(nativeWebhookEventId, "nativeWebhookEventId");
-        this.nativeWebhookEventId = Optional.ofNullable(nativeWebhookEventId);
-        return this;
-    }
 
-
-    public IntegrationSupport withNativeWebhookEventId(Optional<? extends NativeWebhookEventId> nativeWebhookEventId) {
-        Utils.checkNotNull(nativeWebhookEventId, "nativeWebhookEventId");
+    public IntegrationSupport withNativeWebhookEventId(@Nullable NativeWebhookEventId nativeWebhookEventId) {
         this.nativeWebhookEventId = nativeWebhookEventId;
         return this;
     }
 
-    public IntegrationSupport withNativeWebhookFormId(NativeWebhookFormId nativeWebhookFormId) {
-        Utils.checkNotNull(nativeWebhookFormId, "nativeWebhookFormId");
-        this.nativeWebhookFormId = Optional.ofNullable(nativeWebhookFormId);
-        return this;
-    }
 
-
-    public IntegrationSupport withNativeWebhookFormId(Optional<? extends NativeWebhookFormId> nativeWebhookFormId) {
-        Utils.checkNotNull(nativeWebhookFormId, "nativeWebhookFormId");
+    public IntegrationSupport withNativeWebhookFormId(@Nullable NativeWebhookFormId nativeWebhookFormId) {
         this.nativeWebhookFormId = nativeWebhookFormId;
         return this;
     }
 
-    public IntegrationSupport withNativeWebhookLabelId(NativeWebhookLabelId nativeWebhookLabelId) {
-        Utils.checkNotNull(nativeWebhookLabelId, "nativeWebhookLabelId");
-        this.nativeWebhookLabelId = Optional.ofNullable(nativeWebhookLabelId);
-        return this;
-    }
 
-
-    public IntegrationSupport withNativeWebhookLabelId(Optional<? extends NativeWebhookLabelId> nativeWebhookLabelId) {
-        Utils.checkNotNull(nativeWebhookLabelId, "nativeWebhookLabelId");
+    public IntegrationSupport withNativeWebhookLabelId(@Nullable NativeWebhookLabelId nativeWebhookLabelId) {
         this.nativeWebhookLabelId = nativeWebhookLabelId;
         return this;
     }
 
-    public IntegrationSupport withNativeWebhookOrderId(NativeWebhookOrderId nativeWebhookOrderId) {
-        Utils.checkNotNull(nativeWebhookOrderId, "nativeWebhookOrderId");
-        this.nativeWebhookOrderId = Optional.ofNullable(nativeWebhookOrderId);
-        return this;
-    }
 
-
-    public IntegrationSupport withNativeWebhookOrderId(Optional<? extends NativeWebhookOrderId> nativeWebhookOrderId) {
-        Utils.checkNotNull(nativeWebhookOrderId, "nativeWebhookOrderId");
+    public IntegrationSupport withNativeWebhookOrderId(@Nullable NativeWebhookOrderId nativeWebhookOrderId) {
         this.nativeWebhookOrderId = nativeWebhookOrderId;
         return this;
     }
 
-    public IntegrationSupport withNativeWebhookParentId(NativeWebhookParentId nativeWebhookParentId) {
-        Utils.checkNotNull(nativeWebhookParentId, "nativeWebhookParentId");
-        this.nativeWebhookParentId = Optional.ofNullable(nativeWebhookParentId);
-        return this;
-    }
 
-
-    public IntegrationSupport withNativeWebhookParentId(Optional<? extends NativeWebhookParentId> nativeWebhookParentId) {
-        Utils.checkNotNull(nativeWebhookParentId, "nativeWebhookParentId");
+    public IntegrationSupport withNativeWebhookParentId(@Nullable NativeWebhookParentId nativeWebhookParentId) {
         this.nativeWebhookParentId = nativeWebhookParentId;
         return this;
     }
 
-    public IntegrationSupport withNativeWebhookProjectId(NativeWebhookProjectId nativeWebhookProjectId) {
-        Utils.checkNotNull(nativeWebhookProjectId, "nativeWebhookProjectId");
-        this.nativeWebhookProjectId = Optional.ofNullable(nativeWebhookProjectId);
-        return this;
-    }
 
-
-    public IntegrationSupport withNativeWebhookProjectId(Optional<? extends NativeWebhookProjectId> nativeWebhookProjectId) {
-        Utils.checkNotNull(nativeWebhookProjectId, "nativeWebhookProjectId");
+    public IntegrationSupport withNativeWebhookProjectId(@Nullable NativeWebhookProjectId nativeWebhookProjectId) {
         this.nativeWebhookProjectId = nativeWebhookProjectId;
         return this;
     }
 
-    public IntegrationSupport withNativeWebhookShipmentId(NativeWebhookShipmentId nativeWebhookShipmentId) {
-        Utils.checkNotNull(nativeWebhookShipmentId, "nativeWebhookShipmentId");
-        this.nativeWebhookShipmentId = Optional.ofNullable(nativeWebhookShipmentId);
-        return this;
-    }
 
-
-    public IntegrationSupport withNativeWebhookShipmentId(Optional<? extends NativeWebhookShipmentId> nativeWebhookShipmentId) {
-        Utils.checkNotNull(nativeWebhookShipmentId, "nativeWebhookShipmentId");
+    public IntegrationSupport withNativeWebhookShipmentId(@Nullable NativeWebhookShipmentId nativeWebhookShipmentId) {
         this.nativeWebhookShipmentId = nativeWebhookShipmentId;
         return this;
     }
 
-    public IntegrationSupport withNativeWebhookTaskId(NativeWebhookTaskId nativeWebhookTaskId) {
-        Utils.checkNotNull(nativeWebhookTaskId, "nativeWebhookTaskId");
-        this.nativeWebhookTaskId = Optional.ofNullable(nativeWebhookTaskId);
-        return this;
-    }
 
-
-    public IntegrationSupport withNativeWebhookTaskId(Optional<? extends NativeWebhookTaskId> nativeWebhookTaskId) {
-        Utils.checkNotNull(nativeWebhookTaskId, "nativeWebhookTaskId");
+    public IntegrationSupport withNativeWebhookTaskId(@Nullable NativeWebhookTaskId nativeWebhookTaskId) {
         this.nativeWebhookTaskId = nativeWebhookTaskId;
         return this;
     }
 
-    public IntegrationSupport withOutboundFields(Map<String, String> outboundFields) {
-        Utils.checkNotNull(outboundFields, "outboundFields");
-        this.outboundFields = Optional.ofNullable(outboundFields);
-        return this;
-    }
 
-
-    public IntegrationSupport withOutboundFields(Optional<? extends Map<String, String>> outboundFields) {
-        Utils.checkNotNull(outboundFields, "outboundFields");
+    public IntegrationSupport withOutboundFields(@Nullable Map<String, String> outboundFields) {
         this.outboundFields = outboundFields;
         return this;
     }
 
-    /**
-     * objects that we map from in the integration
-     */
-    public IntegrationSupport withRawObjects(List<String> rawObjects) {
-        Utils.checkNotNull(rawObjects, "rawObjects");
-        this.rawObjects = Optional.ofNullable(rawObjects);
-        return this;
-    }
-
 
     /**
      * objects that we map from in the integration
      */
-    public IntegrationSupport withRawObjects(Optional<? extends List<String>> rawObjects) {
-        Utils.checkNotNull(rawObjects, "rawObjects");
+    public IntegrationSupport withRawObjects(@Nullable List<String> rawObjects) {
         this.rawObjects = rawObjects;
         return this;
     }
 
-    public IntegrationSupport withSearchDomain(SearchDomain searchDomain) {
-        Utils.checkNotNull(searchDomain, "searchDomain");
-        this.searchDomain = Optional.ofNullable(searchDomain);
-        return this;
-    }
 
-
-    public IntegrationSupport withSearchDomain(Optional<? extends SearchDomain> searchDomain) {
-        Utils.checkNotNull(searchDomain, "searchDomain");
+    public IntegrationSupport withSearchDomain(@Nullable SearchDomain searchDomain) {
         this.searchDomain = searchDomain;
         return this;
     }
 
-    public IntegrationSupport withSearchEmail(SearchEmail searchEmail) {
-        Utils.checkNotNull(searchEmail, "searchEmail");
-        this.searchEmail = Optional.ofNullable(searchEmail);
-        return this;
-    }
 
-
-    public IntegrationSupport withSearchEmail(Optional<? extends SearchEmail> searchEmail) {
-        Utils.checkNotNull(searchEmail, "searchEmail");
+    public IntegrationSupport withSearchEmail(@Nullable SearchEmail searchEmail) {
         this.searchEmail = searchEmail;
         return this;
     }
 
-    public IntegrationSupport withSearchLinkedinurl(SearchLinkedinurl searchLinkedinurl) {
-        Utils.checkNotNull(searchLinkedinurl, "searchLinkedinurl");
-        this.searchLinkedinurl = Optional.ofNullable(searchLinkedinurl);
-        return this;
-    }
 
-
-    public IntegrationSupport withSearchLinkedinurl(Optional<? extends SearchLinkedinurl> searchLinkedinurl) {
-        Utils.checkNotNull(searchLinkedinurl, "searchLinkedinurl");
+    public IntegrationSupport withSearchLinkedinurl(@Nullable SearchLinkedinurl searchLinkedinurl) {
         this.searchLinkedinurl = searchLinkedinurl;
         return this;
     }
 
-    public IntegrationSupport withSearchName(SearchName searchName) {
-        Utils.checkNotNull(searchName, "searchName");
-        this.searchName = Optional.ofNullable(searchName);
-        return this;
-    }
 
-
-    public IntegrationSupport withSearchName(Optional<? extends SearchName> searchName) {
-        Utils.checkNotNull(searchName, "searchName");
+    public IntegrationSupport withSearchName(@Nullable SearchName searchName) {
         this.searchName = searchName;
         return this;
     }
 
-    public IntegrationSupport withSearchTwitter(SearchTwitter searchTwitter) {
-        Utils.checkNotNull(searchTwitter, "searchTwitter");
-        this.searchTwitter = Optional.ofNullable(searchTwitter);
-        return this;
-    }
 
-
-    public IntegrationSupport withSearchTwitter(Optional<? extends SearchTwitter> searchTwitter) {
-        Utils.checkNotNull(searchTwitter, "searchTwitter");
+    public IntegrationSupport withSearchTwitter(@Nullable SearchTwitter searchTwitter) {
         this.searchTwitter = searchTwitter;
         return this;
     }
 
-    public IntegrationSupport withSlowFields(List<String> slowFields) {
-        Utils.checkNotNull(slowFields, "slowFields");
-        this.slowFields = Optional.ofNullable(slowFields);
-        return this;
-    }
 
-
-    public IntegrationSupport withSlowFields(Optional<? extends List<String>> slowFields) {
-        Utils.checkNotNull(slowFields, "slowFields");
+    public IntegrationSupport withSlowFields(@Nullable List<String> slowFields) {
         this.slowFields = slowFields;
         return this;
     }
 
-    public IntegrationSupport withVirtualWebhookAdId(VirtualWebhookAdId virtualWebhookAdId) {
-        Utils.checkNotNull(virtualWebhookAdId, "virtualWebhookAdId");
-        this.virtualWebhookAdId = Optional.ofNullable(virtualWebhookAdId);
-        return this;
-    }
 
-
-    public IntegrationSupport withVirtualWebhookAdId(Optional<? extends VirtualWebhookAdId> virtualWebhookAdId) {
-        Utils.checkNotNull(virtualWebhookAdId, "virtualWebhookAdId");
+    public IntegrationSupport withVirtualWebhookAdId(@Nullable VirtualWebhookAdId virtualWebhookAdId) {
         this.virtualWebhookAdId = virtualWebhookAdId;
         return this;
     }
 
-    public IntegrationSupport withVirtualWebhookApplicationId(VirtualWebhookApplicationId virtualWebhookApplicationId) {
-        Utils.checkNotNull(virtualWebhookApplicationId, "virtualWebhookApplicationId");
-        this.virtualWebhookApplicationId = Optional.ofNullable(virtualWebhookApplicationId);
-        return this;
-    }
 
-
-    public IntegrationSupport withVirtualWebhookApplicationId(Optional<? extends VirtualWebhookApplicationId> virtualWebhookApplicationId) {
-        Utils.checkNotNull(virtualWebhookApplicationId, "virtualWebhookApplicationId");
+    public IntegrationSupport withVirtualWebhookApplicationId(@Nullable VirtualWebhookApplicationId virtualWebhookApplicationId) {
         this.virtualWebhookApplicationId = virtualWebhookApplicationId;
         return this;
     }
 
-    public IntegrationSupport withVirtualWebhookBranchId(VirtualWebhookBranchId virtualWebhookBranchId) {
-        Utils.checkNotNull(virtualWebhookBranchId, "virtualWebhookBranchId");
-        this.virtualWebhookBranchId = Optional.ofNullable(virtualWebhookBranchId);
-        return this;
-    }
 
-
-    public IntegrationSupport withVirtualWebhookBranchId(Optional<? extends VirtualWebhookBranchId> virtualWebhookBranchId) {
-        Utils.checkNotNull(virtualWebhookBranchId, "virtualWebhookBranchId");
+    public IntegrationSupport withVirtualWebhookBranchId(@Nullable VirtualWebhookBranchId virtualWebhookBranchId) {
         this.virtualWebhookBranchId = virtualWebhookBranchId;
         return this;
     }
 
-    public IntegrationSupport withVirtualWebhookCalendarId(VirtualWebhookCalendarId virtualWebhookCalendarId) {
-        Utils.checkNotNull(virtualWebhookCalendarId, "virtualWebhookCalendarId");
-        this.virtualWebhookCalendarId = Optional.ofNullable(virtualWebhookCalendarId);
-        return this;
-    }
 
-
-    public IntegrationSupport withVirtualWebhookCalendarId(Optional<? extends VirtualWebhookCalendarId> virtualWebhookCalendarId) {
-        Utils.checkNotNull(virtualWebhookCalendarId, "virtualWebhookCalendarId");
+    public IntegrationSupport withVirtualWebhookCalendarId(@Nullable VirtualWebhookCalendarId virtualWebhookCalendarId) {
         this.virtualWebhookCalendarId = virtualWebhookCalendarId;
         return this;
     }
 
-    public IntegrationSupport withVirtualWebhookCallId(VirtualWebhookCallId virtualWebhookCallId) {
-        Utils.checkNotNull(virtualWebhookCallId, "virtualWebhookCallId");
-        this.virtualWebhookCallId = Optional.ofNullable(virtualWebhookCallId);
-        return this;
-    }
 
-
-    public IntegrationSupport withVirtualWebhookCallId(Optional<? extends VirtualWebhookCallId> virtualWebhookCallId) {
-        Utils.checkNotNull(virtualWebhookCallId, "virtualWebhookCallId");
+    public IntegrationSupport withVirtualWebhookCallId(@Nullable VirtualWebhookCallId virtualWebhookCallId) {
         this.virtualWebhookCallId = virtualWebhookCallId;
         return this;
     }
 
-    public IntegrationSupport withVirtualWebhookCampaignId(VirtualWebhookCampaignId virtualWebhookCampaignId) {
-        Utils.checkNotNull(virtualWebhookCampaignId, "virtualWebhookCampaignId");
-        this.virtualWebhookCampaignId = Optional.ofNullable(virtualWebhookCampaignId);
-        return this;
-    }
 
-
-    public IntegrationSupport withVirtualWebhookCampaignId(Optional<? extends VirtualWebhookCampaignId> virtualWebhookCampaignId) {
-        Utils.checkNotNull(virtualWebhookCampaignId, "virtualWebhookCampaignId");
+    public IntegrationSupport withVirtualWebhookCampaignId(@Nullable VirtualWebhookCampaignId virtualWebhookCampaignId) {
         this.virtualWebhookCampaignId = virtualWebhookCampaignId;
         return this;
     }
 
-    public IntegrationSupport withVirtualWebhookCandidateId(VirtualWebhookCandidateId virtualWebhookCandidateId) {
-        Utils.checkNotNull(virtualWebhookCandidateId, "virtualWebhookCandidateId");
-        this.virtualWebhookCandidateId = Optional.ofNullable(virtualWebhookCandidateId);
-        return this;
-    }
 
-
-    public IntegrationSupport withVirtualWebhookCandidateId(Optional<? extends VirtualWebhookCandidateId> virtualWebhookCandidateId) {
-        Utils.checkNotNull(virtualWebhookCandidateId, "virtualWebhookCandidateId");
+    public IntegrationSupport withVirtualWebhookCandidateId(@Nullable VirtualWebhookCandidateId virtualWebhookCandidateId) {
         this.virtualWebhookCandidateId = virtualWebhookCandidateId;
         return this;
     }
 
-    public IntegrationSupport withVirtualWebhookCarrierId(VirtualWebhookCarrierId virtualWebhookCarrierId) {
-        Utils.checkNotNull(virtualWebhookCarrierId, "virtualWebhookCarrierId");
-        this.virtualWebhookCarrierId = Optional.ofNullable(virtualWebhookCarrierId);
-        return this;
-    }
 
-
-    public IntegrationSupport withVirtualWebhookCarrierId(Optional<? extends VirtualWebhookCarrierId> virtualWebhookCarrierId) {
-        Utils.checkNotNull(virtualWebhookCarrierId, "virtualWebhookCarrierId");
+    public IntegrationSupport withVirtualWebhookCarrierId(@Nullable VirtualWebhookCarrierId virtualWebhookCarrierId) {
         this.virtualWebhookCarrierId = virtualWebhookCarrierId;
         return this;
     }
 
-    public IntegrationSupport withVirtualWebhookChannelId(VirtualWebhookChannelId virtualWebhookChannelId) {
-        Utils.checkNotNull(virtualWebhookChannelId, "virtualWebhookChannelId");
-        this.virtualWebhookChannelId = Optional.ofNullable(virtualWebhookChannelId);
-        return this;
-    }
 
-
-    public IntegrationSupport withVirtualWebhookChannelId(Optional<? extends VirtualWebhookChannelId> virtualWebhookChannelId) {
-        Utils.checkNotNull(virtualWebhookChannelId, "virtualWebhookChannelId");
+    public IntegrationSupport withVirtualWebhookChannelId(@Nullable VirtualWebhookChannelId virtualWebhookChannelId) {
         this.virtualWebhookChannelId = virtualWebhookChannelId;
         return this;
     }
 
-    public IntegrationSupport withVirtualWebhookCollectionId(VirtualWebhookCollectionId virtualWebhookCollectionId) {
-        Utils.checkNotNull(virtualWebhookCollectionId, "virtualWebhookCollectionId");
-        this.virtualWebhookCollectionId = Optional.ofNullable(virtualWebhookCollectionId);
-        return this;
-    }
 
-
-    public IntegrationSupport withVirtualWebhookCollectionId(Optional<? extends VirtualWebhookCollectionId> virtualWebhookCollectionId) {
-        Utils.checkNotNull(virtualWebhookCollectionId, "virtualWebhookCollectionId");
+    public IntegrationSupport withVirtualWebhookCollectionId(@Nullable VirtualWebhookCollectionId virtualWebhookCollectionId) {
         this.virtualWebhookCollectionId = virtualWebhookCollectionId;
         return this;
     }
 
-    public IntegrationSupport withVirtualWebhookCompanyId(VirtualWebhookCompanyId virtualWebhookCompanyId) {
-        Utils.checkNotNull(virtualWebhookCompanyId, "virtualWebhookCompanyId");
-        this.virtualWebhookCompanyId = Optional.ofNullable(virtualWebhookCompanyId);
-        return this;
-    }
 
-
-    public IntegrationSupport withVirtualWebhookCompanyId(Optional<? extends VirtualWebhookCompanyId> virtualWebhookCompanyId) {
-        Utils.checkNotNull(virtualWebhookCompanyId, "virtualWebhookCompanyId");
+    public IntegrationSupport withVirtualWebhookCompanyId(@Nullable VirtualWebhookCompanyId virtualWebhookCompanyId) {
         this.virtualWebhookCompanyId = virtualWebhookCompanyId;
         return this;
     }
 
-    public IntegrationSupport withVirtualWebhookContactId(VirtualWebhookContactId virtualWebhookContactId) {
-        Utils.checkNotNull(virtualWebhookContactId, "virtualWebhookContactId");
-        this.virtualWebhookContactId = Optional.ofNullable(virtualWebhookContactId);
-        return this;
-    }
 
-
-    public IntegrationSupport withVirtualWebhookContactId(Optional<? extends VirtualWebhookContactId> virtualWebhookContactId) {
-        Utils.checkNotNull(virtualWebhookContactId, "virtualWebhookContactId");
+    public IntegrationSupport withVirtualWebhookContactId(@Nullable VirtualWebhookContactId virtualWebhookContactId) {
         this.virtualWebhookContactId = virtualWebhookContactId;
         return this;
     }
 
-    public IntegrationSupport withVirtualWebhookCustomerId(VirtualWebhookCustomerId virtualWebhookCustomerId) {
-        Utils.checkNotNull(virtualWebhookCustomerId, "virtualWebhookCustomerId");
-        this.virtualWebhookCustomerId = Optional.ofNullable(virtualWebhookCustomerId);
-        return this;
-    }
 
-
-    public IntegrationSupport withVirtualWebhookCustomerId(Optional<? extends VirtualWebhookCustomerId> virtualWebhookCustomerId) {
-        Utils.checkNotNull(virtualWebhookCustomerId, "virtualWebhookCustomerId");
+    public IntegrationSupport withVirtualWebhookCustomerId(@Nullable VirtualWebhookCustomerId virtualWebhookCustomerId) {
         this.virtualWebhookCustomerId = virtualWebhookCustomerId;
         return this;
     }
 
-    public IntegrationSupport withVirtualWebhookDealId(VirtualWebhookDealId virtualWebhookDealId) {
-        Utils.checkNotNull(virtualWebhookDealId, "virtualWebhookDealId");
-        this.virtualWebhookDealId = Optional.ofNullable(virtualWebhookDealId);
-        return this;
-    }
 
-
-    public IntegrationSupport withVirtualWebhookDealId(Optional<? extends VirtualWebhookDealId> virtualWebhookDealId) {
-        Utils.checkNotNull(virtualWebhookDealId, "virtualWebhookDealId");
+    public IntegrationSupport withVirtualWebhookDealId(@Nullable VirtualWebhookDealId virtualWebhookDealId) {
         this.virtualWebhookDealId = virtualWebhookDealId;
         return this;
     }
 
-    public IntegrationSupport withVirtualWebhookEndLt(VirtualWebhookEndLt virtualWebhookEndLt) {
-        Utils.checkNotNull(virtualWebhookEndLt, "virtualWebhookEndLt");
-        this.virtualWebhookEndLt = Optional.ofNullable(virtualWebhookEndLt);
-        return this;
-    }
 
-
-    public IntegrationSupport withVirtualWebhookEndLt(Optional<? extends VirtualWebhookEndLt> virtualWebhookEndLt) {
-        Utils.checkNotNull(virtualWebhookEndLt, "virtualWebhookEndLt");
+    public IntegrationSupport withVirtualWebhookEndLt(@Nullable VirtualWebhookEndLt virtualWebhookEndLt) {
         this.virtualWebhookEndLt = virtualWebhookEndLt;
         return this;
     }
 
-    public IntegrationSupport withVirtualWebhookEventId(VirtualWebhookEventId virtualWebhookEventId) {
-        Utils.checkNotNull(virtualWebhookEventId, "virtualWebhookEventId");
-        this.virtualWebhookEventId = Optional.ofNullable(virtualWebhookEventId);
-        return this;
-    }
 
-
-    public IntegrationSupport withVirtualWebhookEventId(Optional<? extends VirtualWebhookEventId> virtualWebhookEventId) {
-        Utils.checkNotNull(virtualWebhookEventId, "virtualWebhookEventId");
+    public IntegrationSupport withVirtualWebhookEventId(@Nullable VirtualWebhookEventId virtualWebhookEventId) {
         this.virtualWebhookEventId = virtualWebhookEventId;
         return this;
     }
 
-    public IntegrationSupport withVirtualWebhookExpand(VirtualWebhookExpand virtualWebhookExpand) {
-        Utils.checkNotNull(virtualWebhookExpand, "virtualWebhookExpand");
-        this.virtualWebhookExpand = Optional.ofNullable(virtualWebhookExpand);
-        return this;
-    }
 
-
-    public IntegrationSupport withVirtualWebhookExpand(Optional<? extends VirtualWebhookExpand> virtualWebhookExpand) {
-        Utils.checkNotNull(virtualWebhookExpand, "virtualWebhookExpand");
+    public IntegrationSupport withVirtualWebhookExpand(@Nullable VirtualWebhookExpand virtualWebhookExpand) {
         this.virtualWebhookExpand = virtualWebhookExpand;
         return this;
     }
 
-    public IntegrationSupport withVirtualWebhookFields(VirtualWebhookFields virtualWebhookFields) {
-        Utils.checkNotNull(virtualWebhookFields, "virtualWebhookFields");
-        this.virtualWebhookFields = Optional.ofNullable(virtualWebhookFields);
-        return this;
-    }
 
-
-    public IntegrationSupport withVirtualWebhookFields(Optional<? extends VirtualWebhookFields> virtualWebhookFields) {
-        Utils.checkNotNull(virtualWebhookFields, "virtualWebhookFields");
+    public IntegrationSupport withVirtualWebhookFields(@Nullable VirtualWebhookFields virtualWebhookFields) {
         this.virtualWebhookFields = virtualWebhookFields;
         return this;
     }
 
-    public IntegrationSupport withVirtualWebhookFormId(VirtualWebhookFormId virtualWebhookFormId) {
-        Utils.checkNotNull(virtualWebhookFormId, "virtualWebhookFormId");
-        this.virtualWebhookFormId = Optional.ofNullable(virtualWebhookFormId);
-        return this;
-    }
 
-
-    public IntegrationSupport withVirtualWebhookFormId(Optional<? extends VirtualWebhookFormId> virtualWebhookFormId) {
-        Utils.checkNotNull(virtualWebhookFormId, "virtualWebhookFormId");
+    public IntegrationSupport withVirtualWebhookFormId(@Nullable VirtualWebhookFormId virtualWebhookFormId) {
         this.virtualWebhookFormId = virtualWebhookFormId;
         return this;
     }
 
-    public IntegrationSupport withVirtualWebhookGroupId(VirtualWebhookGroupId virtualWebhookGroupId) {
-        Utils.checkNotNull(virtualWebhookGroupId, "virtualWebhookGroupId");
-        this.virtualWebhookGroupId = Optional.ofNullable(virtualWebhookGroupId);
-        return this;
-    }
 
-
-    public IntegrationSupport withVirtualWebhookGroupId(Optional<? extends VirtualWebhookGroupId> virtualWebhookGroupId) {
-        Utils.checkNotNull(virtualWebhookGroupId, "virtualWebhookGroupId");
+    public IntegrationSupport withVirtualWebhookGroupId(@Nullable VirtualWebhookGroupId virtualWebhookGroupId) {
         this.virtualWebhookGroupId = virtualWebhookGroupId;
         return this;
     }
 
-    public IntegrationSupport withVirtualWebhookItemId(VirtualWebhookItemId virtualWebhookItemId) {
-        Utils.checkNotNull(virtualWebhookItemId, "virtualWebhookItemId");
-        this.virtualWebhookItemId = Optional.ofNullable(virtualWebhookItemId);
-        return this;
-    }
 
-
-    public IntegrationSupport withVirtualWebhookItemId(Optional<? extends VirtualWebhookItemId> virtualWebhookItemId) {
-        Utils.checkNotNull(virtualWebhookItemId, "virtualWebhookItemId");
+    public IntegrationSupport withVirtualWebhookItemId(@Nullable VirtualWebhookItemId virtualWebhookItemId) {
         this.virtualWebhookItemId = virtualWebhookItemId;
         return this;
     }
 
-    public IntegrationSupport withVirtualWebhookItemVariantId(VirtualWebhookItemVariantId virtualWebhookItemVariantId) {
-        Utils.checkNotNull(virtualWebhookItemVariantId, "virtualWebhookItemVariantId");
-        this.virtualWebhookItemVariantId = Optional.ofNullable(virtualWebhookItemVariantId);
-        return this;
-    }
 
-
-    public IntegrationSupport withVirtualWebhookItemVariantId(Optional<? extends VirtualWebhookItemVariantId> virtualWebhookItemVariantId) {
-        Utils.checkNotNull(virtualWebhookItemVariantId, "virtualWebhookItemVariantId");
+    public IntegrationSupport withVirtualWebhookItemVariantId(@Nullable VirtualWebhookItemVariantId virtualWebhookItemVariantId) {
         this.virtualWebhookItemVariantId = virtualWebhookItemVariantId;
         return this;
     }
 
-    public IntegrationSupport withVirtualWebhookJobId(VirtualWebhookJobId virtualWebhookJobId) {
-        Utils.checkNotNull(virtualWebhookJobId, "virtualWebhookJobId");
-        this.virtualWebhookJobId = Optional.ofNullable(virtualWebhookJobId);
-        return this;
-    }
 
-
-    public IntegrationSupport withVirtualWebhookJobId(Optional<? extends VirtualWebhookJobId> virtualWebhookJobId) {
-        Utils.checkNotNull(virtualWebhookJobId, "virtualWebhookJobId");
+    public IntegrationSupport withVirtualWebhookJobId(@Nullable VirtualWebhookJobId virtualWebhookJobId) {
         this.virtualWebhookJobId = virtualWebhookJobId;
         return this;
     }
 
-    public IntegrationSupport withVirtualWebhookLabelId(VirtualWebhookLabelId virtualWebhookLabelId) {
-        Utils.checkNotNull(virtualWebhookLabelId, "virtualWebhookLabelId");
-        this.virtualWebhookLabelId = Optional.ofNullable(virtualWebhookLabelId);
-        return this;
-    }
 
-
-    public IntegrationSupport withVirtualWebhookLabelId(Optional<? extends VirtualWebhookLabelId> virtualWebhookLabelId) {
-        Utils.checkNotNull(virtualWebhookLabelId, "virtualWebhookLabelId");
+    public IntegrationSupport withVirtualWebhookLabelId(@Nullable VirtualWebhookLabelId virtualWebhookLabelId) {
         this.virtualWebhookLabelId = virtualWebhookLabelId;
         return this;
     }
 
-    public IntegrationSupport withVirtualWebhookLeadId(VirtualWebhookLeadId virtualWebhookLeadId) {
-        Utils.checkNotNull(virtualWebhookLeadId, "virtualWebhookLeadId");
-        this.virtualWebhookLeadId = Optional.ofNullable(virtualWebhookLeadId);
-        return this;
-    }
 
-
-    public IntegrationSupport withVirtualWebhookLeadId(Optional<? extends VirtualWebhookLeadId> virtualWebhookLeadId) {
-        Utils.checkNotNull(virtualWebhookLeadId, "virtualWebhookLeadId");
+    public IntegrationSupport withVirtualWebhookLeadId(@Nullable VirtualWebhookLeadId virtualWebhookLeadId) {
         this.virtualWebhookLeadId = virtualWebhookLeadId;
         return this;
     }
 
-    public IntegrationSupport withVirtualWebhookLimit(VirtualWebhookLimit virtualWebhookLimit) {
-        Utils.checkNotNull(virtualWebhookLimit, "virtualWebhookLimit");
-        this.virtualWebhookLimit = Optional.ofNullable(virtualWebhookLimit);
-        return this;
-    }
 
-
-    public IntegrationSupport withVirtualWebhookLimit(Optional<? extends VirtualWebhookLimit> virtualWebhookLimit) {
-        Utils.checkNotNull(virtualWebhookLimit, "virtualWebhookLimit");
+    public IntegrationSupport withVirtualWebhookLimit(@Nullable VirtualWebhookLimit virtualWebhookLimit) {
         this.virtualWebhookLimit = virtualWebhookLimit;
         return this;
     }
 
-    public IntegrationSupport withVirtualWebhookListId(VirtualWebhookListId virtualWebhookListId) {
-        Utils.checkNotNull(virtualWebhookListId, "virtualWebhookListId");
-        this.virtualWebhookListId = Optional.ofNullable(virtualWebhookListId);
-        return this;
-    }
 
-
-    public IntegrationSupport withVirtualWebhookListId(Optional<? extends VirtualWebhookListId> virtualWebhookListId) {
-        Utils.checkNotNull(virtualWebhookListId, "virtualWebhookListId");
+    public IntegrationSupport withVirtualWebhookListId(@Nullable VirtualWebhookListId virtualWebhookListId) {
         this.virtualWebhookListId = virtualWebhookListId;
         return this;
     }
 
-    public IntegrationSupport withVirtualWebhookLocationId(VirtualWebhookLocationId virtualWebhookLocationId) {
-        Utils.checkNotNull(virtualWebhookLocationId, "virtualWebhookLocationId");
-        this.virtualWebhookLocationId = Optional.ofNullable(virtualWebhookLocationId);
-        return this;
-    }
 
-
-    public IntegrationSupport withVirtualWebhookLocationId(Optional<? extends VirtualWebhookLocationId> virtualWebhookLocationId) {
-        Utils.checkNotNull(virtualWebhookLocationId, "virtualWebhookLocationId");
+    public IntegrationSupport withVirtualWebhookLocationId(@Nullable VirtualWebhookLocationId virtualWebhookLocationId) {
         this.virtualWebhookLocationId = virtualWebhookLocationId;
         return this;
     }
 
-    public IntegrationSupport withVirtualWebhookOrderId(VirtualWebhookOrderId virtualWebhookOrderId) {
-        Utils.checkNotNull(virtualWebhookOrderId, "virtualWebhookOrderId");
-        this.virtualWebhookOrderId = Optional.ofNullable(virtualWebhookOrderId);
-        return this;
-    }
 
-
-    public IntegrationSupport withVirtualWebhookOrderId(Optional<? extends VirtualWebhookOrderId> virtualWebhookOrderId) {
-        Utils.checkNotNull(virtualWebhookOrderId, "virtualWebhookOrderId");
+    public IntegrationSupport withVirtualWebhookOrderId(@Nullable VirtualWebhookOrderId virtualWebhookOrderId) {
         this.virtualWebhookOrderId = virtualWebhookOrderId;
         return this;
     }
 
-    public IntegrationSupport withVirtualWebhookOrgId(VirtualWebhookOrgId virtualWebhookOrgId) {
-        Utils.checkNotNull(virtualWebhookOrgId, "virtualWebhookOrgId");
-        this.virtualWebhookOrgId = Optional.ofNullable(virtualWebhookOrgId);
-        return this;
-    }
 
-
-    public IntegrationSupport withVirtualWebhookOrgId(Optional<? extends VirtualWebhookOrgId> virtualWebhookOrgId) {
-        Utils.checkNotNull(virtualWebhookOrgId, "virtualWebhookOrgId");
+    public IntegrationSupport withVirtualWebhookOrgId(@Nullable VirtualWebhookOrgId virtualWebhookOrgId) {
         this.virtualWebhookOrgId = virtualWebhookOrgId;
         return this;
     }
 
-    public IntegrationSupport withVirtualWebhookPageId(VirtualWebhookPageId virtualWebhookPageId) {
-        Utils.checkNotNull(virtualWebhookPageId, "virtualWebhookPageId");
-        this.virtualWebhookPageId = Optional.ofNullable(virtualWebhookPageId);
-        return this;
-    }
 
-
-    public IntegrationSupport withVirtualWebhookPageId(Optional<? extends VirtualWebhookPageId> virtualWebhookPageId) {
-        Utils.checkNotNull(virtualWebhookPageId, "virtualWebhookPageId");
+    public IntegrationSupport withVirtualWebhookPageId(@Nullable VirtualWebhookPageId virtualWebhookPageId) {
         this.virtualWebhookPageId = virtualWebhookPageId;
         return this;
     }
 
-    public IntegrationSupport withVirtualWebhookParentId(VirtualWebhookParentId virtualWebhookParentId) {
-        Utils.checkNotNull(virtualWebhookParentId, "virtualWebhookParentId");
-        this.virtualWebhookParentId = Optional.ofNullable(virtualWebhookParentId);
-        return this;
-    }
 
-
-    public IntegrationSupport withVirtualWebhookParentId(Optional<? extends VirtualWebhookParentId> virtualWebhookParentId) {
-        Utils.checkNotNull(virtualWebhookParentId, "virtualWebhookParentId");
+    public IntegrationSupport withVirtualWebhookParentId(@Nullable VirtualWebhookParentId virtualWebhookParentId) {
         this.virtualWebhookParentId = virtualWebhookParentId;
         return this;
     }
 
-    public IntegrationSupport withVirtualWebhookPipelineId(VirtualWebhookPipelineId virtualWebhookPipelineId) {
-        Utils.checkNotNull(virtualWebhookPipelineId, "virtualWebhookPipelineId");
-        this.virtualWebhookPipelineId = Optional.ofNullable(virtualWebhookPipelineId);
-        return this;
-    }
 
-
-    public IntegrationSupport withVirtualWebhookPipelineId(Optional<? extends VirtualWebhookPipelineId> virtualWebhookPipelineId) {
-        Utils.checkNotNull(virtualWebhookPipelineId, "virtualWebhookPipelineId");
+    public IntegrationSupport withVirtualWebhookPipelineId(@Nullable VirtualWebhookPipelineId virtualWebhookPipelineId) {
         this.virtualWebhookPipelineId = virtualWebhookPipelineId;
         return this;
     }
 
-    public IntegrationSupport withVirtualWebhookProjectId(VirtualWebhookProjectId virtualWebhookProjectId) {
-        Utils.checkNotNull(virtualWebhookProjectId, "virtualWebhookProjectId");
-        this.virtualWebhookProjectId = Optional.ofNullable(virtualWebhookProjectId);
-        return this;
-    }
 
-
-    public IntegrationSupport withVirtualWebhookProjectId(Optional<? extends VirtualWebhookProjectId> virtualWebhookProjectId) {
-        Utils.checkNotNull(virtualWebhookProjectId, "virtualWebhookProjectId");
+    public IntegrationSupport withVirtualWebhookProjectId(@Nullable VirtualWebhookProjectId virtualWebhookProjectId) {
         this.virtualWebhookProjectId = virtualWebhookProjectId;
         return this;
     }
 
-    public IntegrationSupport withVirtualWebhookRepoId(VirtualWebhookRepoId virtualWebhookRepoId) {
-        Utils.checkNotNull(virtualWebhookRepoId, "virtualWebhookRepoId");
-        this.virtualWebhookRepoId = Optional.ofNullable(virtualWebhookRepoId);
-        return this;
-    }
 
-
-    public IntegrationSupport withVirtualWebhookRepoId(Optional<? extends VirtualWebhookRepoId> virtualWebhookRepoId) {
-        Utils.checkNotNull(virtualWebhookRepoId, "virtualWebhookRepoId");
+    public IntegrationSupport withVirtualWebhookRepoId(@Nullable VirtualWebhookRepoId virtualWebhookRepoId) {
         this.virtualWebhookRepoId = virtualWebhookRepoId;
         return this;
     }
 
-    public IntegrationSupport withVirtualWebhookSaleschannelId(VirtualWebhookSaleschannelId virtualWebhookSaleschannelId) {
-        Utils.checkNotNull(virtualWebhookSaleschannelId, "virtualWebhookSaleschannelId");
-        this.virtualWebhookSaleschannelId = Optional.ofNullable(virtualWebhookSaleschannelId);
-        return this;
-    }
 
-
-    public IntegrationSupport withVirtualWebhookSaleschannelId(Optional<? extends VirtualWebhookSaleschannelId> virtualWebhookSaleschannelId) {
-        Utils.checkNotNull(virtualWebhookSaleschannelId, "virtualWebhookSaleschannelId");
+    public IntegrationSupport withVirtualWebhookSaleschannelId(@Nullable VirtualWebhookSaleschannelId virtualWebhookSaleschannelId) {
         this.virtualWebhookSaleschannelId = virtualWebhookSaleschannelId;
         return this;
     }
 
-    public IntegrationSupport withVirtualWebhookShipmentId(VirtualWebhookShipmentId virtualWebhookShipmentId) {
-        Utils.checkNotNull(virtualWebhookShipmentId, "virtualWebhookShipmentId");
-        this.virtualWebhookShipmentId = Optional.ofNullable(virtualWebhookShipmentId);
-        return this;
-    }
 
-
-    public IntegrationSupport withVirtualWebhookShipmentId(Optional<? extends VirtualWebhookShipmentId> virtualWebhookShipmentId) {
-        Utils.checkNotNull(virtualWebhookShipmentId, "virtualWebhookShipmentId");
+    public IntegrationSupport withVirtualWebhookShipmentId(@Nullable VirtualWebhookShipmentId virtualWebhookShipmentId) {
         this.virtualWebhookShipmentId = virtualWebhookShipmentId;
         return this;
     }
 
-    public IntegrationSupport withVirtualWebhookSpaceId(VirtualWebhookSpaceId virtualWebhookSpaceId) {
-        Utils.checkNotNull(virtualWebhookSpaceId, "virtualWebhookSpaceId");
-        this.virtualWebhookSpaceId = Optional.ofNullable(virtualWebhookSpaceId);
-        return this;
-    }
 
-
-    public IntegrationSupport withVirtualWebhookSpaceId(Optional<? extends VirtualWebhookSpaceId> virtualWebhookSpaceId) {
-        Utils.checkNotNull(virtualWebhookSpaceId, "virtualWebhookSpaceId");
+    public IntegrationSupport withVirtualWebhookSpaceId(@Nullable VirtualWebhookSpaceId virtualWebhookSpaceId) {
         this.virtualWebhookSpaceId = virtualWebhookSpaceId;
         return this;
     }
 
-    public IntegrationSupport withVirtualWebhookStartGte(VirtualWebhookStartGte virtualWebhookStartGte) {
-        Utils.checkNotNull(virtualWebhookStartGte, "virtualWebhookStartGte");
-        this.virtualWebhookStartGte = Optional.ofNullable(virtualWebhookStartGte);
-        return this;
-    }
 
-
-    public IntegrationSupport withVirtualWebhookStartGte(Optional<? extends VirtualWebhookStartGte> virtualWebhookStartGte) {
-        Utils.checkNotNull(virtualWebhookStartGte, "virtualWebhookStartGte");
+    public IntegrationSupport withVirtualWebhookStartGte(@Nullable VirtualWebhookStartGte virtualWebhookStartGte) {
         this.virtualWebhookStartGte = virtualWebhookStartGte;
         return this;
     }
 
-    public IntegrationSupport withVirtualWebhookStatus(VirtualWebhookStatus virtualWebhookStatus) {
-        Utils.checkNotNull(virtualWebhookStatus, "virtualWebhookStatus");
-        this.virtualWebhookStatus = Optional.ofNullable(virtualWebhookStatus);
-        return this;
-    }
 
-
-    public IntegrationSupport withVirtualWebhookStatus(Optional<? extends VirtualWebhookStatus> virtualWebhookStatus) {
-        Utils.checkNotNull(virtualWebhookStatus, "virtualWebhookStatus");
+    public IntegrationSupport withVirtualWebhookStatus(@Nullable VirtualWebhookStatus virtualWebhookStatus) {
         this.virtualWebhookStatus = virtualWebhookStatus;
         return this;
     }
 
-    public IntegrationSupport withVirtualWebhookTaskId(VirtualWebhookTaskId virtualWebhookTaskId) {
-        Utils.checkNotNull(virtualWebhookTaskId, "virtualWebhookTaskId");
-        this.virtualWebhookTaskId = Optional.ofNullable(virtualWebhookTaskId);
-        return this;
-    }
 
-
-    public IntegrationSupport withVirtualWebhookTaskId(Optional<? extends VirtualWebhookTaskId> virtualWebhookTaskId) {
-        Utils.checkNotNull(virtualWebhookTaskId, "virtualWebhookTaskId");
+    public IntegrationSupport withVirtualWebhookTaskId(@Nullable VirtualWebhookTaskId virtualWebhookTaskId) {
         this.virtualWebhookTaskId = virtualWebhookTaskId;
         return this;
     }
 
-    public IntegrationSupport withVirtualWebhookTicketId(VirtualWebhookTicketId virtualWebhookTicketId) {
-        Utils.checkNotNull(virtualWebhookTicketId, "virtualWebhookTicketId");
-        this.virtualWebhookTicketId = Optional.ofNullable(virtualWebhookTicketId);
-        return this;
-    }
 
-
-    public IntegrationSupport withVirtualWebhookTicketId(Optional<? extends VirtualWebhookTicketId> virtualWebhookTicketId) {
-        Utils.checkNotNull(virtualWebhookTicketId, "virtualWebhookTicketId");
+    public IntegrationSupport withVirtualWebhookTicketId(@Nullable VirtualWebhookTicketId virtualWebhookTicketId) {
         this.virtualWebhookTicketId = virtualWebhookTicketId;
         return this;
     }
 
-    public IntegrationSupport withVirtualWebhookType(VirtualWebhookType virtualWebhookType) {
-        Utils.checkNotNull(virtualWebhookType, "virtualWebhookType");
-        this.virtualWebhookType = Optional.ofNullable(virtualWebhookType);
-        return this;
-    }
 
-
-    public IntegrationSupport withVirtualWebhookType(Optional<? extends VirtualWebhookType> virtualWebhookType) {
-        Utils.checkNotNull(virtualWebhookType, "virtualWebhookType");
+    public IntegrationSupport withVirtualWebhookType(@Nullable VirtualWebhookType virtualWebhookType) {
         this.virtualWebhookType = virtualWebhookType;
         return this;
     }
 
-    public IntegrationSupport withVirtualWebhookUpdatedGte(VirtualWebhookUpdatedGte virtualWebhookUpdatedGte) {
-        Utils.checkNotNull(virtualWebhookUpdatedGte, "virtualWebhookUpdatedGte");
-        this.virtualWebhookUpdatedGte = Optional.ofNullable(virtualWebhookUpdatedGte);
-        return this;
-    }
 
-
-    public IntegrationSupport withVirtualWebhookUpdatedGte(Optional<? extends VirtualWebhookUpdatedGte> virtualWebhookUpdatedGte) {
-        Utils.checkNotNull(virtualWebhookUpdatedGte, "virtualWebhookUpdatedGte");
+    public IntegrationSupport withVirtualWebhookUpdatedGte(@Nullable VirtualWebhookUpdatedGte virtualWebhookUpdatedGte) {
         this.virtualWebhookUpdatedGte = virtualWebhookUpdatedGte;
         return this;
     }
 
-    public IntegrationSupport withVirtualWebhookUserId(VirtualWebhookUserId virtualWebhookUserId) {
-        Utils.checkNotNull(virtualWebhookUserId, "virtualWebhookUserId");
-        this.virtualWebhookUserId = Optional.ofNullable(virtualWebhookUserId);
-        return this;
-    }
 
-
-    public IntegrationSupport withVirtualWebhookUserId(Optional<? extends VirtualWebhookUserId> virtualWebhookUserId) {
-        Utils.checkNotNull(virtualWebhookUserId, "virtualWebhookUserId");
+    public IntegrationSupport withVirtualWebhookUserId(@Nullable VirtualWebhookUserId virtualWebhookUserId) {
         this.virtualWebhookUserId = virtualWebhookUserId;
         return this;
     }
 
-    public IntegrationSupport withVirtualWebhookUserMentionedId(VirtualWebhookUserMentionedId virtualWebhookUserMentionedId) {
-        Utils.checkNotNull(virtualWebhookUserMentionedId, "virtualWebhookUserMentionedId");
-        this.virtualWebhookUserMentionedId = Optional.ofNullable(virtualWebhookUserMentionedId);
-        return this;
-    }
 
-
-    public IntegrationSupport withVirtualWebhookUserMentionedId(Optional<? extends VirtualWebhookUserMentionedId> virtualWebhookUserMentionedId) {
-        Utils.checkNotNull(virtualWebhookUserMentionedId, "virtualWebhookUserMentionedId");
+    public IntegrationSupport withVirtualWebhookUserMentionedId(@Nullable VirtualWebhookUserMentionedId virtualWebhookUserMentionedId) {
         this.virtualWebhookUserMentionedId = virtualWebhookUserMentionedId;
         return this;
     }
 
-    public IntegrationSupport withWebhookEvents(PropertyIntegrationSupportWebhookEvents webhookEvents) {
-        Utils.checkNotNull(webhookEvents, "webhookEvents");
-        this.webhookEvents = Optional.ofNullable(webhookEvents);
-        return this;
-    }
 
-
-    public IntegrationSupport withWebhookEvents(Optional<? extends PropertyIntegrationSupportWebhookEvents> webhookEvents) {
-        Utils.checkNotNull(webhookEvents, "webhookEvents");
+    public IntegrationSupport withWebhookEvents(@Nullable PropertyIntegrationSupportWebhookEvents webhookEvents) {
         this.webhookEvents = webhookEvents;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -4161,2088 +2777,980 @@ public class IntegrationSupport {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends FromWebhook> fromWebhook = Optional.empty();
+        private FromWebhook fromWebhook;
 
-        private Optional<? extends Map<String, String>> inboundFields = Optional.empty();
+        private Map<String, String> inboundFields;
 
-        private Optional<? extends ListAccountId> listAccountId = Optional.empty();
+        private ListAccountId listAccountId;
 
-        private Optional<? extends ListAdId> listAdId = Optional.empty();
+        private ListAdId listAdId;
 
-        private Optional<? extends ListApplicationId> listApplicationId = Optional.empty();
+        private ListApplicationId listApplicationId;
 
-        private Optional<? extends ListBenefitId> listBenefitId = Optional.empty();
+        private ListBenefitId listBenefitId;
 
-        private Optional<? extends ListBranchId> listBranchId = Optional.empty();
+        private ListBranchId listBranchId;
 
-        private Optional<? extends ListCalendarId> listCalendarId = Optional.empty();
+        private ListCalendarId listCalendarId;
 
-        private Optional<? extends ListCallId> listCallId = Optional.empty();
+        private ListCallId listCallId;
 
-        private Optional<? extends ListCampaignId> listCampaignId = Optional.empty();
+        private ListCampaignId listCampaignId;
 
-        private Optional<? extends ListCandidateId> listCandidateId = Optional.empty();
+        private ListCandidateId listCandidateId;
 
-        private Optional<? extends ListCarrierId> listCarrierId = Optional.empty();
+        private ListCarrierId listCarrierId;
 
-        private Optional<? extends ListCategoryId> listCategoryId = Optional.empty();
+        private ListCategoryId listCategoryId;
 
-        private Optional<? extends ListChannelId> listChannelId = Optional.empty();
+        private ListChannelId listChannelId;
 
-        private Optional<? extends ListClassId> listClassId = Optional.empty();
+        private ListClassId listClassId;
 
-        private Optional<? extends ListCollectionId> listCollectionId = Optional.empty();
+        private ListCollectionId listCollectionId;
 
-        private Optional<? extends ListCompanyId> listCompanyId = Optional.empty();
+        private ListCompanyId listCompanyId;
 
-        private Optional<? extends ListContactId> listContactId = Optional.empty();
+        private ListContactId listContactId;
 
-        private Optional<? extends ListCourseId> listCourseId = Optional.empty();
+        private ListCourseId listCourseId;
 
-        private Optional<? extends ListCustomerId> listCustomerId = Optional.empty();
+        private ListCustomerId listCustomerId;
 
-        private Optional<? extends ListDealId> listDealId = Optional.empty();
+        private ListDealId listDealId;
 
-        private Optional<? extends ListDocumentId> listDocumentId = Optional.empty();
+        private ListDocumentId listDocumentId;
 
-        private Optional<? extends ListEndLt> listEndLt = Optional.empty();
+        private ListEndLt listEndLt;
 
-        private Optional<? extends ListEventId> listEventId = Optional.empty();
+        private ListEventId listEventId;
 
-        private Optional<? extends ListExpand> listExpand = Optional.empty();
+        private ListExpand listExpand;
 
-        private Optional<? extends ListFormId> listFormId = Optional.empty();
+        private ListFormId listFormId;
 
-        private Optional<? extends ListGroupId> listGroupId = Optional.empty();
+        private ListGroupId listGroupId;
 
-        private Optional<? extends ListInstructorId> listInstructorId = Optional.empty();
+        private ListInstructorId listInstructorId;
 
-        private Optional<? extends ListInterviewId> listInterviewId = Optional.empty();
+        private ListInterviewId listInterviewId;
 
-        private Optional<? extends ListInvoiceId> listInvoiceId = Optional.empty();
+        private ListInvoiceId listInvoiceId;
 
-        private Optional<? extends ListItemId> listItemId = Optional.empty();
+        private ListItemId listItemId;
 
-        private Optional<? extends ListItemVariantId> listItemVariantId = Optional.empty();
+        private ListItemVariantId listItemVariantId;
 
-        private Optional<? extends ListJobId> listJobId = Optional.empty();
+        private ListJobId listJobId;
 
-        private Optional<? extends ListLabelId> listLabelId = Optional.empty();
+        private ListLabelId listLabelId;
 
-        private Optional<? extends ListLeadId> listLeadId = Optional.empty();
+        private ListLeadId listLeadId;
 
-        private Optional<? extends ListLimit> listLimit = Optional.empty();
+        private ListLimit listLimit;
 
-        private Optional<? extends ListLinkId> listLinkId = Optional.empty();
+        private ListLinkId listLinkId;
 
-        private Optional<? extends ListListId> listListId = Optional.empty();
+        private ListListId listListId;
 
-        private Optional<? extends ListLocationId> listLocationId = Optional.empty();
+        private ListLocationId listLocationId;
 
-        private Optional<? extends ListOffset> listOffset = Optional.empty();
+        private ListOffset listOffset;
 
-        private Optional<? extends ListOrder> listOrder = Optional.empty();
+        private ListOrder listOrder;
 
-        private Optional<? extends ListOrderId> listOrderId = Optional.empty();
+        private ListOrderId listOrderId;
 
-        private Optional<? extends ListOrgId> listOrgId = Optional.empty();
+        private ListOrgId listOrgId;
 
-        private Optional<? extends ListPackageId> listPackageId = Optional.empty();
+        private ListPackageId listPackageId;
 
-        private Optional<? extends ListPageId> listPageId = Optional.empty();
+        private ListPageId listPageId;
 
-        private Optional<? extends ListParentId> listParentId = Optional.empty();
+        private ListParentId listParentId;
 
-        private Optional<? extends ListPaymentId> listPaymentId = Optional.empty();
+        private ListPaymentId listPaymentId;
 
-        private Optional<? extends ListPayslipId> listPayslipId = Optional.empty();
+        private ListPayslipId listPayslipId;
 
-        private Optional<? extends ListPipelineId> listPipelineId = Optional.empty();
+        private ListPipelineId listPipelineId;
 
-        private Optional<? extends ListProjectId> listProjectId = Optional.empty();
+        private ListProjectId listProjectId;
 
-        private Optional<? extends ListQuery> listQuery = Optional.empty();
+        private ListQuery listQuery;
 
-        private Optional<? extends ListRawFields> listRawFields = Optional.empty();
+        private ListRawFields listRawFields;
 
-        private Optional<? extends ListRepoId> listRepoId = Optional.empty();
+        private ListRepoId listRepoId;
 
-        private Optional<? extends ListRootId> listRootId = Optional.empty();
+        private ListRootId listRootId;
 
-        private Optional<? extends ListSaleschannelId> listSaleschannelId = Optional.empty();
+        private ListSaleschannelId listSaleschannelId;
 
-        private Optional<? extends ListShipmentId> listShipmentId = Optional.empty();
+        private ListShipmentId listShipmentId;
 
-        private Optional<? extends ListSortByCreatedAt> listSortByCreatedAt = Optional.empty();
+        private ListSortByCreatedAt listSortByCreatedAt;
 
-        private Optional<? extends ListSortByName> listSortByName = Optional.empty();
+        private ListSortByName listSortByName;
 
-        private Optional<? extends ListSortByUpdatedAt> listSortByUpdatedAt = Optional.empty();
+        private ListSortByUpdatedAt listSortByUpdatedAt;
 
-        private Optional<? extends ListSpaceId> listSpaceId = Optional.empty();
+        private ListSpaceId listSpaceId;
 
-        private Optional<? extends ListStartGte> listStartGte = Optional.empty();
+        private ListStartGte listStartGte;
 
-        private Optional<? extends ListStatus> listStatus = Optional.empty();
+        private ListStatus listStatus;
 
-        private Optional<? extends ListStudentId> listStudentId = Optional.empty();
+        private ListStudentId listStudentId;
 
-        private Optional<? extends ListTaskId> listTaskId = Optional.empty();
+        private ListTaskId listTaskId;
 
-        private Optional<? extends ListTeacherId> listTeacherId = Optional.empty();
+        private ListTeacherId listTeacherId;
 
-        private Optional<? extends ListTicketId> listTicketId = Optional.empty();
+        private ListTicketId listTicketId;
 
-        private Optional<? extends ListType> listType = Optional.empty();
+        private ListType listType;
 
-        private Optional<? extends ListUpdatedGte> listUpdatedGte = Optional.empty();
+        private ListUpdatedGte listUpdatedGte;
 
-        private Optional<? extends ListUserId> listUserId = Optional.empty();
+        private ListUserId listUserId;
 
-        private Optional<? extends ListUserMentionedId> listUserMentionedId = Optional.empty();
+        private ListUserMentionedId listUserMentionedId;
 
-        private Optional<? extends Map<String, Boolean>> methods = Optional.empty();
+        private Map<String, Boolean> methods;
 
-        private Optional<? extends NativeWebhookCalendarId> nativeWebhookCalendarId = Optional.empty();
+        private NativeWebhookCalendarId nativeWebhookCalendarId;
 
-        private Optional<? extends NativeWebhookCarrierId> nativeWebhookCarrierId = Optional.empty();
+        private NativeWebhookCarrierId nativeWebhookCarrierId;
 
-        private Optional<? extends NativeWebhookChannelId> nativeWebhookChannelId = Optional.empty();
+        private NativeWebhookChannelId nativeWebhookChannelId;
 
-        private Optional<? extends NativeWebhookCompanyId> nativeWebhookCompanyId = Optional.empty();
+        private NativeWebhookCompanyId nativeWebhookCompanyId;
 
-        private Optional<? extends NativeWebhookEventId> nativeWebhookEventId = Optional.empty();
+        private NativeWebhookEventId nativeWebhookEventId;
 
-        private Optional<? extends NativeWebhookFormId> nativeWebhookFormId = Optional.empty();
+        private NativeWebhookFormId nativeWebhookFormId;
 
-        private Optional<? extends NativeWebhookLabelId> nativeWebhookLabelId = Optional.empty();
+        private NativeWebhookLabelId nativeWebhookLabelId;
 
-        private Optional<? extends NativeWebhookOrderId> nativeWebhookOrderId = Optional.empty();
+        private NativeWebhookOrderId nativeWebhookOrderId;
 
-        private Optional<? extends NativeWebhookParentId> nativeWebhookParentId = Optional.empty();
+        private NativeWebhookParentId nativeWebhookParentId;
 
-        private Optional<? extends NativeWebhookProjectId> nativeWebhookProjectId = Optional.empty();
+        private NativeWebhookProjectId nativeWebhookProjectId;
 
-        private Optional<? extends NativeWebhookShipmentId> nativeWebhookShipmentId = Optional.empty();
+        private NativeWebhookShipmentId nativeWebhookShipmentId;
 
-        private Optional<? extends NativeWebhookTaskId> nativeWebhookTaskId = Optional.empty();
+        private NativeWebhookTaskId nativeWebhookTaskId;
 
-        private Optional<? extends Map<String, String>> outboundFields = Optional.empty();
+        private Map<String, String> outboundFields;
 
-        private Optional<? extends List<String>> rawObjects = Optional.empty();
+        private List<String> rawObjects;
 
-        private Optional<? extends SearchDomain> searchDomain = Optional.empty();
+        private SearchDomain searchDomain;
 
-        private Optional<? extends SearchEmail> searchEmail = Optional.empty();
+        private SearchEmail searchEmail;
 
-        private Optional<? extends SearchLinkedinurl> searchLinkedinurl = Optional.empty();
+        private SearchLinkedinurl searchLinkedinurl;
 
-        private Optional<? extends SearchName> searchName = Optional.empty();
+        private SearchName searchName;
 
-        private Optional<? extends SearchTwitter> searchTwitter = Optional.empty();
+        private SearchTwitter searchTwitter;
 
-        private Optional<? extends List<String>> slowFields = Optional.empty();
+        private List<String> slowFields;
 
-        private Optional<? extends VirtualWebhookAdId> virtualWebhookAdId = Optional.empty();
+        private VirtualWebhookAdId virtualWebhookAdId;
 
-        private Optional<? extends VirtualWebhookApplicationId> virtualWebhookApplicationId = Optional.empty();
+        private VirtualWebhookApplicationId virtualWebhookApplicationId;
 
-        private Optional<? extends VirtualWebhookBranchId> virtualWebhookBranchId = Optional.empty();
+        private VirtualWebhookBranchId virtualWebhookBranchId;
 
-        private Optional<? extends VirtualWebhookCalendarId> virtualWebhookCalendarId = Optional.empty();
+        private VirtualWebhookCalendarId virtualWebhookCalendarId;
 
-        private Optional<? extends VirtualWebhookCallId> virtualWebhookCallId = Optional.empty();
+        private VirtualWebhookCallId virtualWebhookCallId;
 
-        private Optional<? extends VirtualWebhookCampaignId> virtualWebhookCampaignId = Optional.empty();
+        private VirtualWebhookCampaignId virtualWebhookCampaignId;
 
-        private Optional<? extends VirtualWebhookCandidateId> virtualWebhookCandidateId = Optional.empty();
+        private VirtualWebhookCandidateId virtualWebhookCandidateId;
 
-        private Optional<? extends VirtualWebhookCarrierId> virtualWebhookCarrierId = Optional.empty();
+        private VirtualWebhookCarrierId virtualWebhookCarrierId;
 
-        private Optional<? extends VirtualWebhookChannelId> virtualWebhookChannelId = Optional.empty();
+        private VirtualWebhookChannelId virtualWebhookChannelId;
 
-        private Optional<? extends VirtualWebhookCollectionId> virtualWebhookCollectionId = Optional.empty();
+        private VirtualWebhookCollectionId virtualWebhookCollectionId;
 
-        private Optional<? extends VirtualWebhookCompanyId> virtualWebhookCompanyId = Optional.empty();
+        private VirtualWebhookCompanyId virtualWebhookCompanyId;
 
-        private Optional<? extends VirtualWebhookContactId> virtualWebhookContactId = Optional.empty();
+        private VirtualWebhookContactId virtualWebhookContactId;
 
-        private Optional<? extends VirtualWebhookCustomerId> virtualWebhookCustomerId = Optional.empty();
+        private VirtualWebhookCustomerId virtualWebhookCustomerId;
 
-        private Optional<? extends VirtualWebhookDealId> virtualWebhookDealId = Optional.empty();
+        private VirtualWebhookDealId virtualWebhookDealId;
 
-        private Optional<? extends VirtualWebhookEndLt> virtualWebhookEndLt = Optional.empty();
+        private VirtualWebhookEndLt virtualWebhookEndLt;
 
-        private Optional<? extends VirtualWebhookEventId> virtualWebhookEventId = Optional.empty();
+        private VirtualWebhookEventId virtualWebhookEventId;
 
-        private Optional<? extends VirtualWebhookExpand> virtualWebhookExpand = Optional.empty();
+        private VirtualWebhookExpand virtualWebhookExpand;
 
-        private Optional<? extends VirtualWebhookFields> virtualWebhookFields = Optional.empty();
+        private VirtualWebhookFields virtualWebhookFields;
 
-        private Optional<? extends VirtualWebhookFormId> virtualWebhookFormId = Optional.empty();
+        private VirtualWebhookFormId virtualWebhookFormId;
 
-        private Optional<? extends VirtualWebhookGroupId> virtualWebhookGroupId = Optional.empty();
+        private VirtualWebhookGroupId virtualWebhookGroupId;
 
-        private Optional<? extends VirtualWebhookItemId> virtualWebhookItemId = Optional.empty();
+        private VirtualWebhookItemId virtualWebhookItemId;
 
-        private Optional<? extends VirtualWebhookItemVariantId> virtualWebhookItemVariantId = Optional.empty();
+        private VirtualWebhookItemVariantId virtualWebhookItemVariantId;
 
-        private Optional<? extends VirtualWebhookJobId> virtualWebhookJobId = Optional.empty();
+        private VirtualWebhookJobId virtualWebhookJobId;
 
-        private Optional<? extends VirtualWebhookLabelId> virtualWebhookLabelId = Optional.empty();
+        private VirtualWebhookLabelId virtualWebhookLabelId;
 
-        private Optional<? extends VirtualWebhookLeadId> virtualWebhookLeadId = Optional.empty();
+        private VirtualWebhookLeadId virtualWebhookLeadId;
 
-        private Optional<? extends VirtualWebhookLimit> virtualWebhookLimit = Optional.empty();
+        private VirtualWebhookLimit virtualWebhookLimit;
 
-        private Optional<? extends VirtualWebhookListId> virtualWebhookListId = Optional.empty();
+        private VirtualWebhookListId virtualWebhookListId;
 
-        private Optional<? extends VirtualWebhookLocationId> virtualWebhookLocationId = Optional.empty();
+        private VirtualWebhookLocationId virtualWebhookLocationId;
 
-        private Optional<? extends VirtualWebhookOrderId> virtualWebhookOrderId = Optional.empty();
+        private VirtualWebhookOrderId virtualWebhookOrderId;
 
-        private Optional<? extends VirtualWebhookOrgId> virtualWebhookOrgId = Optional.empty();
+        private VirtualWebhookOrgId virtualWebhookOrgId;
 
-        private Optional<? extends VirtualWebhookPageId> virtualWebhookPageId = Optional.empty();
+        private VirtualWebhookPageId virtualWebhookPageId;
 
-        private Optional<? extends VirtualWebhookParentId> virtualWebhookParentId = Optional.empty();
+        private VirtualWebhookParentId virtualWebhookParentId;
 
-        private Optional<? extends VirtualWebhookPipelineId> virtualWebhookPipelineId = Optional.empty();
+        private VirtualWebhookPipelineId virtualWebhookPipelineId;
 
-        private Optional<? extends VirtualWebhookProjectId> virtualWebhookProjectId = Optional.empty();
+        private VirtualWebhookProjectId virtualWebhookProjectId;
 
-        private Optional<? extends VirtualWebhookRepoId> virtualWebhookRepoId = Optional.empty();
+        private VirtualWebhookRepoId virtualWebhookRepoId;
 
-        private Optional<? extends VirtualWebhookSaleschannelId> virtualWebhookSaleschannelId = Optional.empty();
+        private VirtualWebhookSaleschannelId virtualWebhookSaleschannelId;
 
-        private Optional<? extends VirtualWebhookShipmentId> virtualWebhookShipmentId = Optional.empty();
+        private VirtualWebhookShipmentId virtualWebhookShipmentId;
 
-        private Optional<? extends VirtualWebhookSpaceId> virtualWebhookSpaceId = Optional.empty();
+        private VirtualWebhookSpaceId virtualWebhookSpaceId;
 
-        private Optional<? extends VirtualWebhookStartGte> virtualWebhookStartGte = Optional.empty();
+        private VirtualWebhookStartGte virtualWebhookStartGte;
 
-        private Optional<? extends VirtualWebhookStatus> virtualWebhookStatus = Optional.empty();
+        private VirtualWebhookStatus virtualWebhookStatus;
 
-        private Optional<? extends VirtualWebhookTaskId> virtualWebhookTaskId = Optional.empty();
+        private VirtualWebhookTaskId virtualWebhookTaskId;
 
-        private Optional<? extends VirtualWebhookTicketId> virtualWebhookTicketId = Optional.empty();
+        private VirtualWebhookTicketId virtualWebhookTicketId;
 
-        private Optional<? extends VirtualWebhookType> virtualWebhookType = Optional.empty();
+        private VirtualWebhookType virtualWebhookType;
 
-        private Optional<? extends VirtualWebhookUpdatedGte> virtualWebhookUpdatedGte = Optional.empty();
+        private VirtualWebhookUpdatedGte virtualWebhookUpdatedGte;
 
-        private Optional<? extends VirtualWebhookUserId> virtualWebhookUserId = Optional.empty();
+        private VirtualWebhookUserId virtualWebhookUserId;
 
-        private Optional<? extends VirtualWebhookUserMentionedId> virtualWebhookUserMentionedId = Optional.empty();
+        private VirtualWebhookUserMentionedId virtualWebhookUserMentionedId;
 
-        private Optional<? extends PropertyIntegrationSupportWebhookEvents> webhookEvents = Optional.empty();
+        private PropertyIntegrationSupportWebhookEvents webhookEvents;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder fromWebhook(FromWebhook fromWebhook) {
-            Utils.checkNotNull(fromWebhook, "fromWebhook");
-            this.fromWebhook = Optional.ofNullable(fromWebhook);
-            return this;
-        }
-
-        public Builder fromWebhook(Optional<? extends FromWebhook> fromWebhook) {
-            Utils.checkNotNull(fromWebhook, "fromWebhook");
+        public Builder fromWebhook(@Nullable FromWebhook fromWebhook) {
             this.fromWebhook = fromWebhook;
             return this;
         }
 
-
-        public Builder inboundFields(Map<String, String> inboundFields) {
-            Utils.checkNotNull(inboundFields, "inboundFields");
-            this.inboundFields = Optional.ofNullable(inboundFields);
-            return this;
-        }
-
-        public Builder inboundFields(Optional<? extends Map<String, String>> inboundFields) {
-            Utils.checkNotNull(inboundFields, "inboundFields");
+        public Builder inboundFields(@Nullable Map<String, String> inboundFields) {
             this.inboundFields = inboundFields;
             return this;
         }
 
-
-        public Builder listAccountId(ListAccountId listAccountId) {
-            Utils.checkNotNull(listAccountId, "listAccountId");
-            this.listAccountId = Optional.ofNullable(listAccountId);
-            return this;
-        }
-
-        public Builder listAccountId(Optional<? extends ListAccountId> listAccountId) {
-            Utils.checkNotNull(listAccountId, "listAccountId");
+        public Builder listAccountId(@Nullable ListAccountId listAccountId) {
             this.listAccountId = listAccountId;
             return this;
         }
 
-
-        public Builder listAdId(ListAdId listAdId) {
-            Utils.checkNotNull(listAdId, "listAdId");
-            this.listAdId = Optional.ofNullable(listAdId);
-            return this;
-        }
-
-        public Builder listAdId(Optional<? extends ListAdId> listAdId) {
-            Utils.checkNotNull(listAdId, "listAdId");
+        public Builder listAdId(@Nullable ListAdId listAdId) {
             this.listAdId = listAdId;
             return this;
         }
 
-
-        public Builder listApplicationId(ListApplicationId listApplicationId) {
-            Utils.checkNotNull(listApplicationId, "listApplicationId");
-            this.listApplicationId = Optional.ofNullable(listApplicationId);
-            return this;
-        }
-
-        public Builder listApplicationId(Optional<? extends ListApplicationId> listApplicationId) {
-            Utils.checkNotNull(listApplicationId, "listApplicationId");
+        public Builder listApplicationId(@Nullable ListApplicationId listApplicationId) {
             this.listApplicationId = listApplicationId;
             return this;
         }
 
-
-        public Builder listBenefitId(ListBenefitId listBenefitId) {
-            Utils.checkNotNull(listBenefitId, "listBenefitId");
-            this.listBenefitId = Optional.ofNullable(listBenefitId);
-            return this;
-        }
-
-        public Builder listBenefitId(Optional<? extends ListBenefitId> listBenefitId) {
-            Utils.checkNotNull(listBenefitId, "listBenefitId");
+        public Builder listBenefitId(@Nullable ListBenefitId listBenefitId) {
             this.listBenefitId = listBenefitId;
             return this;
         }
 
-
-        public Builder listBranchId(ListBranchId listBranchId) {
-            Utils.checkNotNull(listBranchId, "listBranchId");
-            this.listBranchId = Optional.ofNullable(listBranchId);
-            return this;
-        }
-
-        public Builder listBranchId(Optional<? extends ListBranchId> listBranchId) {
-            Utils.checkNotNull(listBranchId, "listBranchId");
+        public Builder listBranchId(@Nullable ListBranchId listBranchId) {
             this.listBranchId = listBranchId;
             return this;
         }
 
-
-        public Builder listCalendarId(ListCalendarId listCalendarId) {
-            Utils.checkNotNull(listCalendarId, "listCalendarId");
-            this.listCalendarId = Optional.ofNullable(listCalendarId);
-            return this;
-        }
-
-        public Builder listCalendarId(Optional<? extends ListCalendarId> listCalendarId) {
-            Utils.checkNotNull(listCalendarId, "listCalendarId");
+        public Builder listCalendarId(@Nullable ListCalendarId listCalendarId) {
             this.listCalendarId = listCalendarId;
             return this;
         }
 
-
-        public Builder listCallId(ListCallId listCallId) {
-            Utils.checkNotNull(listCallId, "listCallId");
-            this.listCallId = Optional.ofNullable(listCallId);
-            return this;
-        }
-
-        public Builder listCallId(Optional<? extends ListCallId> listCallId) {
-            Utils.checkNotNull(listCallId, "listCallId");
+        public Builder listCallId(@Nullable ListCallId listCallId) {
             this.listCallId = listCallId;
             return this;
         }
 
-
-        public Builder listCampaignId(ListCampaignId listCampaignId) {
-            Utils.checkNotNull(listCampaignId, "listCampaignId");
-            this.listCampaignId = Optional.ofNullable(listCampaignId);
-            return this;
-        }
-
-        public Builder listCampaignId(Optional<? extends ListCampaignId> listCampaignId) {
-            Utils.checkNotNull(listCampaignId, "listCampaignId");
+        public Builder listCampaignId(@Nullable ListCampaignId listCampaignId) {
             this.listCampaignId = listCampaignId;
             return this;
         }
 
-
-        public Builder listCandidateId(ListCandidateId listCandidateId) {
-            Utils.checkNotNull(listCandidateId, "listCandidateId");
-            this.listCandidateId = Optional.ofNullable(listCandidateId);
-            return this;
-        }
-
-        public Builder listCandidateId(Optional<? extends ListCandidateId> listCandidateId) {
-            Utils.checkNotNull(listCandidateId, "listCandidateId");
+        public Builder listCandidateId(@Nullable ListCandidateId listCandidateId) {
             this.listCandidateId = listCandidateId;
             return this;
         }
 
-
-        public Builder listCarrierId(ListCarrierId listCarrierId) {
-            Utils.checkNotNull(listCarrierId, "listCarrierId");
-            this.listCarrierId = Optional.ofNullable(listCarrierId);
-            return this;
-        }
-
-        public Builder listCarrierId(Optional<? extends ListCarrierId> listCarrierId) {
-            Utils.checkNotNull(listCarrierId, "listCarrierId");
+        public Builder listCarrierId(@Nullable ListCarrierId listCarrierId) {
             this.listCarrierId = listCarrierId;
             return this;
         }
 
-
-        public Builder listCategoryId(ListCategoryId listCategoryId) {
-            Utils.checkNotNull(listCategoryId, "listCategoryId");
-            this.listCategoryId = Optional.ofNullable(listCategoryId);
-            return this;
-        }
-
-        public Builder listCategoryId(Optional<? extends ListCategoryId> listCategoryId) {
-            Utils.checkNotNull(listCategoryId, "listCategoryId");
+        public Builder listCategoryId(@Nullable ListCategoryId listCategoryId) {
             this.listCategoryId = listCategoryId;
             return this;
         }
 
-
-        public Builder listChannelId(ListChannelId listChannelId) {
-            Utils.checkNotNull(listChannelId, "listChannelId");
-            this.listChannelId = Optional.ofNullable(listChannelId);
-            return this;
-        }
-
-        public Builder listChannelId(Optional<? extends ListChannelId> listChannelId) {
-            Utils.checkNotNull(listChannelId, "listChannelId");
+        public Builder listChannelId(@Nullable ListChannelId listChannelId) {
             this.listChannelId = listChannelId;
             return this;
         }
 
-
-        public Builder listClassId(ListClassId listClassId) {
-            Utils.checkNotNull(listClassId, "listClassId");
-            this.listClassId = Optional.ofNullable(listClassId);
-            return this;
-        }
-
-        public Builder listClassId(Optional<? extends ListClassId> listClassId) {
-            Utils.checkNotNull(listClassId, "listClassId");
+        public Builder listClassId(@Nullable ListClassId listClassId) {
             this.listClassId = listClassId;
             return this;
         }
 
-
-        public Builder listCollectionId(ListCollectionId listCollectionId) {
-            Utils.checkNotNull(listCollectionId, "listCollectionId");
-            this.listCollectionId = Optional.ofNullable(listCollectionId);
-            return this;
-        }
-
-        public Builder listCollectionId(Optional<? extends ListCollectionId> listCollectionId) {
-            Utils.checkNotNull(listCollectionId, "listCollectionId");
+        public Builder listCollectionId(@Nullable ListCollectionId listCollectionId) {
             this.listCollectionId = listCollectionId;
             return this;
         }
 
-
-        public Builder listCompanyId(ListCompanyId listCompanyId) {
-            Utils.checkNotNull(listCompanyId, "listCompanyId");
-            this.listCompanyId = Optional.ofNullable(listCompanyId);
-            return this;
-        }
-
-        public Builder listCompanyId(Optional<? extends ListCompanyId> listCompanyId) {
-            Utils.checkNotNull(listCompanyId, "listCompanyId");
+        public Builder listCompanyId(@Nullable ListCompanyId listCompanyId) {
             this.listCompanyId = listCompanyId;
             return this;
         }
 
-
-        public Builder listContactId(ListContactId listContactId) {
-            Utils.checkNotNull(listContactId, "listContactId");
-            this.listContactId = Optional.ofNullable(listContactId);
-            return this;
-        }
-
-        public Builder listContactId(Optional<? extends ListContactId> listContactId) {
-            Utils.checkNotNull(listContactId, "listContactId");
+        public Builder listContactId(@Nullable ListContactId listContactId) {
             this.listContactId = listContactId;
             return this;
         }
 
-
-        public Builder listCourseId(ListCourseId listCourseId) {
-            Utils.checkNotNull(listCourseId, "listCourseId");
-            this.listCourseId = Optional.ofNullable(listCourseId);
-            return this;
-        }
-
-        public Builder listCourseId(Optional<? extends ListCourseId> listCourseId) {
-            Utils.checkNotNull(listCourseId, "listCourseId");
+        public Builder listCourseId(@Nullable ListCourseId listCourseId) {
             this.listCourseId = listCourseId;
             return this;
         }
 
-
-        public Builder listCustomerId(ListCustomerId listCustomerId) {
-            Utils.checkNotNull(listCustomerId, "listCustomerId");
-            this.listCustomerId = Optional.ofNullable(listCustomerId);
-            return this;
-        }
-
-        public Builder listCustomerId(Optional<? extends ListCustomerId> listCustomerId) {
-            Utils.checkNotNull(listCustomerId, "listCustomerId");
+        public Builder listCustomerId(@Nullable ListCustomerId listCustomerId) {
             this.listCustomerId = listCustomerId;
             return this;
         }
 
-
-        public Builder listDealId(ListDealId listDealId) {
-            Utils.checkNotNull(listDealId, "listDealId");
-            this.listDealId = Optional.ofNullable(listDealId);
-            return this;
-        }
-
-        public Builder listDealId(Optional<? extends ListDealId> listDealId) {
-            Utils.checkNotNull(listDealId, "listDealId");
+        public Builder listDealId(@Nullable ListDealId listDealId) {
             this.listDealId = listDealId;
             return this;
         }
 
-
-        public Builder listDocumentId(ListDocumentId listDocumentId) {
-            Utils.checkNotNull(listDocumentId, "listDocumentId");
-            this.listDocumentId = Optional.ofNullable(listDocumentId);
-            return this;
-        }
-
-        public Builder listDocumentId(Optional<? extends ListDocumentId> listDocumentId) {
-            Utils.checkNotNull(listDocumentId, "listDocumentId");
+        public Builder listDocumentId(@Nullable ListDocumentId listDocumentId) {
             this.listDocumentId = listDocumentId;
             return this;
         }
 
-
-        public Builder listEndLt(ListEndLt listEndLt) {
-            Utils.checkNotNull(listEndLt, "listEndLt");
-            this.listEndLt = Optional.ofNullable(listEndLt);
-            return this;
-        }
-
-        public Builder listEndLt(Optional<? extends ListEndLt> listEndLt) {
-            Utils.checkNotNull(listEndLt, "listEndLt");
+        public Builder listEndLt(@Nullable ListEndLt listEndLt) {
             this.listEndLt = listEndLt;
             return this;
         }
 
-
-        public Builder listEventId(ListEventId listEventId) {
-            Utils.checkNotNull(listEventId, "listEventId");
-            this.listEventId = Optional.ofNullable(listEventId);
-            return this;
-        }
-
-        public Builder listEventId(Optional<? extends ListEventId> listEventId) {
-            Utils.checkNotNull(listEventId, "listEventId");
+        public Builder listEventId(@Nullable ListEventId listEventId) {
             this.listEventId = listEventId;
             return this;
         }
 
-
-        public Builder listExpand(ListExpand listExpand) {
-            Utils.checkNotNull(listExpand, "listExpand");
-            this.listExpand = Optional.ofNullable(listExpand);
-            return this;
-        }
-
-        public Builder listExpand(Optional<? extends ListExpand> listExpand) {
-            Utils.checkNotNull(listExpand, "listExpand");
+        public Builder listExpand(@Nullable ListExpand listExpand) {
             this.listExpand = listExpand;
             return this;
         }
 
-
-        public Builder listFormId(ListFormId listFormId) {
-            Utils.checkNotNull(listFormId, "listFormId");
-            this.listFormId = Optional.ofNullable(listFormId);
-            return this;
-        }
-
-        public Builder listFormId(Optional<? extends ListFormId> listFormId) {
-            Utils.checkNotNull(listFormId, "listFormId");
+        public Builder listFormId(@Nullable ListFormId listFormId) {
             this.listFormId = listFormId;
             return this;
         }
 
-
-        public Builder listGroupId(ListGroupId listGroupId) {
-            Utils.checkNotNull(listGroupId, "listGroupId");
-            this.listGroupId = Optional.ofNullable(listGroupId);
-            return this;
-        }
-
-        public Builder listGroupId(Optional<? extends ListGroupId> listGroupId) {
-            Utils.checkNotNull(listGroupId, "listGroupId");
+        public Builder listGroupId(@Nullable ListGroupId listGroupId) {
             this.listGroupId = listGroupId;
             return this;
         }
 
-
-        public Builder listInstructorId(ListInstructorId listInstructorId) {
-            Utils.checkNotNull(listInstructorId, "listInstructorId");
-            this.listInstructorId = Optional.ofNullable(listInstructorId);
-            return this;
-        }
-
-        public Builder listInstructorId(Optional<? extends ListInstructorId> listInstructorId) {
-            Utils.checkNotNull(listInstructorId, "listInstructorId");
+        public Builder listInstructorId(@Nullable ListInstructorId listInstructorId) {
             this.listInstructorId = listInstructorId;
             return this;
         }
 
-
-        public Builder listInterviewId(ListInterviewId listInterviewId) {
-            Utils.checkNotNull(listInterviewId, "listInterviewId");
-            this.listInterviewId = Optional.ofNullable(listInterviewId);
-            return this;
-        }
-
-        public Builder listInterviewId(Optional<? extends ListInterviewId> listInterviewId) {
-            Utils.checkNotNull(listInterviewId, "listInterviewId");
+        public Builder listInterviewId(@Nullable ListInterviewId listInterviewId) {
             this.listInterviewId = listInterviewId;
             return this;
         }
 
-
-        public Builder listInvoiceId(ListInvoiceId listInvoiceId) {
-            Utils.checkNotNull(listInvoiceId, "listInvoiceId");
-            this.listInvoiceId = Optional.ofNullable(listInvoiceId);
-            return this;
-        }
-
-        public Builder listInvoiceId(Optional<? extends ListInvoiceId> listInvoiceId) {
-            Utils.checkNotNull(listInvoiceId, "listInvoiceId");
+        public Builder listInvoiceId(@Nullable ListInvoiceId listInvoiceId) {
             this.listInvoiceId = listInvoiceId;
             return this;
         }
 
-
-        public Builder listItemId(ListItemId listItemId) {
-            Utils.checkNotNull(listItemId, "listItemId");
-            this.listItemId = Optional.ofNullable(listItemId);
-            return this;
-        }
-
-        public Builder listItemId(Optional<? extends ListItemId> listItemId) {
-            Utils.checkNotNull(listItemId, "listItemId");
+        public Builder listItemId(@Nullable ListItemId listItemId) {
             this.listItemId = listItemId;
             return this;
         }
 
-
-        public Builder listItemVariantId(ListItemVariantId listItemVariantId) {
-            Utils.checkNotNull(listItemVariantId, "listItemVariantId");
-            this.listItemVariantId = Optional.ofNullable(listItemVariantId);
-            return this;
-        }
-
-        public Builder listItemVariantId(Optional<? extends ListItemVariantId> listItemVariantId) {
-            Utils.checkNotNull(listItemVariantId, "listItemVariantId");
+        public Builder listItemVariantId(@Nullable ListItemVariantId listItemVariantId) {
             this.listItemVariantId = listItemVariantId;
             return this;
         }
 
-
-        public Builder listJobId(ListJobId listJobId) {
-            Utils.checkNotNull(listJobId, "listJobId");
-            this.listJobId = Optional.ofNullable(listJobId);
-            return this;
-        }
-
-        public Builder listJobId(Optional<? extends ListJobId> listJobId) {
-            Utils.checkNotNull(listJobId, "listJobId");
+        public Builder listJobId(@Nullable ListJobId listJobId) {
             this.listJobId = listJobId;
             return this;
         }
 
-
-        public Builder listLabelId(ListLabelId listLabelId) {
-            Utils.checkNotNull(listLabelId, "listLabelId");
-            this.listLabelId = Optional.ofNullable(listLabelId);
-            return this;
-        }
-
-        public Builder listLabelId(Optional<? extends ListLabelId> listLabelId) {
-            Utils.checkNotNull(listLabelId, "listLabelId");
+        public Builder listLabelId(@Nullable ListLabelId listLabelId) {
             this.listLabelId = listLabelId;
             return this;
         }
 
-
-        public Builder listLeadId(ListLeadId listLeadId) {
-            Utils.checkNotNull(listLeadId, "listLeadId");
-            this.listLeadId = Optional.ofNullable(listLeadId);
-            return this;
-        }
-
-        public Builder listLeadId(Optional<? extends ListLeadId> listLeadId) {
-            Utils.checkNotNull(listLeadId, "listLeadId");
+        public Builder listLeadId(@Nullable ListLeadId listLeadId) {
             this.listLeadId = listLeadId;
             return this;
         }
 
-
-        public Builder listLimit(ListLimit listLimit) {
-            Utils.checkNotNull(listLimit, "listLimit");
-            this.listLimit = Optional.ofNullable(listLimit);
-            return this;
-        }
-
-        public Builder listLimit(Optional<? extends ListLimit> listLimit) {
-            Utils.checkNotNull(listLimit, "listLimit");
+        public Builder listLimit(@Nullable ListLimit listLimit) {
             this.listLimit = listLimit;
             return this;
         }
 
-
-        public Builder listLinkId(ListLinkId listLinkId) {
-            Utils.checkNotNull(listLinkId, "listLinkId");
-            this.listLinkId = Optional.ofNullable(listLinkId);
-            return this;
-        }
-
-        public Builder listLinkId(Optional<? extends ListLinkId> listLinkId) {
-            Utils.checkNotNull(listLinkId, "listLinkId");
+        public Builder listLinkId(@Nullable ListLinkId listLinkId) {
             this.listLinkId = listLinkId;
             return this;
         }
 
-
-        public Builder listListId(ListListId listListId) {
-            Utils.checkNotNull(listListId, "listListId");
-            this.listListId = Optional.ofNullable(listListId);
-            return this;
-        }
-
-        public Builder listListId(Optional<? extends ListListId> listListId) {
-            Utils.checkNotNull(listListId, "listListId");
+        public Builder listListId(@Nullable ListListId listListId) {
             this.listListId = listListId;
             return this;
         }
 
-
-        public Builder listLocationId(ListLocationId listLocationId) {
-            Utils.checkNotNull(listLocationId, "listLocationId");
-            this.listLocationId = Optional.ofNullable(listLocationId);
-            return this;
-        }
-
-        public Builder listLocationId(Optional<? extends ListLocationId> listLocationId) {
-            Utils.checkNotNull(listLocationId, "listLocationId");
+        public Builder listLocationId(@Nullable ListLocationId listLocationId) {
             this.listLocationId = listLocationId;
             return this;
         }
 
-
-        public Builder listOffset(ListOffset listOffset) {
-            Utils.checkNotNull(listOffset, "listOffset");
-            this.listOffset = Optional.ofNullable(listOffset);
-            return this;
-        }
-
-        public Builder listOffset(Optional<? extends ListOffset> listOffset) {
-            Utils.checkNotNull(listOffset, "listOffset");
+        public Builder listOffset(@Nullable ListOffset listOffset) {
             this.listOffset = listOffset;
             return this;
         }
 
-
-        public Builder listOrder(ListOrder listOrder) {
-            Utils.checkNotNull(listOrder, "listOrder");
-            this.listOrder = Optional.ofNullable(listOrder);
-            return this;
-        }
-
-        public Builder listOrder(Optional<? extends ListOrder> listOrder) {
-            Utils.checkNotNull(listOrder, "listOrder");
+        public Builder listOrder(@Nullable ListOrder listOrder) {
             this.listOrder = listOrder;
             return this;
         }
 
-
-        public Builder listOrderId(ListOrderId listOrderId) {
-            Utils.checkNotNull(listOrderId, "listOrderId");
-            this.listOrderId = Optional.ofNullable(listOrderId);
-            return this;
-        }
-
-        public Builder listOrderId(Optional<? extends ListOrderId> listOrderId) {
-            Utils.checkNotNull(listOrderId, "listOrderId");
+        public Builder listOrderId(@Nullable ListOrderId listOrderId) {
             this.listOrderId = listOrderId;
             return this;
         }
 
-
-        public Builder listOrgId(ListOrgId listOrgId) {
-            Utils.checkNotNull(listOrgId, "listOrgId");
-            this.listOrgId = Optional.ofNullable(listOrgId);
-            return this;
-        }
-
-        public Builder listOrgId(Optional<? extends ListOrgId> listOrgId) {
-            Utils.checkNotNull(listOrgId, "listOrgId");
+        public Builder listOrgId(@Nullable ListOrgId listOrgId) {
             this.listOrgId = listOrgId;
             return this;
         }
 
-
-        public Builder listPackageId(ListPackageId listPackageId) {
-            Utils.checkNotNull(listPackageId, "listPackageId");
-            this.listPackageId = Optional.ofNullable(listPackageId);
-            return this;
-        }
-
-        public Builder listPackageId(Optional<? extends ListPackageId> listPackageId) {
-            Utils.checkNotNull(listPackageId, "listPackageId");
+        public Builder listPackageId(@Nullable ListPackageId listPackageId) {
             this.listPackageId = listPackageId;
             return this;
         }
 
-
-        public Builder listPageId(ListPageId listPageId) {
-            Utils.checkNotNull(listPageId, "listPageId");
-            this.listPageId = Optional.ofNullable(listPageId);
-            return this;
-        }
-
-        public Builder listPageId(Optional<? extends ListPageId> listPageId) {
-            Utils.checkNotNull(listPageId, "listPageId");
+        public Builder listPageId(@Nullable ListPageId listPageId) {
             this.listPageId = listPageId;
             return this;
         }
 
-
-        public Builder listParentId(ListParentId listParentId) {
-            Utils.checkNotNull(listParentId, "listParentId");
-            this.listParentId = Optional.ofNullable(listParentId);
-            return this;
-        }
-
-        public Builder listParentId(Optional<? extends ListParentId> listParentId) {
-            Utils.checkNotNull(listParentId, "listParentId");
+        public Builder listParentId(@Nullable ListParentId listParentId) {
             this.listParentId = listParentId;
             return this;
         }
 
-
-        public Builder listPaymentId(ListPaymentId listPaymentId) {
-            Utils.checkNotNull(listPaymentId, "listPaymentId");
-            this.listPaymentId = Optional.ofNullable(listPaymentId);
-            return this;
-        }
-
-        public Builder listPaymentId(Optional<? extends ListPaymentId> listPaymentId) {
-            Utils.checkNotNull(listPaymentId, "listPaymentId");
+        public Builder listPaymentId(@Nullable ListPaymentId listPaymentId) {
             this.listPaymentId = listPaymentId;
             return this;
         }
 
-
-        public Builder listPayslipId(ListPayslipId listPayslipId) {
-            Utils.checkNotNull(listPayslipId, "listPayslipId");
-            this.listPayslipId = Optional.ofNullable(listPayslipId);
-            return this;
-        }
-
-        public Builder listPayslipId(Optional<? extends ListPayslipId> listPayslipId) {
-            Utils.checkNotNull(listPayslipId, "listPayslipId");
+        public Builder listPayslipId(@Nullable ListPayslipId listPayslipId) {
             this.listPayslipId = listPayslipId;
             return this;
         }
 
-
-        public Builder listPipelineId(ListPipelineId listPipelineId) {
-            Utils.checkNotNull(listPipelineId, "listPipelineId");
-            this.listPipelineId = Optional.ofNullable(listPipelineId);
-            return this;
-        }
-
-        public Builder listPipelineId(Optional<? extends ListPipelineId> listPipelineId) {
-            Utils.checkNotNull(listPipelineId, "listPipelineId");
+        public Builder listPipelineId(@Nullable ListPipelineId listPipelineId) {
             this.listPipelineId = listPipelineId;
             return this;
         }
 
-
-        public Builder listProjectId(ListProjectId listProjectId) {
-            Utils.checkNotNull(listProjectId, "listProjectId");
-            this.listProjectId = Optional.ofNullable(listProjectId);
-            return this;
-        }
-
-        public Builder listProjectId(Optional<? extends ListProjectId> listProjectId) {
-            Utils.checkNotNull(listProjectId, "listProjectId");
+        public Builder listProjectId(@Nullable ListProjectId listProjectId) {
             this.listProjectId = listProjectId;
             return this;
         }
 
-
-        public Builder listQuery(ListQuery listQuery) {
-            Utils.checkNotNull(listQuery, "listQuery");
-            this.listQuery = Optional.ofNullable(listQuery);
-            return this;
-        }
-
-        public Builder listQuery(Optional<? extends ListQuery> listQuery) {
-            Utils.checkNotNull(listQuery, "listQuery");
+        public Builder listQuery(@Nullable ListQuery listQuery) {
             this.listQuery = listQuery;
             return this;
         }
 
-
-        public Builder listRawFields(ListRawFields listRawFields) {
-            Utils.checkNotNull(listRawFields, "listRawFields");
-            this.listRawFields = Optional.ofNullable(listRawFields);
-            return this;
-        }
-
-        public Builder listRawFields(Optional<? extends ListRawFields> listRawFields) {
-            Utils.checkNotNull(listRawFields, "listRawFields");
+        public Builder listRawFields(@Nullable ListRawFields listRawFields) {
             this.listRawFields = listRawFields;
             return this;
         }
 
-
-        public Builder listRepoId(ListRepoId listRepoId) {
-            Utils.checkNotNull(listRepoId, "listRepoId");
-            this.listRepoId = Optional.ofNullable(listRepoId);
-            return this;
-        }
-
-        public Builder listRepoId(Optional<? extends ListRepoId> listRepoId) {
-            Utils.checkNotNull(listRepoId, "listRepoId");
+        public Builder listRepoId(@Nullable ListRepoId listRepoId) {
             this.listRepoId = listRepoId;
             return this;
         }
 
-
-        public Builder listRootId(ListRootId listRootId) {
-            Utils.checkNotNull(listRootId, "listRootId");
-            this.listRootId = Optional.ofNullable(listRootId);
-            return this;
-        }
-
-        public Builder listRootId(Optional<? extends ListRootId> listRootId) {
-            Utils.checkNotNull(listRootId, "listRootId");
+        public Builder listRootId(@Nullable ListRootId listRootId) {
             this.listRootId = listRootId;
             return this;
         }
 
-
-        public Builder listSaleschannelId(ListSaleschannelId listSaleschannelId) {
-            Utils.checkNotNull(listSaleschannelId, "listSaleschannelId");
-            this.listSaleschannelId = Optional.ofNullable(listSaleschannelId);
-            return this;
-        }
-
-        public Builder listSaleschannelId(Optional<? extends ListSaleschannelId> listSaleschannelId) {
-            Utils.checkNotNull(listSaleschannelId, "listSaleschannelId");
+        public Builder listSaleschannelId(@Nullable ListSaleschannelId listSaleschannelId) {
             this.listSaleschannelId = listSaleschannelId;
             return this;
         }
 
-
-        public Builder listShipmentId(ListShipmentId listShipmentId) {
-            Utils.checkNotNull(listShipmentId, "listShipmentId");
-            this.listShipmentId = Optional.ofNullable(listShipmentId);
-            return this;
-        }
-
-        public Builder listShipmentId(Optional<? extends ListShipmentId> listShipmentId) {
-            Utils.checkNotNull(listShipmentId, "listShipmentId");
+        public Builder listShipmentId(@Nullable ListShipmentId listShipmentId) {
             this.listShipmentId = listShipmentId;
             return this;
         }
 
-
-        public Builder listSortByCreatedAt(ListSortByCreatedAt listSortByCreatedAt) {
-            Utils.checkNotNull(listSortByCreatedAt, "listSortByCreatedAt");
-            this.listSortByCreatedAt = Optional.ofNullable(listSortByCreatedAt);
-            return this;
-        }
-
-        public Builder listSortByCreatedAt(Optional<? extends ListSortByCreatedAt> listSortByCreatedAt) {
-            Utils.checkNotNull(listSortByCreatedAt, "listSortByCreatedAt");
+        public Builder listSortByCreatedAt(@Nullable ListSortByCreatedAt listSortByCreatedAt) {
             this.listSortByCreatedAt = listSortByCreatedAt;
             return this;
         }
 
-
-        public Builder listSortByName(ListSortByName listSortByName) {
-            Utils.checkNotNull(listSortByName, "listSortByName");
-            this.listSortByName = Optional.ofNullable(listSortByName);
-            return this;
-        }
-
-        public Builder listSortByName(Optional<? extends ListSortByName> listSortByName) {
-            Utils.checkNotNull(listSortByName, "listSortByName");
+        public Builder listSortByName(@Nullable ListSortByName listSortByName) {
             this.listSortByName = listSortByName;
             return this;
         }
 
-
-        public Builder listSortByUpdatedAt(ListSortByUpdatedAt listSortByUpdatedAt) {
-            Utils.checkNotNull(listSortByUpdatedAt, "listSortByUpdatedAt");
-            this.listSortByUpdatedAt = Optional.ofNullable(listSortByUpdatedAt);
-            return this;
-        }
-
-        public Builder listSortByUpdatedAt(Optional<? extends ListSortByUpdatedAt> listSortByUpdatedAt) {
-            Utils.checkNotNull(listSortByUpdatedAt, "listSortByUpdatedAt");
+        public Builder listSortByUpdatedAt(@Nullable ListSortByUpdatedAt listSortByUpdatedAt) {
             this.listSortByUpdatedAt = listSortByUpdatedAt;
             return this;
         }
 
-
-        public Builder listSpaceId(ListSpaceId listSpaceId) {
-            Utils.checkNotNull(listSpaceId, "listSpaceId");
-            this.listSpaceId = Optional.ofNullable(listSpaceId);
-            return this;
-        }
-
-        public Builder listSpaceId(Optional<? extends ListSpaceId> listSpaceId) {
-            Utils.checkNotNull(listSpaceId, "listSpaceId");
+        public Builder listSpaceId(@Nullable ListSpaceId listSpaceId) {
             this.listSpaceId = listSpaceId;
             return this;
         }
 
-
-        public Builder listStartGte(ListStartGte listStartGte) {
-            Utils.checkNotNull(listStartGte, "listStartGte");
-            this.listStartGte = Optional.ofNullable(listStartGte);
-            return this;
-        }
-
-        public Builder listStartGte(Optional<? extends ListStartGte> listStartGte) {
-            Utils.checkNotNull(listStartGte, "listStartGte");
+        public Builder listStartGte(@Nullable ListStartGte listStartGte) {
             this.listStartGte = listStartGte;
             return this;
         }
 
-
-        public Builder listStatus(ListStatus listStatus) {
-            Utils.checkNotNull(listStatus, "listStatus");
-            this.listStatus = Optional.ofNullable(listStatus);
-            return this;
-        }
-
-        public Builder listStatus(Optional<? extends ListStatus> listStatus) {
-            Utils.checkNotNull(listStatus, "listStatus");
+        public Builder listStatus(@Nullable ListStatus listStatus) {
             this.listStatus = listStatus;
             return this;
         }
 
-
-        public Builder listStudentId(ListStudentId listStudentId) {
-            Utils.checkNotNull(listStudentId, "listStudentId");
-            this.listStudentId = Optional.ofNullable(listStudentId);
-            return this;
-        }
-
-        public Builder listStudentId(Optional<? extends ListStudentId> listStudentId) {
-            Utils.checkNotNull(listStudentId, "listStudentId");
+        public Builder listStudentId(@Nullable ListStudentId listStudentId) {
             this.listStudentId = listStudentId;
             return this;
         }
 
-
-        public Builder listTaskId(ListTaskId listTaskId) {
-            Utils.checkNotNull(listTaskId, "listTaskId");
-            this.listTaskId = Optional.ofNullable(listTaskId);
-            return this;
-        }
-
-        public Builder listTaskId(Optional<? extends ListTaskId> listTaskId) {
-            Utils.checkNotNull(listTaskId, "listTaskId");
+        public Builder listTaskId(@Nullable ListTaskId listTaskId) {
             this.listTaskId = listTaskId;
             return this;
         }
 
-
-        public Builder listTeacherId(ListTeacherId listTeacherId) {
-            Utils.checkNotNull(listTeacherId, "listTeacherId");
-            this.listTeacherId = Optional.ofNullable(listTeacherId);
-            return this;
-        }
-
-        public Builder listTeacherId(Optional<? extends ListTeacherId> listTeacherId) {
-            Utils.checkNotNull(listTeacherId, "listTeacherId");
+        public Builder listTeacherId(@Nullable ListTeacherId listTeacherId) {
             this.listTeacherId = listTeacherId;
             return this;
         }
 
-
-        public Builder listTicketId(ListTicketId listTicketId) {
-            Utils.checkNotNull(listTicketId, "listTicketId");
-            this.listTicketId = Optional.ofNullable(listTicketId);
-            return this;
-        }
-
-        public Builder listTicketId(Optional<? extends ListTicketId> listTicketId) {
-            Utils.checkNotNull(listTicketId, "listTicketId");
+        public Builder listTicketId(@Nullable ListTicketId listTicketId) {
             this.listTicketId = listTicketId;
             return this;
         }
 
-
-        public Builder listType(ListType listType) {
-            Utils.checkNotNull(listType, "listType");
-            this.listType = Optional.ofNullable(listType);
-            return this;
-        }
-
-        public Builder listType(Optional<? extends ListType> listType) {
-            Utils.checkNotNull(listType, "listType");
+        public Builder listType(@Nullable ListType listType) {
             this.listType = listType;
             return this;
         }
 
-
-        public Builder listUpdatedGte(ListUpdatedGte listUpdatedGte) {
-            Utils.checkNotNull(listUpdatedGte, "listUpdatedGte");
-            this.listUpdatedGte = Optional.ofNullable(listUpdatedGte);
-            return this;
-        }
-
-        public Builder listUpdatedGte(Optional<? extends ListUpdatedGte> listUpdatedGte) {
-            Utils.checkNotNull(listUpdatedGte, "listUpdatedGte");
+        public Builder listUpdatedGte(@Nullable ListUpdatedGte listUpdatedGte) {
             this.listUpdatedGte = listUpdatedGte;
             return this;
         }
 
-
-        public Builder listUserId(ListUserId listUserId) {
-            Utils.checkNotNull(listUserId, "listUserId");
-            this.listUserId = Optional.ofNullable(listUserId);
-            return this;
-        }
-
-        public Builder listUserId(Optional<? extends ListUserId> listUserId) {
-            Utils.checkNotNull(listUserId, "listUserId");
+        public Builder listUserId(@Nullable ListUserId listUserId) {
             this.listUserId = listUserId;
             return this;
         }
 
-
-        public Builder listUserMentionedId(ListUserMentionedId listUserMentionedId) {
-            Utils.checkNotNull(listUserMentionedId, "listUserMentionedId");
-            this.listUserMentionedId = Optional.ofNullable(listUserMentionedId);
-            return this;
-        }
-
-        public Builder listUserMentionedId(Optional<? extends ListUserMentionedId> listUserMentionedId) {
-            Utils.checkNotNull(listUserMentionedId, "listUserMentionedId");
+        public Builder listUserMentionedId(@Nullable ListUserMentionedId listUserMentionedId) {
             this.listUserMentionedId = listUserMentionedId;
             return this;
         }
 
-
-        public Builder methods(Map<String, Boolean> methods) {
-            Utils.checkNotNull(methods, "methods");
-            this.methods = Optional.ofNullable(methods);
-            return this;
-        }
-
-        public Builder methods(Optional<? extends Map<String, Boolean>> methods) {
-            Utils.checkNotNull(methods, "methods");
+        public Builder methods(@Nullable Map<String, Boolean> methods) {
             this.methods = methods;
             return this;
         }
 
-
-        public Builder nativeWebhookCalendarId(NativeWebhookCalendarId nativeWebhookCalendarId) {
-            Utils.checkNotNull(nativeWebhookCalendarId, "nativeWebhookCalendarId");
-            this.nativeWebhookCalendarId = Optional.ofNullable(nativeWebhookCalendarId);
-            return this;
-        }
-
-        public Builder nativeWebhookCalendarId(Optional<? extends NativeWebhookCalendarId> nativeWebhookCalendarId) {
-            Utils.checkNotNull(nativeWebhookCalendarId, "nativeWebhookCalendarId");
+        public Builder nativeWebhookCalendarId(@Nullable NativeWebhookCalendarId nativeWebhookCalendarId) {
             this.nativeWebhookCalendarId = nativeWebhookCalendarId;
             return this;
         }
 
-
-        public Builder nativeWebhookCarrierId(NativeWebhookCarrierId nativeWebhookCarrierId) {
-            Utils.checkNotNull(nativeWebhookCarrierId, "nativeWebhookCarrierId");
-            this.nativeWebhookCarrierId = Optional.ofNullable(nativeWebhookCarrierId);
-            return this;
-        }
-
-        public Builder nativeWebhookCarrierId(Optional<? extends NativeWebhookCarrierId> nativeWebhookCarrierId) {
-            Utils.checkNotNull(nativeWebhookCarrierId, "nativeWebhookCarrierId");
+        public Builder nativeWebhookCarrierId(@Nullable NativeWebhookCarrierId nativeWebhookCarrierId) {
             this.nativeWebhookCarrierId = nativeWebhookCarrierId;
             return this;
         }
 
-
-        public Builder nativeWebhookChannelId(NativeWebhookChannelId nativeWebhookChannelId) {
-            Utils.checkNotNull(nativeWebhookChannelId, "nativeWebhookChannelId");
-            this.nativeWebhookChannelId = Optional.ofNullable(nativeWebhookChannelId);
-            return this;
-        }
-
-        public Builder nativeWebhookChannelId(Optional<? extends NativeWebhookChannelId> nativeWebhookChannelId) {
-            Utils.checkNotNull(nativeWebhookChannelId, "nativeWebhookChannelId");
+        public Builder nativeWebhookChannelId(@Nullable NativeWebhookChannelId nativeWebhookChannelId) {
             this.nativeWebhookChannelId = nativeWebhookChannelId;
             return this;
         }
 
-
-        public Builder nativeWebhookCompanyId(NativeWebhookCompanyId nativeWebhookCompanyId) {
-            Utils.checkNotNull(nativeWebhookCompanyId, "nativeWebhookCompanyId");
-            this.nativeWebhookCompanyId = Optional.ofNullable(nativeWebhookCompanyId);
-            return this;
-        }
-
-        public Builder nativeWebhookCompanyId(Optional<? extends NativeWebhookCompanyId> nativeWebhookCompanyId) {
-            Utils.checkNotNull(nativeWebhookCompanyId, "nativeWebhookCompanyId");
+        public Builder nativeWebhookCompanyId(@Nullable NativeWebhookCompanyId nativeWebhookCompanyId) {
             this.nativeWebhookCompanyId = nativeWebhookCompanyId;
             return this;
         }
 
-
-        public Builder nativeWebhookEventId(NativeWebhookEventId nativeWebhookEventId) {
-            Utils.checkNotNull(nativeWebhookEventId, "nativeWebhookEventId");
-            this.nativeWebhookEventId = Optional.ofNullable(nativeWebhookEventId);
-            return this;
-        }
-
-        public Builder nativeWebhookEventId(Optional<? extends NativeWebhookEventId> nativeWebhookEventId) {
-            Utils.checkNotNull(nativeWebhookEventId, "nativeWebhookEventId");
+        public Builder nativeWebhookEventId(@Nullable NativeWebhookEventId nativeWebhookEventId) {
             this.nativeWebhookEventId = nativeWebhookEventId;
             return this;
         }
 
-
-        public Builder nativeWebhookFormId(NativeWebhookFormId nativeWebhookFormId) {
-            Utils.checkNotNull(nativeWebhookFormId, "nativeWebhookFormId");
-            this.nativeWebhookFormId = Optional.ofNullable(nativeWebhookFormId);
-            return this;
-        }
-
-        public Builder nativeWebhookFormId(Optional<? extends NativeWebhookFormId> nativeWebhookFormId) {
-            Utils.checkNotNull(nativeWebhookFormId, "nativeWebhookFormId");
+        public Builder nativeWebhookFormId(@Nullable NativeWebhookFormId nativeWebhookFormId) {
             this.nativeWebhookFormId = nativeWebhookFormId;
             return this;
         }
 
-
-        public Builder nativeWebhookLabelId(NativeWebhookLabelId nativeWebhookLabelId) {
-            Utils.checkNotNull(nativeWebhookLabelId, "nativeWebhookLabelId");
-            this.nativeWebhookLabelId = Optional.ofNullable(nativeWebhookLabelId);
-            return this;
-        }
-
-        public Builder nativeWebhookLabelId(Optional<? extends NativeWebhookLabelId> nativeWebhookLabelId) {
-            Utils.checkNotNull(nativeWebhookLabelId, "nativeWebhookLabelId");
+        public Builder nativeWebhookLabelId(@Nullable NativeWebhookLabelId nativeWebhookLabelId) {
             this.nativeWebhookLabelId = nativeWebhookLabelId;
             return this;
         }
 
-
-        public Builder nativeWebhookOrderId(NativeWebhookOrderId nativeWebhookOrderId) {
-            Utils.checkNotNull(nativeWebhookOrderId, "nativeWebhookOrderId");
-            this.nativeWebhookOrderId = Optional.ofNullable(nativeWebhookOrderId);
-            return this;
-        }
-
-        public Builder nativeWebhookOrderId(Optional<? extends NativeWebhookOrderId> nativeWebhookOrderId) {
-            Utils.checkNotNull(nativeWebhookOrderId, "nativeWebhookOrderId");
+        public Builder nativeWebhookOrderId(@Nullable NativeWebhookOrderId nativeWebhookOrderId) {
             this.nativeWebhookOrderId = nativeWebhookOrderId;
             return this;
         }
 
-
-        public Builder nativeWebhookParentId(NativeWebhookParentId nativeWebhookParentId) {
-            Utils.checkNotNull(nativeWebhookParentId, "nativeWebhookParentId");
-            this.nativeWebhookParentId = Optional.ofNullable(nativeWebhookParentId);
-            return this;
-        }
-
-        public Builder nativeWebhookParentId(Optional<? extends NativeWebhookParentId> nativeWebhookParentId) {
-            Utils.checkNotNull(nativeWebhookParentId, "nativeWebhookParentId");
+        public Builder nativeWebhookParentId(@Nullable NativeWebhookParentId nativeWebhookParentId) {
             this.nativeWebhookParentId = nativeWebhookParentId;
             return this;
         }
 
-
-        public Builder nativeWebhookProjectId(NativeWebhookProjectId nativeWebhookProjectId) {
-            Utils.checkNotNull(nativeWebhookProjectId, "nativeWebhookProjectId");
-            this.nativeWebhookProjectId = Optional.ofNullable(nativeWebhookProjectId);
-            return this;
-        }
-
-        public Builder nativeWebhookProjectId(Optional<? extends NativeWebhookProjectId> nativeWebhookProjectId) {
-            Utils.checkNotNull(nativeWebhookProjectId, "nativeWebhookProjectId");
+        public Builder nativeWebhookProjectId(@Nullable NativeWebhookProjectId nativeWebhookProjectId) {
             this.nativeWebhookProjectId = nativeWebhookProjectId;
             return this;
         }
 
-
-        public Builder nativeWebhookShipmentId(NativeWebhookShipmentId nativeWebhookShipmentId) {
-            Utils.checkNotNull(nativeWebhookShipmentId, "nativeWebhookShipmentId");
-            this.nativeWebhookShipmentId = Optional.ofNullable(nativeWebhookShipmentId);
-            return this;
-        }
-
-        public Builder nativeWebhookShipmentId(Optional<? extends NativeWebhookShipmentId> nativeWebhookShipmentId) {
-            Utils.checkNotNull(nativeWebhookShipmentId, "nativeWebhookShipmentId");
+        public Builder nativeWebhookShipmentId(@Nullable NativeWebhookShipmentId nativeWebhookShipmentId) {
             this.nativeWebhookShipmentId = nativeWebhookShipmentId;
             return this;
         }
 
-
-        public Builder nativeWebhookTaskId(NativeWebhookTaskId nativeWebhookTaskId) {
-            Utils.checkNotNull(nativeWebhookTaskId, "nativeWebhookTaskId");
-            this.nativeWebhookTaskId = Optional.ofNullable(nativeWebhookTaskId);
-            return this;
-        }
-
-        public Builder nativeWebhookTaskId(Optional<? extends NativeWebhookTaskId> nativeWebhookTaskId) {
-            Utils.checkNotNull(nativeWebhookTaskId, "nativeWebhookTaskId");
+        public Builder nativeWebhookTaskId(@Nullable NativeWebhookTaskId nativeWebhookTaskId) {
             this.nativeWebhookTaskId = nativeWebhookTaskId;
             return this;
         }
 
-
-        public Builder outboundFields(Map<String, String> outboundFields) {
-            Utils.checkNotNull(outboundFields, "outboundFields");
-            this.outboundFields = Optional.ofNullable(outboundFields);
-            return this;
-        }
-
-        public Builder outboundFields(Optional<? extends Map<String, String>> outboundFields) {
-            Utils.checkNotNull(outboundFields, "outboundFields");
+        public Builder outboundFields(@Nullable Map<String, String> outboundFields) {
             this.outboundFields = outboundFields;
             return this;
         }
 
-
         /**
          * objects that we map from in the integration
          */
-        public Builder rawObjects(List<String> rawObjects) {
-            Utils.checkNotNull(rawObjects, "rawObjects");
-            this.rawObjects = Optional.ofNullable(rawObjects);
-            return this;
-        }
-
-        /**
-         * objects that we map from in the integration
-         */
-        public Builder rawObjects(Optional<? extends List<String>> rawObjects) {
-            Utils.checkNotNull(rawObjects, "rawObjects");
+        public Builder rawObjects(@Nullable List<String> rawObjects) {
             this.rawObjects = rawObjects;
             return this;
         }
 
-
-        public Builder searchDomain(SearchDomain searchDomain) {
-            Utils.checkNotNull(searchDomain, "searchDomain");
-            this.searchDomain = Optional.ofNullable(searchDomain);
-            return this;
-        }
-
-        public Builder searchDomain(Optional<? extends SearchDomain> searchDomain) {
-            Utils.checkNotNull(searchDomain, "searchDomain");
+        public Builder searchDomain(@Nullable SearchDomain searchDomain) {
             this.searchDomain = searchDomain;
             return this;
         }
 
-
-        public Builder searchEmail(SearchEmail searchEmail) {
-            Utils.checkNotNull(searchEmail, "searchEmail");
-            this.searchEmail = Optional.ofNullable(searchEmail);
-            return this;
-        }
-
-        public Builder searchEmail(Optional<? extends SearchEmail> searchEmail) {
-            Utils.checkNotNull(searchEmail, "searchEmail");
+        public Builder searchEmail(@Nullable SearchEmail searchEmail) {
             this.searchEmail = searchEmail;
             return this;
         }
 
-
-        public Builder searchLinkedinurl(SearchLinkedinurl searchLinkedinurl) {
-            Utils.checkNotNull(searchLinkedinurl, "searchLinkedinurl");
-            this.searchLinkedinurl = Optional.ofNullable(searchLinkedinurl);
-            return this;
-        }
-
-        public Builder searchLinkedinurl(Optional<? extends SearchLinkedinurl> searchLinkedinurl) {
-            Utils.checkNotNull(searchLinkedinurl, "searchLinkedinurl");
+        public Builder searchLinkedinurl(@Nullable SearchLinkedinurl searchLinkedinurl) {
             this.searchLinkedinurl = searchLinkedinurl;
             return this;
         }
 
-
-        public Builder searchName(SearchName searchName) {
-            Utils.checkNotNull(searchName, "searchName");
-            this.searchName = Optional.ofNullable(searchName);
-            return this;
-        }
-
-        public Builder searchName(Optional<? extends SearchName> searchName) {
-            Utils.checkNotNull(searchName, "searchName");
+        public Builder searchName(@Nullable SearchName searchName) {
             this.searchName = searchName;
             return this;
         }
 
-
-        public Builder searchTwitter(SearchTwitter searchTwitter) {
-            Utils.checkNotNull(searchTwitter, "searchTwitter");
-            this.searchTwitter = Optional.ofNullable(searchTwitter);
-            return this;
-        }
-
-        public Builder searchTwitter(Optional<? extends SearchTwitter> searchTwitter) {
-            Utils.checkNotNull(searchTwitter, "searchTwitter");
+        public Builder searchTwitter(@Nullable SearchTwitter searchTwitter) {
             this.searchTwitter = searchTwitter;
             return this;
         }
 
-
-        public Builder slowFields(List<String> slowFields) {
-            Utils.checkNotNull(slowFields, "slowFields");
-            this.slowFields = Optional.ofNullable(slowFields);
-            return this;
-        }
-
-        public Builder slowFields(Optional<? extends List<String>> slowFields) {
-            Utils.checkNotNull(slowFields, "slowFields");
+        public Builder slowFields(@Nullable List<String> slowFields) {
             this.slowFields = slowFields;
             return this;
         }
 
-
-        public Builder virtualWebhookAdId(VirtualWebhookAdId virtualWebhookAdId) {
-            Utils.checkNotNull(virtualWebhookAdId, "virtualWebhookAdId");
-            this.virtualWebhookAdId = Optional.ofNullable(virtualWebhookAdId);
-            return this;
-        }
-
-        public Builder virtualWebhookAdId(Optional<? extends VirtualWebhookAdId> virtualWebhookAdId) {
-            Utils.checkNotNull(virtualWebhookAdId, "virtualWebhookAdId");
+        public Builder virtualWebhookAdId(@Nullable VirtualWebhookAdId virtualWebhookAdId) {
             this.virtualWebhookAdId = virtualWebhookAdId;
             return this;
         }
 
-
-        public Builder virtualWebhookApplicationId(VirtualWebhookApplicationId virtualWebhookApplicationId) {
-            Utils.checkNotNull(virtualWebhookApplicationId, "virtualWebhookApplicationId");
-            this.virtualWebhookApplicationId = Optional.ofNullable(virtualWebhookApplicationId);
-            return this;
-        }
-
-        public Builder virtualWebhookApplicationId(Optional<? extends VirtualWebhookApplicationId> virtualWebhookApplicationId) {
-            Utils.checkNotNull(virtualWebhookApplicationId, "virtualWebhookApplicationId");
+        public Builder virtualWebhookApplicationId(@Nullable VirtualWebhookApplicationId virtualWebhookApplicationId) {
             this.virtualWebhookApplicationId = virtualWebhookApplicationId;
             return this;
         }
 
-
-        public Builder virtualWebhookBranchId(VirtualWebhookBranchId virtualWebhookBranchId) {
-            Utils.checkNotNull(virtualWebhookBranchId, "virtualWebhookBranchId");
-            this.virtualWebhookBranchId = Optional.ofNullable(virtualWebhookBranchId);
-            return this;
-        }
-
-        public Builder virtualWebhookBranchId(Optional<? extends VirtualWebhookBranchId> virtualWebhookBranchId) {
-            Utils.checkNotNull(virtualWebhookBranchId, "virtualWebhookBranchId");
+        public Builder virtualWebhookBranchId(@Nullable VirtualWebhookBranchId virtualWebhookBranchId) {
             this.virtualWebhookBranchId = virtualWebhookBranchId;
             return this;
         }
 
-
-        public Builder virtualWebhookCalendarId(VirtualWebhookCalendarId virtualWebhookCalendarId) {
-            Utils.checkNotNull(virtualWebhookCalendarId, "virtualWebhookCalendarId");
-            this.virtualWebhookCalendarId = Optional.ofNullable(virtualWebhookCalendarId);
-            return this;
-        }
-
-        public Builder virtualWebhookCalendarId(Optional<? extends VirtualWebhookCalendarId> virtualWebhookCalendarId) {
-            Utils.checkNotNull(virtualWebhookCalendarId, "virtualWebhookCalendarId");
+        public Builder virtualWebhookCalendarId(@Nullable VirtualWebhookCalendarId virtualWebhookCalendarId) {
             this.virtualWebhookCalendarId = virtualWebhookCalendarId;
             return this;
         }
 
-
-        public Builder virtualWebhookCallId(VirtualWebhookCallId virtualWebhookCallId) {
-            Utils.checkNotNull(virtualWebhookCallId, "virtualWebhookCallId");
-            this.virtualWebhookCallId = Optional.ofNullable(virtualWebhookCallId);
-            return this;
-        }
-
-        public Builder virtualWebhookCallId(Optional<? extends VirtualWebhookCallId> virtualWebhookCallId) {
-            Utils.checkNotNull(virtualWebhookCallId, "virtualWebhookCallId");
+        public Builder virtualWebhookCallId(@Nullable VirtualWebhookCallId virtualWebhookCallId) {
             this.virtualWebhookCallId = virtualWebhookCallId;
             return this;
         }
 
-
-        public Builder virtualWebhookCampaignId(VirtualWebhookCampaignId virtualWebhookCampaignId) {
-            Utils.checkNotNull(virtualWebhookCampaignId, "virtualWebhookCampaignId");
-            this.virtualWebhookCampaignId = Optional.ofNullable(virtualWebhookCampaignId);
-            return this;
-        }
-
-        public Builder virtualWebhookCampaignId(Optional<? extends VirtualWebhookCampaignId> virtualWebhookCampaignId) {
-            Utils.checkNotNull(virtualWebhookCampaignId, "virtualWebhookCampaignId");
+        public Builder virtualWebhookCampaignId(@Nullable VirtualWebhookCampaignId virtualWebhookCampaignId) {
             this.virtualWebhookCampaignId = virtualWebhookCampaignId;
             return this;
         }
 
-
-        public Builder virtualWebhookCandidateId(VirtualWebhookCandidateId virtualWebhookCandidateId) {
-            Utils.checkNotNull(virtualWebhookCandidateId, "virtualWebhookCandidateId");
-            this.virtualWebhookCandidateId = Optional.ofNullable(virtualWebhookCandidateId);
-            return this;
-        }
-
-        public Builder virtualWebhookCandidateId(Optional<? extends VirtualWebhookCandidateId> virtualWebhookCandidateId) {
-            Utils.checkNotNull(virtualWebhookCandidateId, "virtualWebhookCandidateId");
+        public Builder virtualWebhookCandidateId(@Nullable VirtualWebhookCandidateId virtualWebhookCandidateId) {
             this.virtualWebhookCandidateId = virtualWebhookCandidateId;
             return this;
         }
 
-
-        public Builder virtualWebhookCarrierId(VirtualWebhookCarrierId virtualWebhookCarrierId) {
-            Utils.checkNotNull(virtualWebhookCarrierId, "virtualWebhookCarrierId");
-            this.virtualWebhookCarrierId = Optional.ofNullable(virtualWebhookCarrierId);
-            return this;
-        }
-
-        public Builder virtualWebhookCarrierId(Optional<? extends VirtualWebhookCarrierId> virtualWebhookCarrierId) {
-            Utils.checkNotNull(virtualWebhookCarrierId, "virtualWebhookCarrierId");
+        public Builder virtualWebhookCarrierId(@Nullable VirtualWebhookCarrierId virtualWebhookCarrierId) {
             this.virtualWebhookCarrierId = virtualWebhookCarrierId;
             return this;
         }
 
-
-        public Builder virtualWebhookChannelId(VirtualWebhookChannelId virtualWebhookChannelId) {
-            Utils.checkNotNull(virtualWebhookChannelId, "virtualWebhookChannelId");
-            this.virtualWebhookChannelId = Optional.ofNullable(virtualWebhookChannelId);
-            return this;
-        }
-
-        public Builder virtualWebhookChannelId(Optional<? extends VirtualWebhookChannelId> virtualWebhookChannelId) {
-            Utils.checkNotNull(virtualWebhookChannelId, "virtualWebhookChannelId");
+        public Builder virtualWebhookChannelId(@Nullable VirtualWebhookChannelId virtualWebhookChannelId) {
             this.virtualWebhookChannelId = virtualWebhookChannelId;
             return this;
         }
 
-
-        public Builder virtualWebhookCollectionId(VirtualWebhookCollectionId virtualWebhookCollectionId) {
-            Utils.checkNotNull(virtualWebhookCollectionId, "virtualWebhookCollectionId");
-            this.virtualWebhookCollectionId = Optional.ofNullable(virtualWebhookCollectionId);
-            return this;
-        }
-
-        public Builder virtualWebhookCollectionId(Optional<? extends VirtualWebhookCollectionId> virtualWebhookCollectionId) {
-            Utils.checkNotNull(virtualWebhookCollectionId, "virtualWebhookCollectionId");
+        public Builder virtualWebhookCollectionId(@Nullable VirtualWebhookCollectionId virtualWebhookCollectionId) {
             this.virtualWebhookCollectionId = virtualWebhookCollectionId;
             return this;
         }
 
-
-        public Builder virtualWebhookCompanyId(VirtualWebhookCompanyId virtualWebhookCompanyId) {
-            Utils.checkNotNull(virtualWebhookCompanyId, "virtualWebhookCompanyId");
-            this.virtualWebhookCompanyId = Optional.ofNullable(virtualWebhookCompanyId);
-            return this;
-        }
-
-        public Builder virtualWebhookCompanyId(Optional<? extends VirtualWebhookCompanyId> virtualWebhookCompanyId) {
-            Utils.checkNotNull(virtualWebhookCompanyId, "virtualWebhookCompanyId");
+        public Builder virtualWebhookCompanyId(@Nullable VirtualWebhookCompanyId virtualWebhookCompanyId) {
             this.virtualWebhookCompanyId = virtualWebhookCompanyId;
             return this;
         }
 
-
-        public Builder virtualWebhookContactId(VirtualWebhookContactId virtualWebhookContactId) {
-            Utils.checkNotNull(virtualWebhookContactId, "virtualWebhookContactId");
-            this.virtualWebhookContactId = Optional.ofNullable(virtualWebhookContactId);
-            return this;
-        }
-
-        public Builder virtualWebhookContactId(Optional<? extends VirtualWebhookContactId> virtualWebhookContactId) {
-            Utils.checkNotNull(virtualWebhookContactId, "virtualWebhookContactId");
+        public Builder virtualWebhookContactId(@Nullable VirtualWebhookContactId virtualWebhookContactId) {
             this.virtualWebhookContactId = virtualWebhookContactId;
             return this;
         }
 
-
-        public Builder virtualWebhookCustomerId(VirtualWebhookCustomerId virtualWebhookCustomerId) {
-            Utils.checkNotNull(virtualWebhookCustomerId, "virtualWebhookCustomerId");
-            this.virtualWebhookCustomerId = Optional.ofNullable(virtualWebhookCustomerId);
-            return this;
-        }
-
-        public Builder virtualWebhookCustomerId(Optional<? extends VirtualWebhookCustomerId> virtualWebhookCustomerId) {
-            Utils.checkNotNull(virtualWebhookCustomerId, "virtualWebhookCustomerId");
+        public Builder virtualWebhookCustomerId(@Nullable VirtualWebhookCustomerId virtualWebhookCustomerId) {
             this.virtualWebhookCustomerId = virtualWebhookCustomerId;
             return this;
         }
 
-
-        public Builder virtualWebhookDealId(VirtualWebhookDealId virtualWebhookDealId) {
-            Utils.checkNotNull(virtualWebhookDealId, "virtualWebhookDealId");
-            this.virtualWebhookDealId = Optional.ofNullable(virtualWebhookDealId);
-            return this;
-        }
-
-        public Builder virtualWebhookDealId(Optional<? extends VirtualWebhookDealId> virtualWebhookDealId) {
-            Utils.checkNotNull(virtualWebhookDealId, "virtualWebhookDealId");
+        public Builder virtualWebhookDealId(@Nullable VirtualWebhookDealId virtualWebhookDealId) {
             this.virtualWebhookDealId = virtualWebhookDealId;
             return this;
         }
 
-
-        public Builder virtualWebhookEndLt(VirtualWebhookEndLt virtualWebhookEndLt) {
-            Utils.checkNotNull(virtualWebhookEndLt, "virtualWebhookEndLt");
-            this.virtualWebhookEndLt = Optional.ofNullable(virtualWebhookEndLt);
-            return this;
-        }
-
-        public Builder virtualWebhookEndLt(Optional<? extends VirtualWebhookEndLt> virtualWebhookEndLt) {
-            Utils.checkNotNull(virtualWebhookEndLt, "virtualWebhookEndLt");
+        public Builder virtualWebhookEndLt(@Nullable VirtualWebhookEndLt virtualWebhookEndLt) {
             this.virtualWebhookEndLt = virtualWebhookEndLt;
             return this;
         }
 
-
-        public Builder virtualWebhookEventId(VirtualWebhookEventId virtualWebhookEventId) {
-            Utils.checkNotNull(virtualWebhookEventId, "virtualWebhookEventId");
-            this.virtualWebhookEventId = Optional.ofNullable(virtualWebhookEventId);
-            return this;
-        }
-
-        public Builder virtualWebhookEventId(Optional<? extends VirtualWebhookEventId> virtualWebhookEventId) {
-            Utils.checkNotNull(virtualWebhookEventId, "virtualWebhookEventId");
+        public Builder virtualWebhookEventId(@Nullable VirtualWebhookEventId virtualWebhookEventId) {
             this.virtualWebhookEventId = virtualWebhookEventId;
             return this;
         }
 
-
-        public Builder virtualWebhookExpand(VirtualWebhookExpand virtualWebhookExpand) {
-            Utils.checkNotNull(virtualWebhookExpand, "virtualWebhookExpand");
-            this.virtualWebhookExpand = Optional.ofNullable(virtualWebhookExpand);
-            return this;
-        }
-
-        public Builder virtualWebhookExpand(Optional<? extends VirtualWebhookExpand> virtualWebhookExpand) {
-            Utils.checkNotNull(virtualWebhookExpand, "virtualWebhookExpand");
+        public Builder virtualWebhookExpand(@Nullable VirtualWebhookExpand virtualWebhookExpand) {
             this.virtualWebhookExpand = virtualWebhookExpand;
             return this;
         }
 
-
-        public Builder virtualWebhookFields(VirtualWebhookFields virtualWebhookFields) {
-            Utils.checkNotNull(virtualWebhookFields, "virtualWebhookFields");
-            this.virtualWebhookFields = Optional.ofNullable(virtualWebhookFields);
-            return this;
-        }
-
-        public Builder virtualWebhookFields(Optional<? extends VirtualWebhookFields> virtualWebhookFields) {
-            Utils.checkNotNull(virtualWebhookFields, "virtualWebhookFields");
+        public Builder virtualWebhookFields(@Nullable VirtualWebhookFields virtualWebhookFields) {
             this.virtualWebhookFields = virtualWebhookFields;
             return this;
         }
 
-
-        public Builder virtualWebhookFormId(VirtualWebhookFormId virtualWebhookFormId) {
-            Utils.checkNotNull(virtualWebhookFormId, "virtualWebhookFormId");
-            this.virtualWebhookFormId = Optional.ofNullable(virtualWebhookFormId);
-            return this;
-        }
-
-        public Builder virtualWebhookFormId(Optional<? extends VirtualWebhookFormId> virtualWebhookFormId) {
-            Utils.checkNotNull(virtualWebhookFormId, "virtualWebhookFormId");
+        public Builder virtualWebhookFormId(@Nullable VirtualWebhookFormId virtualWebhookFormId) {
             this.virtualWebhookFormId = virtualWebhookFormId;
             return this;
         }
 
-
-        public Builder virtualWebhookGroupId(VirtualWebhookGroupId virtualWebhookGroupId) {
-            Utils.checkNotNull(virtualWebhookGroupId, "virtualWebhookGroupId");
-            this.virtualWebhookGroupId = Optional.ofNullable(virtualWebhookGroupId);
-            return this;
-        }
-
-        public Builder virtualWebhookGroupId(Optional<? extends VirtualWebhookGroupId> virtualWebhookGroupId) {
-            Utils.checkNotNull(virtualWebhookGroupId, "virtualWebhookGroupId");
+        public Builder virtualWebhookGroupId(@Nullable VirtualWebhookGroupId virtualWebhookGroupId) {
             this.virtualWebhookGroupId = virtualWebhookGroupId;
             return this;
         }
 
-
-        public Builder virtualWebhookItemId(VirtualWebhookItemId virtualWebhookItemId) {
-            Utils.checkNotNull(virtualWebhookItemId, "virtualWebhookItemId");
-            this.virtualWebhookItemId = Optional.ofNullable(virtualWebhookItemId);
-            return this;
-        }
-
-        public Builder virtualWebhookItemId(Optional<? extends VirtualWebhookItemId> virtualWebhookItemId) {
-            Utils.checkNotNull(virtualWebhookItemId, "virtualWebhookItemId");
+        public Builder virtualWebhookItemId(@Nullable VirtualWebhookItemId virtualWebhookItemId) {
             this.virtualWebhookItemId = virtualWebhookItemId;
             return this;
         }
 
-
-        public Builder virtualWebhookItemVariantId(VirtualWebhookItemVariantId virtualWebhookItemVariantId) {
-            Utils.checkNotNull(virtualWebhookItemVariantId, "virtualWebhookItemVariantId");
-            this.virtualWebhookItemVariantId = Optional.ofNullable(virtualWebhookItemVariantId);
-            return this;
-        }
-
-        public Builder virtualWebhookItemVariantId(Optional<? extends VirtualWebhookItemVariantId> virtualWebhookItemVariantId) {
-            Utils.checkNotNull(virtualWebhookItemVariantId, "virtualWebhookItemVariantId");
+        public Builder virtualWebhookItemVariantId(@Nullable VirtualWebhookItemVariantId virtualWebhookItemVariantId) {
             this.virtualWebhookItemVariantId = virtualWebhookItemVariantId;
             return this;
         }
 
-
-        public Builder virtualWebhookJobId(VirtualWebhookJobId virtualWebhookJobId) {
-            Utils.checkNotNull(virtualWebhookJobId, "virtualWebhookJobId");
-            this.virtualWebhookJobId = Optional.ofNullable(virtualWebhookJobId);
-            return this;
-        }
-
-        public Builder virtualWebhookJobId(Optional<? extends VirtualWebhookJobId> virtualWebhookJobId) {
-            Utils.checkNotNull(virtualWebhookJobId, "virtualWebhookJobId");
+        public Builder virtualWebhookJobId(@Nullable VirtualWebhookJobId virtualWebhookJobId) {
             this.virtualWebhookJobId = virtualWebhookJobId;
             return this;
         }
 
-
-        public Builder virtualWebhookLabelId(VirtualWebhookLabelId virtualWebhookLabelId) {
-            Utils.checkNotNull(virtualWebhookLabelId, "virtualWebhookLabelId");
-            this.virtualWebhookLabelId = Optional.ofNullable(virtualWebhookLabelId);
-            return this;
-        }
-
-        public Builder virtualWebhookLabelId(Optional<? extends VirtualWebhookLabelId> virtualWebhookLabelId) {
-            Utils.checkNotNull(virtualWebhookLabelId, "virtualWebhookLabelId");
+        public Builder virtualWebhookLabelId(@Nullable VirtualWebhookLabelId virtualWebhookLabelId) {
             this.virtualWebhookLabelId = virtualWebhookLabelId;
             return this;
         }
 
-
-        public Builder virtualWebhookLeadId(VirtualWebhookLeadId virtualWebhookLeadId) {
-            Utils.checkNotNull(virtualWebhookLeadId, "virtualWebhookLeadId");
-            this.virtualWebhookLeadId = Optional.ofNullable(virtualWebhookLeadId);
-            return this;
-        }
-
-        public Builder virtualWebhookLeadId(Optional<? extends VirtualWebhookLeadId> virtualWebhookLeadId) {
-            Utils.checkNotNull(virtualWebhookLeadId, "virtualWebhookLeadId");
+        public Builder virtualWebhookLeadId(@Nullable VirtualWebhookLeadId virtualWebhookLeadId) {
             this.virtualWebhookLeadId = virtualWebhookLeadId;
             return this;
         }
 
-
-        public Builder virtualWebhookLimit(VirtualWebhookLimit virtualWebhookLimit) {
-            Utils.checkNotNull(virtualWebhookLimit, "virtualWebhookLimit");
-            this.virtualWebhookLimit = Optional.ofNullable(virtualWebhookLimit);
-            return this;
-        }
-
-        public Builder virtualWebhookLimit(Optional<? extends VirtualWebhookLimit> virtualWebhookLimit) {
-            Utils.checkNotNull(virtualWebhookLimit, "virtualWebhookLimit");
+        public Builder virtualWebhookLimit(@Nullable VirtualWebhookLimit virtualWebhookLimit) {
             this.virtualWebhookLimit = virtualWebhookLimit;
             return this;
         }
 
-
-        public Builder virtualWebhookListId(VirtualWebhookListId virtualWebhookListId) {
-            Utils.checkNotNull(virtualWebhookListId, "virtualWebhookListId");
-            this.virtualWebhookListId = Optional.ofNullable(virtualWebhookListId);
-            return this;
-        }
-
-        public Builder virtualWebhookListId(Optional<? extends VirtualWebhookListId> virtualWebhookListId) {
-            Utils.checkNotNull(virtualWebhookListId, "virtualWebhookListId");
+        public Builder virtualWebhookListId(@Nullable VirtualWebhookListId virtualWebhookListId) {
             this.virtualWebhookListId = virtualWebhookListId;
             return this;
         }
 
-
-        public Builder virtualWebhookLocationId(VirtualWebhookLocationId virtualWebhookLocationId) {
-            Utils.checkNotNull(virtualWebhookLocationId, "virtualWebhookLocationId");
-            this.virtualWebhookLocationId = Optional.ofNullable(virtualWebhookLocationId);
-            return this;
-        }
-
-        public Builder virtualWebhookLocationId(Optional<? extends VirtualWebhookLocationId> virtualWebhookLocationId) {
-            Utils.checkNotNull(virtualWebhookLocationId, "virtualWebhookLocationId");
+        public Builder virtualWebhookLocationId(@Nullable VirtualWebhookLocationId virtualWebhookLocationId) {
             this.virtualWebhookLocationId = virtualWebhookLocationId;
             return this;
         }
 
-
-        public Builder virtualWebhookOrderId(VirtualWebhookOrderId virtualWebhookOrderId) {
-            Utils.checkNotNull(virtualWebhookOrderId, "virtualWebhookOrderId");
-            this.virtualWebhookOrderId = Optional.ofNullable(virtualWebhookOrderId);
-            return this;
-        }
-
-        public Builder virtualWebhookOrderId(Optional<? extends VirtualWebhookOrderId> virtualWebhookOrderId) {
-            Utils.checkNotNull(virtualWebhookOrderId, "virtualWebhookOrderId");
+        public Builder virtualWebhookOrderId(@Nullable VirtualWebhookOrderId virtualWebhookOrderId) {
             this.virtualWebhookOrderId = virtualWebhookOrderId;
             return this;
         }
 
-
-        public Builder virtualWebhookOrgId(VirtualWebhookOrgId virtualWebhookOrgId) {
-            Utils.checkNotNull(virtualWebhookOrgId, "virtualWebhookOrgId");
-            this.virtualWebhookOrgId = Optional.ofNullable(virtualWebhookOrgId);
-            return this;
-        }
-
-        public Builder virtualWebhookOrgId(Optional<? extends VirtualWebhookOrgId> virtualWebhookOrgId) {
-            Utils.checkNotNull(virtualWebhookOrgId, "virtualWebhookOrgId");
+        public Builder virtualWebhookOrgId(@Nullable VirtualWebhookOrgId virtualWebhookOrgId) {
             this.virtualWebhookOrgId = virtualWebhookOrgId;
             return this;
         }
 
-
-        public Builder virtualWebhookPageId(VirtualWebhookPageId virtualWebhookPageId) {
-            Utils.checkNotNull(virtualWebhookPageId, "virtualWebhookPageId");
-            this.virtualWebhookPageId = Optional.ofNullable(virtualWebhookPageId);
-            return this;
-        }
-
-        public Builder virtualWebhookPageId(Optional<? extends VirtualWebhookPageId> virtualWebhookPageId) {
-            Utils.checkNotNull(virtualWebhookPageId, "virtualWebhookPageId");
+        public Builder virtualWebhookPageId(@Nullable VirtualWebhookPageId virtualWebhookPageId) {
             this.virtualWebhookPageId = virtualWebhookPageId;
             return this;
         }
 
-
-        public Builder virtualWebhookParentId(VirtualWebhookParentId virtualWebhookParentId) {
-            Utils.checkNotNull(virtualWebhookParentId, "virtualWebhookParentId");
-            this.virtualWebhookParentId = Optional.ofNullable(virtualWebhookParentId);
-            return this;
-        }
-
-        public Builder virtualWebhookParentId(Optional<? extends VirtualWebhookParentId> virtualWebhookParentId) {
-            Utils.checkNotNull(virtualWebhookParentId, "virtualWebhookParentId");
+        public Builder virtualWebhookParentId(@Nullable VirtualWebhookParentId virtualWebhookParentId) {
             this.virtualWebhookParentId = virtualWebhookParentId;
             return this;
         }
 
-
-        public Builder virtualWebhookPipelineId(VirtualWebhookPipelineId virtualWebhookPipelineId) {
-            Utils.checkNotNull(virtualWebhookPipelineId, "virtualWebhookPipelineId");
-            this.virtualWebhookPipelineId = Optional.ofNullable(virtualWebhookPipelineId);
-            return this;
-        }
-
-        public Builder virtualWebhookPipelineId(Optional<? extends VirtualWebhookPipelineId> virtualWebhookPipelineId) {
-            Utils.checkNotNull(virtualWebhookPipelineId, "virtualWebhookPipelineId");
+        public Builder virtualWebhookPipelineId(@Nullable VirtualWebhookPipelineId virtualWebhookPipelineId) {
             this.virtualWebhookPipelineId = virtualWebhookPipelineId;
             return this;
         }
 
-
-        public Builder virtualWebhookProjectId(VirtualWebhookProjectId virtualWebhookProjectId) {
-            Utils.checkNotNull(virtualWebhookProjectId, "virtualWebhookProjectId");
-            this.virtualWebhookProjectId = Optional.ofNullable(virtualWebhookProjectId);
-            return this;
-        }
-
-        public Builder virtualWebhookProjectId(Optional<? extends VirtualWebhookProjectId> virtualWebhookProjectId) {
-            Utils.checkNotNull(virtualWebhookProjectId, "virtualWebhookProjectId");
+        public Builder virtualWebhookProjectId(@Nullable VirtualWebhookProjectId virtualWebhookProjectId) {
             this.virtualWebhookProjectId = virtualWebhookProjectId;
             return this;
         }
 
-
-        public Builder virtualWebhookRepoId(VirtualWebhookRepoId virtualWebhookRepoId) {
-            Utils.checkNotNull(virtualWebhookRepoId, "virtualWebhookRepoId");
-            this.virtualWebhookRepoId = Optional.ofNullable(virtualWebhookRepoId);
-            return this;
-        }
-
-        public Builder virtualWebhookRepoId(Optional<? extends VirtualWebhookRepoId> virtualWebhookRepoId) {
-            Utils.checkNotNull(virtualWebhookRepoId, "virtualWebhookRepoId");
+        public Builder virtualWebhookRepoId(@Nullable VirtualWebhookRepoId virtualWebhookRepoId) {
             this.virtualWebhookRepoId = virtualWebhookRepoId;
             return this;
         }
 
-
-        public Builder virtualWebhookSaleschannelId(VirtualWebhookSaleschannelId virtualWebhookSaleschannelId) {
-            Utils.checkNotNull(virtualWebhookSaleschannelId, "virtualWebhookSaleschannelId");
-            this.virtualWebhookSaleschannelId = Optional.ofNullable(virtualWebhookSaleschannelId);
-            return this;
-        }
-
-        public Builder virtualWebhookSaleschannelId(Optional<? extends VirtualWebhookSaleschannelId> virtualWebhookSaleschannelId) {
-            Utils.checkNotNull(virtualWebhookSaleschannelId, "virtualWebhookSaleschannelId");
+        public Builder virtualWebhookSaleschannelId(@Nullable VirtualWebhookSaleschannelId virtualWebhookSaleschannelId) {
             this.virtualWebhookSaleschannelId = virtualWebhookSaleschannelId;
             return this;
         }
 
-
-        public Builder virtualWebhookShipmentId(VirtualWebhookShipmentId virtualWebhookShipmentId) {
-            Utils.checkNotNull(virtualWebhookShipmentId, "virtualWebhookShipmentId");
-            this.virtualWebhookShipmentId = Optional.ofNullable(virtualWebhookShipmentId);
-            return this;
-        }
-
-        public Builder virtualWebhookShipmentId(Optional<? extends VirtualWebhookShipmentId> virtualWebhookShipmentId) {
-            Utils.checkNotNull(virtualWebhookShipmentId, "virtualWebhookShipmentId");
+        public Builder virtualWebhookShipmentId(@Nullable VirtualWebhookShipmentId virtualWebhookShipmentId) {
             this.virtualWebhookShipmentId = virtualWebhookShipmentId;
             return this;
         }
 
-
-        public Builder virtualWebhookSpaceId(VirtualWebhookSpaceId virtualWebhookSpaceId) {
-            Utils.checkNotNull(virtualWebhookSpaceId, "virtualWebhookSpaceId");
-            this.virtualWebhookSpaceId = Optional.ofNullable(virtualWebhookSpaceId);
-            return this;
-        }
-
-        public Builder virtualWebhookSpaceId(Optional<? extends VirtualWebhookSpaceId> virtualWebhookSpaceId) {
-            Utils.checkNotNull(virtualWebhookSpaceId, "virtualWebhookSpaceId");
+        public Builder virtualWebhookSpaceId(@Nullable VirtualWebhookSpaceId virtualWebhookSpaceId) {
             this.virtualWebhookSpaceId = virtualWebhookSpaceId;
             return this;
         }
 
-
-        public Builder virtualWebhookStartGte(VirtualWebhookStartGte virtualWebhookStartGte) {
-            Utils.checkNotNull(virtualWebhookStartGte, "virtualWebhookStartGte");
-            this.virtualWebhookStartGte = Optional.ofNullable(virtualWebhookStartGte);
-            return this;
-        }
-
-        public Builder virtualWebhookStartGte(Optional<? extends VirtualWebhookStartGte> virtualWebhookStartGte) {
-            Utils.checkNotNull(virtualWebhookStartGte, "virtualWebhookStartGte");
+        public Builder virtualWebhookStartGte(@Nullable VirtualWebhookStartGte virtualWebhookStartGte) {
             this.virtualWebhookStartGte = virtualWebhookStartGte;
             return this;
         }
 
-
-        public Builder virtualWebhookStatus(VirtualWebhookStatus virtualWebhookStatus) {
-            Utils.checkNotNull(virtualWebhookStatus, "virtualWebhookStatus");
-            this.virtualWebhookStatus = Optional.ofNullable(virtualWebhookStatus);
-            return this;
-        }
-
-        public Builder virtualWebhookStatus(Optional<? extends VirtualWebhookStatus> virtualWebhookStatus) {
-            Utils.checkNotNull(virtualWebhookStatus, "virtualWebhookStatus");
+        public Builder virtualWebhookStatus(@Nullable VirtualWebhookStatus virtualWebhookStatus) {
             this.virtualWebhookStatus = virtualWebhookStatus;
             return this;
         }
 
-
-        public Builder virtualWebhookTaskId(VirtualWebhookTaskId virtualWebhookTaskId) {
-            Utils.checkNotNull(virtualWebhookTaskId, "virtualWebhookTaskId");
-            this.virtualWebhookTaskId = Optional.ofNullable(virtualWebhookTaskId);
-            return this;
-        }
-
-        public Builder virtualWebhookTaskId(Optional<? extends VirtualWebhookTaskId> virtualWebhookTaskId) {
-            Utils.checkNotNull(virtualWebhookTaskId, "virtualWebhookTaskId");
+        public Builder virtualWebhookTaskId(@Nullable VirtualWebhookTaskId virtualWebhookTaskId) {
             this.virtualWebhookTaskId = virtualWebhookTaskId;
             return this;
         }
 
-
-        public Builder virtualWebhookTicketId(VirtualWebhookTicketId virtualWebhookTicketId) {
-            Utils.checkNotNull(virtualWebhookTicketId, "virtualWebhookTicketId");
-            this.virtualWebhookTicketId = Optional.ofNullable(virtualWebhookTicketId);
-            return this;
-        }
-
-        public Builder virtualWebhookTicketId(Optional<? extends VirtualWebhookTicketId> virtualWebhookTicketId) {
-            Utils.checkNotNull(virtualWebhookTicketId, "virtualWebhookTicketId");
+        public Builder virtualWebhookTicketId(@Nullable VirtualWebhookTicketId virtualWebhookTicketId) {
             this.virtualWebhookTicketId = virtualWebhookTicketId;
             return this;
         }
 
-
-        public Builder virtualWebhookType(VirtualWebhookType virtualWebhookType) {
-            Utils.checkNotNull(virtualWebhookType, "virtualWebhookType");
-            this.virtualWebhookType = Optional.ofNullable(virtualWebhookType);
-            return this;
-        }
-
-        public Builder virtualWebhookType(Optional<? extends VirtualWebhookType> virtualWebhookType) {
-            Utils.checkNotNull(virtualWebhookType, "virtualWebhookType");
+        public Builder virtualWebhookType(@Nullable VirtualWebhookType virtualWebhookType) {
             this.virtualWebhookType = virtualWebhookType;
             return this;
         }
 
-
-        public Builder virtualWebhookUpdatedGte(VirtualWebhookUpdatedGte virtualWebhookUpdatedGte) {
-            Utils.checkNotNull(virtualWebhookUpdatedGte, "virtualWebhookUpdatedGte");
-            this.virtualWebhookUpdatedGte = Optional.ofNullable(virtualWebhookUpdatedGte);
-            return this;
-        }
-
-        public Builder virtualWebhookUpdatedGte(Optional<? extends VirtualWebhookUpdatedGte> virtualWebhookUpdatedGte) {
-            Utils.checkNotNull(virtualWebhookUpdatedGte, "virtualWebhookUpdatedGte");
+        public Builder virtualWebhookUpdatedGte(@Nullable VirtualWebhookUpdatedGte virtualWebhookUpdatedGte) {
             this.virtualWebhookUpdatedGte = virtualWebhookUpdatedGte;
             return this;
         }
 
-
-        public Builder virtualWebhookUserId(VirtualWebhookUserId virtualWebhookUserId) {
-            Utils.checkNotNull(virtualWebhookUserId, "virtualWebhookUserId");
-            this.virtualWebhookUserId = Optional.ofNullable(virtualWebhookUserId);
-            return this;
-        }
-
-        public Builder virtualWebhookUserId(Optional<? extends VirtualWebhookUserId> virtualWebhookUserId) {
-            Utils.checkNotNull(virtualWebhookUserId, "virtualWebhookUserId");
+        public Builder virtualWebhookUserId(@Nullable VirtualWebhookUserId virtualWebhookUserId) {
             this.virtualWebhookUserId = virtualWebhookUserId;
             return this;
         }
 
-
-        public Builder virtualWebhookUserMentionedId(VirtualWebhookUserMentionedId virtualWebhookUserMentionedId) {
-            Utils.checkNotNull(virtualWebhookUserMentionedId, "virtualWebhookUserMentionedId");
-            this.virtualWebhookUserMentionedId = Optional.ofNullable(virtualWebhookUserMentionedId);
-            return this;
-        }
-
-        public Builder virtualWebhookUserMentionedId(Optional<? extends VirtualWebhookUserMentionedId> virtualWebhookUserMentionedId) {
-            Utils.checkNotNull(virtualWebhookUserMentionedId, "virtualWebhookUserMentionedId");
+        public Builder virtualWebhookUserMentionedId(@Nullable VirtualWebhookUserMentionedId virtualWebhookUserMentionedId) {
             this.virtualWebhookUserMentionedId = virtualWebhookUserMentionedId;
             return this;
         }
 
-
-        public Builder webhookEvents(PropertyIntegrationSupportWebhookEvents webhookEvents) {
-            Utils.checkNotNull(webhookEvents, "webhookEvents");
-            this.webhookEvents = Optional.ofNullable(webhookEvents);
-            return this;
-        }
-
-        public Builder webhookEvents(Optional<? extends PropertyIntegrationSupportWebhookEvents> webhookEvents) {
-            Utils.checkNotNull(webhookEvents, "webhookEvents");
+        public Builder webhookEvents(@Nullable PropertyIntegrationSupportWebhookEvents webhookEvents) {
             this.webhookEvents = webhookEvents;
             return this;
         }
 
         public IntegrationSupport build() {
-
             return new IntegrationSupport(
                 fromWebhook, inboundFields, listAccountId,
                 listAdId, listApplicationId, listBenefitId,

@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateAdsGroupRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAdsGroupRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAdsGroupResponse;
@@ -115,7 +116,7 @@ public class Group {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAdsGroupResponse createAdsGroup(CreateAdsGroupRequest request) {
+    public CreateAdsGroupResponse createAdsGroup(@Nonnull CreateAdsGroupRequest request) {
         RequestOperation<CreateAdsGroupRequest, CreateAdsGroupResponse> operation
               = new CreateAdsGroup.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -137,7 +138,7 @@ public class Group {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateHrisGroupResponse createHrisGroup(CreateHrisGroupRequest request) {
+    public CreateHrisGroupResponse createHrisGroup(@Nonnull CreateHrisGroupRequest request) {
         RequestOperation<CreateHrisGroupRequest, CreateHrisGroupResponse> operation
               = new CreateHrisGroup.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -159,7 +160,7 @@ public class Group {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateScimGroupsResponse createScimGroups(CreateScimGroupsRequest request) {
+    public CreateScimGroupsResponse createScimGroups(@Nonnull CreateScimGroupsRequest request) {
         RequestOperation<CreateScimGroupsRequest, CreateScimGroupsResponse> operation
               = new CreateScimGroups.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -181,7 +182,7 @@ public class Group {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAdsGroupResponse getAdsGroup(GetAdsGroupRequest request) {
+    public GetAdsGroupResponse getAdsGroup(@Nonnull GetAdsGroupRequest request) {
         RequestOperation<GetAdsGroupRequest, GetAdsGroupResponse> operation
               = new GetAdsGroup.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -203,7 +204,7 @@ public class Group {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetHrisGroupResponse getHrisGroup(GetHrisGroupRequest request) {
+    public GetHrisGroupResponse getHrisGroup(@Nonnull GetHrisGroupRequest request) {
         RequestOperation<GetHrisGroupRequest, GetHrisGroupResponse> operation
               = new GetHrisGroup.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -225,7 +226,7 @@ public class Group {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetScimGroupsResponse getScimGroups(GetScimGroupsRequest request) {
+    public GetScimGroupsResponse getScimGroups(@Nonnull GetScimGroupsRequest request) {
         RequestOperation<GetScimGroupsRequest, GetScimGroupsResponse> operation
               = new GetScimGroups.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -247,7 +248,7 @@ public class Group {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAdsGroupsResponse listAdsGroups(ListAdsGroupsRequest request) {
+    public ListAdsGroupsResponse listAdsGroups(@Nonnull ListAdsGroupsRequest request) {
         RequestOperation<ListAdsGroupsRequest, ListAdsGroupsResponse> operation
               = new ListAdsGroups.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -269,7 +270,7 @@ public class Group {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListHrisGroupsResponse listHrisGroups(ListHrisGroupsRequest request) {
+    public ListHrisGroupsResponse listHrisGroups(@Nonnull ListHrisGroupsRequest request) {
         RequestOperation<ListHrisGroupsRequest, ListHrisGroupsResponse> operation
               = new ListHrisGroups.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -291,7 +292,7 @@ public class Group {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListScimGroupsResponse listScimGroups(ListScimGroupsRequest request) {
+    public ListScimGroupsResponse listScimGroups(@Nonnull ListScimGroupsRequest request) {
         RequestOperation<ListScimGroupsRequest, ListScimGroupsResponse> operation
               = new ListScimGroups.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -313,7 +314,7 @@ public class Group {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAdsGroupResponse patchAdsGroup(PatchAdsGroupRequest request) {
+    public PatchAdsGroupResponse patchAdsGroup(@Nonnull PatchAdsGroupRequest request) {
         RequestOperation<PatchAdsGroupRequest, PatchAdsGroupResponse> operation
               = new PatchAdsGroup.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -335,7 +336,7 @@ public class Group {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchHrisGroupResponse patchHrisGroup(PatchHrisGroupRequest request) {
+    public PatchHrisGroupResponse patchHrisGroup(@Nonnull PatchHrisGroupRequest request) {
         RequestOperation<PatchHrisGroupRequest, PatchHrisGroupResponse> operation
               = new PatchHrisGroup.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -357,7 +358,7 @@ public class Group {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchScimGroupsResponse patchScimGroups(PatchScimGroupsRequest request) {
+    public PatchScimGroupsResponse patchScimGroups(@Nonnull PatchScimGroupsRequest request) {
         RequestOperation<PatchScimGroupsRequest, PatchScimGroupsResponse> operation
               = new PatchScimGroups.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -379,7 +380,7 @@ public class Group {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAdsGroupResponse removeAdsGroup(RemoveAdsGroupRequest request) {
+    public RemoveAdsGroupResponse removeAdsGroup(@Nonnull RemoveAdsGroupRequest request) {
         RequestOperation<RemoveAdsGroupRequest, RemoveAdsGroupResponse> operation
               = new RemoveAdsGroup.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -401,7 +402,7 @@ public class Group {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveHrisGroupResponse removeHrisGroup(RemoveHrisGroupRequest request) {
+    public RemoveHrisGroupResponse removeHrisGroup(@Nonnull RemoveHrisGroupRequest request) {
         RequestOperation<RemoveHrisGroupRequest, RemoveHrisGroupResponse> operation
               = new RemoveHrisGroup.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -423,7 +424,7 @@ public class Group {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveScimGroupsResponse removeScimGroups(RemoveScimGroupsRequest request) {
+    public RemoveScimGroupsResponse removeScimGroups(@Nonnull RemoveScimGroupsRequest request) {
         RequestOperation<RemoveScimGroupsRequest, RemoveScimGroupsResponse> operation
               = new RemoveScimGroups.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -445,7 +446,7 @@ public class Group {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAdsGroupResponse updateAdsGroup(UpdateAdsGroupRequest request) {
+    public UpdateAdsGroupResponse updateAdsGroup(@Nonnull UpdateAdsGroupRequest request) {
         RequestOperation<UpdateAdsGroupRequest, UpdateAdsGroupResponse> operation
               = new UpdateAdsGroup.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -467,7 +468,7 @@ public class Group {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateHrisGroupResponse updateHrisGroup(UpdateHrisGroupRequest request) {
+    public UpdateHrisGroupResponse updateHrisGroup(@Nonnull UpdateHrisGroupRequest request) {
         RequestOperation<UpdateHrisGroupRequest, UpdateHrisGroupResponse> operation
               = new UpdateHrisGroup.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -489,7 +490,7 @@ public class Group {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateScimGroupsResponse updateScimGroups(UpdateScimGroupsRequest request) {
+    public UpdateScimGroupsResponse updateScimGroups(@Nonnull UpdateScimGroupsRequest request) {
         RequestOperation<UpdateScimGroupsRequest, UpdateScimGroupsResponse> operation
               = new UpdateScimGroups.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

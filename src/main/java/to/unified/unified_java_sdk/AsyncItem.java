@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceItemRequest;
 import to.unified.unified_java_sdk.models.operations.GetCommerceItemRequest;
@@ -68,7 +69,7 @@ public class AsyncItem {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateCommerceItemResponse>} - The async response
      */
-    public CompletableFuture<CreateCommerceItemResponse> createCommerceItem(CreateCommerceItemRequest request) {
+    public CompletableFuture<CreateCommerceItemResponse> createCommerceItem(@Nonnull CreateCommerceItemRequest request) {
         AsyncRequestOperation<CreateCommerceItemRequest, CreateCommerceItemResponse> operation
               = new CreateCommerceItem.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -91,7 +92,7 @@ public class AsyncItem {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetCommerceItemResponse>} - The async response
      */
-    public CompletableFuture<GetCommerceItemResponse> getCommerceItem(GetCommerceItemRequest request) {
+    public CompletableFuture<GetCommerceItemResponse> getCommerceItem(@Nonnull GetCommerceItemRequest request) {
         AsyncRequestOperation<GetCommerceItemRequest, GetCommerceItemResponse> operation
               = new GetCommerceItem.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -114,7 +115,7 @@ public class AsyncItem {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListCommerceItemsResponse>} - The async response
      */
-    public CompletableFuture<ListCommerceItemsResponse> listCommerceItems(ListCommerceItemsRequest request) {
+    public CompletableFuture<ListCommerceItemsResponse> listCommerceItems(@Nonnull ListCommerceItemsRequest request) {
         AsyncRequestOperation<ListCommerceItemsRequest, ListCommerceItemsResponse> operation
               = new ListCommerceItems.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -137,7 +138,7 @@ public class AsyncItem {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchCommerceItemResponse>} - The async response
      */
-    public CompletableFuture<PatchCommerceItemResponse> patchCommerceItem(PatchCommerceItemRequest request) {
+    public CompletableFuture<PatchCommerceItemResponse> patchCommerceItem(@Nonnull PatchCommerceItemRequest request) {
         AsyncRequestOperation<PatchCommerceItemRequest, PatchCommerceItemResponse> operation
               = new PatchCommerceItem.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -160,7 +161,7 @@ public class AsyncItem {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveCommerceItemResponse>} - The async response
      */
-    public CompletableFuture<RemoveCommerceItemResponse> removeCommerceItem(RemoveCommerceItemRequest request) {
+    public CompletableFuture<RemoveCommerceItemResponse> removeCommerceItem(@Nonnull RemoveCommerceItemRequest request) {
         AsyncRequestOperation<RemoveCommerceItemRequest, RemoveCommerceItemResponse> operation
               = new RemoveCommerceItem.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -183,7 +184,7 @@ public class AsyncItem {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateCommerceItemResponse>} - The async response
      */
-    public CompletableFuture<UpdateCommerceItemResponse> updateCommerceItem(UpdateCommerceItemRequest request) {
+    public CompletableFuture<UpdateCommerceItemResponse> updateCommerceItem(@Nonnull UpdateCommerceItemRequest request) {
         AsyncRequestOperation<UpdateCommerceItemRequest, UpdateCommerceItemResponse> operation
               = new UpdateCommerceItem.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

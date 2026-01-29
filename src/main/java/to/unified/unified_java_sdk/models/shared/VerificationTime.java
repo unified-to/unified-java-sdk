@@ -4,14 +4,13 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -21,41 +20,36 @@ public class VerificationTime {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("milliseconds")
-    private Optional<Double> milliseconds;
+    private Double milliseconds;
 
     /**
      * {country}-{stateprovince/territory} or just {country} 2-digit ISO codes
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valid_regions")
-    private Optional<? extends List<String>> validRegions;
+    private List<String> validRegions;
 
     @JsonCreator
     public VerificationTime(
-            @JsonProperty("milliseconds") Optional<Double> milliseconds,
-            @JsonProperty("valid_regions") Optional<? extends List<String>> validRegions) {
-        Utils.checkNotNull(milliseconds, "milliseconds");
-        Utils.checkNotNull(validRegions, "validRegions");
+            @JsonProperty("milliseconds") @Nullable Double milliseconds,
+            @JsonProperty("valid_regions") @Nullable List<String> validRegions) {
         this.milliseconds = milliseconds;
         this.validRegions = validRegions;
     }
     
     public VerificationTime() {
-        this(Optional.empty(), Optional.empty());
+        this(null, null);
     }
 
-    @JsonIgnore
     public Optional<Double> milliseconds() {
-        return milliseconds;
+        return Optional.ofNullable(this.milliseconds);
     }
 
     /**
      * {country}-{stateprovince/territory} or just {country} 2-digit ISO codes
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> validRegions() {
-        return (Optional<List<String>>) validRegions;
+        return Optional.ofNullable(this.validRegions);
     }
 
     public static Builder builder() {
@@ -63,37 +57,20 @@ public class VerificationTime {
     }
 
 
-    public VerificationTime withMilliseconds(double milliseconds) {
-        Utils.checkNotNull(milliseconds, "milliseconds");
-        this.milliseconds = Optional.ofNullable(milliseconds);
-        return this;
-    }
-
-
-    public VerificationTime withMilliseconds(Optional<Double> milliseconds) {
-        Utils.checkNotNull(milliseconds, "milliseconds");
+    public VerificationTime withMilliseconds(@Nullable Double milliseconds) {
         this.milliseconds = milliseconds;
         return this;
     }
 
-    /**
-     * {country}-{stateprovince/territory} or just {country} 2-digit ISO codes
-     */
-    public VerificationTime withValidRegions(List<String> validRegions) {
-        Utils.checkNotNull(validRegions, "validRegions");
-        this.validRegions = Optional.ofNullable(validRegions);
-        return this;
-    }
-
 
     /**
      * {country}-{stateprovince/territory} or just {country} 2-digit ISO codes
      */
-    public VerificationTime withValidRegions(Optional<? extends List<String>> validRegions) {
-        Utils.checkNotNull(validRegions, "validRegions");
+    public VerificationTime withValidRegions(@Nullable List<String> validRegions) {
         this.validRegions = validRegions;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -125,48 +102,28 @@ public class VerificationTime {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<Double> milliseconds = Optional.empty();
+        private Double milliseconds;
 
-        private Optional<? extends List<String>> validRegions = Optional.empty();
+        private List<String> validRegions;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder milliseconds(double milliseconds) {
-            Utils.checkNotNull(milliseconds, "milliseconds");
-            this.milliseconds = Optional.ofNullable(milliseconds);
-            return this;
-        }
-
-        public Builder milliseconds(Optional<Double> milliseconds) {
-            Utils.checkNotNull(milliseconds, "milliseconds");
+        public Builder milliseconds(@Nullable Double milliseconds) {
             this.milliseconds = milliseconds;
             return this;
         }
 
-
         /**
          * {country}-{stateprovince/territory} or just {country} 2-digit ISO codes
          */
-        public Builder validRegions(List<String> validRegions) {
-            Utils.checkNotNull(validRegions, "validRegions");
-            this.validRegions = Optional.ofNullable(validRegions);
-            return this;
-        }
-
-        /**
-         * {country}-{stateprovince/territory} or just {country} 2-digit ISO codes
-         */
-        public Builder validRegions(Optional<? extends List<String>> validRegions) {
-            Utils.checkNotNull(validRegions, "validRegions");
+        public Builder validRegions(@Nullable List<String> validRegions) {
             this.validRegions = validRegions;
             return this;
         }
 
         public VerificationTime build() {
-
             return new VerificationTime(
                 milliseconds, validRegions);
         }

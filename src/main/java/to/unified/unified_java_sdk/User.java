@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateScimUsersRequest;
 import to.unified.unified_java_sdk.models.operations.CreateScimUsersRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateScimUsersResponse;
@@ -67,7 +68,7 @@ public class User {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateScimUsersResponse createScimUsers(CreateScimUsersRequest request) {
+    public CreateScimUsersResponse createScimUsers(@Nonnull CreateScimUsersRequest request) {
         RequestOperation<CreateScimUsersRequest, CreateScimUsersResponse> operation
               = new CreateScimUsers.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -89,7 +90,7 @@ public class User {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetScimUsersResponse getScimUsers(GetScimUsersRequest request) {
+    public GetScimUsersResponse getScimUsers(@Nonnull GetScimUsersRequest request) {
         RequestOperation<GetScimUsersRequest, GetScimUsersResponse> operation
               = new GetScimUsers.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -111,7 +112,7 @@ public class User {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListScimUsersResponse listScimUsers(ListScimUsersRequest request) {
+    public ListScimUsersResponse listScimUsers(@Nonnull ListScimUsersRequest request) {
         RequestOperation<ListScimUsersRequest, ListScimUsersResponse> operation
               = new ListScimUsers.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -133,7 +134,7 @@ public class User {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchScimUsersResponse patchScimUsers(PatchScimUsersRequest request) {
+    public PatchScimUsersResponse patchScimUsers(@Nonnull PatchScimUsersRequest request) {
         RequestOperation<PatchScimUsersRequest, PatchScimUsersResponse> operation
               = new PatchScimUsers.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -155,7 +156,7 @@ public class User {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveScimUsersResponse removeScimUsers(RemoveScimUsersRequest request) {
+    public RemoveScimUsersResponse removeScimUsers(@Nonnull RemoveScimUsersRequest request) {
         RequestOperation<RemoveScimUsersRequest, RemoveScimUsersResponse> operation
               = new RemoveScimUsers.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -177,7 +178,7 @@ public class User {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateScimUsersResponse updateScimUsers(UpdateScimUsersRequest request) {
+    public UpdateScimUsersResponse updateScimUsers(@Nonnull UpdateScimUsersRequest request) {
         RequestOperation<UpdateScimUsersRequest, UpdateScimUsersResponse> operation
               = new UpdateScimUsers.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

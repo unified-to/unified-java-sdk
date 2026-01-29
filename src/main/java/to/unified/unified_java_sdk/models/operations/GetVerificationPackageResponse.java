@@ -4,12 +4,11 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.io.InputStream;
-import java.lang.Integer;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.VerificationPackage;
@@ -36,63 +35,56 @@ public class GetVerificationPackageResponse implements Response {
     /**
      * Successful
      */
-    private Optional<? extends VerificationPackage> verificationPackage;
+    private VerificationPackage verificationPackage;
 
     @JsonCreator
     public GetVerificationPackageResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<InputStream> rawResponse,
-            Optional<? extends VerificationPackage> verificationPackage) {
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        Utils.checkNotNull(verificationPackage, "verificationPackage");
-        this.contentType = contentType;
+            @Nonnull HttpResponse<InputStream> rawResponse,
+            @Nullable VerificationPackage verificationPackage) {
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
         this.verificationPackage = verificationPackage;
     }
     
     public GetVerificationPackageResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
+            @Nonnull HttpResponse<InputStream> rawResponse) {
         this(contentType, statusCode, rawResponse,
-            Optional.empty());
+            null);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<InputStream> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<VerificationPackage> verificationPackage() {
-        return (Optional<VerificationPackage>) verificationPackage;
+        return Optional.ofNullable(this.verificationPackage);
     }
 
     public static Builder builder() {
@@ -103,36 +95,26 @@ public class GetVerificationPackageResponse implements Response {
     /**
      * HTTP response content type for this operation
      */
-    public GetVerificationPackageResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
+    public GetVerificationPackageResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public GetVerificationPackageResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public GetVerificationPackageResponse withRawResponse(HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
-        return this;
-    }
-
-    /**
-     * Successful
-     */
-    public GetVerificationPackageResponse withVerificationPackage(VerificationPackage verificationPackage) {
-        Utils.checkNotNull(verificationPackage, "verificationPackage");
-        this.verificationPackage = Optional.ofNullable(verificationPackage);
+    public GetVerificationPackageResponse withRawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
 
@@ -140,11 +122,11 @@ public class GetVerificationPackageResponse implements Response {
     /**
      * Successful
      */
-    public GetVerificationPackageResponse withVerificationPackage(Optional<? extends VerificationPackage> verificationPackage) {
-        Utils.checkNotNull(verificationPackage, "verificationPackage");
+    public GetVerificationPackageResponse withVerificationPackage(@Nullable VerificationPackage verificationPackage) {
         this.verificationPackage = verificationPackage;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -183,67 +165,49 @@ public class GetVerificationPackageResponse implements Response {
 
         private String contentType;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<InputStream> rawResponse;
 
-        private Optional<? extends VerificationPackage> verificationPackage = Optional.empty();
+        private VerificationPackage verificationPackage;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<InputStream> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
-            return this;
-        }
-
-
-        /**
-         * Successful
-         */
-        public Builder verificationPackage(VerificationPackage verificationPackage) {
-            Utils.checkNotNull(verificationPackage, "verificationPackage");
-            this.verificationPackage = Optional.ofNullable(verificationPackage);
+        public Builder rawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         /**
          * Successful
          */
-        public Builder verificationPackage(Optional<? extends VerificationPackage> verificationPackage) {
-            Utils.checkNotNull(verificationPackage, "verificationPackage");
+        public Builder verificationPackage(@Nullable VerificationPackage verificationPackage) {
             this.verificationPackage = verificationPackage;
             return this;
         }
 
         public GetVerificationPackageResponse build() {
-
             return new GetVerificationPackageResponse(
                 contentType, statusCode, rawResponse,
                 verificationPackage);

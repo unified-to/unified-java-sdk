@@ -4,14 +4,13 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Optional;
@@ -22,82 +21,71 @@ public class HrisEmployeerelationship {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
-    private Optional<? extends PropertyHrisEmployeerelationshipAddress> address;
+    private PropertyHrisEmployeerelationshipAddress address;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emails")
-    private Optional<? extends List<HrisEmail>> emails;
+    private List<HrisEmail> emails;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
-    private Optional<OffsetDateTime> endAt;
+    private OffsetDateTime endAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first_name")
-    private Optional<String> firstName;
+    private String firstName;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_beneficiary")
-    private Optional<Boolean> isBeneficiary;
+    private Boolean isBeneficiary;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_dependent")
-    private Optional<Boolean> isDependent;
+    private Boolean isDependent;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_name")
-    private Optional<String> lastName;
+    private String lastName;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
-    private Optional<String> name;
+    private String name;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
-    private Optional<OffsetDateTime> startAt;
+    private OffsetDateTime startAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("telephones")
-    private Optional<? extends List<HrisTelephone>> telephones;
+    private List<HrisTelephone> telephones;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
-    private Optional<? extends HrisEmployeerelationshipType> type;
+    private HrisEmployeerelationshipType type;
 
     @JsonCreator
     public HrisEmployeerelationship(
-            @JsonProperty("address") Optional<? extends PropertyHrisEmployeerelationshipAddress> address,
-            @JsonProperty("emails") Optional<? extends List<HrisEmail>> emails,
-            @JsonProperty("end_at") Optional<OffsetDateTime> endAt,
-            @JsonProperty("first_name") Optional<String> firstName,
-            @JsonProperty("is_beneficiary") Optional<Boolean> isBeneficiary,
-            @JsonProperty("is_dependent") Optional<Boolean> isDependent,
-            @JsonProperty("last_name") Optional<String> lastName,
-            @JsonProperty("name") Optional<String> name,
-            @JsonProperty("start_at") Optional<OffsetDateTime> startAt,
-            @JsonProperty("telephones") Optional<? extends List<HrisTelephone>> telephones,
-            @JsonProperty("type") Optional<? extends HrisEmployeerelationshipType> type) {
-        Utils.checkNotNull(address, "address");
-        Utils.checkNotNull(emails, "emails");
-        Utils.checkNotNull(endAt, "endAt");
-        Utils.checkNotNull(firstName, "firstName");
-        Utils.checkNotNull(isBeneficiary, "isBeneficiary");
-        Utils.checkNotNull(isDependent, "isDependent");
-        Utils.checkNotNull(lastName, "lastName");
-        Utils.checkNotNull(name, "name");
-        Utils.checkNotNull(startAt, "startAt");
-        Utils.checkNotNull(telephones, "telephones");
-        Utils.checkNotNull(type, "type");
+            @JsonProperty("address") @Nullable PropertyHrisEmployeerelationshipAddress address,
+            @JsonProperty("emails") @Nullable List<HrisEmail> emails,
+            @JsonProperty("end_at") @Nullable OffsetDateTime endAt,
+            @JsonProperty("first_name") @Nullable String firstName,
+            @JsonProperty("is_beneficiary") @Nullable Boolean isBeneficiary,
+            @JsonProperty("is_dependent") @Nullable Boolean isDependent,
+            @JsonProperty("last_name") @Nullable String lastName,
+            @JsonProperty("name") @Nullable String name,
+            @JsonProperty("start_at") @Nullable OffsetDateTime startAt,
+            @JsonProperty("telephones") @Nullable List<HrisTelephone> telephones,
+            @JsonProperty("type") @Nullable HrisEmployeerelationshipType type) {
         this.address = address;
         this.emails = emails;
         this.endAt = endAt;
@@ -112,69 +100,54 @@ public class HrisEmployeerelationship {
     }
     
     public HrisEmployeerelationship() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<PropertyHrisEmployeerelationshipAddress> address() {
-        return (Optional<PropertyHrisEmployeerelationshipAddress>) address;
+        return Optional.ofNullable(this.address);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<HrisEmail>> emails() {
-        return (Optional<List<HrisEmail>>) emails;
+        return Optional.ofNullable(this.emails);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> endAt() {
-        return endAt;
+        return Optional.ofNullable(this.endAt);
     }
 
-    @JsonIgnore
     public Optional<String> firstName() {
-        return firstName;
+        return Optional.ofNullable(this.firstName);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isBeneficiary() {
-        return isBeneficiary;
+        return Optional.ofNullable(this.isBeneficiary);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isDependent() {
-        return isDependent;
+        return Optional.ofNullable(this.isDependent);
     }
 
-    @JsonIgnore
     public Optional<String> lastName() {
-        return lastName;
+        return Optional.ofNullable(this.lastName);
     }
 
-    @JsonIgnore
     public Optional<String> name() {
-        return name;
+        return Optional.ofNullable(this.name);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> startAt() {
-        return startAt;
+        return Optional.ofNullable(this.startAt);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<HrisTelephone>> telephones() {
-        return (Optional<List<HrisTelephone>>) telephones;
+        return Optional.ofNullable(this.telephones);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<HrisEmployeerelationshipType> type() {
-        return (Optional<HrisEmployeerelationshipType>) type;
+        return Optional.ofNullable(this.type);
     }
 
     public static Builder builder() {
@@ -182,148 +155,71 @@ public class HrisEmployeerelationship {
     }
 
 
-    public HrisEmployeerelationship withAddress(PropertyHrisEmployeerelationshipAddress address) {
-        Utils.checkNotNull(address, "address");
-        this.address = Optional.ofNullable(address);
-        return this;
-    }
-
-
-    public HrisEmployeerelationship withAddress(Optional<? extends PropertyHrisEmployeerelationshipAddress> address) {
-        Utils.checkNotNull(address, "address");
+    public HrisEmployeerelationship withAddress(@Nullable PropertyHrisEmployeerelationshipAddress address) {
         this.address = address;
         return this;
     }
 
-    public HrisEmployeerelationship withEmails(List<HrisEmail> emails) {
-        Utils.checkNotNull(emails, "emails");
-        this.emails = Optional.ofNullable(emails);
-        return this;
-    }
 
-
-    public HrisEmployeerelationship withEmails(Optional<? extends List<HrisEmail>> emails) {
-        Utils.checkNotNull(emails, "emails");
+    public HrisEmployeerelationship withEmails(@Nullable List<HrisEmail> emails) {
         this.emails = emails;
         return this;
     }
 
-    public HrisEmployeerelationship withEndAt(OffsetDateTime endAt) {
-        Utils.checkNotNull(endAt, "endAt");
-        this.endAt = Optional.ofNullable(endAt);
-        return this;
-    }
 
-
-    public HrisEmployeerelationship withEndAt(Optional<OffsetDateTime> endAt) {
-        Utils.checkNotNull(endAt, "endAt");
+    public HrisEmployeerelationship withEndAt(@Nullable OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
     }
 
-    public HrisEmployeerelationship withFirstName(String firstName) {
-        Utils.checkNotNull(firstName, "firstName");
-        this.firstName = Optional.ofNullable(firstName);
-        return this;
-    }
 
-
-    public HrisEmployeerelationship withFirstName(Optional<String> firstName) {
-        Utils.checkNotNull(firstName, "firstName");
+    public HrisEmployeerelationship withFirstName(@Nullable String firstName) {
         this.firstName = firstName;
         return this;
     }
 
-    public HrisEmployeerelationship withIsBeneficiary(boolean isBeneficiary) {
-        Utils.checkNotNull(isBeneficiary, "isBeneficiary");
-        this.isBeneficiary = Optional.ofNullable(isBeneficiary);
-        return this;
-    }
 
-
-    public HrisEmployeerelationship withIsBeneficiary(Optional<Boolean> isBeneficiary) {
-        Utils.checkNotNull(isBeneficiary, "isBeneficiary");
+    public HrisEmployeerelationship withIsBeneficiary(@Nullable Boolean isBeneficiary) {
         this.isBeneficiary = isBeneficiary;
         return this;
     }
 
-    public HrisEmployeerelationship withIsDependent(boolean isDependent) {
-        Utils.checkNotNull(isDependent, "isDependent");
-        this.isDependent = Optional.ofNullable(isDependent);
-        return this;
-    }
 
-
-    public HrisEmployeerelationship withIsDependent(Optional<Boolean> isDependent) {
-        Utils.checkNotNull(isDependent, "isDependent");
+    public HrisEmployeerelationship withIsDependent(@Nullable Boolean isDependent) {
         this.isDependent = isDependent;
         return this;
     }
 
-    public HrisEmployeerelationship withLastName(String lastName) {
-        Utils.checkNotNull(lastName, "lastName");
-        this.lastName = Optional.ofNullable(lastName);
-        return this;
-    }
 
-
-    public HrisEmployeerelationship withLastName(Optional<String> lastName) {
-        Utils.checkNotNull(lastName, "lastName");
+    public HrisEmployeerelationship withLastName(@Nullable String lastName) {
         this.lastName = lastName;
         return this;
     }
 
-    public HrisEmployeerelationship withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = Optional.ofNullable(name);
-        return this;
-    }
 
-
-    public HrisEmployeerelationship withName(Optional<String> name) {
-        Utils.checkNotNull(name, "name");
+    public HrisEmployeerelationship withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
-    public HrisEmployeerelationship withStartAt(OffsetDateTime startAt) {
-        Utils.checkNotNull(startAt, "startAt");
-        this.startAt = Optional.ofNullable(startAt);
-        return this;
-    }
 
-
-    public HrisEmployeerelationship withStartAt(Optional<OffsetDateTime> startAt) {
-        Utils.checkNotNull(startAt, "startAt");
+    public HrisEmployeerelationship withStartAt(@Nullable OffsetDateTime startAt) {
         this.startAt = startAt;
         return this;
     }
 
-    public HrisEmployeerelationship withTelephones(List<HrisTelephone> telephones) {
-        Utils.checkNotNull(telephones, "telephones");
-        this.telephones = Optional.ofNullable(telephones);
-        return this;
-    }
 
-
-    public HrisEmployeerelationship withTelephones(Optional<? extends List<HrisTelephone>> telephones) {
-        Utils.checkNotNull(telephones, "telephones");
+    public HrisEmployeerelationship withTelephones(@Nullable List<HrisTelephone> telephones) {
         this.telephones = telephones;
         return this;
     }
 
-    public HrisEmployeerelationship withType(HrisEmployeerelationshipType type) {
-        Utils.checkNotNull(type, "type");
-        this.type = Optional.ofNullable(type);
-        return this;
-    }
 
-
-    public HrisEmployeerelationship withType(Optional<? extends HrisEmployeerelationshipType> type) {
-        Utils.checkNotNull(type, "type");
+    public HrisEmployeerelationship withType(@Nullable HrisEmployeerelationshipType type) {
         this.type = type;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -376,177 +272,88 @@ public class HrisEmployeerelationship {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends PropertyHrisEmployeerelationshipAddress> address = Optional.empty();
+        private PropertyHrisEmployeerelationshipAddress address;
 
-        private Optional<? extends List<HrisEmail>> emails = Optional.empty();
+        private List<HrisEmail> emails;
 
-        private Optional<OffsetDateTime> endAt = Optional.empty();
+        private OffsetDateTime endAt;
 
-        private Optional<String> firstName = Optional.empty();
+        private String firstName;
 
-        private Optional<Boolean> isBeneficiary = Optional.empty();
+        private Boolean isBeneficiary;
 
-        private Optional<Boolean> isDependent = Optional.empty();
+        private Boolean isDependent;
 
-        private Optional<String> lastName = Optional.empty();
+        private String lastName;
 
-        private Optional<String> name = Optional.empty();
+        private String name;
 
-        private Optional<OffsetDateTime> startAt = Optional.empty();
+        private OffsetDateTime startAt;
 
-        private Optional<? extends List<HrisTelephone>> telephones = Optional.empty();
+        private List<HrisTelephone> telephones;
 
-        private Optional<? extends HrisEmployeerelationshipType> type = Optional.empty();
+        private HrisEmployeerelationshipType type;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder address(PropertyHrisEmployeerelationshipAddress address) {
-            Utils.checkNotNull(address, "address");
-            this.address = Optional.ofNullable(address);
-            return this;
-        }
-
-        public Builder address(Optional<? extends PropertyHrisEmployeerelationshipAddress> address) {
-            Utils.checkNotNull(address, "address");
+        public Builder address(@Nullable PropertyHrisEmployeerelationshipAddress address) {
             this.address = address;
             return this;
         }
 
-
-        public Builder emails(List<HrisEmail> emails) {
-            Utils.checkNotNull(emails, "emails");
-            this.emails = Optional.ofNullable(emails);
-            return this;
-        }
-
-        public Builder emails(Optional<? extends List<HrisEmail>> emails) {
-            Utils.checkNotNull(emails, "emails");
+        public Builder emails(@Nullable List<HrisEmail> emails) {
             this.emails = emails;
             return this;
         }
 
-
-        public Builder endAt(OffsetDateTime endAt) {
-            Utils.checkNotNull(endAt, "endAt");
-            this.endAt = Optional.ofNullable(endAt);
-            return this;
-        }
-
-        public Builder endAt(Optional<OffsetDateTime> endAt) {
-            Utils.checkNotNull(endAt, "endAt");
+        public Builder endAt(@Nullable OffsetDateTime endAt) {
             this.endAt = endAt;
             return this;
         }
 
-
-        public Builder firstName(String firstName) {
-            Utils.checkNotNull(firstName, "firstName");
-            this.firstName = Optional.ofNullable(firstName);
-            return this;
-        }
-
-        public Builder firstName(Optional<String> firstName) {
-            Utils.checkNotNull(firstName, "firstName");
+        public Builder firstName(@Nullable String firstName) {
             this.firstName = firstName;
             return this;
         }
 
-
-        public Builder isBeneficiary(boolean isBeneficiary) {
-            Utils.checkNotNull(isBeneficiary, "isBeneficiary");
-            this.isBeneficiary = Optional.ofNullable(isBeneficiary);
-            return this;
-        }
-
-        public Builder isBeneficiary(Optional<Boolean> isBeneficiary) {
-            Utils.checkNotNull(isBeneficiary, "isBeneficiary");
+        public Builder isBeneficiary(@Nullable Boolean isBeneficiary) {
             this.isBeneficiary = isBeneficiary;
             return this;
         }
 
-
-        public Builder isDependent(boolean isDependent) {
-            Utils.checkNotNull(isDependent, "isDependent");
-            this.isDependent = Optional.ofNullable(isDependent);
-            return this;
-        }
-
-        public Builder isDependent(Optional<Boolean> isDependent) {
-            Utils.checkNotNull(isDependent, "isDependent");
+        public Builder isDependent(@Nullable Boolean isDependent) {
             this.isDependent = isDependent;
             return this;
         }
 
-
-        public Builder lastName(String lastName) {
-            Utils.checkNotNull(lastName, "lastName");
-            this.lastName = Optional.ofNullable(lastName);
-            return this;
-        }
-
-        public Builder lastName(Optional<String> lastName) {
-            Utils.checkNotNull(lastName, "lastName");
+        public Builder lastName(@Nullable String lastName) {
             this.lastName = lastName;
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = Optional.ofNullable(name);
-            return this;
-        }
-
-        public Builder name(Optional<String> name) {
-            Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-
-        public Builder startAt(OffsetDateTime startAt) {
-            Utils.checkNotNull(startAt, "startAt");
-            this.startAt = Optional.ofNullable(startAt);
-            return this;
-        }
-
-        public Builder startAt(Optional<OffsetDateTime> startAt) {
-            Utils.checkNotNull(startAt, "startAt");
+        public Builder startAt(@Nullable OffsetDateTime startAt) {
             this.startAt = startAt;
             return this;
         }
 
-
-        public Builder telephones(List<HrisTelephone> telephones) {
-            Utils.checkNotNull(telephones, "telephones");
-            this.telephones = Optional.ofNullable(telephones);
-            return this;
-        }
-
-        public Builder telephones(Optional<? extends List<HrisTelephone>> telephones) {
-            Utils.checkNotNull(telephones, "telephones");
+        public Builder telephones(@Nullable List<HrisTelephone> telephones) {
             this.telephones = telephones;
             return this;
         }
 
-
-        public Builder type(HrisEmployeerelationshipType type) {
-            Utils.checkNotNull(type, "type");
-            this.type = Optional.ofNullable(type);
-            return this;
-        }
-
-        public Builder type(Optional<? extends HrisEmployeerelationshipType> type) {
-            Utils.checkNotNull(type, "type");
+        public Builder type(@Nullable HrisEmployeerelationshipType type) {
             this.type = type;
             return this;
         }
 
         public HrisEmployeerelationship build() {
-
             return new HrisEmployeerelationship(
                 address, emails, endAt,
                 firstName, isBeneficiary, isDependent,

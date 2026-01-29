@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateVerificationRequestRequest;
 import to.unified.unified_java_sdk.models.operations.CreateVerificationRequestRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateVerificationRequestResponse;
@@ -67,7 +68,7 @@ public class Request {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateVerificationRequestResponse createVerificationRequest(CreateVerificationRequestRequest request) {
+    public CreateVerificationRequestResponse createVerificationRequest(@Nonnull CreateVerificationRequestRequest request) {
         RequestOperation<CreateVerificationRequestRequest, CreateVerificationRequestResponse> operation
               = new CreateVerificationRequest.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -89,7 +90,7 @@ public class Request {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetVerificationRequestResponse getVerificationRequest(GetVerificationRequestRequest request) {
+    public GetVerificationRequestResponse getVerificationRequest(@Nonnull GetVerificationRequestRequest request) {
         RequestOperation<GetVerificationRequestRequest, GetVerificationRequestResponse> operation
               = new GetVerificationRequest.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -111,7 +112,7 @@ public class Request {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListVerificationRequestsResponse listVerificationRequests(ListVerificationRequestsRequest request) {
+    public ListVerificationRequestsResponse listVerificationRequests(@Nonnull ListVerificationRequestsRequest request) {
         RequestOperation<ListVerificationRequestsRequest, ListVerificationRequestsResponse> operation
               = new ListVerificationRequests.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -133,7 +134,7 @@ public class Request {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchVerificationRequestResponse patchVerificationRequest(PatchVerificationRequestRequest request) {
+    public PatchVerificationRequestResponse patchVerificationRequest(@Nonnull PatchVerificationRequestRequest request) {
         RequestOperation<PatchVerificationRequestRequest, PatchVerificationRequestResponse> operation
               = new PatchVerificationRequest.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -155,7 +156,7 @@ public class Request {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveVerificationRequestResponse removeVerificationRequest(RemoveVerificationRequestRequest request) {
+    public RemoveVerificationRequestResponse removeVerificationRequest(@Nonnull RemoveVerificationRequestRequest request) {
         RequestOperation<RemoveVerificationRequestRequest, RemoveVerificationRequestResponse> operation
               = new RemoveVerificationRequest.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -177,7 +178,7 @@ public class Request {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateVerificationRequestResponse updateVerificationRequest(UpdateVerificationRequestRequest request) {
+    public UpdateVerificationRequestResponse updateVerificationRequest(@Nonnull UpdateVerificationRequestRequest request) {
         RequestOperation<UpdateVerificationRequestRequest, UpdateVerificationRequestResponse> operation
               = new UpdateVerificationRequest.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

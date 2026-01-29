@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.CrmPipeline;
@@ -30,7 +30,7 @@ public class CreateCrmPipelineRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<CreateCrmPipelineQueryParamFields>> fields;
+    private List<CreateCrmPipelineQueryParamFields> fields;
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
@@ -38,51 +38,45 @@ public class CreateCrmPipelineRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
     @JsonCreator
     public CreateCrmPipelineRequest(
-            CrmPipeline crmPipeline,
-            String connectionId,
-            Optional<? extends List<CreateCrmPipelineQueryParamFields>> fields,
-            Optional<String> raw) {
-        Utils.checkNotNull(crmPipeline, "crmPipeline");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(raw, "raw");
-        this.crmPipeline = crmPipeline;
-        this.connectionId = connectionId;
+            @Nonnull CrmPipeline crmPipeline,
+            @Nonnull String connectionId,
+            @Nullable List<CreateCrmPipelineQueryParamFields> fields,
+            @Nullable String raw) {
+        this.crmPipeline = Optional.ofNullable(crmPipeline)
+            .orElseThrow(() -> new IllegalArgumentException("crmPipeline cannot be null"));
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
         this.raw = raw;
     }
     
     public CreateCrmPipelineRequest(
-            CrmPipeline crmPipeline,
-            String connectionId) {
-        this(crmPipeline, connectionId, Optional.empty(),
-            Optional.empty());
+            @Nonnull CrmPipeline crmPipeline,
+            @Nonnull String connectionId) {
+        this(crmPipeline, connectionId, null,
+            null);
     }
 
-    @JsonIgnore
     public CrmPipeline crmPipeline() {
-        return crmPipeline;
+        return this.crmPipeline;
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<CreateCrmPipelineQueryParamFields>> fields() {
-        return (Optional<List<CreateCrmPipelineQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
@@ -90,9 +84,8 @@ public class CreateCrmPipelineRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
     public static Builder builder() {
@@ -100,27 +93,17 @@ public class CreateCrmPipelineRequest {
     }
 
 
-    public CreateCrmPipelineRequest withCrmPipeline(CrmPipeline crmPipeline) {
-        Utils.checkNotNull(crmPipeline, "crmPipeline");
-        this.crmPipeline = crmPipeline;
+    public CreateCrmPipelineRequest withCrmPipeline(@Nonnull CrmPipeline crmPipeline) {
+        this.crmPipeline = Utils.checkNotNull(crmPipeline, "crmPipeline");
         return this;
     }
+
 
     /**
      * ID of the connection
      */
-    public CreateCrmPipelineRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public CreateCrmPipelineRequest withFields(List<CreateCrmPipelineQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public CreateCrmPipelineRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -128,34 +111,22 @@ public class CreateCrmPipelineRequest {
     /**
      * Fields to return
      */
-    public CreateCrmPipelineRequest withFields(Optional<? extends List<CreateCrmPipelineQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public CreateCrmPipelineRequest withFields(@Nullable List<CreateCrmPipelineQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public CreateCrmPipelineRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
-
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public CreateCrmPipelineRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public CreateCrmPipelineRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -196,75 +167,46 @@ public class CreateCrmPipelineRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<CreateCrmPipelineQueryParamFields>> fields = Optional.empty();
+        private List<CreateCrmPipelineQueryParamFields> fields;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder crmPipeline(CrmPipeline crmPipeline) {
-            Utils.checkNotNull(crmPipeline, "crmPipeline");
-            this.crmPipeline = crmPipeline;
+        public Builder crmPipeline(@Nonnull CrmPipeline crmPipeline) {
+            this.crmPipeline = Utils.checkNotNull(crmPipeline, "crmPipeline");
             return this;
         }
-
 
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<CreateCrmPipelineQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<CreateCrmPipelineQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<CreateCrmPipelineQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
         public CreateCrmPipelineRequest build() {
-
             return new CreateCrmPipelineRequest(
                 crmPipeline, connectionId, fields,
                 raw);

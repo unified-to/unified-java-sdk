@@ -4,14 +4,14 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
 import java.io.InputStream;
-import java.lang.Integer;
 import java.lang.Override;
 import java.lang.String;
 import java.net.http.HttpResponse;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Response;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -37,48 +37,43 @@ public class RemoveCalendarEventResponse implements Response {
 
     @JsonCreator
     public RemoveCalendarEventResponse(
-            String contentType,
-            Map<String, List<String>> headers,
+            @Nonnull String contentType,
+            @Nonnull Map<String, List<String>> headers,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(contentType, "contentType");
+            @Nonnull HttpResponse<InputStream> rawResponse) {
         headers = Utils.emptyMapIfNull(headers);
-        Utils.checkNotNull(headers, "headers");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.contentType = contentType;
-        this.headers = headers;
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
+        this.headers = Optional.ofNullable(headers)
+            .orElseThrow(() -> new IllegalArgumentException("headers cannot be null"));
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
-    @JsonIgnore
     public Map<String, List<String>> headers() {
-        return headers;
+        return this.headers;
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<InputStream> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     public static Builder builder() {
@@ -89,35 +84,35 @@ public class RemoveCalendarEventResponse implements Response {
     /**
      * HTTP response content type for this operation
      */
-    public RemoveCalendarEventResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
+    public RemoveCalendarEventResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
 
-    public RemoveCalendarEventResponse withHeaders(Map<String, List<String>> headers) {
-        Utils.checkNotNull(headers, "headers");
-        this.headers = headers;
+
+    public RemoveCalendarEventResponse withHeaders(@Nonnull Map<String, List<String>> headers) {
+        this.headers = Utils.checkNotNull(headers, "headers");
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public RemoveCalendarEventResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public RemoveCalendarEventResponse withRawResponse(HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
+    public RemoveCalendarEventResponse withRawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -158,7 +153,7 @@ public class RemoveCalendarEventResponse implements Response {
 
         private Map<String, List<String>> headers;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<InputStream> rawResponse;
 
@@ -166,45 +161,36 @@ public class RemoveCalendarEventResponse implements Response {
           // force use of static builder() method
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
 
-
-        public Builder headers(Map<String, List<String>> headers) {
-            Utils.checkNotNull(headers, "headers");
-            this.headers = headers;
+        public Builder headers(@Nonnull Map<String, List<String>> headers) {
+            this.headers = Utils.checkNotNull(headers, "headers");
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<InputStream> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
+        public Builder rawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         public RemoveCalendarEventResponse build() {
-
             return new RemoveCalendarEventResponse(
                 contentType, headers, statusCode,
                 rawResponse);

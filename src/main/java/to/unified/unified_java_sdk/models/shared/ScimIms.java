@@ -4,14 +4,13 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -20,33 +19,29 @@ public class ScimIms {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display")
-    private Optional<String> display;
+    private String display;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primary")
-    private Optional<Boolean> primary;
+    private Boolean primary;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
-    private Optional<? extends ScimImsType> type;
+    private ScimImsType type;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
-    private Optional<String> value;
+    private String value;
 
     @JsonCreator
     public ScimIms(
-            @JsonProperty("display") Optional<String> display,
-            @JsonProperty("primary") Optional<Boolean> primary,
-            @JsonProperty("type") Optional<? extends ScimImsType> type,
-            @JsonProperty("value") Optional<String> value) {
-        Utils.checkNotNull(display, "display");
-        Utils.checkNotNull(primary, "primary");
-        Utils.checkNotNull(type, "type");
-        Utils.checkNotNull(value, "value");
+            @JsonProperty("display") @Nullable String display,
+            @JsonProperty("primary") @Nullable Boolean primary,
+            @JsonProperty("type") @Nullable ScimImsType type,
+            @JsonProperty("value") @Nullable String value) {
         this.display = display;
         this.primary = primary;
         this.type = type;
@@ -54,29 +49,24 @@ public class ScimIms {
     }
     
     public ScimIms() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty());
+        this(null, null, null,
+            null);
     }
 
-    @JsonIgnore
     public Optional<String> display() {
-        return display;
+        return Optional.ofNullable(this.display);
     }
 
-    @JsonIgnore
     public Optional<Boolean> primary() {
-        return primary;
+        return Optional.ofNullable(this.primary);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ScimImsType> type() {
-        return (Optional<ScimImsType>) type;
+        return Optional.ofNullable(this.type);
     }
 
-    @JsonIgnore
     public Optional<String> value() {
-        return value;
+        return Optional.ofNullable(this.value);
     }
 
     public static Builder builder() {
@@ -84,57 +74,29 @@ public class ScimIms {
     }
 
 
-    public ScimIms withDisplay(String display) {
-        Utils.checkNotNull(display, "display");
-        this.display = Optional.ofNullable(display);
-        return this;
-    }
-
-
-    public ScimIms withDisplay(Optional<String> display) {
-        Utils.checkNotNull(display, "display");
+    public ScimIms withDisplay(@Nullable String display) {
         this.display = display;
         return this;
     }
 
-    public ScimIms withPrimary(boolean primary) {
-        Utils.checkNotNull(primary, "primary");
-        this.primary = Optional.ofNullable(primary);
-        return this;
-    }
 
-
-    public ScimIms withPrimary(Optional<Boolean> primary) {
-        Utils.checkNotNull(primary, "primary");
+    public ScimIms withPrimary(@Nullable Boolean primary) {
         this.primary = primary;
         return this;
     }
 
-    public ScimIms withType(ScimImsType type) {
-        Utils.checkNotNull(type, "type");
-        this.type = Optional.ofNullable(type);
-        return this;
-    }
 
-
-    public ScimIms withType(Optional<? extends ScimImsType> type) {
-        Utils.checkNotNull(type, "type");
+    public ScimIms withType(@Nullable ScimImsType type) {
         this.type = type;
         return this;
     }
 
-    public ScimIms withValue(String value) {
-        Utils.checkNotNull(value, "value");
-        this.value = Optional.ofNullable(value);
-        return this;
-    }
 
-
-    public ScimIms withValue(Optional<String> value) {
-        Utils.checkNotNull(value, "value");
+    public ScimIms withValue(@Nullable String value) {
         this.value = value;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -171,72 +133,39 @@ public class ScimIms {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> display = Optional.empty();
+        private String display;
 
-        private Optional<Boolean> primary = Optional.empty();
+        private Boolean primary;
 
-        private Optional<? extends ScimImsType> type = Optional.empty();
+        private ScimImsType type;
 
-        private Optional<String> value = Optional.empty();
+        private String value;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder display(String display) {
-            Utils.checkNotNull(display, "display");
-            this.display = Optional.ofNullable(display);
-            return this;
-        }
-
-        public Builder display(Optional<String> display) {
-            Utils.checkNotNull(display, "display");
+        public Builder display(@Nullable String display) {
             this.display = display;
             return this;
         }
 
-
-        public Builder primary(boolean primary) {
-            Utils.checkNotNull(primary, "primary");
-            this.primary = Optional.ofNullable(primary);
-            return this;
-        }
-
-        public Builder primary(Optional<Boolean> primary) {
-            Utils.checkNotNull(primary, "primary");
+        public Builder primary(@Nullable Boolean primary) {
             this.primary = primary;
             return this;
         }
 
-
-        public Builder type(ScimImsType type) {
-            Utils.checkNotNull(type, "type");
-            this.type = Optional.ofNullable(type);
-            return this;
-        }
-
-        public Builder type(Optional<? extends ScimImsType> type) {
-            Utils.checkNotNull(type, "type");
+        public Builder type(@Nullable ScimImsType type) {
             this.type = type;
             return this;
         }
 
-
-        public Builder value(String value) {
-            Utils.checkNotNull(value, "value");
-            this.value = Optional.ofNullable(value);
-            return this;
-        }
-
-        public Builder value(Optional<String> value) {
-            Utils.checkNotNull(value, "value");
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }
 
         public ScimIms build() {
-
             return new ScimIms(
                 display, primary, type,
                 value);

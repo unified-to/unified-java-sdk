@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateAdsOrganizationRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAdsOrganizationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAdsOrganizationResponse;
@@ -99,7 +100,7 @@ public class Organization {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateAdsOrganizationResponse createAdsOrganization(CreateAdsOrganizationRequest request) {
+    public CreateAdsOrganizationResponse createAdsOrganization(@Nonnull CreateAdsOrganizationRequest request) {
         RequestOperation<CreateAdsOrganizationRequest, CreateAdsOrganizationResponse> operation
               = new CreateAdsOrganization.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -121,7 +122,7 @@ public class Organization {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateRepoOrganizationResponse createRepoOrganization(CreateRepoOrganizationRequest request) {
+    public CreateRepoOrganizationResponse createRepoOrganization(@Nonnull CreateRepoOrganizationRequest request) {
         RequestOperation<CreateRepoOrganizationRequest, CreateRepoOrganizationResponse> operation
               = new CreateRepoOrganization.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -143,7 +144,7 @@ public class Organization {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAccountingOrganizationResponse getAccountingOrganization(GetAccountingOrganizationRequest request) {
+    public GetAccountingOrganizationResponse getAccountingOrganization(@Nonnull GetAccountingOrganizationRequest request) {
         RequestOperation<GetAccountingOrganizationRequest, GetAccountingOrganizationResponse> operation
               = new GetAccountingOrganization.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -165,7 +166,7 @@ public class Organization {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetAdsOrganizationResponse getAdsOrganization(GetAdsOrganizationRequest request) {
+    public GetAdsOrganizationResponse getAdsOrganization(@Nonnull GetAdsOrganizationRequest request) {
         RequestOperation<GetAdsOrganizationRequest, GetAdsOrganizationResponse> operation
               = new GetAdsOrganization.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -187,7 +188,7 @@ public class Organization {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetRepoOrganizationResponse getRepoOrganization(GetRepoOrganizationRequest request) {
+    public GetRepoOrganizationResponse getRepoOrganization(@Nonnull GetRepoOrganizationRequest request) {
         RequestOperation<GetRepoOrganizationRequest, GetRepoOrganizationResponse> operation
               = new GetRepoOrganization.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -209,7 +210,7 @@ public class Organization {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAccountingOrganizationsResponse listAccountingOrganizations(ListAccountingOrganizationsRequest request) {
+    public ListAccountingOrganizationsResponse listAccountingOrganizations(@Nonnull ListAccountingOrganizationsRequest request) {
         RequestOperation<ListAccountingOrganizationsRequest, ListAccountingOrganizationsResponse> operation
               = new ListAccountingOrganizations.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -231,7 +232,7 @@ public class Organization {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAdsOrganizationsResponse listAdsOrganizations(ListAdsOrganizationsRequest request) {
+    public ListAdsOrganizationsResponse listAdsOrganizations(@Nonnull ListAdsOrganizationsRequest request) {
         RequestOperation<ListAdsOrganizationsRequest, ListAdsOrganizationsResponse> operation
               = new ListAdsOrganizations.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -253,7 +254,7 @@ public class Organization {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListRepoOrganizationsResponse listRepoOrganizations(ListRepoOrganizationsRequest request) {
+    public ListRepoOrganizationsResponse listRepoOrganizations(@Nonnull ListRepoOrganizationsRequest request) {
         RequestOperation<ListRepoOrganizationsRequest, ListRepoOrganizationsResponse> operation
               = new ListRepoOrganizations.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -275,7 +276,7 @@ public class Organization {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchAdsOrganizationResponse patchAdsOrganization(PatchAdsOrganizationRequest request) {
+    public PatchAdsOrganizationResponse patchAdsOrganization(@Nonnull PatchAdsOrganizationRequest request) {
         RequestOperation<PatchAdsOrganizationRequest, PatchAdsOrganizationResponse> operation
               = new PatchAdsOrganization.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -297,7 +298,7 @@ public class Organization {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchRepoOrganizationResponse patchRepoOrganization(PatchRepoOrganizationRequest request) {
+    public PatchRepoOrganizationResponse patchRepoOrganization(@Nonnull PatchRepoOrganizationRequest request) {
         RequestOperation<PatchRepoOrganizationRequest, PatchRepoOrganizationResponse> operation
               = new PatchRepoOrganization.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -319,7 +320,7 @@ public class Organization {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveAdsOrganizationResponse removeAdsOrganization(RemoveAdsOrganizationRequest request) {
+    public RemoveAdsOrganizationResponse removeAdsOrganization(@Nonnull RemoveAdsOrganizationRequest request) {
         RequestOperation<RemoveAdsOrganizationRequest, RemoveAdsOrganizationResponse> operation
               = new RemoveAdsOrganization.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -341,7 +342,7 @@ public class Organization {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveRepoOrganizationResponse removeRepoOrganization(RemoveRepoOrganizationRequest request) {
+    public RemoveRepoOrganizationResponse removeRepoOrganization(@Nonnull RemoveRepoOrganizationRequest request) {
         RequestOperation<RemoveRepoOrganizationRequest, RemoveRepoOrganizationResponse> operation
               = new RemoveRepoOrganization.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -363,7 +364,7 @@ public class Organization {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateAdsOrganizationResponse updateAdsOrganization(UpdateAdsOrganizationRequest request) {
+    public UpdateAdsOrganizationResponse updateAdsOrganization(@Nonnull UpdateAdsOrganizationRequest request) {
         RequestOperation<UpdateAdsOrganizationRequest, UpdateAdsOrganizationResponse> operation
               = new UpdateAdsOrganization.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -385,7 +386,7 @@ public class Organization {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateRepoOrganizationResponse updateRepoOrganization(UpdateRepoOrganizationRequest request) {
+    public UpdateRepoOrganizationResponse updateRepoOrganization(@Nonnull UpdateRepoOrganizationRequest request) {
         RequestOperation<UpdateRepoOrganizationRequest, UpdateRepoOrganizationResponse> operation
               = new UpdateRepoOrganization.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

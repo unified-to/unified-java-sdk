@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateMessagingMessageRequest;
 import to.unified.unified_java_sdk.models.operations.GetMessagingMessageRequest;
@@ -68,7 +69,7 @@ public class AsyncMessage {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateMessagingMessageResponse>} - The async response
      */
-    public CompletableFuture<CreateMessagingMessageResponse> createMessagingMessage(CreateMessagingMessageRequest request) {
+    public CompletableFuture<CreateMessagingMessageResponse> createMessagingMessage(@Nonnull CreateMessagingMessageRequest request) {
         AsyncRequestOperation<CreateMessagingMessageRequest, CreateMessagingMessageResponse> operation
               = new CreateMessagingMessage.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -91,7 +92,7 @@ public class AsyncMessage {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetMessagingMessageResponse>} - The async response
      */
-    public CompletableFuture<GetMessagingMessageResponse> getMessagingMessage(GetMessagingMessageRequest request) {
+    public CompletableFuture<GetMessagingMessageResponse> getMessagingMessage(@Nonnull GetMessagingMessageRequest request) {
         AsyncRequestOperation<GetMessagingMessageRequest, GetMessagingMessageResponse> operation
               = new GetMessagingMessage.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -114,7 +115,7 @@ public class AsyncMessage {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListMessagingMessagesResponse>} - The async response
      */
-    public CompletableFuture<ListMessagingMessagesResponse> listMessagingMessages(ListMessagingMessagesRequest request) {
+    public CompletableFuture<ListMessagingMessagesResponse> listMessagingMessages(@Nonnull ListMessagingMessagesRequest request) {
         AsyncRequestOperation<ListMessagingMessagesRequest, ListMessagingMessagesResponse> operation
               = new ListMessagingMessages.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -137,7 +138,7 @@ public class AsyncMessage {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchMessagingMessageResponse>} - The async response
      */
-    public CompletableFuture<PatchMessagingMessageResponse> patchMessagingMessage(PatchMessagingMessageRequest request) {
+    public CompletableFuture<PatchMessagingMessageResponse> patchMessagingMessage(@Nonnull PatchMessagingMessageRequest request) {
         AsyncRequestOperation<PatchMessagingMessageRequest, PatchMessagingMessageResponse> operation
               = new PatchMessagingMessage.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -160,7 +161,7 @@ public class AsyncMessage {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveMessagingMessageResponse>} - The async response
      */
-    public CompletableFuture<RemoveMessagingMessageResponse> removeMessagingMessage(RemoveMessagingMessageRequest request) {
+    public CompletableFuture<RemoveMessagingMessageResponse> removeMessagingMessage(@Nonnull RemoveMessagingMessageRequest request) {
         AsyncRequestOperation<RemoveMessagingMessageRequest, RemoveMessagingMessageResponse> operation
               = new RemoveMessagingMessage.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -183,7 +184,7 @@ public class AsyncMessage {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateMessagingMessageResponse>} - The async response
      */
-    public CompletableFuture<UpdateMessagingMessageResponse> updateMessagingMessage(UpdateMessagingMessageRequest request) {
+    public CompletableFuture<UpdateMessagingMessageResponse> updateMessagingMessage(@Nonnull UpdateMessagingMessageRequest request) {
         AsyncRequestOperation<UpdateMessagingMessageRequest, UpdateMessagingMessageResponse> operation
               = new UpdateMessagingMessage.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

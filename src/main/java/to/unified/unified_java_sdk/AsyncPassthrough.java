@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreatePassthroughJsonRequest;
 import to.unified.unified_java_sdk.models.operations.CreatePassthroughRawRequest;
@@ -76,7 +77,7 @@ public class AsyncPassthrough {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreatePassthroughJsonResponse>} - The async response
      */
-    public CompletableFuture<CreatePassthroughJsonResponse> createPassthroughJson(CreatePassthroughJsonRequest request) {
+    public CompletableFuture<CreatePassthroughJsonResponse> createPassthroughJson(@Nonnull CreatePassthroughJsonRequest request) {
         AsyncRequestOperation<CreatePassthroughJsonRequest, CreatePassthroughJsonResponse> operation
               = new CreatePassthroughJson.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -99,7 +100,7 @@ public class AsyncPassthrough {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreatePassthroughRawResponse>} - The async response
      */
-    public CompletableFuture<CreatePassthroughRawResponse> createPassthroughRaw(CreatePassthroughRawRequest request) {
+    public CompletableFuture<CreatePassthroughRawResponse> createPassthroughRaw(@Nonnull CreatePassthroughRawRequest request) {
         AsyncRequestOperation<CreatePassthroughRawRequest, CreatePassthroughRawResponse> operation
               = new CreatePassthroughRaw.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -122,7 +123,7 @@ public class AsyncPassthrough {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListPassthroughsResponse>} - The async response
      */
-    public CompletableFuture<ListPassthroughsResponse> listPassthroughs(ListPassthroughsRequest request) {
+    public CompletableFuture<ListPassthroughsResponse> listPassthroughs(@Nonnull ListPassthroughsRequest request) {
         AsyncRequestOperation<ListPassthroughsRequest, ListPassthroughsResponse> operation
               = new ListPassthroughs.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -145,7 +146,7 @@ public class AsyncPassthrough {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchPassthroughJsonResponse>} - The async response
      */
-    public CompletableFuture<PatchPassthroughJsonResponse> patchPassthroughJson(PatchPassthroughJsonRequest request) {
+    public CompletableFuture<PatchPassthroughJsonResponse> patchPassthroughJson(@Nonnull PatchPassthroughJsonRequest request) {
         AsyncRequestOperation<PatchPassthroughJsonRequest, PatchPassthroughJsonResponse> operation
               = new PatchPassthroughJson.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -168,7 +169,7 @@ public class AsyncPassthrough {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchPassthroughRawResponse>} - The async response
      */
-    public CompletableFuture<PatchPassthroughRawResponse> patchPassthroughRaw(PatchPassthroughRawRequest request) {
+    public CompletableFuture<PatchPassthroughRawResponse> patchPassthroughRaw(@Nonnull PatchPassthroughRawRequest request) {
         AsyncRequestOperation<PatchPassthroughRawRequest, PatchPassthroughRawResponse> operation
               = new PatchPassthroughRaw.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -191,7 +192,7 @@ public class AsyncPassthrough {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemovePassthroughResponse>} - The async response
      */
-    public CompletableFuture<RemovePassthroughResponse> removePassthrough(RemovePassthroughRequest request) {
+    public CompletableFuture<RemovePassthroughResponse> removePassthrough(@Nonnull RemovePassthroughRequest request) {
         AsyncRequestOperation<RemovePassthroughRequest, RemovePassthroughResponse> operation
               = new RemovePassthrough.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -214,7 +215,7 @@ public class AsyncPassthrough {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdatePassthroughJsonResponse>} - The async response
      */
-    public CompletableFuture<UpdatePassthroughJsonResponse> updatePassthroughJson(UpdatePassthroughJsonRequest request) {
+    public CompletableFuture<UpdatePassthroughJsonResponse> updatePassthroughJson(@Nonnull UpdatePassthroughJsonRequest request) {
         AsyncRequestOperation<UpdatePassthroughJsonRequest, UpdatePassthroughJsonResponse> operation
               = new UpdatePassthroughJson.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -237,7 +238,7 @@ public class AsyncPassthrough {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdatePassthroughRawResponse>} - The async response
      */
-    public CompletableFuture<UpdatePassthroughRawResponse> updatePassthroughRaw(UpdatePassthroughRawRequest request) {
+    public CompletableFuture<UpdatePassthroughRawResponse> updatePassthroughRaw(@Nonnull UpdatePassthroughRawRequest request) {
         AsyncRequestOperation<UpdatePassthroughRawRequest, UpdatePassthroughRawResponse> operation
               = new UpdatePassthroughRaw.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

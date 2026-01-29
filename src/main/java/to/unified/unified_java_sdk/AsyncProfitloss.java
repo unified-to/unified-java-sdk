@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.GetAccountingProfitlossRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingProfitlossesRequest;
@@ -52,7 +53,7 @@ public class AsyncProfitloss {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAccountingProfitlossResponse>} - The async response
      */
-    public CompletableFuture<GetAccountingProfitlossResponse> getAccountingProfitloss(GetAccountingProfitlossRequest request) {
+    public CompletableFuture<GetAccountingProfitlossResponse> getAccountingProfitloss(@Nonnull GetAccountingProfitlossRequest request) {
         AsyncRequestOperation<GetAccountingProfitlossRequest, GetAccountingProfitlossResponse> operation
               = new GetAccountingProfitloss.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -75,7 +76,7 @@ public class AsyncProfitloss {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAccountingProfitlossesResponse>} - The async response
      */
-    public CompletableFuture<ListAccountingProfitlossesResponse> listAccountingProfitlosses(ListAccountingProfitlossesRequest request) {
+    public CompletableFuture<ListAccountingProfitlossesResponse> listAccountingProfitlosses(@Nonnull ListAccountingProfitlossesRequest request) {
         AsyncRequestOperation<ListAccountingProfitlossesRequest, ListAccountingProfitlossesResponse> operation
               = new ListAccountingProfitlosses.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

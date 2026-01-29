@@ -4,10 +4,11 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Override;
 import java.lang.String;
@@ -19,12 +20,12 @@ public class ScimEmail {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display")
-    private Optional<String> display;
+    private String display;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primary")
-    private Optional<Boolean> primary;
+    private Boolean primary;
 
 
     @JsonProperty("type")
@@ -33,48 +34,41 @@ public class ScimEmail {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
-    private Optional<String> value;
+    private String value;
 
     @JsonCreator
     public ScimEmail(
-            @JsonProperty("display") Optional<String> display,
-            @JsonProperty("primary") Optional<Boolean> primary,
-            @JsonProperty("type") ScimEmailType type,
-            @JsonProperty("value") Optional<String> value) {
-        Utils.checkNotNull(display, "display");
-        Utils.checkNotNull(primary, "primary");
-        Utils.checkNotNull(type, "type");
-        Utils.checkNotNull(value, "value");
+            @JsonProperty("display") @Nullable String display,
+            @JsonProperty("primary") @Nullable Boolean primary,
+            @JsonProperty("type") @Nonnull ScimEmailType type,
+            @JsonProperty("value") @Nullable String value) {
         this.display = display;
         this.primary = primary;
-        this.type = type;
+        this.type = Optional.ofNullable(type)
+            .orElseThrow(() -> new IllegalArgumentException("type cannot be null"));
         this.value = value;
     }
     
     public ScimEmail(
-            ScimEmailType type) {
-        this(Optional.empty(), Optional.empty(), type,
-            Optional.empty());
+            @Nonnull ScimEmailType type) {
+        this(null, null, type,
+            null);
     }
 
-    @JsonIgnore
     public Optional<String> display() {
-        return display;
+        return Optional.ofNullable(this.display);
     }
 
-    @JsonIgnore
     public Optional<Boolean> primary() {
-        return primary;
+        return Optional.ofNullable(this.primary);
     }
 
-    @JsonIgnore
     public ScimEmailType type() {
-        return type;
+        return this.type;
     }
 
-    @JsonIgnore
     public Optional<String> value() {
-        return value;
+        return Optional.ofNullable(this.value);
     }
 
     public static Builder builder() {
@@ -82,50 +76,29 @@ public class ScimEmail {
     }
 
 
-    public ScimEmail withDisplay(String display) {
-        Utils.checkNotNull(display, "display");
-        this.display = Optional.ofNullable(display);
-        return this;
-    }
-
-
-    public ScimEmail withDisplay(Optional<String> display) {
-        Utils.checkNotNull(display, "display");
+    public ScimEmail withDisplay(@Nullable String display) {
         this.display = display;
         return this;
     }
 
-    public ScimEmail withPrimary(boolean primary) {
-        Utils.checkNotNull(primary, "primary");
-        this.primary = Optional.ofNullable(primary);
-        return this;
-    }
 
-
-    public ScimEmail withPrimary(Optional<Boolean> primary) {
-        Utils.checkNotNull(primary, "primary");
+    public ScimEmail withPrimary(@Nullable Boolean primary) {
         this.primary = primary;
         return this;
     }
 
-    public ScimEmail withType(ScimEmailType type) {
-        Utils.checkNotNull(type, "type");
-        this.type = type;
-        return this;
-    }
 
-    public ScimEmail withValue(String value) {
-        Utils.checkNotNull(value, "value");
-        this.value = Optional.ofNullable(value);
+    public ScimEmail withType(@Nonnull ScimEmailType type) {
+        this.type = Utils.checkNotNull(type, "type");
         return this;
     }
 
 
-    public ScimEmail withValue(Optional<String> value) {
-        Utils.checkNotNull(value, "value");
+    public ScimEmail withValue(@Nullable String value) {
         this.value = value;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -162,66 +135,39 @@ public class ScimEmail {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> display = Optional.empty();
+        private String display;
 
-        private Optional<Boolean> primary = Optional.empty();
+        private Boolean primary;
 
         private ScimEmailType type;
 
-        private Optional<String> value = Optional.empty();
+        private String value;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder display(String display) {
-            Utils.checkNotNull(display, "display");
-            this.display = Optional.ofNullable(display);
-            return this;
-        }
-
-        public Builder display(Optional<String> display) {
-            Utils.checkNotNull(display, "display");
+        public Builder display(@Nullable String display) {
             this.display = display;
             return this;
         }
 
-
-        public Builder primary(boolean primary) {
-            Utils.checkNotNull(primary, "primary");
-            this.primary = Optional.ofNullable(primary);
-            return this;
-        }
-
-        public Builder primary(Optional<Boolean> primary) {
-            Utils.checkNotNull(primary, "primary");
+        public Builder primary(@Nullable Boolean primary) {
             this.primary = primary;
             return this;
         }
 
-
-        public Builder type(ScimEmailType type) {
-            Utils.checkNotNull(type, "type");
-            this.type = type;
+        public Builder type(@Nonnull ScimEmailType type) {
+            this.type = Utils.checkNotNull(type, "type");
             return this;
         }
 
-
-        public Builder value(String value) {
-            Utils.checkNotNull(value, "value");
-            this.value = Optional.ofNullable(value);
-            return this;
-        }
-
-        public Builder value(Optional<String> value) {
-            Utils.checkNotNull(value, "value");
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }
 
         public ScimEmail build() {
-
             return new ScimEmail(
                 display, primary, type,
                 value);

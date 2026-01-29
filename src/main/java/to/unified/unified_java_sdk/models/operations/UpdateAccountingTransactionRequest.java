@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.AccountingTransaction;
@@ -30,7 +30,7 @@ public class UpdateAccountingTransactionRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<UpdateAccountingTransactionQueryParamFields>> fields;
+    private List<UpdateAccountingTransactionQueryParamFields> fields;
 
     /**
      * ID of the Transaction
@@ -44,63 +44,56 @@ public class UpdateAccountingTransactionRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
     @JsonCreator
     public UpdateAccountingTransactionRequest(
-            AccountingTransaction accountingTransaction,
-            String connectionId,
-            Optional<? extends List<UpdateAccountingTransactionQueryParamFields>> fields,
-            String id,
-            Optional<String> raw) {
-        Utils.checkNotNull(accountingTransaction, "accountingTransaction");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(raw, "raw");
-        this.accountingTransaction = accountingTransaction;
-        this.connectionId = connectionId;
+            @Nonnull AccountingTransaction accountingTransaction,
+            @Nonnull String connectionId,
+            @Nullable List<UpdateAccountingTransactionQueryParamFields> fields,
+            @Nonnull String id,
+            @Nullable String raw) {
+        this.accountingTransaction = Optional.ofNullable(accountingTransaction)
+            .orElseThrow(() -> new IllegalArgumentException("accountingTransaction cannot be null"));
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
-        this.id = id;
+        this.id = Optional.ofNullable(id)
+            .orElseThrow(() -> new IllegalArgumentException("id cannot be null"));
         this.raw = raw;
     }
     
     public UpdateAccountingTransactionRequest(
-            AccountingTransaction accountingTransaction,
-            String connectionId,
-            String id) {
-        this(accountingTransaction, connectionId, Optional.empty(),
-            id, Optional.empty());
+            @Nonnull AccountingTransaction accountingTransaction,
+            @Nonnull String connectionId,
+            @Nonnull String id) {
+        this(accountingTransaction, connectionId, null,
+            id, null);
     }
 
-    @JsonIgnore
     public AccountingTransaction accountingTransaction() {
-        return accountingTransaction;
+        return this.accountingTransaction;
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<UpdateAccountingTransactionQueryParamFields>> fields() {
-        return (Optional<List<UpdateAccountingTransactionQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
      * ID of the Transaction
      */
-    @JsonIgnore
     public String id() {
-        return id;
+        return this.id;
     }
 
     /**
@@ -108,9 +101,8 @@ public class UpdateAccountingTransactionRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
     public static Builder builder() {
@@ -118,27 +110,17 @@ public class UpdateAccountingTransactionRequest {
     }
 
 
-    public UpdateAccountingTransactionRequest withAccountingTransaction(AccountingTransaction accountingTransaction) {
-        Utils.checkNotNull(accountingTransaction, "accountingTransaction");
-        this.accountingTransaction = accountingTransaction;
+    public UpdateAccountingTransactionRequest withAccountingTransaction(@Nonnull AccountingTransaction accountingTransaction) {
+        this.accountingTransaction = Utils.checkNotNull(accountingTransaction, "accountingTransaction");
         return this;
     }
+
 
     /**
      * ID of the connection
      */
-    public UpdateAccountingTransactionRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public UpdateAccountingTransactionRequest withFields(List<UpdateAccountingTransactionQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public UpdateAccountingTransactionRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -146,29 +128,17 @@ public class UpdateAccountingTransactionRequest {
     /**
      * Fields to return
      */
-    public UpdateAccountingTransactionRequest withFields(Optional<? extends List<UpdateAccountingTransactionQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public UpdateAccountingTransactionRequest withFields(@Nullable List<UpdateAccountingTransactionQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
+
     /**
      * ID of the Transaction
      */
-    public UpdateAccountingTransactionRequest withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = id;
-        return this;
-    }
-
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public UpdateAccountingTransactionRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
+    public UpdateAccountingTransactionRequest withId(@Nonnull String id) {
+        this.id = Utils.checkNotNull(id, "id");
         return this;
     }
 
@@ -178,11 +148,11 @@ public class UpdateAccountingTransactionRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public UpdateAccountingTransactionRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public UpdateAccountingTransactionRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -225,71 +195,42 @@ public class UpdateAccountingTransactionRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<UpdateAccountingTransactionQueryParamFields>> fields = Optional.empty();
+        private List<UpdateAccountingTransactionQueryParamFields> fields;
 
         private String id;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder accountingTransaction(AccountingTransaction accountingTransaction) {
-            Utils.checkNotNull(accountingTransaction, "accountingTransaction");
-            this.accountingTransaction = accountingTransaction;
+        public Builder accountingTransaction(@Nonnull AccountingTransaction accountingTransaction) {
+            this.accountingTransaction = Utils.checkNotNull(accountingTransaction, "accountingTransaction");
             return this;
         }
-
 
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<UpdateAccountingTransactionQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<UpdateAccountingTransactionQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<UpdateAccountingTransactionQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * ID of the Transaction
          */
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = id;
-            return this;
-        }
-
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
+        public Builder id(@Nonnull String id) {
+            this.id = Utils.checkNotNull(id, "id");
             return this;
         }
 
@@ -298,14 +239,12 @@ public class UpdateAccountingTransactionRequest {
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
         public UpdateAccountingTransactionRequest build() {
-
             return new UpdateAccountingTransactionRequest(
                 accountingTransaction, connectionId, fields,
                 id, raw);

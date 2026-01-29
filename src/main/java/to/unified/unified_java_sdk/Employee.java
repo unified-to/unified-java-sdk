@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateHrisEmployeeRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisEmployeeRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateHrisEmployeeResponse;
@@ -67,7 +68,7 @@ public class Employee {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateHrisEmployeeResponse createHrisEmployee(CreateHrisEmployeeRequest request) {
+    public CreateHrisEmployeeResponse createHrisEmployee(@Nonnull CreateHrisEmployeeRequest request) {
         RequestOperation<CreateHrisEmployeeRequest, CreateHrisEmployeeResponse> operation
               = new CreateHrisEmployee.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -89,7 +90,7 @@ public class Employee {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetHrisEmployeeResponse getHrisEmployee(GetHrisEmployeeRequest request) {
+    public GetHrisEmployeeResponse getHrisEmployee(@Nonnull GetHrisEmployeeRequest request) {
         RequestOperation<GetHrisEmployeeRequest, GetHrisEmployeeResponse> operation
               = new GetHrisEmployee.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -111,7 +112,7 @@ public class Employee {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListHrisEmployeesResponse listHrisEmployees(ListHrisEmployeesRequest request) {
+    public ListHrisEmployeesResponse listHrisEmployees(@Nonnull ListHrisEmployeesRequest request) {
         RequestOperation<ListHrisEmployeesRequest, ListHrisEmployeesResponse> operation
               = new ListHrisEmployees.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -133,7 +134,7 @@ public class Employee {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchHrisEmployeeResponse patchHrisEmployee(PatchHrisEmployeeRequest request) {
+    public PatchHrisEmployeeResponse patchHrisEmployee(@Nonnull PatchHrisEmployeeRequest request) {
         RequestOperation<PatchHrisEmployeeRequest, PatchHrisEmployeeResponse> operation
               = new PatchHrisEmployee.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -155,7 +156,7 @@ public class Employee {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveHrisEmployeeResponse removeHrisEmployee(RemoveHrisEmployeeRequest request) {
+    public RemoveHrisEmployeeResponse removeHrisEmployee(@Nonnull RemoveHrisEmployeeRequest request) {
         RequestOperation<RemoveHrisEmployeeRequest, RemoveHrisEmployeeResponse> operation
               = new RemoveHrisEmployee.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -177,7 +178,7 @@ public class Employee {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateHrisEmployeeResponse updateHrisEmployee(UpdateHrisEmployeeRequest request) {
+    public UpdateHrisEmployeeResponse updateHrisEmployee(@Nonnull UpdateHrisEmployeeRequest request) {
         RequestOperation<UpdateHrisEmployeeRequest, UpdateHrisEmployeeResponse> operation
               = new UpdateHrisEmployee.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

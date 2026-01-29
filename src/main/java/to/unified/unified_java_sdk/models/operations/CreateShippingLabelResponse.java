@@ -4,12 +4,11 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.io.InputStream;
-import java.lang.Integer;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.ShippingLabel;
@@ -26,7 +25,7 @@ public class CreateShippingLabelResponse implements Response {
     /**
      * Successful
      */
-    private Optional<? extends ShippingLabel> shippingLabel;
+    private ShippingLabel shippingLabel;
 
     /**
      * HTTP response status code for this operation
@@ -40,59 +39,52 @@ public class CreateShippingLabelResponse implements Response {
 
     @JsonCreator
     public CreateShippingLabelResponse(
-            String contentType,
-            Optional<? extends ShippingLabel> shippingLabel,
+            @Nonnull String contentType,
+            @Nullable ShippingLabel shippingLabel,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(shippingLabel, "shippingLabel");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.contentType = contentType;
+            @Nonnull HttpResponse<InputStream> rawResponse) {
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.shippingLabel = shippingLabel;
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
     }
     
     public CreateShippingLabelResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
-        this(contentType, Optional.empty(), statusCode,
+            @Nonnull HttpResponse<InputStream> rawResponse) {
+        this(contentType, null, statusCode,
             rawResponse);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<ShippingLabel> shippingLabel() {
-        return (Optional<ShippingLabel>) shippingLabel;
+        return Optional.ofNullable(this.shippingLabel);
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<InputStream> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     public static Builder builder() {
@@ -103,18 +95,8 @@ public class CreateShippingLabelResponse implements Response {
     /**
      * HTTP response content type for this operation
      */
-    public CreateShippingLabelResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
-        return this;
-    }
-
-    /**
-     * Successful
-     */
-    public CreateShippingLabelResponse withShippingLabel(ShippingLabel shippingLabel) {
-        Utils.checkNotNull(shippingLabel, "shippingLabel");
-        this.shippingLabel = Optional.ofNullable(shippingLabel);
+    public CreateShippingLabelResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
 
@@ -122,29 +104,29 @@ public class CreateShippingLabelResponse implements Response {
     /**
      * Successful
      */
-    public CreateShippingLabelResponse withShippingLabel(Optional<? extends ShippingLabel> shippingLabel) {
-        Utils.checkNotNull(shippingLabel, "shippingLabel");
+    public CreateShippingLabelResponse withShippingLabel(@Nullable ShippingLabel shippingLabel) {
         this.shippingLabel = shippingLabel;
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public CreateShippingLabelResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public CreateShippingLabelResponse withRawResponse(HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
+    public CreateShippingLabelResponse withRawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -183,9 +165,9 @@ public class CreateShippingLabelResponse implements Response {
 
         private String contentType;
 
-        private Optional<? extends ShippingLabel> shippingLabel = Optional.empty();
+        private ShippingLabel shippingLabel;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<InputStream> rawResponse;
 
@@ -193,57 +175,39 @@ public class CreateShippingLabelResponse implements Response {
           // force use of static builder() method
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
-            return this;
-        }
-
-
-        /**
-         * Successful
-         */
-        public Builder shippingLabel(ShippingLabel shippingLabel) {
-            Utils.checkNotNull(shippingLabel, "shippingLabel");
-            this.shippingLabel = Optional.ofNullable(shippingLabel);
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
 
         /**
          * Successful
          */
-        public Builder shippingLabel(Optional<? extends ShippingLabel> shippingLabel) {
-            Utils.checkNotNull(shippingLabel, "shippingLabel");
+        public Builder shippingLabel(@Nullable ShippingLabel shippingLabel) {
             this.shippingLabel = shippingLabel;
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<InputStream> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
+        public Builder rawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         public CreateShippingLabelResponse build() {
-
             return new CreateShippingLabelResponse(
                 contentType, shippingLabel, statusCode,
                 rawResponse);

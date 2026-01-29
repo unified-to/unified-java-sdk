@@ -4,13 +4,13 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -23,32 +23,28 @@ public class HrisEmail {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
-    private Optional<? extends HrisEmailType> type;
+    private HrisEmailType type;
 
     @JsonCreator
     public HrisEmail(
-            @JsonProperty("email") String email,
-            @JsonProperty("type") Optional<? extends HrisEmailType> type) {
-        Utils.checkNotNull(email, "email");
-        Utils.checkNotNull(type, "type");
-        this.email = email;
+            @JsonProperty("email") @Nonnull String email,
+            @JsonProperty("type") @Nullable HrisEmailType type) {
+        this.email = Optional.ofNullable(email)
+            .orElseThrow(() -> new IllegalArgumentException("email cannot be null"));
         this.type = type;
     }
     
     public HrisEmail(
-            String email) {
-        this(email, Optional.empty());
+            @Nonnull String email) {
+        this(email, null);
     }
 
-    @JsonIgnore
     public String email() {
-        return email;
+        return this.email;
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<HrisEmailType> type() {
-        return (Optional<HrisEmailType>) type;
+        return Optional.ofNullable(this.type);
     }
 
     public static Builder builder() {
@@ -56,24 +52,17 @@ public class HrisEmail {
     }
 
 
-    public HrisEmail withEmail(String email) {
-        Utils.checkNotNull(email, "email");
-        this.email = email;
-        return this;
-    }
-
-    public HrisEmail withType(HrisEmailType type) {
-        Utils.checkNotNull(type, "type");
-        this.type = Optional.ofNullable(type);
+    public HrisEmail withEmail(@Nonnull String email) {
+        this.email = Utils.checkNotNull(email, "email");
         return this;
     }
 
 
-    public HrisEmail withType(Optional<? extends HrisEmailType> type) {
-        Utils.checkNotNull(type, "type");
+    public HrisEmail withType(@Nullable HrisEmailType type) {
         this.type = type;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -107,34 +96,23 @@ public class HrisEmail {
 
         private String email;
 
-        private Optional<? extends HrisEmailType> type = Optional.empty();
+        private HrisEmailType type;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder email(String email) {
-            Utils.checkNotNull(email, "email");
-            this.email = email;
+        public Builder email(@Nonnull String email) {
+            this.email = Utils.checkNotNull(email, "email");
             return this;
         }
 
-
-        public Builder type(HrisEmailType type) {
-            Utils.checkNotNull(type, "type");
-            this.type = Optional.ofNullable(type);
-            return this;
-        }
-
-        public Builder type(Optional<? extends HrisEmailType> type) {
-            Utils.checkNotNull(type, "type");
+        public Builder type(@Nullable HrisEmailType type) {
             this.type = type;
             return this;
         }
 
         public HrisEmail build() {
-
             return new HrisEmail(
                 email, type);
         }

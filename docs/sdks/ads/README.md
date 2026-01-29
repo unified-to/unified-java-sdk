@@ -6,28 +6,40 @@
 
 * [createAdsAd](#createadsad) - Create an ad
 * [createAdsCampaign](#createadscampaign) - Create a campaign
+* [createAdsCreative](#createadscreative) - Create a creative
 * [createAdsGroup](#createadsgroup) - Create a group
+* [createAdsInsertionorder](#createadsinsertionorder) - Create an insertionorder
 * [createAdsOrganization](#createadsorganization) - Create an organization
 * [getAdsAd](#getadsad) - Retrieve an ad
 * [getAdsCampaign](#getadscampaign) - Retrieve a campaign
+* [getAdsCreative](#getadscreative) - Retrieve a creative
 * [getAdsGroup](#getadsgroup) - Retrieve a group
+* [getAdsInsertionorder](#getadsinsertionorder) - Retrieve an insertionorder
 * [getAdsOrganization](#getadsorganization) - Retrieve an organization
 * [listAdsAds](#listadsads) - List all ads
 * [listAdsCampaigns](#listadscampaigns) - List all campaigns
+* [listAdsCreatives](#listadscreatives) - List all creatives
 * [listAdsGroups](#listadsgroups) - List all groups
+* [listAdsInsertionorders](#listadsinsertionorders) - List all insertionorders
 * [listAdsOrganizations](#listadsorganizations) - List all organizations
 * [listAdsReports](#listadsreports) - List all reports
 * [patchAdsAd](#patchadsad) - Update an ad
 * [patchAdsCampaign](#patchadscampaign) - Update a campaign
+* [patchAdsCreative](#patchadscreative) - Update a creative
 * [patchAdsGroup](#patchadsgroup) - Update a group
+* [patchAdsInsertionorder](#patchadsinsertionorder) - Update an insertionorder
 * [patchAdsOrganization](#patchadsorganization) - Update an organization
 * [removeAdsAd](#removeadsad) - Remove an ad
 * [removeAdsCampaign](#removeadscampaign) - Remove a campaign
+* [removeAdsCreative](#removeadscreative) - Remove a creative
 * [removeAdsGroup](#removeadsgroup) - Remove a group
+* [removeAdsInsertionorder](#removeadsinsertionorder) - Remove an insertionorder
 * [removeAdsOrganization](#removeadsorganization) - Remove an organization
 * [updateAdsAd](#updateadsad) - Update an ad
 * [updateAdsCampaign](#updateadscampaign) - Update a campaign
+* [updateAdsCreative](#updateadscreative) - Update a creative
 * [updateAdsGroup](#updateadsgroup) - Update a group
+* [updateAdsInsertionorder](#updateadsinsertionorder) - Update an insertionorder
 * [updateAdsOrganization](#updateadsorganization) - Update an organization
 
 ## createAdsAd
@@ -150,6 +162,66 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## createAdsCreative
+
+Create a creative
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="createAdsCreative" method="post" path="/ads/{connection_id}/creative" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateAdsCreativeRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAdsCreativeResponse;
+import to.unified.unified_java_sdk.models.shared.AdsCreative;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        CreateAdsCreativeRequest req = CreateAdsCreativeRequest.builder()
+                .adsCreative(AdsCreative.builder()
+                    .build())
+                .connectionId("<id>")
+                .build();
+
+        CreateAdsCreativeResponse res = sdk.ads().createAdsCreative()
+                .request(req)
+                .call();
+
+        if (res.adsCreative().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [CreateAdsCreativeRequest](../../models/operations/CreateAdsCreativeRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[CreateAdsCreativeResponse](../../models/operations/CreateAdsCreativeResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## createAdsGroup
 
 Create a group
@@ -203,6 +275,66 @@ public class Application {
 ### Response
 
 **[CreateAdsGroupResponse](../../models/operations/CreateAdsGroupResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## createAdsInsertionorder
+
+Create an insertionorder
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="createAdsInsertionorder" method="post" path="/ads/{connection_id}/insertionorder" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateAdsInsertionorderRequest;
+import to.unified.unified_java_sdk.models.operations.CreateAdsInsertionorderResponse;
+import to.unified.unified_java_sdk.models.shared.AdsInsertionorder;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        CreateAdsInsertionorderRequest req = CreateAdsInsertionorderRequest.builder()
+                .adsInsertionorder(AdsInsertionorder.builder()
+                    .build())
+                .connectionId("<id>")
+                .build();
+
+        CreateAdsInsertionorderResponse res = sdk.ads().createAdsInsertionorder()
+                .request(req)
+                .call();
+
+        if (res.adsInsertionorder().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [CreateAdsInsertionorderRequest](../../models/operations/CreateAdsInsertionorderRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+
+### Response
+
+**[CreateAdsInsertionorderResponse](../../models/operations/CreateAdsInsertionorderResponse.md)**
 
 ### Errors
 
@@ -386,6 +518,64 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## getAdsCreative
+
+Retrieve a creative
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getAdsCreative" method="get" path="/ads/{connection_id}/creative/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetAdsCreativeRequest;
+import to.unified.unified_java_sdk.models.operations.GetAdsCreativeResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetAdsCreativeRequest req = GetAdsCreativeRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetAdsCreativeResponse res = sdk.ads().getAdsCreative()
+                .request(req)
+                .call();
+
+        if (res.adsCreative().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [GetAdsCreativeRequest](../../models/operations/GetAdsCreativeRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+
+### Response
+
+**[GetAdsCreativeResponse](../../models/operations/GetAdsCreativeResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## getAdsGroup
 
 Retrieve a group
@@ -437,6 +627,64 @@ public class Application {
 ### Response
 
 **[GetAdsGroupResponse](../../models/operations/GetAdsGroupResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getAdsInsertionorder
+
+Retrieve an insertionorder
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getAdsInsertionorder" method="get" path="/ads/{connection_id}/insertionorder/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetAdsInsertionorderRequest;
+import to.unified.unified_java_sdk.models.operations.GetAdsInsertionorderResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetAdsInsertionorderRequest req = GetAdsInsertionorderRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetAdsInsertionorderResponse res = sdk.ads().getAdsInsertionorder()
+                .request(req)
+                .call();
+
+        if (res.adsInsertionorder().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [GetAdsInsertionorderRequest](../../models/operations/GetAdsInsertionorderRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+
+### Response
+
+**[GetAdsInsertionorderResponse](../../models/operations/GetAdsInsertionorderResponse.md)**
 
 ### Errors
 
@@ -616,6 +864,63 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listAdsCreatives
+
+List all creatives
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listAdsCreatives" method="get" path="/ads/{connection_id}/creative" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListAdsCreativesRequest;
+import to.unified.unified_java_sdk.models.operations.ListAdsCreativesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListAdsCreativesRequest req = ListAdsCreativesRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListAdsCreativesResponse res = sdk.ads().listAdsCreatives()
+                .request(req)
+                .call();
+
+        if (res.adsCreatives().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [ListAdsCreativesRequest](../../models/operations/ListAdsCreativesRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[ListAdsCreativesResponse](../../models/operations/ListAdsCreativesResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listAdsGroups
 
 List all groups
@@ -666,6 +971,63 @@ public class Application {
 ### Response
 
 **[ListAdsGroupsResponse](../../models/operations/ListAdsGroupsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## listAdsInsertionorders
+
+List all insertionorders
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listAdsInsertionorders" method="get" path="/ads/{connection_id}/insertionorder" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListAdsInsertionordersRequest;
+import to.unified.unified_java_sdk.models.operations.ListAdsInsertionordersResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListAdsInsertionordersRequest req = ListAdsInsertionordersRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListAdsInsertionordersResponse res = sdk.ads().listAdsInsertionorders()
+                .request(req)
+                .call();
+
+        if (res.adsInsertionorders().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [ListAdsInsertionordersRequest](../../models/operations/ListAdsInsertionordersRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+
+### Response
+
+**[ListAdsInsertionordersResponse](../../models/operations/ListAdsInsertionordersResponse.md)**
 
 ### Errors
 
@@ -909,6 +1271,67 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## patchAdsCreative
+
+Update a creative
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchAdsCreative" method="patch" path="/ads/{connection_id}/creative/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchAdsCreativeRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAdsCreativeResponse;
+import to.unified.unified_java_sdk.models.shared.AdsCreative;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchAdsCreativeRequest req = PatchAdsCreativeRequest.builder()
+                .adsCreative(AdsCreative.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchAdsCreativeResponse res = sdk.ads().patchAdsCreative()
+                .request(req)
+                .call();
+
+        if (res.adsCreative().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [PatchAdsCreativeRequest](../../models/operations/PatchAdsCreativeRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[PatchAdsCreativeResponse](../../models/operations/PatchAdsCreativeResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## patchAdsGroup
 
 Update a group
@@ -963,6 +1386,67 @@ public class Application {
 ### Response
 
 **[PatchAdsGroupResponse](../../models/operations/PatchAdsGroupResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## patchAdsInsertionorder
+
+Update an insertionorder
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchAdsInsertionorder" method="patch" path="/ads/{connection_id}/insertionorder/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchAdsInsertionorderRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAdsInsertionorderResponse;
+import to.unified.unified_java_sdk.models.shared.AdsInsertionorder;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchAdsInsertionorderRequest req = PatchAdsInsertionorderRequest.builder()
+                .adsInsertionorder(AdsInsertionorder.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchAdsInsertionorderResponse res = sdk.ads().patchAdsInsertionorder()
+                .request(req)
+                .call();
+
+        if (res.adsInsertionorder().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [PatchAdsInsertionorderRequest](../../models/operations/PatchAdsInsertionorderRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+
+### Response
+
+**[PatchAdsInsertionorderResponse](../../models/operations/PatchAdsInsertionorderResponse.md)**
 
 ### Errors
 
@@ -1143,6 +1627,62 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## removeAdsCreative
+
+Remove a creative
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeAdsCreative" method="delete" path="/ads/{connection_id}/creative/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsCreativeRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsCreativeResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveAdsCreativeRequest req = RemoveAdsCreativeRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveAdsCreativeResponse res = sdk.ads().removeAdsCreative()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [RemoveAdsCreativeRequest](../../models/operations/RemoveAdsCreativeRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[RemoveAdsCreativeResponse](../../models/operations/RemoveAdsCreativeResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## removeAdsGroup
 
 Remove a group
@@ -1192,6 +1732,62 @@ public class Application {
 ### Response
 
 **[RemoveAdsGroupResponse](../../models/operations/RemoveAdsGroupResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeAdsInsertionorder
+
+Remove an insertionorder
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeAdsInsertionorder" method="delete" path="/ads/{connection_id}/insertionorder/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsInsertionorderRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveAdsInsertionorderResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveAdsInsertionorderRequest req = RemoveAdsInsertionorderRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveAdsInsertionorderResponse res = sdk.ads().removeAdsInsertionorder()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [RemoveAdsInsertionorderRequest](../../models/operations/RemoveAdsInsertionorderRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+
+### Response
+
+**[RemoveAdsInsertionorderResponse](../../models/operations/RemoveAdsInsertionorderResponse.md)**
 
 ### Errors
 
@@ -1377,6 +1973,67 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## updateAdsCreative
+
+Update a creative
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateAdsCreative" method="put" path="/ads/{connection_id}/creative/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsCreativeRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsCreativeResponse;
+import to.unified.unified_java_sdk.models.shared.AdsCreative;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateAdsCreativeRequest req = UpdateAdsCreativeRequest.builder()
+                .adsCreative(AdsCreative.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateAdsCreativeResponse res = sdk.ads().updateAdsCreative()
+                .request(req)
+                .call();
+
+        if (res.adsCreative().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [UpdateAdsCreativeRequest](../../models/operations/UpdateAdsCreativeRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[UpdateAdsCreativeResponse](../../models/operations/UpdateAdsCreativeResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## updateAdsGroup
 
 Update a group
@@ -1431,6 +2088,67 @@ public class Application {
 ### Response
 
 **[UpdateAdsGroupResponse](../../models/operations/UpdateAdsGroupResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateAdsInsertionorder
+
+Update an insertionorder
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateAdsInsertionorder" method="put" path="/ads/{connection_id}/insertionorder/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsInsertionorderRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAdsInsertionorderResponse;
+import to.unified.unified_java_sdk.models.shared.AdsInsertionorder;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateAdsInsertionorderRequest req = UpdateAdsInsertionorderRequest.builder()
+                .adsInsertionorder(AdsInsertionorder.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateAdsInsertionorderResponse res = sdk.ads().updateAdsInsertionorder()
+                .request(req)
+                .call();
+
+        if (res.adsInsertionorder().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                   | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `request`                                                                                   | [UpdateAdsInsertionorderRequest](../../models/operations/UpdateAdsInsertionorderRequest.md) | :heavy_check_mark:                                                                          | The request object to use for the request.                                                  |
+
+### Response
+
+**[UpdateAdsInsertionorderResponse](../../models/operations/UpdateAdsInsertionorderResponse.md)**
 
 ### Errors
 

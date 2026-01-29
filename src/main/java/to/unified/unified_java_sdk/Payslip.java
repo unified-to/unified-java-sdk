@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.GetHrisPayslipRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisPayslipRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetHrisPayslipResponse;
@@ -51,7 +52,7 @@ public class Payslip {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetHrisPayslipResponse getHrisPayslip(GetHrisPayslipRequest request) {
+    public GetHrisPayslipResponse getHrisPayslip(@Nonnull GetHrisPayslipRequest request) {
         RequestOperation<GetHrisPayslipRequest, GetHrisPayslipResponse> operation
               = new GetHrisPayslip.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -73,7 +74,7 @@ public class Payslip {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListHrisPayslipsResponse listHrisPayslips(ListHrisPayslipsRequest request) {
+    public ListHrisPayslipsResponse listHrisPayslips(@Nonnull ListHrisPayslipsRequest request) {
         RequestOperation<ListHrisPayslipsRequest, ListHrisPayslipsResponse> operation
               = new ListHrisPayslips.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

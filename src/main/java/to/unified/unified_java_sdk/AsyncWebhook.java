@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateUnifiedWebhookRequest;
 import to.unified.unified_java_sdk.models.operations.GetUnifiedWebhookRequest;
@@ -84,7 +85,7 @@ public class AsyncWebhook {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateUnifiedWebhookResponse>} - The async response
      */
-    public CompletableFuture<CreateUnifiedWebhookResponse> createUnifiedWebhook(CreateUnifiedWebhookRequest request) {
+    public CompletableFuture<CreateUnifiedWebhookResponse> createUnifiedWebhook(@Nonnull CreateUnifiedWebhookRequest request) {
         AsyncRequestOperation<CreateUnifiedWebhookRequest, CreateUnifiedWebhookResponse> operation
               = new CreateUnifiedWebhook.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -107,7 +108,7 @@ public class AsyncWebhook {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetUnifiedWebhookResponse>} - The async response
      */
-    public CompletableFuture<GetUnifiedWebhookResponse> getUnifiedWebhook(GetUnifiedWebhookRequest request) {
+    public CompletableFuture<GetUnifiedWebhookResponse> getUnifiedWebhook(@Nonnull GetUnifiedWebhookRequest request) {
         AsyncRequestOperation<GetUnifiedWebhookRequest, GetUnifiedWebhookResponse> operation
               = new GetUnifiedWebhook.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -130,7 +131,7 @@ public class AsyncWebhook {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListUnifiedWebhooksResponse>} - The async response
      */
-    public CompletableFuture<ListUnifiedWebhooksResponse> listUnifiedWebhooks(ListUnifiedWebhooksRequest request) {
+    public CompletableFuture<ListUnifiedWebhooksResponse> listUnifiedWebhooks(@Nonnull ListUnifiedWebhooksRequest request) {
         AsyncRequestOperation<ListUnifiedWebhooksRequest, ListUnifiedWebhooksResponse> operation
               = new ListUnifiedWebhooks.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -153,7 +154,7 @@ public class AsyncWebhook {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchUnifiedWebhookResponse>} - The async response
      */
-    public CompletableFuture<PatchUnifiedWebhookResponse> patchUnifiedWebhook(PatchUnifiedWebhookRequest request) {
+    public CompletableFuture<PatchUnifiedWebhookResponse> patchUnifiedWebhook(@Nonnull PatchUnifiedWebhookRequest request) {
         AsyncRequestOperation<PatchUnifiedWebhookRequest, PatchUnifiedWebhookResponse> operation
               = new PatchUnifiedWebhook.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -176,7 +177,7 @@ public class AsyncWebhook {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchUnifiedWebhookTriggerResponse>} - The async response
      */
-    public CompletableFuture<PatchUnifiedWebhookTriggerResponse> patchUnifiedWebhookTrigger(PatchUnifiedWebhookTriggerRequest request) {
+    public CompletableFuture<PatchUnifiedWebhookTriggerResponse> patchUnifiedWebhookTrigger(@Nonnull PatchUnifiedWebhookTriggerRequest request) {
         AsyncRequestOperation<PatchUnifiedWebhookTriggerRequest, PatchUnifiedWebhookTriggerResponse> operation
               = new PatchUnifiedWebhookTrigger.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -199,7 +200,7 @@ public class AsyncWebhook {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveUnifiedWebhookResponse>} - The async response
      */
-    public CompletableFuture<RemoveUnifiedWebhookResponse> removeUnifiedWebhook(RemoveUnifiedWebhookRequest request) {
+    public CompletableFuture<RemoveUnifiedWebhookResponse> removeUnifiedWebhook(@Nonnull RemoveUnifiedWebhookRequest request) {
         AsyncRequestOperation<RemoveUnifiedWebhookRequest, RemoveUnifiedWebhookResponse> operation
               = new RemoveUnifiedWebhook.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -222,7 +223,7 @@ public class AsyncWebhook {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateUnifiedWebhookResponse>} - The async response
      */
-    public CompletableFuture<UpdateUnifiedWebhookResponse> updateUnifiedWebhook(UpdateUnifiedWebhookRequest request) {
+    public CompletableFuture<UpdateUnifiedWebhookResponse> updateUnifiedWebhook(@Nonnull UpdateUnifiedWebhookRequest request) {
         AsyncRequestOperation<UpdateUnifiedWebhookRequest, UpdateUnifiedWebhookResponse> operation
               = new UpdateUnifiedWebhook.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -245,7 +246,7 @@ public class AsyncWebhook {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateUnifiedWebhookTriggerResponse>} - The async response
      */
-    public CompletableFuture<UpdateUnifiedWebhookTriggerResponse> updateUnifiedWebhookTrigger(UpdateUnifiedWebhookTriggerRequest request) {
+    public CompletableFuture<UpdateUnifiedWebhookTriggerResponse> updateUnifiedWebhookTrigger(@Nonnull UpdateUnifiedWebhookTriggerRequest request) {
         AsyncRequestOperation<UpdateUnifiedWebhookTriggerRequest, UpdateUnifiedWebhookTriggerResponse> operation
               = new UpdateUnifiedWebhookTrigger.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

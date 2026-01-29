@@ -4,12 +4,11 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.io.InputStream;
-import java.lang.Integer;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.List;
 import java.util.Optional;
@@ -27,7 +26,7 @@ public class ListMartechListsResponse implements Response {
     /**
      * Successful
      */
-    private Optional<? extends List<MarketingList>> marketingLists;
+    private List<MarketingList> marketingLists;
 
     /**
      * HTTP response status code for this operation
@@ -41,59 +40,52 @@ public class ListMartechListsResponse implements Response {
 
     @JsonCreator
     public ListMartechListsResponse(
-            String contentType,
-            Optional<? extends List<MarketingList>> marketingLists,
+            @Nonnull String contentType,
+            @Nullable List<MarketingList> marketingLists,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(marketingLists, "marketingLists");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.contentType = contentType;
+            @Nonnull HttpResponse<InputStream> rawResponse) {
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.marketingLists = marketingLists;
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
     }
     
     public ListMartechListsResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<InputStream> rawResponse) {
-        this(contentType, Optional.empty(), statusCode,
+            @Nonnull HttpResponse<InputStream> rawResponse) {
+        this(contentType, null, statusCode,
             rawResponse);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<MarketingList>> marketingLists() {
-        return (Optional<List<MarketingList>>) marketingLists;
+        return Optional.ofNullable(this.marketingLists);
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<InputStream> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     public static Builder builder() {
@@ -104,18 +96,8 @@ public class ListMartechListsResponse implements Response {
     /**
      * HTTP response content type for this operation
      */
-    public ListMartechListsResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
-        return this;
-    }
-
-    /**
-     * Successful
-     */
-    public ListMartechListsResponse withMarketingLists(List<MarketingList> marketingLists) {
-        Utils.checkNotNull(marketingLists, "marketingLists");
-        this.marketingLists = Optional.ofNullable(marketingLists);
+    public ListMartechListsResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
 
@@ -123,29 +105,29 @@ public class ListMartechListsResponse implements Response {
     /**
      * Successful
      */
-    public ListMartechListsResponse withMarketingLists(Optional<? extends List<MarketingList>> marketingLists) {
-        Utils.checkNotNull(marketingLists, "marketingLists");
+    public ListMartechListsResponse withMarketingLists(@Nullable List<MarketingList> marketingLists) {
         this.marketingLists = marketingLists;
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public ListMartechListsResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public ListMartechListsResponse withRawResponse(HttpResponse<InputStream> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
+    public ListMartechListsResponse withRawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -184,9 +166,9 @@ public class ListMartechListsResponse implements Response {
 
         private String contentType;
 
-        private Optional<? extends List<MarketingList>> marketingLists = Optional.empty();
+        private List<MarketingList> marketingLists;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<InputStream> rawResponse;
 
@@ -194,57 +176,39 @@ public class ListMartechListsResponse implements Response {
           // force use of static builder() method
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
-            return this;
-        }
-
-
-        /**
-         * Successful
-         */
-        public Builder marketingLists(List<MarketingList> marketingLists) {
-            Utils.checkNotNull(marketingLists, "marketingLists");
-            this.marketingLists = Optional.ofNullable(marketingLists);
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
 
         /**
          * Successful
          */
-        public Builder marketingLists(Optional<? extends List<MarketingList>> marketingLists) {
-            Utils.checkNotNull(marketingLists, "marketingLists");
+        public Builder marketingLists(@Nullable List<MarketingList> marketingLists) {
             this.marketingLists = marketingLists;
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<InputStream> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
+        public Builder rawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         public ListMartechListsResponse build() {
-
             return new ListMartechListsResponse(
                 contentType, marketingLists, statusCode,
                 rawResponse);

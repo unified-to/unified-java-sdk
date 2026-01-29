@@ -4,13 +4,12 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -19,47 +18,41 @@ public class KmsPageMetadata {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extra_data")
-    private Optional<? extends KmsPageMetadataExtraData> extraData;
+    private KmsPageMetadataExtraData extraData;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
-    private Optional<? extends KmsPageMetadataFormat> format;
+    private KmsPageMetadataFormat format;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespace")
-    private Optional<String> namespace;
+    private String namespace;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slug")
-    private Optional<String> slug;
+    private String slug;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
-    private Optional<? extends KmsPageMetadataValue> value;
+    private KmsPageMetadataValue value;
 
     @JsonCreator
     public KmsPageMetadata(
-            @JsonProperty("extra_data") Optional<? extends KmsPageMetadataExtraData> extraData,
-            @JsonProperty("format") Optional<? extends KmsPageMetadataFormat> format,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("namespace") Optional<String> namespace,
-            @JsonProperty("slug") Optional<String> slug,
-            @JsonProperty("value") Optional<? extends KmsPageMetadataValue> value) {
-        Utils.checkNotNull(extraData, "extraData");
-        Utils.checkNotNull(format, "format");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(namespace, "namespace");
-        Utils.checkNotNull(slug, "slug");
-        Utils.checkNotNull(value, "value");
+            @JsonProperty("extra_data") @Nullable KmsPageMetadataExtraData extraData,
+            @JsonProperty("format") @Nullable KmsPageMetadataFormat format,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("namespace") @Nullable String namespace,
+            @JsonProperty("slug") @Nullable String slug,
+            @JsonProperty("value") @Nullable KmsPageMetadataValue value) {
         this.extraData = extraData;
         this.format = format;
         this.id = id;
@@ -69,41 +62,32 @@ public class KmsPageMetadata {
     }
     
     public KmsPageMetadata() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null, null);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<KmsPageMetadataExtraData> extraData() {
-        return (Optional<KmsPageMetadataExtraData>) extraData;
+        return Optional.ofNullable(this.extraData);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<KmsPageMetadataFormat> format() {
-        return (Optional<KmsPageMetadataFormat>) format;
+        return Optional.ofNullable(this.format);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<String> namespace() {
-        return namespace;
+        return Optional.ofNullable(this.namespace);
     }
 
-    @JsonIgnore
     public Optional<String> slug() {
-        return slug;
+        return Optional.ofNullable(this.slug);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<KmsPageMetadataValue> value() {
-        return (Optional<KmsPageMetadataValue>) value;
+        return Optional.ofNullable(this.value);
     }
 
     public static Builder builder() {
@@ -111,83 +95,41 @@ public class KmsPageMetadata {
     }
 
 
-    public KmsPageMetadata withExtraData(KmsPageMetadataExtraData extraData) {
-        Utils.checkNotNull(extraData, "extraData");
-        this.extraData = Optional.ofNullable(extraData);
-        return this;
-    }
-
-
-    public KmsPageMetadata withExtraData(Optional<? extends KmsPageMetadataExtraData> extraData) {
-        Utils.checkNotNull(extraData, "extraData");
+    public KmsPageMetadata withExtraData(@Nullable KmsPageMetadataExtraData extraData) {
         this.extraData = extraData;
         return this;
     }
 
-    public KmsPageMetadata withFormat(KmsPageMetadataFormat format) {
-        Utils.checkNotNull(format, "format");
-        this.format = Optional.ofNullable(format);
-        return this;
-    }
 
-
-    public KmsPageMetadata withFormat(Optional<? extends KmsPageMetadataFormat> format) {
-        Utils.checkNotNull(format, "format");
+    public KmsPageMetadata withFormat(@Nullable KmsPageMetadataFormat format) {
         this.format = format;
         return this;
     }
 
-    public KmsPageMetadata withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public KmsPageMetadata withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public KmsPageMetadata withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public KmsPageMetadata withNamespace(String namespace) {
-        Utils.checkNotNull(namespace, "namespace");
-        this.namespace = Optional.ofNullable(namespace);
-        return this;
-    }
 
-
-    public KmsPageMetadata withNamespace(Optional<String> namespace) {
-        Utils.checkNotNull(namespace, "namespace");
+    public KmsPageMetadata withNamespace(@Nullable String namespace) {
         this.namespace = namespace;
         return this;
     }
 
-    public KmsPageMetadata withSlug(String slug) {
-        Utils.checkNotNull(slug, "slug");
-        this.slug = Optional.ofNullable(slug);
-        return this;
-    }
 
-
-    public KmsPageMetadata withSlug(Optional<String> slug) {
-        Utils.checkNotNull(slug, "slug");
+    public KmsPageMetadata withSlug(@Nullable String slug) {
         this.slug = slug;
         return this;
     }
 
-    public KmsPageMetadata withValue(KmsPageMetadataValue value) {
-        Utils.checkNotNull(value, "value");
-        this.value = Optional.ofNullable(value);
-        return this;
-    }
 
-
-    public KmsPageMetadata withValue(Optional<? extends KmsPageMetadataValue> value) {
-        Utils.checkNotNull(value, "value");
+    public KmsPageMetadata withValue(@Nullable KmsPageMetadataValue value) {
         this.value = value;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -228,102 +170,53 @@ public class KmsPageMetadata {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends KmsPageMetadataExtraData> extraData = Optional.empty();
+        private KmsPageMetadataExtraData extraData;
 
-        private Optional<? extends KmsPageMetadataFormat> format = Optional.empty();
+        private KmsPageMetadataFormat format;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<String> namespace = Optional.empty();
+        private String namespace;
 
-        private Optional<String> slug = Optional.empty();
+        private String slug;
 
-        private Optional<? extends KmsPageMetadataValue> value = Optional.empty();
+        private KmsPageMetadataValue value;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder extraData(KmsPageMetadataExtraData extraData) {
-            Utils.checkNotNull(extraData, "extraData");
-            this.extraData = Optional.ofNullable(extraData);
-            return this;
-        }
-
-        public Builder extraData(Optional<? extends KmsPageMetadataExtraData> extraData) {
-            Utils.checkNotNull(extraData, "extraData");
+        public Builder extraData(@Nullable KmsPageMetadataExtraData extraData) {
             this.extraData = extraData;
             return this;
         }
 
-
-        public Builder format(KmsPageMetadataFormat format) {
-            Utils.checkNotNull(format, "format");
-            this.format = Optional.ofNullable(format);
-            return this;
-        }
-
-        public Builder format(Optional<? extends KmsPageMetadataFormat> format) {
-            Utils.checkNotNull(format, "format");
+        public Builder format(@Nullable KmsPageMetadataFormat format) {
             this.format = format;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder namespace(String namespace) {
-            Utils.checkNotNull(namespace, "namespace");
-            this.namespace = Optional.ofNullable(namespace);
-            return this;
-        }
-
-        public Builder namespace(Optional<String> namespace) {
-            Utils.checkNotNull(namespace, "namespace");
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }
 
-
-        public Builder slug(String slug) {
-            Utils.checkNotNull(slug, "slug");
-            this.slug = Optional.ofNullable(slug);
-            return this;
-        }
-
-        public Builder slug(Optional<String> slug) {
-            Utils.checkNotNull(slug, "slug");
+        public Builder slug(@Nullable String slug) {
             this.slug = slug;
             return this;
         }
 
-
-        public Builder value(KmsPageMetadataValue value) {
-            Utils.checkNotNull(value, "value");
-            this.value = Optional.ofNullable(value);
-            return this;
-        }
-
-        public Builder value(Optional<? extends KmsPageMetadataValue> value) {
-            Utils.checkNotNull(value, "value");
+        public Builder value(@Nullable KmsPageMetadataValue value) {
             this.value = value;
             return this;
         }
 
         public KmsPageMetadata build() {
-
             return new KmsPageMetadata(
                 extraData, format, id,
                 namespace, slug, value);

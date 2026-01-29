@@ -4,15 +4,13 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import java.lang.Double;
+import jakarta.annotation.Nullable;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -22,32 +20,32 @@ public class PaymentPayout {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<String> createdAt;
+    private String createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
-    private Optional<String> currency;
+    private String currency;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
-    private Optional<String> notes;
+    private String notes;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
-    private Optional<? extends PaymentPayoutStatus> status;
+    private PaymentPayoutStatus status;
 
 
     @JsonProperty("total_amount")
@@ -56,26 +54,18 @@ public class PaymentPayout {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<String> updatedAt;
+    private String updatedAt;
 
     @JsonCreator
     public PaymentPayout(
-            @JsonProperty("created_at") Optional<String> createdAt,
-            @JsonProperty("currency") Optional<String> currency,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("notes") Optional<String> notes,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("status") Optional<? extends PaymentPayoutStatus> status,
+            @JsonProperty("created_at") @Nullable String createdAt,
+            @JsonProperty("currency") @Nullable String currency,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("notes") @Nullable String notes,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("status") @Nullable PaymentPayoutStatus status,
             @JsonProperty("total_amount") double totalAmount,
-            @JsonProperty("updated_at") Optional<String> updatedAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(currency, "currency");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(notes, "notes");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(status, "status");
-        Utils.checkNotNull(totalAmount, "totalAmount");
-        Utils.checkNotNull(updatedAt, "updatedAt");
+            @JsonProperty("updated_at") @Nullable String updatedAt) {
         this.createdAt = createdAt;
         this.currency = currency;
         this.id = id;
@@ -88,51 +78,41 @@ public class PaymentPayout {
     
     public PaymentPayout(
             double totalAmount) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            totalAmount, Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            totalAmount, null);
     }
 
-    @JsonIgnore
     public Optional<String> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<String> currency() {
-        return currency;
+        return Optional.ofNullable(this.currency);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<String> notes() {
-        return notes;
+        return Optional.ofNullable(this.notes);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<PaymentPayoutStatus> status() {
-        return (Optional<PaymentPayoutStatus>) status;
+        return Optional.ofNullable(this.status);
     }
 
-    @JsonIgnore
     public double totalAmount() {
-        return totalAmount;
+        return this.totalAmount;
     }
 
-    @JsonIgnore
     public Optional<String> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
     public static Builder builder() {
@@ -140,102 +120,53 @@ public class PaymentPayout {
     }
 
 
-    public PaymentPayout withCreatedAt(String createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
-
-
-    public PaymentPayout withCreatedAt(Optional<String> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public PaymentPayout withCreatedAt(@Nullable String createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public PaymentPayout withCurrency(String currency) {
-        Utils.checkNotNull(currency, "currency");
-        this.currency = Optional.ofNullable(currency);
-        return this;
-    }
 
-
-    public PaymentPayout withCurrency(Optional<String> currency) {
-        Utils.checkNotNull(currency, "currency");
+    public PaymentPayout withCurrency(@Nullable String currency) {
         this.currency = currency;
         return this;
     }
 
-    public PaymentPayout withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public PaymentPayout withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public PaymentPayout withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public PaymentPayout withNotes(String notes) {
-        Utils.checkNotNull(notes, "notes");
-        this.notes = Optional.ofNullable(notes);
-        return this;
-    }
 
-
-    public PaymentPayout withNotes(Optional<String> notes) {
-        Utils.checkNotNull(notes, "notes");
+    public PaymentPayout withNotes(@Nullable String notes) {
         this.notes = notes;
         return this;
     }
 
-    public PaymentPayout withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public PaymentPayout withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public PaymentPayout withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public PaymentPayout withStatus(PaymentPayoutStatus status) {
-        Utils.checkNotNull(status, "status");
-        this.status = Optional.ofNullable(status);
-        return this;
-    }
 
-
-    public PaymentPayout withStatus(Optional<? extends PaymentPayoutStatus> status) {
-        Utils.checkNotNull(status, "status");
+    public PaymentPayout withStatus(@Nullable PaymentPayoutStatus status) {
         this.status = status;
         return this;
     }
 
+
     public PaymentPayout withTotalAmount(double totalAmount) {
-        Utils.checkNotNull(totalAmount, "totalAmount");
         this.totalAmount = totalAmount;
         return this;
     }
 
-    public PaymentPayout withUpdatedAt(String updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public PaymentPayout withUpdatedAt(Optional<String> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public PaymentPayout withUpdatedAt(@Nullable String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -281,126 +212,67 @@ public class PaymentPayout {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> createdAt = Optional.empty();
+        private String createdAt;
 
-        private Optional<String> currency = Optional.empty();
+        private String currency;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<String> notes = Optional.empty();
+        private String notes;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<? extends PaymentPayoutStatus> status = Optional.empty();
+        private PaymentPayoutStatus status;
 
-        private Double totalAmount;
+        private double totalAmount;
 
-        private Optional<String> updatedAt = Optional.empty();
+        private String updatedAt;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder createdAt(String createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<String> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder currency(String currency) {
-            Utils.checkNotNull(currency, "currency");
-            this.currency = Optional.ofNullable(currency);
-            return this;
-        }
-
-        public Builder currency(Optional<String> currency) {
-            Utils.checkNotNull(currency, "currency");
+        public Builder currency(@Nullable String currency) {
             this.currency = currency;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder notes(String notes) {
-            Utils.checkNotNull(notes, "notes");
-            this.notes = Optional.ofNullable(notes);
-            return this;
-        }
-
-        public Builder notes(Optional<String> notes) {
-            Utils.checkNotNull(notes, "notes");
+        public Builder notes(@Nullable String notes) {
             this.notes = notes;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder status(PaymentPayoutStatus status) {
-            Utils.checkNotNull(status, "status");
-            this.status = Optional.ofNullable(status);
-            return this;
-        }
-
-        public Builder status(Optional<? extends PaymentPayoutStatus> status) {
-            Utils.checkNotNull(status, "status");
+        public Builder status(@Nullable PaymentPayoutStatus status) {
             this.status = status;
             return this;
         }
 
-
         public Builder totalAmount(double totalAmount) {
-            Utils.checkNotNull(totalAmount, "totalAmount");
             this.totalAmount = totalAmount;
             return this;
         }
 
-
-        public Builder updatedAt(String updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<String> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable String updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
         public PaymentPayout build() {
-
             return new PaymentPayout(
                 createdAt, currency, id,
                 notes, raw, status,

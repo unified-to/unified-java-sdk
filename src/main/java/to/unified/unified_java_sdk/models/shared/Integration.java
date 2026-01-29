@@ -4,15 +4,15 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
@@ -28,22 +28,22 @@ public class Integration {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active_healthy_connections")
-    private Optional<Double> activeHealthyConnections;
+    private Double activeHealthyConnections;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("api")
-    private Optional<? extends Api> api;
+    private Api api;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("api_docs_url")
-    private Optional<String> apiDocsUrl;
+    private String apiDocsUrl;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("beta")
-    private Optional<Boolean> beta;
+    private Boolean beta;
 
     /**
      * The categories of support solutions that this integration has
@@ -54,42 +54,42 @@ public class Integration {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
-    private Optional<String> color;
+    private String color;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<String> createdAt;
+    private String createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
-    private Optional<String> description;
+    private String description;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fa_icon")
-    private Optional<String> faIcon;
+    private String faIcon;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("featured")
-    private Optional<Boolean> featured;
+    private Boolean featured;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("in_progress")
-    private Optional<Boolean> inProgress;
+    private Boolean inProgress;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
-    private Optional<Boolean> isActive;
+    private Boolean isActive;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logo_url")
-    private Optional<String> logoUrl;
+    private String logoUrl;
 
 
     @JsonProperty("name")
@@ -98,56 +98,56 @@ public class Integration {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partnership")
-    private Optional<? extends Partnership> partnership;
+    private Partnership partnership;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("popularity")
-    private Optional<Double> popularity;
+    private Double popularity;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rate_limit_description")
-    private Optional<String> rateLimitDescription;
+    private String rateLimitDescription;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("saml")
-    private Optional<? extends Saml> saml;
+    private Saml saml;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sandbox")
-    private Optional<? extends Sandbox> sandbox;
+    private Sandbox sandbox;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("support")
-    private Optional<? extends Map<String, IntegrationSupport>> support;
+    private Map<String, IntegrationSupport> support;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tested_at")
-    private Optional<OffsetDateTime> testedAt;
+    private OffsetDateTime testedAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text_color")
-    private Optional<String> textColor;
+    private String textColor;
 
     /**
      * instructions for the user on how to find the token/key
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token_instructions")
-    private Optional<? extends List<String>> tokenInstructions;
+    private List<String> tokenInstructions;
 
     /**
      * if auth_types = 'token'
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token_names")
-    private Optional<? extends List<String>> tokenNames;
+    private List<String> tokenNames;
 
 
     @JsonProperty("type")
@@ -156,74 +156,48 @@ public class Integration {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<String> updatedAt;
+    private String updatedAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("web_url")
-    private Optional<String> webUrl;
+    private String webUrl;
 
     @JsonCreator
     public Integration(
-            @JsonProperty("active_healthy_connections") Optional<Double> activeHealthyConnections,
-            @JsonProperty("api") Optional<? extends Api> api,
-            @JsonProperty("api_docs_url") Optional<String> apiDocsUrl,
-            @JsonProperty("beta") Optional<Boolean> beta,
-            @JsonProperty("categories") List<PropertyIntegrationCategories> categories,
-            @JsonProperty("color") Optional<String> color,
-            @JsonProperty("created_at") Optional<String> createdAt,
-            @JsonProperty("description") Optional<String> description,
-            @JsonProperty("fa_icon") Optional<String> faIcon,
-            @JsonProperty("featured") Optional<Boolean> featured,
-            @JsonProperty("in_progress") Optional<Boolean> inProgress,
-            @JsonProperty("is_active") Optional<Boolean> isActive,
-            @JsonProperty("logo_url") Optional<String> logoUrl,
-            @JsonProperty("name") String name,
-            @JsonProperty("partnership") Optional<? extends Partnership> partnership,
-            @JsonProperty("popularity") Optional<Double> popularity,
-            @JsonProperty("rate_limit_description") Optional<String> rateLimitDescription,
-            @JsonProperty("saml") Optional<? extends Saml> saml,
-            @JsonProperty("sandbox") Optional<? extends Sandbox> sandbox,
-            @JsonProperty("support") Optional<? extends Map<String, IntegrationSupport>> support,
-            @JsonProperty("tested_at") Optional<OffsetDateTime> testedAt,
-            @JsonProperty("text_color") Optional<String> textColor,
-            @JsonProperty("token_instructions") Optional<? extends List<String>> tokenInstructions,
-            @JsonProperty("token_names") Optional<? extends List<String>> tokenNames,
-            @JsonProperty("type") String type,
-            @JsonProperty("updated_at") Optional<String> updatedAt,
-            @JsonProperty("web_url") Optional<String> webUrl) {
-        Utils.checkNotNull(activeHealthyConnections, "activeHealthyConnections");
-        Utils.checkNotNull(api, "api");
-        Utils.checkNotNull(apiDocsUrl, "apiDocsUrl");
-        Utils.checkNotNull(beta, "beta");
-        Utils.checkNotNull(categories, "categories");
-        Utils.checkNotNull(color, "color");
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(description, "description");
-        Utils.checkNotNull(faIcon, "faIcon");
-        Utils.checkNotNull(featured, "featured");
-        Utils.checkNotNull(inProgress, "inProgress");
-        Utils.checkNotNull(isActive, "isActive");
-        Utils.checkNotNull(logoUrl, "logoUrl");
-        Utils.checkNotNull(name, "name");
-        Utils.checkNotNull(partnership, "partnership");
-        Utils.checkNotNull(popularity, "popularity");
-        Utils.checkNotNull(rateLimitDescription, "rateLimitDescription");
-        Utils.checkNotNull(saml, "saml");
-        Utils.checkNotNull(sandbox, "sandbox");
-        Utils.checkNotNull(support, "support");
-        Utils.checkNotNull(testedAt, "testedAt");
-        Utils.checkNotNull(textColor, "textColor");
-        Utils.checkNotNull(tokenInstructions, "tokenInstructions");
-        Utils.checkNotNull(tokenNames, "tokenNames");
-        Utils.checkNotNull(type, "type");
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        Utils.checkNotNull(webUrl, "webUrl");
+            @JsonProperty("active_healthy_connections") @Nullable Double activeHealthyConnections,
+            @JsonProperty("api") @Nullable Api api,
+            @JsonProperty("api_docs_url") @Nullable String apiDocsUrl,
+            @JsonProperty("beta") @Nullable Boolean beta,
+            @JsonProperty("categories") @Nonnull List<PropertyIntegrationCategories> categories,
+            @JsonProperty("color") @Nullable String color,
+            @JsonProperty("created_at") @Nullable String createdAt,
+            @JsonProperty("description") @Nullable String description,
+            @JsonProperty("fa_icon") @Nullable String faIcon,
+            @JsonProperty("featured") @Nullable Boolean featured,
+            @JsonProperty("in_progress") @Nullable Boolean inProgress,
+            @JsonProperty("is_active") @Nullable Boolean isActive,
+            @JsonProperty("logo_url") @Nullable String logoUrl,
+            @JsonProperty("name") @Nonnull String name,
+            @JsonProperty("partnership") @Nullable Partnership partnership,
+            @JsonProperty("popularity") @Nullable Double popularity,
+            @JsonProperty("rate_limit_description") @Nullable String rateLimitDescription,
+            @JsonProperty("saml") @Nullable Saml saml,
+            @JsonProperty("sandbox") @Nullable Sandbox sandbox,
+            @JsonProperty("support") @Nullable Map<String, IntegrationSupport> support,
+            @JsonProperty("tested_at") @Nullable OffsetDateTime testedAt,
+            @JsonProperty("text_color") @Nullable String textColor,
+            @JsonProperty("token_instructions") @Nullable List<String> tokenInstructions,
+            @JsonProperty("token_names") @Nullable List<String> tokenNames,
+            @JsonProperty("type") @Nonnull String type,
+            @JsonProperty("updated_at") @Nullable String updatedAt,
+            @JsonProperty("web_url") @Nullable String webUrl) {
         this.activeHealthyConnections = activeHealthyConnections;
         this.api = api;
         this.apiDocsUrl = apiDocsUrl;
         this.beta = beta;
-        this.categories = categories;
+        this.categories = Optional.ofNullable(categories)
+            .orElseThrow(() -> new IllegalArgumentException("categories cannot be null"));
         this.color = color;
         this.createdAt = createdAt;
         this.description = description;
@@ -232,7 +206,8 @@ public class Integration {
         this.inProgress = inProgress;
         this.isActive = isActive;
         this.logoUrl = logoUrl;
-        this.name = name;
+        this.name = Optional.ofNullable(name)
+            .orElseThrow(() -> new IllegalArgumentException("name cannot be null"));
         this.partnership = partnership;
         this.popularity = popularity;
         this.rateLimitDescription = rateLimitDescription;
@@ -243,175 +218,142 @@ public class Integration {
         this.textColor = textColor;
         this.tokenInstructions = tokenInstructions;
         this.tokenNames = tokenNames;
-        this.type = type;
+        this.type = Optional.ofNullable(type)
+            .orElseThrow(() -> new IllegalArgumentException("type cannot be null"));
         this.updatedAt = updatedAt;
         this.webUrl = webUrl;
     }
     
     public Integration(
-            List<PropertyIntegrationCategories> categories,
-            String name,
-            String type) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), categories, Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), name, Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            type, Optional.empty(), Optional.empty());
+            @Nonnull List<PropertyIntegrationCategories> categories,
+            @Nonnull String name,
+            @Nonnull String type) {
+        this(null, null, null,
+            null, categories, null,
+            null, null, null,
+            null, null, null,
+            null, name, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            type, null, null);
     }
 
-    @JsonIgnore
     public Optional<Double> activeHealthyConnections() {
-        return activeHealthyConnections;
+        return Optional.ofNullable(this.activeHealthyConnections);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Api> api() {
-        return (Optional<Api>) api;
+        return Optional.ofNullable(this.api);
     }
 
-    @JsonIgnore
     public Optional<String> apiDocsUrl() {
-        return apiDocsUrl;
+        return Optional.ofNullable(this.apiDocsUrl);
     }
 
-    @JsonIgnore
     public Optional<Boolean> beta() {
-        return beta;
+        return Optional.ofNullable(this.beta);
     }
 
     /**
      * The categories of support solutions that this integration has
      */
-    @JsonIgnore
     public List<PropertyIntegrationCategories> categories() {
-        return categories;
+        return this.categories;
     }
 
-    @JsonIgnore
     public Optional<String> color() {
-        return color;
+        return Optional.ofNullable(this.color);
     }
 
-    @JsonIgnore
     public Optional<String> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<String> description() {
-        return description;
+        return Optional.ofNullable(this.description);
     }
 
-    @JsonIgnore
     public Optional<String> faIcon() {
-        return faIcon;
+        return Optional.ofNullable(this.faIcon);
     }
 
-    @JsonIgnore
     public Optional<Boolean> featured() {
-        return featured;
+        return Optional.ofNullable(this.featured);
     }
 
-    @JsonIgnore
     public Optional<Boolean> inProgress() {
-        return inProgress;
+        return Optional.ofNullable(this.inProgress);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isActive() {
-        return isActive;
+        return Optional.ofNullable(this.isActive);
     }
 
-    @JsonIgnore
     public Optional<String> logoUrl() {
-        return logoUrl;
+        return Optional.ofNullable(this.logoUrl);
     }
 
-    @JsonIgnore
     public String name() {
-        return name;
+        return this.name;
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Partnership> partnership() {
-        return (Optional<Partnership>) partnership;
+        return Optional.ofNullable(this.partnership);
     }
 
-    @JsonIgnore
     public Optional<Double> popularity() {
-        return popularity;
+        return Optional.ofNullable(this.popularity);
     }
 
-    @JsonIgnore
     public Optional<String> rateLimitDescription() {
-        return rateLimitDescription;
+        return Optional.ofNullable(this.rateLimitDescription);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Saml> saml() {
-        return (Optional<Saml>) saml;
+        return Optional.ofNullable(this.saml);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Sandbox> sandbox() {
-        return (Optional<Sandbox>) sandbox;
+        return Optional.ofNullable(this.sandbox);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, IntegrationSupport>> support() {
-        return (Optional<Map<String, IntegrationSupport>>) support;
+        return Optional.ofNullable(this.support);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> testedAt() {
-        return testedAt;
+        return Optional.ofNullable(this.testedAt);
     }
 
-    @JsonIgnore
     public Optional<String> textColor() {
-        return textColor;
+        return Optional.ofNullable(this.textColor);
     }
 
     /**
      * instructions for the user on how to find the token/key
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> tokenInstructions() {
-        return (Optional<List<String>>) tokenInstructions;
+        return Optional.ofNullable(this.tokenInstructions);
     }
 
     /**
      * if auth_types = 'token'
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> tokenNames() {
-        return (Optional<List<String>>) tokenNames;
+        return Optional.ofNullable(this.tokenNames);
     }
 
-    @JsonIgnore
     public String type() {
-        return type;
+        return this.type;
     }
 
-    @JsonIgnore
     public Optional<String> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
-    @JsonIgnore
     public Optional<String> webUrl() {
-        return webUrl;
+        return Optional.ofNullable(this.webUrl);
     }
 
     public static Builder builder() {
@@ -419,350 +361,176 @@ public class Integration {
     }
 
 
-    public Integration withActiveHealthyConnections(double activeHealthyConnections) {
-        Utils.checkNotNull(activeHealthyConnections, "activeHealthyConnections");
-        this.activeHealthyConnections = Optional.ofNullable(activeHealthyConnections);
-        return this;
-    }
-
-
-    public Integration withActiveHealthyConnections(Optional<Double> activeHealthyConnections) {
-        Utils.checkNotNull(activeHealthyConnections, "activeHealthyConnections");
+    public Integration withActiveHealthyConnections(@Nullable Double activeHealthyConnections) {
         this.activeHealthyConnections = activeHealthyConnections;
         return this;
     }
 
-    public Integration withApi(Api api) {
-        Utils.checkNotNull(api, "api");
-        this.api = Optional.ofNullable(api);
-        return this;
-    }
 
-
-    public Integration withApi(Optional<? extends Api> api) {
-        Utils.checkNotNull(api, "api");
+    public Integration withApi(@Nullable Api api) {
         this.api = api;
         return this;
     }
 
-    public Integration withApiDocsUrl(String apiDocsUrl) {
-        Utils.checkNotNull(apiDocsUrl, "apiDocsUrl");
-        this.apiDocsUrl = Optional.ofNullable(apiDocsUrl);
-        return this;
-    }
 
-
-    public Integration withApiDocsUrl(Optional<String> apiDocsUrl) {
-        Utils.checkNotNull(apiDocsUrl, "apiDocsUrl");
+    public Integration withApiDocsUrl(@Nullable String apiDocsUrl) {
         this.apiDocsUrl = apiDocsUrl;
         return this;
     }
 
-    public Integration withBeta(boolean beta) {
-        Utils.checkNotNull(beta, "beta");
-        this.beta = Optional.ofNullable(beta);
-        return this;
-    }
 
-
-    public Integration withBeta(Optional<Boolean> beta) {
-        Utils.checkNotNull(beta, "beta");
+    public Integration withBeta(@Nullable Boolean beta) {
         this.beta = beta;
         return this;
     }
 
+
     /**
      * The categories of support solutions that this integration has
      */
-    public Integration withCategories(List<PropertyIntegrationCategories> categories) {
-        Utils.checkNotNull(categories, "categories");
-        this.categories = categories;
-        return this;
-    }
-
-    public Integration withColor(String color) {
-        Utils.checkNotNull(color, "color");
-        this.color = Optional.ofNullable(color);
+    public Integration withCategories(@Nonnull List<PropertyIntegrationCategories> categories) {
+        this.categories = Utils.checkNotNull(categories, "categories");
         return this;
     }
 
 
-    public Integration withColor(Optional<String> color) {
-        Utils.checkNotNull(color, "color");
+    public Integration withColor(@Nullable String color) {
         this.color = color;
         return this;
     }
 
-    public Integration withCreatedAt(String createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
 
-
-    public Integration withCreatedAt(Optional<String> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public Integration withCreatedAt(@Nullable String createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public Integration withDescription(String description) {
-        Utils.checkNotNull(description, "description");
-        this.description = Optional.ofNullable(description);
-        return this;
-    }
 
-
-    public Integration withDescription(Optional<String> description) {
-        Utils.checkNotNull(description, "description");
+    public Integration withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
-    public Integration withFaIcon(String faIcon) {
-        Utils.checkNotNull(faIcon, "faIcon");
-        this.faIcon = Optional.ofNullable(faIcon);
-        return this;
-    }
 
-
-    public Integration withFaIcon(Optional<String> faIcon) {
-        Utils.checkNotNull(faIcon, "faIcon");
+    public Integration withFaIcon(@Nullable String faIcon) {
         this.faIcon = faIcon;
         return this;
     }
 
-    public Integration withFeatured(boolean featured) {
-        Utils.checkNotNull(featured, "featured");
-        this.featured = Optional.ofNullable(featured);
-        return this;
-    }
 
-
-    public Integration withFeatured(Optional<Boolean> featured) {
-        Utils.checkNotNull(featured, "featured");
+    public Integration withFeatured(@Nullable Boolean featured) {
         this.featured = featured;
         return this;
     }
 
-    public Integration withInProgress(boolean inProgress) {
-        Utils.checkNotNull(inProgress, "inProgress");
-        this.inProgress = Optional.ofNullable(inProgress);
-        return this;
-    }
 
-
-    public Integration withInProgress(Optional<Boolean> inProgress) {
-        Utils.checkNotNull(inProgress, "inProgress");
+    public Integration withInProgress(@Nullable Boolean inProgress) {
         this.inProgress = inProgress;
         return this;
     }
 
-    public Integration withIsActive(boolean isActive) {
-        Utils.checkNotNull(isActive, "isActive");
-        this.isActive = Optional.ofNullable(isActive);
-        return this;
-    }
 
-
-    public Integration withIsActive(Optional<Boolean> isActive) {
-        Utils.checkNotNull(isActive, "isActive");
+    public Integration withIsActive(@Nullable Boolean isActive) {
         this.isActive = isActive;
         return this;
     }
 
-    public Integration withLogoUrl(String logoUrl) {
-        Utils.checkNotNull(logoUrl, "logoUrl");
-        this.logoUrl = Optional.ofNullable(logoUrl);
-        return this;
-    }
 
-
-    public Integration withLogoUrl(Optional<String> logoUrl) {
-        Utils.checkNotNull(logoUrl, "logoUrl");
+    public Integration withLogoUrl(@Nullable String logoUrl) {
         this.logoUrl = logoUrl;
         return this;
     }
 
-    public Integration withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = name;
-        return this;
-    }
 
-    public Integration withPartnership(Partnership partnership) {
-        Utils.checkNotNull(partnership, "partnership");
-        this.partnership = Optional.ofNullable(partnership);
+    public Integration withName(@Nonnull String name) {
+        this.name = Utils.checkNotNull(name, "name");
         return this;
     }
 
 
-    public Integration withPartnership(Optional<? extends Partnership> partnership) {
-        Utils.checkNotNull(partnership, "partnership");
+    public Integration withPartnership(@Nullable Partnership partnership) {
         this.partnership = partnership;
         return this;
     }
 
-    public Integration withPopularity(double popularity) {
-        Utils.checkNotNull(popularity, "popularity");
-        this.popularity = Optional.ofNullable(popularity);
-        return this;
-    }
 
-
-    public Integration withPopularity(Optional<Double> popularity) {
-        Utils.checkNotNull(popularity, "popularity");
+    public Integration withPopularity(@Nullable Double popularity) {
         this.popularity = popularity;
         return this;
     }
 
-    public Integration withRateLimitDescription(String rateLimitDescription) {
-        Utils.checkNotNull(rateLimitDescription, "rateLimitDescription");
-        this.rateLimitDescription = Optional.ofNullable(rateLimitDescription);
-        return this;
-    }
 
-
-    public Integration withRateLimitDescription(Optional<String> rateLimitDescription) {
-        Utils.checkNotNull(rateLimitDescription, "rateLimitDescription");
+    public Integration withRateLimitDescription(@Nullable String rateLimitDescription) {
         this.rateLimitDescription = rateLimitDescription;
         return this;
     }
 
-    public Integration withSaml(Saml saml) {
-        Utils.checkNotNull(saml, "saml");
-        this.saml = Optional.ofNullable(saml);
-        return this;
-    }
 
-
-    public Integration withSaml(Optional<? extends Saml> saml) {
-        Utils.checkNotNull(saml, "saml");
+    public Integration withSaml(@Nullable Saml saml) {
         this.saml = saml;
         return this;
     }
 
-    public Integration withSandbox(Sandbox sandbox) {
-        Utils.checkNotNull(sandbox, "sandbox");
-        this.sandbox = Optional.ofNullable(sandbox);
-        return this;
-    }
 
-
-    public Integration withSandbox(Optional<? extends Sandbox> sandbox) {
-        Utils.checkNotNull(sandbox, "sandbox");
+    public Integration withSandbox(@Nullable Sandbox sandbox) {
         this.sandbox = sandbox;
         return this;
     }
 
-    public Integration withSupport(Map<String, IntegrationSupport> support) {
-        Utils.checkNotNull(support, "support");
-        this.support = Optional.ofNullable(support);
-        return this;
-    }
 
-
-    public Integration withSupport(Optional<? extends Map<String, IntegrationSupport>> support) {
-        Utils.checkNotNull(support, "support");
+    public Integration withSupport(@Nullable Map<String, IntegrationSupport> support) {
         this.support = support;
         return this;
     }
 
-    public Integration withTestedAt(OffsetDateTime testedAt) {
-        Utils.checkNotNull(testedAt, "testedAt");
-        this.testedAt = Optional.ofNullable(testedAt);
-        return this;
-    }
 
-
-    public Integration withTestedAt(Optional<OffsetDateTime> testedAt) {
-        Utils.checkNotNull(testedAt, "testedAt");
+    public Integration withTestedAt(@Nullable OffsetDateTime testedAt) {
         this.testedAt = testedAt;
         return this;
     }
 
-    public Integration withTextColor(String textColor) {
-        Utils.checkNotNull(textColor, "textColor");
-        this.textColor = Optional.ofNullable(textColor);
-        return this;
-    }
 
-
-    public Integration withTextColor(Optional<String> textColor) {
-        Utils.checkNotNull(textColor, "textColor");
+    public Integration withTextColor(@Nullable String textColor) {
         this.textColor = textColor;
         return this;
     }
 
-    /**
-     * instructions for the user on how to find the token/key
-     */
-    public Integration withTokenInstructions(List<String> tokenInstructions) {
-        Utils.checkNotNull(tokenInstructions, "tokenInstructions");
-        this.tokenInstructions = Optional.ofNullable(tokenInstructions);
-        return this;
-    }
-
 
     /**
      * instructions for the user on how to find the token/key
      */
-    public Integration withTokenInstructions(Optional<? extends List<String>> tokenInstructions) {
-        Utils.checkNotNull(tokenInstructions, "tokenInstructions");
+    public Integration withTokenInstructions(@Nullable List<String> tokenInstructions) {
         this.tokenInstructions = tokenInstructions;
         return this;
     }
 
-    /**
-     * if auth_types = 'token'
-     */
-    public Integration withTokenNames(List<String> tokenNames) {
-        Utils.checkNotNull(tokenNames, "tokenNames");
-        this.tokenNames = Optional.ofNullable(tokenNames);
-        return this;
-    }
-
 
     /**
      * if auth_types = 'token'
      */
-    public Integration withTokenNames(Optional<? extends List<String>> tokenNames) {
-        Utils.checkNotNull(tokenNames, "tokenNames");
+    public Integration withTokenNames(@Nullable List<String> tokenNames) {
         this.tokenNames = tokenNames;
         return this;
     }
 
-    public Integration withType(String type) {
-        Utils.checkNotNull(type, "type");
-        this.type = type;
-        return this;
-    }
 
-    public Integration withUpdatedAt(String updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
+    public Integration withType(@Nonnull String type) {
+        this.type = Utils.checkNotNull(type, "type");
         return this;
     }
 
 
-    public Integration withUpdatedAt(Optional<String> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public Integration withUpdatedAt(@Nullable String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
-    public Integration withWebUrl(String webUrl) {
-        Utils.checkNotNull(webUrl, "webUrl");
-        this.webUrl = Optional.ofNullable(webUrl);
-        return this;
-    }
 
-
-    public Integration withWebUrl(Optional<String> webUrl) {
-        Utils.checkNotNull(webUrl, "webUrl");
+    public Integration withWebUrl(@Nullable String webUrl) {
         this.webUrl = webUrl;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -852,414 +620,209 @@ public class Integration {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<Double> activeHealthyConnections = Optional.empty();
+        private Double activeHealthyConnections;
 
-        private Optional<? extends Api> api = Optional.empty();
+        private Api api;
 
-        private Optional<String> apiDocsUrl = Optional.empty();
+        private String apiDocsUrl;
 
-        private Optional<Boolean> beta = Optional.empty();
+        private Boolean beta;
 
         private List<PropertyIntegrationCategories> categories;
 
-        private Optional<String> color = Optional.empty();
+        private String color;
 
-        private Optional<String> createdAt = Optional.empty();
+        private String createdAt;
 
-        private Optional<String> description = Optional.empty();
+        private String description;
 
-        private Optional<String> faIcon = Optional.empty();
+        private String faIcon;
 
-        private Optional<Boolean> featured = Optional.empty();
+        private Boolean featured;
 
-        private Optional<Boolean> inProgress = Optional.empty();
+        private Boolean inProgress;
 
-        private Optional<Boolean> isActive = Optional.empty();
+        private Boolean isActive;
 
-        private Optional<String> logoUrl = Optional.empty();
+        private String logoUrl;
 
         private String name;
 
-        private Optional<? extends Partnership> partnership = Optional.empty();
+        private Partnership partnership;
 
-        private Optional<Double> popularity = Optional.empty();
+        private Double popularity;
 
-        private Optional<String> rateLimitDescription = Optional.empty();
+        private String rateLimitDescription;
 
-        private Optional<? extends Saml> saml = Optional.empty();
+        private Saml saml;
 
-        private Optional<? extends Sandbox> sandbox = Optional.empty();
+        private Sandbox sandbox;
 
-        private Optional<? extends Map<String, IntegrationSupport>> support = Optional.empty();
+        private Map<String, IntegrationSupport> support;
 
-        private Optional<OffsetDateTime> testedAt = Optional.empty();
+        private OffsetDateTime testedAt;
 
-        private Optional<String> textColor = Optional.empty();
+        private String textColor;
 
-        private Optional<? extends List<String>> tokenInstructions = Optional.empty();
+        private List<String> tokenInstructions;
 
-        private Optional<? extends List<String>> tokenNames = Optional.empty();
+        private List<String> tokenNames;
 
         private String type;
 
-        private Optional<String> updatedAt = Optional.empty();
+        private String updatedAt;
 
-        private Optional<String> webUrl = Optional.empty();
+        private String webUrl;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder activeHealthyConnections(double activeHealthyConnections) {
-            Utils.checkNotNull(activeHealthyConnections, "activeHealthyConnections");
-            this.activeHealthyConnections = Optional.ofNullable(activeHealthyConnections);
-            return this;
-        }
-
-        public Builder activeHealthyConnections(Optional<Double> activeHealthyConnections) {
-            Utils.checkNotNull(activeHealthyConnections, "activeHealthyConnections");
+        public Builder activeHealthyConnections(@Nullable Double activeHealthyConnections) {
             this.activeHealthyConnections = activeHealthyConnections;
             return this;
         }
 
-
-        public Builder api(Api api) {
-            Utils.checkNotNull(api, "api");
-            this.api = Optional.ofNullable(api);
-            return this;
-        }
-
-        public Builder api(Optional<? extends Api> api) {
-            Utils.checkNotNull(api, "api");
+        public Builder api(@Nullable Api api) {
             this.api = api;
             return this;
         }
 
-
-        public Builder apiDocsUrl(String apiDocsUrl) {
-            Utils.checkNotNull(apiDocsUrl, "apiDocsUrl");
-            this.apiDocsUrl = Optional.ofNullable(apiDocsUrl);
-            return this;
-        }
-
-        public Builder apiDocsUrl(Optional<String> apiDocsUrl) {
-            Utils.checkNotNull(apiDocsUrl, "apiDocsUrl");
+        public Builder apiDocsUrl(@Nullable String apiDocsUrl) {
             this.apiDocsUrl = apiDocsUrl;
             return this;
         }
 
-
-        public Builder beta(boolean beta) {
-            Utils.checkNotNull(beta, "beta");
-            this.beta = Optional.ofNullable(beta);
-            return this;
-        }
-
-        public Builder beta(Optional<Boolean> beta) {
-            Utils.checkNotNull(beta, "beta");
+        public Builder beta(@Nullable Boolean beta) {
             this.beta = beta;
             return this;
         }
 
-
         /**
          * The categories of support solutions that this integration has
          */
-        public Builder categories(List<PropertyIntegrationCategories> categories) {
-            Utils.checkNotNull(categories, "categories");
-            this.categories = categories;
+        public Builder categories(@Nonnull List<PropertyIntegrationCategories> categories) {
+            this.categories = Utils.checkNotNull(categories, "categories");
             return this;
         }
 
-
-        public Builder color(String color) {
-            Utils.checkNotNull(color, "color");
-            this.color = Optional.ofNullable(color);
-            return this;
-        }
-
-        public Builder color(Optional<String> color) {
-            Utils.checkNotNull(color, "color");
+        public Builder color(@Nullable String color) {
             this.color = color;
             return this;
         }
 
-
-        public Builder createdAt(String createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<String> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder description(String description) {
-            Utils.checkNotNull(description, "description");
-            this.description = Optional.ofNullable(description);
-            return this;
-        }
-
-        public Builder description(Optional<String> description) {
-            Utils.checkNotNull(description, "description");
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-
-        public Builder faIcon(String faIcon) {
-            Utils.checkNotNull(faIcon, "faIcon");
-            this.faIcon = Optional.ofNullable(faIcon);
-            return this;
-        }
-
-        public Builder faIcon(Optional<String> faIcon) {
-            Utils.checkNotNull(faIcon, "faIcon");
+        public Builder faIcon(@Nullable String faIcon) {
             this.faIcon = faIcon;
             return this;
         }
 
-
-        public Builder featured(boolean featured) {
-            Utils.checkNotNull(featured, "featured");
-            this.featured = Optional.ofNullable(featured);
-            return this;
-        }
-
-        public Builder featured(Optional<Boolean> featured) {
-            Utils.checkNotNull(featured, "featured");
+        public Builder featured(@Nullable Boolean featured) {
             this.featured = featured;
             return this;
         }
 
-
-        public Builder inProgress(boolean inProgress) {
-            Utils.checkNotNull(inProgress, "inProgress");
-            this.inProgress = Optional.ofNullable(inProgress);
-            return this;
-        }
-
-        public Builder inProgress(Optional<Boolean> inProgress) {
-            Utils.checkNotNull(inProgress, "inProgress");
+        public Builder inProgress(@Nullable Boolean inProgress) {
             this.inProgress = inProgress;
             return this;
         }
 
-
-        public Builder isActive(boolean isActive) {
-            Utils.checkNotNull(isActive, "isActive");
-            this.isActive = Optional.ofNullable(isActive);
-            return this;
-        }
-
-        public Builder isActive(Optional<Boolean> isActive) {
-            Utils.checkNotNull(isActive, "isActive");
+        public Builder isActive(@Nullable Boolean isActive) {
             this.isActive = isActive;
             return this;
         }
 
-
-        public Builder logoUrl(String logoUrl) {
-            Utils.checkNotNull(logoUrl, "logoUrl");
-            this.logoUrl = Optional.ofNullable(logoUrl);
-            return this;
-        }
-
-        public Builder logoUrl(Optional<String> logoUrl) {
-            Utils.checkNotNull(logoUrl, "logoUrl");
+        public Builder logoUrl(@Nullable String logoUrl) {
             this.logoUrl = logoUrl;
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = name;
+        public Builder name(@Nonnull String name) {
+            this.name = Utils.checkNotNull(name, "name");
             return this;
         }
 
-
-        public Builder partnership(Partnership partnership) {
-            Utils.checkNotNull(partnership, "partnership");
-            this.partnership = Optional.ofNullable(partnership);
-            return this;
-        }
-
-        public Builder partnership(Optional<? extends Partnership> partnership) {
-            Utils.checkNotNull(partnership, "partnership");
+        public Builder partnership(@Nullable Partnership partnership) {
             this.partnership = partnership;
             return this;
         }
 
-
-        public Builder popularity(double popularity) {
-            Utils.checkNotNull(popularity, "popularity");
-            this.popularity = Optional.ofNullable(popularity);
-            return this;
-        }
-
-        public Builder popularity(Optional<Double> popularity) {
-            Utils.checkNotNull(popularity, "popularity");
+        public Builder popularity(@Nullable Double popularity) {
             this.popularity = popularity;
             return this;
         }
 
-
-        public Builder rateLimitDescription(String rateLimitDescription) {
-            Utils.checkNotNull(rateLimitDescription, "rateLimitDescription");
-            this.rateLimitDescription = Optional.ofNullable(rateLimitDescription);
-            return this;
-        }
-
-        public Builder rateLimitDescription(Optional<String> rateLimitDescription) {
-            Utils.checkNotNull(rateLimitDescription, "rateLimitDescription");
+        public Builder rateLimitDescription(@Nullable String rateLimitDescription) {
             this.rateLimitDescription = rateLimitDescription;
             return this;
         }
 
-
-        public Builder saml(Saml saml) {
-            Utils.checkNotNull(saml, "saml");
-            this.saml = Optional.ofNullable(saml);
-            return this;
-        }
-
-        public Builder saml(Optional<? extends Saml> saml) {
-            Utils.checkNotNull(saml, "saml");
+        public Builder saml(@Nullable Saml saml) {
             this.saml = saml;
             return this;
         }
 
-
-        public Builder sandbox(Sandbox sandbox) {
-            Utils.checkNotNull(sandbox, "sandbox");
-            this.sandbox = Optional.ofNullable(sandbox);
-            return this;
-        }
-
-        public Builder sandbox(Optional<? extends Sandbox> sandbox) {
-            Utils.checkNotNull(sandbox, "sandbox");
+        public Builder sandbox(@Nullable Sandbox sandbox) {
             this.sandbox = sandbox;
             return this;
         }
 
-
-        public Builder support(Map<String, IntegrationSupport> support) {
-            Utils.checkNotNull(support, "support");
-            this.support = Optional.ofNullable(support);
-            return this;
-        }
-
-        public Builder support(Optional<? extends Map<String, IntegrationSupport>> support) {
-            Utils.checkNotNull(support, "support");
+        public Builder support(@Nullable Map<String, IntegrationSupport> support) {
             this.support = support;
             return this;
         }
 
-
-        public Builder testedAt(OffsetDateTime testedAt) {
-            Utils.checkNotNull(testedAt, "testedAt");
-            this.testedAt = Optional.ofNullable(testedAt);
-            return this;
-        }
-
-        public Builder testedAt(Optional<OffsetDateTime> testedAt) {
-            Utils.checkNotNull(testedAt, "testedAt");
+        public Builder testedAt(@Nullable OffsetDateTime testedAt) {
             this.testedAt = testedAt;
             return this;
         }
 
-
-        public Builder textColor(String textColor) {
-            Utils.checkNotNull(textColor, "textColor");
-            this.textColor = Optional.ofNullable(textColor);
-            return this;
-        }
-
-        public Builder textColor(Optional<String> textColor) {
-            Utils.checkNotNull(textColor, "textColor");
+        public Builder textColor(@Nullable String textColor) {
             this.textColor = textColor;
             return this;
         }
 
-
         /**
          * instructions for the user on how to find the token/key
          */
-        public Builder tokenInstructions(List<String> tokenInstructions) {
-            Utils.checkNotNull(tokenInstructions, "tokenInstructions");
-            this.tokenInstructions = Optional.ofNullable(tokenInstructions);
-            return this;
-        }
-
-        /**
-         * instructions for the user on how to find the token/key
-         */
-        public Builder tokenInstructions(Optional<? extends List<String>> tokenInstructions) {
-            Utils.checkNotNull(tokenInstructions, "tokenInstructions");
+        public Builder tokenInstructions(@Nullable List<String> tokenInstructions) {
             this.tokenInstructions = tokenInstructions;
             return this;
         }
 
-
         /**
          * if auth_types = 'token'
          */
-        public Builder tokenNames(List<String> tokenNames) {
-            Utils.checkNotNull(tokenNames, "tokenNames");
-            this.tokenNames = Optional.ofNullable(tokenNames);
-            return this;
-        }
-
-        /**
-         * if auth_types = 'token'
-         */
-        public Builder tokenNames(Optional<? extends List<String>> tokenNames) {
-            Utils.checkNotNull(tokenNames, "tokenNames");
+        public Builder tokenNames(@Nullable List<String> tokenNames) {
             this.tokenNames = tokenNames;
             return this;
         }
 
-
-        public Builder type(String type) {
-            Utils.checkNotNull(type, "type");
-            this.type = type;
+        public Builder type(@Nonnull String type) {
+            this.type = Utils.checkNotNull(type, "type");
             return this;
         }
 
-
-        public Builder updatedAt(String updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<String> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable String updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
-
-        public Builder webUrl(String webUrl) {
-            Utils.checkNotNull(webUrl, "webUrl");
-            this.webUrl = Optional.ofNullable(webUrl);
-            return this;
-        }
-
-        public Builder webUrl(Optional<String> webUrl) {
-            Utils.checkNotNull(webUrl, "webUrl");
+        public Builder webUrl(@Nullable String webUrl) {
             this.webUrl = webUrl;
             return this;
         }
 
         public Integration build() {
-
             return new Integration(
                 activeHealthyConnections, api, apiDocsUrl,
                 beta, categories, color,

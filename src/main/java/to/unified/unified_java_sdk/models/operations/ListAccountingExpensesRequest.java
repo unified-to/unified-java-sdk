@@ -4,11 +4,11 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
@@ -20,7 +20,7 @@ public class ListAccountingExpensesRequest {
      * The category ID to filter by (reference to AccountingCategory)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category_id")
-    private Optional<String> categoryId;
+    private String categoryId;
 
     /**
      * ID of the connection
@@ -32,43 +32,43 @@ public class ListAccountingExpensesRequest {
      * The contact ID to filter by (reference to AccountingContact)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contact_id")
-    private Optional<String> contactId;
+    private String contactId;
 
     /**
      * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_lt")
-    private Optional<String> endLt;
+    private String endLt;
 
     /**
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<ListAccountingExpensesQueryParamFields>> fields;
+    private List<ListAccountingExpensesQueryParamFields> fields;
 
     /**
      * The group ID to filter by (reference to HrisGroup)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group_id")
-    private Optional<String> groupId;
+    private String groupId;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
-    private Optional<Double> limit;
+    private Double limit;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
-    private Optional<Double> offset;
+    private Double offset;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
-    private Optional<String> order;
+    private String order;
 
     /**
      * Query string to search. eg. email address or name
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
-    private Optional<String> query;
+    private String query;
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
@@ -76,65 +76,51 @@ public class ListAccountingExpensesRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
-    private Optional<String> sort;
+    private String sort;
 
     /**
      * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_gte")
-    private Optional<String> startGte;
+    private String startGte;
 
     /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
-    private Optional<String> updatedGte;
+    private String updatedGte;
 
     /**
      * The user/employee ID to filter by (reference to HrisEmployee)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_id")
-    private Optional<String> userId;
+    private String userId;
 
     @JsonCreator
     public ListAccountingExpensesRequest(
-            Optional<String> categoryId,
-            String connectionId,
-            Optional<String> contactId,
-            Optional<String> endLt,
-            Optional<? extends List<ListAccountingExpensesQueryParamFields>> fields,
-            Optional<String> groupId,
-            Optional<Double> limit,
-            Optional<Double> offset,
-            Optional<String> order,
-            Optional<String> query,
-            Optional<String> raw,
-            Optional<String> sort,
-            Optional<String> startGte,
-            Optional<String> updatedGte,
-            Optional<String> userId) {
-        Utils.checkNotNull(categoryId, "categoryId");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(contactId, "contactId");
-        Utils.checkNotNull(endLt, "endLt");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(groupId, "groupId");
-        Utils.checkNotNull(limit, "limit");
-        Utils.checkNotNull(offset, "offset");
-        Utils.checkNotNull(order, "order");
-        Utils.checkNotNull(query, "query");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(sort, "sort");
-        Utils.checkNotNull(startGte, "startGte");
-        Utils.checkNotNull(updatedGte, "updatedGte");
-        Utils.checkNotNull(userId, "userId");
+            @Nullable String categoryId,
+            @Nonnull String connectionId,
+            @Nullable String contactId,
+            @Nullable String endLt,
+            @Nullable List<ListAccountingExpensesQueryParamFields> fields,
+            @Nullable String groupId,
+            @Nullable Double limit,
+            @Nullable Double offset,
+            @Nullable String order,
+            @Nullable String query,
+            @Nullable String raw,
+            @Nullable String sort,
+            @Nullable String startGte,
+            @Nullable String updatedGte,
+            @Nullable String userId) {
         this.categoryId = categoryId;
-        this.connectionId = connectionId;
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.contactId = contactId;
         this.endLt = endLt;
         this.fields = fields;
@@ -151,84 +137,73 @@ public class ListAccountingExpensesRequest {
     }
     
     public ListAccountingExpensesRequest(
-            String connectionId) {
-        this(Optional.empty(), connectionId, Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty());
+            @Nonnull String connectionId) {
+        this(null, connectionId, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null);
     }
 
     /**
      * The category ID to filter by (reference to AccountingCategory)
      */
-    @JsonIgnore
     public Optional<String> categoryId() {
-        return categoryId;
+        return Optional.ofNullable(this.categoryId);
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * The contact ID to filter by (reference to AccountingContact)
      */
-    @JsonIgnore
     public Optional<String> contactId() {
-        return contactId;
+        return Optional.ofNullable(this.contactId);
     }
 
     /**
      * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
-    @JsonIgnore
     public Optional<String> endLt() {
-        return endLt;
+        return Optional.ofNullable(this.endLt);
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<ListAccountingExpensesQueryParamFields>> fields() {
-        return (Optional<List<ListAccountingExpensesQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
      * The group ID to filter by (reference to HrisGroup)
      */
-    @JsonIgnore
     public Optional<String> groupId() {
-        return groupId;
+        return Optional.ofNullable(this.groupId);
     }
 
-    @JsonIgnore
     public Optional<Double> limit() {
-        return limit;
+        return Optional.ofNullable(this.limit);
     }
 
-    @JsonIgnore
     public Optional<Double> offset() {
-        return offset;
+        return Optional.ofNullable(this.offset);
     }
 
-    @JsonIgnore
     public Optional<String> order() {
-        return order;
+        return Optional.ofNullable(this.order);
     }
 
     /**
      * Query string to search. eg. email address or name
      */
-    @JsonIgnore
     public Optional<String> query() {
-        return query;
+        return Optional.ofNullable(this.query);
     }
 
     /**
@@ -236,39 +211,34 @@ public class ListAccountingExpensesRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @JsonIgnore
     public Optional<String> sort() {
-        return sort;
+        return Optional.ofNullable(this.sort);
     }
 
     /**
      * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
-    @JsonIgnore
     public Optional<String> startGte() {
-        return startGte;
+        return Optional.ofNullable(this.startGte);
     }
 
     /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
-    @JsonIgnore
     public Optional<String> updatedGte() {
-        return updatedGte;
+        return Optional.ofNullable(this.updatedGte);
     }
 
     /**
      * The user/employee ID to filter by (reference to HrisEmployee)
      */
-    @JsonIgnore
     public Optional<String> userId() {
-        return userId;
+        return Optional.ofNullable(this.userId);
     }
 
     public static Builder builder() {
@@ -279,37 +249,17 @@ public class ListAccountingExpensesRequest {
     /**
      * The category ID to filter by (reference to AccountingCategory)
      */
-    public ListAccountingExpensesRequest withCategoryId(String categoryId) {
-        Utils.checkNotNull(categoryId, "categoryId");
-        this.categoryId = Optional.ofNullable(categoryId);
-        return this;
-    }
-
-
-    /**
-     * The category ID to filter by (reference to AccountingCategory)
-     */
-    public ListAccountingExpensesRequest withCategoryId(Optional<String> categoryId) {
-        Utils.checkNotNull(categoryId, "categoryId");
+    public ListAccountingExpensesRequest withCategoryId(@Nullable String categoryId) {
         this.categoryId = categoryId;
         return this;
     }
 
+
     /**
      * ID of the connection
      */
-    public ListAccountingExpensesRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * The contact ID to filter by (reference to AccountingContact)
-     */
-    public ListAccountingExpensesRequest withContactId(String contactId) {
-        Utils.checkNotNull(contactId, "contactId");
-        this.contactId = Optional.ofNullable(contactId);
+    public ListAccountingExpensesRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -317,221 +267,110 @@ public class ListAccountingExpensesRequest {
     /**
      * The contact ID to filter by (reference to AccountingContact)
      */
-    public ListAccountingExpensesRequest withContactId(Optional<String> contactId) {
-        Utils.checkNotNull(contactId, "contactId");
+    public ListAccountingExpensesRequest withContactId(@Nullable String contactId) {
         this.contactId = contactId;
         return this;
     }
 
-    /**
-     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-     */
-    public ListAccountingExpensesRequest withEndLt(String endLt) {
-        Utils.checkNotNull(endLt, "endLt");
-        this.endLt = Optional.ofNullable(endLt);
-        return this;
-    }
-
 
     /**
      * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
-    public ListAccountingExpensesRequest withEndLt(Optional<String> endLt) {
-        Utils.checkNotNull(endLt, "endLt");
+    public ListAccountingExpensesRequest withEndLt(@Nullable String endLt) {
         this.endLt = endLt;
         return this;
     }
 
-    /**
-     * Fields to return
-     */
-    public ListAccountingExpensesRequest withFields(List<ListAccountingExpensesQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
-        return this;
-    }
-
 
     /**
      * Fields to return
      */
-    public ListAccountingExpensesRequest withFields(Optional<? extends List<ListAccountingExpensesQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public ListAccountingExpensesRequest withFields(@Nullable List<ListAccountingExpensesQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
-    /**
-     * The group ID to filter by (reference to HrisGroup)
-     */
-    public ListAccountingExpensesRequest withGroupId(String groupId) {
-        Utils.checkNotNull(groupId, "groupId");
-        this.groupId = Optional.ofNullable(groupId);
-        return this;
-    }
-
 
     /**
      * The group ID to filter by (reference to HrisGroup)
      */
-    public ListAccountingExpensesRequest withGroupId(Optional<String> groupId) {
-        Utils.checkNotNull(groupId, "groupId");
+    public ListAccountingExpensesRequest withGroupId(@Nullable String groupId) {
         this.groupId = groupId;
         return this;
     }
 
-    public ListAccountingExpensesRequest withLimit(double limit) {
-        Utils.checkNotNull(limit, "limit");
-        this.limit = Optional.ofNullable(limit);
-        return this;
-    }
 
-
-    public ListAccountingExpensesRequest withLimit(Optional<Double> limit) {
-        Utils.checkNotNull(limit, "limit");
+    public ListAccountingExpensesRequest withLimit(@Nullable Double limit) {
         this.limit = limit;
         return this;
     }
 
-    public ListAccountingExpensesRequest withOffset(double offset) {
-        Utils.checkNotNull(offset, "offset");
-        this.offset = Optional.ofNullable(offset);
-        return this;
-    }
 
-
-    public ListAccountingExpensesRequest withOffset(Optional<Double> offset) {
-        Utils.checkNotNull(offset, "offset");
+    public ListAccountingExpensesRequest withOffset(@Nullable Double offset) {
         this.offset = offset;
         return this;
     }
 
-    public ListAccountingExpensesRequest withOrder(String order) {
-        Utils.checkNotNull(order, "order");
-        this.order = Optional.ofNullable(order);
-        return this;
-    }
 
-
-    public ListAccountingExpensesRequest withOrder(Optional<String> order) {
-        Utils.checkNotNull(order, "order");
+    public ListAccountingExpensesRequest withOrder(@Nullable String order) {
         this.order = order;
         return this;
     }
 
-    /**
-     * Query string to search. eg. email address or name
-     */
-    public ListAccountingExpensesRequest withQuery(String query) {
-        Utils.checkNotNull(query, "query");
-        this.query = Optional.ofNullable(query);
-        return this;
-    }
-
 
     /**
      * Query string to search. eg. email address or name
      */
-    public ListAccountingExpensesRequest withQuery(Optional<String> query) {
-        Utils.checkNotNull(query, "query");
+    public ListAccountingExpensesRequest withQuery(@Nullable String query) {
         this.query = query;
         return this;
     }
 
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public ListAccountingExpensesRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
-
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public ListAccountingExpensesRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public ListAccountingExpensesRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
 
-    public ListAccountingExpensesRequest withSort(String sort) {
-        Utils.checkNotNull(sort, "sort");
-        this.sort = Optional.ofNullable(sort);
-        return this;
-    }
 
-
-    public ListAccountingExpensesRequest withSort(Optional<String> sort) {
-        Utils.checkNotNull(sort, "sort");
+    public ListAccountingExpensesRequest withSort(@Nullable String sort) {
         this.sort = sort;
         return this;
     }
 
-    /**
-     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-     */
-    public ListAccountingExpensesRequest withStartGte(String startGte) {
-        Utils.checkNotNull(startGte, "startGte");
-        this.startGte = Optional.ofNullable(startGte);
-        return this;
-    }
-
 
     /**
      * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      */
-    public ListAccountingExpensesRequest withStartGte(Optional<String> startGte) {
-        Utils.checkNotNull(startGte, "startGte");
+    public ListAccountingExpensesRequest withStartGte(@Nullable String startGte) {
         this.startGte = startGte;
         return this;
     }
 
-    /**
-     * Return only results whose updated date is equal or greater to this value (ISO-8601 /
-     * YYYY-MM-DDTHH:MM:SSZ format)
-     */
-    public ListAccountingExpensesRequest withUpdatedGte(String updatedGte) {
-        Utils.checkNotNull(updatedGte, "updatedGte");
-        this.updatedGte = Optional.ofNullable(updatedGte);
-        return this;
-    }
-
 
     /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
-    public ListAccountingExpensesRequest withUpdatedGte(Optional<String> updatedGte) {
-        Utils.checkNotNull(updatedGte, "updatedGte");
+    public ListAccountingExpensesRequest withUpdatedGte(@Nullable String updatedGte) {
         this.updatedGte = updatedGte;
         return this;
     }
 
-    /**
-     * The user/employee ID to filter by (reference to HrisEmployee)
-     */
-    public ListAccountingExpensesRequest withUserId(String userId) {
-        Utils.checkNotNull(userId, "userId");
-        this.userId = Optional.ofNullable(userId);
-        return this;
-    }
-
 
     /**
      * The user/employee ID to filter by (reference to HrisEmployee)
      */
-    public ListAccountingExpensesRequest withUserId(Optional<String> userId) {
-        Utils.checkNotNull(userId, "userId");
+    public ListAccountingExpensesRequest withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -593,300 +432,152 @@ public class ListAccountingExpensesRequest {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> categoryId = Optional.empty();
+        private String categoryId;
 
         private String connectionId;
 
-        private Optional<String> contactId = Optional.empty();
+        private String contactId;
 
-        private Optional<String> endLt = Optional.empty();
+        private String endLt;
 
-        private Optional<? extends List<ListAccountingExpensesQueryParamFields>> fields = Optional.empty();
+        private List<ListAccountingExpensesQueryParamFields> fields;
 
-        private Optional<String> groupId = Optional.empty();
+        private String groupId;
 
-        private Optional<Double> limit = Optional.empty();
+        private Double limit;
 
-        private Optional<Double> offset = Optional.empty();
+        private Double offset;
 
-        private Optional<String> order = Optional.empty();
+        private String order;
 
-        private Optional<String> query = Optional.empty();
+        private String query;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
-        private Optional<String> sort = Optional.empty();
+        private String sort;
 
-        private Optional<String> startGte = Optional.empty();
+        private String startGte;
 
-        private Optional<String> updatedGte = Optional.empty();
+        private String updatedGte;
 
-        private Optional<String> userId = Optional.empty();
+        private String userId;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
         /**
          * The category ID to filter by (reference to AccountingCategory)
          */
-        public Builder categoryId(String categoryId) {
-            Utils.checkNotNull(categoryId, "categoryId");
-            this.categoryId = Optional.ofNullable(categoryId);
-            return this;
-        }
-
-        /**
-         * The category ID to filter by (reference to AccountingCategory)
-         */
-        public Builder categoryId(Optional<String> categoryId) {
-            Utils.checkNotNull(categoryId, "categoryId");
+        public Builder categoryId(@Nullable String categoryId) {
             this.categoryId = categoryId;
             return this;
         }
 
-
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * The contact ID to filter by (reference to AccountingContact)
-         */
-        public Builder contactId(String contactId) {
-            Utils.checkNotNull(contactId, "contactId");
-            this.contactId = Optional.ofNullable(contactId);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * The contact ID to filter by (reference to AccountingContact)
          */
-        public Builder contactId(Optional<String> contactId) {
-            Utils.checkNotNull(contactId, "contactId");
+        public Builder contactId(@Nullable String contactId) {
             this.contactId = contactId;
             return this;
         }
 
-
         /**
          * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
          */
-        public Builder endLt(String endLt) {
-            Utils.checkNotNull(endLt, "endLt");
-            this.endLt = Optional.ofNullable(endLt);
-            return this;
-        }
-
-        /**
-         * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-         */
-        public Builder endLt(Optional<String> endLt) {
-            Utils.checkNotNull(endLt, "endLt");
+        public Builder endLt(@Nullable String endLt) {
             this.endLt = endLt;
             return this;
         }
 
-
         /**
          * Fields to return
          */
-        public Builder fields(List<ListAccountingExpensesQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
-            return this;
-        }
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(Optional<? extends List<ListAccountingExpensesQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<ListAccountingExpensesQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * The group ID to filter by (reference to HrisGroup)
          */
-        public Builder groupId(String groupId) {
-            Utils.checkNotNull(groupId, "groupId");
-            this.groupId = Optional.ofNullable(groupId);
-            return this;
-        }
-
-        /**
-         * The group ID to filter by (reference to HrisGroup)
-         */
-        public Builder groupId(Optional<String> groupId) {
-            Utils.checkNotNull(groupId, "groupId");
+        public Builder groupId(@Nullable String groupId) {
             this.groupId = groupId;
             return this;
         }
 
-
-        public Builder limit(double limit) {
-            Utils.checkNotNull(limit, "limit");
-            this.limit = Optional.ofNullable(limit);
-            return this;
-        }
-
-        public Builder limit(Optional<Double> limit) {
-            Utils.checkNotNull(limit, "limit");
+        public Builder limit(@Nullable Double limit) {
             this.limit = limit;
             return this;
         }
 
-
-        public Builder offset(double offset) {
-            Utils.checkNotNull(offset, "offset");
-            this.offset = Optional.ofNullable(offset);
-            return this;
-        }
-
-        public Builder offset(Optional<Double> offset) {
-            Utils.checkNotNull(offset, "offset");
+        public Builder offset(@Nullable Double offset) {
             this.offset = offset;
             return this;
         }
 
-
-        public Builder order(String order) {
-            Utils.checkNotNull(order, "order");
-            this.order = Optional.ofNullable(order);
-            return this;
-        }
-
-        public Builder order(Optional<String> order) {
-            Utils.checkNotNull(order, "order");
+        public Builder order(@Nullable String order) {
             this.order = order;
             return this;
         }
 
-
         /**
          * Query string to search. eg. email address or name
          */
-        public Builder query(String query) {
-            Utils.checkNotNull(query, "query");
-            this.query = Optional.ofNullable(query);
-            return this;
-        }
-
-        /**
-         * Query string to search. eg. email address or name
-         */
-        public Builder query(Optional<String> query) {
-            Utils.checkNotNull(query, "query");
+        public Builder query(@Nullable String query) {
             this.query = query;
             return this;
         }
 
-
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder sort(String sort) {
-            Utils.checkNotNull(sort, "sort");
-            this.sort = Optional.ofNullable(sort);
-            return this;
-        }
-
-        public Builder sort(Optional<String> sort) {
-            Utils.checkNotNull(sort, "sort");
+        public Builder sort(@Nullable String sort) {
             this.sort = sort;
             return this;
         }
 
-
         /**
          * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
          */
-        public Builder startGte(String startGte) {
-            Utils.checkNotNull(startGte, "startGte");
-            this.startGte = Optional.ofNullable(startGte);
-            return this;
-        }
-
-        /**
-         * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
-         */
-        public Builder startGte(Optional<String> startGte) {
-            Utils.checkNotNull(startGte, "startGte");
+        public Builder startGte(@Nullable String startGte) {
             this.startGte = startGte;
             return this;
         }
 
-
         /**
          * Return only results whose updated date is equal or greater to this value (ISO-8601 /
          * YYYY-MM-DDTHH:MM:SSZ format)
          */
-        public Builder updatedGte(String updatedGte) {
-            Utils.checkNotNull(updatedGte, "updatedGte");
-            this.updatedGte = Optional.ofNullable(updatedGte);
-            return this;
-        }
-
-        /**
-         * Return only results whose updated date is equal or greater to this value (ISO-8601 /
-         * YYYY-MM-DDTHH:MM:SSZ format)
-         */
-        public Builder updatedGte(Optional<String> updatedGte) {
-            Utils.checkNotNull(updatedGte, "updatedGte");
+        public Builder updatedGte(@Nullable String updatedGte) {
             this.updatedGte = updatedGte;
             return this;
         }
 
-
         /**
          * The user/employee ID to filter by (reference to HrisEmployee)
          */
-        public Builder userId(String userId) {
-            Utils.checkNotNull(userId, "userId");
-            this.userId = Optional.ofNullable(userId);
-            return this;
-        }
-
-        /**
-         * The user/employee ID to filter by (reference to HrisEmployee)
-         */
-        public Builder userId(Optional<String> userId) {
-            Utils.checkNotNull(userId, "userId");
+        public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;
         }
 
         public ListAccountingExpensesRequest build() {
-
             return new ListAccountingExpensesRequest(
                 categoryId, connectionId, contactId,
                 endLt, fields, groupId,

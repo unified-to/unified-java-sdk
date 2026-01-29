@@ -4,9 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
 import java.lang.Override;
 import java.lang.String;
+import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -20,17 +21,16 @@ public class GetUnifiedWebhookRequest {
 
     @JsonCreator
     public GetUnifiedWebhookRequest(
-            String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = id;
+            @Nonnull String id) {
+        this.id = Optional.ofNullable(id)
+            .orElseThrow(() -> new IllegalArgumentException("id cannot be null"));
     }
 
     /**
      * ID of the Webhook
      */
-    @JsonIgnore
     public String id() {
-        return id;
+        return this.id;
     }
 
     public static Builder builder() {
@@ -41,11 +41,11 @@ public class GetUnifiedWebhookRequest {
     /**
      * ID of the Webhook
      */
-    public GetUnifiedWebhookRequest withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = id;
+    public GetUnifiedWebhookRequest withId(@Nonnull String id) {
+        this.id = Utils.checkNotNull(id, "id");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -81,18 +81,15 @@ public class GetUnifiedWebhookRequest {
           // force use of static builder() method
         }
 
-
         /**
          * ID of the Webhook
          */
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = id;
+        public Builder id(@Nonnull String id) {
+            this.id = Utils.checkNotNull(id, "id");
             return this;
         }
 
         public GetUnifiedWebhookRequest build() {
-
             return new GetUnifiedWebhookRequest(
                 id);
         }

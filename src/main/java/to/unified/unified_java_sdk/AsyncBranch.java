@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateRepoBranchRequest;
 import to.unified.unified_java_sdk.models.operations.GetRepoBranchRequest;
@@ -68,7 +69,7 @@ public class AsyncBranch {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateRepoBranchResponse>} - The async response
      */
-    public CompletableFuture<CreateRepoBranchResponse> createRepoBranch(CreateRepoBranchRequest request) {
+    public CompletableFuture<CreateRepoBranchResponse> createRepoBranch(@Nonnull CreateRepoBranchRequest request) {
         AsyncRequestOperation<CreateRepoBranchRequest, CreateRepoBranchResponse> operation
               = new CreateRepoBranch.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -91,7 +92,7 @@ public class AsyncBranch {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetRepoBranchResponse>} - The async response
      */
-    public CompletableFuture<GetRepoBranchResponse> getRepoBranch(GetRepoBranchRequest request) {
+    public CompletableFuture<GetRepoBranchResponse> getRepoBranch(@Nonnull GetRepoBranchRequest request) {
         AsyncRequestOperation<GetRepoBranchRequest, GetRepoBranchResponse> operation
               = new GetRepoBranch.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -114,7 +115,7 @@ public class AsyncBranch {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListRepoBranchesResponse>} - The async response
      */
-    public CompletableFuture<ListRepoBranchesResponse> listRepoBranches(ListRepoBranchesRequest request) {
+    public CompletableFuture<ListRepoBranchesResponse> listRepoBranches(@Nonnull ListRepoBranchesRequest request) {
         AsyncRequestOperation<ListRepoBranchesRequest, ListRepoBranchesResponse> operation
               = new ListRepoBranches.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -137,7 +138,7 @@ public class AsyncBranch {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchRepoBranchResponse>} - The async response
      */
-    public CompletableFuture<PatchRepoBranchResponse> patchRepoBranch(PatchRepoBranchRequest request) {
+    public CompletableFuture<PatchRepoBranchResponse> patchRepoBranch(@Nonnull PatchRepoBranchRequest request) {
         AsyncRequestOperation<PatchRepoBranchRequest, PatchRepoBranchResponse> operation
               = new PatchRepoBranch.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -160,7 +161,7 @@ public class AsyncBranch {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveRepoBranchResponse>} - The async response
      */
-    public CompletableFuture<RemoveRepoBranchResponse> removeRepoBranch(RemoveRepoBranchRequest request) {
+    public CompletableFuture<RemoveRepoBranchResponse> removeRepoBranch(@Nonnull RemoveRepoBranchRequest request) {
         AsyncRequestOperation<RemoveRepoBranchRequest, RemoveRepoBranchResponse> operation
               = new RemoveRepoBranch.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -183,7 +184,7 @@ public class AsyncBranch {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateRepoBranchResponse>} - The async response
      */
-    public CompletableFuture<UpdateRepoBranchResponse> updateRepoBranch(UpdateRepoBranchRequest request) {
+    public CompletableFuture<UpdateRepoBranchResponse> updateRepoBranch(@Nonnull UpdateRepoBranchRequest request) {
         AsyncRequestOperation<UpdateRepoBranchRequest, UpdateRepoBranchResponse> operation
               = new UpdateRepoBranch.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk.models.operations.async;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingContactRequest;
@@ -13,27 +14,39 @@ import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
 public class UpdateAccountingContactRequestBuilder {
-
-    private UpdateAccountingContactRequest request;
     private final SDKConfiguration sdkConfiguration;
-    private final Headers _headers = new Headers(); 
+    private final Headers _headers = new Headers();
+    private UpdateAccountingContactRequest request;
 
     public UpdateAccountingContactRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
 
-    public UpdateAccountingContactRequestBuilder request(UpdateAccountingContactRequest request) {
-        Utils.checkNotNull(request, "request");
-        this.request = request;
+    public UpdateAccountingContactRequestBuilder request(@Nonnull UpdateAccountingContactRequest request) {
+        this.request = Utils.checkNotNull(request, "request");
         return this;
     }
 
+    private UpdateAccountingContactRequest _buildRequest() {
+        return this.request;
+    }
+    
+    public UpdateAccountingContactRequestBuilder header(String name, String value) {
+        Utils.checkNotNull(name, "name");
+        Utils.checkNotNull(value, "value");
+        this._headers.add(name, value);
+        return this;
+    }
+
+    /**
+    * Executes the request and returns the response.
+    *
+    * @return The response from the server.
+    */
     public CompletableFuture<UpdateAccountingContactResponse> call() {
-        
         AsyncRequestOperation<UpdateAccountingContactRequest, UpdateAccountingContactResponse> operation
               = new UpdateAccountingContact.Async(sdkConfiguration, _headers);
-
-        return operation.doRequest(request)
+        return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }
 }

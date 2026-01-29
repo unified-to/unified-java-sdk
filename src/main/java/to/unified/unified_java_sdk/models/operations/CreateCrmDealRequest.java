@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.CrmDeal;
@@ -32,7 +32,7 @@ public class CreateCrmDealRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<CreateCrmDealQueryParamFields>> fields;
+    private List<CreateCrmDealQueryParamFields> fields;
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
@@ -40,54 +40,48 @@ public class CreateCrmDealRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
     @JsonCreator
     public CreateCrmDealRequest(
-            CrmDeal crmDeal,
-            String connectionId,
-            Optional<? extends List<CreateCrmDealQueryParamFields>> fields,
-            Optional<String> raw) {
-        Utils.checkNotNull(crmDeal, "crmDeal");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(raw, "raw");
-        this.crmDeal = crmDeal;
-        this.connectionId = connectionId;
+            @Nonnull CrmDeal crmDeal,
+            @Nonnull String connectionId,
+            @Nullable List<CreateCrmDealQueryParamFields> fields,
+            @Nullable String raw) {
+        this.crmDeal = Optional.ofNullable(crmDeal)
+            .orElseThrow(() -> new IllegalArgumentException("crmDeal cannot be null"));
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
         this.raw = raw;
     }
     
     public CreateCrmDealRequest(
-            CrmDeal crmDeal,
-            String connectionId) {
-        this(crmDeal, connectionId, Optional.empty(),
-            Optional.empty());
+            @Nonnull CrmDeal crmDeal,
+            @Nonnull String connectionId) {
+        this(crmDeal, connectionId, null,
+            null);
     }
 
     /**
      * A deal represents an opportunity with companies and/or contacts
      */
-    @JsonIgnore
     public CrmDeal crmDeal() {
-        return crmDeal;
+        return this.crmDeal;
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<CreateCrmDealQueryParamFields>> fields() {
-        return (Optional<List<CreateCrmDealQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
@@ -95,9 +89,8 @@ public class CreateCrmDealRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
     public static Builder builder() {
@@ -108,27 +101,17 @@ public class CreateCrmDealRequest {
     /**
      * A deal represents an opportunity with companies and/or contacts
      */
-    public CreateCrmDealRequest withCrmDeal(CrmDeal crmDeal) {
-        Utils.checkNotNull(crmDeal, "crmDeal");
-        this.crmDeal = crmDeal;
+    public CreateCrmDealRequest withCrmDeal(@Nonnull CrmDeal crmDeal) {
+        this.crmDeal = Utils.checkNotNull(crmDeal, "crmDeal");
         return this;
     }
+
 
     /**
      * ID of the connection
      */
-    public CreateCrmDealRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public CreateCrmDealRequest withFields(List<CreateCrmDealQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public CreateCrmDealRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -136,34 +119,22 @@ public class CreateCrmDealRequest {
     /**
      * Fields to return
      */
-    public CreateCrmDealRequest withFields(Optional<? extends List<CreateCrmDealQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public CreateCrmDealRequest withFields(@Nullable List<CreateCrmDealQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public CreateCrmDealRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
-
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public CreateCrmDealRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public CreateCrmDealRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -204,78 +175,49 @@ public class CreateCrmDealRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<CreateCrmDealQueryParamFields>> fields = Optional.empty();
+        private List<CreateCrmDealQueryParamFields> fields;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
         /**
          * A deal represents an opportunity with companies and/or contacts
          */
-        public Builder crmDeal(CrmDeal crmDeal) {
-            Utils.checkNotNull(crmDeal, "crmDeal");
-            this.crmDeal = crmDeal;
+        public Builder crmDeal(@Nonnull CrmDeal crmDeal) {
+            this.crmDeal = Utils.checkNotNull(crmDeal, "crmDeal");
             return this;
         }
-
 
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<CreateCrmDealQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<CreateCrmDealQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<CreateCrmDealQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
         public CreateCrmDealRequest build() {
-
             return new CreateCrmDealRequest(
                 crmDeal, connectionId, fields,
                 raw);

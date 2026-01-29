@@ -4,12 +4,12 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
@@ -21,33 +21,33 @@ public class ListUnifiedIntegrationWorkspacesRequest {
      * Filter the results for only the workspace's active integrations
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=active")
-    private Optional<Boolean> active;
+    private Boolean active;
 
     /**
      * Filter the results on these categories
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=categories")
-    private Optional<? extends List<QueryParamCategories>> categories;
+    private List<QueryParamCategories> categories;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=env")
-    private Optional<String> env;
+    private String env;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
-    private Optional<Double> limit;
+    private Double limit;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
-    private Optional<Double> offset;
+    private Double offset;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=summary")
-    private Optional<Boolean> summary;
+    private Boolean summary;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
-    private Optional<String> updatedGte;
+    private String updatedGte;
 
     /**
      * The ID of the workspace
@@ -57,22 +57,14 @@ public class ListUnifiedIntegrationWorkspacesRequest {
 
     @JsonCreator
     public ListUnifiedIntegrationWorkspacesRequest(
-            Optional<Boolean> active,
-            Optional<? extends List<QueryParamCategories>> categories,
-            Optional<String> env,
-            Optional<Double> limit,
-            Optional<Double> offset,
-            Optional<Boolean> summary,
-            Optional<String> updatedGte,
-            String workspaceId) {
-        Utils.checkNotNull(active, "active");
-        Utils.checkNotNull(categories, "categories");
-        Utils.checkNotNull(env, "env");
-        Utils.checkNotNull(limit, "limit");
-        Utils.checkNotNull(offset, "offset");
-        Utils.checkNotNull(summary, "summary");
-        Utils.checkNotNull(updatedGte, "updatedGte");
-        Utils.checkNotNull(workspaceId, "workspaceId");
+            @Nullable Boolean active,
+            @Nullable List<QueryParamCategories> categories,
+            @Nullable String env,
+            @Nullable Double limit,
+            @Nullable Double offset,
+            @Nullable Boolean summary,
+            @Nullable String updatedGte,
+            @Nonnull String workspaceId) {
         this.active = active;
         this.categories = categories;
         this.env = env;
@@ -80,64 +72,56 @@ public class ListUnifiedIntegrationWorkspacesRequest {
         this.offset = offset;
         this.summary = summary;
         this.updatedGte = updatedGte;
-        this.workspaceId = workspaceId;
+        this.workspaceId = Optional.ofNullable(workspaceId)
+            .orElseThrow(() -> new IllegalArgumentException("workspaceId cannot be null"));
     }
     
     public ListUnifiedIntegrationWorkspacesRequest(
-            String workspaceId) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), workspaceId);
+            @Nonnull String workspaceId) {
+        this(null, null, null,
+            null, null, null,
+            null, workspaceId);
     }
 
     /**
      * Filter the results for only the workspace's active integrations
      */
-    @JsonIgnore
     public Optional<Boolean> active() {
-        return active;
+        return Optional.ofNullable(this.active);
     }
 
     /**
      * Filter the results on these categories
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<QueryParamCategories>> categories() {
-        return (Optional<List<QueryParamCategories>>) categories;
+        return Optional.ofNullable(this.categories);
     }
 
-    @JsonIgnore
     public Optional<String> env() {
-        return env;
+        return Optional.ofNullable(this.env);
     }
 
-    @JsonIgnore
     public Optional<Double> limit() {
-        return limit;
+        return Optional.ofNullable(this.limit);
     }
 
-    @JsonIgnore
     public Optional<Double> offset() {
-        return offset;
+        return Optional.ofNullable(this.offset);
     }
 
-    @JsonIgnore
     public Optional<Boolean> summary() {
-        return summary;
+        return Optional.ofNullable(this.summary);
     }
 
-    @JsonIgnore
     public Optional<String> updatedGte() {
-        return updatedGte;
+        return Optional.ofNullable(this.updatedGte);
     }
 
     /**
      * The ID of the workspace
      */
-    @JsonIgnore
     public String workspaceId() {
-        return workspaceId;
+        return this.workspaceId;
     }
 
     public static Builder builder() {
@@ -148,114 +132,59 @@ public class ListUnifiedIntegrationWorkspacesRequest {
     /**
      * Filter the results for only the workspace's active integrations
      */
-    public ListUnifiedIntegrationWorkspacesRequest withActive(boolean active) {
-        Utils.checkNotNull(active, "active");
-        this.active = Optional.ofNullable(active);
-        return this;
-    }
-
-
-    /**
-     * Filter the results for only the workspace's active integrations
-     */
-    public ListUnifiedIntegrationWorkspacesRequest withActive(Optional<Boolean> active) {
-        Utils.checkNotNull(active, "active");
+    public ListUnifiedIntegrationWorkspacesRequest withActive(@Nullable Boolean active) {
         this.active = active;
         return this;
     }
 
-    /**
-     * Filter the results on these categories
-     */
-    public ListUnifiedIntegrationWorkspacesRequest withCategories(List<QueryParamCategories> categories) {
-        Utils.checkNotNull(categories, "categories");
-        this.categories = Optional.ofNullable(categories);
-        return this;
-    }
-
 
     /**
      * Filter the results on these categories
      */
-    public ListUnifiedIntegrationWorkspacesRequest withCategories(Optional<? extends List<QueryParamCategories>> categories) {
-        Utils.checkNotNull(categories, "categories");
+    public ListUnifiedIntegrationWorkspacesRequest withCategories(@Nullable List<QueryParamCategories> categories) {
         this.categories = categories;
         return this;
     }
 
-    public ListUnifiedIntegrationWorkspacesRequest withEnv(String env) {
-        Utils.checkNotNull(env, "env");
-        this.env = Optional.ofNullable(env);
-        return this;
-    }
 
-
-    public ListUnifiedIntegrationWorkspacesRequest withEnv(Optional<String> env) {
-        Utils.checkNotNull(env, "env");
+    public ListUnifiedIntegrationWorkspacesRequest withEnv(@Nullable String env) {
         this.env = env;
         return this;
     }
 
-    public ListUnifiedIntegrationWorkspacesRequest withLimit(double limit) {
-        Utils.checkNotNull(limit, "limit");
-        this.limit = Optional.ofNullable(limit);
-        return this;
-    }
 
-
-    public ListUnifiedIntegrationWorkspacesRequest withLimit(Optional<Double> limit) {
-        Utils.checkNotNull(limit, "limit");
+    public ListUnifiedIntegrationWorkspacesRequest withLimit(@Nullable Double limit) {
         this.limit = limit;
         return this;
     }
 
-    public ListUnifiedIntegrationWorkspacesRequest withOffset(double offset) {
-        Utils.checkNotNull(offset, "offset");
-        this.offset = Optional.ofNullable(offset);
-        return this;
-    }
 
-
-    public ListUnifiedIntegrationWorkspacesRequest withOffset(Optional<Double> offset) {
-        Utils.checkNotNull(offset, "offset");
+    public ListUnifiedIntegrationWorkspacesRequest withOffset(@Nullable Double offset) {
         this.offset = offset;
         return this;
     }
 
-    public ListUnifiedIntegrationWorkspacesRequest withSummary(boolean summary) {
-        Utils.checkNotNull(summary, "summary");
-        this.summary = Optional.ofNullable(summary);
-        return this;
-    }
 
-
-    public ListUnifiedIntegrationWorkspacesRequest withSummary(Optional<Boolean> summary) {
-        Utils.checkNotNull(summary, "summary");
+    public ListUnifiedIntegrationWorkspacesRequest withSummary(@Nullable Boolean summary) {
         this.summary = summary;
         return this;
     }
 
-    public ListUnifiedIntegrationWorkspacesRequest withUpdatedGte(String updatedGte) {
-        Utils.checkNotNull(updatedGte, "updatedGte");
-        this.updatedGte = Optional.ofNullable(updatedGte);
-        return this;
-    }
 
-
-    public ListUnifiedIntegrationWorkspacesRequest withUpdatedGte(Optional<String> updatedGte) {
-        Utils.checkNotNull(updatedGte, "updatedGte");
+    public ListUnifiedIntegrationWorkspacesRequest withUpdatedGte(@Nullable String updatedGte) {
         this.updatedGte = updatedGte;
         return this;
     }
 
+
     /**
      * The ID of the workspace
      */
-    public ListUnifiedIntegrationWorkspacesRequest withWorkspaceId(String workspaceId) {
-        Utils.checkNotNull(workspaceId, "workspaceId");
-        this.workspaceId = workspaceId;
+    public ListUnifiedIntegrationWorkspacesRequest withWorkspaceId(@Nonnull String workspaceId) {
+        this.workspaceId = Utils.checkNotNull(workspaceId, "workspaceId");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -301,19 +230,19 @@ public class ListUnifiedIntegrationWorkspacesRequest {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<Boolean> active = Optional.empty();
+        private Boolean active;
 
-        private Optional<? extends List<QueryParamCategories>> categories = Optional.empty();
+        private List<QueryParamCategories> categories;
 
-        private Optional<String> env = Optional.empty();
+        private String env;
 
-        private Optional<Double> limit = Optional.empty();
+        private Double limit;
 
-        private Optional<Double> offset = Optional.empty();
+        private Double offset;
 
-        private Optional<Boolean> summary = Optional.empty();
+        private Boolean summary;
 
-        private Optional<String> updatedGte = Optional.empty();
+        private String updatedGte;
 
         private String workspaceId;
 
@@ -321,121 +250,56 @@ public class ListUnifiedIntegrationWorkspacesRequest {
           // force use of static builder() method
         }
 
-
         /**
          * Filter the results for only the workspace's active integrations
          */
-        public Builder active(boolean active) {
-            Utils.checkNotNull(active, "active");
-            this.active = Optional.ofNullable(active);
-            return this;
-        }
-
-        /**
-         * Filter the results for only the workspace's active integrations
-         */
-        public Builder active(Optional<Boolean> active) {
-            Utils.checkNotNull(active, "active");
+        public Builder active(@Nullable Boolean active) {
             this.active = active;
             return this;
         }
 
-
         /**
          * Filter the results on these categories
          */
-        public Builder categories(List<QueryParamCategories> categories) {
-            Utils.checkNotNull(categories, "categories");
-            this.categories = Optional.ofNullable(categories);
-            return this;
-        }
-
-        /**
-         * Filter the results on these categories
-         */
-        public Builder categories(Optional<? extends List<QueryParamCategories>> categories) {
-            Utils.checkNotNull(categories, "categories");
+        public Builder categories(@Nullable List<QueryParamCategories> categories) {
             this.categories = categories;
             return this;
         }
 
-
-        public Builder env(String env) {
-            Utils.checkNotNull(env, "env");
-            this.env = Optional.ofNullable(env);
-            return this;
-        }
-
-        public Builder env(Optional<String> env) {
-            Utils.checkNotNull(env, "env");
+        public Builder env(@Nullable String env) {
             this.env = env;
             return this;
         }
 
-
-        public Builder limit(double limit) {
-            Utils.checkNotNull(limit, "limit");
-            this.limit = Optional.ofNullable(limit);
-            return this;
-        }
-
-        public Builder limit(Optional<Double> limit) {
-            Utils.checkNotNull(limit, "limit");
+        public Builder limit(@Nullable Double limit) {
             this.limit = limit;
             return this;
         }
 
-
-        public Builder offset(double offset) {
-            Utils.checkNotNull(offset, "offset");
-            this.offset = Optional.ofNullable(offset);
-            return this;
-        }
-
-        public Builder offset(Optional<Double> offset) {
-            Utils.checkNotNull(offset, "offset");
+        public Builder offset(@Nullable Double offset) {
             this.offset = offset;
             return this;
         }
 
-
-        public Builder summary(boolean summary) {
-            Utils.checkNotNull(summary, "summary");
-            this.summary = Optional.ofNullable(summary);
-            return this;
-        }
-
-        public Builder summary(Optional<Boolean> summary) {
-            Utils.checkNotNull(summary, "summary");
+        public Builder summary(@Nullable Boolean summary) {
             this.summary = summary;
             return this;
         }
 
-
-        public Builder updatedGte(String updatedGte) {
-            Utils.checkNotNull(updatedGte, "updatedGte");
-            this.updatedGte = Optional.ofNullable(updatedGte);
-            return this;
-        }
-
-        public Builder updatedGte(Optional<String> updatedGte) {
-            Utils.checkNotNull(updatedGte, "updatedGte");
+        public Builder updatedGte(@Nullable String updatedGte) {
             this.updatedGte = updatedGte;
             return this;
         }
 
-
         /**
          * The ID of the workspace
          */
-        public Builder workspaceId(String workspaceId) {
-            Utils.checkNotNull(workspaceId, "workspaceId");
-            this.workspaceId = workspaceId;
+        public Builder workspaceId(@Nonnull String workspaceId) {
+            this.workspaceId = Utils.checkNotNull(workspaceId, "workspaceId");
             return this;
         }
 
         public ListUnifiedIntegrationWorkspacesRequest build() {
-
             return new ListUnifiedIntegrationWorkspacesRequest(
                 active, categories, env,
                 limit, offset, summary,

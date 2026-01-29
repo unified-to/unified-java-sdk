@@ -4,14 +4,13 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nullable;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
@@ -23,67 +22,67 @@ public class AtsCandidate {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
-    private Optional<? extends PropertyAtsCandidateAddress> address;
+    private PropertyAtsCandidateAddress address;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_id")
-    private Optional<String> companyId;
+    private String companyId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_name")
-    private Optional<String> companyName;
+    private String companyName;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date_of_birth")
-    private Optional<OffsetDateTime> dateOfBirth;
+    private OffsetDateTime dateOfBirth;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("education")
-    private Optional<? extends List<AtsCandidateEducation>> education;
+    private List<AtsCandidateEducation> education;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emails")
-    private Optional<? extends List<AtsEmail>> emails;
+    private List<AtsEmail> emails;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("experiences")
-    private Optional<? extends List<AtsCandidateExperience>> experiences;
+    private List<AtsCandidateExperience> experiences;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("external_identifier")
-    private Optional<String> externalIdentifier;
+    private String externalIdentifier;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first_name")
-    private Optional<String> firstName;
+    private String firstName;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image_url")
-    private Optional<String> imageUrl;
+    private String imageUrl;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_name")
-    private Optional<String> lastName;
+    private String lastName;
 
     /**
      * URLs for web pages containing additional material about the candidate (LinkedIn, other social media,
@@ -91,122 +90,96 @@ public class AtsCandidate {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link_urls")
-    private Optional<? extends List<String>> linkUrls;
+    private List<String> linkUrls;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
-    private Optional<? extends List<AtsMetadata>> metadata;
+    private List<AtsMetadata> metadata;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
-    private Optional<String> name;
+    private String name;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("origin")
-    private Optional<? extends Origin> origin;
+    private Origin origin;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skills")
-    private Optional<? extends List<String>> skills;
+    private List<String> skills;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sources")
-    private Optional<? extends List<String>> sources;
+    private List<String> sources;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
-    private Optional<? extends List<String>> tags;
+    private List<String> tags;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("telephones")
-    private Optional<? extends List<AtsTelephone>> telephones;
+    private List<AtsTelephone> telephones;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
-    private Optional<String> title;
+    private String title;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
-    private Optional<String> userId;
+    private String userId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("web_url")
-    private Optional<String> webUrl;
+    private String webUrl;
 
     @JsonCreator
     public AtsCandidate(
-            @JsonProperty("address") Optional<? extends PropertyAtsCandidateAddress> address,
-            @JsonProperty("company_id") Optional<String> companyId,
-            @JsonProperty("company_name") Optional<String> companyName,
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("date_of_birth") Optional<OffsetDateTime> dateOfBirth,
-            @JsonProperty("education") Optional<? extends List<AtsCandidateEducation>> education,
-            @JsonProperty("emails") Optional<? extends List<AtsEmail>> emails,
-            @JsonProperty("experiences") Optional<? extends List<AtsCandidateExperience>> experiences,
-            @JsonProperty("external_identifier") Optional<String> externalIdentifier,
-            @JsonProperty("first_name") Optional<String> firstName,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("image_url") Optional<String> imageUrl,
-            @JsonProperty("last_name") Optional<String> lastName,
-            @JsonProperty("link_urls") Optional<? extends List<String>> linkUrls,
-            @JsonProperty("metadata") Optional<? extends List<AtsMetadata>> metadata,
-            @JsonProperty("name") Optional<String> name,
-            @JsonProperty("origin") Optional<? extends Origin> origin,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("skills") Optional<? extends List<String>> skills,
-            @JsonProperty("sources") Optional<? extends List<String>> sources,
-            @JsonProperty("tags") Optional<? extends List<String>> tags,
-            @JsonProperty("telephones") Optional<? extends List<AtsTelephone>> telephones,
-            @JsonProperty("title") Optional<String> title,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
-            @JsonProperty("user_id") Optional<String> userId,
-            @JsonProperty("web_url") Optional<String> webUrl) {
-        Utils.checkNotNull(address, "address");
-        Utils.checkNotNull(companyId, "companyId");
-        Utils.checkNotNull(companyName, "companyName");
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(dateOfBirth, "dateOfBirth");
-        Utils.checkNotNull(education, "education");
-        Utils.checkNotNull(emails, "emails");
-        Utils.checkNotNull(experiences, "experiences");
-        Utils.checkNotNull(externalIdentifier, "externalIdentifier");
-        Utils.checkNotNull(firstName, "firstName");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(imageUrl, "imageUrl");
-        Utils.checkNotNull(lastName, "lastName");
-        Utils.checkNotNull(linkUrls, "linkUrls");
-        Utils.checkNotNull(metadata, "metadata");
-        Utils.checkNotNull(name, "name");
-        Utils.checkNotNull(origin, "origin");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(skills, "skills");
-        Utils.checkNotNull(sources, "sources");
-        Utils.checkNotNull(tags, "tags");
-        Utils.checkNotNull(telephones, "telephones");
-        Utils.checkNotNull(title, "title");
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        Utils.checkNotNull(userId, "userId");
-        Utils.checkNotNull(webUrl, "webUrl");
+            @JsonProperty("address") @Nullable PropertyAtsCandidateAddress address,
+            @JsonProperty("company_id") @Nullable String companyId,
+            @JsonProperty("company_name") @Nullable String companyName,
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("date_of_birth") @Nullable OffsetDateTime dateOfBirth,
+            @JsonProperty("education") @Nullable List<AtsCandidateEducation> education,
+            @JsonProperty("emails") @Nullable List<AtsEmail> emails,
+            @JsonProperty("experiences") @Nullable List<AtsCandidateExperience> experiences,
+            @JsonProperty("external_identifier") @Nullable String externalIdentifier,
+            @JsonProperty("first_name") @Nullable String firstName,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("image_url") @Nullable String imageUrl,
+            @JsonProperty("last_name") @Nullable String lastName,
+            @JsonProperty("link_urls") @Nullable List<String> linkUrls,
+            @JsonProperty("metadata") @Nullable List<AtsMetadata> metadata,
+            @JsonProperty("name") @Nullable String name,
+            @JsonProperty("origin") @Nullable Origin origin,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("skills") @Nullable List<String> skills,
+            @JsonProperty("sources") @Nullable List<String> sources,
+            @JsonProperty("tags") @Nullable List<String> tags,
+            @JsonProperty("telephones") @Nullable List<AtsTelephone> telephones,
+            @JsonProperty("title") @Nullable String title,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
+            @JsonProperty("user_id") @Nullable String userId,
+            @JsonProperty("web_url") @Nullable String webUrl) {
         this.address = address;
         this.companyId = companyId;
         this.companyName = companyName;
@@ -236,161 +209,123 @@ public class AtsCandidate {
     }
     
     public AtsCandidate() {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<PropertyAtsCandidateAddress> address() {
-        return (Optional<PropertyAtsCandidateAddress>) address;
+        return Optional.ofNullable(this.address);
     }
 
-    @JsonIgnore
     public Optional<String> companyId() {
-        return companyId;
+        return Optional.ofNullable(this.companyId);
     }
 
-    @JsonIgnore
     public Optional<String> companyName() {
-        return companyName;
+        return Optional.ofNullable(this.companyName);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> dateOfBirth() {
-        return dateOfBirth;
+        return Optional.ofNullable(this.dateOfBirth);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<AtsCandidateEducation>> education() {
-        return (Optional<List<AtsCandidateEducation>>) education;
+        return Optional.ofNullable(this.education);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<AtsEmail>> emails() {
-        return (Optional<List<AtsEmail>>) emails;
+        return Optional.ofNullable(this.emails);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<AtsCandidateExperience>> experiences() {
-        return (Optional<List<AtsCandidateExperience>>) experiences;
+        return Optional.ofNullable(this.experiences);
     }
 
-    @JsonIgnore
     public Optional<String> externalIdentifier() {
-        return externalIdentifier;
+        return Optional.ofNullable(this.externalIdentifier);
     }
 
-    @JsonIgnore
     public Optional<String> firstName() {
-        return firstName;
+        return Optional.ofNullable(this.firstName);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<String> imageUrl() {
-        return imageUrl;
+        return Optional.ofNullable(this.imageUrl);
     }
 
-    @JsonIgnore
     public Optional<String> lastName() {
-        return lastName;
+        return Optional.ofNullable(this.lastName);
     }
 
     /**
      * URLs for web pages containing additional material about the candidate (LinkedIn, other social media,
      * articles, etc.)
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> linkUrls() {
-        return (Optional<List<String>>) linkUrls;
+        return Optional.ofNullable(this.linkUrls);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<AtsMetadata>> metadata() {
-        return (Optional<List<AtsMetadata>>) metadata;
+        return Optional.ofNullable(this.metadata);
     }
 
-    @JsonIgnore
     public Optional<String> name() {
-        return name;
+        return Optional.ofNullable(this.name);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Origin> origin() {
-        return (Optional<Origin>) origin;
+        return Optional.ofNullable(this.origin);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> skills() {
-        return (Optional<List<String>>) skills;
+        return Optional.ofNullable(this.skills);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> sources() {
-        return (Optional<List<String>>) sources;
+        return Optional.ofNullable(this.sources);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<String>> tags() {
-        return (Optional<List<String>>) tags;
+        return Optional.ofNullable(this.tags);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<AtsTelephone>> telephones() {
-        return (Optional<List<AtsTelephone>>) telephones;
+        return Optional.ofNullable(this.telephones);
     }
 
-    @JsonIgnore
     public Optional<String> title() {
-        return title;
+        return Optional.ofNullable(this.title);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
-    @JsonIgnore
     public Optional<String> userId() {
-        return userId;
+        return Optional.ofNullable(this.userId);
     }
 
-    @JsonIgnore
     public Optional<String> webUrl() {
-        return webUrl;
+        return Optional.ofNullable(this.webUrl);
     }
 
     public static Builder builder() {
@@ -398,351 +333,165 @@ public class AtsCandidate {
     }
 
 
-    public AtsCandidate withAddress(PropertyAtsCandidateAddress address) {
-        Utils.checkNotNull(address, "address");
-        this.address = Optional.ofNullable(address);
-        return this;
-    }
-
-
-    public AtsCandidate withAddress(Optional<? extends PropertyAtsCandidateAddress> address) {
-        Utils.checkNotNull(address, "address");
+    public AtsCandidate withAddress(@Nullable PropertyAtsCandidateAddress address) {
         this.address = address;
         return this;
     }
 
-    public AtsCandidate withCompanyId(String companyId) {
-        Utils.checkNotNull(companyId, "companyId");
-        this.companyId = Optional.ofNullable(companyId);
-        return this;
-    }
 
-
-    public AtsCandidate withCompanyId(Optional<String> companyId) {
-        Utils.checkNotNull(companyId, "companyId");
+    public AtsCandidate withCompanyId(@Nullable String companyId) {
         this.companyId = companyId;
         return this;
     }
 
-    public AtsCandidate withCompanyName(String companyName) {
-        Utils.checkNotNull(companyName, "companyName");
-        this.companyName = Optional.ofNullable(companyName);
-        return this;
-    }
 
-
-    public AtsCandidate withCompanyName(Optional<String> companyName) {
-        Utils.checkNotNull(companyName, "companyName");
+    public AtsCandidate withCompanyName(@Nullable String companyName) {
         this.companyName = companyName;
         return this;
     }
 
-    public AtsCandidate withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
 
-
-    public AtsCandidate withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public AtsCandidate withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public AtsCandidate withDateOfBirth(OffsetDateTime dateOfBirth) {
-        Utils.checkNotNull(dateOfBirth, "dateOfBirth");
-        this.dateOfBirth = Optional.ofNullable(dateOfBirth);
-        return this;
-    }
 
-
-    public AtsCandidate withDateOfBirth(Optional<OffsetDateTime> dateOfBirth) {
-        Utils.checkNotNull(dateOfBirth, "dateOfBirth");
+    public AtsCandidate withDateOfBirth(@Nullable OffsetDateTime dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
         return this;
     }
 
-    public AtsCandidate withEducation(List<AtsCandidateEducation> education) {
-        Utils.checkNotNull(education, "education");
-        this.education = Optional.ofNullable(education);
-        return this;
-    }
 
-
-    public AtsCandidate withEducation(Optional<? extends List<AtsCandidateEducation>> education) {
-        Utils.checkNotNull(education, "education");
+    public AtsCandidate withEducation(@Nullable List<AtsCandidateEducation> education) {
         this.education = education;
         return this;
     }
 
-    public AtsCandidate withEmails(List<AtsEmail> emails) {
-        Utils.checkNotNull(emails, "emails");
-        this.emails = Optional.ofNullable(emails);
-        return this;
-    }
 
-
-    public AtsCandidate withEmails(Optional<? extends List<AtsEmail>> emails) {
-        Utils.checkNotNull(emails, "emails");
+    public AtsCandidate withEmails(@Nullable List<AtsEmail> emails) {
         this.emails = emails;
         return this;
     }
 
-    public AtsCandidate withExperiences(List<AtsCandidateExperience> experiences) {
-        Utils.checkNotNull(experiences, "experiences");
-        this.experiences = Optional.ofNullable(experiences);
-        return this;
-    }
 
-
-    public AtsCandidate withExperiences(Optional<? extends List<AtsCandidateExperience>> experiences) {
-        Utils.checkNotNull(experiences, "experiences");
+    public AtsCandidate withExperiences(@Nullable List<AtsCandidateExperience> experiences) {
         this.experiences = experiences;
         return this;
     }
 
-    public AtsCandidate withExternalIdentifier(String externalIdentifier) {
-        Utils.checkNotNull(externalIdentifier, "externalIdentifier");
-        this.externalIdentifier = Optional.ofNullable(externalIdentifier);
-        return this;
-    }
 
-
-    public AtsCandidate withExternalIdentifier(Optional<String> externalIdentifier) {
-        Utils.checkNotNull(externalIdentifier, "externalIdentifier");
+    public AtsCandidate withExternalIdentifier(@Nullable String externalIdentifier) {
         this.externalIdentifier = externalIdentifier;
         return this;
     }
 
-    public AtsCandidate withFirstName(String firstName) {
-        Utils.checkNotNull(firstName, "firstName");
-        this.firstName = Optional.ofNullable(firstName);
-        return this;
-    }
 
-
-    public AtsCandidate withFirstName(Optional<String> firstName) {
-        Utils.checkNotNull(firstName, "firstName");
+    public AtsCandidate withFirstName(@Nullable String firstName) {
         this.firstName = firstName;
         return this;
     }
 
-    public AtsCandidate withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public AtsCandidate withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public AtsCandidate withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public AtsCandidate withImageUrl(String imageUrl) {
-        Utils.checkNotNull(imageUrl, "imageUrl");
-        this.imageUrl = Optional.ofNullable(imageUrl);
-        return this;
-    }
 
-
-    public AtsCandidate withImageUrl(Optional<String> imageUrl) {
-        Utils.checkNotNull(imageUrl, "imageUrl");
+    public AtsCandidate withImageUrl(@Nullable String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
     }
 
-    public AtsCandidate withLastName(String lastName) {
-        Utils.checkNotNull(lastName, "lastName");
-        this.lastName = Optional.ofNullable(lastName);
-        return this;
-    }
 
-
-    public AtsCandidate withLastName(Optional<String> lastName) {
-        Utils.checkNotNull(lastName, "lastName");
+    public AtsCandidate withLastName(@Nullable String lastName) {
         this.lastName = lastName;
         return this;
     }
 
-    /**
-     * URLs for web pages containing additional material about the candidate (LinkedIn, other social media,
-     * articles, etc.)
-     */
-    public AtsCandidate withLinkUrls(List<String> linkUrls) {
-        Utils.checkNotNull(linkUrls, "linkUrls");
-        this.linkUrls = Optional.ofNullable(linkUrls);
-        return this;
-    }
-
 
     /**
      * URLs for web pages containing additional material about the candidate (LinkedIn, other social media,
      * articles, etc.)
      */
-    public AtsCandidate withLinkUrls(Optional<? extends List<String>> linkUrls) {
-        Utils.checkNotNull(linkUrls, "linkUrls");
+    public AtsCandidate withLinkUrls(@Nullable List<String> linkUrls) {
         this.linkUrls = linkUrls;
         return this;
     }
 
-    public AtsCandidate withMetadata(List<AtsMetadata> metadata) {
-        Utils.checkNotNull(metadata, "metadata");
-        this.metadata = Optional.ofNullable(metadata);
-        return this;
-    }
 
-
-    public AtsCandidate withMetadata(Optional<? extends List<AtsMetadata>> metadata) {
-        Utils.checkNotNull(metadata, "metadata");
+    public AtsCandidate withMetadata(@Nullable List<AtsMetadata> metadata) {
         this.metadata = metadata;
         return this;
     }
 
-    public AtsCandidate withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = Optional.ofNullable(name);
-        return this;
-    }
 
-
-    public AtsCandidate withName(Optional<String> name) {
-        Utils.checkNotNull(name, "name");
+    public AtsCandidate withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
-    public AtsCandidate withOrigin(Origin origin) {
-        Utils.checkNotNull(origin, "origin");
-        this.origin = Optional.ofNullable(origin);
-        return this;
-    }
 
-
-    public AtsCandidate withOrigin(Optional<? extends Origin> origin) {
-        Utils.checkNotNull(origin, "origin");
+    public AtsCandidate withOrigin(@Nullable Origin origin) {
         this.origin = origin;
         return this;
     }
 
-    public AtsCandidate withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public AtsCandidate withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public AtsCandidate withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public AtsCandidate withSkills(List<String> skills) {
-        Utils.checkNotNull(skills, "skills");
-        this.skills = Optional.ofNullable(skills);
-        return this;
-    }
 
-
-    public AtsCandidate withSkills(Optional<? extends List<String>> skills) {
-        Utils.checkNotNull(skills, "skills");
+    public AtsCandidate withSkills(@Nullable List<String> skills) {
         this.skills = skills;
         return this;
     }
 
-    public AtsCandidate withSources(List<String> sources) {
-        Utils.checkNotNull(sources, "sources");
-        this.sources = Optional.ofNullable(sources);
-        return this;
-    }
 
-
-    public AtsCandidate withSources(Optional<? extends List<String>> sources) {
-        Utils.checkNotNull(sources, "sources");
+    public AtsCandidate withSources(@Nullable List<String> sources) {
         this.sources = sources;
         return this;
     }
 
-    public AtsCandidate withTags(List<String> tags) {
-        Utils.checkNotNull(tags, "tags");
-        this.tags = Optional.ofNullable(tags);
-        return this;
-    }
 
-
-    public AtsCandidate withTags(Optional<? extends List<String>> tags) {
-        Utils.checkNotNull(tags, "tags");
+    public AtsCandidate withTags(@Nullable List<String> tags) {
         this.tags = tags;
         return this;
     }
 
-    public AtsCandidate withTelephones(List<AtsTelephone> telephones) {
-        Utils.checkNotNull(telephones, "telephones");
-        this.telephones = Optional.ofNullable(telephones);
-        return this;
-    }
 
-
-    public AtsCandidate withTelephones(Optional<? extends List<AtsTelephone>> telephones) {
-        Utils.checkNotNull(telephones, "telephones");
+    public AtsCandidate withTelephones(@Nullable List<AtsTelephone> telephones) {
         this.telephones = telephones;
         return this;
     }
 
-    public AtsCandidate withTitle(String title) {
-        Utils.checkNotNull(title, "title");
-        this.title = Optional.ofNullable(title);
-        return this;
-    }
 
-
-    public AtsCandidate withTitle(Optional<String> title) {
-        Utils.checkNotNull(title, "title");
+    public AtsCandidate withTitle(@Nullable String title) {
         this.title = title;
         return this;
     }
 
-    public AtsCandidate withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public AtsCandidate withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public AtsCandidate withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
-    public AtsCandidate withUserId(String userId) {
-        Utils.checkNotNull(userId, "userId");
-        this.userId = Optional.ofNullable(userId);
-        return this;
-    }
 
-
-    public AtsCandidate withUserId(Optional<String> userId) {
-        Utils.checkNotNull(userId, "userId");
+    public AtsCandidate withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
     }
 
-    public AtsCandidate withWebUrl(String webUrl) {
-        Utils.checkNotNull(webUrl, "webUrl");
-        this.webUrl = Optional.ofNullable(webUrl);
-        return this;
-    }
 
-
-    public AtsCandidate withWebUrl(Optional<String> webUrl) {
-        Utils.checkNotNull(webUrl, "webUrl");
+    public AtsCandidate withWebUrl(@Nullable String webUrl) {
         this.webUrl = webUrl;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -830,410 +579,197 @@ public class AtsCandidate {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends PropertyAtsCandidateAddress> address = Optional.empty();
+        private PropertyAtsCandidateAddress address;
 
-        private Optional<String> companyId = Optional.empty();
+        private String companyId;
 
-        private Optional<String> companyName = Optional.empty();
+        private String companyName;
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<OffsetDateTime> dateOfBirth = Optional.empty();
+        private OffsetDateTime dateOfBirth;
 
-        private Optional<? extends List<AtsCandidateEducation>> education = Optional.empty();
+        private List<AtsCandidateEducation> education;
 
-        private Optional<? extends List<AtsEmail>> emails = Optional.empty();
+        private List<AtsEmail> emails;
 
-        private Optional<? extends List<AtsCandidateExperience>> experiences = Optional.empty();
+        private List<AtsCandidateExperience> experiences;
 
-        private Optional<String> externalIdentifier = Optional.empty();
+        private String externalIdentifier;
 
-        private Optional<String> firstName = Optional.empty();
+        private String firstName;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<String> imageUrl = Optional.empty();
+        private String imageUrl;
 
-        private Optional<String> lastName = Optional.empty();
+        private String lastName;
 
-        private Optional<? extends List<String>> linkUrls = Optional.empty();
+        private List<String> linkUrls;
 
-        private Optional<? extends List<AtsMetadata>> metadata = Optional.empty();
+        private List<AtsMetadata> metadata;
 
-        private Optional<String> name = Optional.empty();
+        private String name;
 
-        private Optional<? extends Origin> origin = Optional.empty();
+        private Origin origin;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<? extends List<String>> skills = Optional.empty();
+        private List<String> skills;
 
-        private Optional<? extends List<String>> sources = Optional.empty();
+        private List<String> sources;
 
-        private Optional<? extends List<String>> tags = Optional.empty();
+        private List<String> tags;
 
-        private Optional<? extends List<AtsTelephone>> telephones = Optional.empty();
+        private List<AtsTelephone> telephones;
 
-        private Optional<String> title = Optional.empty();
+        private String title;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
-        private Optional<String> userId = Optional.empty();
+        private String userId;
 
-        private Optional<String> webUrl = Optional.empty();
+        private String webUrl;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder address(PropertyAtsCandidateAddress address) {
-            Utils.checkNotNull(address, "address");
-            this.address = Optional.ofNullable(address);
-            return this;
-        }
-
-        public Builder address(Optional<? extends PropertyAtsCandidateAddress> address) {
-            Utils.checkNotNull(address, "address");
+        public Builder address(@Nullable PropertyAtsCandidateAddress address) {
             this.address = address;
             return this;
         }
 
-
-        public Builder companyId(String companyId) {
-            Utils.checkNotNull(companyId, "companyId");
-            this.companyId = Optional.ofNullable(companyId);
-            return this;
-        }
-
-        public Builder companyId(Optional<String> companyId) {
-            Utils.checkNotNull(companyId, "companyId");
+        public Builder companyId(@Nullable String companyId) {
             this.companyId = companyId;
             return this;
         }
 
-
-        public Builder companyName(String companyName) {
-            Utils.checkNotNull(companyName, "companyName");
-            this.companyName = Optional.ofNullable(companyName);
-            return this;
-        }
-
-        public Builder companyName(Optional<String> companyName) {
-            Utils.checkNotNull(companyName, "companyName");
+        public Builder companyName(@Nullable String companyName) {
             this.companyName = companyName;
             return this;
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder dateOfBirth(OffsetDateTime dateOfBirth) {
-            Utils.checkNotNull(dateOfBirth, "dateOfBirth");
-            this.dateOfBirth = Optional.ofNullable(dateOfBirth);
-            return this;
-        }
-
-        public Builder dateOfBirth(Optional<OffsetDateTime> dateOfBirth) {
-            Utils.checkNotNull(dateOfBirth, "dateOfBirth");
+        public Builder dateOfBirth(@Nullable OffsetDateTime dateOfBirth) {
             this.dateOfBirth = dateOfBirth;
             return this;
         }
 
-
-        public Builder education(List<AtsCandidateEducation> education) {
-            Utils.checkNotNull(education, "education");
-            this.education = Optional.ofNullable(education);
-            return this;
-        }
-
-        public Builder education(Optional<? extends List<AtsCandidateEducation>> education) {
-            Utils.checkNotNull(education, "education");
+        public Builder education(@Nullable List<AtsCandidateEducation> education) {
             this.education = education;
             return this;
         }
 
-
-        public Builder emails(List<AtsEmail> emails) {
-            Utils.checkNotNull(emails, "emails");
-            this.emails = Optional.ofNullable(emails);
-            return this;
-        }
-
-        public Builder emails(Optional<? extends List<AtsEmail>> emails) {
-            Utils.checkNotNull(emails, "emails");
+        public Builder emails(@Nullable List<AtsEmail> emails) {
             this.emails = emails;
             return this;
         }
 
-
-        public Builder experiences(List<AtsCandidateExperience> experiences) {
-            Utils.checkNotNull(experiences, "experiences");
-            this.experiences = Optional.ofNullable(experiences);
-            return this;
-        }
-
-        public Builder experiences(Optional<? extends List<AtsCandidateExperience>> experiences) {
-            Utils.checkNotNull(experiences, "experiences");
+        public Builder experiences(@Nullable List<AtsCandidateExperience> experiences) {
             this.experiences = experiences;
             return this;
         }
 
-
-        public Builder externalIdentifier(String externalIdentifier) {
-            Utils.checkNotNull(externalIdentifier, "externalIdentifier");
-            this.externalIdentifier = Optional.ofNullable(externalIdentifier);
-            return this;
-        }
-
-        public Builder externalIdentifier(Optional<String> externalIdentifier) {
-            Utils.checkNotNull(externalIdentifier, "externalIdentifier");
+        public Builder externalIdentifier(@Nullable String externalIdentifier) {
             this.externalIdentifier = externalIdentifier;
             return this;
         }
 
-
-        public Builder firstName(String firstName) {
-            Utils.checkNotNull(firstName, "firstName");
-            this.firstName = Optional.ofNullable(firstName);
-            return this;
-        }
-
-        public Builder firstName(Optional<String> firstName) {
-            Utils.checkNotNull(firstName, "firstName");
+        public Builder firstName(@Nullable String firstName) {
             this.firstName = firstName;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder imageUrl(String imageUrl) {
-            Utils.checkNotNull(imageUrl, "imageUrl");
-            this.imageUrl = Optional.ofNullable(imageUrl);
-            return this;
-        }
-
-        public Builder imageUrl(Optional<String> imageUrl) {
-            Utils.checkNotNull(imageUrl, "imageUrl");
+        public Builder imageUrl(@Nullable String imageUrl) {
             this.imageUrl = imageUrl;
             return this;
         }
 
-
-        public Builder lastName(String lastName) {
-            Utils.checkNotNull(lastName, "lastName");
-            this.lastName = Optional.ofNullable(lastName);
-            return this;
-        }
-
-        public Builder lastName(Optional<String> lastName) {
-            Utils.checkNotNull(lastName, "lastName");
+        public Builder lastName(@Nullable String lastName) {
             this.lastName = lastName;
             return this;
         }
 
-
         /**
          * URLs for web pages containing additional material about the candidate (LinkedIn, other social media,
          * articles, etc.)
          */
-        public Builder linkUrls(List<String> linkUrls) {
-            Utils.checkNotNull(linkUrls, "linkUrls");
-            this.linkUrls = Optional.ofNullable(linkUrls);
-            return this;
-        }
-
-        /**
-         * URLs for web pages containing additional material about the candidate (LinkedIn, other social media,
-         * articles, etc.)
-         */
-        public Builder linkUrls(Optional<? extends List<String>> linkUrls) {
-            Utils.checkNotNull(linkUrls, "linkUrls");
+        public Builder linkUrls(@Nullable List<String> linkUrls) {
             this.linkUrls = linkUrls;
             return this;
         }
 
-
-        public Builder metadata(List<AtsMetadata> metadata) {
-            Utils.checkNotNull(metadata, "metadata");
-            this.metadata = Optional.ofNullable(metadata);
-            return this;
-        }
-
-        public Builder metadata(Optional<? extends List<AtsMetadata>> metadata) {
-            Utils.checkNotNull(metadata, "metadata");
+        public Builder metadata(@Nullable List<AtsMetadata> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = Optional.ofNullable(name);
-            return this;
-        }
-
-        public Builder name(Optional<String> name) {
-            Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-
-        public Builder origin(Origin origin) {
-            Utils.checkNotNull(origin, "origin");
-            this.origin = Optional.ofNullable(origin);
-            return this;
-        }
-
-        public Builder origin(Optional<? extends Origin> origin) {
-            Utils.checkNotNull(origin, "origin");
+        public Builder origin(@Nullable Origin origin) {
             this.origin = origin;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder skills(List<String> skills) {
-            Utils.checkNotNull(skills, "skills");
-            this.skills = Optional.ofNullable(skills);
-            return this;
-        }
-
-        public Builder skills(Optional<? extends List<String>> skills) {
-            Utils.checkNotNull(skills, "skills");
+        public Builder skills(@Nullable List<String> skills) {
             this.skills = skills;
             return this;
         }
 
-
-        public Builder sources(List<String> sources) {
-            Utils.checkNotNull(sources, "sources");
-            this.sources = Optional.ofNullable(sources);
-            return this;
-        }
-
-        public Builder sources(Optional<? extends List<String>> sources) {
-            Utils.checkNotNull(sources, "sources");
+        public Builder sources(@Nullable List<String> sources) {
             this.sources = sources;
             return this;
         }
 
-
-        public Builder tags(List<String> tags) {
-            Utils.checkNotNull(tags, "tags");
-            this.tags = Optional.ofNullable(tags);
-            return this;
-        }
-
-        public Builder tags(Optional<? extends List<String>> tags) {
-            Utils.checkNotNull(tags, "tags");
+        public Builder tags(@Nullable List<String> tags) {
             this.tags = tags;
             return this;
         }
 
-
-        public Builder telephones(List<AtsTelephone> telephones) {
-            Utils.checkNotNull(telephones, "telephones");
-            this.telephones = Optional.ofNullable(telephones);
-            return this;
-        }
-
-        public Builder telephones(Optional<? extends List<AtsTelephone>> telephones) {
-            Utils.checkNotNull(telephones, "telephones");
+        public Builder telephones(@Nullable List<AtsTelephone> telephones) {
             this.telephones = telephones;
             return this;
         }
 
-
-        public Builder title(String title) {
-            Utils.checkNotNull(title, "title");
-            this.title = Optional.ofNullable(title);
-            return this;
-        }
-
-        public Builder title(Optional<String> title) {
-            Utils.checkNotNull(title, "title");
+        public Builder title(@Nullable String title) {
             this.title = title;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
-
-        public Builder userId(String userId) {
-            Utils.checkNotNull(userId, "userId");
-            this.userId = Optional.ofNullable(userId);
-            return this;
-        }
-
-        public Builder userId(Optional<String> userId) {
-            Utils.checkNotNull(userId, "userId");
+        public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;
         }
 
-
-        public Builder webUrl(String webUrl) {
-            Utils.checkNotNull(webUrl, "webUrl");
-            this.webUrl = Optional.ofNullable(webUrl);
-            return this;
-        }
-
-        public Builder webUrl(Optional<String> webUrl) {
-            Utils.checkNotNull(webUrl, "webUrl");
+        public Builder webUrl(@Nullable String webUrl) {
             this.webUrl = webUrl;
             return this;
         }
 
         public AtsCandidate build() {
-
             return new AtsCandidate(
                 address, companyId, companyName,
                 createdAt, dateOfBirth, education,

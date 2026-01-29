@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
+import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateHrisBenefitRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisBenefitRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateHrisBenefitResponse;
@@ -67,7 +68,7 @@ public class Benefit {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public CreateHrisBenefitResponse createHrisBenefit(CreateHrisBenefitRequest request) {
+    public CreateHrisBenefitResponse createHrisBenefit(@Nonnull CreateHrisBenefitRequest request) {
         RequestOperation<CreateHrisBenefitRequest, CreateHrisBenefitResponse> operation
               = new CreateHrisBenefit.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -89,7 +90,7 @@ public class Benefit {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public GetHrisBenefitResponse getHrisBenefit(GetHrisBenefitRequest request) {
+    public GetHrisBenefitResponse getHrisBenefit(@Nonnull GetHrisBenefitRequest request) {
         RequestOperation<GetHrisBenefitRequest, GetHrisBenefitResponse> operation
               = new GetHrisBenefit.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -111,7 +112,7 @@ public class Benefit {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListHrisBenefitsResponse listHrisBenefits(ListHrisBenefitsRequest request) {
+    public ListHrisBenefitsResponse listHrisBenefits(@Nonnull ListHrisBenefitsRequest request) {
         RequestOperation<ListHrisBenefitsRequest, ListHrisBenefitsResponse> operation
               = new ListHrisBenefits.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -133,7 +134,7 @@ public class Benefit {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public PatchHrisBenefitResponse patchHrisBenefit(PatchHrisBenefitRequest request) {
+    public PatchHrisBenefitResponse patchHrisBenefit(@Nonnull PatchHrisBenefitRequest request) {
         RequestOperation<PatchHrisBenefitRequest, PatchHrisBenefitResponse> operation
               = new PatchHrisBenefit.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -155,7 +156,7 @@ public class Benefit {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public RemoveHrisBenefitResponse removeHrisBenefit(RemoveHrisBenefitRequest request) {
+    public RemoveHrisBenefitResponse removeHrisBenefit(@Nonnull RemoveHrisBenefitRequest request) {
         RequestOperation<RemoveHrisBenefitRequest, RemoveHrisBenefitResponse> operation
               = new RemoveHrisBenefit.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
@@ -177,7 +178,7 @@ public class Benefit {
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public UpdateHrisBenefitResponse updateHrisBenefit(UpdateHrisBenefitRequest request) {
+    public UpdateHrisBenefitResponse updateHrisBenefit(@Nonnull UpdateHrisBenefitRequest request) {
         RequestOperation<UpdateHrisBenefitRequest, UpdateHrisBenefitResponse> operation
               = new UpdateHrisBenefit.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));

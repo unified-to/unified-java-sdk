@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.UcRecording;
@@ -30,7 +30,7 @@ public class PatchUcRecordingRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<PatchUcRecordingQueryParamFields>> fields;
+    private List<PatchUcRecordingQueryParamFields> fields;
 
     /**
      * ID of the Recording
@@ -44,63 +44,56 @@ public class PatchUcRecordingRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
     @JsonCreator
     public PatchUcRecordingRequest(
-            UcRecording ucRecording,
-            String connectionId,
-            Optional<? extends List<PatchUcRecordingQueryParamFields>> fields,
-            String id,
-            Optional<String> raw) {
-        Utils.checkNotNull(ucRecording, "ucRecording");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(raw, "raw");
-        this.ucRecording = ucRecording;
-        this.connectionId = connectionId;
+            @Nonnull UcRecording ucRecording,
+            @Nonnull String connectionId,
+            @Nullable List<PatchUcRecordingQueryParamFields> fields,
+            @Nonnull String id,
+            @Nullable String raw) {
+        this.ucRecording = Optional.ofNullable(ucRecording)
+            .orElseThrow(() -> new IllegalArgumentException("ucRecording cannot be null"));
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
-        this.id = id;
+        this.id = Optional.ofNullable(id)
+            .orElseThrow(() -> new IllegalArgumentException("id cannot be null"));
         this.raw = raw;
     }
     
     public PatchUcRecordingRequest(
-            UcRecording ucRecording,
-            String connectionId,
-            String id) {
-        this(ucRecording, connectionId, Optional.empty(),
-            id, Optional.empty());
+            @Nonnull UcRecording ucRecording,
+            @Nonnull String connectionId,
+            @Nonnull String id) {
+        this(ucRecording, connectionId, null,
+            id, null);
     }
 
-    @JsonIgnore
     public UcRecording ucRecording() {
-        return ucRecording;
+        return this.ucRecording;
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<PatchUcRecordingQueryParamFields>> fields() {
-        return (Optional<List<PatchUcRecordingQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
      * ID of the Recording
      */
-    @JsonIgnore
     public String id() {
-        return id;
+        return this.id;
     }
 
     /**
@@ -108,9 +101,8 @@ public class PatchUcRecordingRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
     public static Builder builder() {
@@ -118,27 +110,17 @@ public class PatchUcRecordingRequest {
     }
 
 
-    public PatchUcRecordingRequest withUcRecording(UcRecording ucRecording) {
-        Utils.checkNotNull(ucRecording, "ucRecording");
-        this.ucRecording = ucRecording;
+    public PatchUcRecordingRequest withUcRecording(@Nonnull UcRecording ucRecording) {
+        this.ucRecording = Utils.checkNotNull(ucRecording, "ucRecording");
         return this;
     }
+
 
     /**
      * ID of the connection
      */
-    public PatchUcRecordingRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public PatchUcRecordingRequest withFields(List<PatchUcRecordingQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public PatchUcRecordingRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -146,29 +128,17 @@ public class PatchUcRecordingRequest {
     /**
      * Fields to return
      */
-    public PatchUcRecordingRequest withFields(Optional<? extends List<PatchUcRecordingQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public PatchUcRecordingRequest withFields(@Nullable List<PatchUcRecordingQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
+
     /**
      * ID of the Recording
      */
-    public PatchUcRecordingRequest withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = id;
-        return this;
-    }
-
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public PatchUcRecordingRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
+    public PatchUcRecordingRequest withId(@Nonnull String id) {
+        this.id = Utils.checkNotNull(id, "id");
         return this;
     }
 
@@ -178,11 +148,11 @@ public class PatchUcRecordingRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public PatchUcRecordingRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public PatchUcRecordingRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -225,71 +195,42 @@ public class PatchUcRecordingRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<PatchUcRecordingQueryParamFields>> fields = Optional.empty();
+        private List<PatchUcRecordingQueryParamFields> fields;
 
         private String id;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder ucRecording(UcRecording ucRecording) {
-            Utils.checkNotNull(ucRecording, "ucRecording");
-            this.ucRecording = ucRecording;
+        public Builder ucRecording(@Nonnull UcRecording ucRecording) {
+            this.ucRecording = Utils.checkNotNull(ucRecording, "ucRecording");
             return this;
         }
-
 
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<PatchUcRecordingQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<PatchUcRecordingQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<PatchUcRecordingQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * ID of the Recording
          */
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = id;
-            return this;
-        }
-
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
+        public Builder id(@Nonnull String id) {
+            this.id = Utils.checkNotNull(id, "id");
             return this;
         }
 
@@ -298,14 +239,12 @@ public class PatchUcRecordingRequest {
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
         public PatchUcRecordingRequest build() {
-
             return new PatchUcRecordingRequest(
                 ucRecording, connectionId, fields,
                 id, raw);

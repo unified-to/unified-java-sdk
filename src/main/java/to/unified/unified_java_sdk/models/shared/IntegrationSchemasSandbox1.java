@@ -49,7 +49,6 @@ public class IntegrationSchemasSandbox1 {
         }
 
         public IntegrationSchemasSandbox1 build() {
-
             return new IntegrationSchemasSandbox1(
                 );
         }

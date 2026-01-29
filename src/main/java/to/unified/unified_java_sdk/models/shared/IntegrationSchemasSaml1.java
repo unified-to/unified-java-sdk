@@ -49,7 +49,6 @@ public class IntegrationSchemasSaml1 {
         }
 
         public IntegrationSchemasSaml1 build() {
-
             return new IntegrationSchemasSaml1(
                 );
         }

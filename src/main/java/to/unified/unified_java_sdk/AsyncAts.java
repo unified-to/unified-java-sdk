@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAtsActivityRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAtsApplicationRequest;
@@ -240,7 +241,7 @@ public class AsyncAts {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAtsActivityResponse>} - The async response
      */
-    public CompletableFuture<CreateAtsActivityResponse> createAtsActivity(CreateAtsActivityRequest request) {
+    public CompletableFuture<CreateAtsActivityResponse> createAtsActivity(@Nonnull CreateAtsActivityRequest request) {
         AsyncRequestOperation<CreateAtsActivityRequest, CreateAtsActivityResponse> operation
               = new CreateAtsActivity.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -263,7 +264,7 @@ public class AsyncAts {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAtsApplicationResponse>} - The async response
      */
-    public CompletableFuture<CreateAtsApplicationResponse> createAtsApplication(CreateAtsApplicationRequest request) {
+    public CompletableFuture<CreateAtsApplicationResponse> createAtsApplication(@Nonnull CreateAtsApplicationRequest request) {
         AsyncRequestOperation<CreateAtsApplicationRequest, CreateAtsApplicationResponse> operation
               = new CreateAtsApplication.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -286,7 +287,7 @@ public class AsyncAts {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAtsCandidateResponse>} - The async response
      */
-    public CompletableFuture<CreateAtsCandidateResponse> createAtsCandidate(CreateAtsCandidateRequest request) {
+    public CompletableFuture<CreateAtsCandidateResponse> createAtsCandidate(@Nonnull CreateAtsCandidateRequest request) {
         AsyncRequestOperation<CreateAtsCandidateRequest, CreateAtsCandidateResponse> operation
               = new CreateAtsCandidate.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -309,7 +310,7 @@ public class AsyncAts {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAtsCompanyResponse>} - The async response
      */
-    public CompletableFuture<CreateAtsCompanyResponse> createAtsCompany(CreateAtsCompanyRequest request) {
+    public CompletableFuture<CreateAtsCompanyResponse> createAtsCompany(@Nonnull CreateAtsCompanyRequest request) {
         AsyncRequestOperation<CreateAtsCompanyRequest, CreateAtsCompanyResponse> operation
               = new CreateAtsCompany.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -332,7 +333,7 @@ public class AsyncAts {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAtsDocumentResponse>} - The async response
      */
-    public CompletableFuture<CreateAtsDocumentResponse> createAtsDocument(CreateAtsDocumentRequest request) {
+    public CompletableFuture<CreateAtsDocumentResponse> createAtsDocument(@Nonnull CreateAtsDocumentRequest request) {
         AsyncRequestOperation<CreateAtsDocumentRequest, CreateAtsDocumentResponse> operation
               = new CreateAtsDocument.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -355,7 +356,7 @@ public class AsyncAts {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAtsInterviewResponse>} - The async response
      */
-    public CompletableFuture<CreateAtsInterviewResponse> createAtsInterview(CreateAtsInterviewRequest request) {
+    public CompletableFuture<CreateAtsInterviewResponse> createAtsInterview(@Nonnull CreateAtsInterviewRequest request) {
         AsyncRequestOperation<CreateAtsInterviewRequest, CreateAtsInterviewResponse> operation
               = new CreateAtsInterview.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -378,7 +379,7 @@ public class AsyncAts {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAtsJobResponse>} - The async response
      */
-    public CompletableFuture<CreateAtsJobResponse> createAtsJob(CreateAtsJobRequest request) {
+    public CompletableFuture<CreateAtsJobResponse> createAtsJob(@Nonnull CreateAtsJobRequest request) {
         AsyncRequestOperation<CreateAtsJobRequest, CreateAtsJobResponse> operation
               = new CreateAtsJob.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -401,7 +402,7 @@ public class AsyncAts {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateAtsScorecardResponse>} - The async response
      */
-    public CompletableFuture<CreateAtsScorecardResponse> createAtsScorecard(CreateAtsScorecardRequest request) {
+    public CompletableFuture<CreateAtsScorecardResponse> createAtsScorecard(@Nonnull CreateAtsScorecardRequest request) {
         AsyncRequestOperation<CreateAtsScorecardRequest, CreateAtsScorecardResponse> operation
               = new CreateAtsScorecard.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -424,7 +425,7 @@ public class AsyncAts {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAtsActivityResponse>} - The async response
      */
-    public CompletableFuture<GetAtsActivityResponse> getAtsActivity(GetAtsActivityRequest request) {
+    public CompletableFuture<GetAtsActivityResponse> getAtsActivity(@Nonnull GetAtsActivityRequest request) {
         AsyncRequestOperation<GetAtsActivityRequest, GetAtsActivityResponse> operation
               = new GetAtsActivity.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -447,7 +448,7 @@ public class AsyncAts {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAtsApplicationResponse>} - The async response
      */
-    public CompletableFuture<GetAtsApplicationResponse> getAtsApplication(GetAtsApplicationRequest request) {
+    public CompletableFuture<GetAtsApplicationResponse> getAtsApplication(@Nonnull GetAtsApplicationRequest request) {
         AsyncRequestOperation<GetAtsApplicationRequest, GetAtsApplicationResponse> operation
               = new GetAtsApplication.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -470,7 +471,7 @@ public class AsyncAts {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAtsCandidateResponse>} - The async response
      */
-    public CompletableFuture<GetAtsCandidateResponse> getAtsCandidate(GetAtsCandidateRequest request) {
+    public CompletableFuture<GetAtsCandidateResponse> getAtsCandidate(@Nonnull GetAtsCandidateRequest request) {
         AsyncRequestOperation<GetAtsCandidateRequest, GetAtsCandidateResponse> operation
               = new GetAtsCandidate.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -493,7 +494,7 @@ public class AsyncAts {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAtsCompanyResponse>} - The async response
      */
-    public CompletableFuture<GetAtsCompanyResponse> getAtsCompany(GetAtsCompanyRequest request) {
+    public CompletableFuture<GetAtsCompanyResponse> getAtsCompany(@Nonnull GetAtsCompanyRequest request) {
         AsyncRequestOperation<GetAtsCompanyRequest, GetAtsCompanyResponse> operation
               = new GetAtsCompany.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -516,7 +517,7 @@ public class AsyncAts {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAtsDocumentResponse>} - The async response
      */
-    public CompletableFuture<GetAtsDocumentResponse> getAtsDocument(GetAtsDocumentRequest request) {
+    public CompletableFuture<GetAtsDocumentResponse> getAtsDocument(@Nonnull GetAtsDocumentRequest request) {
         AsyncRequestOperation<GetAtsDocumentRequest, GetAtsDocumentResponse> operation
               = new GetAtsDocument.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -539,7 +540,7 @@ public class AsyncAts {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAtsInterviewResponse>} - The async response
      */
-    public CompletableFuture<GetAtsInterviewResponse> getAtsInterview(GetAtsInterviewRequest request) {
+    public CompletableFuture<GetAtsInterviewResponse> getAtsInterview(@Nonnull GetAtsInterviewRequest request) {
         AsyncRequestOperation<GetAtsInterviewRequest, GetAtsInterviewResponse> operation
               = new GetAtsInterview.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -562,7 +563,7 @@ public class AsyncAts {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAtsJobResponse>} - The async response
      */
-    public CompletableFuture<GetAtsJobResponse> getAtsJob(GetAtsJobRequest request) {
+    public CompletableFuture<GetAtsJobResponse> getAtsJob(@Nonnull GetAtsJobRequest request) {
         AsyncRequestOperation<GetAtsJobRequest, GetAtsJobResponse> operation
               = new GetAtsJob.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -585,7 +586,7 @@ public class AsyncAts {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetAtsScorecardResponse>} - The async response
      */
-    public CompletableFuture<GetAtsScorecardResponse> getAtsScorecard(GetAtsScorecardRequest request) {
+    public CompletableFuture<GetAtsScorecardResponse> getAtsScorecard(@Nonnull GetAtsScorecardRequest request) {
         AsyncRequestOperation<GetAtsScorecardRequest, GetAtsScorecardResponse> operation
               = new GetAtsScorecard.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -608,7 +609,7 @@ public class AsyncAts {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAtsActivitiesResponse>} - The async response
      */
-    public CompletableFuture<ListAtsActivitiesResponse> listAtsActivities(ListAtsActivitiesRequest request) {
+    public CompletableFuture<ListAtsActivitiesResponse> listAtsActivities(@Nonnull ListAtsActivitiesRequest request) {
         AsyncRequestOperation<ListAtsActivitiesRequest, ListAtsActivitiesResponse> operation
               = new ListAtsActivities.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -631,7 +632,7 @@ public class AsyncAts {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAtsApplicationsResponse>} - The async response
      */
-    public CompletableFuture<ListAtsApplicationsResponse> listAtsApplications(ListAtsApplicationsRequest request) {
+    public CompletableFuture<ListAtsApplicationsResponse> listAtsApplications(@Nonnull ListAtsApplicationsRequest request) {
         AsyncRequestOperation<ListAtsApplicationsRequest, ListAtsApplicationsResponse> operation
               = new ListAtsApplications.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -654,7 +655,7 @@ public class AsyncAts {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAtsApplicationstatusesResponse>} - The async response
      */
-    public CompletableFuture<ListAtsApplicationstatusesResponse> listAtsApplicationstatuses(ListAtsApplicationstatusesRequest request) {
+    public CompletableFuture<ListAtsApplicationstatusesResponse> listAtsApplicationstatuses(@Nonnull ListAtsApplicationstatusesRequest request) {
         AsyncRequestOperation<ListAtsApplicationstatusesRequest, ListAtsApplicationstatusesResponse> operation
               = new ListAtsApplicationstatuses.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -677,7 +678,7 @@ public class AsyncAts {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAtsCandidatesResponse>} - The async response
      */
-    public CompletableFuture<ListAtsCandidatesResponse> listAtsCandidates(ListAtsCandidatesRequest request) {
+    public CompletableFuture<ListAtsCandidatesResponse> listAtsCandidates(@Nonnull ListAtsCandidatesRequest request) {
         AsyncRequestOperation<ListAtsCandidatesRequest, ListAtsCandidatesResponse> operation
               = new ListAtsCandidates.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -700,7 +701,7 @@ public class AsyncAts {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAtsCompaniesResponse>} - The async response
      */
-    public CompletableFuture<ListAtsCompaniesResponse> listAtsCompanies(ListAtsCompaniesRequest request) {
+    public CompletableFuture<ListAtsCompaniesResponse> listAtsCompanies(@Nonnull ListAtsCompaniesRequest request) {
         AsyncRequestOperation<ListAtsCompaniesRequest, ListAtsCompaniesResponse> operation
               = new ListAtsCompanies.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -723,7 +724,7 @@ public class AsyncAts {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAtsDocumentsResponse>} - The async response
      */
-    public CompletableFuture<ListAtsDocumentsResponse> listAtsDocuments(ListAtsDocumentsRequest request) {
+    public CompletableFuture<ListAtsDocumentsResponse> listAtsDocuments(@Nonnull ListAtsDocumentsRequest request) {
         AsyncRequestOperation<ListAtsDocumentsRequest, ListAtsDocumentsResponse> operation
               = new ListAtsDocuments.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -746,7 +747,7 @@ public class AsyncAts {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAtsInterviewsResponse>} - The async response
      */
-    public CompletableFuture<ListAtsInterviewsResponse> listAtsInterviews(ListAtsInterviewsRequest request) {
+    public CompletableFuture<ListAtsInterviewsResponse> listAtsInterviews(@Nonnull ListAtsInterviewsRequest request) {
         AsyncRequestOperation<ListAtsInterviewsRequest, ListAtsInterviewsResponse> operation
               = new ListAtsInterviews.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -769,7 +770,7 @@ public class AsyncAts {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAtsJobsResponse>} - The async response
      */
-    public CompletableFuture<ListAtsJobsResponse> listAtsJobs(ListAtsJobsRequest request) {
+    public CompletableFuture<ListAtsJobsResponse> listAtsJobs(@Nonnull ListAtsJobsRequest request) {
         AsyncRequestOperation<ListAtsJobsRequest, ListAtsJobsResponse> operation
               = new ListAtsJobs.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -792,7 +793,7 @@ public class AsyncAts {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListAtsScorecardsResponse>} - The async response
      */
-    public CompletableFuture<ListAtsScorecardsResponse> listAtsScorecards(ListAtsScorecardsRequest request) {
+    public CompletableFuture<ListAtsScorecardsResponse> listAtsScorecards(@Nonnull ListAtsScorecardsRequest request) {
         AsyncRequestOperation<ListAtsScorecardsRequest, ListAtsScorecardsResponse> operation
               = new ListAtsScorecards.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -815,7 +816,7 @@ public class AsyncAts {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAtsActivityResponse>} - The async response
      */
-    public CompletableFuture<PatchAtsActivityResponse> patchAtsActivity(PatchAtsActivityRequest request) {
+    public CompletableFuture<PatchAtsActivityResponse> patchAtsActivity(@Nonnull PatchAtsActivityRequest request) {
         AsyncRequestOperation<PatchAtsActivityRequest, PatchAtsActivityResponse> operation
               = new PatchAtsActivity.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -838,7 +839,7 @@ public class AsyncAts {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAtsApplicationResponse>} - The async response
      */
-    public CompletableFuture<PatchAtsApplicationResponse> patchAtsApplication(PatchAtsApplicationRequest request) {
+    public CompletableFuture<PatchAtsApplicationResponse> patchAtsApplication(@Nonnull PatchAtsApplicationRequest request) {
         AsyncRequestOperation<PatchAtsApplicationRequest, PatchAtsApplicationResponse> operation
               = new PatchAtsApplication.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -861,7 +862,7 @@ public class AsyncAts {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAtsCandidateResponse>} - The async response
      */
-    public CompletableFuture<PatchAtsCandidateResponse> patchAtsCandidate(PatchAtsCandidateRequest request) {
+    public CompletableFuture<PatchAtsCandidateResponse> patchAtsCandidate(@Nonnull PatchAtsCandidateRequest request) {
         AsyncRequestOperation<PatchAtsCandidateRequest, PatchAtsCandidateResponse> operation
               = new PatchAtsCandidate.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -884,7 +885,7 @@ public class AsyncAts {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAtsCompanyResponse>} - The async response
      */
-    public CompletableFuture<PatchAtsCompanyResponse> patchAtsCompany(PatchAtsCompanyRequest request) {
+    public CompletableFuture<PatchAtsCompanyResponse> patchAtsCompany(@Nonnull PatchAtsCompanyRequest request) {
         AsyncRequestOperation<PatchAtsCompanyRequest, PatchAtsCompanyResponse> operation
               = new PatchAtsCompany.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -907,7 +908,7 @@ public class AsyncAts {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAtsDocumentResponse>} - The async response
      */
-    public CompletableFuture<PatchAtsDocumentResponse> patchAtsDocument(PatchAtsDocumentRequest request) {
+    public CompletableFuture<PatchAtsDocumentResponse> patchAtsDocument(@Nonnull PatchAtsDocumentRequest request) {
         AsyncRequestOperation<PatchAtsDocumentRequest, PatchAtsDocumentResponse> operation
               = new PatchAtsDocument.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -930,7 +931,7 @@ public class AsyncAts {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAtsInterviewResponse>} - The async response
      */
-    public CompletableFuture<PatchAtsInterviewResponse> patchAtsInterview(PatchAtsInterviewRequest request) {
+    public CompletableFuture<PatchAtsInterviewResponse> patchAtsInterview(@Nonnull PatchAtsInterviewRequest request) {
         AsyncRequestOperation<PatchAtsInterviewRequest, PatchAtsInterviewResponse> operation
               = new PatchAtsInterview.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -953,7 +954,7 @@ public class AsyncAts {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAtsJobResponse>} - The async response
      */
-    public CompletableFuture<PatchAtsJobResponse> patchAtsJob(PatchAtsJobRequest request) {
+    public CompletableFuture<PatchAtsJobResponse> patchAtsJob(@Nonnull PatchAtsJobRequest request) {
         AsyncRequestOperation<PatchAtsJobRequest, PatchAtsJobResponse> operation
               = new PatchAtsJob.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -976,7 +977,7 @@ public class AsyncAts {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchAtsScorecardResponse>} - The async response
      */
-    public CompletableFuture<PatchAtsScorecardResponse> patchAtsScorecard(PatchAtsScorecardRequest request) {
+    public CompletableFuture<PatchAtsScorecardResponse> patchAtsScorecard(@Nonnull PatchAtsScorecardRequest request) {
         AsyncRequestOperation<PatchAtsScorecardRequest, PatchAtsScorecardResponse> operation
               = new PatchAtsScorecard.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -999,7 +1000,7 @@ public class AsyncAts {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAtsActivityResponse>} - The async response
      */
-    public CompletableFuture<RemoveAtsActivityResponse> removeAtsActivity(RemoveAtsActivityRequest request) {
+    public CompletableFuture<RemoveAtsActivityResponse> removeAtsActivity(@Nonnull RemoveAtsActivityRequest request) {
         AsyncRequestOperation<RemoveAtsActivityRequest, RemoveAtsActivityResponse> operation
               = new RemoveAtsActivity.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -1022,7 +1023,7 @@ public class AsyncAts {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAtsApplicationResponse>} - The async response
      */
-    public CompletableFuture<RemoveAtsApplicationResponse> removeAtsApplication(RemoveAtsApplicationRequest request) {
+    public CompletableFuture<RemoveAtsApplicationResponse> removeAtsApplication(@Nonnull RemoveAtsApplicationRequest request) {
         AsyncRequestOperation<RemoveAtsApplicationRequest, RemoveAtsApplicationResponse> operation
               = new RemoveAtsApplication.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -1045,7 +1046,7 @@ public class AsyncAts {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAtsCandidateResponse>} - The async response
      */
-    public CompletableFuture<RemoveAtsCandidateResponse> removeAtsCandidate(RemoveAtsCandidateRequest request) {
+    public CompletableFuture<RemoveAtsCandidateResponse> removeAtsCandidate(@Nonnull RemoveAtsCandidateRequest request) {
         AsyncRequestOperation<RemoveAtsCandidateRequest, RemoveAtsCandidateResponse> operation
               = new RemoveAtsCandidate.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -1068,7 +1069,7 @@ public class AsyncAts {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAtsCompanyResponse>} - The async response
      */
-    public CompletableFuture<RemoveAtsCompanyResponse> removeAtsCompany(RemoveAtsCompanyRequest request) {
+    public CompletableFuture<RemoveAtsCompanyResponse> removeAtsCompany(@Nonnull RemoveAtsCompanyRequest request) {
         AsyncRequestOperation<RemoveAtsCompanyRequest, RemoveAtsCompanyResponse> operation
               = new RemoveAtsCompany.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -1091,7 +1092,7 @@ public class AsyncAts {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAtsDocumentResponse>} - The async response
      */
-    public CompletableFuture<RemoveAtsDocumentResponse> removeAtsDocument(RemoveAtsDocumentRequest request) {
+    public CompletableFuture<RemoveAtsDocumentResponse> removeAtsDocument(@Nonnull RemoveAtsDocumentRequest request) {
         AsyncRequestOperation<RemoveAtsDocumentRequest, RemoveAtsDocumentResponse> operation
               = new RemoveAtsDocument.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -1114,7 +1115,7 @@ public class AsyncAts {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAtsInterviewResponse>} - The async response
      */
-    public CompletableFuture<RemoveAtsInterviewResponse> removeAtsInterview(RemoveAtsInterviewRequest request) {
+    public CompletableFuture<RemoveAtsInterviewResponse> removeAtsInterview(@Nonnull RemoveAtsInterviewRequest request) {
         AsyncRequestOperation<RemoveAtsInterviewRequest, RemoveAtsInterviewResponse> operation
               = new RemoveAtsInterview.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -1137,7 +1138,7 @@ public class AsyncAts {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAtsJobResponse>} - The async response
      */
-    public CompletableFuture<RemoveAtsJobResponse> removeAtsJob(RemoveAtsJobRequest request) {
+    public CompletableFuture<RemoveAtsJobResponse> removeAtsJob(@Nonnull RemoveAtsJobRequest request) {
         AsyncRequestOperation<RemoveAtsJobRequest, RemoveAtsJobResponse> operation
               = new RemoveAtsJob.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -1160,7 +1161,7 @@ public class AsyncAts {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveAtsScorecardResponse>} - The async response
      */
-    public CompletableFuture<RemoveAtsScorecardResponse> removeAtsScorecard(RemoveAtsScorecardRequest request) {
+    public CompletableFuture<RemoveAtsScorecardResponse> removeAtsScorecard(@Nonnull RemoveAtsScorecardRequest request) {
         AsyncRequestOperation<RemoveAtsScorecardRequest, RemoveAtsScorecardResponse> operation
               = new RemoveAtsScorecard.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -1183,7 +1184,7 @@ public class AsyncAts {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAtsActivityResponse>} - The async response
      */
-    public CompletableFuture<UpdateAtsActivityResponse> updateAtsActivity(UpdateAtsActivityRequest request) {
+    public CompletableFuture<UpdateAtsActivityResponse> updateAtsActivity(@Nonnull UpdateAtsActivityRequest request) {
         AsyncRequestOperation<UpdateAtsActivityRequest, UpdateAtsActivityResponse> operation
               = new UpdateAtsActivity.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -1206,7 +1207,7 @@ public class AsyncAts {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAtsApplicationResponse>} - The async response
      */
-    public CompletableFuture<UpdateAtsApplicationResponse> updateAtsApplication(UpdateAtsApplicationRequest request) {
+    public CompletableFuture<UpdateAtsApplicationResponse> updateAtsApplication(@Nonnull UpdateAtsApplicationRequest request) {
         AsyncRequestOperation<UpdateAtsApplicationRequest, UpdateAtsApplicationResponse> operation
               = new UpdateAtsApplication.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -1229,7 +1230,7 @@ public class AsyncAts {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAtsCandidateResponse>} - The async response
      */
-    public CompletableFuture<UpdateAtsCandidateResponse> updateAtsCandidate(UpdateAtsCandidateRequest request) {
+    public CompletableFuture<UpdateAtsCandidateResponse> updateAtsCandidate(@Nonnull UpdateAtsCandidateRequest request) {
         AsyncRequestOperation<UpdateAtsCandidateRequest, UpdateAtsCandidateResponse> operation
               = new UpdateAtsCandidate.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -1252,7 +1253,7 @@ public class AsyncAts {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAtsCompanyResponse>} - The async response
      */
-    public CompletableFuture<UpdateAtsCompanyResponse> updateAtsCompany(UpdateAtsCompanyRequest request) {
+    public CompletableFuture<UpdateAtsCompanyResponse> updateAtsCompany(@Nonnull UpdateAtsCompanyRequest request) {
         AsyncRequestOperation<UpdateAtsCompanyRequest, UpdateAtsCompanyResponse> operation
               = new UpdateAtsCompany.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -1275,7 +1276,7 @@ public class AsyncAts {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAtsDocumentResponse>} - The async response
      */
-    public CompletableFuture<UpdateAtsDocumentResponse> updateAtsDocument(UpdateAtsDocumentRequest request) {
+    public CompletableFuture<UpdateAtsDocumentResponse> updateAtsDocument(@Nonnull UpdateAtsDocumentRequest request) {
         AsyncRequestOperation<UpdateAtsDocumentRequest, UpdateAtsDocumentResponse> operation
               = new UpdateAtsDocument.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -1298,7 +1299,7 @@ public class AsyncAts {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAtsInterviewResponse>} - The async response
      */
-    public CompletableFuture<UpdateAtsInterviewResponse> updateAtsInterview(UpdateAtsInterviewRequest request) {
+    public CompletableFuture<UpdateAtsInterviewResponse> updateAtsInterview(@Nonnull UpdateAtsInterviewRequest request) {
         AsyncRequestOperation<UpdateAtsInterviewRequest, UpdateAtsInterviewResponse> operation
               = new UpdateAtsInterview.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -1321,7 +1322,7 @@ public class AsyncAts {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAtsJobResponse>} - The async response
      */
-    public CompletableFuture<UpdateAtsJobResponse> updateAtsJob(UpdateAtsJobRequest request) {
+    public CompletableFuture<UpdateAtsJobResponse> updateAtsJob(@Nonnull UpdateAtsJobRequest request) {
         AsyncRequestOperation<UpdateAtsJobRequest, UpdateAtsJobResponse> operation
               = new UpdateAtsJob.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -1344,7 +1345,7 @@ public class AsyncAts {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateAtsScorecardResponse>} - The async response
      */
-    public CompletableFuture<UpdateAtsScorecardResponse> updateAtsScorecard(UpdateAtsScorecardRequest request) {
+    public CompletableFuture<UpdateAtsScorecardResponse> updateAtsScorecard(@Nonnull UpdateAtsScorecardRequest request) {
         AsyncRequestOperation<UpdateAtsScorecardRequest, UpdateAtsScorecardResponse> operation
               = new UpdateAtsScorecard.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

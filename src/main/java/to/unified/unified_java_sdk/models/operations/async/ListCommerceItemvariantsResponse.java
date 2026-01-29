@@ -4,11 +4,11 @@
 package to.unified.unified_java_sdk.models.operations.async;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import java.lang.Integer;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import java.io.InputStream;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.net.http.HttpResponse;
 import java.util.List;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public class ListCommerceItemvariantsResponse implements AsyncResponse {
     /**
      * Successful
      */
-    private Optional<? extends List<CommerceItemvariant1>> commerceItemvariants;
+    private List<CommerceItemvariant1> commerceItemvariants;
 
     /**
      * HTTP response content type for this operation
@@ -41,59 +41,52 @@ public class ListCommerceItemvariantsResponse implements AsyncResponse {
 
     @JsonCreator
     public ListCommerceItemvariantsResponse(
-            Optional<? extends List<CommerceItemvariant1>> commerceItemvariants,
-            String contentType,
+            @Nullable List<CommerceItemvariant1> commerceItemvariants,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(commerceItemvariants, "commerceItemvariants");
-        Utils.checkNotNull(contentType, "contentType");
-        Utils.checkNotNull(statusCode, "statusCode");
-        Utils.checkNotNull(rawResponse, "rawResponse");
+            @Nonnull HttpResponse<Blob> rawResponse) {
         this.commerceItemvariants = commerceItemvariants;
-        this.contentType = contentType;
+        this.contentType = Optional.ofNullable(contentType)
+            .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.statusCode = statusCode;
-        this.rawResponse = rawResponse;
+        this.rawResponse = Optional.ofNullable(rawResponse)
+            .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
     }
     
     public ListCommerceItemvariantsResponse(
-            String contentType,
+            @Nonnull String contentType,
             int statusCode,
-            HttpResponse<Blob> rawResponse) {
-        this(Optional.empty(), contentType, statusCode,
+            @Nonnull HttpResponse<Blob> rawResponse) {
+        this(null, contentType, statusCode,
             rawResponse);
     }
 
     /**
      * Successful
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<CommerceItemvariant1>> commerceItemvariants() {
-        return (Optional<List<CommerceItemvariant1>>) commerceItemvariants;
+        return Optional.ofNullable(this.commerceItemvariants);
     }
 
     /**
      * HTTP response content type for this operation
      */
-    @JsonIgnore
     public String contentType() {
-        return contentType;
+        return this.contentType;
     }
 
     /**
      * HTTP response status code for this operation
      */
-    @JsonIgnore
     public int statusCode() {
-        return statusCode;
+        return this.statusCode;
     }
 
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    @JsonIgnore
     public HttpResponse<Blob> rawResponse() {
-        return rawResponse;
+        return this.rawResponse;
     }
 
     public static Builder builder() {
@@ -104,48 +97,38 @@ public class ListCommerceItemvariantsResponse implements AsyncResponse {
     /**
      * Successful
      */
-    public ListCommerceItemvariantsResponse withCommerceItemvariants(List<CommerceItemvariant1> commerceItemvariants) {
-        Utils.checkNotNull(commerceItemvariants, "commerceItemvariants");
-        this.commerceItemvariants = Optional.ofNullable(commerceItemvariants);
-        return this;
-    }
-
-
-    /**
-     * Successful
-     */
-    public ListCommerceItemvariantsResponse withCommerceItemvariants(Optional<? extends List<CommerceItemvariant1>> commerceItemvariants) {
-        Utils.checkNotNull(commerceItemvariants, "commerceItemvariants");
+    public ListCommerceItemvariantsResponse withCommerceItemvariants(@Nullable List<CommerceItemvariant1> commerceItemvariants) {
         this.commerceItemvariants = commerceItemvariants;
         return this;
     }
 
+
     /**
      * HTTP response content type for this operation
      */
-    public ListCommerceItemvariantsResponse withContentType(String contentType) {
-        Utils.checkNotNull(contentType, "contentType");
-        this.contentType = contentType;
+    public ListCommerceItemvariantsResponse withContentType(@Nonnull String contentType) {
+        this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
+
 
     /**
      * HTTP response status code for this operation
      */
     public ListCommerceItemvariantsResponse withStatusCode(int statusCode) {
-        Utils.checkNotNull(statusCode, "statusCode");
         this.statusCode = statusCode;
         return this;
     }
 
+
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public ListCommerceItemvariantsResponse withRawResponse(HttpResponse<Blob> rawResponse) {
-        Utils.checkNotNull(rawResponse, "rawResponse");
-        this.rawResponse = rawResponse;
+    public ListCommerceItemvariantsResponse withRawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+        this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -182,11 +165,11 @@ public class ListCommerceItemvariantsResponse implements AsyncResponse {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<? extends List<CommerceItemvariant1>> commerceItemvariants = Optional.empty();
+        private List<CommerceItemvariant1> commerceItemvariants;
 
         private String contentType;
 
-        private Integer statusCode;
+        private int statusCode;
 
         private HttpResponse<Blob> rawResponse;
 
@@ -194,57 +177,39 @@ public class ListCommerceItemvariantsResponse implements AsyncResponse {
           // force use of static builder() method
         }
 
-
         /**
          * Successful
          */
-        public Builder commerceItemvariants(List<CommerceItemvariant1> commerceItemvariants) {
-            Utils.checkNotNull(commerceItemvariants, "commerceItemvariants");
-            this.commerceItemvariants = Optional.ofNullable(commerceItemvariants);
-            return this;
-        }
-
-        /**
-         * Successful
-         */
-        public Builder commerceItemvariants(Optional<? extends List<CommerceItemvariant1>> commerceItemvariants) {
-            Utils.checkNotNull(commerceItemvariants, "commerceItemvariants");
+        public Builder commerceItemvariants(@Nullable List<CommerceItemvariant1> commerceItemvariants) {
             this.commerceItemvariants = commerceItemvariants;
             return this;
         }
 
-
         /**
          * HTTP response content type for this operation
          */
-        public Builder contentType(String contentType) {
-            Utils.checkNotNull(contentType, "contentType");
-            this.contentType = contentType;
+        public Builder contentType(@Nonnull String contentType) {
+            this.contentType = Utils.checkNotNull(contentType, "contentType");
             return this;
         }
-
 
         /**
          * HTTP response status code for this operation
          */
         public Builder statusCode(int statusCode) {
-            Utils.checkNotNull(statusCode, "statusCode");
             this.statusCode = statusCode;
             return this;
         }
 
-
         /**
          * Raw HTTP response; suitable for custom response parsing
          */
-        public Builder rawResponse(HttpResponse<Blob> rawResponse) {
-            Utils.checkNotNull(rawResponse, "rawResponse");
-            this.rawResponse = rawResponse;
+        public Builder rawResponse(@Nonnull HttpResponse<Blob> rawResponse) {
+            this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
             return this;
         }
 
         public ListCommerceItemvariantsResponse build() {
-
             return new ListCommerceItemvariantsResponse(
                 commerceItemvariants, contentType, statusCode,
                 rawResponse);

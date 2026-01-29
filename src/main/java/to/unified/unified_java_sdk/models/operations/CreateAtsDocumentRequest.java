@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.AtsDocument;
@@ -30,7 +30,7 @@ public class CreateAtsDocumentRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<CreateAtsDocumentQueryParamFields>> fields;
+    private List<CreateAtsDocumentQueryParamFields> fields;
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
@@ -38,51 +38,45 @@ public class CreateAtsDocumentRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
     @JsonCreator
     public CreateAtsDocumentRequest(
-            AtsDocument atsDocument,
-            String connectionId,
-            Optional<? extends List<CreateAtsDocumentQueryParamFields>> fields,
-            Optional<String> raw) {
-        Utils.checkNotNull(atsDocument, "atsDocument");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(raw, "raw");
-        this.atsDocument = atsDocument;
-        this.connectionId = connectionId;
+            @Nonnull AtsDocument atsDocument,
+            @Nonnull String connectionId,
+            @Nullable List<CreateAtsDocumentQueryParamFields> fields,
+            @Nullable String raw) {
+        this.atsDocument = Optional.ofNullable(atsDocument)
+            .orElseThrow(() -> new IllegalArgumentException("atsDocument cannot be null"));
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
         this.raw = raw;
     }
     
     public CreateAtsDocumentRequest(
-            AtsDocument atsDocument,
-            String connectionId) {
-        this(atsDocument, connectionId, Optional.empty(),
-            Optional.empty());
+            @Nonnull AtsDocument atsDocument,
+            @Nonnull String connectionId) {
+        this(atsDocument, connectionId, null,
+            null);
     }
 
-    @JsonIgnore
     public AtsDocument atsDocument() {
-        return atsDocument;
+        return this.atsDocument;
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<CreateAtsDocumentQueryParamFields>> fields() {
-        return (Optional<List<CreateAtsDocumentQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
@@ -90,9 +84,8 @@ public class CreateAtsDocumentRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
     public static Builder builder() {
@@ -100,27 +93,17 @@ public class CreateAtsDocumentRequest {
     }
 
 
-    public CreateAtsDocumentRequest withAtsDocument(AtsDocument atsDocument) {
-        Utils.checkNotNull(atsDocument, "atsDocument");
-        this.atsDocument = atsDocument;
+    public CreateAtsDocumentRequest withAtsDocument(@Nonnull AtsDocument atsDocument) {
+        this.atsDocument = Utils.checkNotNull(atsDocument, "atsDocument");
         return this;
     }
+
 
     /**
      * ID of the connection
      */
-    public CreateAtsDocumentRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public CreateAtsDocumentRequest withFields(List<CreateAtsDocumentQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public CreateAtsDocumentRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -128,34 +111,22 @@ public class CreateAtsDocumentRequest {
     /**
      * Fields to return
      */
-    public CreateAtsDocumentRequest withFields(Optional<? extends List<CreateAtsDocumentQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public CreateAtsDocumentRequest withFields(@Nullable List<CreateAtsDocumentQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public CreateAtsDocumentRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
-
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public CreateAtsDocumentRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public CreateAtsDocumentRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -196,75 +167,46 @@ public class CreateAtsDocumentRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<CreateAtsDocumentQueryParamFields>> fields = Optional.empty();
+        private List<CreateAtsDocumentQueryParamFields> fields;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder atsDocument(AtsDocument atsDocument) {
-            Utils.checkNotNull(atsDocument, "atsDocument");
-            this.atsDocument = atsDocument;
+        public Builder atsDocument(@Nonnull AtsDocument atsDocument) {
+            this.atsDocument = Utils.checkNotNull(atsDocument, "atsDocument");
             return this;
         }
-
 
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<CreateAtsDocumentQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<CreateAtsDocumentQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<CreateAtsDocumentQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
         public CreateAtsDocumentRequest build() {
-
             return new CreateAtsDocumentRequest(
                 atsDocument, connectionId, fields,
                 raw);

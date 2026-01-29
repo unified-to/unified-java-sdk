@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.GetHrisTimeoffRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisTimeoffsRequest;
@@ -52,7 +53,7 @@ public class AsyncTimeoff {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetHrisTimeoffResponse>} - The async response
      */
-    public CompletableFuture<GetHrisTimeoffResponse> getHrisTimeoff(GetHrisTimeoffRequest request) {
+    public CompletableFuture<GetHrisTimeoffResponse> getHrisTimeoff(@Nonnull GetHrisTimeoffRequest request) {
         AsyncRequestOperation<GetHrisTimeoffRequest, GetHrisTimeoffResponse> operation
               = new GetHrisTimeoff.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -75,7 +76,7 @@ public class AsyncTimeoff {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListHrisTimeoffsResponse>} - The async response
      */
-    public CompletableFuture<ListHrisTimeoffsResponse> listHrisTimeoffs(ListHrisTimeoffsRequest request) {
+    public CompletableFuture<ListHrisTimeoffsResponse> listHrisTimeoffs(@Nonnull ListHrisTimeoffsRequest request) {
         AsyncRequestOperation<ListHrisTimeoffsRequest, ListHrisTimeoffsResponse> operation
               = new ListHrisTimeoffs.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

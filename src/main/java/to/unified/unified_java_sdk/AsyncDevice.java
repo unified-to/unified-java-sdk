@@ -5,6 +5,7 @@ package to.unified.unified_java_sdk;
 
 import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOperation;
 
+import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateHrisDeviceRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisDeviceRequest;
@@ -68,7 +69,7 @@ public class AsyncDevice {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<CreateHrisDeviceResponse>} - The async response
      */
-    public CompletableFuture<CreateHrisDeviceResponse> createHrisDevice(CreateHrisDeviceRequest request) {
+    public CompletableFuture<CreateHrisDeviceResponse> createHrisDevice(@Nonnull CreateHrisDeviceRequest request) {
         AsyncRequestOperation<CreateHrisDeviceRequest, CreateHrisDeviceResponse> operation
               = new CreateHrisDevice.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -91,7 +92,7 @@ public class AsyncDevice {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<GetHrisDeviceResponse>} - The async response
      */
-    public CompletableFuture<GetHrisDeviceResponse> getHrisDevice(GetHrisDeviceRequest request) {
+    public CompletableFuture<GetHrisDeviceResponse> getHrisDevice(@Nonnull GetHrisDeviceRequest request) {
         AsyncRequestOperation<GetHrisDeviceRequest, GetHrisDeviceResponse> operation
               = new GetHrisDevice.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -114,7 +115,7 @@ public class AsyncDevice {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<ListHrisDevicesResponse>} - The async response
      */
-    public CompletableFuture<ListHrisDevicesResponse> listHrisDevices(ListHrisDevicesRequest request) {
+    public CompletableFuture<ListHrisDevicesResponse> listHrisDevices(@Nonnull ListHrisDevicesRequest request) {
         AsyncRequestOperation<ListHrisDevicesRequest, ListHrisDevicesResponse> operation
               = new ListHrisDevices.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -137,7 +138,7 @@ public class AsyncDevice {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<PatchHrisDeviceResponse>} - The async response
      */
-    public CompletableFuture<PatchHrisDeviceResponse> patchHrisDevice(PatchHrisDeviceRequest request) {
+    public CompletableFuture<PatchHrisDeviceResponse> patchHrisDevice(@Nonnull PatchHrisDeviceRequest request) {
         AsyncRequestOperation<PatchHrisDeviceRequest, PatchHrisDeviceResponse> operation
               = new PatchHrisDevice.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -160,7 +161,7 @@ public class AsyncDevice {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<RemoveHrisDeviceResponse>} - The async response
      */
-    public CompletableFuture<RemoveHrisDeviceResponse> removeHrisDevice(RemoveHrisDeviceRequest request) {
+    public CompletableFuture<RemoveHrisDeviceResponse> removeHrisDevice(@Nonnull RemoveHrisDeviceRequest request) {
         AsyncRequestOperation<RemoveHrisDeviceRequest, RemoveHrisDeviceResponse> operation
               = new RemoveHrisDevice.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
@@ -183,7 +184,7 @@ public class AsyncDevice {
      * @param request The request object containing all the parameters for the API call.
      * @return {@code CompletableFuture<UpdateHrisDeviceResponse>} - The async response
      */
-    public CompletableFuture<UpdateHrisDeviceResponse> updateHrisDevice(UpdateHrisDeviceRequest request) {
+    public CompletableFuture<UpdateHrisDeviceResponse> updateHrisDevice(@Nonnull UpdateHrisDeviceRequest request) {
         AsyncRequestOperation<UpdateHrisDeviceRequest, UpdateHrisDeviceResponse> operation
               = new UpdateHrisDevice.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)

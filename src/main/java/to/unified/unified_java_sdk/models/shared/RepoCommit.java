@@ -4,14 +4,14 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.Map;
 import java.util.Optional;
@@ -22,27 +22,27 @@ public class RepoCommit {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("branch_id")
-    private Optional<String> branchId;
+    private String branchId;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
-    private Optional<String> message;
+    private String message;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonProperty("repo_id")
@@ -51,87 +51,71 @@ public class RepoCommit {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
-    private Optional<String> userId;
+    private String userId;
 
     @JsonCreator
     public RepoCommit(
-            @JsonProperty("branch_id") Optional<String> branchId,
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("message") Optional<String> message,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("repo_id") String repoId,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt,
-            @JsonProperty("user_id") Optional<String> userId) {
-        Utils.checkNotNull(branchId, "branchId");
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(message, "message");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(repoId, "repoId");
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        Utils.checkNotNull(userId, "userId");
+            @JsonProperty("branch_id") @Nullable String branchId,
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("message") @Nullable String message,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("repo_id") @Nonnull String repoId,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
+            @JsonProperty("user_id") @Nullable String userId) {
         this.branchId = branchId;
         this.createdAt = createdAt;
         this.id = id;
         this.message = message;
         this.raw = raw;
-        this.repoId = repoId;
+        this.repoId = Optional.ofNullable(repoId)
+            .orElseThrow(() -> new IllegalArgumentException("repoId cannot be null"));
         this.updatedAt = updatedAt;
         this.userId = userId;
     }
     
     public RepoCommit(
-            String repoId) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), repoId,
-            Optional.empty(), Optional.empty());
+            @Nonnull String repoId) {
+        this(null, null, null,
+            null, null, repoId,
+            null, null);
     }
 
-    @JsonIgnore
     public Optional<String> branchId() {
-        return branchId;
+        return Optional.ofNullable(this.branchId);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<String> message() {
-        return message;
+        return Optional.ofNullable(this.message);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @JsonIgnore
     public String repoId() {
-        return repoId;
+        return this.repoId;
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
-    @JsonIgnore
     public Optional<String> userId() {
-        return userId;
+        return Optional.ofNullable(this.userId);
     }
 
     public static Builder builder() {
@@ -139,102 +123,53 @@ public class RepoCommit {
     }
 
 
-    public RepoCommit withBranchId(String branchId) {
-        Utils.checkNotNull(branchId, "branchId");
-        this.branchId = Optional.ofNullable(branchId);
-        return this;
-    }
-
-
-    public RepoCommit withBranchId(Optional<String> branchId) {
-        Utils.checkNotNull(branchId, "branchId");
+    public RepoCommit withBranchId(@Nullable String branchId) {
         this.branchId = branchId;
         return this;
     }
 
-    public RepoCommit withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
 
-
-    public RepoCommit withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public RepoCommit withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public RepoCommit withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public RepoCommit withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public RepoCommit withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public RepoCommit withMessage(String message) {
-        Utils.checkNotNull(message, "message");
-        this.message = Optional.ofNullable(message);
-        return this;
-    }
 
-
-    public RepoCommit withMessage(Optional<String> message) {
-        Utils.checkNotNull(message, "message");
+    public RepoCommit withMessage(@Nullable String message) {
         this.message = message;
         return this;
     }
 
-    public RepoCommit withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public RepoCommit withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public RepoCommit withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public RepoCommit withRepoId(String repoId) {
-        Utils.checkNotNull(repoId, "repoId");
-        this.repoId = repoId;
-        return this;
-    }
 
-    public RepoCommit withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
+    public RepoCommit withRepoId(@Nonnull String repoId) {
+        this.repoId = Utils.checkNotNull(repoId, "repoId");
         return this;
     }
 
 
-    public RepoCommit withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public RepoCommit withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
-    public RepoCommit withUserId(String userId) {
-        Utils.checkNotNull(userId, "userId");
-        this.userId = Optional.ofNullable(userId);
-        return this;
-    }
 
-
-    public RepoCommit withUserId(Optional<String> userId) {
-        Utils.checkNotNull(userId, "userId");
+    public RepoCommit withUserId(@Nullable String userId) {
         this.userId = userId;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -280,126 +215,67 @@ public class RepoCommit {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> branchId = Optional.empty();
+        private String branchId;
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<String> message = Optional.empty();
+        private String message;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
         private String repoId;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
-        private Optional<String> userId = Optional.empty();
+        private String userId;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder branchId(String branchId) {
-            Utils.checkNotNull(branchId, "branchId");
-            this.branchId = Optional.ofNullable(branchId);
-            return this;
-        }
-
-        public Builder branchId(Optional<String> branchId) {
-            Utils.checkNotNull(branchId, "branchId");
+        public Builder branchId(@Nullable String branchId) {
             this.branchId = branchId;
             return this;
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder message(String message) {
-            Utils.checkNotNull(message, "message");
-            this.message = Optional.ofNullable(message);
-            return this;
-        }
-
-        public Builder message(Optional<String> message) {
-            Utils.checkNotNull(message, "message");
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder repoId(String repoId) {
-            Utils.checkNotNull(repoId, "repoId");
-            this.repoId = repoId;
+        public Builder repoId(@Nonnull String repoId) {
+            this.repoId = Utils.checkNotNull(repoId, "repoId");
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
-
-        public Builder userId(String userId) {
-            Utils.checkNotNull(userId, "userId");
-            this.userId = Optional.ofNullable(userId);
-            return this;
-        }
-
-        public Builder userId(Optional<String> userId) {
-            Utils.checkNotNull(userId, "userId");
+        public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;
         }
 
         public RepoCommit build() {
-
             return new RepoCommit(
                 branchId, createdAt, id,
                 message, raw, repoId,

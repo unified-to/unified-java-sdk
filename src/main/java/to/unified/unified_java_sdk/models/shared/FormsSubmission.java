@@ -4,14 +4,14 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Map;
@@ -27,7 +27,7 @@ public class FormsSubmission {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<OffsetDateTime> createdAt;
+    private OffsetDateTime createdAt;
 
 
     @JsonProperty("form_id")
@@ -36,49 +36,43 @@ public class FormsSubmission {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("respondent_email")
-    private Optional<String> respondentEmail;
+    private String respondentEmail;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("respondent_name")
-    private Optional<String> respondentName;
+    private String respondentName;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<OffsetDateTime> updatedAt;
+    private OffsetDateTime updatedAt;
 
     @JsonCreator
     public FormsSubmission(
-            @JsonProperty("answers") List<FormAnswer> answers,
-            @JsonProperty("created_at") Optional<OffsetDateTime> createdAt,
-            @JsonProperty("form_id") String formId,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("respondent_email") Optional<String> respondentEmail,
-            @JsonProperty("respondent_name") Optional<String> respondentName,
-            @JsonProperty("updated_at") Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(answers, "answers");
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(formId, "formId");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(respondentEmail, "respondentEmail");
-        Utils.checkNotNull(respondentName, "respondentName");
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.answers = answers;
+            @JsonProperty("answers") @Nonnull List<FormAnswer> answers,
+            @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("form_id") @Nonnull String formId,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("respondent_email") @Nullable String respondentEmail,
+            @JsonProperty("respondent_name") @Nullable String respondentName,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
+        this.answers = Optional.ofNullable(answers)
+            .orElseThrow(() -> new IllegalArgumentException("answers cannot be null"));
         this.createdAt = createdAt;
-        this.formId = formId;
+        this.formId = Optional.ofNullable(formId)
+            .orElseThrow(() -> new IllegalArgumentException("formId cannot be null"));
         this.id = id;
         this.raw = raw;
         this.respondentEmail = respondentEmail;
@@ -87,52 +81,43 @@ public class FormsSubmission {
     }
     
     public FormsSubmission(
-            List<FormAnswer> answers,
-            String formId) {
-        this(answers, Optional.empty(), formId,
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty());
+            @Nonnull List<FormAnswer> answers,
+            @Nonnull String formId) {
+        this(answers, null, formId,
+            null, null, null,
+            null, null);
     }
 
-    @JsonIgnore
     public List<FormAnswer> answers() {
-        return answers;
+        return this.answers;
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public String formId() {
-        return formId;
+        return this.formId;
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @JsonIgnore
     public Optional<String> respondentEmail() {
-        return respondentEmail;
+        return Optional.ofNullable(this.respondentEmail);
     }
 
-    @JsonIgnore
     public Optional<String> respondentName() {
-        return respondentName;
+        return Optional.ofNullable(this.respondentName);
     }
 
-    @JsonIgnore
     public Optional<OffsetDateTime> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
     public static Builder builder() {
@@ -140,95 +125,53 @@ public class FormsSubmission {
     }
 
 
-    public FormsSubmission withAnswers(List<FormAnswer> answers) {
-        Utils.checkNotNull(answers, "answers");
-        this.answers = answers;
-        return this;
-    }
-
-    public FormsSubmission withCreatedAt(OffsetDateTime createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
+    public FormsSubmission withAnswers(@Nonnull List<FormAnswer> answers) {
+        this.answers = Utils.checkNotNull(answers, "answers");
         return this;
     }
 
 
-    public FormsSubmission withCreatedAt(Optional<OffsetDateTime> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public FormsSubmission withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public FormsSubmission withFormId(String formId) {
-        Utils.checkNotNull(formId, "formId");
-        this.formId = formId;
-        return this;
-    }
 
-    public FormsSubmission withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
+    public FormsSubmission withFormId(@Nonnull String formId) {
+        this.formId = Utils.checkNotNull(formId, "formId");
         return this;
     }
 
 
-    public FormsSubmission withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public FormsSubmission withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public FormsSubmission withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public FormsSubmission withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public FormsSubmission withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public FormsSubmission withRespondentEmail(String respondentEmail) {
-        Utils.checkNotNull(respondentEmail, "respondentEmail");
-        this.respondentEmail = Optional.ofNullable(respondentEmail);
-        return this;
-    }
 
-
-    public FormsSubmission withRespondentEmail(Optional<String> respondentEmail) {
-        Utils.checkNotNull(respondentEmail, "respondentEmail");
+    public FormsSubmission withRespondentEmail(@Nullable String respondentEmail) {
         this.respondentEmail = respondentEmail;
         return this;
     }
 
-    public FormsSubmission withRespondentName(String respondentName) {
-        Utils.checkNotNull(respondentName, "respondentName");
-        this.respondentName = Optional.ofNullable(respondentName);
-        return this;
-    }
 
-
-    public FormsSubmission withRespondentName(Optional<String> respondentName) {
-        Utils.checkNotNull(respondentName, "respondentName");
+    public FormsSubmission withRespondentName(@Nullable String respondentName) {
         this.respondentName = respondentName;
         return this;
     }
 
-    public FormsSubmission withUpdatedAt(OffsetDateTime updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public FormsSubmission withUpdatedAt(Optional<OffsetDateTime> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public FormsSubmission withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -276,118 +219,65 @@ public class FormsSubmission {
 
         private List<FormAnswer> answers;
 
-        private Optional<OffsetDateTime> createdAt = Optional.empty();
+        private OffsetDateTime createdAt;
 
         private String formId;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<String> respondentEmail = Optional.empty();
+        private String respondentEmail;
 
-        private Optional<String> respondentName = Optional.empty();
+        private String respondentName;
 
-        private Optional<OffsetDateTime> updatedAt = Optional.empty();
+        private OffsetDateTime updatedAt;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder answers(List<FormAnswer> answers) {
-            Utils.checkNotNull(answers, "answers");
-            this.answers = answers;
+        public Builder answers(@Nonnull List<FormAnswer> answers) {
+            this.answers = Utils.checkNotNull(answers, "answers");
             return this;
         }
 
-
-        public Builder createdAt(OffsetDateTime createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<OffsetDateTime> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder formId(String formId) {
-            Utils.checkNotNull(formId, "formId");
-            this.formId = formId;
+        public Builder formId(@Nonnull String formId) {
+            this.formId = Utils.checkNotNull(formId, "formId");
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder respondentEmail(String respondentEmail) {
-            Utils.checkNotNull(respondentEmail, "respondentEmail");
-            this.respondentEmail = Optional.ofNullable(respondentEmail);
-            return this;
-        }
-
-        public Builder respondentEmail(Optional<String> respondentEmail) {
-            Utils.checkNotNull(respondentEmail, "respondentEmail");
+        public Builder respondentEmail(@Nullable String respondentEmail) {
             this.respondentEmail = respondentEmail;
             return this;
         }
 
-
-        public Builder respondentName(String respondentName) {
-            Utils.checkNotNull(respondentName, "respondentName");
-            this.respondentName = Optional.ofNullable(respondentName);
-            return this;
-        }
-
-        public Builder respondentName(Optional<String> respondentName) {
-            Utils.checkNotNull(respondentName, "respondentName");
+        public Builder respondentName(@Nullable String respondentName) {
             this.respondentName = respondentName;
             return this;
         }
 
-
-        public Builder updatedAt(OffsetDateTime updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<OffsetDateTime> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
         public FormsSubmission build() {
-
             return new FormsSubmission(
                 answers, createdAt, formId,
                 id, raw, respondentEmail,

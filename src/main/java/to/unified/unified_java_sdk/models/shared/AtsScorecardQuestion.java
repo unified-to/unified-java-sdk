@@ -4,10 +4,11 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
 import java.util.Optional;
@@ -18,12 +19,12 @@ public class AtsScorecardQuestion {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("answer")
-    private Optional<String> answer;
+    private String answer;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
-    private Optional<String> description;
+    private String description;
 
 
     @JsonProperty("text")
@@ -31,35 +32,30 @@ public class AtsScorecardQuestion {
 
     @JsonCreator
     public AtsScorecardQuestion(
-            @JsonProperty("answer") Optional<String> answer,
-            @JsonProperty("description") Optional<String> description,
-            @JsonProperty("text") String text) {
-        Utils.checkNotNull(answer, "answer");
-        Utils.checkNotNull(description, "description");
-        Utils.checkNotNull(text, "text");
+            @JsonProperty("answer") @Nullable String answer,
+            @JsonProperty("description") @Nullable String description,
+            @JsonProperty("text") @Nonnull String text) {
         this.answer = answer;
         this.description = description;
-        this.text = text;
+        this.text = Optional.ofNullable(text)
+            .orElseThrow(() -> new IllegalArgumentException("text cannot be null"));
     }
     
     public AtsScorecardQuestion(
-            String text) {
-        this(Optional.empty(), Optional.empty(), text);
+            @Nonnull String text) {
+        this(null, null, text);
     }
 
-    @JsonIgnore
     public Optional<String> answer() {
-        return answer;
+        return Optional.ofNullable(this.answer);
     }
 
-    @JsonIgnore
     public Optional<String> description() {
-        return description;
+        return Optional.ofNullable(this.description);
     }
 
-    @JsonIgnore
     public String text() {
-        return text;
+        return this.text;
     }
 
     public static Builder builder() {
@@ -67,37 +63,23 @@ public class AtsScorecardQuestion {
     }
 
 
-    public AtsScorecardQuestion withAnswer(String answer) {
-        Utils.checkNotNull(answer, "answer");
-        this.answer = Optional.ofNullable(answer);
-        return this;
-    }
-
-
-    public AtsScorecardQuestion withAnswer(Optional<String> answer) {
-        Utils.checkNotNull(answer, "answer");
+    public AtsScorecardQuestion withAnswer(@Nullable String answer) {
         this.answer = answer;
         return this;
     }
 
-    public AtsScorecardQuestion withDescription(String description) {
-        Utils.checkNotNull(description, "description");
-        this.description = Optional.ofNullable(description);
-        return this;
-    }
 
-
-    public AtsScorecardQuestion withDescription(Optional<String> description) {
-        Utils.checkNotNull(description, "description");
+    public AtsScorecardQuestion withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
-    public AtsScorecardQuestion withText(String text) {
-        Utils.checkNotNull(text, "text");
-        this.text = text;
+
+    public AtsScorecardQuestion withText(@Nonnull String text) {
+        this.text = Utils.checkNotNull(text, "text");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -131,9 +113,9 @@ public class AtsScorecardQuestion {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> answer = Optional.empty();
+        private String answer;
 
-        private Optional<String> description = Optional.empty();
+        private String description;
 
         private String text;
 
@@ -141,41 +123,22 @@ public class AtsScorecardQuestion {
           // force use of static builder() method
         }
 
-
-        public Builder answer(String answer) {
-            Utils.checkNotNull(answer, "answer");
-            this.answer = Optional.ofNullable(answer);
-            return this;
-        }
-
-        public Builder answer(Optional<String> answer) {
-            Utils.checkNotNull(answer, "answer");
+        public Builder answer(@Nullable String answer) {
             this.answer = answer;
             return this;
         }
 
-
-        public Builder description(String description) {
-            Utils.checkNotNull(description, "description");
-            this.description = Optional.ofNullable(description);
-            return this;
-        }
-
-        public Builder description(Optional<String> description) {
-            Utils.checkNotNull(description, "description");
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-
-        public Builder text(String text) {
-            Utils.checkNotNull(text, "text");
-            this.text = text;
+        public Builder text(@Nonnull String text) {
+            this.text = Utils.checkNotNull(text, "text");
             return this;
         }
 
         public AtsScorecardQuestion build() {
-
             return new AtsScorecardQuestion(
                 answer, description, text);
         }

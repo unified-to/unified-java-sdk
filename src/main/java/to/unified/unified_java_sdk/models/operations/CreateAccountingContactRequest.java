@@ -4,10 +4,10 @@
 package to.unified.unified_java_sdk.models.operations;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.models.shared.AccountingContact;
@@ -30,7 +30,7 @@ public class CreateAccountingContactRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private Optional<? extends List<CreateAccountingContactQueryParamFields>> fields;
+    private List<CreateAccountingContactQueryParamFields> fields;
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
@@ -38,51 +38,45 @@ public class CreateAccountingContactRequest {
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
-    private Optional<String> raw;
+    private String raw;
 
     @JsonCreator
     public CreateAccountingContactRequest(
-            AccountingContact accountingContact,
-            String connectionId,
-            Optional<? extends List<CreateAccountingContactQueryParamFields>> fields,
-            Optional<String> raw) {
-        Utils.checkNotNull(accountingContact, "accountingContact");
-        Utils.checkNotNull(connectionId, "connectionId");
-        Utils.checkNotNull(fields, "fields");
-        Utils.checkNotNull(raw, "raw");
-        this.accountingContact = accountingContact;
-        this.connectionId = connectionId;
+            @Nonnull AccountingContact accountingContact,
+            @Nonnull String connectionId,
+            @Nullable List<CreateAccountingContactQueryParamFields> fields,
+            @Nullable String raw) {
+        this.accountingContact = Optional.ofNullable(accountingContact)
+            .orElseThrow(() -> new IllegalArgumentException("accountingContact cannot be null"));
+        this.connectionId = Optional.ofNullable(connectionId)
+            .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
         this.raw = raw;
     }
     
     public CreateAccountingContactRequest(
-            AccountingContact accountingContact,
-            String connectionId) {
-        this(accountingContact, connectionId, Optional.empty(),
-            Optional.empty());
+            @Nonnull AccountingContact accountingContact,
+            @Nonnull String connectionId) {
+        this(accountingContact, connectionId, null,
+            null);
     }
 
-    @JsonIgnore
     public AccountingContact accountingContact() {
-        return accountingContact;
+        return this.accountingContact;
     }
 
     /**
      * ID of the connection
      */
-    @JsonIgnore
     public String connectionId() {
-        return connectionId;
+        return this.connectionId;
     }
 
     /**
      * Fields to return
      */
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<List<CreateAccountingContactQueryParamFields>> fields() {
-        return (Optional<List<CreateAccountingContactQueryParamFields>>) fields;
+        return Optional.ofNullable(this.fields);
     }
 
     /**
@@ -90,9 +84,8 @@ public class CreateAccountingContactRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    @JsonIgnore
     public Optional<String> raw() {
-        return raw;
+        return Optional.ofNullable(this.raw);
     }
 
     public static Builder builder() {
@@ -100,27 +93,17 @@ public class CreateAccountingContactRequest {
     }
 
 
-    public CreateAccountingContactRequest withAccountingContact(AccountingContact accountingContact) {
-        Utils.checkNotNull(accountingContact, "accountingContact");
-        this.accountingContact = accountingContact;
+    public CreateAccountingContactRequest withAccountingContact(@Nonnull AccountingContact accountingContact) {
+        this.accountingContact = Utils.checkNotNull(accountingContact, "accountingContact");
         return this;
     }
+
 
     /**
      * ID of the connection
      */
-    public CreateAccountingContactRequest withConnectionId(String connectionId) {
-        Utils.checkNotNull(connectionId, "connectionId");
-        this.connectionId = connectionId;
-        return this;
-    }
-
-    /**
-     * Fields to return
-     */
-    public CreateAccountingContactRequest withFields(List<CreateAccountingContactQueryParamFields> fields) {
-        Utils.checkNotNull(fields, "fields");
-        this.fields = Optional.ofNullable(fields);
+    public CreateAccountingContactRequest withConnectionId(@Nonnull String connectionId) {
+        this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
 
@@ -128,34 +111,22 @@ public class CreateAccountingContactRequest {
     /**
      * Fields to return
      */
-    public CreateAccountingContactRequest withFields(Optional<? extends List<CreateAccountingContactQueryParamFields>> fields) {
-        Utils.checkNotNull(fields, "fields");
+    public CreateAccountingContactRequest withFields(@Nullable List<CreateAccountingContactQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
-    /**
-     * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-     * 
-     * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-     */
-    public CreateAccountingContactRequest withRaw(String raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
-
 
     /**
      * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public CreateAccountingContactRequest withRaw(Optional<String> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public CreateAccountingContactRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -196,75 +167,46 @@ public class CreateAccountingContactRequest {
 
         private String connectionId;
 
-        private Optional<? extends List<CreateAccountingContactQueryParamFields>> fields = Optional.empty();
+        private List<CreateAccountingContactQueryParamFields> fields;
 
-        private Optional<String> raw = Optional.empty();
+        private String raw;
 
         private Builder() {
           // force use of static builder() method
         }
 
-
-        public Builder accountingContact(AccountingContact accountingContact) {
-            Utils.checkNotNull(accountingContact, "accountingContact");
-            this.accountingContact = accountingContact;
+        public Builder accountingContact(@Nonnull AccountingContact accountingContact) {
+            this.accountingContact = Utils.checkNotNull(accountingContact, "accountingContact");
             return this;
         }
-
 
         /**
          * ID of the connection
          */
-        public Builder connectionId(String connectionId) {
-            Utils.checkNotNull(connectionId, "connectionId");
-            this.connectionId = connectionId;
-            return this;
-        }
-
-
-        /**
-         * Fields to return
-         */
-        public Builder fields(List<CreateAccountingContactQueryParamFields> fields) {
-            Utils.checkNotNull(fields, "fields");
-            this.fields = Optional.ofNullable(fields);
+        public Builder connectionId(@Nonnull String connectionId) {
+            this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
             return this;
         }
 
         /**
          * Fields to return
          */
-        public Builder fields(Optional<? extends List<CreateAccountingContactQueryParamFields>> fields) {
-            Utils.checkNotNull(fields, "fields");
+        public Builder fields(@Nullable List<CreateAccountingContactQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
 
-
         /**
          * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
          * 
          * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
          */
-        public Builder raw(String raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        /**
-         * Raw parameters to include in the 3rd-party request. Encoded as a URL component. eg.
-         * 
-         * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
-         */
-        public Builder raw(Optional<String> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable String raw) {
             this.raw = raw;
             return this;
         }
 
         public CreateAccountingContactRequest build() {
-
             return new CreateAccountingContactRequest(
                 accountingContact, connectionId, fields,
                 raw);

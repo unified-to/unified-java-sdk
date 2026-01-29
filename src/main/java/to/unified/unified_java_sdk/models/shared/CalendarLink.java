@@ -4,16 +4,16 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -23,52 +23,52 @@ public class CalendarLink {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
-    private Optional<String> createdAt;
+    private String createdAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
-    private Optional<String> description;
+    private String description;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
-    private Optional<Double> duration;
+    private Double duration;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
-    private Optional<String> id;
+    private String id;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
-    private Optional<Boolean> isActive;
+    private Boolean isActive;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
-    private Optional<String> name;
+    private String name;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price_amount")
-    private Optional<Double> priceAmount;
+    private Double priceAmount;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price_currency")
-    private Optional<String> priceCurrency;
+    private String priceCurrency;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
-    private Optional<? extends Map<String, Object>> raw;
+    private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
-    private Optional<String> updatedAt;
+    private String updatedAt;
 
 
     @JsonProperty("url")
@@ -76,28 +76,17 @@ public class CalendarLink {
 
     @JsonCreator
     public CalendarLink(
-            @JsonProperty("created_at") Optional<String> createdAt,
-            @JsonProperty("description") Optional<String> description,
-            @JsonProperty("duration") Optional<Double> duration,
-            @JsonProperty("id") Optional<String> id,
-            @JsonProperty("is_active") Optional<Boolean> isActive,
-            @JsonProperty("name") Optional<String> name,
-            @JsonProperty("price_amount") Optional<Double> priceAmount,
-            @JsonProperty("price_currency") Optional<String> priceCurrency,
-            @JsonProperty("raw") Optional<? extends Map<String, Object>> raw,
-            @JsonProperty("updated_at") Optional<String> updatedAt,
-            @JsonProperty("url") String url) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        Utils.checkNotNull(description, "description");
-        Utils.checkNotNull(duration, "duration");
-        Utils.checkNotNull(id, "id");
-        Utils.checkNotNull(isActive, "isActive");
-        Utils.checkNotNull(name, "name");
-        Utils.checkNotNull(priceAmount, "priceAmount");
-        Utils.checkNotNull(priceCurrency, "priceCurrency");
-        Utils.checkNotNull(raw, "raw");
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        Utils.checkNotNull(url, "url");
+            @JsonProperty("created_at") @Nullable String createdAt,
+            @JsonProperty("description") @Nullable String description,
+            @JsonProperty("duration") @Nullable Double duration,
+            @JsonProperty("id") @Nullable String id,
+            @JsonProperty("is_active") @Nullable Boolean isActive,
+            @JsonProperty("name") @Nullable String name,
+            @JsonProperty("price_amount") @Nullable Double priceAmount,
+            @JsonProperty("price_currency") @Nullable String priceCurrency,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("updated_at") @Nullable String updatedAt,
+            @JsonProperty("url") @Nonnull String url) {
         this.createdAt = createdAt;
         this.description = description;
         this.duration = duration;
@@ -108,71 +97,60 @@ public class CalendarLink {
         this.priceCurrency = priceCurrency;
         this.raw = raw;
         this.updatedAt = updatedAt;
-        this.url = url;
+        this.url = Optional.ofNullable(url)
+            .orElseThrow(() -> new IllegalArgumentException("url cannot be null"));
     }
     
     public CalendarLink(
-            String url) {
-        this(Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), Optional.empty(), Optional.empty(),
-            Optional.empty(), url);
+            @Nonnull String url) {
+        this(null, null, null,
+            null, null, null,
+            null, null, null,
+            null, url);
     }
 
-    @JsonIgnore
     public Optional<String> createdAt() {
-        return createdAt;
+        return Optional.ofNullable(this.createdAt);
     }
 
-    @JsonIgnore
     public Optional<String> description() {
-        return description;
+        return Optional.ofNullable(this.description);
     }
 
-    @JsonIgnore
     public Optional<Double> duration() {
-        return duration;
+        return Optional.ofNullable(this.duration);
     }
 
-    @JsonIgnore
     public Optional<String> id() {
-        return id;
+        return Optional.ofNullable(this.id);
     }
 
-    @JsonIgnore
     public Optional<Boolean> isActive() {
-        return isActive;
+        return Optional.ofNullable(this.isActive);
     }
 
-    @JsonIgnore
     public Optional<String> name() {
-        return name;
+        return Optional.ofNullable(this.name);
     }
 
-    @JsonIgnore
     public Optional<Double> priceAmount() {
-        return priceAmount;
+        return Optional.ofNullable(this.priceAmount);
     }
 
-    @JsonIgnore
     public Optional<String> priceCurrency() {
-        return priceCurrency;
+        return Optional.ofNullable(this.priceCurrency);
     }
 
-    @SuppressWarnings("unchecked")
-    @JsonIgnore
     public Optional<Map<String, Object>> raw() {
-        return (Optional<Map<String, Object>>) raw;
+        return Optional.ofNullable(this.raw);
     }
 
-    @JsonIgnore
     public Optional<String> updatedAt() {
-        return updatedAt;
+        return Optional.ofNullable(this.updatedAt);
     }
 
-    @JsonIgnore
     public String url() {
-        return url;
+        return this.url;
     }
 
     public static Builder builder() {
@@ -180,141 +158,71 @@ public class CalendarLink {
     }
 
 
-    public CalendarLink withCreatedAt(String createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
-        this.createdAt = Optional.ofNullable(createdAt);
-        return this;
-    }
-
-
-    public CalendarLink withCreatedAt(Optional<String> createdAt) {
-        Utils.checkNotNull(createdAt, "createdAt");
+    public CalendarLink withCreatedAt(@Nullable String createdAt) {
         this.createdAt = createdAt;
         return this;
     }
 
-    public CalendarLink withDescription(String description) {
-        Utils.checkNotNull(description, "description");
-        this.description = Optional.ofNullable(description);
-        return this;
-    }
 
-
-    public CalendarLink withDescription(Optional<String> description) {
-        Utils.checkNotNull(description, "description");
+    public CalendarLink withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
-    public CalendarLink withDuration(double duration) {
-        Utils.checkNotNull(duration, "duration");
-        this.duration = Optional.ofNullable(duration);
-        return this;
-    }
 
-
-    public CalendarLink withDuration(Optional<Double> duration) {
-        Utils.checkNotNull(duration, "duration");
+    public CalendarLink withDuration(@Nullable Double duration) {
         this.duration = duration;
         return this;
     }
 
-    public CalendarLink withId(String id) {
-        Utils.checkNotNull(id, "id");
-        this.id = Optional.ofNullable(id);
-        return this;
-    }
 
-
-    public CalendarLink withId(Optional<String> id) {
-        Utils.checkNotNull(id, "id");
+    public CalendarLink withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
-    public CalendarLink withIsActive(boolean isActive) {
-        Utils.checkNotNull(isActive, "isActive");
-        this.isActive = Optional.ofNullable(isActive);
-        return this;
-    }
 
-
-    public CalendarLink withIsActive(Optional<Boolean> isActive) {
-        Utils.checkNotNull(isActive, "isActive");
+    public CalendarLink withIsActive(@Nullable Boolean isActive) {
         this.isActive = isActive;
         return this;
     }
 
-    public CalendarLink withName(String name) {
-        Utils.checkNotNull(name, "name");
-        this.name = Optional.ofNullable(name);
-        return this;
-    }
 
-
-    public CalendarLink withName(Optional<String> name) {
-        Utils.checkNotNull(name, "name");
+    public CalendarLink withName(@Nullable String name) {
         this.name = name;
         return this;
     }
 
-    public CalendarLink withPriceAmount(double priceAmount) {
-        Utils.checkNotNull(priceAmount, "priceAmount");
-        this.priceAmount = Optional.ofNullable(priceAmount);
-        return this;
-    }
 
-
-    public CalendarLink withPriceAmount(Optional<Double> priceAmount) {
-        Utils.checkNotNull(priceAmount, "priceAmount");
+    public CalendarLink withPriceAmount(@Nullable Double priceAmount) {
         this.priceAmount = priceAmount;
         return this;
     }
 
-    public CalendarLink withPriceCurrency(String priceCurrency) {
-        Utils.checkNotNull(priceCurrency, "priceCurrency");
-        this.priceCurrency = Optional.ofNullable(priceCurrency);
-        return this;
-    }
 
-
-    public CalendarLink withPriceCurrency(Optional<String> priceCurrency) {
-        Utils.checkNotNull(priceCurrency, "priceCurrency");
+    public CalendarLink withPriceCurrency(@Nullable String priceCurrency) {
         this.priceCurrency = priceCurrency;
         return this;
     }
 
-    public CalendarLink withRaw(Map<String, Object> raw) {
-        Utils.checkNotNull(raw, "raw");
-        this.raw = Optional.ofNullable(raw);
-        return this;
-    }
 
-
-    public CalendarLink withRaw(Optional<? extends Map<String, Object>> raw) {
-        Utils.checkNotNull(raw, "raw");
+    public CalendarLink withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
-    public CalendarLink withUpdatedAt(String updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
-        this.updatedAt = Optional.ofNullable(updatedAt);
-        return this;
-    }
 
-
-    public CalendarLink withUpdatedAt(Optional<String> updatedAt) {
-        Utils.checkNotNull(updatedAt, "updatedAt");
+    public CalendarLink withUpdatedAt(@Nullable String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
 
-    public CalendarLink withUrl(String url) {
-        Utils.checkNotNull(url, "url");
-        this.url = url;
+
+    public CalendarLink withUrl(@Nonnull String url) {
+        this.url = Utils.checkNotNull(url, "url");
         return this;
     }
+
 
     @Override
     public boolean equals(java.lang.Object o) {
@@ -367,25 +275,25 @@ public class CalendarLink {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private Optional<String> createdAt = Optional.empty();
+        private String createdAt;
 
-        private Optional<String> description = Optional.empty();
+        private String description;
 
-        private Optional<Double> duration = Optional.empty();
+        private Double duration;
 
-        private Optional<String> id = Optional.empty();
+        private String id;
 
-        private Optional<Boolean> isActive = Optional.empty();
+        private Boolean isActive;
 
-        private Optional<String> name = Optional.empty();
+        private String name;
 
-        private Optional<Double> priceAmount = Optional.empty();
+        private Double priceAmount;
 
-        private Optional<String> priceCurrency = Optional.empty();
+        private String priceCurrency;
 
-        private Optional<? extends Map<String, Object>> raw = Optional.empty();
+        private Map<String, Object> raw;
 
-        private Optional<String> updatedAt = Optional.empty();
+        private String updatedAt;
 
         private String url;
 
@@ -393,145 +301,62 @@ public class CalendarLink {
           // force use of static builder() method
         }
 
-
-        public Builder createdAt(String createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
-            this.createdAt = Optional.ofNullable(createdAt);
-            return this;
-        }
-
-        public Builder createdAt(Optional<String> createdAt) {
-            Utils.checkNotNull(createdAt, "createdAt");
+        public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-
-        public Builder description(String description) {
-            Utils.checkNotNull(description, "description");
-            this.description = Optional.ofNullable(description);
-            return this;
-        }
-
-        public Builder description(Optional<String> description) {
-            Utils.checkNotNull(description, "description");
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-
-        public Builder duration(double duration) {
-            Utils.checkNotNull(duration, "duration");
-            this.duration = Optional.ofNullable(duration);
-            return this;
-        }
-
-        public Builder duration(Optional<Double> duration) {
-            Utils.checkNotNull(duration, "duration");
+        public Builder duration(@Nullable Double duration) {
             this.duration = duration;
             return this;
         }
 
-
-        public Builder id(String id) {
-            Utils.checkNotNull(id, "id");
-            this.id = Optional.ofNullable(id);
-            return this;
-        }
-
-        public Builder id(Optional<String> id) {
-            Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-
-        public Builder isActive(boolean isActive) {
-            Utils.checkNotNull(isActive, "isActive");
-            this.isActive = Optional.ofNullable(isActive);
-            return this;
-        }
-
-        public Builder isActive(Optional<Boolean> isActive) {
-            Utils.checkNotNull(isActive, "isActive");
+        public Builder isActive(@Nullable Boolean isActive) {
             this.isActive = isActive;
             return this;
         }
 
-
-        public Builder name(String name) {
-            Utils.checkNotNull(name, "name");
-            this.name = Optional.ofNullable(name);
-            return this;
-        }
-
-        public Builder name(Optional<String> name) {
-            Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-
-        public Builder priceAmount(double priceAmount) {
-            Utils.checkNotNull(priceAmount, "priceAmount");
-            this.priceAmount = Optional.ofNullable(priceAmount);
-            return this;
-        }
-
-        public Builder priceAmount(Optional<Double> priceAmount) {
-            Utils.checkNotNull(priceAmount, "priceAmount");
+        public Builder priceAmount(@Nullable Double priceAmount) {
             this.priceAmount = priceAmount;
             return this;
         }
 
-
-        public Builder priceCurrency(String priceCurrency) {
-            Utils.checkNotNull(priceCurrency, "priceCurrency");
-            this.priceCurrency = Optional.ofNullable(priceCurrency);
-            return this;
-        }
-
-        public Builder priceCurrency(Optional<String> priceCurrency) {
-            Utils.checkNotNull(priceCurrency, "priceCurrency");
+        public Builder priceCurrency(@Nullable String priceCurrency) {
             this.priceCurrency = priceCurrency;
             return this;
         }
 
-
-        public Builder raw(Map<String, Object> raw) {
-            Utils.checkNotNull(raw, "raw");
-            this.raw = Optional.ofNullable(raw);
-            return this;
-        }
-
-        public Builder raw(Optional<? extends Map<String, Object>> raw) {
-            Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-
-        public Builder updatedAt(String updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
-            this.updatedAt = Optional.ofNullable(updatedAt);
-            return this;
-        }
-
-        public Builder updatedAt(Optional<String> updatedAt) {
-            Utils.checkNotNull(updatedAt, "updatedAt");
+        public Builder updatedAt(@Nullable String updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
-
-        public Builder url(String url) {
-            Utils.checkNotNull(url, "url");
-            this.url = url;
+        public Builder url(@Nonnull String url) {
+            this.url = Utils.checkNotNull(url, "url");
             return this;
         }
 
         public CalendarLink build() {
-
             return new CalendarLink(
                 createdAt, description, duration,
                 id, isActive, name,
