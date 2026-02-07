@@ -23,6 +23,11 @@ public class PropertyCalendarRecordingTranscriptAttendee {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("is_cohost")
+    private Boolean isCohost;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
@@ -44,11 +49,13 @@ public class PropertyCalendarRecordingTranscriptAttendee {
     @JsonCreator
     public PropertyCalendarRecordingTranscriptAttendee(
             @JsonProperty("email") @Nullable String email,
+            @JsonProperty("is_cohost") @Nullable Boolean isCohost,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("required") @Nullable Boolean required,
             @JsonProperty("status") @Nullable PropertyCalendarRecordingTranscriptAttendeeStatus status,
             @JsonProperty("user_id") @Nullable String userId) {
         this.email = email;
+        this.isCohost = isCohost;
         this.name = name;
         this.required = required;
         this.status = status;
@@ -57,11 +64,15 @@ public class PropertyCalendarRecordingTranscriptAttendee {
     
     public PropertyCalendarRecordingTranscriptAttendee() {
         this(null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<String> email() {
         return Optional.ofNullable(this.email);
+    }
+
+    public Optional<Boolean> isCohost() {
+        return Optional.ofNullable(this.isCohost);
     }
 
     public Optional<String> name() {
@@ -87,6 +98,12 @@ public class PropertyCalendarRecordingTranscriptAttendee {
 
     public PropertyCalendarRecordingTranscriptAttendee withEmail(@Nullable String email) {
         this.email = email;
+        return this;
+    }
+
+
+    public PropertyCalendarRecordingTranscriptAttendee withIsCohost(@Nullable Boolean isCohost) {
+        this.isCohost = isCohost;
         return this;
     }
 
@@ -126,6 +143,7 @@ public class PropertyCalendarRecordingTranscriptAttendee {
         PropertyCalendarRecordingTranscriptAttendee other = (PropertyCalendarRecordingTranscriptAttendee) o;
         return 
             Utils.enhancedDeepEquals(this.email, other.email) &&
+            Utils.enhancedDeepEquals(this.isCohost, other.isCohost) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.required, other.required) &&
             Utils.enhancedDeepEquals(this.status, other.status) &&
@@ -135,14 +153,15 @@ public class PropertyCalendarRecordingTranscriptAttendee {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            email, name, required,
-            status, userId);
+            email, isCohost, name,
+            required, status, userId);
     }
     
     @Override
     public String toString() {
         return Utils.toString(PropertyCalendarRecordingTranscriptAttendee.class,
                 "email", email,
+                "isCohost", isCohost,
                 "name", name,
                 "required", required,
                 "status", status,
@@ -153,6 +172,8 @@ public class PropertyCalendarRecordingTranscriptAttendee {
     public final static class Builder {
 
         private String email;
+
+        private Boolean isCohost;
 
         private String name;
 
@@ -168,6 +189,11 @@ public class PropertyCalendarRecordingTranscriptAttendee {
 
         public Builder email(@Nullable String email) {
             this.email = email;
+            return this;
+        }
+
+        public Builder isCohost(@Nullable Boolean isCohost) {
+            this.isCohost = isCohost;
             return this;
         }
 
@@ -193,8 +219,8 @@ public class PropertyCalendarRecordingTranscriptAttendee {
 
         public PropertyCalendarRecordingTranscriptAttendee build() {
             return new PropertyCalendarRecordingTranscriptAttendee(
-                email, name, required,
-                status, userId);
+                email, isCohost, name,
+                required, status, userId);
         }
 
     }

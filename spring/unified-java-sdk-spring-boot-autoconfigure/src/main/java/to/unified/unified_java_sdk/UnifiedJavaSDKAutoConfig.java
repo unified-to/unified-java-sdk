@@ -672,6 +672,17 @@ public class UnifiedJavaSDKAutoConfig {
         return unifiedTo.recording();
     }
     /**
+     * Creates a Webinar sub-SDK bean if none exists.
+     *
+     * @param unifiedTo the main SDK instance
+     * @return A configured Webinar instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public Webinar webinar(UnifiedTo unifiedTo) {
+        return unifiedTo.webinar();
+    }
+    /**
      * Creates a Commerce sub-SDK bean if none exists.
      *
      * @param unifiedTo the main SDK instance
@@ -2080,6 +2091,17 @@ public class UnifiedJavaSDKAutoConfig {
     @ConditionalOnMissingBean
     public AsyncRecording asyncRecording(AsyncUnifiedTo asyncUnifiedTo) {
         return asyncUnifiedTo.recording();
+    }
+    /**
+     * Creates an AsyncWebinar sub-SDK bean if none exists.
+     *
+     * @param asyncUnifiedTo the async SDK instance
+     * @return A configured AsyncWebinar instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public AsyncWebinar asyncWebinar(AsyncUnifiedTo asyncUnifiedTo) {
+        return asyncUnifiedTo.webinar();
     }
     /**
      * Creates an AsyncCommerce sub-SDK bean if none exists.

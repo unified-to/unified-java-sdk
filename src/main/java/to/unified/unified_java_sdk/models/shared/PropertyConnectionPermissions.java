@@ -111,10 +111,14 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions CRM_LEAD_WRITE = new PropertyConnectionPermissions("crm_lead_write");
     public static final PropertyConnectionPermissions CRM_PIPELINE_READ = new PropertyConnectionPermissions("crm_pipeline_read");
     public static final PropertyConnectionPermissions CRM_PIPELINE_WRITE = new PropertyConnectionPermissions("crm_pipeline_write");
+    public static final PropertyConnectionPermissions MARTECH_CAMPAIGN_READ = new PropertyConnectionPermissions("martech_campaign_read");
+    public static final PropertyConnectionPermissions MARTECH_CAMPAIGN_WRITE = new PropertyConnectionPermissions("martech_campaign_write");
     public static final PropertyConnectionPermissions MARTECH_LIST_READ = new PropertyConnectionPermissions("martech_list_read");
     public static final PropertyConnectionPermissions MARTECH_LIST_WRITE = new PropertyConnectionPermissions("martech_list_write");
     public static final PropertyConnectionPermissions MARTECH_MEMBER_READ = new PropertyConnectionPermissions("martech_member_read");
     public static final PropertyConnectionPermissions MARTECH_MEMBER_WRITE = new PropertyConnectionPermissions("martech_member_write");
+    public static final PropertyConnectionPermissions MARTECH_REPORT_READ = new PropertyConnectionPermissions("martech_report_read");
+    public static final PropertyConnectionPermissions MARTECH_REPORT_WRITE = new PropertyConnectionPermissions("martech_report_write");
     public static final PropertyConnectionPermissions TICKETING_CUSTOMER_READ = new PropertyConnectionPermissions("ticketing_customer_read");
     public static final PropertyConnectionPermissions TICKETING_CUSTOMER_WRITE = new PropertyConnectionPermissions("ticketing_customer_write");
     public static final PropertyConnectionPermissions TICKETING_TICKET_READ = new PropertyConnectionPermissions("ticketing_ticket_read");
@@ -208,6 +212,8 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions CALENDAR_LINK_WRITE = new PropertyConnectionPermissions("calendar_link_write");
     public static final PropertyConnectionPermissions CALENDAR_RECORDING_READ = new PropertyConnectionPermissions("calendar_recording_read");
     public static final PropertyConnectionPermissions CALENDAR_RECORDING_WRITE = new PropertyConnectionPermissions("calendar_recording_write");
+    public static final PropertyConnectionPermissions CALENDAR_WEBINAR_READ = new PropertyConnectionPermissions("calendar_webinar_read");
+    public static final PropertyConnectionPermissions CALENDAR_WEBINAR_WRITE = new PropertyConnectionPermissions("calendar_webinar_write");
     public static final PropertyConnectionPermissions ENRICH_PERSON_READ = new PropertyConnectionPermissions("enrich_person_read");
     public static final PropertyConnectionPermissions ENRICH_COMPANY_READ = new PropertyConnectionPermissions("enrich_company_read");
     public static final PropertyConnectionPermissions ADS_AD_READ = new PropertyConnectionPermissions("ads_ad_read");
@@ -398,10 +404,14 @@ public class PropertyConnectionPermissions {
         map.put("crm_lead_write", CRM_LEAD_WRITE);
         map.put("crm_pipeline_read", CRM_PIPELINE_READ);
         map.put("crm_pipeline_write", CRM_PIPELINE_WRITE);
+        map.put("martech_campaign_read", MARTECH_CAMPAIGN_READ);
+        map.put("martech_campaign_write", MARTECH_CAMPAIGN_WRITE);
         map.put("martech_list_read", MARTECH_LIST_READ);
         map.put("martech_list_write", MARTECH_LIST_WRITE);
         map.put("martech_member_read", MARTECH_MEMBER_READ);
         map.put("martech_member_write", MARTECH_MEMBER_WRITE);
+        map.put("martech_report_read", MARTECH_REPORT_READ);
+        map.put("martech_report_write", MARTECH_REPORT_WRITE);
         map.put("ticketing_customer_read", TICKETING_CUSTOMER_READ);
         map.put("ticketing_customer_write", TICKETING_CUSTOMER_WRITE);
         map.put("ticketing_ticket_read", TICKETING_TICKET_READ);
@@ -495,6 +505,8 @@ public class PropertyConnectionPermissions {
         map.put("calendar_link_write", CALENDAR_LINK_WRITE);
         map.put("calendar_recording_read", CALENDAR_RECORDING_READ);
         map.put("calendar_recording_write", CALENDAR_RECORDING_WRITE);
+        map.put("calendar_webinar_read", CALENDAR_WEBINAR_READ);
+        map.put("calendar_webinar_write", CALENDAR_WEBINAR_WRITE);
         map.put("enrich_person_read", ENRICH_PERSON_READ);
         map.put("enrich_company_read", ENRICH_COMPANY_READ);
         map.put("ads_ad_read", ADS_AD_READ);
@@ -617,10 +629,14 @@ public class PropertyConnectionPermissions {
         map.put("crm_lead_write", PropertyConnectionPermissionsEnum.CRM_LEAD_WRITE);
         map.put("crm_pipeline_read", PropertyConnectionPermissionsEnum.CRM_PIPELINE_READ);
         map.put("crm_pipeline_write", PropertyConnectionPermissionsEnum.CRM_PIPELINE_WRITE);
+        map.put("martech_campaign_read", PropertyConnectionPermissionsEnum.MARTECH_CAMPAIGN_READ);
+        map.put("martech_campaign_write", PropertyConnectionPermissionsEnum.MARTECH_CAMPAIGN_WRITE);
         map.put("martech_list_read", PropertyConnectionPermissionsEnum.MARTECH_LIST_READ);
         map.put("martech_list_write", PropertyConnectionPermissionsEnum.MARTECH_LIST_WRITE);
         map.put("martech_member_read", PropertyConnectionPermissionsEnum.MARTECH_MEMBER_READ);
         map.put("martech_member_write", PropertyConnectionPermissionsEnum.MARTECH_MEMBER_WRITE);
+        map.put("martech_report_read", PropertyConnectionPermissionsEnum.MARTECH_REPORT_READ);
+        map.put("martech_report_write", PropertyConnectionPermissionsEnum.MARTECH_REPORT_WRITE);
         map.put("ticketing_customer_read", PropertyConnectionPermissionsEnum.TICKETING_CUSTOMER_READ);
         map.put("ticketing_customer_write", PropertyConnectionPermissionsEnum.TICKETING_CUSTOMER_WRITE);
         map.put("ticketing_ticket_read", PropertyConnectionPermissionsEnum.TICKETING_TICKET_READ);
@@ -714,6 +730,8 @@ public class PropertyConnectionPermissions {
         map.put("calendar_link_write", PropertyConnectionPermissionsEnum.CALENDAR_LINK_WRITE);
         map.put("calendar_recording_read", PropertyConnectionPermissionsEnum.CALENDAR_RECORDING_READ);
         map.put("calendar_recording_write", PropertyConnectionPermissionsEnum.CALENDAR_RECORDING_WRITE);
+        map.put("calendar_webinar_read", PropertyConnectionPermissionsEnum.CALENDAR_WEBINAR_READ);
+        map.put("calendar_webinar_write", PropertyConnectionPermissionsEnum.CALENDAR_WEBINAR_WRITE);
         map.put("enrich_person_read", PropertyConnectionPermissionsEnum.ENRICH_PERSON_READ);
         map.put("enrich_company_read", PropertyConnectionPermissionsEnum.ENRICH_COMPANY_READ);
         map.put("ads_ad_read", PropertyConnectionPermissionsEnum.ADS_AD_READ);
@@ -837,10 +855,14 @@ public class PropertyConnectionPermissions {
         CRM_LEAD_WRITE("crm_lead_write"),
         CRM_PIPELINE_READ("crm_pipeline_read"),
         CRM_PIPELINE_WRITE("crm_pipeline_write"),
+        MARTECH_CAMPAIGN_READ("martech_campaign_read"),
+        MARTECH_CAMPAIGN_WRITE("martech_campaign_write"),
         MARTECH_LIST_READ("martech_list_read"),
         MARTECH_LIST_WRITE("martech_list_write"),
         MARTECH_MEMBER_READ("martech_member_read"),
         MARTECH_MEMBER_WRITE("martech_member_write"),
+        MARTECH_REPORT_READ("martech_report_read"),
+        MARTECH_REPORT_WRITE("martech_report_write"),
         TICKETING_CUSTOMER_READ("ticketing_customer_read"),
         TICKETING_CUSTOMER_WRITE("ticketing_customer_write"),
         TICKETING_TICKET_READ("ticketing_ticket_read"),
@@ -934,6 +956,8 @@ public class PropertyConnectionPermissions {
         CALENDAR_LINK_WRITE("calendar_link_write"),
         CALENDAR_RECORDING_READ("calendar_recording_read"),
         CALENDAR_RECORDING_WRITE("calendar_recording_write"),
+        CALENDAR_WEBINAR_READ("calendar_webinar_read"),
+        CALENDAR_WEBINAR_WRITE("calendar_webinar_write"),
         ENRICH_PERSON_READ("enrich_person_read"),
         ENRICH_COMPANY_READ("enrich_company_read"),
         ADS_AD_READ("ads_ad_read"),

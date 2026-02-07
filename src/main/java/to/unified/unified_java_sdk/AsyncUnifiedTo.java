@@ -95,6 +95,8 @@ public class AsyncUnifiedTo {
 
     private final AsyncRecording recording;
 
+    private final AsyncWebinar webinar;
+
     private final AsyncCommerce commerce;
 
     private final AsyncCollection collection;
@@ -429,6 +431,10 @@ public class AsyncUnifiedTo {
 
     public AsyncRecording recording() {
         return recording;
+    }
+
+    public AsyncWebinar webinar() {
+        return webinar;
     }
 
     public AsyncCommerce commerce() {
@@ -822,6 +828,7 @@ public class AsyncUnifiedTo {
         this.event = new AsyncEvent(syncSDK.event(), sdkConfiguration);
         this.link = new AsyncLink(syncSDK.link(), sdkConfiguration);
         this.recording = new AsyncRecording(syncSDK.recording(), sdkConfiguration);
+        this.webinar = new AsyncWebinar(syncSDK.webinar(), sdkConfiguration);
         this.commerce = new AsyncCommerce(syncSDK.commerce(), sdkConfiguration);
         this.collection = new AsyncCollection(syncSDK.collection(), sdkConfiguration);
         this.inventory = new AsyncInventory(syncSDK.inventory(), sdkConfiguration);

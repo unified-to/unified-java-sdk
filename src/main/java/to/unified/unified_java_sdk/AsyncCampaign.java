@@ -8,29 +8,53 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAdsCampaignRequest;
+import to.unified.unified_java_sdk.models.operations.CreateMartechCampaignRequest;
 import to.unified.unified_java_sdk.models.operations.GetAdsCampaignRequest;
+import to.unified.unified_java_sdk.models.operations.GetMartechCampaignRequest;
 import to.unified.unified_java_sdk.models.operations.ListAdsCampaignsRequest;
+import to.unified.unified_java_sdk.models.operations.ListMartechCampaignsRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAdsCampaignRequest;
+import to.unified.unified_java_sdk.models.operations.PatchMartechCampaignRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveAdsCampaignRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveMartechCampaignRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAdsCampaignRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateMartechCampaignRequest;
 import to.unified.unified_java_sdk.models.operations.async.CreateAdsCampaignRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateAdsCampaignResponse;
+import to.unified.unified_java_sdk.models.operations.async.CreateMartechCampaignRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateMartechCampaignResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetAdsCampaignRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetAdsCampaignResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetMartechCampaignRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetMartechCampaignResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListAdsCampaignsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListAdsCampaignsResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListMartechCampaignsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListMartechCampaignsResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchAdsCampaignRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchAdsCampaignResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchMartechCampaignRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchMartechCampaignResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveAdsCampaignRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.RemoveAdsCampaignResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveMartechCampaignRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveMartechCampaignResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateAdsCampaignRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateAdsCampaignResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateMartechCampaignRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateMartechCampaignResponse;
 import to.unified.unified_java_sdk.operations.CreateAdsCampaign;
+import to.unified.unified_java_sdk.operations.CreateMartechCampaign;
 import to.unified.unified_java_sdk.operations.GetAdsCampaign;
+import to.unified.unified_java_sdk.operations.GetMartechCampaign;
 import to.unified.unified_java_sdk.operations.ListAdsCampaigns;
+import to.unified.unified_java_sdk.operations.ListMartechCampaigns;
 import to.unified.unified_java_sdk.operations.PatchAdsCampaign;
+import to.unified.unified_java_sdk.operations.PatchMartechCampaign;
 import to.unified.unified_java_sdk.operations.RemoveAdsCampaign;
+import to.unified.unified_java_sdk.operations.RemoveMartechCampaign;
 import to.unified.unified_java_sdk.operations.UpdateAdsCampaign;
+import to.unified.unified_java_sdk.operations.UpdateMartechCampaign;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -78,6 +102,29 @@ public class AsyncCampaign {
 
 
     /**
+     * Create a campaign
+     * 
+     * @return The async call builder
+     */
+    public CreateMartechCampaignRequestBuilder createMartechCampaign() {
+        return new CreateMartechCampaignRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a campaign
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<CreateMartechCampaignResponse>} - The async response
+     */
+    public CompletableFuture<CreateMartechCampaignResponse> createMartechCampaign(@Nonnull CreateMartechCampaignRequest request) {
+        AsyncRequestOperation<CreateMartechCampaignRequest, CreateMartechCampaignResponse> operation
+              = new CreateMartechCampaign.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * Retrieve a campaign
      * 
      * @return The async call builder
@@ -95,6 +142,29 @@ public class AsyncCampaign {
     public CompletableFuture<GetAdsCampaignResponse> getAdsCampaign(@Nonnull GetAdsCampaignRequest request) {
         AsyncRequestOperation<GetAdsCampaignRequest, GetAdsCampaignResponse> operation
               = new GetAdsCampaign.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Retrieve a campaign
+     * 
+     * @return The async call builder
+     */
+    public GetMartechCampaignRequestBuilder getMartechCampaign() {
+        return new GetMartechCampaignRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a campaign
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetMartechCampaignResponse>} - The async response
+     */
+    public CompletableFuture<GetMartechCampaignResponse> getMartechCampaign(@Nonnull GetMartechCampaignRequest request) {
+        AsyncRequestOperation<GetMartechCampaignRequest, GetMartechCampaignResponse> operation
+              = new GetMartechCampaign.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -124,6 +194,29 @@ public class AsyncCampaign {
 
 
     /**
+     * List all campaigns
+     * 
+     * @return The async call builder
+     */
+    public ListMartechCampaignsRequestBuilder listMartechCampaigns() {
+        return new ListMartechCampaignsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all campaigns
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListMartechCampaignsResponse>} - The async response
+     */
+    public CompletableFuture<ListMartechCampaignsResponse> listMartechCampaigns(@Nonnull ListMartechCampaignsRequest request) {
+        AsyncRequestOperation<ListMartechCampaignsRequest, ListMartechCampaignsResponse> operation
+              = new ListMartechCampaigns.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * Update a campaign
      * 
      * @return The async call builder
@@ -141,6 +234,29 @@ public class AsyncCampaign {
     public CompletableFuture<PatchAdsCampaignResponse> patchAdsCampaign(@Nonnull PatchAdsCampaignRequest request) {
         AsyncRequestOperation<PatchAdsCampaignRequest, PatchAdsCampaignResponse> operation
               = new PatchAdsCampaign.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update a campaign
+     * 
+     * @return The async call builder
+     */
+    public PatchMartechCampaignRequestBuilder patchMartechCampaign() {
+        return new PatchMartechCampaignRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a campaign
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<PatchMartechCampaignResponse>} - The async response
+     */
+    public CompletableFuture<PatchMartechCampaignResponse> patchMartechCampaign(@Nonnull PatchMartechCampaignRequest request) {
+        AsyncRequestOperation<PatchMartechCampaignRequest, PatchMartechCampaignResponse> operation
+              = new PatchMartechCampaign.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -170,6 +286,29 @@ public class AsyncCampaign {
 
 
     /**
+     * Remove a campaign
+     * 
+     * @return The async call builder
+     */
+    public RemoveMartechCampaignRequestBuilder removeMartechCampaign() {
+        return new RemoveMartechCampaignRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a campaign
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<RemoveMartechCampaignResponse>} - The async response
+     */
+    public CompletableFuture<RemoveMartechCampaignResponse> removeMartechCampaign(@Nonnull RemoveMartechCampaignRequest request) {
+        AsyncRequestOperation<RemoveMartechCampaignRequest, RemoveMartechCampaignResponse> operation
+              = new RemoveMartechCampaign.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * Update a campaign
      * 
      * @return The async call builder
@@ -187,6 +326,29 @@ public class AsyncCampaign {
     public CompletableFuture<UpdateAdsCampaignResponse> updateAdsCampaign(@Nonnull UpdateAdsCampaignRequest request) {
         AsyncRequestOperation<UpdateAdsCampaignRequest, UpdateAdsCampaignResponse> operation
               = new UpdateAdsCampaign.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update a campaign
+     * 
+     * @return The async call builder
+     */
+    public UpdateMartechCampaignRequestBuilder updateMartechCampaign() {
+        return new UpdateMartechCampaignRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a campaign
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<UpdateMartechCampaignResponse>} - The async response
+     */
+    public CompletableFuture<UpdateMartechCampaignResponse> updateMartechCampaign(@Nonnull UpdateMartechCampaignRequest request) {
+        AsyncRequestOperation<UpdateMartechCampaignRequest, UpdateMartechCampaignResponse> operation
+              = new UpdateMartechCampaign.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

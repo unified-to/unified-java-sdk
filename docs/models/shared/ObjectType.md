@@ -63,8 +63,10 @@
 | `HRIS_TIMESHIFT`           | hris_timeshift             |
 | `HRIS_DEDUCTION`           | hris_deduction             |
 | `HRIS_BENEFIT`             | hris_benefit               |
+| `MARTECH_CAMPAIGN`         | martech_campaign           |
 | `MARTECH_LIST`             | martech_list               |
 | `MARTECH_MEMBER`           | martech_member             |
+| `MARTECH_REPORT`           | martech_report             |
 | `PASSTHROUGH`              | passthrough                |
 | `TICKETING_NOTE`           | ticketing_note             |
 | `TICKETING_TICKET`         | ticketing_ticket           |
@@ -107,6 +109,7 @@
 | `CALENDAR_BUSY`            | calendar_busy              |
 | `CALENDAR_LINK`            | calendar_link              |
 | `CALENDAR_RECORDING`       | calendar_recording         |
+| `CALENDAR_WEBINAR`         | calendar_webinar           |
 | `ADS_ORGANIZATION`         | ads_organization           |
 | `ADS_AD`                   | ads_ad                     |
 | `ADS_CAMPAIGN`             | ads_campaign               |

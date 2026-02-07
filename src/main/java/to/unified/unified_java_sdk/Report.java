@@ -15,9 +15,13 @@ import to.unified.unified_java_sdk.models.operations.ListAccountingReportsRespon
 import to.unified.unified_java_sdk.models.operations.ListAdsReportsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAdsReportsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListAdsReportsResponse;
+import to.unified.unified_java_sdk.models.operations.ListMartechReportsRequest;
+import to.unified.unified_java_sdk.models.operations.ListMartechReportsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListMartechReportsResponse;
 import to.unified.unified_java_sdk.operations.GetAccountingReport;
 import to.unified.unified_java_sdk.operations.ListAccountingReports;
 import to.unified.unified_java_sdk.operations.ListAdsReports;
+import to.unified.unified_java_sdk.operations.ListMartechReports;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -103,6 +107,28 @@ public class Report {
     public ListAdsReportsResponse listAdsReports(@Nonnull ListAdsReportsRequest request) {
         RequestOperation<ListAdsReportsRequest, ListAdsReportsResponse> operation
               = new ListAdsReports.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all reports
+     * 
+     * @return The call builder
+     */
+    public ListMartechReportsRequestBuilder listMartechReports() {
+        return new ListMartechReportsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all reports
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListMartechReportsResponse listMartechReports(@Nonnull ListMartechReportsRequest request) {
+        RequestOperation<ListMartechReportsRequest, ListMartechReportsResponse> operation
+              = new ListMartechReports.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -164,6 +164,9 @@ public class UnifiedTo {
     private final Recording recording;
 
 
+    private final Webinar webinar;
+
+
     private final Commerce commerce;
 
 
@@ -624,6 +627,11 @@ public class UnifiedTo {
 
     public Recording recording() {
         return recording;
+    }
+
+
+    public Webinar webinar() {
+        return webinar;
     }
 
 
@@ -1234,6 +1242,7 @@ public class UnifiedTo {
         this.event = new Event(sdkConfiguration);
         this.link = new Link(sdkConfiguration);
         this.recording = new Recording(sdkConfiguration);
+        this.webinar = new Webinar(sdkConfiguration);
         this.commerce = new Commerce(sdkConfiguration);
         this.collection = new Collection(sdkConfiguration);
         this.inventory = new Inventory(sdkConfiguration);

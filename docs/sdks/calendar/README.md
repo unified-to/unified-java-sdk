@@ -7,24 +7,30 @@
 * [createCalendarCalendar](#createcalendarcalendar) - Create a calendar
 * [createCalendarEvent](#createcalendarevent) - Create an event
 * [createCalendarLink](#createcalendarlink) - Create a link
+* [createCalendarWebinar](#createcalendarwebinar) - Create a webinar
 * [getCalendarCalendar](#getcalendarcalendar) - Retrieve a calendar
 * [getCalendarEvent](#getcalendarevent) - Retrieve an event
 * [getCalendarLink](#getcalendarlink) - Retrieve a link
 * [getCalendarRecording](#getcalendarrecording) - Retrieve a recording
+* [getCalendarWebinar](#getcalendarwebinar) - Retrieve a webinar
 * [listCalendarBusies](#listcalendarbusies) - List all busies
 * [listCalendarCalendars](#listcalendarcalendars) - List all calendars
 * [listCalendarEvents](#listcalendarevents) - List all events
 * [listCalendarLinks](#listcalendarlinks) - List all links
 * [listCalendarRecordings](#listcalendarrecordings) - List all recordings
+* [listCalendarWebinars](#listcalendarwebinars) - List all webinars
 * [patchCalendarCalendar](#patchcalendarcalendar) - Update a calendar
 * [patchCalendarEvent](#patchcalendarevent) - Update an event
 * [patchCalendarLink](#patchcalendarlink) - Update a link
+* [patchCalendarWebinar](#patchcalendarwebinar) - Update a webinar
 * [removeCalendarCalendar](#removecalendarcalendar) - Remove a calendar
 * [removeCalendarEvent](#removecalendarevent) - Remove an event
 * [removeCalendarLink](#removecalendarlink) - Remove a link
+* [removeCalendarWebinar](#removecalendarwebinar) - Remove a webinar
 * [updateCalendarCalendar](#updatecalendarcalendar) - Update a calendar
 * [updateCalendarEvent](#updatecalendarevent) - Update an event
 * [updateCalendarLink](#updatecalendarlink) - Update a link
+* [updateCalendarWebinar](#updatecalendarwebinar) - Update a webinar
 
 ## createCalendarCalendar
 
@@ -201,6 +207,66 @@ public class Application {
 ### Response
 
 **[CreateCalendarLinkResponse](../../models/operations/CreateCalendarLinkResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## createCalendarWebinar
+
+Create a webinar
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="createCalendarWebinar" method="post" path="/calendar/{connection_id}/webinar" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateCalendarWebinarRequest;
+import to.unified.unified_java_sdk.models.operations.CreateCalendarWebinarResponse;
+import to.unified.unified_java_sdk.models.shared.CalendarWebinar;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        CreateCalendarWebinarRequest req = CreateCalendarWebinarRequest.builder()
+                .calendarWebinar(CalendarWebinar.builder()
+                    .build())
+                .connectionId("<id>")
+                .build();
+
+        CreateCalendarWebinarResponse res = sdk.calendar().createCalendarWebinar()
+                .request(req)
+                .call();
+
+        if (res.calendarWebinar().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [CreateCalendarWebinarRequest](../../models/operations/CreateCalendarWebinarRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+
+### Response
+
+**[CreateCalendarWebinarResponse](../../models/operations/CreateCalendarWebinarResponse.md)**
 
 ### Errors
 
@@ -433,6 +499,64 @@ public class Application {
 ### Response
 
 **[GetCalendarRecordingResponse](../../models/operations/GetCalendarRecordingResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getCalendarWebinar
+
+Retrieve a webinar
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getCalendarWebinar" method="get" path="/calendar/{connection_id}/webinar/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetCalendarWebinarRequest;
+import to.unified.unified_java_sdk.models.operations.GetCalendarWebinarResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetCalendarWebinarRequest req = GetCalendarWebinarRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetCalendarWebinarResponse res = sdk.calendar().getCalendarWebinar()
+                .request(req)
+                .call();
+
+        if (res.calendarWebinar().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [GetCalendarWebinarRequest](../../models/operations/GetCalendarWebinarRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[GetCalendarWebinarResponse](../../models/operations/GetCalendarWebinarResponse.md)**
 
 ### Errors
 
@@ -725,6 +849,63 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listCalendarWebinars
+
+List all webinars
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listCalendarWebinars" method="get" path="/calendar/{connection_id}/webinar" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListCalendarWebinarsRequest;
+import to.unified.unified_java_sdk.models.operations.ListCalendarWebinarsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListCalendarWebinarsRequest req = ListCalendarWebinarsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListCalendarWebinarsResponse res = sdk.calendar().listCalendarWebinars()
+                .request(req)
+                .call();
+
+        if (res.calendarWebinars().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [ListCalendarWebinarsRequest](../../models/operations/ListCalendarWebinarsRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+
+### Response
+
+**[ListCalendarWebinarsResponse](../../models/operations/ListCalendarWebinarsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## patchCalendarCalendar
 
 Update a calendar
@@ -910,6 +1091,67 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## patchCalendarWebinar
+
+Update a webinar
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchCalendarWebinar" method="patch" path="/calendar/{connection_id}/webinar/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchCalendarWebinarRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCalendarWebinarResponse;
+import to.unified.unified_java_sdk.models.shared.CalendarWebinar;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchCalendarWebinarRequest req = PatchCalendarWebinarRequest.builder()
+                .calendarWebinar(CalendarWebinar.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchCalendarWebinarResponse res = sdk.calendar().patchCalendarWebinar()
+                .request(req)
+                .call();
+
+        if (res.calendarWebinar().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [PatchCalendarWebinarRequest](../../models/operations/PatchCalendarWebinarRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+
+### Response
+
+**[PatchCalendarWebinarResponse](../../models/operations/PatchCalendarWebinarResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## removeCalendarCalendar
 
 Remove a calendar
@@ -1071,6 +1313,62 @@ public class Application {
 ### Response
 
 **[RemoveCalendarLinkResponse](../../models/operations/RemoveCalendarLinkResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeCalendarWebinar
+
+Remove a webinar
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeCalendarWebinar" method="delete" path="/calendar/{connection_id}/webinar/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveCalendarWebinarRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCalendarWebinarResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveCalendarWebinarRequest req = RemoveCalendarWebinarRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveCalendarWebinarResponse res = sdk.calendar().removeCalendarWebinar()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [RemoveCalendarWebinarRequest](../../models/operations/RemoveCalendarWebinarRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+
+### Response
+
+**[RemoveCalendarWebinarResponse](../../models/operations/RemoveCalendarWebinarResponse.md)**
 
 ### Errors
 
@@ -1256,6 +1554,67 @@ public class Application {
 ### Response
 
 **[UpdateCalendarLinkResponse](../../models/operations/UpdateCalendarLinkResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateCalendarWebinar
+
+Update a webinar
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateCalendarWebinar" method="put" path="/calendar/{connection_id}/webinar/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateCalendarWebinarRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCalendarWebinarResponse;
+import to.unified.unified_java_sdk.models.shared.CalendarWebinar;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateCalendarWebinarRequest req = UpdateCalendarWebinarRequest.builder()
+                .calendarWebinar(CalendarWebinar.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateCalendarWebinarResponse res = sdk.calendar().updateCalendarWebinar()
+                .request(req)
+                .call();
+
+        if (res.calendarWebinar().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [UpdateCalendarWebinarRequest](../../models/operations/UpdateCalendarWebinarRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+
+### Response
+
+**[UpdateCalendarWebinarResponse](../../models/operations/UpdateCalendarWebinarResponse.md)**
 
 ### Errors
 

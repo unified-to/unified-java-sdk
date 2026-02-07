@@ -19,6 +19,7 @@ generation:
   schemas:
     allOfMergeStrategy: shallowMerge
   requestBodyFieldName: ""
+  versioningStrategy: automatic
   persistentEdits: {}
   tests:
     generateTests: true
@@ -27,7 +28,7 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 java:
-  version: 0.47.6
+  version: 0.47.7
   additionalDependencies: []
   additionalPlugins: []
   artifactID: unified-java-sdk
@@ -69,5 +70,6 @@ java:
   operationScopedParams: true
   outputModelSuffix: output
   projectName: Unified-java-sdk
+  respectTitlesForPrimitiveUnionMembers: false
   templateVersion: v2
   unionStrategy: populated-fields

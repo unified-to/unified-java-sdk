@@ -22,6 +22,11 @@ import to.unified.unified_java_sdk.utils.Utils;
 public class AccountingExpense {
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("account_id")
+    private String accountId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approved_at")
     private OffsetDateTime approvedAt;
 
@@ -62,6 +67,16 @@ public class AccountingExpense {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("payment_method")
+    private String paymentMethod;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("posted_at")
+    private OffsetDateTime postedAt;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
@@ -97,6 +112,7 @@ public class AccountingExpense {
 
     @JsonCreator
     public AccountingExpense(
+            @JsonProperty("account_id") @Nullable String accountId,
             @JsonProperty("approved_at") @Nullable OffsetDateTime approvedAt,
             @JsonProperty("approver_user_id") @Nullable String approverUserId,
             @JsonProperty("contact_id") @Nullable String contactId,
@@ -105,6 +121,8 @@ public class AccountingExpense {
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("lineitems") @Nullable List<AccountingLineitem> lineitems,
             @JsonProperty("name") @Nullable String name,
+            @JsonProperty("payment_method") @Nullable String paymentMethod,
+            @JsonProperty("posted_at") @Nullable OffsetDateTime postedAt,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("reimbursed_amount") @Nullable Double reimbursedAmount,
             @JsonProperty("reimbursed_at") @Nullable OffsetDateTime reimbursedAt,
@@ -112,6 +130,7 @@ public class AccountingExpense {
             @JsonProperty("total_amount") @Nullable Double totalAmount,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
             @JsonProperty("user_id") @Nullable String userId) {
+        this.accountId = accountId;
         this.approvedAt = approvedAt;
         this.approverUserId = approverUserId;
         this.contactId = contactId;
@@ -120,6 +139,8 @@ public class AccountingExpense {
         this.id = id;
         this.lineitems = lineitems;
         this.name = name;
+        this.paymentMethod = paymentMethod;
+        this.postedAt = postedAt;
         this.raw = raw;
         this.reimbursedAmount = reimbursedAmount;
         this.reimbursedAt = reimbursedAt;
@@ -134,7 +155,12 @@ public class AccountingExpense {
             null, null, null,
             null, null, null,
             null, null, null,
+            null, null, null,
             null, null, null);
+    }
+
+    public Optional<String> accountId() {
+        return Optional.ofNullable(this.accountId);
     }
 
     public Optional<OffsetDateTime> approvedAt() {
@@ -169,6 +195,14 @@ public class AccountingExpense {
         return Optional.ofNullable(this.name);
     }
 
+    public Optional<String> paymentMethod() {
+        return Optional.ofNullable(this.paymentMethod);
+    }
+
+    public Optional<OffsetDateTime> postedAt() {
+        return Optional.ofNullable(this.postedAt);
+    }
+
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
@@ -199,6 +233,12 @@ public class AccountingExpense {
 
     public static Builder builder() {
         return new Builder();
+    }
+
+
+    public AccountingExpense withAccountId(@Nullable String accountId) {
+        this.accountId = accountId;
+        return this;
     }
 
 
@@ -246,6 +286,18 @@ public class AccountingExpense {
 
     public AccountingExpense withName(@Nullable String name) {
         this.name = name;
+        return this;
+    }
+
+
+    public AccountingExpense withPaymentMethod(@Nullable String paymentMethod) {
+        this.paymentMethod = paymentMethod;
+        return this;
+    }
+
+
+    public AccountingExpense withPostedAt(@Nullable OffsetDateTime postedAt) {
+        this.postedAt = postedAt;
         return this;
     }
 
@@ -302,6 +354,7 @@ public class AccountingExpense {
         }
         AccountingExpense other = (AccountingExpense) o;
         return 
+            Utils.enhancedDeepEquals(this.accountId, other.accountId) &&
             Utils.enhancedDeepEquals(this.approvedAt, other.approvedAt) &&
             Utils.enhancedDeepEquals(this.approverUserId, other.approverUserId) &&
             Utils.enhancedDeepEquals(this.contactId, other.contactId) &&
@@ -310,6 +363,8 @@ public class AccountingExpense {
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.lineitems, other.lineitems) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
+            Utils.enhancedDeepEquals(this.paymentMethod, other.paymentMethod) &&
+            Utils.enhancedDeepEquals(this.postedAt, other.postedAt) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.reimbursedAmount, other.reimbursedAmount) &&
             Utils.enhancedDeepEquals(this.reimbursedAt, other.reimbursedAt) &&
@@ -322,9 +377,10 @@ public class AccountingExpense {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            approvedAt, approverUserId, contactId,
-            createdAt, currency, id,
-            lineitems, name, raw,
+            accountId, approvedAt, approverUserId,
+            contactId, createdAt, currency,
+            id, lineitems, name,
+            paymentMethod, postedAt, raw,
             reimbursedAmount, reimbursedAt, taxAmount,
             totalAmount, updatedAt, userId);
     }
@@ -332,6 +388,7 @@ public class AccountingExpense {
     @Override
     public String toString() {
         return Utils.toString(AccountingExpense.class,
+                "accountId", accountId,
                 "approvedAt", approvedAt,
                 "approverUserId", approverUserId,
                 "contactId", contactId,
@@ -340,6 +397,8 @@ public class AccountingExpense {
                 "id", id,
                 "lineitems", lineitems,
                 "name", name,
+                "paymentMethod", paymentMethod,
+                "postedAt", postedAt,
                 "raw", raw,
                 "reimbursedAmount", reimbursedAmount,
                 "reimbursedAt", reimbursedAt,
@@ -351,6 +410,8 @@ public class AccountingExpense {
 
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
+
+        private String accountId;
 
         private OffsetDateTime approvedAt;
 
@@ -368,6 +429,10 @@ public class AccountingExpense {
 
         private String name;
 
+        private String paymentMethod;
+
+        private OffsetDateTime postedAt;
+
         private Map<String, Object> raw;
 
         private Double reimbursedAmount;
@@ -384,6 +449,11 @@ public class AccountingExpense {
 
         private Builder() {
           // force use of static builder() method
+        }
+
+        public Builder accountId(@Nullable String accountId) {
+            this.accountId = accountId;
+            return this;
         }
 
         public Builder approvedAt(@Nullable OffsetDateTime approvedAt) {
@@ -426,6 +496,16 @@ public class AccountingExpense {
             return this;
         }
 
+        public Builder paymentMethod(@Nullable String paymentMethod) {
+            this.paymentMethod = paymentMethod;
+            return this;
+        }
+
+        public Builder postedAt(@Nullable OffsetDateTime postedAt) {
+            this.postedAt = postedAt;
+            return this;
+        }
+
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
@@ -463,9 +543,10 @@ public class AccountingExpense {
 
         public AccountingExpense build() {
             return new AccountingExpense(
-                approvedAt, approverUserId, contactId,
-                createdAt, currency, id,
-                lineitems, name, raw,
+                accountId, approvedAt, approverUserId,
+                contactId, createdAt, currency,
+                id, lineitems, name,
+                paymentMethod, postedAt, raw,
                 reimbursedAmount, reimbursedAt, taxAmount,
                 totalAmount, updatedAt, userId);
         }

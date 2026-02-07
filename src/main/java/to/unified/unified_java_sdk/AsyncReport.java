@@ -10,15 +10,19 @@ import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.GetAccountingReportRequest;
 import to.unified.unified_java_sdk.models.operations.ListAccountingReportsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAdsReportsRequest;
+import to.unified.unified_java_sdk.models.operations.ListMartechReportsRequest;
 import to.unified.unified_java_sdk.models.operations.async.GetAccountingReportRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetAccountingReportResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListAccountingReportsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListAccountingReportsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListAdsReportsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListAdsReportsResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListMartechReportsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListMartechReportsResponse;
 import to.unified.unified_java_sdk.operations.GetAccountingReport;
 import to.unified.unified_java_sdk.operations.ListAccountingReports;
 import to.unified.unified_java_sdk.operations.ListAdsReports;
+import to.unified.unified_java_sdk.operations.ListMartechReports;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -106,6 +110,29 @@ public class AsyncReport {
     public CompletableFuture<ListAdsReportsResponse> listAdsReports(@Nonnull ListAdsReportsRequest request) {
         AsyncRequestOperation<ListAdsReportsRequest, ListAdsReportsResponse> operation
               = new ListAdsReports.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * List all reports
+     * 
+     * @return The async call builder
+     */
+    public ListMartechReportsRequestBuilder listMartechReports() {
+        return new ListMartechReportsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all reports
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListMartechReportsResponse>} - The async response
+     */
+    public CompletableFuture<ListMartechReportsResponse> listMartechReports(@Nonnull ListMartechReportsRequest request) {
+        AsyncRequestOperation<ListMartechReportsRequest, ListMartechReportsResponse> operation
+              = new ListMartechReports.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

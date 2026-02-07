@@ -1,33 +1,33 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: 842cdb22961f557bcd41a4dc4569932b
+  docChecksum: 15ec18fc071c0aef95cddded62ccfdd3
   docVersion: "1.0"
-  speakeasyVersion: 1.700.2
-  generationVersion: 2.801.2
-  releaseVersion: 0.47.6
-  configChecksum: fc4822ec86ce62e8a7e7501e3fe0ecf1
+  speakeasyVersion: 1.708.2
+  generationVersion: 2.811.4
+  releaseVersion: 0.47.7
+  configChecksum: 5a33268ad2c8a077ed365e2f0fd27a08
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
 persistentEdits:
-  generation_id: b441740a-5b82-4e10-bf2b-2047b6702217
-  pristine_commit_hash: 42b7e8bb177511eeb1bb1315d415837071e9a226
-  pristine_tree_hash: 149b0e94f5fcc703569245bf97c19d720ca1880c
+  generation_id: 4057f2d2-e304-473b-b83b-fd5688cf8951
+  pristine_commit_hash: fc4579e0743946bb75efac2052036e08ac9e51bf
+  pristine_tree_hash: d54bec61bae4a4484de001257b6c8827308a9351
 features:
   java:
     acceptHeaders: 2.81.2
     additionalDependencies: 0.1.0
-    constsAndDefaults: 0.1.1
-    core: 3.55.8
+    constsAndDefaults: 0.1.2
+    core: 3.55.10
     downloadStreams: 0.1.1
-    globalSecurity: 2.83.1
+    globalSecurity: 2.83.2
     globalSecurityCallbacks: 0.1.0
     globalServerURLs: 2.83.0
     inputOutputModels: 2.83.0
     openEnums: 0.2.0
     sdkHooks: 1.2.0
-    unions: 0.3.1
+    unions: 0.3.2
     uploadStreams: 0.1.0
 trackedFiles:
   .gitattributes:
@@ -104,8 +104,8 @@ trackedFiles:
     pristine_git_object: eb3f98c542fd9bbb56f0972114e289016f247fc6
   docs/models/operations/CreateAccountingExpenseQueryParamFields.md:
     id: b3cbc5fef589
-    last_write_checksum: sha1:53bf20eb22000b576dcd80639426bac3687421dc
-    pristine_git_object: a824be26e64df1a03fc26975a473f45ba9c56f2e
+    last_write_checksum: sha1:6d92df06234770907ceb467dbaa9c9fe981d7b72
+    pristine_git_object: d4771a3a7606dd979f4eeb9b089ca1101b6e8725
   docs/models/operations/CreateAccountingExpenseRequest.md:
     id: 157d9c8bb23f
     last_write_checksum: sha1:50d9cbf7ec4df581fe6a8c3a90e4576a8a513389
@@ -402,6 +402,18 @@ trackedFiles:
     id: 15381c93235d
     last_write_checksum: sha1:f6fd3d0c066e265ff0e2bf338ad9f79ea3c06de4
     pristine_git_object: 6df482fa3d3169558c25a4fae7532c240d469a7d
+  docs/models/operations/CreateCalendarWebinarQueryParamFields.md:
+    id: ee99bf02a505
+    last_write_checksum: sha1:57fe0ce57ab529c466c175fd4b448823109fafec
+    pristine_git_object: b5027e5ffc912b6f7ae7dd425585de038411a053
+  docs/models/operations/CreateCalendarWebinarRequest.md:
+    id: eb0cc242a7ae
+    last_write_checksum: sha1:e2ba709f2141669f2db64cb6e1b613f81032c486
+    pristine_git_object: 0be0f05f348d4e45c8757d7bd8f651af40f7ef81
+  docs/models/operations/CreateCalendarWebinarResponse.md:
+    id: b1ee0a643e69
+    last_write_checksum: sha1:9bab5a901a5e7a75b5bdf629e6b61ed14656be75
+    pristine_git_object: 25807bcc93222bb1ab735558ac15c0a09cafc023
   docs/models/operations/CreateCommerceCollectionQueryParamFields.md:
     id: de3baaeeb63b
     last_write_checksum: sha1:2339299097512b41a8ac3a4a62688d31afc75245
@@ -774,6 +786,18 @@ trackedFiles:
     id: 4a2bb832decf
     last_write_checksum: sha1:2448e63236c8e9c61dcdcf559ac5fb9efadb67c9
     pristine_git_object: 29959c03aefbf40b22ccb8d56d49fb6492708c7d
+  docs/models/operations/CreateMartechCampaignQueryParamFields.md:
+    id: e030c639a3b9
+    last_write_checksum: sha1:eab8610e6b949351bc0dbd218b75da49e7ad0b4e
+    pristine_git_object: 92a05a44059a5c0247417bda2e3ef96bf51a77e6
+  docs/models/operations/CreateMartechCampaignRequest.md:
+    id: 6bc8db92c78f
+    last_write_checksum: sha1:cf884204cbdec911f167df9995c746f2b3499c6a
+    pristine_git_object: e442c231d7ab9f653c8afc0703e763489dd9b45e
+  docs/models/operations/CreateMartechCampaignResponse.md:
+    id: 7f7ba751c8ae
+    last_write_checksum: sha1:7776cf2a73093b312979719d31fb09f769e9e2bd
+    pristine_git_object: 6228b67fb828ccfe31c3fd335f9b9227c552ab73
   docs/models/operations/CreateMartechListQueryParamFields.md:
     id: f373f333f019
     last_write_checksum: sha1:f51a90df61477a63f418f3dd75976fc188a109cf
@@ -1232,8 +1256,8 @@ trackedFiles:
     pristine_git_object: 93dd0a0554e56d529a690ff269fee2af2315f272
   docs/models/operations/GetAccountingExpenseQueryParamFields.md:
     id: 9cb993b929db
-    last_write_checksum: sha1:1da4939a9ccaac4787578ae6ed16b319f57adff2
-    pristine_git_object: 1811619909b4bf105b5cf2ff352ff49566210668
+    last_write_checksum: sha1:90765b9717027a932c7a40e3a265e6529424f5f1
+    pristine_git_object: e2bb321d5e3ceb9073a166b88ad7ee2229f35bd2
   docs/models/operations/GetAccountingExpenseRequest.md:
     id: d4439a9091c8
     last_write_checksum: sha1:70dd1a90391b8992067a7f257452fec9f568443b
@@ -1590,6 +1614,18 @@ trackedFiles:
     id: 6b162a78be78
     last_write_checksum: sha1:96dab2a10fc23dd573841b09d56c52d70daaecba
     pristine_git_object: 39a7b377e5020cc99d731b3d3e493207fdd44286
+  docs/models/operations/GetCalendarWebinarQueryParamFields.md:
+    id: 5776a253d3da
+    last_write_checksum: sha1:8027675b68143f1602f2bea5ff4be0f8d78cda54
+    pristine_git_object: 8b4e316c45c49c60ebfcc1d2500140a125cadadb
+  docs/models/operations/GetCalendarWebinarRequest.md:
+    id: 09ee022e2f54
+    last_write_checksum: sha1:41537771ecf31105d7778b7f474de02777b42f73
+    pristine_git_object: 73be3bb13a717821598324b69d99d9280ce37dfc
+  docs/models/operations/GetCalendarWebinarResponse.md:
+    id: c41551082083
+    last_write_checksum: sha1:9454d094947dde00c169476c7a084f3fcedb979d
+    pristine_git_object: 70e9af51a49d5ee1833f66eb5ce542438ee0e046
   docs/models/operations/GetCommerceCollectionQueryParamFields.md:
     id: 9994c11510c6
     last_write_checksum: sha1:5eb9f068903b08845addb339652210b39fe0702a
@@ -1986,6 +2022,18 @@ trackedFiles:
     id: 89afb904408c
     last_write_checksum: sha1:dd8a0925b8fffcb0469af0555fc90989f3e0c7f9
     pristine_git_object: 8b42ebb3f9b45ff43c9cb6aa2d0fc99c3a3b76b3
+  docs/models/operations/GetMartechCampaignQueryParamFields.md:
+    id: 7257baf305dd
+    last_write_checksum: sha1:6ee76168ee120e9de74e4a4b9df4adfa86d98e2e
+    pristine_git_object: 7cbe485d821d308d234d5d55ca73314096c91d56
+  docs/models/operations/GetMartechCampaignRequest.md:
+    id: 4813c357d106
+    last_write_checksum: sha1:582b9165330265864038dc8ed0d52ae05040f459
+    pristine_git_object: 222981c11006afb45efc76ccdd6d4f97a2844c79
+  docs/models/operations/GetMartechCampaignResponse.md:
+    id: 7420f6aad215
+    last_write_checksum: sha1:74862582ebedb507d182e96c62172cff458ceaa0
+    pristine_git_object: 4a1d6292ab13acfab105d5e4f5e19793fae580ef
   docs/models/operations/GetMartechListQueryParamFields.md:
     id: 8baa27bc9214
     last_write_checksum: sha1:7fa6ed6a14c97d6632af76a11b1f80d51fbe31b4
@@ -2544,8 +2592,8 @@ trackedFiles:
     pristine_git_object: 05dc2d0b5c1d3b4494069dc5976f6322eae413d9
   docs/models/operations/ListAccountingExpensesQueryParamFields.md:
     id: b56ce971ab13
-    last_write_checksum: sha1:08f0c8e45005562c007e54cedbce545037c164ef
-    pristine_git_object: 822cf482b0043b3e017bf1a1c4be2e8618a59ffe
+    last_write_checksum: sha1:0ff9ef36dfd38f6638417a38b11565da687f5a39
+    pristine_git_object: a034a2fe4390e0a947730a08133aba833c83924c
   docs/models/operations/ListAccountingExpensesRequest.md:
     id: 5884de330447
     last_write_checksum: sha1:59f465bcbca488e2e6157ccfc4622f98a8f41be6
@@ -2938,6 +2986,18 @@ trackedFiles:
     id: 9c07a72abde8
     last_write_checksum: sha1:a2dc6c5f77065c0c4787dec758beda380dcf5407
     pristine_git_object: 04fac376eb0b521032dcb8d3137a51363b940bdc
+  docs/models/operations/ListCalendarWebinarsQueryParamFields.md:
+    id: 0ae09a928c9d
+    last_write_checksum: sha1:51929188122f6ff336eafd051055dd627b8617cd
+    pristine_git_object: 95de44792f3abe3595c54bb199b94de675490e73
+  docs/models/operations/ListCalendarWebinarsRequest.md:
+    id: dd1a1fe42e64
+    last_write_checksum: sha1:98f68c84b6eb2defbcf5bc88ab49635e4432fbaf
+    pristine_git_object: 3386a4b5f72f5257ea8fbadcb001fe626a27eed1
+  docs/models/operations/ListCalendarWebinarsResponse.md:
+    id: 00af3effe574
+    last_write_checksum: sha1:979f96fb74d855c9f2ebc7735079ac98326ab6fd
+    pristine_git_object: f5d1187802be788e82f9086d04d97a28f76c6b11
   docs/models/operations/ListCommerceCollectionsQueryParamFields.md:
     id: c48d059afcdb
     last_write_checksum: sha1:fc72de2622d8aa4332d1c554085db8985b29d2fa
@@ -3350,6 +3410,18 @@ trackedFiles:
     id: b5360bcfa799
     last_write_checksum: sha1:c06b254987fa900771d2074c813b35507ae19652
     pristine_git_object: 45ebafa525b23c9f9d98ff78f3ab3952c044800e
+  docs/models/operations/ListMartechCampaignsQueryParamFields.md:
+    id: 8f702f721f13
+    last_write_checksum: sha1:ee19f6c9ae332c33d990d770a857e194b6d8dbaf
+    pristine_git_object: fd000c60fd34ac2887d5cfc6682b39b35c28a785
+  docs/models/operations/ListMartechCampaignsRequest.md:
+    id: 439c798ce07f
+    last_write_checksum: sha1:1d554b7c61c15b3a57b247ed102c7a08758bdec6
+    pristine_git_object: 7851990eed9ca9100428fa55993beb4706a60118
+  docs/models/operations/ListMartechCampaignsResponse.md:
+    id: da32bf0130ed
+    last_write_checksum: sha1:2f9eefbaedcc8c0d8e3e7b15d1d0b81e75675823
+    pristine_git_object: 039f304a595d9f3093c36a38bf04322ddab49419
   docs/models/operations/ListMartechListsQueryParamFields.md:
     id: 917d328bb286
     last_write_checksum: sha1:e2d40f7c523aefa468c571c46276aecb0d420b5f
@@ -3374,6 +3446,18 @@ trackedFiles:
     id: 72ff36a4073f
     last_write_checksum: sha1:021dc40b571c886bd5e42b3561a59cf37ff34172
     pristine_git_object: 76da33d1f5e7ba48c981bc27d66632697db17b67
+  docs/models/operations/ListMartechReportsQueryParamFields.md:
+    id: 7f1a89805ea2
+    last_write_checksum: sha1:9c65f3a49056bf5c16b475afff5d6240c1b2d782
+    pristine_git_object: 61cbe214fd93c3a63c304c67f52f2909dbc7db24
+  docs/models/operations/ListMartechReportsRequest.md:
+    id: 512bb9db5c80
+    last_write_checksum: sha1:cb25303a1847e204088306fd2a253b6d271e9334
+    pristine_git_object: c88d78a007923d926f9b27e36db457c156266c91
+  docs/models/operations/ListMartechReportsResponse.md:
+    id: 831ca86234c7
+    last_write_checksum: sha1:99c03a2300291a5bea82030e79c730e3bda3fc20
+    pristine_git_object: 1551672b4440ac34d53fc77876621cab5e0c8ca7
   docs/models/operations/ListMessagingChannelsQueryParamFields.md:
     id: 8f259f565630
     last_write_checksum: sha1:69727fcc2783d35cb5bede2fc8524e56fa2a8f5d
@@ -3888,8 +3972,8 @@ trackedFiles:
     pristine_git_object: d8b3136989fc39455ffcdcfebe50cb9e6d0d50fd
   docs/models/operations/PatchAccountingExpenseQueryParamFields.md:
     id: acb9b146470f
-    last_write_checksum: sha1:ae82067c9147c6dfd99325c6f52c846688994ce9
-    pristine_git_object: 0a521c2706e15088d7d28c97476ace4fe16d12d3
+    last_write_checksum: sha1:491d2a81fc495ed2fb5c351aa2c4d47419bf1a5d
+    pristine_git_object: 4931845d593650a61177a40c5786ec31d39896d2
   docs/models/operations/PatchAccountingExpenseRequest.md:
     id: 7c80a4d4d9c6
     last_write_checksum: sha1:3e904206ca8d30a40fadccea1f751d05b0c5f9e8
@@ -4186,6 +4270,18 @@ trackedFiles:
     id: 1f69418a56df
     last_write_checksum: sha1:4d0706284490b879ba3d824805702f5b87109a2a
     pristine_git_object: 94480a98cbc74218fd289220a694583400f076c4
+  docs/models/operations/PatchCalendarWebinarQueryParamFields.md:
+    id: e24aba8cf289
+    last_write_checksum: sha1:fb490897e64883516d18a35aaadc5b8af5c51b0b
+    pristine_git_object: a32c7b49304ed9f829133c491caddc5d4f93fa77
+  docs/models/operations/PatchCalendarWebinarRequest.md:
+    id: 9c97f326c342
+    last_write_checksum: sha1:f4ef3cf81ab1eba3afe6e7b2b189ad338afd636b
+    pristine_git_object: 3dccd228e057681fb0d04a9dcdfd6c4d73ef685c
+  docs/models/operations/PatchCalendarWebinarResponse.md:
+    id: 51d04e5c4b4a
+    last_write_checksum: sha1:7dc4335ce370710e2858213d1613ef28e2e7bb92
+    pristine_git_object: baa9260b330c5f86628bf829a78058ca48045175
   docs/models/operations/PatchCommerceCollectionQueryParamFields.md:
     id: 70a518906b20
     last_write_checksum: sha1:b517c793e63647b9aea924670dadfb43e6024005
@@ -4534,6 +4630,18 @@ trackedFiles:
     id: 0307318b63cd
     last_write_checksum: sha1:62dbd5153b71f04cb871e5783157614493478c5d
     pristine_git_object: 06eb00b766e509cce5e503e875763993fc0ddd8d
+  docs/models/operations/PatchMartechCampaignQueryParamFields.md:
+    id: 8681b6ec6630
+    last_write_checksum: sha1:d21df42966ac4337247b0cd980e9fd1c5383d830
+    pristine_git_object: fa7e92a9b0a2cd663f3e157abd23b4b2ff43fbe3
+  docs/models/operations/PatchMartechCampaignRequest.md:
+    id: 2e073a936ab4
+    last_write_checksum: sha1:6ae6100640fd8dd281f7ce1be2898ff71d907d64
+    pristine_git_object: 690eba9f82bd3ead075e62bbf812a2017e92b19a
+  docs/models/operations/PatchMartechCampaignResponse.md:
+    id: d223d82c439a
+    last_write_checksum: sha1:5e448b5fb5ae0aced09fcddd45dec53fca4a91d9
+    pristine_git_object: 0a517d1bac8dc108ecc44d5b1740397078363f64
   docs/models/operations/PatchMartechListQueryParamFields.md:
     id: ac0a121d9484
     last_write_checksum: sha1:fc89ad30dc30ba2fab63c8dae0152a5fda87113a
@@ -5162,6 +5270,14 @@ trackedFiles:
     id: 1761c662577d
     last_write_checksum: sha1:8c91e5e4a7399422de239d0aedffce1f22cd4db3
     pristine_git_object: 92f582d47dd1b7ab3d6a846ebdc24ac9f4a27b3e
+  docs/models/operations/RemoveCalendarWebinarRequest.md:
+    id: 6bcf596be100
+    last_write_checksum: sha1:a46d539aa03dc53e5e551deca30722981ff798db
+    pristine_git_object: af51dcb4a0140d042d34abdcd48af471c6a3e368
+  docs/models/operations/RemoveCalendarWebinarResponse.md:
+    id: e3438f1e0b6d
+    last_write_checksum: sha1:5a791d1c2b5b63962a1b2c9bf6e8dc14a6df5d62
+    pristine_git_object: c857116adeb9d5a57e75a5184cdf4654e0baac58
   docs/models/operations/RemoveCommerceCollectionRequest.md:
     id: 68d6f137db3c
     last_write_checksum: sha1:0aad622b341fc45cf7893d18d26997fd286ed11f
@@ -5394,6 +5510,14 @@ trackedFiles:
     id: a5ee70e46505
     last_write_checksum: sha1:d398105f7398ce19925555ea341febd429542fee
     pristine_git_object: c79811289284c726a19d47bdfdbfd382679e40f1
+  docs/models/operations/RemoveMartechCampaignRequest.md:
+    id: 8f3e59c48d8b
+    last_write_checksum: sha1:e0a70dc583f0a8ece063f3446fb0e6aabdbd260a
+    pristine_git_object: 12084f75b7daf360c83c33380d85b016125ceaac
+  docs/models/operations/RemoveMartechCampaignResponse.md:
+    id: 76de888fb080
+    last_write_checksum: sha1:42407009e3b2d60a62185eaede7e6918ab72533c
+    pristine_git_object: e58aac39357bb4d178694b53b1d2eb08c1f01491
   docs/models/operations/RemoveMartechListRequest.md:
     id: abc67fb89bf3
     last_write_checksum: sha1:79c7261d4169a7d0ee7a103291a333697084da54
@@ -5712,8 +5836,8 @@ trackedFiles:
     pristine_git_object: f8211acc44abf2c424c800bef59d35d71a1acc24
   docs/models/operations/UpdateAccountingExpenseQueryParamFields.md:
     id: dcb4f9a8f6d7
-    last_write_checksum: sha1:e1c72c2e17634ffc511acbc869cd94fe35e92954
-    pristine_git_object: d10e9aaad531953dc1b3d6d08d99563c71ccfa62
+    last_write_checksum: sha1:87abc59a841ab866ca2162ff390bdcac1eebfd69
+    pristine_git_object: 553b4acb350df6c76301397a6d2dac54f820e52d
   docs/models/operations/UpdateAccountingExpenseRequest.md:
     id: 095aa14bc819
     last_write_checksum: sha1:7da543d02833a8a84b70510976bcecf78a8bce38
@@ -6010,6 +6134,18 @@ trackedFiles:
     id: dfbe6c90d984
     last_write_checksum: sha1:f99be12475af3a77e1df985d89fe62b1dcfe5782
     pristine_git_object: eb03277033b18677836e2838741b0ce787774eaf
+  docs/models/operations/UpdateCalendarWebinarQueryParamFields.md:
+    id: 60c26c5a6503
+    last_write_checksum: sha1:adff6517c65734d62b15eadb85c955f5494cc080
+    pristine_git_object: 17d811bf2f3139b7fa32114ef58e2601b85abfe6
+  docs/models/operations/UpdateCalendarWebinarRequest.md:
+    id: fa66bed9ebd6
+    last_write_checksum: sha1:63a2476a02e357a132d7fdc3fad496ed61b95b62
+    pristine_git_object: b7178607610c93ed2d61f5ac3d6dc944ef813cdd
+  docs/models/operations/UpdateCalendarWebinarResponse.md:
+    id: 83b9af165824
+    last_write_checksum: sha1:cd7f82a2ecf1baccb29ab141f75d7576eba71f60
+    pristine_git_object: 4e3341058c43a732e1e253255727cc4c70a8af62
   docs/models/operations/UpdateCommerceCollectionQueryParamFields.md:
     id: 16e758c39a7b
     last_write_checksum: sha1:071773a92165002fb5857ab12093c3321c43ee04
@@ -6358,6 +6494,18 @@ trackedFiles:
     id: 9ac470e78426
     last_write_checksum: sha1:2427bc75381c2da11c9fc73b75ddea631ca8d6d1
     pristine_git_object: 3d25774c8c2dd9f05bf1947c458a49d8e36c942a
+  docs/models/operations/UpdateMartechCampaignQueryParamFields.md:
+    id: ad416b4d8870
+    last_write_checksum: sha1:956278ddfd7272ea22fabbac12064e1789620b6b
+    pristine_git_object: 534236dcc38f8431647fae0d85f641f65715eb8d
+  docs/models/operations/UpdateMartechCampaignRequest.md:
+    id: 778059aada3e
+    last_write_checksum: sha1:67bc473567a130d5643dd09ffee1bc2e9835b614
+    pristine_git_object: 89143282d8468132c2c0fadb71540e950aab11ec
+  docs/models/operations/UpdateMartechCampaignResponse.md:
+    id: 2307644c4190
+    last_write_checksum: sha1:649d78b542f4f8d83e3602421a6cf96299eb1bb2
+    pristine_git_object: 1a8ce30bc5dfe0a7abf9343405e3c091bc77b6ef
   docs/models/operations/UpdateMartechListQueryParamFields.md:
     id: 6c102c3bf374
     last_write_checksum: sha1:9a6c197a1e3ab3cd1bdcce524f53a593b880cced
@@ -6816,8 +6964,8 @@ trackedFiles:
     pristine_git_object: b9e494ce0e9bb6f96f3c5d0a90f797a81a12bf8a
   docs/models/shared/AccountingExpense.md:
     id: df2657978400
-    last_write_checksum: sha1:e7caa1b543d971372b84e5ab3f9b3be338133b9b
-    pristine_git_object: 9461265a7a30ced450e6061c4c99e204e354108d
+    last_write_checksum: sha1:4912055093a5c46c2ce432df189580d15b223500
+    pristine_git_object: 0e7af1cd1c85c74a9e331e6b2f8d12c13682f0db
   docs/models/shared/AccountingInvoice.md:
     id: 99a98a5243d5
     last_write_checksum: sha1:9f3ee07064f7546df05aacb2059a568c2b443b05
@@ -7200,8 +7348,8 @@ trackedFiles:
     pristine_git_object: d51c82ce4764b87bc655d8e5d449fe93474a2f8f
   docs/models/shared/CalendarAttendee.md:
     id: 73603da6d92b
-    last_write_checksum: sha1:512982301f67538b639cc42605c8e66faf725123
-    pristine_git_object: f160562b0dce91818b975cb7b9053bd027c101b1
+    last_write_checksum: sha1:98a73b9b6c8c20148998492cd9f84b55e794643c
+    pristine_git_object: 3574d1e58cc6d6e20c407fd0ef9e1f7e75454590
   docs/models/shared/CalendarAttendeeStatus.md:
     id: 8e7c38bacd12
     last_write_checksum: sha1:0e7c1982105dd7e3cf80eb47a11af925770f2973
@@ -7250,6 +7398,26 @@ trackedFiles:
     id: 3ec0acb04244
     last_write_checksum: sha1:e6e3ff441aaa72292c213287bc3f7448888e5f98
     pristine_git_object: b35bd29dd3cb28e5333405426840d912333e4051
+  docs/models/shared/CalendarWebinar.md:
+    id: c595942c6932
+    last_write_checksum: sha1:0abb20813a6dd58cb7a4cd574c1aa62ec5077846
+    pristine_git_object: cd47b996b575ba8be86e9c783650d4f0e1bc7f55
+  docs/models/shared/CalendarWebinarPanelist.md:
+    id: 46554c6fe7b5
+    last_write_checksum: sha1:90154ad1f20d39a173f3558638a1b34f401e99ee
+    pristine_git_object: 91e453f2d8427d335d86ccfc2d65aefc94918bc2
+  docs/models/shared/CalendarWebinarPanelistStatus.md:
+    id: 89371525d351
+    last_write_checksum: sha1:5e171fbc39b665c31d1a0ec19afa2efa1f5a7401
+    pristine_git_object: be1412e6ef57418634324991695f69473ad1da5c
+  docs/models/shared/CalendarWebinarRegistrant.md:
+    id: 3e0526e31832
+    last_write_checksum: sha1:ffddf6f2aca0502cc4f6c9c619ded9f7e98b9410
+    pristine_git_object: d0920e84a5498137f57677dc899ac57a10648b3f
+  docs/models/shared/CalendarWebinarStatus.md:
+    id: 8caeca327e43
+    last_write_checksum: sha1:3e163cf24862252fa8fd6ac35ffb12b0185a9f51
+    pristine_git_object: 6eb48d3a60904ea3e7e8f531c290646cb700e060
   docs/models/shared/CommerceCollection.md:
     id: 9169cdaf96e7
     last_write_checksum: sha1:ebefd018fbbcde937b38872b9d93c79931a30904
@@ -7800,8 +7968,8 @@ trackedFiles:
     pristine_git_object: 4b91bf19939268ca123eaa559d4dbe263fe63567
   docs/models/shared/IntegrationSupport.md:
     id: 0e3a91ee3802
-    last_write_checksum: sha1:85eb0895f9bf8a0241d40d74bfee81ea69a9ca4c
-    pristine_git_object: 142b82b877b935d64b20357480cd4ec0992607a5
+    last_write_checksum: sha1:11e41a062511e14a06319c473a68f28c4d39c839
+    pristine_git_object: 15e1c68228f64a5fe4215aa187653df4d03be0a9
   docs/models/shared/IntervalUnit.md:
     id: 4d891763c7e5
     last_write_checksum: sha1:ff80634d029fa06094d858a4f17a3349dd1ef1f7
@@ -8018,6 +8186,10 @@ trackedFiles:
     id: e3bb0c10e963
     last_write_checksum: sha1:b17a0f5ce1a12bb83b83370d53aabf61e2141f94
     pristine_git_object: 0399aa7d79ac4e1c70337861d3082fa93637a514
+  docs/models/shared/ListMemberId.md:
+    id: f6c027b90a7a
+    last_write_checksum: sha1:88cf1c1d1abcefe91272c88c5697e70713335e5b
+    pristine_git_object: 902d5665c88a891016cc794df0c082d7136d1242
   docs/models/shared/ListOffset.md:
     id: 6afc7fa98b82
     last_write_checksum: sha1:d8406a58b73103e0a250a596fa3d42f0bb40a92e
@@ -8182,6 +8354,14 @@ trackedFiles:
     id: 5ac4b88852ba
     last_write_checksum: sha1:c67d60e7cb0863ef02e2fa90186898274fdddd4f
     pristine_git_object: 027031c5909cc3b128cfb0346ec6a7d475ad00c7
+  docs/models/shared/MarketingCampaign.md:
+    id: 1871bd12ad04
+    last_write_checksum: sha1:c41a72846dd2aca1f9fae5f1a877d77e31795eda
+    pristine_git_object: 94e98eec69855eafdf4737a79d998ec21000c4b9
+  docs/models/shared/MarketingCampaignStatus.md:
+    id: fb7526dd8a68
+    last_write_checksum: sha1:aeeb099060a56ff834fa0846632d14aefccc591d
+    pristine_git_object: da4a370213a18da61e59b66ff3aa77615f997a30
   docs/models/shared/MarketingEmail.md:
     id: ac6f3795d249
     last_write_checksum: sha1:56caa02d6aa81de131e80ad42d589a6ca2e70b43
@@ -8198,6 +8378,14 @@ trackedFiles:
     id: dd4d6dd5df56
     last_write_checksum: sha1:c22102d8cdb294f951219fec429fb268abb8cc75
     pristine_git_object: 930312e6346ec9b3379bf94d8d33c6023ccc1498
+  docs/models/shared/MarketingReport.md:
+    id: eb1e619517b2
+    last_write_checksum: sha1:ede4ddc3c265861b24ab90e6e8f4b63330a5a69e
+    pristine_git_object: 8fb6927b8926761f22ea91789facc6f56fe87b67
+  docs/models/shared/MarketingReportLink.md:
+    id: d2cdb79969a0
+    last_write_checksum: sha1:b9cadbdbdd1facc7941eacbf25532fb7c4ec345b
+    pristine_git_object: 1520d7ec8c356aff5e78293259f8bbb2575b83f0
   docs/models/shared/MessagingAttachment.md:
     id: 18d0ebf937a9
     last_write_checksum: sha1:70c603198a2facf2dd0335b9ea4cb8c9938b69ea
@@ -8296,8 +8484,8 @@ trackedFiles:
     pristine_git_object: 562d35878766045b167504675f5184375314cd37
   docs/models/shared/ObjectType.md:
     id: aadea85dc693
-    last_write_checksum: sha1:28414c9e1087450b6d62ed0581768e34b90d5131
-    pristine_git_object: 568b4bd211ad1dec0bf32f4fe5ecf8c7b6a49ac9
+    last_write_checksum: sha1:44ef2d40bece68a823e7252c04bfaa4ada1179ce
+    pristine_git_object: d7ef0276cd12df5675e55803c3fbc0672b653735
   docs/models/shared/One.md:
     id: f77064f6609b
     last_write_checksum: sha1:cf4c9b7629bdfb5a4196cf3446928735be87767d
@@ -8624,8 +8812,8 @@ trackedFiles:
     pristine_git_object: 978c2f215058d754365a3311496b2d9aed43c438
   docs/models/shared/PropertyCalendarEventOrganizer.md:
     id: 8dd2e2c8bdee
-    last_write_checksum: sha1:9678114c100e5a0a3ba44698a619e4fb69740954
-    pristine_git_object: a44a56b9ba81aae2aae8b4a4ca8cb9657ce8276d
+    last_write_checksum: sha1:4019ff9ac6eb6bfe4ad3efdfdb68330b9fd06a20
+    pristine_git_object: 4402b07ff8d3ddac4aa58eb770b0073e5f30d2e7
   docs/models/shared/PropertyCalendarEventOrganizerStatus.md:
     id: e11ddd8b2b71
     last_write_checksum: sha1:9a796336a1e5c6ffb726519838551c549f88a58e
@@ -8636,12 +8824,20 @@ trackedFiles:
     pristine_git_object: a946c8ca51208b79a981c80358cbccd2c25947be
   docs/models/shared/PropertyCalendarRecordingTranscriptAttendee.md:
     id: 07542c4bf791
-    last_write_checksum: sha1:a09b92b93622f7b96359cec2360eb9928bec13af
-    pristine_git_object: 6f7b452ffcdbeb07d6e875b3132fd44473a8672e
+    last_write_checksum: sha1:648b90c005913a2260c97efb8bad4d32ddf090b4
+    pristine_git_object: 51e7f0deed514fc41b73b7bd052c8485af460c61
   docs/models/shared/PropertyCalendarRecordingTranscriptAttendeeStatus.md:
     id: fd7924e6da52
     last_write_checksum: sha1:ac3d646adb42af91d7edfbd1e8d1019742af2e95
     pristine_git_object: 4dcbd0ec5ab8197c839eae34bbdb433818a2d081
+  docs/models/shared/PropertyCalendarWebinarOrganizer.md:
+    id: 477153f3dad2
+    last_write_checksum: sha1:9ec3a2297b03de9252b3eed6a7bc6306c9ec5c4a
+    pristine_git_object: 5c5bb0efd94f2ca046622ea0ee37a83523514fb3
+  docs/models/shared/PropertyCalendarWebinarOrganizerStatus.md:
+    id: 485b3efcef8e
+    last_write_checksum: sha1:dd75b6570986ebf0bf588a6dfe6e8fc3aaece235
+    pristine_git_object: 1b2a75783b7237f24ca74f7fd8330cb1eeeb1e85
   docs/models/shared/PropertyCommerceLocationAddress.md:
     id: 042aa0ac5566
     last_write_checksum: sha1:1917f79375436c8c354c4bb7e410585dcaf67501
@@ -8656,8 +8852,8 @@ trackedFiles:
     pristine_git_object: 2e7fcc55705808a3871b4495af480722706189de
   docs/models/shared/PropertyConnectionPermissions.md:
     id: 8349678e7060
-    last_write_checksum: sha1:cf2db740807263306a91d60d1c666fa77dedfb09
-    pristine_git_object: cccf0f80e1ed1226b3868618f3958433baab4443
+    last_write_checksum: sha1:edfaf7840230e5274e5acd99fc4bcc268ab71a16
+    pristine_git_object: 42ddbc1bbb7a4f424912bfc974fbac15a033f19d
   docs/models/shared/PropertyCrmCompanyAddress.md:
     id: 4967e83e2f48
     last_write_checksum: sha1:0c0698e2770768217e498dd44cb595c321dbb057
@@ -8906,6 +9102,10 @@ trackedFiles:
     id: e3531c75e545
     last_write_checksum: sha1:6fc26f1b5237d760c706be984e80ff97dc540893
     pristine_git_object: ba70d5c5fdeac3cf3f6e31433abd8aefce234974
+  docs/models/shared/RegistrationStatus.md:
+    id: 7cbe1f15bd70
+    last_write_checksum: sha1:cdbe5ef097fada8a6ae1ff36c86b782754e06280
+    pristine_git_object: 5fffd3181caacb1c6c7ae929904519c0242a6d32
   docs/models/shared/RepoBranch.md:
     id: d794efdd3c86
     last_write_checksum: sha1:a855efddc2ec6ef7a1095094e9a6721c0db80f60
@@ -9454,6 +9654,10 @@ trackedFiles:
     id: 418f153745cc
     last_write_checksum: sha1:9d83021544044f9dc8b78f0555a2c909bb4d0b26
     pristine_git_object: ac0aed2b54b9d13745590ffad137c60baa35553e
+  docs/models/shared/VirtualWebhookMemberId.md:
+    id: b63699c3aa95
+    last_write_checksum: sha1:fe7353084b3b5dbed5da80ce85e31ff3a98ff57f
+    pristine_git_object: d1e8c0ee91c81fdc79fea6f07d3748699f90b090
   docs/models/shared/VirtualWebhookOrderId.md:
     id: f1385836ddb2
     last_write_checksum: sha1:da048cf2ee3150dd2c93e8a3f023b76f0bf7387f
@@ -9608,16 +9812,16 @@ trackedFiles:
     pristine_git_object: 53fabcee5730df728fa46ed2059f0da00a93d8db
   docs/sdks/calendar/README.md:
     id: b85c3af313ad
-    last_write_checksum: sha1:93700ef93a730a469f82de17ccddd4799f7f844d
-    pristine_git_object: 61f4544cdc39f688a16d11d9dfb122dc447ae481
+    last_write_checksum: sha1:1ced033640fd9059579822a19db50d859fd18d96
+    pristine_git_object: 9c1dd9ae2c80a1bc5669ece740714cb7f26e8cf3
   docs/sdks/call/README.md:
     id: 63a19d6314f9
     last_write_checksum: sha1:166e3cbc648932fb1c4e0ef9d70b716c0bb95408
     pristine_git_object: 960061a7f9206eae78b5b8b11a055c154c01e3d3
   docs/sdks/campaign/README.md:
     id: 7c44530e0eca
-    last_write_checksum: sha1:4e9653fcc0f11f510c6124b2bfa6b638f53c426c
-    pristine_git_object: 81f3dcb27ed6ffda3fc7ef19abf4f3c9a9872b96
+    last_write_checksum: sha1:d73bb140a8b258f3a103cef0b4ec43ecb31ff6d4
+    pristine_git_object: 937121ffa1859106d2ef1cbdddacf4df6d68969c
   docs/sdks/candidate/README.md:
     id: af1eaf3d177f
     last_write_checksum: sha1:a7d727943f793c75afb08b76c3d2d713bbdac977
@@ -9836,8 +10040,8 @@ trackedFiles:
     pristine_git_object: 04d28e54f503f08aa1642d1b83b97d0aa1008f8e
   docs/sdks/martech/README.md:
     id: ba21e4ca633c
-    last_write_checksum: sha1:629dab95e843c5e20353aa88d405262af8b850fb
-    pristine_git_object: e32110b3ec0458f18ebb371a9ed5ff32667eb444
+    last_write_checksum: sha1:d22570dca22b50b737cb5a234ff1b500dfcde963
+    pristine_git_object: c808ba5703bb97c89d1f127834d3a12418270d60
   docs/sdks/member/README.md:
     id: 699c1c3b93e4
     last_write_checksum: sha1:abc1c40ff5ae35f98703d7eb9d21f1e4fc731223
@@ -9940,8 +10144,8 @@ trackedFiles:
     pristine_git_object: 7847774773e1aba43f469ff3d632c3e77171504e
   docs/sdks/report/README.md:
     id: 0e99424930fc
-    last_write_checksum: sha1:32688f178bbf6ae5c8843ad436a654928bfcf116
-    pristine_git_object: d2d8ba1369d2d3baae0ae15bbdeede45f386f789
+    last_write_checksum: sha1:8c6bd7fea21e3d00728681af1c0d5aec43e280c7
+    pristine_git_object: 6804127c84c19777bb06376d7a9c7e445a2ea8fc
   docs/sdks/repository/README.md:
     id: 25db3a468495
     last_write_checksum: sha1:678f3bde934898ba0f8f1a7a948831710e28ddce
@@ -10054,14 +10258,18 @@ trackedFiles:
     id: 3b908e644c3d
     last_write_checksum: sha1:e40307f2d5f84b1807aea46b25075ede953e0665
     pristine_git_object: 6cd2be5c4d8b1ae24bdeacf4280bbfd0f86c90f4
+  docs/sdks/webinar/README.md:
+    id: f09c102d4cb9
+    last_write_checksum: sha1:0d8ef0cd8a47559cad3f4274b6e7db42cc38b7cc
+    pristine_git_object: b96a30b7d93168b83ebe640459f1bdfdd6b5c181
   docs/utils/Blob.md:
     id: 3d9a7c4ad67a
     last_write_checksum: sha1:57a06b753fa91ccd56740890867b87619099d3eb
     pristine_git_object: 14fe7a9e0f20951a7e3ab2752816fbc9b8c41dd3
   gradle.properties:
     id: 2afbb999f001
-    last_write_checksum: sha1:07c229516573072a7bcdc711090c1923e15f0c1a
-    pristine_git_object: fe54cc880d6cf592b4261d0ebe65aa0c16e60525
+    last_write_checksum: sha1:a87f9e9c9ca660746a91832201d62fe2a4b41df7
+    pristine_git_object: a95ad4ba210369bf1f9a7f797cc1ea570181ca2d
   gradle/wrapper/gradle-wrapper.jar:
     id: ec27dae6e852
     last_write_checksum: sha1:f725fb1467084142d74fd7cd8eab691ab3442611
@@ -10100,8 +10308,8 @@ trackedFiles:
     pristine_git_object: ab5e5f144b397313d0470f3309760881f37507b0
   spring/unified-java-sdk-spring-boot-autoconfigure/src/main/java/to/unified/unified_java_sdk/UnifiedJavaSDKAutoConfig.java:
     id: 59d16b6a0f5e
-    last_write_checksum: sha1:66a610bf9c0f98519f0ce828edbab3f5e539cfa3
-    pristine_git_object: d123787d49957d92ebc654c3a12299354d5e4dbb
+    last_write_checksum: sha1:db8b41c45b2c9e6690d5a31fdb4d3d083c661121
+    pristine_git_object: 13786d8c5e31c1208edefec3ca0e993b57eb937f
   ? spring/unified-java-sdk-spring-boot-autoconfigure/src/main/java/to/unified/unified_java_sdk/UnifiedJavaSDKAutoConfigProperties.java
   : id: 3fa7a7e75daf
     last_write_checksum: sha1:f1233cd367653f3f1537aa72c70c7da5874ae478
@@ -10208,16 +10416,16 @@ trackedFiles:
     pristine_git_object: 8b8a991c91b5576c84a2c614961a193b007c2e80
   src/main/java/to/unified/unified_java_sdk/AsyncCalendar.java:
     id: 71931b229b9b
-    last_write_checksum: sha1:fc1d19d84bbbd794cf531c9683e333ac562bc11a
-    pristine_git_object: 01bcb64434b6f4de0349050ce30d130e9369d10c
+    last_write_checksum: sha1:80330bd6b0a589898d9d9a963f3602bacc6b084c
+    pristine_git_object: b172bc8f582485981f89bd1bb692eeeaaa8e0215
   src/main/java/to/unified/unified_java_sdk/AsyncCall.java:
     id: 4a923beb067a
     last_write_checksum: sha1:8f60fa938a26375967b0189315d0d49a9f40e729
     pristine_git_object: 25d5d23bd7fbf95ffcda60e50d2a3b414192312e
   src/main/java/to/unified/unified_java_sdk/AsyncCampaign.java:
     id: 5a58d05dd844
-    last_write_checksum: sha1:de8e60e625a07f680d8e0770e7a44f419e70b4a6
-    pristine_git_object: 98564a96fb287435cb74885232ecab6dc81e898c
+    last_write_checksum: sha1:0792d9c53254fe908d0f16bac36e76309e5a2ac4
+    pristine_git_object: 46b9715c34cabeea586f665f5cef9ab8d04f89c0
   src/main/java/to/unified/unified_java_sdk/AsyncCandidate.java:
     id: ee4b7849bc2a
     last_write_checksum: sha1:974af67d16eb7af89bae1d5220f2db1e3a659337
@@ -10436,8 +10644,8 @@ trackedFiles:
     pristine_git_object: 15032c440c286bcef1d16722b023832fda62a073
   src/main/java/to/unified/unified_java_sdk/AsyncMartech.java:
     id: 54c02d614053
-    last_write_checksum: sha1:1a981a382e809420664922f241a8afdbeb5a82c6
-    pristine_git_object: eb6f205192a0fb438373215f4b63a7f528c232b9
+    last_write_checksum: sha1:2b167559ad24059c91f6432113a133eb0b686727
+    pristine_git_object: 76b3a25f4a95b338d36b7e0291439ad0d9f93319
   src/main/java/to/unified/unified_java_sdk/AsyncMember.java:
     id: 7d65cfa64be1
     last_write_checksum: sha1:2c9f5f54a65a19b6bde69f1980c5519b7e1abf89
@@ -10540,8 +10748,8 @@ trackedFiles:
     pristine_git_object: 6f588fcee63ecf9f30f390df2ca6c5170f4e380f
   src/main/java/to/unified/unified_java_sdk/AsyncReport.java:
     id: 5158346290ee
-    last_write_checksum: sha1:4b770aa1287383a83159714f9b76f8ad46fefb3b
-    pristine_git_object: 2b7b6d2ccb33b60920cf32ba44eef71c3f02a0f1
+    last_write_checksum: sha1:78ef9b4af24d741948e4e77941f8d591931e067f
+    pristine_git_object: 56f571ef771024c78ea94b6ace737e2ff6312da3
   src/main/java/to/unified/unified_java_sdk/AsyncRepository.java:
     id: edb8ad590b2e
     last_write_checksum: sha1:3becfff11615d23eb428f2b75262836d8ab0f928
@@ -10644,8 +10852,8 @@ trackedFiles:
     pristine_git_object: c478f1d9922c3484d04234718177455677faba01
   src/main/java/to/unified/unified_java_sdk/AsyncUnifiedTo.java:
     id: f122b5de7920
-    last_write_checksum: sha1:b201065501979fd996e3af364cd83516e1e7ba30
-    pristine_git_object: 3e1278abf843c26a232ee86d44d8c2f7d3315543
+    last_write_checksum: sha1:ea2a5268dff670b0932624689d27d5ea65f7fdec
+    pristine_git_object: 47e1e8f5869791585d0fd0bf5eb1fcc14526ec2c
   src/main/java/to/unified/unified_java_sdk/AsyncUser.java:
     id: cf1cd6c6778a
     last_write_checksum: sha1:5630f3643e5a73a69a4855566291d128a44655ab
@@ -10658,6 +10866,10 @@ trackedFiles:
     id: 9056ae4162d2
     last_write_checksum: sha1:af8e1e94764512bb5604207c519f5ae7092b95dc
     pristine_git_object: 52ea84859ece4a4135a578378be11512de525e93
+  src/main/java/to/unified/unified_java_sdk/AsyncWebinar.java:
+    id: c4c5592c34ad
+    last_write_checksum: sha1:a70f206662aa4d58bb8e65a8835631b841d55835
+    pristine_git_object: d9846fdc8bcf23d788cc34790de958182e546098
   src/main/java/to/unified/unified_java_sdk/Ats.java:
     id: e780a9c651bc
     last_write_checksum: sha1:e23a74c56baaf44bee1aa67dabdbd8436e7ad079
@@ -10688,16 +10900,16 @@ trackedFiles:
     pristine_git_object: 91d82bbf23120b2e7786f48f604ef89fa37d83f4
   src/main/java/to/unified/unified_java_sdk/Calendar.java:
     id: dd26ce4da908
-    last_write_checksum: sha1:a2f6f37e13527021638cf67af885aa676e1a70f0
-    pristine_git_object: 23f7e9d1e08fda24ddccf715b8e7791282c65582
+    last_write_checksum: sha1:465258bf91ea5f537a6ab076eba19cb451cad27e
+    pristine_git_object: 4c41e8b635a9d06982f30d18e2e79a16f403d3b1
   src/main/java/to/unified/unified_java_sdk/Call.java:
     id: 9418a35ef818
     last_write_checksum: sha1:ae8466c441b3c32c5305f7aa366bc7d79d0ac91a
     pristine_git_object: fed00d9a8c93373f568cb7971993c3aab46cab35
   src/main/java/to/unified/unified_java_sdk/Campaign.java:
     id: aeea0028c8d6
-    last_write_checksum: sha1:4fe13c73b073397b53a371212dfa8106fa491ef4
-    pristine_git_object: cdb4af7e77b8229ed1ee58b48f3dd4fe9de8ca84
+    last_write_checksum: sha1:1b45781a6ef23e5b4ae4cb7a1cbeb3538905c004
+    pristine_git_object: 03c9d85381f8cd575c2a42aac12cd9a4e1e3b587
   src/main/java/to/unified/unified_java_sdk/Candidate.java:
     id: 38cb2e352fe8
     last_write_checksum: sha1:9057697d52a807ca9e6077779f7f62830f0281f8
@@ -10916,8 +11128,8 @@ trackedFiles:
     pristine_git_object: ab82f67bf05a0ec1aae8e131f0203b21a4be8a5e
   src/main/java/to/unified/unified_java_sdk/Martech.java:
     id: 6f323fd62b65
-    last_write_checksum: sha1:061e00349abf486431b872eb2e72fbb1a1d8d980
-    pristine_git_object: f31cdfb80d588895732307eb3263ea378afeb129
+    last_write_checksum: sha1:20c0a70bcc29a80e590169e279b9af9e714ac47e
+    pristine_git_object: 66fbfee952385a4fb186d450a29d03ad6958c20f
   src/main/java/to/unified/unified_java_sdk/Member.java:
     id: 35e2a34cfa1a
     last_write_checksum: sha1:bef5301ef296de29d6f57a7b863c821144a4936f
@@ -11020,8 +11232,8 @@ trackedFiles:
     pristine_git_object: f209b0536a610bb147004d4c627252152b30bba9
   src/main/java/to/unified/unified_java_sdk/Report.java:
     id: b5b440c87ec1
-    last_write_checksum: sha1:36c8502890e187eb9f874e2fd29d430e1fc36b47
-    pristine_git_object: 12a7dcf902dda3d3535b4b9916d7b396710993f3
+    last_write_checksum: sha1:ec339d08b27b65e9e473335afe1d7e846274b429
+    pristine_git_object: 5737d30d213803ea27bc49a2db36c74f06399c16
   src/main/java/to/unified/unified_java_sdk/Repository.java:
     id: b2fb9f4bf84e
     last_write_checksum: sha1:07de130881bc0193622665b77a2cc91601befa52
@@ -11036,8 +11248,8 @@ trackedFiles:
     pristine_git_object: 2ccb6e90f32063c290e9fa25abf9649b884b4ed0
   src/main/java/to/unified/unified_java_sdk/SDKConfiguration.java:
     id: 42279b7431fa
-    last_write_checksum: sha1:1b7aa40863d11ec0d816ec2138464c4f05b5fad8
-    pristine_git_object: e35844c21837cadefe55849f9e4d6d9863cb4c9f
+    last_write_checksum: sha1:b3f619cde3a49d325a5e7d357f6435bc8efc208a
+    pristine_git_object: 53147ab4af92099622d63d713161713ceebbf415
   src/main/java/to/unified/unified_java_sdk/Saleschannel.java:
     id: 2dca25153692
     last_write_checksum: sha1:aa7ff3de99773ebd3e17f6d146b171516820aa37
@@ -11132,8 +11344,8 @@ trackedFiles:
     pristine_git_object: 06f47d4ca31084c6cd61abe2b157eb442e0ba7f9
   src/main/java/to/unified/unified_java_sdk/UnifiedTo.java:
     id: 94ebc6554d08
-    last_write_checksum: sha1:67f9ac8a3c8053e7343f62afac16d826669c37e4
-    pristine_git_object: cea7fbc590493f53610fd980e8ec2b886cffc1ff
+    last_write_checksum: sha1:81010ba6f22ae94ba242c85cf4693aee7df2e613
+    pristine_git_object: e8a6ae372098f5cee37cb773379c319d798d8c6b
   src/main/java/to/unified/unified_java_sdk/User.java:
     id: 43d862dfacba
     last_write_checksum: sha1:d9367e97c7e78c32ecba8e0e20180d57f8c296b8
@@ -11146,6 +11358,10 @@ trackedFiles:
     id: 09741b4ebddb
     last_write_checksum: sha1:18a322464d6ee11d7d91eef1d712cee16f076510
     pristine_git_object: 18895bbe35309b784bf85a60bd2507c0dffd3f9c
+  src/main/java/to/unified/unified_java_sdk/Webinar.java:
+    id: 8d7ddf93818d
+    last_write_checksum: sha1:13d51f5d376733dba2d1f15fa86033149741fda6
+    pristine_git_object: 59f3251fc7905fe6cafa8cff8f4a53e50ea821d7
   src/main/java/to/unified/unified_java_sdk/models/errors/AsyncSDKError.java:
     id: b424cd83eb21
     last_write_checksum: sha1:b180c2ca5a5101d4cfb9aa735b13aae32c5d787a
@@ -11282,6 +11498,10 @@ trackedFiles:
     id: 43c618e22eea
     last_write_checksum: sha1:bb4dcc608f126cff60e21a48e0566e5b8cf28ab3
     pristine_git_object: 66294dbab9e87b24e04c877c7fbfe5eac7e9be37
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateCalendarWebinarRequestBuilder.java:
+    id: f0262a40473e
+    last_write_checksum: sha1:9a1070ce959d5567667e0b44a2577d57ef3356dd
+    pristine_git_object: 822e539a6aae2d247c135a1b599513aacfcf2019
   src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateCommerceCollectionRequestBuilder.java:
     id: d272b0019eb9
     last_write_checksum: sha1:6b43f8280022aa10102f6b4c7f4d588045aba8b8
@@ -11406,6 +11626,10 @@ trackedFiles:
     id: 4f666c4f2f40
     last_write_checksum: sha1:f35a580cd7d1e4cd7055d561d41e49dd6fa914ba
     pristine_git_object: 47a6b41bbd21619b06dab24d2cb35d686afbffa0
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateMartechCampaignRequestBuilder.java:
+    id: 341dd080602e
+    last_write_checksum: sha1:f05d3890b7f9e4129f9575687b16f4de1c8bdbf0
+    pristine_git_object: 139e0ee2d7720aa908bdc9d8eb564969eec08cb8
   src/main/java/to/unified/unified_java_sdk/models/operations//async/CreateMartechListRequestBuilder.java:
     id: 5acc04ef960c
     last_write_checksum: sha1:24828ee3f5da7aa1f5d9b3465446b211b227d76a
@@ -11690,6 +11914,10 @@ trackedFiles:
     id: d7ee8ea935d9
     last_write_checksum: sha1:2ccefaf4245544e415532a68ae422c2fc1ccbf4e
     pristine_git_object: cfc1da0646b54978264c61f3302fc6983c4069be
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/GetCalendarWebinarRequestBuilder.java:
+    id: 99eed805d5e4
+    last_write_checksum: sha1:31f68c112863a62ce90ecd146bf09f3450e107db
+    pristine_git_object: 7f2b242253a8648140dd5b4b3c772560278ec820
   src/main/java/to/unified/unified_java_sdk/models/operations//async/GetCommerceCollectionRequestBuilder.java:
     id: f3c8e93cef9f
     last_write_checksum: sha1:18d5b08d559e5621f4b19ef5b04dd5aed5731319
@@ -11822,6 +12050,10 @@ trackedFiles:
     id: b90c01ff2ef1
     last_write_checksum: sha1:3b296fceb4c05446469c2e09bb339499af858be8
     pristine_git_object: ac00137f4999a0a294487a89454de65ed1d7c5da
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/GetMartechCampaignRequestBuilder.java:
+    id: c544e7811653
+    last_write_checksum: sha1:8a2ba37458f9991971b6e1e72889f7e7b782e5ba
+    pristine_git_object: cb85b0d658750c6c7861d94df9462eaa345598ba
   src/main/java/to/unified/unified_java_sdk/models/operations//async/GetMartechListRequestBuilder.java:
     id: a4bc95676e5c
     last_write_checksum: sha1:b16fde6ed014606dabb3058dc6d6b19e54197304
@@ -12150,6 +12382,10 @@ trackedFiles:
     id: dc20a449e75a
     last_write_checksum: sha1:113a56da0a5a0816ee9d52ba4723cb9f8532b5fb
     pristine_git_object: 14095b210c2b215410aa2472adec7fa06f77124f
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/ListCalendarWebinarsRequestBuilder.java:
+    id: 559d1ec8d82b
+    last_write_checksum: sha1:d4434685d31e69bbb93120232236d7396fbebfa9
+    pristine_git_object: 25a292aa4d69015d51ce9ac051c9f026f9e88daf
   src/main/java/to/unified/unified_java_sdk/models/operations//async/ListCommerceCollectionsRequestBuilder.java:
     id: 48a2bdd268ad
     last_write_checksum: sha1:9a6618b2850f308ff758aea82fcd9080475d988a
@@ -12290,6 +12526,10 @@ trackedFiles:
     id: 87a3f201cf4e
     last_write_checksum: sha1:d2ee1fb121b334a8089e7d2828725b9fb5d1f9a4
     pristine_git_object: 9c886048e877629313bca51b48979c8bcf27794b
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/ListMartechCampaignsRequestBuilder.java:
+    id: d1c644f56386
+    last_write_checksum: sha1:d050d92ba3cdc5039038b9861296a0dd68ea402e
+    pristine_git_object: 5a4d336bb03e94c9254407e5970ce37eb984af84
   src/main/java/to/unified/unified_java_sdk/models/operations//async/ListMartechListsRequestBuilder.java:
     id: 47caa88872a6
     last_write_checksum: sha1:57b6745209456c02b34e44f5bb3908b1978ac12c
@@ -12298,6 +12538,10 @@ trackedFiles:
     id: 435ee0102e90
     last_write_checksum: sha1:817fae1572e29888aeab35e47d49cd9f7a09eec7
     pristine_git_object: cb4f88c5fba20f18aa5e1ca17afac25f5d23b547
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/ListMartechReportsRequestBuilder.java:
+    id: c551b7588160
+    last_write_checksum: sha1:0fcfb7f1082c3cbbbf8ea2be25a8cab92531c745
+    pristine_git_object: 8b244dcd17a742e64d0deb315ac00c7a77d37a3b
   src/main/java/to/unified/unified_java_sdk/models/operations//async/ListMessagingChannelsRequestBuilder.java:
     id: 0fa4cfee6e65
     last_write_checksum: sha1:5e47bb540496921f9bd34fec93bca6ac444068b8
@@ -12582,6 +12826,10 @@ trackedFiles:
     id: 0d64d11c4ceb
     last_write_checksum: sha1:d03bb3e6f312371d3634b056fc9e2a83fb9f8a58
     pristine_git_object: 3494261237c13035c048cd605992b2a52f43f2a0
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchCalendarWebinarRequestBuilder.java:
+    id: f75fcfaaef4f
+    last_write_checksum: sha1:18f0f17c262730f3e40529d48ef154d13adb6ddb
+    pristine_git_object: ab1b898c5370cac8671f98fe61037c7ba05910e1
   src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchCommerceCollectionRequestBuilder.java:
     id: d5715b2054e8
     last_write_checksum: sha1:e5b84ed81c9692c6e063b7e22b76cc3bf1071976
@@ -12698,6 +12946,10 @@ trackedFiles:
     id: 9e19dd2c94b8
     last_write_checksum: sha1:74ea1a73e160acf51f6583d4cab2c45b9fcff42b
     pristine_git_object: 4213220dbdcbe2a39fd3317f7a8ec27409e69aa1
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchMartechCampaignRequestBuilder.java:
+    id: 1fb0730fc5b5
+    last_write_checksum: sha1:c18a7fba4b6354ee0b2c0e3089a782823bed5dd9
+    pristine_git_object: c95207f219758113670b6c373ce2411d33883364
   src/main/java/to/unified/unified_java_sdk/models/operations//async/PatchMartechListRequestBuilder.java:
     id: e424b73aea2b
     last_write_checksum: sha1:3ab48013f90217fd4b556e02660314a4f43e9120
@@ -12954,6 +13206,10 @@ trackedFiles:
     id: 7b737096a28e
     last_write_checksum: sha1:9f436bd4ed249ce74072118204df20868e799804
     pristine_git_object: c9996c8d56372f533e83d8ae4ccefc490279bb65
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveCalendarWebinarRequestBuilder.java:
+    id: 0c83954eeb59
+    last_write_checksum: sha1:8d54c97a41384bb91da0fb1f71eb920496ab6fce
+    pristine_git_object: 3647d707cacfc118a0fb7f7c15f5238833b23087
   src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveCommerceCollectionRequestBuilder.java:
     id: 7b35a969d6ef
     last_write_checksum: sha1:4cca4b4b432dea1f96bdad19cd7333448d67ff2e
@@ -13070,6 +13326,10 @@ trackedFiles:
     id: 10b0010903e2
     last_write_checksum: sha1:3620041e99519316e6f5091f0e5520346429bd0c
     pristine_git_object: 1f1f92acda913fd11fab762a9a33de73cf9bf454
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveMartechCampaignRequestBuilder.java:
+    id: 86ed7ba6a5a6
+    last_write_checksum: sha1:ebba34003f21df47ce7e8917be24adfe2fa4c3ff
+    pristine_git_object: 1a98ff4b956d3b3e7a35248d8a48d286d3551241
   src/main/java/to/unified/unified_java_sdk/models/operations//async/RemoveMartechListRequestBuilder.java:
     id: e242275cb88f
     last_write_checksum: sha1:2aa40298e70d95c036d4647221ef1af7e57a53cb
@@ -13318,6 +13578,10 @@ trackedFiles:
     id: c45105047165
     last_write_checksum: sha1:f5069b426359400e47516c38e011069cdedf813b
     pristine_git_object: c0ff943f968c3eaa975428c6c31c7ddbca439ce9
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateCalendarWebinarRequestBuilder.java:
+    id: bc0d7ee57ea1
+    last_write_checksum: sha1:881c3e50522aa97e52b09e61db636d69993d2f20
+    pristine_git_object: 5a82de4402f8a321a05833c648e3f2e973423dde
   src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateCommerceCollectionRequestBuilder.java:
     id: e3d3eca932ab
     last_write_checksum: sha1:f292c2525738cec8a6ac39d052e0a45e46498c8c
@@ -13434,6 +13698,10 @@ trackedFiles:
     id: 8c20ec3c0d5f
     last_write_checksum: sha1:6870020e45a7c10a286c3ca24b630b61c040b23a
     pristine_git_object: 7aeff8a8c2c0edf1de561947470e70cd1c3f3554
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateMartechCampaignRequestBuilder.java:
+    id: 4980a7dcce62
+    last_write_checksum: sha1:77b3fce7e6ff06a366cef05f610bf20b0ac39d3e
+    pristine_git_object: bd34ba086fd91ae3b07e0d7bead80fb1e97390aa
   src/main/java/to/unified/unified_java_sdk/models/operations//async/UpdateMartechListRequestBuilder.java:
     id: abd321cba97f
     last_write_checksum: sha1:80874d9f7725676da2cd7de3130d474211bb28a9
@@ -13652,8 +13920,8 @@ trackedFiles:
     pristine_git_object: ae56373f00eb7c45f59a52906cfcb3f7b726e7ae
   src/main/java/to/unified/unified_java_sdk/models/operations/CreateAccountingExpenseQueryParamFields.java:
     id: 768733097c22
-    last_write_checksum: sha1:1d14424dcb7e107637f3bcc28feb9339d6a1dd84
-    pristine_git_object: 29469a92ee0f06c39e97fb06518d5b650a2a0acc
+    last_write_checksum: sha1:14e8d5cf447f868fc42c3bd3ca0af44823be3b9d
+    pristine_git_object: fc49604cdd5d1226140c2afe0c36281342c019ac
   src/main/java/to/unified/unified_java_sdk/models/operations/CreateAccountingExpenseRequest.java:
     id: e335d274fcad
     last_write_checksum: sha1:33a56ee7b6fc626d6d93f3b456e05b1d50990754
@@ -14050,6 +14318,22 @@ trackedFiles:
     id: 11a98caa0923
     last_write_checksum: sha1:737b7c2aadbc84f3b14b030ebe3935ad81b48367
     pristine_git_object: db943530f0a0422236a5027d03a26fad1f7bdea6
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreateCalendarWebinarQueryParamFields.java:
+    id: aa2941eb541a
+    last_write_checksum: sha1:4a48ceb841a30abdf4320cb5fce2c4bc043fbdb8
+    pristine_git_object: 661d70556567805c33565d81ffd83603e2870598
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreateCalendarWebinarRequest.java:
+    id: c5d3330b654c
+    last_write_checksum: sha1:569cbc1808de22b7ab40ca51b36901b7e774a2e6
+    pristine_git_object: 78c73d20b8e325a74c7cbf8395326e8123fd3df3
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreateCalendarWebinarRequestBuilder.java:
+    id: 82d867e1cff8
+    last_write_checksum: sha1:065bd803a7f630731514947269e53a3e22292753
+    pristine_git_object: f96324c66bed66fb672d85fb62fb2576de346af0
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreateCalendarWebinarResponse.java:
+    id: de6240628aa4
+    last_write_checksum: sha1:ce59ec5376479e10b5d652e92888d0b9376ccb0c
+    pristine_git_object: d299af4a382325e7be36ba854fba80974fb227c7
   src/main/java/to/unified/unified_java_sdk/models/operations/CreateCommerceCollectionQueryParamFields.java:
     id: 1b53efc8e11b
     last_write_checksum: sha1:44fae73dc6adee08dd7a337391a2a05cd3417cb8
@@ -14546,6 +14830,22 @@ trackedFiles:
     id: f7d05b2740b8
     last_write_checksum: sha1:f867d5d6dd45cc6df421ebe41a5a167d0e83c15f
     pristine_git_object: 6e5272fe14796a0529d673bead385fd7b7064bfd
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreateMartechCampaignQueryParamFields.java:
+    id: 73806211d4a5
+    last_write_checksum: sha1:d3917a3eefa9b7c9962abb076442c77fc2575cfc
+    pristine_git_object: 3e9be433424ed55d6ad44ca6fc44ecdbf61e7ebc
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreateMartechCampaignRequest.java:
+    id: 7d970721abfc
+    last_write_checksum: sha1:80553bcdba6f6b81a714649df3445c24995dd40c
+    pristine_git_object: 3974464c6ca921845ac1e2478d22d7c69eb89eb5
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreateMartechCampaignRequestBuilder.java:
+    id: 6a2752991dc6
+    last_write_checksum: sha1:f1647ccb403e3e6ee92d4c188738bc9506cd9dfb
+    pristine_git_object: 6c5e13b9b5f18b8e414753e73d241f1d4e1b93f2
+  src/main/java/to/unified/unified_java_sdk/models/operations/CreateMartechCampaignResponse.java:
+    id: 375da1617ec3
+    last_write_checksum: sha1:a09580e527172d5ea982452bce8aaa90c3f1c71a
+    pristine_git_object: 5881aa950f549b2a108467fb725c7a0daf1e5bf5
   src/main/java/to/unified/unified_java_sdk/models/operations/CreateMartechListQueryParamFields.java:
     id: 40d9a93de816
     last_write_checksum: sha1:a7ff367eef7e6e298cd9250dc430d523b6a9f518
@@ -15168,8 +15468,8 @@ trackedFiles:
     pristine_git_object: 57cf5dc6664164b71e281bc9a5b19b82ef4097bb
   src/main/java/to/unified/unified_java_sdk/models/operations/GetAccountingExpenseQueryParamFields.java:
     id: 4273a10f02af
-    last_write_checksum: sha1:6202cefffff4bef9971c34fe66e8a58cbcbdfd9b
-    pristine_git_object: 65a20cc5803b983d67c42b0481c615c661c20dd6
+    last_write_checksum: sha1:66255671a8382e784db3bbef3a179238d66b9f84
+    pristine_git_object: 363598515a785af85923b7c605a7fc48ab6803b9
   src/main/java/to/unified/unified_java_sdk/models/operations/GetAccountingExpenseRequest.java:
     id: a4d6d6df83f3
     last_write_checksum: sha1:1e57e893b72560c078a7d9ec55aafabc8a28def7
@@ -15646,6 +15946,22 @@ trackedFiles:
     id: 767009d696bf
     last_write_checksum: sha1:c4cc70431e1da6ab483dceba783b116bf02be496
     pristine_git_object: b14812996a5b89f91bfe8e2a00ef80dc04c46904
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetCalendarWebinarQueryParamFields.java:
+    id: 9618ed1d52c3
+    last_write_checksum: sha1:fa3ef90680ccf32df74287da4cb03118ef73df3d
+    pristine_git_object: e289c1c5bb8d932910d33543b5a40abea83bedaa
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetCalendarWebinarRequest.java:
+    id: 7de9122579a7
+    last_write_checksum: sha1:34ce59a1b34a21ce2081f409e052b0392cb802ba
+    pristine_git_object: 116d19d5e595d2275cb608dc010dbe39a4601812
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetCalendarWebinarRequestBuilder.java:
+    id: 2a33926a337b
+    last_write_checksum: sha1:c7e699c6802c5c53ba736aad028380ccaf56a87a
+    pristine_git_object: 607e19a75170d3d36a39342dd2de361cddca4ebf
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetCalendarWebinarResponse.java:
+    id: 770c224129f4
+    last_write_checksum: sha1:d92f6fe46052b51a9dbb7184588bd3bdfd8772f2
+    pristine_git_object: 21dcf585e960e5a4683f65e886afe276e61e7d92
   src/main/java/to/unified/unified_java_sdk/models/operations/GetCommerceCollectionQueryParamFields.java:
     id: 2a6f52294d53
     last_write_checksum: sha1:069f21d5248742b478ec0770035f3fbc32b85ea0
@@ -16174,6 +16490,22 @@ trackedFiles:
     id: 85f8cb3deaf9
     last_write_checksum: sha1:04a92a67faa8e633d99fec20733393af1db52636
     pristine_git_object: 5c9cff99baa7df3bb6509c526bcc0c3ad538800c
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetMartechCampaignQueryParamFields.java:
+    id: da7b7d383804
+    last_write_checksum: sha1:f22b7b6f3d2d72e3dab3b6590e586442a4509e7d
+    pristine_git_object: caf225bb17cae26f57d04b66550a69b3bd85d1d6
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetMartechCampaignRequest.java:
+    id: 1669c1cfcc84
+    last_write_checksum: sha1:1b58eab8db977c4d84d978c22eada57fda86a4f7
+    pristine_git_object: e72cf476027fcd5573de6b1123acbab78a8f8f00
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetMartechCampaignRequestBuilder.java:
+    id: 4d8a433f268d
+    last_write_checksum: sha1:367eba33698e717fbc9d7c87a595e347eee41400
+    pristine_git_object: 247f4c3d5591d709708c8039642f91f38c71ac87
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetMartechCampaignResponse.java:
+    id: 8fe2c32f8c54
+    last_write_checksum: sha1:cc30fc8b1178635e1561733f9a8409c1141d5387
+    pristine_git_object: 9696f96d5e741d6e6e9165f3155d55148c6381c6
   src/main/java/to/unified/unified_java_sdk/models/operations/GetMartechListQueryParamFields.java:
     id: aedd85887fb4
     last_write_checksum: sha1:84430616748e62382c150ecab181400c9fb3532a
@@ -16928,8 +17260,8 @@ trackedFiles:
     pristine_git_object: 8e91869cf7b5e10abf4602ceeec2027f02b42ff7
   src/main/java/to/unified/unified_java_sdk/models/operations/ListAccountingExpensesQueryParamFields.java:
     id: 05e3e96b5490
-    last_write_checksum: sha1:05437c5b3a2025b188a7f7f233e87476e686ce61
-    pristine_git_object: 178072233c47c0b41bbfb86edbe91b4606ea59e5
+    last_write_checksum: sha1:fe19dff647c3dd1d1311fe9baff6a79305aaac40
+    pristine_git_object: b91b0bf5655dfad60d75634b4102422d31d8e08a
   src/main/java/to/unified/unified_java_sdk/models/operations/ListAccountingExpensesRequest.java:
     id: b32b0087c9bf
     last_write_checksum: sha1:9166ceec7a5694a2c5b30490d7d5e2aa9fcfab65
@@ -17454,6 +17786,22 @@ trackedFiles:
     id: ab07ef570659
     last_write_checksum: sha1:13c2d4ad83e473460e9b39b36119db73b02bc09b
     pristine_git_object: d9d09d892a2681808c547412c1ae7b1a87153906
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListCalendarWebinarsQueryParamFields.java:
+    id: c4959889c4a1
+    last_write_checksum: sha1:dcd64f7c07d735a55267baa26410c55de4d6c144
+    pristine_git_object: 5c6dbc52e14e3e89dbf67cfa4f529498fdbec492
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListCalendarWebinarsRequest.java:
+    id: 8e37e4e91c33
+    last_write_checksum: sha1:65354c2fee4a5eaa51fa20660f512f50e0b067df
+    pristine_git_object: 339292fb931618dd15482e1b740769e79f3c5f0e
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListCalendarWebinarsRequestBuilder.java:
+    id: d2a448d8b620
+    last_write_checksum: sha1:fa6bb567dea41a4a346e8870d93c37f650b55560
+    pristine_git_object: a44890c48d7ce0305747b99b6f5bd35f5b0bbad1
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListCalendarWebinarsResponse.java:
+    id: 321170367d90
+    last_write_checksum: sha1:ef12f5c3a51c9a23807e203bd274fcbd9d2357bb
+    pristine_git_object: 384315db007ccd3d0cb8679e13aa48c25fb071f1
   src/main/java/to/unified/unified_java_sdk/models/operations/ListCommerceCollectionsQueryParamFields.java:
     id: 9d33a02177d2
     last_write_checksum: sha1:810acbf0293c0536c7fdae8145bf1900378e0f24
@@ -18006,6 +18354,22 @@ trackedFiles:
     id: 2c041554e6ef
     last_write_checksum: sha1:dcb8e338e9c2bf716953b60676ddfd933859d2d7
     pristine_git_object: dfa6c7228b09f3f965e1e64ca95e78a63784f85e
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListMartechCampaignsQueryParamFields.java:
+    id: 876d199f3001
+    last_write_checksum: sha1:13158a53ab561bc6575e9f72df257421741d2fad
+    pristine_git_object: f6383ca93b97759a559957adf95d09e4c93b0a72
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListMartechCampaignsRequest.java:
+    id: c0b2de23872f
+    last_write_checksum: sha1:d7ac22e38f29806b9b39d8d2e6157231344cf70c
+    pristine_git_object: 2ca15768fdc2ceb4ea865db4ac1e43cadc72460c
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListMartechCampaignsRequestBuilder.java:
+    id: 2f1bcdc2cc85
+    last_write_checksum: sha1:79e5b068a9f6a10f76d230d8baa1c98d81f45e9a
+    pristine_git_object: bfac173eeb216a1d40c06b21956cfb8d651427be
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListMartechCampaignsResponse.java:
+    id: ef994c44a7a3
+    last_write_checksum: sha1:315577e4d00155b56837916c7541a3684b79afc9
+    pristine_git_object: 898872e577e743388ba64afef6afa9edcfbaea50
   src/main/java/to/unified/unified_java_sdk/models/operations/ListMartechListsQueryParamFields.java:
     id: 7ce732bae1be
     last_write_checksum: sha1:2085dd1ec1a81eedb6eb4c63701b254a05d51c03
@@ -18038,6 +18402,22 @@ trackedFiles:
     id: 75a2b436d28f
     last_write_checksum: sha1:90deef3567db63001bd0bf59d319b091c3d03f7b
     pristine_git_object: 8608555a2a209c77f44cf170159125751a9f587a
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListMartechReportsQueryParamFields.java:
+    id: b0a207b89a29
+    last_write_checksum: sha1:301b884cd147d8e7feeb55df0055731edef1257d
+    pristine_git_object: 932f8c5e503f61860fd1258d6ded4e8096df079a
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListMartechReportsRequest.java:
+    id: 3d82e24484c2
+    last_write_checksum: sha1:624941036ecc18b2870803d314496cd3f3f09c1f
+    pristine_git_object: 9c6ea310559d223bb9b2197bb3595fedc3c57661
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListMartechReportsRequestBuilder.java:
+    id: aceed6abdaa9
+    last_write_checksum: sha1:4aefba4148dac73553952544bdbf97d7778e6809
+    pristine_git_object: d0572715aa72f8a152d31e29da30e0b1bd5a0b45
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListMartechReportsResponse.java:
+    id: 5f326673b32a
+    last_write_checksum: sha1:1b8a6e4ee68bce1dd12abadcc51bf9517cd71d01
+    pristine_git_object: f1b59584c230a7cf22c0a9ea402989896d5d0819
   src/main/java/to/unified/unified_java_sdk/models/operations/ListMessagingChannelsQueryParamFields.java:
     id: 7c372289d2cd
     last_write_checksum: sha1:2274057a68d51d7bbb3c013cd8c88ff78f374748
@@ -18736,8 +19116,8 @@ trackedFiles:
     pristine_git_object: f5d6aeaa6257309ac224a2959a9c4669afe96a9f
   src/main/java/to/unified/unified_java_sdk/models/operations/PatchAccountingExpenseQueryParamFields.java:
     id: 21fd2a5e3c24
-    last_write_checksum: sha1:ed572276ebbf3264ad41d5daad420054523e624a
-    pristine_git_object: 155255dc624356c97cf2770b491fbcd4a50e3435
+    last_write_checksum: sha1:7f65c1c312eb1902718788720030bfccd64f953b
+    pristine_git_object: d9acda26b9f82636f9b76b2527654dc3c8c9faf3
   src/main/java/to/unified/unified_java_sdk/models/operations/PatchAccountingExpenseRequest.java:
     id: f15904daeaba
     last_write_checksum: sha1:6da6b29f6d5194af27449bb83871d8caaffd479a
@@ -19134,6 +19514,22 @@ trackedFiles:
     id: c2576bf49fdc
     last_write_checksum: sha1:99188d5518aabd9178aec70337e003e2ad9d27cf
     pristine_git_object: 0fe6f231da9035da14f025ad3330aad4bb035f30
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchCalendarWebinarQueryParamFields.java:
+    id: 610874b93bb6
+    last_write_checksum: sha1:cdbb52d3c5d0dd252f44a23e7d0ea2c78a465b90
+    pristine_git_object: a47b2e98098082467557875e231241c08b340618
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchCalendarWebinarRequest.java:
+    id: 8f47ce337f30
+    last_write_checksum: sha1:d8c4255adaf8c58cbc4f28888ecd154946167b28
+    pristine_git_object: 2b271606afa8ead6560cd2e19ef9e28f5f9f3424
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchCalendarWebinarRequestBuilder.java:
+    id: d20e5c393c64
+    last_write_checksum: sha1:afb876bc7c320fcded0728116eec087bcb2141c4
+    pristine_git_object: b0796a4c58ba5fca84d3dd8d83f4d83e488bc40e
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchCalendarWebinarResponse.java:
+    id: 740d183898c2
+    last_write_checksum: sha1:439901775978b06ed172bd5e9f12bc7ea657521f
+    pristine_git_object: 26c882e11a7081bf4005a8f71b86155c7850f023
   src/main/java/to/unified/unified_java_sdk/models/operations/PatchCommerceCollectionQueryParamFields.java:
     id: 63001a23684f
     last_write_checksum: sha1:c2faaa3720c0a65386cad75ff5177f5a37c9197d
@@ -19598,6 +19994,22 @@ trackedFiles:
     id: a4b967fcc1b0
     last_write_checksum: sha1:0afcd78ec7d4d83c5b9ed834e85d8d27d993713e
     pristine_git_object: d0ec6d11592e2a71da1cda4b2ea6e79145cc4254
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchMartechCampaignQueryParamFields.java:
+    id: 0e3cd350be92
+    last_write_checksum: sha1:8a681bd959dd4dfdbd490c7713b568c04f5ea20f
+    pristine_git_object: c87f35dfa1fd7fa3206d7a6b7c21fe4b83dac658
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchMartechCampaignRequest.java:
+    id: ac59570c8c48
+    last_write_checksum: sha1:28484e08aca688dcdf333a941cfd47531835f85e
+    pristine_git_object: 4ecb68fd050d7dbb6e5e0c490043269afb3642af
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchMartechCampaignRequestBuilder.java:
+    id: fbca1a446902
+    last_write_checksum: sha1:848d623666241007be9ec40d0191899071f072c8
+    pristine_git_object: ff53212d9b29d3a379fa310a2bacf600b1dd5884
+  src/main/java/to/unified/unified_java_sdk/models/operations/PatchMartechCampaignResponse.java:
+    id: ec98f3ce2fd3
+    last_write_checksum: sha1:999cedbdf2ed0ef3f020b9183ff65d01fa89bc4a
+    pristine_git_object: 72fe4b3bf198b93f0f6d2f2c5f53a136733e507d
   src/main/java/to/unified/unified_java_sdk/models/operations/PatchMartechListQueryParamFields.java:
     id: d16c706da436
     last_write_checksum: sha1:10da7470af5561cf43e2bb39b89e4be3fbc7bf23
@@ -20482,6 +20894,18 @@ trackedFiles:
     id: 5d40a438396a
     last_write_checksum: sha1:23094f3b56a7f4e2bff4966a5471f2cb352342c6
     pristine_git_object: ee5fb2cd85aee75034a8e9d13dbbd2989002083b
+  src/main/java/to/unified/unified_java_sdk/models/operations/RemoveCalendarWebinarRequest.java:
+    id: fff1b322bd71
+    last_write_checksum: sha1:ccba322b360409739289cdde650b6385a3814aed
+    pristine_git_object: d8d06075a0133cbb6bf98495ec520fe3dd639974
+  src/main/java/to/unified/unified_java_sdk/models/operations/RemoveCalendarWebinarRequestBuilder.java:
+    id: c8ca16235c0d
+    last_write_checksum: sha1:41268be3100162a339d3a0ffc428062ec9b83c2c
+    pristine_git_object: 1f1450ba1fb57951cb4d77affaf86b6dc30513fd
+  src/main/java/to/unified/unified_java_sdk/models/operations/RemoveCalendarWebinarResponse.java:
+    id: beddcc640a9e
+    last_write_checksum: sha1:1fb5609a1e8bffe44231b07685eace37a0544830
+    pristine_git_object: ab3ef92fb31b6e1e13790627d2a210404bb61119
   src/main/java/to/unified/unified_java_sdk/models/operations/RemoveCommerceCollectionRequest.java:
     id: c0d23efe448f
     last_write_checksum: sha1:daf65bd62d3589f19e83954bcc697f56438d773f
@@ -20830,6 +21254,18 @@ trackedFiles:
     id: e61aee3c0cc5
     last_write_checksum: sha1:cc9857e83b5b30f5b4904186a6e8834cab86e618
     pristine_git_object: a2b2cdaa9bdf65c9c60a7bc3dcfa84e8222c364b
+  src/main/java/to/unified/unified_java_sdk/models/operations/RemoveMartechCampaignRequest.java:
+    id: 7e08465f3fca
+    last_write_checksum: sha1:74b69c69e32b21bbb6ca208d427337ffd34298e9
+    pristine_git_object: 4daf4257e1f3b18085dd1e6604e231b39c520161
+  src/main/java/to/unified/unified_java_sdk/models/operations/RemoveMartechCampaignRequestBuilder.java:
+    id: 7df3c2c2d115
+    last_write_checksum: sha1:920f1f0cb053ed34b56189f33f63d133d44a6a85
+    pristine_git_object: 34ae90f3ba2a268d0ad5916abff68e8b397901c3
+  src/main/java/to/unified/unified_java_sdk/models/operations/RemoveMartechCampaignResponse.java:
+    id: b1c0227ffbb7
+    last_write_checksum: sha1:ab90e099db57133ea4e65851a1b0530b1a76417e
+    pristine_git_object: 75d55f990ecc3235e4f4ef1f874609b192c0d487
   src/main/java/to/unified/unified_java_sdk/models/operations/RemoveMartechListRequest.java:
     id: 10f69db06286
     last_write_checksum: sha1:5d587fa737e12f612348bc26b3c52ea920f51398
@@ -21296,8 +21732,8 @@ trackedFiles:
     pristine_git_object: 718cc1fccac8caab6d7ebec6c9fa7429ab47484d
   src/main/java/to/unified/unified_java_sdk/models/operations/UpdateAccountingExpenseQueryParamFields.java:
     id: dad5b29e4f3e
-    last_write_checksum: sha1:b437c9348ebf20b127f6326e116944bc7bcb1f5b
-    pristine_git_object: 79a75047ee476ac5b06e35f8fa35b55108f881e3
+    last_write_checksum: sha1:9df3a665a5048c730f80167c46e62361c4fe7530
+    pristine_git_object: df1d949e48043c83d581db30e02e3a72941ad2d2
   src/main/java/to/unified/unified_java_sdk/models/operations/UpdateAccountingExpenseRequest.java:
     id: 5a7e7b776659
     last_write_checksum: sha1:7f8769c42299639c4d85bba27798ac292b1a5701
@@ -21694,6 +22130,22 @@ trackedFiles:
     id: 92789f5b6e9b
     last_write_checksum: sha1:cb4ddb99e232c03a0b9000f7f9ba806467ceec57
     pristine_git_object: 9c9f814accc32adcbd158431f5778a2b678efffd
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdateCalendarWebinarQueryParamFields.java:
+    id: 77a3bf72b9b3
+    last_write_checksum: sha1:f35a9808ab0bca5169cab01fa3047ac5515154df
+    pristine_git_object: bd830ac4d93be330479ad51b6133234e0e1aea21
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdateCalendarWebinarRequest.java:
+    id: b445da91997c
+    last_write_checksum: sha1:6ebcae9b20e71595544c6ebd25ac40b0391a1cbf
+    pristine_git_object: 36d552a7f8fefbc1034296d8c0aa249d17bf74ba
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdateCalendarWebinarRequestBuilder.java:
+    id: c25f27cd1e8e
+    last_write_checksum: sha1:701695e51aaf7175162a7426533376a09f776f61
+    pristine_git_object: 5694d5692319d469aa22aa7d7257c3c0774baa2f
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdateCalendarWebinarResponse.java:
+    id: 14c0094c7433
+    last_write_checksum: sha1:8fe2239d5c2bd4ccf915289a687aff1bcd375118
+    pristine_git_object: 75a94da231d4a3ad042914d0182285a2b7795696
   src/main/java/to/unified/unified_java_sdk/models/operations/UpdateCommerceCollectionQueryParamFields.java:
     id: 9c1944dada48
     last_write_checksum: sha1:5dfa978ce1a67188679c87cf781a87a9dcd2b5fa
@@ -22158,6 +22610,22 @@ trackedFiles:
     id: 210fe5f1ea0c
     last_write_checksum: sha1:932b1f7744bd5e4f3aa7e42997bd86058bdacad1
     pristine_git_object: 5b8bad6badbceeb1c145b05e1f14f9d0e0f08d1c
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdateMartechCampaignQueryParamFields.java:
+    id: f91225245a14
+    last_write_checksum: sha1:33915b6bea5eb32ea2ca31784ec751be773b87cf
+    pristine_git_object: 554d61a75cb5fa5879b5b61768d2bceaf8a341e5
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdateMartechCampaignRequest.java:
+    id: 1dd427a4a984
+    last_write_checksum: sha1:775b71ddb80e639995899b9eff360c3e539a31eb
+    pristine_git_object: 9344883b4fec5b5ea4f28c49adc43c9cd0d8aadb
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdateMartechCampaignRequestBuilder.java:
+    id: bea68c285161
+    last_write_checksum: sha1:43354a4001acda6b21c59d4f450e7967e40a7c71
+    pristine_git_object: 1e9f599ddddb15cf636b824eaee6eeb65791f57e
+  src/main/java/to/unified/unified_java_sdk/models/operations/UpdateMartechCampaignResponse.java:
+    id: fabedbf35512
+    last_write_checksum: sha1:2094907b74509695dcd8ae0c6cc04838d19789db
+    pristine_git_object: 866c05988232d1c98e1450e505bf88b8e5b1da7c
   src/main/java/to/unified/unified_java_sdk/models/operations/UpdateMartechListQueryParamFields.java:
     id: 07c8ec39b706
     last_write_checksum: sha1:c53ff08dc308f704eecbf54b2c7bc76c16ded8e2
@@ -22794,6 +23262,10 @@ trackedFiles:
     id: ead04d2211d7
     last_write_checksum: sha1:e1fdc11a38b326746e385266ad8bbcb6627b71db
     pristine_git_object: f12050e95e76e646d9702513bb8498810fd1eb14
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateCalendarWebinarResponse.java:
+    id: ed3b789d6f41
+    last_write_checksum: sha1:95a017b0aacd8d0d4ffc472d464ba6c0598c8bd5
+    pristine_git_object: 8bdf09feb6980a7bc62f3c760f9a9ed1ab1313e7
   src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateCommerceCollectionResponse.java:
     id: 16d08bc3dd2f
     last_write_checksum: sha1:ce904b1957d8d6ee53df43551f3793a1c7efa75e
@@ -22918,6 +23390,10 @@ trackedFiles:
     id: fcdc24cc7771
     last_write_checksum: sha1:d43571eaa6cd68cf56afac21b882c311d28d48fc
     pristine_git_object: ce012612f69e41a2ab7c90670ff3f29957ab933b
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateMartechCampaignResponse.java:
+    id: 2c27a1c66708
+    last_write_checksum: sha1:afd095d9562920e51958df8e51e2a47a360cc52a
+    pristine_git_object: 59e4ec27ed2c42bdf60b2a87f661c8550e0b2874
   src/main/java/to/unified/unified_java_sdk/models/operations/async/CreateMartechListResponse.java:
     id: 2fa1c668cc42
     last_write_checksum: sha1:0b02bff80cbc9339d3562abe622696aebab94229
@@ -23202,6 +23678,10 @@ trackedFiles:
     id: 945e53998168
     last_write_checksum: sha1:1d7936dd59a1586da982bd428f9f16c6533dd081
     pristine_git_object: b3c0f095c9436687c13128d31ac5b02f13f6148d
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/GetCalendarWebinarResponse.java:
+    id: 00239684903b
+    last_write_checksum: sha1:ca988961bac4b5a08b36b147eb676f1a63cb0c92
+    pristine_git_object: 1a96fc10b89476757ce3022d6b90b3c3da0d7a86
   src/main/java/to/unified/unified_java_sdk/models/operations/async/GetCommerceCollectionResponse.java:
     id: d4b0c5ea780a
     last_write_checksum: sha1:c4c5bdb6c5d0d968dd43c67b72844abf22dd4c06
@@ -23334,6 +23814,10 @@ trackedFiles:
     id: c96b32517a1d
     last_write_checksum: sha1:95783775796652d52c23d8781b6d87494b080b96
     pristine_git_object: ef01c93a69dae272323854102a8203db1e330fe4
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/GetMartechCampaignResponse.java:
+    id: f9677b34eae6
+    last_write_checksum: sha1:f6bd791d93135c8311b93ece29c4e907f0a8fe9c
+    pristine_git_object: 738e732b77e7fca1b420c9e41c1d792a19f0554a
   src/main/java/to/unified/unified_java_sdk/models/operations/async/GetMartechListResponse.java:
     id: 27a54bd29165
     last_write_checksum: sha1:73a03ca4cfefbf2c451ab010aef8f58e96445a40
@@ -23662,6 +24146,10 @@ trackedFiles:
     id: a9f022912fd2
     last_write_checksum: sha1:4593bcf5c3622085f120e0278de160267fd15e5e
     pristine_git_object: 31c743c391e0e591a18586aade9dc56070ecf7c8
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/ListCalendarWebinarsResponse.java:
+    id: 2dd0523c9d1c
+    last_write_checksum: sha1:f0dd89cc1fd8977a9fff84aef478882561d837d2
+    pristine_git_object: e049fa65591f58b62d2f93ffa24b8f8eb639f755
   src/main/java/to/unified/unified_java_sdk/models/operations/async/ListCommerceCollectionsResponse.java:
     id: 74ce52301172
     last_write_checksum: sha1:df13970a01eae56c8e546ee509db4114b7402f1d
@@ -23802,6 +24290,10 @@ trackedFiles:
     id: 5124d0b90041
     last_write_checksum: sha1:d46c6c78f6ad60a046fa981d3aa6d8c0baace6e1
     pristine_git_object: f13f734190ef416316e88f0a67cf5821d9d9034a
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/ListMartechCampaignsResponse.java:
+    id: fa1f5699616a
+    last_write_checksum: sha1:9623d53019b0fc382fb3a6ee6ffeb44344a5d765
+    pristine_git_object: ef4e55c92e36ffe4feae245c5aa89ca7a4e28072
   src/main/java/to/unified/unified_java_sdk/models/operations/async/ListMartechListsResponse.java:
     id: 6f0a49c2c63f
     last_write_checksum: sha1:5e159d01bc2377d5b3ee87f620c75f16b1971130
@@ -23810,6 +24302,10 @@ trackedFiles:
     id: f740fd0e9234
     last_write_checksum: sha1:d10db7c6e9ec485b3bc11452f1064769f6b8aabc
     pristine_git_object: 6807d88fc0896325ef8ffe0f58ebf8af7f18f40d
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/ListMartechReportsResponse.java:
+    id: cb37d6e62665
+    last_write_checksum: sha1:6afd59695f6358278e9cbe1c5a7beb297bf36e0a
+    pristine_git_object: c03033375ec4c7c0ab6cf30f561fef7de6180849
   src/main/java/to/unified/unified_java_sdk/models/operations/async/ListMessagingChannelsResponse.java:
     id: 684a6ffee44f
     last_write_checksum: sha1:7fb4a5cd58802825b35ea49e16af5bf59ad97161
@@ -24094,6 +24590,10 @@ trackedFiles:
     id: f90249639456
     last_write_checksum: sha1:a8ea53184f5684a5e906cf7d4a010b37f404d479
     pristine_git_object: affdd6263ab00ac5672668bf235456098694fbea
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchCalendarWebinarResponse.java:
+    id: 244ad1c0a7c7
+    last_write_checksum: sha1:0a0c22d010fa931c7d66c281c4d06fe49602f8c3
+    pristine_git_object: 105ec983f9e51aa93f16f37af70c99ca2f7aada5
   src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchCommerceCollectionResponse.java:
     id: ac621e05b41d
     last_write_checksum: sha1:2d40f05514ce7235f0776d29131242fb295d5c38
@@ -24210,6 +24710,10 @@ trackedFiles:
     id: ccf07b80ebd2
     last_write_checksum: sha1:425cc1bb04dac702b0a2f318ef6c687d9618862e
     pristine_git_object: af885953b8f1e88d8893fe087e87c63badaa1cac
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchMartechCampaignResponse.java:
+    id: d55eeaa9895c
+    last_write_checksum: sha1:f8b3e83814f02e1aef352d7ae0409a3abc5917a1
+    pristine_git_object: d189b8ac018f6842ccb957634e157599c93f2567
   src/main/java/to/unified/unified_java_sdk/models/operations/async/PatchMartechListResponse.java:
     id: 80e21e7828bb
     last_write_checksum: sha1:57b794c16ee989af581e24cbd172dd229590f0bb
@@ -24466,6 +24970,10 @@ trackedFiles:
     id: 880f9e08e13d
     last_write_checksum: sha1:3e67f628579512db133761886590695925dc37e1
     pristine_git_object: 09f193f32ab676aedb6a463c0387455331c688a2
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveCalendarWebinarResponse.java:
+    id: dab030e83d7c
+    last_write_checksum: sha1:f414cfd5a2e6f1d583ccaa0f721ce63dc224d74b
+    pristine_git_object: 966adb5d12b417c7bce5cda1a77cd31062a04617
   src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveCommerceCollectionResponse.java:
     id: 04e5853f44e5
     last_write_checksum: sha1:c3b0dc0a93fcb38264ebb8712875360713b18c17
@@ -24582,6 +25090,10 @@ trackedFiles:
     id: 3eef1d3cbf0f
     last_write_checksum: sha1:985a9cc0056869035697b5852e2bb4ce45aef0e4
     pristine_git_object: 3c9a1f911871b80da4e60001676aeb12bb45d083
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveMartechCampaignResponse.java:
+    id: 25cd335718ab
+    last_write_checksum: sha1:312e982017effa8e6c241f2270c32f2790be63b6
+    pristine_git_object: 16ae2d6c46a9e46599add950ddd89b05c541e43d
   src/main/java/to/unified/unified_java_sdk/models/operations/async/RemoveMartechListResponse.java:
     id: 3efd806b30c1
     last_write_checksum: sha1:00962ae9aa0287ce0d8deb8d3320706cde6ca236
@@ -24830,6 +25342,10 @@ trackedFiles:
     id: 2805d5958f09
     last_write_checksum: sha1:bb8b67157e79700309fc10e7f52e42f0f689e419
     pristine_git_object: 5e8a54d260a8268472549d609b60b1b6cb848b60
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateCalendarWebinarResponse.java:
+    id: cfe109c8d62b
+    last_write_checksum: sha1:1c160e5cb1ae47d05c4736b789a710d91e16b10d
+    pristine_git_object: 2f9964593864c2c65be5c57676ac0b326f19bc42
   src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateCommerceCollectionResponse.java:
     id: a9ebbdfec150
     last_write_checksum: sha1:d0b8c7b4685900ad70f1a35fe7e2d4c2671d5a94
@@ -24946,6 +25462,10 @@ trackedFiles:
     id: cdf2f9ece985
     last_write_checksum: sha1:99d2a9a6cf8c02fcc01c7a9598f6dabefbb89a5d
     pristine_git_object: c6e818075a68c7325f920fbc9919769bd4c8326c
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateMartechCampaignResponse.java:
+    id: eceed8921430
+    last_write_checksum: sha1:526935aff7fe91be5a87c393667879bf0b29bcae
+    pristine_git_object: 69023b17d1611ce09a998a7c7b52918d97fc1395
   src/main/java/to/unified/unified_java_sdk/models/operations/async/UpdateMartechListResponse.java:
     id: d912cac03629
     last_write_checksum: sha1:cd5861a2fa7427ac80e2183be4f4237d5d1b1476
@@ -25160,8 +25680,8 @@ trackedFiles:
     pristine_git_object: 7c3386ba468b0b7c26997eab2e52ecba8df76f61
   src/main/java/to/unified/unified_java_sdk/models/shared/AccountingExpense.java:
     id: 7be87976ba22
-    last_write_checksum: sha1:7ee8ccbea56df1a49c96bf1aec4c80ddb3df99f3
-    pristine_git_object: d47d3fda8ccbe485ccb578314d52c51cdbb41d9d
+    last_write_checksum: sha1:37e2854dc39b67ce8b9259f62b440a3f093b2dd4
+    pristine_git_object: f94ce450f87ed5c760a2e0a51596f36400002292
   src/main/java/to/unified/unified_java_sdk/models/shared/AccountingInvoice.java:
     id: 164586170a04
     last_write_checksum: sha1:31425910f06735e85f5b14415253dde6d257e7bf
@@ -25544,8 +26064,8 @@ trackedFiles:
     pristine_git_object: ed4234614cbd9eb01d035a9519f2a71dbfa7f673
   src/main/java/to/unified/unified_java_sdk/models/shared/CalendarAttendee.java:
     id: 91836ee83271
-    last_write_checksum: sha1:3ce15c146481bdc02199f5afd7f226ba90d125f4
-    pristine_git_object: c8cd206c6fec25a1f542524744edaa4433ce8391
+    last_write_checksum: sha1:2bddf01806406157d81d1fa8867b3e244b68ad07
+    pristine_git_object: b5fabd3ea36cc0404ad331276d6b0fe0c74823a3
   src/main/java/to/unified/unified_java_sdk/models/shared/CalendarAttendeeStatus.java:
     id: 3ebae5a97fc2
     last_write_checksum: sha1:6b72bf4f0ba304c013e66608848ec6a401ce5a4b
@@ -25594,6 +26114,26 @@ trackedFiles:
     id: cc60a4cb4054
     last_write_checksum: sha1:a163db4058050e42c0b819841203c73725f32e69
     pristine_git_object: 7f508d255a31c26fdc92ebef63eb491aab1e944e
+  src/main/java/to/unified/unified_java_sdk/models/shared/CalendarWebinar.java:
+    id: eceff554a958
+    last_write_checksum: sha1:2d79a9c2234a58bb4fe883dda704e12b7043278b
+    pristine_git_object: 6e30d516d2a77c27aeaf28241af2653454c05e4f
+  src/main/java/to/unified/unified_java_sdk/models/shared/CalendarWebinarPanelist.java:
+    id: 02f1b24fbd2c
+    last_write_checksum: sha1:d5270c39275a417887a901d6f3ca905ad406ca6a
+    pristine_git_object: 177960841ceec7c87c7e71160aaa6633bdbe892d
+  src/main/java/to/unified/unified_java_sdk/models/shared/CalendarWebinarPanelistStatus.java:
+    id: 6cc941b7504d
+    last_write_checksum: sha1:8dae7d426cc1c2b4f8782e30ba3094975b54bd7f
+    pristine_git_object: ad808d68fb8fcd519659a80a433b26c9a844eb3f
+  src/main/java/to/unified/unified_java_sdk/models/shared/CalendarWebinarRegistrant.java:
+    id: 2b68e466e0ff
+    last_write_checksum: sha1:cd5bc9123a936f15d941ec512d65c373f22ba474
+    pristine_git_object: b8d95424ecfdc807015eb4b5225a9098ca732be5
+  src/main/java/to/unified/unified_java_sdk/models/shared/CalendarWebinarStatus.java:
+    id: deb65dc2a1fe
+    last_write_checksum: sha1:be829134817ef36f9e9d2b5fd4d51fd60d7ebd8d
+    pristine_git_object: 6e67622fa99d553bea1cccc645287516a31316a2
   src/main/java/to/unified/unified_java_sdk/models/shared/CommerceCollection.java:
     id: bbce99a09e1b
     last_write_checksum: sha1:cd468cf7700980c5c331f7bdde885b5be5a96a19
@@ -26144,8 +26684,8 @@ trackedFiles:
     pristine_git_object: 7c25a09c04e8f4910d98dff0877262fb3b6ab1fa
   src/main/java/to/unified/unified_java_sdk/models/shared/IntegrationSupport.java:
     id: 85ade4f68b32
-    last_write_checksum: sha1:f6a9a1de3d5f1b293d480ed2b3011e8a30dc2e1e
-    pristine_git_object: 7a89d67a4b66a7021dfc85fbffcee1f3781eb5c4
+    last_write_checksum: sha1:f0929d3a1e043eb82092ba9d58603b53e6b45424
+    pristine_git_object: 90479bd6f7f6b7f06f9303b342dba5a9672923c5
   src/main/java/to/unified/unified_java_sdk/models/shared/IntervalUnit.java:
     id: 4a74e196734d
     last_write_checksum: sha1:71b99abac40ea305b8e3db4f8834d3fc330c3583
@@ -26362,6 +26902,10 @@ trackedFiles:
     id: eab9f70aab3c
     last_write_checksum: sha1:57fefaf365bf2ca58734803a2a58b3d3b211fdf0
     pristine_git_object: f595b0d0b6e03f2b81e50f83f1f5ea631ba1fcfc
+  src/main/java/to/unified/unified_java_sdk/models/shared/ListMemberId.java:
+    id: ad4d244394e2
+    last_write_checksum: sha1:42e20a69289cf1254e1c3a70822a7dfef589e0d5
+    pristine_git_object: 446fd99567b5049f0ee6e47c81e1441b211ff85c
   src/main/java/to/unified/unified_java_sdk/models/shared/ListOffset.java:
     id: 2fd9f518dc95
     last_write_checksum: sha1:b28b78a22790115803cb7576099d5d45e7b2dab1
@@ -26526,6 +27070,14 @@ trackedFiles:
     id: d75e758ba847
     last_write_checksum: sha1:260614ea3fb5cbc13c79fa525f52a7e6c27a83bc
     pristine_git_object: 42c10f0bd5d17e8ecf71c4ca0dd2620b8920dc15
+  src/main/java/to/unified/unified_java_sdk/models/shared/MarketingCampaign.java:
+    id: f700e4084b9e
+    last_write_checksum: sha1:8ea67e35ec1147afe8db53c7fffa6ea95e952a20
+    pristine_git_object: 54a2083961dcbf1e2f0773e2c6554dbc1fef2939
+  src/main/java/to/unified/unified_java_sdk/models/shared/MarketingCampaignStatus.java:
+    id: 067f4046a7dc
+    last_write_checksum: sha1:f456d18072d3be4db4bbab1e8405a738a5259170
+    pristine_git_object: 346400fd879098b274fb7d93b757aa3b46fb90f4
   src/main/java/to/unified/unified_java_sdk/models/shared/MarketingEmail.java:
     id: 9815d9a0f3bc
     last_write_checksum: sha1:6b9e931ee38279af87d8956ed812ec3b7092b2e7
@@ -26542,6 +27094,14 @@ trackedFiles:
     id: d39b14f1619b
     last_write_checksum: sha1:d518fb7abd125682967edbb417b073b5f0e6d977
     pristine_git_object: 585cb7385c9ac84be3079ee6aa259018c6d14441
+  src/main/java/to/unified/unified_java_sdk/models/shared/MarketingReport.java:
+    id: 511fbbb8f911
+    last_write_checksum: sha1:da8b33680a2ca399a831763d73cb7ce357c56a6a
+    pristine_git_object: ef8312e40e2b112b47df0cb05a7b04f2006d8005
+  src/main/java/to/unified/unified_java_sdk/models/shared/MarketingReportLink.java:
+    id: a2a716ac6a6c
+    last_write_checksum: sha1:d51d3f8ab026f37ef82da524fd7734b8434e5642
+    pristine_git_object: c9a798c4b291d38b3bd2e13702057a15efdccbb9
   src/main/java/to/unified/unified_java_sdk/models/shared/MessagingAttachment.java:
     id: d16dfd78b0bc
     last_write_checksum: sha1:0cac2b6484a8ad3de880bae9b8d377793b31fa16
@@ -26640,8 +27200,8 @@ trackedFiles:
     pristine_git_object: 797c963e18c7ea6040b13f43c4e016de7b0102d7
   src/main/java/to/unified/unified_java_sdk/models/shared/ObjectType.java:
     id: d20c4867606e
-    last_write_checksum: sha1:4d8faf188e0a019aaa05a5aebe0180e7a93edffb
-    pristine_git_object: 4e7fc22a6bfc690b2c1748f71cfd49a266cad542
+    last_write_checksum: sha1:3fcc21afa5154a8e76793934ffaa27bba5d38390
+    pristine_git_object: 7328c6fe8ada9beee173f30337bbed1deb3449dd
   src/main/java/to/unified/unified_java_sdk/models/shared/One.java:
     id: a92034029840
     last_write_checksum: sha1:fa5c896fbd1353e4619d67bace69d0bcf141eec4
@@ -26968,8 +27528,8 @@ trackedFiles:
     pristine_git_object: 4bcd2de8fba7f231317e4d43e060c30e616b8eab
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyCalendarEventOrganizer.java:
     id: 9ad3705647cf
-    last_write_checksum: sha1:2ff9f6802ab9548596fbc1c31c9b3eb697af3779
-    pristine_git_object: 05f2c349b395ab247acccce8bdd4615f691b225e
+    last_write_checksum: sha1:969bf3ff15a6550cca93df0f2a65aca8b8bf0724
+    pristine_git_object: 4a9c86d3f5728b38bec0b8f521b7eede4554dfaf
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyCalendarEventOrganizerStatus.java:
     id: 25e6d76ec5c8
     last_write_checksum: sha1:339b84ad87dfbf203028f50f6b66ae950fdc801a
@@ -26980,12 +27540,20 @@ trackedFiles:
     pristine_git_object: c86d5f7d08802c7df3ac4773bc6859183b616ca3
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyCalendarRecordingTranscriptAttendee.java:
     id: 486dd3ce38b5
-    last_write_checksum: sha1:68695bfeb684f08cf48ba49634fe67d0fe4077ec
-    pristine_git_object: 59946f549c27861004db3e868be538269b0db048
+    last_write_checksum: sha1:b1db855b1f9b01b029e318c761be956c02424eb4
+    pristine_git_object: c8e7a4ddbc72bd25cd83519c8de2b531ddb37965
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyCalendarRecordingTranscriptAttendeeStatus.java:
     id: f3c5b13e1c2e
     last_write_checksum: sha1:6bbecd5c3f946089c18d650df67909833f163dc3
     pristine_git_object: 7ad4b33327e883c6447ec219abdd0fb9df86ae42
+  src/main/java/to/unified/unified_java_sdk/models/shared/PropertyCalendarWebinarOrganizer.java:
+    id: 2dd7651c2d61
+    last_write_checksum: sha1:eda96b1daa7b5c1f6a45c15e8d0770da4ac4ec7b
+    pristine_git_object: 0cc871a4a014269179297e1cb6832c80ffad2a17
+  src/main/java/to/unified/unified_java_sdk/models/shared/PropertyCalendarWebinarOrganizerStatus.java:
+    id: 1612bb5137a2
+    last_write_checksum: sha1:79dc7fe7a9a21ee3c0b1cd8bd54702bcd33a2d6f
+    pristine_git_object: 187e7f13c7989c178b67aacf9ce563564ac0bedb
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyCommerceLocationAddress.java:
     id: caacc9cbe7bb
     last_write_checksum: sha1:9e5cfc5a3e4d9efe6ba85c0306e15d04ca0ddaff
@@ -27000,8 +27568,8 @@ trackedFiles:
     pristine_git_object: feddd26e7280839e6d3969a74e56015b99dda734
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyConnectionPermissions.java:
     id: 65db75e56442
-    last_write_checksum: sha1:fd985e13516afd8b823f08f220b5effacf644820
-    pristine_git_object: 77915886c030cac769b99b20aadd22c62b2a4cec
+    last_write_checksum: sha1:e90d1ac5e8a0f8af3b23752f2ad334d4ab447c6c
+    pristine_git_object: 4783c3e282840602d574174ec828aed1708aebfc
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyCrmCompanyAddress.java:
     id: 3141278ac2cc
     last_write_checksum: sha1:98f345b389d544322e3aefbae3bd27456c15a67c
@@ -27250,6 +27818,10 @@ trackedFiles:
     id: 67e5f3adb96a
     last_write_checksum: sha1:1375f24a74510f68ffb09fc89c65dc859207b3e7
     pristine_git_object: 1f9c94bc8f8e6f94c1410d404cbfafae1e4fff8c
+  src/main/java/to/unified/unified_java_sdk/models/shared/RegistrationStatus.java:
+    id: 782629f004f7
+    last_write_checksum: sha1:7a2069ac31ae19d2f5ea950bc59d362a31ce7163
+    pristine_git_object: b8d52b66772e25ad8648703783fc0625fd66c7b4
   src/main/java/to/unified/unified_java_sdk/models/shared/RepoBranch.java:
     id: 62ed4aa1e394
     last_write_checksum: sha1:b8c861e15a915277dd5882fa273eb1b2dd140f2a
@@ -27798,6 +28370,10 @@ trackedFiles:
     id: 79be6bd45379
     last_write_checksum: sha1:4e0488a495ffb28e1027ab242973903359eacc85
     pristine_git_object: 7a74b1f571f89ecbf3a914897e0bb7ce3814c2d7
+  src/main/java/to/unified/unified_java_sdk/models/shared/VirtualWebhookMemberId.java:
+    id: d708a244976b
+    last_write_checksum: sha1:2a0122dee800ca1ff42f7bbf1d3bcf6515633e7a
+    pristine_git_object: 8d9857ca636453c4fc8969a8fa2e97c6809cc4b3
   src/main/java/to/unified/unified_java_sdk/models/shared/VirtualWebhookOrderId.java:
     id: afd4104bc0c6
     last_write_checksum: sha1:b8d958eb5fddd2eea601c2b4bb023779074b3d60
@@ -28010,6 +28586,10 @@ trackedFiles:
     id: a056b40f7d90
     last_write_checksum: sha1:0ecec2104ac1ca5d2333b812271401a6c37f9802
     pristine_git_object: 4052e2eb3153c99393227e138c9ebfcb45e4c4fe
+  src/main/java/to/unified/unified_java_sdk/operations/CreateCalendarWebinar.java:
+    id: b8d23c5feaf7
+    last_write_checksum: sha1:1d5fcafee404f38cca0393ce9dd3bad8c7bdfb17
+    pristine_git_object: 51a07f3398eb68d7825cd93d7a55315080610081
   src/main/java/to/unified/unified_java_sdk/operations/CreateCommerceCollection.java:
     id: 8b4723c28eab
     last_write_checksum: sha1:70374cceb149cb851334b2f8a8d0e4fb80861fd5
@@ -28134,6 +28714,10 @@ trackedFiles:
     id: e2fb686d40df
     last_write_checksum: sha1:ea085dad83cacdf84010593d450caea1766c3130
     pristine_git_object: 99b11fd447b3dae35c43d6c2dc72681292b4d34b
+  src/main/java/to/unified/unified_java_sdk/operations/CreateMartechCampaign.java:
+    id: dbd87e32d12d
+    last_write_checksum: sha1:0e2254bc252915acbfef71ed857a638dea415f4b
+    pristine_git_object: e7c5889c8b8b48bc0f26b05d54c24a7adbf7c17d
   src/main/java/to/unified/unified_java_sdk/operations/CreateMartechList.java:
     id: dcc0b239a7f0
     last_write_checksum: sha1:97b8079a4e475a4212f2c5c815d54ae88ba23392
@@ -28418,6 +29002,10 @@ trackedFiles:
     id: c801a9a0f3f8
     last_write_checksum: sha1:e5d266394c8e0618cf93c4731c69ee5671006e5f
     pristine_git_object: d642ca24375d71ae710a3462088748b28fb0de06
+  src/main/java/to/unified/unified_java_sdk/operations/GetCalendarWebinar.java:
+    id: 4c1dab27e4f1
+    last_write_checksum: sha1:7dc1fd7752dae802ff65878bc305c3a25911506e
+    pristine_git_object: 343315f89567ba19d61f3eac7d7ac37ec172ca99
   src/main/java/to/unified/unified_java_sdk/operations/GetCommerceCollection.java:
     id: aeeec2584f84
     last_write_checksum: sha1:4e0d80d97a7af7115ceec46bd1f884a3e20a580f
@@ -28550,6 +29138,10 @@ trackedFiles:
     id: a33b8e17569e
     last_write_checksum: sha1:444e54935130f5923c6a3c15daa42833e1199d22
     pristine_git_object: 1a8e849c1b7b4d22571c416e89912b9b2841dace
+  src/main/java/to/unified/unified_java_sdk/operations/GetMartechCampaign.java:
+    id: f014cda2731b
+    last_write_checksum: sha1:00fb7c3ddf17ce213a979600b72375b397e1c810
+    pristine_git_object: 60b6d389124f2d4e161c87de7a2898b9cf4c48c0
   src/main/java/to/unified/unified_java_sdk/operations/GetMartechList.java:
     id: 39ee53fd1afa
     last_write_checksum: sha1:fcd64a25b9cc15f47345c32443d95efbaf5c4b84
@@ -28878,6 +29470,10 @@ trackedFiles:
     id: a6410830fb74
     last_write_checksum: sha1:c910550205e4bb54002b2fbcdb4a95f1b428e6fa
     pristine_git_object: 1ce38b5860083402f32d41a3b4395dbdfbca84ed
+  src/main/java/to/unified/unified_java_sdk/operations/ListCalendarWebinars.java:
+    id: 6aaaccdbff1b
+    last_write_checksum: sha1:c78ea32c1e60e5623d88e3103c139ff0d832bd3d
+    pristine_git_object: d6de31b1b5b12776f3c8357f926805b899afae86
   src/main/java/to/unified/unified_java_sdk/operations/ListCommerceCollections.java:
     id: 9b2ef5b33fd9
     last_write_checksum: sha1:383c99d45d4f4e6ce6bfc8422210e5a32e7508e2
@@ -29018,6 +29614,10 @@ trackedFiles:
     id: bb3e75cbe08f
     last_write_checksum: sha1:5e7d8da298680b6356106b555b37b9fa91618e99
     pristine_git_object: 645ec391a6acc349de84f5355caa01eb59ee3618
+  src/main/java/to/unified/unified_java_sdk/operations/ListMartechCampaigns.java:
+    id: 1b88011c217f
+    last_write_checksum: sha1:74792ab206a2c775ae72ddad0040c0ea7fec0ccb
+    pristine_git_object: 240c89cce58168343857f169b9b9537b2480e628
   src/main/java/to/unified/unified_java_sdk/operations/ListMartechLists.java:
     id: f05fedc18719
     last_write_checksum: sha1:2a20dedcacd50d751264c2ff09a990ec8c5c155d
@@ -29026,6 +29626,10 @@ trackedFiles:
     id: 7e0bc303cdb6
     last_write_checksum: sha1:d4be96ee10d5e2c8acc3dc695a120aeaf84d4f02
     pristine_git_object: 58ecca1ebf099d54460350fc2fb7f0d1f777126e
+  src/main/java/to/unified/unified_java_sdk/operations/ListMartechReports.java:
+    id: df4008aaf526
+    last_write_checksum: sha1:37d96bb33754f4d202085c75b2bd86e19fb4743a
+    pristine_git_object: 417882a5c63781f852328d7c124a391b3ea46801
   src/main/java/to/unified/unified_java_sdk/operations/ListMessagingChannels.java:
     id: fb3c2bae30e7
     last_write_checksum: sha1:d41ce15284579edf694cc37af850d1a5c312218c
@@ -29314,6 +29918,10 @@ trackedFiles:
     id: 3f667d1db45b
     last_write_checksum: sha1:6d40d38938a9f7b5525e75af7618cbb516424899
     pristine_git_object: da3c819eed97bbc1dcb435fb2daa79eaf1dbb8d7
+  src/main/java/to/unified/unified_java_sdk/operations/PatchCalendarWebinar.java:
+    id: 492521174f6e
+    last_write_checksum: sha1:a7ae1debfd42cecc61673f7045aa605d09d6010d
+    pristine_git_object: 20ab3e36a882010893c115c6c355ce82c50a662b
   src/main/java/to/unified/unified_java_sdk/operations/PatchCommerceCollection.java:
     id: e75dee5806b2
     last_write_checksum: sha1:a23c1e4337d8d041374247a4740c531cd49bb29a
@@ -29430,6 +30038,10 @@ trackedFiles:
     id: 4177cbee9da3
     last_write_checksum: sha1:6afa697b277207868bae538e15bb4c6cb590b4cc
     pristine_git_object: da2ad17bfc0a0e830e2c4bead3f692bdec1633d3
+  src/main/java/to/unified/unified_java_sdk/operations/PatchMartechCampaign.java:
+    id: 53eea71c6de2
+    last_write_checksum: sha1:b4b16a775bc4bb090ca1cd902c7664e1249c952b
+    pristine_git_object: f4b01fa25495f274fb2dc25b5b5ad241b64d1a79
   src/main/java/to/unified/unified_java_sdk/operations/PatchMartechList.java:
     id: e7ed8c8712e6
     last_write_checksum: sha1:21c270d5e71473a402d1e0c282d2ab225605f7f5
@@ -29686,6 +30298,10 @@ trackedFiles:
     id: fd72eb156c68
     last_write_checksum: sha1:c175110e38658e3c8ae8ea29044a6ea80359a474
     pristine_git_object: c2f5cfde1a5c296d94b792af665d87342e5916ac
+  src/main/java/to/unified/unified_java_sdk/operations/RemoveCalendarWebinar.java:
+    id: 2fc75dcc1d92
+    last_write_checksum: sha1:0a3a652cd946d59b28ac4752635eea933a3080c6
+    pristine_git_object: 64093df363f01fc7dd343fcd28948c8b33ca31c4
   src/main/java/to/unified/unified_java_sdk/operations/RemoveCommerceCollection.java:
     id: 621f96df833d
     last_write_checksum: sha1:239613b0557f20ea02551860b7f90dff89b1876a
@@ -29802,6 +30418,10 @@ trackedFiles:
     id: 2aa201c3916a
     last_write_checksum: sha1:41c55a5e4be35a54fad994ab90129080f7b4deed
     pristine_git_object: 26e7712c5041b9a4549e537308f6d9a7ece30526
+  src/main/java/to/unified/unified_java_sdk/operations/RemoveMartechCampaign.java:
+    id: 4929d391f5f3
+    last_write_checksum: sha1:80d5cfd34fc1421ebb72710183f6205f4a4d251c
+    pristine_git_object: 26dc2215b13ff387df84b7b53f5b8d428fa4cbbd
   src/main/java/to/unified/unified_java_sdk/operations/RemoveMartechList.java:
     id: 66bbe32c5c14
     last_write_checksum: sha1:8fd80cce82abafa3ae8a9db6fd4473e55db1fc99
@@ -30050,6 +30670,10 @@ trackedFiles:
     id: 8c4f4d45c09f
     last_write_checksum: sha1:83cd93982ab2ab48b0858deba506703c90956412
     pristine_git_object: 266f0699c3fb17df464d519c7bc2266ff23f8c69
+  src/main/java/to/unified/unified_java_sdk/operations/UpdateCalendarWebinar.java:
+    id: dc90012c838f
+    last_write_checksum: sha1:a82979645f3f2bebc75520e125ed02d101dc5da0
+    pristine_git_object: 2192823cf073c0d6ca83144e118768b11a44438d
   src/main/java/to/unified/unified_java_sdk/operations/UpdateCommerceCollection.java:
     id: bff0af254926
     last_write_checksum: sha1:6ef11a1e85f55fff2cfd7d7cb267b3171de76971
@@ -30166,6 +30790,10 @@ trackedFiles:
     id: 0f5667a90883
     last_write_checksum: sha1:f7f32bf68525894dbb9360a09f1d26210e5bae0a
     pristine_git_object: 8dd70e7e6b6aae4c5158b022c6f80c630356fa3d
+  src/main/java/to/unified/unified_java_sdk/operations/UpdateMartechCampaign.java:
+    id: 38292987155b
+    last_write_checksum: sha1:a89cf8e75cb095522b131a48d4e4355aafcc3908
+    pristine_git_object: 9abb28b7094f1f778c2f01f644f3f81b2973949b
   src/main/java/to/unified/unified_java_sdk/operations/UpdateMartechList.java:
     id: da938d122e99
     last_write_checksum: sha1:a5c4a3c8870cfe9973a34810fd2cb4431c2cb042
@@ -30356,12 +30984,12 @@ trackedFiles:
     pristine_git_object: d9df17d33ea1c15c4ca76044c4b7d1aad28472eb
   src/main/java/to/unified/unified_java_sdk/utils/EventStream.java:
     id: 787de9e25ad7
-    last_write_checksum: sha1:b5d0a1d29e235b0968d5adf2b78317387d464e22
-    pristine_git_object: c2f6ec902760fe1465233fd3ff2c5881f8637ca6
+    last_write_checksum: sha1:801b8bf975441344c7f579bcc49f8f1e4eae5ee1
+    pristine_git_object: da5a71480d1e7d3e076940fd2dd9606a2e8f371e
   src/main/java/to/unified/unified_java_sdk/utils/EventStreamMessage.java:
     id: 0d0d90829d6a
-    last_write_checksum: sha1:35b94d281cdb6ec54694265b828bd2cb4abebaf2
-    pristine_git_object: 46e7e6a2a45bacf8603d5d0a1793802932726eaf
+    last_write_checksum: sha1:13e4b206e93907fd3861247b209a724d654132e2
+    pristine_git_object: ad395fb7941354dbcdc18648a135d467db787913
   src/main/java/to/unified/unified_java_sdk/utils/Exceptions.java:
     id: e580ef392fdb
     last_write_checksum: sha1:4c9639ea78c303793c86ee7a0f0ec9085690c63a
@@ -30508,8 +31136,8 @@ trackedFiles:
     pristine_git_object: aeb4b08e8a91d14644ec575ee81d9b9af5873826
   src/main/java/to/unified/unified_java_sdk/utils/Security.java:
     id: 08f2c8641ef9
-    last_write_checksum: sha1:09509911dbdb857c5c75940c8bec0d3ce16a5a12
-    pristine_git_object: 37c6ba639c78c8d1df90de095b74565a5e84f0d4
+    last_write_checksum: sha1:6f3ace76a53678f0c2ae2fd584103fa66eb64633
+    pristine_git_object: 51806462b110b475de5320d81f74716a35c4fffb
   src/main/java/to/unified/unified_java_sdk/utils/SecurityMetadata.java:
     id: aad6061cd21e
     last_write_checksum: sha1:32c03fbbbdc2498f5932b10311703415c9ecf35e
@@ -30524,8 +31152,8 @@ trackedFiles:
     pristine_git_object: 640433d01c048277caad81c151583cda40dbfa7c
   src/main/java/to/unified/unified_java_sdk/utils/SpeakeasyHTTPClient.java:
     id: 6eb3a76566ad
-    last_write_checksum: sha1:0a62f3970be78ac52056ef5ec8a5c5f63a8e87f3
-    pristine_git_object: d6c2f733208bd367324cb1902f3eb99743852f6a
+    last_write_checksum: sha1:156f1aa84586eb43985f1ce84c6175e22e6ab9e7
+    pristine_git_object: f2d5a0eee464cc94084c4a31e919120abaeed1e2
   src/main/java/to/unified/unified_java_sdk/utils/SpeakeasyLogger.java:
     id: a77dc8b3d0dd
     last_write_checksum: sha1:b8d17850c8cc0adb2a27a75f996939a3d486899b
@@ -30536,8 +31164,8 @@ trackedFiles:
     pristine_git_object: 566989cf27d98f80375d8dbeb95c164e4c00778f
   src/main/java/to/unified/unified_java_sdk/utils/StreamingParser.java:
     id: 40efa93bd97e
-    last_write_checksum: sha1:8ece3be7e7548df5d24def42c55020939db415b8
-    pristine_git_object: 0718e94063d854023403478d233590f6ed216f12
+    last_write_checksum: sha1:9833e34e391ffc511079d937ea22cb96d5c985e0
+    pristine_git_object: de483dfec04235a925f3441ed86eb837cd3f7336
   src/main/java/to/unified/unified_java_sdk/utils/TypedObject.java:
     id: 4060d090a8cf
     last_write_checksum: sha1:7347a4a425cdac583fe1299ecdb839bd1deae044
@@ -30556,12 +31184,12 @@ trackedFiles:
     pristine_git_object: 724c8b7e91a071a71dd6183d3fbdd8d904e41aef
   src/main/java/to/unified/unified_java_sdk/utils/Utils.java:
     id: 4ccba493acae
-    last_write_checksum: sha1:45bfc411e34078183b7aac4af0093942fd839576
-    pristine_git_object: 29c94e66b6fad37dfb26e5aa5dd5cdc32e12cabb
+    last_write_checksum: sha1:0e920ea33455935aca739d87b0d79eed3df7e734
+    pristine_git_object: 7d6c54abeef78756f1ae48c264a0c0fa01a20b8d
   src/main/java/to/unified/unified_java_sdk/utils/reactive/EventStream.java:
     id: 9872cb5520bd
-    last_write_checksum: sha1:01a85c772d2bad1336a80616f42ae377c1886184
-    pristine_git_object: 3a3c83b51bf277eeb6c746cd770f8ddfb7097c2a
+    last_write_checksum: sha1:5cc006fbd0e62d749a81788021fd560f9deca643
+    pristine_git_object: 63242c56cad170b5ff80f59e771467e6025ad1fb
   src/main/java/to/unified/unified_java_sdk/utils/reactive/ReactiveUtils.java:
     id: 2e1dca178000
     last_write_checksum: sha1:b69ffc7e8dd9859fc1083910134cae9b799151a0
@@ -36064,9 +36692,127 @@ examples:
       responses:
         "200":
           application/json: {}
+  listMartechReports:
+    speakeasy-default-list-martech-reports:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  createMartechCampaign:
+    speakeasy-default-create-martech-campaign:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getMartechCampaign:
+    speakeasy-default-get-martech-campaign:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listMartechCampaigns:
+    speakeasy-default-list-martech-campaigns:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchMartechCampaign:
+    speakeasy-default-patch-martech-campaign:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeMartechCampaign:
+    speakeasy-default-remove-martech-campaign:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateMartechCampaign:
+    speakeasy-default-update-martech-campaign:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  createCalendarWebinar:
+    speakeasy-default-create-calendar-webinar:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  getCalendarWebinar:
+    speakeasy-default-get-calendar-webinar:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listCalendarWebinars:
+    speakeasy-default-list-calendar-webinars:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  patchCalendarWebinar:
+    speakeasy-default-patch-calendar-webinar:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+  removeCalendarWebinar:
+    speakeasy-default-remove-calendar-webinar:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+  updateCalendarWebinar:
+    speakeasy-default-update-calendar-webinar:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Java SDK Changes:\n* `unified-to.ads.createAdsCreative()`: **Added**\n* `unified-to.ads.createAdsInsertionorder()`: **Added**\n* `unified-to.ads.getAdsCreative()`: **Added**\n* `unified-to.ads.getAdsInsertionorder()`: **Added**\n* `unified-to.ads.listAdsCreatives()`: **Added**\n* `unified-to.ads.listAdsInsertionorders()`: **Added**\n* `unified-to.ads.patchAdsCreative()`: **Added**\n* `unified-to.ads.patchAdsInsertionorder()`: **Added**\n* `unified-to.ads.removeAdsCreative()`: **Added**\n* `unified-to.ads.removeAdsInsertionorder()`: **Added**\n* `unified-to.ads.updateAdsCreative()`: **Added**\n* `unified-to.ads.updateAdsInsertionorder()`: **Added**\n* `unified-to.creative.createAdsCreative()`: **Added**\n* `unified-to.creative.getAdsCreative()`: **Added**\n* `unified-to.creative.listAdsCreatives()`: **Added**\n* `unified-to.creative.patchAdsCreative()`: **Added**\n* `unified-to.creative.removeAdsCreative()`: **Added**\n* `unified-to.creative.updateAdsCreative()`: **Added**\n* `unified-to.insertionorder.createAdsInsertionorder()`: **Added**\n* `unified-to.insertionorder.getAdsInsertionorder()`: **Added**\n* `unified-to.insertionorder.listAdsInsertionorders()`: **Added**\n* `unified-to.insertionorder.patchAdsInsertionorder()`: **Added**\n* `unified-to.insertionorder.removeAdsInsertionorder()`: **Added**\n* `unified-to.insertionorder.updateAdsInsertionorder()`: **Added**\n* `unified-to.shipping.patchShippingLabel()`: **Added**\n* `unified-to.shipping.updateShippingLabel()`: **Added**\n* `unified-to.label.patchShippingLabel()`: **Added**\n* `unified-to.label.updateShippingLabel()`: **Added**\n* `unified-to.shipping.createShippingTracking()`: **Removed** **Breaking** ⚠️\n* `unified-to.shipping.getShippingRate()`: **Removed** **Breaking** ⚠️\n* `unified-to.shipping.listShippingTrackings()`: **Removed** **Breaking** ⚠️\n* `unified-to.rate.getShippingRate()`: **Removed** **Breaking** ⚠️\n* `unified-to.tracking.createShippingTracking()`: **Removed** **Breaking** ⚠️\n* `unified-to.tracking.listShippingTrackings()`: **Removed** **Breaking** ⚠️\n* `unified-to.accounting.createAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response.contactId` **Added**\n* `unified-to.accounting.createAccountingJournal()`: \n  *  `request.accountingJournal.lineitems[]` **Changed**\n  *  `response.lineitems[]` **Changed**\n* `unified-to.accounting.getAccountingExpense()`: \n  *  `request.fields` **Changed**\n  *  `response.contactId` **Added**\n* `unified-to.accounting.getAccountingJournal()`:  `response.lineitems[]` **Changed**\n* `unified-to.accounting.listAccountingExpenses()`: \n  *  `request.fields` **Changed**\n  *  `response.[].contactId` **Added**\n* `unified-to.accounting.listAccountingJournals()`:  `response.[].lineitems[]` **Changed**\n* `unified-to.accounting.patchAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response.contactId` **Added**\n* `unified-to.accounting.patchAccountingJournal()`: \n  *  `request.accountingJournal.lineitems[]` **Changed**\n  *  `response.lineitems[]` **Changed**\n* `unified-to.accounting.updateAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response.contactId` **Added**\n* `unified-to.accounting.updateAccountingJournal()`: \n  *  `request.accountingJournal.lineitems[]` **Changed**\n  *  `response.lineitems[]` **Changed**\n* `unified-to.expense.createAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response.contactId` **Added**\n* `unified-to.expense.getAccountingExpense()`: \n  *  `request.fields` **Changed**\n  *  `response.contactId` **Added**\n* `unified-to.expense.listAccountingExpenses()`: \n  *  `request.fields` **Changed**\n  *  `response.[].contactId` **Added**\n* `unified-to.expense.patchAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response.contactId` **Added**\n* `unified-to.expense.updateAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response.contactId` **Added**\n* `unified-to.journal.createAccountingJournal()`: \n  *  `request.accountingJournal.lineitems[]` **Changed**\n  *  `response.lineitems[]` **Changed**\n* `unified-to.journal.getAccountingJournal()`:  `response.lineitems[]` **Changed**\n* `unified-to.journal.listAccountingJournals()`:  `response.[].lineitems[]` **Changed**\n* `unified-to.journal.patchAccountingJournal()`: \n  *  `request.accountingJournal.lineitems[]` **Changed**\n  *  `response.lineitems[]` **Changed**\n* `unified-to.journal.updateAccountingJournal()`: \n  *  `request.accountingJournal.lineitems[]` **Changed**\n  *  `response.lineitems[]` **Changed**\n* `unified-to.report.listAdsReports()`:  `response.[].metrics[]` **Changed**\n* `unified-to.ads.createAdsAd()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.ads.createAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.ads.createAdsGroup()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.ads.getAdsAd()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.ads.getAdsCampaign()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.ads.getAdsGroup()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.ads.listAdsAds()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.ads.listAdsCampaigns()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.ads.listAdsGroups()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.ads.listAdsReports()`:  `response.[].metrics[]` **Changed**\n* `unified-to.ads.patchAdsAd()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.ads.patchAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.ads.patchAdsGroup()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.ads.updateAdsAd()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.ads.updateAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.ads.updateAdsGroup()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.ad.createAdsAd()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.ad.getAdsAd()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.ad.listAdsAds()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.ad.patchAdsAd()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.ad.updateAdsAd()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.campaign.createAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.campaign.getAdsCampaign()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.campaign.listAdsCampaigns()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.campaign.patchAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.campaign.updateAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.group.createAdsGroup()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.group.getAdsGroup()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.group.listAdsGroups()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.group.patchAdsGroup()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.group.updateAdsGroup()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.unified.createUnifiedConnection()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.unified.createUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n* `unified-to.unified.getUnifiedApicall()`:  `response` **Changed**\n* `unified-to.unified.getUnifiedConnection()`:  `response` **Changed**\n* `unified-to.unified.getUnifiedWebhook()`:  `response.objectType` **Changed**\n* `unified-to.unified.listUnifiedApicalls()`:  `response.[]` **Changed**\n* `unified-to.unified.listUnifiedConnections()`:  `response.[]` **Changed**\n* `unified-to.unified.listUnifiedWebhooks()`:  `response.[].objectType` **Changed**\n* `unified-to.unified.patchUnifiedConnection()`: \n  *  `request.connection` **Changed**\n  *  `response` **Changed**\n* `unified-to.unified.patchUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n* `unified-to.unified.updateUnifiedConnection()`: \n  *  `request.connection` **Changed**\n  *  `response` **Changed**\n* `unified-to.unified.updateUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n* `unified-to.apicall.getUnifiedApicall()`:  `response` **Changed**\n* `unified-to.apicall.listUnifiedApicalls()`:  `response.[]` **Changed**\n* `unified-to.connection.createUnifiedConnection()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.connection.getUnifiedConnection()`:  `response` **Changed**\n* `unified-to.connection.listUnifiedConnections()`:  `response.[]` **Changed**\n* `unified-to.connection.patchUnifiedConnection()`: \n  *  `request.connection` **Changed**\n  *  `response` **Changed**\n* `unified-to.connection.updateUnifiedConnection()`: \n  *  `request.connection` **Changed**\n  *  `response` **Changed**\n* `unified-to.webhook.createUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n* `unified-to.webhook.getUnifiedWebhook()`:  `response.objectType` **Changed**\n* `unified-to.webhook.listUnifiedWebhooks()`:  `response.[].objectType` **Changed**\n* `unified-to.webhook.patchUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n* `unified-to.webhook.updateUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n* `unified-to.verification.getVerificationPackage()`: \n  *  `request.fields` **Changed**\n  *  `response.validRegions` **Added**\n* `unified-to.verification.listVerificationPackages()`: \n  *  `request.fields` **Changed**\n  *  `response.[].validRegions` **Added**\n* `unified-to.package.getVerificationPackage()`: \n  *  `request.fields` **Changed**\n  *  `response.validRegions` **Added**\n* `unified-to.package.listVerificationPackages()`: \n  *  `request.fields` **Changed**\n  *  `response.[].validRegions` **Added**\n"
+releaseNotes: "## Java SDK Changes:\n* `unified-to.report.listMartechReports()`: **Added**\n* `unified-to.campaign.createMartechCampaign()`: **Added**\n* `unified-to.campaign.getMartechCampaign()`: **Added**\n* `unified-to.campaign.listMartechCampaigns()`: **Added**\n* `unified-to.campaign.patchMartechCampaign()`: **Added**\n* `unified-to.campaign.removeMartechCampaign()`: **Added**\n* `unified-to.campaign.updateMartechCampaign()`: **Added**\n* `unified-to.calendar.createCalendarWebinar()`: **Added**\n* `unified-to.calendar.getCalendarWebinar()`: **Added**\n* `unified-to.calendar.listCalendarWebinars()`: **Added**\n* `unified-to.calendar.patchCalendarWebinar()`: **Added**\n* `unified-to.calendar.removeCalendarWebinar()`: **Added**\n* `unified-to.calendar.updateCalendarWebinar()`: **Added**\n* `unified-to.webinar.createCalendarWebinar()`: **Added**\n* `unified-to.webinar.getCalendarWebinar()`: **Added**\n* `unified-to.webinar.listCalendarWebinars()`: **Added**\n* `unified-to.webinar.patchCalendarWebinar()`: **Added**\n* `unified-to.webinar.removeCalendarWebinar()`: **Added**\n* `unified-to.webinar.updateCalendarWebinar()`: **Added**\n* `unified-to.martech.createMartechCampaign()`: **Added**\n* `unified-to.martech.getMartechCampaign()`: **Added**\n* `unified-to.martech.listMartechCampaigns()`: **Added**\n* `unified-to.martech.listMartechReports()`: **Added**\n* `unified-to.martech.patchMartechCampaign()`: **Added**\n* `unified-to.martech.removeMartechCampaign()`: **Added**\n* `unified-to.martech.updateMartechCampaign()`: **Added**\n* `unified-to.accounting.createAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.getAccountingExpense()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.listAccountingExpenses()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.accounting.patchAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.updateAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.expense.createAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.expense.getAccountingExpense()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.expense.listAccountingExpenses()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.expense.patchAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.expense.updateAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.calendar.createCalendarEvent()`: \n  *  `request.calendarEvent` **Changed**\n  *  `response` **Changed**\n* `unified-to.calendar.getCalendarEvent()`:  `response` **Changed**\n* `unified-to.calendar.getCalendarRecording()`:  `response.media[]` **Changed**\n* `unified-to.calendar.listCalendarEvents()`:  `response.[]` **Changed**\n* `unified-to.calendar.listCalendarRecordings()`:  `response.[].media[]` **Changed**\n* `unified-to.calendar.patchCalendarEvent()`: \n  *  `request.calendarEvent` **Changed**\n  *  `response` **Changed**\n* `unified-to.calendar.updateCalendarEvent()`: \n  *  `request.calendarEvent` **Changed**\n  *  `response` **Changed**\n* `unified-to.event.createCalendarEvent()`: \n  *  `request.calendarEvent` **Changed**\n  *  `response` **Changed**\n* `unified-to.event.getCalendarEvent()`:  `response` **Changed**\n* `unified-to.event.listCalendarEvents()`:  `response.[]` **Changed**\n* `unified-to.event.patchCalendarEvent()`: \n  *  `request.calendarEvent` **Changed**\n  *  `response` **Changed**\n* `unified-to.event.updateCalendarEvent()`: \n  *  `request.calendarEvent` **Changed**\n  *  `response` **Changed**\n* `unified-to.recording.getCalendarRecording()`:  `response.media[]` **Changed**\n* `unified-to.recording.listCalendarRecordings()`:  `response.[].media[]` **Changed**\n* `unified-to.unified.createUnifiedConnection()`: \n  *  `request.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified-to.unified.createUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n* `unified-to.unified.getUnifiedConnection()`:  `response.permissions[]` **Changed**\n* `unified-to.unified.getUnifiedWebhook()`:  `response.objectType` **Changed**\n* `unified-to.unified.listUnifiedConnections()`:  `response.[].permissions[]` **Changed**\n* `unified-to.unified.listUnifiedIntegrationWorkspaces()`:  `response.[].support.Map<IntegrationSupport>` **Changed**\n* `unified-to.unified.listUnifiedIntegrations()`:  `response.[].support.Map<IntegrationSupport>` **Changed**\n* `unified-to.unified.listUnifiedWebhooks()`:  `response.[].objectType` **Changed**\n* `unified-to.unified.patchUnifiedConnection()`: \n  *  `request.connection.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified-to.unified.patchUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n* `unified-to.unified.updateUnifiedConnection()`: \n  *  `request.connection.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified-to.unified.updateUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n* `unified-to.connection.createUnifiedConnection()`: \n  *  `request.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified-to.connection.getUnifiedConnection()`:  `response.permissions[]` **Changed**\n* `unified-to.connection.listUnifiedConnections()`:  `response.[].permissions[]` **Changed**\n* `unified-to.connection.patchUnifiedConnection()`: \n  *  `request.connection.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified-to.connection.updateUnifiedConnection()`: \n  *  `request.connection.permissions[]` **Changed**\n  *  `response.permissions[]` **Changed**\n* `unified-to.integration.listUnifiedIntegrationWorkspaces()`:  `response.[].support.Map<IntegrationSupport>` **Changed**\n* `unified-to.integration.listUnifiedIntegrations()`:  `response.[].support.Map<IntegrationSupport>` **Changed**\n* `unified-to.webhook.createUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n* `unified-to.webhook.getUnifiedWebhook()`:  `response.objectType` **Changed**\n* `unified-to.webhook.listUnifiedWebhooks()`:  `response.[].objectType` **Changed**\n* `unified-to.webhook.patchUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n* `unified-to.webhook.updateUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md

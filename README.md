@@ -38,7 +38,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.47.6'
+implementation 'to.unified:unified-java-sdk:0.47.7'
 ```
 
 Maven:
@@ -46,7 +46,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.47.6</version>
+    <version>0.47.7</version>
 </dependency>
 ```
 
@@ -434,24 +434,30 @@ public class Application {
 * [createCalendarCalendar](docs/sdks/calendar/README.md#createcalendarcalendar) - Create a calendar
 * [createCalendarEvent](docs/sdks/calendar/README.md#createcalendarevent) - Create an event
 * [createCalendarLink](docs/sdks/calendar/README.md#createcalendarlink) - Create a link
+* [createCalendarWebinar](docs/sdks/calendar/README.md#createcalendarwebinar) - Create a webinar
 * [getCalendarCalendar](docs/sdks/calendar/README.md#getcalendarcalendar) - Retrieve a calendar
 * [getCalendarEvent](docs/sdks/calendar/README.md#getcalendarevent) - Retrieve an event
 * [getCalendarLink](docs/sdks/calendar/README.md#getcalendarlink) - Retrieve a link
 * [getCalendarRecording](docs/sdks/calendar/README.md#getcalendarrecording) - Retrieve a recording
+* [getCalendarWebinar](docs/sdks/calendar/README.md#getcalendarwebinar) - Retrieve a webinar
 * [listCalendarBusies](docs/sdks/calendar/README.md#listcalendarbusies) - List all busies
 * [listCalendarCalendars](docs/sdks/calendar/README.md#listcalendarcalendars) - List all calendars
 * [listCalendarEvents](docs/sdks/calendar/README.md#listcalendarevents) - List all events
 * [listCalendarLinks](docs/sdks/calendar/README.md#listcalendarlinks) - List all links
 * [listCalendarRecordings](docs/sdks/calendar/README.md#listcalendarrecordings) - List all recordings
+* [listCalendarWebinars](docs/sdks/calendar/README.md#listcalendarwebinars) - List all webinars
 * [patchCalendarCalendar](docs/sdks/calendar/README.md#patchcalendarcalendar) - Update a calendar
 * [patchCalendarEvent](docs/sdks/calendar/README.md#patchcalendarevent) - Update an event
 * [patchCalendarLink](docs/sdks/calendar/README.md#patchcalendarlink) - Update a link
+* [patchCalendarWebinar](docs/sdks/calendar/README.md#patchcalendarwebinar) - Update a webinar
 * [removeCalendarCalendar](docs/sdks/calendar/README.md#removecalendarcalendar) - Remove a calendar
 * [removeCalendarEvent](docs/sdks/calendar/README.md#removecalendarevent) - Remove an event
 * [removeCalendarLink](docs/sdks/calendar/README.md#removecalendarlink) - Remove a link
+* [removeCalendarWebinar](docs/sdks/calendar/README.md#removecalendarwebinar) - Remove a webinar
 * [updateCalendarCalendar](docs/sdks/calendar/README.md#updatecalendarcalendar) - Update a calendar
 * [updateCalendarEvent](docs/sdks/calendar/README.md#updatecalendarevent) - Update an event
 * [updateCalendarLink](docs/sdks/calendar/README.md#updatecalendarlink) - Update a link
+* [updateCalendarWebinar](docs/sdks/calendar/README.md#updatecalendarwebinar) - Update a webinar
 
 ### [Call](docs/sdks/call/README.md)
 
@@ -461,11 +467,17 @@ public class Application {
 ### [Campaign](docs/sdks/campaign/README.md)
 
 * [createAdsCampaign](docs/sdks/campaign/README.md#createadscampaign) - Create a campaign
+* [createMartechCampaign](docs/sdks/campaign/README.md#createmartechcampaign) - Create a campaign
 * [getAdsCampaign](docs/sdks/campaign/README.md#getadscampaign) - Retrieve a campaign
+* [getMartechCampaign](docs/sdks/campaign/README.md#getmartechcampaign) - Retrieve a campaign
 * [listAdsCampaigns](docs/sdks/campaign/README.md#listadscampaigns) - List all campaigns
+* [listMartechCampaigns](docs/sdks/campaign/README.md#listmartechcampaigns) - List all campaigns
 * [patchAdsCampaign](docs/sdks/campaign/README.md#patchadscampaign) - Update a campaign
+* [patchMartechCampaign](docs/sdks/campaign/README.md#patchmartechcampaign) - Update a campaign
 * [removeAdsCampaign](docs/sdks/campaign/README.md#removeadscampaign) - Remove a campaign
+* [removeMartechCampaign](docs/sdks/campaign/README.md#removemartechcampaign) - Remove a campaign
 * [updateAdsCampaign](docs/sdks/campaign/README.md#updateadscampaign) - Update a campaign
+* [updateMartechCampaign](docs/sdks/campaign/README.md#updatemartechcampaign) - Update a campaign
 
 ### [Candidate](docs/sdks/candidate/README.md)
 
@@ -1132,16 +1144,23 @@ public class Application {
 
 ### [Martech](docs/sdks/martech/README.md)
 
+* [createMartechCampaign](docs/sdks/martech/README.md#createmartechcampaign) - Create a campaign
 * [createMartechList](docs/sdks/martech/README.md#createmartechlist) - Create a list
 * [createMartechMember](docs/sdks/martech/README.md#createmartechmember) - Create a member
+* [getMartechCampaign](docs/sdks/martech/README.md#getmartechcampaign) - Retrieve a campaign
 * [getMartechList](docs/sdks/martech/README.md#getmartechlist) - Retrieve a list
 * [getMartechMember](docs/sdks/martech/README.md#getmartechmember) - Retrieve a member
+* [listMartechCampaigns](docs/sdks/martech/README.md#listmartechcampaigns) - List all campaigns
 * [listMartechLists](docs/sdks/martech/README.md#listmartechlists) - List all lists
 * [listMartechMembers](docs/sdks/martech/README.md#listmartechmembers) - List all members
+* [listMartechReports](docs/sdks/martech/README.md#listmartechreports) - List all reports
+* [patchMartechCampaign](docs/sdks/martech/README.md#patchmartechcampaign) - Update a campaign
 * [patchMartechList](docs/sdks/martech/README.md#patchmartechlist) - Update a list
 * [patchMartechMember](docs/sdks/martech/README.md#patchmartechmember) - Update a member
+* [removeMartechCampaign](docs/sdks/martech/README.md#removemartechcampaign) - Remove a campaign
 * [removeMartechList](docs/sdks/martech/README.md#removemartechlist) - Remove a list
 * [removeMartechMember](docs/sdks/martech/README.md#removemartechmember) - Remove a member
+* [updateMartechCampaign](docs/sdks/martech/README.md#updatemartechcampaign) - Update a campaign
 * [updateMartechList](docs/sdks/martech/README.md#updatemartechlist) - Update a list
 * [updateMartechMember](docs/sdks/martech/README.md#updatemartechmember) - Update a member
 
@@ -1392,6 +1411,7 @@ public class Application {
 * [getAccountingReport](docs/sdks/report/README.md#getaccountingreport) - Retrieve a report
 * [listAccountingReports](docs/sdks/report/README.md#listaccountingreports) - List all reports
 * [listAdsReports](docs/sdks/report/README.md#listadsreports) - List all reports
+* [listMartechReports](docs/sdks/report/README.md#listmartechreports) - List all reports
 
 ### [Repository](docs/sdks/repository/README.md)
 
@@ -1711,6 +1731,15 @@ public class Application {
 * [removeUnifiedWebhook](docs/sdks/webhook/README.md#removeunifiedwebhook) - Remove webhook subscription
 * [updateUnifiedWebhook](docs/sdks/webhook/README.md#updateunifiedwebhook) - Update webhook subscription
 * [updateUnifiedWebhookTrigger](docs/sdks/webhook/README.md#updateunifiedwebhooktrigger) - Trigger webhook
+
+### [Webinar](docs/sdks/webinar/README.md)
+
+* [createCalendarWebinar](docs/sdks/webinar/README.md#createcalendarwebinar) - Create a webinar
+* [getCalendarWebinar](docs/sdks/webinar/README.md#getcalendarwebinar) - Retrieve a webinar
+* [listCalendarWebinars](docs/sdks/webinar/README.md#listcalendarwebinars) - List all webinars
+* [patchCalendarWebinar](docs/sdks/webinar/README.md#patchcalendarwebinar) - Update a webinar
+* [removeCalendarWebinar](docs/sdks/webinar/README.md#removecalendarwebinar) - Remove a webinar
+* [updateCalendarWebinar](docs/sdks/webinar/README.md#updatecalendarwebinar) - Update a webinar
 
 </details>
 <!-- End Available Resources and Operations [operations] -->

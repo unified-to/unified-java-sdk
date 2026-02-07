@@ -78,8 +78,10 @@ public class ObjectType {
     public static final ObjectType HRIS_TIMESHIFT = new ObjectType("hris_timeshift");
     public static final ObjectType HRIS_DEDUCTION = new ObjectType("hris_deduction");
     public static final ObjectType HRIS_BENEFIT = new ObjectType("hris_benefit");
+    public static final ObjectType MARTECH_CAMPAIGN = new ObjectType("martech_campaign");
     public static final ObjectType MARTECH_LIST = new ObjectType("martech_list");
     public static final ObjectType MARTECH_MEMBER = new ObjectType("martech_member");
+    public static final ObjectType MARTECH_REPORT = new ObjectType("martech_report");
     public static final ObjectType PASSTHROUGH = new ObjectType("passthrough");
     public static final ObjectType TICKETING_NOTE = new ObjectType("ticketing_note");
     public static final ObjectType TICKETING_TICKET = new ObjectType("ticketing_ticket");
@@ -122,6 +124,7 @@ public class ObjectType {
     public static final ObjectType CALENDAR_BUSY = new ObjectType("calendar_busy");
     public static final ObjectType CALENDAR_LINK = new ObjectType("calendar_link");
     public static final ObjectType CALENDAR_RECORDING = new ObjectType("calendar_recording");
+    public static final ObjectType CALENDAR_WEBINAR = new ObjectType("calendar_webinar");
     public static final ObjectType ADS_ORGANIZATION = new ObjectType("ads_organization");
     public static final ObjectType ADS_AD = new ObjectType("ads_ad");
     public static final ObjectType ADS_CAMPAIGN = new ObjectType("ads_campaign");
@@ -267,8 +270,10 @@ public class ObjectType {
         map.put("hris_timeshift", HRIS_TIMESHIFT);
         map.put("hris_deduction", HRIS_DEDUCTION);
         map.put("hris_benefit", HRIS_BENEFIT);
+        map.put("martech_campaign", MARTECH_CAMPAIGN);
         map.put("martech_list", MARTECH_LIST);
         map.put("martech_member", MARTECH_MEMBER);
+        map.put("martech_report", MARTECH_REPORT);
         map.put("passthrough", PASSTHROUGH);
         map.put("ticketing_note", TICKETING_NOTE);
         map.put("ticketing_ticket", TICKETING_TICKET);
@@ -311,6 +316,7 @@ public class ObjectType {
         map.put("calendar_busy", CALENDAR_BUSY);
         map.put("calendar_link", CALENDAR_LINK);
         map.put("calendar_recording", CALENDAR_RECORDING);
+        map.put("calendar_webinar", CALENDAR_WEBINAR);
         map.put("ads_organization", ADS_ORGANIZATION);
         map.put("ads_ad", ADS_AD);
         map.put("ads_campaign", ADS_CAMPAIGN);
@@ -388,8 +394,10 @@ public class ObjectType {
         map.put("hris_timeshift", ObjectTypeEnum.HRIS_TIMESHIFT);
         map.put("hris_deduction", ObjectTypeEnum.HRIS_DEDUCTION);
         map.put("hris_benefit", ObjectTypeEnum.HRIS_BENEFIT);
+        map.put("martech_campaign", ObjectTypeEnum.MARTECH_CAMPAIGN);
         map.put("martech_list", ObjectTypeEnum.MARTECH_LIST);
         map.put("martech_member", ObjectTypeEnum.MARTECH_MEMBER);
+        map.put("martech_report", ObjectTypeEnum.MARTECH_REPORT);
         map.put("passthrough", ObjectTypeEnum.PASSTHROUGH);
         map.put("ticketing_note", ObjectTypeEnum.TICKETING_NOTE);
         map.put("ticketing_ticket", ObjectTypeEnum.TICKETING_TICKET);
@@ -432,6 +440,7 @@ public class ObjectType {
         map.put("calendar_busy", ObjectTypeEnum.CALENDAR_BUSY);
         map.put("calendar_link", ObjectTypeEnum.CALENDAR_LINK);
         map.put("calendar_recording", ObjectTypeEnum.CALENDAR_RECORDING);
+        map.put("calendar_webinar", ObjectTypeEnum.CALENDAR_WEBINAR);
         map.put("ads_organization", ObjectTypeEnum.ADS_ORGANIZATION);
         map.put("ads_ad", ObjectTypeEnum.ADS_AD);
         map.put("ads_campaign", ObjectTypeEnum.ADS_CAMPAIGN);
@@ -510,8 +519,10 @@ public class ObjectType {
         HRIS_TIMESHIFT("hris_timeshift"),
         HRIS_DEDUCTION("hris_deduction"),
         HRIS_BENEFIT("hris_benefit"),
+        MARTECH_CAMPAIGN("martech_campaign"),
         MARTECH_LIST("martech_list"),
         MARTECH_MEMBER("martech_member"),
+        MARTECH_REPORT("martech_report"),
         PASSTHROUGH("passthrough"),
         TICKETING_NOTE("ticketing_note"),
         TICKETING_TICKET("ticketing_ticket"),
@@ -554,6 +565,7 @@ public class ObjectType {
         CALENDAR_BUSY("calendar_busy"),
         CALENDAR_LINK("calendar_link"),
         CALENDAR_RECORDING("calendar_recording"),
+        CALENDAR_WEBINAR("calendar_webinar"),
         ADS_ORGANIZATION("ads_organization"),
         ADS_AD("ads_ad"),
         ADS_CAMPAIGN("ads_campaign"),
