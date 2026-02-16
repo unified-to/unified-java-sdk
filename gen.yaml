@@ -28,7 +28,7 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 java:
-  version: 0.47.7
+  version: 0.47.8
   additionalDependencies: []
   additionalPlugins: []
   artifactID: unified-java-sdk
@@ -44,6 +44,7 @@ java:
   enableStreamingUploads: false
   flattenGlobalSecurity: false
   forwardCompatibleEnumsByDefault: false
+  forwardCompatibleUnionsByDefault: "false"
   generateOptionalUnionAccessors: false
   generateSpringBootStarter: true
   githubURL: github.com/unified-to/unified-java-sdk
@@ -66,7 +67,6 @@ java:
   maxMethodParams: 0
   multipartArrayFormat: legacy
   nullFriendlyParameters: true
-  openUnions: true
   operationScopedParams: true
   outputModelSuffix: output
   projectName: Unified-java-sdk

@@ -119,6 +119,12 @@ public class UnifiedTo {
     private final Insertionorder insertionorder;
 
 
+    private final Assessment assessment;
+
+
+    private final Package package_;
+
+
     private final Ats ats;
 
 
@@ -272,6 +278,9 @@ public class UnifiedTo {
     private final Class class_;
 
 
+    private final Content content;
+
+
     private final Course course;
 
 
@@ -419,9 +428,6 @@ public class UnifiedTo {
     private final Verification verification;
 
 
-    private final Package package_;
-
-
     private final Request request;
 
 
@@ -552,6 +558,16 @@ public class UnifiedTo {
 
     public Insertionorder insertionorder() {
         return insertionorder;
+    }
+
+
+    public Assessment assessment() {
+        return assessment;
+    }
+
+
+    public Package package_() {
+        return package_;
     }
 
 
@@ -810,6 +826,11 @@ public class UnifiedTo {
     }
 
 
+    public Content content() {
+        return content;
+    }
+
+
     public Course course() {
         return course;
     }
@@ -1055,11 +1076,6 @@ public class UnifiedTo {
     }
 
 
-    public Package package_() {
-        return package_;
-    }
-
-
     public Request request() {
         return request;
     }
@@ -1227,6 +1243,8 @@ public class UnifiedTo {
         this.creative = new Creative(sdkConfiguration);
         this.group = new Group(sdkConfiguration);
         this.insertionorder = new Insertionorder(sdkConfiguration);
+        this.assessment = new Assessment(sdkConfiguration);
+        this.package_ = new Package(sdkConfiguration);
         this.ats = new Ats(sdkConfiguration);
         this.activity = new Activity(sdkConfiguration);
         this.application = new Application(sdkConfiguration);
@@ -1278,6 +1296,7 @@ public class UnifiedTo {
         this.space = new Space(sdkConfiguration);
         this.lms = new Lms(sdkConfiguration);
         this.class_ = new Class(sdkConfiguration);
+        this.content = new Content(sdkConfiguration);
         this.course = new Course(sdkConfiguration);
         this.instructor = new Instructor(sdkConfiguration);
         this.student = new Student(sdkConfiguration);
@@ -1327,7 +1346,6 @@ public class UnifiedTo {
         this.issue = new Issue(sdkConfiguration);
         this.webhook = new Webhook(sdkConfiguration);
         this.verification = new Verification(sdkConfiguration);
-        this.package_ = new Package(sdkConfiguration);
         this.request = new Request(sdkConfiguration);
         this.asyncSDK = new AsyncUnifiedTo(this, sdkConfiguration);
     }

@@ -125,11 +125,6 @@ public class PropertyMessagingEventMessage {
 
 
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("parent_message_id")
-    private String parentMessageId;
-
-
-    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
@@ -183,7 +178,6 @@ public class PropertyMessagingEventMessage {
             @JsonProperty("message_markdown") @Nullable String messageMarkdown,
             @JsonProperty("message_thread_identifier") @Nullable String messageThreadIdentifier,
             @JsonProperty("parent_id") @Nullable String parentId,
-            @JsonProperty("parent_message_id") @Nullable String parentMessageId,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("reactions") @Nullable List<MessagingReaction> reactions,
             @JsonProperty("reference") @Nullable String reference,
@@ -209,7 +203,6 @@ public class PropertyMessagingEventMessage {
         this.messageMarkdown = messageMarkdown;
         this.messageThreadIdentifier = messageThreadIdentifier;
         this.parentId = parentId;
-        this.parentMessageId = parentMessageId;
         this.raw = raw;
         this.reactions = reactions;
         this.reference = reference;
@@ -228,7 +221,7 @@ public class PropertyMessagingEventMessage {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null);
     }
 
     public Optional<List<MessagingAttachment>> attachments() {
@@ -320,10 +313,6 @@ public class PropertyMessagingEventMessage {
 
     public Optional<String> parentId() {
         return Optional.ofNullable(this.parentId);
-    }
-
-    public Optional<String> parentMessageId() {
-        return Optional.ofNullable(this.parentMessageId);
     }
 
     public Optional<Map<String, Object>> raw() {
@@ -486,12 +475,6 @@ public class PropertyMessagingEventMessage {
     }
 
 
-    public PropertyMessagingEventMessage withParentMessageId(@Nullable String parentMessageId) {
-        this.parentMessageId = parentMessageId;
-        return this;
-    }
-
-
     public PropertyMessagingEventMessage withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
@@ -562,7 +545,6 @@ public class PropertyMessagingEventMessage {
             Utils.enhancedDeepEquals(this.messageMarkdown, other.messageMarkdown) &&
             Utils.enhancedDeepEquals(this.messageThreadIdentifier, other.messageThreadIdentifier) &&
             Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
-            Utils.enhancedDeepEquals(this.parentMessageId, other.parentMessageId) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.reactions, other.reactions) &&
             Utils.enhancedDeepEquals(this.reference, other.reference) &&
@@ -581,9 +563,9 @@ public class PropertyMessagingEventMessage {
             hiddenMembers, id, isUnread,
             mentionedMembers, message, messageHtml,
             messageMarkdown, messageThreadIdentifier, parentId,
-            parentMessageId, raw, reactions,
-            reference, rootMessageId, subject,
-            updatedAt, webUrl);
+            raw, reactions, reference,
+            rootMessageId, subject, updatedAt,
+            webUrl);
     }
     
     @Override
@@ -607,7 +589,6 @@ public class PropertyMessagingEventMessage {
                 "messageMarkdown", messageMarkdown,
                 "messageThreadIdentifier", messageThreadIdentifier,
                 "parentId", parentId,
-                "parentMessageId", parentMessageId,
                 "raw", raw,
                 "reactions", reactions,
                 "reference", reference,
@@ -655,8 +636,6 @@ public class PropertyMessagingEventMessage {
         private String messageThreadIdentifier;
 
         private String parentId;
-
-        private String parentMessageId;
 
         private Map<String, Object> raw;
 
@@ -785,11 +764,6 @@ public class PropertyMessagingEventMessage {
             return this;
         }
 
-        public Builder parentMessageId(@Nullable String parentMessageId) {
-            this.parentMessageId = parentMessageId;
-            return this;
-        }
-
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
@@ -833,9 +807,9 @@ public class PropertyMessagingEventMessage {
                 hiddenMembers, id, isUnread,
                 mentionedMembers, message, messageHtml,
                 messageMarkdown, messageThreadIdentifier, parentId,
-                parentMessageId, raw, reactions,
-                reference, rootMessageId, subject,
-                updatedAt, webUrl);
+                raw, reactions, reference,
+                rootMessageId, subject, updatedAt,
+                webUrl);
         }
 
     }

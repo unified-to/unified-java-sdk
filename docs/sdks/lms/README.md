@@ -4,30 +4,108 @@
 
 ### Available Operations
 
+* [createLmsActivity](#createlmsactivity) - Create an activity
 * [createLmsClass](#createlmsclass) - Create a class
+* [createLmsCollection](#createlmscollection) - Create a collection
+* [createLmsContent](#createlmscontent) - Create a content
 * [createLmsCourse](#createlmscourse) - Create a course
 * [createLmsInstructor](#createlmsinstructor) - Create an instructor
 * [createLmsStudent](#createlmsstudent) - Create a student
+* [getLmsActivity](#getlmsactivity) - Retrieve an activity
 * [getLmsClass](#getlmsclass) - Retrieve a class
+* [getLmsCollection](#getlmscollection) - Retrieve a collection
+* [getLmsContent](#getlmscontent) - Retrieve a content
 * [getLmsCourse](#getlmscourse) - Retrieve a course
 * [getLmsInstructor](#getlmsinstructor) - Retrieve an instructor
 * [getLmsStudent](#getlmsstudent) - Retrieve a student
+* [listLmsActivities](#listlmsactivities) - List all activities
 * [listLmsClasses](#listlmsclasses) - List all classes
+* [listLmsCollections](#listlmscollections) - List all collections
+* [listLmsContents](#listlmscontents) - List all contents
 * [listLmsCourses](#listlmscourses) - List all courses
 * [listLmsInstructors](#listlmsinstructors) - List all instructors
 * [listLmsStudents](#listlmsstudents) - List all students
+* [patchLmsActivity](#patchlmsactivity) - Update an activity
 * [patchLmsClass](#patchlmsclass) - Update a class
+* [patchLmsCollection](#patchlmscollection) - Update a collection
+* [patchLmsContent](#patchlmscontent) - Update a content
 * [patchLmsCourse](#patchlmscourse) - Update a course
 * [patchLmsInstructor](#patchlmsinstructor) - Update an instructor
 * [patchLmsStudent](#patchlmsstudent) - Update a student
+* [removeLmsActivity](#removelmsactivity) - Remove an activity
 * [removeLmsClass](#removelmsclass) - Remove a class
+* [removeLmsCollection](#removelmscollection) - Remove a collection
+* [removeLmsContent](#removelmscontent) - Remove a content
 * [removeLmsCourse](#removelmscourse) - Remove a course
 * [removeLmsInstructor](#removelmsinstructor) - Remove an instructor
 * [removeLmsStudent](#removelmsstudent) - Remove a student
+* [updateLmsActivity](#updatelmsactivity) - Update an activity
 * [updateLmsClass](#updatelmsclass) - Update a class
+* [updateLmsCollection](#updatelmscollection) - Update a collection
+* [updateLmsContent](#updatelmscontent) - Update a content
 * [updateLmsCourse](#updatelmscourse) - Update a course
 * [updateLmsInstructor](#updatelmsinstructor) - Update an instructor
 * [updateLmsStudent](#updatelmsstudent) - Update a student
+
+## createLmsActivity
+
+Create an activity
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="createLmsActivity" method="post" path="/lms/{connection_id}/activity" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateLmsActivityRequest;
+import to.unified.unified_java_sdk.models.operations.CreateLmsActivityResponse;
+import to.unified.unified_java_sdk.models.shared.LmsActivity;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        CreateLmsActivityRequest req = CreateLmsActivityRequest.builder()
+                .lmsActivity(LmsActivity.builder()
+                    .build())
+                .connectionId("<id>")
+                .build();
+
+        CreateLmsActivityResponse res = sdk.lms().createLmsActivity()
+                .request(req)
+                .call();
+
+        if (res.lmsActivity().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [CreateLmsActivityRequest](../../models/operations/CreateLmsActivityRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[CreateLmsActivityResponse](../../models/operations/CreateLmsActivityResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## createLmsClass
 
@@ -84,6 +162,126 @@ public class Application {
 ### Response
 
 **[CreateLmsClassResponse](../../models/operations/CreateLmsClassResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## createLmsCollection
+
+Create a collection
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="createLmsCollection" method="post" path="/lms/{connection_id}/collection" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateLmsCollectionRequest;
+import to.unified.unified_java_sdk.models.operations.CreateLmsCollectionResponse;
+import to.unified.unified_java_sdk.models.shared.LmsCollection;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        CreateLmsCollectionRequest req = CreateLmsCollectionRequest.builder()
+                .lmsCollection(LmsCollection.builder()
+                    .build())
+                .connectionId("<id>")
+                .build();
+
+        CreateLmsCollectionResponse res = sdk.lms().createLmsCollection()
+                .request(req)
+                .call();
+
+        if (res.lmsCollection().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [CreateLmsCollectionRequest](../../models/operations/CreateLmsCollectionRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[CreateLmsCollectionResponse](../../models/operations/CreateLmsCollectionResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## createLmsContent
+
+Create a content
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="createLmsContent" method="post" path="/lms/{connection_id}/content" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateLmsContentRequest;
+import to.unified.unified_java_sdk.models.operations.CreateLmsContentResponse;
+import to.unified.unified_java_sdk.models.shared.LmsContent;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        CreateLmsContentRequest req = CreateLmsContentRequest.builder()
+                .lmsContent(LmsContent.builder()
+                    .build())
+                .connectionId("<id>")
+                .build();
+
+        CreateLmsContentResponse res = sdk.lms().createLmsContent()
+                .request(req)
+                .call();
+
+        if (res.lmsContent().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [CreateLmsContentRequest](../../models/operations/CreateLmsContentRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[CreateLmsContentResponse](../../models/operations/CreateLmsContentResponse.md)**
 
 ### Errors
 
@@ -272,6 +470,64 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## getLmsActivity
+
+Retrieve an activity
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getLmsActivity" method="get" path="/lms/{connection_id}/activity/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetLmsActivityRequest;
+import to.unified.unified_java_sdk.models.operations.GetLmsActivityResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetLmsActivityRequest req = GetLmsActivityRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetLmsActivityResponse res = sdk.lms().getLmsActivity()
+                .request(req)
+                .call();
+
+        if (res.lmsActivity().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [GetLmsActivityRequest](../../models/operations/GetLmsActivityRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+
+### Response
+
+**[GetLmsActivityResponse](../../models/operations/GetLmsActivityResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## getLmsClass
 
 Retrieve a class
@@ -323,6 +579,122 @@ public class Application {
 ### Response
 
 **[GetLmsClassResponse](../../models/operations/GetLmsClassResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getLmsCollection
+
+Retrieve a collection
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getLmsCollection" method="get" path="/lms/{connection_id}/collection/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetLmsCollectionRequest;
+import to.unified.unified_java_sdk.models.operations.GetLmsCollectionResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetLmsCollectionRequest req = GetLmsCollectionRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetLmsCollectionResponse res = sdk.lms().getLmsCollection()
+                .request(req)
+                .call();
+
+        if (res.lmsCollection().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [GetLmsCollectionRequest](../../models/operations/GetLmsCollectionRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[GetLmsCollectionResponse](../../models/operations/GetLmsCollectionResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getLmsContent
+
+Retrieve a content
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getLmsContent" method="get" path="/lms/{connection_id}/content/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetLmsContentRequest;
+import to.unified.unified_java_sdk.models.operations.GetLmsContentResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetLmsContentRequest req = GetLmsContentRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetLmsContentResponse res = sdk.lms().getLmsContent()
+                .request(req)
+                .call();
+
+        if (res.lmsContent().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [GetLmsContentRequest](../../models/operations/GetLmsContentRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+
+### Response
+
+**[GetLmsContentResponse](../../models/operations/GetLmsContentResponse.md)**
 
 ### Errors
 
@@ -504,6 +876,63 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listLmsActivities
+
+List all activities
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listLmsActivities" method="get" path="/lms/{connection_id}/activity" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListLmsActivitiesRequest;
+import to.unified.unified_java_sdk.models.operations.ListLmsActivitiesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListLmsActivitiesRequest req = ListLmsActivitiesRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListLmsActivitiesResponse res = sdk.lms().listLmsActivities()
+                .request(req)
+                .call();
+
+        if (res.lmsActivities().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [ListLmsActivitiesRequest](../../models/operations/ListLmsActivitiesRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[ListLmsActivitiesResponse](../../models/operations/ListLmsActivitiesResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listLmsClasses
 
 List all classes
@@ -554,6 +983,120 @@ public class Application {
 ### Response
 
 **[ListLmsClassesResponse](../../models/operations/ListLmsClassesResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## listLmsCollections
+
+List all collections
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listLmsCollections" method="get" path="/lms/{connection_id}/collection" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListLmsCollectionsRequest;
+import to.unified.unified_java_sdk.models.operations.ListLmsCollectionsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListLmsCollectionsRequest req = ListLmsCollectionsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListLmsCollectionsResponse res = sdk.lms().listLmsCollections()
+                .request(req)
+                .call();
+
+        if (res.lmsCollections().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [ListLmsCollectionsRequest](../../models/operations/ListLmsCollectionsRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[ListLmsCollectionsResponse](../../models/operations/ListLmsCollectionsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## listLmsContents
+
+List all contents
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listLmsContents" method="get" path="/lms/{connection_id}/content" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListLmsContentsRequest;
+import to.unified.unified_java_sdk.models.operations.ListLmsContentsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListLmsContentsRequest req = ListLmsContentsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListLmsContentsResponse res = sdk.lms().listLmsContents()
+                .request(req)
+                .call();
+
+        if (res.lmsContents().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [ListLmsContentsRequest](../../models/operations/ListLmsContentsRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+
+### Response
+
+**[ListLmsContentsResponse](../../models/operations/ListLmsContentsResponse.md)**
 
 ### Errors
 
@@ -732,6 +1275,67 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## patchLmsActivity
+
+Update an activity
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchLmsActivity" method="patch" path="/lms/{connection_id}/activity/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchLmsActivityRequest;
+import to.unified.unified_java_sdk.models.operations.PatchLmsActivityResponse;
+import to.unified.unified_java_sdk.models.shared.LmsActivity;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchLmsActivityRequest req = PatchLmsActivityRequest.builder()
+                .lmsActivity(LmsActivity.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchLmsActivityResponse res = sdk.lms().patchLmsActivity()
+                .request(req)
+                .call();
+
+        if (res.lmsActivity().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [PatchLmsActivityRequest](../../models/operations/PatchLmsActivityRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[PatchLmsActivityResponse](../../models/operations/PatchLmsActivityResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## patchLmsClass
 
 Update a class
@@ -788,6 +1392,128 @@ public class Application {
 ### Response
 
 **[PatchLmsClassResponse](../../models/operations/PatchLmsClassResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## patchLmsCollection
+
+Update a collection
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchLmsCollection" method="patch" path="/lms/{connection_id}/collection/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchLmsCollectionRequest;
+import to.unified.unified_java_sdk.models.operations.PatchLmsCollectionResponse;
+import to.unified.unified_java_sdk.models.shared.LmsCollection;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchLmsCollectionRequest req = PatchLmsCollectionRequest.builder()
+                .lmsCollection(LmsCollection.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchLmsCollectionResponse res = sdk.lms().patchLmsCollection()
+                .request(req)
+                .call();
+
+        if (res.lmsCollection().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [PatchLmsCollectionRequest](../../models/operations/PatchLmsCollectionRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[PatchLmsCollectionResponse](../../models/operations/PatchLmsCollectionResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## patchLmsContent
+
+Update a content
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchLmsContent" method="patch" path="/lms/{connection_id}/content/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchLmsContentRequest;
+import to.unified.unified_java_sdk.models.operations.PatchLmsContentResponse;
+import to.unified.unified_java_sdk.models.shared.LmsContent;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchLmsContentRequest req = PatchLmsContentRequest.builder()
+                .lmsContent(LmsContent.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchLmsContentResponse res = sdk.lms().patchLmsContent()
+                .request(req)
+                .call();
+
+        if (res.lmsContent().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [PatchLmsContentRequest](../../models/operations/PatchLmsContentRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+
+### Response
+
+**[PatchLmsContentResponse](../../models/operations/PatchLmsContentResponse.md)**
 
 ### Errors
 
@@ -979,6 +1705,62 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## removeLmsActivity
+
+Remove an activity
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeLmsActivity" method="delete" path="/lms/{connection_id}/activity/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveLmsActivityRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveLmsActivityResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveLmsActivityRequest req = RemoveLmsActivityRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveLmsActivityResponse res = sdk.lms().removeLmsActivity()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [RemoveLmsActivityRequest](../../models/operations/RemoveLmsActivityRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[RemoveLmsActivityResponse](../../models/operations/RemoveLmsActivityResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## removeLmsClass
 
 Remove a class
@@ -1028,6 +1810,118 @@ public class Application {
 ### Response
 
 **[RemoveLmsClassResponse](../../models/operations/RemoveLmsClassResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeLmsCollection
+
+Remove a collection
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeLmsCollection" method="delete" path="/lms/{connection_id}/collection/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveLmsCollectionRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveLmsCollectionResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveLmsCollectionRequest req = RemoveLmsCollectionRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveLmsCollectionResponse res = sdk.lms().removeLmsCollection()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [RemoveLmsCollectionRequest](../../models/operations/RemoveLmsCollectionRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[RemoveLmsCollectionResponse](../../models/operations/RemoveLmsCollectionResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeLmsContent
+
+Remove a content
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeLmsContent" method="delete" path="/lms/{connection_id}/content/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveLmsContentRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveLmsContentResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveLmsContentRequest req = RemoveLmsContentRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveLmsContentResponse res = sdk.lms().removeLmsContent()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [RemoveLmsContentRequest](../../models/operations/RemoveLmsContentRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[RemoveLmsContentResponse](../../models/operations/RemoveLmsContentResponse.md)**
 
 ### Errors
 
@@ -1203,6 +2097,67 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## updateLmsActivity
+
+Update an activity
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateLmsActivity" method="put" path="/lms/{connection_id}/activity/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateLmsActivityRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateLmsActivityResponse;
+import to.unified.unified_java_sdk.models.shared.LmsActivity;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateLmsActivityRequest req = UpdateLmsActivityRequest.builder()
+                .lmsActivity(LmsActivity.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateLmsActivityResponse res = sdk.lms().updateLmsActivity()
+                .request(req)
+                .call();
+
+        if (res.lmsActivity().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [UpdateLmsActivityRequest](../../models/operations/UpdateLmsActivityRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[UpdateLmsActivityResponse](../../models/operations/UpdateLmsActivityResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## updateLmsClass
 
 Update a class
@@ -1259,6 +2214,128 @@ public class Application {
 ### Response
 
 **[UpdateLmsClassResponse](../../models/operations/UpdateLmsClassResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateLmsCollection
+
+Update a collection
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateLmsCollection" method="put" path="/lms/{connection_id}/collection/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateLmsCollectionRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateLmsCollectionResponse;
+import to.unified.unified_java_sdk.models.shared.LmsCollection;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateLmsCollectionRequest req = UpdateLmsCollectionRequest.builder()
+                .lmsCollection(LmsCollection.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateLmsCollectionResponse res = sdk.lms().updateLmsCollection()
+                .request(req)
+                .call();
+
+        if (res.lmsCollection().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [UpdateLmsCollectionRequest](../../models/operations/UpdateLmsCollectionRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[UpdateLmsCollectionResponse](../../models/operations/UpdateLmsCollectionResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateLmsContent
+
+Update a content
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateLmsContent" method="put" path="/lms/{connection_id}/content/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateLmsContentRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateLmsContentResponse;
+import to.unified.unified_java_sdk.models.shared.LmsContent;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateLmsContentRequest req = UpdateLmsContentRequest.builder()
+                .lmsContent(LmsContent.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateLmsContentResponse res = sdk.lms().updateLmsContent()
+                .request(req)
+                .call();
+
+        if (res.lmsContent().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [UpdateLmsContentRequest](../../models/operations/UpdateLmsContentRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[UpdateLmsContentResponse](../../models/operations/UpdateLmsContentResponse.md)**
 
 ### Errors
 

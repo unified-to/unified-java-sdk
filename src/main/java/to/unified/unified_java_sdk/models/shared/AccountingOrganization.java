@@ -7,7 +7,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Object;
@@ -51,6 +50,7 @@ public class AccountingOrganization {
     private String legalName;
 
 
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
@@ -58,6 +58,11 @@ public class AccountingOrganization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_code")
     private String organizationCode;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("parent_id")
+    private String parentId;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -92,8 +97,9 @@ public class AccountingOrganization {
             @JsonProperty("fiscal_year_end_month") @Nullable Double fiscalYearEndMonth,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("legal_name") @Nullable String legalName,
-            @JsonProperty("name") @Nonnull String name,
+            @JsonProperty("name") @Nullable String name,
             @JsonProperty("organization_code") @Nullable String organizationCode,
+            @JsonProperty("parent_id") @Nullable String parentId,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("tax_number") @Nullable String taxNumber,
             @JsonProperty("timezone") @Nullable String timezone,
@@ -105,9 +111,9 @@ public class AccountingOrganization {
         this.fiscalYearEndMonth = fiscalYearEndMonth;
         this.id = id;
         this.legalName = legalName;
-        this.name = Optional.ofNullable(name)
-            .orElseThrow(() -> new IllegalArgumentException("name cannot be null"));
+        this.name = name;
         this.organizationCode = organizationCode;
+        this.parentId = parentId;
         this.raw = raw;
         this.taxNumber = taxNumber;
         this.timezone = timezone;
@@ -115,13 +121,12 @@ public class AccountingOrganization {
         this.website = website;
     }
     
-    public AccountingOrganization(
-            @Nonnull String name) {
+    public AccountingOrganization() {
         this(null, null, null,
             null, null, null,
-            name, null, null,
             null, null, null,
-            null);
+            null, null, null,
+            null, null);
     }
 
     public Optional<PropertyAccountingOrganizationAddress> address() {
@@ -148,12 +153,16 @@ public class AccountingOrganization {
         return Optional.ofNullable(this.legalName);
     }
 
-    public String name() {
-        return this.name;
+    public Optional<String> name() {
+        return Optional.ofNullable(this.name);
     }
 
     public Optional<String> organizationCode() {
         return Optional.ofNullable(this.organizationCode);
+    }
+
+    public Optional<String> parentId() {
+        return Optional.ofNullable(this.parentId);
     }
 
     public Optional<Map<String, Object>> raw() {
@@ -217,14 +226,20 @@ public class AccountingOrganization {
     }
 
 
-    public AccountingOrganization withName(@Nonnull String name) {
-        this.name = Utils.checkNotNull(name, "name");
+    public AccountingOrganization withName(@Nullable String name) {
+        this.name = name;
         return this;
     }
 
 
     public AccountingOrganization withOrganizationCode(@Nullable String organizationCode) {
         this.organizationCode = organizationCode;
+        return this;
+    }
+
+
+    public AccountingOrganization withParentId(@Nullable String parentId) {
+        this.parentId = parentId;
         return this;
     }
 
@@ -277,6 +292,7 @@ public class AccountingOrganization {
             Utils.enhancedDeepEquals(this.legalName, other.legalName) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.organizationCode, other.organizationCode) &&
+            Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.taxNumber, other.taxNumber) &&
             Utils.enhancedDeepEquals(this.timezone, other.timezone) &&
@@ -289,9 +305,9 @@ public class AccountingOrganization {
         return Utils.enhancedHash(
             address, createdAt, currency,
             fiscalYearEndMonth, id, legalName,
-            name, organizationCode, raw,
-            taxNumber, timezone, updatedAt,
-            website);
+            name, organizationCode, parentId,
+            raw, taxNumber, timezone,
+            updatedAt, website);
     }
     
     @Override
@@ -305,6 +321,7 @@ public class AccountingOrganization {
                 "legalName", legalName,
                 "name", name,
                 "organizationCode", organizationCode,
+                "parentId", parentId,
                 "raw", raw,
                 "taxNumber", taxNumber,
                 "timezone", timezone,
@@ -330,6 +347,8 @@ public class AccountingOrganization {
         private String name;
 
         private String organizationCode;
+
+        private String parentId;
 
         private Map<String, Object> raw;
 
@@ -375,13 +394,18 @@ public class AccountingOrganization {
             return this;
         }
 
-        public Builder name(@Nonnull String name) {
-            this.name = Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
+            this.name = name;
             return this;
         }
 
         public Builder organizationCode(@Nullable String organizationCode) {
             this.organizationCode = organizationCode;
+            return this;
+        }
+
+        public Builder parentId(@Nullable String parentId) {
+            this.parentId = parentId;
             return this;
         }
 
@@ -414,9 +438,9 @@ public class AccountingOrganization {
             return new AccountingOrganization(
                 address, createdAt, currency,
                 fiscalYearEndMonth, id, legalName,
-                name, organizationCode, raw,
-                taxNumber, timezone, updatedAt,
-                website);
+                name, organizationCode, parentId,
+                raw, taxNumber, timezone,
+                updatedAt, website);
         }
 
     }

@@ -8,29 +8,53 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAtsActivityRequest;
+import to.unified.unified_java_sdk.models.operations.CreateLmsActivityRequest;
 import to.unified.unified_java_sdk.models.operations.GetAtsActivityRequest;
+import to.unified.unified_java_sdk.models.operations.GetLmsActivityRequest;
 import to.unified.unified_java_sdk.models.operations.ListAtsActivitiesRequest;
+import to.unified.unified_java_sdk.models.operations.ListLmsActivitiesRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAtsActivityRequest;
+import to.unified.unified_java_sdk.models.operations.PatchLmsActivityRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveAtsActivityRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveLmsActivityRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsActivityRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateLmsActivityRequest;
 import to.unified.unified_java_sdk.models.operations.async.CreateAtsActivityRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateAtsActivityResponse;
+import to.unified.unified_java_sdk.models.operations.async.CreateLmsActivityRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateLmsActivityResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetAtsActivityRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetAtsActivityResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetLmsActivityRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetLmsActivityResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListAtsActivitiesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListAtsActivitiesResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListLmsActivitiesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListLmsActivitiesResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchAtsActivityRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchAtsActivityResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchLmsActivityRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchLmsActivityResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveAtsActivityRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.RemoveAtsActivityResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveLmsActivityRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveLmsActivityResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateAtsActivityRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateAtsActivityResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateLmsActivityRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateLmsActivityResponse;
 import to.unified.unified_java_sdk.operations.CreateAtsActivity;
+import to.unified.unified_java_sdk.operations.CreateLmsActivity;
 import to.unified.unified_java_sdk.operations.GetAtsActivity;
+import to.unified.unified_java_sdk.operations.GetLmsActivity;
 import to.unified.unified_java_sdk.operations.ListAtsActivities;
+import to.unified.unified_java_sdk.operations.ListLmsActivities;
 import to.unified.unified_java_sdk.operations.PatchAtsActivity;
+import to.unified.unified_java_sdk.operations.PatchLmsActivity;
 import to.unified.unified_java_sdk.operations.RemoveAtsActivity;
+import to.unified.unified_java_sdk.operations.RemoveLmsActivity;
 import to.unified.unified_java_sdk.operations.UpdateAtsActivity;
+import to.unified.unified_java_sdk.operations.UpdateLmsActivity;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -78,6 +102,29 @@ public class AsyncActivity {
 
 
     /**
+     * Create an activity
+     * 
+     * @return The async call builder
+     */
+    public CreateLmsActivityRequestBuilder createLmsActivity() {
+        return new CreateLmsActivityRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create an activity
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<CreateLmsActivityResponse>} - The async response
+     */
+    public CompletableFuture<CreateLmsActivityResponse> createLmsActivity(@Nonnull CreateLmsActivityRequest request) {
+        AsyncRequestOperation<CreateLmsActivityRequest, CreateLmsActivityResponse> operation
+              = new CreateLmsActivity.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * Retrieve an activity
      * 
      * @return The async call builder
@@ -95,6 +142,29 @@ public class AsyncActivity {
     public CompletableFuture<GetAtsActivityResponse> getAtsActivity(@Nonnull GetAtsActivityRequest request) {
         AsyncRequestOperation<GetAtsActivityRequest, GetAtsActivityResponse> operation
               = new GetAtsActivity.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Retrieve an activity
+     * 
+     * @return The async call builder
+     */
+    public GetLmsActivityRequestBuilder getLmsActivity() {
+        return new GetLmsActivityRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve an activity
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetLmsActivityResponse>} - The async response
+     */
+    public CompletableFuture<GetLmsActivityResponse> getLmsActivity(@Nonnull GetLmsActivityRequest request) {
+        AsyncRequestOperation<GetLmsActivityRequest, GetLmsActivityResponse> operation
+              = new GetLmsActivity.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -124,6 +194,29 @@ public class AsyncActivity {
 
 
     /**
+     * List all activities
+     * 
+     * @return The async call builder
+     */
+    public ListLmsActivitiesRequestBuilder listLmsActivities() {
+        return new ListLmsActivitiesRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all activities
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListLmsActivitiesResponse>} - The async response
+     */
+    public CompletableFuture<ListLmsActivitiesResponse> listLmsActivities(@Nonnull ListLmsActivitiesRequest request) {
+        AsyncRequestOperation<ListLmsActivitiesRequest, ListLmsActivitiesResponse> operation
+              = new ListLmsActivities.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * Update an activity
      * 
      * @return The async call builder
@@ -141,6 +234,29 @@ public class AsyncActivity {
     public CompletableFuture<PatchAtsActivityResponse> patchAtsActivity(@Nonnull PatchAtsActivityRequest request) {
         AsyncRequestOperation<PatchAtsActivityRequest, PatchAtsActivityResponse> operation
               = new PatchAtsActivity.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update an activity
+     * 
+     * @return The async call builder
+     */
+    public PatchLmsActivityRequestBuilder patchLmsActivity() {
+        return new PatchLmsActivityRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update an activity
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<PatchLmsActivityResponse>} - The async response
+     */
+    public CompletableFuture<PatchLmsActivityResponse> patchLmsActivity(@Nonnull PatchLmsActivityRequest request) {
+        AsyncRequestOperation<PatchLmsActivityRequest, PatchLmsActivityResponse> operation
+              = new PatchLmsActivity.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -170,6 +286,29 @@ public class AsyncActivity {
 
 
     /**
+     * Remove an activity
+     * 
+     * @return The async call builder
+     */
+    public RemoveLmsActivityRequestBuilder removeLmsActivity() {
+        return new RemoveLmsActivityRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove an activity
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<RemoveLmsActivityResponse>} - The async response
+     */
+    public CompletableFuture<RemoveLmsActivityResponse> removeLmsActivity(@Nonnull RemoveLmsActivityRequest request) {
+        AsyncRequestOperation<RemoveLmsActivityRequest, RemoveLmsActivityResponse> operation
+              = new RemoveLmsActivity.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * Update an activity
      * 
      * @return The async call builder
@@ -187,6 +326,29 @@ public class AsyncActivity {
     public CompletableFuture<UpdateAtsActivityResponse> updateAtsActivity(@Nonnull UpdateAtsActivityRequest request) {
         AsyncRequestOperation<UpdateAtsActivityRequest, UpdateAtsActivityResponse> operation
               = new UpdateAtsActivity.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update an activity
+     * 
+     * @return The async call builder
+     */
+    public UpdateLmsActivityRequestBuilder updateLmsActivity() {
+        return new UpdateLmsActivityRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update an activity
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<UpdateLmsActivityResponse>} - The async response
+     */
+    public CompletableFuture<UpdateLmsActivityResponse> updateLmsActivity(@Nonnull UpdateLmsActivityRequest request) {
+        AsyncRequestOperation<UpdateLmsActivityRequest, UpdateLmsActivityResponse> operation
+              = new UpdateLmsActivity.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

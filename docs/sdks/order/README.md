@@ -8,8 +8,10 @@
 * [getAccountingOrder](#getaccountingorder) - Retrieve an order
 * [listAccountingOrders](#listaccountingorders) - List all orders
 * [patchAccountingOrder](#patchaccountingorder) - Update an order
+* [patchAssessmentOrder](#patchassessmentorder) - Update an order
 * [removeAccountingOrder](#removeaccountingorder) - Remove an order
 * [updateAccountingOrder](#updateaccountingorder) - Update an order
+* [updateAssessmentOrder](#updateassessmentorder) - Update an order
 
 ## createAccountingOrder
 
@@ -247,6 +249,69 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## patchAssessmentOrder
+
+Update an order
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchAssessmentOrder" method="patch" path="/assessment/{connection_id}/order/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchAssessmentOrderRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAssessmentOrderResponse;
+import to.unified.unified_java_sdk.models.shared.AssessmentOrder;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchAssessmentOrderRequest req = PatchAssessmentOrderRequest.builder()
+                .assessmentOrder(AssessmentOrder.builder()
+                    .connectionId("<id>")
+                    .workspaceId("<id>")
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchAssessmentOrderResponse res = sdk.order().patchAssessmentOrder()
+                .request(req)
+                .call();
+
+        if (res.assessmentOrder().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [PatchAssessmentOrderRequest](../../models/operations/PatchAssessmentOrderRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+
+### Response
+
+**[PatchAssessmentOrderResponse](../../models/operations/PatchAssessmentOrderResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## removeAccountingOrder
 
 Remove an order
@@ -357,6 +422,69 @@ public class Application {
 ### Response
 
 **[UpdateAccountingOrderResponse](../../models/operations/UpdateAccountingOrderResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateAssessmentOrder
+
+Update an order
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateAssessmentOrder" method="put" path="/assessment/{connection_id}/order/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateAssessmentOrderRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAssessmentOrderResponse;
+import to.unified.unified_java_sdk.models.shared.AssessmentOrder;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateAssessmentOrderRequest req = UpdateAssessmentOrderRequest.builder()
+                .assessmentOrder(AssessmentOrder.builder()
+                    .connectionId("<id>")
+                    .workspaceId("<id>")
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateAssessmentOrderResponse res = sdk.order().updateAssessmentOrder()
+                .request(req)
+                .call();
+
+        if (res.assessmentOrder().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [UpdateAssessmentOrderRequest](../../models/operations/UpdateAssessmentOrderRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+
+### Response
+
+**[UpdateAssessmentOrderResponse](../../models/operations/UpdateAssessmentOrderResponse.md)**
 
 ### Errors
 

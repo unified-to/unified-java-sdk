@@ -18,6 +18,11 @@ import to.unified.unified_java_sdk.utils.Utils;
 public class LmsMedia {
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("content")
+    private String content;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private String description;
 
@@ -42,11 +47,13 @@ public class LmsMedia {
 
     @JsonCreator
     public LmsMedia(
+            @JsonProperty("content") @Nullable String content,
             @JsonProperty("description") @Nullable String description,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("thumbnail_url") @Nullable String thumbnailUrl,
             @JsonProperty("type") @Nullable LmsMediaType type,
             @JsonProperty("url") @Nonnull String url) {
+        this.content = content;
         this.description = description;
         this.name = name;
         this.thumbnailUrl = thumbnailUrl;
@@ -58,7 +65,11 @@ public class LmsMedia {
     public LmsMedia(
             @Nonnull String url) {
         this(null, null, null,
-            null, url);
+            null, null, url);
+    }
+
+    public Optional<String> content() {
+        return Optional.ofNullable(this.content);
     }
 
     public Optional<String> description() {
@@ -83,6 +94,12 @@ public class LmsMedia {
 
     public static Builder builder() {
         return new Builder();
+    }
+
+
+    public LmsMedia withContent(@Nullable String content) {
+        this.content = content;
+        return this;
     }
 
 
@@ -126,6 +143,7 @@ public class LmsMedia {
         }
         LmsMedia other = (LmsMedia) o;
         return 
+            Utils.enhancedDeepEquals(this.content, other.content) &&
             Utils.enhancedDeepEquals(this.description, other.description) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.thumbnailUrl, other.thumbnailUrl) &&
@@ -136,13 +154,14 @@ public class LmsMedia {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            description, name, thumbnailUrl,
-            type, url);
+            content, description, name,
+            thumbnailUrl, type, url);
     }
     
     @Override
     public String toString() {
         return Utils.toString(LmsMedia.class,
+                "content", content,
                 "description", description,
                 "name", name,
                 "thumbnailUrl", thumbnailUrl,
@@ -152,6 +171,8 @@ public class LmsMedia {
 
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
+
+        private String content;
 
         private String description;
 
@@ -165,6 +186,11 @@ public class LmsMedia {
 
         private Builder() {
           // force use of static builder() method
+        }
+
+        public Builder content(@Nullable String content) {
+            this.content = content;
+            return this;
         }
 
         public Builder description(@Nullable String description) {
@@ -194,8 +220,8 @@ public class LmsMedia {
 
         public LmsMedia build() {
             return new LmsMedia(
-                description, name, thumbnailUrl,
-                type, url);
+                content, description, name,
+                thumbnailUrl, type, url);
         }
 
     }

@@ -507,6 +507,28 @@ public class UnifiedJavaSDKAutoConfig {
         return unifiedTo.insertionorder();
     }
     /**
+     * Creates a Assessment sub-SDK bean if none exists.
+     *
+     * @param unifiedTo the main SDK instance
+     * @return A configured Assessment instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public Assessment assessment(UnifiedTo unifiedTo) {
+        return unifiedTo.assessment();
+    }
+    /**
+     * Creates a Package sub-SDK bean if none exists.
+     *
+     * @param unifiedTo the main SDK instance
+     * @return A configured Package instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public Package package_(UnifiedTo unifiedTo) {
+        return unifiedTo.package_();
+    }
+    /**
      * Creates a Ats sub-SDK bean if none exists.
      *
      * @param unifiedTo the main SDK instance
@@ -1068,6 +1090,17 @@ public class UnifiedJavaSDKAutoConfig {
         return unifiedTo.class_();
     }
     /**
+     * Creates a Content sub-SDK bean if none exists.
+     *
+     * @param unifiedTo the main SDK instance
+     * @return A configured Content instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public Content content(UnifiedTo unifiedTo) {
+        return unifiedTo.content();
+    }
+    /**
      * Creates a Course sub-SDK bean if none exists.
      *
      * @param unifiedTo the main SDK instance
@@ -1607,17 +1640,6 @@ public class UnifiedJavaSDKAutoConfig {
         return unifiedTo.verification();
     }
     /**
-     * Creates a Package sub-SDK bean if none exists.
-     *
-     * @param unifiedTo the main SDK instance
-     * @return A configured Package instance
-     */
-    @Bean
-    @ConditionalOnMissingBean
-    public Package package_(UnifiedTo unifiedTo) {
-        return unifiedTo.package_();
-    }
-    /**
      * Creates a Request sub-SDK bean if none exists.
      *
      * @param unifiedTo the main SDK instance
@@ -1926,6 +1948,28 @@ public class UnifiedJavaSDKAutoConfig {
     @ConditionalOnMissingBean
     public AsyncInsertionorder asyncInsertionorder(AsyncUnifiedTo asyncUnifiedTo) {
         return asyncUnifiedTo.insertionorder();
+    }
+    /**
+     * Creates an AsyncAssessment sub-SDK bean if none exists.
+     *
+     * @param asyncUnifiedTo the async SDK instance
+     * @return A configured AsyncAssessment instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public AsyncAssessment asyncAssessment(AsyncUnifiedTo asyncUnifiedTo) {
+        return asyncUnifiedTo.assessment();
+    }
+    /**
+     * Creates an AsyncPackage sub-SDK bean if none exists.
+     *
+     * @param asyncUnifiedTo the async SDK instance
+     * @return A configured AsyncPackage instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public AsyncPackage asyncPackage(AsyncUnifiedTo asyncUnifiedTo) {
+        return asyncUnifiedTo.package_();
     }
     /**
      * Creates an AsyncAts sub-SDK bean if none exists.
@@ -2489,6 +2533,17 @@ public class UnifiedJavaSDKAutoConfig {
         return asyncUnifiedTo.class_();
     }
     /**
+     * Creates an AsyncContent sub-SDK bean if none exists.
+     *
+     * @param asyncUnifiedTo the async SDK instance
+     * @return A configured AsyncContent instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public AsyncContent asyncContent(AsyncUnifiedTo asyncUnifiedTo) {
+        return asyncUnifiedTo.content();
+    }
+    /**
      * Creates an AsyncCourse sub-SDK bean if none exists.
      *
      * @param asyncUnifiedTo the async SDK instance
@@ -3026,17 +3081,6 @@ public class UnifiedJavaSDKAutoConfig {
     @ConditionalOnMissingBean
     public AsyncVerification asyncVerification(AsyncUnifiedTo asyncUnifiedTo) {
         return asyncUnifiedTo.verification();
-    }
-    /**
-     * Creates an AsyncPackage sub-SDK bean if none exists.
-     *
-     * @param asyncUnifiedTo the async SDK instance
-     * @return A configured AsyncPackage instance
-     */
-    @Bean
-    @ConditionalOnMissingBean
-    public AsyncPackage asyncPackage(AsyncUnifiedTo asyncUnifiedTo) {
-        return asyncUnifiedTo.package_();
     }
     /**
      * Creates an AsyncRequest sub-SDK bean if none exists.

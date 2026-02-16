@@ -63,7 +63,7 @@ public class VerificationRequest {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profile_gender")
-    private ProfileGender profileGender;
+    private VerificationRequestProfileGender profileGender;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -135,7 +135,7 @@ public class VerificationRequest {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response_status")
-    private ResponseStatus responseStatus;
+    private VerificationRequestResponseStatus responseStatus;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -157,7 +157,7 @@ public class VerificationRequest {
             @JsonProperty("profile_addresses") @Nullable List<VerificationAddress> profileAddresses,
             @JsonProperty("profile_date_of_birth") @Nullable String profileDateOfBirth,
             @JsonProperty("profile_emails") @Nullable List<String> profileEmails,
-            @JsonProperty("profile_gender") @Nullable ProfileGender profileGender,
+            @JsonProperty("profile_gender") @Nullable VerificationRequestProfileGender profileGender,
             @JsonProperty("profile_ip_address") @Nullable String profileIpAddress,
             @JsonProperty("profile_name") @Nullable String profileName,
             @JsonProperty("profile_national_identifier") @Nullable String profileNationalIdentifier,
@@ -171,7 +171,7 @@ public class VerificationRequest {
             @JsonProperty("response_redirect_url") @Nullable String responseRedirectUrl,
             @JsonProperty("response_score") @Nullable Double responseScore,
             @JsonProperty("response_source") @Nullable String responseSource,
-            @JsonProperty("response_status") @Nullable ResponseStatus responseStatus,
+            @JsonProperty("response_status") @Nullable VerificationRequestResponseStatus responseStatus,
             @JsonProperty("target_url") @Nullable String targetUrl,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.candidateId = candidateId;
@@ -245,7 +245,7 @@ public class VerificationRequest {
         return Optional.ofNullable(this.profileEmails);
     }
 
-    public Optional<ProfileGender> profileGender() {
+    public Optional<VerificationRequestProfileGender> profileGender() {
         return Optional.ofNullable(this.profileGender);
     }
 
@@ -304,7 +304,7 @@ public class VerificationRequest {
         return Optional.ofNullable(this.responseSource);
     }
 
-    public Optional<ResponseStatus> responseStatus() {
+    public Optional<VerificationRequestResponseStatus> responseStatus() {
         return Optional.ofNullable(this.responseStatus);
     }
 
@@ -369,7 +369,7 @@ public class VerificationRequest {
     }
 
 
-    public VerificationRequest withProfileGender(@Nullable ProfileGender profileGender) {
+    public VerificationRequest withProfileGender(@Nullable VerificationRequestProfileGender profileGender) {
         this.profileGender = profileGender;
         return this;
     }
@@ -456,7 +456,7 @@ public class VerificationRequest {
     }
 
 
-    public VerificationRequest withResponseStatus(@Nullable ResponseStatus responseStatus) {
+    public VerificationRequest withResponseStatus(@Nullable VerificationRequestResponseStatus responseStatus) {
         this.responseStatus = responseStatus;
         return this;
     }
@@ -574,7 +574,7 @@ public class VerificationRequest {
 
         private List<String> profileEmails;
 
-        private ProfileGender profileGender;
+        private VerificationRequestProfileGender profileGender;
 
         private String profileIpAddress;
 
@@ -602,7 +602,7 @@ public class VerificationRequest {
 
         private String responseSource;
 
-        private ResponseStatus responseStatus;
+        private VerificationRequestResponseStatus responseStatus;
 
         private String targetUrl;
 
@@ -652,7 +652,7 @@ public class VerificationRequest {
             return this;
         }
 
-        public Builder profileGender(@Nullable ProfileGender profileGender) {
+        public Builder profileGender(@Nullable VerificationRequestProfileGender profileGender) {
             this.profileGender = profileGender;
             return this;
         }
@@ -725,7 +725,7 @@ public class VerificationRequest {
             return this;
         }
 
-        public Builder responseStatus(@Nullable ResponseStatus responseStatus) {
+        public Builder responseStatus(@Nullable VerificationRequestResponseStatus responseStatus) {
             this.responseStatus = responseStatus;
             return this;
         }

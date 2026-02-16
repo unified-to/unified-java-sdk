@@ -95,7 +95,7 @@ public class CreateUnifiedConnection {
                     typeReference);
             SerializedBody serializedRequestBody = Utils.serializeRequestBody(
                     convertedRequest,
-                    "request",
+                    "",
                     "json",
                     false);
             if (serializedRequestBody == null) {

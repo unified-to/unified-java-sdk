@@ -18,18 +18,26 @@ import to.unified.unified_java_sdk.models.operations.ListAccountingOrdersRespons
 import to.unified.unified_java_sdk.models.operations.PatchAccountingOrderRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingOrderRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchAccountingOrderResponse;
+import to.unified.unified_java_sdk.models.operations.PatchAssessmentOrderRequest;
+import to.unified.unified_java_sdk.models.operations.PatchAssessmentOrderRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchAssessmentOrderResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveAccountingOrderRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveAccountingOrderRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveAccountingOrderResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingOrderRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingOrderRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateAccountingOrderResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateAssessmentOrderRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateAssessmentOrderRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateAssessmentOrderResponse;
 import to.unified.unified_java_sdk.operations.CreateAccountingOrder;
 import to.unified.unified_java_sdk.operations.GetAccountingOrder;
 import to.unified.unified_java_sdk.operations.ListAccountingOrders;
 import to.unified.unified_java_sdk.operations.PatchAccountingOrder;
+import to.unified.unified_java_sdk.operations.PatchAssessmentOrder;
 import to.unified.unified_java_sdk.operations.RemoveAccountingOrder;
 import to.unified.unified_java_sdk.operations.UpdateAccountingOrder;
+import to.unified.unified_java_sdk.operations.UpdateAssessmentOrder;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -141,6 +149,28 @@ public class Order {
     }
 
     /**
+     * Update an order
+     * 
+     * @return The call builder
+     */
+    public PatchAssessmentOrderRequestBuilder patchAssessmentOrder() {
+        return new PatchAssessmentOrderRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update an order
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchAssessmentOrderResponse patchAssessmentOrder(@Nonnull PatchAssessmentOrderRequest request) {
+        RequestOperation<PatchAssessmentOrderRequest, PatchAssessmentOrderResponse> operation
+              = new PatchAssessmentOrder.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Remove an order
      * 
      * @return The call builder
@@ -181,6 +211,28 @@ public class Order {
     public UpdateAccountingOrderResponse updateAccountingOrder(@Nonnull UpdateAccountingOrderRequest request) {
         RequestOperation<UpdateAccountingOrderRequest, UpdateAccountingOrderResponse> operation
               = new UpdateAccountingOrder.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update an order
+     * 
+     * @return The call builder
+     */
+    public UpdateAssessmentOrderRequestBuilder updateAssessmentOrder() {
+        return new UpdateAssessmentOrderRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update an order
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateAssessmentOrderResponse updateAssessmentOrder(@Nonnull UpdateAssessmentOrderRequest request) {
+        RequestOperation<UpdateAssessmentOrderRequest, UpdateAssessmentOrderResponse> operation
+              = new UpdateAssessmentOrder.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -5,6 +5,7 @@
 
 | Field                                                          | Type                                                           | Required                                                       | Description                                                    |
 | -------------------------------------------------------------- | -------------------------------------------------------------- | -------------------------------------------------------------- | -------------------------------------------------------------- |
+| `content`                                                      | *Optional\<String>*                                            | :heavy_minus_sign:                                             | N/A                                                            |
 | `description`                                                  | *Optional\<String>*                                            | :heavy_minus_sign:                                             | N/A                                                            |
 | `name`                                                         | *Optional\<String>*                                            | :heavy_minus_sign:                                             | N/A                                                            |
 | `thumbnailUrl`                                                 | *Optional\<String>*                                            | :heavy_minus_sign:                                             | N/A                                                            |

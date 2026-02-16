@@ -64,6 +64,11 @@ public class AccountingJournalLineitem {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("organization_id")
+    private String organizationId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_id")
     private String paymentId;
 
@@ -93,6 +98,7 @@ public class AccountingJournalLineitem {
             @JsonProperty("group_id") @Nullable String groupId,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("invoice_id") @Nullable String invoiceId,
+            @JsonProperty("organization_id") @Nullable String organizationId,
             @JsonProperty("payment_id") @Nullable String paymentId,
             @JsonProperty("project_id") @Nullable String projectId,
             @JsonProperty("tax_amount") @Nullable Double taxAmount,
@@ -106,6 +112,7 @@ public class AccountingJournalLineitem {
         this.groupId = groupId;
         this.id = id;
         this.invoiceId = invoiceId;
+        this.organizationId = organizationId;
         this.paymentId = paymentId;
         this.projectId = projectId;
         this.taxAmount = taxAmount;
@@ -117,7 +124,7 @@ public class AccountingJournalLineitem {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     public Optional<String> accountId() {
@@ -154,6 +161,10 @@ public class AccountingJournalLineitem {
 
     public Optional<String> invoiceId() {
         return Optional.ofNullable(this.invoiceId);
+    }
+
+    public Optional<String> organizationId() {
+        return Optional.ofNullable(this.organizationId);
     }
 
     public Optional<String> paymentId() {
@@ -231,6 +242,12 @@ public class AccountingJournalLineitem {
     }
 
 
+    public AccountingJournalLineitem withOrganizationId(@Nullable String organizationId) {
+        this.organizationId = organizationId;
+        return this;
+    }
+
+
     public AccountingJournalLineitem withPaymentId(@Nullable String paymentId) {
         this.paymentId = paymentId;
         return this;
@@ -274,6 +291,7 @@ public class AccountingJournalLineitem {
             Utils.enhancedDeepEquals(this.groupId, other.groupId) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.invoiceId, other.invoiceId) &&
+            Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
             Utils.enhancedDeepEquals(this.paymentId, other.paymentId) &&
             Utils.enhancedDeepEquals(this.projectId, other.projectId) &&
             Utils.enhancedDeepEquals(this.taxAmount, other.taxAmount) &&
@@ -286,8 +304,8 @@ public class AccountingJournalLineitem {
             accountId, categoryIds, contactId,
             creditAmount, debitAmount, description,
             groupId, id, invoiceId,
-            paymentId, projectId, taxAmount,
-            totalAmount);
+            organizationId, paymentId, projectId,
+            taxAmount, totalAmount);
     }
     
     @Override
@@ -302,6 +320,7 @@ public class AccountingJournalLineitem {
                 "groupId", groupId,
                 "id", id,
                 "invoiceId", invoiceId,
+                "organizationId", organizationId,
                 "paymentId", paymentId,
                 "projectId", projectId,
                 "taxAmount", taxAmount,
@@ -328,6 +347,8 @@ public class AccountingJournalLineitem {
         private String id;
 
         private String invoiceId;
+
+        private String organizationId;
 
         private String paymentId;
 
@@ -386,6 +407,11 @@ public class AccountingJournalLineitem {
             return this;
         }
 
+        public Builder organizationId(@Nullable String organizationId) {
+            this.organizationId = organizationId;
+            return this;
+        }
+
         public Builder paymentId(@Nullable String paymentId) {
             this.paymentId = paymentId;
             return this;
@@ -411,8 +437,8 @@ public class AccountingJournalLineitem {
                 accountId, categoryIds, contactId,
                 creditAmount, debitAmount, description,
                 groupId, id, invoiceId,
-                paymentId, projectId, taxAmount,
-                totalAmount);
+                organizationId, paymentId, projectId,
+                taxAmount, totalAmount);
         }
 
     }

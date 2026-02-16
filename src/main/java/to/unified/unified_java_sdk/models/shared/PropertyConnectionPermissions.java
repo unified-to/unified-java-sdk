@@ -82,6 +82,9 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions VERIFICATION_PACKAGE_READ = new PropertyConnectionPermissions("verification_package_read");
     public static final PropertyConnectionPermissions VERIFICATION_REQUEST_READ = new PropertyConnectionPermissions("verification_request_read");
     public static final PropertyConnectionPermissions VERIFICATION_REQUEST_WRITE = new PropertyConnectionPermissions("verification_request_write");
+    public static final PropertyConnectionPermissions ASSESSMENT_PACKAGE_READ = new PropertyConnectionPermissions("assessment_package_read");
+    public static final PropertyConnectionPermissions ASSESSMENT_PACKAGE_WRITE = new PropertyConnectionPermissions("assessment_package_write");
+    public static final PropertyConnectionPermissions ASSESSMENT_ORDER_WRITE = new PropertyConnectionPermissions("assessment_order_write");
     public static final PropertyConnectionPermissions ATS_ACTIVITY_READ = new PropertyConnectionPermissions("ats_activity_read");
     public static final PropertyConnectionPermissions ATS_ACTIVITY_WRITE = new PropertyConnectionPermissions("ats_activity_write");
     public static final PropertyConnectionPermissions ATS_APPLICATION_READ = new PropertyConnectionPermissions("ats_application_read");
@@ -111,12 +114,12 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions CRM_LEAD_WRITE = new PropertyConnectionPermissions("crm_lead_write");
     public static final PropertyConnectionPermissions CRM_PIPELINE_READ = new PropertyConnectionPermissions("crm_pipeline_read");
     public static final PropertyConnectionPermissions CRM_PIPELINE_WRITE = new PropertyConnectionPermissions("crm_pipeline_write");
-    public static final PropertyConnectionPermissions MARTECH_CAMPAIGN_READ = new PropertyConnectionPermissions("martech_campaign_read");
-    public static final PropertyConnectionPermissions MARTECH_CAMPAIGN_WRITE = new PropertyConnectionPermissions("martech_campaign_write");
     public static final PropertyConnectionPermissions MARTECH_LIST_READ = new PropertyConnectionPermissions("martech_list_read");
     public static final PropertyConnectionPermissions MARTECH_LIST_WRITE = new PropertyConnectionPermissions("martech_list_write");
     public static final PropertyConnectionPermissions MARTECH_MEMBER_READ = new PropertyConnectionPermissions("martech_member_read");
     public static final PropertyConnectionPermissions MARTECH_MEMBER_WRITE = new PropertyConnectionPermissions("martech_member_write");
+    public static final PropertyConnectionPermissions MARTECH_CAMPAIGN_READ = new PropertyConnectionPermissions("martech_campaign_read");
+    public static final PropertyConnectionPermissions MARTECH_CAMPAIGN_WRITE = new PropertyConnectionPermissions("martech_campaign_write");
     public static final PropertyConnectionPermissions MARTECH_REPORT_READ = new PropertyConnectionPermissions("martech_report_read");
     public static final PropertyConnectionPermissions MARTECH_REPORT_WRITE = new PropertyConnectionPermissions("martech_report_write");
     public static final PropertyConnectionPermissions TICKETING_CUSTOMER_READ = new PropertyConnectionPermissions("ticketing_customer_read");
@@ -191,6 +194,12 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions LMS_STUDENT_WRITE = new PropertyConnectionPermissions("lms_student_write");
     public static final PropertyConnectionPermissions LMS_INSTRUCTOR_READ = new PropertyConnectionPermissions("lms_instructor_read");
     public static final PropertyConnectionPermissions LMS_INSTRUCTOR_WRITE = new PropertyConnectionPermissions("lms_instructor_write");
+    public static final PropertyConnectionPermissions LMS_CONTENT_READ = new PropertyConnectionPermissions("lms_content_read");
+    public static final PropertyConnectionPermissions LMS_CONTENT_WRITE = new PropertyConnectionPermissions("lms_content_write");
+    public static final PropertyConnectionPermissions LMS_COLLECTION_READ = new PropertyConnectionPermissions("lms_collection_read");
+    public static final PropertyConnectionPermissions LMS_COLLECTION_WRITE = new PropertyConnectionPermissions("lms_collection_write");
+    public static final PropertyConnectionPermissions LMS_ACTIVITY_READ = new PropertyConnectionPermissions("lms_activity_read");
+    public static final PropertyConnectionPermissions LMS_ACTIVITY_WRITE = new PropertyConnectionPermissions("lms_activity_write");
     public static final PropertyConnectionPermissions REPO_ORGANIZATION_READ = new PropertyConnectionPermissions("repo_organization_read");
     public static final PropertyConnectionPermissions REPO_ORGANIZATION_WRITE = new PropertyConnectionPermissions("repo_organization_write");
     public static final PropertyConnectionPermissions REPO_REPOSITORY_READ = new PropertyConnectionPermissions("repo_repository_read");
@@ -375,6 +384,9 @@ public class PropertyConnectionPermissions {
         map.put("verification_package_read", VERIFICATION_PACKAGE_READ);
         map.put("verification_request_read", VERIFICATION_REQUEST_READ);
         map.put("verification_request_write", VERIFICATION_REQUEST_WRITE);
+        map.put("assessment_package_read", ASSESSMENT_PACKAGE_READ);
+        map.put("assessment_package_write", ASSESSMENT_PACKAGE_WRITE);
+        map.put("assessment_order_write", ASSESSMENT_ORDER_WRITE);
         map.put("ats_activity_read", ATS_ACTIVITY_READ);
         map.put("ats_activity_write", ATS_ACTIVITY_WRITE);
         map.put("ats_application_read", ATS_APPLICATION_READ);
@@ -404,12 +416,12 @@ public class PropertyConnectionPermissions {
         map.put("crm_lead_write", CRM_LEAD_WRITE);
         map.put("crm_pipeline_read", CRM_PIPELINE_READ);
         map.put("crm_pipeline_write", CRM_PIPELINE_WRITE);
-        map.put("martech_campaign_read", MARTECH_CAMPAIGN_READ);
-        map.put("martech_campaign_write", MARTECH_CAMPAIGN_WRITE);
         map.put("martech_list_read", MARTECH_LIST_READ);
         map.put("martech_list_write", MARTECH_LIST_WRITE);
         map.put("martech_member_read", MARTECH_MEMBER_READ);
         map.put("martech_member_write", MARTECH_MEMBER_WRITE);
+        map.put("martech_campaign_read", MARTECH_CAMPAIGN_READ);
+        map.put("martech_campaign_write", MARTECH_CAMPAIGN_WRITE);
         map.put("martech_report_read", MARTECH_REPORT_READ);
         map.put("martech_report_write", MARTECH_REPORT_WRITE);
         map.put("ticketing_customer_read", TICKETING_CUSTOMER_READ);
@@ -484,6 +496,12 @@ public class PropertyConnectionPermissions {
         map.put("lms_student_write", LMS_STUDENT_WRITE);
         map.put("lms_instructor_read", LMS_INSTRUCTOR_READ);
         map.put("lms_instructor_write", LMS_INSTRUCTOR_WRITE);
+        map.put("lms_content_read", LMS_CONTENT_READ);
+        map.put("lms_content_write", LMS_CONTENT_WRITE);
+        map.put("lms_collection_read", LMS_COLLECTION_READ);
+        map.put("lms_collection_write", LMS_COLLECTION_WRITE);
+        map.put("lms_activity_read", LMS_ACTIVITY_READ);
+        map.put("lms_activity_write", LMS_ACTIVITY_WRITE);
         map.put("repo_organization_read", REPO_ORGANIZATION_READ);
         map.put("repo_organization_write", REPO_ORGANIZATION_WRITE);
         map.put("repo_repository_read", REPO_REPOSITORY_READ);
@@ -600,6 +618,9 @@ public class PropertyConnectionPermissions {
         map.put("verification_package_read", PropertyConnectionPermissionsEnum.VERIFICATION_PACKAGE_READ);
         map.put("verification_request_read", PropertyConnectionPermissionsEnum.VERIFICATION_REQUEST_READ);
         map.put("verification_request_write", PropertyConnectionPermissionsEnum.VERIFICATION_REQUEST_WRITE);
+        map.put("assessment_package_read", PropertyConnectionPermissionsEnum.ASSESSMENT_PACKAGE_READ);
+        map.put("assessment_package_write", PropertyConnectionPermissionsEnum.ASSESSMENT_PACKAGE_WRITE);
+        map.put("assessment_order_write", PropertyConnectionPermissionsEnum.ASSESSMENT_ORDER_WRITE);
         map.put("ats_activity_read", PropertyConnectionPermissionsEnum.ATS_ACTIVITY_READ);
         map.put("ats_activity_write", PropertyConnectionPermissionsEnum.ATS_ACTIVITY_WRITE);
         map.put("ats_application_read", PropertyConnectionPermissionsEnum.ATS_APPLICATION_READ);
@@ -629,12 +650,12 @@ public class PropertyConnectionPermissions {
         map.put("crm_lead_write", PropertyConnectionPermissionsEnum.CRM_LEAD_WRITE);
         map.put("crm_pipeline_read", PropertyConnectionPermissionsEnum.CRM_PIPELINE_READ);
         map.put("crm_pipeline_write", PropertyConnectionPermissionsEnum.CRM_PIPELINE_WRITE);
-        map.put("martech_campaign_read", PropertyConnectionPermissionsEnum.MARTECH_CAMPAIGN_READ);
-        map.put("martech_campaign_write", PropertyConnectionPermissionsEnum.MARTECH_CAMPAIGN_WRITE);
         map.put("martech_list_read", PropertyConnectionPermissionsEnum.MARTECH_LIST_READ);
         map.put("martech_list_write", PropertyConnectionPermissionsEnum.MARTECH_LIST_WRITE);
         map.put("martech_member_read", PropertyConnectionPermissionsEnum.MARTECH_MEMBER_READ);
         map.put("martech_member_write", PropertyConnectionPermissionsEnum.MARTECH_MEMBER_WRITE);
+        map.put("martech_campaign_read", PropertyConnectionPermissionsEnum.MARTECH_CAMPAIGN_READ);
+        map.put("martech_campaign_write", PropertyConnectionPermissionsEnum.MARTECH_CAMPAIGN_WRITE);
         map.put("martech_report_read", PropertyConnectionPermissionsEnum.MARTECH_REPORT_READ);
         map.put("martech_report_write", PropertyConnectionPermissionsEnum.MARTECH_REPORT_WRITE);
         map.put("ticketing_customer_read", PropertyConnectionPermissionsEnum.TICKETING_CUSTOMER_READ);
@@ -709,6 +730,12 @@ public class PropertyConnectionPermissions {
         map.put("lms_student_write", PropertyConnectionPermissionsEnum.LMS_STUDENT_WRITE);
         map.put("lms_instructor_read", PropertyConnectionPermissionsEnum.LMS_INSTRUCTOR_READ);
         map.put("lms_instructor_write", PropertyConnectionPermissionsEnum.LMS_INSTRUCTOR_WRITE);
+        map.put("lms_content_read", PropertyConnectionPermissionsEnum.LMS_CONTENT_READ);
+        map.put("lms_content_write", PropertyConnectionPermissionsEnum.LMS_CONTENT_WRITE);
+        map.put("lms_collection_read", PropertyConnectionPermissionsEnum.LMS_COLLECTION_READ);
+        map.put("lms_collection_write", PropertyConnectionPermissionsEnum.LMS_COLLECTION_WRITE);
+        map.put("lms_activity_read", PropertyConnectionPermissionsEnum.LMS_ACTIVITY_READ);
+        map.put("lms_activity_write", PropertyConnectionPermissionsEnum.LMS_ACTIVITY_WRITE);
         map.put("repo_organization_read", PropertyConnectionPermissionsEnum.REPO_ORGANIZATION_READ);
         map.put("repo_organization_write", PropertyConnectionPermissionsEnum.REPO_ORGANIZATION_WRITE);
         map.put("repo_repository_read", PropertyConnectionPermissionsEnum.REPO_REPOSITORY_READ);
@@ -826,6 +853,9 @@ public class PropertyConnectionPermissions {
         VERIFICATION_PACKAGE_READ("verification_package_read"),
         VERIFICATION_REQUEST_READ("verification_request_read"),
         VERIFICATION_REQUEST_WRITE("verification_request_write"),
+        ASSESSMENT_PACKAGE_READ("assessment_package_read"),
+        ASSESSMENT_PACKAGE_WRITE("assessment_package_write"),
+        ASSESSMENT_ORDER_WRITE("assessment_order_write"),
         ATS_ACTIVITY_READ("ats_activity_read"),
         ATS_ACTIVITY_WRITE("ats_activity_write"),
         ATS_APPLICATION_READ("ats_application_read"),
@@ -855,12 +885,12 @@ public class PropertyConnectionPermissions {
         CRM_LEAD_WRITE("crm_lead_write"),
         CRM_PIPELINE_READ("crm_pipeline_read"),
         CRM_PIPELINE_WRITE("crm_pipeline_write"),
-        MARTECH_CAMPAIGN_READ("martech_campaign_read"),
-        MARTECH_CAMPAIGN_WRITE("martech_campaign_write"),
         MARTECH_LIST_READ("martech_list_read"),
         MARTECH_LIST_WRITE("martech_list_write"),
         MARTECH_MEMBER_READ("martech_member_read"),
         MARTECH_MEMBER_WRITE("martech_member_write"),
+        MARTECH_CAMPAIGN_READ("martech_campaign_read"),
+        MARTECH_CAMPAIGN_WRITE("martech_campaign_write"),
         MARTECH_REPORT_READ("martech_report_read"),
         MARTECH_REPORT_WRITE("martech_report_write"),
         TICKETING_CUSTOMER_READ("ticketing_customer_read"),
@@ -935,6 +965,12 @@ public class PropertyConnectionPermissions {
         LMS_STUDENT_WRITE("lms_student_write"),
         LMS_INSTRUCTOR_READ("lms_instructor_read"),
         LMS_INSTRUCTOR_WRITE("lms_instructor_write"),
+        LMS_CONTENT_READ("lms_content_read"),
+        LMS_CONTENT_WRITE("lms_content_write"),
+        LMS_COLLECTION_READ("lms_collection_read"),
+        LMS_COLLECTION_WRITE("lms_collection_write"),
+        LMS_ACTIVITY_READ("lms_activity_read"),
+        LMS_ACTIVITY_WRITE("lms_activity_write"),
         REPO_ORGANIZATION_READ("repo_organization_read"),
         REPO_ORGANIZATION_WRITE("repo_organization_write"),
         REPO_REPOSITORY_READ("repo_repository_read"),

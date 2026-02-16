@@ -20,10 +20,11 @@ import java.util.Optional;
  */
 public class ResponseStatus {
 
+    public static final ResponseStatus OPEN = new ResponseStatus("OPEN");
+    public static final ResponseStatus IN_PROGRESS = new ResponseStatus("IN_PROGRESS");
     public static final ResponseStatus COMPLETED = new ResponseStatus("COMPLETED");
     public static final ResponseStatus FAILED = new ResponseStatus("FAILED");
-    public static final ResponseStatus PASSED = new ResponseStatus("PASSED");
-    public static final ResponseStatus PENDING = new ResponseStatus("PENDING");
+    public static final ResponseStatus REJECTED = new ResponseStatus("REJECTED");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -97,29 +98,32 @@ public class ResponseStatus {
 
     private static final Map<String, ResponseStatus> createValuesMap() {
         Map<String, ResponseStatus> map = new LinkedHashMap<>();
+        map.put("OPEN", OPEN);
+        map.put("IN_PROGRESS", IN_PROGRESS);
         map.put("COMPLETED", COMPLETED);
         map.put("FAILED", FAILED);
-        map.put("PASSED", PASSED);
-        map.put("PENDING", PENDING);
+        map.put("REJECTED", REJECTED);
         return map;
     }
 
     private static final Map<String, ResponseStatusEnum> createEnumsMap() {
         Map<String, ResponseStatusEnum> map = new HashMap<>();
+        map.put("OPEN", ResponseStatusEnum.OPEN);
+        map.put("IN_PROGRESS", ResponseStatusEnum.IN_PROGRESS);
         map.put("COMPLETED", ResponseStatusEnum.COMPLETED);
         map.put("FAILED", ResponseStatusEnum.FAILED);
-        map.put("PASSED", ResponseStatusEnum.PASSED);
-        map.put("PENDING", ResponseStatusEnum.PENDING);
+        map.put("REJECTED", ResponseStatusEnum.REJECTED);
         return map;
     }
     
     
     public enum ResponseStatusEnum {
 
+        OPEN("OPEN"),
+        IN_PROGRESS("IN_PROGRESS"),
         COMPLETED("COMPLETED"),
         FAILED("FAILED"),
-        PASSED("PASSED"),
-        PENDING("PENDING"),;
+        REJECTED("REJECTED"),;
 
         private final String value;
 

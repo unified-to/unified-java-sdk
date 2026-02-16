@@ -38,7 +38,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.47.7'
+implementation 'to.unified:unified-java-sdk:0.47.8'
 ```
 
 Maven:
@@ -46,7 +46,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.47.7</version>
+    <version>0.47.8</version>
 </dependency>
 ```
 
@@ -263,11 +263,17 @@ public class Application {
 ### [Activity](docs/sdks/activity/README.md)
 
 * [createAtsActivity](docs/sdks/activity/README.md#createatsactivity) - Create an activity
+* [createLmsActivity](docs/sdks/activity/README.md#createlmsactivity) - Create an activity
 * [getAtsActivity](docs/sdks/activity/README.md#getatsactivity) - Retrieve an activity
+* [getLmsActivity](docs/sdks/activity/README.md#getlmsactivity) - Retrieve an activity
 * [listAtsActivities](docs/sdks/activity/README.md#listatsactivities) - List all activities
+* [listLmsActivities](docs/sdks/activity/README.md#listlmsactivities) - List all activities
 * [patchAtsActivity](docs/sdks/activity/README.md#patchatsactivity) - Update an activity
+* [patchLmsActivity](docs/sdks/activity/README.md#patchlmsactivity) - Update an activity
 * [removeAtsActivity](docs/sdks/activity/README.md#removeatsactivity) - Remove an activity
+* [removeLmsActivity](docs/sdks/activity/README.md#removelmsactivity) - Remove an activity
 * [updateAtsActivity](docs/sdks/activity/README.md#updateatsactivity) - Update an activity
+* [updateLmsActivity](docs/sdks/activity/README.md#updatelmsactivity) - Update an activity
 
 ### [Ad](docs/sdks/ad/README.md)
 
@@ -335,6 +341,17 @@ public class Application {
 ### [Applicationstatus](docs/sdks/applicationstatus/README.md)
 
 * [listAtsApplicationstatuses](docs/sdks/applicationstatus/README.md#listatsapplicationstatuses) - List all applicationstatuses
+
+### [Assessment](docs/sdks/assessment/README.md)
+
+* [createAssessmentPackage](docs/sdks/assessment/README.md#createassessmentpackage) - Create an assessment package
+* [getAssessmentPackage](docs/sdks/assessment/README.md#getassessmentpackage) - Get an assessment package
+* [listAssessmentPackages](docs/sdks/assessment/README.md#listassessmentpackages) - List assessment packages
+* [patchAssessmentOrder](docs/sdks/assessment/README.md#patchassessmentorder) - Update an order
+* [patchAssessmentPackage](docs/sdks/assessment/README.md#patchassessmentpackage) - Update an assessment package
+* [removeAssessmentPackage](docs/sdks/assessment/README.md#removeassessmentpackage) - Delete an assessment package
+* [updateAssessmentOrder](docs/sdks/assessment/README.md#updateassessmentorder) - Update an order
+* [updateAssessmentPackage](docs/sdks/assessment/README.md#updateassessmentpackage) - Update an assessment package
 
 ### [Ats](docs/sdks/ats/README.md)
 
@@ -535,11 +552,17 @@ public class Application {
 ### [Collection](docs/sdks/collection/README.md)
 
 * [createCommerceCollection](docs/sdks/collection/README.md#createcommercecollection) - Create a collection
+* [createLmsCollection](docs/sdks/collection/README.md#createlmscollection) - Create a collection
 * [getCommerceCollection](docs/sdks/collection/README.md#getcommercecollection) - Retrieve a collection
+* [getLmsCollection](docs/sdks/collection/README.md#getlmscollection) - Retrieve a collection
 * [listCommerceCollections](docs/sdks/collection/README.md#listcommercecollections) - List all collections
+* [listLmsCollections](docs/sdks/collection/README.md#listlmscollections) - List all collections
 * [patchCommerceCollection](docs/sdks/collection/README.md#patchcommercecollection) - Update a collection
+* [patchLmsCollection](docs/sdks/collection/README.md#patchlmscollection) - Update a collection
 * [removeCommerceCollection](docs/sdks/collection/README.md#removecommercecollection) - Remove a collection
+* [removeLmsCollection](docs/sdks/collection/README.md#removelmscollection) - Remove a collection
 * [updateCommerceCollection](docs/sdks/collection/README.md#updatecommercecollection) - Update a collection
+* [updateLmsCollection](docs/sdks/collection/README.md#updatelmscollection) - Update a collection
 
 ### [Comment](docs/sdks/comment/README.md)
 
@@ -667,6 +690,15 @@ public class Application {
 * [updateAccountingContact](docs/sdks/contact/README.md#updateaccountingcontact) - Update a contact
 * [updateCrmContact](docs/sdks/contact/README.md#updatecrmcontact) - Update a contact
 * [updateUcContact](docs/sdks/contact/README.md#updateuccontact) - Update a contact
+
+### [Content](docs/sdks/content/README.md)
+
+* [createLmsContent](docs/sdks/content/README.md#createlmscontent) - Create a content
+* [getLmsContent](docs/sdks/content/README.md#getlmscontent) - Retrieve a content
+* [listLmsContents](docs/sdks/content/README.md#listlmscontents) - List all contents
+* [patchLmsContent](docs/sdks/content/README.md#patchlmscontent) - Update a content
+* [removeLmsContent](docs/sdks/content/README.md#removelmscontent) - Remove a content
+* [updateLmsContent](docs/sdks/content/README.md#updatelmscontent) - Update a content
 
 ### [Course](docs/sdks/course/README.md)
 
@@ -1098,27 +1130,45 @@ public class Application {
 
 ### [Lms](docs/sdks/lms/README.md)
 
+* [createLmsActivity](docs/sdks/lms/README.md#createlmsactivity) - Create an activity
 * [createLmsClass](docs/sdks/lms/README.md#createlmsclass) - Create a class
+* [createLmsCollection](docs/sdks/lms/README.md#createlmscollection) - Create a collection
+* [createLmsContent](docs/sdks/lms/README.md#createlmscontent) - Create a content
 * [createLmsCourse](docs/sdks/lms/README.md#createlmscourse) - Create a course
 * [createLmsInstructor](docs/sdks/lms/README.md#createlmsinstructor) - Create an instructor
 * [createLmsStudent](docs/sdks/lms/README.md#createlmsstudent) - Create a student
+* [getLmsActivity](docs/sdks/lms/README.md#getlmsactivity) - Retrieve an activity
 * [getLmsClass](docs/sdks/lms/README.md#getlmsclass) - Retrieve a class
+* [getLmsCollection](docs/sdks/lms/README.md#getlmscollection) - Retrieve a collection
+* [getLmsContent](docs/sdks/lms/README.md#getlmscontent) - Retrieve a content
 * [getLmsCourse](docs/sdks/lms/README.md#getlmscourse) - Retrieve a course
 * [getLmsInstructor](docs/sdks/lms/README.md#getlmsinstructor) - Retrieve an instructor
 * [getLmsStudent](docs/sdks/lms/README.md#getlmsstudent) - Retrieve a student
+* [listLmsActivities](docs/sdks/lms/README.md#listlmsactivities) - List all activities
 * [listLmsClasses](docs/sdks/lms/README.md#listlmsclasses) - List all classes
+* [listLmsCollections](docs/sdks/lms/README.md#listlmscollections) - List all collections
+* [listLmsContents](docs/sdks/lms/README.md#listlmscontents) - List all contents
 * [listLmsCourses](docs/sdks/lms/README.md#listlmscourses) - List all courses
 * [listLmsInstructors](docs/sdks/lms/README.md#listlmsinstructors) - List all instructors
 * [listLmsStudents](docs/sdks/lms/README.md#listlmsstudents) - List all students
+* [patchLmsActivity](docs/sdks/lms/README.md#patchlmsactivity) - Update an activity
 * [patchLmsClass](docs/sdks/lms/README.md#patchlmsclass) - Update a class
+* [patchLmsCollection](docs/sdks/lms/README.md#patchlmscollection) - Update a collection
+* [patchLmsContent](docs/sdks/lms/README.md#patchlmscontent) - Update a content
 * [patchLmsCourse](docs/sdks/lms/README.md#patchlmscourse) - Update a course
 * [patchLmsInstructor](docs/sdks/lms/README.md#patchlmsinstructor) - Update an instructor
 * [patchLmsStudent](docs/sdks/lms/README.md#patchlmsstudent) - Update a student
+* [removeLmsActivity](docs/sdks/lms/README.md#removelmsactivity) - Remove an activity
 * [removeLmsClass](docs/sdks/lms/README.md#removelmsclass) - Remove a class
+* [removeLmsCollection](docs/sdks/lms/README.md#removelmscollection) - Remove a collection
+* [removeLmsContent](docs/sdks/lms/README.md#removelmscontent) - Remove a content
 * [removeLmsCourse](docs/sdks/lms/README.md#removelmscourse) - Remove a course
 * [removeLmsInstructor](docs/sdks/lms/README.md#removelmsinstructor) - Remove an instructor
 * [removeLmsStudent](docs/sdks/lms/README.md#removelmsstudent) - Remove a student
+* [updateLmsActivity](docs/sdks/lms/README.md#updatelmsactivity) - Update an activity
 * [updateLmsClass](docs/sdks/lms/README.md#updatelmsclass) - Update a class
+* [updateLmsCollection](docs/sdks/lms/README.md#updatelmscollection) - Update a collection
+* [updateLmsContent](docs/sdks/lms/README.md#updatelmscontent) - Update a content
 * [updateLmsCourse](docs/sdks/lms/README.md#updatelmscourse) - Update a course
 * [updateLmsInstructor](docs/sdks/lms/README.md#updatelmsinstructor) - Update an instructor
 * [updateLmsStudent](docs/sdks/lms/README.md#updatelmsstudent) - Update a student
@@ -1224,8 +1274,10 @@ public class Application {
 * [getAccountingOrder](docs/sdks/order/README.md#getaccountingorder) - Retrieve an order
 * [listAccountingOrders](docs/sdks/order/README.md#listaccountingorders) - List all orders
 * [patchAccountingOrder](docs/sdks/order/README.md#patchaccountingorder) - Update an order
+* [patchAssessmentOrder](docs/sdks/order/README.md#patchassessmentorder) - Update an order
 * [removeAccountingOrder](docs/sdks/order/README.md#removeaccountingorder) - Remove an order
 * [updateAccountingOrder](docs/sdks/order/README.md#updateaccountingorder) - Update an order
+* [updateAssessmentOrder](docs/sdks/order/README.md#updateassessmentorder) - Update an order
 
 ### [Organization](docs/sdks/organization/README.md)
 
@@ -1246,8 +1298,14 @@ public class Application {
 
 ### [Package](docs/sdks/package/README.md)
 
+* [createAssessmentPackage](docs/sdks/package/README.md#createassessmentpackage) - Create an assessment package
+* [getAssessmentPackage](docs/sdks/package/README.md#getassessmentpackage) - Get an assessment package
 * [getVerificationPackage](docs/sdks/package/README.md#getverificationpackage) - Retrieve a package
+* [listAssessmentPackages](docs/sdks/package/README.md#listassessmentpackages) - List assessment packages
 * [listVerificationPackages](docs/sdks/package/README.md#listverificationpackages) - List all packages
+* [patchAssessmentPackage](docs/sdks/package/README.md#patchassessmentpackage) - Update an assessment package
+* [removeAssessmentPackage](docs/sdks/package/README.md#removeassessmentpackage) - Delete an assessment package
+* [updateAssessmentPackage](docs/sdks/package/README.md#updateassessmentpackage) - Update an assessment package
 
 ### [Page](docs/sdks/page/README.md)
 

@@ -14,6 +14,7 @@ import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -101,6 +102,11 @@ public class AccountingAccount {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("taxonomy")
+    private List<AccountingAccountTaxonomy> taxonomy;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private Type type;
 
@@ -126,6 +132,7 @@ public class AccountingAccount {
             @JsonProperty("status") @Nullable Status status,
             @JsonProperty("subgroup") @Nullable String subgroup,
             @JsonProperty("subsection") @Nullable String subsection,
+            @JsonProperty("taxonomy") @Nullable List<AccountingAccountTaxonomy> taxonomy,
             @JsonProperty("type") @Nullable Type type,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.balance = balance;
@@ -143,6 +150,7 @@ public class AccountingAccount {
         this.status = status;
         this.subgroup = subgroup;
         this.subsection = subsection;
+        this.taxonomy = taxonomy;
         this.type = type;
         this.updatedAt = updatedAt;
     }
@@ -153,7 +161,7 @@ public class AccountingAccount {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<Double> balance() {
@@ -214,6 +222,10 @@ public class AccountingAccount {
 
     public Optional<String> subsection() {
         return Optional.ofNullable(this.subsection);
+    }
+
+    public Optional<List<AccountingAccountTaxonomy>> taxonomy() {
+        return Optional.ofNullable(this.taxonomy);
     }
 
     public Optional<Type> type() {
@@ -319,6 +331,12 @@ public class AccountingAccount {
     }
 
 
+    public AccountingAccount withTaxonomy(@Nullable List<AccountingAccountTaxonomy> taxonomy) {
+        this.taxonomy = taxonomy;
+        return this;
+    }
+
+
     public AccountingAccount withType(@Nullable Type type) {
         this.type = type;
         return this;
@@ -356,6 +374,7 @@ public class AccountingAccount {
             Utils.enhancedDeepEquals(this.status, other.status) &&
             Utils.enhancedDeepEquals(this.subgroup, other.subgroup) &&
             Utils.enhancedDeepEquals(this.subsection, other.subsection) &&
+            Utils.enhancedDeepEquals(this.taxonomy, other.taxonomy) &&
             Utils.enhancedDeepEquals(this.type, other.type) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
     }
@@ -368,7 +387,7 @@ public class AccountingAccount {
             id, isPayable, name,
             parentId, raw, section,
             status, subgroup, subsection,
-            type, updatedAt);
+            taxonomy, type, updatedAt);
     }
     
     @Override
@@ -389,6 +408,7 @@ public class AccountingAccount {
                 "status", status,
                 "subgroup", subgroup,
                 "subsection", subsection,
+                "taxonomy", taxonomy,
                 "type", type,
                 "updatedAt", updatedAt);
     }
@@ -425,6 +445,8 @@ public class AccountingAccount {
         private String subgroup;
 
         private String subsection;
+
+        private List<AccountingAccountTaxonomy> taxonomy;
 
         private Type type;
 
@@ -509,6 +531,11 @@ public class AccountingAccount {
             return this;
         }
 
+        public Builder taxonomy(@Nullable List<AccountingAccountTaxonomy> taxonomy) {
+            this.taxonomy = taxonomy;
+            return this;
+        }
+
         public Builder type(@Nullable Type type) {
             this.type = type;
             return this;
@@ -526,7 +553,7 @@ public class AccountingAccount {
                 id, isPayable, name,
                 parentId, raw, section,
                 status, subgroup, subsection,
-                type, updatedAt);
+                taxonomy, type, updatedAt);
         }
 
     }

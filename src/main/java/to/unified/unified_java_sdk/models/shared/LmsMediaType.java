@@ -25,6 +25,9 @@ public class LmsMediaType {
     public static final LmsMediaType VIDEO = new LmsMediaType("VIDEO");
     public static final LmsMediaType WEB = new LmsMediaType("WEB");
     public static final LmsMediaType DOCUMENT = new LmsMediaType("DOCUMENT");
+    public static final LmsMediaType TEXT = new LmsMediaType("TEXT");
+    public static final LmsMediaType HTML = new LmsMediaType("HTML");
+    public static final LmsMediaType MARKDOWN = new LmsMediaType("MARKDOWN");
     public static final LmsMediaType OTHER = new LmsMediaType("OTHER");
 
     // This map will grow whenever a Color gets created with a new
@@ -104,6 +107,9 @@ public class LmsMediaType {
         map.put("VIDEO", VIDEO);
         map.put("WEB", WEB);
         map.put("DOCUMENT", DOCUMENT);
+        map.put("TEXT", TEXT);
+        map.put("HTML", HTML);
+        map.put("MARKDOWN", MARKDOWN);
         map.put("OTHER", OTHER);
         return map;
     }
@@ -115,6 +121,9 @@ public class LmsMediaType {
         map.put("VIDEO", LmsMediaTypeEnum.VIDEO);
         map.put("WEB", LmsMediaTypeEnum.WEB);
         map.put("DOCUMENT", LmsMediaTypeEnum.DOCUMENT);
+        map.put("TEXT", LmsMediaTypeEnum.TEXT);
+        map.put("HTML", LmsMediaTypeEnum.HTML);
+        map.put("MARKDOWN", LmsMediaTypeEnum.MARKDOWN);
         map.put("OTHER", LmsMediaTypeEnum.OTHER);
         return map;
     }
@@ -127,6 +136,9 @@ public class LmsMediaType {
         VIDEO("VIDEO"),
         WEB("WEB"),
         DOCUMENT("DOCUMENT"),
+        TEXT("TEXT"),
+        HTML("HTML"),
+        MARKDOWN("MARKDOWN"),
         OTHER("OTHER"),;
 
         private final String value;

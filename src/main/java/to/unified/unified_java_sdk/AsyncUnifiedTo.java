@@ -65,6 +65,10 @@ public class AsyncUnifiedTo {
 
     private final AsyncInsertionorder insertionorder;
 
+    private final AsyncAssessment assessment;
+
+    private final AsyncPackage package_;
+
     private final AsyncAts ats;
 
     private final AsyncActivity activity;
@@ -167,6 +171,8 @@ public class AsyncUnifiedTo {
 
     private final AsyncClass class_;
 
+    private final AsyncContent content;
+
     private final AsyncCourse course;
 
     private final AsyncInstructor instructor;
@@ -264,8 +270,6 @@ public class AsyncUnifiedTo {
     private final AsyncWebhook webhook;
 
     private final AsyncVerification verification;
-
-    private final AsyncPackage package_;
 
     private final AsyncRequest request;
 
@@ -371,6 +375,14 @@ public class AsyncUnifiedTo {
 
     public AsyncInsertionorder insertionorder() {
         return insertionorder;
+    }
+
+    public AsyncAssessment assessment() {
+        return assessment;
+    }
+
+    public AsyncPackage package_() {
+        return package_;
     }
 
     public AsyncAts ats() {
@@ -577,6 +589,10 @@ public class AsyncUnifiedTo {
         return class_;
     }
 
+    public AsyncContent content() {
+        return content;
+    }
+
     public AsyncCourse course() {
         return course;
     }
@@ -773,10 +789,6 @@ public class AsyncUnifiedTo {
         return verification;
     }
 
-    public AsyncPackage package_() {
-        return package_;
-    }
-
     public AsyncRequest request() {
         return request;
     }
@@ -813,6 +825,8 @@ public class AsyncUnifiedTo {
         this.creative = new AsyncCreative(syncSDK.creative(), sdkConfiguration);
         this.group = new AsyncGroup(syncSDK.group(), sdkConfiguration);
         this.insertionorder = new AsyncInsertionorder(syncSDK.insertionorder(), sdkConfiguration);
+        this.assessment = new AsyncAssessment(syncSDK.assessment(), sdkConfiguration);
+        this.package_ = new AsyncPackage(syncSDK.package_(), sdkConfiguration);
         this.ats = new AsyncAts(syncSDK.ats(), sdkConfiguration);
         this.activity = new AsyncActivity(syncSDK.activity(), sdkConfiguration);
         this.application = new AsyncApplication(syncSDK.application(), sdkConfiguration);
@@ -864,6 +878,7 @@ public class AsyncUnifiedTo {
         this.space = new AsyncSpace(syncSDK.space(), sdkConfiguration);
         this.lms = new AsyncLms(syncSDK.lms(), sdkConfiguration);
         this.class_ = new AsyncClass(syncSDK.class_(), sdkConfiguration);
+        this.content = new AsyncContent(syncSDK.content(), sdkConfiguration);
         this.course = new AsyncCourse(syncSDK.course(), sdkConfiguration);
         this.instructor = new AsyncInstructor(syncSDK.instructor(), sdkConfiguration);
         this.student = new AsyncStudent(syncSDK.student(), sdkConfiguration);
@@ -913,7 +928,6 @@ public class AsyncUnifiedTo {
         this.issue = new AsyncIssue(syncSDK.issue(), sdkConfiguration);
         this.webhook = new AsyncWebhook(syncSDK.webhook(), sdkConfiguration);
         this.verification = new AsyncVerification(syncSDK.verification(), sdkConfiguration);
-        this.package_ = new AsyncPackage(syncSDK.package_(), sdkConfiguration);
         this.request = new AsyncRequest(syncSDK.request(), sdkConfiguration);
     }
 

@@ -53,6 +53,8 @@ public class ObjectType {
     public static final ObjectType COMMERCE_ITEMVARIANT = new ObjectType("commerce_itemvariant");
     public static final ObjectType VERIFICATION_PACKAGE = new ObjectType("verification_package");
     public static final ObjectType VERIFICATION_REQUEST = new ObjectType("verification_request");
+    public static final ObjectType ASSESSMENT_PACKAGE = new ObjectType("assessment_package");
+    public static final ObjectType ASSESSMENT_ORDER = new ObjectType("assessment_order");
     public static final ObjectType ATS_ACTIVITY = new ObjectType("ats_activity");
     public static final ObjectType ATS_APPLICATION = new ObjectType("ats_application");
     public static final ObjectType ATS_APPLICATIONSTATUS = new ObjectType("ats_applicationstatus");
@@ -78,9 +80,9 @@ public class ObjectType {
     public static final ObjectType HRIS_TIMESHIFT = new ObjectType("hris_timeshift");
     public static final ObjectType HRIS_DEDUCTION = new ObjectType("hris_deduction");
     public static final ObjectType HRIS_BENEFIT = new ObjectType("hris_benefit");
-    public static final ObjectType MARTECH_CAMPAIGN = new ObjectType("martech_campaign");
     public static final ObjectType MARTECH_LIST = new ObjectType("martech_list");
     public static final ObjectType MARTECH_MEMBER = new ObjectType("martech_member");
+    public static final ObjectType MARTECH_CAMPAIGN = new ObjectType("martech_campaign");
     public static final ObjectType MARTECH_REPORT = new ObjectType("martech_report");
     public static final ObjectType PASSTHROUGH = new ObjectType("passthrough");
     public static final ObjectType TICKETING_NOTE = new ObjectType("ticketing_note");
@@ -113,6 +115,9 @@ public class ObjectType {
     public static final ObjectType LMS_CLASS = new ObjectType("lms_class");
     public static final ObjectType LMS_STUDENT = new ObjectType("lms_student");
     public static final ObjectType LMS_INSTRUCTOR = new ObjectType("lms_instructor");
+    public static final ObjectType LMS_CONTENT = new ObjectType("lms_content");
+    public static final ObjectType LMS_COLLECTION = new ObjectType("lms_collection");
+    public static final ObjectType LMS_ACTIVITY = new ObjectType("lms_activity");
     public static final ObjectType REPO_ORGANIZATION = new ObjectType("repo_organization");
     public static final ObjectType REPO_REPOSITORY = new ObjectType("repo_repository");
     public static final ObjectType REPO_BRANCH = new ObjectType("repo_branch");
@@ -245,6 +250,8 @@ public class ObjectType {
         map.put("commerce_itemvariant", COMMERCE_ITEMVARIANT);
         map.put("verification_package", VERIFICATION_PACKAGE);
         map.put("verification_request", VERIFICATION_REQUEST);
+        map.put("assessment_package", ASSESSMENT_PACKAGE);
+        map.put("assessment_order", ASSESSMENT_ORDER);
         map.put("ats_activity", ATS_ACTIVITY);
         map.put("ats_application", ATS_APPLICATION);
         map.put("ats_applicationstatus", ATS_APPLICATIONSTATUS);
@@ -270,9 +277,9 @@ public class ObjectType {
         map.put("hris_timeshift", HRIS_TIMESHIFT);
         map.put("hris_deduction", HRIS_DEDUCTION);
         map.put("hris_benefit", HRIS_BENEFIT);
-        map.put("martech_campaign", MARTECH_CAMPAIGN);
         map.put("martech_list", MARTECH_LIST);
         map.put("martech_member", MARTECH_MEMBER);
+        map.put("martech_campaign", MARTECH_CAMPAIGN);
         map.put("martech_report", MARTECH_REPORT);
         map.put("passthrough", PASSTHROUGH);
         map.put("ticketing_note", TICKETING_NOTE);
@@ -305,6 +312,9 @@ public class ObjectType {
         map.put("lms_class", LMS_CLASS);
         map.put("lms_student", LMS_STUDENT);
         map.put("lms_instructor", LMS_INSTRUCTOR);
+        map.put("lms_content", LMS_CONTENT);
+        map.put("lms_collection", LMS_COLLECTION);
+        map.put("lms_activity", LMS_ACTIVITY);
         map.put("repo_organization", REPO_ORGANIZATION);
         map.put("repo_repository", REPO_REPOSITORY);
         map.put("repo_branch", REPO_BRANCH);
@@ -369,6 +379,8 @@ public class ObjectType {
         map.put("commerce_itemvariant", ObjectTypeEnum.COMMERCE_ITEMVARIANT);
         map.put("verification_package", ObjectTypeEnum.VERIFICATION_PACKAGE);
         map.put("verification_request", ObjectTypeEnum.VERIFICATION_REQUEST);
+        map.put("assessment_package", ObjectTypeEnum.ASSESSMENT_PACKAGE);
+        map.put("assessment_order", ObjectTypeEnum.ASSESSMENT_ORDER);
         map.put("ats_activity", ObjectTypeEnum.ATS_ACTIVITY);
         map.put("ats_application", ObjectTypeEnum.ATS_APPLICATION);
         map.put("ats_applicationstatus", ObjectTypeEnum.ATS_APPLICATIONSTATUS);
@@ -394,9 +406,9 @@ public class ObjectType {
         map.put("hris_timeshift", ObjectTypeEnum.HRIS_TIMESHIFT);
         map.put("hris_deduction", ObjectTypeEnum.HRIS_DEDUCTION);
         map.put("hris_benefit", ObjectTypeEnum.HRIS_BENEFIT);
-        map.put("martech_campaign", ObjectTypeEnum.MARTECH_CAMPAIGN);
         map.put("martech_list", ObjectTypeEnum.MARTECH_LIST);
         map.put("martech_member", ObjectTypeEnum.MARTECH_MEMBER);
+        map.put("martech_campaign", ObjectTypeEnum.MARTECH_CAMPAIGN);
         map.put("martech_report", ObjectTypeEnum.MARTECH_REPORT);
         map.put("passthrough", ObjectTypeEnum.PASSTHROUGH);
         map.put("ticketing_note", ObjectTypeEnum.TICKETING_NOTE);
@@ -429,6 +441,9 @@ public class ObjectType {
         map.put("lms_class", ObjectTypeEnum.LMS_CLASS);
         map.put("lms_student", ObjectTypeEnum.LMS_STUDENT);
         map.put("lms_instructor", ObjectTypeEnum.LMS_INSTRUCTOR);
+        map.put("lms_content", ObjectTypeEnum.LMS_CONTENT);
+        map.put("lms_collection", ObjectTypeEnum.LMS_COLLECTION);
+        map.put("lms_activity", ObjectTypeEnum.LMS_ACTIVITY);
         map.put("repo_organization", ObjectTypeEnum.REPO_ORGANIZATION);
         map.put("repo_repository", ObjectTypeEnum.REPO_REPOSITORY);
         map.put("repo_branch", ObjectTypeEnum.REPO_BRANCH);
@@ -494,6 +509,8 @@ public class ObjectType {
         COMMERCE_ITEMVARIANT("commerce_itemvariant"),
         VERIFICATION_PACKAGE("verification_package"),
         VERIFICATION_REQUEST("verification_request"),
+        ASSESSMENT_PACKAGE("assessment_package"),
+        ASSESSMENT_ORDER("assessment_order"),
         ATS_ACTIVITY("ats_activity"),
         ATS_APPLICATION("ats_application"),
         ATS_APPLICATIONSTATUS("ats_applicationstatus"),
@@ -519,9 +536,9 @@ public class ObjectType {
         HRIS_TIMESHIFT("hris_timeshift"),
         HRIS_DEDUCTION("hris_deduction"),
         HRIS_BENEFIT("hris_benefit"),
-        MARTECH_CAMPAIGN("martech_campaign"),
         MARTECH_LIST("martech_list"),
         MARTECH_MEMBER("martech_member"),
+        MARTECH_CAMPAIGN("martech_campaign"),
         MARTECH_REPORT("martech_report"),
         PASSTHROUGH("passthrough"),
         TICKETING_NOTE("ticketing_note"),
@@ -554,6 +571,9 @@ public class ObjectType {
         LMS_CLASS("lms_class"),
         LMS_STUDENT("lms_student"),
         LMS_INSTRUCTOR("lms_instructor"),
+        LMS_CONTENT("lms_content"),
+        LMS_COLLECTION("lms_collection"),
+        LMS_ACTIVITY("lms_activity"),
         REPO_ORGANIZATION("repo_organization"),
         REPO_REPOSITORY("repo_repository"),
         REPO_BRANCH("repo_branch"),
