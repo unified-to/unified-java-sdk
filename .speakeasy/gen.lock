@@ -1,19 +1,19 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: bba5d3ebf913171b03ce2be8b22a3947
+  docChecksum: d121c23b689164804bad4c9617517509
   docVersion: "1.0"
-  speakeasyVersion: 1.718.0
+  speakeasyVersion: 1.719.0
   generationVersion: 2.824.1
-  releaseVersion: 0.47.8
-  configChecksum: 7b1ae8556f1ce70b11dca2387aa096b8
+  releaseVersion: 0.47.9
+  configChecksum: 6f9477b5bfddee72d3e00ade6d7095e5
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   published: true
 persistentEdits:
-  generation_id: 823e5c14-c87a-470a-9266-a81c1ba1d974
-  pristine_commit_hash: adb4994936fe275a3499bb8624772882410a827f
-  pristine_tree_hash: 4fbf6e49680f34afd5b9757bd42f0dad9be9b26b
+  generation_id: 66566e07-10a4-443f-b47a-127d51587306
+  pristine_commit_hash: fcf8fd30305a728fb4a9db4816bfc8aea3e9a1b9
+  pristine_tree_hash: 48601f25f40c8984ca7ad167e7198d8ad272c402
 features:
   java:
     acceptHeaders: 2.81.2
@@ -2900,8 +2900,8 @@ trackedFiles:
     pristine_git_object: 38f7ca5c2e403a17e206e349d264b415dcaf7a41
   docs/models/operations/ListAdsReportsRequest.md:
     id: 99a186786e8a
-    last_write_checksum: sha1:0ef45273bfa68e72a528f10baae12c1703353cf4
-    pristine_git_object: 4e5e799b8ec235cecaa26991c91efa760d3138eb
+    last_write_checksum: sha1:5c9162e17e3030bcbbeaae760dd01ff703883f5f
+    pristine_git_object: 55386b79d563b6950db1a623bd57adac941f15a3
   docs/models/operations/ListAdsReportsResponse.md:
     id: bacacedb0595
     last_write_checksum: sha1:63d1fc166fe38a0ac6646d61c1c02fcf1291cdf9
@@ -9728,8 +9728,8 @@ trackedFiles:
     pristine_git_object: 9f0480c42a6d329b94ca16e6c1aef82a49f88f5e
   docs/models/shared/TaskComment.md:
     id: 1de7cb447238
-    last_write_checksum: sha1:0a57626c5d21ffa1cdf92ac8b45286e5de49d792
-    pristine_git_object: 184167ff38cc2c7064e4da5a20dfd7038ce99395
+    last_write_checksum: sha1:3142fe6f3aa0396ddcb1d2d56d9424a352725315
+    pristine_git_object: 5dcd19b3c25f2d8d939594ef4a084a58568dc1e3
   docs/models/shared/TaskMetadata.md:
     id: 9d4a42b4fdbb
     last_write_checksum: sha1:e918a64e32226964482b19142ea7f4a85a850608
@@ -10244,8 +10244,8 @@ trackedFiles:
     pristine_git_object: 85d0ab8bdee0ab453900cdc0ac015a846bc65271
   docs/sdks/comment/README.md:
     id: e4246f80d976
-    last_write_checksum: sha1:00139d476a18cd710e57796e31031ca85f464cba
-    pristine_git_object: e5b82baf5e4a0abadf3e1eeff89ab8351d9071ac
+    last_write_checksum: sha1:8af219b6806b8b4edeff037c6f8fa8cd9bc32a27
+    pristine_git_object: a12eb5db322c043d80315a11401621bf2cd5b533
   docs/sdks/commerce/README.md:
     id: ec0eedee4bc3
     last_write_checksum: sha1:81ee7f4697629797bd1e7f46b3bddce68810ad28
@@ -10596,8 +10596,8 @@ trackedFiles:
     pristine_git_object: 81d976d0403e2a7fb33db50eff85484bdf77b2b0
   docs/sdks/task/README.md:
     id: ae2d0d96ea1f
-    last_write_checksum: sha1:d94eceddf0e9425abe5ed88d3ee2e032db58c92c
-    pristine_git_object: df647fed82e2de074bd2c0a8d88b87d2e86304b8
+    last_write_checksum: sha1:0bd0b644293d8ee0b43e6180e7f1f3d6ad3979ee
+    pristine_git_object: 997bfbada8c764bb8c3c93eb3cca73ca11d69313
   docs/sdks/taxrate/README.md:
     id: 626e6511cf80
     last_write_checksum: sha1:61c5a33085411bf905d02505b2c94d8518c955ea
@@ -10660,8 +10660,8 @@ trackedFiles:
     pristine_git_object: 14fe7a9e0f20951a7e3ab2752816fbc9b8c41dd3
   gradle.properties:
     id: 2afbb999f001
-    last_write_checksum: sha1:fa5bdce45217c7bdd99be07a668d2a43f337eb6f
-    pristine_git_object: 6084d72e56761c0775041500fb1d8619b5542b6d
+    last_write_checksum: sha1:a051917325577adb0cfefc702486e1c1c35ca781
+    pristine_git_object: ebb0a27a9497681de19847b7a23df6b9cd888ec5
   gradle/wrapper/gradle-wrapper.jar:
     id: ec27dae6e852
     last_write_checksum: sha1:f725fb1467084142d74fd7cd8eab691ab3442611
@@ -11656,8 +11656,8 @@ trackedFiles:
     pristine_git_object: 2ccb6e90f32063c290e9fa25abf9649b884b4ed0
   src/main/java/to/unified/unified_java_sdk/SDKConfiguration.java:
     id: 42279b7431fa
-    last_write_checksum: sha1:e7d835c294ebfebfbed796f4e30c2d72da021416
-    pristine_git_object: f48b45f249dbd5f348610f8db4632770767f881d
+    last_write_checksum: sha1:bb0f5a0e6946cf0423bc3099c841c8aefa535310
+    pristine_git_object: 80dde51c32a989d0eed240e39050e04480f6034f
   src/main/java/to/unified/unified_java_sdk/Saleschannel.java:
     id: 2dca25153692
     last_write_checksum: sha1:aa7ff3de99773ebd3e17f6d146b171516820aa37
@@ -18184,8 +18184,8 @@ trackedFiles:
     pristine_git_object: ced2dca12d07ac35ad6881f6dd9a9c92c2043422
   src/main/java/to/unified/unified_java_sdk/models/operations/ListAdsReportsRequest.java:
     id: 124bf9197133
-    last_write_checksum: sha1:249f584e04eba745ac773f35f2711760c876f80b
-    pristine_git_object: a2474789fa9aa145596bbdaecf263643f409f76a
+    last_write_checksum: sha1:a7d89a8cbf9894f45397ce913cf5402bf80acd77
+    pristine_git_object: ca32eef3e173c6e9559ecea77cc109b06c37210f
   src/main/java/to/unified/unified_java_sdk/models/operations/ListAdsReportsRequestBuilder.java:
     id: 1374ee10b478
     last_write_checksum: sha1:f965ae930f14cd691e836c4ba66b4a449d7ebadb
@@ -29164,8 +29164,8 @@ trackedFiles:
     pristine_git_object: 34cad0285d55741eb5e4aabfd3650ec0617a46b8
   src/main/java/to/unified/unified_java_sdk/models/shared/TaskComment.java:
     id: 821e0c789605
-    last_write_checksum: sha1:661ace51f7f9f2a13a8d5f5fbaeaa37453fa54dc
-    pristine_git_object: 51e9b349c3dd05b1a23c00385e203a85e5d53cb5
+    last_write_checksum: sha1:24199c8197da2dedd5e3497329ab424d4b9df54b
+    pristine_git_object: 08a7f29b678757ea2940b6c670c7ef885ce90fec
   src/main/java/to/unified/unified_java_sdk/models/shared/TaskMetadata.java:
     id: e4d96a6d1197
     last_write_checksum: sha1:c74a784b892cea3627b9f3bb39dcc4c8283e9173
@@ -34871,10 +34871,10 @@ examples:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {"task_id": "<id>", "text": "<value>"}
+        application/json: {"text": "<value>"}
       responses:
         "200":
-          application/json: {"task_id": "<id>", "text": "<value>"}
+          application/json: {"text": "<value>"}
   createUcComment:
     speakeasy-default-create-uc-comment:
       parameters:
@@ -34893,7 +34893,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"task_id": "<id>", "text": "<value>"}
+          application/json: {"text": "<value>"}
   getUcComment:
     speakeasy-default-get-uc-comment:
       parameters:
@@ -34926,10 +34926,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"task_id": "<id>", "text": "<value>"}
+        application/json: {"text": "<value>"}
       responses:
         "200":
-          application/json: {"task_id": "<id>", "text": "<value>"}
+          application/json: {"text": "<value>"}
   patchUcComment:
     speakeasy-default-patch-uc-comment:
       parameters:
@@ -34960,10 +34960,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"task_id": "<id>", "text": "<value>"}
+        application/json: {"text": "<value>"}
       responses:
         "200":
-          application/json: {"task_id": "<id>", "text": "<value>"}
+          application/json: {"text": "<value>"}
   updateUcComment:
     speakeasy-default-update-uc-comment:
       parameters:
@@ -38262,7 +38262,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Java SDK Changes:\n* `unified-to.event.patchMessagingEvent()`: \n  *  `request.messagingEvent.message.parentMessageId` **Removed** (Breaking ⚠️)\n  *  `response.message.parentMessageId` **Removed** (Breaking ⚠️)\n* `unified-to.message.updateMessagingMessage()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response.parentMessageId` **Removed** (Breaking ⚠️)\n* `unified-to.message.patchMessagingMessage()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response.parentMessageId` **Removed** (Breaking ⚠️)\n* `unified-to.message.listMessagingMessages()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response.[].parentMessageId` **Removed** (Breaking ⚠️)\n* `unified-to.message.getMessagingMessage()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response.parentMessageId` **Removed** (Breaking ⚠️)\n* `unified-to.message.createMessagingMessage()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response.parentMessageId` **Removed** (Breaking ⚠️)\n* `unified-to.messaging.updateMessagingMessage()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response.parentMessageId` **Removed** (Breaking ⚠️)\n* `unified-to.messaging.updateMessagingEvent()`: \n  *  `request.messagingEvent.message.parentMessageId` **Removed** (Breaking ⚠️)\n  *  `response.message.parentMessageId` **Removed** (Breaking ⚠️)\n* `unified-to.messaging.patchMessagingMessage()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response.parentMessageId` **Removed** (Breaking ⚠️)\n* `unified-to.messaging.patchMessagingEvent()`: \n  *  `request.messagingEvent.message.parentMessageId` **Removed** (Breaking ⚠️)\n  *  `response.message.parentMessageId` **Removed** (Breaking ⚠️)\n* `unified-to.messaging.listMessagingMessages()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response.[].parentMessageId` **Removed** (Breaking ⚠️)\n* `unified-to.messaging.getMessagingMessage()`: \n  *  `request.fields` **Changed** (Breaking ⚠️)\n  *  `response.parentMessageId` **Removed** (Breaking ⚠️)\n* `unified-to.messaging.createMessagingMessage()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response.parentMessageId` **Removed** (Breaking ⚠️)\n* `unified-to.event.updateMessagingEvent()`: \n  *  `request.messagingEvent.message.parentMessageId` **Removed** (Breaking ⚠️)\n  *  `response.message.parentMessageId` **Removed** (Breaking ⚠️)\n* `unified-to.lms.listLmsActivities()`: **Added**\n* `unified-to.activity.removeLmsActivity()`: **Added**\n* `unified-to.activity.createLmsActivity()`: **Added**\n* `unified-to.activity.getLmsActivity()`: **Added**\n* `unified-to.activity.listLmsActivities()`: **Added**\n* `unified-to.activity.patchLmsActivity()`: **Added**\n* `unified-to.organization.listAccountingOrganizations()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.activity.updateLmsActivity()`: **Added**\n* `unified-to.collection.createLmsCollection()`: **Added**\n* `unified-to.collection.getLmsCollection()`: **Added**\n* `unified-to.collection.listLmsCollections()`: **Added**\n* `unified-to.collection.patchLmsCollection()`: **Added**\n* `unified-to.collection.removeLmsCollection()`: **Added**\n* `unified-to.collection.updateLmsCollection()`: **Added**\n* `unified-to.lms.createLmsActivity()`: **Added**\n* `unified-to.lms.createLmsCollection()`: **Added**\n* `unified-to.lms.createLmsContent()`: **Added**\n* `unified-to.lms.getLmsActivity()`: **Added**\n* `unified-to.package.removeAssessmentPackage()`: **Added**\n* `unified-to.lms.getLmsContent()`: **Added**\n* `unified-to.order.patchAssessmentOrder()`: **Added**\n* `unified-to.lms.listLmsCollections()`: **Added**\n* `unified-to.lms.listLmsContents()`: **Added**\n* `unified-to.lms.patchLmsActivity()`: **Added**\n* `unified-to.lms.patchLmsCollection()`: **Added**\n* `unified-to.lms.patchLmsContent()`: **Added**\n* `unified-to.lms.removeLmsActivity()`: **Added**\n* `unified-to.lms.removeLmsCollection()`: **Added**\n* `unified-to.lms.removeLmsContent()`: **Added**\n* `unified-to.lms.updateLmsActivity()`: **Added**\n* `unified-to.lms.updateLmsCollection()`: **Added**\n* `unified-to.lms.updateLmsContent()`: **Added**\n* `unified-to.content.createLmsContent()`: **Added**\n* `unified-to.content.getLmsContent()`: **Added**\n* `unified-to.content.listLmsContents()`: **Added**\n* `unified-to.content.patchLmsContent()`: **Added**\n* `unified-to.content.removeLmsContent()`: **Added**\n* `unified-to.content.updateLmsContent()`: **Added**\n* `unified-to.accounting.createAccountingAccount()`: \n  *  `request` **Changed**\n  *  `response.taxonomy` **Added**\n* `unified-to.accounting.createAccountingJournal()`: \n  *  `request.accountingJournal.lineitems[].organizationId` **Added**\n  *  `response.lineitems[].organizationId` **Added**\n* `unified-to.accounting.getAccountingAccount()`: \n  *  `request.fields` **Changed**\n  *  `response.taxonomy` **Added**\n* `unified-to.accounting.getAccountingJournal()`:  `response.lineitems[].organizationId` **Added**\n* `unified-to.accounting.getAccountingOrganization()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.accounting.listAccountingAccounts()`: \n  *  `request.fields` **Changed**\n  *  `response.[].taxonomy` **Added**\n* `unified-to.accounting.listAccountingJournals()`:  `response.[].lineitems[].organizationId` **Added**\n* `unified-to.accounting.listAccountingOrganizations()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.accounting.patchAccountingAccount()`: \n  *  `request` **Changed**\n  *  `response.taxonomy` **Added**\n* `unified-to.accounting.patchAccountingJournal()`: \n  *  `request.accountingJournal.lineitems[].organizationId` **Added**\n  *  `response.lineitems[].organizationId` **Added**\n* `unified-to.accounting.updateAccountingAccount()`: \n  *  `request` **Changed**\n  *  `response.taxonomy` **Added**\n* `unified-to.accounting.updateAccountingJournal()`: \n  *  `request.accountingJournal.lineitems[].organizationId` **Added**\n  *  `response.lineitems[].organizationId` **Added**\n* `unified-to.account.createAccountingAccount()`: \n  *  `request` **Changed**\n  *  `response.taxonomy` **Added**\n* `unified-to.account.getAccountingAccount()`: \n  *  `request.fields` **Changed**\n  *  `response.taxonomy` **Added**\n* `unified-to.account.listAccountingAccounts()`: \n  *  `request.fields` **Changed**\n  *  `response.[].taxonomy` **Added**\n* `unified-to.account.patchAccountingAccount()`: \n  *  `request` **Changed**\n  *  `response.taxonomy` **Added**\n* `unified-to.account.updateAccountingAccount()`: \n  *  `request` **Changed**\n  *  `response.taxonomy` **Added**\n* `unified-to.journal.createAccountingJournal()`: \n  *  `request.accountingJournal.lineitems[].organizationId` **Added**\n  *  `response.lineitems[].organizationId` **Added**\n* `unified-to.journal.getAccountingJournal()`:  `response.lineitems[].organizationId` **Added**\n* `unified-to.journal.listAccountingJournals()`:  `response.[].lineitems[].organizationId` **Added**\n* `unified-to.organization.getAccountingOrganization()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.journal.updateAccountingJournal()`: \n  *  `request.accountingJournal.lineitems[].organizationId` **Added**\n  *  `response.lineitems[].organizationId` **Added**\n* `unified-to.journal.patchAccountingJournal()`: \n  *  `request.accountingJournal.lineitems[].organizationId` **Added**\n  *  `response.lineitems[].organizationId` **Added**\n* `unified-to.package.updateAssessmentPackage()`: **Added**\n* `unified-to.lms.getLmsCollection()`: **Added**\n* `unified-to.package.patchAssessmentPackage()`: **Added**\n* `unified-to.commerce.listCommerceLocations()`: \n  *  `request.orgId` **Added**\n* `unified-to.location.listCommerceLocations()`: \n  *  `request.orgId` **Added**\n* `unified-to.lms.createLmsClass()`: \n  *  `request.lmsClass.media[]` **Changed**\n  *  `response.media[]` **Changed**\n* `unified-to.lms.createLmsCourse()`: \n  *  `request.lmsCourse.media[]` **Changed**\n  *  `response.media[]` **Changed**\n* `unified-to.lms.getLmsClass()`:  `response.media[]` **Changed**\n* `unified-to.lms.getLmsCourse()`:  `response.media[]` **Changed**\n* `unified-to.lms.listLmsClasses()`:  `response.[].media[]` **Changed**\n* `unified-to.lms.listLmsCourses()`:  `response.[].media[]` **Changed**\n* `unified-to.lms.patchLmsClass()`: \n  *  `request.lmsClass.media[]` **Changed**\n  *  `response.media[]` **Changed**\n* `unified-to.lms.patchLmsCourse()`: \n  *  `request.lmsCourse.media[]` **Changed**\n  *  `response.media[]` **Changed**\n* `unified-to.lms.updateLmsClass()`: \n  *  `request.lmsClass.media[]` **Changed**\n  *  `response.media[]` **Changed**\n* `unified-to.lms.updateLmsCourse()`: \n  *  `request.lmsCourse.media[]` **Changed**\n  *  `response.media[]` **Changed**\n* `unified-to.class.createLmsClass()`: \n  *  `request.lmsClass.media[]` **Changed**\n  *  `response.media[]` **Changed**\n* `unified-to.class.getLmsClass()`:  `response.media[]` **Changed**\n* `unified-to.class.listLmsClasses()`:  `response.[].media[]` **Changed**\n* `unified-to.class.patchLmsClass()`: \n  *  `request.lmsClass.media[]` **Changed**\n  *  `response.media[]` **Changed**\n* `unified-to.class.updateLmsClass()`: \n  *  `request.lmsClass.media[]` **Changed**\n  *  `response.media[]` **Changed**\n* `unified-to.course.createLmsCourse()`: \n  *  `request.lmsCourse.media[]` **Changed**\n  *  `response.media[]` **Changed**\n* `unified-to.course.getLmsCourse()`:  `response.media[]` **Changed**\n* `unified-to.course.listLmsCourses()`:  `response.[].media[]` **Changed**\n* `unified-to.course.patchLmsCourse()`: \n  *  `request.lmsCourse.media[]` **Changed**\n  *  `response.media[]` **Changed**\n* `unified-to.course.updateLmsCourse()`: \n  *  `request.lmsCourse.media[]` **Changed**\n  *  `response.media[]` **Changed**\n* `unified-to.package.listAssessmentPackages()`: **Added**\n* `unified-to.package.getAssessmentPackage()`: **Added**\n* `unified-to.package.createAssessmentPackage()`: **Added**\n* `unified-to.assessment.updateAssessmentPackage()`: **Added**\n* `unified-to.assessment.updateAssessmentOrder()`: **Added**\n* `unified-to.assessment.removeAssessmentPackage()`: **Added**\n* `unified-to.assessment.patchAssessmentPackage()`: **Added**\n* `unified-to.assessment.patchAssessmentOrder()`: **Added**\n* `unified-to.assessment.listAssessmentPackages()`: **Added**\n* `unified-to.assessment.getAssessmentPackage()`: **Added**\n* `unified-to.assessment.createAssessmentPackage()`: **Added**\n* `unified-to.order.updateAssessmentOrder()`: **Added**\n* `unified-to.unified.createUnifiedConnection()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.unified.createUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n* `unified-to.unified.getUnifiedConnection()`:  `response` **Changed**\n* `unified-to.unified.getUnifiedWebhook()`:  `response.objectType` **Changed**\n* `unified-to.unified.listUnifiedConnections()`: \n  *  `request.categories` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.unified.listUnifiedIntegrationWorkspaces()`: \n  *  `request.categories` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.unified.listUnifiedIntegrations()`: \n  *  `request.categories` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.unified.listUnifiedWebhooks()`:  `response.[].objectType` **Changed**\n* `unified-to.unified.patchUnifiedConnection()`: \n  *  `request.connection` **Changed**\n  *  `response` **Changed**\n* `unified-to.unified.patchUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n* `unified-to.unified.updateUnifiedConnection()`: \n  *  `request.connection` **Changed**\n  *  `response` **Changed**\n* `unified-to.unified.updateUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n* `unified-to.connection.createUnifiedConnection()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.connection.getUnifiedConnection()`:  `response` **Changed**\n* `unified-to.connection.listUnifiedConnections()`: \n  *  `request.categories` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.connection.patchUnifiedConnection()`: \n  *  `request.connection` **Changed**\n  *  `response` **Changed**\n* `unified-to.connection.updateUnifiedConnection()`: \n  *  `request.connection` **Changed**\n  *  `response` **Changed**\n* `unified-to.integration.listUnifiedIntegrationWorkspaces()`: \n  *  `request.categories` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.integration.listUnifiedIntegrations()`: \n  *  `request.categories` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.webhook.createUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n* `unified-to.webhook.getUnifiedWebhook()`:  `response.objectType` **Changed**\n* `unified-to.webhook.listUnifiedWebhooks()`:  `response.[].objectType` **Changed**\n* `unified-to.webhook.patchUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n* `unified-to.webhook.updateUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n"
+releaseNotes: "## Java SDK Changes:\n* `unified-to.report.listAdsReports()`:  `request` **Changed**\n* `unified-to.ads.listAdsReports()`:  `request` **Changed**\n* `unified-to.comment.createTaskComment()`: \n  *  `request.taskComment.taskId` **Changed**\n  *  `response.taskId` **Changed**\n* `unified-to.comment.getTaskComment()`:  `response.taskId` **Changed**\n* `unified-to.comment.listTaskComments()`:  `response.[].taskId` **Changed**\n* `unified-to.comment.patchTaskComment()`: \n  *  `request.taskComment.taskId` **Changed**\n  *  `response.taskId` **Changed**\n* `unified-to.comment.updateTaskComment()`: \n  *  `request.taskComment.taskId` **Changed**\n  *  `response.taskId` **Changed**\n* `unified-to.task.createTaskComment()`: \n  *  `request.taskComment.taskId` **Changed**\n  *  `response.taskId` **Changed**\n* `unified-to.task.getTaskComment()`:  `response.taskId` **Changed**\n* `unified-to.task.listTaskComments()`:  `response.[].taskId` **Changed**\n* `unified-to.task.patchTaskComment()`: \n  *  `request.taskComment.taskId` **Changed**\n  *  `response.taskId` **Changed**\n* `unified-to.task.updateTaskComment()`: \n  *  `request.taskComment.taskId` **Changed**\n  *  `response.taskId` **Changed**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md

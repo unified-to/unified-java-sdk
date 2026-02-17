@@ -17,6 +17,12 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListAdsReportsRequest {
     /**
+     * The ad ID to filter by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ad_id")
+    private String adId;
+
+    /**
      * The campaign ID to filter by
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=campaign_id")
@@ -29,10 +35,22 @@ public class ListAdsReportsRequest {
     private String connectionId;
 
     /**
+     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_lt")
+    private String endLt;
+
+    /**
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     private List<ListAdsReportsQueryParamFields> fields;
+
+    /**
+     * The group ID to filter by (reference to HrisGroup)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group_id")
+    private String groupId;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
@@ -70,6 +88,12 @@ public class ListAdsReportsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     private String sort;
 
+    /**
+     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_gte")
+    private String startGte;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     private String type;
@@ -83,9 +107,12 @@ public class ListAdsReportsRequest {
 
     @JsonCreator
     public ListAdsReportsRequest(
+            @Nullable String adId,
             @Nullable String campaignId,
             @Nonnull String connectionId,
+            @Nullable String endLt,
             @Nullable List<ListAdsReportsQueryParamFields> fields,
+            @Nullable String groupId,
             @Nullable Double limit,
             @Nullable Double offset,
             @Nullable String order,
@@ -93,12 +120,16 @@ public class ListAdsReportsRequest {
             @Nullable String query,
             @Nullable String raw,
             @Nullable String sort,
+            @Nullable String startGte,
             @Nullable String type,
             @Nullable String updatedGte) {
+        this.adId = adId;
         this.campaignId = campaignId;
         this.connectionId = Optional.ofNullable(connectionId)
             .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
+        this.endLt = endLt;
         this.fields = fields;
+        this.groupId = groupId;
         this.limit = limit;
         this.offset = offset;
         this.order = order;
@@ -106,16 +137,26 @@ public class ListAdsReportsRequest {
         this.query = query;
         this.raw = raw;
         this.sort = sort;
+        this.startGte = startGte;
         this.type = type;
         this.updatedGte = updatedGte;
     }
     
     public ListAdsReportsRequest(
             @Nonnull String connectionId) {
-        this(null, connectionId, null,
+        this(null, null, connectionId,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null, null, null,
+            null);
+    }
+
+    /**
+     * The ad ID to filter by
+     */
+    public Optional<String> adId() {
+        return Optional.ofNullable(this.adId);
     }
 
     /**
@@ -133,10 +174,24 @@ public class ListAdsReportsRequest {
     }
 
     /**
+     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    public Optional<String> endLt() {
+        return Optional.ofNullable(this.endLt);
+    }
+
+    /**
      * Fields to return
      */
     public Optional<List<ListAdsReportsQueryParamFields>> fields() {
         return Optional.ofNullable(this.fields);
+    }
+
+    /**
+     * The group ID to filter by (reference to HrisGroup)
+     */
+    public Optional<String> groupId() {
+        return Optional.ofNullable(this.groupId);
     }
 
     public Optional<Double> limit() {
@@ -178,6 +233,13 @@ public class ListAdsReportsRequest {
         return Optional.ofNullable(this.sort);
     }
 
+    /**
+     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    public Optional<String> startGte() {
+        return Optional.ofNullable(this.startGte);
+    }
+
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -192,6 +254,15 @@ public class ListAdsReportsRequest {
 
     public static Builder builder() {
         return new Builder();
+    }
+
+
+    /**
+     * The ad ID to filter by
+     */
+    public ListAdsReportsRequest withAdId(@Nullable String adId) {
+        this.adId = adId;
+        return this;
     }
 
 
@@ -214,10 +285,28 @@ public class ListAdsReportsRequest {
 
 
     /**
+     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    public ListAdsReportsRequest withEndLt(@Nullable String endLt) {
+        this.endLt = endLt;
+        return this;
+    }
+
+
+    /**
      * Fields to return
      */
     public ListAdsReportsRequest withFields(@Nullable List<ListAdsReportsQueryParamFields> fields) {
         this.fields = fields;
+        return this;
+    }
+
+
+    /**
+     * The group ID to filter by (reference to HrisGroup)
+     */
+    public ListAdsReportsRequest withGroupId(@Nullable String groupId) {
+        this.groupId = groupId;
         return this;
     }
 
@@ -275,6 +364,15 @@ public class ListAdsReportsRequest {
     }
 
 
+    /**
+     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    public ListAdsReportsRequest withStartGte(@Nullable String startGte) {
+        this.startGte = startGte;
+        return this;
+    }
+
+
     public ListAdsReportsRequest withType(@Nullable String type) {
         this.type = type;
         return this;
@@ -301,9 +399,12 @@ public class ListAdsReportsRequest {
         }
         ListAdsReportsRequest other = (ListAdsReportsRequest) o;
         return 
+            Utils.enhancedDeepEquals(this.adId, other.adId) &&
             Utils.enhancedDeepEquals(this.campaignId, other.campaignId) &&
             Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
+            Utils.enhancedDeepEquals(this.endLt, other.endLt) &&
             Utils.enhancedDeepEquals(this.fields, other.fields) &&
+            Utils.enhancedDeepEquals(this.groupId, other.groupId) &&
             Utils.enhancedDeepEquals(this.limit, other.limit) &&
             Utils.enhancedDeepEquals(this.offset, other.offset) &&
             Utils.enhancedDeepEquals(this.order, other.order) &&
@@ -311,6 +412,7 @@ public class ListAdsReportsRequest {
             Utils.enhancedDeepEquals(this.query, other.query) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.sort, other.sort) &&
+            Utils.enhancedDeepEquals(this.startGte, other.startGte) &&
             Utils.enhancedDeepEquals(this.type, other.type) &&
             Utils.enhancedDeepEquals(this.updatedGte, other.updatedGte);
     }
@@ -318,18 +420,23 @@ public class ListAdsReportsRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            campaignId, connectionId, fields,
+            adId, campaignId, connectionId,
+            endLt, fields, groupId,
             limit, offset, order,
             orgId, query, raw,
-            sort, type, updatedGte);
+            sort, startGte, type,
+            updatedGte);
     }
     
     @Override
     public String toString() {
         return Utils.toString(ListAdsReportsRequest.class,
+                "adId", adId,
                 "campaignId", campaignId,
                 "connectionId", connectionId,
+                "endLt", endLt,
                 "fields", fields,
+                "groupId", groupId,
                 "limit", limit,
                 "offset", offset,
                 "order", order,
@@ -337,6 +444,7 @@ public class ListAdsReportsRequest {
                 "query", query,
                 "raw", raw,
                 "sort", sort,
+                "startGte", startGte,
                 "type", type,
                 "updatedGte", updatedGte);
     }
@@ -344,11 +452,17 @@ public class ListAdsReportsRequest {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
+        private String adId;
+
         private String campaignId;
 
         private String connectionId;
 
+        private String endLt;
+
         private List<ListAdsReportsQueryParamFields> fields;
+
+        private String groupId;
 
         private Double limit;
 
@@ -364,12 +478,22 @@ public class ListAdsReportsRequest {
 
         private String sort;
 
+        private String startGte;
+
         private String type;
 
         private String updatedGte;
 
         private Builder() {
           // force use of static builder() method
+        }
+
+        /**
+         * The ad ID to filter by
+         */
+        public Builder adId(@Nullable String adId) {
+            this.adId = adId;
+            return this;
         }
 
         /**
@@ -389,10 +513,26 @@ public class ListAdsReportsRequest {
         }
 
         /**
+         * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
+        public Builder endLt(@Nullable String endLt) {
+            this.endLt = endLt;
+            return this;
+        }
+
+        /**
          * Fields to return
          */
         public Builder fields(@Nullable List<ListAdsReportsQueryParamFields> fields) {
             this.fields = fields;
+            return this;
+        }
+
+        /**
+         * The group ID to filter by (reference to HrisGroup)
+         */
+        public Builder groupId(@Nullable String groupId) {
+            this.groupId = groupId;
             return this;
         }
 
@@ -442,6 +582,14 @@ public class ListAdsReportsRequest {
             return this;
         }
 
+        /**
+         * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
+        public Builder startGte(@Nullable String startGte) {
+            this.startGte = startGte;
+            return this;
+        }
+
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
@@ -458,10 +606,12 @@ public class ListAdsReportsRequest {
 
         public ListAdsReportsRequest build() {
             return new ListAdsReportsRequest(
-                campaignId, connectionId, fields,
+                adId, campaignId, connectionId,
+                endLt, fields, groupId,
                 limit, offset, order,
                 orgId, query, raw,
-                sort, type, updatedGte);
+                sort, startGte, type,
+                updatedGte);
         }
 
     }

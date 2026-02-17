@@ -54,7 +54,6 @@ public class Application {
 
         CreateTaskCommentRequest req = CreateTaskCommentRequest.builder()
                 .taskComment(TaskComment.builder()
-                    .taskId("<id>")
                     .text("<value>")
                     .build())
                 .connectionId("<id>")
@@ -696,7 +695,6 @@ public class Application {
 
         PatchTaskCommentRequest req = PatchTaskCommentRequest.builder()
                 .taskComment(TaskComment.builder()
-                    .taskId("<id>")
                     .text("<value>")
                     .build())
                 .connectionId("<id>")
@@ -1049,7 +1047,6 @@ public class Application {
 
         UpdateTaskCommentRequest req = UpdateTaskCommentRequest.builder()
                 .taskComment(TaskComment.builder()
-                    .taskId("<id>")
                     .text("<value>")
                     .build())
                 .connectionId("<id>")

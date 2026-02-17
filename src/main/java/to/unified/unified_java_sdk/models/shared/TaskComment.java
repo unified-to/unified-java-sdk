@@ -35,6 +35,7 @@ public class TaskComment {
     private Map<String, Object> raw;
 
 
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("task_id")
     private String taskId;
 
@@ -62,7 +63,7 @@ public class TaskComment {
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
-            @JsonProperty("task_id") @Nonnull String taskId,
+            @JsonProperty("task_id") @Nullable String taskId,
             @JsonProperty("text") @Nonnull String text,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
             @JsonProperty("user_id") @Nullable String userId,
@@ -70,8 +71,7 @@ public class TaskComment {
         this.createdAt = createdAt;
         this.id = id;
         this.raw = raw;
-        this.taskId = Optional.ofNullable(taskId)
-            .orElseThrow(() -> new IllegalArgumentException("taskId cannot be null"));
+        this.taskId = taskId;
         this.text = Optional.ofNullable(text)
             .orElseThrow(() -> new IllegalArgumentException("text cannot be null"));
         this.updatedAt = updatedAt;
@@ -80,10 +80,9 @@ public class TaskComment {
     }
     
     public TaskComment(
-            @Nonnull String taskId,
             @Nonnull String text) {
         this(null, null, null,
-            taskId, text, null,
+            null, text, null,
             null, null);
     }
 
@@ -99,8 +98,8 @@ public class TaskComment {
         return Optional.ofNullable(this.raw);
     }
 
-    public String taskId() {
-        return this.taskId;
+    public Optional<String> taskId() {
+        return Optional.ofNullable(this.taskId);
     }
 
     public String text() {
@@ -142,8 +141,8 @@ public class TaskComment {
     }
 
 
-    public TaskComment withTaskId(@Nonnull String taskId) {
-        this.taskId = Utils.checkNotNull(taskId, "taskId");
+    public TaskComment withTaskId(@Nullable String taskId) {
+        this.taskId = taskId;
         return this;
     }
 
@@ -251,8 +250,8 @@ public class TaskComment {
             return this;
         }
 
-        public Builder taskId(@Nonnull String taskId) {
-            this.taskId = Utils.checkNotNull(taskId, "taskId");
+        public Builder taskId(@Nullable String taskId) {
+            this.taskId = taskId;
             return this;
         }
 
