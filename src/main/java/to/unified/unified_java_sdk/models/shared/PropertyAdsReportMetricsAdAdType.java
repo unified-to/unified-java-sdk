@@ -29,6 +29,10 @@ public class PropertyAdsReportMetricsAdAdType {
     public static final PropertyAdsReportMetricsAdAdType CALL = new PropertyAdsReportMetricsAdAdType("CALL");
     public static final PropertyAdsReportMetricsAdAdType CAROUSEL = new PropertyAdsReportMetricsAdAdType("CAROUSEL");
     public static final PropertyAdsReportMetricsAdAdType SOCIAL = new PropertyAdsReportMetricsAdAdType("SOCIAL");
+    public static final PropertyAdsReportMetricsAdAdType DISPLAY = new PropertyAdsReportMetricsAdAdType("DISPLAY");
+    public static final PropertyAdsReportMetricsAdAdType SEARCH = new PropertyAdsReportMetricsAdAdType("SEARCH");
+    public static final PropertyAdsReportMetricsAdAdType AUDIO = new PropertyAdsReportMetricsAdAdType("AUDIO");
+    public static final PropertyAdsReportMetricsAdAdType YOUTUBE = new PropertyAdsReportMetricsAdAdType("YOUTUBE");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -111,6 +115,10 @@ public class PropertyAdsReportMetricsAdAdType {
         map.put("CALL", CALL);
         map.put("CAROUSEL", CAROUSEL);
         map.put("SOCIAL", SOCIAL);
+        map.put("DISPLAY", DISPLAY);
+        map.put("SEARCH", SEARCH);
+        map.put("AUDIO", AUDIO);
+        map.put("YOUTUBE", YOUTUBE);
         return map;
     }
 
@@ -125,6 +133,10 @@ public class PropertyAdsReportMetricsAdAdType {
         map.put("CALL", PropertyAdsReportMetricsAdAdTypeEnum.CALL);
         map.put("CAROUSEL", PropertyAdsReportMetricsAdAdTypeEnum.CAROUSEL);
         map.put("SOCIAL", PropertyAdsReportMetricsAdAdTypeEnum.SOCIAL);
+        map.put("DISPLAY", PropertyAdsReportMetricsAdAdTypeEnum.DISPLAY);
+        map.put("SEARCH", PropertyAdsReportMetricsAdAdTypeEnum.SEARCH);
+        map.put("AUDIO", PropertyAdsReportMetricsAdAdTypeEnum.AUDIO);
+        map.put("YOUTUBE", PropertyAdsReportMetricsAdAdTypeEnum.YOUTUBE);
         return map;
     }
     
@@ -139,7 +151,11 @@ public class PropertyAdsReportMetricsAdAdType {
         APP("APP"),
         CALL("CALL"),
         CAROUSEL("CAROUSEL"),
-        SOCIAL("SOCIAL"),;
+        SOCIAL("SOCIAL"),
+        DISPLAY("DISPLAY"),
+        SEARCH("SEARCH"),
+        AUDIO("AUDIO"),
+        YOUTUBE("YOUTUBE"),;
 
         private final String value;
 

@@ -17,6 +17,12 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListPaymentPaymentsRequest {
     /**
+     * The bill ID to filter by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bill_id")
+    private String billId;
+
+    /**
      * ID of the connection
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=connection_id")
@@ -43,6 +49,12 @@ public class ListPaymentPaymentsRequest {
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     private Double limit;
+
+    /**
+     * The link ID to filter by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=link_id")
+    private String linkId;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
@@ -71,6 +83,12 @@ public class ListPaymentPaymentsRequest {
     private String sort;
 
     /**
+     * The type to filter by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    private String type;
+
+    /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
@@ -79,37 +97,51 @@ public class ListPaymentPaymentsRequest {
 
     @JsonCreator
     public ListPaymentPaymentsRequest(
+            @Nullable String billId,
             @Nonnull String connectionId,
             @Nullable String contactId,
             @Nullable List<ListPaymentPaymentsQueryParamFields> fields,
             @Nullable String invoiceId,
             @Nullable Double limit,
+            @Nullable String linkId,
             @Nullable Double offset,
             @Nullable String order,
             @Nullable String query,
             @Nullable String raw,
             @Nullable String sort,
+            @Nullable String type,
             @Nullable String updatedGte) {
+        this.billId = billId;
         this.connectionId = Optional.ofNullable(connectionId)
             .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.contactId = contactId;
         this.fields = fields;
         this.invoiceId = invoiceId;
         this.limit = limit;
+        this.linkId = linkId;
         this.offset = offset;
         this.order = order;
         this.query = query;
         this.raw = raw;
         this.sort = sort;
+        this.type = type;
         this.updatedGte = updatedGte;
     }
     
     public ListPaymentPaymentsRequest(
             @Nonnull String connectionId) {
-        this(connectionId, null, null,
+        this(null, connectionId, null,
+            null, null, null,
             null, null, null,
             null, null, null,
             null, null);
+    }
+
+    /**
+     * The bill ID to filter by
+     */
+    public Optional<String> billId() {
+        return Optional.ofNullable(this.billId);
     }
 
     /**
@@ -144,6 +176,13 @@ public class ListPaymentPaymentsRequest {
         return Optional.ofNullable(this.limit);
     }
 
+    /**
+     * The link ID to filter by
+     */
+    public Optional<String> linkId() {
+        return Optional.ofNullable(this.linkId);
+    }
+
     public Optional<Double> offset() {
         return Optional.ofNullable(this.offset);
     }
@@ -173,6 +212,13 @@ public class ListPaymentPaymentsRequest {
     }
 
     /**
+     * The type to filter by
+     */
+    public Optional<String> type() {
+        return Optional.ofNullable(this.type);
+    }
+
+    /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
@@ -182,6 +228,15 @@ public class ListPaymentPaymentsRequest {
 
     public static Builder builder() {
         return new Builder();
+    }
+
+
+    /**
+     * The bill ID to filter by
+     */
+    public ListPaymentPaymentsRequest withBillId(@Nullable String billId) {
+        this.billId = billId;
+        return this;
     }
 
 
@@ -227,6 +282,15 @@ public class ListPaymentPaymentsRequest {
     }
 
 
+    /**
+     * The link ID to filter by
+     */
+    public ListPaymentPaymentsRequest withLinkId(@Nullable String linkId) {
+        this.linkId = linkId;
+        return this;
+    }
+
+
     public ListPaymentPaymentsRequest withOffset(@Nullable Double offset) {
         this.offset = offset;
         return this;
@@ -266,6 +330,15 @@ public class ListPaymentPaymentsRequest {
 
 
     /**
+     * The type to filter by
+     */
+    public ListPaymentPaymentsRequest withType(@Nullable String type) {
+        this.type = type;
+        return this;
+    }
+
+
+    /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
@@ -285,46 +358,55 @@ public class ListPaymentPaymentsRequest {
         }
         ListPaymentPaymentsRequest other = (ListPaymentPaymentsRequest) o;
         return 
+            Utils.enhancedDeepEquals(this.billId, other.billId) &&
             Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
             Utils.enhancedDeepEquals(this.contactId, other.contactId) &&
             Utils.enhancedDeepEquals(this.fields, other.fields) &&
             Utils.enhancedDeepEquals(this.invoiceId, other.invoiceId) &&
             Utils.enhancedDeepEquals(this.limit, other.limit) &&
+            Utils.enhancedDeepEquals(this.linkId, other.linkId) &&
             Utils.enhancedDeepEquals(this.offset, other.offset) &&
             Utils.enhancedDeepEquals(this.order, other.order) &&
             Utils.enhancedDeepEquals(this.query, other.query) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.sort, other.sort) &&
+            Utils.enhancedDeepEquals(this.type, other.type) &&
             Utils.enhancedDeepEquals(this.updatedGte, other.updatedGte);
     }
     
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            connectionId, contactId, fields,
-            invoiceId, limit, offset,
-            order, query, raw,
-            sort, updatedGte);
+            billId, connectionId, contactId,
+            fields, invoiceId, limit,
+            linkId, offset, order,
+            query, raw, sort,
+            type, updatedGte);
     }
     
     @Override
     public String toString() {
         return Utils.toString(ListPaymentPaymentsRequest.class,
+                "billId", billId,
                 "connectionId", connectionId,
                 "contactId", contactId,
                 "fields", fields,
                 "invoiceId", invoiceId,
                 "limit", limit,
+                "linkId", linkId,
                 "offset", offset,
                 "order", order,
                 "query", query,
                 "raw", raw,
                 "sort", sort,
+                "type", type,
                 "updatedGte", updatedGte);
     }
 
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
+
+        private String billId;
 
         private String connectionId;
 
@@ -336,6 +418,8 @@ public class ListPaymentPaymentsRequest {
 
         private Double limit;
 
+        private String linkId;
+
         private Double offset;
 
         private String order;
@@ -346,10 +430,20 @@ public class ListPaymentPaymentsRequest {
 
         private String sort;
 
+        private String type;
+
         private String updatedGte;
 
         private Builder() {
           // force use of static builder() method
+        }
+
+        /**
+         * The bill ID to filter by
+         */
+        public Builder billId(@Nullable String billId) {
+            this.billId = billId;
+            return this;
         }
 
         /**
@@ -389,6 +483,14 @@ public class ListPaymentPaymentsRequest {
             return this;
         }
 
+        /**
+         * The link ID to filter by
+         */
+        public Builder linkId(@Nullable String linkId) {
+            this.linkId = linkId;
+            return this;
+        }
+
         public Builder offset(@Nullable Double offset) {
             this.offset = offset;
             return this;
@@ -423,6 +525,14 @@ public class ListPaymentPaymentsRequest {
         }
 
         /**
+         * The type to filter by
+         */
+        public Builder type(@Nullable String type) {
+            this.type = type;
+            return this;
+        }
+
+        /**
          * Return only results whose updated date is equal or greater to this value (ISO-8601 /
          * YYYY-MM-DDTHH:MM:SSZ format)
          */
@@ -433,10 +543,11 @@ public class ListPaymentPaymentsRequest {
 
         public ListPaymentPaymentsRequest build() {
             return new ListPaymentPaymentsRequest(
-                connectionId, contactId, fields,
-                invoiceId, limit, offset,
-                order, query, raw,
-                sort, updatedGte);
+                billId, connectionId, contactId,
+                fields, invoiceId, limit,
+                linkId, offset, order,
+                query, raw, sort,
+                type, updatedGte);
         }
 
     }

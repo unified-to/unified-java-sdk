@@ -21,11 +21,15 @@ public enum PatchAdsCampaignQueryParamFields {
     BUDGET_PERIOD("budget_period"),
     TOTAL_SPEND_AMOUNT("total_spend_amount"),
     TARGETING("targeting"),
-    RAW("raw"),
     GOAL("goal"),
     PLANNED_SPEND_AMOUNT("planned_spend_amount"),
     FREQUENCY_CAP("frequency_cap"),
-    IS_ACTIVE("is_active");
+    BID_STRATEGY("bid_strategy"),
+    SPECIAL_AD_CATEGORIES("special_ad_categories"),
+    ADVERTISING_CHANNEL_TYPE("advertising_channel_type"),
+    CAMPAIGN_BUDGET_IDENTIFIER("campaign_budget_identifier"),
+    CURRENCY("currency"),
+    RAW("raw");
 
     @JsonValue
     private final String value;

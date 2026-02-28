@@ -29,6 +29,10 @@ public class AdType {
     public static final AdType CALL = new AdType("CALL");
     public static final AdType CAROUSEL = new AdType("CAROUSEL");
     public static final AdType SOCIAL = new AdType("SOCIAL");
+    public static final AdType DISPLAY = new AdType("DISPLAY");
+    public static final AdType SEARCH = new AdType("SEARCH");
+    public static final AdType AUDIO = new AdType("AUDIO");
+    public static final AdType YOUTUBE = new AdType("YOUTUBE");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -111,6 +115,10 @@ public class AdType {
         map.put("CALL", CALL);
         map.put("CAROUSEL", CAROUSEL);
         map.put("SOCIAL", SOCIAL);
+        map.put("DISPLAY", DISPLAY);
+        map.put("SEARCH", SEARCH);
+        map.put("AUDIO", AUDIO);
+        map.put("YOUTUBE", YOUTUBE);
         return map;
     }
 
@@ -125,6 +133,10 @@ public class AdType {
         map.put("CALL", AdTypeEnum.CALL);
         map.put("CAROUSEL", AdTypeEnum.CAROUSEL);
         map.put("SOCIAL", AdTypeEnum.SOCIAL);
+        map.put("DISPLAY", AdTypeEnum.DISPLAY);
+        map.put("SEARCH", AdTypeEnum.SEARCH);
+        map.put("AUDIO", AdTypeEnum.AUDIO);
+        map.put("YOUTUBE", AdTypeEnum.YOUTUBE);
         return map;
     }
     
@@ -139,7 +151,11 @@ public class AdType {
         APP("APP"),
         CALL("CALL"),
         CAROUSEL("CAROUSEL"),
-        SOCIAL("SOCIAL"),;
+        SOCIAL("SOCIAL"),
+        DISPLAY("DISPLAY"),
+        SEARCH("SEARCH"),
+        AUDIO("AUDIO"),
+        YOUTUBE("YOUTUBE"),;
 
         private final String value;
 

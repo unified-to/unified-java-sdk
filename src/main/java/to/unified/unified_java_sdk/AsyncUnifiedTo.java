@@ -145,6 +145,8 @@ public class AsyncUnifiedTo {
 
     private final AsyncHris hris;
 
+    private final AsyncBankaccount bankaccount;
+
     private final AsyncBenefit benefit;
 
     private final AsyncDeduction deduction;
@@ -537,6 +539,10 @@ public class AsyncUnifiedTo {
         return hris;
     }
 
+    public AsyncBankaccount bankaccount() {
+        return bankaccount;
+    }
+
     public AsyncBenefit benefit() {
         return benefit;
     }
@@ -865,6 +871,7 @@ public class AsyncUnifiedTo {
         this.model = new AsyncModel(syncSDK.model(), sdkConfiguration);
         this.prompt = new AsyncPrompt(syncSDK.prompt(), sdkConfiguration);
         this.hris = new AsyncHris(syncSDK.hris(), sdkConfiguration);
+        this.bankaccount = new AsyncBankaccount(syncSDK.bankaccount(), sdkConfiguration);
         this.benefit = new AsyncBenefit(syncSDK.benefit(), sdkConfiguration);
         this.deduction = new AsyncDeduction(syncSDK.deduction(), sdkConfiguration);
         this.device = new AsyncDevice(syncSDK.device(), sdkConfiguration);

@@ -28,6 +28,11 @@ public class PropertyAdsCampaignTargeting {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("behaviors")
+    private List<String> behaviors;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("companies")
     private List<String> companies;
 
@@ -38,6 +43,11 @@ public class PropertyAdsCampaignTargeting {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("custom_audiences")
+    private List<String> customAudiences;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("degrees")
     private List<String> degrees;
 
@@ -45,6 +55,16 @@ public class PropertyAdsCampaignTargeting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("devices")
     private List<String> devices;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("excluded_audiences")
+    private List<String> excludedAudiences;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("excluded_locations")
+    private List<String> excludedLocations;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -110,10 +130,14 @@ public class PropertyAdsCampaignTargeting {
     public PropertyAdsCampaignTargeting(
             @JsonProperty("age_ranges") @Nullable List<String> ageRanges,
             @JsonProperty("audiences") @Nullable List<String> audiences,
+            @JsonProperty("behaviors") @Nullable List<String> behaviors,
             @JsonProperty("companies") @Nullable List<String> companies,
             @JsonProperty("company_sizes") @Nullable List<String> companySizes,
+            @JsonProperty("custom_audiences") @Nullable List<String> customAudiences,
             @JsonProperty("degrees") @Nullable List<String> degrees,
             @JsonProperty("devices") @Nullable List<String> devices,
+            @JsonProperty("excluded_audiences") @Nullable List<String> excludedAudiences,
+            @JsonProperty("excluded_locations") @Nullable List<String> excludedLocations,
             @JsonProperty("genders") @Nullable List<String> genders,
             @JsonProperty("industries") @Nullable List<String> industries,
             @JsonProperty("interests") @Nullable List<String> interests,
@@ -128,10 +152,14 @@ public class PropertyAdsCampaignTargeting {
             @JsonProperty("skills") @Nullable List<String> skills) {
         this.ageRanges = ageRanges;
         this.audiences = audiences;
+        this.behaviors = behaviors;
         this.companies = companies;
         this.companySizes = companySizes;
+        this.customAudiences = customAudiences;
         this.degrees = degrees;
         this.devices = devices;
+        this.excludedAudiences = excludedAudiences;
+        this.excludedLocations = excludedLocations;
         this.genders = genders;
         this.industries = industries;
         this.interests = interests;
@@ -152,7 +180,9 @@ public class PropertyAdsCampaignTargeting {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null, null, null,
+            null);
     }
 
     public Optional<List<String>> ageRanges() {
@@ -163,6 +193,10 @@ public class PropertyAdsCampaignTargeting {
         return Optional.ofNullable(this.audiences);
     }
 
+    public Optional<List<String>> behaviors() {
+        return Optional.ofNullable(this.behaviors);
+    }
+
     public Optional<List<String>> companies() {
         return Optional.ofNullable(this.companies);
     }
@@ -171,12 +205,24 @@ public class PropertyAdsCampaignTargeting {
         return Optional.ofNullable(this.companySizes);
     }
 
+    public Optional<List<String>> customAudiences() {
+        return Optional.ofNullable(this.customAudiences);
+    }
+
     public Optional<List<String>> degrees() {
         return Optional.ofNullable(this.degrees);
     }
 
     public Optional<List<String>> devices() {
         return Optional.ofNullable(this.devices);
+    }
+
+    public Optional<List<String>> excludedAudiences() {
+        return Optional.ofNullable(this.excludedAudiences);
+    }
+
+    public Optional<List<String>> excludedLocations() {
+        return Optional.ofNullable(this.excludedLocations);
     }
 
     public Optional<List<String>> genders() {
@@ -244,6 +290,12 @@ public class PropertyAdsCampaignTargeting {
     }
 
 
+    public PropertyAdsCampaignTargeting withBehaviors(@Nullable List<String> behaviors) {
+        this.behaviors = behaviors;
+        return this;
+    }
+
+
     public PropertyAdsCampaignTargeting withCompanies(@Nullable List<String> companies) {
         this.companies = companies;
         return this;
@@ -256,6 +308,12 @@ public class PropertyAdsCampaignTargeting {
     }
 
 
+    public PropertyAdsCampaignTargeting withCustomAudiences(@Nullable List<String> customAudiences) {
+        this.customAudiences = customAudiences;
+        return this;
+    }
+
+
     public PropertyAdsCampaignTargeting withDegrees(@Nullable List<String> degrees) {
         this.degrees = degrees;
         return this;
@@ -264,6 +322,18 @@ public class PropertyAdsCampaignTargeting {
 
     public PropertyAdsCampaignTargeting withDevices(@Nullable List<String> devices) {
         this.devices = devices;
+        return this;
+    }
+
+
+    public PropertyAdsCampaignTargeting withExcludedAudiences(@Nullable List<String> excludedAudiences) {
+        this.excludedAudiences = excludedAudiences;
+        return this;
+    }
+
+
+    public PropertyAdsCampaignTargeting withExcludedLocations(@Nullable List<String> excludedLocations) {
+        this.excludedLocations = excludedLocations;
         return this;
     }
 
@@ -352,10 +422,14 @@ public class PropertyAdsCampaignTargeting {
         return 
             Utils.enhancedDeepEquals(this.ageRanges, other.ageRanges) &&
             Utils.enhancedDeepEquals(this.audiences, other.audiences) &&
+            Utils.enhancedDeepEquals(this.behaviors, other.behaviors) &&
             Utils.enhancedDeepEquals(this.companies, other.companies) &&
             Utils.enhancedDeepEquals(this.companySizes, other.companySizes) &&
+            Utils.enhancedDeepEquals(this.customAudiences, other.customAudiences) &&
             Utils.enhancedDeepEquals(this.degrees, other.degrees) &&
             Utils.enhancedDeepEquals(this.devices, other.devices) &&
+            Utils.enhancedDeepEquals(this.excludedAudiences, other.excludedAudiences) &&
+            Utils.enhancedDeepEquals(this.excludedLocations, other.excludedLocations) &&
             Utils.enhancedDeepEquals(this.genders, other.genders) &&
             Utils.enhancedDeepEquals(this.industries, other.industries) &&
             Utils.enhancedDeepEquals(this.interests, other.interests) &&
@@ -373,12 +447,14 @@ public class PropertyAdsCampaignTargeting {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            ageRanges, audiences, companies,
-            companySizes, degrees, devices,
-            genders, industries, interests,
-            jobFunctions, jobTitles, keywords,
-            languages, locations, placements,
-            schools, seniorities, skills);
+            ageRanges, audiences, behaviors,
+            companies, companySizes, customAudiences,
+            degrees, devices, excludedAudiences,
+            excludedLocations, genders, industries,
+            interests, jobFunctions, jobTitles,
+            keywords, languages, locations,
+            placements, schools, seniorities,
+            skills);
     }
     
     @Override
@@ -386,10 +462,14 @@ public class PropertyAdsCampaignTargeting {
         return Utils.toString(PropertyAdsCampaignTargeting.class,
                 "ageRanges", ageRanges,
                 "audiences", audiences,
+                "behaviors", behaviors,
                 "companies", companies,
                 "companySizes", companySizes,
+                "customAudiences", customAudiences,
                 "degrees", degrees,
                 "devices", devices,
+                "excludedAudiences", excludedAudiences,
+                "excludedLocations", excludedLocations,
                 "genders", genders,
                 "industries", industries,
                 "interests", interests,
@@ -411,13 +491,21 @@ public class PropertyAdsCampaignTargeting {
 
         private List<String> audiences;
 
+        private List<String> behaviors;
+
         private List<String> companies;
 
         private List<String> companySizes;
 
+        private List<String> customAudiences;
+
         private List<String> degrees;
 
         private List<String> devices;
+
+        private List<String> excludedAudiences;
+
+        private List<String> excludedLocations;
 
         private List<String> genders;
 
@@ -457,6 +545,11 @@ public class PropertyAdsCampaignTargeting {
             return this;
         }
 
+        public Builder behaviors(@Nullable List<String> behaviors) {
+            this.behaviors = behaviors;
+            return this;
+        }
+
         public Builder companies(@Nullable List<String> companies) {
             this.companies = companies;
             return this;
@@ -467,6 +560,11 @@ public class PropertyAdsCampaignTargeting {
             return this;
         }
 
+        public Builder customAudiences(@Nullable List<String> customAudiences) {
+            this.customAudiences = customAudiences;
+            return this;
+        }
+
         public Builder degrees(@Nullable List<String> degrees) {
             this.degrees = degrees;
             return this;
@@ -474,6 +572,16 @@ public class PropertyAdsCampaignTargeting {
 
         public Builder devices(@Nullable List<String> devices) {
             this.devices = devices;
+            return this;
+        }
+
+        public Builder excludedAudiences(@Nullable List<String> excludedAudiences) {
+            this.excludedAudiences = excludedAudiences;
+            return this;
+        }
+
+        public Builder excludedLocations(@Nullable List<String> excludedLocations) {
+            this.excludedLocations = excludedLocations;
             return this;
         }
 
@@ -539,12 +647,14 @@ public class PropertyAdsCampaignTargeting {
 
         public PropertyAdsCampaignTargeting build() {
             return new PropertyAdsCampaignTargeting(
-                ageRanges, audiences, companies,
-                companySizes, degrees, devices,
-                genders, industries, interests,
-                jobFunctions, jobTitles, keywords,
-                languages, locations, placements,
-                schools, seniorities, skills);
+                ageRanges, audiences, behaviors,
+                companies, companySizes, customAudiences,
+                degrees, devices, excludedAudiences,
+                excludedLocations, genders, industries,
+                interests, jobFunctions, jobTitles,
+                keywords, languages, locations,
+                placements, schools, seniorities,
+                skills);
         }
 
     }

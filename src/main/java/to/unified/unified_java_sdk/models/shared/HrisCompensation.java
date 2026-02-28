@@ -38,6 +38,11 @@ public class HrisCompensation {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("notes")
+    private String notes;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private HrisCompensationType type;
 
@@ -47,17 +52,19 @@ public class HrisCompensation {
             @JsonProperty("currency") @Nullable String currency,
             @JsonProperty("frequency") @Nullable HrisCompensationFrequency frequency,
             @JsonProperty("group_id") @Nullable String groupId,
+            @JsonProperty("notes") @Nullable String notes,
             @JsonProperty("type") @Nullable HrisCompensationType type) {
         this.amount = amount;
         this.currency = currency;
         this.frequency = frequency;
         this.groupId = groupId;
+        this.notes = notes;
         this.type = type;
     }
     
     public HrisCompensation() {
         this(null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<Double> amount() {
@@ -74,6 +81,10 @@ public class HrisCompensation {
 
     public Optional<String> groupId() {
         return Optional.ofNullable(this.groupId);
+    }
+
+    public Optional<String> notes() {
+        return Optional.ofNullable(this.notes);
     }
 
     public Optional<HrisCompensationType> type() {
@@ -109,6 +120,12 @@ public class HrisCompensation {
     }
 
 
+    public HrisCompensation withNotes(@Nullable String notes) {
+        this.notes = notes;
+        return this;
+    }
+
+
     public HrisCompensation withType(@Nullable HrisCompensationType type) {
         this.type = type;
         return this;
@@ -129,6 +146,7 @@ public class HrisCompensation {
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
             Utils.enhancedDeepEquals(this.frequency, other.frequency) &&
             Utils.enhancedDeepEquals(this.groupId, other.groupId) &&
+            Utils.enhancedDeepEquals(this.notes, other.notes) &&
             Utils.enhancedDeepEquals(this.type, other.type);
     }
     
@@ -136,7 +154,7 @@ public class HrisCompensation {
     public int hashCode() {
         return Utils.enhancedHash(
             amount, currency, frequency,
-            groupId, type);
+            groupId, notes, type);
     }
     
     @Override
@@ -146,6 +164,7 @@ public class HrisCompensation {
                 "currency", currency,
                 "frequency", frequency,
                 "groupId", groupId,
+                "notes", notes,
                 "type", type);
     }
 
@@ -159,6 +178,8 @@ public class HrisCompensation {
         private HrisCompensationFrequency frequency;
 
         private String groupId;
+
+        private String notes;
 
         private HrisCompensationType type;
 
@@ -186,6 +207,11 @@ public class HrisCompensation {
             return this;
         }
 
+        public Builder notes(@Nullable String notes) {
+            this.notes = notes;
+            return this;
+        }
+
         public Builder type(@Nullable HrisCompensationType type) {
             this.type = type;
             return this;
@@ -194,7 +220,7 @@ public class HrisCompensation {
         public HrisCompensation build() {
             return new HrisCompensation(
                 amount, currency, frequency,
-                groupId, type);
+                groupId, notes, type);
         }
 
     }

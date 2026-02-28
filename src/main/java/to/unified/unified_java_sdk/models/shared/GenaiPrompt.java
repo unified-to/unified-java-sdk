@@ -26,6 +26,11 @@ public class GenaiPrompt {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("mcp_authorization_token")
+    private String mcpAuthorizationToken;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mcp_deferred_tools")
     private List<String> mcpDeferredTools;
 
@@ -67,6 +72,7 @@ public class GenaiPrompt {
     @JsonCreator
     public GenaiPrompt(
             @JsonProperty("max_tokens") @Nullable Double maxTokens,
+            @JsonProperty("mcp_authorization_token") @Nullable String mcpAuthorizationToken,
             @JsonProperty("mcp_deferred_tools") @Nullable List<String> mcpDeferredTools,
             @JsonProperty("mcp_url") @Nullable String mcpUrl,
             @JsonProperty("messages") @Nullable List<GenaiContent> messages,
@@ -76,6 +82,7 @@ public class GenaiPrompt {
             @JsonProperty("temperature") @Nullable Double temperature,
             @JsonProperty("tokens_used") @Nullable Double tokensUsed) {
         this.maxTokens = maxTokens;
+        this.mcpAuthorizationToken = mcpAuthorizationToken;
         this.mcpDeferredTools = mcpDeferredTools;
         this.mcpUrl = mcpUrl;
         this.messages = messages;
@@ -89,11 +96,16 @@ public class GenaiPrompt {
     public GenaiPrompt() {
         this(null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     public Optional<Double> maxTokens() {
         return Optional.ofNullable(this.maxTokens);
+    }
+
+    public Optional<String> mcpAuthorizationToken() {
+        return Optional.ofNullable(this.mcpAuthorizationToken);
     }
 
     public Optional<List<String>> mcpDeferredTools() {
@@ -135,6 +147,12 @@ public class GenaiPrompt {
 
     public GenaiPrompt withMaxTokens(@Nullable Double maxTokens) {
         this.maxTokens = maxTokens;
+        return this;
+    }
+
+
+    public GenaiPrompt withMcpAuthorizationToken(@Nullable String mcpAuthorizationToken) {
+        this.mcpAuthorizationToken = mcpAuthorizationToken;
         return this;
     }
 
@@ -198,6 +216,7 @@ public class GenaiPrompt {
         GenaiPrompt other = (GenaiPrompt) o;
         return 
             Utils.enhancedDeepEquals(this.maxTokens, other.maxTokens) &&
+            Utils.enhancedDeepEquals(this.mcpAuthorizationToken, other.mcpAuthorizationToken) &&
             Utils.enhancedDeepEquals(this.mcpDeferredTools, other.mcpDeferredTools) &&
             Utils.enhancedDeepEquals(this.mcpUrl, other.mcpUrl) &&
             Utils.enhancedDeepEquals(this.messages, other.messages) &&
@@ -211,15 +230,17 @@ public class GenaiPrompt {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            maxTokens, mcpDeferredTools, mcpUrl,
-            messages, modelId, raw,
-            responses, temperature, tokensUsed);
+            maxTokens, mcpAuthorizationToken, mcpDeferredTools,
+            mcpUrl, messages, modelId,
+            raw, responses, temperature,
+            tokensUsed);
     }
     
     @Override
     public String toString() {
         return Utils.toString(GenaiPrompt.class,
                 "maxTokens", maxTokens,
+                "mcpAuthorizationToken", mcpAuthorizationToken,
                 "mcpDeferredTools", mcpDeferredTools,
                 "mcpUrl", mcpUrl,
                 "messages", messages,
@@ -234,6 +255,8 @@ public class GenaiPrompt {
     public final static class Builder {
 
         private Double maxTokens;
+
+        private String mcpAuthorizationToken;
 
         private List<String> mcpDeferredTools;
 
@@ -257,6 +280,11 @@ public class GenaiPrompt {
 
         public Builder maxTokens(@Nullable Double maxTokens) {
             this.maxTokens = maxTokens;
+            return this;
+        }
+
+        public Builder mcpAuthorizationToken(@Nullable String mcpAuthorizationToken) {
+            this.mcpAuthorizationToken = mcpAuthorizationToken;
             return this;
         }
 
@@ -302,9 +330,10 @@ public class GenaiPrompt {
 
         public GenaiPrompt build() {
             return new GenaiPrompt(
-                maxTokens, mcpDeferredTools, mcpUrl,
-                messages, modelId, raw,
-                responses, temperature, tokensUsed);
+                maxTokens, mcpAuthorizationToken, mcpDeferredTools,
+                mcpUrl, messages, modelId,
+                raw, responses, temperature,
+                tokensUsed);
         }
 
     }

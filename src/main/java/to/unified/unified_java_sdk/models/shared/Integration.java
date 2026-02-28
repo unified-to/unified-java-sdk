@@ -88,6 +88,11 @@ public class Integration {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("is_hidden")
+    private Boolean isHidden;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logo_url")
     private String logoUrl;
 
@@ -177,6 +182,7 @@ public class Integration {
             @JsonProperty("featured") @Nullable Boolean featured,
             @JsonProperty("in_progress") @Nullable Boolean inProgress,
             @JsonProperty("is_active") @Nullable Boolean isActive,
+            @JsonProperty("is_hidden") @Nullable Boolean isHidden,
             @JsonProperty("logo_url") @Nullable String logoUrl,
             @JsonProperty("name") @Nonnull String name,
             @JsonProperty("partnership") @Nullable Partnership partnership,
@@ -205,6 +211,7 @@ public class Integration {
         this.featured = featured;
         this.inProgress = inProgress;
         this.isActive = isActive;
+        this.isHidden = isHidden;
         this.logoUrl = logoUrl;
         this.name = Optional.ofNullable(name)
             .orElseThrow(() -> new IllegalArgumentException("name cannot be null"));
@@ -232,11 +239,12 @@ public class Integration {
             null, categories, null,
             null, null, null,
             null, null, null,
-            null, name, null,
+            null, null, name,
             null, null, null,
             null, null, null,
             null, null, null,
-            type, null, null);
+            null, type, null,
+            null);
     }
 
     public Optional<Double> activeHealthyConnections() {
@@ -288,6 +296,10 @@ public class Integration {
 
     public Optional<Boolean> isActive() {
         return Optional.ofNullable(this.isActive);
+    }
+
+    public Optional<Boolean> isHidden() {
+        return Optional.ofNullable(this.isHidden);
     }
 
     public Optional<String> logoUrl() {
@@ -436,6 +448,12 @@ public class Integration {
     }
 
 
+    public Integration withIsHidden(@Nullable Boolean isHidden) {
+        this.isHidden = isHidden;
+        return this;
+    }
+
+
     public Integration withLogoUrl(@Nullable String logoUrl) {
         this.logoUrl = logoUrl;
         return this;
@@ -554,6 +572,7 @@ public class Integration {
             Utils.enhancedDeepEquals(this.featured, other.featured) &&
             Utils.enhancedDeepEquals(this.inProgress, other.inProgress) &&
             Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
+            Utils.enhancedDeepEquals(this.isHidden, other.isHidden) &&
             Utils.enhancedDeepEquals(this.logoUrl, other.logoUrl) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.partnership, other.partnership) &&
@@ -578,11 +597,12 @@ public class Integration {
             beta, categories, color,
             createdAt, description, faIcon,
             featured, inProgress, isActive,
-            logoUrl, name, partnership,
-            popularity, rateLimitDescription, saml,
-            sandbox, support, testedAt,
-            textColor, tokenInstructions, tokenNames,
-            type, updatedAt, webUrl);
+            isHidden, logoUrl, name,
+            partnership, popularity, rateLimitDescription,
+            saml, sandbox, support,
+            testedAt, textColor, tokenInstructions,
+            tokenNames, type, updatedAt,
+            webUrl);
     }
     
     @Override
@@ -600,6 +620,7 @@ public class Integration {
                 "featured", featured,
                 "inProgress", inProgress,
                 "isActive", isActive,
+                "isHidden", isHidden,
                 "logoUrl", logoUrl,
                 "name", name,
                 "partnership", partnership,
@@ -643,6 +664,8 @@ public class Integration {
         private Boolean inProgress;
 
         private Boolean isActive;
+
+        private Boolean isHidden;
 
         private String logoUrl;
 
@@ -741,6 +764,11 @@ public class Integration {
             return this;
         }
 
+        public Builder isHidden(@Nullable Boolean isHidden) {
+            this.isHidden = isHidden;
+            return this;
+        }
+
         public Builder logoUrl(@Nullable String logoUrl) {
             this.logoUrl = logoUrl;
             return this;
@@ -828,11 +856,12 @@ public class Integration {
                 beta, categories, color,
                 createdAt, description, faIcon,
                 featured, inProgress, isActive,
-                logoUrl, name, partnership,
-                popularity, rateLimitDescription, saml,
-                sandbox, support, testedAt,
-                textColor, tokenInstructions, tokenNames,
-                type, updatedAt, webUrl);
+                isHidden, logoUrl, name,
+                partnership, popularity, rateLimitDescription,
+                saml, sandbox, support,
+                testedAt, textColor, tokenInstructions,
+                tokenNames, type, updatedAt,
+                webUrl);
         }
 
     }

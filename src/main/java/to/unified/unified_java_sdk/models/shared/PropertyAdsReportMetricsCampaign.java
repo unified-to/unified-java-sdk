@@ -8,18 +8,30 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.annotation.Nullable;
-import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class PropertyAdsReportMetricsCampaign {
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("advertising_channel_type")
+    private PropertyAdsReportMetricsCampaignAdvertisingChannelType advertisingChannelType;
+
+    /**
+     * YOUTUBE_AND_PARTNERS
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("bid_strategy")
+    private PropertyAdsReportMetricsCampaignBidStrategy bidStrategy;
+
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("budget_amount")
@@ -32,8 +44,18 @@ public class PropertyAdsReportMetricsCampaign {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("campaign_budget_identifier")
+    private String campaignBudgetIdentifier;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("currency")
+    private String currency;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -57,11 +79,6 @@ public class PropertyAdsReportMetricsCampaign {
 
 
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("is_active")
-    private Boolean isActive;
-
-
-    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
@@ -79,6 +96,11 @@ public class PropertyAdsReportMetricsCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("special_ad_categories")
+    private List<String> specialAdCategories;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -107,35 +129,43 @@ public class PropertyAdsReportMetricsCampaign {
 
     @JsonCreator
     public PropertyAdsReportMetricsCampaign(
+            @JsonProperty("advertising_channel_type") @Nullable PropertyAdsReportMetricsCampaignAdvertisingChannelType advertisingChannelType,
+            @JsonProperty("bid_strategy") @Nullable PropertyAdsReportMetricsCampaignBidStrategy bidStrategy,
             @JsonProperty("budget_amount") @Nullable Double budgetAmount,
             @JsonProperty("budget_period") @Nullable PropertyAdsReportMetricsCampaignBudgetPeriod budgetPeriod,
+            @JsonProperty("campaign_budget_identifier") @Nullable String campaignBudgetIdentifier,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
+            @JsonProperty("currency") @Nullable String currency,
             @JsonProperty("end_at") @Nullable OffsetDateTime endAt,
             @JsonProperty("frequency_cap") @Nullable PropertyAdsReportMetricsCampaignFrequencyCap frequencyCap,
             @JsonProperty("goal") @Nullable PropertyAdsReportMetricsCampaignGoal goal,
             @JsonProperty("id") @Nullable String id,
-            @JsonProperty("is_active") @Nullable Boolean isActive,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("organization_id") @Nullable String organizationId,
             @JsonProperty("planned_spend_amount") @Nullable Double plannedSpendAmount,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("special_ad_categories") @Nullable List<String> specialAdCategories,
             @JsonProperty("start_at") @Nullable OffsetDateTime startAt,
             @JsonProperty("status") @Nullable PropertyAdsReportMetricsCampaignStatus status,
             @JsonProperty("targeting") @Nullable PropertyAdsReportMetricsCampaignTargeting targeting,
             @JsonProperty("total_spend_amount") @Nullable Double totalSpendAmount,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
+        this.advertisingChannelType = advertisingChannelType;
+        this.bidStrategy = bidStrategy;
         this.budgetAmount = budgetAmount;
         this.budgetPeriod = budgetPeriod;
+        this.campaignBudgetIdentifier = campaignBudgetIdentifier;
         this.createdAt = createdAt;
+        this.currency = currency;
         this.endAt = endAt;
         this.frequencyCap = frequencyCap;
         this.goal = goal;
         this.id = id;
-        this.isActive = isActive;
         this.name = name;
         this.organizationId = organizationId;
         this.plannedSpendAmount = plannedSpendAmount;
         this.raw = raw;
+        this.specialAdCategories = specialAdCategories;
         this.startAt = startAt;
         this.status = status;
         this.targeting = targeting;
@@ -149,7 +179,19 @@ public class PropertyAdsReportMetricsCampaign {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null,
+            null, null, null);
+    }
+
+    public Optional<PropertyAdsReportMetricsCampaignAdvertisingChannelType> advertisingChannelType() {
+        return Optional.ofNullable(this.advertisingChannelType);
+    }
+
+    /**
+     * YOUTUBE_AND_PARTNERS
+     */
+    public Optional<PropertyAdsReportMetricsCampaignBidStrategy> bidStrategy() {
+        return Optional.ofNullable(this.bidStrategy);
     }
 
     public Optional<Double> budgetAmount() {
@@ -160,8 +202,16 @@ public class PropertyAdsReportMetricsCampaign {
         return Optional.ofNullable(this.budgetPeriod);
     }
 
+    public Optional<String> campaignBudgetIdentifier() {
+        return Optional.ofNullable(this.campaignBudgetIdentifier);
+    }
+
     public Optional<OffsetDateTime> createdAt() {
         return Optional.ofNullable(this.createdAt);
+    }
+
+    public Optional<String> currency() {
+        return Optional.ofNullable(this.currency);
     }
 
     public Optional<OffsetDateTime> endAt() {
@@ -180,10 +230,6 @@ public class PropertyAdsReportMetricsCampaign {
         return Optional.ofNullable(this.id);
     }
 
-    public Optional<Boolean> isActive() {
-        return Optional.ofNullable(this.isActive);
-    }
-
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -198,6 +244,10 @@ public class PropertyAdsReportMetricsCampaign {
 
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
+    }
+
+    public Optional<List<String>> specialAdCategories() {
+        return Optional.ofNullable(this.specialAdCategories);
     }
 
     public Optional<OffsetDateTime> startAt() {
@@ -225,6 +275,21 @@ public class PropertyAdsReportMetricsCampaign {
     }
 
 
+    public PropertyAdsReportMetricsCampaign withAdvertisingChannelType(@Nullable PropertyAdsReportMetricsCampaignAdvertisingChannelType advertisingChannelType) {
+        this.advertisingChannelType = advertisingChannelType;
+        return this;
+    }
+
+
+    /**
+     * YOUTUBE_AND_PARTNERS
+     */
+    public PropertyAdsReportMetricsCampaign withBidStrategy(@Nullable PropertyAdsReportMetricsCampaignBidStrategy bidStrategy) {
+        this.bidStrategy = bidStrategy;
+        return this;
+    }
+
+
     public PropertyAdsReportMetricsCampaign withBudgetAmount(@Nullable Double budgetAmount) {
         this.budgetAmount = budgetAmount;
         return this;
@@ -237,8 +302,20 @@ public class PropertyAdsReportMetricsCampaign {
     }
 
 
+    public PropertyAdsReportMetricsCampaign withCampaignBudgetIdentifier(@Nullable String campaignBudgetIdentifier) {
+        this.campaignBudgetIdentifier = campaignBudgetIdentifier;
+        return this;
+    }
+
+
     public PropertyAdsReportMetricsCampaign withCreatedAt(@Nullable OffsetDateTime createdAt) {
         this.createdAt = createdAt;
+        return this;
+    }
+
+
+    public PropertyAdsReportMetricsCampaign withCurrency(@Nullable String currency) {
+        this.currency = currency;
         return this;
     }
 
@@ -267,12 +344,6 @@ public class PropertyAdsReportMetricsCampaign {
     }
 
 
-    public PropertyAdsReportMetricsCampaign withIsActive(@Nullable Boolean isActive) {
-        this.isActive = isActive;
-        return this;
-    }
-
-
     public PropertyAdsReportMetricsCampaign withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -293,6 +364,12 @@ public class PropertyAdsReportMetricsCampaign {
 
     public PropertyAdsReportMetricsCampaign withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
+        return this;
+    }
+
+
+    public PropertyAdsReportMetricsCampaign withSpecialAdCategories(@Nullable List<String> specialAdCategories) {
+        this.specialAdCategories = specialAdCategories;
         return this;
     }
 
@@ -337,18 +414,22 @@ public class PropertyAdsReportMetricsCampaign {
         }
         PropertyAdsReportMetricsCampaign other = (PropertyAdsReportMetricsCampaign) o;
         return 
+            Utils.enhancedDeepEquals(this.advertisingChannelType, other.advertisingChannelType) &&
+            Utils.enhancedDeepEquals(this.bidStrategy, other.bidStrategy) &&
             Utils.enhancedDeepEquals(this.budgetAmount, other.budgetAmount) &&
             Utils.enhancedDeepEquals(this.budgetPeriod, other.budgetPeriod) &&
+            Utils.enhancedDeepEquals(this.campaignBudgetIdentifier, other.campaignBudgetIdentifier) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
+            Utils.enhancedDeepEquals(this.currency, other.currency) &&
             Utils.enhancedDeepEquals(this.endAt, other.endAt) &&
             Utils.enhancedDeepEquals(this.frequencyCap, other.frequencyCap) &&
             Utils.enhancedDeepEquals(this.goal, other.goal) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
-            Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
             Utils.enhancedDeepEquals(this.plannedSpendAmount, other.plannedSpendAmount) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.specialAdCategories, other.specialAdCategories) &&
             Utils.enhancedDeepEquals(this.startAt, other.startAt) &&
             Utils.enhancedDeepEquals(this.status, other.status) &&
             Utils.enhancedDeepEquals(this.targeting, other.targeting) &&
@@ -359,29 +440,34 @@ public class PropertyAdsReportMetricsCampaign {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            budgetAmount, budgetPeriod, createdAt,
-            endAt, frequencyCap, goal,
-            id, isActive, name,
+            advertisingChannelType, bidStrategy, budgetAmount,
+            budgetPeriod, campaignBudgetIdentifier, createdAt,
+            currency, endAt, frequencyCap,
+            goal, id, name,
             organizationId, plannedSpendAmount, raw,
-            startAt, status, targeting,
-            totalSpendAmount, updatedAt);
+            specialAdCategories, startAt, status,
+            targeting, totalSpendAmount, updatedAt);
     }
     
     @Override
     public String toString() {
         return Utils.toString(PropertyAdsReportMetricsCampaign.class,
+                "advertisingChannelType", advertisingChannelType,
+                "bidStrategy", bidStrategy,
                 "budgetAmount", budgetAmount,
                 "budgetPeriod", budgetPeriod,
+                "campaignBudgetIdentifier", campaignBudgetIdentifier,
                 "createdAt", createdAt,
+                "currency", currency,
                 "endAt", endAt,
                 "frequencyCap", frequencyCap,
                 "goal", goal,
                 "id", id,
-                "isActive", isActive,
                 "name", name,
                 "organizationId", organizationId,
                 "plannedSpendAmount", plannedSpendAmount,
                 "raw", raw,
+                "specialAdCategories", specialAdCategories,
                 "startAt", startAt,
                 "status", status,
                 "targeting", targeting,
@@ -392,11 +478,19 @@ public class PropertyAdsReportMetricsCampaign {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
+        private PropertyAdsReportMetricsCampaignAdvertisingChannelType advertisingChannelType;
+
+        private PropertyAdsReportMetricsCampaignBidStrategy bidStrategy;
+
         private Double budgetAmount;
 
         private PropertyAdsReportMetricsCampaignBudgetPeriod budgetPeriod;
 
+        private String campaignBudgetIdentifier;
+
         private OffsetDateTime createdAt;
+
+        private String currency;
 
         private OffsetDateTime endAt;
 
@@ -406,8 +500,6 @@ public class PropertyAdsReportMetricsCampaign {
 
         private String id;
 
-        private Boolean isActive;
-
         private String name;
 
         private String organizationId;
@@ -415,6 +507,8 @@ public class PropertyAdsReportMetricsCampaign {
         private Double plannedSpendAmount;
 
         private Map<String, Object> raw;
+
+        private List<String> specialAdCategories;
 
         private OffsetDateTime startAt;
 
@@ -430,6 +524,19 @@ public class PropertyAdsReportMetricsCampaign {
           // force use of static builder() method
         }
 
+        public Builder advertisingChannelType(@Nullable PropertyAdsReportMetricsCampaignAdvertisingChannelType advertisingChannelType) {
+            this.advertisingChannelType = advertisingChannelType;
+            return this;
+        }
+
+        /**
+         * YOUTUBE_AND_PARTNERS
+         */
+        public Builder bidStrategy(@Nullable PropertyAdsReportMetricsCampaignBidStrategy bidStrategy) {
+            this.bidStrategy = bidStrategy;
+            return this;
+        }
+
         public Builder budgetAmount(@Nullable Double budgetAmount) {
             this.budgetAmount = budgetAmount;
             return this;
@@ -440,8 +547,18 @@ public class PropertyAdsReportMetricsCampaign {
             return this;
         }
 
+        public Builder campaignBudgetIdentifier(@Nullable String campaignBudgetIdentifier) {
+            this.campaignBudgetIdentifier = campaignBudgetIdentifier;
+            return this;
+        }
+
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
             this.createdAt = createdAt;
+            return this;
+        }
+
+        public Builder currency(@Nullable String currency) {
+            this.currency = currency;
             return this;
         }
 
@@ -465,11 +582,6 @@ public class PropertyAdsReportMetricsCampaign {
             return this;
         }
 
-        public Builder isActive(@Nullable Boolean isActive) {
-            this.isActive = isActive;
-            return this;
-        }
-
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
@@ -487,6 +599,11 @@ public class PropertyAdsReportMetricsCampaign {
 
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
+            return this;
+        }
+
+        public Builder specialAdCategories(@Nullable List<String> specialAdCategories) {
+            this.specialAdCategories = specialAdCategories;
             return this;
         }
 
@@ -517,12 +634,13 @@ public class PropertyAdsReportMetricsCampaign {
 
         public PropertyAdsReportMetricsCampaign build() {
             return new PropertyAdsReportMetricsCampaign(
-                budgetAmount, budgetPeriod, createdAt,
-                endAt, frequencyCap, goal,
-                id, isActive, name,
+                advertisingChannelType, bidStrategy, budgetAmount,
+                budgetPeriod, campaignBudgetIdentifier, createdAt,
+                currency, endAt, frequencyCap,
+                goal, id, name,
                 organizationId, plannedSpendAmount, raw,
-                startAt, status, targeting,
-                totalSpendAmount, updatedAt);
+                specialAdCategories, startAt, status,
+                targeting, totalSpendAmount, updatedAt);
         }
 
     }

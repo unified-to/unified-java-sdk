@@ -29,6 +29,11 @@ public class AdsCreative {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("body")
+    private String body;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("campaign_id")
     private String campaignId;
 
@@ -41,6 +46,11 @@ public class AdsCreative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creative_type")
     private CreativeType creativeType;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("cta")
+    private String cta;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -79,8 +89,23 @@ public class AdsCreative {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("image_hash")
+    private String imageHash;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_id")
     private String itemId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("link_url")
+    private String linkUrl;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<AdsMetadata> metadata;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -91,6 +116,21 @@ public class AdsCreative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_id")
     private String organizationId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("page_identifier")
+    private String pageIdentifier;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("path1")
+    private String path1;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("path2")
+    private String path2;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -109,6 +149,16 @@ public class AdsCreative {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("thumbnail_url")
+    private String thumbnailUrl;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("title")
+    private String title;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
@@ -119,15 +169,22 @@ public class AdsCreative {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("video_id")
+    private String videoId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     private Double width;
 
     @JsonCreator
     public AdsCreative(
             @JsonProperty("asset_urls") @Nullable List<String> assetUrls,
+            @JsonProperty("body") @Nullable String body,
             @JsonProperty("campaign_id") @Nullable String campaignId,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("creative_type") @Nullable CreativeType creativeType,
+            @JsonProperty("cta") @Nullable String cta,
             @JsonProperty("external_ad_reference") @Nullable String externalAdReference,
             @JsonProperty("external_creative_reference") @Nullable String externalCreativeReference,
             @JsonProperty("external_placement_reference") @Nullable String externalPlacementReference,
@@ -135,19 +192,30 @@ public class AdsCreative {
             @JsonProperty("height") @Nullable Double height,
             @JsonProperty("hosting_source") @Nullable HostingSource hostingSource,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("image_hash") @Nullable String imageHash,
             @JsonProperty("item_id") @Nullable String itemId,
+            @JsonProperty("link_url") @Nullable String linkUrl,
+            @JsonProperty("metadata") @Nullable List<AdsMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("organization_id") @Nullable String organizationId,
+            @JsonProperty("page_identifier") @Nullable String pageIdentifier,
+            @JsonProperty("path1") @Nullable String path1,
+            @JsonProperty("path2") @Nullable String path2,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("status") @Nullable AdsCreativeStatus status,
             @JsonProperty("third_party_tag") @Nullable String thirdPartyTag,
+            @JsonProperty("thumbnail_url") @Nullable String thumbnailUrl,
+            @JsonProperty("title") @Nullable String title,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
             @JsonProperty("vast_tag_url") @Nullable String vastTagUrl,
+            @JsonProperty("video_id") @Nullable String videoId,
             @JsonProperty("width") @Nullable Double width) {
         this.assetUrls = assetUrls;
+        this.body = body;
         this.campaignId = campaignId;
         this.createdAt = createdAt;
         this.creativeType = creativeType;
+        this.cta = cta;
         this.externalAdReference = externalAdReference;
         this.externalCreativeReference = externalCreativeReference;
         this.externalPlacementReference = externalPlacementReference;
@@ -155,14 +223,23 @@ public class AdsCreative {
         this.height = height;
         this.hostingSource = hostingSource;
         this.id = id;
+        this.imageHash = imageHash;
         this.itemId = itemId;
+        this.linkUrl = linkUrl;
+        this.metadata = metadata;
         this.name = name;
         this.organizationId = organizationId;
+        this.pageIdentifier = pageIdentifier;
+        this.path1 = path1;
+        this.path2 = path2;
         this.raw = raw;
         this.status = status;
         this.thirdPartyTag = thirdPartyTag;
+        this.thumbnailUrl = thumbnailUrl;
+        this.title = title;
         this.updatedAt = updatedAt;
         this.vastTagUrl = vastTagUrl;
+        this.videoId = videoId;
         this.width = width;
     }
     
@@ -173,7 +250,11 @@ public class AdsCreative {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null, null, null,
+            null);
     }
 
     /**
@@ -181,6 +262,10 @@ public class AdsCreative {
      */
     public Optional<List<String>> assetUrls() {
         return Optional.ofNullable(this.assetUrls);
+    }
+
+    public Optional<String> body() {
+        return Optional.ofNullable(this.body);
     }
 
     public Optional<String> campaignId() {
@@ -193,6 +278,10 @@ public class AdsCreative {
 
     public Optional<CreativeType> creativeType() {
         return Optional.ofNullable(this.creativeType);
+    }
+
+    public Optional<String> cta() {
+        return Optional.ofNullable(this.cta);
     }
 
     public Optional<String> externalAdReference() {
@@ -223,8 +312,20 @@ public class AdsCreative {
         return Optional.ofNullable(this.id);
     }
 
+    public Optional<String> imageHash() {
+        return Optional.ofNullable(this.imageHash);
+    }
+
     public Optional<String> itemId() {
         return Optional.ofNullable(this.itemId);
+    }
+
+    public Optional<String> linkUrl() {
+        return Optional.ofNullable(this.linkUrl);
+    }
+
+    public Optional<List<AdsMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> name() {
@@ -233,6 +334,18 @@ public class AdsCreative {
 
     public Optional<String> organizationId() {
         return Optional.ofNullable(this.organizationId);
+    }
+
+    public Optional<String> pageIdentifier() {
+        return Optional.ofNullable(this.pageIdentifier);
+    }
+
+    public Optional<String> path1() {
+        return Optional.ofNullable(this.path1);
+    }
+
+    public Optional<String> path2() {
+        return Optional.ofNullable(this.path2);
     }
 
     public Optional<Map<String, Object>> raw() {
@@ -247,12 +360,24 @@ public class AdsCreative {
         return Optional.ofNullable(this.thirdPartyTag);
     }
 
+    public Optional<String> thumbnailUrl() {
+        return Optional.ofNullable(this.thumbnailUrl);
+    }
+
+    public Optional<String> title() {
+        return Optional.ofNullable(this.title);
+    }
+
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
     public Optional<String> vastTagUrl() {
         return Optional.ofNullable(this.vastTagUrl);
+    }
+
+    public Optional<String> videoId() {
+        return Optional.ofNullable(this.videoId);
     }
 
     public Optional<Double> width() {
@@ -273,6 +398,12 @@ public class AdsCreative {
     }
 
 
+    public AdsCreative withBody(@Nullable String body) {
+        this.body = body;
+        return this;
+    }
+
+
     public AdsCreative withCampaignId(@Nullable String campaignId) {
         this.campaignId = campaignId;
         return this;
@@ -287,6 +418,12 @@ public class AdsCreative {
 
     public AdsCreative withCreativeType(@Nullable CreativeType creativeType) {
         this.creativeType = creativeType;
+        return this;
+    }
+
+
+    public AdsCreative withCta(@Nullable String cta) {
+        this.cta = cta;
         return this;
     }
 
@@ -333,8 +470,26 @@ public class AdsCreative {
     }
 
 
+    public AdsCreative withImageHash(@Nullable String imageHash) {
+        this.imageHash = imageHash;
+        return this;
+    }
+
+
     public AdsCreative withItemId(@Nullable String itemId) {
         this.itemId = itemId;
+        return this;
+    }
+
+
+    public AdsCreative withLinkUrl(@Nullable String linkUrl) {
+        this.linkUrl = linkUrl;
+        return this;
+    }
+
+
+    public AdsCreative withMetadata(@Nullable List<AdsMetadata> metadata) {
+        this.metadata = metadata;
         return this;
     }
 
@@ -347,6 +502,24 @@ public class AdsCreative {
 
     public AdsCreative withOrganizationId(@Nullable String organizationId) {
         this.organizationId = organizationId;
+        return this;
+    }
+
+
+    public AdsCreative withPageIdentifier(@Nullable String pageIdentifier) {
+        this.pageIdentifier = pageIdentifier;
+        return this;
+    }
+
+
+    public AdsCreative withPath1(@Nullable String path1) {
+        this.path1 = path1;
+        return this;
+    }
+
+
+    public AdsCreative withPath2(@Nullable String path2) {
+        this.path2 = path2;
         return this;
     }
 
@@ -369,6 +542,18 @@ public class AdsCreative {
     }
 
 
+    public AdsCreative withThumbnailUrl(@Nullable String thumbnailUrl) {
+        this.thumbnailUrl = thumbnailUrl;
+        return this;
+    }
+
+
+    public AdsCreative withTitle(@Nullable String title) {
+        this.title = title;
+        return this;
+    }
+
+
     public AdsCreative withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -377,6 +562,12 @@ public class AdsCreative {
 
     public AdsCreative withVastTagUrl(@Nullable String vastTagUrl) {
         this.vastTagUrl = vastTagUrl;
+        return this;
+    }
+
+
+    public AdsCreative withVideoId(@Nullable String videoId) {
+        this.videoId = videoId;
         return this;
     }
 
@@ -398,9 +589,11 @@ public class AdsCreative {
         AdsCreative other = (AdsCreative) o;
         return 
             Utils.enhancedDeepEquals(this.assetUrls, other.assetUrls) &&
+            Utils.enhancedDeepEquals(this.body, other.body) &&
             Utils.enhancedDeepEquals(this.campaignId, other.campaignId) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.creativeType, other.creativeType) &&
+            Utils.enhancedDeepEquals(this.cta, other.cta) &&
             Utils.enhancedDeepEquals(this.externalAdReference, other.externalAdReference) &&
             Utils.enhancedDeepEquals(this.externalCreativeReference, other.externalCreativeReference) &&
             Utils.enhancedDeepEquals(this.externalPlacementReference, other.externalPlacementReference) &&
@@ -408,36 +601,51 @@ public class AdsCreative {
             Utils.enhancedDeepEquals(this.height, other.height) &&
             Utils.enhancedDeepEquals(this.hostingSource, other.hostingSource) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.imageHash, other.imageHash) &&
             Utils.enhancedDeepEquals(this.itemId, other.itemId) &&
+            Utils.enhancedDeepEquals(this.linkUrl, other.linkUrl) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
+            Utils.enhancedDeepEquals(this.pageIdentifier, other.pageIdentifier) &&
+            Utils.enhancedDeepEquals(this.path1, other.path1) &&
+            Utils.enhancedDeepEquals(this.path2, other.path2) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.status, other.status) &&
             Utils.enhancedDeepEquals(this.thirdPartyTag, other.thirdPartyTag) &&
+            Utils.enhancedDeepEquals(this.thumbnailUrl, other.thumbnailUrl) &&
+            Utils.enhancedDeepEquals(this.title, other.title) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
             Utils.enhancedDeepEquals(this.vastTagUrl, other.vastTagUrl) &&
+            Utils.enhancedDeepEquals(this.videoId, other.videoId) &&
             Utils.enhancedDeepEquals(this.width, other.width);
     }
     
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            assetUrls, campaignId, createdAt,
-            creativeType, externalAdReference, externalCreativeReference,
-            externalPlacementReference, groupId, height,
-            hostingSource, id, itemId,
-            name, organizationId, raw,
-            status, thirdPartyTag, updatedAt,
-            vastTagUrl, width);
+            assetUrls, body, campaignId,
+            createdAt, creativeType, cta,
+            externalAdReference, externalCreativeReference, externalPlacementReference,
+            groupId, height, hostingSource,
+            id, imageHash, itemId,
+            linkUrl, metadata, name,
+            organizationId, pageIdentifier, path1,
+            path2, raw, status,
+            thirdPartyTag, thumbnailUrl, title,
+            updatedAt, vastTagUrl, videoId,
+            width);
     }
     
     @Override
     public String toString() {
         return Utils.toString(AdsCreative.class,
                 "assetUrls", assetUrls,
+                "body", body,
                 "campaignId", campaignId,
                 "createdAt", createdAt,
                 "creativeType", creativeType,
+                "cta", cta,
                 "externalAdReference", externalAdReference,
                 "externalCreativeReference", externalCreativeReference,
                 "externalPlacementReference", externalPlacementReference,
@@ -445,14 +653,23 @@ public class AdsCreative {
                 "height", height,
                 "hostingSource", hostingSource,
                 "id", id,
+                "imageHash", imageHash,
                 "itemId", itemId,
+                "linkUrl", linkUrl,
+                "metadata", metadata,
                 "name", name,
                 "organizationId", organizationId,
+                "pageIdentifier", pageIdentifier,
+                "path1", path1,
+                "path2", path2,
                 "raw", raw,
                 "status", status,
                 "thirdPartyTag", thirdPartyTag,
+                "thumbnailUrl", thumbnailUrl,
+                "title", title,
                 "updatedAt", updatedAt,
                 "vastTagUrl", vastTagUrl,
+                "videoId", videoId,
                 "width", width);
     }
 
@@ -461,11 +678,15 @@ public class AdsCreative {
 
         private List<String> assetUrls;
 
+        private String body;
+
         private String campaignId;
 
         private OffsetDateTime createdAt;
 
         private CreativeType creativeType;
+
+        private String cta;
 
         private String externalAdReference;
 
@@ -481,11 +702,23 @@ public class AdsCreative {
 
         private String id;
 
+        private String imageHash;
+
         private String itemId;
+
+        private String linkUrl;
+
+        private List<AdsMetadata> metadata;
 
         private String name;
 
         private String organizationId;
+
+        private String pageIdentifier;
+
+        private String path1;
+
+        private String path2;
 
         private Map<String, Object> raw;
 
@@ -493,9 +726,15 @@ public class AdsCreative {
 
         private String thirdPartyTag;
 
+        private String thumbnailUrl;
+
+        private String title;
+
         private OffsetDateTime updatedAt;
 
         private String vastTagUrl;
+
+        private String videoId;
 
         private Double width;
 
@@ -511,6 +750,11 @@ public class AdsCreative {
             return this;
         }
 
+        public Builder body(@Nullable String body) {
+            this.body = body;
+            return this;
+        }
+
         public Builder campaignId(@Nullable String campaignId) {
             this.campaignId = campaignId;
             return this;
@@ -523,6 +767,11 @@ public class AdsCreative {
 
         public Builder creativeType(@Nullable CreativeType creativeType) {
             this.creativeType = creativeType;
+            return this;
+        }
+
+        public Builder cta(@Nullable String cta) {
+            this.cta = cta;
             return this;
         }
 
@@ -561,8 +810,23 @@ public class AdsCreative {
             return this;
         }
 
+        public Builder imageHash(@Nullable String imageHash) {
+            this.imageHash = imageHash;
+            return this;
+        }
+
         public Builder itemId(@Nullable String itemId) {
             this.itemId = itemId;
+            return this;
+        }
+
+        public Builder linkUrl(@Nullable String linkUrl) {
+            this.linkUrl = linkUrl;
+            return this;
+        }
+
+        public Builder metadata(@Nullable List<AdsMetadata> metadata) {
+            this.metadata = metadata;
             return this;
         }
 
@@ -573,6 +837,21 @@ public class AdsCreative {
 
         public Builder organizationId(@Nullable String organizationId) {
             this.organizationId = organizationId;
+            return this;
+        }
+
+        public Builder pageIdentifier(@Nullable String pageIdentifier) {
+            this.pageIdentifier = pageIdentifier;
+            return this;
+        }
+
+        public Builder path1(@Nullable String path1) {
+            this.path1 = path1;
+            return this;
+        }
+
+        public Builder path2(@Nullable String path2) {
+            this.path2 = path2;
             return this;
         }
 
@@ -591,6 +870,16 @@ public class AdsCreative {
             return this;
         }
 
+        public Builder thumbnailUrl(@Nullable String thumbnailUrl) {
+            this.thumbnailUrl = thumbnailUrl;
+            return this;
+        }
+
+        public Builder title(@Nullable String title) {
+            this.title = title;
+            return this;
+        }
+
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
@@ -601,6 +890,11 @@ public class AdsCreative {
             return this;
         }
 
+        public Builder videoId(@Nullable String videoId) {
+            this.videoId = videoId;
+            return this;
+        }
+
         public Builder width(@Nullable Double width) {
             this.width = width;
             return this;
@@ -608,13 +902,17 @@ public class AdsCreative {
 
         public AdsCreative build() {
             return new AdsCreative(
-                assetUrls, campaignId, createdAt,
-                creativeType, externalAdReference, externalCreativeReference,
-                externalPlacementReference, groupId, height,
-                hostingSource, id, itemId,
-                name, organizationId, raw,
-                status, thirdPartyTag, updatedAt,
-                vastTagUrl, width);
+                assetUrls, body, campaignId,
+                createdAt, creativeType, cta,
+                externalAdReference, externalCreativeReference, externalPlacementReference,
+                groupId, height, hostingSource,
+                id, imageHash, itemId,
+                linkUrl, metadata, name,
+                organizationId, pageIdentifier, path1,
+                path2, raw, status,
+                thirdPartyTag, thumbnailUrl, title,
+                updatedAt, vastTagUrl, videoId,
+                width);
         }
 
     }

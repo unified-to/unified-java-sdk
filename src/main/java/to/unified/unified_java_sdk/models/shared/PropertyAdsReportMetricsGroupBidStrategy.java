@@ -53,6 +53,11 @@ public class PropertyAdsReportMetricsGroupBidStrategy {
     private Boolean raiseBidForDeals;
 
 
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("target_roas")
+    private Double targetRoas;
+
+
     @JsonProperty("type")
     private PropertyAdsReportMetricsGroupBidStrategyType type;
 
@@ -74,6 +79,7 @@ public class PropertyAdsReportMetricsGroupBidStrategy {
             @JsonProperty("performance_goal_amount") @Nullable Double performanceGoalAmount,
             @JsonProperty("performance_goal_type") @Nullable PropertyAdsReportMetricsGroupBidStrategyPerformanceGoalType performanceGoalType,
             @JsonProperty("raise_bid_for_deals") @Nullable Boolean raiseBidForDeals,
+            @JsonProperty("target_roas") @Nullable Double targetRoas,
             @JsonProperty("type") @Nonnull PropertyAdsReportMetricsGroupBidStrategyType type,
             @JsonProperty("youtube_and_partners_type") @Nullable PropertyAdsReportMetricsGroupBidStrategyYoutubeAndPartnersType youtubeAndPartnersType,
             @JsonProperty("youtube_and_partners_value") @Nullable String youtubeAndPartnersValue) {
@@ -83,6 +89,7 @@ public class PropertyAdsReportMetricsGroupBidStrategy {
         this.performanceGoalAmount = performanceGoalAmount;
         this.performanceGoalType = performanceGoalType;
         this.raiseBidForDeals = raiseBidForDeals;
+        this.targetRoas = targetRoas;
         this.type = Optional.ofNullable(type)
             .orElseThrow(() -> new IllegalArgumentException("type cannot be null"));
         this.youtubeAndPartnersType = youtubeAndPartnersType;
@@ -93,7 +100,8 @@ public class PropertyAdsReportMetricsGroupBidStrategy {
             @Nonnull PropertyAdsReportMetricsGroupBidStrategyType type) {
         this(null, null, null,
             null, null, null,
-            type, null, null);
+            null, type, null,
+            null);
     }
 
     public Optional<String> customBiddingAlgorithmId() {
@@ -118,6 +126,10 @@ public class PropertyAdsReportMetricsGroupBidStrategy {
 
     public Optional<Boolean> raiseBidForDeals() {
         return Optional.ofNullable(this.raiseBidForDeals);
+    }
+
+    public Optional<Double> targetRoas() {
+        return Optional.ofNullable(this.targetRoas);
     }
 
     public PropertyAdsReportMetricsGroupBidStrategyType type() {
@@ -173,6 +185,12 @@ public class PropertyAdsReportMetricsGroupBidStrategy {
     }
 
 
+    public PropertyAdsReportMetricsGroupBidStrategy withTargetRoas(@Nullable Double targetRoas) {
+        this.targetRoas = targetRoas;
+        return this;
+    }
+
+
     public PropertyAdsReportMetricsGroupBidStrategy withType(@Nonnull PropertyAdsReportMetricsGroupBidStrategyType type) {
         this.type = Utils.checkNotNull(type, "type");
         return this;
@@ -207,6 +225,7 @@ public class PropertyAdsReportMetricsGroupBidStrategy {
             Utils.enhancedDeepEquals(this.performanceGoalAmount, other.performanceGoalAmount) &&
             Utils.enhancedDeepEquals(this.performanceGoalType, other.performanceGoalType) &&
             Utils.enhancedDeepEquals(this.raiseBidForDeals, other.raiseBidForDeals) &&
+            Utils.enhancedDeepEquals(this.targetRoas, other.targetRoas) &&
             Utils.enhancedDeepEquals(this.type, other.type) &&
             Utils.enhancedDeepEquals(this.youtubeAndPartnersType, other.youtubeAndPartnersType) &&
             Utils.enhancedDeepEquals(this.youtubeAndPartnersValue, other.youtubeAndPartnersValue);
@@ -217,7 +236,8 @@ public class PropertyAdsReportMetricsGroupBidStrategy {
         return Utils.enhancedHash(
             customBiddingAlgorithmId, fixedBidAmount, maxAverageCpmBidAmount,
             performanceGoalAmount, performanceGoalType, raiseBidForDeals,
-            type, youtubeAndPartnersType, youtubeAndPartnersValue);
+            targetRoas, type, youtubeAndPartnersType,
+            youtubeAndPartnersValue);
     }
     
     @Override
@@ -229,6 +249,7 @@ public class PropertyAdsReportMetricsGroupBidStrategy {
                 "performanceGoalAmount", performanceGoalAmount,
                 "performanceGoalType", performanceGoalType,
                 "raiseBidForDeals", raiseBidForDeals,
+                "targetRoas", targetRoas,
                 "type", type,
                 "youtubeAndPartnersType", youtubeAndPartnersType,
                 "youtubeAndPartnersValue", youtubeAndPartnersValue);
@@ -248,6 +269,8 @@ public class PropertyAdsReportMetricsGroupBidStrategy {
         private PropertyAdsReportMetricsGroupBidStrategyPerformanceGoalType performanceGoalType;
 
         private Boolean raiseBidForDeals;
+
+        private Double targetRoas;
 
         private PropertyAdsReportMetricsGroupBidStrategyType type;
 
@@ -289,6 +312,11 @@ public class PropertyAdsReportMetricsGroupBidStrategy {
             return this;
         }
 
+        public Builder targetRoas(@Nullable Double targetRoas) {
+            this.targetRoas = targetRoas;
+            return this;
+        }
+
         public Builder type(@Nonnull PropertyAdsReportMetricsGroupBidStrategyType type) {
             this.type = Utils.checkNotNull(type, "type");
             return this;
@@ -308,7 +336,8 @@ public class PropertyAdsReportMetricsGroupBidStrategy {
             return new PropertyAdsReportMetricsGroupBidStrategy(
                 customBiddingAlgorithmId, fixedBidAmount, maxAverageCpmBidAmount,
                 performanceGoalAmount, performanceGoalType, raiseBidForDeals,
-                type, youtubeAndPartnersType, youtubeAndPartnersValue);
+                targetRoas, type, youtubeAndPartnersType,
+                youtubeAndPartnersValue);
         }
 
     }

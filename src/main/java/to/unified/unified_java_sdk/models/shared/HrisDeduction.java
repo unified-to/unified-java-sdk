@@ -71,6 +71,11 @@ public class HrisDeduction {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("notes")
+    private String notes;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
@@ -105,6 +110,7 @@ public class HrisDeduction {
             @JsonProperty("frequency") @Nullable HrisDeductionFrequency frequency,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_active") @Nullable Boolean isActive,
+            @JsonProperty("notes") @Nullable String notes,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("start_at") @Nullable OffsetDateTime startAt,
             @JsonProperty("type") @Nullable HrisDeductionType type,
@@ -119,6 +125,7 @@ public class HrisDeduction {
         this.frequency = frequency;
         this.id = id;
         this.isActive = isActive;
+        this.notes = notes;
         this.raw = raw;
         this.startAt = startAt;
         this.type = type;
@@ -131,7 +138,7 @@ public class HrisDeduction {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<Double> amount() {
@@ -168,6 +175,10 @@ public class HrisDeduction {
 
     public Optional<Boolean> isActive() {
         return Optional.ofNullable(this.isActive);
+    }
+
+    public Optional<String> notes() {
+        return Optional.ofNullable(this.notes);
     }
 
     public Optional<Map<String, Object>> raw() {
@@ -249,6 +260,12 @@ public class HrisDeduction {
     }
 
 
+    public HrisDeduction withNotes(@Nullable String notes) {
+        this.notes = notes;
+        return this;
+    }
+
+
     public HrisDeduction withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
@@ -298,6 +315,7 @@ public class HrisDeduction {
             Utils.enhancedDeepEquals(this.frequency, other.frequency) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
+            Utils.enhancedDeepEquals(this.notes, other.notes) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.startAt, other.startAt) &&
             Utils.enhancedDeepEquals(this.type, other.type) &&
@@ -311,8 +329,8 @@ public class HrisDeduction {
             amount, benefitId, companyId,
             coverageLevel, createdAt, endAt,
             frequency, id, isActive,
-            raw, startAt, type,
-            updatedAt, userId);
+            notes, raw, startAt,
+            type, updatedAt, userId);
     }
     
     @Override
@@ -327,6 +345,7 @@ public class HrisDeduction {
                 "frequency", frequency,
                 "id", id,
                 "isActive", isActive,
+                "notes", notes,
                 "raw", raw,
                 "startAt", startAt,
                 "type", type,
@@ -354,6 +373,8 @@ public class HrisDeduction {
         private String id;
 
         private Boolean isActive;
+
+        private String notes;
 
         private Map<String, Object> raw;
 
@@ -414,6 +435,11 @@ public class HrisDeduction {
             return this;
         }
 
+        public Builder notes(@Nullable String notes) {
+            this.notes = notes;
+            return this;
+        }
+
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
@@ -444,8 +470,8 @@ public class HrisDeduction {
                 amount, benefitId, companyId,
                 coverageLevel, createdAt, endAt,
                 frequency, id, isActive,
-                raw, startAt, type,
-                updatedAt, userId);
+                notes, raw, startAt,
+                type, updatedAt, userId);
         }
 
     }

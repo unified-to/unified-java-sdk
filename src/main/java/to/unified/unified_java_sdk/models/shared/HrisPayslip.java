@@ -37,7 +37,7 @@ public class HrisPayslip {
     private String currency;
 
     /**
-     * // The ID (and optionally name) of the employee deduction (if this detail represents a deduction)
+     * The ID (and optionally name) of the employee deduction (if this detail represents a deduction)
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deduction")
@@ -155,7 +155,7 @@ public class HrisPayslip {
     }
 
     /**
-     * // The ID (and optionally name) of the employee deduction (if this detail represents a deduction)
+     * The ID (and optionally name) of the employee deduction (if this detail represents a deduction)
      */
     public Optional<PropertyHrisPayslipDeduction> deduction() {
         return Optional.ofNullable(this.deduction);
@@ -229,7 +229,7 @@ public class HrisPayslip {
 
 
     /**
-     * // The ID (and optionally name) of the employee deduction (if this detail represents a deduction)
+     * The ID (and optionally name) of the employee deduction (if this detail represents a deduction)
      */
     public HrisPayslip withDeduction(@Nullable PropertyHrisPayslipDeduction deduction) {
         this.deduction = deduction;
@@ -413,7 +413,7 @@ public class HrisPayslip {
         }
 
         /**
-         * // The ID (and optionally name) of the employee deduction (if this detail represents a deduction)
+         * The ID (and optionally name) of the employee deduction (if this detail represents a deduction)
          */
         public Builder deduction(@Nullable PropertyHrisPayslipDeduction deduction) {
             this.deduction = deduction;

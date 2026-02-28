@@ -28,6 +28,11 @@ public class PaymentPayment {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("bill_id")
+    private String billId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact_id")
     private String contactId;
 
@@ -78,12 +83,18 @@ public class PaymentPayment {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("type")
+    private PaymentPaymentType type;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
     @JsonCreator
     public PaymentPayment(
             @JsonProperty("account_id") @Nullable String accountId,
+            @JsonProperty("bill_id") @Nullable String billId,
             @JsonProperty("contact_id") @Nullable String contactId,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("currency") @Nullable String currency,
@@ -94,8 +105,10 @@ public class PaymentPayment {
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("reference") @Nullable String reference,
             @JsonProperty("total_amount") @Nullable Double totalAmount,
+            @JsonProperty("type") @Nullable PaymentPaymentType type,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.accountId = accountId;
+        this.billId = billId;
         this.contactId = contactId;
         this.createdAt = createdAt;
         this.currency = Optional.ofNullable(currency)
@@ -107,6 +120,7 @@ public class PaymentPayment {
         this.raw = raw;
         this.reference = reference;
         this.totalAmount = totalAmount;
+        this.type = type;
         this.updatedAt = updatedAt;
     }
     
@@ -114,11 +128,16 @@ public class PaymentPayment {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null, null);
     }
 
     public Optional<String> accountId() {
         return Optional.ofNullable(this.accountId);
+    }
+
+    public Optional<String> billId() {
+        return Optional.ofNullable(this.billId);
     }
 
     public Optional<String> contactId() {
@@ -161,6 +180,10 @@ public class PaymentPayment {
         return Optional.ofNullable(this.totalAmount);
     }
 
+    public Optional<PaymentPaymentType> type() {
+        return Optional.ofNullable(this.type);
+    }
+
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
@@ -172,6 +195,12 @@ public class PaymentPayment {
 
     public PaymentPayment withAccountId(@Nullable String accountId) {
         this.accountId = accountId;
+        return this;
+    }
+
+
+    public PaymentPayment withBillId(@Nullable String billId) {
+        this.billId = billId;
         return this;
     }
 
@@ -236,6 +265,12 @@ public class PaymentPayment {
     }
 
 
+    public PaymentPayment withType(@Nullable PaymentPaymentType type) {
+        this.type = type;
+        return this;
+    }
+
+
     public PaymentPayment withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -253,6 +288,7 @@ public class PaymentPayment {
         PaymentPayment other = (PaymentPayment) o;
         return 
             Utils.enhancedDeepEquals(this.accountId, other.accountId) &&
+            Utils.enhancedDeepEquals(this.billId, other.billId) &&
             Utils.enhancedDeepEquals(this.contactId, other.contactId) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
@@ -263,22 +299,25 @@ public class PaymentPayment {
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.reference, other.reference) &&
             Utils.enhancedDeepEquals(this.totalAmount, other.totalAmount) &&
+            Utils.enhancedDeepEquals(this.type, other.type) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
     }
     
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            accountId, contactId, createdAt,
-            currency, id, invoiceId,
-            notes, paymentMethod, raw,
-            reference, totalAmount, updatedAt);
+            accountId, billId, contactId,
+            createdAt, currency, id,
+            invoiceId, notes, paymentMethod,
+            raw, reference, totalAmount,
+            type, updatedAt);
     }
     
     @Override
     public String toString() {
         return Utils.toString(PaymentPayment.class,
                 "accountId", accountId,
+                "billId", billId,
                 "contactId", contactId,
                 "createdAt", createdAt,
                 "currency", currency,
@@ -289,6 +328,7 @@ public class PaymentPayment {
                 "raw", raw,
                 "reference", reference,
                 "totalAmount", totalAmount,
+                "type", type,
                 "updatedAt", updatedAt);
     }
 
@@ -296,6 +336,8 @@ public class PaymentPayment {
     public final static class Builder {
 
         private String accountId;
+
+        private String billId;
 
         private String contactId;
 
@@ -317,6 +359,8 @@ public class PaymentPayment {
 
         private Double totalAmount;
 
+        private PaymentPaymentType type;
+
         private OffsetDateTime updatedAt;
 
         private Builder() {
@@ -325,6 +369,11 @@ public class PaymentPayment {
 
         public Builder accountId(@Nullable String accountId) {
             this.accountId = accountId;
+            return this;
+        }
+
+        public Builder billId(@Nullable String billId) {
+            this.billId = billId;
             return this;
         }
 
@@ -378,6 +427,11 @@ public class PaymentPayment {
             return this;
         }
 
+        public Builder type(@Nullable PaymentPaymentType type) {
+            this.type = type;
+            return this;
+        }
+
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
@@ -385,10 +439,11 @@ public class PaymentPayment {
 
         public PaymentPayment build() {
             return new PaymentPayment(
-                accountId, contactId, createdAt,
-                currency, id, invoiceId,
-                notes, paymentMethod, raw,
-                reference, totalAmount, updatedAt);
+                accountId, billId, contactId,
+                createdAt, currency, id,
+                invoiceId, notes, paymentMethod,
+                raw, reference, totalAmount,
+                type, updatedAt);
         }
 
 

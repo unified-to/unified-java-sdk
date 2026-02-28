@@ -48,7 +48,7 @@ public class ExtraData {
         return new ExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
 
-    public static ExtraData of(List<Five> value) {
+    public static ExtraData of(List<AtsMetadata5> value) {
         Utils.checkNotNull(value, "value");
         return new ExtraData(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
     }
@@ -60,7 +60,7 @@ public class ExtraData {
      * <li>{@code java.lang.String}</li>
      * <li>{@code double}</li>
      * <li>{@code boolean}</li>
-     * <li>{@code java.util.List<to.unified.unified_java_sdk.models.shared.Five>}</li>
+     * <li>{@code java.util.List<to.unified.unified_java_sdk.models.shared.AtsMetadata5>}</li>
      * </ul>
      * 
      * <p>Use {@code instanceof} to determine what type is returned. For example:
@@ -104,7 +104,7 @@ public class ExtraData {
                   TypeReferenceWithShape.of(new TypeReference<String>() {}, JsonShape.DEFAULT),
                   TypeReferenceWithShape.of(new TypeReference<Double>() {}, JsonShape.DEFAULT),
                   TypeReferenceWithShape.of(new TypeReference<Boolean>() {}, JsonShape.DEFAULT),
-                  TypeReferenceWithShape.of(new TypeReference<List<Five>>() {}, JsonShape.DEFAULT));
+                  TypeReferenceWithShape.of(new TypeReference<List<AtsMetadata5>>() {}, JsonShape.DEFAULT));
         }
     }
     

@@ -20,8 +20,17 @@ import java.util.Optional;
  */
 public class AdsGroupType {
 
-    public static final AdsGroupType DISPLAY = new AdsGroupType("DISPLAY");
+    public static final AdsGroupType TEXT = new AdsGroupType("TEXT");
+    public static final AdsGroupType IMAGE = new AdsGroupType("IMAGE");
     public static final AdsGroupType VIDEO = new AdsGroupType("VIDEO");
+    public static final AdsGroupType RESPONSIVE = new AdsGroupType("RESPONSIVE");
+    public static final AdsGroupType SHOPPING = new AdsGroupType("SHOPPING");
+    public static final AdsGroupType APP = new AdsGroupType("APP");
+    public static final AdsGroupType CALL = new AdsGroupType("CALL");
+    public static final AdsGroupType CAROUSEL = new AdsGroupType("CAROUSEL");
+    public static final AdsGroupType SOCIAL = new AdsGroupType("SOCIAL");
+    public static final AdsGroupType DISPLAY = new AdsGroupType("DISPLAY");
+    public static final AdsGroupType SEARCH = new AdsGroupType("SEARCH");
     public static final AdsGroupType AUDIO = new AdsGroupType("AUDIO");
     public static final AdsGroupType YOUTUBE = new AdsGroupType("YOUTUBE");
 
@@ -97,8 +106,17 @@ public class AdsGroupType {
 
     private static final Map<String, AdsGroupType> createValuesMap() {
         Map<String, AdsGroupType> map = new LinkedHashMap<>();
-        map.put("DISPLAY", DISPLAY);
+        map.put("TEXT", TEXT);
+        map.put("IMAGE", IMAGE);
         map.put("VIDEO", VIDEO);
+        map.put("RESPONSIVE", RESPONSIVE);
+        map.put("SHOPPING", SHOPPING);
+        map.put("APP", APP);
+        map.put("CALL", CALL);
+        map.put("CAROUSEL", CAROUSEL);
+        map.put("SOCIAL", SOCIAL);
+        map.put("DISPLAY", DISPLAY);
+        map.put("SEARCH", SEARCH);
         map.put("AUDIO", AUDIO);
         map.put("YOUTUBE", YOUTUBE);
         return map;
@@ -106,8 +124,17 @@ public class AdsGroupType {
 
     private static final Map<String, AdsGroupTypeEnum> createEnumsMap() {
         Map<String, AdsGroupTypeEnum> map = new HashMap<>();
-        map.put("DISPLAY", AdsGroupTypeEnum.DISPLAY);
+        map.put("TEXT", AdsGroupTypeEnum.TEXT);
+        map.put("IMAGE", AdsGroupTypeEnum.IMAGE);
         map.put("VIDEO", AdsGroupTypeEnum.VIDEO);
+        map.put("RESPONSIVE", AdsGroupTypeEnum.RESPONSIVE);
+        map.put("SHOPPING", AdsGroupTypeEnum.SHOPPING);
+        map.put("APP", AdsGroupTypeEnum.APP);
+        map.put("CALL", AdsGroupTypeEnum.CALL);
+        map.put("CAROUSEL", AdsGroupTypeEnum.CAROUSEL);
+        map.put("SOCIAL", AdsGroupTypeEnum.SOCIAL);
+        map.put("DISPLAY", AdsGroupTypeEnum.DISPLAY);
+        map.put("SEARCH", AdsGroupTypeEnum.SEARCH);
         map.put("AUDIO", AdsGroupTypeEnum.AUDIO);
         map.put("YOUTUBE", AdsGroupTypeEnum.YOUTUBE);
         return map;
@@ -116,8 +143,17 @@ public class AdsGroupType {
     
     public enum AdsGroupTypeEnum {
 
-        DISPLAY("DISPLAY"),
+        TEXT("TEXT"),
+        IMAGE("IMAGE"),
         VIDEO("VIDEO"),
+        RESPONSIVE("RESPONSIVE"),
+        SHOPPING("SHOPPING"),
+        APP("APP"),
+        CALL("CALL"),
+        CAROUSEL("CAROUSEL"),
+        SOCIAL("SOCIAL"),
+        DISPLAY("DISPLAY"),
+        SEARCH("SEARCH"),
         AUDIO("AUDIO"),
         YOUTUBE("YOUTUBE"),;
 

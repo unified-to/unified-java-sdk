@@ -150,6 +150,8 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions HRIS_DEDUCTION_WRITE = new PropertyConnectionPermissions("hris_deduction_write");
     public static final PropertyConnectionPermissions HRIS_BENEFIT_READ = new PropertyConnectionPermissions("hris_benefit_read");
     public static final PropertyConnectionPermissions HRIS_BENEFIT_WRITE = new PropertyConnectionPermissions("hris_benefit_write");
+    public static final PropertyConnectionPermissions HRIS_BANKACCOUNT_READ = new PropertyConnectionPermissions("hris_bankaccount_read");
+    public static final PropertyConnectionPermissions HRIS_BANKACCOUNT_WRITE = new PropertyConnectionPermissions("hris_bankaccount_write");
     public static final PropertyConnectionPermissions UC_CALL_READ = new PropertyConnectionPermissions("uc_call_read");
     public static final PropertyConnectionPermissions UC_CONTACT_READ = new PropertyConnectionPermissions("uc_contact_read");
     public static final PropertyConnectionPermissions UC_CONTACT_WRITE = new PropertyConnectionPermissions("uc_contact_write");
@@ -452,6 +454,8 @@ public class PropertyConnectionPermissions {
         map.put("hris_deduction_write", HRIS_DEDUCTION_WRITE);
         map.put("hris_benefit_read", HRIS_BENEFIT_READ);
         map.put("hris_benefit_write", HRIS_BENEFIT_WRITE);
+        map.put("hris_bankaccount_read", HRIS_BANKACCOUNT_READ);
+        map.put("hris_bankaccount_write", HRIS_BANKACCOUNT_WRITE);
         map.put("uc_call_read", UC_CALL_READ);
         map.put("uc_contact_read", UC_CONTACT_READ);
         map.put("uc_contact_write", UC_CONTACT_WRITE);
@@ -686,6 +690,8 @@ public class PropertyConnectionPermissions {
         map.put("hris_deduction_write", PropertyConnectionPermissionsEnum.HRIS_DEDUCTION_WRITE);
         map.put("hris_benefit_read", PropertyConnectionPermissionsEnum.HRIS_BENEFIT_READ);
         map.put("hris_benefit_write", PropertyConnectionPermissionsEnum.HRIS_BENEFIT_WRITE);
+        map.put("hris_bankaccount_read", PropertyConnectionPermissionsEnum.HRIS_BANKACCOUNT_READ);
+        map.put("hris_bankaccount_write", PropertyConnectionPermissionsEnum.HRIS_BANKACCOUNT_WRITE);
         map.put("uc_call_read", PropertyConnectionPermissionsEnum.UC_CALL_READ);
         map.put("uc_contact_read", PropertyConnectionPermissionsEnum.UC_CONTACT_READ);
         map.put("uc_contact_write", PropertyConnectionPermissionsEnum.UC_CONTACT_WRITE);
@@ -921,6 +927,8 @@ public class PropertyConnectionPermissions {
         HRIS_DEDUCTION_WRITE("hris_deduction_write"),
         HRIS_BENEFIT_READ("hris_benefit_read"),
         HRIS_BENEFIT_WRITE("hris_benefit_write"),
+        HRIS_BANKACCOUNT_READ("hris_bankaccount_read"),
+        HRIS_BANKACCOUNT_WRITE("hris_bankaccount_write"),
         UC_CALL_READ("uc_call_read"),
         UC_CONTACT_READ("uc_contact_read"),
         UC_CONTACT_WRITE("uc_contact_write"),

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
+import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
@@ -34,6 +35,11 @@ public class MetadataMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("is_required")
+    private Boolean isRequired;
 
 
     @JsonProperty("name")
@@ -78,6 +84,7 @@ public class MetadataMetadata {
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("format") @Nullable MetadataMetadataFormat format,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("is_required") @Nullable Boolean isRequired,
             @JsonProperty("name") @Nonnull String name,
             @JsonProperty("object_type") @Nonnull String objectType,
             @JsonProperty("objects") @Nullable Map<String, Object> objects,
@@ -89,6 +96,7 @@ public class MetadataMetadata {
         this.createdAt = createdAt;
         this.format = format;
         this.id = id;
+        this.isRequired = isRequired;
         this.name = Optional.ofNullable(name)
             .orElseThrow(() -> new IllegalArgumentException("name cannot be null"));
         this.objectType = Optional.ofNullable(objectType)
@@ -105,9 +113,9 @@ public class MetadataMetadata {
             @Nonnull String name,
             @Nonnull String objectType) {
         this(null, null, null,
-            name, objectType, null,
+            null, name, objectType,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<OffsetDateTime> createdAt() {
@@ -120,6 +128,10 @@ public class MetadataMetadata {
 
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
+    }
+
+    public Optional<Boolean> isRequired() {
+        return Optional.ofNullable(this.isRequired);
     }
 
     public String name() {
@@ -173,6 +185,12 @@ public class MetadataMetadata {
 
     public MetadataMetadata withId(@Nullable String id) {
         this.id = id;
+        return this;
+    }
+
+
+    public MetadataMetadata withIsRequired(@Nullable Boolean isRequired) {
+        this.isRequired = isRequired;
         return this;
     }
 
@@ -238,6 +256,7 @@ public class MetadataMetadata {
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.format, other.format) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.isRequired, other.isRequired) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.objectType, other.objectType) &&
             Utils.enhancedDeepEquals(this.objects, other.objects) &&
@@ -252,9 +271,9 @@ public class MetadataMetadata {
     public int hashCode() {
         return Utils.enhancedHash(
             createdAt, format, id,
-            name, objectType, objects,
-            options, originalFormat, raw,
-            slug, updatedAt);
+            isRequired, name, objectType,
+            objects, options, originalFormat,
+            raw, slug, updatedAt);
     }
     
     @Override
@@ -263,6 +282,7 @@ public class MetadataMetadata {
                 "createdAt", createdAt,
                 "format", format,
                 "id", id,
+                "isRequired", isRequired,
                 "name", name,
                 "objectType", objectType,
                 "objects", objects,
@@ -281,6 +301,8 @@ public class MetadataMetadata {
         private MetadataMetadataFormat format;
 
         private String id;
+
+        private Boolean isRequired;
 
         private String name;
 
@@ -314,6 +336,11 @@ public class MetadataMetadata {
 
         public Builder id(@Nullable String id) {
             this.id = id;
+            return this;
+        }
+
+        public Builder isRequired(@Nullable Boolean isRequired) {
+            this.isRequired = isRequired;
             return this;
         }
 
@@ -360,9 +387,9 @@ public class MetadataMetadata {
         public MetadataMetadata build() {
             return new MetadataMetadata(
                 createdAt, format, id,
-                name, objectType, objects,
-                options, originalFormat, raw,
-                slug, updatedAt);
+                isRequired, name, objectType,
+                objects, options, originalFormat,
+                raw, slug, updatedAt);
         }
 
     }

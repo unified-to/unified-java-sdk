@@ -947,6 +947,17 @@ public class UnifiedJavaSDKAutoConfig {
         return unifiedTo.hris();
     }
     /**
+     * Creates a Bankaccount sub-SDK bean if none exists.
+     *
+     * @param unifiedTo the main SDK instance
+     * @return A configured Bankaccount instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public Bankaccount bankaccount(UnifiedTo unifiedTo) {
+        return unifiedTo.bankaccount();
+    }
+    /**
      * Creates a Benefit sub-SDK bean if none exists.
      *
      * @param unifiedTo the main SDK instance
@@ -2388,6 +2399,17 @@ public class UnifiedJavaSDKAutoConfig {
     @ConditionalOnMissingBean
     public AsyncHris asyncHris(AsyncUnifiedTo asyncUnifiedTo) {
         return asyncUnifiedTo.hris();
+    }
+    /**
+     * Creates an AsyncBankaccount sub-SDK bean if none exists.
+     *
+     * @param asyncUnifiedTo the async SDK instance
+     * @return A configured AsyncBankaccount instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public AsyncBankaccount asyncBankaccount(AsyncUnifiedTo asyncUnifiedTo) {
+        return asyncUnifiedTo.bankaccount();
     }
     /**
      * Creates an AsyncBenefit sub-SDK bean if none exists.

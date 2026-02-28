@@ -64,6 +64,11 @@ public class AccountingJournal {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("source")
+    private String source;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax_amount")
     private Double taxAmount;
 
@@ -87,6 +92,7 @@ public class AccountingJournal {
             @JsonProperty("posted_at") @Nullable OffsetDateTime postedAt,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("reference") @Nullable String reference,
+            @JsonProperty("source") @Nullable String source,
             @JsonProperty("tax_amount") @Nullable Double taxAmount,
             @JsonProperty("taxrate_id") @Nullable String taxrateId,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
@@ -98,6 +104,7 @@ public class AccountingJournal {
         this.postedAt = postedAt;
         this.raw = raw;
         this.reference = reference;
+        this.source = source;
         this.taxAmount = taxAmount;
         this.taxrateId = taxrateId;
         this.updatedAt = updatedAt;
@@ -107,7 +114,7 @@ public class AccountingJournal {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<OffsetDateTime> createdAt() {
@@ -143,6 +150,10 @@ public class AccountingJournal {
 
     public Optional<String> reference() {
         return Optional.ofNullable(this.reference);
+    }
+
+    public Optional<String> source() {
+        return Optional.ofNullable(this.source);
     }
 
     public Optional<Double> taxAmount() {
@@ -213,6 +224,12 @@ public class AccountingJournal {
     }
 
 
+    public AccountingJournal withSource(@Nullable String source) {
+        this.source = source;
+        return this;
+    }
+
+
     public AccountingJournal withTaxAmount(@Nullable Double taxAmount) {
         this.taxAmount = taxAmount;
         return this;
@@ -249,6 +266,7 @@ public class AccountingJournal {
             Utils.enhancedDeepEquals(this.postedAt, other.postedAt) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.reference, other.reference) &&
+            Utils.enhancedDeepEquals(this.source, other.source) &&
             Utils.enhancedDeepEquals(this.taxAmount, other.taxAmount) &&
             Utils.enhancedDeepEquals(this.taxrateId, other.taxrateId) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
@@ -259,8 +277,8 @@ public class AccountingJournal {
         return Utils.enhancedHash(
             createdAt, currency, description,
             id, lineitems, postedAt,
-            raw, reference, taxAmount,
-            taxrateId, updatedAt);
+            raw, reference, source,
+            taxAmount, taxrateId, updatedAt);
     }
     
     @Override
@@ -274,6 +292,7 @@ public class AccountingJournal {
                 "postedAt", postedAt,
                 "raw", raw,
                 "reference", reference,
+                "source", source,
                 "taxAmount", taxAmount,
                 "taxrateId", taxrateId,
                 "updatedAt", updatedAt);
@@ -297,6 +316,8 @@ public class AccountingJournal {
         private Map<String, Object> raw;
 
         private String reference;
+
+        private String source;
 
         private Double taxAmount;
 
@@ -351,6 +372,11 @@ public class AccountingJournal {
             return this;
         }
 
+        public Builder source(@Nullable String source) {
+            this.source = source;
+            return this;
+        }
+
         public Builder taxAmount(@Nullable Double taxAmount) {
             this.taxAmount = taxAmount;
             return this;
@@ -370,8 +396,8 @@ public class AccountingJournal {
             return new AccountingJournal(
                 createdAt, currency, description,
                 id, lineitems, postedAt,
-                raw, reference, taxAmount,
-                taxrateId, updatedAt);
+                raw, reference, source,
+                taxAmount, taxrateId, updatedAt);
         }
 
     }

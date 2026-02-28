@@ -4,6 +4,7 @@
 
 ### Available Operations
 
+* [createHrisBankaccount](#createhrisbankaccount) - Create a bankaccount
 * [createHrisBenefit](#createhrisbenefit) - Create a benefit
 * [createHrisCompany](#createhriscompany) - Create a company
 * [createHrisDeduction](#createhrisdeduction) - Create a deduction
@@ -12,6 +13,7 @@
 * [createHrisGroup](#createhrisgroup) - Create a group
 * [createHrisLocation](#createhrislocation) - Create a location
 * [createHrisTimeshift](#createhristimeshift) - Create a timeshift
+* [getHrisBankaccount](#gethrisbankaccount) - Retrieve a bankaccount
 * [getHrisBenefit](#gethrisbenefit) - Retrieve a benefit
 * [getHrisCompany](#gethriscompany) - Retrieve a company
 * [getHrisDeduction](#gethrisdeduction) - Retrieve a deduction
@@ -22,6 +24,7 @@
 * [getHrisPayslip](#gethrispayslip) - Retrieve a payslip
 * [getHrisTimeoff](#gethristimeoff) - Retrieve a timeoff
 * [getHrisTimeshift](#gethristimeshift) - Retrieve a timeshift
+* [listHrisBankaccounts](#listhrisbankaccounts) - List all bankaccounts
 * [listHrisBenefits](#listhrisbenefits) - List all benefits
 * [listHrisCompanies](#listhriscompanies) - List all companies
 * [listHrisDeductions](#listhrisdeductions) - List all deductions
@@ -32,6 +35,7 @@
 * [listHrisPayslips](#listhrispayslips) - List all payslips
 * [listHrisTimeoffs](#listhristimeoffs) - List all timeoffs
 * [listHrisTimeshifts](#listhristimeshifts) - List all timeshifts
+* [patchHrisBankaccount](#patchhrisbankaccount) - Update a bankaccount
 * [patchHrisBenefit](#patchhrisbenefit) - Update a benefit
 * [patchHrisCompany](#patchhriscompany) - Update a company
 * [patchHrisDeduction](#patchhrisdeduction) - Update a deduction
@@ -40,6 +44,7 @@
 * [patchHrisGroup](#patchhrisgroup) - Update a group
 * [patchHrisLocation](#patchhrislocation) - Update a location
 * [patchHrisTimeshift](#patchhristimeshift) - Update a timeshift
+* [removeHrisBankaccount](#removehrisbankaccount) - Remove a bankaccount
 * [removeHrisBenefit](#removehrisbenefit) - Remove a benefit
 * [removeHrisCompany](#removehriscompany) - Remove a company
 * [removeHrisDeduction](#removehrisdeduction) - Remove a deduction
@@ -48,6 +53,7 @@
 * [removeHrisGroup](#removehrisgroup) - Remove a group
 * [removeHrisLocation](#removehrislocation) - Remove a location
 * [removeHrisTimeshift](#removehristimeshift) - Remove a timeshift
+* [updateHrisBankaccount](#updatehrisbankaccount) - Update a bankaccount
 * [updateHrisBenefit](#updatehrisbenefit) - Update a benefit
 * [updateHrisCompany](#updatehriscompany) - Update a company
 * [updateHrisDeduction](#updatehrisdeduction) - Update a deduction
@@ -56,6 +62,66 @@
 * [updateHrisGroup](#updatehrisgroup) - Update a group
 * [updateHrisLocation](#updatehrislocation) - Update a location
 * [updateHrisTimeshift](#updatehristimeshift) - Update a timeshift
+
+## createHrisBankaccount
+
+Create a bankaccount
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="createHrisBankaccount" method="post" path="/hris/{connection_id}/bankaccount" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateHrisBankaccountRequest;
+import to.unified.unified_java_sdk.models.operations.CreateHrisBankaccountResponse;
+import to.unified.unified_java_sdk.models.shared.HrisBankaccount;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        CreateHrisBankaccountRequest req = CreateHrisBankaccountRequest.builder()
+                .hrisBankaccount(HrisBankaccount.builder()
+                    .build())
+                .connectionId("<id>")
+                .build();
+
+        CreateHrisBankaccountResponse res = sdk.hris().createHrisBankaccount()
+                .request(req)
+                .call();
+
+        if (res.hrisBankaccount().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [CreateHrisBankaccountRequest](../../models/operations/CreateHrisBankaccountRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+
+### Response
+
+**[CreateHrisBankaccountResponse](../../models/operations/CreateHrisBankaccountResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
 ## createHrisBenefit
 
@@ -535,6 +601,64 @@ public class Application {
 ### Response
 
 **[CreateHrisTimeshiftResponse](../../models/operations/CreateHrisTimeshiftResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## getHrisBankaccount
+
+Retrieve a bankaccount
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getHrisBankaccount" method="get" path="/hris/{connection_id}/bankaccount/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetHrisBankaccountRequest;
+import to.unified.unified_java_sdk.models.operations.GetHrisBankaccountResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetHrisBankaccountRequest req = GetHrisBankaccountRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetHrisBankaccountResponse res = sdk.hris().getHrisBankaccount()
+                .request(req)
+                .call();
+
+        if (res.hrisBankaccount().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [GetHrisBankaccountRequest](../../models/operations/GetHrisBankaccountRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[GetHrisBankaccountResponse](../../models/operations/GetHrisBankaccountResponse.md)**
 
 ### Errors
 
@@ -1122,6 +1246,63 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listHrisBankaccounts
+
+List all bankaccounts
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listHrisBankaccounts" method="get" path="/hris/{connection_id}/bankaccount" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListHrisBankaccountsRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisBankaccountsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListHrisBankaccountsRequest req = ListHrisBankaccountsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListHrisBankaccountsResponse res = sdk.hris().listHrisBankaccounts()
+                .request(req)
+                .call();
+
+        if (res.hrisBankaccounts().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [ListHrisBankaccountsRequest](../../models/operations/ListHrisBankaccountsRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+
+### Response
+
+**[ListHrisBankaccountsResponse](../../models/operations/ListHrisBankaccountsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listHrisBenefits
 
 List all benefits
@@ -1692,6 +1873,67 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## patchHrisBankaccount
+
+Update a bankaccount
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchHrisBankaccount" method="patch" path="/hris/{connection_id}/bankaccount/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchHrisBankaccountRequest;
+import to.unified.unified_java_sdk.models.operations.PatchHrisBankaccountResponse;
+import to.unified.unified_java_sdk.models.shared.HrisBankaccount;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchHrisBankaccountRequest req = PatchHrisBankaccountRequest.builder()
+                .hrisBankaccount(HrisBankaccount.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchHrisBankaccountResponse res = sdk.hris().patchHrisBankaccount()
+                .request(req)
+                .call();
+
+        if (res.hrisBankaccount().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                             | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `request`                                                                             | [PatchHrisBankaccountRequest](../../models/operations/PatchHrisBankaccountRequest.md) | :heavy_check_mark:                                                                    | The request object to use for the request.                                            |
+
+### Response
+
+**[PatchHrisBankaccountResponse](../../models/operations/PatchHrisBankaccountResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## patchHrisBenefit
 
 Update a benefit
@@ -2185,6 +2427,62 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## removeHrisBankaccount
+
+Remove a bankaccount
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeHrisBankaccount" method="delete" path="/hris/{connection_id}/bankaccount/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisBankaccountRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisBankaccountResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveHrisBankaccountRequest req = RemoveHrisBankaccountRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveHrisBankaccountResponse res = sdk.hris().removeHrisBankaccount()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [RemoveHrisBankaccountRequest](../../models/operations/RemoveHrisBankaccountRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+
+### Response
+
+**[RemoveHrisBankaccountResponse](../../models/operations/RemoveHrisBankaccountResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## removeHrisBenefit
 
 Remove a benefit
@@ -2626,6 +2924,67 @@ public class Application {
 ### Response
 
 **[RemoveHrisTimeshiftResponse](../../models/operations/RemoveHrisTimeshiftResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateHrisBankaccount
+
+Update a bankaccount
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateHrisBankaccount" method="put" path="/hris/{connection_id}/bankaccount/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisBankaccountRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisBankaccountResponse;
+import to.unified.unified_java_sdk.models.shared.HrisBankaccount;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateHrisBankaccountRequest req = UpdateHrisBankaccountRequest.builder()
+                .hrisBankaccount(HrisBankaccount.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateHrisBankaccountResponse res = sdk.hris().updateHrisBankaccount()
+                .request(req)
+                .call();
+
+        if (res.hrisBankaccount().isPresent()) {
+            // handle response
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [UpdateHrisBankaccountRequest](../../models/operations/UpdateHrisBankaccountRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+
+### Response
+
+**[UpdateHrisBankaccountResponse](../../models/operations/UpdateHrisBankaccountResponse.md)**
 
 ### Errors
 

@@ -7,6 +7,7 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
+import to.unified.unified_java_sdk.models.operations.CreateHrisBankaccountRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisBenefitRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisDeductionRequest;
@@ -15,6 +16,7 @@ import to.unified.unified_java_sdk.models.operations.CreateHrisEmployeeRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisGroupRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisLocationRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTimeshiftRequest;
+import to.unified.unified_java_sdk.models.operations.GetHrisBankaccountRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisBenefitRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisDeductionRequest;
@@ -25,6 +27,7 @@ import to.unified.unified_java_sdk.models.operations.GetHrisLocationRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisPayslipRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisTimeoffRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisTimeshiftRequest;
+import to.unified.unified_java_sdk.models.operations.ListHrisBankaccountsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisBenefitsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisCompaniesRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisDeductionsRequest;
@@ -35,6 +38,7 @@ import to.unified.unified_java_sdk.models.operations.ListHrisLocationsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisPayslipsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisTimeoffsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisTimeshiftsRequest;
+import to.unified.unified_java_sdk.models.operations.PatchHrisBankaccountRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisBenefitRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisDeductionRequest;
@@ -43,6 +47,7 @@ import to.unified.unified_java_sdk.models.operations.PatchHrisEmployeeRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisGroupRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisLocationRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisTimeshiftRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisBankaccountRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisBenefitRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisDeductionRequest;
@@ -51,6 +56,7 @@ import to.unified.unified_java_sdk.models.operations.RemoveHrisEmployeeRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisGroupRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisLocationRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisTimeshiftRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisBankaccountRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisBenefitRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisCompanyRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisDeductionRequest;
@@ -59,6 +65,8 @@ import to.unified.unified_java_sdk.models.operations.UpdateHrisEmployeeRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisGroupRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisLocationRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeshiftRequest;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisBankaccountRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisBankaccountResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateHrisBenefitRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateHrisBenefitResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateHrisCompanyRequestBuilder;
@@ -75,6 +83,8 @@ import to.unified.unified_java_sdk.models.operations.async.CreateHrisLocationReq
 import to.unified.unified_java_sdk.models.operations.async.CreateHrisLocationResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateHrisTimeshiftRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateHrisTimeshiftResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisBankaccountRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetHrisBankaccountResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetHrisBenefitRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetHrisBenefitResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetHrisCompanyRequestBuilder;
@@ -95,6 +105,8 @@ import to.unified.unified_java_sdk.models.operations.async.GetHrisTimeoffRequest
 import to.unified.unified_java_sdk.models.operations.async.GetHrisTimeoffResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetHrisTimeshiftRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetHrisTimeshiftResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisBankaccountsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListHrisBankaccountsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListHrisBenefitsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListHrisBenefitsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListHrisCompaniesRequestBuilder;
@@ -115,6 +127,8 @@ import to.unified.unified_java_sdk.models.operations.async.ListHrisTimeoffsReque
 import to.unified.unified_java_sdk.models.operations.async.ListHrisTimeoffsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListHrisTimeshiftsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListHrisTimeshiftsResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisBankaccountRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisBankaccountResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchHrisBenefitRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchHrisBenefitResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchHrisCompanyRequestBuilder;
@@ -131,6 +145,8 @@ import to.unified.unified_java_sdk.models.operations.async.PatchHrisLocationRequ
 import to.unified.unified_java_sdk.models.operations.async.PatchHrisLocationResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchHrisTimeshiftRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchHrisTimeshiftResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisBankaccountRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisBankaccountResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveHrisBenefitRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.RemoveHrisBenefitResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveHrisCompanyRequestBuilder;
@@ -147,6 +163,8 @@ import to.unified.unified_java_sdk.models.operations.async.RemoveHrisLocationReq
 import to.unified.unified_java_sdk.models.operations.async.RemoveHrisLocationResponse;
 import to.unified.unified_java_sdk.models.operations.async.RemoveHrisTimeshiftRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.RemoveHrisTimeshiftResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisBankaccountRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisBankaccountResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateHrisBenefitRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateHrisBenefitResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateHrisCompanyRequestBuilder;
@@ -163,6 +181,7 @@ import to.unified.unified_java_sdk.models.operations.async.UpdateHrisLocationReq
 import to.unified.unified_java_sdk.models.operations.async.UpdateHrisLocationResponse;
 import to.unified.unified_java_sdk.models.operations.async.UpdateHrisTimeshiftRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.UpdateHrisTimeshiftResponse;
+import to.unified.unified_java_sdk.operations.CreateHrisBankaccount;
 import to.unified.unified_java_sdk.operations.CreateHrisBenefit;
 import to.unified.unified_java_sdk.operations.CreateHrisCompany;
 import to.unified.unified_java_sdk.operations.CreateHrisDeduction;
@@ -171,6 +190,7 @@ import to.unified.unified_java_sdk.operations.CreateHrisEmployee;
 import to.unified.unified_java_sdk.operations.CreateHrisGroup;
 import to.unified.unified_java_sdk.operations.CreateHrisLocation;
 import to.unified.unified_java_sdk.operations.CreateHrisTimeshift;
+import to.unified.unified_java_sdk.operations.GetHrisBankaccount;
 import to.unified.unified_java_sdk.operations.GetHrisBenefit;
 import to.unified.unified_java_sdk.operations.GetHrisCompany;
 import to.unified.unified_java_sdk.operations.GetHrisDeduction;
@@ -181,6 +201,7 @@ import to.unified.unified_java_sdk.operations.GetHrisLocation;
 import to.unified.unified_java_sdk.operations.GetHrisPayslip;
 import to.unified.unified_java_sdk.operations.GetHrisTimeoff;
 import to.unified.unified_java_sdk.operations.GetHrisTimeshift;
+import to.unified.unified_java_sdk.operations.ListHrisBankaccounts;
 import to.unified.unified_java_sdk.operations.ListHrisBenefits;
 import to.unified.unified_java_sdk.operations.ListHrisCompanies;
 import to.unified.unified_java_sdk.operations.ListHrisDeductions;
@@ -191,6 +212,7 @@ import to.unified.unified_java_sdk.operations.ListHrisLocations;
 import to.unified.unified_java_sdk.operations.ListHrisPayslips;
 import to.unified.unified_java_sdk.operations.ListHrisTimeoffs;
 import to.unified.unified_java_sdk.operations.ListHrisTimeshifts;
+import to.unified.unified_java_sdk.operations.PatchHrisBankaccount;
 import to.unified.unified_java_sdk.operations.PatchHrisBenefit;
 import to.unified.unified_java_sdk.operations.PatchHrisCompany;
 import to.unified.unified_java_sdk.operations.PatchHrisDeduction;
@@ -199,6 +221,7 @@ import to.unified.unified_java_sdk.operations.PatchHrisEmployee;
 import to.unified.unified_java_sdk.operations.PatchHrisGroup;
 import to.unified.unified_java_sdk.operations.PatchHrisLocation;
 import to.unified.unified_java_sdk.operations.PatchHrisTimeshift;
+import to.unified.unified_java_sdk.operations.RemoveHrisBankaccount;
 import to.unified.unified_java_sdk.operations.RemoveHrisBenefit;
 import to.unified.unified_java_sdk.operations.RemoveHrisCompany;
 import to.unified.unified_java_sdk.operations.RemoveHrisDeduction;
@@ -207,6 +230,7 @@ import to.unified.unified_java_sdk.operations.RemoveHrisEmployee;
 import to.unified.unified_java_sdk.operations.RemoveHrisGroup;
 import to.unified.unified_java_sdk.operations.RemoveHrisLocation;
 import to.unified.unified_java_sdk.operations.RemoveHrisTimeshift;
+import to.unified.unified_java_sdk.operations.UpdateHrisBankaccount;
 import to.unified.unified_java_sdk.operations.UpdateHrisBenefit;
 import to.unified.unified_java_sdk.operations.UpdateHrisCompany;
 import to.unified.unified_java_sdk.operations.UpdateHrisDeduction;
@@ -235,6 +259,29 @@ public class AsyncHris {
      */
     public Hris sync() {
         return syncSDK;
+    }
+
+
+    /**
+     * Create a bankaccount
+     * 
+     * @return The async call builder
+     */
+    public CreateHrisBankaccountRequestBuilder createHrisBankaccount() {
+        return new CreateHrisBankaccountRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a bankaccount
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<CreateHrisBankaccountResponse>} - The async response
+     */
+    public CompletableFuture<CreateHrisBankaccountResponse> createHrisBankaccount(@Nonnull CreateHrisBankaccountRequest request) {
+        AsyncRequestOperation<CreateHrisBankaccountRequest, CreateHrisBankaccountResponse> operation
+              = new CreateHrisBankaccount.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
     }
 
 
@@ -417,6 +464,29 @@ public class AsyncHris {
     public CompletableFuture<CreateHrisTimeshiftResponse> createHrisTimeshift(@Nonnull CreateHrisTimeshiftRequest request) {
         AsyncRequestOperation<CreateHrisTimeshiftRequest, CreateHrisTimeshiftResponse> operation
               = new CreateHrisTimeshift.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Retrieve a bankaccount
+     * 
+     * @return The async call builder
+     */
+    public GetHrisBankaccountRequestBuilder getHrisBankaccount() {
+        return new GetHrisBankaccountRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a bankaccount
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetHrisBankaccountResponse>} - The async response
+     */
+    public CompletableFuture<GetHrisBankaccountResponse> getHrisBankaccount(@Nonnull GetHrisBankaccountRequest request) {
+        AsyncRequestOperation<GetHrisBankaccountRequest, GetHrisBankaccountResponse> operation
+              = new GetHrisBankaccount.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }
@@ -653,6 +723,29 @@ public class AsyncHris {
 
 
     /**
+     * List all bankaccounts
+     * 
+     * @return The async call builder
+     */
+    public ListHrisBankaccountsRequestBuilder listHrisBankaccounts() {
+        return new ListHrisBankaccountsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all bankaccounts
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListHrisBankaccountsResponse>} - The async response
+     */
+    public CompletableFuture<ListHrisBankaccountsResponse> listHrisBankaccounts(@Nonnull ListHrisBankaccountsRequest request) {
+        AsyncRequestOperation<ListHrisBankaccountsRequest, ListHrisBankaccountsResponse> operation
+              = new ListHrisBankaccounts.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * List all benefits
      * 
      * @return The async call builder
@@ -883,6 +976,29 @@ public class AsyncHris {
 
 
     /**
+     * Update a bankaccount
+     * 
+     * @return The async call builder
+     */
+    public PatchHrisBankaccountRequestBuilder patchHrisBankaccount() {
+        return new PatchHrisBankaccountRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a bankaccount
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<PatchHrisBankaccountResponse>} - The async response
+     */
+    public CompletableFuture<PatchHrisBankaccountResponse> patchHrisBankaccount(@Nonnull PatchHrisBankaccountRequest request) {
+        AsyncRequestOperation<PatchHrisBankaccountRequest, PatchHrisBankaccountResponse> operation
+              = new PatchHrisBankaccount.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * Update a benefit
      * 
      * @return The async call builder
@@ -1067,6 +1183,29 @@ public class AsyncHris {
 
 
     /**
+     * Remove a bankaccount
+     * 
+     * @return The async call builder
+     */
+    public RemoveHrisBankaccountRequestBuilder removeHrisBankaccount() {
+        return new RemoveHrisBankaccountRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a bankaccount
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<RemoveHrisBankaccountResponse>} - The async response
+     */
+    public CompletableFuture<RemoveHrisBankaccountResponse> removeHrisBankaccount(@Nonnull RemoveHrisBankaccountRequest request) {
+        AsyncRequestOperation<RemoveHrisBankaccountRequest, RemoveHrisBankaccountResponse> operation
+              = new RemoveHrisBankaccount.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
      * Remove a benefit
      * 
      * @return The async call builder
@@ -1245,6 +1384,29 @@ public class AsyncHris {
     public CompletableFuture<RemoveHrisTimeshiftResponse> removeHrisTimeshift(@Nonnull RemoveHrisTimeshiftRequest request) {
         AsyncRequestOperation<RemoveHrisTimeshiftRequest, RemoveHrisTimeshiftResponse> operation
               = new RemoveHrisTimeshift.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update a bankaccount
+     * 
+     * @return The async call builder
+     */
+    public UpdateHrisBankaccountRequestBuilder updateHrisBankaccount() {
+        return new UpdateHrisBankaccountRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a bankaccount
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<UpdateHrisBankaccountResponse>} - The async response
+     */
+    public CompletableFuture<UpdateHrisBankaccountResponse> updateHrisBankaccount(@Nonnull UpdateHrisBankaccountRequest request) {
+        AsyncRequestOperation<UpdateHrisBankaccountRequest, UpdateHrisBankaccountResponse> operation
+              = new UpdateHrisBankaccount.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

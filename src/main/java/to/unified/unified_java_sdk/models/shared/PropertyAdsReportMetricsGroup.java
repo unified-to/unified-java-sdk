@@ -23,6 +23,11 @@ import to.unified.unified_java_sdk.utils.Utils;
 public class PropertyAdsReportMetricsGroup {
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("ad_group_type")
+    private String adGroupType;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bid_amount")
     private Double bidAmount;
 
@@ -32,6 +37,11 @@ public class PropertyAdsReportMetricsGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bid_strategy")
     private PropertyAdsReportMetricsGroupBidStrategy bidStrategy;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("billing_event")
+    private String billingEvent;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -75,6 +85,16 @@ public class PropertyAdsReportMetricsGroup {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("currency")
+    private String currency;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("daily_spend_cap")
+    private Double dailySpendCap;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     private OffsetDateTime endAt;
 
@@ -100,13 +120,23 @@ public class PropertyAdsReportMetricsGroup {
 
 
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("is_active")
-    private Boolean isActive;
+    @JsonProperty("lifetime_spend_cap")
+    private Double lifetimeSpendCap;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<AdsMetadata> metadata;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("optimization_goal")
+    private String optimizationGoal;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -155,8 +185,10 @@ public class PropertyAdsReportMetricsGroup {
 
     @JsonCreator
     public PropertyAdsReportMetricsGroup(
+            @JsonProperty("ad_group_type") @Nullable String adGroupType,
             @JsonProperty("bid_amount") @Nullable Double bidAmount,
             @JsonProperty("bid_strategy") @Nullable PropertyAdsReportMetricsGroupBidStrategy bidStrategy,
+            @JsonProperty("billing_event") @Nullable String billingEvent,
             @JsonProperty("budget_allocation_type") @Nullable PropertyAdsReportMetricsGroupBudgetAllocationType budgetAllocationType,
             @JsonProperty("budget_amount") @Nullable Double budgetAmount,
             @JsonProperty("budget_max_amount") @Nullable Double budgetMaxAmount,
@@ -165,13 +197,17 @@ public class PropertyAdsReportMetricsGroup {
             @JsonProperty("campaign_id") @Nullable String campaignId,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("creative_ids") @Nullable List<String> creativeIds,
+            @JsonProperty("currency") @Nullable String currency,
+            @JsonProperty("daily_spend_cap") @Nullable Double dailySpendCap,
             @JsonProperty("end_at") @Nullable OffsetDateTime endAt,
             @JsonProperty("frequency_cap") @Nullable PropertyAdsReportMetricsGroupFrequencyCap frequencyCap,
             @JsonProperty("has_eu_political_ads") @Nullable Boolean hasEuPoliticalAds,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("insertionorder_id") @Nullable String insertionorderId,
-            @JsonProperty("is_active") @Nullable Boolean isActive,
+            @JsonProperty("lifetime_spend_cap") @Nullable Double lifetimeSpendCap,
+            @JsonProperty("metadata") @Nullable List<AdsMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
+            @JsonProperty("optimization_goal") @Nullable String optimizationGoal,
             @JsonProperty("organization_id") @Nullable String organizationId,
             @JsonProperty("pacing") @Nullable PropertyAdsReportMetricsGroupPacing pacing,
             @JsonProperty("parent_id") @Nullable String parentId,
@@ -181,8 +217,10 @@ public class PropertyAdsReportMetricsGroup {
             @JsonProperty("targeting") @Nullable PropertyAdsReportMetricsGroupTargeting targeting,
             @JsonProperty("type") @Nullable PropertyAdsReportMetricsGroupType type,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
+        this.adGroupType = adGroupType;
         this.bidAmount = bidAmount;
         this.bidStrategy = bidStrategy;
+        this.billingEvent = billingEvent;
         this.budgetAllocationType = budgetAllocationType;
         this.budgetAmount = budgetAmount;
         this.budgetMaxAmount = budgetMaxAmount;
@@ -191,13 +229,17 @@ public class PropertyAdsReportMetricsGroup {
         this.campaignId = campaignId;
         this.createdAt = createdAt;
         this.creativeIds = creativeIds;
+        this.currency = currency;
+        this.dailySpendCap = dailySpendCap;
         this.endAt = endAt;
         this.frequencyCap = frequencyCap;
         this.hasEuPoliticalAds = hasEuPoliticalAds;
         this.id = id;
         this.insertionorderId = insertionorderId;
-        this.isActive = isActive;
+        this.lifetimeSpendCap = lifetimeSpendCap;
+        this.metadata = metadata;
         this.name = name;
+        this.optimizationGoal = optimizationGoal;
         this.organizationId = organizationId;
         this.pacing = pacing;
         this.parentId = parentId;
@@ -218,7 +260,13 @@ public class PropertyAdsReportMetricsGroup {
             null, null, null,
             null, null, null,
             null, null, null,
+            null, null, null,
+            null, null, null,
             null, null);
+    }
+
+    public Optional<String> adGroupType() {
+        return Optional.ofNullable(this.adGroupType);
     }
 
     public Optional<Double> bidAmount() {
@@ -230,6 +278,10 @@ public class PropertyAdsReportMetricsGroup {
      */
     public Optional<PropertyAdsReportMetricsGroupBidStrategy> bidStrategy() {
         return Optional.ofNullable(this.bidStrategy);
+    }
+
+    public Optional<String> billingEvent() {
+        return Optional.ofNullable(this.billingEvent);
     }
 
     public Optional<PropertyAdsReportMetricsGroupBudgetAllocationType> budgetAllocationType() {
@@ -264,6 +316,14 @@ public class PropertyAdsReportMetricsGroup {
         return Optional.ofNullable(this.creativeIds);
     }
 
+    public Optional<String> currency() {
+        return Optional.ofNullable(this.currency);
+    }
+
+    public Optional<Double> dailySpendCap() {
+        return Optional.ofNullable(this.dailySpendCap);
+    }
+
     public Optional<OffsetDateTime> endAt() {
         return Optional.ofNullable(this.endAt);
     }
@@ -284,12 +344,20 @@ public class PropertyAdsReportMetricsGroup {
         return Optional.ofNullable(this.insertionorderId);
     }
 
-    public Optional<Boolean> isActive() {
-        return Optional.ofNullable(this.isActive);
+    public Optional<Double> lifetimeSpendCap() {
+        return Optional.ofNullable(this.lifetimeSpendCap);
+    }
+
+    public Optional<List<AdsMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
+    }
+
+    public Optional<String> optimizationGoal() {
+        return Optional.ofNullable(this.optimizationGoal);
     }
 
     public Optional<String> organizationId() {
@@ -333,6 +401,12 @@ public class PropertyAdsReportMetricsGroup {
     }
 
 
+    public PropertyAdsReportMetricsGroup withAdGroupType(@Nullable String adGroupType) {
+        this.adGroupType = adGroupType;
+        return this;
+    }
+
+
     public PropertyAdsReportMetricsGroup withBidAmount(@Nullable Double bidAmount) {
         this.bidAmount = bidAmount;
         return this;
@@ -344,6 +418,12 @@ public class PropertyAdsReportMetricsGroup {
      */
     public PropertyAdsReportMetricsGroup withBidStrategy(@Nullable PropertyAdsReportMetricsGroupBidStrategy bidStrategy) {
         this.bidStrategy = bidStrategy;
+        return this;
+    }
+
+
+    public PropertyAdsReportMetricsGroup withBillingEvent(@Nullable String billingEvent) {
+        this.billingEvent = billingEvent;
         return this;
     }
 
@@ -396,6 +476,18 @@ public class PropertyAdsReportMetricsGroup {
     }
 
 
+    public PropertyAdsReportMetricsGroup withCurrency(@Nullable String currency) {
+        this.currency = currency;
+        return this;
+    }
+
+
+    public PropertyAdsReportMetricsGroup withDailySpendCap(@Nullable Double dailySpendCap) {
+        this.dailySpendCap = dailySpendCap;
+        return this;
+    }
+
+
     public PropertyAdsReportMetricsGroup withEndAt(@Nullable OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
@@ -426,14 +518,26 @@ public class PropertyAdsReportMetricsGroup {
     }
 
 
-    public PropertyAdsReportMetricsGroup withIsActive(@Nullable Boolean isActive) {
-        this.isActive = isActive;
+    public PropertyAdsReportMetricsGroup withLifetimeSpendCap(@Nullable Double lifetimeSpendCap) {
+        this.lifetimeSpendCap = lifetimeSpendCap;
+        return this;
+    }
+
+
+    public PropertyAdsReportMetricsGroup withMetadata(@Nullable List<AdsMetadata> metadata) {
+        this.metadata = metadata;
         return this;
     }
 
 
     public PropertyAdsReportMetricsGroup withName(@Nullable String name) {
         this.name = name;
+        return this;
+    }
+
+
+    public PropertyAdsReportMetricsGroup withOptimizationGoal(@Nullable String optimizationGoal) {
+        this.optimizationGoal = optimizationGoal;
         return this;
     }
 
@@ -502,8 +606,10 @@ public class PropertyAdsReportMetricsGroup {
         }
         PropertyAdsReportMetricsGroup other = (PropertyAdsReportMetricsGroup) o;
         return 
+            Utils.enhancedDeepEquals(this.adGroupType, other.adGroupType) &&
             Utils.enhancedDeepEquals(this.bidAmount, other.bidAmount) &&
             Utils.enhancedDeepEquals(this.bidStrategy, other.bidStrategy) &&
+            Utils.enhancedDeepEquals(this.billingEvent, other.billingEvent) &&
             Utils.enhancedDeepEquals(this.budgetAllocationType, other.budgetAllocationType) &&
             Utils.enhancedDeepEquals(this.budgetAmount, other.budgetAmount) &&
             Utils.enhancedDeepEquals(this.budgetMaxAmount, other.budgetMaxAmount) &&
@@ -512,13 +618,17 @@ public class PropertyAdsReportMetricsGroup {
             Utils.enhancedDeepEquals(this.campaignId, other.campaignId) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.creativeIds, other.creativeIds) &&
+            Utils.enhancedDeepEquals(this.currency, other.currency) &&
+            Utils.enhancedDeepEquals(this.dailySpendCap, other.dailySpendCap) &&
             Utils.enhancedDeepEquals(this.endAt, other.endAt) &&
             Utils.enhancedDeepEquals(this.frequencyCap, other.frequencyCap) &&
             Utils.enhancedDeepEquals(this.hasEuPoliticalAds, other.hasEuPoliticalAds) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.insertionorderId, other.insertionorderId) &&
-            Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
+            Utils.enhancedDeepEquals(this.lifetimeSpendCap, other.lifetimeSpendCap) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
+            Utils.enhancedDeepEquals(this.optimizationGoal, other.optimizationGoal) &&
             Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
             Utils.enhancedDeepEquals(this.pacing, other.pacing) &&
             Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
@@ -533,12 +643,14 @@ public class PropertyAdsReportMetricsGroup {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            bidAmount, bidStrategy, budgetAllocationType,
-            budgetAmount, budgetMaxAmount, budgetPeriod,
-            budgetUnit, campaignId, createdAt,
-            creativeIds, endAt, frequencyCap,
-            hasEuPoliticalAds, id, insertionorderId,
-            isActive, name, organizationId,
+            adGroupType, bidAmount, bidStrategy,
+            billingEvent, budgetAllocationType, budgetAmount,
+            budgetMaxAmount, budgetPeriod, budgetUnit,
+            campaignId, createdAt, creativeIds,
+            currency, dailySpendCap, endAt,
+            frequencyCap, hasEuPoliticalAds, id,
+            insertionorderId, lifetimeSpendCap, metadata,
+            name, optimizationGoal, organizationId,
             pacing, parentId, raw,
             startAt, status, targeting,
             type, updatedAt);
@@ -547,8 +659,10 @@ public class PropertyAdsReportMetricsGroup {
     @Override
     public String toString() {
         return Utils.toString(PropertyAdsReportMetricsGroup.class,
+                "adGroupType", adGroupType,
                 "bidAmount", bidAmount,
                 "bidStrategy", bidStrategy,
+                "billingEvent", billingEvent,
                 "budgetAllocationType", budgetAllocationType,
                 "budgetAmount", budgetAmount,
                 "budgetMaxAmount", budgetMaxAmount,
@@ -557,13 +671,17 @@ public class PropertyAdsReportMetricsGroup {
                 "campaignId", campaignId,
                 "createdAt", createdAt,
                 "creativeIds", creativeIds,
+                "currency", currency,
+                "dailySpendCap", dailySpendCap,
                 "endAt", endAt,
                 "frequencyCap", frequencyCap,
                 "hasEuPoliticalAds", hasEuPoliticalAds,
                 "id", id,
                 "insertionorderId", insertionorderId,
-                "isActive", isActive,
+                "lifetimeSpendCap", lifetimeSpendCap,
+                "metadata", metadata,
                 "name", name,
+                "optimizationGoal", optimizationGoal,
                 "organizationId", organizationId,
                 "pacing", pacing,
                 "parentId", parentId,
@@ -578,9 +696,13 @@ public class PropertyAdsReportMetricsGroup {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
+        private String adGroupType;
+
         private Double bidAmount;
 
         private PropertyAdsReportMetricsGroupBidStrategy bidStrategy;
+
+        private String billingEvent;
 
         private PropertyAdsReportMetricsGroupBudgetAllocationType budgetAllocationType;
 
@@ -598,6 +720,10 @@ public class PropertyAdsReportMetricsGroup {
 
         private List<String> creativeIds;
 
+        private String currency;
+
+        private Double dailySpendCap;
+
         private OffsetDateTime endAt;
 
         private PropertyAdsReportMetricsGroupFrequencyCap frequencyCap;
@@ -608,9 +734,13 @@ public class PropertyAdsReportMetricsGroup {
 
         private String insertionorderId;
 
-        private Boolean isActive;
+        private Double lifetimeSpendCap;
+
+        private List<AdsMetadata> metadata;
 
         private String name;
+
+        private String optimizationGoal;
 
         private String organizationId;
 
@@ -634,6 +764,11 @@ public class PropertyAdsReportMetricsGroup {
           // force use of static builder() method
         }
 
+        public Builder adGroupType(@Nullable String adGroupType) {
+            this.adGroupType = adGroupType;
+            return this;
+        }
+
         public Builder bidAmount(@Nullable Double bidAmount) {
             this.bidAmount = bidAmount;
             return this;
@@ -644,6 +779,11 @@ public class PropertyAdsReportMetricsGroup {
          */
         public Builder bidStrategy(@Nullable PropertyAdsReportMetricsGroupBidStrategy bidStrategy) {
             this.bidStrategy = bidStrategy;
+            return this;
+        }
+
+        public Builder billingEvent(@Nullable String billingEvent) {
+            this.billingEvent = billingEvent;
             return this;
         }
 
@@ -687,6 +827,16 @@ public class PropertyAdsReportMetricsGroup {
             return this;
         }
 
+        public Builder currency(@Nullable String currency) {
+            this.currency = currency;
+            return this;
+        }
+
+        public Builder dailySpendCap(@Nullable Double dailySpendCap) {
+            this.dailySpendCap = dailySpendCap;
+            return this;
+        }
+
         public Builder endAt(@Nullable OffsetDateTime endAt) {
             this.endAt = endAt;
             return this;
@@ -712,13 +862,23 @@ public class PropertyAdsReportMetricsGroup {
             return this;
         }
 
-        public Builder isActive(@Nullable Boolean isActive) {
-            this.isActive = isActive;
+        public Builder lifetimeSpendCap(@Nullable Double lifetimeSpendCap) {
+            this.lifetimeSpendCap = lifetimeSpendCap;
+            return this;
+        }
+
+        public Builder metadata(@Nullable List<AdsMetadata> metadata) {
+            this.metadata = metadata;
             return this;
         }
 
         public Builder name(@Nullable String name) {
             this.name = name;
+            return this;
+        }
+
+        public Builder optimizationGoal(@Nullable String optimizationGoal) {
+            this.optimizationGoal = optimizationGoal;
             return this;
         }
 
@@ -769,12 +929,14 @@ public class PropertyAdsReportMetricsGroup {
 
         public PropertyAdsReportMetricsGroup build() {
             return new PropertyAdsReportMetricsGroup(
-                bidAmount, bidStrategy, budgetAllocationType,
-                budgetAmount, budgetMaxAmount, budgetPeriod,
-                budgetUnit, campaignId, createdAt,
-                creativeIds, endAt, frequencyCap,
-                hasEuPoliticalAds, id, insertionorderId,
-                isActive, name, organizationId,
+                adGroupType, bidAmount, bidStrategy,
+                billingEvent, budgetAllocationType, budgetAmount,
+                budgetMaxAmount, budgetPeriod, budgetUnit,
+                campaignId, createdAt, creativeIds,
+                currency, dailySpendCap, endAt,
+                frequencyCap, hasEuPoliticalAds, id,
+                insertionorderId, lifetimeSpendCap, metadata,
+                name, optimizationGoal, organizationId,
                 pacing, parentId, raw,
                 startAt, status, targeting,
                 type, updatedAt);

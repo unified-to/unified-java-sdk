@@ -62,6 +62,16 @@ public class AdsAd {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("display_url")
+    private String displayUrl;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("end_at")
+    private OffsetDateTime endAt;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("final_url")
     private String finalUrl;
 
@@ -92,6 +102,11 @@ public class AdsAd {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<AdsMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
@@ -102,8 +117,23 @@ public class AdsAd {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("path1")
+    private String path1;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("path2")
+    private String path2;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("start_at")
+    private OffsetDateTime startAt;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -130,15 +160,21 @@ public class AdsAd {
             @JsonProperty("creative_ids") @Nullable List<String> creativeIds,
             @JsonProperty("cta") @Nullable String cta,
             @JsonProperty("description") @Nullable String description,
+            @JsonProperty("display_url") @Nullable String displayUrl,
+            @JsonProperty("end_at") @Nullable OffsetDateTime endAt,
             @JsonProperty("final_url") @Nullable String finalUrl,
             @JsonProperty("group_id") @Nullable String groupId,
             @JsonProperty("headline") @Nullable String headline,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_active") @Nullable Boolean isActive,
             @JsonProperty("item_id") @Nullable String itemId,
+            @JsonProperty("metadata") @Nullable List<AdsMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("organization_id") @Nullable String organizationId,
+            @JsonProperty("path1") @Nullable String path1,
+            @JsonProperty("path2") @Nullable String path2,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("start_at") @Nullable OffsetDateTime startAt,
             @JsonProperty("status") @Nullable AdsAdStatus status,
             @JsonProperty("targeting") @Nullable PropertyAdsAdTargeting targeting,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
@@ -150,15 +186,21 @@ public class AdsAd {
         this.creativeIds = creativeIds;
         this.cta = cta;
         this.description = description;
+        this.displayUrl = displayUrl;
+        this.endAt = endAt;
         this.finalUrl = finalUrl;
         this.groupId = groupId;
         this.headline = headline;
         this.id = id;
         this.isActive = isActive;
         this.itemId = itemId;
+        this.metadata = metadata;
         this.name = name;
         this.organizationId = organizationId;
+        this.path1 = path1;
+        this.path2 = path2;
         this.raw = raw;
+        this.startAt = startAt;
         this.status = status;
         this.targeting = targeting;
         this.updatedAt = updatedAt;
@@ -166,6 +208,8 @@ public class AdsAd {
     
     public AdsAd() {
         this(null, null, null,
+            null, null, null,
+            null, null, null,
             null, null, null,
             null, null, null,
             null, null, null,
@@ -206,6 +250,14 @@ public class AdsAd {
         return Optional.ofNullable(this.description);
     }
 
+    public Optional<String> displayUrl() {
+        return Optional.ofNullable(this.displayUrl);
+    }
+
+    public Optional<OffsetDateTime> endAt() {
+        return Optional.ofNullable(this.endAt);
+    }
+
     public Optional<String> finalUrl() {
         return Optional.ofNullable(this.finalUrl);
     }
@@ -230,6 +282,10 @@ public class AdsAd {
         return Optional.ofNullable(this.itemId);
     }
 
+    public Optional<List<AdsMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
+    }
+
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -238,8 +294,20 @@ public class AdsAd {
         return Optional.ofNullable(this.organizationId);
     }
 
+    public Optional<String> path1() {
+        return Optional.ofNullable(this.path1);
+    }
+
+    public Optional<String> path2() {
+        return Optional.ofNullable(this.path2);
+    }
+
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
+    }
+
+    public Optional<OffsetDateTime> startAt() {
+        return Optional.ofNullable(this.startAt);
     }
 
     public Optional<AdsAdStatus> status() {
@@ -307,6 +375,18 @@ public class AdsAd {
     }
 
 
+    public AdsAd withDisplayUrl(@Nullable String displayUrl) {
+        this.displayUrl = displayUrl;
+        return this;
+    }
+
+
+    public AdsAd withEndAt(@Nullable OffsetDateTime endAt) {
+        this.endAt = endAt;
+        return this;
+    }
+
+
     public AdsAd withFinalUrl(@Nullable String finalUrl) {
         this.finalUrl = finalUrl;
         return this;
@@ -343,6 +423,12 @@ public class AdsAd {
     }
 
 
+    public AdsAd withMetadata(@Nullable List<AdsMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public AdsAd withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -355,8 +441,26 @@ public class AdsAd {
     }
 
 
+    public AdsAd withPath1(@Nullable String path1) {
+        this.path1 = path1;
+        return this;
+    }
+
+
+    public AdsAd withPath2(@Nullable String path2) {
+        this.path2 = path2;
+        return this;
+    }
+
+
     public AdsAd withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
+        return this;
+    }
+
+
+    public AdsAd withStartAt(@Nullable OffsetDateTime startAt) {
+        this.startAt = startAt;
         return this;
     }
 
@@ -397,15 +501,21 @@ public class AdsAd {
             Utils.enhancedDeepEquals(this.creativeIds, other.creativeIds) &&
             Utils.enhancedDeepEquals(this.cta, other.cta) &&
             Utils.enhancedDeepEquals(this.description, other.description) &&
+            Utils.enhancedDeepEquals(this.displayUrl, other.displayUrl) &&
+            Utils.enhancedDeepEquals(this.endAt, other.endAt) &&
             Utils.enhancedDeepEquals(this.finalUrl, other.finalUrl) &&
             Utils.enhancedDeepEquals(this.groupId, other.groupId) &&
             Utils.enhancedDeepEquals(this.headline, other.headline) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
             Utils.enhancedDeepEquals(this.itemId, other.itemId) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
+            Utils.enhancedDeepEquals(this.path1, other.path1) &&
+            Utils.enhancedDeepEquals(this.path2, other.path2) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.startAt, other.startAt) &&
             Utils.enhancedDeepEquals(this.status, other.status) &&
             Utils.enhancedDeepEquals(this.targeting, other.targeting) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
@@ -416,10 +526,12 @@ public class AdsAd {
         return Utils.enhancedHash(
             adCopy, adType, campaignId,
             createdAt, creativeAssetUrl, creativeIds,
-            cta, description, finalUrl,
-            groupId, headline, id,
-            isActive, itemId, name,
-            organizationId, raw, status,
+            cta, description, displayUrl,
+            endAt, finalUrl, groupId,
+            headline, id, isActive,
+            itemId, metadata, name,
+            organizationId, path1, path2,
+            raw, startAt, status,
             targeting, updatedAt);
     }
     
@@ -434,15 +546,21 @@ public class AdsAd {
                 "creativeIds", creativeIds,
                 "cta", cta,
                 "description", description,
+                "displayUrl", displayUrl,
+                "endAt", endAt,
                 "finalUrl", finalUrl,
                 "groupId", groupId,
                 "headline", headline,
                 "id", id,
                 "isActive", isActive,
                 "itemId", itemId,
+                "metadata", metadata,
                 "name", name,
                 "organizationId", organizationId,
+                "path1", path1,
+                "path2", path2,
                 "raw", raw,
+                "startAt", startAt,
                 "status", status,
                 "targeting", targeting,
                 "updatedAt", updatedAt);
@@ -467,6 +585,10 @@ public class AdsAd {
 
         private String description;
 
+        private String displayUrl;
+
+        private OffsetDateTime endAt;
+
         private String finalUrl;
 
         private String groupId;
@@ -479,11 +601,19 @@ public class AdsAd {
 
         private String itemId;
 
+        private List<AdsMetadata> metadata;
+
         private String name;
 
         private String organizationId;
 
+        private String path1;
+
+        private String path2;
+
         private Map<String, Object> raw;
+
+        private OffsetDateTime startAt;
 
         private AdsAdStatus status;
 
@@ -535,6 +665,16 @@ public class AdsAd {
             return this;
         }
 
+        public Builder displayUrl(@Nullable String displayUrl) {
+            this.displayUrl = displayUrl;
+            return this;
+        }
+
+        public Builder endAt(@Nullable OffsetDateTime endAt) {
+            this.endAt = endAt;
+            return this;
+        }
+
         public Builder finalUrl(@Nullable String finalUrl) {
             this.finalUrl = finalUrl;
             return this;
@@ -565,6 +705,11 @@ public class AdsAd {
             return this;
         }
 
+        public Builder metadata(@Nullable List<AdsMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
@@ -575,8 +720,23 @@ public class AdsAd {
             return this;
         }
 
+        public Builder path1(@Nullable String path1) {
+            this.path1 = path1;
+            return this;
+        }
+
+        public Builder path2(@Nullable String path2) {
+            this.path2 = path2;
+            return this;
+        }
+
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
+            return this;
+        }
+
+        public Builder startAt(@Nullable OffsetDateTime startAt) {
+            this.startAt = startAt;
             return this;
         }
 
@@ -599,10 +759,12 @@ public class AdsAd {
             return new AdsAd(
                 adCopy, adType, campaignId,
                 createdAt, creativeAssetUrl, creativeIds,
-                cta, description, finalUrl,
-                groupId, headline, id,
-                isActive, itemId, name,
-                organizationId, raw, status,
+                cta, description, displayUrl,
+                endAt, finalUrl, groupId,
+                headline, id, isActive,
+                itemId, metadata, name,
+                organizationId, path1, path2,
+                raw, startAt, status,
                 targeting, updatedAt);
         }
 

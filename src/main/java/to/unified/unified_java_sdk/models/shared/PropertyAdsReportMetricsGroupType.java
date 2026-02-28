@@ -20,8 +20,17 @@ import java.util.Optional;
  */
 public class PropertyAdsReportMetricsGroupType {
 
-    public static final PropertyAdsReportMetricsGroupType DISPLAY = new PropertyAdsReportMetricsGroupType("DISPLAY");
+    public static final PropertyAdsReportMetricsGroupType TEXT = new PropertyAdsReportMetricsGroupType("TEXT");
+    public static final PropertyAdsReportMetricsGroupType IMAGE = new PropertyAdsReportMetricsGroupType("IMAGE");
     public static final PropertyAdsReportMetricsGroupType VIDEO = new PropertyAdsReportMetricsGroupType("VIDEO");
+    public static final PropertyAdsReportMetricsGroupType RESPONSIVE = new PropertyAdsReportMetricsGroupType("RESPONSIVE");
+    public static final PropertyAdsReportMetricsGroupType SHOPPING = new PropertyAdsReportMetricsGroupType("SHOPPING");
+    public static final PropertyAdsReportMetricsGroupType APP = new PropertyAdsReportMetricsGroupType("APP");
+    public static final PropertyAdsReportMetricsGroupType CALL = new PropertyAdsReportMetricsGroupType("CALL");
+    public static final PropertyAdsReportMetricsGroupType CAROUSEL = new PropertyAdsReportMetricsGroupType("CAROUSEL");
+    public static final PropertyAdsReportMetricsGroupType SOCIAL = new PropertyAdsReportMetricsGroupType("SOCIAL");
+    public static final PropertyAdsReportMetricsGroupType DISPLAY = new PropertyAdsReportMetricsGroupType("DISPLAY");
+    public static final PropertyAdsReportMetricsGroupType SEARCH = new PropertyAdsReportMetricsGroupType("SEARCH");
     public static final PropertyAdsReportMetricsGroupType AUDIO = new PropertyAdsReportMetricsGroupType("AUDIO");
     public static final PropertyAdsReportMetricsGroupType YOUTUBE = new PropertyAdsReportMetricsGroupType("YOUTUBE");
 
@@ -97,8 +106,17 @@ public class PropertyAdsReportMetricsGroupType {
 
     private static final Map<String, PropertyAdsReportMetricsGroupType> createValuesMap() {
         Map<String, PropertyAdsReportMetricsGroupType> map = new LinkedHashMap<>();
-        map.put("DISPLAY", DISPLAY);
+        map.put("TEXT", TEXT);
+        map.put("IMAGE", IMAGE);
         map.put("VIDEO", VIDEO);
+        map.put("RESPONSIVE", RESPONSIVE);
+        map.put("SHOPPING", SHOPPING);
+        map.put("APP", APP);
+        map.put("CALL", CALL);
+        map.put("CAROUSEL", CAROUSEL);
+        map.put("SOCIAL", SOCIAL);
+        map.put("DISPLAY", DISPLAY);
+        map.put("SEARCH", SEARCH);
         map.put("AUDIO", AUDIO);
         map.put("YOUTUBE", YOUTUBE);
         return map;
@@ -106,8 +124,17 @@ public class PropertyAdsReportMetricsGroupType {
 
     private static final Map<String, PropertyAdsReportMetricsGroupTypeEnum> createEnumsMap() {
         Map<String, PropertyAdsReportMetricsGroupTypeEnum> map = new HashMap<>();
-        map.put("DISPLAY", PropertyAdsReportMetricsGroupTypeEnum.DISPLAY);
+        map.put("TEXT", PropertyAdsReportMetricsGroupTypeEnum.TEXT);
+        map.put("IMAGE", PropertyAdsReportMetricsGroupTypeEnum.IMAGE);
         map.put("VIDEO", PropertyAdsReportMetricsGroupTypeEnum.VIDEO);
+        map.put("RESPONSIVE", PropertyAdsReportMetricsGroupTypeEnum.RESPONSIVE);
+        map.put("SHOPPING", PropertyAdsReportMetricsGroupTypeEnum.SHOPPING);
+        map.put("APP", PropertyAdsReportMetricsGroupTypeEnum.APP);
+        map.put("CALL", PropertyAdsReportMetricsGroupTypeEnum.CALL);
+        map.put("CAROUSEL", PropertyAdsReportMetricsGroupTypeEnum.CAROUSEL);
+        map.put("SOCIAL", PropertyAdsReportMetricsGroupTypeEnum.SOCIAL);
+        map.put("DISPLAY", PropertyAdsReportMetricsGroupTypeEnum.DISPLAY);
+        map.put("SEARCH", PropertyAdsReportMetricsGroupTypeEnum.SEARCH);
         map.put("AUDIO", PropertyAdsReportMetricsGroupTypeEnum.AUDIO);
         map.put("YOUTUBE", PropertyAdsReportMetricsGroupTypeEnum.YOUTUBE);
         return map;
@@ -116,8 +143,17 @@ public class PropertyAdsReportMetricsGroupType {
     
     public enum PropertyAdsReportMetricsGroupTypeEnum {
 
-        DISPLAY("DISPLAY"),
+        TEXT("TEXT"),
+        IMAGE("IMAGE"),
         VIDEO("VIDEO"),
+        RESPONSIVE("RESPONSIVE"),
+        SHOPPING("SHOPPING"),
+        APP("APP"),
+        CALL("CALL"),
+        CAROUSEL("CAROUSEL"),
+        SOCIAL("SOCIAL"),
+        DISPLAY("DISPLAY"),
+        SEARCH("SEARCH"),
         AUDIO("AUDIO"),
         YOUTUBE("YOUTUBE"),;
 

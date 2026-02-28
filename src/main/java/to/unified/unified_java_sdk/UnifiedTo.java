@@ -239,6 +239,9 @@ public class UnifiedTo {
     private final Hris hris;
 
 
+    private final Bankaccount bankaccount;
+
+
     private final Benefit benefit;
 
 
@@ -758,6 +761,11 @@ public class UnifiedTo {
 
     public Hris hris() {
         return hris;
+    }
+
+
+    public Bankaccount bankaccount() {
+        return bankaccount;
     }
 
 
@@ -1283,6 +1291,7 @@ public class UnifiedTo {
         this.model = new Model(sdkConfiguration);
         this.prompt = new Prompt(sdkConfiguration);
         this.hris = new Hris(sdkConfiguration);
+        this.bankaccount = new Bankaccount(sdkConfiguration);
         this.benefit = new Benefit(sdkConfiguration);
         this.deduction = new Deduction(sdkConfiguration);
         this.device = new Device(sdkConfiguration);

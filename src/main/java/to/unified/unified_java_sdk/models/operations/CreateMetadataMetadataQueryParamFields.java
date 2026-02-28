@@ -19,6 +19,7 @@ public enum CreateMetadataMetadataQueryParamFields {
     OPTIONS("options"),
     OBJECT_TYPE("object_type"),
     OBJECTS("objects"),
+    IS_REQUIRED("is_required"),
     RAW("raw");
 
     @JsonValue
