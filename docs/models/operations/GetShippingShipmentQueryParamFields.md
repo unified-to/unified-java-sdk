@@ -1,5 +1,13 @@
 # GetShippingShipmentQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.GetShippingShipmentQueryParamFields;
+
+GetShippingShipmentQueryParamFields value = GetShippingShipmentQueryParamFields.ID;
+```
+
 
 ## Values
 

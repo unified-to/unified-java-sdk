@@ -1,5 +1,16 @@
 # ListRepoId
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.shared.ListRepoId;
+
+ListRepoId value = ListRepoId.SUPPORTED_REQUIRED;
+
+// Open enum: use .of() to create instances from custom string values
+ListRepoId custom = ListRepoId.of("custom_value");
+```
+
 
 ## Values
 

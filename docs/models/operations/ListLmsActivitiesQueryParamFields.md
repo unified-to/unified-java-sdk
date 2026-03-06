@@ -1,5 +1,13 @@
 # ListLmsActivitiesQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.ListLmsActivitiesQueryParamFields;
+
+ListLmsActivitiesQueryParamFields value = ListLmsActivitiesQueryParamFields.ID;
+```
+
 
 ## Values
 

@@ -1,5 +1,13 @@
 # ListCrmCompaniesQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.ListCrmCompaniesQueryParamFields;
+
+ListCrmCompaniesQueryParamFields value = ListCrmCompaniesQueryParamFields.ID;
+```
+
 
 ## Values
 

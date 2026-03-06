@@ -1,5 +1,13 @@
 # GetAccountingContactQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.GetAccountingContactQueryParamFields;
+
+GetAccountingContactQueryParamFields value = GetAccountingContactQueryParamFields.ID;
+```
+
 
 ## Values
 

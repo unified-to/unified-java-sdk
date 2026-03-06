@@ -1,5 +1,16 @@
 # HrisDeductionCoverageLevel
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.shared.HrisDeductionCoverageLevel;
+
+HrisDeductionCoverageLevel value = HrisDeductionCoverageLevel.EMPLOYEE_ONLY;
+
+// Open enum: use .of() to create instances from custom string values
+HrisDeductionCoverageLevel custom = HrisDeductionCoverageLevel.of("custom_value");
+```
+
 
 ## Values
 

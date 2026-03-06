@@ -1,5 +1,13 @@
 # PatchShippingShipmentQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.PatchShippingShipmentQueryParamFields;
+
+PatchShippingShipmentQueryParamFields value = PatchShippingShipmentQueryParamFields.ID;
+```
+
 
 ## Values
 

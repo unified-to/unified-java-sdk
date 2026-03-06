@@ -1,5 +1,13 @@
 # PatchHrisBankaccountQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.PatchHrisBankaccountQueryParamFields;
+
+PatchHrisBankaccountQueryParamFields value = PatchHrisBankaccountQueryParamFields.ID;
+```
+
 
 ## Values
 

@@ -1,5 +1,13 @@
 # UpdateUcContactQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.UpdateUcContactQueryParamFields;
+
+UpdateUcContactQueryParamFields value = UpdateUcContactQueryParamFields.ID;
+```
+
 
 ## Values
 

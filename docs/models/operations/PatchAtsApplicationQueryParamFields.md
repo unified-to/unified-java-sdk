@@ -1,5 +1,13 @@
 # PatchAtsApplicationQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.PatchAtsApplicationQueryParamFields;
+
+PatchAtsApplicationQueryParamFields value = PatchAtsApplicationQueryParamFields.ID;
+```
+
 
 ## Values
 

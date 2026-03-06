@@ -1,5 +1,13 @@
 # PatchPaymentSubscriptionQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.PatchPaymentSubscriptionQueryParamFields;
+
+PatchPaymentSubscriptionQueryParamFields value = PatchPaymentSubscriptionQueryParamFields.ID;
+```
+
 
 ## Values
 

@@ -1,5 +1,13 @@
 # GetHrisGroupQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.GetHrisGroupQueryParamFields;
+
+GetHrisGroupQueryParamFields value = GetHrisGroupQueryParamFields.ID;
+```
+
 
 ## Values
 

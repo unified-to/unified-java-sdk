@@ -1,5 +1,16 @@
 # PropertyAdsInsertionorderKpiType
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.shared.PropertyAdsInsertionorderKpiType;
+
+PropertyAdsInsertionorderKpiType value = PropertyAdsInsertionorderKpiType.UNSPECIFIED;
+
+// Open enum: use .of() to create instances from custom string values
+PropertyAdsInsertionorderKpiType custom = PropertyAdsInsertionorderKpiType.of("custom_value");
+```
+
 
 ## Values
 

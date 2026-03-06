@@ -1,5 +1,16 @@
 # NativeWebhookLabelId
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.shared.NativeWebhookLabelId;
+
+NativeWebhookLabelId value = NativeWebhookLabelId.SUPPORTED_REQUIRED;
+
+// Open enum: use .of() to create instances from custom string values
+NativeWebhookLabelId custom = NativeWebhookLabelId.of("custom_value");
+```
+
 
 ## Values
 

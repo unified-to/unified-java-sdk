@@ -1,5 +1,13 @@
 # GetCommerceSaleschannelQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.GetCommerceSaleschannelQueryParamFields;
+
+GetCommerceSaleschannelQueryParamFields value = GetCommerceSaleschannelQueryParamFields.ID;
+```
+
 
 ## Values
 

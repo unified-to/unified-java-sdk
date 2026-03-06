@@ -1,5 +1,13 @@
 # UpdateAdsCampaignQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.UpdateAdsCampaignQueryParamFields;
+
+UpdateAdsCampaignQueryParamFields value = UpdateAdsCampaignQueryParamFields.ID;
+```
+
 
 ## Values
 

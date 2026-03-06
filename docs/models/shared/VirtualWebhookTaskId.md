@@ -1,5 +1,16 @@
 # VirtualWebhookTaskId
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.shared.VirtualWebhookTaskId;
+
+VirtualWebhookTaskId value = VirtualWebhookTaskId.SUPPORTED_REQUIRED;
+
+// Open enum: use .of() to create instances from custom string values
+VirtualWebhookTaskId custom = VirtualWebhookTaskId.of("custom_value");
+```
+
 
 ## Values
 

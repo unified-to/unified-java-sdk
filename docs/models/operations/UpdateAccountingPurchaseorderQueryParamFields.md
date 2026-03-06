@@ -1,5 +1,13 @@
 # UpdateAccountingPurchaseorderQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingPurchaseorderQueryParamFields;
+
+UpdateAccountingPurchaseorderQueryParamFields value = UpdateAccountingPurchaseorderQueryParamFields.ID;
+```
+
 
 ## Values
 

@@ -1,5 +1,16 @@
 # HrisEmailType
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.shared.HrisEmailType;
+
+HrisEmailType value = HrisEmailType.WORK;
+
+// Open enum: use .of() to create instances from custom string values
+HrisEmailType custom = HrisEmailType.of("custom_value");
+```
+
 
 ## Values
 

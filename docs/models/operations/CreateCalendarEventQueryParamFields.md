@@ -1,5 +1,13 @@
 # CreateCalendarEventQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.CreateCalendarEventQueryParamFields;
+
+CreateCalendarEventQueryParamFields value = CreateCalendarEventQueryParamFields.ID;
+```
+
 
 ## Values
 

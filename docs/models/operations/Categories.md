@@ -1,5 +1,13 @@
 # Categories
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.Categories;
+
+Categories value = Categories.PASSTHROUGH;
+```
+
 
 ## Values
 

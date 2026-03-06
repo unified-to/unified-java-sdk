@@ -1,5 +1,16 @@
 # YoutubeAndPartnersType
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.shared.YoutubeAndPartnersType;
+
+YoutubeAndPartnersType value = YoutubeAndPartnersType.UNSPECIFIED;
+
+// Open enum: use .of() to create instances from custom string values
+YoutubeAndPartnersType custom = YoutubeAndPartnersType.of("custom_value");
+```
+
 
 ## Values
 

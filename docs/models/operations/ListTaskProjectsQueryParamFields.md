@@ -1,5 +1,13 @@
 # ListTaskProjectsQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.ListTaskProjectsQueryParamFields;
+
+ListTaskProjectsQueryParamFields value = ListTaskProjectsQueryParamFields.ID;
+```
+
 
 ## Values
 

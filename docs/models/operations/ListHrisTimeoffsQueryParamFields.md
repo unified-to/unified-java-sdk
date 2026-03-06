@@ -1,5 +1,13 @@
 # ListHrisTimeoffsQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.ListHrisTimeoffsQueryParamFields;
+
+ListHrisTimeoffsQueryParamFields value = ListHrisTimeoffsQueryParamFields.ID;
+```
+
 
 ## Values
 

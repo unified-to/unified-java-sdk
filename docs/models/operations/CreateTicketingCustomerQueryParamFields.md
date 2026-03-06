@@ -1,5 +1,13 @@
 # CreateTicketingCustomerQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.CreateTicketingCustomerQueryParamFields;
+
+CreateTicketingCustomerQueryParamFields value = CreateTicketingCustomerQueryParamFields.ID;
+```
+
 
 ## Values
 

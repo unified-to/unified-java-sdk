@@ -1,5 +1,16 @@
 # ShippingTrackingStatus
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.shared.ShippingTrackingStatus;
+
+ShippingTrackingStatus value = ShippingTrackingStatus.PENDING;
+
+// Open enum: use .of() to create instances from custom string values
+ShippingTrackingStatus custom = ShippingTrackingStatus.of("custom_value");
+```
+
 
 ## Values
 

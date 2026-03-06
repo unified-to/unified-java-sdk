@@ -1,5 +1,16 @@
 # ListSaleschannelId
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.shared.ListSaleschannelId;
+
+ListSaleschannelId value = ListSaleschannelId.SUPPORTED_REQUIRED;
+
+// Open enum: use .of() to create instances from custom string values
+ListSaleschannelId custom = ListSaleschannelId.of("custom_value");
+```
+
 
 ## Values
 

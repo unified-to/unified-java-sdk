@@ -1,5 +1,16 @@
 # BudgetPeriod
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.shared.BudgetPeriod;
+
+BudgetPeriod value = BudgetPeriod.DAILY;
+
+// Open enum: use .of() to create instances from custom string values
+BudgetPeriod custom = BudgetPeriod.of("custom_value");
+```
+
 
 ## Values
 

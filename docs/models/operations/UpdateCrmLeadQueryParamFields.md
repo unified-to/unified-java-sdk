@@ -1,5 +1,13 @@
 # UpdateCrmLeadQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.UpdateCrmLeadQueryParamFields;
+
+UpdateCrmLeadQueryParamFields value = UpdateCrmLeadQueryParamFields.ID;
+```
+
 
 ## Values
 

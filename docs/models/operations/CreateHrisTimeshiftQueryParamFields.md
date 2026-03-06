@@ -1,5 +1,13 @@
 # CreateHrisTimeshiftQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.CreateHrisTimeshiftQueryParamFields;
+
+CreateHrisTimeshiftQueryParamFields value = CreateHrisTimeshiftQueryParamFields.ID;
+```
+
 
 ## Values
 

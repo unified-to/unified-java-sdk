@@ -1,5 +1,16 @@
 # Type
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.shared.Type;
+
+Type value = Type.ACCOUNTS_PAYABLE;
+
+// Open enum: use .of() to create instances from custom string values
+Type custom = Type.of("custom_value");
+```
+
 
 ## Values
 

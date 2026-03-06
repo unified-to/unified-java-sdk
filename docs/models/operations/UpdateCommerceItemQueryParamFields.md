@@ -1,5 +1,13 @@
 # UpdateCommerceItemQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceItemQueryParamFields;
+
+UpdateCommerceItemQueryParamFields value = UpdateCommerceItemQueryParamFields.ID;
+```
+
 
 ## Values
 

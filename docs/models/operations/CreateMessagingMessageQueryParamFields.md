@@ -1,5 +1,13 @@
 # CreateMessagingMessageQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.CreateMessagingMessageQueryParamFields;
+
+CreateMessagingMessageQueryParamFields value = CreateMessagingMessageQueryParamFields.ID;
+```
+
 
 ## Values
 

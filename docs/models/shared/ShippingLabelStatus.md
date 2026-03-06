@@ -1,5 +1,16 @@
 # ShippingLabelStatus
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.shared.ShippingLabelStatus;
+
+ShippingLabelStatus value = ShippingLabelStatus.PENDING;
+
+// Open enum: use .of() to create instances from custom string values
+ShippingLabelStatus custom = ShippingLabelStatus.of("custom_value");
+```
+
 
 ## Values
 

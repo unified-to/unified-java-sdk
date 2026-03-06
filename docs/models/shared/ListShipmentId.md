@@ -1,5 +1,16 @@
 # ListShipmentId
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.shared.ListShipmentId;
+
+ListShipmentId value = ListShipmentId.SUPPORTED_REQUIRED;
+
+// Open enum: use .of() to create instances from custom string values
+ListShipmentId custom = ListShipmentId.of("custom_value");
+```
+
 
 ## Values
 

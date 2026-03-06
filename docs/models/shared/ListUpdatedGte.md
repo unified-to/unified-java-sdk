@@ -1,5 +1,16 @@
 # ListUpdatedGte
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.shared.ListUpdatedGte;
+
+ListUpdatedGte value = ListUpdatedGte.SUPPORTED_REQUIRED;
+
+// Open enum: use .of() to create instances from custom string values
+ListUpdatedGte custom = ListUpdatedGte.of("custom_value");
+```
+
 
 ## Values
 

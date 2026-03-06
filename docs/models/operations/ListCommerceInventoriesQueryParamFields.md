@@ -1,5 +1,13 @@
 # ListCommerceInventoriesQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.ListCommerceInventoriesQueryParamFields;
+
+ListCommerceInventoriesQueryParamFields value = ListCommerceInventoriesQueryParamFields.ID;
+```
+
 
 ## Values
 

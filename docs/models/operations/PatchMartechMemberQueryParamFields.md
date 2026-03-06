@@ -1,5 +1,13 @@
 # PatchMartechMemberQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.PatchMartechMemberQueryParamFields;
+
+PatchMartechMemberQueryParamFields value = PatchMartechMemberQueryParamFields.ID;
+```
+
 
 ## Values
 

@@ -1,5 +1,16 @@
 # AdsCreativeStatus
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.shared.AdsCreativeStatus;
+
+AdsCreativeStatus value = AdsCreativeStatus.UNSPECIFIED;
+
+// Open enum: use .of() to create instances from custom string values
+AdsCreativeStatus custom = AdsCreativeStatus.of("custom_value");
+```
+
 
 ## Values
 

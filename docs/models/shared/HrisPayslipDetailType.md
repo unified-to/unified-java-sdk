@@ -1,5 +1,16 @@
 # HrisPayslipDetailType
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.shared.HrisPayslipDetailType;
+
+HrisPayslipDetailType value = HrisPayslipDetailType.EARNING_SALARY;
+
+// Open enum: use .of() to create instances from custom string values
+HrisPayslipDetailType custom = HrisPayslipDetailType.of("custom_value");
+```
+
 
 ## Values
 

@@ -1,5 +1,13 @@
 # ListAccountingCategoriesQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.ListAccountingCategoriesQueryParamFields;
+
+ListAccountingCategoriesQueryParamFields value = ListAccountingCategoriesQueryParamFields.ID;
+```
+
 
 ## Values
 

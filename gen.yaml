@@ -29,7 +29,7 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 java:
-  version: 0.47.10
+  version: 0.47.11
   additionalDependencies: []
   additionalPlugins: []
   artifactID: unified-java-sdk
@@ -44,11 +44,13 @@ java:
   enableFormatting: false
   enableSlf4jLogging: false
   enableStreamingUploads: false
+  explicitDocImports: false
   flattenGlobalSecurity: false
   forwardCompatibleEnumsByDefault: false
   forwardCompatibleUnionsByDefault: "false"
   generateOptionalUnionAccessors: false
   generateSpringBootStarter: true
+  generateUnionDocs: false
   githubURL: github.com/unified-to/unified-java-sdk
   groupID: to.unified
   imports:
@@ -71,7 +73,9 @@ java:
   nullFriendlyParameters: true
   operationScopedParams: true
   outputModelSuffix: output
+  prefixModeMethodNames: false
   projectName: Unified-java-sdk
   respectTitlesForPrimitiveUnionMembers: false
+  showSetterGetterTypesInDocs: false
   templateVersion: v2
   unionStrategy: populated-fields

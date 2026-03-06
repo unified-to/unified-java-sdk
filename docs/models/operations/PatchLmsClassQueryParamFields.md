@@ -1,5 +1,13 @@
 # PatchLmsClassQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.PatchLmsClassQueryParamFields;
+
+PatchLmsClassQueryParamFields value = PatchLmsClassQueryParamFields.ID;
+```
+
 
 ## Values
 

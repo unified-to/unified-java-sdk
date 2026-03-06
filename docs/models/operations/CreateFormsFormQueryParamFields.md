@@ -1,5 +1,13 @@
 # CreateFormsFormQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.CreateFormsFormQueryParamFields;
+
+CreateFormsFormQueryParamFields value = CreateFormsFormQueryParamFields.ID;
+```
+
 
 ## Values
 

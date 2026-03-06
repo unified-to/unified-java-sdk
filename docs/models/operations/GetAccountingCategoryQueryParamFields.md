@@ -1,5 +1,13 @@
 # GetAccountingCategoryQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.GetAccountingCategoryQueryParamFields;
+
+GetAccountingCategoryQueryParamFields value = GetAccountingCategoryQueryParamFields.ID;
+```
+
 
 ## Values
 

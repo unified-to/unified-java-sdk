@@ -1,5 +1,13 @@
 # PatchHrisLocationQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.PatchHrisLocationQueryParamFields;
+
+PatchHrisLocationQueryParamFields value = PatchHrisLocationQueryParamFields.ID;
+```
+
 
 ## Values
 

@@ -1,5 +1,13 @@
 # GetLmsContentQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.GetLmsContentQueryParamFields;
+
+GetLmsContentQueryParamFields value = GetLmsContentQueryParamFields.ID;
+```
+
 
 ## Values
 

@@ -1,5 +1,13 @@
 # GetAtsInterviewQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.GetAtsInterviewQueryParamFields;
+
+GetAtsInterviewQueryParamFields value = GetAtsInterviewQueryParamFields.ID;
+```
+
 
 ## Values
 

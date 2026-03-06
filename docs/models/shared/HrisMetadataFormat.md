@@ -1,5 +1,16 @@
 # HrisMetadataFormat
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.shared.HrisMetadataFormat;
+
+HrisMetadataFormat value = HrisMetadataFormat.TEXT;
+
+// Open enum: use .of() to create instances from custom string values
+HrisMetadataFormat custom = HrisMetadataFormat.of("custom_value");
+```
+
 
 ## Values
 

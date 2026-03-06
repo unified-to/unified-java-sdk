@@ -1,5 +1,16 @@
 # AtsEmailType
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.shared.AtsEmailType;
+
+AtsEmailType value = AtsEmailType.WORK;
+
+// Open enum: use .of() to create instances from custom string values
+AtsEmailType custom = AtsEmailType.of("custom_value");
+```
+
 
 ## Values
 

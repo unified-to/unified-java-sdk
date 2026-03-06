@@ -1,5 +1,13 @@
 # UpdateAccountingJournalQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingJournalQueryParamFields;
+
+UpdateAccountingJournalQueryParamFields value = UpdateAccountingJournalQueryParamFields.ID;
+```
+
 
 ## Values
 

@@ -1,5 +1,13 @@
 # ListCommerceReviewsQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.ListCommerceReviewsQueryParamFields;
+
+ListCommerceReviewsQueryParamFields value = ListCommerceReviewsQueryParamFields.ID;
+```
+
 
 ## Values
 

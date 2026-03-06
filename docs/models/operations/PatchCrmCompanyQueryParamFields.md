@@ -1,5 +1,13 @@
 # PatchCrmCompanyQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.PatchCrmCompanyQueryParamFields;
+
+PatchCrmCompanyQueryParamFields value = PatchCrmCompanyQueryParamFields.ID;
+```
+
 
 ## Values
 

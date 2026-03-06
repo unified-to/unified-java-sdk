@@ -1,5 +1,13 @@
 # GetAccountingBillQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.GetAccountingBillQueryParamFields;
+
+GetAccountingBillQueryParamFields value = GetAccountingBillQueryParamFields.ID;
+```
+
 
 ## Values
 

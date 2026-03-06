@@ -1,5 +1,13 @@
 # PatchStorageFileQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.PatchStorageFileQueryParamFields;
+
+PatchStorageFileQueryParamFields value = PatchStorageFileQueryParamFields.ID;
+```
+
 
 ## Values
 

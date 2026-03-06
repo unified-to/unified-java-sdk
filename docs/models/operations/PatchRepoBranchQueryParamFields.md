@@ -1,5 +1,13 @@
 # PatchRepoBranchQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.PatchRepoBranchQueryParamFields;
+
+PatchRepoBranchQueryParamFields value = PatchRepoBranchQueryParamFields.ID;
+```
+
 
 ## Values
 

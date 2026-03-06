@@ -1,5 +1,16 @@
 # PropertyAdsGroupBidStrategyYoutubeAndPartnersType
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.shared.PropertyAdsGroupBidStrategyYoutubeAndPartnersType;
+
+PropertyAdsGroupBidStrategyYoutubeAndPartnersType value = PropertyAdsGroupBidStrategyYoutubeAndPartnersType.UNSPECIFIED;
+
+// Open enum: use .of() to create instances from custom string values
+PropertyAdsGroupBidStrategyYoutubeAndPartnersType custom = PropertyAdsGroupBidStrategyYoutubeAndPartnersType.of("custom_value");
+```
+
 
 ## Values
 

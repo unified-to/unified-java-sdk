@@ -1,5 +1,13 @@
 # GetMessagingChannelQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.GetMessagingChannelQueryParamFields;
+
+GetMessagingChannelQueryParamFields value = GetMessagingChannelQueryParamFields.ID;
+```
+
 
 ## Values
 

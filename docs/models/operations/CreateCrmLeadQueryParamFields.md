@@ -1,5 +1,13 @@
 # CreateCrmLeadQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.CreateCrmLeadQueryParamFields;
+
+CreateCrmLeadQueryParamFields value = CreateCrmLeadQueryParamFields.ID;
+```
+
 
 ## Values
 

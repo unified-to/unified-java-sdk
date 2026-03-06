@@ -1,5 +1,13 @@
 # UpdateAdsInsertionorderQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.UpdateAdsInsertionorderQueryParamFields;
+
+UpdateAdsInsertionorderQueryParamFields value = UpdateAdsInsertionorderQueryParamFields.ID;
+```
+
 
 ## Values
 

@@ -1,5 +1,13 @@
 # CreateAccountingTransactionQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.CreateAccountingTransactionQueryParamFields;
+
+CreateAccountingTransactionQueryParamFields value = CreateAccountingTransactionQueryParamFields.ID;
+```
+
 
 ## Values
 

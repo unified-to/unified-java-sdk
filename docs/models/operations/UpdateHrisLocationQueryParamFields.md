@@ -1,5 +1,13 @@
 # UpdateHrisLocationQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.UpdateHrisLocationQueryParamFields;
+
+UpdateHrisLocationQueryParamFields value = UpdateHrisLocationQueryParamFields.ID;
+```
+
 
 ## Values
 

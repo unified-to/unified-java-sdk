@@ -1,5 +1,13 @@
 # PatchCommerceInventoryQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.PatchCommerceInventoryQueryParamFields;
+
+PatchCommerceInventoryQueryParamFields value = PatchCommerceInventoryQueryParamFields.ID;
+```
+
 
 ## Values
 

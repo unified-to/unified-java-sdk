@@ -1,5 +1,16 @@
 # ListRootId
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.shared.ListRootId;
+
+ListRootId value = ListRootId.SUPPORTED_REQUIRED;
+
+// Open enum: use .of() to create instances from custom string values
+ListRootId custom = ListRootId.of("custom_value");
+```
+
 
 ## Values
 

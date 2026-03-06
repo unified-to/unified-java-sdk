@@ -1,5 +1,13 @@
 # UpdateAtsCompanyQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.UpdateAtsCompanyQueryParamFields;
+
+UpdateAtsCompanyQueryParamFields value = UpdateAtsCompanyQueryParamFields.ID;
+```
+
 
 ## Values
 

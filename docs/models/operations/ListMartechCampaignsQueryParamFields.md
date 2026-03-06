@@ -1,5 +1,13 @@
 # ListMartechCampaignsQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.ListMartechCampaignsQueryParamFields;
+
+ListMartechCampaignsQueryParamFields value = ListMartechCampaignsQueryParamFields.ID;
+```
+
 
 ## Values
 

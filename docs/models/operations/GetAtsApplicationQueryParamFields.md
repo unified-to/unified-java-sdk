@@ -1,5 +1,13 @@
 # GetAtsApplicationQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.GetAtsApplicationQueryParamFields;
+
+GetAtsApplicationQueryParamFields value = GetAtsApplicationQueryParamFields.ID;
+```
+
 
 ## Values
 

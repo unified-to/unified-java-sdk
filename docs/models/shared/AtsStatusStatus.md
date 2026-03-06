@@ -1,5 +1,16 @@
 # AtsStatusStatus
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.shared.AtsStatusStatus;
+
+AtsStatusStatus value = AtsStatusStatus.NEW;
+
+// Open enum: use .of() to create instances from custom string values
+AtsStatusStatus custom = AtsStatusStatus.of("custom_value");
+```
+
 
 ## Values
 

@@ -1,5 +1,13 @@
 # PatchLmsContentQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.PatchLmsContentQueryParamFields;
+
+PatchLmsContentQueryParamFields value = PatchLmsContentQueryParamFields.ID;
+```
+
 
 ## Values
 

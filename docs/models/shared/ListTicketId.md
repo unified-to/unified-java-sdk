@@ -1,5 +1,16 @@
 # ListTicketId
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.shared.ListTicketId;
+
+ListTicketId value = ListTicketId.SUPPORTED_REQUIRED;
+
+// Open enum: use .of() to create instances from custom string values
+ListTicketId custom = ListTicketId.of("custom_value");
+```
+
 
 ## Values
 

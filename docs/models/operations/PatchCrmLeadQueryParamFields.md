@@ -1,5 +1,13 @@
 # PatchCrmLeadQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.PatchCrmLeadQueryParamFields;
+
+PatchCrmLeadQueryParamFields value = PatchCrmLeadQueryParamFields.ID;
+```
+
 
 ## Values
 

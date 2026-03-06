@@ -1,5 +1,13 @@
 # CreateCrmContactQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.CreateCrmContactQueryParamFields;
+
+CreateCrmContactQueryParamFields value = CreateCrmContactQueryParamFields.ID;
+```
+
 
 ## Values
 

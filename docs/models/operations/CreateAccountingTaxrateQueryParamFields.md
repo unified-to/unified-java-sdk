@@ -1,5 +1,13 @@
 # CreateAccountingTaxrateQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.CreateAccountingTaxrateQueryParamFields;
+
+CreateAccountingTaxrateQueryParamFields value = CreateAccountingTaxrateQueryParamFields.ID;
+```
+
 
 ## Values
 

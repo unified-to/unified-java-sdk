@@ -1,5 +1,16 @@
 # VirtualWebhookChannelId
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.shared.VirtualWebhookChannelId;
+
+VirtualWebhookChannelId value = VirtualWebhookChannelId.SUPPORTED_REQUIRED;
+
+// Open enum: use .of() to create instances from custom string values
+VirtualWebhookChannelId custom = VirtualWebhookChannelId.of("custom_value");
+```
+
 
 ## Values
 

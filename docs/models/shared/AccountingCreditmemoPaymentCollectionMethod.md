@@ -1,5 +1,16 @@
 # AccountingCreditmemoPaymentCollectionMethod
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.shared.AccountingCreditmemoPaymentCollectionMethod;
+
+AccountingCreditmemoPaymentCollectionMethod value = AccountingCreditmemoPaymentCollectionMethod.SEND_INVOICE;
+
+// Open enum: use .of() to create instances from custom string values
+AccountingCreditmemoPaymentCollectionMethod custom = AccountingCreditmemoPaymentCollectionMethod.of("custom_value");
+```
+
 
 ## Values
 

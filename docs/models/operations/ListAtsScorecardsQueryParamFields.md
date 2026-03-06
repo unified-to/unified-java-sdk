@@ -1,5 +1,13 @@
 # ListAtsScorecardsQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.ListAtsScorecardsQueryParamFields;
+
+ListAtsScorecardsQueryParamFields value = ListAtsScorecardsQueryParamFields.ID;
+```
+
 
 ## Values
 

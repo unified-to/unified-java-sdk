@@ -1,5 +1,13 @@
 # PatchCrmPipelineQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.PatchCrmPipelineQueryParamFields;
+
+PatchCrmPipelineQueryParamFields value = PatchCrmPipelineQueryParamFields.ID;
+```
+
 
 ## Values
 

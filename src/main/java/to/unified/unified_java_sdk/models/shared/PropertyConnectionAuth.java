@@ -41,6 +41,11 @@ public class PropertyConnectionAuth {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("audience")
+    private String audience;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorize_url")
     private String authorizeUrl;
 
@@ -157,6 +162,7 @@ public class PropertyConnectionAuth {
             @JsonProperty("access_token") @Nullable String accessToken,
             @JsonProperty("api_url") @Nullable String apiUrl,
             @JsonProperty("app_id") @Nullable String appId,
+            @JsonProperty("audience") @Nullable String audience,
             @JsonProperty("authorize_url") @Nullable String authorizeUrl,
             @JsonProperty("client_id") @Nullable String clientId,
             @JsonProperty("client_secret") @Nullable String clientSecret,
@@ -182,6 +188,7 @@ public class PropertyConnectionAuth {
         this.accessToken = accessToken;
         this.apiUrl = apiUrl;
         this.appId = appId;
+        this.audience = audience;
         this.authorizeUrl = authorizeUrl;
         this.clientId = clientId;
         this.clientSecret = clientSecret;
@@ -215,7 +222,7 @@ public class PropertyConnectionAuth {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     public Optional<String> accessToken() {
@@ -228,6 +235,10 @@ public class PropertyConnectionAuth {
 
     public Optional<String> appId() {
         return Optional.ofNullable(this.appId);
+    }
+
+    public Optional<String> audience() {
+        return Optional.ofNullable(this.audience);
     }
 
     public Optional<String> authorizeUrl() {
@@ -341,6 +352,12 @@ public class PropertyConnectionAuth {
 
     public PropertyConnectionAuth withAppId(@Nullable String appId) {
         this.appId = appId;
+        return this;
+    }
+
+
+    public PropertyConnectionAuth withAudience(@Nullable String audience) {
+        this.audience = audience;
         return this;
     }
 
@@ -494,6 +511,7 @@ public class PropertyConnectionAuth {
             Utils.enhancedDeepEquals(this.accessToken, other.accessToken) &&
             Utils.enhancedDeepEquals(this.apiUrl, other.apiUrl) &&
             Utils.enhancedDeepEquals(this.appId, other.appId) &&
+            Utils.enhancedDeepEquals(this.audience, other.audience) &&
             Utils.enhancedDeepEquals(this.authorizeUrl, other.authorizeUrl) &&
             Utils.enhancedDeepEquals(this.clientId, other.clientId) &&
             Utils.enhancedDeepEquals(this.clientSecret, other.clientSecret) &&
@@ -522,14 +540,14 @@ public class PropertyConnectionAuth {
     public int hashCode() {
         return Utils.enhancedHash(
             accessToken, apiUrl, appId,
-            authorizeUrl, clientId, clientSecret,
-            consumerKey, consumerSecret, devApiKey,
-            emails, expiresIn, expiryDate,
-            key, meta, name,
-            otherAuthInfo, pem, refreshToken,
-            refreshTokenExpiresDate, refreshTokenExpiresIn, refreshUrl,
-            state, token, tokenUrl,
-            userId);
+            audience, authorizeUrl, clientId,
+            clientSecret, consumerKey, consumerSecret,
+            devApiKey, emails, expiresIn,
+            expiryDate, key, meta,
+            name, otherAuthInfo, pem,
+            refreshToken, refreshTokenExpiresDate, refreshTokenExpiresIn,
+            refreshUrl, state, token,
+            tokenUrl, userId);
     }
     
     @Override
@@ -538,6 +556,7 @@ public class PropertyConnectionAuth {
                 "accessToken", accessToken,
                 "apiUrl", apiUrl,
                 "appId", appId,
+                "audience", audience,
                 "authorizeUrl", authorizeUrl,
                 "clientId", clientId,
                 "clientSecret", clientSecret,
@@ -570,6 +589,8 @@ public class PropertyConnectionAuth {
         private String apiUrl;
 
         private String appId;
+
+        private String audience;
 
         private String authorizeUrl;
 
@@ -631,6 +652,11 @@ public class PropertyConnectionAuth {
 
         public Builder appId(@Nullable String appId) {
             this.appId = appId;
+            return this;
+        }
+
+        public Builder audience(@Nullable String audience) {
+            this.audience = audience;
             return this;
         }
 
@@ -751,14 +777,14 @@ public class PropertyConnectionAuth {
         public PropertyConnectionAuth build() {
             return new PropertyConnectionAuth(
                 accessToken, apiUrl, appId,
-                authorizeUrl, clientId, clientSecret,
-                consumerKey, consumerSecret, devApiKey,
-                emails, expiresIn, expiryDate,
-                key, meta, name,
-                otherAuthInfo, pem, refreshToken,
-                refreshTokenExpiresDate, refreshTokenExpiresIn, refreshUrl,
-                state, token, tokenUrl,
-                userId);
+                audience, authorizeUrl, clientId,
+                clientSecret, consumerKey, consumerSecret,
+                devApiKey, emails, expiresIn,
+                expiryDate, key, meta,
+                name, otherAuthInfo, pem,
+                refreshToken, refreshTokenExpiresDate, refreshTokenExpiresIn,
+                refreshUrl, state, token,
+                tokenUrl, userId);
         }
 
     }

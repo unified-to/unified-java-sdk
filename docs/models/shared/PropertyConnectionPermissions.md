@@ -1,5 +1,16 @@
 # PropertyConnectionPermissions
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.shared.PropertyConnectionPermissions;
+
+PropertyConnectionPermissions value = PropertyConnectionPermissions.ACCOUNTING_ACCOUNT_READ;
+
+// Open enum: use .of() to create instances from custom string values
+PropertyConnectionPermissions custom = PropertyConnectionPermissions.of("custom_value");
+```
+
 
 ## Values
 

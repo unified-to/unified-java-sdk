@@ -1,5 +1,13 @@
 # PatchCalendarEventQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.PatchCalendarEventQueryParamFields;
+
+PatchCalendarEventQueryParamFields value = PatchCalendarEventQueryParamFields.ID;
+```
+
 
 ## Values
 

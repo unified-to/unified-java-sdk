@@ -1,5 +1,13 @@
 # UpdatePaymentSubscriptionQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.UpdatePaymentSubscriptionQueryParamFields;
+
+UpdatePaymentSubscriptionQueryParamFields value = UpdatePaymentSubscriptionQueryParamFields.ID;
+```
+
 
 ## Values
 

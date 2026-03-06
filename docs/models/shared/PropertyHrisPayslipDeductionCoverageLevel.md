@@ -1,5 +1,16 @@
 # PropertyHrisPayslipDeductionCoverageLevel
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.shared.PropertyHrisPayslipDeductionCoverageLevel;
+
+PropertyHrisPayslipDeductionCoverageLevel value = PropertyHrisPayslipDeductionCoverageLevel.EMPLOYEE_ONLY;
+
+// Open enum: use .of() to create instances from custom string values
+PropertyHrisPayslipDeductionCoverageLevel custom = PropertyHrisPayslipDeductionCoverageLevel.of("custom_value");
+```
+
 
 ## Values
 

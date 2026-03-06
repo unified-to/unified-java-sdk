@@ -1,5 +1,16 @@
 # CrmMetadataFormat
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.shared.CrmMetadataFormat;
+
+CrmMetadataFormat value = CrmMetadataFormat.TEXT;
+
+// Open enum: use .of() to create instances from custom string values
+CrmMetadataFormat custom = CrmMetadataFormat.of("custom_value");
+```
+
 
 ## Values
 

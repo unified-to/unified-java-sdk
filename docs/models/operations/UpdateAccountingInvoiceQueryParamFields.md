@@ -1,5 +1,13 @@
 # UpdateAccountingInvoiceQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingInvoiceQueryParamFields;
+
+UpdateAccountingInvoiceQueryParamFields value = UpdateAccountingInvoiceQueryParamFields.ID;
+```
+
 
 ## Values
 

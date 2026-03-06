@@ -1,5 +1,16 @@
 # AtsInterviewStatus
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.shared.AtsInterviewStatus;
+
+AtsInterviewStatus value = AtsInterviewStatus.SCHEDULED;
+
+// Open enum: use .of() to create instances from custom string values
+AtsInterviewStatus custom = AtsInterviewStatus.of("custom_value");
+```
+
 
 ## Values
 

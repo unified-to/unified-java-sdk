@@ -1,5 +1,13 @@
 # PatchAccountingJournalQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.PatchAccountingJournalQueryParamFields;
+
+PatchAccountingJournalQueryParamFields value = PatchAccountingJournalQueryParamFields.ID;
+```
+
 
 ## Values
 

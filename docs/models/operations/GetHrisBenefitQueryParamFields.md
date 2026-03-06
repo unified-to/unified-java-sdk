@@ -1,5 +1,13 @@
 # GetHrisBenefitQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.GetHrisBenefitQueryParamFields;
+
+GetHrisBenefitQueryParamFields value = GetHrisBenefitQueryParamFields.ID;
+```
+
 
 ## Values
 

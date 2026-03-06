@@ -1,5 +1,16 @@
 # AssessmentPackageType
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.shared.AssessmentPackageType;
+
+AssessmentPackageType value = AssessmentPackageType.SKILLS_TEST;
+
+// Open enum: use .of() to create instances from custom string values
+AssessmentPackageType custom = AssessmentPackageType.of("custom_value");
+```
+
 
 ## Values
 

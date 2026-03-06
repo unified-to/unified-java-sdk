@@ -1,5 +1,13 @@
 # UpdateHrisEmployeeQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.UpdateHrisEmployeeQueryParamFields;
+
+UpdateHrisEmployeeQueryParamFields value = UpdateHrisEmployeeQueryParamFields.ID;
+```
+
 
 ## Values
 

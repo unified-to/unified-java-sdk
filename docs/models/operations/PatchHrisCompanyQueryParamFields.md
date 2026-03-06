@@ -1,5 +1,13 @@
 # PatchHrisCompanyQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.PatchHrisCompanyQueryParamFields;
+
+PatchHrisCompanyQueryParamFields value = PatchHrisCompanyQueryParamFields.ID;
+```
+
 
 ## Values
 

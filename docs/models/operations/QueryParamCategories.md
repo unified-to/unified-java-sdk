@@ -1,5 +1,13 @@
 # QueryParamCategories
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.QueryParamCategories;
+
+QueryParamCategories value = QueryParamCategories.PASSTHROUGH;
+```
+
 
 ## Values
 

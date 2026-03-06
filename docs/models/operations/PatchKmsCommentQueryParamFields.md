@@ -1,5 +1,13 @@
 # PatchKmsCommentQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.PatchKmsCommentQueryParamFields;
+
+PatchKmsCommentQueryParamFields value = PatchKmsCommentQueryParamFields.ID;
+```
+
 
 ## Values
 

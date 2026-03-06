@@ -1,5 +1,16 @@
 # ListBenefitId
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.shared.ListBenefitId;
+
+ListBenefitId value = ListBenefitId.SUPPORTED_REQUIRED;
+
+// Open enum: use .of() to create instances from custom string values
+ListBenefitId custom = ListBenefitId.of("custom_value");
+```
+
 
 ## Values
 

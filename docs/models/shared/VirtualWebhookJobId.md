@@ -1,5 +1,16 @@
 # VirtualWebhookJobId
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.shared.VirtualWebhookJobId;
+
+VirtualWebhookJobId value = VirtualWebhookJobId.SUPPORTED_REQUIRED;
+
+// Open enum: use .of() to create instances from custom string values
+VirtualWebhookJobId custom = VirtualWebhookJobId.of("custom_value");
+```
+
 
 ## Values
 

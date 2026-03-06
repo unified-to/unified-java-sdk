@@ -1,5 +1,16 @@
 # KmsPageMetadataFormat
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.shared.KmsPageMetadataFormat;
+
+KmsPageMetadataFormat value = KmsPageMetadataFormat.TEXT;
+
+// Open enum: use .of() to create instances from custom string values
+KmsPageMetadataFormat custom = KmsPageMetadataFormat.of("custom_value");
+```
+
 
 ## Values
 

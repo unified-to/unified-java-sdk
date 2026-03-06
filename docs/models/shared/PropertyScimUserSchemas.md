@@ -1,5 +1,16 @@
 # PropertyScimUserSchemas
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.shared.PropertyScimUserSchemas;
+
+PropertyScimUserSchemas value = PropertyScimUserSchemas.URN_IETF_PARAMS_SCIM_SCHEMAS_CORE20_USER;
+
+// Open enum: use .of() to create instances from custom string values
+PropertyScimUserSchemas custom = PropertyScimUserSchemas.of("custom_value");
+```
+
 
 ## Values
 

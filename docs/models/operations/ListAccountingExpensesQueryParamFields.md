@@ -1,5 +1,13 @@
 # ListAccountingExpensesQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.ListAccountingExpensesQueryParamFields;
+
+ListAccountingExpensesQueryParamFields value = ListAccountingExpensesQueryParamFields.ID;
+```
+
 
 ## Values
 

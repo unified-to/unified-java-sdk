@@ -1,5 +1,16 @@
 # ListCarrierId
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.shared.ListCarrierId;
+
+ListCarrierId value = ListCarrierId.SUPPORTED_REQUIRED;
+
+// Open enum: use .of() to create instances from custom string values
+ListCarrierId custom = ListCarrierId.of("custom_value");
+```
+
 
 ## Values
 

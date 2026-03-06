@@ -1,5 +1,16 @@
 # ObjectType
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.shared.ObjectType;
+
+ObjectType value = ObjectType.ACCOUNTING_ACCOUNT;
+
+// Open enum: use .of() to create instances from custom string values
+ObjectType custom = ObjectType.of("custom_value");
+```
+
 
 ## Values
 

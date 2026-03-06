@@ -1,5 +1,13 @@
 # ListTaskCommentsQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.ListTaskCommentsQueryParamFields;
+
+ListTaskCommentsQueryParamFields value = ListTaskCommentsQueryParamFields.ID;
+```
+
 
 ## Values
 

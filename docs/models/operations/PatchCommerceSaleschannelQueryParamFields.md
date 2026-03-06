@@ -1,5 +1,13 @@
 # PatchCommerceSaleschannelQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.PatchCommerceSaleschannelQueryParamFields;
+
+PatchCommerceSaleschannelQueryParamFields value = PatchCommerceSaleschannelQueryParamFields.ID;
+```
+
 
 ## Values
 

@@ -1,5 +1,13 @@
 # GetAdsOrganizationQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.GetAdsOrganizationQueryParamFields;
+
+GetAdsOrganizationQueryParamFields value = GetAdsOrganizationQueryParamFields.ID;
+```
+
 
 ## Values
 

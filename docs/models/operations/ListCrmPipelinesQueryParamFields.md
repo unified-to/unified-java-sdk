@@ -1,5 +1,13 @@
 # ListCrmPipelinesQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.ListCrmPipelinesQueryParamFields;
+
+ListCrmPipelinesQueryParamFields value = ListCrmPipelinesQueryParamFields.ID;
+```
+
 
 ## Values
 

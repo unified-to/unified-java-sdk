@@ -1,5 +1,13 @@
 # GetHrisCompanyQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.GetHrisCompanyQueryParamFields;
+
+GetHrisCompanyQueryParamFields value = GetHrisCompanyQueryParamFields.ID;
+```
+
 
 ## Values
 

@@ -1,5 +1,13 @@
 # UpdateCrmCompanyQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.UpdateCrmCompanyQueryParamFields;
+
+UpdateCrmCompanyQueryParamFields value = UpdateCrmCompanyQueryParamFields.ID;
+```
+
 
 ## Values
 

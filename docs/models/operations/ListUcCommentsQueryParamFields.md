@@ -1,5 +1,13 @@
 # ListUcCommentsQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.ListUcCommentsQueryParamFields;
+
+ListUcCommentsQueryParamFields value = ListUcCommentsQueryParamFields.ID;
+```
+
 
 ## Values
 

@@ -1,5 +1,16 @@
 # AtsJobQuestionType
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.shared.AtsJobQuestionType;
+
+AtsJobQuestionType value = AtsJobQuestionType.TEXT;
+
+// Open enum: use .of() to create instances from custom string values
+AtsJobQuestionType custom = AtsJobQuestionType.of("custom_value");
+```
+
 
 ## Values
 

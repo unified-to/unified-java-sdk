@@ -1,5 +1,13 @@
 # ListAccountingOrganizationsQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.ListAccountingOrganizationsQueryParamFields;
+
+ListAccountingOrganizationsQueryParamFields value = ListAccountingOrganizationsQueryParamFields.ID;
+```
+
 
 ## Values
 

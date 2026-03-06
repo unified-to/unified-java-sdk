@@ -1,5 +1,16 @@
 # Ethnicity
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.shared.Ethnicity;
+
+Ethnicity value = Ethnicity.CAUCASIAN;
+
+// Open enum: use .of() to create instances from custom string values
+Ethnicity custom = Ethnicity.of("custom_value");
+```
+
 
 ## Values
 

@@ -1,5 +1,16 @@
 # ContentsType
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.shared.ContentsType;
+
+ContentsType value = ContentsType.MERCHANDISE;
+
+// Open enum: use .of() to create instances from custom string values
+ContentsType custom = ContentsType.of("custom_value");
+```
+
 
 ## Values
 

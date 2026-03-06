@@ -1,5 +1,16 @@
 # AtsGroupType
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.shared.AtsGroupType;
+
+AtsGroupType value = AtsGroupType.TEAM;
+
+// Open enum: use .of() to create instances from custom string values
+AtsGroupType custom = AtsGroupType.of("custom_value");
+```
+
 
 ## Values
 

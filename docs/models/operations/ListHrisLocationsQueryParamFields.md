@@ -1,5 +1,13 @@
 # ListHrisLocationsQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.ListHrisLocationsQueryParamFields;
+
+ListHrisLocationsQueryParamFields value = ListHrisLocationsQueryParamFields.ID;
+```
+
 
 ## Values
 

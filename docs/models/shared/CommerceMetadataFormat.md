@@ -1,5 +1,16 @@
 # CommerceMetadataFormat
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.shared.CommerceMetadataFormat;
+
+CommerceMetadataFormat value = CommerceMetadataFormat.TEXT;
+
+// Open enum: use .of() to create instances from custom string values
+CommerceMetadataFormat custom = CommerceMetadataFormat.of("custom_value");
+```
+
 
 ## Values
 

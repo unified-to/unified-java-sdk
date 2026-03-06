@@ -1,5 +1,13 @@
 # PatchTaskCommentQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.PatchTaskCommentQueryParamFields;
+
+PatchTaskCommentQueryParamFields value = PatchTaskCommentQueryParamFields.ID;
+```
+
 
 ## Values
 

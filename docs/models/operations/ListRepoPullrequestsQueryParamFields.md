@@ -1,5 +1,13 @@
 # ListRepoPullrequestsQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.ListRepoPullrequestsQueryParamFields;
+
+ListRepoPullrequestsQueryParamFields value = ListRepoPullrequestsQueryParamFields.ID;
+```
+
 
 ## Values
 

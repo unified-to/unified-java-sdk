@@ -1,5 +1,16 @@
 # EncondingFormat
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.shared.EncondingFormat;
+
+EncondingFormat value = EncondingFormat.FLOAT;
+
+// Open enum: use .of() to create instances from custom string values
+EncondingFormat custom = EncondingFormat.of("custom_value");
+```
+
 
 ## Values
 

@@ -1,5 +1,16 @@
 # VirtualWebhookCalendarId
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.shared.VirtualWebhookCalendarId;
+
+VirtualWebhookCalendarId value = VirtualWebhookCalendarId.SUPPORTED_REQUIRED;
+
+// Open enum: use .of() to create instances from custom string values
+VirtualWebhookCalendarId custom = VirtualWebhookCalendarId.of("custom_value");
+```
+
 
 ## Values
 

@@ -1,5 +1,13 @@
 # PatchAtsCandidateQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.PatchAtsCandidateQueryParamFields;
+
+PatchAtsCandidateQueryParamFields value = PatchAtsCandidateQueryParamFields.ID;
+```
+
 
 ## Values
 

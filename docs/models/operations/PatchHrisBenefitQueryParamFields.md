@@ -1,5 +1,13 @@
 # PatchHrisBenefitQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.PatchHrisBenefitQueryParamFields;
+
+PatchHrisBenefitQueryParamFields value = PatchHrisBenefitQueryParamFields.ID;
+```
+
 
 ## Values
 

@@ -1,5 +1,13 @@
 # PatchAccountingOrderQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.PatchAccountingOrderQueryParamFields;
+
+PatchAccountingOrderQueryParamFields value = PatchAccountingOrderQueryParamFields.ID;
+```
+
 
 ## Values
 

@@ -1,5 +1,13 @@
 # UpdateAccountingExpenseQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingExpenseQueryParamFields;
+
+UpdateAccountingExpenseQueryParamFields value = UpdateAccountingExpenseQueryParamFields.ID;
+```
+
 
 ## Values
 

@@ -1,5 +1,13 @@
 # ListCrmEventsQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.ListCrmEventsQueryParamFields;
+
+ListCrmEventsQueryParamFields value = ListCrmEventsQueryParamFields.ID;
+```
+
 
 ## Values
 

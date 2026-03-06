@@ -1,5 +1,13 @@
 # PatchKmsSpaceQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.PatchKmsSpaceQueryParamFields;
+
+PatchKmsSpaceQueryParamFields value = PatchKmsSpaceQueryParamFields.ID;
+```
+
 
 ## Values
 

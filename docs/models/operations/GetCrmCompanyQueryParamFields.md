@@ -1,5 +1,13 @@
 # GetCrmCompanyQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.GetCrmCompanyQueryParamFields;
+
+GetCrmCompanyQueryParamFields value = GetCrmCompanyQueryParamFields.ID;
+```
+
 
 ## Values
 

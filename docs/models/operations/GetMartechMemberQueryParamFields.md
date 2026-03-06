@@ -1,5 +1,13 @@
 # GetMartechMemberQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.GetMartechMemberQueryParamFields;
+
+GetMartechMemberQueryParamFields value = GetMartechMemberQueryParamFields.ID;
+```
+
 
 ## Values
 

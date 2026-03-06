@@ -1,5 +1,13 @@
 # GetPaymentLinkQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.GetPaymentLinkQueryParamFields;
+
+GetPaymentLinkQueryParamFields value = GetPaymentLinkQueryParamFields.ID;
+```
+
 
 ## Values
 

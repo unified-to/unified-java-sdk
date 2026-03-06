@@ -1,5 +1,13 @@
 # CreateAtsScorecardQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.CreateAtsScorecardQueryParamFields;
+
+CreateAtsScorecardQueryParamFields value = CreateAtsScorecardQueryParamFields.ID;
+```
+
 
 ## Values
 

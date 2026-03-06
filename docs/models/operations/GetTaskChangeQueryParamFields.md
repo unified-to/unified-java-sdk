@@ -1,5 +1,13 @@
 # GetTaskChangeQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.GetTaskChangeQueryParamFields;
+
+GetTaskChangeQueryParamFields value = GetTaskChangeQueryParamFields.ID;
+```
+
 
 ## Values
 

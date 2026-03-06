@@ -1,5 +1,13 @@
 # UpdateMartechCampaignQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.UpdateMartechCampaignQueryParamFields;
+
+UpdateMartechCampaignQueryParamFields value = UpdateMartechCampaignQueryParamFields.ID;
+```
+
 
 ## Values
 

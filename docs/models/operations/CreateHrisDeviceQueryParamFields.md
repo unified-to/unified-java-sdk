@@ -1,5 +1,13 @@
 # CreateHrisDeviceQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.CreateHrisDeviceQueryParamFields;
+
+CreateHrisDeviceQueryParamFields value = CreateHrisDeviceQueryParamFields.ID;
+```
+
 
 ## Values
 

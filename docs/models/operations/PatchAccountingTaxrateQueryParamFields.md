@@ -1,5 +1,13 @@
 # PatchAccountingTaxrateQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.PatchAccountingTaxrateQueryParamFields;
+
+PatchAccountingTaxrateQueryParamFields value = PatchAccountingTaxrateQueryParamFields.ID;
+```
+
 
 ## Values
 

@@ -1,5 +1,13 @@
 # PatchCommerceReviewQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.PatchCommerceReviewQueryParamFields;
+
+PatchCommerceReviewQueryParamFields value = PatchCommerceReviewQueryParamFields.ID;
+```
+
 
 ## Values
 

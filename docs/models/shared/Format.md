@@ -1,5 +1,16 @@
 # Format
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.shared.Format;
+
+Format value = Format.TEXT;
+
+// Open enum: use .of() to create instances from custom string values
+Format custom = Format.of("custom_value");
+```
+
 
 ## Values
 

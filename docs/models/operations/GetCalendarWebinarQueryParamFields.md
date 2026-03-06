@@ -1,5 +1,13 @@
 # GetCalendarWebinarQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.GetCalendarWebinarQueryParamFields;
+
+GetCalendarWebinarQueryParamFields value = GetCalendarWebinarQueryParamFields.ID;
+```
+
 
 ## Values
 

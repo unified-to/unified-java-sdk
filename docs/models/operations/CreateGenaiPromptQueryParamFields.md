@@ -1,5 +1,13 @@
 # CreateGenaiPromptQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.CreateGenaiPromptQueryParamFields;
+
+CreateGenaiPromptQueryParamFields value = CreateGenaiPromptQueryParamFields.MODEL_ID;
+```
+
 
 ## Values
 

@@ -1,5 +1,13 @@
 # GetGenaiModelQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.GetGenaiModelQueryParamFields;
+
+GetGenaiModelQueryParamFields value = GetGenaiModelQueryParamFields.ID;
+```
+
 
 ## Values
 

@@ -1,5 +1,13 @@
 # CreateUcCommentQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.CreateUcCommentQueryParamFields;
+
+CreateUcCommentQueryParamFields value = CreateUcCommentQueryParamFields.ID;
+```
+
 
 ## Values
 

@@ -1,5 +1,16 @@
 # CoverageLevel
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.shared.CoverageLevel;
+
+CoverageLevel value = CoverageLevel.EMPLOYEE_ONLY;
+
+// Open enum: use .of() to create instances from custom string values
+CoverageLevel custom = CoverageLevel.of("custom_value");
+```
+
 
 ## Values
 

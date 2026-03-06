@@ -1,5 +1,13 @@
 # UpdateAccountingTransactionQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.UpdateAccountingTransactionQueryParamFields;
+
+UpdateAccountingTransactionQueryParamFields value = UpdateAccountingTransactionQueryParamFields.ID;
+```
+
 
 ## Values
 

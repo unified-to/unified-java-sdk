@@ -1,5 +1,16 @@
 # ListMemberId
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.shared.ListMemberId;
+
+ListMemberId value = ListMemberId.SUPPORTED_REQUIRED;
+
+// Open enum: use .of() to create instances from custom string values
+ListMemberId custom = ListMemberId.of("custom_value");
+```
+
 
 ## Values
 

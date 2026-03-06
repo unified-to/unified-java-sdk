@@ -1,5 +1,13 @@
 # CreateMartechMemberQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.CreateMartechMemberQueryParamFields;
+
+CreateMartechMemberQueryParamFields value = CreateMartechMemberQueryParamFields.ID;
+```
+
 
 ## Values
 

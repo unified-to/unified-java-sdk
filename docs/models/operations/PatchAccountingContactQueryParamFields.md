@@ -1,5 +1,13 @@
 # PatchAccountingContactQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.PatchAccountingContactQueryParamFields;
+
+PatchAccountingContactQueryParamFields value = PatchAccountingContactQueryParamFields.ID;
+```
+
 
 ## Values
 

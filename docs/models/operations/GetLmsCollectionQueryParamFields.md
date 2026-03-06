@@ -1,5 +1,13 @@
 # GetLmsCollectionQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.GetLmsCollectionQueryParamFields;
+
+GetLmsCollectionQueryParamFields value = GetLmsCollectionQueryParamFields.ID;
+```
+
 
 ## Values
 

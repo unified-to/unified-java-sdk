@@ -1,5 +1,13 @@
 # GetAccountingPurchaseorderQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.GetAccountingPurchaseorderQueryParamFields;
+
+GetAccountingPurchaseorderQueryParamFields value = GetAccountingPurchaseorderQueryParamFields.ID;
+```
+
 
 ## Values
 

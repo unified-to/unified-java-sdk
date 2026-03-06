@@ -1,5 +1,16 @@
 # AdsCampaignStatus
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.shared.AdsCampaignStatus;
+
+AdsCampaignStatus value = AdsCampaignStatus.UNSPECIFIED;
+
+// Open enum: use .of() to create instances from custom string values
+AdsCampaignStatus custom = AdsCampaignStatus.of("custom_value");
+```
+
 
 ## Values
 

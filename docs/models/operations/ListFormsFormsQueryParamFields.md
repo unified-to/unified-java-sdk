@@ -1,5 +1,13 @@
 # ListFormsFormsQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.ListFormsFormsQueryParamFields;
+
+ListFormsFormsQueryParamFields value = ListFormsFormsQueryParamFields.ID;
+```
+
 
 ## Values
 

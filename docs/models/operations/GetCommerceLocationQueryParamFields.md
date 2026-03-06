@@ -1,5 +1,13 @@
 # GetCommerceLocationQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.GetCommerceLocationQueryParamFields;
+
+GetCommerceLocationQueryParamFields value = GetCommerceLocationQueryParamFields.ID;
+```
+
 
 ## Values
 

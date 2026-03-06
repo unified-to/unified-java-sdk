@@ -1,5 +1,16 @@
 # AtsDocumentType
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.shared.AtsDocumentType;
+
+AtsDocumentType value = AtsDocumentType.RESUME;
+
+// Open enum: use .of() to create instances from custom string values
+AtsDocumentType custom = AtsDocumentType.of("custom_value");
+```
+
 
 ## Values
 

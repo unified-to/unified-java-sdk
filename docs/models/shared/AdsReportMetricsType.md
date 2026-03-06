@@ -1,5 +1,16 @@
 # AdsReportMetricsType
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.shared.AdsReportMetricsType;
+
+AdsReportMetricsType value = AdsReportMetricsType.CLICKS;
+
+// Open enum: use .of() to create instances from custom string values
+AdsReportMetricsType custom = AdsReportMetricsType.of("custom_value");
+```
+
 
 ## Values
 

@@ -1,5 +1,13 @@
 # ListUcCallsQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.ListUcCallsQueryParamFields;
+
+ListUcCallsQueryParamFields value = ListUcCallsQueryParamFields.ID;
+```
+
 
 ## Values
 

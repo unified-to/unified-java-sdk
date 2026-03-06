@@ -1,5 +1,13 @@
 # UpdateMetadataMetadataQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.UpdateMetadataMetadataQueryParamFields;
+
+UpdateMetadataMetadataQueryParamFields value = UpdateMetadataMetadataQueryParamFields.ID;
+```
+
 
 ## Values
 

@@ -1,5 +1,13 @@
 # CreateMetadataMetadataQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.CreateMetadataMetadataQueryParamFields;
+
+CreateMetadataMetadataQueryParamFields value = CreateMetadataMetadataQueryParamFields.ID;
+```
+
 
 ## Values
 

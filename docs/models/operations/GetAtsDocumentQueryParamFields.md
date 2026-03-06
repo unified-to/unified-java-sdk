@@ -1,5 +1,13 @@
 # GetAtsDocumentQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.GetAtsDocumentQueryParamFields;
+
+GetAtsDocumentQueryParamFields value = GetAtsDocumentQueryParamFields.ID;
+```
+
 
 ## Values
 

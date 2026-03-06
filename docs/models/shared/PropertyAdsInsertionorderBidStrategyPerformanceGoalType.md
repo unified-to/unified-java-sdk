@@ -1,5 +1,16 @@
 # PropertyAdsInsertionorderBidStrategyPerformanceGoalType
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.shared.PropertyAdsInsertionorderBidStrategyPerformanceGoalType;
+
+PropertyAdsInsertionorderBidStrategyPerformanceGoalType value = PropertyAdsInsertionorderBidStrategyPerformanceGoalType.UNSPECIFIED;
+
+// Open enum: use .of() to create instances from custom string values
+PropertyAdsInsertionorderBidStrategyPerformanceGoalType custom = PropertyAdsInsertionorderBidStrategyPerformanceGoalType.of("custom_value");
+```
+
 
 ## Values
 

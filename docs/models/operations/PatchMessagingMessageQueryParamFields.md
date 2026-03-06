@@ -1,5 +1,13 @@
 # PatchMessagingMessageQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.PatchMessagingMessageQueryParamFields;
+
+PatchMessagingMessageQueryParamFields value = PatchMessagingMessageQueryParamFields.ID;
+```
+
 
 ## Values
 

@@ -1,5 +1,13 @@
 # GetCommerceCollectionQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.GetCommerceCollectionQueryParamFields;
+
+GetCommerceCollectionQueryParamFields value = GetCommerceCollectionQueryParamFields.ID;
+```
+
 
 ## Values
 

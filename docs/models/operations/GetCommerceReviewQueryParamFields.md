@@ -1,5 +1,13 @@
 # GetCommerceReviewQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.GetCommerceReviewQueryParamFields;
+
+GetCommerceReviewQueryParamFields value = GetCommerceReviewQueryParamFields.ID;
+```
+
 
 ## Values
 

@@ -1,5 +1,13 @@
 # CreateRepoOrganizationQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.CreateRepoOrganizationQueryParamFields;
+
+CreateRepoOrganizationQueryParamFields value = CreateRepoOrganizationQueryParamFields.ID;
+```
+
 
 ## Values
 

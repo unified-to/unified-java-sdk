@@ -1,5 +1,13 @@
 # PatchAccountingInvoiceQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.PatchAccountingInvoiceQueryParamFields;
+
+PatchAccountingInvoiceQueryParamFields value = PatchAccountingInvoiceQueryParamFields.ID;
+```
+
 
 ## Values
 

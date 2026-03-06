@@ -1,5 +1,16 @@
 # PropertyUcCallTelephoneType
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.shared.PropertyUcCallTelephoneType;
+
+PropertyUcCallTelephoneType value = PropertyUcCallTelephoneType.WORK;
+
+// Open enum: use .of() to create instances from custom string values
+PropertyUcCallTelephoneType custom = PropertyUcCallTelephoneType.of("custom_value");
+```
+
 
 ## Values
 

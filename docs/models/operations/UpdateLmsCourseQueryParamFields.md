@@ -1,5 +1,13 @@
 # UpdateLmsCourseQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.UpdateLmsCourseQueryParamFields;
+
+UpdateLmsCourseQueryParamFields value = UpdateLmsCourseQueryParamFields.ID;
+```
+
 
 ## Values
 

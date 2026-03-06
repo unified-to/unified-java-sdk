@@ -1,5 +1,13 @@
 # ListAdsReportsQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.ListAdsReportsQueryParamFields;
+
+ListAdsReportsQueryParamFields value = ListAdsReportsQueryParamFields.ID;
+```
+
 
 ## Values
 

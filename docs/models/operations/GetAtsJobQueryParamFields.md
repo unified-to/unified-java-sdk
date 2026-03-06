@@ -1,5 +1,13 @@
 # GetAtsJobQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.GetAtsJobQueryParamFields;
+
+GetAtsJobQueryParamFields value = GetAtsJobQueryParamFields.ID;
+```
+
 
 ## Values
 

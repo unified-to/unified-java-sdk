@@ -1,5 +1,13 @@
 # CreateCommerceItemQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.CreateCommerceItemQueryParamFields;
+
+CreateCommerceItemQueryParamFields value = CreateCommerceItemQueryParamFields.ID;
+```
+
 
 ## Values
 

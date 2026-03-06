@@ -1,5 +1,13 @@
 # GetKmsCommentQueryParamFields
 
+## Example Usage
+
+```java
+import to.unified.unified_java_sdk.models.operations.GetKmsCommentQueryParamFields;
+
+GetKmsCommentQueryParamFields value = GetKmsCommentQueryParamFields.ID;
+```
+
 
 ## Values
 
