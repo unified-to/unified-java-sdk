@@ -42,7 +42,7 @@ public class Application {
                 .call();
 
         if (res.enrichCompany().isPresent()) {
-            // handle response
+            System.out.println(res.enrichCompany().get());
         }
     }
 }
@@ -99,7 +99,7 @@ public class Application {
                 .call();
 
         if (res.enrichPerson().isPresent()) {
-            // handle response
+            System.out.println(res.enrichPerson().get());
         }
     }
 }

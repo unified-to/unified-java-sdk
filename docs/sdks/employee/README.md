@@ -49,7 +49,7 @@ public class Application {
                 .call();
 
         if (res.hrisEmployee().isPresent()) {
-            // handle response
+            System.out.println(res.hrisEmployee().get());
         }
     }
 }
@@ -107,7 +107,7 @@ public class Application {
                 .call();
 
         if (res.hrisEmployee().isPresent()) {
-            // handle response
+            System.out.println(res.hrisEmployee().get());
         }
     }
 }
@@ -164,7 +164,7 @@ public class Application {
                 .call();
 
         if (res.hrisEmployees().isPresent()) {
-            // handle response
+            System.out.println(res.hrisEmployees().get());
         }
     }
 }
@@ -225,7 +225,7 @@ public class Application {
                 .call();
 
         if (res.hrisEmployee().isPresent()) {
-            // handle response
+            System.out.println(res.hrisEmployee().get());
         }
     }
 }
@@ -342,7 +342,7 @@ public class Application {
                 .call();
 
         if (res.hrisEmployee().isPresent()) {
-            // handle response
+            System.out.println(res.hrisEmployee().get());
         }
     }
 }

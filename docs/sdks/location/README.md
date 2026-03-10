@@ -56,7 +56,7 @@ public class Application {
                 .call();
 
         if (res.commerceLocation().isPresent()) {
-            // handle response
+            System.out.println(res.commerceLocation().get());
         }
     }
 }
@@ -116,7 +116,7 @@ public class Application {
                 .call();
 
         if (res.hrisLocation().isPresent()) {
-            // handle response
+            System.out.println(res.hrisLocation().get());
         }
     }
 }
@@ -174,7 +174,7 @@ public class Application {
                 .call();
 
         if (res.commerceLocation().isPresent()) {
-            // handle response
+            System.out.println(res.commerceLocation().get());
         }
     }
 }
@@ -232,7 +232,7 @@ public class Application {
                 .call();
 
         if (res.hrisLocation().isPresent()) {
-            // handle response
+            System.out.println(res.hrisLocation().get());
         }
     }
 }
@@ -289,7 +289,7 @@ public class Application {
                 .call();
 
         if (res.commerceLocations().isPresent()) {
-            // handle response
+            System.out.println(res.commerceLocations().get());
         }
     }
 }
@@ -346,7 +346,7 @@ public class Application {
                 .call();
 
         if (res.hrisLocations().isPresent()) {
-            // handle response
+            System.out.println(res.hrisLocations().get());
         }
     }
 }
@@ -408,7 +408,7 @@ public class Application {
                 .call();
 
         if (res.commerceLocation().isPresent()) {
-            // handle response
+            System.out.println(res.commerceLocation().get());
         }
     }
 }
@@ -469,7 +469,7 @@ public class Application {
                 .call();
 
         if (res.hrisLocation().isPresent()) {
-            // handle response
+            System.out.println(res.hrisLocation().get());
         }
     }
 }
@@ -643,7 +643,7 @@ public class Application {
                 .call();
 
         if (res.commerceLocation().isPresent()) {
-            // handle response
+            System.out.println(res.commerceLocation().get());
         }
     }
 }
@@ -704,7 +704,7 @@ public class Application {
                 .call();
 
         if (res.hrisLocation().isPresent()) {
-            // handle response
+            System.out.println(res.hrisLocation().get());
         }
     }
 }

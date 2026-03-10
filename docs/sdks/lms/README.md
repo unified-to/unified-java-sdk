@@ -85,7 +85,7 @@ public class Application {
                 .call();
 
         if (res.lmsActivity().isPresent()) {
-            // handle response
+            System.out.println(res.lmsActivity().get());
         }
     }
 }
@@ -147,7 +147,7 @@ public class Application {
                 .call();
 
         if (res.lmsClass().isPresent()) {
-            // handle response
+            System.out.println(res.lmsClass().get());
         }
     }
 }
@@ -207,7 +207,7 @@ public class Application {
                 .call();
 
         if (res.lmsCollection().isPresent()) {
-            // handle response
+            System.out.println(res.lmsCollection().get());
         }
     }
 }
@@ -267,7 +267,7 @@ public class Application {
                 .call();
 
         if (res.lmsContent().isPresent()) {
-            // handle response
+            System.out.println(res.lmsContent().get());
         }
     }
 }
@@ -328,7 +328,7 @@ public class Application {
                 .call();
 
         if (res.lmsCourse().isPresent()) {
-            // handle response
+            System.out.println(res.lmsCourse().get());
         }
     }
 }
@@ -388,7 +388,7 @@ public class Application {
                 .call();
 
         if (res.lmsInstructor().isPresent()) {
-            // handle response
+            System.out.println(res.lmsInstructor().get());
         }
     }
 }
@@ -448,7 +448,7 @@ public class Application {
                 .call();
 
         if (res.lmsStudent().isPresent()) {
-            // handle response
+            System.out.println(res.lmsStudent().get());
         }
     }
 }
@@ -506,7 +506,7 @@ public class Application {
                 .call();
 
         if (res.lmsActivity().isPresent()) {
-            // handle response
+            System.out.println(res.lmsActivity().get());
         }
     }
 }
@@ -564,7 +564,7 @@ public class Application {
                 .call();
 
         if (res.lmsClass().isPresent()) {
-            // handle response
+            System.out.println(res.lmsClass().get());
         }
     }
 }
@@ -622,7 +622,7 @@ public class Application {
                 .call();
 
         if (res.lmsCollection().isPresent()) {
-            // handle response
+            System.out.println(res.lmsCollection().get());
         }
     }
 }
@@ -680,7 +680,7 @@ public class Application {
                 .call();
 
         if (res.lmsContent().isPresent()) {
-            // handle response
+            System.out.println(res.lmsContent().get());
         }
     }
 }
@@ -738,7 +738,7 @@ public class Application {
                 .call();
 
         if (res.lmsCourse().isPresent()) {
-            // handle response
+            System.out.println(res.lmsCourse().get());
         }
     }
 }
@@ -796,7 +796,7 @@ public class Application {
                 .call();
 
         if (res.lmsInstructor().isPresent()) {
-            // handle response
+            System.out.println(res.lmsInstructor().get());
         }
     }
 }
@@ -854,7 +854,7 @@ public class Application {
                 .call();
 
         if (res.lmsStudent().isPresent()) {
-            // handle response
+            System.out.println(res.lmsStudent().get());
         }
     }
 }
@@ -911,7 +911,7 @@ public class Application {
                 .call();
 
         if (res.lmsActivities().isPresent()) {
-            // handle response
+            System.out.println(res.lmsActivities().get());
         }
     }
 }
@@ -968,7 +968,7 @@ public class Application {
                 .call();
 
         if (res.lmsClasses().isPresent()) {
-            // handle response
+            System.out.println(res.lmsClasses().get());
         }
     }
 }
@@ -1025,7 +1025,7 @@ public class Application {
                 .call();
 
         if (res.lmsCollections().isPresent()) {
-            // handle response
+            System.out.println(res.lmsCollections().get());
         }
     }
 }
@@ -1082,7 +1082,7 @@ public class Application {
                 .call();
 
         if (res.lmsContents().isPresent()) {
-            // handle response
+            System.out.println(res.lmsContents().get());
         }
     }
 }
@@ -1139,7 +1139,7 @@ public class Application {
                 .call();
 
         if (res.lmsCourses().isPresent()) {
-            // handle response
+            System.out.println(res.lmsCourses().get());
         }
     }
 }
@@ -1196,7 +1196,7 @@ public class Application {
                 .call();
 
         if (res.lmsInstructors().isPresent()) {
-            // handle response
+            System.out.println(res.lmsInstructors().get());
         }
     }
 }
@@ -1253,7 +1253,7 @@ public class Application {
                 .call();
 
         if (res.lmsStudents().isPresent()) {
-            // handle response
+            System.out.println(res.lmsStudents().get());
         }
     }
 }
@@ -1314,7 +1314,7 @@ public class Application {
                 .call();
 
         if (res.lmsActivity().isPresent()) {
-            // handle response
+            System.out.println(res.lmsActivity().get());
         }
     }
 }
@@ -1377,7 +1377,7 @@ public class Application {
                 .call();
 
         if (res.lmsClass().isPresent()) {
-            // handle response
+            System.out.println(res.lmsClass().get());
         }
     }
 }
@@ -1438,7 +1438,7 @@ public class Application {
                 .call();
 
         if (res.lmsCollection().isPresent()) {
-            // handle response
+            System.out.println(res.lmsCollection().get());
         }
     }
 }
@@ -1499,7 +1499,7 @@ public class Application {
                 .call();
 
         if (res.lmsContent().isPresent()) {
-            // handle response
+            System.out.println(res.lmsContent().get());
         }
     }
 }
@@ -1561,7 +1561,7 @@ public class Application {
                 .call();
 
         if (res.lmsCourse().isPresent()) {
-            // handle response
+            System.out.println(res.lmsCourse().get());
         }
     }
 }
@@ -1622,7 +1622,7 @@ public class Application {
                 .call();
 
         if (res.lmsInstructor().isPresent()) {
-            // handle response
+            System.out.println(res.lmsInstructor().get());
         }
     }
 }
@@ -1683,7 +1683,7 @@ public class Application {
                 .call();
 
         if (res.lmsStudent().isPresent()) {
-            // handle response
+            System.out.println(res.lmsStudent().get());
         }
     }
 }
@@ -2136,7 +2136,7 @@ public class Application {
                 .call();
 
         if (res.lmsActivity().isPresent()) {
-            // handle response
+            System.out.println(res.lmsActivity().get());
         }
     }
 }
@@ -2199,7 +2199,7 @@ public class Application {
                 .call();
 
         if (res.lmsClass().isPresent()) {
-            // handle response
+            System.out.println(res.lmsClass().get());
         }
     }
 }
@@ -2260,7 +2260,7 @@ public class Application {
                 .call();
 
         if (res.lmsCollection().isPresent()) {
-            // handle response
+            System.out.println(res.lmsCollection().get());
         }
     }
 }
@@ -2321,7 +2321,7 @@ public class Application {
                 .call();
 
         if (res.lmsContent().isPresent()) {
-            // handle response
+            System.out.println(res.lmsContent().get());
         }
     }
 }
@@ -2383,7 +2383,7 @@ public class Application {
                 .call();
 
         if (res.lmsCourse().isPresent()) {
-            // handle response
+            System.out.println(res.lmsCourse().get());
         }
     }
 }
@@ -2444,7 +2444,7 @@ public class Application {
                 .call();
 
         if (res.lmsInstructor().isPresent()) {
-            // handle response
+            System.out.println(res.lmsInstructor().get());
         }
     }
 }
@@ -2505,7 +2505,7 @@ public class Application {
                 .call();
 
         if (res.lmsStudent().isPresent()) {
-            // handle response
+            System.out.println(res.lmsStudent().get());
         }
     }
 }

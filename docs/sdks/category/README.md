@@ -55,7 +55,7 @@ public class Application {
                 .call();
 
         if (res.accountingCategory().isPresent()) {
-            // handle response
+            System.out.println(res.accountingCategory().get());
         }
     }
 }
@@ -115,7 +115,7 @@ public class Application {
                 .call();
 
         if (res.ticketingCategory().isPresent()) {
-            // handle response
+            System.out.println(res.ticketingCategory().get());
         }
     }
 }
@@ -173,7 +173,7 @@ public class Application {
                 .call();
 
         if (res.accountingCategory().isPresent()) {
-            // handle response
+            System.out.println(res.accountingCategory().get());
         }
     }
 }
@@ -231,7 +231,7 @@ public class Application {
                 .call();
 
         if (res.ticketingCategory().isPresent()) {
-            // handle response
+            System.out.println(res.ticketingCategory().get());
         }
     }
 }
@@ -288,7 +288,7 @@ public class Application {
                 .call();
 
         if (res.accountingCategories().isPresent()) {
-            // handle response
+            System.out.println(res.accountingCategories().get());
         }
     }
 }
@@ -345,7 +345,7 @@ public class Application {
                 .call();
 
         if (res.ticketingCategories().isPresent()) {
-            // handle response
+            System.out.println(res.ticketingCategories().get());
         }
     }
 }
@@ -406,7 +406,7 @@ public class Application {
                 .call();
 
         if (res.accountingCategory().isPresent()) {
-            // handle response
+            System.out.println(res.accountingCategory().get());
         }
     }
 }
@@ -467,7 +467,7 @@ public class Application {
                 .call();
 
         if (res.ticketingCategory().isPresent()) {
-            // handle response
+            System.out.println(res.ticketingCategory().get());
         }
     }
 }
@@ -640,7 +640,7 @@ public class Application {
                 .call();
 
         if (res.accountingCategory().isPresent()) {
-            // handle response
+            System.out.println(res.accountingCategory().get());
         }
     }
 }
@@ -701,7 +701,7 @@ public class Application {
                 .call();
 
         if (res.ticketingCategory().isPresent()) {
-            // handle response
+            System.out.println(res.ticketingCategory().get());
         }
     }
 }

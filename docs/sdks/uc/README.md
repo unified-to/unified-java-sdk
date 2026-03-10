@@ -64,7 +64,7 @@ public class Application {
                 .call();
 
         if (res.ucComment().isPresent()) {
-            // handle response
+            System.out.println(res.ucComment().get());
         }
     }
 }
@@ -124,7 +124,7 @@ public class Application {
                 .call();
 
         if (res.ucContact().isPresent()) {
-            // handle response
+            System.out.println(res.ucContact().get());
         }
     }
 }
@@ -184,7 +184,7 @@ public class Application {
                 .call();
 
         if (res.ucRecording().isPresent()) {
-            // handle response
+            System.out.println(res.ucRecording().get());
         }
     }
 }
@@ -242,7 +242,7 @@ public class Application {
                 .call();
 
         if (res.ucCall().isPresent()) {
-            // handle response
+            System.out.println(res.ucCall().get());
         }
     }
 }
@@ -300,7 +300,7 @@ public class Application {
                 .call();
 
         if (res.ucComment().isPresent()) {
-            // handle response
+            System.out.println(res.ucComment().get());
         }
     }
 }
@@ -358,7 +358,7 @@ public class Application {
                 .call();
 
         if (res.ucContact().isPresent()) {
-            // handle response
+            System.out.println(res.ucContact().get());
         }
     }
 }
@@ -416,7 +416,7 @@ public class Application {
                 .call();
 
         if (res.ucRecording().isPresent()) {
-            // handle response
+            System.out.println(res.ucRecording().get());
         }
     }
 }
@@ -473,7 +473,7 @@ public class Application {
                 .call();
 
         if (res.ucCalls().isPresent()) {
-            // handle response
+            System.out.println(res.ucCalls().get());
         }
     }
 }
@@ -530,7 +530,7 @@ public class Application {
                 .call();
 
         if (res.ucComments().isPresent()) {
-            // handle response
+            System.out.println(res.ucComments().get());
         }
     }
 }
@@ -587,7 +587,7 @@ public class Application {
                 .call();
 
         if (res.ucContacts().isPresent()) {
-            // handle response
+            System.out.println(res.ucContacts().get());
         }
     }
 }
@@ -644,7 +644,7 @@ public class Application {
                 .call();
 
         if (res.ucRecordings().isPresent()) {
-            // handle response
+            System.out.println(res.ucRecordings().get());
         }
     }
 }
@@ -706,7 +706,7 @@ public class Application {
                 .call();
 
         if (res.ucComment().isPresent()) {
-            // handle response
+            System.out.println(res.ucComment().get());
         }
     }
 }
@@ -767,7 +767,7 @@ public class Application {
                 .call();
 
         if (res.ucContact().isPresent()) {
-            // handle response
+            System.out.println(res.ucContact().get());
         }
     }
 }
@@ -828,7 +828,7 @@ public class Application {
                 .call();
 
         if (res.ucRecording().isPresent()) {
-            // handle response
+            System.out.println(res.ucRecording().get());
         }
     }
 }
@@ -1058,7 +1058,7 @@ public class Application {
                 .call();
 
         if (res.ucComment().isPresent()) {
-            // handle response
+            System.out.println(res.ucComment().get());
         }
     }
 }
@@ -1119,7 +1119,7 @@ public class Application {
                 .call();
 
         if (res.ucContact().isPresent()) {
-            // handle response
+            System.out.println(res.ucContact().get());
         }
     }
 }
@@ -1180,7 +1180,7 @@ public class Application {
                 .call();
 
         if (res.ucRecording().isPresent()) {
-            // handle response
+            System.out.println(res.ucRecording().get());
         }
     }
 }

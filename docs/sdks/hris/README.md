@@ -101,7 +101,7 @@ public class Application {
                 .call();
 
         if (res.hrisBankaccount().isPresent()) {
-            // handle response
+            System.out.println(res.hrisBankaccount().get());
         }
     }
 }
@@ -161,7 +161,7 @@ public class Application {
                 .call();
 
         if (res.hrisBenefit().isPresent()) {
-            // handle response
+            System.out.println(res.hrisBenefit().get());
         }
     }
 }
@@ -221,7 +221,7 @@ public class Application {
                 .call();
 
         if (res.hrisCompany().isPresent()) {
-            // handle response
+            System.out.println(res.hrisCompany().get());
         }
     }
 }
@@ -281,7 +281,7 @@ public class Application {
                 .call();
 
         if (res.hrisDeduction().isPresent()) {
-            // handle response
+            System.out.println(res.hrisDeduction().get());
         }
     }
 }
@@ -342,7 +342,7 @@ public class Application {
                 .call();
 
         if (res.hrisDevice().isPresent()) {
-            // handle response
+            System.out.println(res.hrisDevice().get());
         }
     }
 }
@@ -402,7 +402,7 @@ public class Application {
                 .call();
 
         if (res.hrisEmployee().isPresent()) {
-            // handle response
+            System.out.println(res.hrisEmployee().get());
         }
     }
 }
@@ -462,7 +462,7 @@ public class Application {
                 .call();
 
         if (res.hrisGroup().isPresent()) {
-            // handle response
+            System.out.println(res.hrisGroup().get());
         }
     }
 }
@@ -522,7 +522,7 @@ public class Application {
                 .call();
 
         if (res.hrisLocation().isPresent()) {
-            // handle response
+            System.out.println(res.hrisLocation().get());
         }
     }
 }
@@ -586,7 +586,7 @@ public class Application {
                 .call();
 
         if (res.hrisTimeshift().isPresent()) {
-            // handle response
+            System.out.println(res.hrisTimeshift().get());
         }
     }
 }
@@ -644,7 +644,7 @@ public class Application {
                 .call();
 
         if (res.hrisBankaccount().isPresent()) {
-            // handle response
+            System.out.println(res.hrisBankaccount().get());
         }
     }
 }
@@ -702,7 +702,7 @@ public class Application {
                 .call();
 
         if (res.hrisBenefit().isPresent()) {
-            // handle response
+            System.out.println(res.hrisBenefit().get());
         }
     }
 }
@@ -760,7 +760,7 @@ public class Application {
                 .call();
 
         if (res.hrisCompany().isPresent()) {
-            // handle response
+            System.out.println(res.hrisCompany().get());
         }
     }
 }
@@ -818,7 +818,7 @@ public class Application {
                 .call();
 
         if (res.hrisDeduction().isPresent()) {
-            // handle response
+            System.out.println(res.hrisDeduction().get());
         }
     }
 }
@@ -876,7 +876,7 @@ public class Application {
                 .call();
 
         if (res.hrisDevice().isPresent()) {
-            // handle response
+            System.out.println(res.hrisDevice().get());
         }
     }
 }
@@ -934,7 +934,7 @@ public class Application {
                 .call();
 
         if (res.hrisEmployee().isPresent()) {
-            // handle response
+            System.out.println(res.hrisEmployee().get());
         }
     }
 }
@@ -992,7 +992,7 @@ public class Application {
                 .call();
 
         if (res.hrisGroup().isPresent()) {
-            // handle response
+            System.out.println(res.hrisGroup().get());
         }
     }
 }
@@ -1050,7 +1050,7 @@ public class Application {
                 .call();
 
         if (res.hrisLocation().isPresent()) {
-            // handle response
+            System.out.println(res.hrisLocation().get());
         }
     }
 }
@@ -1108,7 +1108,7 @@ public class Application {
                 .call();
 
         if (res.hrisPayslip().isPresent()) {
-            // handle response
+            System.out.println(res.hrisPayslip().get());
         }
     }
 }
@@ -1166,7 +1166,7 @@ public class Application {
                 .call();
 
         if (res.hrisTimeoff().isPresent()) {
-            // handle response
+            System.out.println(res.hrisTimeoff().get());
         }
     }
 }
@@ -1224,7 +1224,7 @@ public class Application {
                 .call();
 
         if (res.hrisTimeshift().isPresent()) {
-            // handle response
+            System.out.println(res.hrisTimeshift().get());
         }
     }
 }
@@ -1281,7 +1281,7 @@ public class Application {
                 .call();
 
         if (res.hrisBankaccounts().isPresent()) {
-            // handle response
+            System.out.println(res.hrisBankaccounts().get());
         }
     }
 }
@@ -1338,7 +1338,7 @@ public class Application {
                 .call();
 
         if (res.hrisBenefits().isPresent()) {
-            // handle response
+            System.out.println(res.hrisBenefits().get());
         }
     }
 }
@@ -1395,7 +1395,7 @@ public class Application {
                 .call();
 
         if (res.hrisCompanies().isPresent()) {
-            // handle response
+            System.out.println(res.hrisCompanies().get());
         }
     }
 }
@@ -1452,7 +1452,7 @@ public class Application {
                 .call();
 
         if (res.hrisDeductions().isPresent()) {
-            // handle response
+            System.out.println(res.hrisDeductions().get());
         }
     }
 }
@@ -1509,7 +1509,7 @@ public class Application {
                 .call();
 
         if (res.hrisDevices().isPresent()) {
-            // handle response
+            System.out.println(res.hrisDevices().get());
         }
     }
 }
@@ -1566,7 +1566,7 @@ public class Application {
                 .call();
 
         if (res.hrisEmployees().isPresent()) {
-            // handle response
+            System.out.println(res.hrisEmployees().get());
         }
     }
 }
@@ -1623,7 +1623,7 @@ public class Application {
                 .call();
 
         if (res.hrisGroups().isPresent()) {
-            // handle response
+            System.out.println(res.hrisGroups().get());
         }
     }
 }
@@ -1680,7 +1680,7 @@ public class Application {
                 .call();
 
         if (res.hrisLocations().isPresent()) {
-            // handle response
+            System.out.println(res.hrisLocations().get());
         }
     }
 }
@@ -1737,7 +1737,7 @@ public class Application {
                 .call();
 
         if (res.hrisPayslips().isPresent()) {
-            // handle response
+            System.out.println(res.hrisPayslips().get());
         }
     }
 }
@@ -1794,7 +1794,7 @@ public class Application {
                 .call();
 
         if (res.hrisTimeoffs().isPresent()) {
-            // handle response
+            System.out.println(res.hrisTimeoffs().get());
         }
     }
 }
@@ -1851,7 +1851,7 @@ public class Application {
                 .call();
 
         if (res.hrisTimeshifts().isPresent()) {
-            // handle response
+            System.out.println(res.hrisTimeshifts().get());
         }
     }
 }
@@ -1912,7 +1912,7 @@ public class Application {
                 .call();
 
         if (res.hrisBankaccount().isPresent()) {
-            // handle response
+            System.out.println(res.hrisBankaccount().get());
         }
     }
 }
@@ -1973,7 +1973,7 @@ public class Application {
                 .call();
 
         if (res.hrisBenefit().isPresent()) {
-            // handle response
+            System.out.println(res.hrisBenefit().get());
         }
     }
 }
@@ -2034,7 +2034,7 @@ public class Application {
                 .call();
 
         if (res.hrisCompany().isPresent()) {
-            // handle response
+            System.out.println(res.hrisCompany().get());
         }
     }
 }
@@ -2095,7 +2095,7 @@ public class Application {
                 .call();
 
         if (res.hrisDeduction().isPresent()) {
-            // handle response
+            System.out.println(res.hrisDeduction().get());
         }
     }
 }
@@ -2157,7 +2157,7 @@ public class Application {
                 .call();
 
         if (res.hrisDevice().isPresent()) {
-            // handle response
+            System.out.println(res.hrisDevice().get());
         }
     }
 }
@@ -2218,7 +2218,7 @@ public class Application {
                 .call();
 
         if (res.hrisEmployee().isPresent()) {
-            // handle response
+            System.out.println(res.hrisEmployee().get());
         }
     }
 }
@@ -2279,7 +2279,7 @@ public class Application {
                 .call();
 
         if (res.hrisGroup().isPresent()) {
-            // handle response
+            System.out.println(res.hrisGroup().get());
         }
     }
 }
@@ -2340,7 +2340,7 @@ public class Application {
                 .call();
 
         if (res.hrisLocation().isPresent()) {
-            // handle response
+            System.out.println(res.hrisLocation().get());
         }
     }
 }
@@ -2405,7 +2405,7 @@ public class Application {
                 .call();
 
         if (res.hrisTimeshift().isPresent()) {
-            // handle response
+            System.out.println(res.hrisTimeshift().get());
         }
     }
 }
@@ -2970,7 +2970,7 @@ public class Application {
                 .call();
 
         if (res.hrisBankaccount().isPresent()) {
-            // handle response
+            System.out.println(res.hrisBankaccount().get());
         }
     }
 }
@@ -3031,7 +3031,7 @@ public class Application {
                 .call();
 
         if (res.hrisBenefit().isPresent()) {
-            // handle response
+            System.out.println(res.hrisBenefit().get());
         }
     }
 }
@@ -3092,7 +3092,7 @@ public class Application {
                 .call();
 
         if (res.hrisCompany().isPresent()) {
-            // handle response
+            System.out.println(res.hrisCompany().get());
         }
     }
 }
@@ -3153,7 +3153,7 @@ public class Application {
                 .call();
 
         if (res.hrisDeduction().isPresent()) {
-            // handle response
+            System.out.println(res.hrisDeduction().get());
         }
     }
 }
@@ -3215,7 +3215,7 @@ public class Application {
                 .call();
 
         if (res.hrisDevice().isPresent()) {
-            // handle response
+            System.out.println(res.hrisDevice().get());
         }
     }
 }
@@ -3276,7 +3276,7 @@ public class Application {
                 .call();
 
         if (res.hrisEmployee().isPresent()) {
-            // handle response
+            System.out.println(res.hrisEmployee().get());
         }
     }
 }
@@ -3337,7 +3337,7 @@ public class Application {
                 .call();
 
         if (res.hrisGroup().isPresent()) {
-            // handle response
+            System.out.println(res.hrisGroup().get());
         }
     }
 }
@@ -3398,7 +3398,7 @@ public class Application {
                 .call();
 
         if (res.hrisLocation().isPresent()) {
-            // handle response
+            System.out.println(res.hrisLocation().get());
         }
     }
 }
@@ -3463,7 +3463,7 @@ public class Application {
                 .call();
 
         if (res.hrisTimeshift().isPresent()) {
-            // handle response
+            System.out.println(res.hrisTimeshift().get());
         }
     }
 }

@@ -56,7 +56,7 @@ public class Application {
                 .call();
 
         if (res.scimGroup().isPresent()) {
-            // handle response
+            System.out.println(res.scimGroup().get());
         }
     }
 }
@@ -116,7 +116,7 @@ public class Application {
                 .call();
 
         if (res.scimUser().isPresent()) {
-            // handle response
+            System.out.println(res.scimUser().get());
         }
     }
 }
@@ -174,7 +174,7 @@ public class Application {
                 .call();
 
         if (res.scimGroup().isPresent()) {
-            // handle response
+            System.out.println(res.scimGroup().get());
         }
     }
 }
@@ -232,7 +232,7 @@ public class Application {
                 .call();
 
         if (res.scimUser().isPresent()) {
-            // handle response
+            System.out.println(res.scimUser().get());
         }
     }
 }
@@ -289,7 +289,7 @@ public class Application {
                 .call();
 
         if (res.scimGroups().isPresent()) {
-            // handle response
+            System.out.println(res.scimGroups().get());
         }
     }
 }
@@ -346,7 +346,7 @@ public class Application {
                 .call();
 
         if (res.scimUsers().isPresent()) {
-            // handle response
+            System.out.println(res.scimUsers().get());
         }
     }
 }
@@ -408,7 +408,7 @@ public class Application {
                 .call();
 
         if (res.scimGroup().isPresent()) {
-            // handle response
+            System.out.println(res.scimGroup().get());
         }
     }
 }
@@ -469,7 +469,7 @@ public class Application {
                 .call();
 
         if (res.scimUser().isPresent()) {
-            // handle response
+            System.out.println(res.scimUser().get());
         }
     }
 }
@@ -643,7 +643,7 @@ public class Application {
                 .call();
 
         if (res.scimGroup().isPresent()) {
-            // handle response
+            System.out.println(res.scimGroup().get());
         }
     }
 }
@@ -704,7 +704,7 @@ public class Application {
                 .call();
 
         if (res.scimUser().isPresent()) {
-            // handle response
+            System.out.println(res.scimUser().get());
         }
     }
 }

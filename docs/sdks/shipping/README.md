@@ -59,7 +59,7 @@ public class Application {
                 .call();
 
         if (res.shippingLabel().isPresent()) {
-            // handle response
+            System.out.println(res.shippingLabel().get());
         }
     }
 }
@@ -119,7 +119,7 @@ public class Application {
                 .call();
 
         if (res.shippingRate().isPresent()) {
-            // handle response
+            System.out.println(res.shippingRate().get());
         }
     }
 }
@@ -179,7 +179,7 @@ public class Application {
                 .call();
 
         if (res.shippingShipment().isPresent()) {
-            // handle response
+            System.out.println(res.shippingShipment().get());
         }
     }
 }
@@ -237,7 +237,7 @@ public class Application {
                 .call();
 
         if (res.shippingCarrier().isPresent()) {
-            // handle response
+            System.out.println(res.shippingCarrier().get());
         }
     }
 }
@@ -295,7 +295,7 @@ public class Application {
                 .call();
 
         if (res.shippingLabel().isPresent()) {
-            // handle response
+            System.out.println(res.shippingLabel().get());
         }
     }
 }
@@ -353,7 +353,7 @@ public class Application {
                 .call();
 
         if (res.shippingShipment().isPresent()) {
-            // handle response
+            System.out.println(res.shippingShipment().get());
         }
     }
 }
@@ -411,7 +411,7 @@ public class Application {
                 .call();
 
         if (res.shippingTracking().isPresent()) {
-            // handle response
+            System.out.println(res.shippingTracking().get());
         }
     }
 }
@@ -468,7 +468,7 @@ public class Application {
                 .call();
 
         if (res.shippingCarriers().isPresent()) {
-            // handle response
+            System.out.println(res.shippingCarriers().get());
         }
     }
 }
@@ -525,7 +525,7 @@ public class Application {
                 .call();
 
         if (res.shippingLabels().isPresent()) {
-            // handle response
+            System.out.println(res.shippingLabels().get());
         }
     }
 }
@@ -582,7 +582,7 @@ public class Application {
                 .call();
 
         if (res.shippingShipments().isPresent()) {
-            // handle response
+            System.out.println(res.shippingShipments().get());
         }
     }
 }
@@ -643,7 +643,7 @@ public class Application {
                 .call();
 
         if (res.shippingLabel().isPresent()) {
-            // handle response
+            System.out.println(res.shippingLabel().get());
         }
     }
 }
@@ -704,7 +704,7 @@ public class Application {
                 .call();
 
         if (res.shippingShipment().isPresent()) {
-            // handle response
+            System.out.println(res.shippingShipment().get());
         }
     }
 }
@@ -877,7 +877,7 @@ public class Application {
                 .call();
 
         if (res.shippingLabel().isPresent()) {
-            // handle response
+            System.out.println(res.shippingLabel().get());
         }
     }
 }
@@ -938,7 +938,7 @@ public class Application {
                 .call();
 
         if (res.shippingShipment().isPresent()) {
-            // handle response
+            System.out.println(res.shippingShipment().get());
         }
     }
 }

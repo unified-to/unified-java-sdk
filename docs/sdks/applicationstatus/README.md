@@ -41,7 +41,7 @@ public class Application {
                 .call();
 
         if (res.atsStatuses().isPresent()) {
-            // handle response
+            System.out.println(res.atsStatuses().get());
         }
     }
 }

@@ -49,7 +49,7 @@ public class Application {
                 .call();
 
         if (res.hrisDeduction().isPresent()) {
-            // handle response
+            System.out.println(res.hrisDeduction().get());
         }
     }
 }
@@ -107,7 +107,7 @@ public class Application {
                 .call();
 
         if (res.hrisDeduction().isPresent()) {
-            // handle response
+            System.out.println(res.hrisDeduction().get());
         }
     }
 }
@@ -164,7 +164,7 @@ public class Application {
                 .call();
 
         if (res.hrisDeductions().isPresent()) {
-            // handle response
+            System.out.println(res.hrisDeductions().get());
         }
     }
 }
@@ -225,7 +225,7 @@ public class Application {
                 .call();
 
         if (res.hrisDeduction().isPresent()) {
-            // handle response
+            System.out.println(res.hrisDeduction().get());
         }
     }
 }
@@ -342,7 +342,7 @@ public class Application {
                 .call();
 
         if (res.hrisDeduction().isPresent()) {
-            // handle response
+            System.out.println(res.hrisDeduction().get());
         }
     }
 }

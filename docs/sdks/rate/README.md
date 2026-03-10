@@ -44,7 +44,7 @@ public class Application {
                 .call();
 
         if (res.shippingRate().isPresent()) {
-            // handle response
+            System.out.println(res.shippingRate().get());
         }
     }
 }

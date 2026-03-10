@@ -49,7 +49,7 @@ public class Application {
                 .call();
 
         if (res.accountingJournal().isPresent()) {
-            // handle response
+            System.out.println(res.accountingJournal().get());
         }
     }
 }
@@ -107,7 +107,7 @@ public class Application {
                 .call();
 
         if (res.accountingJournal().isPresent()) {
-            // handle response
+            System.out.println(res.accountingJournal().get());
         }
     }
 }
@@ -164,7 +164,7 @@ public class Application {
                 .call();
 
         if (res.accountingJournals().isPresent()) {
-            // handle response
+            System.out.println(res.accountingJournals().get());
         }
     }
 }
@@ -225,7 +225,7 @@ public class Application {
                 .call();
 
         if (res.accountingJournal().isPresent()) {
-            // handle response
+            System.out.println(res.accountingJournal().get());
         }
     }
 }
@@ -342,7 +342,7 @@ public class Application {
                 .call();
 
         if (res.accountingJournal().isPresent()) {
-            // handle response
+            System.out.println(res.accountingJournal().get());
         }
     }
 }

@@ -49,7 +49,7 @@ public class Application {
                 .call();
 
         if (res.accountingCreditmemo().isPresent()) {
-            // handle response
+            System.out.println(res.accountingCreditmemo().get());
         }
     }
 }
@@ -107,7 +107,7 @@ public class Application {
                 .call();
 
         if (res.accountingCreditmemo().isPresent()) {
-            // handle response
+            System.out.println(res.accountingCreditmemo().get());
         }
     }
 }
@@ -164,7 +164,7 @@ public class Application {
                 .call();
 
         if (res.accountingCreditmemoes().isPresent()) {
-            // handle response
+            System.out.println(res.accountingCreditmemoes().get());
         }
     }
 }
@@ -225,7 +225,7 @@ public class Application {
                 .call();
 
         if (res.accountingCreditmemo().isPresent()) {
-            // handle response
+            System.out.println(res.accountingCreditmemo().get());
         }
     }
 }
@@ -342,7 +342,7 @@ public class Application {
                 .call();
 
         if (res.accountingCreditmemo().isPresent()) {
-            // handle response
+            System.out.println(res.accountingCreditmemo().get());
         }
     }
 }

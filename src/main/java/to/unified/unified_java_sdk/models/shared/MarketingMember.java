@@ -67,6 +67,11 @@ public class MarketingMember {
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("status")
+    private MarketingMemberStatus status;
+
     /**
      * An array of tags associated with this member
      */
@@ -89,6 +94,7 @@ public class MarketingMember {
             @JsonProperty("list_ids") @Nullable List<String> listIds,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("status") @Nullable MarketingMemberStatus status,
             @JsonProperty("tags") @Nullable List<String> tags,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.createdAt = createdAt;
@@ -99,6 +105,7 @@ public class MarketingMember {
         this.listIds = listIds;
         this.name = name;
         this.raw = raw;
+        this.status = status;
         this.tags = tags;
         this.updatedAt = updatedAt;
     }
@@ -107,7 +114,7 @@ public class MarketingMember {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     public Optional<OffsetDateTime> createdAt() {
@@ -146,6 +153,10 @@ public class MarketingMember {
 
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
+    }
+
+    public Optional<MarketingMemberStatus> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -218,6 +229,12 @@ public class MarketingMember {
     }
 
 
+    public MarketingMember withStatus(@Nullable MarketingMemberStatus status) {
+        this.status = status;
+        return this;
+    }
+
+
     /**
      * An array of tags associated with this member
      */
@@ -251,6 +268,7 @@ public class MarketingMember {
             Utils.enhancedDeepEquals(this.listIds, other.listIds) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.status, other.status) &&
             Utils.enhancedDeepEquals(this.tags, other.tags) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
     }
@@ -260,8 +278,8 @@ public class MarketingMember {
         return Utils.enhancedHash(
             createdAt, emails, firstName,
             id, lastName, listIds,
-            name, raw, tags,
-            updatedAt);
+            name, raw, status,
+            tags, updatedAt);
     }
     
     @Override
@@ -275,6 +293,7 @@ public class MarketingMember {
                 "listIds", listIds,
                 "name", name,
                 "raw", raw,
+                "status", status,
                 "tags", tags,
                 "updatedAt", updatedAt);
     }
@@ -297,6 +316,8 @@ public class MarketingMember {
         private String name;
 
         private Map<String, Object> raw;
+
+        private MarketingMemberStatus status;
 
         private List<String> tags;
 
@@ -352,6 +373,11 @@ public class MarketingMember {
             return this;
         }
 
+        public Builder status(@Nullable MarketingMemberStatus status) {
+            this.status = status;
+            return this;
+        }
+
         /**
          * An array of tags associated with this member
          */
@@ -369,8 +395,8 @@ public class MarketingMember {
             return new MarketingMember(
                 createdAt, emails, firstName,
                 id, lastName, listIds,
-                name, raw, tags,
-                updatedAt);
+                name, raw, status,
+                tags, updatedAt);
         }
 
     }

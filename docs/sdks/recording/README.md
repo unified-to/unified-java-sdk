@@ -51,7 +51,7 @@ public class Application {
                 .call();
 
         if (res.ucRecording().isPresent()) {
-            // handle response
+            System.out.println(res.ucRecording().get());
         }
     }
 }
@@ -109,7 +109,7 @@ public class Application {
                 .call();
 
         if (res.calendarRecording().isPresent()) {
-            // handle response
+            System.out.println(res.calendarRecording().get());
         }
     }
 }
@@ -167,7 +167,7 @@ public class Application {
                 .call();
 
         if (res.ucRecording().isPresent()) {
-            // handle response
+            System.out.println(res.ucRecording().get());
         }
     }
 }
@@ -224,7 +224,7 @@ public class Application {
                 .call();
 
         if (res.calendarRecordings().isPresent()) {
-            // handle response
+            System.out.println(res.calendarRecordings().get());
         }
     }
 }
@@ -281,7 +281,7 @@ public class Application {
                 .call();
 
         if (res.ucRecordings().isPresent()) {
-            // handle response
+            System.out.println(res.ucRecordings().get());
         }
     }
 }
@@ -342,7 +342,7 @@ public class Application {
                 .call();
 
         if (res.ucRecording().isPresent()) {
-            // handle response
+            System.out.println(res.ucRecording().get());
         }
     }
 }
@@ -459,7 +459,7 @@ public class Application {
                 .call();
 
         if (res.ucRecording().isPresent()) {
-            // handle response
+            System.out.println(res.ucRecording().get());
         }
     }
 }

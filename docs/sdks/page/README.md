@@ -50,7 +50,7 @@ public class Application {
                 .call();
 
         if (res.kmsPage().isPresent()) {
-            // handle response
+            System.out.println(res.kmsPage().get());
         }
     }
 }
@@ -108,7 +108,7 @@ public class Application {
                 .call();
 
         if (res.kmsPage().isPresent()) {
-            // handle response
+            System.out.println(res.kmsPage().get());
         }
     }
 }
@@ -165,7 +165,7 @@ public class Application {
                 .call();
 
         if (res.kmsPages().isPresent()) {
-            // handle response
+            System.out.println(res.kmsPages().get());
         }
     }
 }
@@ -227,7 +227,7 @@ public class Application {
                 .call();
 
         if (res.kmsPage().isPresent()) {
-            // handle response
+            System.out.println(res.kmsPage().get());
         }
     }
 }
@@ -345,7 +345,7 @@ public class Application {
                 .call();
 
         if (res.kmsPage().isPresent()) {
-            // handle response
+            System.out.println(res.kmsPage().get());
         }
     }
 }

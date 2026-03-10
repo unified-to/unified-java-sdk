@@ -52,7 +52,7 @@ public class Application {
                 .call();
 
         if (res.formsForm().isPresent()) {
-            // handle response
+            System.out.println(res.formsForm().get());
         }
     }
 }
@@ -110,7 +110,7 @@ public class Application {
                 .call();
 
         if (res.formsForm().isPresent()) {
-            // handle response
+            System.out.println(res.formsForm().get());
         }
     }
 }
@@ -168,7 +168,7 @@ public class Application {
                 .call();
 
         if (res.formsSubmission().isPresent()) {
-            // handle response
+            System.out.println(res.formsSubmission().get());
         }
     }
 }
@@ -225,7 +225,7 @@ public class Application {
                 .call();
 
         if (res.formsForms().isPresent()) {
-            // handle response
+            System.out.println(res.formsForms().get());
         }
     }
 }
@@ -282,7 +282,7 @@ public class Application {
                 .call();
 
         if (res.formsSubmissions().isPresent()) {
-            // handle response
+            System.out.println(res.formsSubmissions().get());
         }
     }
 }
@@ -344,7 +344,7 @@ public class Application {
                 .call();
 
         if (res.formsForm().isPresent()) {
-            // handle response
+            System.out.println(res.formsForm().get());
         }
     }
 }
@@ -462,7 +462,7 @@ public class Application {
                 .call();
 
         if (res.formsForm().isPresent()) {
-            // handle response
+            System.out.println(res.formsForm().get());
         }
     }
 }

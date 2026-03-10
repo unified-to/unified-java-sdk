@@ -57,7 +57,7 @@ public class Application {
                 .call();
 
         if (res.calendarEvent().isPresent()) {
-            // handle response
+            System.out.println(res.calendarEvent().get());
         }
     }
 }
@@ -117,7 +117,7 @@ public class Application {
                 .call();
 
         if (res.crmEvent().isPresent()) {
-            // handle response
+            System.out.println(res.crmEvent().get());
         }
     }
 }
@@ -175,7 +175,7 @@ public class Application {
                 .call();
 
         if (res.calendarEvent().isPresent()) {
-            // handle response
+            System.out.println(res.calendarEvent().get());
         }
     }
 }
@@ -233,7 +233,7 @@ public class Application {
                 .call();
 
         if (res.crmEvent().isPresent()) {
-            // handle response
+            System.out.println(res.crmEvent().get());
         }
     }
 }
@@ -290,7 +290,7 @@ public class Application {
                 .call();
 
         if (res.calendarEvents().isPresent()) {
-            // handle response
+            System.out.println(res.calendarEvents().get());
         }
     }
 }
@@ -347,7 +347,7 @@ public class Application {
                 .call();
 
         if (res.crmEvents().isPresent()) {
-            // handle response
+            System.out.println(res.crmEvents().get());
         }
     }
 }
@@ -408,7 +408,7 @@ public class Application {
                 .call();
 
         if (res.calendarEvent().isPresent()) {
-            // handle response
+            System.out.println(res.calendarEvent().get());
         }
     }
 }
@@ -469,7 +469,7 @@ public class Application {
                 .call();
 
         if (res.crmEvent().isPresent()) {
-            // handle response
+            System.out.println(res.crmEvent().get());
         }
     }
 }
@@ -530,7 +530,7 @@ public class Application {
                 .call();
 
         if (res.messagingEvent().isPresent()) {
-            // handle response
+            System.out.println(res.messagingEvent().get());
         }
     }
 }
@@ -703,7 +703,7 @@ public class Application {
                 .call();
 
         if (res.calendarEvent().isPresent()) {
-            // handle response
+            System.out.println(res.calendarEvent().get());
         }
     }
 }
@@ -764,7 +764,7 @@ public class Application {
                 .call();
 
         if (res.crmEvent().isPresent()) {
-            // handle response
+            System.out.println(res.crmEvent().get());
         }
     }
 }
@@ -825,7 +825,7 @@ public class Application {
                 .call();
 
         if (res.messagingEvent().isPresent()) {
-            // handle response
+            System.out.println(res.messagingEvent().get());
         }
     }
 }

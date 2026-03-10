@@ -50,7 +50,7 @@ public class Application {
                 .call();
 
         if (res.repoCommit().isPresent()) {
-            // handle response
+            System.out.println(res.repoCommit().get());
         }
     }
 }
@@ -108,7 +108,7 @@ public class Application {
                 .call();
 
         if (res.repoCommit().isPresent()) {
-            // handle response
+            System.out.println(res.repoCommit().get());
         }
     }
 }
@@ -165,7 +165,7 @@ public class Application {
                 .call();
 
         if (res.repoCommits().isPresent()) {
-            // handle response
+            System.out.println(res.repoCommits().get());
         }
     }
 }
@@ -227,7 +227,7 @@ public class Application {
                 .call();
 
         if (res.repoCommit().isPresent()) {
-            // handle response
+            System.out.println(res.repoCommit().get());
         }
     }
 }
@@ -345,7 +345,7 @@ public class Application {
                 .call();
 
         if (res.repoCommit().isPresent()) {
-            // handle response
+            System.out.println(res.repoCommit().get());
         }
     }
 }

@@ -49,7 +49,7 @@ public class Application {
                 .call();
 
         if (res.calendarWebinar().isPresent()) {
-            // handle response
+            System.out.println(res.calendarWebinar().get());
         }
     }
 }
@@ -107,7 +107,7 @@ public class Application {
                 .call();
 
         if (res.calendarWebinar().isPresent()) {
-            // handle response
+            System.out.println(res.calendarWebinar().get());
         }
     }
 }
@@ -164,7 +164,7 @@ public class Application {
                 .call();
 
         if (res.calendarWebinars().isPresent()) {
-            // handle response
+            System.out.println(res.calendarWebinars().get());
         }
     }
 }
@@ -225,7 +225,7 @@ public class Application {
                 .call();
 
         if (res.calendarWebinar().isPresent()) {
-            // handle response
+            System.out.println(res.calendarWebinar().get());
         }
     }
 }
@@ -342,7 +342,7 @@ public class Application {
                 .call();
 
         if (res.calendarWebinar().isPresent()) {
-            // handle response
+            System.out.println(res.calendarWebinar().get());
         }
     }
 }

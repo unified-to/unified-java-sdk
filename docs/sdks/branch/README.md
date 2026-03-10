@@ -51,7 +51,7 @@ public class Application {
                 .call();
 
         if (res.repoBranch().isPresent()) {
-            // handle response
+            System.out.println(res.repoBranch().get());
         }
     }
 }
@@ -109,7 +109,7 @@ public class Application {
                 .call();
 
         if (res.repoBranch().isPresent()) {
-            // handle response
+            System.out.println(res.repoBranch().get());
         }
     }
 }
@@ -166,7 +166,7 @@ public class Application {
                 .call();
 
         if (res.repoBranches().isPresent()) {
-            // handle response
+            System.out.println(res.repoBranches().get());
         }
     }
 }
@@ -229,7 +229,7 @@ public class Application {
                 .call();
 
         if (res.repoBranch().isPresent()) {
-            // handle response
+            System.out.println(res.repoBranch().get());
         }
     }
 }
@@ -348,7 +348,7 @@ public class Application {
                 .call();
 
         if (res.repoBranch().isPresent()) {
-            // handle response
+            System.out.println(res.repoBranch().get());
         }
     }
 }

@@ -49,7 +49,7 @@ public class Application {
                 .call();
 
         if (res.accountingTaxrate().isPresent()) {
-            // handle response
+            System.out.println(res.accountingTaxrate().get());
         }
     }
 }
@@ -107,7 +107,7 @@ public class Application {
                 .call();
 
         if (res.accountingTaxrate().isPresent()) {
-            // handle response
+            System.out.println(res.accountingTaxrate().get());
         }
     }
 }
@@ -164,7 +164,7 @@ public class Application {
                 .call();
 
         if (res.accountingTaxrates().isPresent()) {
-            // handle response
+            System.out.println(res.accountingTaxrates().get());
         }
     }
 }
@@ -225,7 +225,7 @@ public class Application {
                 .call();
 
         if (res.accountingTaxrate().isPresent()) {
-            // handle response
+            System.out.println(res.accountingTaxrate().get());
         }
     }
 }
@@ -342,7 +342,7 @@ public class Application {
                 .call();
 
         if (res.accountingTaxrate().isPresent()) {
-            // handle response
+            System.out.println(res.accountingTaxrate().get());
         }
     }
 }

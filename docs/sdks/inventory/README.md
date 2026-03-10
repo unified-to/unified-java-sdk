@@ -50,7 +50,7 @@ public class Application {
                 .call();
 
         if (res.commerceInventory().isPresent()) {
-            // handle response
+            System.out.println(res.commerceInventory().get());
         }
     }
 }
@@ -108,7 +108,7 @@ public class Application {
                 .call();
 
         if (res.commerceInventory().isPresent()) {
-            // handle response
+            System.out.println(res.commerceInventory().get());
         }
     }
 }
@@ -165,7 +165,7 @@ public class Application {
                 .call();
 
         if (res.commerceInventories().isPresent()) {
-            // handle response
+            System.out.println(res.commerceInventories().get());
         }
     }
 }
@@ -227,7 +227,7 @@ public class Application {
                 .call();
 
         if (res.commerceInventory().isPresent()) {
-            // handle response
+            System.out.println(res.commerceInventory().get());
         }
     }
 }
@@ -345,7 +345,7 @@ public class Application {
                 .call();
 
         if (res.commerceInventory().isPresent()) {
-            // handle response
+            System.out.println(res.commerceInventory().get());
         }
     }
 }

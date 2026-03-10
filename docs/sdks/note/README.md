@@ -49,7 +49,7 @@ public class Application {
                 .call();
 
         if (res.ticketingNote().isPresent()) {
-            // handle response
+            System.out.println(res.ticketingNote().get());
         }
     }
 }
@@ -107,7 +107,7 @@ public class Application {
                 .call();
 
         if (res.ticketingNote().isPresent()) {
-            // handle response
+            System.out.println(res.ticketingNote().get());
         }
     }
 }
@@ -164,7 +164,7 @@ public class Application {
                 .call();
 
         if (res.ticketingNotes().isPresent()) {
-            // handle response
+            System.out.println(res.ticketingNotes().get());
         }
     }
 }
@@ -225,7 +225,7 @@ public class Application {
                 .call();
 
         if (res.ticketingNote().isPresent()) {
-            // handle response
+            System.out.println(res.ticketingNote().get());
         }
     }
 }
@@ -342,7 +342,7 @@ public class Application {
                 .call();
 
         if (res.ticketingNote().isPresent()) {
-            // handle response
+            System.out.println(res.ticketingNote().get());
         }
     }
 }

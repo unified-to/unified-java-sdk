@@ -62,7 +62,7 @@ public class Application {
                 .call();
 
         if (res.marketingCampaign().isPresent()) {
-            // handle response
+            System.out.println(res.marketingCampaign().get());
         }
     }
 }
@@ -122,7 +122,7 @@ public class Application {
                 .call();
 
         if (res.marketingList().isPresent()) {
-            // handle response
+            System.out.println(res.marketingList().get());
         }
     }
 }
@@ -182,7 +182,7 @@ public class Application {
                 .call();
 
         if (res.marketingMember().isPresent()) {
-            // handle response
+            System.out.println(res.marketingMember().get());
         }
     }
 }
@@ -240,7 +240,7 @@ public class Application {
                 .call();
 
         if (res.marketingCampaign().isPresent()) {
-            // handle response
+            System.out.println(res.marketingCampaign().get());
         }
     }
 }
@@ -298,7 +298,7 @@ public class Application {
                 .call();
 
         if (res.marketingList().isPresent()) {
-            // handle response
+            System.out.println(res.marketingList().get());
         }
     }
 }
@@ -356,7 +356,7 @@ public class Application {
                 .call();
 
         if (res.marketingMember().isPresent()) {
-            // handle response
+            System.out.println(res.marketingMember().get());
         }
     }
 }
@@ -413,7 +413,7 @@ public class Application {
                 .call();
 
         if (res.marketingCampaigns().isPresent()) {
-            // handle response
+            System.out.println(res.marketingCampaigns().get());
         }
     }
 }
@@ -470,7 +470,7 @@ public class Application {
                 .call();
 
         if (res.marketingLists().isPresent()) {
-            // handle response
+            System.out.println(res.marketingLists().get());
         }
     }
 }
@@ -527,7 +527,7 @@ public class Application {
                 .call();
 
         if (res.marketingMembers().isPresent()) {
-            // handle response
+            System.out.println(res.marketingMembers().get());
         }
     }
 }
@@ -584,7 +584,7 @@ public class Application {
                 .call();
 
         if (res.marketingReports().isPresent()) {
-            // handle response
+            System.out.println(res.marketingReports().get());
         }
     }
 }
@@ -645,7 +645,7 @@ public class Application {
                 .call();
 
         if (res.marketingCampaign().isPresent()) {
-            // handle response
+            System.out.println(res.marketingCampaign().get());
         }
     }
 }
@@ -706,7 +706,7 @@ public class Application {
                 .call();
 
         if (res.marketingList().isPresent()) {
-            // handle response
+            System.out.println(res.marketingList().get());
         }
     }
 }
@@ -767,7 +767,7 @@ public class Application {
                 .call();
 
         if (res.marketingMember().isPresent()) {
-            // handle response
+            System.out.println(res.marketingMember().get());
         }
     }
 }
@@ -996,7 +996,7 @@ public class Application {
                 .call();
 
         if (res.marketingCampaign().isPresent()) {
-            // handle response
+            System.out.println(res.marketingCampaign().get());
         }
     }
 }
@@ -1057,7 +1057,7 @@ public class Application {
                 .call();
 
         if (res.marketingList().isPresent()) {
-            // handle response
+            System.out.println(res.marketingList().get());
         }
     }
 }
@@ -1118,7 +1118,7 @@ public class Application {
                 .call();
 
         if (res.marketingMember().isPresent()) {
-            // handle response
+            System.out.println(res.marketingMember().get());
         }
     }
 }

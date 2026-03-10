@@ -49,7 +49,7 @@ public class Application {
                 .call();
 
         if (res.accountingAccount().isPresent()) {
-            // handle response
+            System.out.println(res.accountingAccount().get());
         }
     }
 }
@@ -107,7 +107,7 @@ public class Application {
                 .call();
 
         if (res.accountingAccount().isPresent()) {
-            // handle response
+            System.out.println(res.accountingAccount().get());
         }
     }
 }
@@ -164,7 +164,7 @@ public class Application {
                 .call();
 
         if (res.accountingAccounts().isPresent()) {
-            // handle response
+            System.out.println(res.accountingAccounts().get());
         }
     }
 }
@@ -225,7 +225,7 @@ public class Application {
                 .call();
 
         if (res.accountingAccount().isPresent()) {
-            // handle response
+            System.out.println(res.accountingAccount().get());
         }
     }
 }
@@ -342,7 +342,7 @@ public class Application {
                 .call();
 
         if (res.accountingAccount().isPresent()) {
-            // handle response
+            System.out.println(res.accountingAccount().get());
         }
     }
 }

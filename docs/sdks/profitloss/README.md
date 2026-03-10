@@ -43,7 +43,7 @@ public class Application {
                 .call();
 
         if (res.accountingProfitloss().isPresent()) {
-            // handle response
+            System.out.println(res.accountingProfitloss().get());
         }
     }
 }
@@ -100,7 +100,7 @@ public class Application {
                 .call();
 
         if (res.accountingProfitlosses().isPresent()) {
-            // handle response
+            System.out.println(res.accountingProfitlosses().get());
         }
     }
 }

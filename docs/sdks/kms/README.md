@@ -62,7 +62,7 @@ public class Application {
                 .call();
 
         if (res.kmsComment().isPresent()) {
-            // handle response
+            System.out.println(res.kmsComment().get());
         }
     }
 }
@@ -123,7 +123,7 @@ public class Application {
                 .call();
 
         if (res.kmsPage().isPresent()) {
-            // handle response
+            System.out.println(res.kmsPage().get());
         }
     }
 }
@@ -184,7 +184,7 @@ public class Application {
                 .call();
 
         if (res.kmsSpace().isPresent()) {
-            // handle response
+            System.out.println(res.kmsSpace().get());
         }
     }
 }
@@ -242,7 +242,7 @@ public class Application {
                 .call();
 
         if (res.kmsComment().isPresent()) {
-            // handle response
+            System.out.println(res.kmsComment().get());
         }
     }
 }
@@ -300,7 +300,7 @@ public class Application {
                 .call();
 
         if (res.kmsPage().isPresent()) {
-            // handle response
+            System.out.println(res.kmsPage().get());
         }
     }
 }
@@ -358,7 +358,7 @@ public class Application {
                 .call();
 
         if (res.kmsSpace().isPresent()) {
-            // handle response
+            System.out.println(res.kmsSpace().get());
         }
     }
 }
@@ -415,7 +415,7 @@ public class Application {
                 .call();
 
         if (res.kmsComments().isPresent()) {
-            // handle response
+            System.out.println(res.kmsComments().get());
         }
     }
 }
@@ -472,7 +472,7 @@ public class Application {
                 .call();
 
         if (res.kmsPages().isPresent()) {
-            // handle response
+            System.out.println(res.kmsPages().get());
         }
     }
 }
@@ -529,7 +529,7 @@ public class Application {
                 .call();
 
         if (res.kmsSpaces().isPresent()) {
-            // handle response
+            System.out.println(res.kmsSpaces().get());
         }
     }
 }
@@ -591,7 +591,7 @@ public class Application {
                 .call();
 
         if (res.kmsComment().isPresent()) {
-            // handle response
+            System.out.println(res.kmsComment().get());
         }
     }
 }
@@ -653,7 +653,7 @@ public class Application {
                 .call();
 
         if (res.kmsPage().isPresent()) {
-            // handle response
+            System.out.println(res.kmsPage().get());
         }
     }
 }
@@ -715,7 +715,7 @@ public class Application {
                 .call();
 
         if (res.kmsSpace().isPresent()) {
-            // handle response
+            System.out.println(res.kmsSpace().get());
         }
     }
 }
@@ -945,7 +945,7 @@ public class Application {
                 .call();
 
         if (res.kmsComment().isPresent()) {
-            // handle response
+            System.out.println(res.kmsComment().get());
         }
     }
 }
@@ -1007,7 +1007,7 @@ public class Application {
                 .call();
 
         if (res.kmsPage().isPresent()) {
-            // handle response
+            System.out.println(res.kmsPage().get());
         }
     }
 }
@@ -1069,7 +1069,7 @@ public class Application {
                 .call();
 
         if (res.kmsSpace().isPresent()) {
-            // handle response
+            System.out.println(res.kmsSpace().get());
         }
     }
 }

@@ -61,7 +61,7 @@ public class Application {
                 .call();
 
         if (res.accountingContact().isPresent()) {
-            // handle response
+            System.out.println(res.accountingContact().get());
         }
     }
 }
@@ -121,7 +121,7 @@ public class Application {
                 .call();
 
         if (res.crmContact().isPresent()) {
-            // handle response
+            System.out.println(res.crmContact().get());
         }
     }
 }
@@ -181,7 +181,7 @@ public class Application {
                 .call();
 
         if (res.ucContact().isPresent()) {
-            // handle response
+            System.out.println(res.ucContact().get());
         }
     }
 }
@@ -239,7 +239,7 @@ public class Application {
                 .call();
 
         if (res.accountingContact().isPresent()) {
-            // handle response
+            System.out.println(res.accountingContact().get());
         }
     }
 }
@@ -297,7 +297,7 @@ public class Application {
                 .call();
 
         if (res.crmContact().isPresent()) {
-            // handle response
+            System.out.println(res.crmContact().get());
         }
     }
 }
@@ -355,7 +355,7 @@ public class Application {
                 .call();
 
         if (res.ucContact().isPresent()) {
-            // handle response
+            System.out.println(res.ucContact().get());
         }
     }
 }
@@ -412,7 +412,7 @@ public class Application {
                 .call();
 
         if (res.accountingContacts().isPresent()) {
-            // handle response
+            System.out.println(res.accountingContacts().get());
         }
     }
 }
@@ -469,7 +469,7 @@ public class Application {
                 .call();
 
         if (res.crmContacts().isPresent()) {
-            // handle response
+            System.out.println(res.crmContacts().get());
         }
     }
 }
@@ -526,7 +526,7 @@ public class Application {
                 .call();
 
         if (res.ucContacts().isPresent()) {
-            // handle response
+            System.out.println(res.ucContacts().get());
         }
     }
 }
@@ -587,7 +587,7 @@ public class Application {
                 .call();
 
         if (res.accountingContact().isPresent()) {
-            // handle response
+            System.out.println(res.accountingContact().get());
         }
     }
 }
@@ -648,7 +648,7 @@ public class Application {
                 .call();
 
         if (res.crmContact().isPresent()) {
-            // handle response
+            System.out.println(res.crmContact().get());
         }
     }
 }
@@ -709,7 +709,7 @@ public class Application {
                 .call();
 
         if (res.ucContact().isPresent()) {
-            // handle response
+            System.out.println(res.ucContact().get());
         }
     }
 }
@@ -938,7 +938,7 @@ public class Application {
                 .call();
 
         if (res.accountingContact().isPresent()) {
-            // handle response
+            System.out.println(res.accountingContact().get());
         }
     }
 }
@@ -999,7 +999,7 @@ public class Application {
                 .call();
 
         if (res.crmContact().isPresent()) {
-            // handle response
+            System.out.println(res.crmContact().get());
         }
     }
 }
@@ -1060,7 +1060,7 @@ public class Application {
                 .call();
 
         if (res.ucContact().isPresent()) {
-            // handle response
+            System.out.println(res.ucContact().get());
         }
     }
 }

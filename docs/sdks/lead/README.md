@@ -49,7 +49,7 @@ public class Application {
                 .call();
 
         if (res.crmLead().isPresent()) {
-            // handle response
+            System.out.println(res.crmLead().get());
         }
     }
 }
@@ -107,7 +107,7 @@ public class Application {
                 .call();
 
         if (res.crmLead().isPresent()) {
-            // handle response
+            System.out.println(res.crmLead().get());
         }
     }
 }
@@ -164,7 +164,7 @@ public class Application {
                 .call();
 
         if (res.crmLeads().isPresent()) {
-            // handle response
+            System.out.println(res.crmLeads().get());
         }
     }
 }
@@ -225,7 +225,7 @@ public class Application {
                 .call();
 
         if (res.crmLead().isPresent()) {
-            // handle response
+            System.out.println(res.crmLead().get());
         }
     }
 }
@@ -342,7 +342,7 @@ public class Application {
                 .call();
 
         if (res.crmLead().isPresent()) {
-            // handle response
+            System.out.println(res.crmLead().get());
         }
     }
 }

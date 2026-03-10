@@ -49,7 +49,7 @@ public class Application {
                 .call();
 
         if (res.commerceItemvariant().isPresent()) {
-            // handle response
+            System.out.println(res.commerceItemvariant().get());
         }
     }
 }
@@ -107,7 +107,7 @@ public class Application {
                 .call();
 
         if (res.commerceItemvariant().isPresent()) {
-            // handle response
+            System.out.println(res.commerceItemvariant().get());
         }
     }
 }
@@ -164,7 +164,7 @@ public class Application {
                 .call();
 
         if (res.commerceItemvariants().isPresent()) {
-            // handle response
+            System.out.println(res.commerceItemvariants().get());
         }
     }
 }
@@ -225,7 +225,7 @@ public class Application {
                 .call();
 
         if (res.commerceItemvariant().isPresent()) {
-            // handle response
+            System.out.println(res.commerceItemvariant().get());
         }
     }
 }
@@ -342,7 +342,7 @@ public class Application {
                 .call();
 
         if (res.commerceItemvariant().isPresent()) {
-            // handle response
+            System.out.println(res.commerceItemvariant().get());
         }
     }
 }

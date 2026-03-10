@@ -43,7 +43,7 @@ public class Application {
                 .call();
 
         if (res.shippingCarrier().isPresent()) {
-            // handle response
+            System.out.println(res.shippingCarrier().get());
         }
     }
 }
@@ -100,7 +100,7 @@ public class Application {
                 .call();
 
         if (res.shippingCarriers().isPresent()) {
-            // handle response
+            System.out.println(res.shippingCarriers().get());
         }
     }
 }

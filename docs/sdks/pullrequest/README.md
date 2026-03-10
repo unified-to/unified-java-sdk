@@ -49,7 +49,7 @@ public class Application {
                 .call();
 
         if (res.repoPullrequest().isPresent()) {
-            // handle response
+            System.out.println(res.repoPullrequest().get());
         }
     }
 }
@@ -107,7 +107,7 @@ public class Application {
                 .call();
 
         if (res.repoPullrequest().isPresent()) {
-            // handle response
+            System.out.println(res.repoPullrequest().get());
         }
     }
 }
@@ -164,7 +164,7 @@ public class Application {
                 .call();
 
         if (res.repoPullrequests().isPresent()) {
-            // handle response
+            System.out.println(res.repoPullrequests().get());
         }
     }
 }
@@ -225,7 +225,7 @@ public class Application {
                 .call();
 
         if (res.repoPullrequest().isPresent()) {
-            // handle response
+            System.out.println(res.repoPullrequest().get());
         }
     }
 }
@@ -342,7 +342,7 @@ public class Application {
                 .call();
 
         if (res.repoPullrequest().isPresent()) {
-            // handle response
+            System.out.println(res.repoPullrequest().get());
         }
     }
 }

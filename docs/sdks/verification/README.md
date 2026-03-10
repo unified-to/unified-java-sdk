@@ -51,7 +51,7 @@ public class Application {
                 .call();
 
         if (res.verificationRequest().isPresent()) {
-            // handle response
+            System.out.println(res.verificationRequest().get());
         }
     }
 }
@@ -109,7 +109,7 @@ public class Application {
                 .call();
 
         if (res.verificationPackage().isPresent()) {
-            // handle response
+            System.out.println(res.verificationPackage().get());
         }
     }
 }
@@ -167,7 +167,7 @@ public class Application {
                 .call();
 
         if (res.verificationRequest().isPresent()) {
-            // handle response
+            System.out.println(res.verificationRequest().get());
         }
     }
 }
@@ -224,7 +224,7 @@ public class Application {
                 .call();
 
         if (res.verificationPackages().isPresent()) {
-            // handle response
+            System.out.println(res.verificationPackages().get());
         }
     }
 }
@@ -281,7 +281,7 @@ public class Application {
                 .call();
 
         if (res.verificationRequests().isPresent()) {
-            // handle response
+            System.out.println(res.verificationRequests().get());
         }
     }
 }
@@ -342,7 +342,7 @@ public class Application {
                 .call();
 
         if (res.verificationRequest().isPresent()) {
-            // handle response
+            System.out.println(res.verificationRequest().get());
         }
     }
 }
@@ -459,7 +459,7 @@ public class Application {
                 .call();
 
         if (res.verificationRequest().isPresent()) {
-            // handle response
+            System.out.println(res.verificationRequest().get());
         }
     }
 }

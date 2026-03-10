@@ -49,7 +49,7 @@ public class Application {
                 .call();
 
         if (res.shippingLabel().isPresent()) {
-            // handle response
+            System.out.println(res.shippingLabel().get());
         }
     }
 }
@@ -107,7 +107,7 @@ public class Application {
                 .call();
 
         if (res.shippingLabel().isPresent()) {
-            // handle response
+            System.out.println(res.shippingLabel().get());
         }
     }
 }
@@ -164,7 +164,7 @@ public class Application {
                 .call();
 
         if (res.shippingLabels().isPresent()) {
-            // handle response
+            System.out.println(res.shippingLabels().get());
         }
     }
 }
@@ -225,7 +225,7 @@ public class Application {
                 .call();
 
         if (res.shippingLabel().isPresent()) {
-            // handle response
+            System.out.println(res.shippingLabel().get());
         }
     }
 }
@@ -342,7 +342,7 @@ public class Application {
                 .call();
 
         if (res.shippingLabel().isPresent()) {
-            // handle response
+            System.out.println(res.shippingLabel().get());
         }
     }
 }

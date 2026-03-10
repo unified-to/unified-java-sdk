@@ -51,7 +51,7 @@ public class Application {
                 .call();
 
         if (res.accountingOrder().isPresent()) {
-            // handle response
+            System.out.println(res.accountingOrder().get());
         }
     }
 }
@@ -109,7 +109,7 @@ public class Application {
                 .call();
 
         if (res.accountingOrder().isPresent()) {
-            // handle response
+            System.out.println(res.accountingOrder().get());
         }
     }
 }
@@ -166,7 +166,7 @@ public class Application {
                 .call();
 
         if (res.accountingOrders().isPresent()) {
-            // handle response
+            System.out.println(res.accountingOrders().get());
         }
     }
 }
@@ -227,7 +227,7 @@ public class Application {
                 .call();
 
         if (res.accountingOrder().isPresent()) {
-            // handle response
+            System.out.println(res.accountingOrder().get());
         }
     }
 }
@@ -290,7 +290,7 @@ public class Application {
                 .call();
 
         if (res.assessmentOrder().isPresent()) {
-            // handle response
+            System.out.println(res.assessmentOrder().get());
         }
     }
 }
@@ -407,7 +407,7 @@ public class Application {
                 .call();
 
         if (res.accountingOrder().isPresent()) {
-            // handle response
+            System.out.println(res.accountingOrder().get());
         }
     }
 }
@@ -470,7 +470,7 @@ public class Application {
                 .call();
 
         if (res.assessmentOrder().isPresent()) {
-            // handle response
+            System.out.println(res.assessmentOrder().get());
         }
     }
 }

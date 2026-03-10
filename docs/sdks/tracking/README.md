@@ -42,7 +42,7 @@ public class Application {
                 .call();
 
         if (res.shippingTracking().isPresent()) {
-            // handle response
+            System.out.println(res.shippingTracking().get());
         }
     }
 }

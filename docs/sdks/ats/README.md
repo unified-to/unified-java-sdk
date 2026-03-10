@@ -92,7 +92,7 @@ public class Application {
                 .call();
 
         if (res.atsActivity().isPresent()) {
-            // handle response
+            System.out.println(res.atsActivity().get());
         }
     }
 }
@@ -152,7 +152,7 @@ public class Application {
                 .call();
 
         if (res.atsApplication().isPresent()) {
-            // handle response
+            System.out.println(res.atsApplication().get());
         }
     }
 }
@@ -212,7 +212,7 @@ public class Application {
                 .call();
 
         if (res.atsCandidate().isPresent()) {
-            // handle response
+            System.out.println(res.atsCandidate().get());
         }
     }
 }
@@ -273,7 +273,7 @@ public class Application {
                 .call();
 
         if (res.atsCompany().isPresent()) {
-            // handle response
+            System.out.println(res.atsCompany().get());
         }
     }
 }
@@ -333,7 +333,7 @@ public class Application {
                 .call();
 
         if (res.atsDocument().isPresent()) {
-            // handle response
+            System.out.println(res.atsDocument().get());
         }
     }
 }
@@ -393,7 +393,7 @@ public class Application {
                 .call();
 
         if (res.atsInterview().isPresent()) {
-            // handle response
+            System.out.println(res.atsInterview().get());
         }
     }
 }
@@ -453,7 +453,7 @@ public class Application {
                 .call();
 
         if (res.atsJob().isPresent()) {
-            // handle response
+            System.out.println(res.atsJob().get());
         }
     }
 }
@@ -513,7 +513,7 @@ public class Application {
                 .call();
 
         if (res.atsScorecard().isPresent()) {
-            // handle response
+            System.out.println(res.atsScorecard().get());
         }
     }
 }
@@ -571,7 +571,7 @@ public class Application {
                 .call();
 
         if (res.atsActivity().isPresent()) {
-            // handle response
+            System.out.println(res.atsActivity().get());
         }
     }
 }
@@ -629,7 +629,7 @@ public class Application {
                 .call();
 
         if (res.atsApplication().isPresent()) {
-            // handle response
+            System.out.println(res.atsApplication().get());
         }
     }
 }
@@ -687,7 +687,7 @@ public class Application {
                 .call();
 
         if (res.atsCandidate().isPresent()) {
-            // handle response
+            System.out.println(res.atsCandidate().get());
         }
     }
 }
@@ -745,7 +745,7 @@ public class Application {
                 .call();
 
         if (res.atsCompany().isPresent()) {
-            // handle response
+            System.out.println(res.atsCompany().get());
         }
     }
 }
@@ -803,7 +803,7 @@ public class Application {
                 .call();
 
         if (res.atsDocument().isPresent()) {
-            // handle response
+            System.out.println(res.atsDocument().get());
         }
     }
 }
@@ -861,7 +861,7 @@ public class Application {
                 .call();
 
         if (res.atsInterview().isPresent()) {
-            // handle response
+            System.out.println(res.atsInterview().get());
         }
     }
 }
@@ -919,7 +919,7 @@ public class Application {
                 .call();
 
         if (res.atsJob().isPresent()) {
-            // handle response
+            System.out.println(res.atsJob().get());
         }
     }
 }
@@ -977,7 +977,7 @@ public class Application {
                 .call();
 
         if (res.atsScorecard().isPresent()) {
-            // handle response
+            System.out.println(res.atsScorecard().get());
         }
     }
 }
@@ -1034,7 +1034,7 @@ public class Application {
                 .call();
 
         if (res.atsActivities().isPresent()) {
-            // handle response
+            System.out.println(res.atsActivities().get());
         }
     }
 }
@@ -1091,7 +1091,7 @@ public class Application {
                 .call();
 
         if (res.atsApplications().isPresent()) {
-            // handle response
+            System.out.println(res.atsApplications().get());
         }
     }
 }
@@ -1148,7 +1148,7 @@ public class Application {
                 .call();
 
         if (res.atsStatuses().isPresent()) {
-            // handle response
+            System.out.println(res.atsStatuses().get());
         }
     }
 }
@@ -1205,7 +1205,7 @@ public class Application {
                 .call();
 
         if (res.atsCandidates().isPresent()) {
-            // handle response
+            System.out.println(res.atsCandidates().get());
         }
     }
 }
@@ -1262,7 +1262,7 @@ public class Application {
                 .call();
 
         if (res.atsCompanies().isPresent()) {
-            // handle response
+            System.out.println(res.atsCompanies().get());
         }
     }
 }
@@ -1319,7 +1319,7 @@ public class Application {
                 .call();
 
         if (res.atsDocuments().isPresent()) {
-            // handle response
+            System.out.println(res.atsDocuments().get());
         }
     }
 }
@@ -1376,7 +1376,7 @@ public class Application {
                 .call();
 
         if (res.atsInterviews().isPresent()) {
-            // handle response
+            System.out.println(res.atsInterviews().get());
         }
     }
 }
@@ -1433,7 +1433,7 @@ public class Application {
                 .call();
 
         if (res.atsJobs().isPresent()) {
-            // handle response
+            System.out.println(res.atsJobs().get());
         }
     }
 }
@@ -1490,7 +1490,7 @@ public class Application {
                 .call();
 
         if (res.atsScorecards().isPresent()) {
-            // handle response
+            System.out.println(res.atsScorecards().get());
         }
     }
 }
@@ -1551,7 +1551,7 @@ public class Application {
                 .call();
 
         if (res.atsActivity().isPresent()) {
-            // handle response
+            System.out.println(res.atsActivity().get());
         }
     }
 }
@@ -1612,7 +1612,7 @@ public class Application {
                 .call();
 
         if (res.atsApplication().isPresent()) {
-            // handle response
+            System.out.println(res.atsApplication().get());
         }
     }
 }
@@ -1673,7 +1673,7 @@ public class Application {
                 .call();
 
         if (res.atsCandidate().isPresent()) {
-            // handle response
+            System.out.println(res.atsCandidate().get());
         }
     }
 }
@@ -1735,7 +1735,7 @@ public class Application {
                 .call();
 
         if (res.atsCompany().isPresent()) {
-            // handle response
+            System.out.println(res.atsCompany().get());
         }
     }
 }
@@ -1796,7 +1796,7 @@ public class Application {
                 .call();
 
         if (res.atsDocument().isPresent()) {
-            // handle response
+            System.out.println(res.atsDocument().get());
         }
     }
 }
@@ -1857,7 +1857,7 @@ public class Application {
                 .call();
 
         if (res.atsInterview().isPresent()) {
-            // handle response
+            System.out.println(res.atsInterview().get());
         }
     }
 }
@@ -1918,7 +1918,7 @@ public class Application {
                 .call();
 
         if (res.atsJob().isPresent()) {
-            // handle response
+            System.out.println(res.atsJob().get());
         }
     }
 }
@@ -1979,7 +1979,7 @@ public class Application {
                 .call();
 
         if (res.atsScorecard().isPresent()) {
-            // handle response
+            System.out.println(res.atsScorecard().get());
         }
     }
 }
@@ -2488,7 +2488,7 @@ public class Application {
                 .call();
 
         if (res.atsActivity().isPresent()) {
-            // handle response
+            System.out.println(res.atsActivity().get());
         }
     }
 }
@@ -2549,7 +2549,7 @@ public class Application {
                 .call();
 
         if (res.atsApplication().isPresent()) {
-            // handle response
+            System.out.println(res.atsApplication().get());
         }
     }
 }
@@ -2610,7 +2610,7 @@ public class Application {
                 .call();
 
         if (res.atsCandidate().isPresent()) {
-            // handle response
+            System.out.println(res.atsCandidate().get());
         }
     }
 }
@@ -2672,7 +2672,7 @@ public class Application {
                 .call();
 
         if (res.atsCompany().isPresent()) {
-            // handle response
+            System.out.println(res.atsCompany().get());
         }
     }
 }
@@ -2733,7 +2733,7 @@ public class Application {
                 .call();
 
         if (res.atsDocument().isPresent()) {
-            // handle response
+            System.out.println(res.atsDocument().get());
         }
     }
 }
@@ -2794,7 +2794,7 @@ public class Application {
                 .call();
 
         if (res.atsInterview().isPresent()) {
-            // handle response
+            System.out.println(res.atsInterview().get());
         }
     }
 }
@@ -2855,7 +2855,7 @@ public class Application {
                 .call();
 
         if (res.atsJob().isPresent()) {
-            // handle response
+            System.out.println(res.atsJob().get());
         }
     }
 }
@@ -2916,7 +2916,7 @@ public class Application {
                 .call();
 
         if (res.atsScorecard().isPresent()) {
-            // handle response
+            System.out.println(res.atsScorecard().get());
         }
     }
 }

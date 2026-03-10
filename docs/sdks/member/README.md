@@ -49,7 +49,7 @@ public class Application {
                 .call();
 
         if (res.marketingMember().isPresent()) {
-            // handle response
+            System.out.println(res.marketingMember().get());
         }
     }
 }
@@ -107,7 +107,7 @@ public class Application {
                 .call();
 
         if (res.marketingMember().isPresent()) {
-            // handle response
+            System.out.println(res.marketingMember().get());
         }
     }
 }
@@ -164,7 +164,7 @@ public class Application {
                 .call();
 
         if (res.marketingMembers().isPresent()) {
-            // handle response
+            System.out.println(res.marketingMembers().get());
         }
     }
 }
@@ -225,7 +225,7 @@ public class Application {
                 .call();
 
         if (res.marketingMember().isPresent()) {
-            // handle response
+            System.out.println(res.marketingMember().get());
         }
     }
 }
@@ -342,7 +342,7 @@ public class Application {
                 .call();
 
         if (res.marketingMember().isPresent()) {
-            // handle response
+            System.out.println(res.marketingMember().get());
         }
     }
 }

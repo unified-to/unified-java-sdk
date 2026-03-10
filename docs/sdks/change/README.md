@@ -43,7 +43,7 @@ public class Application {
                 .call();
 
         if (res.taskChange().isPresent()) {
-            // handle response
+            System.out.println(res.taskChange().get());
         }
     }
 }
@@ -100,7 +100,7 @@ public class Application {
                 .call();
 
         if (res.taskChanges().isPresent()) {
-            // handle response
+            System.out.println(res.taskChanges().get());
         }
     }
 }

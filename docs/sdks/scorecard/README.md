@@ -49,7 +49,7 @@ public class Application {
                 .call();
 
         if (res.atsScorecard().isPresent()) {
-            // handle response
+            System.out.println(res.atsScorecard().get());
         }
     }
 }
@@ -107,7 +107,7 @@ public class Application {
                 .call();
 
         if (res.atsScorecard().isPresent()) {
-            // handle response
+            System.out.println(res.atsScorecard().get());
         }
     }
 }
@@ -164,7 +164,7 @@ public class Application {
                 .call();
 
         if (res.atsScorecards().isPresent()) {
-            // handle response
+            System.out.println(res.atsScorecards().get());
         }
     }
 }
@@ -225,7 +225,7 @@ public class Application {
                 .call();
 
         if (res.atsScorecard().isPresent()) {
-            // handle response
+            System.out.println(res.atsScorecard().get());
         }
     }
 }
@@ -342,7 +342,7 @@ public class Application {
                 .call();
 
         if (res.atsScorecard().isPresent()) {
-            // handle response
+            System.out.println(res.atsScorecard().get());
         }
     }
 }

@@ -63,7 +63,7 @@ public class Application {
                 .call();
 
         if (res.atsCompany().isPresent()) {
-            // handle response
+            System.out.println(res.atsCompany().get());
         }
     }
 }
@@ -123,7 +123,7 @@ public class Application {
                 .call();
 
         if (res.crmCompany().isPresent()) {
-            // handle response
+            System.out.println(res.crmCompany().get());
         }
     }
 }
@@ -183,7 +183,7 @@ public class Application {
                 .call();
 
         if (res.hrisCompany().isPresent()) {
-            // handle response
+            System.out.println(res.hrisCompany().get());
         }
     }
 }
@@ -241,7 +241,7 @@ public class Application {
                 .call();
 
         if (res.atsCompany().isPresent()) {
-            // handle response
+            System.out.println(res.atsCompany().get());
         }
     }
 }
@@ -299,7 +299,7 @@ public class Application {
                 .call();
 
         if (res.crmCompany().isPresent()) {
-            // handle response
+            System.out.println(res.crmCompany().get());
         }
     }
 }
@@ -357,7 +357,7 @@ public class Application {
                 .call();
 
         if (res.hrisCompany().isPresent()) {
-            // handle response
+            System.out.println(res.hrisCompany().get());
         }
     }
 }
@@ -414,7 +414,7 @@ public class Application {
                 .call();
 
         if (res.atsCompanies().isPresent()) {
-            // handle response
+            System.out.println(res.atsCompanies().get());
         }
     }
 }
@@ -471,7 +471,7 @@ public class Application {
                 .call();
 
         if (res.crmCompanies().isPresent()) {
-            // handle response
+            System.out.println(res.crmCompanies().get());
         }
     }
 }
@@ -528,7 +528,7 @@ public class Application {
                 .call();
 
         if (res.enrichCompany().isPresent()) {
-            // handle response
+            System.out.println(res.enrichCompany().get());
         }
     }
 }
@@ -585,7 +585,7 @@ public class Application {
                 .call();
 
         if (res.hrisCompanies().isPresent()) {
-            // handle response
+            System.out.println(res.hrisCompanies().get());
         }
     }
 }
@@ -647,7 +647,7 @@ public class Application {
                 .call();
 
         if (res.atsCompany().isPresent()) {
-            // handle response
+            System.out.println(res.atsCompany().get());
         }
     }
 }
@@ -708,7 +708,7 @@ public class Application {
                 .call();
 
         if (res.crmCompany().isPresent()) {
-            // handle response
+            System.out.println(res.crmCompany().get());
         }
     }
 }
@@ -769,7 +769,7 @@ public class Application {
                 .call();
 
         if (res.hrisCompany().isPresent()) {
-            // handle response
+            System.out.println(res.hrisCompany().get());
         }
     }
 }
@@ -999,7 +999,7 @@ public class Application {
                 .call();
 
         if (res.atsCompany().isPresent()) {
-            // handle response
+            System.out.println(res.atsCompany().get());
         }
     }
 }
@@ -1060,7 +1060,7 @@ public class Application {
                 .call();
 
         if (res.crmCompany().isPresent()) {
-            // handle response
+            System.out.println(res.crmCompany().get());
         }
     }
 }
@@ -1121,7 +1121,7 @@ public class Application {
                 .call();
 
         if (res.hrisCompany().isPresent()) {
-            // handle response
+            System.out.println(res.hrisCompany().get());
         }
     }
 }

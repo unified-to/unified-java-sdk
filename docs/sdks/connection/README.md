@@ -49,7 +49,7 @@ public class Application {
                 .call();
 
         if (res.connection().isPresent()) {
-            // handle response
+            System.out.println(res.connection().get());
         }
     }
 }
@@ -106,7 +106,7 @@ public class Application {
                 .call();
 
         if (res.connection().isPresent()) {
-            // handle response
+            System.out.println(res.connection().get());
         }
     }
 }
@@ -157,7 +157,7 @@ public class Application {
                 .call();
 
         if (res.connections().isPresent()) {
-            // handle response
+            System.out.println(res.connections().get());
         }
     }
 }
@@ -221,7 +221,7 @@ public class Application {
                 .call();
 
         if (res.connection().isPresent()) {
-            // handle response
+            System.out.println(res.connection().get());
         }
     }
 }
@@ -340,7 +340,7 @@ public class Application {
                 .call();
 
         if (res.connection().isPresent()) {
-            // handle response
+            System.out.println(res.connection().get());
         }
     }
 }

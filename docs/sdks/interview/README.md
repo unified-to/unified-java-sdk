@@ -49,7 +49,7 @@ public class Application {
                 .call();
 
         if (res.atsInterview().isPresent()) {
-            // handle response
+            System.out.println(res.atsInterview().get());
         }
     }
 }
@@ -107,7 +107,7 @@ public class Application {
                 .call();
 
         if (res.atsInterview().isPresent()) {
-            // handle response
+            System.out.println(res.atsInterview().get());
         }
     }
 }
@@ -164,7 +164,7 @@ public class Application {
                 .call();
 
         if (res.atsInterviews().isPresent()) {
-            // handle response
+            System.out.println(res.atsInterviews().get());
         }
     }
 }
@@ -225,7 +225,7 @@ public class Application {
                 .call();
 
         if (res.atsInterview().isPresent()) {
-            // handle response
+            System.out.println(res.atsInterview().get());
         }
     }
 }
@@ -342,7 +342,7 @@ public class Application {
                 .call();
 
         if (res.atsInterview().isPresent()) {
-            // handle response
+            System.out.println(res.atsInterview().get());
         }
     }
 }

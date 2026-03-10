@@ -24,6 +24,7 @@ For more information about the API: [API Documentation](https://docs.unified.to)
   * [Authentication](#authentication)
   * [Custom HTTP Client](#custom-http-client)
   * [Debugging](#debugging)
+  * [Jackson Configuration](#jackson-configuration)
 
 <!-- End Table of Contents [toc] -->
 
@@ -38,7 +39,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.47.11'
+implementation 'to.unified:unified-java-sdk:0.47.12'
 ```
 
 Maven:
@@ -46,7 +47,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.47.11</version>
+    <version>0.47.12</version>
 </dependency>
 ```
 
@@ -101,7 +102,7 @@ public class Application {
                 .call();
 
         if (res.accountingAccount().isPresent()) {
-            // handle response
+            System.out.println(res.accountingAccount().get());
         }
     }
 }
@@ -142,7 +143,7 @@ public class Application {
 
         resFut.thenAccept(res -> {
             if (res.accountingAccount().isPresent()) {
-            // handle response
+                System.out.println(res.accountingAccount().get());
             }
         });
     }
@@ -150,6 +151,15 @@ public class Application {
 ```
 
 [comp-fut]: https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html
+
+#### Union Consumption Patterns
+
+When a response field is a union model:
+
+- Discriminated unions: branch on the discriminator (`switch`) and then narrow to the concrete type.
+- Non-discriminated unions: use generated accessors (for example `string()`, `asLong()`, `simpleObject()`) to determine the active variant.
+
+For full model-specific examples (including Java 11/16/21 variants), see each union model's **Supported Types** section in the generated model docs.
 <!-- End SDK Example Usage [usage] -->
 
 <!-- Start Available Resources and Operations [operations] -->
@@ -1866,7 +1876,7 @@ public class Application {
                 .call();
 
         if (res.accountingAccount().isPresent()) {
-            // handle response
+            System.out.println(res.accountingAccount().get());
         }
     }
 }
@@ -1907,7 +1917,7 @@ public class Application {
                 .call();
 
         if (res.accountingAccount().isPresent()) {
-            // handle response
+            System.out.println(res.accountingAccount().get());
         }
     }
 }
@@ -1967,7 +1977,7 @@ public class Application {
                     .call();
 
             if (res.accountingAccount().isPresent()) {
-                // handle response
+                System.out.println(res.accountingAccount().get());
             }
         } catch (UnifiedToError ex) { // all SDK exceptions inherit from UnifiedToError
 
@@ -2115,7 +2125,7 @@ public class Application {
                 .call();
 
         if (res.accountingAccount().isPresent()) {
-            // handle response
+            System.out.println(res.accountingAccount().get());
         }
     }
 }
@@ -2291,6 +2301,36 @@ __NOTE__: This is a convenience method that calls `HTTPClient.enableDebugLogging
 
 Another option is to set the System property `-Djdk.httpclient.HttpClient.log=all`. However, this second option does not log bodies.
 <!-- End Debugging [debug] -->
+
+<!-- Start Jackson Configuration [jackson] -->
+## Jackson Configuration
+
+The SDK ships with a pre-configured Jackson [`ObjectMapper`][jackson-databind] accessible via
+`JSON.getMapper()`. It is set up with type modules, strict deserializers, and the feature flags
+needed for full SDK compatibility (including ISO-8601 `OffsetDateTime` serialization):
+
+```java
+import to.unified.unified_java_sdk.utils.JSON;
+
+String json = JSON.getMapper().writeValueAsString(response);
+```
+
+To compose with your own `ObjectMapper`, register the provided `UnifiedJavaSDKJacksonModule`, which
+bundles all the same modules and feature flags as a single plug-and-play module:
+
+```java
+import to.unified.unified_java_sdk.utils.UnifiedJavaSDKJacksonModule;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+ObjectMapper myMapper = new ObjectMapper()
+    .registerModule(new UnifiedJavaSDKJacksonModule());
+
+String json = myMapper.writeValueAsString(response);
+```
+
+[jackson-databind]: https://github.com/FasterXML/jackson-databind
+[jackson-jsr310]: https://github.com/FasterXML/jackson-modules-java8/tree/master/datetime
+<!-- End Jackson Configuration [jackson] -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->
 

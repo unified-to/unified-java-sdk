@@ -67,7 +67,7 @@ public class Application {
                 .call();
 
         if (res.connection().isPresent()) {
-            // handle response
+            System.out.println(res.connection().get());
         }
     }
 }
@@ -123,7 +123,7 @@ public class Application {
                 .call();
 
         if (res.environments().isPresent()) {
-            // handle response
+            System.out.println(res.environments().get());
         }
     }
 }
@@ -184,7 +184,7 @@ public class Application {
                 .call();
 
         if (res.webhook().isPresent()) {
-            // handle response
+            System.out.println(res.webhook().get());
         }
     }
 }
@@ -241,7 +241,7 @@ public class Application {
                 .call();
 
         if (res.apiCall().isPresent()) {
-            // handle response
+            System.out.println(res.apiCall().get());
         }
     }
 }
@@ -298,7 +298,7 @@ public class Application {
                 .call();
 
         if (res.connection().isPresent()) {
-            // handle response
+            System.out.println(res.connection().get());
         }
     }
 }
@@ -356,7 +356,7 @@ public class Application {
                 .call();
 
         if (res.res().isPresent()) {
-            // handle response
+            System.out.println(res.res().get());
         }
     }
 }
@@ -413,7 +413,7 @@ public class Application {
                 .call();
 
         if (res.issue().isPresent()) {
-            // handle response
+            System.out.println(res.issue().get());
         }
     }
 }
@@ -470,7 +470,7 @@ public class Application {
                 .call();
 
         if (res.webhook().isPresent()) {
-            // handle response
+            System.out.println(res.webhook().get());
         }
     }
 }
@@ -521,7 +521,7 @@ public class Application {
                 .call();
 
         if (res.apiCalls().isPresent()) {
-            // handle response
+            System.out.println(res.apiCalls().get());
         }
     }
 }
@@ -572,7 +572,7 @@ public class Application {
                 .call();
 
         if (res.connections().isPresent()) {
-            // handle response
+            System.out.println(res.connections().get());
         }
     }
 }
@@ -623,7 +623,7 @@ public class Application {
                 .call();
 
         if (res.environments().isPresent()) {
-            // handle response
+            System.out.println(res.environments().get());
         }
     }
 }
@@ -674,7 +674,7 @@ public class Application {
                 .call();
 
         if (res.integrations().isPresent()) {
-            // handle response
+            System.out.println(res.integrations().get());
         }
     }
 }
@@ -725,7 +725,7 @@ public class Application {
                 .call();
 
         if (res.integrations().isPresent()) {
-            // handle response
+            System.out.println(res.integrations().get());
         }
     }
 }
@@ -776,7 +776,7 @@ public class Application {
                 .call();
 
         if (res.issues().isPresent()) {
-            // handle response
+            System.out.println(res.issues().get());
         }
     }
 }
@@ -827,7 +827,7 @@ public class Application {
                 .call();
 
         if (res.webhooks().isPresent()) {
-            // handle response
+            System.out.println(res.webhooks().get());
         }
     }
 }
@@ -891,7 +891,7 @@ public class Application {
                 .call();
 
         if (res.connection().isPresent()) {
-            // handle response
+            System.out.println(res.connection().get());
         }
     }
 }
@@ -953,7 +953,7 @@ public class Application {
                 .call();
 
         if (res.webhook().isPresent()) {
-            // handle response
+            System.out.println(res.webhook().get());
         }
     }
 }
@@ -1120,7 +1120,7 @@ public class Application {
                 .call();
 
         if (res.environments().isPresent()) {
-            // handle response
+            System.out.println(res.environments().get());
         }
     }
 }
@@ -1239,7 +1239,7 @@ public class Application {
                 .call();
 
         if (res.connection().isPresent()) {
-            // handle response
+            System.out.println(res.connection().get());
         }
     }
 }
@@ -1301,7 +1301,7 @@ public class Application {
                 .call();
 
         if (res.webhook().isPresent()) {
-            // handle response
+            System.out.println(res.webhook().get());
         }
     }
 }

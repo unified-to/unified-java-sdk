@@ -43,7 +43,7 @@ public class Application {
                 .call();
 
         if (res.accountingCashflow().isPresent()) {
-            // handle response
+            System.out.println(res.accountingCashflow().get());
         }
     }
 }
@@ -100,7 +100,7 @@ public class Application {
                 .call();
 
         if (res.accountingCashflows().isPresent()) {
-            // handle response
+            System.out.println(res.accountingCashflows().get());
         }
     }
 }

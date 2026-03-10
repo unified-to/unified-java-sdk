@@ -44,7 +44,7 @@ public class Application {
                 .call();
 
         if (res.genaiPrompt().isPresent()) {
-            // handle response
+            System.out.println(res.genaiPrompt().get());
         }
     }
 }

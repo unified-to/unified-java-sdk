@@ -65,7 +65,7 @@ public class Application {
                 .call();
 
         if (res.paymentLink().isPresent()) {
-            // handle response
+            System.out.println(res.paymentLink().get());
         }
     }
 }
@@ -125,7 +125,7 @@ public class Application {
                 .call();
 
         if (res.paymentPayment().isPresent()) {
-            // handle response
+            System.out.println(res.paymentPayment().get());
         }
     }
 }
@@ -185,7 +185,7 @@ public class Application {
                 .call();
 
         if (res.paymentSubscription().isPresent()) {
-            // handle response
+            System.out.println(res.paymentSubscription().get());
         }
     }
 }
@@ -243,7 +243,7 @@ public class Application {
                 .call();
 
         if (res.paymentLink().isPresent()) {
-            // handle response
+            System.out.println(res.paymentLink().get());
         }
     }
 }
@@ -301,7 +301,7 @@ public class Application {
                 .call();
 
         if (res.paymentPayment().isPresent()) {
-            // handle response
+            System.out.println(res.paymentPayment().get());
         }
     }
 }
@@ -359,7 +359,7 @@ public class Application {
                 .call();
 
         if (res.paymentPayout().isPresent()) {
-            // handle response
+            System.out.println(res.paymentPayout().get());
         }
     }
 }
@@ -417,7 +417,7 @@ public class Application {
                 .call();
 
         if (res.paymentRefund().isPresent()) {
-            // handle response
+            System.out.println(res.paymentRefund().get());
         }
     }
 }
@@ -475,7 +475,7 @@ public class Application {
                 .call();
 
         if (res.paymentSubscription().isPresent()) {
-            // handle response
+            System.out.println(res.paymentSubscription().get());
         }
     }
 }
@@ -532,7 +532,7 @@ public class Application {
                 .call();
 
         if (res.paymentLinks().isPresent()) {
-            // handle response
+            System.out.println(res.paymentLinks().get());
         }
     }
 }
@@ -589,7 +589,7 @@ public class Application {
                 .call();
 
         if (res.paymentPayments().isPresent()) {
-            // handle response
+            System.out.println(res.paymentPayments().get());
         }
     }
 }
@@ -646,7 +646,7 @@ public class Application {
                 .call();
 
         if (res.paymentPayouts().isPresent()) {
-            // handle response
+            System.out.println(res.paymentPayouts().get());
         }
     }
 }
@@ -703,7 +703,7 @@ public class Application {
                 .call();
 
         if (res.paymentRefunds().isPresent()) {
-            // handle response
+            System.out.println(res.paymentRefunds().get());
         }
     }
 }
@@ -760,7 +760,7 @@ public class Application {
                 .call();
 
         if (res.paymentSubscriptions().isPresent()) {
-            // handle response
+            System.out.println(res.paymentSubscriptions().get());
         }
     }
 }
@@ -821,7 +821,7 @@ public class Application {
                 .call();
 
         if (res.paymentLink().isPresent()) {
-            // handle response
+            System.out.println(res.paymentLink().get());
         }
     }
 }
@@ -882,7 +882,7 @@ public class Application {
                 .call();
 
         if (res.paymentPayment().isPresent()) {
-            // handle response
+            System.out.println(res.paymentPayment().get());
         }
     }
 }
@@ -943,7 +943,7 @@ public class Application {
                 .call();
 
         if (res.paymentSubscription().isPresent()) {
-            // handle response
+            System.out.println(res.paymentSubscription().get());
         }
     }
 }
@@ -1172,7 +1172,7 @@ public class Application {
                 .call();
 
         if (res.paymentLink().isPresent()) {
-            // handle response
+            System.out.println(res.paymentLink().get());
         }
     }
 }
@@ -1233,7 +1233,7 @@ public class Application {
                 .call();
 
         if (res.paymentPayment().isPresent()) {
-            // handle response
+            System.out.println(res.paymentPayment().get());
         }
     }
 }
@@ -1294,7 +1294,7 @@ public class Application {
                 .call();
 
         if (res.paymentSubscription().isPresent()) {
-            // handle response
+            System.out.println(res.paymentSubscription().get());
         }
     }
 }

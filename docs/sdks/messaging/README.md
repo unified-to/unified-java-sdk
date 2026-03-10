@@ -53,7 +53,7 @@ public class Application {
                 .call();
 
         if (res.messagingMessage().isPresent()) {
-            // handle response
+            System.out.println(res.messagingMessage().get());
         }
     }
 }
@@ -111,7 +111,7 @@ public class Application {
                 .call();
 
         if (res.messagingChannel().isPresent()) {
-            // handle response
+            System.out.println(res.messagingChannel().get());
         }
     }
 }
@@ -169,7 +169,7 @@ public class Application {
                 .call();
 
         if (res.messagingMessage().isPresent()) {
-            // handle response
+            System.out.println(res.messagingMessage().get());
         }
     }
 }
@@ -226,7 +226,7 @@ public class Application {
                 .call();
 
         if (res.messagingChannels().isPresent()) {
-            // handle response
+            System.out.println(res.messagingChannels().get());
         }
     }
 }
@@ -283,7 +283,7 @@ public class Application {
                 .call();
 
         if (res.messagingMessages().isPresent()) {
-            // handle response
+            System.out.println(res.messagingMessages().get());
         }
     }
 }
@@ -344,7 +344,7 @@ public class Application {
                 .call();
 
         if (res.messagingEvent().isPresent()) {
-            // handle response
+            System.out.println(res.messagingEvent().get());
         }
     }
 }
@@ -405,7 +405,7 @@ public class Application {
                 .call();
 
         if (res.messagingMessage().isPresent()) {
-            // handle response
+            System.out.println(res.messagingMessage().get());
         }
     }
 }
@@ -522,7 +522,7 @@ public class Application {
                 .call();
 
         if (res.messagingEvent().isPresent()) {
-            // handle response
+            System.out.println(res.messagingEvent().get());
         }
     }
 }
@@ -583,7 +583,7 @@ public class Application {
                 .call();
 
         if (res.messagingMessage().isPresent()) {
-            // handle response
+            System.out.println(res.messagingMessage().get());
         }
     }
 }

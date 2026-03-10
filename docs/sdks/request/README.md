@@ -49,7 +49,7 @@ public class Application {
                 .call();
 
         if (res.verificationRequest().isPresent()) {
-            // handle response
+            System.out.println(res.verificationRequest().get());
         }
     }
 }
@@ -107,7 +107,7 @@ public class Application {
                 .call();
 
         if (res.verificationRequest().isPresent()) {
-            // handle response
+            System.out.println(res.verificationRequest().get());
         }
     }
 }
@@ -164,7 +164,7 @@ public class Application {
                 .call();
 
         if (res.verificationRequests().isPresent()) {
-            // handle response
+            System.out.println(res.verificationRequests().get());
         }
     }
 }
@@ -225,7 +225,7 @@ public class Application {
                 .call();
 
         if (res.verificationRequest().isPresent()) {
-            // handle response
+            System.out.println(res.verificationRequest().get());
         }
     }
 }
@@ -342,7 +342,7 @@ public class Application {
                 .call();
 
         if (res.verificationRequest().isPresent()) {
-            // handle response
+            System.out.println(res.verificationRequest().get());
         }
     }
 }

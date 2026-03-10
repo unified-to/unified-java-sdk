@@ -61,7 +61,7 @@ public class Application {
                 .call();
 
         if (res.adsGroup().isPresent()) {
-            // handle response
+            System.out.println(res.adsGroup().get());
         }
     }
 }
@@ -121,7 +121,7 @@ public class Application {
                 .call();
 
         if (res.hrisGroup().isPresent()) {
-            // handle response
+            System.out.println(res.hrisGroup().get());
         }
     }
 }
@@ -182,7 +182,7 @@ public class Application {
                 .call();
 
         if (res.scimGroup().isPresent()) {
-            // handle response
+            System.out.println(res.scimGroup().get());
         }
     }
 }
@@ -240,7 +240,7 @@ public class Application {
                 .call();
 
         if (res.adsGroup().isPresent()) {
-            // handle response
+            System.out.println(res.adsGroup().get());
         }
     }
 }
@@ -298,7 +298,7 @@ public class Application {
                 .call();
 
         if (res.hrisGroup().isPresent()) {
-            // handle response
+            System.out.println(res.hrisGroup().get());
         }
     }
 }
@@ -356,7 +356,7 @@ public class Application {
                 .call();
 
         if (res.scimGroup().isPresent()) {
-            // handle response
+            System.out.println(res.scimGroup().get());
         }
     }
 }
@@ -413,7 +413,7 @@ public class Application {
                 .call();
 
         if (res.adsGroups().isPresent()) {
-            // handle response
+            System.out.println(res.adsGroups().get());
         }
     }
 }
@@ -470,7 +470,7 @@ public class Application {
                 .call();
 
         if (res.hrisGroups().isPresent()) {
-            // handle response
+            System.out.println(res.hrisGroups().get());
         }
     }
 }
@@ -527,7 +527,7 @@ public class Application {
                 .call();
 
         if (res.scimGroups().isPresent()) {
-            // handle response
+            System.out.println(res.scimGroups().get());
         }
     }
 }
@@ -588,7 +588,7 @@ public class Application {
                 .call();
 
         if (res.adsGroup().isPresent()) {
-            // handle response
+            System.out.println(res.adsGroup().get());
         }
     }
 }
@@ -649,7 +649,7 @@ public class Application {
                 .call();
 
         if (res.hrisGroup().isPresent()) {
-            // handle response
+            System.out.println(res.hrisGroup().get());
         }
     }
 }
@@ -711,7 +711,7 @@ public class Application {
                 .call();
 
         if (res.scimGroup().isPresent()) {
-            // handle response
+            System.out.println(res.scimGroup().get());
         }
     }
 }
@@ -940,7 +940,7 @@ public class Application {
                 .call();
 
         if (res.adsGroup().isPresent()) {
-            // handle response
+            System.out.println(res.adsGroup().get());
         }
     }
 }
@@ -1001,7 +1001,7 @@ public class Application {
                 .call();
 
         if (res.hrisGroup().isPresent()) {
-            // handle response
+            System.out.println(res.hrisGroup().get());
         }
     }
 }
@@ -1063,7 +1063,7 @@ public class Application {
                 .call();
 
         if (res.scimGroup().isPresent()) {
-            // handle response
+            System.out.println(res.scimGroup().get());
         }
     }
 }

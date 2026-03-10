@@ -42,7 +42,7 @@ public class Application {
                 .call();
 
         if (res.issue().isPresent()) {
-            // handle response
+            System.out.println(res.issue().get());
         }
     }
 }
@@ -93,7 +93,7 @@ public class Application {
                 .call();
 
         if (res.issues().isPresent()) {
-            // handle response
+            System.out.println(res.issues().get());
         }
     }
 }

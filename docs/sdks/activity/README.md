@@ -55,7 +55,7 @@ public class Application {
                 .call();
 
         if (res.atsActivity().isPresent()) {
-            // handle response
+            System.out.println(res.atsActivity().get());
         }
     }
 }
@@ -115,7 +115,7 @@ public class Application {
                 .call();
 
         if (res.lmsActivity().isPresent()) {
-            // handle response
+            System.out.println(res.lmsActivity().get());
         }
     }
 }
@@ -173,7 +173,7 @@ public class Application {
                 .call();
 
         if (res.atsActivity().isPresent()) {
-            // handle response
+            System.out.println(res.atsActivity().get());
         }
     }
 }
@@ -231,7 +231,7 @@ public class Application {
                 .call();
 
         if (res.lmsActivity().isPresent()) {
-            // handle response
+            System.out.println(res.lmsActivity().get());
         }
     }
 }
@@ -288,7 +288,7 @@ public class Application {
                 .call();
 
         if (res.atsActivities().isPresent()) {
-            // handle response
+            System.out.println(res.atsActivities().get());
         }
     }
 }
@@ -345,7 +345,7 @@ public class Application {
                 .call();
 
         if (res.lmsActivities().isPresent()) {
-            // handle response
+            System.out.println(res.lmsActivities().get());
         }
     }
 }
@@ -406,7 +406,7 @@ public class Application {
                 .call();
 
         if (res.atsActivity().isPresent()) {
-            // handle response
+            System.out.println(res.atsActivity().get());
         }
     }
 }
@@ -467,7 +467,7 @@ public class Application {
                 .call();
 
         if (res.lmsActivity().isPresent()) {
-            // handle response
+            System.out.println(res.lmsActivity().get());
         }
     }
 }
@@ -640,7 +640,7 @@ public class Application {
                 .call();
 
         if (res.atsActivity().isPresent()) {
-            // handle response
+            System.out.println(res.atsActivity().get());
         }
     }
 }
@@ -701,7 +701,7 @@ public class Application {
                 .call();
 
         if (res.lmsActivity().isPresent()) {
-            // handle response
+            System.out.println(res.lmsActivity().get());
         }
     }
 }

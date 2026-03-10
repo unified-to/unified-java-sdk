@@ -523,7 +523,7 @@ public class IntegrationSupport {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtual_webhook_benefit_id")
-    private String virtualWebhookBenefitId;
+    private VirtualWebhookBenefitId virtualWebhookBenefitId;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -699,6 +699,11 @@ public class IntegrationSupport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtual_webhook_parent_id")
     private VirtualWebhookParentId virtualWebhookParentId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("virtual_webhook_payment_id")
+    private VirtualWebhookPaymentId virtualWebhookPaymentId;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -882,7 +887,7 @@ public class IntegrationSupport {
             @JsonProperty("slow_fields") @Nullable List<String> slowFields,
             @JsonProperty("virtual_webhook_ad_id") @Nullable VirtualWebhookAdId virtualWebhookAdId,
             @JsonProperty("virtual_webhook_application_id") @Nullable VirtualWebhookApplicationId virtualWebhookApplicationId,
-            @JsonProperty("virtual_webhook_benefit_id") @Nullable String virtualWebhookBenefitId,
+            @JsonProperty("virtual_webhook_benefit_id") @Nullable VirtualWebhookBenefitId virtualWebhookBenefitId,
             @JsonProperty("virtual_webhook_bill_id") @Nullable VirtualWebhookBillId virtualWebhookBillId,
             @JsonProperty("virtual_webhook_branch_id") @Nullable VirtualWebhookBranchId virtualWebhookBranchId,
             @JsonProperty("virtual_webhook_calendar_id") @Nullable VirtualWebhookCalendarId virtualWebhookCalendarId,
@@ -918,6 +923,7 @@ public class IntegrationSupport {
             @JsonProperty("virtual_webhook_org_id") @Nullable VirtualWebhookOrgId virtualWebhookOrgId,
             @JsonProperty("virtual_webhook_page_id") @Nullable VirtualWebhookPageId virtualWebhookPageId,
             @JsonProperty("virtual_webhook_parent_id") @Nullable VirtualWebhookParentId virtualWebhookParentId,
+            @JsonProperty("virtual_webhook_payment_id") @Nullable VirtualWebhookPaymentId virtualWebhookPaymentId,
             @JsonProperty("virtual_webhook_pipeline_id") @Nullable VirtualWebhookPipelineId virtualWebhookPipelineId,
             @JsonProperty("virtual_webhook_project_id") @Nullable VirtualWebhookProjectId virtualWebhookProjectId,
             @JsonProperty("virtual_webhook_repo_id") @Nullable VirtualWebhookRepoId virtualWebhookRepoId,
@@ -1070,6 +1076,7 @@ public class IntegrationSupport {
         this.virtualWebhookOrgId = virtualWebhookOrgId;
         this.virtualWebhookPageId = virtualWebhookPageId;
         this.virtualWebhookParentId = virtualWebhookParentId;
+        this.virtualWebhookPaymentId = virtualWebhookPaymentId;
         this.virtualWebhookPipelineId = virtualWebhookPipelineId;
         this.virtualWebhookProjectId = virtualWebhookProjectId;
         this.virtualWebhookRepoId = virtualWebhookRepoId;
@@ -1139,7 +1146,7 @@ public class IntegrationSupport {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<FromWebhook> fromWebhook() {
@@ -1545,7 +1552,7 @@ public class IntegrationSupport {
         return Optional.ofNullable(this.virtualWebhookApplicationId);
     }
 
-    public Optional<String> virtualWebhookBenefitId() {
+    public Optional<VirtualWebhookBenefitId> virtualWebhookBenefitId() {
         return Optional.ofNullable(this.virtualWebhookBenefitId);
     }
 
@@ -1687,6 +1694,10 @@ public class IntegrationSupport {
 
     public Optional<VirtualWebhookParentId> virtualWebhookParentId() {
         return Optional.ofNullable(this.virtualWebhookParentId);
+    }
+
+    public Optional<VirtualWebhookPaymentId> virtualWebhookPaymentId() {
+        return Optional.ofNullable(this.virtualWebhookPaymentId);
     }
 
     public Optional<VirtualWebhookPipelineId> virtualWebhookPipelineId() {
@@ -2361,7 +2372,7 @@ public class IntegrationSupport {
     }
 
 
-    public IntegrationSupport withVirtualWebhookBenefitId(@Nullable String virtualWebhookBenefitId) {
+    public IntegrationSupport withVirtualWebhookBenefitId(@Nullable VirtualWebhookBenefitId virtualWebhookBenefitId) {
         this.virtualWebhookBenefitId = virtualWebhookBenefitId;
         return this;
     }
@@ -2573,6 +2584,12 @@ public class IntegrationSupport {
 
     public IntegrationSupport withVirtualWebhookParentId(@Nullable VirtualWebhookParentId virtualWebhookParentId) {
         this.virtualWebhookParentId = virtualWebhookParentId;
+        return this;
+    }
+
+
+    public IntegrationSupport withVirtualWebhookPaymentId(@Nullable VirtualWebhookPaymentId virtualWebhookPaymentId) {
+        this.virtualWebhookPaymentId = virtualWebhookPaymentId;
         return this;
     }
 
@@ -2819,6 +2836,7 @@ public class IntegrationSupport {
             Utils.enhancedDeepEquals(this.virtualWebhookOrgId, other.virtualWebhookOrgId) &&
             Utils.enhancedDeepEquals(this.virtualWebhookPageId, other.virtualWebhookPageId) &&
             Utils.enhancedDeepEquals(this.virtualWebhookParentId, other.virtualWebhookParentId) &&
+            Utils.enhancedDeepEquals(this.virtualWebhookPaymentId, other.virtualWebhookPaymentId) &&
             Utils.enhancedDeepEquals(this.virtualWebhookPipelineId, other.virtualWebhookPipelineId) &&
             Utils.enhancedDeepEquals(this.virtualWebhookProjectId, other.virtualWebhookProjectId) &&
             Utils.enhancedDeepEquals(this.virtualWebhookRepoId, other.virtualWebhookRepoId) &&
@@ -2885,12 +2903,12 @@ public class IntegrationSupport {
             virtualWebhookLeadId, virtualWebhookLimit, virtualWebhookLinkId,
             virtualWebhookListId, virtualWebhookLocationId, virtualWebhookMemberId,
             virtualWebhookOrderId, virtualWebhookOrgId, virtualWebhookPageId,
-            virtualWebhookParentId, virtualWebhookPipelineId, virtualWebhookProjectId,
-            virtualWebhookRepoId, virtualWebhookSaleschannelId, virtualWebhookShipmentId,
-            virtualWebhookSpaceId, virtualWebhookStartGte, virtualWebhookStatus,
-            virtualWebhookStudentId, virtualWebhookTaskId, virtualWebhookTicketId,
-            virtualWebhookType, virtualWebhookUpdatedGte, virtualWebhookUserId,
-            virtualWebhookUserMentionedId, webhookEvents);
+            virtualWebhookParentId, virtualWebhookPaymentId, virtualWebhookPipelineId,
+            virtualWebhookProjectId, virtualWebhookRepoId, virtualWebhookSaleschannelId,
+            virtualWebhookShipmentId, virtualWebhookSpaceId, virtualWebhookStartGte,
+            virtualWebhookStatus, virtualWebhookStudentId, virtualWebhookTaskId,
+            virtualWebhookTicketId, virtualWebhookType, virtualWebhookUpdatedGte,
+            virtualWebhookUserId, virtualWebhookUserMentionedId, webhookEvents);
     }
     
     @Override
@@ -3032,6 +3050,7 @@ public class IntegrationSupport {
                 "virtualWebhookOrgId", virtualWebhookOrgId,
                 "virtualWebhookPageId", virtualWebhookPageId,
                 "virtualWebhookParentId", virtualWebhookParentId,
+                "virtualWebhookPaymentId", virtualWebhookPaymentId,
                 "virtualWebhookPipelineId", virtualWebhookPipelineId,
                 "virtualWebhookProjectId", virtualWebhookProjectId,
                 "virtualWebhookRepoId", virtualWebhookRepoId,
@@ -3253,7 +3272,7 @@ public class IntegrationSupport {
 
         private VirtualWebhookApplicationId virtualWebhookApplicationId;
 
-        private String virtualWebhookBenefitId;
+        private VirtualWebhookBenefitId virtualWebhookBenefitId;
 
         private VirtualWebhookBillId virtualWebhookBillId;
 
@@ -3324,6 +3343,8 @@ public class IntegrationSupport {
         private VirtualWebhookPageId virtualWebhookPageId;
 
         private VirtualWebhookParentId virtualWebhookParentId;
+
+        private VirtualWebhookPaymentId virtualWebhookPaymentId;
 
         private VirtualWebhookPipelineId virtualWebhookPipelineId;
 
@@ -3864,7 +3885,7 @@ public class IntegrationSupport {
             return this;
         }
 
-        public Builder virtualWebhookBenefitId(@Nullable String virtualWebhookBenefitId) {
+        public Builder virtualWebhookBenefitId(@Nullable VirtualWebhookBenefitId virtualWebhookBenefitId) {
             this.virtualWebhookBenefitId = virtualWebhookBenefitId;
             return this;
         }
@@ -4044,6 +4065,11 @@ public class IntegrationSupport {
             return this;
         }
 
+        public Builder virtualWebhookPaymentId(@Nullable VirtualWebhookPaymentId virtualWebhookPaymentId) {
+            this.virtualWebhookPaymentId = virtualWebhookPaymentId;
+            return this;
+        }
+
         public Builder virtualWebhookPipelineId(@Nullable VirtualWebhookPipelineId virtualWebhookPipelineId) {
             this.virtualWebhookPipelineId = virtualWebhookPipelineId;
             return this;
@@ -4171,12 +4197,12 @@ public class IntegrationSupport {
                 virtualWebhookLeadId, virtualWebhookLimit, virtualWebhookLinkId,
                 virtualWebhookListId, virtualWebhookLocationId, virtualWebhookMemberId,
                 virtualWebhookOrderId, virtualWebhookOrgId, virtualWebhookPageId,
-                virtualWebhookParentId, virtualWebhookPipelineId, virtualWebhookProjectId,
-                virtualWebhookRepoId, virtualWebhookSaleschannelId, virtualWebhookShipmentId,
-                virtualWebhookSpaceId, virtualWebhookStartGte, virtualWebhookStatus,
-                virtualWebhookStudentId, virtualWebhookTaskId, virtualWebhookTicketId,
-                virtualWebhookType, virtualWebhookUpdatedGte, virtualWebhookUserId,
-                virtualWebhookUserMentionedId, webhookEvents);
+                virtualWebhookParentId, virtualWebhookPaymentId, virtualWebhookPipelineId,
+                virtualWebhookProjectId, virtualWebhookRepoId, virtualWebhookSaleschannelId,
+                virtualWebhookShipmentId, virtualWebhookSpaceId, virtualWebhookStartGte,
+                virtualWebhookStatus, virtualWebhookStudentId, virtualWebhookTaskId,
+                virtualWebhookTicketId, virtualWebhookType, virtualWebhookUpdatedGte,
+                virtualWebhookUserId, virtualWebhookUserMentionedId, webhookEvents);
         }
 
     }

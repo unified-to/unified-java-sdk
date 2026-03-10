@@ -52,7 +52,7 @@ public class Application {
                 .call();
 
         if (res.webhook().isPresent()) {
-            // handle response
+            System.out.println(res.webhook().get());
         }
     }
 }
@@ -109,7 +109,7 @@ public class Application {
                 .call();
 
         if (res.webhook().isPresent()) {
-            // handle response
+            System.out.println(res.webhook().get());
         }
     }
 }
@@ -160,7 +160,7 @@ public class Application {
                 .call();
 
         if (res.webhooks().isPresent()) {
-            // handle response
+            System.out.println(res.webhooks().get());
         }
     }
 }
@@ -222,7 +222,7 @@ public class Application {
                 .call();
 
         if (res.webhook().isPresent()) {
-            // handle response
+            System.out.println(res.webhook().get());
         }
     }
 }
@@ -394,7 +394,7 @@ public class Application {
                 .call();
 
         if (res.webhook().isPresent()) {
-            // handle response
+            System.out.println(res.webhook().get());
         }
     }
 }

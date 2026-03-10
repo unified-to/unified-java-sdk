@@ -71,7 +71,7 @@ public class Application {
                 .call();
 
         if (res.calendarCalendar().isPresent()) {
-            // handle response
+            System.out.println(res.calendarCalendar().get());
         }
     }
 }
@@ -131,7 +131,7 @@ public class Application {
                 .call();
 
         if (res.calendarEvent().isPresent()) {
-            // handle response
+            System.out.println(res.calendarEvent().get());
         }
     }
 }
@@ -192,7 +192,7 @@ public class Application {
                 .call();
 
         if (res.calendarLink().isPresent()) {
-            // handle response
+            System.out.println(res.calendarLink().get());
         }
     }
 }
@@ -252,7 +252,7 @@ public class Application {
                 .call();
 
         if (res.calendarWebinar().isPresent()) {
-            // handle response
+            System.out.println(res.calendarWebinar().get());
         }
     }
 }
@@ -310,7 +310,7 @@ public class Application {
                 .call();
 
         if (res.calendarCalendar().isPresent()) {
-            // handle response
+            System.out.println(res.calendarCalendar().get());
         }
     }
 }
@@ -368,7 +368,7 @@ public class Application {
                 .call();
 
         if (res.calendarEvent().isPresent()) {
-            // handle response
+            System.out.println(res.calendarEvent().get());
         }
     }
 }
@@ -426,7 +426,7 @@ public class Application {
                 .call();
 
         if (res.calendarLink().isPresent()) {
-            // handle response
+            System.out.println(res.calendarLink().get());
         }
     }
 }
@@ -484,7 +484,7 @@ public class Application {
                 .call();
 
         if (res.calendarRecording().isPresent()) {
-            // handle response
+            System.out.println(res.calendarRecording().get());
         }
     }
 }
@@ -542,7 +542,7 @@ public class Application {
                 .call();
 
         if (res.calendarWebinar().isPresent()) {
-            // handle response
+            System.out.println(res.calendarWebinar().get());
         }
     }
 }
@@ -599,7 +599,7 @@ public class Application {
                 .call();
 
         if (res.calendarBusies().isPresent()) {
-            // handle response
+            System.out.println(res.calendarBusies().get());
         }
     }
 }
@@ -656,7 +656,7 @@ public class Application {
                 .call();
 
         if (res.calendarCalendars().isPresent()) {
-            // handle response
+            System.out.println(res.calendarCalendars().get());
         }
     }
 }
@@ -713,7 +713,7 @@ public class Application {
                 .call();
 
         if (res.calendarEvents().isPresent()) {
-            // handle response
+            System.out.println(res.calendarEvents().get());
         }
     }
 }
@@ -770,7 +770,7 @@ public class Application {
                 .call();
 
         if (res.calendarLinks().isPresent()) {
-            // handle response
+            System.out.println(res.calendarLinks().get());
         }
     }
 }
@@ -827,7 +827,7 @@ public class Application {
                 .call();
 
         if (res.calendarRecordings().isPresent()) {
-            // handle response
+            System.out.println(res.calendarRecordings().get());
         }
     }
 }
@@ -884,7 +884,7 @@ public class Application {
                 .call();
 
         if (res.calendarWebinars().isPresent()) {
-            // handle response
+            System.out.println(res.calendarWebinars().get());
         }
     }
 }
@@ -946,7 +946,7 @@ public class Application {
                 .call();
 
         if (res.calendarCalendar().isPresent()) {
-            // handle response
+            System.out.println(res.calendarCalendar().get());
         }
     }
 }
@@ -1007,7 +1007,7 @@ public class Application {
                 .call();
 
         if (res.calendarEvent().isPresent()) {
-            // handle response
+            System.out.println(res.calendarEvent().get());
         }
     }
 }
@@ -1069,7 +1069,7 @@ public class Application {
                 .call();
 
         if (res.calendarLink().isPresent()) {
-            // handle response
+            System.out.println(res.calendarLink().get());
         }
     }
 }
@@ -1130,7 +1130,7 @@ public class Application {
                 .call();
 
         if (res.calendarWebinar().isPresent()) {
-            // handle response
+            System.out.println(res.calendarWebinar().get());
         }
     }
 }
@@ -1416,7 +1416,7 @@ public class Application {
                 .call();
 
         if (res.calendarCalendar().isPresent()) {
-            // handle response
+            System.out.println(res.calendarCalendar().get());
         }
     }
 }
@@ -1477,7 +1477,7 @@ public class Application {
                 .call();
 
         if (res.calendarEvent().isPresent()) {
-            // handle response
+            System.out.println(res.calendarEvent().get());
         }
     }
 }
@@ -1539,7 +1539,7 @@ public class Application {
                 .call();
 
         if (res.calendarLink().isPresent()) {
-            // handle response
+            System.out.println(res.calendarLink().get());
         }
     }
 }
@@ -1600,7 +1600,7 @@ public class Application {
                 .call();
 
         if (res.calendarWebinar().isPresent()) {
-            // handle response
+            System.out.println(res.calendarWebinar().get());
         }
     }
 }

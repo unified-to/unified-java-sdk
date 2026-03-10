@@ -49,7 +49,7 @@ public class Application {
                 .call();
 
         if (res.accountingPurchaseorder().isPresent()) {
-            // handle response
+            System.out.println(res.accountingPurchaseorder().get());
         }
     }
 }
@@ -107,7 +107,7 @@ public class Application {
                 .call();
 
         if (res.accountingPurchaseorder().isPresent()) {
-            // handle response
+            System.out.println(res.accountingPurchaseorder().get());
         }
     }
 }
@@ -164,7 +164,7 @@ public class Application {
                 .call();
 
         if (res.accountingPurchaseorders().isPresent()) {
-            // handle response
+            System.out.println(res.accountingPurchaseorders().get());
         }
     }
 }
@@ -225,7 +225,7 @@ public class Application {
                 .call();
 
         if (res.accountingPurchaseorder().isPresent()) {
-            // handle response
+            System.out.println(res.accountingPurchaseorder().get());
         }
     }
 }
@@ -342,7 +342,7 @@ public class Application {
                 .call();
 
         if (res.accountingPurchaseorder().isPresent()) {
-            // handle response
+            System.out.println(res.accountingPurchaseorder().get());
         }
     }
 }

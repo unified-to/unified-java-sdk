@@ -42,7 +42,7 @@ public class Application {
                 .call();
 
         if (res.apiCall().isPresent()) {
-            // handle response
+            System.out.println(res.apiCall().get());
         }
     }
 }
@@ -93,7 +93,7 @@ public class Application {
                 .call();
 
         if (res.apiCalls().isPresent()) {
-            // handle response
+            System.out.println(res.apiCalls().get());
         }
     }
 }

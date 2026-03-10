@@ -41,7 +41,7 @@ public class Application {
                 .call();
 
         if (res.calendarBusies().isPresent()) {
-            // handle response
+            System.out.println(res.calendarBusies().get());
         }
     }
 }

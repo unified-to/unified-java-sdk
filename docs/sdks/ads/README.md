@@ -80,7 +80,7 @@ public class Application {
                 .call();
 
         if (res.adsAd().isPresent()) {
-            // handle response
+            System.out.println(res.adsAd().get());
         }
     }
 }
@@ -140,7 +140,7 @@ public class Application {
                 .call();
 
         if (res.adsCampaign().isPresent()) {
-            // handle response
+            System.out.println(res.adsCampaign().get());
         }
     }
 }
@@ -200,7 +200,7 @@ public class Application {
                 .call();
 
         if (res.adsCreative().isPresent()) {
-            // handle response
+            System.out.println(res.adsCreative().get());
         }
     }
 }
@@ -260,7 +260,7 @@ public class Application {
                 .call();
 
         if (res.adsGroup().isPresent()) {
-            // handle response
+            System.out.println(res.adsGroup().get());
         }
     }
 }
@@ -320,7 +320,7 @@ public class Application {
                 .call();
 
         if (res.adsInsertionorder().isPresent()) {
-            // handle response
+            System.out.println(res.adsInsertionorder().get());
         }
     }
 }
@@ -380,7 +380,7 @@ public class Application {
                 .call();
 
         if (res.adsOrganization().isPresent()) {
-            // handle response
+            System.out.println(res.adsOrganization().get());
         }
     }
 }
@@ -438,7 +438,7 @@ public class Application {
                 .call();
 
         if (res.adsAd().isPresent()) {
-            // handle response
+            System.out.println(res.adsAd().get());
         }
     }
 }
@@ -496,7 +496,7 @@ public class Application {
                 .call();
 
         if (res.adsCampaign().isPresent()) {
-            // handle response
+            System.out.println(res.adsCampaign().get());
         }
     }
 }
@@ -554,7 +554,7 @@ public class Application {
                 .call();
 
         if (res.adsCreative().isPresent()) {
-            // handle response
+            System.out.println(res.adsCreative().get());
         }
     }
 }
@@ -612,7 +612,7 @@ public class Application {
                 .call();
 
         if (res.adsGroup().isPresent()) {
-            // handle response
+            System.out.println(res.adsGroup().get());
         }
     }
 }
@@ -670,7 +670,7 @@ public class Application {
                 .call();
 
         if (res.adsInsertionorder().isPresent()) {
-            // handle response
+            System.out.println(res.adsInsertionorder().get());
         }
     }
 }
@@ -728,7 +728,7 @@ public class Application {
                 .call();
 
         if (res.adsOrganization().isPresent()) {
-            // handle response
+            System.out.println(res.adsOrganization().get());
         }
     }
 }
@@ -785,7 +785,7 @@ public class Application {
                 .call();
 
         if (res.adsAds().isPresent()) {
-            // handle response
+            System.out.println(res.adsAds().get());
         }
     }
 }
@@ -842,7 +842,7 @@ public class Application {
                 .call();
 
         if (res.adsCampaigns().isPresent()) {
-            // handle response
+            System.out.println(res.adsCampaigns().get());
         }
     }
 }
@@ -899,7 +899,7 @@ public class Application {
                 .call();
 
         if (res.adsCreatives().isPresent()) {
-            // handle response
+            System.out.println(res.adsCreatives().get());
         }
     }
 }
@@ -956,7 +956,7 @@ public class Application {
                 .call();
 
         if (res.adsGroups().isPresent()) {
-            // handle response
+            System.out.println(res.adsGroups().get());
         }
     }
 }
@@ -1013,7 +1013,7 @@ public class Application {
                 .call();
 
         if (res.adsInsertionorders().isPresent()) {
-            // handle response
+            System.out.println(res.adsInsertionorders().get());
         }
     }
 }
@@ -1070,7 +1070,7 @@ public class Application {
                 .call();
 
         if (res.adsOrganizations().isPresent()) {
-            // handle response
+            System.out.println(res.adsOrganizations().get());
         }
     }
 }
@@ -1127,7 +1127,7 @@ public class Application {
                 .call();
 
         if (res.adsReports().isPresent()) {
-            // handle response
+            System.out.println(res.adsReports().get());
         }
     }
 }
@@ -1188,7 +1188,7 @@ public class Application {
                 .call();
 
         if (res.adsAd().isPresent()) {
-            // handle response
+            System.out.println(res.adsAd().get());
         }
     }
 }
@@ -1249,7 +1249,7 @@ public class Application {
                 .call();
 
         if (res.adsCampaign().isPresent()) {
-            // handle response
+            System.out.println(res.adsCampaign().get());
         }
     }
 }
@@ -1310,7 +1310,7 @@ public class Application {
                 .call();
 
         if (res.adsCreative().isPresent()) {
-            // handle response
+            System.out.println(res.adsCreative().get());
         }
     }
 }
@@ -1371,7 +1371,7 @@ public class Application {
                 .call();
 
         if (res.adsGroup().isPresent()) {
-            // handle response
+            System.out.println(res.adsGroup().get());
         }
     }
 }
@@ -1432,7 +1432,7 @@ public class Application {
                 .call();
 
         if (res.adsInsertionorder().isPresent()) {
-            // handle response
+            System.out.println(res.adsInsertionorder().get());
         }
     }
 }
@@ -1493,7 +1493,7 @@ public class Application {
                 .call();
 
         if (res.adsOrganization().isPresent()) {
-            // handle response
+            System.out.println(res.adsOrganization().get());
         }
     }
 }
@@ -1890,7 +1890,7 @@ public class Application {
                 .call();
 
         if (res.adsAd().isPresent()) {
-            // handle response
+            System.out.println(res.adsAd().get());
         }
     }
 }
@@ -1951,7 +1951,7 @@ public class Application {
                 .call();
 
         if (res.adsCampaign().isPresent()) {
-            // handle response
+            System.out.println(res.adsCampaign().get());
         }
     }
 }
@@ -2012,7 +2012,7 @@ public class Application {
                 .call();
 
         if (res.adsCreative().isPresent()) {
-            // handle response
+            System.out.println(res.adsCreative().get());
         }
     }
 }
@@ -2073,7 +2073,7 @@ public class Application {
                 .call();
 
         if (res.adsGroup().isPresent()) {
-            // handle response
+            System.out.println(res.adsGroup().get());
         }
     }
 }
@@ -2134,7 +2134,7 @@ public class Application {
                 .call();
 
         if (res.adsInsertionorder().isPresent()) {
-            // handle response
+            System.out.println(res.adsInsertionorder().get());
         }
     }
 }
@@ -2195,7 +2195,7 @@ public class Application {
                 .call();
 
         if (res.adsOrganization().isPresent()) {
-            // handle response
+            System.out.println(res.adsOrganization().get());
         }
     }
 }

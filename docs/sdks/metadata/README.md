@@ -51,7 +51,7 @@ public class Application {
                 .call();
 
         if (res.metadataMetadata().isPresent()) {
-            // handle response
+            System.out.println(res.metadataMetadata().get());
         }
     }
 }
@@ -109,7 +109,7 @@ public class Application {
                 .call();
 
         if (res.metadataMetadata().isPresent()) {
-            // handle response
+            System.out.println(res.metadataMetadata().get());
         }
     }
 }
@@ -166,7 +166,7 @@ public class Application {
                 .call();
 
         if (res.metadataMetadatas().isPresent()) {
-            // handle response
+            System.out.println(res.metadataMetadatas().get());
         }
     }
 }
@@ -229,7 +229,7 @@ public class Application {
                 .call();
 
         if (res.metadataMetadata().isPresent()) {
-            // handle response
+            System.out.println(res.metadataMetadata().get());
         }
     }
 }
@@ -348,7 +348,7 @@ public class Application {
                 .call();
 
         if (res.metadataMetadata().isPresent()) {
-            // handle response
+            System.out.println(res.metadataMetadata().get());
         }
     }
 }

@@ -49,7 +49,7 @@ public class Application {
                 .call();
 
         if (res.accountingExpense().isPresent()) {
-            // handle response
+            System.out.println(res.accountingExpense().get());
         }
     }
 }
@@ -107,7 +107,7 @@ public class Application {
                 .call();
 
         if (res.accountingExpense().isPresent()) {
-            // handle response
+            System.out.println(res.accountingExpense().get());
         }
     }
 }
@@ -164,7 +164,7 @@ public class Application {
                 .call();
 
         if (res.accountingExpenses().isPresent()) {
-            // handle response
+            System.out.println(res.accountingExpenses().get());
         }
     }
 }
@@ -225,7 +225,7 @@ public class Application {
                 .call();
 
         if (res.accountingExpense().isPresent()) {
-            // handle response
+            System.out.println(res.accountingExpense().get());
         }
     }
 }
@@ -342,7 +342,7 @@ public class Application {
                 .call();
 
         if (res.accountingExpense().isPresent()) {
-            // handle response
+            System.out.println(res.accountingExpense().get());
         }
     }
 }

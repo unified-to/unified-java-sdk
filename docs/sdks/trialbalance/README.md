@@ -43,7 +43,7 @@ public class Application {
                 .call();
 
         if (res.accountingTrialbalance().isPresent()) {
-            // handle response
+            System.out.println(res.accountingTrialbalance().get());
         }
     }
 }
@@ -100,7 +100,7 @@ public class Application {
                 .call();
 
         if (res.accountingTrialbalances().isPresent()) {
-            // handle response
+            System.out.println(res.accountingTrialbalances().get());
         }
     }
 }

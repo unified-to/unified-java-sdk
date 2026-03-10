@@ -22,4 +22,5 @@ GetMartechMemberQueryParamFields value = GetMartechMemberQueryParamFields.ID;
 | `EMAILS`     | emails       |
 | `LIST_IDS`   | list_ids     |
 | `TAGS`       | tags         |
+| `STATUS`     | status       |
 | `RAW`        | raw          |

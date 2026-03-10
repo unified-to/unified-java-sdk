@@ -64,7 +64,7 @@ public class Application {
                 .call();
 
         if (res.taskComment().isPresent()) {
-            // handle response
+            System.out.println(res.taskComment().get());
         }
     }
 }
@@ -124,7 +124,7 @@ public class Application {
                 .call();
 
         if (res.taskProject().isPresent()) {
-            // handle response
+            System.out.println(res.taskProject().get());
         }
     }
 }
@@ -184,7 +184,7 @@ public class Application {
                 .call();
 
         if (res.taskTask().isPresent()) {
-            // handle response
+            System.out.println(res.taskTask().get());
         }
     }
 }
@@ -242,7 +242,7 @@ public class Application {
                 .call();
 
         if (res.taskChange().isPresent()) {
-            // handle response
+            System.out.println(res.taskChange().get());
         }
     }
 }
@@ -300,7 +300,7 @@ public class Application {
                 .call();
 
         if (res.taskComment().isPresent()) {
-            // handle response
+            System.out.println(res.taskComment().get());
         }
     }
 }
@@ -358,7 +358,7 @@ public class Application {
                 .call();
 
         if (res.taskProject().isPresent()) {
-            // handle response
+            System.out.println(res.taskProject().get());
         }
     }
 }
@@ -416,7 +416,7 @@ public class Application {
                 .call();
 
         if (res.taskTask().isPresent()) {
-            // handle response
+            System.out.println(res.taskTask().get());
         }
     }
 }
@@ -473,7 +473,7 @@ public class Application {
                 .call();
 
         if (res.taskChanges().isPresent()) {
-            // handle response
+            System.out.println(res.taskChanges().get());
         }
     }
 }
@@ -530,7 +530,7 @@ public class Application {
                 .call();
 
         if (res.taskComments().isPresent()) {
-            // handle response
+            System.out.println(res.taskComments().get());
         }
     }
 }
@@ -587,7 +587,7 @@ public class Application {
                 .call();
 
         if (res.taskProjects().isPresent()) {
-            // handle response
+            System.out.println(res.taskProjects().get());
         }
     }
 }
@@ -644,7 +644,7 @@ public class Application {
                 .call();
 
         if (res.taskTasks().isPresent()) {
-            // handle response
+            System.out.println(res.taskTasks().get());
         }
     }
 }
@@ -706,7 +706,7 @@ public class Application {
                 .call();
 
         if (res.taskComment().isPresent()) {
-            // handle response
+            System.out.println(res.taskComment().get());
         }
     }
 }
@@ -767,7 +767,7 @@ public class Application {
                 .call();
 
         if (res.taskProject().isPresent()) {
-            // handle response
+            System.out.println(res.taskProject().get());
         }
     }
 }
@@ -828,7 +828,7 @@ public class Application {
                 .call();
 
         if (res.taskTask().isPresent()) {
-            // handle response
+            System.out.println(res.taskTask().get());
         }
     }
 }
@@ -1058,7 +1058,7 @@ public class Application {
                 .call();
 
         if (res.taskComment().isPresent()) {
-            // handle response
+            System.out.println(res.taskComment().get());
         }
     }
 }
@@ -1119,7 +1119,7 @@ public class Application {
                 .call();
 
         if (res.taskProject().isPresent()) {
-            // handle response
+            System.out.println(res.taskProject().get());
         }
     }
 }
@@ -1180,7 +1180,7 @@ public class Application {
                 .call();
 
         if (res.taskTask().isPresent()) {
-            // handle response
+            System.out.println(res.taskTask().get());
         }
     }
 }

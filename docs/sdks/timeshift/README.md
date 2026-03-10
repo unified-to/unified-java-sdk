@@ -53,7 +53,7 @@ public class Application {
                 .call();
 
         if (res.hrisTimeshift().isPresent()) {
-            // handle response
+            System.out.println(res.hrisTimeshift().get());
         }
     }
 }
@@ -111,7 +111,7 @@ public class Application {
                 .call();
 
         if (res.hrisTimeshift().isPresent()) {
-            // handle response
+            System.out.println(res.hrisTimeshift().get());
         }
     }
 }
@@ -168,7 +168,7 @@ public class Application {
                 .call();
 
         if (res.hrisTimeshifts().isPresent()) {
-            // handle response
+            System.out.println(res.hrisTimeshifts().get());
         }
     }
 }
@@ -233,7 +233,7 @@ public class Application {
                 .call();
 
         if (res.hrisTimeshift().isPresent()) {
-            // handle response
+            System.out.println(res.hrisTimeshift().get());
         }
     }
 }
@@ -354,7 +354,7 @@ public class Application {
                 .call();
 
         if (res.hrisTimeshift().isPresent()) {
-            // handle response
+            System.out.println(res.hrisTimeshift().get());
         }
     }
 }

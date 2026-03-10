@@ -43,7 +43,7 @@ public class Application {
                 .call();
 
         if (res.hrisTimeoff().isPresent()) {
-            // handle response
+            System.out.println(res.hrisTimeoff().get());
         }
     }
 }
@@ -100,7 +100,7 @@ public class Application {
                 .call();
 
         if (res.hrisTimeoffs().isPresent()) {
-            // handle response
+            System.out.println(res.hrisTimeoffs().get());
         }
     }
 }

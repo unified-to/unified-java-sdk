@@ -30,7 +30,7 @@ public class Application {
                 .call();
 
         if (res.accountingAccount().isPresent()) {
-            // handle response
+            System.out.println(res.accountingAccount().get());
         }
     }
 }

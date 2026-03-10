@@ -55,7 +55,7 @@ public class Application {
                 .call();
 
         if (res.adsCampaign().isPresent()) {
-            // handle response
+            System.out.println(res.adsCampaign().get());
         }
     }
 }
@@ -115,7 +115,7 @@ public class Application {
                 .call();
 
         if (res.marketingCampaign().isPresent()) {
-            // handle response
+            System.out.println(res.marketingCampaign().get());
         }
     }
 }
@@ -173,7 +173,7 @@ public class Application {
                 .call();
 
         if (res.adsCampaign().isPresent()) {
-            // handle response
+            System.out.println(res.adsCampaign().get());
         }
     }
 }
@@ -231,7 +231,7 @@ public class Application {
                 .call();
 
         if (res.marketingCampaign().isPresent()) {
-            // handle response
+            System.out.println(res.marketingCampaign().get());
         }
     }
 }
@@ -288,7 +288,7 @@ public class Application {
                 .call();
 
         if (res.adsCampaigns().isPresent()) {
-            // handle response
+            System.out.println(res.adsCampaigns().get());
         }
     }
 }
@@ -345,7 +345,7 @@ public class Application {
                 .call();
 
         if (res.marketingCampaigns().isPresent()) {
-            // handle response
+            System.out.println(res.marketingCampaigns().get());
         }
     }
 }
@@ -406,7 +406,7 @@ public class Application {
                 .call();
 
         if (res.adsCampaign().isPresent()) {
-            // handle response
+            System.out.println(res.adsCampaign().get());
         }
     }
 }
@@ -467,7 +467,7 @@ public class Application {
                 .call();
 
         if (res.marketingCampaign().isPresent()) {
-            // handle response
+            System.out.println(res.marketingCampaign().get());
         }
     }
 }
@@ -640,7 +640,7 @@ public class Application {
                 .call();
 
         if (res.adsCampaign().isPresent()) {
-            // handle response
+            System.out.println(res.adsCampaign().get());
         }
     }
 }
@@ -701,7 +701,7 @@ public class Application {
                 .call();
 
         if (res.marketingCampaign().isPresent()) {
-            // handle response
+            System.out.println(res.marketingCampaign().get());
         }
     }
 }

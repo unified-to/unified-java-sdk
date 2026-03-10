@@ -49,7 +49,7 @@ public class Application {
                 .call();
 
         if (res.taskProject().isPresent()) {
-            // handle response
+            System.out.println(res.taskProject().get());
         }
     }
 }
@@ -107,7 +107,7 @@ public class Application {
                 .call();
 
         if (res.taskProject().isPresent()) {
-            // handle response
+            System.out.println(res.taskProject().get());
         }
     }
 }
@@ -164,7 +164,7 @@ public class Application {
                 .call();
 
         if (res.taskProjects().isPresent()) {
-            // handle response
+            System.out.println(res.taskProjects().get());
         }
     }
 }
@@ -225,7 +225,7 @@ public class Application {
                 .call();
 
         if (res.taskProject().isPresent()) {
-            // handle response
+            System.out.println(res.taskProject().get());
         }
     }
 }
@@ -342,7 +342,7 @@ public class Application {
                 .call();
 
         if (res.taskProject().isPresent()) {
-            // handle response
+            System.out.println(res.taskProject().get());
         }
     }
 }

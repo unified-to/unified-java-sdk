@@ -43,7 +43,7 @@ public class Application {
                 .call();
 
         if (res.accountingBalancesheet().isPresent()) {
-            // handle response
+            System.out.println(res.accountingBalancesheet().get());
         }
     }
 }
@@ -100,7 +100,7 @@ public class Application {
                 .call();
 
         if (res.accountingBalancesheets().isPresent()) {
-            // handle response
+            System.out.println(res.accountingBalancesheets().get());
         }
     }
 }

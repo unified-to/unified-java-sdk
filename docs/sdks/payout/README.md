@@ -43,7 +43,7 @@ public class Application {
                 .call();
 
         if (res.paymentPayout().isPresent()) {
-            // handle response
+            System.out.println(res.paymentPayout().get());
         }
     }
 }
@@ -100,7 +100,7 @@ public class Application {
                 .call();
 
         if (res.paymentPayouts().isPresent()) {
-            // handle response
+            System.out.println(res.paymentPayouts().get());
         }
     }
 }

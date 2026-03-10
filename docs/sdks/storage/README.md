@@ -49,7 +49,7 @@ public class Application {
                 .call();
 
         if (res.storageFile().isPresent()) {
-            // handle response
+            System.out.println(res.storageFile().get());
         }
     }
 }
@@ -107,7 +107,7 @@ public class Application {
                 .call();
 
         if (res.storageFile().isPresent()) {
-            // handle response
+            System.out.println(res.storageFile().get());
         }
     }
 }
@@ -164,7 +164,7 @@ public class Application {
                 .call();
 
         if (res.storageFiles().isPresent()) {
-            // handle response
+            System.out.println(res.storageFiles().get());
         }
     }
 }
@@ -225,7 +225,7 @@ public class Application {
                 .call();
 
         if (res.storageFile().isPresent()) {
-            // handle response
+            System.out.println(res.storageFile().get());
         }
     }
 }
@@ -342,7 +342,7 @@ public class Application {
                 .call();
 
         if (res.storageFile().isPresent()) {
-            // handle response
+            System.out.println(res.storageFile().get());
         }
     }
 }

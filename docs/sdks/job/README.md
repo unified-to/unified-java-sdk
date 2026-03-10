@@ -49,7 +49,7 @@ public class Application {
                 .call();
 
         if (res.atsJob().isPresent()) {
-            // handle response
+            System.out.println(res.atsJob().get());
         }
     }
 }
@@ -107,7 +107,7 @@ public class Application {
                 .call();
 
         if (res.atsJob().isPresent()) {
-            // handle response
+            System.out.println(res.atsJob().get());
         }
     }
 }
@@ -164,7 +164,7 @@ public class Application {
                 .call();
 
         if (res.atsJobs().isPresent()) {
-            // handle response
+            System.out.println(res.atsJobs().get());
         }
     }
 }
@@ -225,7 +225,7 @@ public class Application {
                 .call();
 
         if (res.atsJob().isPresent()) {
-            // handle response
+            System.out.println(res.atsJob().get());
         }
     }
 }
@@ -342,7 +342,7 @@ public class Application {
                 .call();
 
         if (res.atsJob().isPresent()) {
-            // handle response
+            System.out.println(res.atsJob().get());
         }
     }
 }

@@ -79,7 +79,7 @@ public class Application {
                 .call();
 
         if (res.crmCompany().isPresent()) {
-            // handle response
+            System.out.println(res.crmCompany().get());
         }
     }
 }
@@ -139,7 +139,7 @@ public class Application {
                 .call();
 
         if (res.crmContact().isPresent()) {
-            // handle response
+            System.out.println(res.crmContact().get());
         }
     }
 }
@@ -199,7 +199,7 @@ public class Application {
                 .call();
 
         if (res.crmDeal().isPresent()) {
-            // handle response
+            System.out.println(res.crmDeal().get());
         }
     }
 }
@@ -259,7 +259,7 @@ public class Application {
                 .call();
 
         if (res.crmEvent().isPresent()) {
-            // handle response
+            System.out.println(res.crmEvent().get());
         }
     }
 }
@@ -319,7 +319,7 @@ public class Application {
                 .call();
 
         if (res.crmLead().isPresent()) {
-            // handle response
+            System.out.println(res.crmLead().get());
         }
     }
 }
@@ -379,7 +379,7 @@ public class Application {
                 .call();
 
         if (res.crmPipeline().isPresent()) {
-            // handle response
+            System.out.println(res.crmPipeline().get());
         }
     }
 }
@@ -437,7 +437,7 @@ public class Application {
                 .call();
 
         if (res.crmCompany().isPresent()) {
-            // handle response
+            System.out.println(res.crmCompany().get());
         }
     }
 }
@@ -495,7 +495,7 @@ public class Application {
                 .call();
 
         if (res.crmContact().isPresent()) {
-            // handle response
+            System.out.println(res.crmContact().get());
         }
     }
 }
@@ -553,7 +553,7 @@ public class Application {
                 .call();
 
         if (res.crmDeal().isPresent()) {
-            // handle response
+            System.out.println(res.crmDeal().get());
         }
     }
 }
@@ -611,7 +611,7 @@ public class Application {
                 .call();
 
         if (res.crmEvent().isPresent()) {
-            // handle response
+            System.out.println(res.crmEvent().get());
         }
     }
 }
@@ -669,7 +669,7 @@ public class Application {
                 .call();
 
         if (res.crmLead().isPresent()) {
-            // handle response
+            System.out.println(res.crmLead().get());
         }
     }
 }
@@ -727,7 +727,7 @@ public class Application {
                 .call();
 
         if (res.crmPipeline().isPresent()) {
-            // handle response
+            System.out.println(res.crmPipeline().get());
         }
     }
 }
@@ -784,7 +784,7 @@ public class Application {
                 .call();
 
         if (res.crmCompanies().isPresent()) {
-            // handle response
+            System.out.println(res.crmCompanies().get());
         }
     }
 }
@@ -841,7 +841,7 @@ public class Application {
                 .call();
 
         if (res.crmContacts().isPresent()) {
-            // handle response
+            System.out.println(res.crmContacts().get());
         }
     }
 }
@@ -898,7 +898,7 @@ public class Application {
                 .call();
 
         if (res.crmDeals().isPresent()) {
-            // handle response
+            System.out.println(res.crmDeals().get());
         }
     }
 }
@@ -955,7 +955,7 @@ public class Application {
                 .call();
 
         if (res.crmEvents().isPresent()) {
-            // handle response
+            System.out.println(res.crmEvents().get());
         }
     }
 }
@@ -1012,7 +1012,7 @@ public class Application {
                 .call();
 
         if (res.crmLeads().isPresent()) {
-            // handle response
+            System.out.println(res.crmLeads().get());
         }
     }
 }
@@ -1069,7 +1069,7 @@ public class Application {
                 .call();
 
         if (res.crmPipelines().isPresent()) {
-            // handle response
+            System.out.println(res.crmPipelines().get());
         }
     }
 }
@@ -1130,7 +1130,7 @@ public class Application {
                 .call();
 
         if (res.crmCompany().isPresent()) {
-            // handle response
+            System.out.println(res.crmCompany().get());
         }
     }
 }
@@ -1191,7 +1191,7 @@ public class Application {
                 .call();
 
         if (res.crmContact().isPresent()) {
-            // handle response
+            System.out.println(res.crmContact().get());
         }
     }
 }
@@ -1252,7 +1252,7 @@ public class Application {
                 .call();
 
         if (res.crmDeal().isPresent()) {
-            // handle response
+            System.out.println(res.crmDeal().get());
         }
     }
 }
@@ -1313,7 +1313,7 @@ public class Application {
                 .call();
 
         if (res.crmEvent().isPresent()) {
-            // handle response
+            System.out.println(res.crmEvent().get());
         }
     }
 }
@@ -1374,7 +1374,7 @@ public class Application {
                 .call();
 
         if (res.crmLead().isPresent()) {
-            // handle response
+            System.out.println(res.crmLead().get());
         }
     }
 }
@@ -1435,7 +1435,7 @@ public class Application {
                 .call();
 
         if (res.crmPipeline().isPresent()) {
-            // handle response
+            System.out.println(res.crmPipeline().get());
         }
     }
 }
@@ -1832,7 +1832,7 @@ public class Application {
                 .call();
 
         if (res.crmCompany().isPresent()) {
-            // handle response
+            System.out.println(res.crmCompany().get());
         }
     }
 }
@@ -1893,7 +1893,7 @@ public class Application {
                 .call();
 
         if (res.crmContact().isPresent()) {
-            // handle response
+            System.out.println(res.crmContact().get());
         }
     }
 }
@@ -1954,7 +1954,7 @@ public class Application {
                 .call();
 
         if (res.crmDeal().isPresent()) {
-            // handle response
+            System.out.println(res.crmDeal().get());
         }
     }
 }
@@ -2015,7 +2015,7 @@ public class Application {
                 .call();
 
         if (res.crmEvent().isPresent()) {
-            // handle response
+            System.out.println(res.crmEvent().get());
         }
     }
 }
@@ -2076,7 +2076,7 @@ public class Application {
                 .call();
 
         if (res.crmLead().isPresent()) {
-            // handle response
+            System.out.println(res.crmLead().get());
         }
     }
 }
@@ -2137,7 +2137,7 @@ public class Application {
                 .call();
 
         if (res.crmPipeline().isPresent()) {
-            // handle response
+            System.out.println(res.crmPipeline().get());
         }
     }
 }

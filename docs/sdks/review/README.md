@@ -50,7 +50,7 @@ public class Application {
                 .call();
 
         if (res.commerceReview().isPresent()) {
-            // handle response
+            System.out.println(res.commerceReview().get());
         }
     }
 }
@@ -108,7 +108,7 @@ public class Application {
                 .call();
 
         if (res.commerceReview().isPresent()) {
-            // handle response
+            System.out.println(res.commerceReview().get());
         }
     }
 }
@@ -165,7 +165,7 @@ public class Application {
                 .call();
 
         if (res.commerceReviews().isPresent()) {
-            // handle response
+            System.out.println(res.commerceReviews().get());
         }
     }
 }
@@ -227,7 +227,7 @@ public class Application {
                 .call();
 
         if (res.commerceReview().isPresent()) {
-            // handle response
+            System.out.println(res.commerceReview().get());
         }
     }
 }
@@ -345,7 +345,7 @@ public class Application {
                 .call();
 
         if (res.commerceReview().isPresent()) {
-            // handle response
+            System.out.println(res.commerceReview().get());
         }
     }
 }

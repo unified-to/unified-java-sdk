@@ -43,7 +43,7 @@ public class Application {
                 .call();
 
         if (res.messagingChannel().isPresent()) {
-            // handle response
+            System.out.println(res.messagingChannel().get());
         }
     }
 }
@@ -100,7 +100,7 @@ public class Application {
                 .call();
 
         if (res.messagingChannels().isPresent()) {
-            // handle response
+            System.out.println(res.messagingChannels().get());
         }
     }
 }

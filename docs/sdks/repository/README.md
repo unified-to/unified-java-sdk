@@ -50,7 +50,7 @@ public class Application {
                 .call();
 
         if (res.repoRepository().isPresent()) {
-            // handle response
+            System.out.println(res.repoRepository().get());
         }
     }
 }
@@ -108,7 +108,7 @@ public class Application {
                 .call();
 
         if (res.repoRepository().isPresent()) {
-            // handle response
+            System.out.println(res.repoRepository().get());
         }
     }
 }
@@ -165,7 +165,7 @@ public class Application {
                 .call();
 
         if (res.repoRepositories().isPresent()) {
-            // handle response
+            System.out.println(res.repoRepositories().get());
         }
     }
 }
@@ -227,7 +227,7 @@ public class Application {
                 .call();
 
         if (res.repoRepository().isPresent()) {
-            // handle response
+            System.out.println(res.repoRepository().get());
         }
     }
 }
@@ -345,7 +345,7 @@ public class Application {
                 .call();
 
         if (res.repoRepository().isPresent()) {
-            // handle response
+            System.out.println(res.repoRepository().get());
         }
     }
 }

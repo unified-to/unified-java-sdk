@@ -43,7 +43,7 @@ public class Application {
                 .call();
 
         if (res.ucCall().isPresent()) {
-            // handle response
+            System.out.println(res.ucCall().get());
         }
     }
 }
@@ -100,7 +100,7 @@ public class Application {
                 .call();
 
         if (res.ucCalls().isPresent()) {
-            // handle response
+            System.out.println(res.ucCalls().get());
         }
     }
 }

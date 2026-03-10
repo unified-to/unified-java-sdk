@@ -49,7 +49,7 @@ public class Application {
                 .call();
 
         if (res.hrisBenefit().isPresent()) {
-            // handle response
+            System.out.println(res.hrisBenefit().get());
         }
     }
 }
@@ -107,7 +107,7 @@ public class Application {
                 .call();
 
         if (res.hrisBenefit().isPresent()) {
-            // handle response
+            System.out.println(res.hrisBenefit().get());
         }
     }
 }
@@ -164,7 +164,7 @@ public class Application {
                 .call();
 
         if (res.hrisBenefits().isPresent()) {
-            // handle response
+            System.out.println(res.hrisBenefits().get());
         }
     }
 }
@@ -225,7 +225,7 @@ public class Application {
                 .call();
 
         if (res.hrisBenefit().isPresent()) {
-            // handle response
+            System.out.println(res.hrisBenefit().get());
         }
     }
 }
@@ -342,7 +342,7 @@ public class Application {
                 .call();
 
         if (res.hrisBenefit().isPresent()) {
-            // handle response
+            System.out.println(res.hrisBenefit().get());
         }
     }
 }

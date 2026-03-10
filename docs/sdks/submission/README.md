@@ -43,7 +43,7 @@ public class Application {
                 .call();
 
         if (res.formsSubmission().isPresent()) {
-            // handle response
+            System.out.println(res.formsSubmission().get());
         }
     }
 }
@@ -100,7 +100,7 @@ public class Application {
                 .call();
 
         if (res.formsSubmissions().isPresent()) {
-            // handle response
+            System.out.println(res.formsSubmissions().get());
         }
     }
 }

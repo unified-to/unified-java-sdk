@@ -50,7 +50,7 @@ public class Application {
                 .call();
 
         if (res.hrisDevice().isPresent()) {
-            // handle response
+            System.out.println(res.hrisDevice().get());
         }
     }
 }
@@ -108,7 +108,7 @@ public class Application {
                 .call();
 
         if (res.hrisDevice().isPresent()) {
-            // handle response
+            System.out.println(res.hrisDevice().get());
         }
     }
 }
@@ -165,7 +165,7 @@ public class Application {
                 .call();
 
         if (res.hrisDevices().isPresent()) {
-            // handle response
+            System.out.println(res.hrisDevices().get());
         }
     }
 }
@@ -227,7 +227,7 @@ public class Application {
                 .call();
 
         if (res.hrisDevice().isPresent()) {
-            // handle response
+            System.out.println(res.hrisDevice().get());
         }
     }
 }
@@ -345,7 +345,7 @@ public class Application {
                 .call();
 
         if (res.hrisDevice().isPresent()) {
-            // handle response
+            System.out.println(res.hrisDevice().get());
         }
     }
 }

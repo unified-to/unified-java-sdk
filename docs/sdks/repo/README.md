@@ -75,7 +75,7 @@ public class Application {
                 .call();
 
         if (res.repoBranch().isPresent()) {
-            // handle response
+            System.out.println(res.repoBranch().get());
         }
     }
 }
@@ -136,7 +136,7 @@ public class Application {
                 .call();
 
         if (res.repoCommit().isPresent()) {
-            // handle response
+            System.out.println(res.repoCommit().get());
         }
     }
 }
@@ -196,7 +196,7 @@ public class Application {
                 .call();
 
         if (res.repoOrganization().isPresent()) {
-            // handle response
+            System.out.println(res.repoOrganization().get());
         }
     }
 }
@@ -256,7 +256,7 @@ public class Application {
                 .call();
 
         if (res.repoPullrequest().isPresent()) {
-            // handle response
+            System.out.println(res.repoPullrequest().get());
         }
     }
 }
@@ -317,7 +317,7 @@ public class Application {
                 .call();
 
         if (res.repoRepository().isPresent()) {
-            // handle response
+            System.out.println(res.repoRepository().get());
         }
     }
 }
@@ -375,7 +375,7 @@ public class Application {
                 .call();
 
         if (res.repoBranch().isPresent()) {
-            // handle response
+            System.out.println(res.repoBranch().get());
         }
     }
 }
@@ -433,7 +433,7 @@ public class Application {
                 .call();
 
         if (res.repoCommit().isPresent()) {
-            // handle response
+            System.out.println(res.repoCommit().get());
         }
     }
 }
@@ -491,7 +491,7 @@ public class Application {
                 .call();
 
         if (res.repoOrganization().isPresent()) {
-            // handle response
+            System.out.println(res.repoOrganization().get());
         }
     }
 }
@@ -549,7 +549,7 @@ public class Application {
                 .call();
 
         if (res.repoPullrequest().isPresent()) {
-            // handle response
+            System.out.println(res.repoPullrequest().get());
         }
     }
 }
@@ -607,7 +607,7 @@ public class Application {
                 .call();
 
         if (res.repoRepository().isPresent()) {
-            // handle response
+            System.out.println(res.repoRepository().get());
         }
     }
 }
@@ -664,7 +664,7 @@ public class Application {
                 .call();
 
         if (res.repoBranches().isPresent()) {
-            // handle response
+            System.out.println(res.repoBranches().get());
         }
     }
 }
@@ -721,7 +721,7 @@ public class Application {
                 .call();
 
         if (res.repoCommits().isPresent()) {
-            // handle response
+            System.out.println(res.repoCommits().get());
         }
     }
 }
@@ -778,7 +778,7 @@ public class Application {
                 .call();
 
         if (res.repoOrganizations().isPresent()) {
-            // handle response
+            System.out.println(res.repoOrganizations().get());
         }
     }
 }
@@ -835,7 +835,7 @@ public class Application {
                 .call();
 
         if (res.repoPullrequests().isPresent()) {
-            // handle response
+            System.out.println(res.repoPullrequests().get());
         }
     }
 }
@@ -892,7 +892,7 @@ public class Application {
                 .call();
 
         if (res.repoRepositories().isPresent()) {
-            // handle response
+            System.out.println(res.repoRepositories().get());
         }
     }
 }
@@ -955,7 +955,7 @@ public class Application {
                 .call();
 
         if (res.repoBranch().isPresent()) {
-            // handle response
+            System.out.println(res.repoBranch().get());
         }
     }
 }
@@ -1017,7 +1017,7 @@ public class Application {
                 .call();
 
         if (res.repoCommit().isPresent()) {
-            // handle response
+            System.out.println(res.repoCommit().get());
         }
     }
 }
@@ -1078,7 +1078,7 @@ public class Application {
                 .call();
 
         if (res.repoOrganization().isPresent()) {
-            // handle response
+            System.out.println(res.repoOrganization().get());
         }
     }
 }
@@ -1139,7 +1139,7 @@ public class Application {
                 .call();
 
         if (res.repoPullrequest().isPresent()) {
-            // handle response
+            System.out.println(res.repoPullrequest().get());
         }
     }
 }
@@ -1201,7 +1201,7 @@ public class Application {
                 .call();
 
         if (res.repoRepository().isPresent()) {
-            // handle response
+            System.out.println(res.repoRepository().get());
         }
     }
 }
@@ -1544,7 +1544,7 @@ public class Application {
                 .call();
 
         if (res.repoBranch().isPresent()) {
-            // handle response
+            System.out.println(res.repoBranch().get());
         }
     }
 }
@@ -1606,7 +1606,7 @@ public class Application {
                 .call();
 
         if (res.repoCommit().isPresent()) {
-            // handle response
+            System.out.println(res.repoCommit().get());
         }
     }
 }
@@ -1667,7 +1667,7 @@ public class Application {
                 .call();
 
         if (res.repoOrganization().isPresent()) {
-            // handle response
+            System.out.println(res.repoOrganization().get());
         }
     }
 }
@@ -1728,7 +1728,7 @@ public class Application {
                 .call();
 
         if (res.repoPullrequest().isPresent()) {
-            // handle response
+            System.out.println(res.repoPullrequest().get());
         }
     }
 }
@@ -1790,7 +1790,7 @@ public class Application {
                 .call();
 
         if (res.repoRepository().isPresent()) {
-            // handle response
+            System.out.println(res.repoRepository().get());
         }
     }
 }

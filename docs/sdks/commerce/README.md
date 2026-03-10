@@ -86,7 +86,7 @@ public class Application {
                 .call();
 
         if (res.commerceCollection().isPresent()) {
-            // handle response
+            System.out.println(res.commerceCollection().get());
         }
     }
 }
@@ -147,7 +147,7 @@ public class Application {
                 .call();
 
         if (res.commerceInventory().isPresent()) {
-            // handle response
+            System.out.println(res.commerceInventory().get());
         }
     }
 }
@@ -207,7 +207,7 @@ public class Application {
                 .call();
 
         if (res.commerceItem().isPresent()) {
-            // handle response
+            System.out.println(res.commerceItem().get());
         }
     }
 }
@@ -267,7 +267,7 @@ public class Application {
                 .call();
 
         if (res.commerceItemvariant().isPresent()) {
-            // handle response
+            System.out.println(res.commerceItemvariant().get());
         }
     }
 }
@@ -328,7 +328,7 @@ public class Application {
                 .call();
 
         if (res.commerceLocation().isPresent()) {
-            // handle response
+            System.out.println(res.commerceLocation().get());
         }
     }
 }
@@ -389,7 +389,7 @@ public class Application {
                 .call();
 
         if (res.commerceReview().isPresent()) {
-            // handle response
+            System.out.println(res.commerceReview().get());
         }
     }
 }
@@ -449,7 +449,7 @@ public class Application {
                 .call();
 
         if (res.commerceSaleschannel().isPresent()) {
-            // handle response
+            System.out.println(res.commerceSaleschannel().get());
         }
     }
 }
@@ -507,7 +507,7 @@ public class Application {
                 .call();
 
         if (res.commerceCollection().isPresent()) {
-            // handle response
+            System.out.println(res.commerceCollection().get());
         }
     }
 }
@@ -565,7 +565,7 @@ public class Application {
                 .call();
 
         if (res.commerceInventory().isPresent()) {
-            // handle response
+            System.out.println(res.commerceInventory().get());
         }
     }
 }
@@ -623,7 +623,7 @@ public class Application {
                 .call();
 
         if (res.commerceItem().isPresent()) {
-            // handle response
+            System.out.println(res.commerceItem().get());
         }
     }
 }
@@ -681,7 +681,7 @@ public class Application {
                 .call();
 
         if (res.commerceItemvariant().isPresent()) {
-            // handle response
+            System.out.println(res.commerceItemvariant().get());
         }
     }
 }
@@ -739,7 +739,7 @@ public class Application {
                 .call();
 
         if (res.commerceLocation().isPresent()) {
-            // handle response
+            System.out.println(res.commerceLocation().get());
         }
     }
 }
@@ -797,7 +797,7 @@ public class Application {
                 .call();
 
         if (res.commerceReview().isPresent()) {
-            // handle response
+            System.out.println(res.commerceReview().get());
         }
     }
 }
@@ -855,7 +855,7 @@ public class Application {
                 .call();
 
         if (res.commerceSaleschannel().isPresent()) {
-            // handle response
+            System.out.println(res.commerceSaleschannel().get());
         }
     }
 }
@@ -912,7 +912,7 @@ public class Application {
                 .call();
 
         if (res.commerceCollections().isPresent()) {
-            // handle response
+            System.out.println(res.commerceCollections().get());
         }
     }
 }
@@ -969,7 +969,7 @@ public class Application {
                 .call();
 
         if (res.commerceInventories().isPresent()) {
-            // handle response
+            System.out.println(res.commerceInventories().get());
         }
     }
 }
@@ -1026,7 +1026,7 @@ public class Application {
                 .call();
 
         if (res.commerceItems().isPresent()) {
-            // handle response
+            System.out.println(res.commerceItems().get());
         }
     }
 }
@@ -1083,7 +1083,7 @@ public class Application {
                 .call();
 
         if (res.commerceItemvariants().isPresent()) {
-            // handle response
+            System.out.println(res.commerceItemvariants().get());
         }
     }
 }
@@ -1140,7 +1140,7 @@ public class Application {
                 .call();
 
         if (res.commerceLocations().isPresent()) {
-            // handle response
+            System.out.println(res.commerceLocations().get());
         }
     }
 }
@@ -1197,7 +1197,7 @@ public class Application {
                 .call();
 
         if (res.commerceReviews().isPresent()) {
-            // handle response
+            System.out.println(res.commerceReviews().get());
         }
     }
 }
@@ -1254,7 +1254,7 @@ public class Application {
                 .call();
 
         if (res.commerceSaleschannels().isPresent()) {
-            // handle response
+            System.out.println(res.commerceSaleschannels().get());
         }
     }
 }
@@ -1316,7 +1316,7 @@ public class Application {
                 .call();
 
         if (res.commerceCollection().isPresent()) {
-            // handle response
+            System.out.println(res.commerceCollection().get());
         }
     }
 }
@@ -1378,7 +1378,7 @@ public class Application {
                 .call();
 
         if (res.commerceInventory().isPresent()) {
-            // handle response
+            System.out.println(res.commerceInventory().get());
         }
     }
 }
@@ -1439,7 +1439,7 @@ public class Application {
                 .call();
 
         if (res.commerceItem().isPresent()) {
-            // handle response
+            System.out.println(res.commerceItem().get());
         }
     }
 }
@@ -1500,7 +1500,7 @@ public class Application {
                 .call();
 
         if (res.commerceItemvariant().isPresent()) {
-            // handle response
+            System.out.println(res.commerceItemvariant().get());
         }
     }
 }
@@ -1562,7 +1562,7 @@ public class Application {
                 .call();
 
         if (res.commerceLocation().isPresent()) {
-            // handle response
+            System.out.println(res.commerceLocation().get());
         }
     }
 }
@@ -1624,7 +1624,7 @@ public class Application {
                 .call();
 
         if (res.commerceReview().isPresent()) {
-            // handle response
+            System.out.println(res.commerceReview().get());
         }
     }
 }
@@ -1685,7 +1685,7 @@ public class Application {
                 .call();
 
         if (res.commerceSaleschannel().isPresent()) {
-            // handle response
+            System.out.println(res.commerceSaleschannel().get());
         }
     }
 }
@@ -2139,7 +2139,7 @@ public class Application {
                 .call();
 
         if (res.commerceCollection().isPresent()) {
-            // handle response
+            System.out.println(res.commerceCollection().get());
         }
     }
 }
@@ -2201,7 +2201,7 @@ public class Application {
                 .call();
 
         if (res.commerceInventory().isPresent()) {
-            // handle response
+            System.out.println(res.commerceInventory().get());
         }
     }
 }
@@ -2262,7 +2262,7 @@ public class Application {
                 .call();
 
         if (res.commerceItem().isPresent()) {
-            // handle response
+            System.out.println(res.commerceItem().get());
         }
     }
 }
@@ -2323,7 +2323,7 @@ public class Application {
                 .call();
 
         if (res.commerceItemvariant().isPresent()) {
-            // handle response
+            System.out.println(res.commerceItemvariant().get());
         }
     }
 }
@@ -2385,7 +2385,7 @@ public class Application {
                 .call();
 
         if (res.commerceLocation().isPresent()) {
-            // handle response
+            System.out.println(res.commerceLocation().get());
         }
     }
 }
@@ -2447,7 +2447,7 @@ public class Application {
                 .call();
 
         if (res.commerceReview().isPresent()) {
-            // handle response
+            System.out.println(res.commerceReview().get());
         }
     }
 }
@@ -2508,7 +2508,7 @@ public class Application {
                 .call();
 
         if (res.commerceSaleschannel().isPresent()) {
-            // handle response
+            System.out.println(res.commerceSaleschannel().get());
         }
     }
 }

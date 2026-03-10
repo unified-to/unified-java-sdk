@@ -62,7 +62,7 @@ public class Application {
                 .call();
 
         if (res.kmsComment().isPresent()) {
-            // handle response
+            System.out.println(res.kmsComment().get());
         }
     }
 }
@@ -123,7 +123,7 @@ public class Application {
                 .call();
 
         if (res.taskComment().isPresent()) {
-            // handle response
+            System.out.println(res.taskComment().get());
         }
     }
 }
@@ -184,7 +184,7 @@ public class Application {
                 .call();
 
         if (res.ucComment().isPresent()) {
-            // handle response
+            System.out.println(res.ucComment().get());
         }
     }
 }
@@ -242,7 +242,7 @@ public class Application {
                 .call();
 
         if (res.kmsComment().isPresent()) {
-            // handle response
+            System.out.println(res.kmsComment().get());
         }
     }
 }
@@ -300,7 +300,7 @@ public class Application {
                 .call();
 
         if (res.taskComment().isPresent()) {
-            // handle response
+            System.out.println(res.taskComment().get());
         }
     }
 }
@@ -358,7 +358,7 @@ public class Application {
                 .call();
 
         if (res.ucComment().isPresent()) {
-            // handle response
+            System.out.println(res.ucComment().get());
         }
     }
 }
@@ -415,7 +415,7 @@ public class Application {
                 .call();
 
         if (res.kmsComments().isPresent()) {
-            // handle response
+            System.out.println(res.kmsComments().get());
         }
     }
 }
@@ -472,7 +472,7 @@ public class Application {
                 .call();
 
         if (res.taskComments().isPresent()) {
-            // handle response
+            System.out.println(res.taskComments().get());
         }
     }
 }
@@ -529,7 +529,7 @@ public class Application {
                 .call();
 
         if (res.ucComments().isPresent()) {
-            // handle response
+            System.out.println(res.ucComments().get());
         }
     }
 }
@@ -591,7 +591,7 @@ public class Application {
                 .call();
 
         if (res.kmsComment().isPresent()) {
-            // handle response
+            System.out.println(res.kmsComment().get());
         }
     }
 }
@@ -653,7 +653,7 @@ public class Application {
                 .call();
 
         if (res.taskComment().isPresent()) {
-            // handle response
+            System.out.println(res.taskComment().get());
         }
     }
 }
@@ -715,7 +715,7 @@ public class Application {
                 .call();
 
         if (res.ucComment().isPresent()) {
-            // handle response
+            System.out.println(res.ucComment().get());
         }
     }
 }
@@ -945,7 +945,7 @@ public class Application {
                 .call();
 
         if (res.kmsComment().isPresent()) {
-            // handle response
+            System.out.println(res.kmsComment().get());
         }
     }
 }
@@ -1007,7 +1007,7 @@ public class Application {
                 .call();
 
         if (res.taskComment().isPresent()) {
-            // handle response
+            System.out.println(res.taskComment().get());
         }
     }
 }
@@ -1069,7 +1069,7 @@ public class Application {
                 .call();
 
         if (res.ucComment().isPresent()) {
-            // handle response
+            System.out.println(res.ucComment().get());
         }
     }
 }

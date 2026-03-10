@@ -49,7 +49,7 @@ public class Application {
                 .call();
 
         if (res.hrisBankaccount().isPresent()) {
-            // handle response
+            System.out.println(res.hrisBankaccount().get());
         }
     }
 }
@@ -107,7 +107,7 @@ public class Application {
                 .call();
 
         if (res.hrisBankaccount().isPresent()) {
-            // handle response
+            System.out.println(res.hrisBankaccount().get());
         }
     }
 }
@@ -164,7 +164,7 @@ public class Application {
                 .call();
 
         if (res.hrisBankaccounts().isPresent()) {
-            // handle response
+            System.out.println(res.hrisBankaccounts().get());
         }
     }
 }
@@ -225,7 +225,7 @@ public class Application {
                 .call();
 
         if (res.hrisBankaccount().isPresent()) {
-            // handle response
+            System.out.println(res.hrisBankaccount().get());
         }
     }
 }
@@ -342,7 +342,7 @@ public class Application {
                 .call();
 
         if (res.hrisBankaccount().isPresent()) {
-            // handle response
+            System.out.println(res.hrisBankaccount().get());
         }
     }
 }

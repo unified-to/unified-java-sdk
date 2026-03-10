@@ -42,7 +42,7 @@ public class Application {
                 .call();
 
         if (res.environments().isPresent()) {
-            // handle response
+            System.out.println(res.environments().get());
         }
     }
 }
@@ -93,7 +93,7 @@ public class Application {
                 .call();
 
         if (res.environments().isPresent()) {
-            // handle response
+            System.out.println(res.environments().get());
         }
     }
 }
@@ -144,7 +144,7 @@ public class Application {
                 .call();
 
         if (res.environments().isPresent()) {
-            // handle response
+            System.out.println(res.environments().get());
         }
     }
 }

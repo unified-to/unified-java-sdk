@@ -47,7 +47,7 @@ public class Application {
                 .call();
 
         if (res.genaiEmbedding().isPresent()) {
-            // handle response
+            System.out.println(res.genaiEmbedding().get());
         }
     }
 }
@@ -107,7 +107,7 @@ public class Application {
                 .call();
 
         if (res.genaiPrompt().isPresent()) {
-            // handle response
+            System.out.println(res.genaiPrompt().get());
         }
     }
 }
@@ -165,7 +165,7 @@ public class Application {
                 .call();
 
         if (res.genaiModel().isPresent()) {
-            // handle response
+            System.out.println(res.genaiModel().get());
         }
     }
 }
@@ -222,7 +222,7 @@ public class Application {
                 .call();
 
         if (res.genaiModels().isPresent()) {
-            // handle response
+            System.out.println(res.genaiModels().get());
         }
     }
 }

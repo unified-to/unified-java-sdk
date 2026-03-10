@@ -43,7 +43,7 @@ public class Application {
                 .call();
 
         if (res.genaiModel().isPresent()) {
-            // handle response
+            System.out.println(res.genaiModel().get());
         }
     }
 }
@@ -100,7 +100,7 @@ public class Application {
                 .call();
 
         if (res.genaiModels().isPresent()) {
-            // handle response
+            System.out.println(res.genaiModels().get());
         }
     }
 }

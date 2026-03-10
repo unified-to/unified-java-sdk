@@ -43,7 +43,7 @@ public class Application {
                 .call();
 
         if (res.hrisPayslip().isPresent()) {
-            // handle response
+            System.out.println(res.hrisPayslip().get());
         }
     }
 }
@@ -100,7 +100,7 @@ public class Application {
                 .call();
 
         if (res.hrisPayslips().isPresent()) {
-            // handle response
+            System.out.println(res.hrisPayslips().get());
         }
     }
 }

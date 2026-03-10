@@ -50,7 +50,7 @@ public class Application {
                 .call();
 
         if (res.lmsCourse().isPresent()) {
-            // handle response
+            System.out.println(res.lmsCourse().get());
         }
     }
 }
@@ -108,7 +108,7 @@ public class Application {
                 .call();
 
         if (res.lmsCourse().isPresent()) {
-            // handle response
+            System.out.println(res.lmsCourse().get());
         }
     }
 }
@@ -165,7 +165,7 @@ public class Application {
                 .call();
 
         if (res.lmsCourses().isPresent()) {
-            // handle response
+            System.out.println(res.lmsCourses().get());
         }
     }
 }
@@ -227,7 +227,7 @@ public class Application {
                 .call();
 
         if (res.lmsCourse().isPresent()) {
-            // handle response
+            System.out.println(res.lmsCourse().get());
         }
     }
 }
@@ -345,7 +345,7 @@ public class Application {
                 .call();
 
         if (res.lmsCourse().isPresent()) {
-            // handle response
+            System.out.println(res.lmsCourse().get());
         }
     }
 }

@@ -67,7 +67,7 @@ public class Application {
                 .call();
 
         if (res.ticketingCategory().isPresent()) {
-            // handle response
+            System.out.println(res.ticketingCategory().get());
         }
     }
 }
@@ -127,7 +127,7 @@ public class Application {
                 .call();
 
         if (res.ticketingCustomer().isPresent()) {
-            // handle response
+            System.out.println(res.ticketingCustomer().get());
         }
     }
 }
@@ -187,7 +187,7 @@ public class Application {
                 .call();
 
         if (res.ticketingNote().isPresent()) {
-            // handle response
+            System.out.println(res.ticketingNote().get());
         }
     }
 }
@@ -247,7 +247,7 @@ public class Application {
                 .call();
 
         if (res.ticketingTicket().isPresent()) {
-            // handle response
+            System.out.println(res.ticketingTicket().get());
         }
     }
 }
@@ -305,7 +305,7 @@ public class Application {
                 .call();
 
         if (res.ticketingCategory().isPresent()) {
-            // handle response
+            System.out.println(res.ticketingCategory().get());
         }
     }
 }
@@ -363,7 +363,7 @@ public class Application {
                 .call();
 
         if (res.ticketingCustomer().isPresent()) {
-            // handle response
+            System.out.println(res.ticketingCustomer().get());
         }
     }
 }
@@ -421,7 +421,7 @@ public class Application {
                 .call();
 
         if (res.ticketingNote().isPresent()) {
-            // handle response
+            System.out.println(res.ticketingNote().get());
         }
     }
 }
@@ -479,7 +479,7 @@ public class Application {
                 .call();
 
         if (res.ticketingTicket().isPresent()) {
-            // handle response
+            System.out.println(res.ticketingTicket().get());
         }
     }
 }
@@ -536,7 +536,7 @@ public class Application {
                 .call();
 
         if (res.ticketingCategories().isPresent()) {
-            // handle response
+            System.out.println(res.ticketingCategories().get());
         }
     }
 }
@@ -593,7 +593,7 @@ public class Application {
                 .call();
 
         if (res.ticketingCustomers().isPresent()) {
-            // handle response
+            System.out.println(res.ticketingCustomers().get());
         }
     }
 }
@@ -650,7 +650,7 @@ public class Application {
                 .call();
 
         if (res.ticketingNotes().isPresent()) {
-            // handle response
+            System.out.println(res.ticketingNotes().get());
         }
     }
 }
@@ -707,7 +707,7 @@ public class Application {
                 .call();
 
         if (res.ticketingTickets().isPresent()) {
-            // handle response
+            System.out.println(res.ticketingTickets().get());
         }
     }
 }
@@ -768,7 +768,7 @@ public class Application {
                 .call();
 
         if (res.ticketingCategory().isPresent()) {
-            // handle response
+            System.out.println(res.ticketingCategory().get());
         }
     }
 }
@@ -829,7 +829,7 @@ public class Application {
                 .call();
 
         if (res.ticketingCustomer().isPresent()) {
-            // handle response
+            System.out.println(res.ticketingCustomer().get());
         }
     }
 }
@@ -890,7 +890,7 @@ public class Application {
                 .call();
 
         if (res.ticketingNote().isPresent()) {
-            // handle response
+            System.out.println(res.ticketingNote().get());
         }
     }
 }
@@ -951,7 +951,7 @@ public class Application {
                 .call();
 
         if (res.ticketingTicket().isPresent()) {
-            // handle response
+            System.out.println(res.ticketingTicket().get());
         }
     }
 }
@@ -1236,7 +1236,7 @@ public class Application {
                 .call();
 
         if (res.ticketingCategory().isPresent()) {
-            // handle response
+            System.out.println(res.ticketingCategory().get());
         }
     }
 }
@@ -1297,7 +1297,7 @@ public class Application {
                 .call();
 
         if (res.ticketingCustomer().isPresent()) {
-            // handle response
+            System.out.println(res.ticketingCustomer().get());
         }
     }
 }
@@ -1358,7 +1358,7 @@ public class Application {
                 .call();
 
         if (res.ticketingNote().isPresent()) {
-            // handle response
+            System.out.println(res.ticketingNote().get());
         }
     }
 }
@@ -1419,7 +1419,7 @@ public class Application {
                 .call();
 
         if (res.ticketingTicket().isPresent()) {
-            // handle response
+            System.out.println(res.ticketingTicket().get());
         }
     }
 }

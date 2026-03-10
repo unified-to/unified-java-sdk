@@ -49,7 +49,7 @@ public class Application {
                 .call();
 
         if (res.adsInsertionorder().isPresent()) {
-            // handle response
+            System.out.println(res.adsInsertionorder().get());
         }
     }
 }
@@ -107,7 +107,7 @@ public class Application {
                 .call();
 
         if (res.adsInsertionorder().isPresent()) {
-            // handle response
+            System.out.println(res.adsInsertionorder().get());
         }
     }
 }
@@ -164,7 +164,7 @@ public class Application {
                 .call();
 
         if (res.adsInsertionorders().isPresent()) {
-            // handle response
+            System.out.println(res.adsInsertionorders().get());
         }
     }
 }
@@ -225,7 +225,7 @@ public class Application {
                 .call();
 
         if (res.adsInsertionorder().isPresent()) {
-            // handle response
+            System.out.println(res.adsInsertionorder().get());
         }
     }
 }
@@ -342,7 +342,7 @@ public class Application {
                 .call();
 
         if (res.adsInsertionorder().isPresent()) {
-            // handle response
+            System.out.println(res.adsInsertionorder().get());
         }
     }
 }

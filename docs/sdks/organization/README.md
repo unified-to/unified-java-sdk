@@ -57,7 +57,7 @@ public class Application {
                 .call();
 
         if (res.adsOrganization().isPresent()) {
-            // handle response
+            System.out.println(res.adsOrganization().get());
         }
     }
 }
@@ -117,7 +117,7 @@ public class Application {
                 .call();
 
         if (res.repoOrganization().isPresent()) {
-            // handle response
+            System.out.println(res.repoOrganization().get());
         }
     }
 }
@@ -175,7 +175,7 @@ public class Application {
                 .call();
 
         if (res.accountingOrganization().isPresent()) {
-            // handle response
+            System.out.println(res.accountingOrganization().get());
         }
     }
 }
@@ -233,7 +233,7 @@ public class Application {
                 .call();
 
         if (res.adsOrganization().isPresent()) {
-            // handle response
+            System.out.println(res.adsOrganization().get());
         }
     }
 }
@@ -291,7 +291,7 @@ public class Application {
                 .call();
 
         if (res.repoOrganization().isPresent()) {
-            // handle response
+            System.out.println(res.repoOrganization().get());
         }
     }
 }
@@ -348,7 +348,7 @@ public class Application {
                 .call();
 
         if (res.accountingOrganizations().isPresent()) {
-            // handle response
+            System.out.println(res.accountingOrganizations().get());
         }
     }
 }
@@ -405,7 +405,7 @@ public class Application {
                 .call();
 
         if (res.adsOrganizations().isPresent()) {
-            // handle response
+            System.out.println(res.adsOrganizations().get());
         }
     }
 }
@@ -462,7 +462,7 @@ public class Application {
                 .call();
 
         if (res.repoOrganizations().isPresent()) {
-            // handle response
+            System.out.println(res.repoOrganizations().get());
         }
     }
 }
@@ -523,7 +523,7 @@ public class Application {
                 .call();
 
         if (res.adsOrganization().isPresent()) {
-            // handle response
+            System.out.println(res.adsOrganization().get());
         }
     }
 }
@@ -584,7 +584,7 @@ public class Application {
                 .call();
 
         if (res.repoOrganization().isPresent()) {
-            // handle response
+            System.out.println(res.repoOrganization().get());
         }
     }
 }
@@ -757,7 +757,7 @@ public class Application {
                 .call();
 
         if (res.adsOrganization().isPresent()) {
-            // handle response
+            System.out.println(res.adsOrganization().get());
         }
     }
 }
@@ -818,7 +818,7 @@ public class Application {
                 .call();
 
         if (res.repoOrganization().isPresent()) {
-            // handle response
+            System.out.println(res.repoOrganization().get());
         }
     }
 }

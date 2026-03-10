@@ -56,7 +56,7 @@ public class Application {
                 .call();
 
         if (res.commerceCollection().isPresent()) {
-            // handle response
+            System.out.println(res.commerceCollection().get());
         }
     }
 }
@@ -116,7 +116,7 @@ public class Application {
                 .call();
 
         if (res.lmsCollection().isPresent()) {
-            // handle response
+            System.out.println(res.lmsCollection().get());
         }
     }
 }
@@ -174,7 +174,7 @@ public class Application {
                 .call();
 
         if (res.commerceCollection().isPresent()) {
-            // handle response
+            System.out.println(res.commerceCollection().get());
         }
     }
 }
@@ -232,7 +232,7 @@ public class Application {
                 .call();
 
         if (res.lmsCollection().isPresent()) {
-            // handle response
+            System.out.println(res.lmsCollection().get());
         }
     }
 }
@@ -289,7 +289,7 @@ public class Application {
                 .call();
 
         if (res.commerceCollections().isPresent()) {
-            // handle response
+            System.out.println(res.commerceCollections().get());
         }
     }
 }
@@ -346,7 +346,7 @@ public class Application {
                 .call();
 
         if (res.lmsCollections().isPresent()) {
-            // handle response
+            System.out.println(res.lmsCollections().get());
         }
     }
 }
@@ -408,7 +408,7 @@ public class Application {
                 .call();
 
         if (res.commerceCollection().isPresent()) {
-            // handle response
+            System.out.println(res.commerceCollection().get());
         }
     }
 }
@@ -469,7 +469,7 @@ public class Application {
                 .call();
 
         if (res.lmsCollection().isPresent()) {
-            // handle response
+            System.out.println(res.lmsCollection().get());
         }
     }
 }
@@ -643,7 +643,7 @@ public class Application {
                 .call();
 
         if (res.commerceCollection().isPresent()) {
-            // handle response
+            System.out.println(res.commerceCollection().get());
         }
     }
 }
@@ -704,7 +704,7 @@ public class Application {
                 .call();
 
         if (res.lmsCollection().isPresent()) {
-            // handle response
+            System.out.println(res.lmsCollection().get());
         }
     }
 }

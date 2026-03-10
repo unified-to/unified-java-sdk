@@ -44,7 +44,7 @@ public class Application {
                 .call();
 
         if (res.genaiEmbedding().isPresent()) {
-            // handle response
+            System.out.println(res.genaiEmbedding().get());
         }
     }
 }
