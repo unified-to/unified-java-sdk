@@ -3,116 +3,129 @@
  */
 package to.unified.unified_java_sdk.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import java.lang.Boolean;
-import java.lang.Double;
-import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
-import java.util.List;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
-import to.unified.unified_java_sdk.utils.OneOfDeserializer;
-import to.unified.unified_java_sdk.utils.TypedObject;
-import to.unified.unified_java_sdk.utils.Utils.JsonShape;
-import to.unified.unified_java_sdk.utils.Utils.TypeReferenceWithShape;
-import to.unified.unified_java_sdk.utils.Utils;
+import java.util.Objects;
+import java.util.Optional;
 
-@JsonDeserialize(using = VirtualWebhookPaymentId._Deserializer.class)
+/**
+ * Wrapper for an "open" enum that can handle unknown values from API responses
+ * without runtime errors. Instances are immutable singletons with reference equality.
+ * Use {@code asEnum()} for switch expressions.
+ */
 public class VirtualWebhookPaymentId {
 
-    @JsonValue
-    private final TypedObject value;
-    
-    private VirtualWebhookPaymentId(TypedObject value) {
+    public static final VirtualWebhookPaymentId SUPPORTED_REQUIRED = new VirtualWebhookPaymentId("supported-required");
+    public static final VirtualWebhookPaymentId SUPPORTED = new VirtualWebhookPaymentId("supported");
+    public static final VirtualWebhookPaymentId NOT_SUPPORTED = new VirtualWebhookPaymentId("not-supported");
+
+    // This map will grow whenever a Color gets created with a new
+    // unrecognized value (a potential memory leak if the user is not
+    // careful). Keep this field lower case to avoid clashing with
+    // generated member names which will always be upper cased (Java
+    // convention)
+    private static final Map<String, VirtualWebhookPaymentId> values = createValuesMap();
+    private static final Map<String, VirtualWebhookPaymentIdEnum> enums = createEnumsMap();
+
+    private final String value;
+
+    private VirtualWebhookPaymentId(String value) {
         this.value = value;
     }
 
-    public static VirtualWebhookPaymentId of(Map<String, Object> value) {
-        Utils.checkNotNull(value, "value");
-        return new VirtualWebhookPaymentId(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
-    }
-
-    public static VirtualWebhookPaymentId of(String value) {
-        Utils.checkNotNull(value, "value");
-        return new VirtualWebhookPaymentId(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
-    }
-
-    public static VirtualWebhookPaymentId of(double value) {
-        return new VirtualWebhookPaymentId(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
-    }
-
-    public static VirtualWebhookPaymentId of(boolean value) {
-        return new VirtualWebhookPaymentId(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
-    }
-
-    public static VirtualWebhookPaymentId of(List<IntegrationSupportSchemas5> value) {
-        Utils.checkNotNull(value, "value");
-        return new VirtualWebhookPaymentId(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
-    }
-    
     /**
-     * Returns an instance of one of these types:
-     * <ul>
-     * <li>{@code java.util.Map<java.lang.String, java.lang.Object>}</li>
-     * <li>{@code java.lang.String}</li>
-     * <li>{@code double}</li>
-     * <li>{@code boolean}</li>
-     * <li>{@code java.util.List<to.unified.unified_java_sdk.models.shared.IntegrationSupportSchemas5>}</li>
-     * </ul>
+     * Returns a VirtualWebhookPaymentId with the given value. For a specific value the 
+     * returned object will always be a singleton so reference equality 
+     * is satisfied when the values are the same.
      * 
-     * <p>Use {@code instanceof} to determine what type is returned. For example:
-     * 
-     * <pre>
-     * if (obj.value() instanceof String) {
-     *     String answer = (String) obj.value();
-     *     System.out.println("answer=" + answer);
-     * }
-     * </pre>
-     * 
-     * @return value of oneOf type
-     **/ 
-    public java.lang.Object value() {
-        return value.value();
-    }
-    
-    @Override
-    public boolean equals(java.lang.Object o) {
-        if (this == o) {
-            return true;
+     * @param value value to be wrapped as VirtualWebhookPaymentId
+     */ 
+    @JsonCreator
+    public static VirtualWebhookPaymentId of(String value) {
+        synchronized (VirtualWebhookPaymentId.class) {
+            return values.computeIfAbsent(value, v -> new VirtualWebhookPaymentId(v));
         }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-        VirtualWebhookPaymentId other = (VirtualWebhookPaymentId) o;
-        return Utils.enhancedDeepEquals(this.value.value(), other.value.value());
     }
-    
+
+    @JsonValue
+    public String value() {
+        return value;
+    }
+
+    public Optional<VirtualWebhookPaymentIdEnum> asEnum() {
+        return Optional.ofNullable(enums.getOrDefault(value, null));
+    }
+
+    public boolean isKnown() {
+        return asEnum().isPresent();
+    }
+
     @Override
     public int hashCode() {
-        return Utils.enhancedHash(value.value());
+        return Objects.hash(value);
     }
-    
-    @SuppressWarnings("serial")
-    public static final class _Deserializer extends OneOfDeserializer<VirtualWebhookPaymentId> {
 
-        public _Deserializer() {
-            super(VirtualWebhookPaymentId.class, false,
-                  TypeReferenceWithShape.of(new TypeReference<Map<String, Object>>() {}, JsonShape.DEFAULT),
-                  TypeReferenceWithShape.of(new TypeReference<String>() {}, JsonShape.DEFAULT),
-                  TypeReferenceWithShape.of(new TypeReference<Double>() {}, JsonShape.DEFAULT),
-                  TypeReferenceWithShape.of(new TypeReference<Boolean>() {}, JsonShape.DEFAULT),
-                  TypeReferenceWithShape.of(new TypeReference<List<IntegrationSupportSchemas5>>() {}, JsonShape.DEFAULT));
-        }
+    @Override
+    public boolean equals(java.lang.Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        VirtualWebhookPaymentId other = (VirtualWebhookPaymentId) obj;
+        return Objects.equals(value, other.value);
     }
-    
+
     @Override
     public String toString() {
-        return Utils.toString(VirtualWebhookPaymentId.class,
-                "value", value);
+        return "VirtualWebhookPaymentId [value=" + value + "]";
     }
 
+    // return an array just like an enum
+    public static VirtualWebhookPaymentId[] values() {
+        synchronized (VirtualWebhookPaymentId.class) {
+            return values.values().toArray(new VirtualWebhookPaymentId[] {});
+        }
+    }
+
+    private static final Map<String, VirtualWebhookPaymentId> createValuesMap() {
+        Map<String, VirtualWebhookPaymentId> map = new LinkedHashMap<>();
+        map.put("supported-required", SUPPORTED_REQUIRED);
+        map.put("supported", SUPPORTED);
+        map.put("not-supported", NOT_SUPPORTED);
+        return map;
+    }
+
+    private static final Map<String, VirtualWebhookPaymentIdEnum> createEnumsMap() {
+        Map<String, VirtualWebhookPaymentIdEnum> map = new HashMap<>();
+        map.put("supported-required", VirtualWebhookPaymentIdEnum.SUPPORTED_REQUIRED);
+        map.put("supported", VirtualWebhookPaymentIdEnum.SUPPORTED);
+        map.put("not-supported", VirtualWebhookPaymentIdEnum.NOT_SUPPORTED);
+        return map;
+    }
+    
+    
+    public enum VirtualWebhookPaymentIdEnum {
+
+        SUPPORTED_REQUIRED("supported-required"),
+        SUPPORTED("supported"),
+        NOT_SUPPORTED("not-supported"),;
+
+        private final String value;
+
+        private VirtualWebhookPaymentIdEnum(String value) {
+            this.value = value;
+        }
+
+        public String value() {
+            return value;
+        }
+    }
 }
 

@@ -25,7 +25,7 @@ import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceItemvariantRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceItemvariantResponse;
-import to.unified.unified_java_sdk.models.shared.CommerceItemvariant1;
+import to.unified.unified_java_sdk.models.shared.CommerceItemvariant;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -39,7 +39,7 @@ public class Application {
             .build();
 
         CreateCommerceItemvariantRequest req = CreateCommerceItemvariantRequest.builder()
-                .commerceItemvariant(CommerceItemvariant1.builder()
+                .commerceItemvariant(CommerceItemvariant.builder()
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -200,7 +200,7 @@ import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchCommerceItemvariantRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCommerceItemvariantResponse;
-import to.unified.unified_java_sdk.models.shared.CommerceItemvariant1;
+import to.unified.unified_java_sdk.models.shared.CommerceItemvariant;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -214,7 +214,7 @@ public class Application {
             .build();
 
         PatchCommerceItemvariantRequest req = PatchCommerceItemvariantRequest.builder()
-                .commerceItemvariant(CommerceItemvariant1.builder()
+                .commerceItemvariant(CommerceItemvariant.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -317,7 +317,7 @@ import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceItemvariantRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceItemvariantResponse;
-import to.unified.unified_java_sdk.models.shared.CommerceItemvariant1;
+import to.unified.unified_java_sdk.models.shared.CommerceItemvariant;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -331,7 +331,7 @@ public class Application {
             .build();
 
         UpdateCommerceItemvariantRequest req = UpdateCommerceItemvariantRequest.builder()
-                .commerceItemvariant(CommerceItemvariant1.builder()
+                .commerceItemvariant(CommerceItemvariant.builder()
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

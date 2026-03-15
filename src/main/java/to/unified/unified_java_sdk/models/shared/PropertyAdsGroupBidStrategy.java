@@ -45,7 +45,7 @@ public class PropertyAdsGroupBidStrategy {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("performance_goal_type")
-    private PropertyAdsGroupBidStrategyPerformanceGoalType performanceGoalType;
+    private PerformanceGoalType performanceGoalType;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -64,7 +64,7 @@ public class PropertyAdsGroupBidStrategy {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("youtube_and_partners_type")
-    private PropertyAdsGroupBidStrategyYoutubeAndPartnersType youtubeAndPartnersType;
+    private YoutubeAndPartnersType youtubeAndPartnersType;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -77,11 +77,11 @@ public class PropertyAdsGroupBidStrategy {
             @JsonProperty("fixed_bid_amount") @Nullable Double fixedBidAmount,
             @JsonProperty("max_average_cpm_bid_amount") @Nullable Double maxAverageCpmBidAmount,
             @JsonProperty("performance_goal_amount") @Nullable Double performanceGoalAmount,
-            @JsonProperty("performance_goal_type") @Nullable PropertyAdsGroupBidStrategyPerformanceGoalType performanceGoalType,
+            @JsonProperty("performance_goal_type") @Nullable PerformanceGoalType performanceGoalType,
             @JsonProperty("raise_bid_for_deals") @Nullable Boolean raiseBidForDeals,
             @JsonProperty("target_roas") @Nullable Double targetRoas,
             @JsonProperty("type") @Nonnull PropertyAdsGroupBidStrategyType type,
-            @JsonProperty("youtube_and_partners_type") @Nullable PropertyAdsGroupBidStrategyYoutubeAndPartnersType youtubeAndPartnersType,
+            @JsonProperty("youtube_and_partners_type") @Nullable YoutubeAndPartnersType youtubeAndPartnersType,
             @JsonProperty("youtube_and_partners_value") @Nullable String youtubeAndPartnersValue) {
         this.customBiddingAlgorithmId = customBiddingAlgorithmId;
         this.fixedBidAmount = fixedBidAmount;
@@ -120,7 +120,7 @@ public class PropertyAdsGroupBidStrategy {
         return Optional.ofNullable(this.performanceGoalAmount);
     }
 
-    public Optional<PropertyAdsGroupBidStrategyPerformanceGoalType> performanceGoalType() {
+    public Optional<PerformanceGoalType> performanceGoalType() {
         return Optional.ofNullable(this.performanceGoalType);
     }
 
@@ -136,7 +136,7 @@ public class PropertyAdsGroupBidStrategy {
         return this.type;
     }
 
-    public Optional<PropertyAdsGroupBidStrategyYoutubeAndPartnersType> youtubeAndPartnersType() {
+    public Optional<YoutubeAndPartnersType> youtubeAndPartnersType() {
         return Optional.ofNullable(this.youtubeAndPartnersType);
     }
 
@@ -173,7 +173,7 @@ public class PropertyAdsGroupBidStrategy {
     }
 
 
-    public PropertyAdsGroupBidStrategy withPerformanceGoalType(@Nullable PropertyAdsGroupBidStrategyPerformanceGoalType performanceGoalType) {
+    public PropertyAdsGroupBidStrategy withPerformanceGoalType(@Nullable PerformanceGoalType performanceGoalType) {
         this.performanceGoalType = performanceGoalType;
         return this;
     }
@@ -197,7 +197,7 @@ public class PropertyAdsGroupBidStrategy {
     }
 
 
-    public PropertyAdsGroupBidStrategy withYoutubeAndPartnersType(@Nullable PropertyAdsGroupBidStrategyYoutubeAndPartnersType youtubeAndPartnersType) {
+    public PropertyAdsGroupBidStrategy withYoutubeAndPartnersType(@Nullable YoutubeAndPartnersType youtubeAndPartnersType) {
         this.youtubeAndPartnersType = youtubeAndPartnersType;
         return this;
     }
@@ -266,7 +266,7 @@ public class PropertyAdsGroupBidStrategy {
 
         private Double performanceGoalAmount;
 
-        private PropertyAdsGroupBidStrategyPerformanceGoalType performanceGoalType;
+        private PerformanceGoalType performanceGoalType;
 
         private Boolean raiseBidForDeals;
 
@@ -274,7 +274,7 @@ public class PropertyAdsGroupBidStrategy {
 
         private PropertyAdsGroupBidStrategyType type;
 
-        private PropertyAdsGroupBidStrategyYoutubeAndPartnersType youtubeAndPartnersType;
+        private YoutubeAndPartnersType youtubeAndPartnersType;
 
         private String youtubeAndPartnersValue;
 
@@ -302,7 +302,7 @@ public class PropertyAdsGroupBidStrategy {
             return this;
         }
 
-        public Builder performanceGoalType(@Nullable PropertyAdsGroupBidStrategyPerformanceGoalType performanceGoalType) {
+        public Builder performanceGoalType(@Nullable PerformanceGoalType performanceGoalType) {
             this.performanceGoalType = performanceGoalType;
             return this;
         }
@@ -322,7 +322,7 @@ public class PropertyAdsGroupBidStrategy {
             return this;
         }
 
-        public Builder youtubeAndPartnersType(@Nullable PropertyAdsGroupBidStrategyYoutubeAndPartnersType youtubeAndPartnersType) {
+        public Builder youtubeAndPartnersType(@Nullable YoutubeAndPartnersType youtubeAndPartnersType) {
             this.youtubeAndPartnersType = youtubeAndPartnersType;
             return this;
         }

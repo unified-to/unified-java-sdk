@@ -18,259 +18,143 @@ import to.unified.unified_java_sdk.utils.Utils;
 public class PropertyAdsGroupTargeting {
 
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("age_ranges")
-    private List<String> ageRanges;
+    @JsonProperty("audience")
+    private PropertyAdsGroupTargetingAudience audience;
+
+    /**
+     * Brand safety (Meta: excluded_publisher_categories, etc.; Google
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("brand_safety")
+    private PropertyAdsGroupTargetingBrandSafety brandSafety;
 
 
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("audiences")
-    private List<String> audiences;
+    @JsonProperty("content")
+    private PropertyAdsGroupTargetingContent content;
+
+    /**
+     * Demographic targeting (Meta: age_min, age_max, genders)
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("demographic")
+    private PropertyAdsGroupTargetingDemographic demographic;
 
 
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("behaviors")
-    private List<String> behaviors;
+    @JsonProperty("device")
+    private PropertyAdsGroupTargetingDevice device;
 
 
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("companies")
-    private List<String> companies;
+    @JsonProperty("geographic")
+    private PropertyAdsGroupTargetingGeographic geographic;
+
+    /**
+     * Language targeting (Meta
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("language")
+    private PropertyAdsGroupTargetingLanguage language;
+
+    /**
+     * Optimization (Meta: targeting_automation; Google: observation vs targeting mode)
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("optimization")
+    private PropertyAdsGroupTargetingOptimization optimization;
 
 
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("company_sizes")
-    private List<String> companySizes;
+    @JsonProperty("placement")
+    private PropertyAdsGroupTargetingPlacement placement;
 
 
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("custom_audiences")
-    private List<String> customAudiences;
-
-
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("degrees")
-    private List<String> degrees;
-
-
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("devices")
-    private List<String> devices;
-
-
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("excluded_audiences")
-    private List<String> excludedAudiences;
-
-
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("excluded_locations")
-    private List<String> excludedLocations;
-
-
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("genders")
-    private List<String> genders;
-
-
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("industries")
-    private List<String> industries;
-
-
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("interests")
-    private List<String> interests;
-
-
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("job_functions")
-    private List<String> jobFunctions;
-
-
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("job_titles")
-    private List<String> jobTitles;
-
-
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("keywords")
-    private List<String> keywords;
-
-
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("languages")
-    private List<String> languages;
-
-
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("locations")
-    private List<String> locations;
-
-
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("placements")
-    private List<String> placements;
-
-
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("schools")
-    private List<String> schools;
-
-
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("seniorities")
-    private List<String> seniorities;
-
-
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("skills")
-    private List<String> skills;
+    @JsonProperty("schedule")
+    private List<AdSchedule> schedule;
 
     @JsonCreator
     public PropertyAdsGroupTargeting(
-            @JsonProperty("age_ranges") @Nullable List<String> ageRanges,
-            @JsonProperty("audiences") @Nullable List<String> audiences,
-            @JsonProperty("behaviors") @Nullable List<String> behaviors,
-            @JsonProperty("companies") @Nullable List<String> companies,
-            @JsonProperty("company_sizes") @Nullable List<String> companySizes,
-            @JsonProperty("custom_audiences") @Nullable List<String> customAudiences,
-            @JsonProperty("degrees") @Nullable List<String> degrees,
-            @JsonProperty("devices") @Nullable List<String> devices,
-            @JsonProperty("excluded_audiences") @Nullable List<String> excludedAudiences,
-            @JsonProperty("excluded_locations") @Nullable List<String> excludedLocations,
-            @JsonProperty("genders") @Nullable List<String> genders,
-            @JsonProperty("industries") @Nullable List<String> industries,
-            @JsonProperty("interests") @Nullable List<String> interests,
-            @JsonProperty("job_functions") @Nullable List<String> jobFunctions,
-            @JsonProperty("job_titles") @Nullable List<String> jobTitles,
-            @JsonProperty("keywords") @Nullable List<String> keywords,
-            @JsonProperty("languages") @Nullable List<String> languages,
-            @JsonProperty("locations") @Nullable List<String> locations,
-            @JsonProperty("placements") @Nullable List<String> placements,
-            @JsonProperty("schools") @Nullable List<String> schools,
-            @JsonProperty("seniorities") @Nullable List<String> seniorities,
-            @JsonProperty("skills") @Nullable List<String> skills) {
-        this.ageRanges = ageRanges;
-        this.audiences = audiences;
-        this.behaviors = behaviors;
-        this.companies = companies;
-        this.companySizes = companySizes;
-        this.customAudiences = customAudiences;
-        this.degrees = degrees;
-        this.devices = devices;
-        this.excludedAudiences = excludedAudiences;
-        this.excludedLocations = excludedLocations;
-        this.genders = genders;
-        this.industries = industries;
-        this.interests = interests;
-        this.jobFunctions = jobFunctions;
-        this.jobTitles = jobTitles;
-        this.keywords = keywords;
-        this.languages = languages;
-        this.locations = locations;
-        this.placements = placements;
-        this.schools = schools;
-        this.seniorities = seniorities;
-        this.skills = skills;
+            @JsonProperty("audience") @Nullable PropertyAdsGroupTargetingAudience audience,
+            @JsonProperty("brand_safety") @Nullable PropertyAdsGroupTargetingBrandSafety brandSafety,
+            @JsonProperty("content") @Nullable PropertyAdsGroupTargetingContent content,
+            @JsonProperty("demographic") @Nullable PropertyAdsGroupTargetingDemographic demographic,
+            @JsonProperty("device") @Nullable PropertyAdsGroupTargetingDevice device,
+            @JsonProperty("geographic") @Nullable PropertyAdsGroupTargetingGeographic geographic,
+            @JsonProperty("language") @Nullable PropertyAdsGroupTargetingLanguage language,
+            @JsonProperty("optimization") @Nullable PropertyAdsGroupTargetingOptimization optimization,
+            @JsonProperty("placement") @Nullable PropertyAdsGroupTargetingPlacement placement,
+            @JsonProperty("schedule") @Nullable List<AdSchedule> schedule) {
+        this.audience = audience;
+        this.brandSafety = brandSafety;
+        this.content = content;
+        this.demographic = demographic;
+        this.device = device;
+        this.geographic = geographic;
+        this.language = language;
+        this.optimization = optimization;
+        this.placement = placement;
+        this.schedule = schedule;
     }
     
     public PropertyAdsGroupTargeting() {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null,
-            null, null, null,
-            null, null, null,
-            null, null, null,
             null);
     }
 
-    public Optional<List<String>> ageRanges() {
-        return Optional.ofNullable(this.ageRanges);
+    public Optional<PropertyAdsGroupTargetingAudience> audience() {
+        return Optional.ofNullable(this.audience);
     }
 
-    public Optional<List<String>> audiences() {
-        return Optional.ofNullable(this.audiences);
+    /**
+     * Brand safety (Meta: excluded_publisher_categories, etc.; Google
+     */
+    public Optional<PropertyAdsGroupTargetingBrandSafety> brandSafety() {
+        return Optional.ofNullable(this.brandSafety);
     }
 
-    public Optional<List<String>> behaviors() {
-        return Optional.ofNullable(this.behaviors);
+    public Optional<PropertyAdsGroupTargetingContent> content() {
+        return Optional.ofNullable(this.content);
     }
 
-    public Optional<List<String>> companies() {
-        return Optional.ofNullable(this.companies);
+    /**
+     * Demographic targeting (Meta: age_min, age_max, genders)
+     */
+    public Optional<PropertyAdsGroupTargetingDemographic> demographic() {
+        return Optional.ofNullable(this.demographic);
     }
 
-    public Optional<List<String>> companySizes() {
-        return Optional.ofNullable(this.companySizes);
+    public Optional<PropertyAdsGroupTargetingDevice> device() {
+        return Optional.ofNullable(this.device);
     }
 
-    public Optional<List<String>> customAudiences() {
-        return Optional.ofNullable(this.customAudiences);
+    public Optional<PropertyAdsGroupTargetingGeographic> geographic() {
+        return Optional.ofNullable(this.geographic);
     }
 
-    public Optional<List<String>> degrees() {
-        return Optional.ofNullable(this.degrees);
+    /**
+     * Language targeting (Meta
+     */
+    public Optional<PropertyAdsGroupTargetingLanguage> language() {
+        return Optional.ofNullable(this.language);
     }
 
-    public Optional<List<String>> devices() {
-        return Optional.ofNullable(this.devices);
+    /**
+     * Optimization (Meta: targeting_automation; Google: observation vs targeting mode)
+     */
+    public Optional<PropertyAdsGroupTargetingOptimization> optimization() {
+        return Optional.ofNullable(this.optimization);
     }
 
-    public Optional<List<String>> excludedAudiences() {
-        return Optional.ofNullable(this.excludedAudiences);
+    public Optional<PropertyAdsGroupTargetingPlacement> placement() {
+        return Optional.ofNullable(this.placement);
     }
 
-    public Optional<List<String>> excludedLocations() {
-        return Optional.ofNullable(this.excludedLocations);
-    }
-
-    public Optional<List<String>> genders() {
-        return Optional.ofNullable(this.genders);
-    }
-
-    public Optional<List<String>> industries() {
-        return Optional.ofNullable(this.industries);
-    }
-
-    public Optional<List<String>> interests() {
-        return Optional.ofNullable(this.interests);
-    }
-
-    public Optional<List<String>> jobFunctions() {
-        return Optional.ofNullable(this.jobFunctions);
-    }
-
-    public Optional<List<String>> jobTitles() {
-        return Optional.ofNullable(this.jobTitles);
-    }
-
-    public Optional<List<String>> keywords() {
-        return Optional.ofNullable(this.keywords);
-    }
-
-    public Optional<List<String>> languages() {
-        return Optional.ofNullable(this.languages);
-    }
-
-    public Optional<List<String>> locations() {
-        return Optional.ofNullable(this.locations);
-    }
-
-    public Optional<List<String>> placements() {
-        return Optional.ofNullable(this.placements);
-    }
-
-    public Optional<List<String>> schools() {
-        return Optional.ofNullable(this.schools);
-    }
-
-    public Optional<List<String>> seniorities() {
-        return Optional.ofNullable(this.seniorities);
-    }
-
-    public Optional<List<String>> skills() {
-        return Optional.ofNullable(this.skills);
+    public Optional<List<AdSchedule>> schedule() {
+        return Optional.ofNullable(this.schedule);
     }
 
     public static Builder builder() {
@@ -278,134 +162,74 @@ public class PropertyAdsGroupTargeting {
     }
 
 
-    public PropertyAdsGroupTargeting withAgeRanges(@Nullable List<String> ageRanges) {
-        this.ageRanges = ageRanges;
+    public PropertyAdsGroupTargeting withAudience(@Nullable PropertyAdsGroupTargetingAudience audience) {
+        this.audience = audience;
         return this;
     }
 
 
-    public PropertyAdsGroupTargeting withAudiences(@Nullable List<String> audiences) {
-        this.audiences = audiences;
+    /**
+     * Brand safety (Meta: excluded_publisher_categories, etc.; Google
+     */
+    public PropertyAdsGroupTargeting withBrandSafety(@Nullable PropertyAdsGroupTargetingBrandSafety brandSafety) {
+        this.brandSafety = brandSafety;
         return this;
     }
 
 
-    public PropertyAdsGroupTargeting withBehaviors(@Nullable List<String> behaviors) {
-        this.behaviors = behaviors;
+    public PropertyAdsGroupTargeting withContent(@Nullable PropertyAdsGroupTargetingContent content) {
+        this.content = content;
         return this;
     }
 
 
-    public PropertyAdsGroupTargeting withCompanies(@Nullable List<String> companies) {
-        this.companies = companies;
+    /**
+     * Demographic targeting (Meta: age_min, age_max, genders)
+     */
+    public PropertyAdsGroupTargeting withDemographic(@Nullable PropertyAdsGroupTargetingDemographic demographic) {
+        this.demographic = demographic;
         return this;
     }
 
 
-    public PropertyAdsGroupTargeting withCompanySizes(@Nullable List<String> companySizes) {
-        this.companySizes = companySizes;
+    public PropertyAdsGroupTargeting withDevice(@Nullable PropertyAdsGroupTargetingDevice device) {
+        this.device = device;
         return this;
     }
 
 
-    public PropertyAdsGroupTargeting withCustomAudiences(@Nullable List<String> customAudiences) {
-        this.customAudiences = customAudiences;
+    public PropertyAdsGroupTargeting withGeographic(@Nullable PropertyAdsGroupTargetingGeographic geographic) {
+        this.geographic = geographic;
         return this;
     }
 
 
-    public PropertyAdsGroupTargeting withDegrees(@Nullable List<String> degrees) {
-        this.degrees = degrees;
+    /**
+     * Language targeting (Meta
+     */
+    public PropertyAdsGroupTargeting withLanguage(@Nullable PropertyAdsGroupTargetingLanguage language) {
+        this.language = language;
         return this;
     }
 
 
-    public PropertyAdsGroupTargeting withDevices(@Nullable List<String> devices) {
-        this.devices = devices;
+    /**
+     * Optimization (Meta: targeting_automation; Google: observation vs targeting mode)
+     */
+    public PropertyAdsGroupTargeting withOptimization(@Nullable PropertyAdsGroupTargetingOptimization optimization) {
+        this.optimization = optimization;
         return this;
     }
 
 
-    public PropertyAdsGroupTargeting withExcludedAudiences(@Nullable List<String> excludedAudiences) {
-        this.excludedAudiences = excludedAudiences;
+    public PropertyAdsGroupTargeting withPlacement(@Nullable PropertyAdsGroupTargetingPlacement placement) {
+        this.placement = placement;
         return this;
     }
 
 
-    public PropertyAdsGroupTargeting withExcludedLocations(@Nullable List<String> excludedLocations) {
-        this.excludedLocations = excludedLocations;
-        return this;
-    }
-
-
-    public PropertyAdsGroupTargeting withGenders(@Nullable List<String> genders) {
-        this.genders = genders;
-        return this;
-    }
-
-
-    public PropertyAdsGroupTargeting withIndustries(@Nullable List<String> industries) {
-        this.industries = industries;
-        return this;
-    }
-
-
-    public PropertyAdsGroupTargeting withInterests(@Nullable List<String> interests) {
-        this.interests = interests;
-        return this;
-    }
-
-
-    public PropertyAdsGroupTargeting withJobFunctions(@Nullable List<String> jobFunctions) {
-        this.jobFunctions = jobFunctions;
-        return this;
-    }
-
-
-    public PropertyAdsGroupTargeting withJobTitles(@Nullable List<String> jobTitles) {
-        this.jobTitles = jobTitles;
-        return this;
-    }
-
-
-    public PropertyAdsGroupTargeting withKeywords(@Nullable List<String> keywords) {
-        this.keywords = keywords;
-        return this;
-    }
-
-
-    public PropertyAdsGroupTargeting withLanguages(@Nullable List<String> languages) {
-        this.languages = languages;
-        return this;
-    }
-
-
-    public PropertyAdsGroupTargeting withLocations(@Nullable List<String> locations) {
-        this.locations = locations;
-        return this;
-    }
-
-
-    public PropertyAdsGroupTargeting withPlacements(@Nullable List<String> placements) {
-        this.placements = placements;
-        return this;
-    }
-
-
-    public PropertyAdsGroupTargeting withSchools(@Nullable List<String> schools) {
-        this.schools = schools;
-        return this;
-    }
-
-
-    public PropertyAdsGroupTargeting withSeniorities(@Nullable List<String> seniorities) {
-        this.seniorities = seniorities;
-        return this;
-    }
-
-
-    public PropertyAdsGroupTargeting withSkills(@Nullable List<String> skills) {
-        this.skills = skills;
+    public PropertyAdsGroupTargeting withSchedule(@Nullable List<AdSchedule> schedule) {
+        this.schedule = schedule;
         return this;
     }
 
@@ -420,241 +244,137 @@ public class PropertyAdsGroupTargeting {
         }
         PropertyAdsGroupTargeting other = (PropertyAdsGroupTargeting) o;
         return 
-            Utils.enhancedDeepEquals(this.ageRanges, other.ageRanges) &&
-            Utils.enhancedDeepEquals(this.audiences, other.audiences) &&
-            Utils.enhancedDeepEquals(this.behaviors, other.behaviors) &&
-            Utils.enhancedDeepEquals(this.companies, other.companies) &&
-            Utils.enhancedDeepEquals(this.companySizes, other.companySizes) &&
-            Utils.enhancedDeepEquals(this.customAudiences, other.customAudiences) &&
-            Utils.enhancedDeepEquals(this.degrees, other.degrees) &&
-            Utils.enhancedDeepEquals(this.devices, other.devices) &&
-            Utils.enhancedDeepEquals(this.excludedAudiences, other.excludedAudiences) &&
-            Utils.enhancedDeepEquals(this.excludedLocations, other.excludedLocations) &&
-            Utils.enhancedDeepEquals(this.genders, other.genders) &&
-            Utils.enhancedDeepEquals(this.industries, other.industries) &&
-            Utils.enhancedDeepEquals(this.interests, other.interests) &&
-            Utils.enhancedDeepEquals(this.jobFunctions, other.jobFunctions) &&
-            Utils.enhancedDeepEquals(this.jobTitles, other.jobTitles) &&
-            Utils.enhancedDeepEquals(this.keywords, other.keywords) &&
-            Utils.enhancedDeepEquals(this.languages, other.languages) &&
-            Utils.enhancedDeepEquals(this.locations, other.locations) &&
-            Utils.enhancedDeepEquals(this.placements, other.placements) &&
-            Utils.enhancedDeepEquals(this.schools, other.schools) &&
-            Utils.enhancedDeepEquals(this.seniorities, other.seniorities) &&
-            Utils.enhancedDeepEquals(this.skills, other.skills);
+            Utils.enhancedDeepEquals(this.audience, other.audience) &&
+            Utils.enhancedDeepEquals(this.brandSafety, other.brandSafety) &&
+            Utils.enhancedDeepEquals(this.content, other.content) &&
+            Utils.enhancedDeepEquals(this.demographic, other.demographic) &&
+            Utils.enhancedDeepEquals(this.device, other.device) &&
+            Utils.enhancedDeepEquals(this.geographic, other.geographic) &&
+            Utils.enhancedDeepEquals(this.language, other.language) &&
+            Utils.enhancedDeepEquals(this.optimization, other.optimization) &&
+            Utils.enhancedDeepEquals(this.placement, other.placement) &&
+            Utils.enhancedDeepEquals(this.schedule, other.schedule);
     }
     
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            ageRanges, audiences, behaviors,
-            companies, companySizes, customAudiences,
-            degrees, devices, excludedAudiences,
-            excludedLocations, genders, industries,
-            interests, jobFunctions, jobTitles,
-            keywords, languages, locations,
-            placements, schools, seniorities,
-            skills);
+            audience, brandSafety, content,
+            demographic, device, geographic,
+            language, optimization, placement,
+            schedule);
     }
     
     @Override
     public String toString() {
         return Utils.toString(PropertyAdsGroupTargeting.class,
-                "ageRanges", ageRanges,
-                "audiences", audiences,
-                "behaviors", behaviors,
-                "companies", companies,
-                "companySizes", companySizes,
-                "customAudiences", customAudiences,
-                "degrees", degrees,
-                "devices", devices,
-                "excludedAudiences", excludedAudiences,
-                "excludedLocations", excludedLocations,
-                "genders", genders,
-                "industries", industries,
-                "interests", interests,
-                "jobFunctions", jobFunctions,
-                "jobTitles", jobTitles,
-                "keywords", keywords,
-                "languages", languages,
-                "locations", locations,
-                "placements", placements,
-                "schools", schools,
-                "seniorities", seniorities,
-                "skills", skills);
+                "audience", audience,
+                "brandSafety", brandSafety,
+                "content", content,
+                "demographic", demographic,
+                "device", device,
+                "geographic", geographic,
+                "language", language,
+                "optimization", optimization,
+                "placement", placement,
+                "schedule", schedule);
     }
 
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private List<String> ageRanges;
+        private PropertyAdsGroupTargetingAudience audience;
 
-        private List<String> audiences;
+        private PropertyAdsGroupTargetingBrandSafety brandSafety;
 
-        private List<String> behaviors;
+        private PropertyAdsGroupTargetingContent content;
 
-        private List<String> companies;
+        private PropertyAdsGroupTargetingDemographic demographic;
 
-        private List<String> companySizes;
+        private PropertyAdsGroupTargetingDevice device;
 
-        private List<String> customAudiences;
+        private PropertyAdsGroupTargetingGeographic geographic;
 
-        private List<String> degrees;
+        private PropertyAdsGroupTargetingLanguage language;
 
-        private List<String> devices;
+        private PropertyAdsGroupTargetingOptimization optimization;
 
-        private List<String> excludedAudiences;
+        private PropertyAdsGroupTargetingPlacement placement;
 
-        private List<String> excludedLocations;
-
-        private List<String> genders;
-
-        private List<String> industries;
-
-        private List<String> interests;
-
-        private List<String> jobFunctions;
-
-        private List<String> jobTitles;
-
-        private List<String> keywords;
-
-        private List<String> languages;
-
-        private List<String> locations;
-
-        private List<String> placements;
-
-        private List<String> schools;
-
-        private List<String> seniorities;
-
-        private List<String> skills;
+        private List<AdSchedule> schedule;
 
         private Builder() {
           // force use of static builder() method
         }
 
-        public Builder ageRanges(@Nullable List<String> ageRanges) {
-            this.ageRanges = ageRanges;
+        public Builder audience(@Nullable PropertyAdsGroupTargetingAudience audience) {
+            this.audience = audience;
             return this;
         }
 
-        public Builder audiences(@Nullable List<String> audiences) {
-            this.audiences = audiences;
+        /**
+         * Brand safety (Meta: excluded_publisher_categories, etc.; Google
+         */
+        public Builder brandSafety(@Nullable PropertyAdsGroupTargetingBrandSafety brandSafety) {
+            this.brandSafety = brandSafety;
             return this;
         }
 
-        public Builder behaviors(@Nullable List<String> behaviors) {
-            this.behaviors = behaviors;
+        public Builder content(@Nullable PropertyAdsGroupTargetingContent content) {
+            this.content = content;
             return this;
         }
 
-        public Builder companies(@Nullable List<String> companies) {
-            this.companies = companies;
+        /**
+         * Demographic targeting (Meta: age_min, age_max, genders)
+         */
+        public Builder demographic(@Nullable PropertyAdsGroupTargetingDemographic demographic) {
+            this.demographic = demographic;
             return this;
         }
 
-        public Builder companySizes(@Nullable List<String> companySizes) {
-            this.companySizes = companySizes;
+        public Builder device(@Nullable PropertyAdsGroupTargetingDevice device) {
+            this.device = device;
             return this;
         }
 
-        public Builder customAudiences(@Nullable List<String> customAudiences) {
-            this.customAudiences = customAudiences;
+        public Builder geographic(@Nullable PropertyAdsGroupTargetingGeographic geographic) {
+            this.geographic = geographic;
             return this;
         }
 
-        public Builder degrees(@Nullable List<String> degrees) {
-            this.degrees = degrees;
+        /**
+         * Language targeting (Meta
+         */
+        public Builder language(@Nullable PropertyAdsGroupTargetingLanguage language) {
+            this.language = language;
             return this;
         }
 
-        public Builder devices(@Nullable List<String> devices) {
-            this.devices = devices;
+        /**
+         * Optimization (Meta: targeting_automation; Google: observation vs targeting mode)
+         */
+        public Builder optimization(@Nullable PropertyAdsGroupTargetingOptimization optimization) {
+            this.optimization = optimization;
             return this;
         }
 
-        public Builder excludedAudiences(@Nullable List<String> excludedAudiences) {
-            this.excludedAudiences = excludedAudiences;
+        public Builder placement(@Nullable PropertyAdsGroupTargetingPlacement placement) {
+            this.placement = placement;
             return this;
         }
 
-        public Builder excludedLocations(@Nullable List<String> excludedLocations) {
-            this.excludedLocations = excludedLocations;
-            return this;
-        }
-
-        public Builder genders(@Nullable List<String> genders) {
-            this.genders = genders;
-            return this;
-        }
-
-        public Builder industries(@Nullable List<String> industries) {
-            this.industries = industries;
-            return this;
-        }
-
-        public Builder interests(@Nullable List<String> interests) {
-            this.interests = interests;
-            return this;
-        }
-
-        public Builder jobFunctions(@Nullable List<String> jobFunctions) {
-            this.jobFunctions = jobFunctions;
-            return this;
-        }
-
-        public Builder jobTitles(@Nullable List<String> jobTitles) {
-            this.jobTitles = jobTitles;
-            return this;
-        }
-
-        public Builder keywords(@Nullable List<String> keywords) {
-            this.keywords = keywords;
-            return this;
-        }
-
-        public Builder languages(@Nullable List<String> languages) {
-            this.languages = languages;
-            return this;
-        }
-
-        public Builder locations(@Nullable List<String> locations) {
-            this.locations = locations;
-            return this;
-        }
-
-        public Builder placements(@Nullable List<String> placements) {
-            this.placements = placements;
-            return this;
-        }
-
-        public Builder schools(@Nullable List<String> schools) {
-            this.schools = schools;
-            return this;
-        }
-
-        public Builder seniorities(@Nullable List<String> seniorities) {
-            this.seniorities = seniorities;
-            return this;
-        }
-
-        public Builder skills(@Nullable List<String> skills) {
-            this.skills = skills;
+        public Builder schedule(@Nullable List<AdSchedule> schedule) {
+            this.schedule = schedule;
             return this;
         }
 
         public PropertyAdsGroupTargeting build() {
             return new PropertyAdsGroupTargeting(
-                ageRanges, audiences, behaviors,
-                companies, companySizes, customAudiences,
-                degrees, devices, excludedAudiences,
-                excludedLocations, genders, industries,
-                interests, jobFunctions, jobTitles,
-                keywords, languages, locations,
-                placements, schools, seniorities,
-                skills);
+                audience, brandSafety, content,
+                demographic, device, geographic,
+                language, optimization, placement,
+                schedule);
         }
 
     }

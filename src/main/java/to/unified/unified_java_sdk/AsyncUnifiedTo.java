@@ -65,6 +65,10 @@ public class AsyncUnifiedTo {
 
     private final AsyncInsertionorder insertionorder;
 
+    private final AsyncPromoted promoted;
+
+    private final AsyncTarget target;
+
     private final AsyncAssessment assessment;
 
     private final AsyncPackage package_;
@@ -377,6 +381,14 @@ public class AsyncUnifiedTo {
 
     public AsyncInsertionorder insertionorder() {
         return insertionorder;
+    }
+
+    public AsyncPromoted promoted() {
+        return promoted;
+    }
+
+    public AsyncTarget target() {
+        return target;
     }
 
     public AsyncAssessment assessment() {
@@ -831,6 +843,8 @@ public class AsyncUnifiedTo {
         this.creative = new AsyncCreative(syncSDK.creative(), sdkConfiguration);
         this.group = new AsyncGroup(syncSDK.group(), sdkConfiguration);
         this.insertionorder = new AsyncInsertionorder(syncSDK.insertionorder(), sdkConfiguration);
+        this.promoted = new AsyncPromoted(syncSDK.promoted(), sdkConfiguration);
+        this.target = new AsyncTarget(syncSDK.target(), sdkConfiguration);
         this.assessment = new AsyncAssessment(syncSDK.assessment(), sdkConfiguration);
         this.package_ = new AsyncPackage(syncSDK.package_(), sdkConfiguration);
         this.ats = new AsyncAts(syncSDK.ats(), sdkConfiguration);

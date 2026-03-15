@@ -62,11 +62,6 @@ public class MessagingChannel {
 
 
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("parent_channel_id")
-    private String parentChannelId;
-
-
-    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_id")
     private String parentId;
 
@@ -95,7 +90,6 @@ public class MessagingChannel {
             @JsonProperty("is_private") @Nullable Boolean isPrivate,
             @JsonProperty("members") @Nullable List<MessagingMember> members,
             @JsonProperty("name") @Nonnull String name,
-            @JsonProperty("parent_channel_id") @Nullable String parentChannelId,
             @JsonProperty("parent_id") @Nullable String parentId,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
@@ -109,7 +103,6 @@ public class MessagingChannel {
         this.members = members;
         this.name = Optional.ofNullable(name)
             .orElseThrow(() -> new IllegalArgumentException("name cannot be null"));
-        this.parentChannelId = parentChannelId;
         this.parentId = parentId;
         this.raw = raw;
         this.updatedAt = updatedAt;
@@ -121,8 +114,7 @@ public class MessagingChannel {
         this(null, null, null,
             null, null, null,
             null, name, null,
-            null, null, null,
-            null);
+            null, null, null);
     }
 
     public Optional<OffsetDateTime> createdAt() {
@@ -155,10 +147,6 @@ public class MessagingChannel {
 
     public String name() {
         return this.name;
-    }
-
-    public Optional<String> parentChannelId() {
-        return Optional.ofNullable(this.parentChannelId);
     }
 
     public Optional<String> parentId() {
@@ -230,12 +218,6 @@ public class MessagingChannel {
     }
 
 
-    public MessagingChannel withParentChannelId(@Nullable String parentChannelId) {
-        this.parentChannelId = parentChannelId;
-        return this;
-    }
-
-
     public MessagingChannel withParentId(@Nullable String parentId) {
         this.parentId = parentId;
         return this;
@@ -278,7 +260,6 @@ public class MessagingChannel {
             Utils.enhancedDeepEquals(this.isPrivate, other.isPrivate) &&
             Utils.enhancedDeepEquals(this.members, other.members) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
-            Utils.enhancedDeepEquals(this.parentChannelId, other.parentChannelId) &&
             Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
@@ -290,9 +271,8 @@ public class MessagingChannel {
         return Utils.enhancedHash(
             createdAt, description, hasSubchannels,
             id, isActive, isPrivate,
-            members, name, parentChannelId,
-            parentId, raw, updatedAt,
-            webUrl);
+            members, name, parentId,
+            raw, updatedAt, webUrl);
     }
     
     @Override
@@ -306,7 +286,6 @@ public class MessagingChannel {
                 "isPrivate", isPrivate,
                 "members", members,
                 "name", name,
-                "parentChannelId", parentChannelId,
                 "parentId", parentId,
                 "raw", raw,
                 "updatedAt", updatedAt,
@@ -331,8 +310,6 @@ public class MessagingChannel {
         private List<MessagingMember> members;
 
         private String name;
-
-        private String parentChannelId;
 
         private String parentId;
 
@@ -386,11 +363,6 @@ public class MessagingChannel {
             return this;
         }
 
-        public Builder parentChannelId(@Nullable String parentChannelId) {
-            this.parentChannelId = parentChannelId;
-            return this;
-        }
-
         public Builder parentId(@Nullable String parentId) {
             this.parentId = parentId;
             return this;
@@ -415,9 +387,8 @@ public class MessagingChannel {
             return new MessagingChannel(
                 createdAt, description, hasSubchannels,
                 id, isActive, isPrivate,
-                members, name, parentChannelId,
-                parentId, raw, updatedAt,
-                webUrl);
+                members, name, parentId,
+                raw, updatedAt, webUrl);
         }
 
     }

@@ -1,0 +1,13 @@
+# PropertyAdsCampaignTargetingOptimization
+
+Optimization (Meta: targeting_automation; Google: observation vs targeting mode)
+
+
+## Fields
+
+| Field                                          | Type                                           | Required                                       | Description                                    |
+| ---------------------------------------------- | ---------------------------------------------- | ---------------------------------------------- | ---------------------------------------------- |
+| `advantageAudience`                            | *Optional\<Boolean>*                           | :heavy_minus_sign:                             | N/A                                            |
+| `advantagePlacements`                          | *Optional\<Boolean>*                           | :heavy_minus_sign:                             | N/A                                            |
+| `mode`                                         | [Optional\<Mode>](../../models/shared/Mode.md) | :heavy_minus_sign:                             | N/A                                            |
+| `targetingOptimizationExpansionAll`            | *Optional\<Boolean>*                           | :heavy_minus_sign:                             | N/A                                            |

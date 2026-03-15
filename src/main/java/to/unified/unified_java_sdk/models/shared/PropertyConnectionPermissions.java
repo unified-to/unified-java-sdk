@@ -240,6 +240,8 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions ADS_CREATIVE_WRITE = new PropertyConnectionPermissions("ads_creative_write");
     public static final PropertyConnectionPermissions ADS_INSERTIONORDER_READ = new PropertyConnectionPermissions("ads_insertionorder_read");
     public static final PropertyConnectionPermissions ADS_INSERTIONORDER_WRITE = new PropertyConnectionPermissions("ads_insertionorder_write");
+    public static final PropertyConnectionPermissions ADS_TARGET_READ = new PropertyConnectionPermissions("ads_target_read");
+    public static final PropertyConnectionPermissions ADS_PROMOTED_READ = new PropertyConnectionPermissions("ads_promoted_read");
     public static final PropertyConnectionPermissions FORMS_FORM_READ = new PropertyConnectionPermissions("forms_form_read");
     public static final PropertyConnectionPermissions FORMS_FORM_WRITE = new PropertyConnectionPermissions("forms_form_write");
     public static final PropertyConnectionPermissions FORMS_SUBMISSION_READ = new PropertyConnectionPermissions("forms_submission_read");
@@ -544,6 +546,8 @@ public class PropertyConnectionPermissions {
         map.put("ads_creative_write", ADS_CREATIVE_WRITE);
         map.put("ads_insertionorder_read", ADS_INSERTIONORDER_READ);
         map.put("ads_insertionorder_write", ADS_INSERTIONORDER_WRITE);
+        map.put("ads_target_read", ADS_TARGET_READ);
+        map.put("ads_promoted_read", ADS_PROMOTED_READ);
         map.put("forms_form_read", FORMS_FORM_READ);
         map.put("forms_form_write", FORMS_FORM_WRITE);
         map.put("forms_submission_read", FORMS_SUBMISSION_READ);
@@ -780,6 +784,8 @@ public class PropertyConnectionPermissions {
         map.put("ads_creative_write", PropertyConnectionPermissionsEnum.ADS_CREATIVE_WRITE);
         map.put("ads_insertionorder_read", PropertyConnectionPermissionsEnum.ADS_INSERTIONORDER_READ);
         map.put("ads_insertionorder_write", PropertyConnectionPermissionsEnum.ADS_INSERTIONORDER_WRITE);
+        map.put("ads_target_read", PropertyConnectionPermissionsEnum.ADS_TARGET_READ);
+        map.put("ads_promoted_read", PropertyConnectionPermissionsEnum.ADS_PROMOTED_READ);
         map.put("forms_form_read", PropertyConnectionPermissionsEnum.FORMS_FORM_READ);
         map.put("forms_form_write", PropertyConnectionPermissionsEnum.FORMS_FORM_WRITE);
         map.put("forms_submission_read", PropertyConnectionPermissionsEnum.FORMS_SUBMISSION_READ);
@@ -1017,6 +1023,8 @@ public class PropertyConnectionPermissions {
         ADS_CREATIVE_WRITE("ads_creative_write"),
         ADS_INSERTIONORDER_READ("ads_insertionorder_read"),
         ADS_INSERTIONORDER_WRITE("ads_insertionorder_write"),
+        ADS_TARGET_READ("ads_target_read"),
+        ADS_PROMOTED_READ("ads_promoted_read"),
         FORMS_FORM_READ("forms_form_read"),
         FORMS_FORM_WRITE("forms_form_write"),
         FORMS_SUBMISSION_READ("forms_submission_read"),

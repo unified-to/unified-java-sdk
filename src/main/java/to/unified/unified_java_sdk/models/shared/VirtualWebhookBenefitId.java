@@ -3,116 +3,129 @@
  */
 package to.unified.unified_java_sdk.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import java.lang.Boolean;
-import java.lang.Double;
-import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
-import java.lang.SuppressWarnings;
-import java.util.List;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
-import to.unified.unified_java_sdk.utils.OneOfDeserializer;
-import to.unified.unified_java_sdk.utils.TypedObject;
-import to.unified.unified_java_sdk.utils.Utils.JsonShape;
-import to.unified.unified_java_sdk.utils.Utils.TypeReferenceWithShape;
-import to.unified.unified_java_sdk.utils.Utils;
+import java.util.Objects;
+import java.util.Optional;
 
-@JsonDeserialize(using = VirtualWebhookBenefitId._Deserializer.class)
+/**
+ * Wrapper for an "open" enum that can handle unknown values from API responses
+ * without runtime errors. Instances are immutable singletons with reference equality.
+ * Use {@code asEnum()} for switch expressions.
+ */
 public class VirtualWebhookBenefitId {
 
-    @JsonValue
-    private final TypedObject value;
-    
-    private VirtualWebhookBenefitId(TypedObject value) {
+    public static final VirtualWebhookBenefitId SUPPORTED_REQUIRED = new VirtualWebhookBenefitId("supported-required");
+    public static final VirtualWebhookBenefitId SUPPORTED = new VirtualWebhookBenefitId("supported");
+    public static final VirtualWebhookBenefitId NOT_SUPPORTED = new VirtualWebhookBenefitId("not-supported");
+
+    // This map will grow whenever a Color gets created with a new
+    // unrecognized value (a potential memory leak if the user is not
+    // careful). Keep this field lower case to avoid clashing with
+    // generated member names which will always be upper cased (Java
+    // convention)
+    private static final Map<String, VirtualWebhookBenefitId> values = createValuesMap();
+    private static final Map<String, VirtualWebhookBenefitIdEnum> enums = createEnumsMap();
+
+    private final String value;
+
+    private VirtualWebhookBenefitId(String value) {
         this.value = value;
     }
 
-    public static VirtualWebhookBenefitId of(Map<String, Object> value) {
-        Utils.checkNotNull(value, "value");
-        return new VirtualWebhookBenefitId(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
-    }
-
-    public static VirtualWebhookBenefitId of(String value) {
-        Utils.checkNotNull(value, "value");
-        return new VirtualWebhookBenefitId(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
-    }
-
-    public static VirtualWebhookBenefitId of(double value) {
-        return new VirtualWebhookBenefitId(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
-    }
-
-    public static VirtualWebhookBenefitId of(boolean value) {
-        return new VirtualWebhookBenefitId(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
-    }
-
-    public static VirtualWebhookBenefitId of(List<IntegrationSupport5> value) {
-        Utils.checkNotNull(value, "value");
-        return new VirtualWebhookBenefitId(TypedObject.of(value, JsonShape.DEFAULT, new TypeReference<>(){}));
-    }
-    
     /**
-     * Returns an instance of one of these types:
-     * <ul>
-     * <li>{@code java.util.Map<java.lang.String, java.lang.Object>}</li>
-     * <li>{@code java.lang.String}</li>
-     * <li>{@code double}</li>
-     * <li>{@code boolean}</li>
-     * <li>{@code java.util.List<to.unified.unified_java_sdk.models.shared.IntegrationSupport5>}</li>
-     * </ul>
+     * Returns a VirtualWebhookBenefitId with the given value. For a specific value the 
+     * returned object will always be a singleton so reference equality 
+     * is satisfied when the values are the same.
      * 
-     * <p>Use {@code instanceof} to determine what type is returned. For example:
-     * 
-     * <pre>
-     * if (obj.value() instanceof String) {
-     *     String answer = (String) obj.value();
-     *     System.out.println("answer=" + answer);
-     * }
-     * </pre>
-     * 
-     * @return value of oneOf type
-     **/ 
-    public java.lang.Object value() {
-        return value.value();
-    }
-    
-    @Override
-    public boolean equals(java.lang.Object o) {
-        if (this == o) {
-            return true;
+     * @param value value to be wrapped as VirtualWebhookBenefitId
+     */ 
+    @JsonCreator
+    public static VirtualWebhookBenefitId of(String value) {
+        synchronized (VirtualWebhookBenefitId.class) {
+            return values.computeIfAbsent(value, v -> new VirtualWebhookBenefitId(v));
         }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-        VirtualWebhookBenefitId other = (VirtualWebhookBenefitId) o;
-        return Utils.enhancedDeepEquals(this.value.value(), other.value.value());
     }
-    
+
+    @JsonValue
+    public String value() {
+        return value;
+    }
+
+    public Optional<VirtualWebhookBenefitIdEnum> asEnum() {
+        return Optional.ofNullable(enums.getOrDefault(value, null));
+    }
+
+    public boolean isKnown() {
+        return asEnum().isPresent();
+    }
+
     @Override
     public int hashCode() {
-        return Utils.enhancedHash(value.value());
+        return Objects.hash(value);
     }
-    
-    @SuppressWarnings("serial")
-    public static final class _Deserializer extends OneOfDeserializer<VirtualWebhookBenefitId> {
 
-        public _Deserializer() {
-            super(VirtualWebhookBenefitId.class, false,
-                  TypeReferenceWithShape.of(new TypeReference<Map<String, Object>>() {}, JsonShape.DEFAULT),
-                  TypeReferenceWithShape.of(new TypeReference<String>() {}, JsonShape.DEFAULT),
-                  TypeReferenceWithShape.of(new TypeReference<Double>() {}, JsonShape.DEFAULT),
-                  TypeReferenceWithShape.of(new TypeReference<Boolean>() {}, JsonShape.DEFAULT),
-                  TypeReferenceWithShape.of(new TypeReference<List<IntegrationSupport5>>() {}, JsonShape.DEFAULT));
-        }
+    @Override
+    public boolean equals(java.lang.Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        VirtualWebhookBenefitId other = (VirtualWebhookBenefitId) obj;
+        return Objects.equals(value, other.value);
     }
-    
+
     @Override
     public String toString() {
-        return Utils.toString(VirtualWebhookBenefitId.class,
-                "value", value);
+        return "VirtualWebhookBenefitId [value=" + value + "]";
     }
 
+    // return an array just like an enum
+    public static VirtualWebhookBenefitId[] values() {
+        synchronized (VirtualWebhookBenefitId.class) {
+            return values.values().toArray(new VirtualWebhookBenefitId[] {});
+        }
+    }
+
+    private static final Map<String, VirtualWebhookBenefitId> createValuesMap() {
+        Map<String, VirtualWebhookBenefitId> map = new LinkedHashMap<>();
+        map.put("supported-required", SUPPORTED_REQUIRED);
+        map.put("supported", SUPPORTED);
+        map.put("not-supported", NOT_SUPPORTED);
+        return map;
+    }
+
+    private static final Map<String, VirtualWebhookBenefitIdEnum> createEnumsMap() {
+        Map<String, VirtualWebhookBenefitIdEnum> map = new HashMap<>();
+        map.put("supported-required", VirtualWebhookBenefitIdEnum.SUPPORTED_REQUIRED);
+        map.put("supported", VirtualWebhookBenefitIdEnum.SUPPORTED);
+        map.put("not-supported", VirtualWebhookBenefitIdEnum.NOT_SUPPORTED);
+        return map;
+    }
+    
+    
+    public enum VirtualWebhookBenefitIdEnum {
+
+        SUPPORTED_REQUIRED("supported-required"),
+        SUPPORTED("supported"),
+        NOT_SUPPORTED("not-supported"),;
+
+        private final String value;
+
+        private VirtualWebhookBenefitIdEnum(String value) {
+            this.value = value;
+        }
+
+        public String value() {
+            return value;
+        }
+    }
 }
 

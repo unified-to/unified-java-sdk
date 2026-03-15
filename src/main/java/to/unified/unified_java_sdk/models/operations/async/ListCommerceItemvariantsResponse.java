@@ -12,7 +12,7 @@ import java.lang.String;
 import java.net.http.HttpResponse;
 import java.util.List;
 import java.util.Optional;
-import to.unified.unified_java_sdk.models.shared.CommerceItemvariant1;
+import to.unified.unified_java_sdk.models.shared.CommerceItemvariant;
 import to.unified.unified_java_sdk.utils.AsyncResponse;
 import to.unified.unified_java_sdk.utils.Blob;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -22,7 +22,7 @@ public class ListCommerceItemvariantsResponse implements AsyncResponse {
     /**
      * Successful
      */
-    private List<CommerceItemvariant1> commerceItemvariants;
+    private List<CommerceItemvariant> commerceItemvariants;
 
     /**
      * HTTP response content type for this operation
@@ -41,7 +41,7 @@ public class ListCommerceItemvariantsResponse implements AsyncResponse {
 
     @JsonCreator
     public ListCommerceItemvariantsResponse(
-            @Nullable List<CommerceItemvariant1> commerceItemvariants,
+            @Nullable List<CommerceItemvariant> commerceItemvariants,
             @Nonnull String contentType,
             int statusCode,
             @Nonnull HttpResponse<Blob> rawResponse) {
@@ -64,7 +64,7 @@ public class ListCommerceItemvariantsResponse implements AsyncResponse {
     /**
      * Successful
      */
-    public Optional<List<CommerceItemvariant1>> commerceItemvariants() {
+    public Optional<List<CommerceItemvariant>> commerceItemvariants() {
         return Optional.ofNullable(this.commerceItemvariants);
     }
 
@@ -97,7 +97,7 @@ public class ListCommerceItemvariantsResponse implements AsyncResponse {
     /**
      * Successful
      */
-    public ListCommerceItemvariantsResponse withCommerceItemvariants(@Nullable List<CommerceItemvariant1> commerceItemvariants) {
+    public ListCommerceItemvariantsResponse withCommerceItemvariants(@Nullable List<CommerceItemvariant> commerceItemvariants) {
         this.commerceItemvariants = commerceItemvariants;
         return this;
     }
@@ -165,7 +165,7 @@ public class ListCommerceItemvariantsResponse implements AsyncResponse {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private List<CommerceItemvariant1> commerceItemvariants;
+        private List<CommerceItemvariant> commerceItemvariants;
 
         private String contentType;
 
@@ -180,7 +180,7 @@ public class ListCommerceItemvariantsResponse implements AsyncResponse {
         /**
          * Successful
          */
-        public Builder commerceItemvariants(@Nullable List<CommerceItemvariant1> commerceItemvariants) {
+        public Builder commerceItemvariants(@Nullable List<CommerceItemvariant> commerceItemvariants) {
             this.commerceItemvariants = commerceItemvariants;
             return this;
         }

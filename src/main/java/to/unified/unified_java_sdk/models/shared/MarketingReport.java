@@ -18,11 +18,7 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
-/**
- * MarketingReport
- * 
- * <p>Campaign performance report
- */
+
 public class MarketingReport {
 
     @JsonInclude(Include.NON_ABSENT)

@@ -16,9 +16,7 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class CreateMartechCampaignRequest {
-    /**
-     * A marketing campaign or email send
-     */
+
     @SpeakeasyMetadata("request:mediaType=application/json")
     private MarketingCampaign marketingCampaign;
 
@@ -63,9 +61,6 @@ public class CreateMartechCampaignRequest {
             null);
     }
 
-    /**
-     * A marketing campaign or email send
-     */
     public MarketingCampaign marketingCampaign() {
         return this.marketingCampaign;
     }
@@ -98,9 +93,6 @@ public class CreateMartechCampaignRequest {
     }
 
 
-    /**
-     * A marketing campaign or email send
-     */
     public CreateMartechCampaignRequest withMarketingCampaign(@Nonnull MarketingCampaign marketingCampaign) {
         this.marketingCampaign = Utils.checkNotNull(marketingCampaign, "marketingCampaign");
         return this;
@@ -183,9 +175,6 @@ public class CreateMartechCampaignRequest {
           // force use of static builder() method
         }
 
-        /**
-         * A marketing campaign or email send
-         */
         public Builder marketingCampaign(@Nonnull MarketingCampaign marketingCampaign) {
             this.marketingCampaign = Utils.checkNotNull(marketingCampaign, "marketingCampaign");
             return this;

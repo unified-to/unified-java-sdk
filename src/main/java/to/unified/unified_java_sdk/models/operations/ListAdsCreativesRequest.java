@@ -29,7 +29,7 @@ public class ListAdsCreativesRequest {
     private List<ListAdsCreativesQueryParamFields> fields;
 
     /**
-     * The group ID to filter by (reference to HrisGroup)
+     * The group ID to filter by (reference to AdsGroup)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group_id")
     private String groupId;
@@ -127,7 +127,7 @@ public class ListAdsCreativesRequest {
     }
 
     /**
-     * The group ID to filter by (reference to HrisGroup)
+     * The group ID to filter by (reference to AdsGroup)
      */
     public Optional<String> groupId() {
         return Optional.ofNullable(this.groupId);
@@ -204,7 +204,7 @@ public class ListAdsCreativesRequest {
 
 
     /**
-     * The group ID to filter by (reference to HrisGroup)
+     * The group ID to filter by (reference to AdsGroup)
      */
     public ListAdsCreativesRequest withGroupId(@Nullable String groupId) {
         this.groupId = groupId;
@@ -369,7 +369,7 @@ public class ListAdsCreativesRequest {
         }
 
         /**
-         * The group ID to filter by (reference to HrisGroup)
+         * The group ID to filter by (reference to AdsGroup)
          */
         public Builder groupId(@Nullable String groupId) {
             this.groupId = groupId;

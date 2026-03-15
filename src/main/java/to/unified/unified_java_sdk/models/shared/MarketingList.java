@@ -25,6 +25,11 @@ import to.unified.unified_java_sdk.utils.Utils;
 public class MarketingList {
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("address")
+    private PropertyMarketingListAddress address;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
@@ -50,6 +55,11 @@ public class MarketingList {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("language")
+    private String language;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
@@ -60,8 +70,33 @@ public class MarketingList {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sender_company")
+    private String senderCompany;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sender_email")
+    private String senderEmail;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sender_name")
+    private String senderName;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sender_phone")
+    private String senderPhone;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     private OffsetDateTime startAt;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("subject")
+    private String subject;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -75,24 +110,38 @@ public class MarketingList {
 
     @JsonCreator
     public MarketingList(
+            @JsonProperty("address") @Nullable PropertyMarketingListAddress address,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("description") @Nullable String description,
             @JsonProperty("end_at") @Nullable OffsetDateTime endAt,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_active") @Nullable Boolean isActive,
+            @JsonProperty("language") @Nullable String language,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("sender_company") @Nullable String senderCompany,
+            @JsonProperty("sender_email") @Nullable String senderEmail,
+            @JsonProperty("sender_name") @Nullable String senderName,
+            @JsonProperty("sender_phone") @Nullable String senderPhone,
             @JsonProperty("start_at") @Nullable OffsetDateTime startAt,
+            @JsonProperty("subject") @Nullable String subject,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
             @JsonProperty("user_id") @Nullable String userId) {
+        this.address = address;
         this.createdAt = createdAt;
         this.description = description;
         this.endAt = endAt;
         this.id = id;
         this.isActive = isActive;
+        this.language = language;
         this.name = name;
         this.raw = raw;
+        this.senderCompany = senderCompany;
+        this.senderEmail = senderEmail;
+        this.senderName = senderName;
+        this.senderPhone = senderPhone;
         this.startAt = startAt;
+        this.subject = subject;
         this.updatedAt = updatedAt;
         this.userId = userId;
     }
@@ -101,7 +150,13 @@ public class MarketingList {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null, null,
+            null, null, null,
+            null, null);
+    }
+
+    public Optional<PropertyMarketingListAddress> address() {
+        return Optional.ofNullable(this.address);
     }
 
     public Optional<OffsetDateTime> createdAt() {
@@ -124,6 +179,10 @@ public class MarketingList {
         return Optional.ofNullable(this.isActive);
     }
 
+    public Optional<String> language() {
+        return Optional.ofNullable(this.language);
+    }
+
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -132,8 +191,28 @@ public class MarketingList {
         return Optional.ofNullable(this.raw);
     }
 
+    public Optional<String> senderCompany() {
+        return Optional.ofNullable(this.senderCompany);
+    }
+
+    public Optional<String> senderEmail() {
+        return Optional.ofNullable(this.senderEmail);
+    }
+
+    public Optional<String> senderName() {
+        return Optional.ofNullable(this.senderName);
+    }
+
+    public Optional<String> senderPhone() {
+        return Optional.ofNullable(this.senderPhone);
+    }
+
     public Optional<OffsetDateTime> startAt() {
         return Optional.ofNullable(this.startAt);
+    }
+
+    public Optional<String> subject() {
+        return Optional.ofNullable(this.subject);
     }
 
     public Optional<OffsetDateTime> updatedAt() {
@@ -146,6 +225,12 @@ public class MarketingList {
 
     public static Builder builder() {
         return new Builder();
+    }
+
+
+    public MarketingList withAddress(@Nullable PropertyMarketingListAddress address) {
+        this.address = address;
+        return this;
     }
 
 
@@ -179,6 +264,12 @@ public class MarketingList {
     }
 
 
+    public MarketingList withLanguage(@Nullable String language) {
+        this.language = language;
+        return this;
+    }
+
+
     public MarketingList withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -191,8 +282,38 @@ public class MarketingList {
     }
 
 
+    public MarketingList withSenderCompany(@Nullable String senderCompany) {
+        this.senderCompany = senderCompany;
+        return this;
+    }
+
+
+    public MarketingList withSenderEmail(@Nullable String senderEmail) {
+        this.senderEmail = senderEmail;
+        return this;
+    }
+
+
+    public MarketingList withSenderName(@Nullable String senderName) {
+        this.senderName = senderName;
+        return this;
+    }
+
+
+    public MarketingList withSenderPhone(@Nullable String senderPhone) {
+        this.senderPhone = senderPhone;
+        return this;
+    }
+
+
     public MarketingList withStartAt(@Nullable OffsetDateTime startAt) {
         this.startAt = startAt;
+        return this;
+    }
+
+
+    public MarketingList withSubject(@Nullable String subject) {
+        this.subject = subject;
         return this;
     }
 
@@ -219,14 +340,21 @@ public class MarketingList {
         }
         MarketingList other = (MarketingList) o;
         return 
+            Utils.enhancedDeepEquals(this.address, other.address) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.description, other.description) &&
             Utils.enhancedDeepEquals(this.endAt, other.endAt) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
+            Utils.enhancedDeepEquals(this.language, other.language) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.senderCompany, other.senderCompany) &&
+            Utils.enhancedDeepEquals(this.senderEmail, other.senderEmail) &&
+            Utils.enhancedDeepEquals(this.senderName, other.senderName) &&
+            Utils.enhancedDeepEquals(this.senderPhone, other.senderPhone) &&
             Utils.enhancedDeepEquals(this.startAt, other.startAt) &&
+            Utils.enhancedDeepEquals(this.subject, other.subject) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
             Utils.enhancedDeepEquals(this.userId, other.userId);
     }
@@ -234,29 +362,40 @@ public class MarketingList {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            createdAt, description, endAt,
-            id, isActive, name,
-            raw, startAt, updatedAt,
-            userId);
+            address, createdAt, description,
+            endAt, id, isActive,
+            language, name, raw,
+            senderCompany, senderEmail, senderName,
+            senderPhone, startAt, subject,
+            updatedAt, userId);
     }
     
     @Override
     public String toString() {
         return Utils.toString(MarketingList.class,
+                "address", address,
                 "createdAt", createdAt,
                 "description", description,
                 "endAt", endAt,
                 "id", id,
                 "isActive", isActive,
+                "language", language,
                 "name", name,
                 "raw", raw,
+                "senderCompany", senderCompany,
+                "senderEmail", senderEmail,
+                "senderName", senderName,
+                "senderPhone", senderPhone,
                 "startAt", startAt,
+                "subject", subject,
                 "updatedAt", updatedAt,
                 "userId", userId);
     }
 
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
+
+        private PropertyMarketingListAddress address;
 
         private OffsetDateTime createdAt;
 
@@ -268,11 +407,23 @@ public class MarketingList {
 
         private Boolean isActive;
 
+        private String language;
+
         private String name;
 
         private Map<String, Object> raw;
 
+        private String senderCompany;
+
+        private String senderEmail;
+
+        private String senderName;
+
+        private String senderPhone;
+
         private OffsetDateTime startAt;
+
+        private String subject;
 
         private OffsetDateTime updatedAt;
 
@@ -280,6 +431,11 @@ public class MarketingList {
 
         private Builder() {
           // force use of static builder() method
+        }
+
+        public Builder address(@Nullable PropertyMarketingListAddress address) {
+            this.address = address;
+            return this;
         }
 
         public Builder createdAt(@Nullable OffsetDateTime createdAt) {
@@ -307,6 +463,11 @@ public class MarketingList {
             return this;
         }
 
+        public Builder language(@Nullable String language) {
+            this.language = language;
+            return this;
+        }
+
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
@@ -317,8 +478,33 @@ public class MarketingList {
             return this;
         }
 
+        public Builder senderCompany(@Nullable String senderCompany) {
+            this.senderCompany = senderCompany;
+            return this;
+        }
+
+        public Builder senderEmail(@Nullable String senderEmail) {
+            this.senderEmail = senderEmail;
+            return this;
+        }
+
+        public Builder senderName(@Nullable String senderName) {
+            this.senderName = senderName;
+            return this;
+        }
+
+        public Builder senderPhone(@Nullable String senderPhone) {
+            this.senderPhone = senderPhone;
+            return this;
+        }
+
         public Builder startAt(@Nullable OffsetDateTime startAt) {
             this.startAt = startAt;
+            return this;
+        }
+
+        public Builder subject(@Nullable String subject) {
+            this.subject = subject;
             return this;
         }
 
@@ -334,10 +520,12 @@ public class MarketingList {
 
         public MarketingList build() {
             return new MarketingList(
-                createdAt, description, endAt,
-                id, isActive, name,
-                raw, startAt, updatedAt,
-                userId);
+                address, createdAt, description,
+                endAt, id, isActive,
+                language, name, raw,
+                senderCompany, senderEmail, senderName,
+                senderPhone, startAt, subject,
+                updatedAt, userId);
         }
 
     }

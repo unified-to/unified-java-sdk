@@ -10,7 +10,7 @@ import java.lang.Override;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
-import to.unified.unified_java_sdk.models.shared.CommerceItemvariant1;
+import to.unified.unified_java_sdk.models.shared.CommerceItemvariant;
 import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -18,7 +18,7 @@ import to.unified.unified_java_sdk.utils.Utils;
 public class CreateCommerceItemvariantRequest {
 
     @SpeakeasyMetadata("request:mediaType=application/json")
-    private CommerceItemvariant1 commerceItemvariant;
+    private CommerceItemvariant commerceItemvariant;
 
     /**
      * ID of the connection
@@ -42,7 +42,7 @@ public class CreateCommerceItemvariantRequest {
 
     @JsonCreator
     public CreateCommerceItemvariantRequest(
-            @Nonnull CommerceItemvariant1 commerceItemvariant,
+            @Nonnull CommerceItemvariant commerceItemvariant,
             @Nonnull String connectionId,
             @Nullable List<CreateCommerceItemvariantQueryParamFields> fields,
             @Nullable String raw) {
@@ -55,13 +55,13 @@ public class CreateCommerceItemvariantRequest {
     }
     
     public CreateCommerceItemvariantRequest(
-            @Nonnull CommerceItemvariant1 commerceItemvariant,
+            @Nonnull CommerceItemvariant commerceItemvariant,
             @Nonnull String connectionId) {
         this(commerceItemvariant, connectionId, null,
             null);
     }
 
-    public CommerceItemvariant1 commerceItemvariant() {
+    public CommerceItemvariant commerceItemvariant() {
         return this.commerceItemvariant;
     }
 
@@ -93,7 +93,7 @@ public class CreateCommerceItemvariantRequest {
     }
 
 
-    public CreateCommerceItemvariantRequest withCommerceItemvariant(@Nonnull CommerceItemvariant1 commerceItemvariant) {
+    public CreateCommerceItemvariantRequest withCommerceItemvariant(@Nonnull CommerceItemvariant commerceItemvariant) {
         this.commerceItemvariant = Utils.checkNotNull(commerceItemvariant, "commerceItemvariant");
         return this;
     }
@@ -163,7 +163,7 @@ public class CreateCommerceItemvariantRequest {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private CommerceItemvariant1 commerceItemvariant;
+        private CommerceItemvariant commerceItemvariant;
 
         private String connectionId;
 
@@ -175,7 +175,7 @@ public class CreateCommerceItemvariantRequest {
           // force use of static builder() method
         }
 
-        public Builder commerceItemvariant(@Nonnull CommerceItemvariant1 commerceItemvariant) {
+        public Builder commerceItemvariant(@Nonnull CommerceItemvariant commerceItemvariant) {
             this.commerceItemvariant = Utils.checkNotNull(commerceItemvariant, "commerceItemvariant");
             return this;
         }

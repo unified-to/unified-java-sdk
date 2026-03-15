@@ -8,7 +8,6 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.annotation.Nullable;
-import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
@@ -67,11 +66,6 @@ public class PropertyAdsReportMetricsAd {
 
 
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("end_at")
-    private OffsetDateTime endAt;
-
-
-    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("final_url")
     private String finalUrl;
 
@@ -89,21 +83,6 @@ public class PropertyAdsReportMetricsAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
-
-
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("is_active")
-    private Boolean isActive;
-
-
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("item_id")
-    private String itemId;
-
-
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("metadata")
-    private List<AdsMetadata> metadata;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -127,23 +106,18 @@ public class PropertyAdsReportMetricsAd {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("promoted")
+    private List<AdsPromoted> promoted;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("start_at")
-    private OffsetDateTime startAt;
-
-
-    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     private PropertyAdsReportMetricsAdStatus status;
-
-
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("targeting")
-    private PropertyAdsReportMetricsAdTargeting targeting;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -161,22 +135,17 @@ public class PropertyAdsReportMetricsAd {
             @JsonProperty("cta") @Nullable String cta,
             @JsonProperty("description") @Nullable String description,
             @JsonProperty("display_url") @Nullable String displayUrl,
-            @JsonProperty("end_at") @Nullable OffsetDateTime endAt,
             @JsonProperty("final_url") @Nullable String finalUrl,
             @JsonProperty("group_id") @Nullable String groupId,
             @JsonProperty("headline") @Nullable String headline,
             @JsonProperty("id") @Nullable String id,
-            @JsonProperty("is_active") @Nullable Boolean isActive,
-            @JsonProperty("item_id") @Nullable String itemId,
-            @JsonProperty("metadata") @Nullable List<AdsMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("organization_id") @Nullable String organizationId,
             @JsonProperty("path1") @Nullable String path1,
             @JsonProperty("path2") @Nullable String path2,
+            @JsonProperty("promoted") @Nullable List<AdsPromoted> promoted,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
-            @JsonProperty("start_at") @Nullable OffsetDateTime startAt,
             @JsonProperty("status") @Nullable PropertyAdsReportMetricsAdStatus status,
-            @JsonProperty("targeting") @Nullable PropertyAdsReportMetricsAdTargeting targeting,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.adCopy = adCopy;
         this.adType = adType;
@@ -187,22 +156,17 @@ public class PropertyAdsReportMetricsAd {
         this.cta = cta;
         this.description = description;
         this.displayUrl = displayUrl;
-        this.endAt = endAt;
         this.finalUrl = finalUrl;
         this.groupId = groupId;
         this.headline = headline;
         this.id = id;
-        this.isActive = isActive;
-        this.itemId = itemId;
-        this.metadata = metadata;
         this.name = name;
         this.organizationId = organizationId;
         this.path1 = path1;
         this.path2 = path2;
+        this.promoted = promoted;
         this.raw = raw;
-        this.startAt = startAt;
         this.status = status;
-        this.targeting = targeting;
         this.updatedAt = updatedAt;
     }
     
@@ -213,9 +177,7 @@ public class PropertyAdsReportMetricsAd {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null,
-            null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<String> adCopy() {
@@ -254,10 +216,6 @@ public class PropertyAdsReportMetricsAd {
         return Optional.ofNullable(this.displayUrl);
     }
 
-    public Optional<OffsetDateTime> endAt() {
-        return Optional.ofNullable(this.endAt);
-    }
-
     public Optional<String> finalUrl() {
         return Optional.ofNullable(this.finalUrl);
     }
@@ -272,18 +230,6 @@ public class PropertyAdsReportMetricsAd {
 
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
-    }
-
-    public Optional<Boolean> isActive() {
-        return Optional.ofNullable(this.isActive);
-    }
-
-    public Optional<String> itemId() {
-        return Optional.ofNullable(this.itemId);
-    }
-
-    public Optional<List<AdsMetadata>> metadata() {
-        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> name() {
@@ -302,20 +248,16 @@ public class PropertyAdsReportMetricsAd {
         return Optional.ofNullable(this.path2);
     }
 
+    public Optional<List<AdsPromoted>> promoted() {
+        return Optional.ofNullable(this.promoted);
+    }
+
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
 
-    public Optional<OffsetDateTime> startAt() {
-        return Optional.ofNullable(this.startAt);
-    }
-
     public Optional<PropertyAdsReportMetricsAdStatus> status() {
         return Optional.ofNullable(this.status);
-    }
-
-    public Optional<PropertyAdsReportMetricsAdTargeting> targeting() {
-        return Optional.ofNullable(this.targeting);
     }
 
     public Optional<OffsetDateTime> updatedAt() {
@@ -381,12 +323,6 @@ public class PropertyAdsReportMetricsAd {
     }
 
 
-    public PropertyAdsReportMetricsAd withEndAt(@Nullable OffsetDateTime endAt) {
-        this.endAt = endAt;
-        return this;
-    }
-
-
     public PropertyAdsReportMetricsAd withFinalUrl(@Nullable String finalUrl) {
         this.finalUrl = finalUrl;
         return this;
@@ -407,24 +343,6 @@ public class PropertyAdsReportMetricsAd {
 
     public PropertyAdsReportMetricsAd withId(@Nullable String id) {
         this.id = id;
-        return this;
-    }
-
-
-    public PropertyAdsReportMetricsAd withIsActive(@Nullable Boolean isActive) {
-        this.isActive = isActive;
-        return this;
-    }
-
-
-    public PropertyAdsReportMetricsAd withItemId(@Nullable String itemId) {
-        this.itemId = itemId;
-        return this;
-    }
-
-
-    public PropertyAdsReportMetricsAd withMetadata(@Nullable List<AdsMetadata> metadata) {
-        this.metadata = metadata;
         return this;
     }
 
@@ -453,26 +371,20 @@ public class PropertyAdsReportMetricsAd {
     }
 
 
+    public PropertyAdsReportMetricsAd withPromoted(@Nullable List<AdsPromoted> promoted) {
+        this.promoted = promoted;
+        return this;
+    }
+
+
     public PropertyAdsReportMetricsAd withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
 
-    public PropertyAdsReportMetricsAd withStartAt(@Nullable OffsetDateTime startAt) {
-        this.startAt = startAt;
-        return this;
-    }
-
-
     public PropertyAdsReportMetricsAd withStatus(@Nullable PropertyAdsReportMetricsAdStatus status) {
         this.status = status;
-        return this;
-    }
-
-
-    public PropertyAdsReportMetricsAd withTargeting(@Nullable PropertyAdsReportMetricsAdTargeting targeting) {
-        this.targeting = targeting;
         return this;
     }
 
@@ -502,22 +414,17 @@ public class PropertyAdsReportMetricsAd {
             Utils.enhancedDeepEquals(this.cta, other.cta) &&
             Utils.enhancedDeepEquals(this.description, other.description) &&
             Utils.enhancedDeepEquals(this.displayUrl, other.displayUrl) &&
-            Utils.enhancedDeepEquals(this.endAt, other.endAt) &&
             Utils.enhancedDeepEquals(this.finalUrl, other.finalUrl) &&
             Utils.enhancedDeepEquals(this.groupId, other.groupId) &&
             Utils.enhancedDeepEquals(this.headline, other.headline) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
-            Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
-            Utils.enhancedDeepEquals(this.itemId, other.itemId) &&
-            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
             Utils.enhancedDeepEquals(this.path1, other.path1) &&
             Utils.enhancedDeepEquals(this.path2, other.path2) &&
+            Utils.enhancedDeepEquals(this.promoted, other.promoted) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
-            Utils.enhancedDeepEquals(this.startAt, other.startAt) &&
             Utils.enhancedDeepEquals(this.status, other.status) &&
-            Utils.enhancedDeepEquals(this.targeting, other.targeting) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
     }
     
@@ -527,12 +434,10 @@ public class PropertyAdsReportMetricsAd {
             adCopy, adType, campaignId,
             createdAt, creativeAssetUrl, creativeIds,
             cta, description, displayUrl,
-            endAt, finalUrl, groupId,
-            headline, id, isActive,
-            itemId, metadata, name,
-            organizationId, path1, path2,
-            raw, startAt, status,
-            targeting, updatedAt);
+            finalUrl, groupId, headline,
+            id, name, organizationId,
+            path1, path2, promoted,
+            raw, status, updatedAt);
     }
     
     @Override
@@ -547,22 +452,17 @@ public class PropertyAdsReportMetricsAd {
                 "cta", cta,
                 "description", description,
                 "displayUrl", displayUrl,
-                "endAt", endAt,
                 "finalUrl", finalUrl,
                 "groupId", groupId,
                 "headline", headline,
                 "id", id,
-                "isActive", isActive,
-                "itemId", itemId,
-                "metadata", metadata,
                 "name", name,
                 "organizationId", organizationId,
                 "path1", path1,
                 "path2", path2,
+                "promoted", promoted,
                 "raw", raw,
-                "startAt", startAt,
                 "status", status,
-                "targeting", targeting,
                 "updatedAt", updatedAt);
     }
 
@@ -587,8 +487,6 @@ public class PropertyAdsReportMetricsAd {
 
         private String displayUrl;
 
-        private OffsetDateTime endAt;
-
         private String finalUrl;
 
         private String groupId;
@@ -596,12 +494,6 @@ public class PropertyAdsReportMetricsAd {
         private String headline;
 
         private String id;
-
-        private Boolean isActive;
-
-        private String itemId;
-
-        private List<AdsMetadata> metadata;
 
         private String name;
 
@@ -611,13 +503,11 @@ public class PropertyAdsReportMetricsAd {
 
         private String path2;
 
+        private List<AdsPromoted> promoted;
+
         private Map<String, Object> raw;
 
-        private OffsetDateTime startAt;
-
         private PropertyAdsReportMetricsAdStatus status;
-
-        private PropertyAdsReportMetricsAdTargeting targeting;
 
         private OffsetDateTime updatedAt;
 
@@ -670,11 +560,6 @@ public class PropertyAdsReportMetricsAd {
             return this;
         }
 
-        public Builder endAt(@Nullable OffsetDateTime endAt) {
-            this.endAt = endAt;
-            return this;
-        }
-
         public Builder finalUrl(@Nullable String finalUrl) {
             this.finalUrl = finalUrl;
             return this;
@@ -692,21 +577,6 @@ public class PropertyAdsReportMetricsAd {
 
         public Builder id(@Nullable String id) {
             this.id = id;
-            return this;
-        }
-
-        public Builder isActive(@Nullable Boolean isActive) {
-            this.isActive = isActive;
-            return this;
-        }
-
-        public Builder itemId(@Nullable String itemId) {
-            this.itemId = itemId;
-            return this;
-        }
-
-        public Builder metadata(@Nullable List<AdsMetadata> metadata) {
-            this.metadata = metadata;
             return this;
         }
 
@@ -730,23 +600,18 @@ public class PropertyAdsReportMetricsAd {
             return this;
         }
 
+        public Builder promoted(@Nullable List<AdsPromoted> promoted) {
+            this.promoted = promoted;
+            return this;
+        }
+
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
-        public Builder startAt(@Nullable OffsetDateTime startAt) {
-            this.startAt = startAt;
-            return this;
-        }
-
         public Builder status(@Nullable PropertyAdsReportMetricsAdStatus status) {
             this.status = status;
-            return this;
-        }
-
-        public Builder targeting(@Nullable PropertyAdsReportMetricsAdTargeting targeting) {
-            this.targeting = targeting;
             return this;
         }
 
@@ -760,12 +625,10 @@ public class PropertyAdsReportMetricsAd {
                 adCopy, adType, campaignId,
                 createdAt, creativeAssetUrl, creativeIds,
                 cta, description, displayUrl,
-                endAt, finalUrl, groupId,
-                headline, id, isActive,
-                itemId, metadata, name,
-                organizationId, path1, path2,
-                raw, startAt, status,
-                targeting, updatedAt);
+                finalUrl, groupId, headline,
+                id, name, organizationId,
+                path1, path2, promoted,
+                raw, status, updatedAt);
         }
 
     }

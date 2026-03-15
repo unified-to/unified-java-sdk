@@ -119,6 +119,12 @@ public class UnifiedTo {
     private final Insertionorder insertionorder;
 
 
+    private final Promoted promoted;
+
+
+    private final Target target;
+
+
     private final Assessment assessment;
 
 
@@ -561,6 +567,16 @@ public class UnifiedTo {
 
     public Insertionorder insertionorder() {
         return insertionorder;
+    }
+
+
+    public Promoted promoted() {
+        return promoted;
+    }
+
+
+    public Target target() {
+        return target;
     }
 
 
@@ -1251,6 +1267,8 @@ public class UnifiedTo {
         this.creative = new Creative(sdkConfiguration);
         this.group = new Group(sdkConfiguration);
         this.insertionorder = new Insertionorder(sdkConfiguration);
+        this.promoted = new Promoted(sdkConfiguration);
+        this.target = new Target(sdkConfiguration);
         this.assessment = new Assessment(sdkConfiguration);
         this.package_ = new Package(sdkConfiguration);
         this.ats = new Ats(sdkConfiguration);

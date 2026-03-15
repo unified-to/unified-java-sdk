@@ -22,7 +22,9 @@
 * [listAdsGroups](#listadsgroups) - List all groups
 * [listAdsInsertionorders](#listadsinsertionorders) - List all insertionorders
 * [listAdsOrganizations](#listadsorganizations) - List all organizations
+* [listAdsPromotedes](#listadspromotedes) - List all promotedes
 * [listAdsReports](#listadsreports) - List all reports
+* [listAdsTargets](#listadstargets) - List all targets
 * [patchAdsAd](#patchadsad) - Update an ad
 * [patchAdsCampaign](#patchadscampaign) - Update a campaign
 * [patchAdsCreative](#patchadscreative) - Update a creative
@@ -1092,6 +1094,63 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## listAdsPromotedes
+
+List all promotedes
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listAdsPromotedes" method="get" path="/ads/{connection_id}/promoted" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListAdsPromotedesRequest;
+import to.unified.unified_java_sdk.models.operations.ListAdsPromotedesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListAdsPromotedesRequest req = ListAdsPromotedesRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListAdsPromotedesResponse res = sdk.ads().listAdsPromotedes()
+                .request(req)
+                .call();
+
+        if (res.adsPromotedes().isPresent()) {
+            System.out.println(res.adsPromotedes().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [ListAdsPromotedesRequest](../../models/operations/ListAdsPromotedesRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[ListAdsPromotedesResponse](../../models/operations/ListAdsPromotedesResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## listAdsReports
 
 List all reports
@@ -1142,6 +1201,63 @@ public class Application {
 ### Response
 
 **[ListAdsReportsResponse](../../models/operations/ListAdsReportsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## listAdsTargets
+
+List all targets
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listAdsTargets" method="get" path="/ads/{connection_id}/target" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListAdsTargetsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAdsTargetsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListAdsTargetsRequest req = ListAdsTargetsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListAdsTargetsResponse res = sdk.ads().listAdsTargets()
+                .request(req)
+                .call();
+
+        if (res.adsTargets().isPresent()) {
+            System.out.println(res.adsTargets().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [ListAdsTargetsRequest](../../models/operations/ListAdsTargetsRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+
+### Response
+
+**[ListAdsTargetsResponse](../../models/operations/ListAdsTargetsResponse.md)**
 
 ### Errors
 

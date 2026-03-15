@@ -6,6 +6,7 @@ package to.unified.unified_java_sdk.models.operations;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
+import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Override;
 import java.lang.String;
@@ -23,10 +24,22 @@ public class ListStorageFilesRequest {
     private String connectionId;
 
     /**
+     * Whether to flatten grouped or recurring items into individual entries.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
+    private Boolean expand;
+
+    /**
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     private List<ListStorageFilesQueryParamFields> fields;
+
+    /**
+     * The fulltext to filter by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fulltext")
+    private String fulltext;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
@@ -80,7 +93,9 @@ public class ListStorageFilesRequest {
     @JsonCreator
     public ListStorageFilesRequest(
             @Nonnull String connectionId,
+            @Nullable Boolean expand,
             @Nullable List<ListStorageFilesQueryParamFields> fields,
+            @Nullable String fulltext,
             @Nullable Double limit,
             @Nullable Double offset,
             @Nullable String order,
@@ -92,7 +107,9 @@ public class ListStorageFilesRequest {
             @Nullable String updatedGte) {
         this.connectionId = Optional.ofNullable(connectionId)
             .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
+        this.expand = expand;
         this.fields = fields;
+        this.fulltext = fulltext;
         this.limit = limit;
         this.offset = offset;
         this.order = order;
@@ -109,7 +126,8 @@ public class ListStorageFilesRequest {
         this(connectionId, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null,
+            null);
     }
 
     /**
@@ -120,10 +138,24 @@ public class ListStorageFilesRequest {
     }
 
     /**
+     * Whether to flatten grouped or recurring items into individual entries.
+     */
+    public Optional<Boolean> expand() {
+        return Optional.ofNullable(this.expand);
+    }
+
+    /**
      * Fields to return
      */
     public Optional<List<ListStorageFilesQueryParamFields>> fields() {
         return Optional.ofNullable(this.fields);
+    }
+
+    /**
+     * The fulltext to filter by
+     */
+    public Optional<String> fulltext() {
+        return Optional.ofNullable(this.fulltext);
     }
 
     public Optional<Double> limit() {
@@ -195,10 +227,28 @@ public class ListStorageFilesRequest {
 
 
     /**
+     * Whether to flatten grouped or recurring items into individual entries.
+     */
+    public ListStorageFilesRequest withExpand(@Nullable Boolean expand) {
+        this.expand = expand;
+        return this;
+    }
+
+
+    /**
      * Fields to return
      */
     public ListStorageFilesRequest withFields(@Nullable List<ListStorageFilesQueryParamFields> fields) {
         this.fields = fields;
+        return this;
+    }
+
+
+    /**
+     * The fulltext to filter by
+     */
+    public ListStorageFilesRequest withFulltext(@Nullable String fulltext) {
+        this.fulltext = fulltext;
         return this;
     }
 
@@ -286,7 +336,9 @@ public class ListStorageFilesRequest {
         ListStorageFilesRequest other = (ListStorageFilesRequest) o;
         return 
             Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
+            Utils.enhancedDeepEquals(this.expand, other.expand) &&
             Utils.enhancedDeepEquals(this.fields, other.fields) &&
+            Utils.enhancedDeepEquals(this.fulltext, other.fulltext) &&
             Utils.enhancedDeepEquals(this.limit, other.limit) &&
             Utils.enhancedDeepEquals(this.offset, other.offset) &&
             Utils.enhancedDeepEquals(this.order, other.order) &&
@@ -301,17 +353,20 @@ public class ListStorageFilesRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            connectionId, fields, limit,
-            offset, order, parentId,
-            query, raw, sort,
-            type, updatedGte);
+            connectionId, expand, fields,
+            fulltext, limit, offset,
+            order, parentId, query,
+            raw, sort, type,
+            updatedGte);
     }
     
     @Override
     public String toString() {
         return Utils.toString(ListStorageFilesRequest.class,
                 "connectionId", connectionId,
+                "expand", expand,
                 "fields", fields,
+                "fulltext", fulltext,
                 "limit", limit,
                 "offset", offset,
                 "order", order,
@@ -328,7 +383,11 @@ public class ListStorageFilesRequest {
 
         private String connectionId;
 
+        private Boolean expand;
+
         private List<ListStorageFilesQueryParamFields> fields;
+
+        private String fulltext;
 
         private Double limit;
 
@@ -361,10 +420,26 @@ public class ListStorageFilesRequest {
         }
 
         /**
+         * Whether to flatten grouped or recurring items into individual entries.
+         */
+        public Builder expand(@Nullable Boolean expand) {
+            this.expand = expand;
+            return this;
+        }
+
+        /**
          * Fields to return
          */
         public Builder fields(@Nullable List<ListStorageFilesQueryParamFields> fields) {
             this.fields = fields;
+            return this;
+        }
+
+        /**
+         * The fulltext to filter by
+         */
+        public Builder fulltext(@Nullable String fulltext) {
+            this.fulltext = fulltext;
             return this;
         }
 
@@ -433,10 +508,11 @@ public class ListStorageFilesRequest {
 
         public ListStorageFilesRequest build() {
             return new ListStorageFilesRequest(
-                connectionId, fields, limit,
-                offset, order, parentId,
-                query, raw, sort,
-                type, updatedGte);
+                connectionId, expand, fields,
+                fulltext, limit, offset,
+                order, parentId, query,
+                raw, sort, type,
+                updatedGte);
         }
 
     }

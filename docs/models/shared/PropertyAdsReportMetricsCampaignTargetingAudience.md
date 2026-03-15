@@ -1,0 +1,15 @@
+# PropertyAdsReportMetricsCampaignTargetingAudience
+
+
+## Fields
+
+| Field                                                                    | Type                                                                     | Required                                                                 | Description                                                              |
+| ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
+| `behaviors`                                                              | List\<[AudienceSegment](../../models/shared/AudienceSegment.md)>         | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `combinationSpec`                                                        | List\<[AudienceCombination](../../models/shared/AudienceCombination.md)> | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `customAudiences`                                                        | List\<[AudienceSegment](../../models/shared/AudienceSegment.md)>         | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `excludedBehaviors`                                                      | List\<[AudienceSegment](../../models/shared/AudienceSegment.md)>         | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `excludedCustomAudiences`                                                | List\<[AudienceSegment](../../models/shared/AudienceSegment.md)>         | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `excludedInterests`                                                      | List\<[AudienceSegment](../../models/shared/AudienceSegment.md)>         | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `interests`                                                              | List\<[AudienceSegment](../../models/shared/AudienceSegment.md)>         | :heavy_minus_sign:                                                       | N/A                                                                      |
+| `lookalikeAudiences`                                                     | List\<[LookalikeAudience](../../models/shared/LookalikeAudience.md)>     | :heavy_minus_sign:                                                       | N/A                                                                      |

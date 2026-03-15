@@ -17,11 +17,7 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
-/**
- * HrisBankaccount
- * 
- * <p>Employee payroll bank account for direct deposit.
- */
+
 public class HrisBankaccount {
 
     @JsonInclude(Include.NON_ABSENT)

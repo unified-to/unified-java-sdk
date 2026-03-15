@@ -29,6 +29,12 @@ public class ListAccountingTransactionsRequest {
     private String contactId;
 
     /**
+     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_lt")
+    private String endLt;
+
+    /**
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
@@ -65,6 +71,12 @@ public class ListAccountingTransactionsRequest {
     private String sort;
 
     /**
+     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_gte")
+    private String startGte;
+
+    /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
@@ -75,6 +87,7 @@ public class ListAccountingTransactionsRequest {
     public ListAccountingTransactionsRequest(
             @Nonnull String connectionId,
             @Nullable String contactId,
+            @Nullable String endLt,
             @Nullable List<ListAccountingTransactionsQueryParamFields> fields,
             @Nullable Double limit,
             @Nullable Double offset,
@@ -82,10 +95,12 @@ public class ListAccountingTransactionsRequest {
             @Nullable String query,
             @Nullable String raw,
             @Nullable String sort,
+            @Nullable String startGte,
             @Nullable String updatedGte) {
         this.connectionId = Optional.ofNullable(connectionId)
             .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.contactId = contactId;
+        this.endLt = endLt;
         this.fields = fields;
         this.limit = limit;
         this.offset = offset;
@@ -93,6 +108,7 @@ public class ListAccountingTransactionsRequest {
         this.query = query;
         this.raw = raw;
         this.sort = sort;
+        this.startGte = startGte;
         this.updatedGte = updatedGte;
     }
     
@@ -101,7 +117,7 @@ public class ListAccountingTransactionsRequest {
         this(connectionId, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null, null);
     }
 
     /**
@@ -116,6 +132,13 @@ public class ListAccountingTransactionsRequest {
      */
     public Optional<String> contactId() {
         return Optional.ofNullable(this.contactId);
+    }
+
+    /**
+     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    public Optional<String> endLt() {
+        return Optional.ofNullable(this.endLt);
     }
 
     /**
@@ -158,6 +181,13 @@ public class ListAccountingTransactionsRequest {
     }
 
     /**
+     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    public Optional<String> startGte() {
+        return Optional.ofNullable(this.startGte);
+    }
+
+    /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
@@ -184,6 +214,15 @@ public class ListAccountingTransactionsRequest {
      */
     public ListAccountingTransactionsRequest withContactId(@Nullable String contactId) {
         this.contactId = contactId;
+        return this;
+    }
+
+
+    /**
+     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    public ListAccountingTransactionsRequest withEndLt(@Nullable String endLt) {
+        this.endLt = endLt;
         return this;
     }
 
@@ -242,6 +281,15 @@ public class ListAccountingTransactionsRequest {
 
 
     /**
+     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    public ListAccountingTransactionsRequest withStartGte(@Nullable String startGte) {
+        this.startGte = startGte;
+        return this;
+    }
+
+
+    /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
@@ -263,6 +311,7 @@ public class ListAccountingTransactionsRequest {
         return 
             Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
             Utils.enhancedDeepEquals(this.contactId, other.contactId) &&
+            Utils.enhancedDeepEquals(this.endLt, other.endLt) &&
             Utils.enhancedDeepEquals(this.fields, other.fields) &&
             Utils.enhancedDeepEquals(this.limit, other.limit) &&
             Utils.enhancedDeepEquals(this.offset, other.offset) &&
@@ -270,16 +319,17 @@ public class ListAccountingTransactionsRequest {
             Utils.enhancedDeepEquals(this.query, other.query) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.sort, other.sort) &&
+            Utils.enhancedDeepEquals(this.startGte, other.startGte) &&
             Utils.enhancedDeepEquals(this.updatedGte, other.updatedGte);
     }
     
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            connectionId, contactId, fields,
-            limit, offset, order,
-            query, raw, sort,
-            updatedGte);
+            connectionId, contactId, endLt,
+            fields, limit, offset,
+            order, query, raw,
+            sort, startGte, updatedGte);
     }
     
     @Override
@@ -287,6 +337,7 @@ public class ListAccountingTransactionsRequest {
         return Utils.toString(ListAccountingTransactionsRequest.class,
                 "connectionId", connectionId,
                 "contactId", contactId,
+                "endLt", endLt,
                 "fields", fields,
                 "limit", limit,
                 "offset", offset,
@@ -294,6 +345,7 @@ public class ListAccountingTransactionsRequest {
                 "query", query,
                 "raw", raw,
                 "sort", sort,
+                "startGte", startGte,
                 "updatedGte", updatedGte);
     }
 
@@ -303,6 +355,8 @@ public class ListAccountingTransactionsRequest {
         private String connectionId;
 
         private String contactId;
+
+        private String endLt;
 
         private List<ListAccountingTransactionsQueryParamFields> fields;
 
@@ -317,6 +371,8 @@ public class ListAccountingTransactionsRequest {
         private String raw;
 
         private String sort;
+
+        private String startGte;
 
         private String updatedGte;
 
@@ -337,6 +393,14 @@ public class ListAccountingTransactionsRequest {
          */
         public Builder contactId(@Nullable String contactId) {
             this.contactId = contactId;
+            return this;
+        }
+
+        /**
+         * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
+        public Builder endLt(@Nullable String endLt) {
+            this.endLt = endLt;
             return this;
         }
 
@@ -387,6 +451,14 @@ public class ListAccountingTransactionsRequest {
         }
 
         /**
+         * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
+        public Builder startGte(@Nullable String startGte) {
+            this.startGte = startGte;
+            return this;
+        }
+
+        /**
          * Return only results whose updated date is equal or greater to this value (ISO-8601 /
          * YYYY-MM-DDTHH:MM:SSZ format)
          */
@@ -397,10 +469,10 @@ public class ListAccountingTransactionsRequest {
 
         public ListAccountingTransactionsRequest build() {
             return new ListAccountingTransactionsRequest(
-                connectionId, contactId, fields,
-                limit, offset, order,
-                query, raw, sort,
-                updatedGte);
+                connectionId, contactId, endLt,
+                fields, limit, offset,
+                order, query, raw,
+                sort, startGte, updatedGte);
         }
 
     }

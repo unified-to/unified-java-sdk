@@ -11,7 +11,7 @@ import java.lang.Override;
 import java.lang.String;
 import java.net.http.HttpResponse;
 import java.util.Optional;
-import to.unified.unified_java_sdk.models.shared.CommerceItemvariant1;
+import to.unified.unified_java_sdk.models.shared.CommerceItemvariant;
 import to.unified.unified_java_sdk.utils.Response;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -20,7 +20,7 @@ public class UpdateCommerceItemvariantResponse implements Response {
     /**
      * Successful
      */
-    private CommerceItemvariant1 commerceItemvariant;
+    private CommerceItemvariant commerceItemvariant;
 
     /**
      * HTTP response content type for this operation
@@ -39,7 +39,7 @@ public class UpdateCommerceItemvariantResponse implements Response {
 
     @JsonCreator
     public UpdateCommerceItemvariantResponse(
-            @Nullable CommerceItemvariant1 commerceItemvariant,
+            @Nullable CommerceItemvariant commerceItemvariant,
             @Nonnull String contentType,
             int statusCode,
             @Nonnull HttpResponse<InputStream> rawResponse) {
@@ -62,7 +62,7 @@ public class UpdateCommerceItemvariantResponse implements Response {
     /**
      * Successful
      */
-    public Optional<CommerceItemvariant1> commerceItemvariant() {
+    public Optional<CommerceItemvariant> commerceItemvariant() {
         return Optional.ofNullable(this.commerceItemvariant);
     }
 
@@ -95,7 +95,7 @@ public class UpdateCommerceItemvariantResponse implements Response {
     /**
      * Successful
      */
-    public UpdateCommerceItemvariantResponse withCommerceItemvariant(@Nullable CommerceItemvariant1 commerceItemvariant) {
+    public UpdateCommerceItemvariantResponse withCommerceItemvariant(@Nullable CommerceItemvariant commerceItemvariant) {
         this.commerceItemvariant = commerceItemvariant;
         return this;
     }
@@ -163,7 +163,7 @@ public class UpdateCommerceItemvariantResponse implements Response {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private CommerceItemvariant1 commerceItemvariant;
+        private CommerceItemvariant commerceItemvariant;
 
         private String contentType;
 
@@ -178,7 +178,7 @@ public class UpdateCommerceItemvariantResponse implements Response {
         /**
          * Successful
          */
-        public Builder commerceItemvariant(@Nullable CommerceItemvariant1 commerceItemvariant) {
+        public Builder commerceItemvariant(@Nullable CommerceItemvariant commerceItemvariant) {
             this.commerceItemvariant = commerceItemvariant;
             return this;
         }

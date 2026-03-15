@@ -17,11 +17,7 @@ import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
-/**
- * MarketingCampaign
- * 
- * <p>A marketing campaign or email send
- */
+
 public class MarketingCampaign {
 
     @JsonInclude(Include.NON_ABSENT)
@@ -44,7 +40,7 @@ public class MarketingCampaign {
     private String id;
 
     /**
-     * Associated list/audience IDs
+     * Associated listaudience IDs
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_ids")
@@ -152,7 +148,7 @@ public class MarketingCampaign {
     }
 
     /**
-     * Associated list/audience IDs
+     * Associated listaudience IDs
      */
     public Optional<List<String>> listIds() {
         return Optional.ofNullable(this.listIds);
@@ -224,7 +220,7 @@ public class MarketingCampaign {
 
 
     /**
-     * Associated list/audience IDs
+     * Associated listaudience IDs
      */
     public MarketingCampaign withListIds(@Nullable List<String> listIds) {
         this.listIds = listIds;
@@ -397,7 +393,7 @@ public class MarketingCampaign {
         }
 
         /**
-         * Associated list/audience IDs
+         * Associated listaudience IDs
          */
         public Builder listIds(@Nullable List<String> listIds) {
             this.listIds = listIds;

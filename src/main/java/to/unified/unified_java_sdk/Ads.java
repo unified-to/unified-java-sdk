@@ -60,9 +60,15 @@ import to.unified.unified_java_sdk.models.operations.ListAdsInsertionordersRespo
 import to.unified.unified_java_sdk.models.operations.ListAdsOrganizationsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAdsOrganizationsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListAdsOrganizationsResponse;
+import to.unified.unified_java_sdk.models.operations.ListAdsPromotedesRequest;
+import to.unified.unified_java_sdk.models.operations.ListAdsPromotedesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAdsPromotedesResponse;
 import to.unified.unified_java_sdk.models.operations.ListAdsReportsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAdsReportsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListAdsReportsResponse;
+import to.unified.unified_java_sdk.models.operations.ListAdsTargetsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAdsTargetsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAdsTargetsResponse;
 import to.unified.unified_java_sdk.models.operations.PatchAdsAdRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAdsAdRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchAdsAdResponse;
@@ -135,7 +141,9 @@ import to.unified.unified_java_sdk.operations.ListAdsCreatives;
 import to.unified.unified_java_sdk.operations.ListAdsGroups;
 import to.unified.unified_java_sdk.operations.ListAdsInsertionorders;
 import to.unified.unified_java_sdk.operations.ListAdsOrganizations;
+import to.unified.unified_java_sdk.operations.ListAdsPromotedes;
 import to.unified.unified_java_sdk.operations.ListAdsReports;
+import to.unified.unified_java_sdk.operations.ListAdsTargets;
 import to.unified.unified_java_sdk.operations.PatchAdsAd;
 import to.unified.unified_java_sdk.operations.PatchAdsCampaign;
 import to.unified.unified_java_sdk.operations.PatchAdsCreative;
@@ -573,6 +581,28 @@ public class Ads {
     }
 
     /**
+     * List all promotedes
+     * 
+     * @return The call builder
+     */
+    public ListAdsPromotedesRequestBuilder listAdsPromotedes() {
+        return new ListAdsPromotedesRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all promotedes
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAdsPromotedesResponse listAdsPromotedes(@Nonnull ListAdsPromotedesRequest request) {
+        RequestOperation<ListAdsPromotedesRequest, ListAdsPromotedesResponse> operation
+              = new ListAdsPromotedes.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * List all reports
      * 
      * @return The call builder
@@ -591,6 +621,28 @@ public class Ads {
     public ListAdsReportsResponse listAdsReports(@Nonnull ListAdsReportsRequest request) {
         RequestOperation<ListAdsReportsRequest, ListAdsReportsResponse> operation
               = new ListAdsReports.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all targets
+     * 
+     * @return The call builder
+     */
+    public ListAdsTargetsRequestBuilder listAdsTargets() {
+        return new ListAdsTargetsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all targets
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListAdsTargetsResponse listAdsTargets(@Nonnull ListAdsTargetsRequest request) {
+        RequestOperation<ListAdsTargetsRequest, ListAdsTargetsResponse> operation
+              = new ListAdsTargets.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

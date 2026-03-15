@@ -1,7 +1,5 @@
 # MarketingCampaign
 
-A marketing campaign or email send
-
 
 ## Fields
 
@@ -11,7 +9,7 @@ A marketing campaign or email send
 | `fromEmail`                                                                               | *Optional\<String>*                                                                       | :heavy_minus_sign:                                                                        | N/A                                                                                       |
 | `fromName`                                                                                | *Optional\<String>*                                                                       | :heavy_minus_sign:                                                                        | N/A                                                                                       |
 | `id`                                                                                      | *Optional\<String>*                                                                       | :heavy_minus_sign:                                                                        | N/A                                                                                       |
-| `listIds`                                                                                 | List\<*String*>                                                                           | :heavy_minus_sign:                                                                        | Associated list/audience IDs                                                              |
+| `listIds`                                                                                 | List\<*String*>                                                                           | :heavy_minus_sign:                                                                        | Associated listaudience IDs                                                               |
 | `name`                                                                                    | *Optional\<String>*                                                                       | :heavy_minus_sign:                                                                        | N/A                                                                                       |
 | `previewText`                                                                             | *Optional\<String>*                                                                       | :heavy_minus_sign:                                                                        | N/A                                                                                       |
 | `raw`                                                                                     | Map\<String, *Object*>                                                                    | :heavy_minus_sign:                                                                        | N/A                                                                                       |

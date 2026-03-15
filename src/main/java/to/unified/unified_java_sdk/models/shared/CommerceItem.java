@@ -129,7 +129,7 @@ public class CommerceItem {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variants")
-    private List<CommerceItemVariant> variants;
+    private List<CommerceItemvariant> variants;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -158,7 +158,7 @@ public class CommerceItem {
             @JsonProperty("taxrate_id") @Nullable String taxrateId,
             @JsonProperty("type") @Nullable String type,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
-            @JsonProperty("variants") @Nullable List<CommerceItemVariant> variants,
+            @JsonProperty("variants") @Nullable List<CommerceItemvariant> variants,
             @JsonProperty("vendor_name") @Nullable String vendorName) {
         this.accountId = accountId;
         this.collectionIds = collectionIds;
@@ -284,7 +284,7 @@ public class CommerceItem {
     /**
      * first variant is the default variant
      */
-    public Optional<List<CommerceItemVariant>> variants() {
+    public Optional<List<CommerceItemvariant>> variants() {
         return Optional.ofNullable(this.variants);
     }
 
@@ -426,7 +426,7 @@ public class CommerceItem {
     /**
      * first variant is the default variant
      */
-    public CommerceItem withVariants(@Nullable List<CommerceItemVariant> variants) {
+    public CommerceItem withVariants(@Nullable List<CommerceItemvariant> variants) {
         this.variants = variants;
         return this;
     }
@@ -555,7 +555,7 @@ public class CommerceItem {
 
         private OffsetDateTime updatedAt;
 
-        private List<CommerceItemVariant> variants;
+        private List<CommerceItemvariant> variants;
 
         private String vendorName;
 
@@ -672,7 +672,7 @@ public class CommerceItem {
         /**
          * first variant is the default variant
          */
-        public Builder variants(@Nullable List<CommerceItemVariant> variants) {
+        public Builder variants(@Nullable List<CommerceItemvariant> variants) {
             this.variants = variants;
             return this;
         }

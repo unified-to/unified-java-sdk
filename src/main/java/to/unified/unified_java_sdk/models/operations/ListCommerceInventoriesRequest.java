@@ -29,7 +29,7 @@ public class ListCommerceInventoriesRequest {
     private List<ListCommerceInventoriesQueryParamFields> fields;
 
     /**
-     * The item variant ID to filter by (reference to CommerceItemVariant)
+     * The item variant ID to filter by (reference to CommerceCommerceItemvariant)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=item_variant_id")
     private String itemVariantId;
@@ -127,7 +127,7 @@ public class ListCommerceInventoriesRequest {
     }
 
     /**
-     * The item variant ID to filter by (reference to CommerceItemVariant)
+     * The item variant ID to filter by (reference to CommerceCommerceItemvariant)
      */
     public Optional<String> itemVariantId() {
         return Optional.ofNullable(this.itemVariantId);
@@ -204,7 +204,7 @@ public class ListCommerceInventoriesRequest {
 
 
     /**
-     * The item variant ID to filter by (reference to CommerceItemVariant)
+     * The item variant ID to filter by (reference to CommerceCommerceItemvariant)
      */
     public ListCommerceInventoriesRequest withItemVariantId(@Nullable String itemVariantId) {
         this.itemVariantId = itemVariantId;
@@ -369,7 +369,7 @@ public class ListCommerceInventoriesRequest {
         }
 
         /**
-         * The item variant ID to filter by (reference to CommerceItemVariant)
+         * The item variant ID to filter by (reference to CommerceCommerceItemvariant)
          */
         public Builder itemVariantId(@Nullable String itemVariantId) {
             this.itemVariantId = itemVariantId;

@@ -13,7 +13,6 @@ public enum UpdateCommerceItemvariantQueryParamFields {
     CREATED_AT("created_at"),
     UPDATED_AT("updated_at"),
     NAME("name"),
-    ITEMS("items"),
     PUBLIC_NAME("public_name"),
     DESCRIPTION("description"),
     PUBLIC_DESCRIPTION("public_description"),
@@ -36,6 +35,7 @@ public enum UpdateCommerceItemvariantQueryParamFields {
     INVENTORY_ID("inventory_id"),
     REQUIRES_SHIPPING("requires_shipping"),
     METADATA("metadata"),
+    ITEMS("items"),
     RAW("raw");
 
     @JsonValue

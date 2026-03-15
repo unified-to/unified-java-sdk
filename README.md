@@ -39,7 +39,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.47.12'
+implementation 'to.unified:unified-java-sdk:0.47.13'
 ```
 
 Maven:
@@ -47,7 +47,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.47.12</version>
+    <version>0.47.13</version>
 </dependency>
 ```
 
@@ -314,7 +314,9 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [listAdsGroups](docs/sdks/ads/README.md#listadsgroups) - List all groups
 * [listAdsInsertionorders](docs/sdks/ads/README.md#listadsinsertionorders) - List all insertionorders
 * [listAdsOrganizations](docs/sdks/ads/README.md#listadsorganizations) - List all organizations
+* [listAdsPromotedes](docs/sdks/ads/README.md#listadspromotedes) - List all promotedes
 * [listAdsReports](docs/sdks/ads/README.md#listadsreports) - List all reports
+* [listAdsTargets](docs/sdks/ads/README.md#listadstargets) - List all targets
 * [patchAdsAd](docs/sdks/ads/README.md#patchadsad) - Update an ad
 * [patchAdsCampaign](docs/sdks/ads/README.md#patchadscampaign) - Update a campaign
 * [patchAdsCreative](docs/sdks/ads/README.md#patchadscreative) - Update a creative
@@ -1414,6 +1416,10 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [removeTaskProject](docs/sdks/project/README.md#removetaskproject) - Remove a project
 * [updateTaskProject](docs/sdks/project/README.md#updatetaskproject) - Update a project
 
+### [Promoted](docs/sdks/promoted/README.md)
+
+* [listAdsPromotedes](docs/sdks/promoted/README.md#listadspromotedes) - List all promotedes
+
 ### [Prompt](docs/sdks/prompt/README.md)
 
 * [createGenaiPrompt](docs/sdks/prompt/README.md#creategenaiprompt) - Create a prompt
@@ -1633,6 +1639,10 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [patchPaymentSubscription](docs/sdks/subscription/README.md#patchpaymentsubscription) - Update a subscription
 * [removePaymentSubscription](docs/sdks/subscription/README.md#removepaymentsubscription) - Remove a subscription
 * [updatePaymentSubscription](docs/sdks/subscription/README.md#updatepaymentsubscription) - Update a subscription
+
+### [Target](docs/sdks/target/README.md)
+
+* [listAdsTargets](docs/sdks/target/README.md#listadstargets) - List all targets
 
 ### [Task](docs/sdks/task/README.md)
 

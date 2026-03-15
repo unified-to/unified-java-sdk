@@ -25,7 +25,7 @@ import to.unified.unified_java_sdk.SecuritySource;
 import to.unified.unified_java_sdk.models.errors.SDKError;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceItemvariantRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateCommerceItemvariantResponse;
-import to.unified.unified_java_sdk.models.shared.CommerceItemvariant1;
+import to.unified.unified_java_sdk.models.shared.CommerceItemvariant;
 import to.unified.unified_java_sdk.utils.Blob;
 import to.unified.unified_java_sdk.utils.HTTPClient;
 import to.unified.unified_java_sdk.utils.HTTPRequest;
@@ -177,7 +177,7 @@ public class UpdateCommerceItemvariant {
             
             if (Utils.statusCodeMatches(response.statusCode(), "200")) {
                 if (Utils.contentTypeMatches(contentType, "application/json")) {
-                    return res.withCommerceItemvariant(Utils.unmarshal(response, new TypeReference<CommerceItemvariant1>() {}));
+                    return res.withCommerceItemvariant(Utils.unmarshal(response, new TypeReference<CommerceItemvariant>() {}));
                 } else {
                     throw SDKError.from("Unexpected content-type received: " + contentType, response);
                 }
@@ -247,7 +247,7 @@ public class UpdateCommerceItemvariant {
             
             if (Utils.statusCodeMatches(response.statusCode(), "200")) {
                 if (Utils.contentTypeMatches(contentType, "application/json")) {
-                    return Utils.unmarshalAsync(response, new TypeReference<CommerceItemvariant1>() {})
+                    return Utils.unmarshalAsync(response, new TypeReference<CommerceItemvariant>() {})
                             .thenApply(res::withCommerceItemvariant);
                 } else {
                     return Utils.createAsyncApiError(response, "Unexpected content-type received: " + contentType);

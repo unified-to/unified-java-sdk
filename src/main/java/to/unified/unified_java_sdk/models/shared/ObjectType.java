@@ -138,6 +138,8 @@ public class ObjectType {
     public static final ObjectType ADS_GROUP = new ObjectType("ads_group");
     public static final ObjectType ADS_CREATIVE = new ObjectType("ads_creative");
     public static final ObjectType ADS_INSERTIONORDER = new ObjectType("ads_insertionorder");
+    public static final ObjectType ADS_TARGET = new ObjectType("ads_target");
+    public static final ObjectType ADS_PROMOTED = new ObjectType("ads_promoted");
     public static final ObjectType FORMS_FORM = new ObjectType("forms_form");
     public static final ObjectType FORMS_SUBMISSION = new ObjectType("forms_submission");
     public static final ObjectType SHIPPING_CARRIER = new ObjectType("shipping_carrier");
@@ -336,6 +338,8 @@ public class ObjectType {
         map.put("ads_group", ADS_GROUP);
         map.put("ads_creative", ADS_CREATIVE);
         map.put("ads_insertionorder", ADS_INSERTIONORDER);
+        map.put("ads_target", ADS_TARGET);
+        map.put("ads_promoted", ADS_PROMOTED);
         map.put("forms_form", FORMS_FORM);
         map.put("forms_submission", FORMS_SUBMISSION);
         map.put("shipping_carrier", SHIPPING_CARRIER);
@@ -466,6 +470,8 @@ public class ObjectType {
         map.put("ads_group", ObjectTypeEnum.ADS_GROUP);
         map.put("ads_creative", ObjectTypeEnum.ADS_CREATIVE);
         map.put("ads_insertionorder", ObjectTypeEnum.ADS_INSERTIONORDER);
+        map.put("ads_target", ObjectTypeEnum.ADS_TARGET);
+        map.put("ads_promoted", ObjectTypeEnum.ADS_PROMOTED);
         map.put("forms_form", ObjectTypeEnum.FORMS_FORM);
         map.put("forms_submission", ObjectTypeEnum.FORMS_SUBMISSION);
         map.put("shipping_carrier", ObjectTypeEnum.SHIPPING_CARRIER);
@@ -597,6 +603,8 @@ public class ObjectType {
         ADS_GROUP("ads_group"),
         ADS_CREATIVE("ads_creative"),
         ADS_INSERTIONORDER("ads_insertionorder"),
+        ADS_TARGET("ads_target"),
+        ADS_PROMOTED("ads_promoted"),
         FORMS_FORM("forms_form"),
         FORMS_SUBMISSION("forms_submission"),
         SHIPPING_CARRIER("shipping_carrier"),

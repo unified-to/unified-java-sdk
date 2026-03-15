@@ -507,6 +507,28 @@ public class UnifiedJavaSDKAutoConfig {
         return unifiedTo.insertionorder();
     }
     /**
+     * Creates a Promoted sub-SDK bean if none exists.
+     *
+     * @param unifiedTo the main SDK instance
+     * @return A configured Promoted instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public Promoted promoted(UnifiedTo unifiedTo) {
+        return unifiedTo.promoted();
+    }
+    /**
+     * Creates a Target sub-SDK bean if none exists.
+     *
+     * @param unifiedTo the main SDK instance
+     * @return A configured Target instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public Target target(UnifiedTo unifiedTo) {
+        return unifiedTo.target();
+    }
+    /**
      * Creates a Assessment sub-SDK bean if none exists.
      *
      * @param unifiedTo the main SDK instance
@@ -1959,6 +1981,28 @@ public class UnifiedJavaSDKAutoConfig {
     @ConditionalOnMissingBean
     public AsyncInsertionorder asyncInsertionorder(AsyncUnifiedTo asyncUnifiedTo) {
         return asyncUnifiedTo.insertionorder();
+    }
+    /**
+     * Creates an AsyncPromoted sub-SDK bean if none exists.
+     *
+     * @param asyncUnifiedTo the async SDK instance
+     * @return A configured AsyncPromoted instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public AsyncPromoted asyncPromoted(AsyncUnifiedTo asyncUnifiedTo) {
+        return asyncUnifiedTo.promoted();
+    }
+    /**
+     * Creates an AsyncTarget sub-SDK bean if none exists.
+     *
+     * @param asyncUnifiedTo the async SDK instance
+     * @return A configured AsyncTarget instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public AsyncTarget asyncTarget(AsyncUnifiedTo asyncUnifiedTo) {
+        return asyncUnifiedTo.target();
     }
     /**
      * Creates an AsyncAssessment sub-SDK bean if none exists.

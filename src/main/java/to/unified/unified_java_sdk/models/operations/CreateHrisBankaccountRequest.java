@@ -16,9 +16,7 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 
 public class CreateHrisBankaccountRequest {
-    /**
-     * Employee payroll bank account for direct deposit.
-     */
+
     @SpeakeasyMetadata("request:mediaType=application/json")
     private HrisBankaccount hrisBankaccount;
 
@@ -63,9 +61,6 @@ public class CreateHrisBankaccountRequest {
             null);
     }
 
-    /**
-     * Employee payroll bank account for direct deposit.
-     */
     public HrisBankaccount hrisBankaccount() {
         return this.hrisBankaccount;
     }
@@ -98,9 +93,6 @@ public class CreateHrisBankaccountRequest {
     }
 
 
-    /**
-     * Employee payroll bank account for direct deposit.
-     */
     public CreateHrisBankaccountRequest withHrisBankaccount(@Nonnull HrisBankaccount hrisBankaccount) {
         this.hrisBankaccount = Utils.checkNotNull(hrisBankaccount, "hrisBankaccount");
         return this;
@@ -183,9 +175,6 @@ public class CreateHrisBankaccountRequest {
           // force use of static builder() method
         }
 
-        /**
-         * Employee payroll bank account for direct deposit.
-         */
         public Builder hrisBankaccount(@Nonnull HrisBankaccount hrisBankaccount) {
             this.hrisBankaccount = Utils.checkNotNull(hrisBankaccount, "hrisBankaccount");
             return this;
