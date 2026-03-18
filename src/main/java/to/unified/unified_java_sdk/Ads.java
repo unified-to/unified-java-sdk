@@ -60,9 +60,9 @@ import to.unified.unified_java_sdk.models.operations.ListAdsInsertionordersRespo
 import to.unified.unified_java_sdk.models.operations.ListAdsOrganizationsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAdsOrganizationsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListAdsOrganizationsResponse;
-import to.unified.unified_java_sdk.models.operations.ListAdsPromotedesRequest;
-import to.unified.unified_java_sdk.models.operations.ListAdsPromotedesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAdsPromotedesResponse;
+import to.unified.unified_java_sdk.models.operations.ListAdsPromotedsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAdsPromotedsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAdsPromotedsResponse;
 import to.unified.unified_java_sdk.models.operations.ListAdsReportsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAdsReportsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListAdsReportsResponse;
@@ -141,7 +141,7 @@ import to.unified.unified_java_sdk.operations.ListAdsCreatives;
 import to.unified.unified_java_sdk.operations.ListAdsGroups;
 import to.unified.unified_java_sdk.operations.ListAdsInsertionorders;
 import to.unified.unified_java_sdk.operations.ListAdsOrganizations;
-import to.unified.unified_java_sdk.operations.ListAdsPromotedes;
+import to.unified.unified_java_sdk.operations.ListAdsPromoteds;
 import to.unified.unified_java_sdk.operations.ListAdsReports;
 import to.unified.unified_java_sdk.operations.ListAdsTargets;
 import to.unified.unified_java_sdk.operations.PatchAdsAd;
@@ -581,24 +581,24 @@ public class Ads {
     }
 
     /**
-     * List all promotedes
+     * List all promoteds
      * 
      * @return The call builder
      */
-    public ListAdsPromotedesRequestBuilder listAdsPromotedes() {
-        return new ListAdsPromotedesRequestBuilder(sdkConfiguration);
+    public ListAdsPromotedsRequestBuilder listAdsPromoteds() {
+        return new ListAdsPromotedsRequestBuilder(sdkConfiguration);
     }
 
     /**
-     * List all promotedes
+     * List all promoteds
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAdsPromotedesResponse listAdsPromotedes(@Nonnull ListAdsPromotedesRequest request) {
-        RequestOperation<ListAdsPromotedesRequest, ListAdsPromotedesResponse> operation
-              = new ListAdsPromotedes.Sync(sdkConfiguration, _headers);
+    public ListAdsPromotedsResponse listAdsPromoteds(@Nonnull ListAdsPromotedsRequest request) {
+        RequestOperation<ListAdsPromotedsRequest, ListAdsPromotedsResponse> operation
+              = new ListAdsPromoteds.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

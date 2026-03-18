@@ -41,6 +41,12 @@ public class ListCommerceCollectionsRequest {
     private String order;
 
     /**
+     * The org ID to filter by (reference to AccountingOrganization)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=org_id")
+    private String orgId;
+
+    /**
      * The parent ID to filter by
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parent_id")
@@ -88,6 +94,7 @@ public class ListCommerceCollectionsRequest {
             @Nullable Double limit,
             @Nullable Double offset,
             @Nullable String order,
+            @Nullable String orgId,
             @Nullable String parentId,
             @Nullable String query,
             @Nullable String raw,
@@ -101,6 +108,7 @@ public class ListCommerceCollectionsRequest {
         this.limit = limit;
         this.offset = offset;
         this.order = order;
+        this.orgId = orgId;
         this.parentId = parentId;
         this.query = query;
         this.raw = raw;
@@ -115,7 +123,8 @@ public class ListCommerceCollectionsRequest {
         this(connectionId, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     /**
@@ -142,6 +151,13 @@ public class ListCommerceCollectionsRequest {
 
     public Optional<String> order() {
         return Optional.ofNullable(this.order);
+    }
+
+    /**
+     * The org ID to filter by (reference to AccountingOrganization)
+     */
+    public Optional<String> orgId() {
+        return Optional.ofNullable(this.orgId);
     }
 
     /**
@@ -232,6 +248,15 @@ public class ListCommerceCollectionsRequest {
 
 
     /**
+     * The org ID to filter by (reference to AccountingOrganization)
+     */
+    public ListCommerceCollectionsRequest withOrgId(@Nullable String orgId) {
+        this.orgId = orgId;
+        return this;
+    }
+
+
+    /**
      * The parent ID to filter by
      */
     public ListCommerceCollectionsRequest withParentId(@Nullable String parentId) {
@@ -306,6 +331,7 @@ public class ListCommerceCollectionsRequest {
             Utils.enhancedDeepEquals(this.limit, other.limit) &&
             Utils.enhancedDeepEquals(this.offset, other.offset) &&
             Utils.enhancedDeepEquals(this.order, other.order) &&
+            Utils.enhancedDeepEquals(this.orgId, other.orgId) &&
             Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
             Utils.enhancedDeepEquals(this.query, other.query) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
@@ -319,9 +345,10 @@ public class ListCommerceCollectionsRequest {
     public int hashCode() {
         return Utils.enhancedHash(
             connectionId, fields, limit,
-            offset, order, parentId,
-            query, raw, saleschannelId,
-            sort, type, updatedGte);
+            offset, order, orgId,
+            parentId, query, raw,
+            saleschannelId, sort, type,
+            updatedGte);
     }
     
     @Override
@@ -332,6 +359,7 @@ public class ListCommerceCollectionsRequest {
                 "limit", limit,
                 "offset", offset,
                 "order", order,
+                "orgId", orgId,
                 "parentId", parentId,
                 "query", query,
                 "raw", raw,
@@ -353,6 +381,8 @@ public class ListCommerceCollectionsRequest {
         private Double offset;
 
         private String order;
+
+        private String orgId;
 
         private String parentId;
 
@@ -400,6 +430,14 @@ public class ListCommerceCollectionsRequest {
 
         public Builder order(@Nullable String order) {
             this.order = order;
+            return this;
+        }
+
+        /**
+         * The org ID to filter by (reference to AccountingOrganization)
+         */
+        public Builder orgId(@Nullable String orgId) {
+            this.orgId = orgId;
             return this;
         }
 
@@ -459,9 +497,10 @@ public class ListCommerceCollectionsRequest {
         public ListCommerceCollectionsRequest build() {
             return new ListCommerceCollectionsRequest(
                 connectionId, fields, limit,
-                offset, order, parentId,
-                query, raw, saleschannelId,
-                sort, type, updatedGte);
+                offset, order, orgId,
+                parentId, query, raw,
+                saleschannelId, sort, type,
+                updatedGte);
         }
 
     }

@@ -65,6 +65,12 @@ public class ListAccountingExpensesRequest {
     private String order;
 
     /**
+     * The org ID to filter by (reference to AccountingOrganization)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=org_id")
+    private String orgId;
+
+    /**
      * Query string to search. eg. email address or name
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
@@ -112,6 +118,7 @@ public class ListAccountingExpensesRequest {
             @Nullable Double limit,
             @Nullable Double offset,
             @Nullable String order,
+            @Nullable String orgId,
             @Nullable String query,
             @Nullable String raw,
             @Nullable String sort,
@@ -128,6 +135,7 @@ public class ListAccountingExpensesRequest {
         this.limit = limit;
         this.offset = offset;
         this.order = order;
+        this.orgId = orgId;
         this.query = query;
         this.raw = raw;
         this.sort = sort;
@@ -142,7 +150,8 @@ public class ListAccountingExpensesRequest {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     /**
@@ -197,6 +206,13 @@ public class ListAccountingExpensesRequest {
 
     public Optional<String> order() {
         return Optional.ofNullable(this.order);
+    }
+
+    /**
+     * The org ID to filter by (reference to AccountingOrganization)
+     */
+    public Optional<String> orgId() {
+        return Optional.ofNullable(this.orgId);
     }
 
     /**
@@ -319,6 +335,15 @@ public class ListAccountingExpensesRequest {
 
 
     /**
+     * The org ID to filter by (reference to AccountingOrganization)
+     */
+    public ListAccountingExpensesRequest withOrgId(@Nullable String orgId) {
+        this.orgId = orgId;
+        return this;
+    }
+
+
+    /**
      * Query string to search. eg. email address or name
      */
     public ListAccountingExpensesRequest withQuery(@Nullable String query) {
@@ -391,6 +416,7 @@ public class ListAccountingExpensesRequest {
             Utils.enhancedDeepEquals(this.limit, other.limit) &&
             Utils.enhancedDeepEquals(this.offset, other.offset) &&
             Utils.enhancedDeepEquals(this.order, other.order) &&
+            Utils.enhancedDeepEquals(this.orgId, other.orgId) &&
             Utils.enhancedDeepEquals(this.query, other.query) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.sort, other.sort) &&
@@ -405,8 +431,9 @@ public class ListAccountingExpensesRequest {
             categoryId, connectionId, contactId,
             endLt, fields, groupId,
             limit, offset, order,
-            query, raw, sort,
-            startGte, updatedGte, userId);
+            orgId, query, raw,
+            sort, startGte, updatedGte,
+            userId);
     }
     
     @Override
@@ -421,6 +448,7 @@ public class ListAccountingExpensesRequest {
                 "limit", limit,
                 "offset", offset,
                 "order", order,
+                "orgId", orgId,
                 "query", query,
                 "raw", raw,
                 "sort", sort,
@@ -449,6 +477,8 @@ public class ListAccountingExpensesRequest {
         private Double offset;
 
         private String order;
+
+        private String orgId;
 
         private String query;
 
@@ -530,6 +560,14 @@ public class ListAccountingExpensesRequest {
         }
 
         /**
+         * The org ID to filter by (reference to AccountingOrganization)
+         */
+        public Builder orgId(@Nullable String orgId) {
+            this.orgId = orgId;
+            return this;
+        }
+
+        /**
          * Query string to search. eg. email address or name
          */
         public Builder query(@Nullable String query) {
@@ -582,8 +620,9 @@ public class ListAccountingExpensesRequest {
                 categoryId, connectionId, contactId,
                 endLt, fields, groupId,
                 limit, offset, order,
-                query, raw, sort,
-                startGte, updatedGte, userId);
+                orgId, query, raw,
+                sort, startGte, updatedGte,
+                userId);
         }
 
     }

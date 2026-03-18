@@ -71,6 +71,12 @@ public class ListPaymentPaymentsRequest {
     private String order;
 
     /**
+     * The org ID to filter by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=org_id")
+    private String orgId;
+
+    /**
      * Query string to search. eg. email address or name
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
@@ -119,6 +125,7 @@ public class ListPaymentPaymentsRequest {
             @Nullable String linkId,
             @Nullable Double offset,
             @Nullable String order,
+            @Nullable String orgId,
             @Nullable String query,
             @Nullable String raw,
             @Nullable String sort,
@@ -136,6 +143,7 @@ public class ListPaymentPaymentsRequest {
         this.linkId = linkId;
         this.offset = offset;
         this.order = order;
+        this.orgId = orgId;
         this.query = query;
         this.raw = raw;
         this.sort = sort;
@@ -151,7 +159,7 @@ public class ListPaymentPaymentsRequest {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     /**
@@ -213,6 +221,13 @@ public class ListPaymentPaymentsRequest {
 
     public Optional<String> order() {
         return Optional.ofNullable(this.order);
+    }
+
+    /**
+     * The org ID to filter by
+     */
+    public Optional<String> orgId() {
+        return Optional.ofNullable(this.orgId);
     }
 
     /**
@@ -344,6 +359,15 @@ public class ListPaymentPaymentsRequest {
 
 
     /**
+     * The org ID to filter by
+     */
+    public ListPaymentPaymentsRequest withOrgId(@Nullable String orgId) {
+        this.orgId = orgId;
+        return this;
+    }
+
+
+    /**
      * Query string to search. eg. email address or name
      */
     public ListPaymentPaymentsRequest withQuery(@Nullable String query) {
@@ -417,6 +441,7 @@ public class ListPaymentPaymentsRequest {
             Utils.enhancedDeepEquals(this.linkId, other.linkId) &&
             Utils.enhancedDeepEquals(this.offset, other.offset) &&
             Utils.enhancedDeepEquals(this.order, other.order) &&
+            Utils.enhancedDeepEquals(this.orgId, other.orgId) &&
             Utils.enhancedDeepEquals(this.query, other.query) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.sort, other.sort) &&
@@ -431,9 +456,9 @@ public class ListPaymentPaymentsRequest {
             billId, connectionId, contactId,
             endLt, fields, invoiceId,
             limit, linkId, offset,
-            order, query, raw,
-            sort, startGte, type,
-            updatedGte);
+            order, orgId, query,
+            raw, sort, startGte,
+            type, updatedGte);
     }
     
     @Override
@@ -449,6 +474,7 @@ public class ListPaymentPaymentsRequest {
                 "linkId", linkId,
                 "offset", offset,
                 "order", order,
+                "orgId", orgId,
                 "query", query,
                 "raw", raw,
                 "sort", sort,
@@ -479,6 +505,8 @@ public class ListPaymentPaymentsRequest {
         private Double offset;
 
         private String order;
+
+        private String orgId;
 
         private String query;
 
@@ -568,6 +596,14 @@ public class ListPaymentPaymentsRequest {
         }
 
         /**
+         * The org ID to filter by
+         */
+        public Builder orgId(@Nullable String orgId) {
+            this.orgId = orgId;
+            return this;
+        }
+
+        /**
          * Query string to search. eg. email address or name
          */
         public Builder query(@Nullable String query) {
@@ -620,9 +656,9 @@ public class ListPaymentPaymentsRequest {
                 billId, connectionId, contactId,
                 endLt, fields, invoiceId,
                 limit, linkId, offset,
-                order, query, raw,
-                sort, startGte, type,
-                updatedGte);
+                order, orgId, query,
+                raw, sort, startGte,
+                type, updatedGte);
         }
 
     }

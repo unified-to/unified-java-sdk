@@ -22,7 +22,7 @@
 * [listAdsGroups](#listadsgroups) - List all groups
 * [listAdsInsertionorders](#listadsinsertionorders) - List all insertionorders
 * [listAdsOrganizations](#listadsorganizations) - List all organizations
-* [listAdsPromotedes](#listadspromotedes) - List all promotedes
+* [listAdsPromoteds](#listadspromoteds) - List all promoteds
 * [listAdsReports](#listadsreports) - List all reports
 * [listAdsTargets](#listadstargets) - List all targets
 * [patchAdsAd](#patchadsad) - Update an ad
@@ -1094,20 +1094,20 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
-## listAdsPromotedes
+## listAdsPromoteds
 
-List all promotedes
+List all promoteds
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAdsPromotedes" method="get" path="/ads/{connection_id}/promoted" -->
+<!-- UsageSnippet language="java" operationID="listAdsPromoteds" method="get" path="/ads/{connection_id}/promoted" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAdsPromotedesRequest;
-import to.unified.unified_java_sdk.models.operations.ListAdsPromotedesResponse;
+import to.unified.unified_java_sdk.models.operations.ListAdsPromotedsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAdsPromotedsResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -1120,16 +1120,16 @@ public class Application {
                     .build())
             .build();
 
-        ListAdsPromotedesRequest req = ListAdsPromotedesRequest.builder()
+        ListAdsPromotedsRequest req = ListAdsPromotedsRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAdsPromotedesResponse res = sdk.ads().listAdsPromotedes()
+        ListAdsPromotedsResponse res = sdk.ads().listAdsPromoteds()
                 .request(req)
                 .call();
 
-        if (res.adsPromotedes().isPresent()) {
-            System.out.println(res.adsPromotedes().get());
+        if (res.adsPromoteds().isPresent()) {
+            System.out.println(res.adsPromoteds().get());
         }
     }
 }
@@ -1137,13 +1137,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [ListAdsPromotedesRequest](../../models/operations/ListAdsPromotedesRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [ListAdsPromotedsRequest](../../models/operations/ListAdsPromotedsRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[ListAdsPromotedesResponse](../../models/operations/ListAdsPromotedesResponse.md)**
+**[ListAdsPromotedsResponse](../../models/operations/ListAdsPromotedsResponse.md)**
 
 ### Errors
 

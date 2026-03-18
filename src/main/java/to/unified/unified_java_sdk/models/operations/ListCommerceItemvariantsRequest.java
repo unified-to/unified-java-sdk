@@ -53,6 +53,12 @@ public class ListCommerceItemvariantsRequest {
     private String order;
 
     /**
+     * The org ID to filter by (reference to AccountingOrganization)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=org_id")
+    private String orgId;
+
+    /**
      * Query string to search. eg. email address or name
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
@@ -86,6 +92,7 @@ public class ListCommerceItemvariantsRequest {
             @Nullable Double limit,
             @Nullable Double offset,
             @Nullable String order,
+            @Nullable String orgId,
             @Nullable String query,
             @Nullable String raw,
             @Nullable String sort,
@@ -98,6 +105,7 @@ public class ListCommerceItemvariantsRequest {
         this.limit = limit;
         this.offset = offset;
         this.order = order;
+        this.orgId = orgId;
         this.query = query;
         this.raw = raw;
         this.sort = sort;
@@ -109,7 +117,7 @@ public class ListCommerceItemvariantsRequest {
         this(null, connectionId, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     /**
@@ -150,6 +158,13 @@ public class ListCommerceItemvariantsRequest {
 
     public Optional<String> order() {
         return Optional.ofNullable(this.order);
+    }
+
+    /**
+     * The org ID to filter by (reference to AccountingOrganization)
+     */
+    public Optional<String> orgId() {
+        return Optional.ofNullable(this.orgId);
     }
 
     /**
@@ -240,6 +255,15 @@ public class ListCommerceItemvariantsRequest {
 
 
     /**
+     * The org ID to filter by (reference to AccountingOrganization)
+     */
+    public ListCommerceItemvariantsRequest withOrgId(@Nullable String orgId) {
+        this.orgId = orgId;
+        return this;
+    }
+
+
+    /**
      * Query string to search. eg. email address or name
      */
     public ListCommerceItemvariantsRequest withQuery(@Nullable String query) {
@@ -292,6 +316,7 @@ public class ListCommerceItemvariantsRequest {
             Utils.enhancedDeepEquals(this.limit, other.limit) &&
             Utils.enhancedDeepEquals(this.offset, other.offset) &&
             Utils.enhancedDeepEquals(this.order, other.order) &&
+            Utils.enhancedDeepEquals(this.orgId, other.orgId) &&
             Utils.enhancedDeepEquals(this.query, other.query) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.sort, other.sort) &&
@@ -303,8 +328,8 @@ public class ListCommerceItemvariantsRequest {
         return Utils.enhancedHash(
             collectionId, connectionId, fields,
             itemId, limit, offset,
-            order, query, raw,
-            sort, updatedGte);
+            order, orgId, query,
+            raw, sort, updatedGte);
     }
     
     @Override
@@ -317,6 +342,7 @@ public class ListCommerceItemvariantsRequest {
                 "limit", limit,
                 "offset", offset,
                 "order", order,
+                "orgId", orgId,
                 "query", query,
                 "raw", raw,
                 "sort", sort,
@@ -339,6 +365,8 @@ public class ListCommerceItemvariantsRequest {
         private Double offset;
 
         private String order;
+
+        private String orgId;
 
         private String query;
 
@@ -400,6 +428,14 @@ public class ListCommerceItemvariantsRequest {
         }
 
         /**
+         * The org ID to filter by (reference to AccountingOrganization)
+         */
+        public Builder orgId(@Nullable String orgId) {
+            this.orgId = orgId;
+            return this;
+        }
+
+        /**
          * Query string to search. eg. email address or name
          */
         public Builder query(@Nullable String query) {
@@ -435,8 +471,8 @@ public class ListCommerceItemvariantsRequest {
             return new ListCommerceItemvariantsRequest(
                 collectionId, connectionId, fields,
                 itemId, limit, offset,
-                order, query, raw,
-                sort, updatedGte);
+                order, orgId, query,
+                raw, sort, updatedGte);
         }
 
     }

@@ -6,10 +6,10 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
-import to.unified.unified_java_sdk.models.operations.ListAdsPromotedesRequest;
-import to.unified.unified_java_sdk.models.operations.ListAdsPromotedesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.ListAdsPromotedesResponse;
-import to.unified.unified_java_sdk.operations.ListAdsPromotedes;
+import to.unified.unified_java_sdk.models.operations.ListAdsPromotedsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAdsPromotedsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListAdsPromotedsResponse;
+import to.unified.unified_java_sdk.operations.ListAdsPromoteds;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -33,24 +33,24 @@ public class Promoted {
     }
 
     /**
-     * List all promotedes
+     * List all promoteds
      * 
      * @return The call builder
      */
-    public ListAdsPromotedesRequestBuilder listAdsPromotedes() {
-        return new ListAdsPromotedesRequestBuilder(sdkConfiguration);
+    public ListAdsPromotedsRequestBuilder listAdsPromoteds() {
+        return new ListAdsPromotedsRequestBuilder(sdkConfiguration);
     }
 
     /**
-     * List all promotedes
+     * List all promoteds
      * 
      * @param request The request object containing all the parameters for the API call.
      * @return The response from the API call
      * @throws RuntimeException subclass if the API call fails
      */
-    public ListAdsPromotedesResponse listAdsPromotedes(@Nonnull ListAdsPromotedesRequest request) {
-        RequestOperation<ListAdsPromotedesRequest, ListAdsPromotedesResponse> operation
-              = new ListAdsPromotedes.Sync(sdkConfiguration, _headers);
+    public ListAdsPromotedsResponse listAdsPromoteds(@Nonnull ListAdsPromotedsRequest request) {
+        RequestOperation<ListAdsPromotedsRequest, ListAdsPromotedsResponse> operation
+              = new ListAdsPromoteds.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

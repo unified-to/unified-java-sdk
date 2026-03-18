@@ -83,6 +83,11 @@ public class AccountingInvoice {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("organization_id")
+    private String organizationId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paid_amount")
     private Double paidAmount;
 
@@ -175,6 +180,7 @@ public class AccountingInvoice {
             @JsonProperty("invoice_number") @Nullable String invoiceNumber,
             @JsonProperty("lineitems") @Nullable List<AccountingLineitem> lineitems,
             @JsonProperty("notes") @Nullable String notes,
+            @JsonProperty("organization_id") @Nullable String organizationId,
             @JsonProperty("paid_amount") @Nullable Double paidAmount,
             @JsonProperty("paid_at") @Nullable OffsetDateTime paidAt,
             @JsonProperty("payment_collection_method") @Nullable AccountingInvoicePaymentCollectionMethod paymentCollectionMethod,
@@ -203,6 +209,7 @@ public class AccountingInvoice {
         this.invoiceNumber = invoiceNumber;
         this.lineitems = lineitems;
         this.notes = notes;
+        this.organizationId = organizationId;
         this.paidAmount = paidAmount;
         this.paidAt = paidAt;
         this.paymentCollectionMethod = paymentCollectionMethod;
@@ -231,7 +238,7 @@ public class AccountingInvoice {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     public Optional<List<AccountingAttachment>> attachments() {
@@ -280,6 +287,10 @@ public class AccountingInvoice {
 
     public Optional<String> notes() {
         return Optional.ofNullable(this.notes);
+    }
+
+    public Optional<String> organizationId() {
+        return Optional.ofNullable(this.organizationId);
     }
 
     public Optional<Double> paidAmount() {
@@ -423,6 +434,12 @@ public class AccountingInvoice {
     }
 
 
+    public AccountingInvoice withOrganizationId(@Nullable String organizationId) {
+        this.organizationId = organizationId;
+        return this;
+    }
+
+
     public AccountingInvoice withPaidAmount(@Nullable Double paidAmount) {
         this.paidAmount = paidAmount;
         return this;
@@ -541,6 +558,7 @@ public class AccountingInvoice {
             Utils.enhancedDeepEquals(this.invoiceNumber, other.invoiceNumber) &&
             Utils.enhancedDeepEquals(this.lineitems, other.lineitems) &&
             Utils.enhancedDeepEquals(this.notes, other.notes) &&
+            Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
             Utils.enhancedDeepEquals(this.paidAmount, other.paidAmount) &&
             Utils.enhancedDeepEquals(this.paidAt, other.paidAt) &&
             Utils.enhancedDeepEquals(this.paymentCollectionMethod, other.paymentCollectionMethod) &&
@@ -566,12 +584,12 @@ public class AccountingInvoice {
             contactId, createdAt, currency,
             discountAmount, dueAt, id,
             invoiceNumber, lineitems, notes,
-            paidAmount, paidAt, paymentCollectionMethod,
-            postedAt, raw, reference,
-            refundAmount, refundReason, refundedAt,
-            send, status, taxAmount,
-            totalAmount, type, updatedAt,
-            url);
+            organizationId, paidAmount, paidAt,
+            paymentCollectionMethod, postedAt, raw,
+            reference, refundAmount, refundReason,
+            refundedAt, send, status,
+            taxAmount, totalAmount, type,
+            updatedAt, url);
     }
     
     @Override
@@ -589,6 +607,7 @@ public class AccountingInvoice {
                 "invoiceNumber", invoiceNumber,
                 "lineitems", lineitems,
                 "notes", notes,
+                "organizationId", organizationId,
                 "paidAmount", paidAmount,
                 "paidAt", paidAt,
                 "paymentCollectionMethod", paymentCollectionMethod,
@@ -633,6 +652,8 @@ public class AccountingInvoice {
         private List<AccountingLineitem> lineitems;
 
         private String notes;
+
+        private String organizationId;
 
         private Double paidAmount;
 
@@ -730,6 +751,11 @@ public class AccountingInvoice {
             return this;
         }
 
+        public Builder organizationId(@Nullable String organizationId) {
+            this.organizationId = organizationId;
+            return this;
+        }
+
         public Builder paidAmount(@Nullable Double paidAmount) {
             this.paidAmount = paidAmount;
             return this;
@@ -816,12 +842,12 @@ public class AccountingInvoice {
                 contactId, createdAt, currency,
                 discountAmount, dueAt, id,
                 invoiceNumber, lineitems, notes,
-                paidAmount, paidAt, paymentCollectionMethod,
-                postedAt, raw, reference,
-                refundAmount, refundReason, refundedAt,
-                send, status, taxAmount,
-                totalAmount, type, updatedAt,
-                url);
+                organizationId, paidAmount, paidAt,
+                paymentCollectionMethod, postedAt, raw,
+                reference, refundAmount, refundReason,
+                refundedAt, send, status,
+                taxAmount, totalAmount, type,
+                updatedAt, url);
         }
 
     }

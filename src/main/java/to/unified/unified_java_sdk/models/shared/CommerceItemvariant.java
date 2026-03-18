@@ -156,7 +156,7 @@ public class CommerceItemvariant {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weight_unit")
-    private WeightUnit weightUnit;
+    private CommerceItemvariantWeightUnit weightUnit;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -191,7 +191,7 @@ public class CommerceItemvariant {
             @JsonProperty("total_stock") @Nullable Double totalStock,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
             @JsonProperty("weight") @Nullable Double weight,
-            @JsonProperty("weight_unit") @Nullable WeightUnit weightUnit,
+            @JsonProperty("weight_unit") @Nullable CommerceItemvariantWeightUnit weightUnit,
             @JsonProperty("width") @Nullable Double width) {
         this.availableAt = availableAt;
         this.createdAt = createdAt;
@@ -343,7 +343,7 @@ public class CommerceItemvariant {
         return Optional.ofNullable(this.weight);
     }
 
-    public Optional<WeightUnit> weightUnit() {
+    public Optional<CommerceItemvariantWeightUnit> weightUnit() {
         return Optional.ofNullable(this.weightUnit);
     }
 
@@ -515,7 +515,7 @@ public class CommerceItemvariant {
     }
 
 
-    public CommerceItemvariant withWeightUnit(@Nullable WeightUnit weightUnit) {
+    public CommerceItemvariant withWeightUnit(@Nullable CommerceItemvariantWeightUnit weightUnit) {
         this.weightUnit = weightUnit;
         return this;
     }
@@ -670,7 +670,7 @@ public class CommerceItemvariant {
 
         private Double weight;
 
-        private WeightUnit weightUnit;
+        private CommerceItemvariantWeightUnit weightUnit;
 
         private Double width;
 
@@ -811,7 +811,7 @@ public class CommerceItemvariant {
             return this;
         }
 
-        public Builder weightUnit(@Nullable WeightUnit weightUnit) {
+        public Builder weightUnit(@Nullable CommerceItemvariantWeightUnit weightUnit) {
             this.weightUnit = weightUnit;
             return this;
         }

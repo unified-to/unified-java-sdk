@@ -7,10 +7,10 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
-import to.unified.unified_java_sdk.models.operations.ListAdsPromotedesRequest;
-import to.unified.unified_java_sdk.models.operations.async.ListAdsPromotedesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListAdsPromotedesResponse;
-import to.unified.unified_java_sdk.operations.ListAdsPromotedes;
+import to.unified.unified_java_sdk.models.operations.ListAdsPromotedsRequest;
+import to.unified.unified_java_sdk.models.operations.async.ListAdsPromotedsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListAdsPromotedsResponse;
+import to.unified.unified_java_sdk.operations.ListAdsPromoteds;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -35,23 +35,23 @@ public class AsyncPromoted {
 
 
     /**
-     * List all promotedes
+     * List all promoteds
      * 
      * @return The async call builder
      */
-    public ListAdsPromotedesRequestBuilder listAdsPromotedes() {
-        return new ListAdsPromotedesRequestBuilder(sdkConfiguration);
+    public ListAdsPromotedsRequestBuilder listAdsPromoteds() {
+        return new ListAdsPromotedsRequestBuilder(sdkConfiguration);
     }
 
     /**
-     * List all promotedes
+     * List all promoteds
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListAdsPromotedesResponse>} - The async response
+     * @return {@code CompletableFuture<ListAdsPromotedsResponse>} - The async response
      */
-    public CompletableFuture<ListAdsPromotedesResponse> listAdsPromotedes(@Nonnull ListAdsPromotedesRequest request) {
-        AsyncRequestOperation<ListAdsPromotedesRequest, ListAdsPromotedesResponse> operation
-              = new ListAdsPromotedes.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListAdsPromotedsResponse> listAdsPromoteds(@Nonnull ListAdsPromotedsRequest request) {
+        AsyncRequestOperation<ListAdsPromotedsRequest, ListAdsPromotedsResponse> operation
+              = new ListAdsPromoteds.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

@@ -30,7 +30,15 @@ public enum UpdateCommerceItemQueryParamFields {
     METADATA("metadata"),
     COLLECTIONS("collections"),
     TAXRATE_ID("taxrate_id"),
-    RAW("raw");
+    RAW("raw"),
+    IS_VISIBLE("is_visible"),
+    IS_FEATURED("is_featured"),
+    WEIGHT("weight"),
+    WEIGHT_UNIT("weight_unit"),
+    REQUIRES_SHIPPING("requires_shipping"),
+    PRICES("prices"),
+    INVENTORY_ID("inventory_id"),
+    TOTAL_STOCK("total_stock");
 
     @JsonValue
     private final String value;

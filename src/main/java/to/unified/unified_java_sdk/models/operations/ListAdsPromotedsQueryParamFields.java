@@ -8,7 +8,7 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 
-public enum ListAdsPromotedesQueryParamFields {
+public enum ListAdsPromotedsQueryParamFields {
     ID("id"),
     NAME("name"),
     TYPE("type");
@@ -16,7 +16,7 @@ public enum ListAdsPromotedesQueryParamFields {
     @JsonValue
     private final String value;
 
-    ListAdsPromotedesQueryParamFields(String value) {
+    ListAdsPromotedsQueryParamFields(String value) {
         this.value = value;
     }
     
@@ -24,8 +24,8 @@ public enum ListAdsPromotedesQueryParamFields {
         return value;
     }
     
-    public static Optional<ListAdsPromotedesQueryParamFields> fromValue(String value) {
-        for (ListAdsPromotedesQueryParamFields o: ListAdsPromotedesQueryParamFields.values()) {
+    public static Optional<ListAdsPromotedsQueryParamFields> fromValue(String value) {
+        for (ListAdsPromotedsQueryParamFields o: ListAdsPromotedsQueryParamFields.values()) {
             if (Objects.deepEquals(o.value, value)) {
                 return Optional.of(o);
             }

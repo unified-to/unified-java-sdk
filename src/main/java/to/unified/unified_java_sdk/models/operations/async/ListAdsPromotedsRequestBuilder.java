@@ -8,30 +8,30 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.SDKConfiguration;
-import to.unified.unified_java_sdk.models.operations.ListAdsPromotedesRequest;
-import to.unified.unified_java_sdk.operations.ListAdsPromotedes;
+import to.unified.unified_java_sdk.models.operations.ListAdsPromotedsRequest;
+import to.unified.unified_java_sdk.operations.ListAdsPromoteds;
 import to.unified.unified_java_sdk.utils.Headers;
 import to.unified.unified_java_sdk.utils.Utils;
 
-public class ListAdsPromotedesRequestBuilder {
+public class ListAdsPromotedsRequestBuilder {
     private final SDKConfiguration sdkConfiguration;
     private final Headers _headers = new Headers();
-    private ListAdsPromotedesRequest request;
+    private ListAdsPromotedsRequest request;
 
-    public ListAdsPromotedesRequestBuilder(SDKConfiguration sdkConfiguration) {
+    public ListAdsPromotedsRequestBuilder(SDKConfiguration sdkConfiguration) {
         this.sdkConfiguration = sdkConfiguration;
     }
 
-    public ListAdsPromotedesRequestBuilder request(@Nonnull ListAdsPromotedesRequest request) {
+    public ListAdsPromotedsRequestBuilder request(@Nonnull ListAdsPromotedsRequest request) {
         this.request = Utils.checkNotNull(request, "request");
         return this;
     }
 
-    private ListAdsPromotedesRequest _buildRequest() {
+    private ListAdsPromotedsRequest _buildRequest() {
         return this.request;
     }
     
-    public ListAdsPromotedesRequestBuilder header(String name, String value) {
+    public ListAdsPromotedsRequestBuilder header(String name, String value) {
         Utils.checkNotNull(name, "name");
         Utils.checkNotNull(value, "value");
         this._headers.add(name, value);
@@ -43,9 +43,9 @@ public class ListAdsPromotedesRequestBuilder {
     *
     * @return The response from the server.
     */
-    public CompletableFuture<ListAdsPromotedesResponse> call() {
-        AsyncRequestOperation<ListAdsPromotedesRequest, ListAdsPromotedesResponse> operation
-              = new ListAdsPromotedes.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListAdsPromotedsResponse> call() {
+        AsyncRequestOperation<ListAdsPromotedsRequest, ListAdsPromotedsResponse> operation
+              = new ListAdsPromoteds.Async(sdkConfiguration, _headers);
         return operation.doRequest(this._buildRequest())
             .thenCompose(operation::handleResponse);
     }

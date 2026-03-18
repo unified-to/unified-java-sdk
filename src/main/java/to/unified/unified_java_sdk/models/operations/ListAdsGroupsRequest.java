@@ -34,6 +34,12 @@ public class ListAdsGroupsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     private List<ListAdsGroupsQueryParamFields> fields;
 
+    /**
+     * The IO ID to filter by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=io_id")
+    private String ioId;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     private Double limit;
@@ -88,6 +94,7 @@ public class ListAdsGroupsRequest {
             @Nullable String campaignId,
             @Nonnull String connectionId,
             @Nullable List<ListAdsGroupsQueryParamFields> fields,
+            @Nullable String ioId,
             @Nullable Double limit,
             @Nullable Double offset,
             @Nullable String order,
@@ -101,6 +108,7 @@ public class ListAdsGroupsRequest {
         this.connectionId = Optional.ofNullable(connectionId)
             .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
+        this.ioId = ioId;
         this.limit = limit;
         this.offset = offset;
         this.order = order;
@@ -117,7 +125,8 @@ public class ListAdsGroupsRequest {
         this(null, connectionId, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     /**
@@ -139,6 +148,13 @@ public class ListAdsGroupsRequest {
      */
     public Optional<List<ListAdsGroupsQueryParamFields>> fields() {
         return Optional.ofNullable(this.fields);
+    }
+
+    /**
+     * The IO ID to filter by
+     */
+    public Optional<String> ioId() {
+        return Optional.ofNullable(this.ioId);
     }
 
     public Optional<Double> limit() {
@@ -223,6 +239,15 @@ public class ListAdsGroupsRequest {
      */
     public ListAdsGroupsRequest withFields(@Nullable List<ListAdsGroupsQueryParamFields> fields) {
         this.fields = fields;
+        return this;
+    }
+
+
+    /**
+     * The IO ID to filter by
+     */
+    public ListAdsGroupsRequest withIoId(@Nullable String ioId) {
+        this.ioId = ioId;
         return this;
     }
 
@@ -312,6 +337,7 @@ public class ListAdsGroupsRequest {
             Utils.enhancedDeepEquals(this.campaignId, other.campaignId) &&
             Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
             Utils.enhancedDeepEquals(this.fields, other.fields) &&
+            Utils.enhancedDeepEquals(this.ioId, other.ioId) &&
             Utils.enhancedDeepEquals(this.limit, other.limit) &&
             Utils.enhancedDeepEquals(this.offset, other.offset) &&
             Utils.enhancedDeepEquals(this.order, other.order) &&
@@ -327,9 +353,10 @@ public class ListAdsGroupsRequest {
     public int hashCode() {
         return Utils.enhancedHash(
             campaignId, connectionId, fields,
-            limit, offset, order,
-            orgId, parentId, query,
-            raw, sort, updatedGte);
+            ioId, limit, offset,
+            order, orgId, parentId,
+            query, raw, sort,
+            updatedGte);
     }
     
     @Override
@@ -338,6 +365,7 @@ public class ListAdsGroupsRequest {
                 "campaignId", campaignId,
                 "connectionId", connectionId,
                 "fields", fields,
+                "ioId", ioId,
                 "limit", limit,
                 "offset", offset,
                 "order", order,
@@ -357,6 +385,8 @@ public class ListAdsGroupsRequest {
         private String connectionId;
 
         private List<ListAdsGroupsQueryParamFields> fields;
+
+        private String ioId;
 
         private Double limit;
 
@@ -401,6 +431,14 @@ public class ListAdsGroupsRequest {
          */
         public Builder fields(@Nullable List<ListAdsGroupsQueryParamFields> fields) {
             this.fields = fields;
+            return this;
+        }
+
+        /**
+         * The IO ID to filter by
+         */
+        public Builder ioId(@Nullable String ioId) {
+            this.ioId = ioId;
             return this;
         }
 
@@ -470,9 +508,10 @@ public class ListAdsGroupsRequest {
         public ListAdsGroupsRequest build() {
             return new ListAdsGroupsRequest(
                 campaignId, connectionId, fields,
-                limit, offset, order,
-                orgId, parentId, query,
-                raw, sort, updatedGte);
+                ioId, limit, offset,
+                order, orgId, parentId,
+                query, raw, sort,
+                updatedGte);
         }
 
     }

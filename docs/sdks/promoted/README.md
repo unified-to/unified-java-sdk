@@ -4,22 +4,22 @@
 
 ### Available Operations
 
-* [listAdsPromotedes](#listadspromotedes) - List all promotedes
+* [listAdsPromoteds](#listadspromoteds) - List all promoteds
 
-## listAdsPromotedes
+## listAdsPromoteds
 
-List all promotedes
+List all promoteds
 
 ### Example Usage
 
-<!-- UsageSnippet language="java" operationID="listAdsPromotedes" method="get" path="/ads/{connection_id}/promoted" -->
+<!-- UsageSnippet language="java" operationID="listAdsPromoteds" method="get" path="/ads/{connection_id}/promoted" -->
 ```java
 package hello.world;
 
 import java.lang.Exception;
 import to.unified.unified_java_sdk.UnifiedTo;
-import to.unified.unified_java_sdk.models.operations.ListAdsPromotedesRequest;
-import to.unified.unified_java_sdk.models.operations.ListAdsPromotedesResponse;
+import to.unified.unified_java_sdk.models.operations.ListAdsPromotedsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAdsPromotedsResponse;
 import to.unified.unified_java_sdk.models.shared.Security;
 
 public class Application {
@@ -32,16 +32,16 @@ public class Application {
                     .build())
             .build();
 
-        ListAdsPromotedesRequest req = ListAdsPromotedesRequest.builder()
+        ListAdsPromotedsRequest req = ListAdsPromotedsRequest.builder()
                 .connectionId("<id>")
                 .build();
 
-        ListAdsPromotedesResponse res = sdk.promoted().listAdsPromotedes()
+        ListAdsPromotedsResponse res = sdk.promoted().listAdsPromoteds()
                 .request(req)
                 .call();
 
-        if (res.adsPromotedes().isPresent()) {
-            System.out.println(res.adsPromotedes().get());
+        if (res.adsPromoteds().isPresent()) {
+            System.out.println(res.adsPromoteds().get());
         }
     }
 }
@@ -49,13 +49,13 @@ public class Application {
 
 ### Parameters
 
-| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `request`                                                                       | [ListAdsPromotedesRequest](../../models/operations/ListAdsPromotedesRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [ListAdsPromotedsRequest](../../models/operations/ListAdsPromotedsRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
 
 ### Response
 
-**[ListAdsPromotedesResponse](../../models/operations/ListAdsPromotedesResponse.md)**
+**[ListAdsPromotedsResponse](../../models/operations/ListAdsPromotedsResponse.md)**
 
 ### Errors
 

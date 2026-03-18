@@ -15,7 +15,7 @@ import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-public class ListAdsPromotedesRequest {
+public class ListAdsPromotedsRequest {
     /**
      * ID of the connection
      */
@@ -26,7 +26,7 @@ public class ListAdsPromotedesRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private List<ListAdsPromotedesQueryParamFields> fields;
+    private List<ListAdsPromotedsQueryParamFields> fields;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
@@ -76,9 +76,9 @@ public class ListAdsPromotedesRequest {
     private String updatedGte;
 
     @JsonCreator
-    public ListAdsPromotedesRequest(
+    public ListAdsPromotedsRequest(
             @Nonnull String connectionId,
-            @Nullable List<ListAdsPromotedesQueryParamFields> fields,
+            @Nullable List<ListAdsPromotedsQueryParamFields> fields,
             @Nullable Double limit,
             @Nullable Double offset,
             @Nullable String order,
@@ -102,7 +102,7 @@ public class ListAdsPromotedesRequest {
         this.updatedGte = updatedGte;
     }
     
-    public ListAdsPromotedesRequest(
+    public ListAdsPromotedsRequest(
             @Nonnull String connectionId) {
         this(connectionId, null, null,
             null, null, null,
@@ -120,7 +120,7 @@ public class ListAdsPromotedesRequest {
     /**
      * Fields to return
      */
-    public Optional<List<ListAdsPromotedesQueryParamFields>> fields() {
+    public Optional<List<ListAdsPromotedsQueryParamFields>> fields() {
         return Optional.ofNullable(this.fields);
     }
 
@@ -183,7 +183,7 @@ public class ListAdsPromotedesRequest {
     /**
      * ID of the connection
      */
-    public ListAdsPromotedesRequest withConnectionId(@Nonnull String connectionId) {
+    public ListAdsPromotedsRequest withConnectionId(@Nonnull String connectionId) {
         this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
@@ -192,25 +192,25 @@ public class ListAdsPromotedesRequest {
     /**
      * Fields to return
      */
-    public ListAdsPromotedesRequest withFields(@Nullable List<ListAdsPromotedesQueryParamFields> fields) {
+    public ListAdsPromotedsRequest withFields(@Nullable List<ListAdsPromotedsQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
 
-    public ListAdsPromotedesRequest withLimit(@Nullable Double limit) {
+    public ListAdsPromotedsRequest withLimit(@Nullable Double limit) {
         this.limit = limit;
         return this;
     }
 
 
-    public ListAdsPromotedesRequest withOffset(@Nullable Double offset) {
+    public ListAdsPromotedsRequest withOffset(@Nullable Double offset) {
         this.offset = offset;
         return this;
     }
 
 
-    public ListAdsPromotedesRequest withOrder(@Nullable String order) {
+    public ListAdsPromotedsRequest withOrder(@Nullable String order) {
         this.order = order;
         return this;
     }
@@ -219,7 +219,7 @@ public class ListAdsPromotedesRequest {
     /**
      * The org ID to filter by (reference to AdsOrganization)
      */
-    public ListAdsPromotedesRequest withOrgId(@Nullable String orgId) {
+    public ListAdsPromotedsRequest withOrgId(@Nullable String orgId) {
         this.orgId = orgId;
         return this;
     }
@@ -228,7 +228,7 @@ public class ListAdsPromotedesRequest {
     /**
      * Query string to search. eg. email address or name
      */
-    public ListAdsPromotedesRequest withQuery(@Nullable String query) {
+    public ListAdsPromotedsRequest withQuery(@Nullable String query) {
         this.query = query;
         return this;
     }
@@ -239,19 +239,19 @@ public class ListAdsPromotedesRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public ListAdsPromotedesRequest withRaw(@Nullable String raw) {
+    public ListAdsPromotedsRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
 
 
-    public ListAdsPromotedesRequest withSort(@Nullable String sort) {
+    public ListAdsPromotedsRequest withSort(@Nullable String sort) {
         this.sort = sort;
         return this;
     }
 
 
-    public ListAdsPromotedesRequest withType(@Nullable String type) {
+    public ListAdsPromotedsRequest withType(@Nullable String type) {
         this.type = type;
         return this;
     }
@@ -261,7 +261,7 @@ public class ListAdsPromotedesRequest {
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
-    public ListAdsPromotedesRequest withUpdatedGte(@Nullable String updatedGte) {
+    public ListAdsPromotedsRequest withUpdatedGte(@Nullable String updatedGte) {
         this.updatedGte = updatedGte;
         return this;
     }
@@ -275,7 +275,7 @@ public class ListAdsPromotedesRequest {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        ListAdsPromotedesRequest other = (ListAdsPromotedesRequest) o;
+        ListAdsPromotedsRequest other = (ListAdsPromotedsRequest) o;
         return 
             Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
             Utils.enhancedDeepEquals(this.fields, other.fields) &&
@@ -301,7 +301,7 @@ public class ListAdsPromotedesRequest {
     
     @Override
     public String toString() {
-        return Utils.toString(ListAdsPromotedesRequest.class,
+        return Utils.toString(ListAdsPromotedsRequest.class,
                 "connectionId", connectionId,
                 "fields", fields,
                 "limit", limit,
@@ -320,7 +320,7 @@ public class ListAdsPromotedesRequest {
 
         private String connectionId;
 
-        private List<ListAdsPromotedesQueryParamFields> fields;
+        private List<ListAdsPromotedsQueryParamFields> fields;
 
         private Double limit;
 
@@ -355,7 +355,7 @@ public class ListAdsPromotedesRequest {
         /**
          * Fields to return
          */
-        public Builder fields(@Nullable List<ListAdsPromotedesQueryParamFields> fields) {
+        public Builder fields(@Nullable List<ListAdsPromotedsQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
@@ -420,8 +420,8 @@ public class ListAdsPromotedesRequest {
             return this;
         }
 
-        public ListAdsPromotedesRequest build() {
-            return new ListAdsPromotedesRequest(
+        public ListAdsPromotedsRequest build() {
+            return new ListAdsPromotedsRequest(
                 connectionId, fields, limit,
                 offset, order, orgId,
                 query, raw, sort,

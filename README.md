@@ -39,7 +39,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.47.13'
+implementation 'to.unified:unified-java-sdk:0.47.14'
 ```
 
 Maven:
@@ -47,7 +47,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.47.13</version>
+    <version>0.47.14</version>
 </dependency>
 ```
 
@@ -314,7 +314,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [listAdsGroups](docs/sdks/ads/README.md#listadsgroups) - List all groups
 * [listAdsInsertionorders](docs/sdks/ads/README.md#listadsinsertionorders) - List all insertionorders
 * [listAdsOrganizations](docs/sdks/ads/README.md#listadsorganizations) - List all organizations
-* [listAdsPromotedes](docs/sdks/ads/README.md#listadspromotedes) - List all promotedes
+* [listAdsPromoteds](docs/sdks/ads/README.md#listadspromoteds) - List all promoteds
 * [listAdsReports](docs/sdks/ads/README.md#listadsreports) - List all reports
 * [listAdsTargets](docs/sdks/ads/README.md#listadstargets) - List all targets
 * [patchAdsAd](docs/sdks/ads/README.md#patchadsad) - Update an ad
@@ -1418,7 +1418,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 
 ### [Promoted](docs/sdks/promoted/README.md)
 
-* [listAdsPromotedes](docs/sdks/promoted/README.md#listadspromotedes) - List all promotedes
+* [listAdsPromoteds](docs/sdks/promoted/README.md#listadspromoteds) - List all promoteds
 
 ### [Prompt](docs/sdks/prompt/README.md)
 

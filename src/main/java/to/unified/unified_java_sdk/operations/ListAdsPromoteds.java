@@ -22,8 +22,8 @@ import java.util.function.Function;
 import to.unified.unified_java_sdk.SDKConfiguration;
 import to.unified.unified_java_sdk.SecuritySource;
 import to.unified.unified_java_sdk.models.errors.SDKError;
-import to.unified.unified_java_sdk.models.operations.ListAdsPromotedesRequest;
-import to.unified.unified_java_sdk.models.operations.ListAdsPromotedesResponse;
+import to.unified.unified_java_sdk.models.operations.ListAdsPromotedsRequest;
+import to.unified.unified_java_sdk.models.operations.ListAdsPromotedsResponse;
 import to.unified.unified_java_sdk.models.shared.AdsPromoted;
 import to.unified.unified_java_sdk.utils.Blob;
 import to.unified.unified_java_sdk.utils.HTTPClient;
@@ -35,7 +35,7 @@ import to.unified.unified_java_sdk.utils.Hook.BeforeRequestContextImpl;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-public class ListAdsPromotedes {
+public class ListAdsPromoteds {
 
     static abstract class Base {
         final SDKConfiguration sdkConfiguration;
@@ -60,7 +60,7 @@ public class ListAdsPromotedes {
             return new BeforeRequestContextImpl(
                     this.sdkConfiguration,
                     this.baseUrl,
-                    "listAdsPromotedes",
+                    "listAdsPromoteds",
                     java.util.Optional.empty(),
                     securitySource());
         }
@@ -69,7 +69,7 @@ public class ListAdsPromotedes {
             return new AfterSuccessContextImpl(
                     this.sdkConfiguration,
                     this.baseUrl,
-                    "listAdsPromotedes",
+                    "listAdsPromoteds",
                     java.util.Optional.empty(),
                     securitySource());
         }
@@ -78,7 +78,7 @@ public class ListAdsPromotedes {
             return new AfterErrorContextImpl(
                     this.sdkConfiguration,
                     this.baseUrl,
-                    "listAdsPromotedes",
+                    "listAdsPromoteds",
                     java.util.Optional.empty(),
                     securitySource());
         }
@@ -104,13 +104,13 @@ public class ListAdsPromotedes {
     }
 
     public static class Sync extends Base
-            implements RequestOperation<ListAdsPromotedesRequest, ListAdsPromotedesResponse> {
+            implements RequestOperation<ListAdsPromotedsRequest, ListAdsPromotedsResponse> {
         public Sync(@Nonnull SDKConfiguration sdkConfiguration, Headers _headers) {
             super(sdkConfiguration, _headers);
         }
 
-        private HttpRequest onBuildRequest(ListAdsPromotedesRequest request) throws Exception {
-            HttpRequest req = buildRequest(request, ListAdsPromotedesRequest.class);
+        private HttpRequest onBuildRequest(ListAdsPromotedsRequest request) throws Exception {
+            HttpRequest req = buildRequest(request, ListAdsPromotedsRequest.class);
             return sdkConfiguration.hooks().beforeRequest(createBeforeRequestContext(), req);
         }
 
@@ -126,7 +126,7 @@ public class ListAdsPromotedes {
         }
 
         @Override
-        public HttpResponse<InputStream> doRequest(ListAdsPromotedesRequest request) {
+        public HttpResponse<InputStream> doRequest(ListAdsPromotedsRequest request) {
             HttpRequest r = unchecked(() -> onBuildRequest(request)).get();
             HttpResponse<InputStream> httpRes;
             try {
@@ -145,23 +145,23 @@ public class ListAdsPromotedes {
 
 
         @Override
-        public ListAdsPromotedesResponse handleResponse(HttpResponse<InputStream> response) {
+        public ListAdsPromotedsResponse handleResponse(HttpResponse<InputStream> response) {
             String contentType = response
                     .headers()
                     .firstValue("Content-Type")
                     .orElse("application/octet-stream");
-            ListAdsPromotedesResponse.Builder resBuilder =
-                    ListAdsPromotedesResponse
+            ListAdsPromotedsResponse.Builder resBuilder =
+                    ListAdsPromotedsResponse
                             .builder()
                             .contentType(contentType)
                             .statusCode(response.statusCode())
                             .rawResponse(response);
 
-            ListAdsPromotedesResponse res = resBuilder.build();
+            ListAdsPromotedsResponse res = resBuilder.build();
             
             if (Utils.statusCodeMatches(response.statusCode(), "200")) {
                 if (Utils.contentTypeMatches(contentType, "application/json")) {
-                    return res.withAdsPromotedes(Utils.unmarshal(response, new TypeReference<List<AdsPromoted>>() {}));
+                    return res.withAdsPromoteds(Utils.unmarshal(response, new TypeReference<List<AdsPromoted>>() {}));
                 } else {
                     throw SDKError.from("Unexpected content-type received: " + contentType, response);
                 }
@@ -178,14 +178,14 @@ public class ListAdsPromotedes {
         }
     }
     public static class Async extends Base
-            implements AsyncRequestOperation<ListAdsPromotedesRequest, to.unified.unified_java_sdk.models.operations.async.ListAdsPromotedesResponse> {
+            implements AsyncRequestOperation<ListAdsPromotedsRequest, to.unified.unified_java_sdk.models.operations.async.ListAdsPromotedsResponse> {
 
         public Async(@Nonnull SDKConfiguration sdkConfiguration, Headers _headers) {
             super(sdkConfiguration, _headers);
         }
 
-        private CompletableFuture<HttpRequest> onBuildRequest(ListAdsPromotedesRequest request) throws Exception {
-            HttpRequest req = buildRequest(request, ListAdsPromotedesRequest.class);
+        private CompletableFuture<HttpRequest> onBuildRequest(ListAdsPromotedsRequest request) throws Exception {
+            HttpRequest req = buildRequest(request, ListAdsPromotedsRequest.class);
             return this.sdkConfiguration.asyncHooks().beforeRequest(createBeforeRequestContext(), req);
         }
 
@@ -198,7 +198,7 @@ public class ListAdsPromotedes {
         }
 
         @Override
-        public CompletableFuture<HttpResponse<Blob>> doRequest(ListAdsPromotedesRequest request) {
+        public CompletableFuture<HttpResponse<Blob>> doRequest(ListAdsPromotedsRequest request) {
             return unchecked(() -> onBuildRequest(request)).get().thenCompose(client::sendAsync)
                     .handle((resp, err) -> {
                         if (err != null) {
@@ -214,25 +214,25 @@ public class ListAdsPromotedes {
         }
 
         @Override
-        public CompletableFuture<to.unified.unified_java_sdk.models.operations.async.ListAdsPromotedesResponse> handleResponse(
+        public CompletableFuture<to.unified.unified_java_sdk.models.operations.async.ListAdsPromotedsResponse> handleResponse(
                 HttpResponse<Blob> response) {
             String contentType = response
                     .headers()
                     .firstValue("Content-Type")
                     .orElse("application/octet-stream");
-            to.unified.unified_java_sdk.models.operations.async.ListAdsPromotedesResponse.Builder resBuilder =
-                    to.unified.unified_java_sdk.models.operations.async.ListAdsPromotedesResponse
+            to.unified.unified_java_sdk.models.operations.async.ListAdsPromotedsResponse.Builder resBuilder =
+                    to.unified.unified_java_sdk.models.operations.async.ListAdsPromotedsResponse
                             .builder()
                             .contentType(contentType)
                             .statusCode(response.statusCode())
                             .rawResponse(response);
 
-            to.unified.unified_java_sdk.models.operations.async.ListAdsPromotedesResponse res = resBuilder.build();
+            to.unified.unified_java_sdk.models.operations.async.ListAdsPromotedsResponse res = resBuilder.build();
             
             if (Utils.statusCodeMatches(response.statusCode(), "200")) {
                 if (Utils.contentTypeMatches(contentType, "application/json")) {
                     return Utils.unmarshalAsync(response, new TypeReference<List<AdsPromoted>>() {})
-                            .thenApply(res::withAdsPromotedes);
+                            .thenApply(res::withAdsPromoteds);
                 } else {
                     return Utils.createAsyncApiError(response, "Unexpected content-type received: " + contentType);
                 }

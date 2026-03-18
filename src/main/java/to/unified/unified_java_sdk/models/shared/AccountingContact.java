@@ -94,6 +94,11 @@ public class AccountingContact {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("organization_id")
+    private String organizationId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_methods")
     private List<AccountingContactPaymentMethod> paymentMethods;
 
@@ -148,6 +153,7 @@ public class AccountingContact {
             @JsonProperty("is_supplier") @Nullable Boolean isSupplier,
             @JsonProperty("last_name") @Nullable String lastName,
             @JsonProperty("name") @Nullable String name,
+            @JsonProperty("organization_id") @Nullable String organizationId,
             @JsonProperty("payment_methods") @Nullable List<AccountingContactPaymentMethod> paymentMethods,
             @JsonProperty("portal_url") @Nullable String portalUrl,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
@@ -171,6 +177,7 @@ public class AccountingContact {
         this.isSupplier = isSupplier;
         this.lastName = lastName;
         this.name = name;
+        this.organizationId = organizationId;
         this.paymentMethods = paymentMethods;
         this.portalUrl = portalUrl;
         this.raw = raw;
@@ -189,7 +196,7 @@ public class AccountingContact {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     public Optional<List<AccountingAssociatedContact>> associatedContacts() {
@@ -246,6 +253,10 @@ public class AccountingContact {
 
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
+    }
+
+    public Optional<String> organizationId() {
+        return Optional.ofNullable(this.organizationId);
     }
 
     public Optional<List<AccountingContactPaymentMethod>> paymentMethods() {
@@ -369,6 +380,12 @@ public class AccountingContact {
     }
 
 
+    public AccountingContact withOrganizationId(@Nullable String organizationId) {
+        this.organizationId = organizationId;
+        return this;
+    }
+
+
     public AccountingContact withPaymentMethods(@Nullable List<AccountingContactPaymentMethod> paymentMethods) {
         this.paymentMethods = paymentMethods;
         return this;
@@ -441,6 +458,7 @@ public class AccountingContact {
             Utils.enhancedDeepEquals(this.isSupplier, other.isSupplier) &&
             Utils.enhancedDeepEquals(this.lastName, other.lastName) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
+            Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
             Utils.enhancedDeepEquals(this.paymentMethods, other.paymentMethods) &&
             Utils.enhancedDeepEquals(this.portalUrl, other.portalUrl) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
@@ -458,10 +476,10 @@ public class AccountingContact {
             createdAt, currency, emails,
             firstName, id, identification,
             isActive, isCustomer, isSupplier,
-            lastName, name, paymentMethods,
-            portalUrl, raw, shippingAddress,
-            taxExemption, taxNumber, telephones,
-            updatedAt);
+            lastName, name, organizationId,
+            paymentMethods, portalUrl, raw,
+            shippingAddress, taxExemption, taxNumber,
+            telephones, updatedAt);
     }
     
     @Override
@@ -481,6 +499,7 @@ public class AccountingContact {
                 "isSupplier", isSupplier,
                 "lastName", lastName,
                 "name", name,
+                "organizationId", organizationId,
                 "paymentMethods", paymentMethods,
                 "portalUrl", portalUrl,
                 "raw", raw,
@@ -521,6 +540,8 @@ public class AccountingContact {
         private String lastName;
 
         private String name;
+
+        private String organizationId;
 
         private List<AccountingContactPaymentMethod> paymentMethods;
 
@@ -612,6 +633,11 @@ public class AccountingContact {
             return this;
         }
 
+        public Builder organizationId(@Nullable String organizationId) {
+            this.organizationId = organizationId;
+            return this;
+        }
+
         public Builder paymentMethods(@Nullable List<AccountingContactPaymentMethod> paymentMethods) {
             this.paymentMethods = paymentMethods;
             return this;
@@ -658,10 +684,10 @@ public class AccountingContact {
                 createdAt, currency, emails,
                 firstName, id, identification,
                 isActive, isCustomer, isSupplier,
-                lastName, name, paymentMethods,
-                portalUrl, raw, shippingAddress,
-                taxExemption, taxNumber, telephones,
-                updatedAt);
+                lastName, name, organizationId,
+                paymentMethods, portalUrl, raw,
+                shippingAddress, taxExemption, taxNumber,
+                telephones, updatedAt);
         }
 
 

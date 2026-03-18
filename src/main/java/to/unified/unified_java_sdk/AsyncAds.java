@@ -25,7 +25,7 @@ import to.unified.unified_java_sdk.models.operations.ListAdsCreativesRequest;
 import to.unified.unified_java_sdk.models.operations.ListAdsGroupsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAdsInsertionordersRequest;
 import to.unified.unified_java_sdk.models.operations.ListAdsOrganizationsRequest;
-import to.unified.unified_java_sdk.models.operations.ListAdsPromotedesRequest;
+import to.unified.unified_java_sdk.models.operations.ListAdsPromotedsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAdsReportsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAdsTargetsRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAdsAdRequest;
@@ -82,8 +82,8 @@ import to.unified.unified_java_sdk.models.operations.async.ListAdsInsertionorder
 import to.unified.unified_java_sdk.models.operations.async.ListAdsInsertionordersResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListAdsOrganizationsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListAdsOrganizationsResponse;
-import to.unified.unified_java_sdk.models.operations.async.ListAdsPromotedesRequestBuilder;
-import to.unified.unified_java_sdk.models.operations.async.ListAdsPromotedesResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListAdsPromotedsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListAdsPromotedsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListAdsReportsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListAdsReportsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListAdsTargetsRequestBuilder;
@@ -142,7 +142,7 @@ import to.unified.unified_java_sdk.operations.ListAdsCreatives;
 import to.unified.unified_java_sdk.operations.ListAdsGroups;
 import to.unified.unified_java_sdk.operations.ListAdsInsertionorders;
 import to.unified.unified_java_sdk.operations.ListAdsOrganizations;
-import to.unified.unified_java_sdk.operations.ListAdsPromotedes;
+import to.unified.unified_java_sdk.operations.ListAdsPromoteds;
 import to.unified.unified_java_sdk.operations.ListAdsReports;
 import to.unified.unified_java_sdk.operations.ListAdsTargets;
 import to.unified.unified_java_sdk.operations.PatchAdsAd;
@@ -601,23 +601,23 @@ public class AsyncAds {
 
 
     /**
-     * List all promotedes
+     * List all promoteds
      * 
      * @return The async call builder
      */
-    public ListAdsPromotedesRequestBuilder listAdsPromotedes() {
-        return new ListAdsPromotedesRequestBuilder(sdkConfiguration);
+    public ListAdsPromotedsRequestBuilder listAdsPromoteds() {
+        return new ListAdsPromotedsRequestBuilder(sdkConfiguration);
     }
 
     /**
-     * List all promotedes
+     * List all promoteds
      * 
      * @param request The request object containing all the parameters for the API call.
-     * @return {@code CompletableFuture<ListAdsPromotedesResponse>} - The async response
+     * @return {@code CompletableFuture<ListAdsPromotedsResponse>} - The async response
      */
-    public CompletableFuture<ListAdsPromotedesResponse> listAdsPromotedes(@Nonnull ListAdsPromotedesRequest request) {
-        AsyncRequestOperation<ListAdsPromotedesRequest, ListAdsPromotedesResponse> operation
-              = new ListAdsPromotedes.Async(sdkConfiguration, _headers);
+    public CompletableFuture<ListAdsPromotedsResponse> listAdsPromoteds(@Nonnull ListAdsPromotedsRequest request) {
+        AsyncRequestOperation<ListAdsPromotedsRequest, ListAdsPromotedsResponse> operation
+              = new ListAdsPromoteds.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

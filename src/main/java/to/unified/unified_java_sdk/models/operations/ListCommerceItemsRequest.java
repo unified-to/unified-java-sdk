@@ -47,6 +47,12 @@ public class ListCommerceItemsRequest {
     private String order;
 
     /**
+     * The org ID to filter by (reference to AccountingOrganization)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=org_id")
+    private String orgId;
+
+    /**
      * Query string to search. eg. email address or name
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
@@ -79,6 +85,7 @@ public class ListCommerceItemsRequest {
             @Nullable Double limit,
             @Nullable Double offset,
             @Nullable String order,
+            @Nullable String orgId,
             @Nullable String query,
             @Nullable String raw,
             @Nullable String sort,
@@ -90,6 +97,7 @@ public class ListCommerceItemsRequest {
         this.limit = limit;
         this.offset = offset;
         this.order = order;
+        this.orgId = orgId;
         this.query = query;
         this.raw = raw;
         this.sort = sort;
@@ -101,7 +109,7 @@ public class ListCommerceItemsRequest {
         this(null, connectionId, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     /**
@@ -135,6 +143,13 @@ public class ListCommerceItemsRequest {
 
     public Optional<String> order() {
         return Optional.ofNullable(this.order);
+    }
+
+    /**
+     * The org ID to filter by (reference to AccountingOrganization)
+     */
+    public Optional<String> orgId() {
+        return Optional.ofNullable(this.orgId);
     }
 
     /**
@@ -216,6 +231,15 @@ public class ListCommerceItemsRequest {
 
 
     /**
+     * The org ID to filter by (reference to AccountingOrganization)
+     */
+    public ListCommerceItemsRequest withOrgId(@Nullable String orgId) {
+        this.orgId = orgId;
+        return this;
+    }
+
+
+    /**
      * Query string to search. eg. email address or name
      */
     public ListCommerceItemsRequest withQuery(@Nullable String query) {
@@ -267,6 +291,7 @@ public class ListCommerceItemsRequest {
             Utils.enhancedDeepEquals(this.limit, other.limit) &&
             Utils.enhancedDeepEquals(this.offset, other.offset) &&
             Utils.enhancedDeepEquals(this.order, other.order) &&
+            Utils.enhancedDeepEquals(this.orgId, other.orgId) &&
             Utils.enhancedDeepEquals(this.query, other.query) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.sort, other.sort) &&
@@ -278,8 +303,8 @@ public class ListCommerceItemsRequest {
         return Utils.enhancedHash(
             collectionId, connectionId, fields,
             limit, offset, order,
-            query, raw, sort,
-            updatedGte);
+            orgId, query, raw,
+            sort, updatedGte);
     }
     
     @Override
@@ -291,6 +316,7 @@ public class ListCommerceItemsRequest {
                 "limit", limit,
                 "offset", offset,
                 "order", order,
+                "orgId", orgId,
                 "query", query,
                 "raw", raw,
                 "sort", sort,
@@ -311,6 +337,8 @@ public class ListCommerceItemsRequest {
         private Double offset;
 
         private String order;
+
+        private String orgId;
 
         private String query;
 
@@ -364,6 +392,14 @@ public class ListCommerceItemsRequest {
         }
 
         /**
+         * The org ID to filter by (reference to AccountingOrganization)
+         */
+        public Builder orgId(@Nullable String orgId) {
+            this.orgId = orgId;
+            return this;
+        }
+
+        /**
          * Query string to search. eg. email address or name
          */
         public Builder query(@Nullable String query) {
@@ -399,8 +435,8 @@ public class ListCommerceItemsRequest {
             return new ListCommerceItemsRequest(
                 collectionId, connectionId, fields,
                 limit, offset, order,
-                query, raw, sort,
-                updatedGte);
+                orgId, query, raw,
+                sort, updatedGte);
         }
 
     }

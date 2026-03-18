@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.annotation.Nullable;
 import java.lang.Boolean;
+import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
@@ -61,13 +62,28 @@ public class CommerceItem {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("inventory_id")
+    private String inventoryId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
     private Boolean isActive;
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("is_featured")
+    private Boolean isFeatured;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_taxable")
     private Boolean isTaxable;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("is_visible")
+    private Boolean isVisible;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -86,6 +102,11 @@ public class CommerceItem {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("prices")
+    private List<CommerceItemPrice> prices;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public_description")
     private String publicDescription;
 
@@ -101,6 +122,11 @@ public class CommerceItem {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("requires_shipping")
+    private Boolean requiresShipping;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slug")
     private String slug;
 
@@ -113,6 +139,11 @@ public class CommerceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxrate_id")
     private String taxrateId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("total_stock")
+    private Double totalStock;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -136,6 +167,16 @@ public class CommerceItem {
     @JsonProperty("vendor_name")
     private String vendorName;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("weight")
+    private Double weight;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("weight_unit")
+    private WeightUnit weightUnit;
+
     @JsonCreator
     public CommerceItem(
             @JsonProperty("account_id") @Nullable String accountId,
@@ -145,21 +186,29 @@ public class CommerceItem {
             @JsonProperty("description") @Nullable String description,
             @JsonProperty("global_code") @Nullable String globalCode,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("inventory_id") @Nullable String inventoryId,
             @JsonProperty("is_active") @Nullable Boolean isActive,
+            @JsonProperty("is_featured") @Nullable Boolean isFeatured,
             @JsonProperty("is_taxable") @Nullable Boolean isTaxable,
+            @JsonProperty("is_visible") @Nullable Boolean isVisible,
             @JsonProperty("media") @Nullable List<CommerceItemMedia> media,
             @JsonProperty("metadata") @Nullable List<CommerceMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
+            @JsonProperty("prices") @Nullable List<CommerceItemPrice> prices,
             @JsonProperty("public_description") @Nullable String publicDescription,
             @JsonProperty("public_name") @Nullable String publicName,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("requires_shipping") @Nullable Boolean requiresShipping,
             @JsonProperty("slug") @Nullable String slug,
             @JsonProperty("tags") @Nullable List<String> tags,
             @JsonProperty("taxrate_id") @Nullable String taxrateId,
+            @JsonProperty("total_stock") @Nullable Double totalStock,
             @JsonProperty("type") @Nullable String type,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
             @JsonProperty("variants") @Nullable List<CommerceItemvariant> variants,
-            @JsonProperty("vendor_name") @Nullable String vendorName) {
+            @JsonProperty("vendor_name") @Nullable String vendorName,
+            @JsonProperty("weight") @Nullable Double weight,
+            @JsonProperty("weight_unit") @Nullable WeightUnit weightUnit) {
         this.accountId = accountId;
         this.collectionIds = collectionIds;
         this.collections = collections;
@@ -167,21 +216,29 @@ public class CommerceItem {
         this.description = description;
         this.globalCode = globalCode;
         this.id = id;
+        this.inventoryId = inventoryId;
         this.isActive = isActive;
+        this.isFeatured = isFeatured;
         this.isTaxable = isTaxable;
+        this.isVisible = isVisible;
         this.media = media;
         this.metadata = metadata;
         this.name = name;
+        this.prices = prices;
         this.publicDescription = publicDescription;
         this.publicName = publicName;
         this.raw = raw;
+        this.requiresShipping = requiresShipping;
         this.slug = slug;
         this.tags = tags;
         this.taxrateId = taxrateId;
+        this.totalStock = totalStock;
         this.type = type;
         this.updatedAt = updatedAt;
         this.variants = variants;
         this.vendorName = vendorName;
+        this.weight = weight;
+        this.weightUnit = weightUnit;
     }
     
     public CommerceItem() {
@@ -192,7 +249,9 @@ public class CommerceItem {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null, null,
+            null, null, null,
+            null, null, null);
     }
 
     public Optional<String> accountId() {
@@ -229,12 +288,24 @@ public class CommerceItem {
         return Optional.ofNullable(this.id);
     }
 
+    public Optional<String> inventoryId() {
+        return Optional.ofNullable(this.inventoryId);
+    }
+
     public Optional<Boolean> isActive() {
         return Optional.ofNullable(this.isActive);
     }
 
+    public Optional<Boolean> isFeatured() {
+        return Optional.ofNullable(this.isFeatured);
+    }
+
     public Optional<Boolean> isTaxable() {
         return Optional.ofNullable(this.isTaxable);
+    }
+
+    public Optional<Boolean> isVisible() {
+        return Optional.ofNullable(this.isVisible);
     }
 
     public Optional<List<CommerceItemMedia>> media() {
@@ -249,6 +320,10 @@ public class CommerceItem {
         return Optional.ofNullable(this.name);
     }
 
+    public Optional<List<CommerceItemPrice>> prices() {
+        return Optional.ofNullable(this.prices);
+    }
+
     public Optional<String> publicDescription() {
         return Optional.ofNullable(this.publicDescription);
     }
@@ -261,6 +336,10 @@ public class CommerceItem {
         return Optional.ofNullable(this.raw);
     }
 
+    public Optional<Boolean> requiresShipping() {
+        return Optional.ofNullable(this.requiresShipping);
+    }
+
     public Optional<String> slug() {
         return Optional.ofNullable(this.slug);
     }
@@ -271,6 +350,10 @@ public class CommerceItem {
 
     public Optional<String> taxrateId() {
         return Optional.ofNullable(this.taxrateId);
+    }
+
+    public Optional<Double> totalStock() {
+        return Optional.ofNullable(this.totalStock);
     }
 
     public Optional<String> type() {
@@ -290,6 +373,14 @@ public class CommerceItem {
 
     public Optional<String> vendorName() {
         return Optional.ofNullable(this.vendorName);
+    }
+
+    public Optional<Double> weight() {
+        return Optional.ofNullable(this.weight);
+    }
+
+    public Optional<WeightUnit> weightUnit() {
+        return Optional.ofNullable(this.weightUnit);
     }
 
     public static Builder builder() {
@@ -345,14 +436,32 @@ public class CommerceItem {
     }
 
 
+    public CommerceItem withInventoryId(@Nullable String inventoryId) {
+        this.inventoryId = inventoryId;
+        return this;
+    }
+
+
     public CommerceItem withIsActive(@Nullable Boolean isActive) {
         this.isActive = isActive;
         return this;
     }
 
 
+    public CommerceItem withIsFeatured(@Nullable Boolean isFeatured) {
+        this.isFeatured = isFeatured;
+        return this;
+    }
+
+
     public CommerceItem withIsTaxable(@Nullable Boolean isTaxable) {
         this.isTaxable = isTaxable;
+        return this;
+    }
+
+
+    public CommerceItem withIsVisible(@Nullable Boolean isVisible) {
+        this.isVisible = isVisible;
         return this;
     }
 
@@ -375,6 +484,12 @@ public class CommerceItem {
     }
 
 
+    public CommerceItem withPrices(@Nullable List<CommerceItemPrice> prices) {
+        this.prices = prices;
+        return this;
+    }
+
+
     public CommerceItem withPublicDescription(@Nullable String publicDescription) {
         this.publicDescription = publicDescription;
         return this;
@@ -393,6 +508,12 @@ public class CommerceItem {
     }
 
 
+    public CommerceItem withRequiresShipping(@Nullable Boolean requiresShipping) {
+        this.requiresShipping = requiresShipping;
+        return this;
+    }
+
+
     public CommerceItem withSlug(@Nullable String slug) {
         this.slug = slug;
         return this;
@@ -407,6 +528,12 @@ public class CommerceItem {
 
     public CommerceItem withTaxrateId(@Nullable String taxrateId) {
         this.taxrateId = taxrateId;
+        return this;
+    }
+
+
+    public CommerceItem withTotalStock(@Nullable Double totalStock) {
+        this.totalStock = totalStock;
         return this;
     }
 
@@ -438,6 +565,18 @@ public class CommerceItem {
     }
 
 
+    public CommerceItem withWeight(@Nullable Double weight) {
+        this.weight = weight;
+        return this;
+    }
+
+
+    public CommerceItem withWeightUnit(@Nullable WeightUnit weightUnit) {
+        this.weightUnit = weightUnit;
+        return this;
+    }
+
+
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -455,21 +594,29 @@ public class CommerceItem {
             Utils.enhancedDeepEquals(this.description, other.description) &&
             Utils.enhancedDeepEquals(this.globalCode, other.globalCode) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.inventoryId, other.inventoryId) &&
             Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
+            Utils.enhancedDeepEquals(this.isFeatured, other.isFeatured) &&
             Utils.enhancedDeepEquals(this.isTaxable, other.isTaxable) &&
+            Utils.enhancedDeepEquals(this.isVisible, other.isVisible) &&
             Utils.enhancedDeepEquals(this.media, other.media) &&
             Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
+            Utils.enhancedDeepEquals(this.prices, other.prices) &&
             Utils.enhancedDeepEquals(this.publicDescription, other.publicDescription) &&
             Utils.enhancedDeepEquals(this.publicName, other.publicName) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.requiresShipping, other.requiresShipping) &&
             Utils.enhancedDeepEquals(this.slug, other.slug) &&
             Utils.enhancedDeepEquals(this.tags, other.tags) &&
             Utils.enhancedDeepEquals(this.taxrateId, other.taxrateId) &&
+            Utils.enhancedDeepEquals(this.totalStock, other.totalStock) &&
             Utils.enhancedDeepEquals(this.type, other.type) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
             Utils.enhancedDeepEquals(this.variants, other.variants) &&
-            Utils.enhancedDeepEquals(this.vendorName, other.vendorName);
+            Utils.enhancedDeepEquals(this.vendorName, other.vendorName) &&
+            Utils.enhancedDeepEquals(this.weight, other.weight) &&
+            Utils.enhancedDeepEquals(this.weightUnit, other.weightUnit);
     }
     
     @Override
@@ -477,12 +624,14 @@ public class CommerceItem {
         return Utils.enhancedHash(
             accountId, collectionIds, collections,
             createdAt, description, globalCode,
-            id, isActive, isTaxable,
+            id, inventoryId, isActive,
+            isFeatured, isTaxable, isVisible,
             media, metadata, name,
-            publicDescription, publicName, raw,
-            slug, tags, taxrateId,
+            prices, publicDescription, publicName,
+            raw, requiresShipping, slug,
+            tags, taxrateId, totalStock,
             type, updatedAt, variants,
-            vendorName);
+            vendorName, weight, weightUnit);
     }
     
     @Override
@@ -495,21 +644,29 @@ public class CommerceItem {
                 "description", description,
                 "globalCode", globalCode,
                 "id", id,
+                "inventoryId", inventoryId,
                 "isActive", isActive,
+                "isFeatured", isFeatured,
                 "isTaxable", isTaxable,
+                "isVisible", isVisible,
                 "media", media,
                 "metadata", metadata,
                 "name", name,
+                "prices", prices,
                 "publicDescription", publicDescription,
                 "publicName", publicName,
                 "raw", raw,
+                "requiresShipping", requiresShipping,
                 "slug", slug,
                 "tags", tags,
                 "taxrateId", taxrateId,
+                "totalStock", totalStock,
                 "type", type,
                 "updatedAt", updatedAt,
                 "variants", variants,
-                "vendorName", vendorName);
+                "vendorName", vendorName,
+                "weight", weight,
+                "weightUnit", weightUnit);
     }
 
     @SuppressWarnings("UnusedReturnValue")
@@ -529,9 +686,15 @@ public class CommerceItem {
 
         private String id;
 
+        private String inventoryId;
+
         private Boolean isActive;
 
+        private Boolean isFeatured;
+
         private Boolean isTaxable;
+
+        private Boolean isVisible;
 
         private List<CommerceItemMedia> media;
 
@@ -539,17 +702,23 @@ public class CommerceItem {
 
         private String name;
 
+        private List<CommerceItemPrice> prices;
+
         private String publicDescription;
 
         private String publicName;
 
         private Map<String, Object> raw;
 
+        private Boolean requiresShipping;
+
         private String slug;
 
         private List<String> tags;
 
         private String taxrateId;
+
+        private Double totalStock;
 
         private String type;
 
@@ -558,6 +727,10 @@ public class CommerceItem {
         private List<CommerceItemvariant> variants;
 
         private String vendorName;
+
+        private Double weight;
+
+        private WeightUnit weightUnit;
 
         private Builder() {
           // force use of static builder() method
@@ -604,13 +777,28 @@ public class CommerceItem {
             return this;
         }
 
+        public Builder inventoryId(@Nullable String inventoryId) {
+            this.inventoryId = inventoryId;
+            return this;
+        }
+
         public Builder isActive(@Nullable Boolean isActive) {
             this.isActive = isActive;
             return this;
         }
 
+        public Builder isFeatured(@Nullable Boolean isFeatured) {
+            this.isFeatured = isFeatured;
+            return this;
+        }
+
         public Builder isTaxable(@Nullable Boolean isTaxable) {
             this.isTaxable = isTaxable;
+            return this;
+        }
+
+        public Builder isVisible(@Nullable Boolean isVisible) {
+            this.isVisible = isVisible;
             return this;
         }
 
@@ -629,6 +817,11 @@ public class CommerceItem {
             return this;
         }
 
+        public Builder prices(@Nullable List<CommerceItemPrice> prices) {
+            this.prices = prices;
+            return this;
+        }
+
         public Builder publicDescription(@Nullable String publicDescription) {
             this.publicDescription = publicDescription;
             return this;
@@ -644,6 +837,11 @@ public class CommerceItem {
             return this;
         }
 
+        public Builder requiresShipping(@Nullable Boolean requiresShipping) {
+            this.requiresShipping = requiresShipping;
+            return this;
+        }
+
         public Builder slug(@Nullable String slug) {
             this.slug = slug;
             return this;
@@ -656,6 +854,11 @@ public class CommerceItem {
 
         public Builder taxrateId(@Nullable String taxrateId) {
             this.taxrateId = taxrateId;
+            return this;
+        }
+
+        public Builder totalStock(@Nullable Double totalStock) {
+            this.totalStock = totalStock;
             return this;
         }
 
@@ -682,16 +885,28 @@ public class CommerceItem {
             return this;
         }
 
+        public Builder weight(@Nullable Double weight) {
+            this.weight = weight;
+            return this;
+        }
+
+        public Builder weightUnit(@Nullable WeightUnit weightUnit) {
+            this.weightUnit = weightUnit;
+            return this;
+        }
+
         public CommerceItem build() {
             return new CommerceItem(
                 accountId, collectionIds, collections,
                 createdAt, description, globalCode,
-                id, isActive, isTaxable,
+                id, inventoryId, isActive,
+                isFeatured, isTaxable, isVisible,
                 media, metadata, name,
-                publicDescription, publicName, raw,
-                slug, tags, taxrateId,
+                prices, publicDescription, publicName,
+                raw, requiresShipping, slug,
+                tags, taxrateId, totalStock,
                 type, updatedAt, variants,
-                vendorName);
+                vendorName, weight, weightUnit);
         }
 
     }

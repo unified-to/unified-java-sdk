@@ -17,11 +17,11 @@ import to.unified.unified_java_sdk.utils.Response;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-public class ListAdsPromotedesResponse implements Response {
+public class ListAdsPromotedsResponse implements Response {
     /**
      * Successful
      */
-    private List<AdsPromoted> adsPromotedes;
+    private List<AdsPromoted> adsPromoteds;
 
     /**
      * HTTP response content type for this operation
@@ -39,12 +39,12 @@ public class ListAdsPromotedesResponse implements Response {
     private HttpResponse<InputStream> rawResponse;
 
     @JsonCreator
-    public ListAdsPromotedesResponse(
-            @Nullable List<AdsPromoted> adsPromotedes,
+    public ListAdsPromotedsResponse(
+            @Nullable List<AdsPromoted> adsPromoteds,
             @Nonnull String contentType,
             int statusCode,
             @Nonnull HttpResponse<InputStream> rawResponse) {
-        this.adsPromotedes = adsPromotedes;
+        this.adsPromoteds = adsPromoteds;
         this.contentType = Optional.ofNullable(contentType)
             .orElseThrow(() -> new IllegalArgumentException("contentType cannot be null"));
         this.statusCode = statusCode;
@@ -52,7 +52,7 @@ public class ListAdsPromotedesResponse implements Response {
             .orElseThrow(() -> new IllegalArgumentException("rawResponse cannot be null"));
     }
     
-    public ListAdsPromotedesResponse(
+    public ListAdsPromotedsResponse(
             @Nonnull String contentType,
             int statusCode,
             @Nonnull HttpResponse<InputStream> rawResponse) {
@@ -63,8 +63,8 @@ public class ListAdsPromotedesResponse implements Response {
     /**
      * Successful
      */
-    public Optional<List<AdsPromoted>> adsPromotedes() {
-        return Optional.ofNullable(this.adsPromotedes);
+    public Optional<List<AdsPromoted>> adsPromoteds() {
+        return Optional.ofNullable(this.adsPromoteds);
     }
 
     /**
@@ -96,8 +96,8 @@ public class ListAdsPromotedesResponse implements Response {
     /**
      * Successful
      */
-    public ListAdsPromotedesResponse withAdsPromotedes(@Nullable List<AdsPromoted> adsPromotedes) {
-        this.adsPromotedes = adsPromotedes;
+    public ListAdsPromotedsResponse withAdsPromoteds(@Nullable List<AdsPromoted> adsPromoteds) {
+        this.adsPromoteds = adsPromoteds;
         return this;
     }
 
@@ -105,7 +105,7 @@ public class ListAdsPromotedesResponse implements Response {
     /**
      * HTTP response content type for this operation
      */
-    public ListAdsPromotedesResponse withContentType(@Nonnull String contentType) {
+    public ListAdsPromotedsResponse withContentType(@Nonnull String contentType) {
         this.contentType = Utils.checkNotNull(contentType, "contentType");
         return this;
     }
@@ -114,7 +114,7 @@ public class ListAdsPromotedesResponse implements Response {
     /**
      * HTTP response status code for this operation
      */
-    public ListAdsPromotedesResponse withStatusCode(int statusCode) {
+    public ListAdsPromotedsResponse withStatusCode(int statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -123,7 +123,7 @@ public class ListAdsPromotedesResponse implements Response {
     /**
      * Raw HTTP response; suitable for custom response parsing
      */
-    public ListAdsPromotedesResponse withRawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
+    public ListAdsPromotedsResponse withRawResponse(@Nonnull HttpResponse<InputStream> rawResponse) {
         this.rawResponse = Utils.checkNotNull(rawResponse, "rawResponse");
         return this;
     }
@@ -137,9 +137,9 @@ public class ListAdsPromotedesResponse implements Response {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        ListAdsPromotedesResponse other = (ListAdsPromotedesResponse) o;
+        ListAdsPromotedsResponse other = (ListAdsPromotedsResponse) o;
         return 
-            Utils.enhancedDeepEquals(this.adsPromotedes, other.adsPromotedes) &&
+            Utils.enhancedDeepEquals(this.adsPromoteds, other.adsPromoteds) &&
             Utils.enhancedDeepEquals(this.contentType, other.contentType) &&
             Utils.enhancedDeepEquals(this.statusCode, other.statusCode) &&
             Utils.enhancedDeepEquals(this.rawResponse, other.rawResponse);
@@ -148,14 +148,14 @@ public class ListAdsPromotedesResponse implements Response {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            adsPromotedes, contentType, statusCode,
+            adsPromoteds, contentType, statusCode,
             rawResponse);
     }
     
     @Override
     public String toString() {
-        return Utils.toString(ListAdsPromotedesResponse.class,
-                "adsPromotedes", adsPromotedes,
+        return Utils.toString(ListAdsPromotedsResponse.class,
+                "adsPromoteds", adsPromoteds,
                 "contentType", contentType,
                 "statusCode", statusCode,
                 "rawResponse", rawResponse);
@@ -164,7 +164,7 @@ public class ListAdsPromotedesResponse implements Response {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private List<AdsPromoted> adsPromotedes;
+        private List<AdsPromoted> adsPromoteds;
 
         private String contentType;
 
@@ -179,8 +179,8 @@ public class ListAdsPromotedesResponse implements Response {
         /**
          * Successful
          */
-        public Builder adsPromotedes(@Nullable List<AdsPromoted> adsPromotedes) {
-            this.adsPromotedes = adsPromotedes;
+        public Builder adsPromoteds(@Nullable List<AdsPromoted> adsPromoteds) {
+            this.adsPromoteds = adsPromoteds;
             return this;
         }
 
@@ -208,9 +208,9 @@ public class ListAdsPromotedesResponse implements Response {
             return this;
         }
 
-        public ListAdsPromotedesResponse build() {
-            return new ListAdsPromotedesResponse(
-                adsPromotedes, contentType, statusCode,
+        public ListAdsPromotedsResponse build() {
+            return new ListAdsPromotedsResponse(
+                adsPromoteds, contentType, statusCode,
                 rawResponse);
         }
 

@@ -67,6 +67,11 @@ public class AccountingExpense {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("organization_id")
+    private String organizationId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_method")
     private String paymentMethod;
 
@@ -121,6 +126,7 @@ public class AccountingExpense {
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("lineitems") @Nullable List<AccountingLineitem> lineitems,
             @JsonProperty("name") @Nullable String name,
+            @JsonProperty("organization_id") @Nullable String organizationId,
             @JsonProperty("payment_method") @Nullable String paymentMethod,
             @JsonProperty("posted_at") @Nullable OffsetDateTime postedAt,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
@@ -139,6 +145,7 @@ public class AccountingExpense {
         this.id = id;
         this.lineitems = lineitems;
         this.name = name;
+        this.organizationId = organizationId;
         this.paymentMethod = paymentMethod;
         this.postedAt = postedAt;
         this.raw = raw;
@@ -156,7 +163,8 @@ public class AccountingExpense {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     public Optional<String> accountId() {
@@ -193,6 +201,10 @@ public class AccountingExpense {
 
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
+    }
+
+    public Optional<String> organizationId() {
+        return Optional.ofNullable(this.organizationId);
     }
 
     public Optional<String> paymentMethod() {
@@ -290,6 +302,12 @@ public class AccountingExpense {
     }
 
 
+    public AccountingExpense withOrganizationId(@Nullable String organizationId) {
+        this.organizationId = organizationId;
+        return this;
+    }
+
+
     public AccountingExpense withPaymentMethod(@Nullable String paymentMethod) {
         this.paymentMethod = paymentMethod;
         return this;
@@ -363,6 +381,7 @@ public class AccountingExpense {
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.lineitems, other.lineitems) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
+            Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
             Utils.enhancedDeepEquals(this.paymentMethod, other.paymentMethod) &&
             Utils.enhancedDeepEquals(this.postedAt, other.postedAt) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
@@ -380,9 +399,10 @@ public class AccountingExpense {
             accountId, approvedAt, approverUserId,
             contactId, createdAt, currency,
             id, lineitems, name,
-            paymentMethod, postedAt, raw,
-            reimbursedAmount, reimbursedAt, taxAmount,
-            totalAmount, updatedAt, userId);
+            organizationId, paymentMethod, postedAt,
+            raw, reimbursedAmount, reimbursedAt,
+            taxAmount, totalAmount, updatedAt,
+            userId);
     }
     
     @Override
@@ -397,6 +417,7 @@ public class AccountingExpense {
                 "id", id,
                 "lineitems", lineitems,
                 "name", name,
+                "organizationId", organizationId,
                 "paymentMethod", paymentMethod,
                 "postedAt", postedAt,
                 "raw", raw,
@@ -428,6 +449,8 @@ public class AccountingExpense {
         private List<AccountingLineitem> lineitems;
 
         private String name;
+
+        private String organizationId;
 
         private String paymentMethod;
 
@@ -496,6 +519,11 @@ public class AccountingExpense {
             return this;
         }
 
+        public Builder organizationId(@Nullable String organizationId) {
+            this.organizationId = organizationId;
+            return this;
+        }
+
         public Builder paymentMethod(@Nullable String paymentMethod) {
             this.paymentMethod = paymentMethod;
             return this;
@@ -546,9 +574,10 @@ public class AccountingExpense {
                 accountId, approvedAt, approverUserId,
                 contactId, createdAt, currency,
                 id, lineitems, name,
-                paymentMethod, postedAt, raw,
-                reimbursedAmount, reimbursedAt, taxAmount,
-                totalAmount, updatedAt, userId);
+                organizationId, paymentMethod, postedAt,
+                raw, reimbursedAmount, reimbursedAt,
+                taxAmount, totalAmount, updatedAt,
+                userId);
         }
 
     }
