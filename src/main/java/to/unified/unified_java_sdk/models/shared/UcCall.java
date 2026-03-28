@@ -69,6 +69,11 @@ public class UcCall {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("type")
+    private UcCallType type;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
@@ -76,6 +81,16 @@ public class UcCall {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     private String userId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("user_name")
+    private String userName;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("user_phone")
+    private String userPhone;
 
     @JsonCreator
     public UcCall(
@@ -88,8 +103,11 @@ public class UcCall {
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("start_at") @Nullable OffsetDateTime startAt,
             @JsonProperty("telephone") @Nullable PropertyUcCallTelephone telephone,
+            @JsonProperty("type") @Nullable UcCallType type,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
-            @JsonProperty("user_id") @Nullable String userId) {
+            @JsonProperty("user_id") @Nullable String userId,
+            @JsonProperty("user_name") @Nullable String userName,
+            @JsonProperty("user_phone") @Nullable String userPhone) {
         this.contactId = contactId;
         this.contacts = contacts;
         this.createdAt = createdAt;
@@ -99,12 +117,16 @@ public class UcCall {
         this.raw = raw;
         this.startAt = startAt;
         this.telephone = telephone;
+        this.type = type;
         this.updatedAt = updatedAt;
         this.userId = userId;
+        this.userName = userName;
+        this.userPhone = userPhone;
     }
     
     public UcCall() {
         this(null, null, null,
+            null, null, null,
             null, null, null,
             null, null, null,
             null, null);
@@ -149,12 +171,24 @@ public class UcCall {
         return Optional.ofNullable(this.telephone);
     }
 
+    public Optional<UcCallType> type() {
+        return Optional.ofNullable(this.type);
+    }
+
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
     public Optional<String> userId() {
         return Optional.ofNullable(this.userId);
+    }
+
+    public Optional<String> userName() {
+        return Optional.ofNullable(this.userName);
+    }
+
+    public Optional<String> userPhone() {
+        return Optional.ofNullable(this.userPhone);
     }
 
     public static Builder builder() {
@@ -219,6 +253,12 @@ public class UcCall {
     }
 
 
+    public UcCall withType(@Nullable UcCallType type) {
+        this.type = type;
+        return this;
+    }
+
+
     public UcCall withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -227,6 +267,18 @@ public class UcCall {
 
     public UcCall withUserId(@Nullable String userId) {
         this.userId = userId;
+        return this;
+    }
+
+
+    public UcCall withUserName(@Nullable String userName) {
+        this.userName = userName;
+        return this;
+    }
+
+
+    public UcCall withUserPhone(@Nullable String userPhone) {
+        this.userPhone = userPhone;
         return this;
     }
 
@@ -250,8 +302,11 @@ public class UcCall {
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.startAt, other.startAt) &&
             Utils.enhancedDeepEquals(this.telephone, other.telephone) &&
+            Utils.enhancedDeepEquals(this.type, other.type) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
-            Utils.enhancedDeepEquals(this.userId, other.userId);
+            Utils.enhancedDeepEquals(this.userId, other.userId) &&
+            Utils.enhancedDeepEquals(this.userName, other.userName) &&
+            Utils.enhancedDeepEquals(this.userPhone, other.userPhone);
     }
     
     @Override
@@ -260,7 +315,8 @@ public class UcCall {
             contactId, contacts, createdAt,
             endAt, id, isPrivate,
             raw, startAt, telephone,
-            updatedAt, userId);
+            type, updatedAt, userId,
+            userName, userPhone);
     }
     
     @Override
@@ -275,8 +331,11 @@ public class UcCall {
                 "raw", raw,
                 "startAt", startAt,
                 "telephone", telephone,
+                "type", type,
                 "updatedAt", updatedAt,
-                "userId", userId);
+                "userId", userId,
+                "userName", userName,
+                "userPhone", userPhone);
     }
 
     @SuppressWarnings("UnusedReturnValue")
@@ -300,9 +359,15 @@ public class UcCall {
 
         private PropertyUcCallTelephone telephone;
 
+        private UcCallType type;
+
         private OffsetDateTime updatedAt;
 
         private String userId;
+
+        private String userName;
+
+        private String userPhone;
 
         private Builder() {
           // force use of static builder() method
@@ -356,6 +421,11 @@ public class UcCall {
             return this;
         }
 
+        public Builder type(@Nullable UcCallType type) {
+            this.type = type;
+            return this;
+        }
+
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
@@ -366,12 +436,23 @@ public class UcCall {
             return this;
         }
 
+        public Builder userName(@Nullable String userName) {
+            this.userName = userName;
+            return this;
+        }
+
+        public Builder userPhone(@Nullable String userPhone) {
+            this.userPhone = userPhone;
+            return this;
+        }
+
         public UcCall build() {
             return new UcCall(
                 contactId, contacts, createdAt,
                 endAt, id, isPrivate,
                 raw, startAt, telephone,
-                updatedAt, userId);
+                type, updatedAt, userId,
+                userName, userPhone);
         }
 
     }

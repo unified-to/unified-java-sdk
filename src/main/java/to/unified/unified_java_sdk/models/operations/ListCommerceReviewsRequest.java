@@ -44,6 +44,12 @@ public class ListCommerceReviewsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     private Double limit;
 
+    /**
+     * The location ID to filter by (reference to CommerceLocation)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location_id")
+    private String locationId;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     private Double offset;
@@ -84,6 +90,7 @@ public class ListCommerceReviewsRequest {
             @Nullable List<ListCommerceReviewsQueryParamFields> fields,
             @Nullable String itemId,
             @Nullable Double limit,
+            @Nullable String locationId,
             @Nullable Double offset,
             @Nullable String order,
             @Nullable String query,
@@ -96,6 +103,7 @@ public class ListCommerceReviewsRequest {
         this.fields = fields;
         this.itemId = itemId;
         this.limit = limit;
+        this.locationId = locationId;
         this.offset = offset;
         this.order = order;
         this.query = query;
@@ -109,7 +117,7 @@ public class ListCommerceReviewsRequest {
         this(connectionId, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     /**
@@ -142,6 +150,13 @@ public class ListCommerceReviewsRequest {
 
     public Optional<Double> limit() {
         return Optional.ofNullable(this.limit);
+    }
+
+    /**
+     * The location ID to filter by (reference to CommerceLocation)
+     */
+    public Optional<String> locationId() {
+        return Optional.ofNullable(this.locationId);
     }
 
     public Optional<Double> offset() {
@@ -227,6 +242,15 @@ public class ListCommerceReviewsRequest {
     }
 
 
+    /**
+     * The location ID to filter by (reference to CommerceLocation)
+     */
+    public ListCommerceReviewsRequest withLocationId(@Nullable String locationId) {
+        this.locationId = locationId;
+        return this;
+    }
+
+
     public ListCommerceReviewsRequest withOffset(@Nullable Double offset) {
         this.offset = offset;
         return this;
@@ -290,6 +314,7 @@ public class ListCommerceReviewsRequest {
             Utils.enhancedDeepEquals(this.fields, other.fields) &&
             Utils.enhancedDeepEquals(this.itemId, other.itemId) &&
             Utils.enhancedDeepEquals(this.limit, other.limit) &&
+            Utils.enhancedDeepEquals(this.locationId, other.locationId) &&
             Utils.enhancedDeepEquals(this.offset, other.offset) &&
             Utils.enhancedDeepEquals(this.order, other.order) &&
             Utils.enhancedDeepEquals(this.query, other.query) &&
@@ -302,9 +327,9 @@ public class ListCommerceReviewsRequest {
     public int hashCode() {
         return Utils.enhancedHash(
             connectionId, contactId, fields,
-            itemId, limit, offset,
-            order, query, raw,
-            sort, updatedGte);
+            itemId, limit, locationId,
+            offset, order, query,
+            raw, sort, updatedGte);
     }
     
     @Override
@@ -315,6 +340,7 @@ public class ListCommerceReviewsRequest {
                 "fields", fields,
                 "itemId", itemId,
                 "limit", limit,
+                "locationId", locationId,
                 "offset", offset,
                 "order", order,
                 "query", query,
@@ -335,6 +361,8 @@ public class ListCommerceReviewsRequest {
         private String itemId;
 
         private Double limit;
+
+        private String locationId;
 
         private Double offset;
 
@@ -389,6 +417,14 @@ public class ListCommerceReviewsRequest {
             return this;
         }
 
+        /**
+         * The location ID to filter by (reference to CommerceLocation)
+         */
+        public Builder locationId(@Nullable String locationId) {
+            this.locationId = locationId;
+            return this;
+        }
+
         public Builder offset(@Nullable Double offset) {
             this.offset = offset;
             return this;
@@ -434,9 +470,9 @@ public class ListCommerceReviewsRequest {
         public ListCommerceReviewsRequest build() {
             return new ListCommerceReviewsRequest(
                 connectionId, contactId, fields,
-                itemId, limit, offset,
-                order, query, raw,
-                sort, updatedGte);
+                itemId, limit, locationId,
+                offset, order, query,
+                raw, sort, updatedGte);
         }
 
     }

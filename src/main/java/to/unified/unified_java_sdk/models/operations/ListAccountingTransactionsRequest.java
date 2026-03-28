@@ -17,6 +17,12 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListAccountingTransactionsRequest {
     /**
+     * The account ID to filter by (reference to AccountingAccount)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=account_id")
+    private String accountId;
+
+    /**
      * ID of the connection
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=connection_id")
@@ -53,6 +59,12 @@ public class ListAccountingTransactionsRequest {
     private String order;
 
     /**
+     * The org ID to filter by (reference to AccountingOrganization)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=org_id")
+    private String orgId;
+
+    /**
      * Query string to search. eg. email address or name
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
@@ -85,6 +97,7 @@ public class ListAccountingTransactionsRequest {
 
     @JsonCreator
     public ListAccountingTransactionsRequest(
+            @Nullable String accountId,
             @Nonnull String connectionId,
             @Nullable String contactId,
             @Nullable String endLt,
@@ -92,11 +105,13 @@ public class ListAccountingTransactionsRequest {
             @Nullable Double limit,
             @Nullable Double offset,
             @Nullable String order,
+            @Nullable String orgId,
             @Nullable String query,
             @Nullable String raw,
             @Nullable String sort,
             @Nullable String startGte,
             @Nullable String updatedGte) {
+        this.accountId = accountId;
         this.connectionId = Optional.ofNullable(connectionId)
             .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.contactId = contactId;
@@ -105,6 +120,7 @@ public class ListAccountingTransactionsRequest {
         this.limit = limit;
         this.offset = offset;
         this.order = order;
+        this.orgId = orgId;
         this.query = query;
         this.raw = raw;
         this.sort = sort;
@@ -114,10 +130,18 @@ public class ListAccountingTransactionsRequest {
     
     public ListAccountingTransactionsRequest(
             @Nonnull String connectionId) {
-        this(connectionId, null, null,
+        this(null, connectionId, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null, null);
+    }
+
+    /**
+     * The account ID to filter by (reference to AccountingAccount)
+     */
+    public Optional<String> accountId() {
+        return Optional.ofNullable(this.accountId);
     }
 
     /**
@@ -161,6 +185,13 @@ public class ListAccountingTransactionsRequest {
     }
 
     /**
+     * The org ID to filter by (reference to AccountingOrganization)
+     */
+    public Optional<String> orgId() {
+        return Optional.ofNullable(this.orgId);
+    }
+
+    /**
      * Query string to search. eg. email address or name
      */
     public Optional<String> query() {
@@ -197,6 +228,15 @@ public class ListAccountingTransactionsRequest {
 
     public static Builder builder() {
         return new Builder();
+    }
+
+
+    /**
+     * The account ID to filter by (reference to AccountingAccount)
+     */
+    public ListAccountingTransactionsRequest withAccountId(@Nullable String accountId) {
+        this.accountId = accountId;
+        return this;
     }
 
 
@@ -250,6 +290,15 @@ public class ListAccountingTransactionsRequest {
 
     public ListAccountingTransactionsRequest withOrder(@Nullable String order) {
         this.order = order;
+        return this;
+    }
+
+
+    /**
+     * The org ID to filter by (reference to AccountingOrganization)
+     */
+    public ListAccountingTransactionsRequest withOrgId(@Nullable String orgId) {
+        this.orgId = orgId;
         return this;
     }
 
@@ -309,6 +358,7 @@ public class ListAccountingTransactionsRequest {
         }
         ListAccountingTransactionsRequest other = (ListAccountingTransactionsRequest) o;
         return 
+            Utils.enhancedDeepEquals(this.accountId, other.accountId) &&
             Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
             Utils.enhancedDeepEquals(this.contactId, other.contactId) &&
             Utils.enhancedDeepEquals(this.endLt, other.endLt) &&
@@ -316,6 +366,7 @@ public class ListAccountingTransactionsRequest {
             Utils.enhancedDeepEquals(this.limit, other.limit) &&
             Utils.enhancedDeepEquals(this.offset, other.offset) &&
             Utils.enhancedDeepEquals(this.order, other.order) &&
+            Utils.enhancedDeepEquals(this.orgId, other.orgId) &&
             Utils.enhancedDeepEquals(this.query, other.query) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.sort, other.sort) &&
@@ -326,15 +377,17 @@ public class ListAccountingTransactionsRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            connectionId, contactId, endLt,
-            fields, limit, offset,
-            order, query, raw,
-            sort, startGte, updatedGte);
+            accountId, connectionId, contactId,
+            endLt, fields, limit,
+            offset, order, orgId,
+            query, raw, sort,
+            startGte, updatedGte);
     }
     
     @Override
     public String toString() {
         return Utils.toString(ListAccountingTransactionsRequest.class,
+                "accountId", accountId,
                 "connectionId", connectionId,
                 "contactId", contactId,
                 "endLt", endLt,
@@ -342,6 +395,7 @@ public class ListAccountingTransactionsRequest {
                 "limit", limit,
                 "offset", offset,
                 "order", order,
+                "orgId", orgId,
                 "query", query,
                 "raw", raw,
                 "sort", sort,
@@ -351,6 +405,8 @@ public class ListAccountingTransactionsRequest {
 
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
+
+        private String accountId;
 
         private String connectionId;
 
@@ -366,6 +422,8 @@ public class ListAccountingTransactionsRequest {
 
         private String order;
 
+        private String orgId;
+
         private String query;
 
         private String raw;
@@ -378,6 +436,14 @@ public class ListAccountingTransactionsRequest {
 
         private Builder() {
           // force use of static builder() method
+        }
+
+        /**
+         * The account ID to filter by (reference to AccountingAccount)
+         */
+        public Builder accountId(@Nullable String accountId) {
+            this.accountId = accountId;
+            return this;
         }
 
         /**
@@ -428,6 +494,14 @@ public class ListAccountingTransactionsRequest {
         }
 
         /**
+         * The org ID to filter by (reference to AccountingOrganization)
+         */
+        public Builder orgId(@Nullable String orgId) {
+            this.orgId = orgId;
+            return this;
+        }
+
+        /**
          * Query string to search. eg. email address or name
          */
         public Builder query(@Nullable String query) {
@@ -469,10 +543,11 @@ public class ListAccountingTransactionsRequest {
 
         public ListAccountingTransactionsRequest build() {
             return new ListAccountingTransactionsRequest(
-                connectionId, contactId, endLt,
-                fields, limit, offset,
-                order, query, raw,
-                sort, startGte, updatedGte);
+                accountId, connectionId, contactId,
+                endLt, fields, limit,
+                offset, order, orgId,
+                query, raw, sort,
+                startGte, updatedGte);
         }
 
     }

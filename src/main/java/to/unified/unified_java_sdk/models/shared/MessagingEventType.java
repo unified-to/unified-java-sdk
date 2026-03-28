@@ -29,6 +29,7 @@ public class MessagingEventType {
     public static final MessagingEventType CHANNEL_LEFT = new MessagingEventType("CHANNEL_LEFT");
     public static final MessagingEventType CHANNEL_CREATED = new MessagingEventType("CHANNEL_CREATED");
     public static final MessagingEventType CHANNEL_DELETED = new MessagingEventType("CHANNEL_DELETED");
+    public static final MessagingEventType CHANNEL_RENAMED = new MessagingEventType("CHANNEL_RENAMED");
     public static final MessagingEventType USER_CREATED = new MessagingEventType("USER_CREATED");
     public static final MessagingEventType USER_DELETED = new MessagingEventType("USER_DELETED");
     public static final MessagingEventType USER_UPDATED = new MessagingEventType("USER_UPDATED");
@@ -114,6 +115,7 @@ public class MessagingEventType {
         map.put("CHANNEL_LEFT", CHANNEL_LEFT);
         map.put("CHANNEL_CREATED", CHANNEL_CREATED);
         map.put("CHANNEL_DELETED", CHANNEL_DELETED);
+        map.put("CHANNEL_RENAMED", CHANNEL_RENAMED);
         map.put("USER_CREATED", USER_CREATED);
         map.put("USER_DELETED", USER_DELETED);
         map.put("USER_UPDATED", USER_UPDATED);
@@ -131,6 +133,7 @@ public class MessagingEventType {
         map.put("CHANNEL_LEFT", MessagingEventTypeEnum.CHANNEL_LEFT);
         map.put("CHANNEL_CREATED", MessagingEventTypeEnum.CHANNEL_CREATED);
         map.put("CHANNEL_DELETED", MessagingEventTypeEnum.CHANNEL_DELETED);
+        map.put("CHANNEL_RENAMED", MessagingEventTypeEnum.CHANNEL_RENAMED);
         map.put("USER_CREATED", MessagingEventTypeEnum.USER_CREATED);
         map.put("USER_DELETED", MessagingEventTypeEnum.USER_DELETED);
         map.put("USER_UPDATED", MessagingEventTypeEnum.USER_UPDATED);
@@ -149,6 +152,7 @@ public class MessagingEventType {
         CHANNEL_LEFT("CHANNEL_LEFT"),
         CHANNEL_CREATED("CHANNEL_CREATED"),
         CHANNEL_DELETED("CHANNEL_DELETED"),
+        CHANNEL_RENAMED("CHANNEL_RENAMED"),
         USER_CREATED("USER_CREATED"),
         USER_DELETED("USER_DELETED"),
         USER_UPDATED("USER_UPDATED"),;

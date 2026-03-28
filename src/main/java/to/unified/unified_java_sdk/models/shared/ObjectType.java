@@ -51,6 +51,8 @@ public class ObjectType {
     public static final ObjectType COMMERCE_REVIEW = new ObjectType("commerce_review");
     public static final ObjectType COMMERCE_SALESCHANNEL = new ObjectType("commerce_saleschannel");
     public static final ObjectType COMMERCE_ITEMVARIANT = new ObjectType("commerce_itemvariant");
+    public static final ObjectType COMMERCE_RESERVATION = new ObjectType("commerce_reservation");
+    public static final ObjectType COMMERCE_AVAILABILITY = new ObjectType("commerce_availability");
     public static final ObjectType VERIFICATION_PACKAGE = new ObjectType("verification_package");
     public static final ObjectType VERIFICATION_REQUEST = new ObjectType("verification_request");
     public static final ObjectType ASSESSMENT_PACKAGE = new ObjectType("assessment_package");
@@ -251,6 +253,8 @@ public class ObjectType {
         map.put("commerce_review", COMMERCE_REVIEW);
         map.put("commerce_saleschannel", COMMERCE_SALESCHANNEL);
         map.put("commerce_itemvariant", COMMERCE_ITEMVARIANT);
+        map.put("commerce_reservation", COMMERCE_RESERVATION);
+        map.put("commerce_availability", COMMERCE_AVAILABILITY);
         map.put("verification_package", VERIFICATION_PACKAGE);
         map.put("verification_request", VERIFICATION_REQUEST);
         map.put("assessment_package", ASSESSMENT_PACKAGE);
@@ -383,6 +387,8 @@ public class ObjectType {
         map.put("commerce_review", ObjectTypeEnum.COMMERCE_REVIEW);
         map.put("commerce_saleschannel", ObjectTypeEnum.COMMERCE_SALESCHANNEL);
         map.put("commerce_itemvariant", ObjectTypeEnum.COMMERCE_ITEMVARIANT);
+        map.put("commerce_reservation", ObjectTypeEnum.COMMERCE_RESERVATION);
+        map.put("commerce_availability", ObjectTypeEnum.COMMERCE_AVAILABILITY);
         map.put("verification_package", ObjectTypeEnum.VERIFICATION_PACKAGE);
         map.put("verification_request", ObjectTypeEnum.VERIFICATION_REQUEST);
         map.put("assessment_package", ObjectTypeEnum.ASSESSMENT_PACKAGE);
@@ -516,6 +522,8 @@ public class ObjectType {
         COMMERCE_REVIEW("commerce_review"),
         COMMERCE_SALESCHANNEL("commerce_saleschannel"),
         COMMERCE_ITEMVARIANT("commerce_itemvariant"),
+        COMMERCE_RESERVATION("commerce_reservation"),
+        COMMERCE_AVAILABILITY("commerce_availability"),
         VERIFICATION_PACKAGE("verification_package"),
         VERIFICATION_REQUEST("verification_request"),
         ASSESSMENT_PACKAGE("assessment_package"),

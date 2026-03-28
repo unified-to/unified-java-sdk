@@ -28,6 +28,7 @@ public enum CreateAdsCampaignQueryParamFields {
     CAMPAIGN_BUDGET_IDENTIFIER("campaign_budget_identifier"),
     CURRENCY("currency"),
     CATEGORY("category"),
+    HAS_EU_POLITICAL_ADS("has_eu_political_ads"),
     RAW("raw");
 
     @JsonValue

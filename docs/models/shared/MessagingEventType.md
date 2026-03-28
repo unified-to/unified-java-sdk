@@ -25,6 +25,7 @@ MessagingEventType custom = MessagingEventType.of("custom_value");
 | `CHANNEL_LEFT`     | CHANNEL_LEFT       |
 | `CHANNEL_CREATED`  | CHANNEL_CREATED    |
 | `CHANNEL_DELETED`  | CHANNEL_DELETED    |
+| `CHANNEL_RENAMED`  | CHANNEL_RENAMED    |
 | `USER_CREATED`     | USER_CREATED       |
 | `USER_DELETED`     | USER_DELETED       |
 | `USER_UPDATED`     | USER_UPDATED       |

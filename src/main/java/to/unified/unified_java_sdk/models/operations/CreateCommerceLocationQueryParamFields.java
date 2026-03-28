@@ -19,7 +19,18 @@ public enum CreateCommerceLocationQueryParamFields {
     LANGUAGE_LOCALE("language_locale"),
     PARENT_ID("parent_id"),
     CURRENCY("currency"),
-    RAW("raw");
+    LOCATION_TYPE("location_type"),
+    TELEPHONES("telephones"),
+    RATING("rating"),
+    REVIEW_COUNT("review_count"),
+    PRICE_LEVEL("price_level"),
+    LATITUDE("latitude"),
+    LONGITUDE("longitude"),
+    IMAGE_URL("image_url"),
+    WEB_URL("web_url"),
+    MEDIA("media"),
+    RAW("raw"),
+    CATEGORIES("categories");
 
     @JsonValue
     private final String value;

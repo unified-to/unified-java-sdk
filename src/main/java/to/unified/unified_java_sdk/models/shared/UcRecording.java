@@ -76,6 +76,11 @@ public class UcRecording {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("type")
+    private UcRecordingType type;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
@@ -83,6 +88,16 @@ public class UcRecording {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     private String userId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("user_name")
+    private String userName;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("user_phone")
+    private String userPhone;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -102,8 +117,11 @@ public class UcRecording {
             @JsonProperty("media") @Nullable List<UcRecordingMedia> media,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("start_at") @Nullable OffsetDateTime startAt,
+            @JsonProperty("type") @Nullable UcRecordingType type,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
             @JsonProperty("user_id") @Nullable String userId,
+            @JsonProperty("user_name") @Nullable String userName,
+            @JsonProperty("user_phone") @Nullable String userPhone,
             @JsonProperty("web_url") @Nullable String webUrl) {
         this.callId = callId;
         this.contactId = contactId;
@@ -116,13 +134,17 @@ public class UcRecording {
         this.media = media;
         this.raw = raw;
         this.startAt = startAt;
+        this.type = type;
         this.updatedAt = updatedAt;
         this.userId = userId;
+        this.userName = userName;
+        this.userPhone = userPhone;
         this.webUrl = webUrl;
     }
     
     public UcRecording() {
         this(null, null, null,
+            null, null, null,
             null, null, null,
             null, null, null,
             null, null, null,
@@ -173,12 +195,24 @@ public class UcRecording {
         return Optional.ofNullable(this.startAt);
     }
 
+    public Optional<UcRecordingType> type() {
+        return Optional.ofNullable(this.type);
+    }
+
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
     }
 
     public Optional<String> userId() {
         return Optional.ofNullable(this.userId);
+    }
+
+    public Optional<String> userName() {
+        return Optional.ofNullable(this.userName);
+    }
+
+    public Optional<String> userPhone() {
+        return Optional.ofNullable(this.userPhone);
     }
 
     public Optional<String> webUrl() {
@@ -256,6 +290,12 @@ public class UcRecording {
     }
 
 
+    public UcRecording withType(@Nullable UcRecordingType type) {
+        this.type = type;
+        return this;
+    }
+
+
     public UcRecording withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -264,6 +304,18 @@ public class UcRecording {
 
     public UcRecording withUserId(@Nullable String userId) {
         this.userId = userId;
+        return this;
+    }
+
+
+    public UcRecording withUserName(@Nullable String userName) {
+        this.userName = userName;
+        return this;
+    }
+
+
+    public UcRecording withUserPhone(@Nullable String userPhone) {
+        this.userPhone = userPhone;
         return this;
     }
 
@@ -295,8 +347,11 @@ public class UcRecording {
             Utils.enhancedDeepEquals(this.media, other.media) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.startAt, other.startAt) &&
+            Utils.enhancedDeepEquals(this.type, other.type) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
             Utils.enhancedDeepEquals(this.userId, other.userId) &&
+            Utils.enhancedDeepEquals(this.userName, other.userName) &&
+            Utils.enhancedDeepEquals(this.userPhone, other.userPhone) &&
             Utils.enhancedDeepEquals(this.webUrl, other.webUrl);
     }
     
@@ -306,8 +361,9 @@ public class UcRecording {
             callId, contactId, contactName,
             contactPhone, createdAt, endAt,
             expiresAt, id, media,
-            raw, startAt, updatedAt,
-            userId, webUrl);
+            raw, startAt, type,
+            updatedAt, userId, userName,
+            userPhone, webUrl);
     }
     
     @Override
@@ -324,8 +380,11 @@ public class UcRecording {
                 "media", media,
                 "raw", raw,
                 "startAt", startAt,
+                "type", type,
                 "updatedAt", updatedAt,
                 "userId", userId,
+                "userName", userName,
+                "userPhone", userPhone,
                 "webUrl", webUrl);
     }
 
@@ -354,9 +413,15 @@ public class UcRecording {
 
         private OffsetDateTime startAt;
 
+        private UcRecordingType type;
+
         private OffsetDateTime updatedAt;
 
         private String userId;
+
+        private String userName;
+
+        private String userPhone;
 
         private String webUrl;
 
@@ -419,6 +484,11 @@ public class UcRecording {
             return this;
         }
 
+        public Builder type(@Nullable UcRecordingType type) {
+            this.type = type;
+            return this;
+        }
+
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
@@ -426,6 +496,16 @@ public class UcRecording {
 
         public Builder userId(@Nullable String userId) {
             this.userId = userId;
+            return this;
+        }
+
+        public Builder userName(@Nullable String userName) {
+            this.userName = userName;
+            return this;
+        }
+
+        public Builder userPhone(@Nullable String userPhone) {
+            this.userPhone = userPhone;
             return this;
         }
 
@@ -439,8 +519,9 @@ public class UcRecording {
                 callId, contactId, contactName,
                 contactPhone, createdAt, endAt,
                 expiresAt, id, media,
-                raw, startAt, updatedAt,
-                userId, webUrl);
+                raw, startAt, type,
+                updatedAt, userId, userName,
+                userPhone, webUrl);
         }
 
     }

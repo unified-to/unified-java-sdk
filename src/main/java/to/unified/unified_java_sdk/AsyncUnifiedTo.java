@@ -107,6 +107,8 @@ public class AsyncUnifiedTo {
 
     private final AsyncCommerce commerce;
 
+    private final AsyncAvailability availability;
+
     private final AsyncCollection collection;
 
     private final AsyncInventory inventory;
@@ -116,6 +118,8 @@ public class AsyncUnifiedTo {
     private final AsyncItemvariant itemvariant;
 
     private final AsyncLocation location;
+
+    private final AsyncReservation reservation;
 
     private final AsyncReview review;
 
@@ -467,6 +471,10 @@ public class AsyncUnifiedTo {
         return commerce;
     }
 
+    public AsyncAvailability availability() {
+        return availability;
+    }
+
     public AsyncCollection collection() {
         return collection;
     }
@@ -485,6 +493,10 @@ public class AsyncUnifiedTo {
 
     public AsyncLocation location() {
         return location;
+    }
+
+    public AsyncReservation reservation() {
+        return reservation;
     }
 
     public AsyncReview review() {
@@ -864,11 +876,13 @@ public class AsyncUnifiedTo {
         this.recording = new AsyncRecording(syncSDK.recording(), sdkConfiguration);
         this.webinar = new AsyncWebinar(syncSDK.webinar(), sdkConfiguration);
         this.commerce = new AsyncCommerce(syncSDK.commerce(), sdkConfiguration);
+        this.availability = new AsyncAvailability(syncSDK.availability(), sdkConfiguration);
         this.collection = new AsyncCollection(syncSDK.collection(), sdkConfiguration);
         this.inventory = new AsyncInventory(syncSDK.inventory(), sdkConfiguration);
         this.item = new AsyncItem(syncSDK.item(), sdkConfiguration);
         this.itemvariant = new AsyncItemvariant(syncSDK.itemvariant(), sdkConfiguration);
         this.location = new AsyncLocation(syncSDK.location(), sdkConfiguration);
+        this.reservation = new AsyncReservation(syncSDK.reservation(), sdkConfiguration);
         this.review = new AsyncReview(syncSDK.review(), sdkConfiguration);
         this.saleschannel = new AsyncSaleschannel(syncSDK.saleschannel(), sdkConfiguration);
         this.crm = new AsyncCrm(syncSDK.crm(), sdkConfiguration);

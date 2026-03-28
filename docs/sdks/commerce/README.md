@@ -9,6 +9,7 @@
 * [createCommerceItem](#createcommerceitem) - Create an item
 * [createCommerceItemvariant](#createcommerceitemvariant) - Create an itemvariant
 * [createCommerceLocation](#createcommercelocation) - Create a location
+* [createCommerceReservation](#createcommercereservation) - Create a reservation
 * [createCommerceReview](#createcommercereview) - Create a review
 * [createCommerceSaleschannel](#createcommercesaleschannel) - Create a saleschannel
 * [getCommerceCollection](#getcommercecollection) - Retrieve a collection
@@ -16,13 +17,16 @@
 * [getCommerceItem](#getcommerceitem) - Retrieve an item
 * [getCommerceItemvariant](#getcommerceitemvariant) - Retrieve an itemvariant
 * [getCommerceLocation](#getcommercelocation) - Retrieve a location
+* [getCommerceReservation](#getcommercereservation) - Retrieve a reservation
 * [getCommerceReview](#getcommercereview) - Retrieve a review
 * [getCommerceSaleschannel](#getcommercesaleschannel) - Retrieve a saleschannel
+* [listCommerceAvailabilities](#listcommerceavailabilities) - List all availabilities
 * [listCommerceCollections](#listcommercecollections) - List all collections
 * [listCommerceInventories](#listcommerceinventories) - List all inventories
 * [listCommerceItems](#listcommerceitems) - List all items
 * [listCommerceItemvariants](#listcommerceitemvariants) - List all itemvariants
 * [listCommerceLocations](#listcommercelocations) - List all locations
+* [listCommerceReservations](#listcommercereservations) - List all reservations
 * [listCommerceReviews](#listcommercereviews) - List all reviews
 * [listCommerceSaleschannels](#listcommercesaleschannels) - List all saleschannels
 * [patchCommerceCollection](#patchcommercecollection) - Update a collection
@@ -30,6 +34,7 @@
 * [patchCommerceItem](#patchcommerceitem) - Update an item
 * [patchCommerceItemvariant](#patchcommerceitemvariant) - Update an itemvariant
 * [patchCommerceLocation](#patchcommercelocation) - Update a location
+* [patchCommerceReservation](#patchcommercereservation) - Update a reservation
 * [patchCommerceReview](#patchcommercereview) - Update a review
 * [patchCommerceSaleschannel](#patchcommercesaleschannel) - Update a saleschannel
 * [removeCommerceCollection](#removecommercecollection) - Remove a collection
@@ -37,6 +42,7 @@
 * [removeCommerceItem](#removecommerceitem) - Remove an item
 * [removeCommerceItemvariant](#removecommerceitemvariant) - Remove an itemvariant
 * [removeCommerceLocation](#removecommercelocation) - Remove a location
+* [removeCommerceReservation](#removecommercereservation) - Remove a reservation
 * [removeCommerceReview](#removecommercereview) - Remove a review
 * [removeCommerceSaleschannel](#removecommercesaleschannel) - Remove a saleschannel
 * [updateCommerceCollection](#updatecommercecollection) - Update a collection
@@ -44,6 +50,7 @@
 * [updateCommerceItem](#updatecommerceitem) - Update an item
 * [updateCommerceItemvariant](#updatecommerceitemvariant) - Update an itemvariant
 * [updateCommerceLocation](#updatecommercelocation) - Update a location
+* [updateCommerceReservation](#updatecommercereservation) - Update a reservation
 * [updateCommerceReview](#updatecommercereview) - Update a review
 * [updateCommerceSaleschannel](#updatecommercesaleschannel) - Update a saleschannel
 
@@ -343,6 +350,66 @@ public class Application {
 ### Response
 
 **[CreateCommerceLocationResponse](../../models/operations/CreateCommerceLocationResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## createCommerceReservation
+
+Create a reservation
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="createCommerceReservation" method="post" path="/commerce/{connection_id}/reservation" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceReservationRequest;
+import to.unified.unified_java_sdk.models.operations.CreateCommerceReservationResponse;
+import to.unified.unified_java_sdk.models.shared.CommerceReservation;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        CreateCommerceReservationRequest req = CreateCommerceReservationRequest.builder()
+                .commerceReservation(CommerceReservation.builder()
+                    .build())
+                .connectionId("<id>")
+                .build();
+
+        CreateCommerceReservationResponse res = sdk.commerce().createCommerceReservation()
+                .request(req)
+                .call();
+
+        if (res.commerceReservation().isPresent()) {
+            System.out.println(res.commerceReservation().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `request`                                                                                       | [CreateCommerceReservationRequest](../../models/operations/CreateCommerceReservationRequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
+
+### Response
+
+**[CreateCommerceReservationResponse](../../models/operations/CreateCommerceReservationResponse.md)**
 
 ### Errors
 
@@ -761,6 +828,64 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## getCommerceReservation
+
+Retrieve a reservation
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getCommerceReservation" method="get" path="/commerce/{connection_id}/reservation/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetCommerceReservationRequest;
+import to.unified.unified_java_sdk.models.operations.GetCommerceReservationResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetCommerceReservationRequest req = GetCommerceReservationRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetCommerceReservationResponse res = sdk.commerce().getCommerceReservation()
+                .request(req)
+                .call();
+
+        if (res.commerceReservation().isPresent()) {
+            System.out.println(res.commerceReservation().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                 | Type                                                                                      | Required                                                                                  | Description                                                                               |
+| ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| `request`                                                                                 | [GetCommerceReservationRequest](../../models/operations/GetCommerceReservationRequest.md) | :heavy_check_mark:                                                                        | The request object to use for the request.                                                |
+
+### Response
+
+**[GetCommerceReservationResponse](../../models/operations/GetCommerceReservationResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## getCommerceReview
 
 Retrieve a review
@@ -870,6 +995,63 @@ public class Application {
 ### Response
 
 **[GetCommerceSaleschannelResponse](../../models/operations/GetCommerceSaleschannelResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## listCommerceAvailabilities
+
+List all availabilities
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listCommerceAvailabilities" method="get" path="/commerce/{connection_id}/availability" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListCommerceAvailabilitiesRequest;
+import to.unified.unified_java_sdk.models.operations.ListCommerceAvailabilitiesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListCommerceAvailabilitiesRequest req = ListCommerceAvailabilitiesRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListCommerceAvailabilitiesResponse res = sdk.commerce().listCommerceAvailabilities()
+                .request(req)
+                .call();
+
+        if (res.commerceAvailabilities().isPresent()) {
+            System.out.println(res.commerceAvailabilities().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                         | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `request`                                                                                         | [ListCommerceAvailabilitiesRequest](../../models/operations/ListCommerceAvailabilitiesRequest.md) | :heavy_check_mark:                                                                                | The request object to use for the request.                                                        |
+
+### Response
+
+**[ListCommerceAvailabilitiesResponse](../../models/operations/ListCommerceAvailabilitiesResponse.md)**
 
 ### Errors
 
@@ -1155,6 +1337,63 @@ public class Application {
 ### Response
 
 **[ListCommerceLocationsResponse](../../models/operations/ListCommerceLocationsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## listCommerceReservations
+
+List all reservations
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listCommerceReservations" method="get" path="/commerce/{connection_id}/reservation" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListCommerceReservationsRequest;
+import to.unified.unified_java_sdk.models.operations.ListCommerceReservationsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListCommerceReservationsRequest req = ListCommerceReservationsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListCommerceReservationsResponse res = sdk.commerce().listCommerceReservations()
+                .request(req)
+                .call();
+
+        if (res.commerceReservations().isPresent()) {
+            System.out.println(res.commerceReservations().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [ListCommerceReservationsRequest](../../models/operations/ListCommerceReservationsRequest.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
+
+### Response
+
+**[ListCommerceReservationsResponse](../../models/operations/ListCommerceReservationsResponse.md)**
 
 ### Errors
 
@@ -1584,6 +1823,67 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## patchCommerceReservation
+
+Update a reservation
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchCommerceReservation" method="patch" path="/commerce/{connection_id}/reservation/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceReservationRequest;
+import to.unified.unified_java_sdk.models.operations.PatchCommerceReservationResponse;
+import to.unified.unified_java_sdk.models.shared.CommerceReservation;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchCommerceReservationRequest req = PatchCommerceReservationRequest.builder()
+                .commerceReservation(CommerceReservation.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchCommerceReservationResponse res = sdk.commerce().patchCommerceReservation()
+                .request(req)
+                .call();
+
+        if (res.commerceReservation().isPresent()) {
+            System.out.println(res.commerceReservation().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                     | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `request`                                                                                     | [PatchCommerceReservationRequest](../../models/operations/PatchCommerceReservationRequest.md) | :heavy_check_mark:                                                                            | The request object to use for the request.                                                    |
+
+### Response
+
+**[PatchCommerceReservationResponse](../../models/operations/PatchCommerceReservationResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## patchCommerceReview
 
 Update a review
@@ -1980,6 +2280,62 @@ public class Application {
 ### Response
 
 **[RemoveCommerceLocationResponse](../../models/operations/RemoveCommerceLocationResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeCommerceReservation
+
+Remove a reservation
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeCommerceReservation" method="delete" path="/commerce/{connection_id}/reservation/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceReservationRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveCommerceReservationResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveCommerceReservationRequest req = RemoveCommerceReservationRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveCommerceReservationResponse res = sdk.commerce().removeCommerceReservation()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `request`                                                                                       | [RemoveCommerceReservationRequest](../../models/operations/RemoveCommerceReservationRequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
+
+### Response
+
+**[RemoveCommerceReservationResponse](../../models/operations/RemoveCommerceReservationResponse.md)**
 
 ### Errors
 
@@ -2400,6 +2756,67 @@ public class Application {
 ### Response
 
 **[UpdateCommerceLocationResponse](../../models/operations/UpdateCommerceLocationResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateCommerceReservation
+
+Update a reservation
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateCommerceReservation" method="put" path="/commerce/{connection_id}/reservation/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceReservationRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateCommerceReservationResponse;
+import to.unified.unified_java_sdk.models.shared.CommerceReservation;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateCommerceReservationRequest req = UpdateCommerceReservationRequest.builder()
+                .commerceReservation(CommerceReservation.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateCommerceReservationResponse res = sdk.commerce().updateCommerceReservation()
+                .request(req)
+                .call();
+
+        if (res.commerceReservation().isPresent()) {
+            System.out.println(res.commerceReservation().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                       | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `request`                                                                                       | [UpdateCommerceReservationRequest](../../models/operations/UpdateCommerceReservationRequest.md) | :heavy_check_mark:                                                                              | The request object to use for the request.                                                      |
+
+### Response
+
+**[UpdateCommerceReservationResponse](../../models/operations/UpdateCommerceReservationResponse.md)**
 
 ### Errors
 

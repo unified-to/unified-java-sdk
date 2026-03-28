@@ -38,6 +38,11 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("currency")
+    private String currency;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("department")
     private String department;
 
@@ -93,6 +98,7 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
             @JsonProperty("additionalManagers") @Nullable List<ScimManager> additionalManagers,
             @JsonProperty("birthday") @Nullable OffsetDateTime birthday,
             @JsonProperty("costCenter") @Nullable String costCenter,
+            @JsonProperty("currency") @Nullable String currency,
             @JsonProperty("department") @Nullable String department,
             @JsonProperty("division") @Nullable String division,
             @JsonProperty("employeeNumber") @Nullable String employeeNumber,
@@ -106,6 +112,7 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
         this.additionalManagers = additionalManagers;
         this.birthday = birthday;
         this.costCenter = costCenter;
+        this.currency = currency;
         this.department = department;
         this.division = division;
         this.employeeNumber = employeeNumber;
@@ -123,7 +130,7 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     public Optional<List<ScimManager>> additionalManagers() {
@@ -136,6 +143,10 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
 
     public Optional<String> costCenter() {
         return Optional.ofNullable(this.costCenter);
+    }
+
+    public Optional<String> currency() {
+        return Optional.ofNullable(this.currency);
     }
 
     public Optional<String> department() {
@@ -200,6 +211,12 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
 
     public PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User withCostCenter(@Nullable String costCenter) {
         this.costCenter = costCenter;
+        return this;
+    }
+
+
+    public PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User withCurrency(@Nullable String currency) {
+        this.currency = currency;
         return this;
     }
 
@@ -280,6 +297,7 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
             Utils.enhancedDeepEquals(this.additionalManagers, other.additionalManagers) &&
             Utils.enhancedDeepEquals(this.birthday, other.birthday) &&
             Utils.enhancedDeepEquals(this.costCenter, other.costCenter) &&
+            Utils.enhancedDeepEquals(this.currency, other.currency) &&
             Utils.enhancedDeepEquals(this.department, other.department) &&
             Utils.enhancedDeepEquals(this.division, other.division) &&
             Utils.enhancedDeepEquals(this.employeeNumber, other.employeeNumber) &&
@@ -296,10 +314,10 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
     public int hashCode() {
         return Utils.enhancedHash(
             additionalManagers, birthday, costCenter,
-            department, division, employeeNumber,
-            endDate, gender, level,
-            location, manager, organization,
-            startDate);
+            currency, department, division,
+            employeeNumber, endDate, gender,
+            level, location, manager,
+            organization, startDate);
     }
     
     @Override
@@ -308,6 +326,7 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
                 "additionalManagers", additionalManagers,
                 "birthday", birthday,
                 "costCenter", costCenter,
+                "currency", currency,
                 "department", department,
                 "division", division,
                 "employeeNumber", employeeNumber,
@@ -328,6 +347,8 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
         private OffsetDateTime birthday;
 
         private String costCenter;
+
+        private String currency;
 
         private String department;
 
@@ -365,6 +386,11 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
 
         public Builder costCenter(@Nullable String costCenter) {
             this.costCenter = costCenter;
+            return this;
+        }
+
+        public Builder currency(@Nullable String currency) {
+            this.currency = currency;
             return this;
         }
 
@@ -424,10 +450,10 @@ public class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User {
         public PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User build() {
             return new PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User(
                 additionalManagers, birthday, costCenter,
-                department, division, employeeNumber,
-                endDate, gender, level,
-                location, manager, organization,
-                startDate);
+                currency, department, division,
+                employeeNumber, endDate, gender,
+                level, location, manager,
+                organization, startDate);
         }
 
     }

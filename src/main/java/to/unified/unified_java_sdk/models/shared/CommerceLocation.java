@@ -10,10 +10,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
 import java.lang.Boolean;
+import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
@@ -24,6 +26,11 @@ public class CommerceLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     private PropertyCommerceLocationAddress address;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("categories")
+    private List<String> categories;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -47,6 +54,11 @@ public class CommerceLocation {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("image_url")
+    private String imageUrl;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
     private Boolean isActive;
 
@@ -54,6 +66,26 @@ public class CommerceLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language_locale")
     private String languageLocale;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("latitude")
+    private Double latitude;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("location_type")
+    private LocationType locationType;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("longitude")
+    private Double longitude;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("media")
+    private List<CommerceItemMedia> media;
 
 
     @JsonProperty("name")
@@ -66,51 +98,106 @@ public class CommerceLocation {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("price_level")
+    private String priceLevel;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("rating")
+    private Double rating;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("review_count")
+    private Double reviewCount;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("telephones")
+    private List<CommerceTelephone> telephones;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("web_url")
+    private String webUrl;
+
     @JsonCreator
     public CommerceLocation(
             @JsonProperty("address") @Nullable PropertyCommerceLocationAddress address,
+            @JsonProperty("categories") @Nullable List<String> categories,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("currency") @Nullable String currency,
             @JsonProperty("description") @Nullable String description,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("image_url") @Nullable String imageUrl,
             @JsonProperty("is_active") @Nullable Boolean isActive,
             @JsonProperty("language_locale") @Nullable String languageLocale,
+            @JsonProperty("latitude") @Nullable Double latitude,
+            @JsonProperty("location_type") @Nullable LocationType locationType,
+            @JsonProperty("longitude") @Nullable Double longitude,
+            @JsonProperty("media") @Nullable List<CommerceItemMedia> media,
             @JsonProperty("name") @Nonnull String name,
             @JsonProperty("parent_id") @Nullable String parentId,
+            @JsonProperty("price_level") @Nullable String priceLevel,
+            @JsonProperty("rating") @Nullable Double rating,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
-            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
+            @JsonProperty("review_count") @Nullable Double reviewCount,
+            @JsonProperty("telephones") @Nullable List<CommerceTelephone> telephones,
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
+            @JsonProperty("web_url") @Nullable String webUrl) {
         this.address = address;
+        this.categories = categories;
         this.createdAt = createdAt;
         this.currency = currency;
         this.description = description;
         this.id = id;
+        this.imageUrl = imageUrl;
         this.isActive = isActive;
         this.languageLocale = languageLocale;
+        this.latitude = latitude;
+        this.locationType = locationType;
+        this.longitude = longitude;
+        this.media = media;
         this.name = Optional.ofNullable(name)
             .orElseThrow(() -> new IllegalArgumentException("name cannot be null"));
         this.parentId = parentId;
+        this.priceLevel = priceLevel;
+        this.rating = rating;
         this.raw = raw;
+        this.reviewCount = reviewCount;
+        this.telephones = telephones;
         this.updatedAt = updatedAt;
+        this.webUrl = webUrl;
     }
     
     public CommerceLocation(
             @Nonnull String name) {
         this(null, null, null,
             null, null, null,
+            null, null, null,
+            null, null, null,
             null, name, null,
-            null, null);
+            null, null, null,
+            null, null, null,
+            null);
     }
 
     public Optional<PropertyCommerceLocationAddress> address() {
         return Optional.ofNullable(this.address);
+    }
+
+    public Optional<List<String>> categories() {
+        return Optional.ofNullable(this.categories);
     }
 
     public Optional<OffsetDateTime> createdAt() {
@@ -129,12 +216,32 @@ public class CommerceLocation {
         return Optional.ofNullable(this.id);
     }
 
+    public Optional<String> imageUrl() {
+        return Optional.ofNullable(this.imageUrl);
+    }
+
     public Optional<Boolean> isActive() {
         return Optional.ofNullable(this.isActive);
     }
 
     public Optional<String> languageLocale() {
         return Optional.ofNullable(this.languageLocale);
+    }
+
+    public Optional<Double> latitude() {
+        return Optional.ofNullable(this.latitude);
+    }
+
+    public Optional<LocationType> locationType() {
+        return Optional.ofNullable(this.locationType);
+    }
+
+    public Optional<Double> longitude() {
+        return Optional.ofNullable(this.longitude);
+    }
+
+    public Optional<List<CommerceItemMedia>> media() {
+        return Optional.ofNullable(this.media);
     }
 
     public String name() {
@@ -145,12 +252,32 @@ public class CommerceLocation {
         return Optional.ofNullable(this.parentId);
     }
 
+    public Optional<String> priceLevel() {
+        return Optional.ofNullable(this.priceLevel);
+    }
+
+    public Optional<Double> rating() {
+        return Optional.ofNullable(this.rating);
+    }
+
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
 
+    public Optional<Double> reviewCount() {
+        return Optional.ofNullable(this.reviewCount);
+    }
+
+    public Optional<List<CommerceTelephone>> telephones() {
+        return Optional.ofNullable(this.telephones);
+    }
+
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
+    }
+
+    public Optional<String> webUrl() {
+        return Optional.ofNullable(this.webUrl);
     }
 
     public static Builder builder() {
@@ -160,6 +287,12 @@ public class CommerceLocation {
 
     public CommerceLocation withAddress(@Nullable PropertyCommerceLocationAddress address) {
         this.address = address;
+        return this;
+    }
+
+
+    public CommerceLocation withCategories(@Nullable List<String> categories) {
+        this.categories = categories;
         return this;
     }
 
@@ -188,6 +321,12 @@ public class CommerceLocation {
     }
 
 
+    public CommerceLocation withImageUrl(@Nullable String imageUrl) {
+        this.imageUrl = imageUrl;
+        return this;
+    }
+
+
     public CommerceLocation withIsActive(@Nullable Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -196,6 +335,30 @@ public class CommerceLocation {
 
     public CommerceLocation withLanguageLocale(@Nullable String languageLocale) {
         this.languageLocale = languageLocale;
+        return this;
+    }
+
+
+    public CommerceLocation withLatitude(@Nullable Double latitude) {
+        this.latitude = latitude;
+        return this;
+    }
+
+
+    public CommerceLocation withLocationType(@Nullable LocationType locationType) {
+        this.locationType = locationType;
+        return this;
+    }
+
+
+    public CommerceLocation withLongitude(@Nullable Double longitude) {
+        this.longitude = longitude;
+        return this;
+    }
+
+
+    public CommerceLocation withMedia(@Nullable List<CommerceItemMedia> media) {
+        this.media = media;
         return this;
     }
 
@@ -212,14 +375,44 @@ public class CommerceLocation {
     }
 
 
+    public CommerceLocation withPriceLevel(@Nullable String priceLevel) {
+        this.priceLevel = priceLevel;
+        return this;
+    }
+
+
+    public CommerceLocation withRating(@Nullable Double rating) {
+        this.rating = rating;
+        return this;
+    }
+
+
     public CommerceLocation withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
 
+    public CommerceLocation withReviewCount(@Nullable Double reviewCount) {
+        this.reviewCount = reviewCount;
+        return this;
+    }
+
+
+    public CommerceLocation withTelephones(@Nullable List<CommerceTelephone> telephones) {
+        this.telephones = telephones;
+        return this;
+    }
+
+
     public CommerceLocation withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
+        return this;
+    }
+
+
+    public CommerceLocation withWebUrl(@Nullable String webUrl) {
+        this.webUrl = webUrl;
         return this;
     }
 
@@ -235,47 +428,75 @@ public class CommerceLocation {
         CommerceLocation other = (CommerceLocation) o;
         return 
             Utils.enhancedDeepEquals(this.address, other.address) &&
+            Utils.enhancedDeepEquals(this.categories, other.categories) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
             Utils.enhancedDeepEquals(this.description, other.description) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.imageUrl, other.imageUrl) &&
             Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
             Utils.enhancedDeepEquals(this.languageLocale, other.languageLocale) &&
+            Utils.enhancedDeepEquals(this.latitude, other.latitude) &&
+            Utils.enhancedDeepEquals(this.locationType, other.locationType) &&
+            Utils.enhancedDeepEquals(this.longitude, other.longitude) &&
+            Utils.enhancedDeepEquals(this.media, other.media) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
+            Utils.enhancedDeepEquals(this.priceLevel, other.priceLevel) &&
+            Utils.enhancedDeepEquals(this.rating, other.rating) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
-            Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
+            Utils.enhancedDeepEquals(this.reviewCount, other.reviewCount) &&
+            Utils.enhancedDeepEquals(this.telephones, other.telephones) &&
+            Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
+            Utils.enhancedDeepEquals(this.webUrl, other.webUrl);
     }
     
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            address, createdAt, currency,
-            description, id, isActive,
-            languageLocale, name, parentId,
-            raw, updatedAt);
+            address, categories, createdAt,
+            currency, description, id,
+            imageUrl, isActive, languageLocale,
+            latitude, locationType, longitude,
+            media, name, parentId,
+            priceLevel, rating, raw,
+            reviewCount, telephones, updatedAt,
+            webUrl);
     }
     
     @Override
     public String toString() {
         return Utils.toString(CommerceLocation.class,
                 "address", address,
+                "categories", categories,
                 "createdAt", createdAt,
                 "currency", currency,
                 "description", description,
                 "id", id,
+                "imageUrl", imageUrl,
                 "isActive", isActive,
                 "languageLocale", languageLocale,
+                "latitude", latitude,
+                "locationType", locationType,
+                "longitude", longitude,
+                "media", media,
                 "name", name,
                 "parentId", parentId,
+                "priceLevel", priceLevel,
+                "rating", rating,
                 "raw", raw,
-                "updatedAt", updatedAt);
+                "reviewCount", reviewCount,
+                "telephones", telephones,
+                "updatedAt", updatedAt,
+                "webUrl", webUrl);
     }
 
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
         private PropertyCommerceLocationAddress address;
+
+        private List<String> categories;
 
         private OffsetDateTime createdAt;
 
@@ -285,17 +506,37 @@ public class CommerceLocation {
 
         private String id;
 
+        private String imageUrl;
+
         private Boolean isActive;
 
         private String languageLocale;
+
+        private Double latitude;
+
+        private LocationType locationType;
+
+        private Double longitude;
+
+        private List<CommerceItemMedia> media;
 
         private String name;
 
         private String parentId;
 
+        private String priceLevel;
+
+        private Double rating;
+
         private Map<String, Object> raw;
 
+        private Double reviewCount;
+
+        private List<CommerceTelephone> telephones;
+
         private OffsetDateTime updatedAt;
+
+        private String webUrl;
 
         private Builder() {
           // force use of static builder() method
@@ -303,6 +544,11 @@ public class CommerceLocation {
 
         public Builder address(@Nullable PropertyCommerceLocationAddress address) {
             this.address = address;
+            return this;
+        }
+
+        public Builder categories(@Nullable List<String> categories) {
+            this.categories = categories;
             return this;
         }
 
@@ -326,6 +572,11 @@ public class CommerceLocation {
             return this;
         }
 
+        public Builder imageUrl(@Nullable String imageUrl) {
+            this.imageUrl = imageUrl;
+            return this;
+        }
+
         public Builder isActive(@Nullable Boolean isActive) {
             this.isActive = isActive;
             return this;
@@ -333,6 +584,26 @@ public class CommerceLocation {
 
         public Builder languageLocale(@Nullable String languageLocale) {
             this.languageLocale = languageLocale;
+            return this;
+        }
+
+        public Builder latitude(@Nullable Double latitude) {
+            this.latitude = latitude;
+            return this;
+        }
+
+        public Builder locationType(@Nullable LocationType locationType) {
+            this.locationType = locationType;
+            return this;
+        }
+
+        public Builder longitude(@Nullable Double longitude) {
+            this.longitude = longitude;
+            return this;
+        }
+
+        public Builder media(@Nullable List<CommerceItemMedia> media) {
+            this.media = media;
             return this;
         }
 
@@ -346,8 +617,28 @@ public class CommerceLocation {
             return this;
         }
 
+        public Builder priceLevel(@Nullable String priceLevel) {
+            this.priceLevel = priceLevel;
+            return this;
+        }
+
+        public Builder rating(@Nullable Double rating) {
+            this.rating = rating;
+            return this;
+        }
+
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
+            return this;
+        }
+
+        public Builder reviewCount(@Nullable Double reviewCount) {
+            this.reviewCount = reviewCount;
+            return this;
+        }
+
+        public Builder telephones(@Nullable List<CommerceTelephone> telephones) {
+            this.telephones = telephones;
             return this;
         }
 
@@ -356,12 +647,21 @@ public class CommerceLocation {
             return this;
         }
 
+        public Builder webUrl(@Nullable String webUrl) {
+            this.webUrl = webUrl;
+            return this;
+        }
+
         public CommerceLocation build() {
             return new CommerceLocation(
-                address, createdAt, currency,
-                description, id, isActive,
-                languageLocale, name, parentId,
-                raw, updatedAt);
+                address, categories, createdAt,
+                currency, description, id,
+                imageUrl, isActive, languageLocale,
+                latitude, locationType, longitude,
+                media, name, parentId,
+                priceLevel, rating, raw,
+                reviewCount, telephones, updatedAt,
+                webUrl);
         }
 
     }

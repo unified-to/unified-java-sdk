@@ -72,6 +72,11 @@ public class AccountingAccount {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("organization_id")
+    private String organizationId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_id")
     private String parentId;
 
@@ -126,6 +131,7 @@ public class AccountingAccount {
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_payable") @Nullable Boolean isPayable,
             @JsonProperty("name") @Nullable String name,
+            @JsonProperty("organization_id") @Nullable String organizationId,
             @JsonProperty("parent_id") @Nullable String parentId,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("section") @Nullable String section,
@@ -144,6 +150,7 @@ public class AccountingAccount {
         this.id = id;
         this.isPayable = isPayable;
         this.name = name;
+        this.organizationId = organizationId;
         this.parentId = parentId;
         this.raw = raw;
         this.section = section;
@@ -161,7 +168,8 @@ public class AccountingAccount {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     public Optional<Double> balance() {
@@ -198,6 +206,10 @@ public class AccountingAccount {
 
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
+    }
+
+    public Optional<String> organizationId() {
+        return Optional.ofNullable(this.organizationId);
     }
 
     public Optional<String> parentId() {
@@ -295,6 +307,12 @@ public class AccountingAccount {
     }
 
 
+    public AccountingAccount withOrganizationId(@Nullable String organizationId) {
+        this.organizationId = organizationId;
+        return this;
+    }
+
+
     public AccountingAccount withParentId(@Nullable String parentId) {
         this.parentId = parentId;
         return this;
@@ -368,6 +386,7 @@ public class AccountingAccount {
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isPayable, other.isPayable) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
+            Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
             Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.section, other.section) &&
@@ -385,9 +404,10 @@ public class AccountingAccount {
             balance, createdAt, currency,
             customerDefinedCode, description, group,
             id, isPayable, name,
-            parentId, raw, section,
-            status, subgroup, subsection,
-            taxonomy, type, updatedAt);
+            organizationId, parentId, raw,
+            section, status, subgroup,
+            subsection, taxonomy, type,
+            updatedAt);
     }
     
     @Override
@@ -402,6 +422,7 @@ public class AccountingAccount {
                 "id", id,
                 "isPayable", isPayable,
                 "name", name,
+                "organizationId", organizationId,
                 "parentId", parentId,
                 "raw", raw,
                 "section", section,
@@ -433,6 +454,8 @@ public class AccountingAccount {
         private Boolean isPayable;
 
         private String name;
+
+        private String organizationId;
 
         private String parentId;
 
@@ -501,6 +524,11 @@ public class AccountingAccount {
             return this;
         }
 
+        public Builder organizationId(@Nullable String organizationId) {
+            this.organizationId = organizationId;
+            return this;
+        }
+
         public Builder parentId(@Nullable String parentId) {
             this.parentId = parentId;
             return this;
@@ -551,9 +579,10 @@ public class AccountingAccount {
                 balance, createdAt, currency,
                 customerDefinedCode, description, group,
                 id, isPayable, name,
-                parentId, raw, section,
-                status, subgroup, subsection,
-                taxonomy, type, updatedAt);
+                organizationId, parentId, raw,
+                section, status, subgroup,
+                subsection, taxonomy, type,
+                updatedAt);
         }
 
     }

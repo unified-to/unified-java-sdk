@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.annotation.Nullable;
+import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;
@@ -71,6 +72,11 @@ public class AdsCampaign {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("has_eu_political_ads")
+    private Boolean hasEuPoliticalAds;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
 
@@ -131,6 +137,7 @@ public class AdsCampaign {
             @JsonProperty("end_at") @Nullable OffsetDateTime endAt,
             @JsonProperty("frequency_cap") @Nullable PropertyAdsCampaignFrequencyCap frequencyCap,
             @JsonProperty("goal") @Nullable Goal goal,
+            @JsonProperty("has_eu_political_ads") @Nullable Boolean hasEuPoliticalAds,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("organization_id") @Nullable String organizationId,
@@ -151,6 +158,7 @@ public class AdsCampaign {
         this.endAt = endAt;
         this.frequencyCap = frequencyCap;
         this.goal = goal;
+        this.hasEuPoliticalAds = hasEuPoliticalAds;
         this.id = id;
         this.name = name;
         this.organizationId = organizationId;
@@ -170,7 +178,7 @@ public class AdsCampaign {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<AdvertisingChannelType> advertisingChannelType() {
@@ -211,6 +219,10 @@ public class AdsCampaign {
 
     public Optional<Goal> goal() {
         return Optional.ofNullable(this.goal);
+    }
+
+    public Optional<Boolean> hasEuPoliticalAds() {
+        return Optional.ofNullable(this.hasEuPoliticalAds);
     }
 
     public Optional<String> id() {
@@ -318,6 +330,12 @@ public class AdsCampaign {
     }
 
 
+    public AdsCampaign withHasEuPoliticalAds(@Nullable Boolean hasEuPoliticalAds) {
+        this.hasEuPoliticalAds = hasEuPoliticalAds;
+        return this;
+    }
+
+
     public AdsCampaign withId(@Nullable String id) {
         this.id = id;
         return this;
@@ -398,6 +416,7 @@ public class AdsCampaign {
             Utils.enhancedDeepEquals(this.endAt, other.endAt) &&
             Utils.enhancedDeepEquals(this.frequencyCap, other.frequencyCap) &&
             Utils.enhancedDeepEquals(this.goal, other.goal) &&
+            Utils.enhancedDeepEquals(this.hasEuPoliticalAds, other.hasEuPoliticalAds) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
@@ -416,10 +435,10 @@ public class AdsCampaign {
             advertisingChannelType, budgetAmount, budgetPeriod,
             campaignBudgetIdentifier, category, createdAt,
             currency, endAt, frequencyCap,
-            goal, id, name,
-            organizationId, plannedSpendAmount, raw,
-            startAt, status, targeting,
-            totalSpendAmount, updatedAt);
+            goal, hasEuPoliticalAds, id,
+            name, organizationId, plannedSpendAmount,
+            raw, startAt, status,
+            targeting, totalSpendAmount, updatedAt);
     }
     
     @Override
@@ -435,6 +454,7 @@ public class AdsCampaign {
                 "endAt", endAt,
                 "frequencyCap", frequencyCap,
                 "goal", goal,
+                "hasEuPoliticalAds", hasEuPoliticalAds,
                 "id", id,
                 "name", name,
                 "organizationId", organizationId,
@@ -469,6 +489,8 @@ public class AdsCampaign {
         private PropertyAdsCampaignFrequencyCap frequencyCap;
 
         private Goal goal;
+
+        private Boolean hasEuPoliticalAds;
 
         private String id;
 
@@ -544,6 +566,11 @@ public class AdsCampaign {
             return this;
         }
 
+        public Builder hasEuPoliticalAds(@Nullable Boolean hasEuPoliticalAds) {
+            this.hasEuPoliticalAds = hasEuPoliticalAds;
+            return this;
+        }
+
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
@@ -599,10 +626,10 @@ public class AdsCampaign {
                 advertisingChannelType, budgetAmount, budgetPeriod,
                 campaignBudgetIdentifier, category, createdAt,
                 currency, endAt, frequencyCap,
-                goal, id, name,
-                organizationId, plannedSpendAmount, raw,
-                startAt, status, targeting,
-                totalSpendAmount, updatedAt);
+                goal, hasEuPoliticalAds, id,
+                name, organizationId, plannedSpendAmount,
+                raw, startAt, status,
+                targeting, totalSpendAmount, updatedAt);
         }
 
     }

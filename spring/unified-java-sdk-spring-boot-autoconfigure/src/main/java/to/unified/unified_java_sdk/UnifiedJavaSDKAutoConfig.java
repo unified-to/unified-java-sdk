@@ -738,6 +738,17 @@ public class UnifiedJavaSDKAutoConfig {
         return unifiedTo.commerce();
     }
     /**
+     * Creates a Availability sub-SDK bean if none exists.
+     *
+     * @param unifiedTo the main SDK instance
+     * @return A configured Availability instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public Availability availability(UnifiedTo unifiedTo) {
+        return unifiedTo.availability();
+    }
+    /**
      * Creates a Collection sub-SDK bean if none exists.
      *
      * @param unifiedTo the main SDK instance
@@ -791,6 +802,17 @@ public class UnifiedJavaSDKAutoConfig {
     @ConditionalOnMissingBean
     public Location location(UnifiedTo unifiedTo) {
         return unifiedTo.location();
+    }
+    /**
+     * Creates a Reservation sub-SDK bean if none exists.
+     *
+     * @param unifiedTo the main SDK instance
+     * @return A configured Reservation instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public Reservation reservation(UnifiedTo unifiedTo) {
+        return unifiedTo.reservation();
     }
     /**
      * Creates a Review sub-SDK bean if none exists.
@@ -2214,6 +2236,17 @@ public class UnifiedJavaSDKAutoConfig {
         return asyncUnifiedTo.commerce();
     }
     /**
+     * Creates an AsyncAvailability sub-SDK bean if none exists.
+     *
+     * @param asyncUnifiedTo the async SDK instance
+     * @return A configured AsyncAvailability instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public AsyncAvailability asyncAvailability(AsyncUnifiedTo asyncUnifiedTo) {
+        return asyncUnifiedTo.availability();
+    }
+    /**
      * Creates an AsyncCollection sub-SDK bean if none exists.
      *
      * @param asyncUnifiedTo the async SDK instance
@@ -2267,6 +2300,17 @@ public class UnifiedJavaSDKAutoConfig {
     @ConditionalOnMissingBean
     public AsyncLocation asyncLocation(AsyncUnifiedTo asyncUnifiedTo) {
         return asyncUnifiedTo.location();
+    }
+    /**
+     * Creates an AsyncReservation sub-SDK bean if none exists.
+     *
+     * @param asyncUnifiedTo the async SDK instance
+     * @return A configured AsyncReservation instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public AsyncReservation asyncReservation(AsyncUnifiedTo asyncUnifiedTo) {
+        return asyncUnifiedTo.reservation();
     }
     /**
      * Creates an AsyncReview sub-SDK bean if none exists.

@@ -91,6 +91,11 @@ public class CommerceReview {
     @JsonProperty("item_variant_id")
     private String itemVariantId;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("location_id")
+    private String locationId;
+
     /**
      * Photosvideos attached to the review
      */
@@ -135,6 +140,11 @@ public class CommerceReview {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("url")
+    private String url;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verified_purchase")
     private Boolean verifiedPurchase;
 
@@ -154,6 +164,7 @@ public class CommerceReview {
             @JsonProperty("is_verified") @Nullable Boolean isVerified,
             @JsonProperty("item_id") @Nonnull String itemId,
             @JsonProperty("item_variant_id") @Nullable String itemVariantId,
+            @JsonProperty("location_id") @Nullable String locationId,
             @JsonProperty("media") @Nullable List<CommerceItemMedia> media,
             @JsonProperty("metadata") @Nullable List<CommerceMetadata> metadata,
             @JsonProperty("rating") @Nullable Double rating,
@@ -162,6 +173,7 @@ public class CommerceReview {
             @JsonProperty("title") @Nullable String title,
             @JsonProperty("unhelpful_votes") @Nullable Double unhelpfulVotes,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
+            @JsonProperty("url") @Nullable String url,
             @JsonProperty("verified_purchase") @Nullable Boolean verifiedPurchase) {
         this.authorAvatarUrl = authorAvatarUrl;
         this.authorEmail = authorEmail;
@@ -178,6 +190,7 @@ public class CommerceReview {
         this.itemId = Optional.ofNullable(itemId)
             .orElseThrow(() -> new IllegalArgumentException("itemId cannot be null"));
         this.itemVariantId = itemVariantId;
+        this.locationId = locationId;
         this.media = media;
         this.metadata = metadata;
         this.rating = rating;
@@ -186,6 +199,7 @@ public class CommerceReview {
         this.title = title;
         this.unhelpfulVotes = unhelpfulVotes;
         this.updatedAt = updatedAt;
+        this.url = url;
         this.verifiedPurchase = verifiedPurchase;
     }
     
@@ -198,7 +212,8 @@ public class CommerceReview {
             itemId, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null,
+            null);
     }
 
     public Optional<String> authorAvatarUrl() {
@@ -257,6 +272,10 @@ public class CommerceReview {
         return Optional.ofNullable(this.itemVariantId);
     }
 
+    public Optional<String> locationId() {
+        return Optional.ofNullable(this.locationId);
+    }
+
     /**
      * Photosvideos attached to the review
      */
@@ -290,6 +309,10 @@ public class CommerceReview {
 
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
+    }
+
+    public Optional<String> url() {
+        return Optional.ofNullable(this.url);
     }
 
     public Optional<Boolean> verifiedPurchase() {
@@ -385,6 +408,12 @@ public class CommerceReview {
     }
 
 
+    public CommerceReview withLocationId(@Nullable String locationId) {
+        this.locationId = locationId;
+        return this;
+    }
+
+
     /**
      * Photosvideos attached to the review
      */
@@ -436,6 +465,12 @@ public class CommerceReview {
     }
 
 
+    public CommerceReview withUrl(@Nullable String url) {
+        this.url = url;
+        return this;
+    }
+
+
     public CommerceReview withVerifiedPurchase(@Nullable Boolean verifiedPurchase) {
         this.verifiedPurchase = verifiedPurchase;
         return this;
@@ -466,6 +501,7 @@ public class CommerceReview {
             Utils.enhancedDeepEquals(this.isVerified, other.isVerified) &&
             Utils.enhancedDeepEquals(this.itemId, other.itemId) &&
             Utils.enhancedDeepEquals(this.itemVariantId, other.itemVariantId) &&
+            Utils.enhancedDeepEquals(this.locationId, other.locationId) &&
             Utils.enhancedDeepEquals(this.media, other.media) &&
             Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.rating, other.rating) &&
@@ -474,6 +510,7 @@ public class CommerceReview {
             Utils.enhancedDeepEquals(this.title, other.title) &&
             Utils.enhancedDeepEquals(this.unhelpfulVotes, other.unhelpfulVotes) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
+            Utils.enhancedDeepEquals(this.url, other.url) &&
             Utils.enhancedDeepEquals(this.verifiedPurchase, other.verifiedPurchase);
     }
     
@@ -484,10 +521,11 @@ public class CommerceReview {
             authorName, comments, content,
             createdAt, helpfulVotes, id,
             isFeatured, isPublic, isVerified,
-            itemId, itemVariantId, media,
-            metadata, rating, raw,
-            status, title, unhelpfulVotes,
-            updatedAt, verifiedPurchase);
+            itemId, itemVariantId, locationId,
+            media, metadata, rating,
+            raw, status, title,
+            unhelpfulVotes, updatedAt, url,
+            verifiedPurchase);
     }
     
     @Override
@@ -507,6 +545,7 @@ public class CommerceReview {
                 "isVerified", isVerified,
                 "itemId", itemId,
                 "itemVariantId", itemVariantId,
+                "locationId", locationId,
                 "media", media,
                 "metadata", metadata,
                 "rating", rating,
@@ -515,6 +554,7 @@ public class CommerceReview {
                 "title", title,
                 "unhelpfulVotes", unhelpfulVotes,
                 "updatedAt", updatedAt,
+                "url", url,
                 "verifiedPurchase", verifiedPurchase);
     }
 
@@ -549,6 +589,8 @@ public class CommerceReview {
 
         private String itemVariantId;
 
+        private String locationId;
+
         private List<CommerceItemMedia> media;
 
         private List<CommerceMetadata> metadata;
@@ -564,6 +606,8 @@ public class CommerceReview {
         private Double unhelpfulVotes;
 
         private OffsetDateTime updatedAt;
+
+        private String url;
 
         private Boolean verifiedPurchase;
 
@@ -641,6 +685,11 @@ public class CommerceReview {
             return this;
         }
 
+        public Builder locationId(@Nullable String locationId) {
+            this.locationId = locationId;
+            return this;
+        }
+
         /**
          * Photosvideos attached to the review
          */
@@ -684,6 +733,11 @@ public class CommerceReview {
             return this;
         }
 
+        public Builder url(@Nullable String url) {
+            this.url = url;
+            return this;
+        }
+
         public Builder verifiedPurchase(@Nullable Boolean verifiedPurchase) {
             this.verifiedPurchase = verifiedPurchase;
             return this;
@@ -695,10 +749,11 @@ public class CommerceReview {
                 authorName, comments, content,
                 createdAt, helpfulVotes, id,
                 isFeatured, isPublic, isVerified,
-                itemId, itemVariantId, media,
-                metadata, rating, raw,
-                status, title, unhelpfulVotes,
-                updatedAt, verifiedPurchase);
+                itemId, itemVariantId, locationId,
+                media, metadata, rating,
+                raw, status, title,
+                unhelpfulVotes, updatedAt, url,
+                verifiedPurchase);
         }
 
     }

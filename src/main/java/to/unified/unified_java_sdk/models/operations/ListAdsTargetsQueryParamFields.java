@@ -12,7 +12,8 @@ public enum ListAdsTargetsQueryParamFields {
     ID("id"),
     NAME("name"),
     VALUE("value"),
-    TYPE("type");
+    TYPE("type"),
+    RAW("raw");
 
     @JsonValue
     private final String value;

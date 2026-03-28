@@ -52,6 +52,11 @@ public class CommerceItem {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("duration")
+    private Double duration;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("global_code")
     private String globalCode;
 
@@ -84,6 +89,11 @@ public class CommerceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_visible")
     private Boolean isVisible;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("location_id")
+    private String locationId;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -184,6 +194,7 @@ public class CommerceItem {
             @JsonProperty("collections") @Nullable List<CommerceReference> collections,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("description") @Nullable String description,
+            @JsonProperty("duration") @Nullable Double duration,
             @JsonProperty("global_code") @Nullable String globalCode,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("inventory_id") @Nullable String inventoryId,
@@ -191,6 +202,7 @@ public class CommerceItem {
             @JsonProperty("is_featured") @Nullable Boolean isFeatured,
             @JsonProperty("is_taxable") @Nullable Boolean isTaxable,
             @JsonProperty("is_visible") @Nullable Boolean isVisible,
+            @JsonProperty("location_id") @Nullable String locationId,
             @JsonProperty("media") @Nullable List<CommerceItemMedia> media,
             @JsonProperty("metadata") @Nullable List<CommerceMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
@@ -214,6 +226,7 @@ public class CommerceItem {
         this.collections = collections;
         this.createdAt = createdAt;
         this.description = description;
+        this.duration = duration;
         this.globalCode = globalCode;
         this.id = id;
         this.inventoryId = inventoryId;
@@ -221,6 +234,7 @@ public class CommerceItem {
         this.isFeatured = isFeatured;
         this.isTaxable = isTaxable;
         this.isVisible = isVisible;
+        this.locationId = locationId;
         this.media = media;
         this.metadata = metadata;
         this.name = name;
@@ -251,7 +265,8 @@ public class CommerceItem {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null, null);
     }
 
     public Optional<String> accountId() {
@@ -280,6 +295,10 @@ public class CommerceItem {
         return Optional.ofNullable(this.description);
     }
 
+    public Optional<Double> duration() {
+        return Optional.ofNullable(this.duration);
+    }
+
     public Optional<String> globalCode() {
         return Optional.ofNullable(this.globalCode);
     }
@@ -306,6 +325,10 @@ public class CommerceItem {
 
     public Optional<Boolean> isVisible() {
         return Optional.ofNullable(this.isVisible);
+    }
+
+    public Optional<String> locationId() {
+        return Optional.ofNullable(this.locationId);
     }
 
     public Optional<List<CommerceItemMedia>> media() {
@@ -424,6 +447,12 @@ public class CommerceItem {
     }
 
 
+    public CommerceItem withDuration(@Nullable Double duration) {
+        this.duration = duration;
+        return this;
+    }
+
+
     public CommerceItem withGlobalCode(@Nullable String globalCode) {
         this.globalCode = globalCode;
         return this;
@@ -462,6 +491,12 @@ public class CommerceItem {
 
     public CommerceItem withIsVisible(@Nullable Boolean isVisible) {
         this.isVisible = isVisible;
+        return this;
+    }
+
+
+    public CommerceItem withLocationId(@Nullable String locationId) {
+        this.locationId = locationId;
         return this;
     }
 
@@ -592,6 +627,7 @@ public class CommerceItem {
             Utils.enhancedDeepEquals(this.collections, other.collections) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.description, other.description) &&
+            Utils.enhancedDeepEquals(this.duration, other.duration) &&
             Utils.enhancedDeepEquals(this.globalCode, other.globalCode) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.inventoryId, other.inventoryId) &&
@@ -599,6 +635,7 @@ public class CommerceItem {
             Utils.enhancedDeepEquals(this.isFeatured, other.isFeatured) &&
             Utils.enhancedDeepEquals(this.isTaxable, other.isTaxable) &&
             Utils.enhancedDeepEquals(this.isVisible, other.isVisible) &&
+            Utils.enhancedDeepEquals(this.locationId, other.locationId) &&
             Utils.enhancedDeepEquals(this.media, other.media) &&
             Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
@@ -623,15 +660,16 @@ public class CommerceItem {
     public int hashCode() {
         return Utils.enhancedHash(
             accountId, collectionIds, collections,
-            createdAt, description, globalCode,
-            id, inventoryId, isActive,
-            isFeatured, isTaxable, isVisible,
-            media, metadata, name,
-            prices, publicDescription, publicName,
-            raw, requiresShipping, slug,
-            tags, taxrateId, totalStock,
-            type, updatedAt, variants,
-            vendorName, weight, weightUnit);
+            createdAt, description, duration,
+            globalCode, id, inventoryId,
+            isActive, isFeatured, isTaxable,
+            isVisible, locationId, media,
+            metadata, name, prices,
+            publicDescription, publicName, raw,
+            requiresShipping, slug, tags,
+            taxrateId, totalStock, type,
+            updatedAt, variants, vendorName,
+            weight, weightUnit);
     }
     
     @Override
@@ -642,6 +680,7 @@ public class CommerceItem {
                 "collections", collections,
                 "createdAt", createdAt,
                 "description", description,
+                "duration", duration,
                 "globalCode", globalCode,
                 "id", id,
                 "inventoryId", inventoryId,
@@ -649,6 +688,7 @@ public class CommerceItem {
                 "isFeatured", isFeatured,
                 "isTaxable", isTaxable,
                 "isVisible", isVisible,
+                "locationId", locationId,
                 "media", media,
                 "metadata", metadata,
                 "name", name,
@@ -682,6 +722,8 @@ public class CommerceItem {
 
         private String description;
 
+        private Double duration;
+
         private String globalCode;
 
         private String id;
@@ -695,6 +737,8 @@ public class CommerceItem {
         private Boolean isTaxable;
 
         private Boolean isVisible;
+
+        private String locationId;
 
         private List<CommerceItemMedia> media;
 
@@ -767,6 +811,11 @@ public class CommerceItem {
             return this;
         }
 
+        public Builder duration(@Nullable Double duration) {
+            this.duration = duration;
+            return this;
+        }
+
         public Builder globalCode(@Nullable String globalCode) {
             this.globalCode = globalCode;
             return this;
@@ -799,6 +848,11 @@ public class CommerceItem {
 
         public Builder isVisible(@Nullable Boolean isVisible) {
             this.isVisible = isVisible;
+            return this;
+        }
+
+        public Builder locationId(@Nullable String locationId) {
+            this.locationId = locationId;
             return this;
         }
 
@@ -898,15 +952,16 @@ public class CommerceItem {
         public CommerceItem build() {
             return new CommerceItem(
                 accountId, collectionIds, collections,
-                createdAt, description, globalCode,
-                id, inventoryId, isActive,
-                isFeatured, isTaxable, isVisible,
-                media, metadata, name,
-                prices, publicDescription, publicName,
-                raw, requiresShipping, slug,
-                tags, taxrateId, totalStock,
-                type, updatedAt, variants,
-                vendorName, weight, weightUnit);
+                createdAt, description, duration,
+                globalCode, id, inventoryId,
+                isActive, isFeatured, isTaxable,
+                isVisible, locationId, media,
+                metadata, name, prices,
+                publicDescription, publicName, raw,
+                requiresShipping, slug, tags,
+                taxrateId, totalStock, type,
+                updatedAt, variants, vendorName,
+                weight, weightUnit);
         }
 
     }

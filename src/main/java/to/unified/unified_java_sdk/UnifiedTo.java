@@ -182,6 +182,9 @@ public class UnifiedTo {
     private final Commerce commerce;
 
 
+    private final Availability availability;
+
+
     private final Collection collection;
 
 
@@ -195,6 +198,9 @@ public class UnifiedTo {
 
 
     private final Location location;
+
+
+    private final Reservation reservation;
 
 
     private final Review review;
@@ -675,6 +681,11 @@ public class UnifiedTo {
     }
 
 
+    public Availability availability() {
+        return availability;
+    }
+
+
     public Collection collection() {
         return collection;
     }
@@ -697,6 +708,11 @@ public class UnifiedTo {
 
     public Location location() {
         return location;
+    }
+
+
+    public Reservation reservation() {
+        return reservation;
     }
 
 
@@ -1288,11 +1304,13 @@ public class UnifiedTo {
         this.recording = new Recording(sdkConfiguration);
         this.webinar = new Webinar(sdkConfiguration);
         this.commerce = new Commerce(sdkConfiguration);
+        this.availability = new Availability(sdkConfiguration);
         this.collection = new Collection(sdkConfiguration);
         this.inventory = new Inventory(sdkConfiguration);
         this.item = new Item(sdkConfiguration);
         this.itemvariant = new Itemvariant(sdkConfiguration);
         this.location = new Location(sdkConfiguration);
+        this.reservation = new Reservation(sdkConfiguration);
         this.review = new Review(sdkConfiguration);
         this.saleschannel = new Saleschannel(sdkConfiguration);
         this.crm = new Crm(sdkConfiguration);

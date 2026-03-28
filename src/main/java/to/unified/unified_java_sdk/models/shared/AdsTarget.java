@@ -9,8 +9,10 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
+import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
+import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -31,6 +33,11 @@ public class AdsTarget {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("raw")
+    private Map<String, Object> raw;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     private AdsTargetType type;
 
@@ -42,11 +49,13 @@ public class AdsTarget {
     public AdsTarget(
             @JsonProperty("id") @Nonnull String id,
             @JsonProperty("name") @Nullable String name,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("type") @Nullable AdsTargetType type,
             @JsonProperty("value") @Nonnull String value) {
         this.id = Optional.ofNullable(id)
             .orElseThrow(() -> new IllegalArgumentException("id cannot be null"));
         this.name = name;
+        this.raw = raw;
         this.type = type;
         this.value = Optional.ofNullable(value)
             .orElseThrow(() -> new IllegalArgumentException("value cannot be null"));
@@ -56,7 +65,7 @@ public class AdsTarget {
             @Nonnull String id,
             @Nonnull String value) {
         this(id, null, null,
-            value);
+            null, value);
     }
 
     public String id() {
@@ -65,6 +74,10 @@ public class AdsTarget {
 
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
+    }
+
+    public Optional<Map<String, Object>> raw() {
+        return Optional.ofNullable(this.raw);
     }
 
     public Optional<AdsTargetType> type() {
@@ -88,6 +101,12 @@ public class AdsTarget {
 
     public AdsTarget withName(@Nullable String name) {
         this.name = name;
+        return this;
+    }
+
+
+    public AdsTarget withRaw(@Nullable Map<String, Object> raw) {
+        this.raw = raw;
         return this;
     }
 
@@ -116,6 +135,7 @@ public class AdsTarget {
         return 
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
+            Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.type, other.type) &&
             Utils.enhancedDeepEquals(this.value, other.value);
     }
@@ -123,8 +143,8 @@ public class AdsTarget {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            id, name, type,
-            value);
+            id, name, raw,
+            type, value);
     }
     
     @Override
@@ -132,6 +152,7 @@ public class AdsTarget {
         return Utils.toString(AdsTarget.class,
                 "id", id,
                 "name", name,
+                "raw", raw,
                 "type", type,
                 "value", value);
     }
@@ -142,6 +163,8 @@ public class AdsTarget {
         private String id;
 
         private String name;
+
+        private Map<String, Object> raw;
 
         private AdsTargetType type;
 
@@ -161,6 +184,11 @@ public class AdsTarget {
             return this;
         }
 
+        public Builder raw(@Nullable Map<String, Object> raw) {
+            this.raw = raw;
+            return this;
+        }
+
         public Builder type(@Nullable AdsTargetType type) {
             this.type = type;
             return this;
@@ -173,8 +201,8 @@ public class AdsTarget {
 
         public AdsTarget build() {
             return new AdsTarget(
-                id, name, type,
-                value);
+                id, name, raw,
+                type, value);
         }
 
     }
