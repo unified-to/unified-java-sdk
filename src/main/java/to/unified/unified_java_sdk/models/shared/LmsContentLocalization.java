@@ -10,12 +10,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
-import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-public class LmsContentShapeLocalization {
+public class LmsContentLocalization {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
@@ -31,26 +30,18 @@ public class LmsContentShapeLocalization {
     @JsonProperty("name")
     private String name;
 
-
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("tags")
-    private List<String> tags;
-
     @JsonCreator
-    public LmsContentShapeLocalization(
+    public LmsContentLocalization(
             @JsonProperty("description") @Nullable String description,
             @JsonProperty("language") @Nullable String language,
-            @JsonProperty("name") @Nullable String name,
-            @JsonProperty("tags") @Nullable List<String> tags) {
+            @JsonProperty("name") @Nullable String name) {
         this.description = description;
         this.language = language;
         this.name = name;
-        this.tags = tags;
     }
     
-    public LmsContentShapeLocalization() {
-        this(null, null, null,
-            null);
+    public LmsContentLocalization() {
+        this(null, null, null);
     }
 
     public Optional<String> description() {
@@ -65,35 +56,25 @@ public class LmsContentShapeLocalization {
         return Optional.ofNullable(this.name);
     }
 
-    public Optional<List<String>> tags() {
-        return Optional.ofNullable(this.tags);
-    }
-
     public static Builder builder() {
         return new Builder();
     }
 
 
-    public LmsContentShapeLocalization withDescription(@Nullable String description) {
+    public LmsContentLocalization withDescription(@Nullable String description) {
         this.description = description;
         return this;
     }
 
 
-    public LmsContentShapeLocalization withLanguage(@Nullable String language) {
+    public LmsContentLocalization withLanguage(@Nullable String language) {
         this.language = language;
         return this;
     }
 
 
-    public LmsContentShapeLocalization withName(@Nullable String name) {
+    public LmsContentLocalization withName(@Nullable String name) {
         this.name = name;
-        return this;
-    }
-
-
-    public LmsContentShapeLocalization withTags(@Nullable List<String> tags) {
-        this.tags = tags;
         return this;
     }
 
@@ -106,28 +87,25 @@ public class LmsContentShapeLocalization {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        LmsContentShapeLocalization other = (LmsContentShapeLocalization) o;
+        LmsContentLocalization other = (LmsContentLocalization) o;
         return 
             Utils.enhancedDeepEquals(this.description, other.description) &&
             Utils.enhancedDeepEquals(this.language, other.language) &&
-            Utils.enhancedDeepEquals(this.name, other.name) &&
-            Utils.enhancedDeepEquals(this.tags, other.tags);
+            Utils.enhancedDeepEquals(this.name, other.name);
     }
     
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            description, language, name,
-            tags);
+            description, language, name);
     }
     
     @Override
     public String toString() {
-        return Utils.toString(LmsContentShapeLocalization.class,
+        return Utils.toString(LmsContentLocalization.class,
                 "description", description,
                 "language", language,
-                "name", name,
-                "tags", tags);
+                "name", name);
     }
 
     @SuppressWarnings("UnusedReturnValue")
@@ -138,8 +116,6 @@ public class LmsContentShapeLocalization {
         private String language;
 
         private String name;
-
-        private List<String> tags;
 
         private Builder() {
           // force use of static builder() method
@@ -160,15 +136,9 @@ public class LmsContentShapeLocalization {
             return this;
         }
 
-        public Builder tags(@Nullable List<String> tags) {
-            this.tags = tags;
-            return this;
-        }
-
-        public LmsContentShapeLocalization build() {
-            return new LmsContentShapeLocalization(
-                description, language, name,
-                tags);
+        public LmsContentLocalization build() {
+            return new LmsContentLocalization(
+                description, language, name);
         }
 
     }

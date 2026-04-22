@@ -239,6 +239,12 @@ public class AsyncUnifiedTo {
 
     private final AsyncTracking tracking;
 
+    private final AsyncSigning signing;
+
+    private final AsyncSignatory signatory;
+
+    private final AsyncTemplate template;
+
     private final AsyncStorage storage;
 
     private final AsyncFile file;
@@ -735,6 +741,18 @@ public class AsyncUnifiedTo {
         return tracking;
     }
 
+    public AsyncSigning signing() {
+        return signing;
+    }
+
+    public AsyncSignatory signatory() {
+        return signatory;
+    }
+
+    public AsyncTemplate template() {
+        return template;
+    }
+
     public AsyncStorage storage() {
         return storage;
     }
@@ -942,6 +960,9 @@ public class AsyncUnifiedTo {
         this.rate = new AsyncRate(syncSDK.rate(), sdkConfiguration);
         this.shipment = new AsyncShipment(syncSDK.shipment(), sdkConfiguration);
         this.tracking = new AsyncTracking(syncSDK.tracking(), sdkConfiguration);
+        this.signing = new AsyncSigning(syncSDK.signing(), sdkConfiguration);
+        this.signatory = new AsyncSignatory(syncSDK.signatory(), sdkConfiguration);
+        this.template = new AsyncTemplate(syncSDK.template(), sdkConfiguration);
         this.storage = new AsyncStorage(syncSDK.storage(), sdkConfiguration);
         this.file = new AsyncFile(syncSDK.file(), sdkConfiguration);
         this.task = new AsyncTask(syncSDK.task(), sdkConfiguration);

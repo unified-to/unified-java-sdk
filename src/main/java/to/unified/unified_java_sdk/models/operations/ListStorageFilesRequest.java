@@ -73,6 +73,12 @@ public class ListStorageFilesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
     private String raw;
 
+    /**
+     * The referenced entity ID to filter by (e.g. linked accounting record for storage_file)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reference")
+    private String reference;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     private String sort;
@@ -102,6 +108,7 @@ public class ListStorageFilesRequest {
             @Nullable String parentId,
             @Nullable String query,
             @Nullable String raw,
+            @Nullable String reference,
             @Nullable String sort,
             @Nullable String type,
             @Nullable String updatedGte) {
@@ -116,6 +123,7 @@ public class ListStorageFilesRequest {
         this.parentId = parentId;
         this.query = query;
         this.raw = raw;
+        this.reference = reference;
         this.sort = sort;
         this.type = type;
         this.updatedGte = updatedGte;
@@ -127,7 +135,7 @@ public class ListStorageFilesRequest {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     /**
@@ -191,6 +199,13 @@ public class ListStorageFilesRequest {
      */
     public Optional<String> raw() {
         return Optional.ofNullable(this.raw);
+    }
+
+    /**
+     * The referenced entity ID to filter by (e.g. linked accounting record for storage_file)
+     */
+    public Optional<String> reference() {
+        return Optional.ofNullable(this.reference);
     }
 
     public Optional<String> sort() {
@@ -300,6 +315,15 @@ public class ListStorageFilesRequest {
     }
 
 
+    /**
+     * The referenced entity ID to filter by (e.g. linked accounting record for storage_file)
+     */
+    public ListStorageFilesRequest withReference(@Nullable String reference) {
+        this.reference = reference;
+        return this;
+    }
+
+
     public ListStorageFilesRequest withSort(@Nullable String sort) {
         this.sort = sort;
         return this;
@@ -345,6 +369,7 @@ public class ListStorageFilesRequest {
             Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
             Utils.enhancedDeepEquals(this.query, other.query) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.reference, other.reference) &&
             Utils.enhancedDeepEquals(this.sort, other.sort) &&
             Utils.enhancedDeepEquals(this.type, other.type) &&
             Utils.enhancedDeepEquals(this.updatedGte, other.updatedGte);
@@ -356,8 +381,8 @@ public class ListStorageFilesRequest {
             connectionId, expand, fields,
             fulltext, limit, offset,
             order, parentId, query,
-            raw, sort, type,
-            updatedGte);
+            raw, reference, sort,
+            type, updatedGte);
     }
     
     @Override
@@ -373,6 +398,7 @@ public class ListStorageFilesRequest {
                 "parentId", parentId,
                 "query", query,
                 "raw", raw,
+                "reference", reference,
                 "sort", sort,
                 "type", type,
                 "updatedGte", updatedGte);
@@ -400,6 +426,8 @@ public class ListStorageFilesRequest {
         private String query;
 
         private String raw;
+
+        private String reference;
 
         private String sort;
 
@@ -484,6 +512,14 @@ public class ListStorageFilesRequest {
             return this;
         }
 
+        /**
+         * The referenced entity ID to filter by (e.g. linked accounting record for storage_file)
+         */
+        public Builder reference(@Nullable String reference) {
+            this.reference = reference;
+            return this;
+        }
+
         public Builder sort(@Nullable String sort) {
             this.sort = sort;
             return this;
@@ -511,8 +547,8 @@ public class ListStorageFilesRequest {
                 connectionId, expand, fields,
                 fulltext, limit, offset,
                 order, parentId, query,
-                raw, sort, type,
-                updatedGte);
+                raw, reference, sort,
+                type, updatedGte);
         }
 
     }

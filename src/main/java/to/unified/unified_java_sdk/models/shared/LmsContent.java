@@ -79,7 +79,7 @@ public class LmsContent {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localizations")
-    private List<LmsContentShapeLocalization> localizations;
+    private List<LmsContentLocalization> localizations;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -134,7 +134,7 @@ public class LmsContent {
             @JsonProperty("instructor_ids") @Nullable List<String> instructorIds,
             @JsonProperty("is_active") @Nullable Boolean isActive,
             @JsonProperty("languages") @Nullable List<String> languages,
-            @JsonProperty("localizations") @Nullable List<LmsContentShapeLocalization> localizations,
+            @JsonProperty("localizations") @Nullable List<LmsContentLocalization> localizations,
             @JsonProperty("media") @Nullable List<LmsMedia> media,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("provider_name") @Nullable String providerName,
@@ -219,7 +219,7 @@ public class LmsContent {
         return Optional.ofNullable(this.languages);
     }
 
-    public Optional<List<LmsContentShapeLocalization>> localizations() {
+    public Optional<List<LmsContentLocalization>> localizations() {
         return Optional.ofNullable(this.localizations);
     }
 
@@ -326,7 +326,7 @@ public class LmsContent {
     }
 
 
-    public LmsContent withLocalizations(@Nullable List<LmsContentShapeLocalization> localizations) {
+    public LmsContent withLocalizations(@Nullable List<LmsContentLocalization> localizations) {
         this.localizations = localizations;
         return this;
     }
@@ -474,7 +474,7 @@ public class LmsContent {
 
         private List<String> languages;
 
-        private List<LmsContentShapeLocalization> localizations;
+        private List<LmsContentLocalization> localizations;
 
         private List<LmsMedia> media;
 
@@ -551,7 +551,7 @@ public class LmsContent {
             return this;
         }
 
-        public Builder localizations(@Nullable List<LmsContentShapeLocalization> localizations) {
+        public Builder localizations(@Nullable List<LmsContentLocalization> localizations) {
             this.localizations = localizations;
             return this;
         }

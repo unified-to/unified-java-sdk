@@ -30,8 +30,8 @@ public enum CreateAccountingContactQueryParamFields {
     COMPANY_NAME("company_name"),
     IDENTIFICATION("identification"),
     ASSOCIATED_CONTACTS("associated_contacts"),
-    RAW("raw"),
-    ORGANIZATION_ID("organization_id");
+    ORGANIZATION_ID("organization_id"),
+    RAW("raw");
 
     @JsonValue
     private final String value;

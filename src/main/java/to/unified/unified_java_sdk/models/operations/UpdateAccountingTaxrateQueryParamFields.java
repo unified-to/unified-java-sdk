@@ -16,6 +16,7 @@ public enum UpdateAccountingTaxrateQueryParamFields {
     DESCRIPTION("description"),
     RATE("rate"),
     IS_ACTIVE("is_active"),
+    ORGANIZATION_ID("organization_id"),
     RAW("raw");
 
     @JsonValue

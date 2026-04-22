@@ -35,6 +35,12 @@ public class ListHrisDeductionsRequest {
     private String connectionId;
 
     /**
+     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_lt")
+    private String endLt;
+
+    /**
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
@@ -77,6 +83,12 @@ public class ListHrisDeductionsRequest {
     private String sort;
 
     /**
+     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_gte")
+    private String startGte;
+
+    /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
@@ -94,6 +106,7 @@ public class ListHrisDeductionsRequest {
             @Nullable String benefitId,
             @Nullable String companyId,
             @Nonnull String connectionId,
+            @Nullable String endLt,
             @Nullable List<ListHrisDeductionsQueryParamFields> fields,
             @Nullable Double limit,
             @Nullable Double offset,
@@ -102,12 +115,14 @@ public class ListHrisDeductionsRequest {
             @Nullable String query,
             @Nullable String raw,
             @Nullable String sort,
+            @Nullable String startGte,
             @Nullable String updatedGte,
             @Nullable String userId) {
         this.benefitId = benefitId;
         this.companyId = companyId;
         this.connectionId = Optional.ofNullable(connectionId)
             .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
+        this.endLt = endLt;
         this.fields = fields;
         this.limit = limit;
         this.offset = offset;
@@ -116,6 +131,7 @@ public class ListHrisDeductionsRequest {
         this.query = query;
         this.raw = raw;
         this.sort = sort;
+        this.startGte = startGte;
         this.updatedGte = updatedGte;
         this.userId = userId;
     }
@@ -126,7 +142,7 @@ public class ListHrisDeductionsRequest {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null, null);
     }
 
     /**
@@ -148,6 +164,13 @@ public class ListHrisDeductionsRequest {
      */
     public String connectionId() {
         return this.connectionId;
+    }
+
+    /**
+     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    public Optional<String> endLt() {
+        return Optional.ofNullable(this.endLt);
     }
 
     /**
@@ -197,6 +220,13 @@ public class ListHrisDeductionsRequest {
     }
 
     /**
+     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    public Optional<String> startGte() {
+        return Optional.ofNullable(this.startGte);
+    }
+
+    /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
@@ -239,6 +269,15 @@ public class ListHrisDeductionsRequest {
      */
     public ListHrisDeductionsRequest withConnectionId(@Nonnull String connectionId) {
         this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
+        return this;
+    }
+
+
+    /**
+     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    public ListHrisDeductionsRequest withEndLt(@Nullable String endLt) {
+        this.endLt = endLt;
         return this;
     }
 
@@ -306,6 +345,15 @@ public class ListHrisDeductionsRequest {
 
 
     /**
+     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    public ListHrisDeductionsRequest withStartGte(@Nullable String startGte) {
+        this.startGte = startGte;
+        return this;
+    }
+
+
+    /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
@@ -337,6 +385,7 @@ public class ListHrisDeductionsRequest {
             Utils.enhancedDeepEquals(this.benefitId, other.benefitId) &&
             Utils.enhancedDeepEquals(this.companyId, other.companyId) &&
             Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
+            Utils.enhancedDeepEquals(this.endLt, other.endLt) &&
             Utils.enhancedDeepEquals(this.fields, other.fields) &&
             Utils.enhancedDeepEquals(this.limit, other.limit) &&
             Utils.enhancedDeepEquals(this.offset, other.offset) &&
@@ -345,6 +394,7 @@ public class ListHrisDeductionsRequest {
             Utils.enhancedDeepEquals(this.query, other.query) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.sort, other.sort) &&
+            Utils.enhancedDeepEquals(this.startGte, other.startGte) &&
             Utils.enhancedDeepEquals(this.updatedGte, other.updatedGte) &&
             Utils.enhancedDeepEquals(this.userId, other.userId);
     }
@@ -353,10 +403,10 @@ public class ListHrisDeductionsRequest {
     public int hashCode() {
         return Utils.enhancedHash(
             benefitId, companyId, connectionId,
-            fields, limit, offset,
-            order, payslipId, query,
-            raw, sort, updatedGte,
-            userId);
+            endLt, fields, limit,
+            offset, order, payslipId,
+            query, raw, sort,
+            startGte, updatedGte, userId);
     }
     
     @Override
@@ -365,6 +415,7 @@ public class ListHrisDeductionsRequest {
                 "benefitId", benefitId,
                 "companyId", companyId,
                 "connectionId", connectionId,
+                "endLt", endLt,
                 "fields", fields,
                 "limit", limit,
                 "offset", offset,
@@ -373,6 +424,7 @@ public class ListHrisDeductionsRequest {
                 "query", query,
                 "raw", raw,
                 "sort", sort,
+                "startGte", startGte,
                 "updatedGte", updatedGte,
                 "userId", userId);
     }
@@ -385,6 +437,8 @@ public class ListHrisDeductionsRequest {
         private String companyId;
 
         private String connectionId;
+
+        private String endLt;
 
         private List<ListHrisDeductionsQueryParamFields> fields;
 
@@ -401,6 +455,8 @@ public class ListHrisDeductionsRequest {
         private String raw;
 
         private String sort;
+
+        private String startGte;
 
         private String updatedGte;
 
@@ -431,6 +487,14 @@ public class ListHrisDeductionsRequest {
          */
         public Builder connectionId(@Nonnull String connectionId) {
             this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
+            return this;
+        }
+
+        /**
+         * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
+        public Builder endLt(@Nullable String endLt) {
+            this.endLt = endLt;
             return this;
         }
 
@@ -489,6 +553,14 @@ public class ListHrisDeductionsRequest {
         }
 
         /**
+         * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
+        public Builder startGte(@Nullable String startGte) {
+            this.startGte = startGte;
+            return this;
+        }
+
+        /**
          * Return only results whose updated date is equal or greater to this value (ISO-8601 /
          * YYYY-MM-DDTHH:MM:SSZ format)
          */
@@ -508,10 +580,10 @@ public class ListHrisDeductionsRequest {
         public ListHrisDeductionsRequest build() {
             return new ListHrisDeductionsRequest(
                 benefitId, companyId, connectionId,
-                fields, limit, offset,
-                order, payslipId, query,
-                raw, sort, updatedGte,
-                userId);
+                endLt, fields, limit,
+                offset, order, payslipId,
+                query, raw, sort,
+                startGte, updatedGte, userId);
         }
 
     }

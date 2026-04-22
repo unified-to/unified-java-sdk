@@ -7,10 +7,10 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
+import java.util.List;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -25,6 +25,13 @@ public class LmsMedia {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     private String description;
+
+    /**
+     * ISO 2-digit language codes
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("languages")
+    private List<String> languages;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -42,6 +49,7 @@ public class LmsMedia {
     private LmsMediaType type;
 
 
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     private String url;
 
@@ -49,23 +57,24 @@ public class LmsMedia {
     public LmsMedia(
             @JsonProperty("content") @Nullable String content,
             @JsonProperty("description") @Nullable String description,
+            @JsonProperty("languages") @Nullable List<String> languages,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("thumbnail_url") @Nullable String thumbnailUrl,
             @JsonProperty("type") @Nullable LmsMediaType type,
-            @JsonProperty("url") @Nonnull String url) {
+            @JsonProperty("url") @Nullable String url) {
         this.content = content;
         this.description = description;
+        this.languages = languages;
         this.name = name;
         this.thumbnailUrl = thumbnailUrl;
         this.type = type;
-        this.url = Optional.ofNullable(url)
-            .orElseThrow(() -> new IllegalArgumentException("url cannot be null"));
+        this.url = url;
     }
     
-    public LmsMedia(
-            @Nonnull String url) {
+    public LmsMedia() {
         this(null, null, null,
-            null, null, url);
+            null, null, null,
+            null);
     }
 
     public Optional<String> content() {
@@ -74,6 +83,13 @@ public class LmsMedia {
 
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
+    }
+
+    /**
+     * ISO 2-digit language codes
+     */
+    public Optional<List<String>> languages() {
+        return Optional.ofNullable(this.languages);
     }
 
     public Optional<String> name() {
@@ -88,8 +104,8 @@ public class LmsMedia {
         return Optional.ofNullable(this.type);
     }
 
-    public String url() {
-        return this.url;
+    public Optional<String> url() {
+        return Optional.ofNullable(this.url);
     }
 
     public static Builder builder() {
@@ -105,6 +121,15 @@ public class LmsMedia {
 
     public LmsMedia withDescription(@Nullable String description) {
         this.description = description;
+        return this;
+    }
+
+
+    /**
+     * ISO 2-digit language codes
+     */
+    public LmsMedia withLanguages(@Nullable List<String> languages) {
+        this.languages = languages;
         return this;
     }
 
@@ -127,8 +152,8 @@ public class LmsMedia {
     }
 
 
-    public LmsMedia withUrl(@Nonnull String url) {
-        this.url = Utils.checkNotNull(url, "url");
+    public LmsMedia withUrl(@Nullable String url) {
+        this.url = url;
         return this;
     }
 
@@ -145,6 +170,7 @@ public class LmsMedia {
         return 
             Utils.enhancedDeepEquals(this.content, other.content) &&
             Utils.enhancedDeepEquals(this.description, other.description) &&
+            Utils.enhancedDeepEquals(this.languages, other.languages) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.thumbnailUrl, other.thumbnailUrl) &&
             Utils.enhancedDeepEquals(this.type, other.type) &&
@@ -154,8 +180,9 @@ public class LmsMedia {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            content, description, name,
-            thumbnailUrl, type, url);
+            content, description, languages,
+            name, thumbnailUrl, type,
+            url);
     }
     
     @Override
@@ -163,6 +190,7 @@ public class LmsMedia {
         return Utils.toString(LmsMedia.class,
                 "content", content,
                 "description", description,
+                "languages", languages,
                 "name", name,
                 "thumbnailUrl", thumbnailUrl,
                 "type", type,
@@ -175,6 +203,8 @@ public class LmsMedia {
         private String content;
 
         private String description;
+
+        private List<String> languages;
 
         private String name;
 
@@ -198,6 +228,14 @@ public class LmsMedia {
             return this;
         }
 
+        /**
+         * ISO 2-digit language codes
+         */
+        public Builder languages(@Nullable List<String> languages) {
+            this.languages = languages;
+            return this;
+        }
+
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
@@ -213,15 +251,16 @@ public class LmsMedia {
             return this;
         }
 
-        public Builder url(@Nonnull String url) {
-            this.url = Utils.checkNotNull(url, "url");
+        public Builder url(@Nullable String url) {
+            this.url = url;
             return this;
         }
 
         public LmsMedia build() {
             return new LmsMedia(
-                content, description, name,
-                thumbnailUrl, type, url);
+                content, description, languages,
+                name, thumbnailUrl, type,
+                url);
         }
 
     }

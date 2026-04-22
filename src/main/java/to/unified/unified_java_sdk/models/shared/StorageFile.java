@@ -77,6 +77,11 @@ public class StorageFile {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("references")
+    private List<StorageReference> references;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     private Double size;
 
@@ -118,6 +123,7 @@ public class StorageFile {
             @JsonProperty("parent_id") @Nullable String parentId,
             @JsonProperty("permissions") @Nullable List<StoragePermission> permissions,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("references") @Nullable List<StorageReference> references,
             @JsonProperty("size") @Nullable Double size,
             @JsonProperty("type") @Nullable StorageFileType type,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
@@ -135,6 +141,7 @@ public class StorageFile {
         this.parentId = parentId;
         this.permissions = permissions;
         this.raw = raw;
+        this.references = references;
         this.size = size;
         this.type = type;
         this.updatedAt = updatedAt;
@@ -149,7 +156,7 @@ public class StorageFile {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<OffsetDateTime> createdAt() {
@@ -194,6 +201,10 @@ public class StorageFile {
 
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
+    }
+
+    public Optional<List<StorageReference>> references() {
+        return Optional.ofNullable(this.references);
     }
 
     public Optional<Double> size() {
@@ -291,6 +302,12 @@ public class StorageFile {
     }
 
 
+    public StorageFile withReferences(@Nullable List<StorageReference> references) {
+        this.references = references;
+        return this;
+    }
+
+
     public StorageFile withSize(@Nullable Double size) {
         this.size = size;
         return this;
@@ -348,6 +365,7 @@ public class StorageFile {
             Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
             Utils.enhancedDeepEquals(this.permissions, other.permissions) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.references, other.references) &&
             Utils.enhancedDeepEquals(this.size, other.size) &&
             Utils.enhancedDeepEquals(this.type, other.type) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
@@ -362,9 +380,9 @@ public class StorageFile {
             createdAt, data, description,
             downloadUrl, hash, id,
             mimeType, name, parentId,
-            permissions, raw, size,
-            type, updatedAt, userId,
-            version, webUrl);
+            permissions, raw, references,
+            size, type, updatedAt,
+            userId, version, webUrl);
     }
     
     @Override
@@ -381,6 +399,7 @@ public class StorageFile {
                 "parentId", parentId,
                 "permissions", permissions,
                 "raw", raw,
+                "references", references,
                 "size", size,
                 "type", type,
                 "updatedAt", updatedAt,
@@ -413,6 +432,8 @@ public class StorageFile {
         private List<StoragePermission> permissions;
 
         private Map<String, Object> raw;
+
+        private List<StorageReference> references;
 
         private Double size;
 
@@ -485,6 +506,11 @@ public class StorageFile {
             return this;
         }
 
+        public Builder references(@Nullable List<StorageReference> references) {
+            this.references = references;
+            return this;
+        }
+
         public Builder size(@Nullable Double size) {
             this.size = size;
             return this;
@@ -520,9 +546,9 @@ public class StorageFile {
                 createdAt, data, description,
                 downloadUrl, hash, id,
                 mimeType, name, parentId,
-                permissions, raw, size,
-                type, updatedAt, userId,
-                version, webUrl);
+                permissions, raw, references,
+                size, type, updatedAt,
+                userId, version, webUrl);
         }
 
     }

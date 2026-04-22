@@ -70,6 +70,11 @@ public class AtsJob {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("hiring_managers")
+    private List<AtsReference> hiringManagers;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
 
@@ -168,6 +173,7 @@ public class AtsJob {
             @JsonProperty("employment_type") @Nullable EmploymentType employmentType,
             @JsonProperty("groups") @Nullable List<AtsGroup> groups,
             @JsonProperty("hiring_manager_ids") @Nullable List<String> hiringManagerIds,
+            @JsonProperty("hiring_managers") @Nullable List<AtsReference> hiringManagers,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("language_locale") @Nullable String languageLocale,
             @JsonProperty("metadata") @Nullable List<AtsMetadata> metadata,
@@ -194,6 +200,7 @@ public class AtsJob {
         this.employmentType = employmentType;
         this.groups = groups;
         this.hiringManagerIds = hiringManagerIds;
+        this.hiringManagers = hiringManagers;
         this.id = id;
         this.languageLocale = languageLocale;
         this.metadata = metadata;
@@ -222,7 +229,7 @@ public class AtsJob {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<List<AtsAddress>> addresses() {
@@ -262,6 +269,10 @@ public class AtsJob {
 
     public Optional<List<String>> hiringManagerIds() {
         return Optional.ofNullable(this.hiringManagerIds);
+    }
+
+    public Optional<List<AtsReference>> hiringManagers() {
+        return Optional.ofNullable(this.hiringManagers);
     }
 
     public Optional<String> id() {
@@ -400,6 +411,12 @@ public class AtsJob {
     }
 
 
+    public AtsJob withHiringManagers(@Nullable List<AtsReference> hiringManagers) {
+        this.hiringManagers = hiringManagers;
+        return this;
+    }
+
+
     public AtsJob withId(@Nullable String id) {
         this.id = id;
         return this;
@@ -527,6 +544,7 @@ public class AtsJob {
             Utils.enhancedDeepEquals(this.employmentType, other.employmentType) &&
             Utils.enhancedDeepEquals(this.groups, other.groups) &&
             Utils.enhancedDeepEquals(this.hiringManagerIds, other.hiringManagerIds) &&
+            Utils.enhancedDeepEquals(this.hiringManagers, other.hiringManagers) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.languageLocale, other.languageLocale) &&
             Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
@@ -552,12 +570,12 @@ public class AtsJob {
             addresses, closedAt, companyId,
             compensation, createdAt, description,
             employmentType, groups, hiringManagerIds,
-            id, languageLocale, metadata,
-            minimumDegree, minimumExperienceYears, name,
-            numberOfOpenings, openings, postings,
-            publicJobUrls, questions, raw,
-            recruiterIds, remote, skills,
-            status, updatedAt);
+            hiringManagers, id, languageLocale,
+            metadata, minimumDegree, minimumExperienceYears,
+            name, numberOfOpenings, openings,
+            postings, publicJobUrls, questions,
+            raw, recruiterIds, remote,
+            skills, status, updatedAt);
     }
     
     @Override
@@ -572,6 +590,7 @@ public class AtsJob {
                 "employmentType", employmentType,
                 "groups", groups,
                 "hiringManagerIds", hiringManagerIds,
+                "hiringManagers", hiringManagers,
                 "id", id,
                 "languageLocale", languageLocale,
                 "metadata", metadata,
@@ -611,6 +630,8 @@ public class AtsJob {
         private List<AtsGroup> groups;
 
         private List<String> hiringManagerIds;
+
+        private List<AtsReference> hiringManagers;
 
         private String id;
 
@@ -695,6 +716,11 @@ public class AtsJob {
 
         public Builder hiringManagerIds(@Nullable List<String> hiringManagerIds) {
             this.hiringManagerIds = hiringManagerIds;
+            return this;
+        }
+
+        public Builder hiringManagers(@Nullable List<AtsReference> hiringManagers) {
+            this.hiringManagers = hiringManagers;
             return this;
         }
 
@@ -794,12 +820,12 @@ public class AtsJob {
                 addresses, closedAt, companyId,
                 compensation, createdAt, description,
                 employmentType, groups, hiringManagerIds,
-                id, languageLocale, metadata,
-                minimumDegree, minimumExperienceYears, name,
-                numberOfOpenings, openings, postings,
-                publicJobUrls, questions, raw,
-                recruiterIds, remote, skills,
-                status, updatedAt);
+                hiringManagers, id, languageLocale,
+                metadata, minimumDegree, minimumExperienceYears,
+                name, numberOfOpenings, openings,
+                postings, publicJobUrls, questions,
+                raw, recruiterIds, remote,
+                skills, status, updatedAt);
         }
 
     }

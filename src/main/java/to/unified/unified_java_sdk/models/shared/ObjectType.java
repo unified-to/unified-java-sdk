@@ -149,6 +149,9 @@ public class ObjectType {
     public static final ObjectType SHIPPING_SHIPMENT = new ObjectType("shipping_shipment");
     public static final ObjectType SHIPPING_LABEL = new ObjectType("shipping_label");
     public static final ObjectType SHIPPING_TRACKING = new ObjectType("shipping_tracking");
+    public static final ObjectType SIGNING_DOCUMENT = new ObjectType("signing_document");
+    public static final ObjectType SIGNING_SIGNATORY = new ObjectType("signing_signatory");
+    public static final ObjectType SIGNING_TEMPLATE = new ObjectType("signing_template");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -351,6 +354,9 @@ public class ObjectType {
         map.put("shipping_shipment", SHIPPING_SHIPMENT);
         map.put("shipping_label", SHIPPING_LABEL);
         map.put("shipping_tracking", SHIPPING_TRACKING);
+        map.put("signing_document", SIGNING_DOCUMENT);
+        map.put("signing_signatory", SIGNING_SIGNATORY);
+        map.put("signing_template", SIGNING_TEMPLATE);
         return map;
     }
 
@@ -485,6 +491,9 @@ public class ObjectType {
         map.put("shipping_shipment", ObjectTypeEnum.SHIPPING_SHIPMENT);
         map.put("shipping_label", ObjectTypeEnum.SHIPPING_LABEL);
         map.put("shipping_tracking", ObjectTypeEnum.SHIPPING_TRACKING);
+        map.put("signing_document", ObjectTypeEnum.SIGNING_DOCUMENT);
+        map.put("signing_signatory", ObjectTypeEnum.SIGNING_SIGNATORY);
+        map.put("signing_template", ObjectTypeEnum.SIGNING_TEMPLATE);
         return map;
     }
     
@@ -619,7 +628,10 @@ public class ObjectType {
         SHIPPING_RATE("shipping_rate"),
         SHIPPING_SHIPMENT("shipping_shipment"),
         SHIPPING_LABEL("shipping_label"),
-        SHIPPING_TRACKING("shipping_tracking"),;
+        SHIPPING_TRACKING("shipping_tracking"),
+        SIGNING_DOCUMENT("signing_document"),
+        SIGNING_SIGNATORY("signing_signatory"),
+        SIGNING_TEMPLATE("signing_template"),;
 
         private final String value;
 

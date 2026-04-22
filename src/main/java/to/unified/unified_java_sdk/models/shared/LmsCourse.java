@@ -29,6 +29,11 @@ public class LmsCourse {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("content_ids")
+    private List<String> contentIds;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
@@ -44,13 +49,25 @@ public class LmsCourse {
 
 
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("id")
-    private String id;
+    @JsonProperty("duration_minutes")
+    private Double durationMinutes;
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("id")
+    private String id;
+
+    /**
+     * &#64;deprecated; use instructors
+     */
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instructor_ids")
     private List<String> instructorIds;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("instructors")
+    private List<LmsInstructor> instructors;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -83,13 +100,40 @@ public class LmsCourse {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("provider_name")
+    private String providerName;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("published_at")
+    private OffsetDateTime publishedAt;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("skills")
+    private List<String> skills;
+
+    /**
+     * &#64;deprecated; use students
+     */
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("student_ids")
     private List<String> studentIds;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("students")
+    private List<LmsStudent> students;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("time_estimate_minutes")
+    private Double timeEstimateMinutes;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -99,26 +143,37 @@ public class LmsCourse {
     @JsonCreator
     public LmsCourse(
             @JsonProperty("categories") @Nullable List<String> categories,
+            @JsonProperty("content_ids") @Nullable List<String> contentIds,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("currency") @Nullable String currency,
             @JsonProperty("description") @Nullable String description,
+            @JsonProperty("duration_minutes") @Nullable Double durationMinutes,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("instructor_ids") @Nullable List<String> instructorIds,
+            @JsonProperty("instructors") @Nullable List<LmsInstructor> instructors,
             @JsonProperty("is_active") @Nullable Boolean isActive,
             @JsonProperty("is_private") @Nullable Boolean isPrivate,
             @JsonProperty("languages") @Nullable List<String> languages,
             @JsonProperty("media") @Nullable List<LmsMedia> media,
             @JsonProperty("name") @Nonnull String name,
             @JsonProperty("price_amount") @Nullable Double priceAmount,
+            @JsonProperty("provider_name") @Nullable String providerName,
+            @JsonProperty("published_at") @Nullable OffsetDateTime publishedAt,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
+            @JsonProperty("skills") @Nullable List<String> skills,
             @JsonProperty("student_ids") @Nullable List<String> studentIds,
+            @JsonProperty("students") @Nullable List<LmsStudent> students,
+            @JsonProperty("time_estimate_minutes") @Nullable Double timeEstimateMinutes,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.categories = categories;
+        this.contentIds = contentIds;
         this.createdAt = createdAt;
         this.currency = currency;
         this.description = description;
+        this.durationMinutes = durationMinutes;
         this.id = id;
         this.instructorIds = instructorIds;
+        this.instructors = instructors;
         this.isActive = isActive;
         this.isPrivate = isPrivate;
         this.languages = languages;
@@ -126,8 +181,13 @@ public class LmsCourse {
         this.name = Optional.ofNullable(name)
             .orElseThrow(() -> new IllegalArgumentException("name cannot be null"));
         this.priceAmount = priceAmount;
+        this.providerName = providerName;
+        this.publishedAt = publishedAt;
         this.raw = raw;
+        this.skills = skills;
         this.studentIds = studentIds;
+        this.students = students;
+        this.timeEstimateMinutes = timeEstimateMinutes;
         this.updatedAt = updatedAt;
     }
     
@@ -136,12 +196,19 @@ public class LmsCourse {
         this(null, null, null,
             null, null, null,
             null, null, null,
+            null, null, null,
             null, name, null,
-            null, null, null);
+            null, null, null,
+            null, null, null,
+            null, null);
     }
 
     public Optional<List<String>> categories() {
         return Optional.ofNullable(this.categories);
+    }
+
+    public Optional<List<String>> contentIds() {
+        return Optional.ofNullable(this.contentIds);
     }
 
     public Optional<OffsetDateTime> createdAt() {
@@ -156,12 +223,23 @@ public class LmsCourse {
         return Optional.ofNullable(this.description);
     }
 
+    public Optional<Double> durationMinutes() {
+        return Optional.ofNullable(this.durationMinutes);
+    }
+
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
 
+    /**
+     * &#64;deprecated; use instructors
+     */
     public Optional<List<String>> instructorIds() {
         return Optional.ofNullable(this.instructorIds);
+    }
+
+    public Optional<List<LmsInstructor>> instructors() {
+        return Optional.ofNullable(this.instructors);
     }
 
     public Optional<Boolean> isActive() {
@@ -188,12 +266,35 @@ public class LmsCourse {
         return Optional.ofNullable(this.priceAmount);
     }
 
+    public Optional<String> providerName() {
+        return Optional.ofNullable(this.providerName);
+    }
+
+    public Optional<OffsetDateTime> publishedAt() {
+        return Optional.ofNullable(this.publishedAt);
+    }
+
     public Optional<Map<String, Object>> raw() {
         return Optional.ofNullable(this.raw);
     }
 
+    public Optional<List<String>> skills() {
+        return Optional.ofNullable(this.skills);
+    }
+
+    /**
+     * &#64;deprecated; use students
+     */
     public Optional<List<String>> studentIds() {
         return Optional.ofNullable(this.studentIds);
+    }
+
+    public Optional<List<LmsStudent>> students() {
+        return Optional.ofNullable(this.students);
+    }
+
+    public Optional<Double> timeEstimateMinutes() {
+        return Optional.ofNullable(this.timeEstimateMinutes);
     }
 
     public Optional<OffsetDateTime> updatedAt() {
@@ -207,6 +308,12 @@ public class LmsCourse {
 
     public LmsCourse withCategories(@Nullable List<String> categories) {
         this.categories = categories;
+        return this;
+    }
+
+
+    public LmsCourse withContentIds(@Nullable List<String> contentIds) {
+        this.contentIds = contentIds;
         return this;
     }
 
@@ -229,14 +336,29 @@ public class LmsCourse {
     }
 
 
+    public LmsCourse withDurationMinutes(@Nullable Double durationMinutes) {
+        this.durationMinutes = durationMinutes;
+        return this;
+    }
+
+
     public LmsCourse withId(@Nullable String id) {
         this.id = id;
         return this;
     }
 
 
+    /**
+     * &#64;deprecated; use instructors
+     */
     public LmsCourse withInstructorIds(@Nullable List<String> instructorIds) {
         this.instructorIds = instructorIds;
+        return this;
+    }
+
+
+    public LmsCourse withInstructors(@Nullable List<LmsInstructor> instructors) {
+        this.instructors = instructors;
         return this;
     }
 
@@ -277,14 +399,47 @@ public class LmsCourse {
     }
 
 
+    public LmsCourse withProviderName(@Nullable String providerName) {
+        this.providerName = providerName;
+        return this;
+    }
+
+
+    public LmsCourse withPublishedAt(@Nullable OffsetDateTime publishedAt) {
+        this.publishedAt = publishedAt;
+        return this;
+    }
+
+
     public LmsCourse withRaw(@Nullable Map<String, Object> raw) {
         this.raw = raw;
         return this;
     }
 
 
+    public LmsCourse withSkills(@Nullable List<String> skills) {
+        this.skills = skills;
+        return this;
+    }
+
+
+    /**
+     * &#64;deprecated; use students
+     */
     public LmsCourse withStudentIds(@Nullable List<String> studentIds) {
         this.studentIds = studentIds;
+        return this;
+    }
+
+
+    public LmsCourse withStudents(@Nullable List<LmsStudent> students) {
+        this.students = students;
+        return this;
+    }
+
+
+    public LmsCourse withTimeEstimateMinutes(@Nullable Double timeEstimateMinutes) {
+        this.timeEstimateMinutes = timeEstimateMinutes;
         return this;
     }
 
@@ -306,49 +461,68 @@ public class LmsCourse {
         LmsCourse other = (LmsCourse) o;
         return 
             Utils.enhancedDeepEquals(this.categories, other.categories) &&
+            Utils.enhancedDeepEquals(this.contentIds, other.contentIds) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
             Utils.enhancedDeepEquals(this.description, other.description) &&
+            Utils.enhancedDeepEquals(this.durationMinutes, other.durationMinutes) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.instructorIds, other.instructorIds) &&
+            Utils.enhancedDeepEquals(this.instructors, other.instructors) &&
             Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
             Utils.enhancedDeepEquals(this.isPrivate, other.isPrivate) &&
             Utils.enhancedDeepEquals(this.languages, other.languages) &&
             Utils.enhancedDeepEquals(this.media, other.media) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.priceAmount, other.priceAmount) &&
+            Utils.enhancedDeepEquals(this.providerName, other.providerName) &&
+            Utils.enhancedDeepEquals(this.publishedAt, other.publishedAt) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
+            Utils.enhancedDeepEquals(this.skills, other.skills) &&
             Utils.enhancedDeepEquals(this.studentIds, other.studentIds) &&
+            Utils.enhancedDeepEquals(this.students, other.students) &&
+            Utils.enhancedDeepEquals(this.timeEstimateMinutes, other.timeEstimateMinutes) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
     }
     
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            categories, createdAt, currency,
-            description, id, instructorIds,
+            categories, contentIds, createdAt,
+            currency, description, durationMinutes,
+            id, instructorIds, instructors,
             isActive, isPrivate, languages,
             media, name, priceAmount,
-            raw, studentIds, updatedAt);
+            providerName, publishedAt, raw,
+            skills, studentIds, students,
+            timeEstimateMinutes, updatedAt);
     }
     
     @Override
     public String toString() {
         return Utils.toString(LmsCourse.class,
                 "categories", categories,
+                "contentIds", contentIds,
                 "createdAt", createdAt,
                 "currency", currency,
                 "description", description,
+                "durationMinutes", durationMinutes,
                 "id", id,
                 "instructorIds", instructorIds,
+                "instructors", instructors,
                 "isActive", isActive,
                 "isPrivate", isPrivate,
                 "languages", languages,
                 "media", media,
                 "name", name,
                 "priceAmount", priceAmount,
+                "providerName", providerName,
+                "publishedAt", publishedAt,
                 "raw", raw,
+                "skills", skills,
                 "studentIds", studentIds,
+                "students", students,
+                "timeEstimateMinutes", timeEstimateMinutes,
                 "updatedAt", updatedAt);
     }
 
@@ -357,15 +531,21 @@ public class LmsCourse {
 
         private List<String> categories;
 
+        private List<String> contentIds;
+
         private OffsetDateTime createdAt;
 
         private String currency;
 
         private String description;
 
+        private Double durationMinutes;
+
         private String id;
 
         private List<String> instructorIds;
+
+        private List<LmsInstructor> instructors;
 
         private Boolean isActive;
 
@@ -379,9 +559,19 @@ public class LmsCourse {
 
         private Double priceAmount;
 
+        private String providerName;
+
+        private OffsetDateTime publishedAt;
+
         private Map<String, Object> raw;
 
+        private List<String> skills;
+
         private List<String> studentIds;
+
+        private List<LmsStudent> students;
+
+        private Double timeEstimateMinutes;
 
         private OffsetDateTime updatedAt;
 
@@ -391,6 +581,11 @@ public class LmsCourse {
 
         public Builder categories(@Nullable List<String> categories) {
             this.categories = categories;
+            return this;
+        }
+
+        public Builder contentIds(@Nullable List<String> contentIds) {
+            this.contentIds = contentIds;
             return this;
         }
 
@@ -409,13 +604,26 @@ public class LmsCourse {
             return this;
         }
 
+        public Builder durationMinutes(@Nullable Double durationMinutes) {
+            this.durationMinutes = durationMinutes;
+            return this;
+        }
+
         public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
+        /**
+         * &#64;deprecated; use instructors
+         */
         public Builder instructorIds(@Nullable List<String> instructorIds) {
             this.instructorIds = instructorIds;
+            return this;
+        }
+
+        public Builder instructors(@Nullable List<LmsInstructor> instructors) {
+            this.instructors = instructors;
             return this;
         }
 
@@ -449,13 +657,41 @@ public class LmsCourse {
             return this;
         }
 
+        public Builder providerName(@Nullable String providerName) {
+            this.providerName = providerName;
+            return this;
+        }
+
+        public Builder publishedAt(@Nullable OffsetDateTime publishedAt) {
+            this.publishedAt = publishedAt;
+            return this;
+        }
+
         public Builder raw(@Nullable Map<String, Object> raw) {
             this.raw = raw;
             return this;
         }
 
+        public Builder skills(@Nullable List<String> skills) {
+            this.skills = skills;
+            return this;
+        }
+
+        /**
+         * &#64;deprecated; use students
+         */
         public Builder studentIds(@Nullable List<String> studentIds) {
             this.studentIds = studentIds;
+            return this;
+        }
+
+        public Builder students(@Nullable List<LmsStudent> students) {
+            this.students = students;
+            return this;
+        }
+
+        public Builder timeEstimateMinutes(@Nullable Double timeEstimateMinutes) {
+            this.timeEstimateMinutes = timeEstimateMinutes;
             return this;
         }
 
@@ -466,11 +702,14 @@ public class LmsCourse {
 
         public LmsCourse build() {
             return new LmsCourse(
-                categories, createdAt, currency,
-                description, id, instructorIds,
+                categories, contentIds, createdAt,
+                currency, description, durationMinutes,
+                id, instructorIds, instructors,
                 isActive, isPrivate, languages,
                 media, name, priceAmount,
-                raw, studentIds, updatedAt);
+                providerName, publishedAt, raw,
+                skills, studentIds, students,
+                timeEstimateMinutes, updatedAt);
         }
 
     }

@@ -116,7 +116,7 @@ public class VerificationPackage {
     private OffsetDateTime updatedAt;
 
     /**
-     * {country}-{stateprovince/territory} or just {country} 2-digit ISO codes
+     * {country}-{state/province/territory} or just {country} 2-digit ISO codes
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valid_regions")
@@ -262,7 +262,7 @@ public class VerificationPackage {
     }
 
     /**
-     * {country}-{stateprovince/territory} or just {country} 2-digit ISO codes
+     * {country}-{state/province/territory} or just {country} 2-digit ISO codes
      */
     public Optional<List<String>> validRegions() {
         return Optional.ofNullable(this.validRegions);
@@ -391,7 +391,7 @@ public class VerificationPackage {
 
 
     /**
-     * {country}-{stateprovince/territory} or just {country} 2-digit ISO codes
+     * {country}-{state/province/territory} or just {country} 2-digit ISO codes
      */
     public VerificationPackage withValidRegions(@Nullable List<String> validRegions) {
         this.validRegions = validRegions;
@@ -611,7 +611,7 @@ public class VerificationPackage {
         }
 
         /**
-         * {country}-{stateprovince/territory} or just {country} 2-digit ISO codes
+         * {country}-{state/province/territory} or just {country} 2-digit ISO codes
          */
         public Builder validRegions(@Nullable List<String> validRegions) {
             this.validRegions = validRegions;

@@ -17,6 +17,12 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 public class ListAccountingJournalsRequest {
     /**
+     * The account ID to filter by (reference to AccountingAccount)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=account_id")
+    private String accountId;
+
+    /**
      * ID of the connection
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=connection_id")
@@ -73,6 +79,7 @@ public class ListAccountingJournalsRequest {
 
     @JsonCreator
     public ListAccountingJournalsRequest(
+            @Nullable String accountId,
             @Nonnull String connectionId,
             @Nullable List<ListAccountingJournalsQueryParamFields> fields,
             @Nullable Double limit,
@@ -83,6 +90,7 @@ public class ListAccountingJournalsRequest {
             @Nullable String raw,
             @Nullable String sort,
             @Nullable String updatedGte) {
+        this.accountId = accountId;
         this.connectionId = Optional.ofNullable(connectionId)
             .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
@@ -98,10 +106,17 @@ public class ListAccountingJournalsRequest {
     
     public ListAccountingJournalsRequest(
             @Nonnull String connectionId) {
-        this(connectionId, null, null,
+        this(null, connectionId, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
+    }
+
+    /**
+     * The account ID to filter by (reference to AccountingAccount)
+     */
+    public Optional<String> accountId() {
+        return Optional.ofNullable(this.accountId);
     }
 
     /**
@@ -167,6 +182,15 @@ public class ListAccountingJournalsRequest {
 
     public static Builder builder() {
         return new Builder();
+    }
+
+
+    /**
+     * The account ID to filter by (reference to AccountingAccount)
+     */
+    public ListAccountingJournalsRequest withAccountId(@Nullable String accountId) {
+        this.accountId = accountId;
+        return this;
     }
 
 
@@ -261,6 +285,7 @@ public class ListAccountingJournalsRequest {
         }
         ListAccountingJournalsRequest other = (ListAccountingJournalsRequest) o;
         return 
+            Utils.enhancedDeepEquals(this.accountId, other.accountId) &&
             Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
             Utils.enhancedDeepEquals(this.fields, other.fields) &&
             Utils.enhancedDeepEquals(this.limit, other.limit) &&
@@ -276,15 +301,16 @@ public class ListAccountingJournalsRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            connectionId, fields, limit,
-            offset, order, orgId,
-            query, raw, sort,
-            updatedGte);
+            accountId, connectionId, fields,
+            limit, offset, order,
+            orgId, query, raw,
+            sort, updatedGte);
     }
     
     @Override
     public String toString() {
         return Utils.toString(ListAccountingJournalsRequest.class,
+                "accountId", accountId,
                 "connectionId", connectionId,
                 "fields", fields,
                 "limit", limit,
@@ -299,6 +325,8 @@ public class ListAccountingJournalsRequest {
 
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
+
+        private String accountId;
 
         private String connectionId;
 
@@ -322,6 +350,14 @@ public class ListAccountingJournalsRequest {
 
         private Builder() {
           // force use of static builder() method
+        }
+
+        /**
+         * The account ID to filter by (reference to AccountingAccount)
+         */
+        public Builder accountId(@Nullable String accountId) {
+            this.accountId = accountId;
+            return this;
         }
 
         /**
@@ -397,10 +433,10 @@ public class ListAccountingJournalsRequest {
 
         public ListAccountingJournalsRequest build() {
             return new ListAccountingJournalsRequest(
-                connectionId, fields, limit,
-                offset, order, orgId,
-                query, raw, sort,
-                updatedGte);
+                accountId, connectionId, fields,
+                limit, offset, order,
+                orgId, query, raw,
+                sort, updatedGte);
         }
 
     }

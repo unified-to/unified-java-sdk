@@ -6,14 +6,30 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import to.unified.unified_java_sdk.models.operations.CreateHrisTimeoffRequest;
+import to.unified.unified_java_sdk.models.operations.CreateHrisTimeoffRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateHrisTimeoffResponse;
 import to.unified.unified_java_sdk.models.operations.GetHrisTimeoffRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisTimeoffRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetHrisTimeoffResponse;
 import to.unified.unified_java_sdk.models.operations.ListHrisTimeoffsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisTimeoffsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListHrisTimeoffsResponse;
+import to.unified.unified_java_sdk.models.operations.PatchHrisTimeoffRequest;
+import to.unified.unified_java_sdk.models.operations.PatchHrisTimeoffRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchHrisTimeoffResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisTimeoffRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisTimeoffRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisTimeoffResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeoffRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeoffRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeoffResponse;
+import to.unified.unified_java_sdk.operations.CreateHrisTimeoff;
 import to.unified.unified_java_sdk.operations.GetHrisTimeoff;
 import to.unified.unified_java_sdk.operations.ListHrisTimeoffs;
+import to.unified.unified_java_sdk.operations.PatchHrisTimeoff;
+import to.unified.unified_java_sdk.operations.RemoveHrisTimeoff;
+import to.unified.unified_java_sdk.operations.UpdateHrisTimeoff;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -34,6 +50,28 @@ public class Timeoff {
      */
     public AsyncTimeoff async() {
         return asyncSDK;
+    }
+
+    /**
+     * Create a timeoff
+     * 
+     * @return The call builder
+     */
+    public CreateHrisTimeoffRequestBuilder createHrisTimeoff() {
+        return new CreateHrisTimeoffRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a timeoff
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHrisTimeoffResponse createHrisTimeoff(@Nonnull CreateHrisTimeoffRequest request) {
+        RequestOperation<CreateHrisTimeoffRequest, CreateHrisTimeoffResponse> operation
+              = new CreateHrisTimeoff.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
     }
 
     /**
@@ -77,6 +115,72 @@ public class Timeoff {
     public ListHrisTimeoffsResponse listHrisTimeoffs(@Nonnull ListHrisTimeoffsRequest request) {
         RequestOperation<ListHrisTimeoffsRequest, ListHrisTimeoffsResponse> operation
               = new ListHrisTimeoffs.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update a timeoff
+     * 
+     * @return The call builder
+     */
+    public PatchHrisTimeoffRequestBuilder patchHrisTimeoff() {
+        return new PatchHrisTimeoffRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a timeoff
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchHrisTimeoffResponse patchHrisTimeoff(@Nonnull PatchHrisTimeoffRequest request) {
+        RequestOperation<PatchHrisTimeoffRequest, PatchHrisTimeoffResponse> operation
+              = new PatchHrisTimeoff.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Remove a timeoff
+     * 
+     * @return The call builder
+     */
+    public RemoveHrisTimeoffRequestBuilder removeHrisTimeoff() {
+        return new RemoveHrisTimeoffRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a timeoff
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveHrisTimeoffResponse removeHrisTimeoff(@Nonnull RemoveHrisTimeoffRequest request) {
+        RequestOperation<RemoveHrisTimeoffRequest, RemoveHrisTimeoffResponse> operation
+              = new RemoveHrisTimeoff.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update a timeoff
+     * 
+     * @return The call builder
+     */
+    public UpdateHrisTimeoffRequestBuilder updateHrisTimeoff() {
+        return new UpdateHrisTimeoffRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a timeoff
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateHrisTimeoffResponse updateHrisTimeoff(@Nonnull UpdateHrisTimeoffRequest request) {
+        RequestOperation<UpdateHrisTimeoffRequest, UpdateHrisTimeoffResponse> operation
+              = new UpdateHrisTimeoff.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

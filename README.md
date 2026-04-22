@@ -39,7 +39,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.47.15'
+implementation 'to.unified:unified-java-sdk:0.47.16'
 ```
 
 Maven:
@@ -47,7 +47,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.47.15</version>
+    <version>0.47.16</version>
 </dependency>
 ```
 
@@ -837,11 +837,17 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 ### [Document](docs/sdks/document/README.md)
 
 * [createAtsDocument](docs/sdks/document/README.md#createatsdocument) - Create a document
+* [createSigningDocument](docs/sdks/document/README.md#createsigningdocument) - Create a document
 * [getAtsDocument](docs/sdks/document/README.md#getatsdocument) - Retrieve a document
+* [getSigningDocument](docs/sdks/document/README.md#getsigningdocument) - Retrieve a document
 * [listAtsDocuments](docs/sdks/document/README.md#listatsdocuments) - List all documents
+* [listSigningDocuments](docs/sdks/document/README.md#listsigningdocuments) - List all documents
 * [patchAtsDocument](docs/sdks/document/README.md#patchatsdocument) - Update a document
+* [patchSigningDocument](docs/sdks/document/README.md#patchsigningdocument) - Update a document
 * [removeAtsDocument](docs/sdks/document/README.md#removeatsdocument) - Remove a document
+* [removeSigningDocument](docs/sdks/document/README.md#removesigningdocument) - Remove a document
 * [updateAtsDocument](docs/sdks/document/README.md#updateatsdocument) - Update a document
+* [updateSigningDocument](docs/sdks/document/README.md#updatesigningdocument) - Update a document
 
 ### [Embedding](docs/sdks/embedding/README.md)
 
@@ -960,6 +966,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [createHrisEmployee](docs/sdks/hris/README.md#createhrisemployee) - Create an employee
 * [createHrisGroup](docs/sdks/hris/README.md#createhrisgroup) - Create a group
 * [createHrisLocation](docs/sdks/hris/README.md#createhrislocation) - Create a location
+* [createHrisTimeoff](docs/sdks/hris/README.md#createhristimeoff) - Create a timeoff
 * [createHrisTimeshift](docs/sdks/hris/README.md#createhristimeshift) - Create a timeshift
 * [getHrisBankaccount](docs/sdks/hris/README.md#gethrisbankaccount) - Retrieve a bankaccount
 * [getHrisBenefit](docs/sdks/hris/README.md#gethrisbenefit) - Retrieve a benefit
@@ -991,6 +998,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [patchHrisEmployee](docs/sdks/hris/README.md#patchhrisemployee) - Update an employee
 * [patchHrisGroup](docs/sdks/hris/README.md#patchhrisgroup) - Update a group
 * [patchHrisLocation](docs/sdks/hris/README.md#patchhrislocation) - Update a location
+* [patchHrisTimeoff](docs/sdks/hris/README.md#patchhristimeoff) - Update a timeoff
 * [patchHrisTimeshift](docs/sdks/hris/README.md#patchhristimeshift) - Update a timeshift
 * [removeHrisBankaccount](docs/sdks/hris/README.md#removehrisbankaccount) - Remove a bankaccount
 * [removeHrisBenefit](docs/sdks/hris/README.md#removehrisbenefit) - Remove a benefit
@@ -1000,6 +1008,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [removeHrisEmployee](docs/sdks/hris/README.md#removehrisemployee) - Remove an employee
 * [removeHrisGroup](docs/sdks/hris/README.md#removehrisgroup) - Remove a group
 * [removeHrisLocation](docs/sdks/hris/README.md#removehrislocation) - Remove a location
+* [removeHrisTimeoff](docs/sdks/hris/README.md#removehristimeoff) - Remove a timeoff
 * [removeHrisTimeshift](docs/sdks/hris/README.md#removehristimeshift) - Remove a timeshift
 * [updateHrisBankaccount](docs/sdks/hris/README.md#updatehrisbankaccount) - Update a bankaccount
 * [updateHrisBenefit](docs/sdks/hris/README.md#updatehrisbenefit) - Update a benefit
@@ -1009,6 +1018,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [updateHrisEmployee](docs/sdks/hris/README.md#updatehrisemployee) - Update an employee
 * [updateHrisGroup](docs/sdks/hris/README.md#updatehrisgroup) - Update a group
 * [updateHrisLocation](docs/sdks/hris/README.md#updatehrislocation) - Update a location
+* [updateHrisTimeoff](docs/sdks/hris/README.md#updatehristimeoff) - Update a timeoff
 * [updateHrisTimeshift](docs/sdks/hris/README.md#updatehristimeshift) - Update a timeshift
 
 ### [Insertionorder](docs/sdks/insertionorder/README.md)
@@ -1619,6 +1629,32 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [updateShippingLabel](docs/sdks/shipping/README.md#updateshippinglabel) - Update a label
 * [updateShippingShipment](docs/sdks/shipping/README.md#updateshippingshipment) - Update a shipment
 
+### [Signatory](docs/sdks/signatory/README.md)
+
+* [createSigningSignatory](docs/sdks/signatory/README.md#createsigningsignatory) - Create a signatory
+* [getSigningSignatory](docs/sdks/signatory/README.md#getsigningsignatory) - Retrieve a signatory
+* [listSigningSignatories](docs/sdks/signatory/README.md#listsigningsignatories) - List all signatories
+* [patchSigningSignatory](docs/sdks/signatory/README.md#patchsigningsignatory) - Update a signatory
+* [removeSigningSignatory](docs/sdks/signatory/README.md#removesigningsignatory) - Remove a signatory
+* [updateSigningSignatory](docs/sdks/signatory/README.md#updatesigningsignatory) - Update a signatory
+
+### [Signing](docs/sdks/signing/README.md)
+
+* [createSigningDocument](docs/sdks/signing/README.md#createsigningdocument) - Create a document
+* [createSigningSignatory](docs/sdks/signing/README.md#createsigningsignatory) - Create a signatory
+* [getSigningDocument](docs/sdks/signing/README.md#getsigningdocument) - Retrieve a document
+* [getSigningSignatory](docs/sdks/signing/README.md#getsigningsignatory) - Retrieve a signatory
+* [getSigningTemplate](docs/sdks/signing/README.md#getsigningtemplate) - Retrieve a template
+* [listSigningDocuments](docs/sdks/signing/README.md#listsigningdocuments) - List all documents
+* [listSigningSignatories](docs/sdks/signing/README.md#listsigningsignatories) - List all signatories
+* [listSigningTemplates](docs/sdks/signing/README.md#listsigningtemplates) - List all templates
+* [patchSigningDocument](docs/sdks/signing/README.md#patchsigningdocument) - Update a document
+* [patchSigningSignatory](docs/sdks/signing/README.md#patchsigningsignatory) - Update a signatory
+* [removeSigningDocument](docs/sdks/signing/README.md#removesigningdocument) - Remove a document
+* [removeSigningSignatory](docs/sdks/signing/README.md#removesigningsignatory) - Remove a signatory
+* [updateSigningDocument](docs/sdks/signing/README.md#updatesigningdocument) - Update a document
+* [updateSigningSignatory](docs/sdks/signing/README.md#updatesigningsignatory) - Update a signatory
+
 ### [Space](docs/sdks/space/README.md)
 
 * [createKmsSpace](docs/sdks/space/README.md#createkmsspace) - Create a space
@@ -1696,6 +1732,11 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [removeAccountingTaxrate](docs/sdks/taxrate/README.md#removeaccountingtaxrate) - Remove a taxrate
 * [updateAccountingTaxrate](docs/sdks/taxrate/README.md#updateaccountingtaxrate) - Update a taxrate
 
+### [Template](docs/sdks/template/README.md)
+
+* [getSigningTemplate](docs/sdks/template/README.md#getsigningtemplate) - Retrieve a template
+* [listSigningTemplates](docs/sdks/template/README.md#listsigningtemplates) - List all templates
+
 ### [Ticket](docs/sdks/ticket/README.md)
 
 * [createTicketingTicket](docs/sdks/ticket/README.md#createticketingticket) - Create a ticket
@@ -1734,8 +1775,12 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 
 ### [Timeoff](docs/sdks/timeoff/README.md)
 
+* [createHrisTimeoff](docs/sdks/timeoff/README.md#createhristimeoff) - Create a timeoff
 * [getHrisTimeoff](docs/sdks/timeoff/README.md#gethristimeoff) - Retrieve a timeoff
 * [listHrisTimeoffs](docs/sdks/timeoff/README.md#listhristimeoffs) - List all timeoffs
+* [patchHrisTimeoff](docs/sdks/timeoff/README.md#patchhristimeoff) - Update a timeoff
+* [removeHrisTimeoff](docs/sdks/timeoff/README.md#removehristimeoff) - Remove a timeoff
+* [updateHrisTimeoff](docs/sdks/timeoff/README.md#updatehristimeoff) - Update a timeoff
 
 ### [Timeshift](docs/sdks/timeshift/README.md)
 

@@ -22,6 +22,11 @@ import to.unified.unified_java_sdk.utils.Utils;
 public class LmsActivity {
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("assigned_grade")
+    private String assignedGrade;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completed_at")
     private OffsetDateTime completedAt;
 
@@ -82,6 +87,7 @@ public class LmsActivity {
 
     @JsonCreator
     public LmsActivity(
+            @JsonProperty("assigned_grade") @Nullable String assignedGrade,
             @JsonProperty("completed_at") @Nullable OffsetDateTime completedAt,
             @JsonProperty("content_id") @Nullable String contentId,
             @JsonProperty("course_id") @Nullable String courseId,
@@ -94,6 +100,7 @@ public class LmsActivity {
             @JsonProperty("started_at") @Nullable OffsetDateTime startedAt,
             @JsonProperty("student_id") @Nullable String studentId,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
+        this.assignedGrade = assignedGrade;
         this.completedAt = completedAt;
         this.contentId = contentId;
         this.courseId = courseId;
@@ -112,7 +119,12 @@ public class LmsActivity {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
+    }
+
+    public Optional<String> assignedGrade() {
+        return Optional.ofNullable(this.assignedGrade);
     }
 
     public Optional<OffsetDateTime> completedAt() {
@@ -165,6 +177,12 @@ public class LmsActivity {
 
     public static Builder builder() {
         return new Builder();
+    }
+
+
+    public LmsActivity withAssignedGrade(@Nullable String assignedGrade) {
+        this.assignedGrade = assignedGrade;
+        return this;
     }
 
 
@@ -250,6 +268,7 @@ public class LmsActivity {
         }
         LmsActivity other = (LmsActivity) o;
         return 
+            Utils.enhancedDeepEquals(this.assignedGrade, other.assignedGrade) &&
             Utils.enhancedDeepEquals(this.completedAt, other.completedAt) &&
             Utils.enhancedDeepEquals(this.contentId, other.contentId) &&
             Utils.enhancedDeepEquals(this.courseId, other.courseId) &&
@@ -267,15 +286,17 @@ public class LmsActivity {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            completedAt, contentId, courseId,
-            createdAt, durationMinutes, id,
-            isCompleted, progressPercentage, raw,
-            startedAt, studentId, updatedAt);
+            assignedGrade, completedAt, contentId,
+            courseId, createdAt, durationMinutes,
+            id, isCompleted, progressPercentage,
+            raw, startedAt, studentId,
+            updatedAt);
     }
     
     @Override
     public String toString() {
         return Utils.toString(LmsActivity.class,
+                "assignedGrade", assignedGrade,
                 "completedAt", completedAt,
                 "contentId", contentId,
                 "courseId", courseId,
@@ -292,6 +313,8 @@ public class LmsActivity {
 
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
+
+        private String assignedGrade;
 
         private OffsetDateTime completedAt;
 
@@ -319,6 +342,11 @@ public class LmsActivity {
 
         private Builder() {
           // force use of static builder() method
+        }
+
+        public Builder assignedGrade(@Nullable String assignedGrade) {
+            this.assignedGrade = assignedGrade;
+            return this;
         }
 
         public Builder completedAt(@Nullable OffsetDateTime completedAt) {
@@ -383,10 +411,11 @@ public class LmsActivity {
 
         public LmsActivity build() {
             return new LmsActivity(
-                completedAt, contentId, courseId,
-                createdAt, durationMinutes, id,
-                isCompleted, progressPercentage, raw,
-                startedAt, studentId, updatedAt);
+                assignedGrade, completedAt, contentId,
+                courseId, createdAt, durationMinutes,
+                id, isCompleted, progressPercentage,
+                raw, startedAt, studentId,
+                updatedAt);
         }
 
     }

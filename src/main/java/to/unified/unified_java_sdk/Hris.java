@@ -30,6 +30,9 @@ import to.unified.unified_java_sdk.models.operations.CreateHrisGroupResponse;
 import to.unified.unified_java_sdk.models.operations.CreateHrisLocationRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisLocationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateHrisLocationResponse;
+import to.unified.unified_java_sdk.models.operations.CreateHrisTimeoffRequest;
+import to.unified.unified_java_sdk.models.operations.CreateHrisTimeoffRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateHrisTimeoffResponse;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTimeshiftRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTimeshiftRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTimeshiftResponse;
@@ -123,6 +126,9 @@ import to.unified.unified_java_sdk.models.operations.PatchHrisGroupResponse;
 import to.unified.unified_java_sdk.models.operations.PatchHrisLocationRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisLocationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchHrisLocationResponse;
+import to.unified.unified_java_sdk.models.operations.PatchHrisTimeoffRequest;
+import to.unified.unified_java_sdk.models.operations.PatchHrisTimeoffRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchHrisTimeoffResponse;
 import to.unified.unified_java_sdk.models.operations.PatchHrisTimeshiftRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisTimeshiftRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchHrisTimeshiftResponse;
@@ -150,6 +156,9 @@ import to.unified.unified_java_sdk.models.operations.RemoveHrisGroupResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisLocationRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisLocationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisLocationResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisTimeoffRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisTimeoffRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisTimeoffResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisTimeshiftRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisTimeshiftRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveHrisTimeshiftResponse;
@@ -177,6 +186,9 @@ import to.unified.unified_java_sdk.models.operations.UpdateHrisGroupResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisLocationRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisLocationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisLocationResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeoffRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeoffRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeoffResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeshiftRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeshiftRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeshiftResponse;
@@ -188,6 +200,7 @@ import to.unified.unified_java_sdk.operations.CreateHrisDevice;
 import to.unified.unified_java_sdk.operations.CreateHrisEmployee;
 import to.unified.unified_java_sdk.operations.CreateHrisGroup;
 import to.unified.unified_java_sdk.operations.CreateHrisLocation;
+import to.unified.unified_java_sdk.operations.CreateHrisTimeoff;
 import to.unified.unified_java_sdk.operations.CreateHrisTimeshift;
 import to.unified.unified_java_sdk.operations.GetHrisBankaccount;
 import to.unified.unified_java_sdk.operations.GetHrisBenefit;
@@ -219,6 +232,7 @@ import to.unified.unified_java_sdk.operations.PatchHrisDevice;
 import to.unified.unified_java_sdk.operations.PatchHrisEmployee;
 import to.unified.unified_java_sdk.operations.PatchHrisGroup;
 import to.unified.unified_java_sdk.operations.PatchHrisLocation;
+import to.unified.unified_java_sdk.operations.PatchHrisTimeoff;
 import to.unified.unified_java_sdk.operations.PatchHrisTimeshift;
 import to.unified.unified_java_sdk.operations.RemoveHrisBankaccount;
 import to.unified.unified_java_sdk.operations.RemoveHrisBenefit;
@@ -228,6 +242,7 @@ import to.unified.unified_java_sdk.operations.RemoveHrisDevice;
 import to.unified.unified_java_sdk.operations.RemoveHrisEmployee;
 import to.unified.unified_java_sdk.operations.RemoveHrisGroup;
 import to.unified.unified_java_sdk.operations.RemoveHrisLocation;
+import to.unified.unified_java_sdk.operations.RemoveHrisTimeoff;
 import to.unified.unified_java_sdk.operations.RemoveHrisTimeshift;
 import to.unified.unified_java_sdk.operations.UpdateHrisBankaccount;
 import to.unified.unified_java_sdk.operations.UpdateHrisBenefit;
@@ -237,6 +252,7 @@ import to.unified.unified_java_sdk.operations.UpdateHrisDevice;
 import to.unified.unified_java_sdk.operations.UpdateHrisEmployee;
 import to.unified.unified_java_sdk.operations.UpdateHrisGroup;
 import to.unified.unified_java_sdk.operations.UpdateHrisLocation;
+import to.unified.unified_java_sdk.operations.UpdateHrisTimeoff;
 import to.unified.unified_java_sdk.operations.UpdateHrisTimeshift;
 import to.unified.unified_java_sdk.utils.Headers;
 
@@ -433,6 +449,28 @@ public class Hris {
     public CreateHrisLocationResponse createHrisLocation(@Nonnull CreateHrisLocationRequest request) {
         RequestOperation<CreateHrisLocationRequest, CreateHrisLocationResponse> operation
               = new CreateHrisLocation.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Create a timeoff
+     * 
+     * @return The call builder
+     */
+    public CreateHrisTimeoffRequestBuilder createHrisTimeoff() {
+        return new CreateHrisTimeoffRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a timeoff
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateHrisTimeoffResponse createHrisTimeoff(@Nonnull CreateHrisTimeoffRequest request) {
+        RequestOperation<CreateHrisTimeoffRequest, CreateHrisTimeoffResponse> operation
+              = new CreateHrisTimeoff.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -1119,6 +1157,28 @@ public class Hris {
     }
 
     /**
+     * Update a timeoff
+     * 
+     * @return The call builder
+     */
+    public PatchHrisTimeoffRequestBuilder patchHrisTimeoff() {
+        return new PatchHrisTimeoffRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a timeoff
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchHrisTimeoffResponse patchHrisTimeoff(@Nonnull PatchHrisTimeoffRequest request) {
+        RequestOperation<PatchHrisTimeoffRequest, PatchHrisTimeoffResponse> operation
+              = new PatchHrisTimeoff.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Update a timeshift
      * 
      * @return The call builder
@@ -1317,6 +1377,28 @@ public class Hris {
     }
 
     /**
+     * Remove a timeoff
+     * 
+     * @return The call builder
+     */
+    public RemoveHrisTimeoffRequestBuilder removeHrisTimeoff() {
+        return new RemoveHrisTimeoffRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a timeoff
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveHrisTimeoffResponse removeHrisTimeoff(@Nonnull RemoveHrisTimeoffRequest request) {
+        RequestOperation<RemoveHrisTimeoffRequest, RemoveHrisTimeoffResponse> operation
+              = new RemoveHrisTimeoff.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Remove a timeshift
      * 
      * @return The call builder
@@ -1511,6 +1593,28 @@ public class Hris {
     public UpdateHrisLocationResponse updateHrisLocation(@Nonnull UpdateHrisLocationRequest request) {
         RequestOperation<UpdateHrisLocationRequest, UpdateHrisLocationResponse> operation
               = new UpdateHrisLocation.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update a timeoff
+     * 
+     * @return The call builder
+     */
+    public UpdateHrisTimeoffRequestBuilder updateHrisTimeoff() {
+        return new UpdateHrisTimeoffRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a timeoff
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateHrisTimeoffResponse updateHrisTimeoff(@Nonnull UpdateHrisTimeoffRequest request) {
+        RequestOperation<UpdateHrisTimeoffRequest, UpdateHrisTimeoffResponse> operation
+              = new UpdateHrisTimeoff.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

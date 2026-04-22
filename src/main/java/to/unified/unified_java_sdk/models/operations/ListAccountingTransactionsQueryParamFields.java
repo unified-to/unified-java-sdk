@@ -26,6 +26,7 @@ public enum ListAccountingTransactionsQueryParamFields {
     LINEITEMS("lineitems"),
     CURRENCY("currency"),
     CONTACTS("contacts"),
+    ORGANIZATION_ID("organization_id"),
     RAW("raw");
 
     @JsonValue

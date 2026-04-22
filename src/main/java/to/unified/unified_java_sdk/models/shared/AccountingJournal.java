@@ -49,6 +49,11 @@ public class AccountingJournal {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("organization_id")
+    private String organizationId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("posted_at")
     private OffsetDateTime postedAt;
 
@@ -89,6 +94,7 @@ public class AccountingJournal {
             @JsonProperty("description") @Nullable String description,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("lineitems") @Nullable List<AccountingJournalLineitem> lineitems,
+            @JsonProperty("organization_id") @Nullable String organizationId,
             @JsonProperty("posted_at") @Nullable OffsetDateTime postedAt,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("reference") @Nullable String reference,
@@ -101,6 +107,7 @@ public class AccountingJournal {
         this.description = description;
         this.id = id;
         this.lineitems = lineitems;
+        this.organizationId = organizationId;
         this.postedAt = postedAt;
         this.raw = raw;
         this.reference = reference;
@@ -114,7 +121,8 @@ public class AccountingJournal {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     public Optional<OffsetDateTime> createdAt() {
@@ -138,6 +146,10 @@ public class AccountingJournal {
      */
     public Optional<List<AccountingJournalLineitem>> lineitems() {
         return Optional.ofNullable(this.lineitems);
+    }
+
+    public Optional<String> organizationId() {
+        return Optional.ofNullable(this.organizationId);
     }
 
     public Optional<OffsetDateTime> postedAt() {
@@ -206,6 +218,12 @@ public class AccountingJournal {
     }
 
 
+    public AccountingJournal withOrganizationId(@Nullable String organizationId) {
+        this.organizationId = organizationId;
+        return this;
+    }
+
+
     public AccountingJournal withPostedAt(@Nullable OffsetDateTime postedAt) {
         this.postedAt = postedAt;
         return this;
@@ -263,6 +281,7 @@ public class AccountingJournal {
             Utils.enhancedDeepEquals(this.description, other.description) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.lineitems, other.lineitems) &&
+            Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
             Utils.enhancedDeepEquals(this.postedAt, other.postedAt) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.reference, other.reference) &&
@@ -276,9 +295,10 @@ public class AccountingJournal {
     public int hashCode() {
         return Utils.enhancedHash(
             createdAt, currency, description,
-            id, lineitems, postedAt,
-            raw, reference, source,
-            taxAmount, taxrateId, updatedAt);
+            id, lineitems, organizationId,
+            postedAt, raw, reference,
+            source, taxAmount, taxrateId,
+            updatedAt);
     }
     
     @Override
@@ -289,6 +309,7 @@ public class AccountingJournal {
                 "description", description,
                 "id", id,
                 "lineitems", lineitems,
+                "organizationId", organizationId,
                 "postedAt", postedAt,
                 "raw", raw,
                 "reference", reference,
@@ -310,6 +331,8 @@ public class AccountingJournal {
         private String id;
 
         private List<AccountingJournalLineitem> lineitems;
+
+        private String organizationId;
 
         private OffsetDateTime postedAt;
 
@@ -357,6 +380,11 @@ public class AccountingJournal {
             return this;
         }
 
+        public Builder organizationId(@Nullable String organizationId) {
+            this.organizationId = organizationId;
+            return this;
+        }
+
         public Builder postedAt(@Nullable OffsetDateTime postedAt) {
             this.postedAt = postedAt;
             return this;
@@ -395,9 +423,10 @@ public class AccountingJournal {
         public AccountingJournal build() {
             return new AccountingJournal(
                 createdAt, currency, description,
-                id, lineitems, postedAt,
-                raw, reference, source,
-                taxAmount, taxrateId, updatedAt);
+                id, lineitems, organizationId,
+                postedAt, raw, reference,
+                source, taxAmount, taxrateId,
+                updatedAt);
         }
 
     }

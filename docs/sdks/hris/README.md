@@ -12,6 +12,7 @@
 * [createHrisEmployee](#createhrisemployee) - Create an employee
 * [createHrisGroup](#createhrisgroup) - Create a group
 * [createHrisLocation](#createhrislocation) - Create a location
+* [createHrisTimeoff](#createhristimeoff) - Create a timeoff
 * [createHrisTimeshift](#createhristimeshift) - Create a timeshift
 * [getHrisBankaccount](#gethrisbankaccount) - Retrieve a bankaccount
 * [getHrisBenefit](#gethrisbenefit) - Retrieve a benefit
@@ -43,6 +44,7 @@
 * [patchHrisEmployee](#patchhrisemployee) - Update an employee
 * [patchHrisGroup](#patchhrisgroup) - Update a group
 * [patchHrisLocation](#patchhrislocation) - Update a location
+* [patchHrisTimeoff](#patchhristimeoff) - Update a timeoff
 * [patchHrisTimeshift](#patchhristimeshift) - Update a timeshift
 * [removeHrisBankaccount](#removehrisbankaccount) - Remove a bankaccount
 * [removeHrisBenefit](#removehrisbenefit) - Remove a benefit
@@ -52,6 +54,7 @@
 * [removeHrisEmployee](#removehrisemployee) - Remove an employee
 * [removeHrisGroup](#removehrisgroup) - Remove a group
 * [removeHrisLocation](#removehrislocation) - Remove a location
+* [removeHrisTimeoff](#removehristimeoff) - Remove a timeoff
 * [removeHrisTimeshift](#removehristimeshift) - Remove a timeshift
 * [updateHrisBankaccount](#updatehrisbankaccount) - Update a bankaccount
 * [updateHrisBenefit](#updatehrisbenefit) - Update a benefit
@@ -61,6 +64,7 @@
 * [updateHrisEmployee](#updatehrisemployee) - Update an employee
 * [updateHrisGroup](#updatehrisgroup) - Update a group
 * [updateHrisLocation](#updatehrislocation) - Update a location
+* [updateHrisTimeoff](#updatehristimeoff) - Update a timeoff
 * [updateHrisTimeshift](#updatehristimeshift) - Update a timeshift
 
 ## createHrisBankaccount
@@ -537,6 +541,66 @@ public class Application {
 ### Response
 
 **[CreateHrisLocationResponse](../../models/operations/CreateHrisLocationResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## createHrisTimeoff
+
+Create a timeoff
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="createHrisTimeoff" method="post" path="/hris/{connection_id}/timeoff" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.CreateHrisTimeoffRequest;
+import to.unified.unified_java_sdk.models.operations.CreateHrisTimeoffResponse;
+import to.unified.unified_java_sdk.models.shared.HrisTimeoff;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        CreateHrisTimeoffRequest req = CreateHrisTimeoffRequest.builder()
+                .hrisTimeoff(HrisTimeoff.builder()
+                    .build())
+                .connectionId("<id>")
+                .build();
+
+        CreateHrisTimeoffResponse res = sdk.hris().createHrisTimeoff()
+                .request(req)
+                .call();
+
+        if (res.hrisTimeoff().isPresent()) {
+            System.out.println(res.hrisTimeoff().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [CreateHrisTimeoffRequest](../../models/operations/CreateHrisTimeoffRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[CreateHrisTimeoffResponse](../../models/operations/CreateHrisTimeoffResponse.md)**
 
 ### Errors
 
@@ -2362,6 +2426,67 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## patchHrisTimeoff
+
+Update a timeoff
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="patchHrisTimeoff" method="patch" path="/hris/{connection_id}/timeoff/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.PatchHrisTimeoffRequest;
+import to.unified.unified_java_sdk.models.operations.PatchHrisTimeoffResponse;
+import to.unified.unified_java_sdk.models.shared.HrisTimeoff;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        PatchHrisTimeoffRequest req = PatchHrisTimeoffRequest.builder()
+                .hrisTimeoff(HrisTimeoff.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        PatchHrisTimeoffResponse res = sdk.hris().patchHrisTimeoff()
+                .request(req)
+                .call();
+
+        if (res.hrisTimeoff().isPresent()) {
+            System.out.println(res.hrisTimeoff().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [PatchHrisTimeoffRequest](../../models/operations/PatchHrisTimeoffRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[PatchHrisTimeoffResponse](../../models/operations/PatchHrisTimeoffResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## patchHrisTimeshift
 
 Update a timeshift
@@ -2868,6 +2993,62 @@ public class Application {
 ### Response
 
 **[RemoveHrisLocationResponse](../../models/operations/RemoveHrisLocationResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## removeHrisTimeoff
+
+Remove a timeoff
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="removeHrisTimeoff" method="delete" path="/hris/{connection_id}/timeoff/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisTimeoffRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisTimeoffResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        RemoveHrisTimeoffRequest req = RemoveHrisTimeoffRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        RemoveHrisTimeoffResponse res = sdk.hris().removeHrisTimeoff()
+                .request(req)
+                .call();
+
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [RemoveHrisTimeoffRequest](../../models/operations/RemoveHrisTimeoffRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[RemoveHrisTimeoffResponse](../../models/operations/RemoveHrisTimeoffResponse.md)**
 
 ### Errors
 
@@ -3413,6 +3594,67 @@ public class Application {
 ### Response
 
 **[UpdateHrisLocationResponse](../../models/operations/UpdateHrisLocationResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## updateHrisTimeoff
+
+Update a timeoff
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="updateHrisTimeoff" method="put" path="/hris/{connection_id}/timeoff/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeoffRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeoffResponse;
+import to.unified.unified_java_sdk.models.shared.HrisTimeoff;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        UpdateHrisTimeoffRequest req = UpdateHrisTimeoffRequest.builder()
+                .hrisTimeoff(HrisTimeoff.builder()
+                    .build())
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        UpdateHrisTimeoffResponse res = sdk.hris().updateHrisTimeoff()
+                .request(req)
+                .call();
+
+        if (res.hrisTimeoff().isPresent()) {
+            System.out.println(res.hrisTimeoff().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                       | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `request`                                                                       | [UpdateHrisTimeoffRequest](../../models/operations/UpdateHrisTimeoffRequest.md) | :heavy_check_mark:                                                              | The request object to use for the request.                                      |
+
+### Response
+
+**[UpdateHrisTimeoffResponse](../../models/operations/UpdateHrisTimeoffResponse.md)**
 
 ### Errors
 

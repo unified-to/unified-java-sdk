@@ -29,4 +29,5 @@ CreateStorageFileQueryParamFields value = CreateStorageFileQueryParamFields.ID;
 | `DATA`         | data           |
 | `VERSION`      | version        |
 | `WEB_URL`      | web_url        |
+| `REFERENCES`   | references     |
 | `RAW`          | raw            |

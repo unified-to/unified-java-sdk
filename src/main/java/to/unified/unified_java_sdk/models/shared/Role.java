@@ -22,6 +22,7 @@ public class Role {
 
     public static final Role SYSTEM = new Role("SYSTEM");
     public static final Role USER = new Role("USER");
+    public static final Role ASSISTANT = new Role("ASSISTANT");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -97,6 +98,7 @@ public class Role {
         Map<String, Role> map = new LinkedHashMap<>();
         map.put("SYSTEM", SYSTEM);
         map.put("USER", USER);
+        map.put("ASSISTANT", ASSISTANT);
         return map;
     }
 
@@ -104,6 +106,7 @@ public class Role {
         Map<String, RoleEnum> map = new HashMap<>();
         map.put("SYSTEM", RoleEnum.SYSTEM);
         map.put("USER", RoleEnum.USER);
+        map.put("ASSISTANT", RoleEnum.ASSISTANT);
         return map;
     }
     
@@ -111,7 +114,8 @@ public class Role {
     public enum RoleEnum {
 
         SYSTEM("SYSTEM"),
-        USER("USER"),;
+        USER("USER"),
+        ASSISTANT("ASSISTANT"),;
 
         private final String value;
 

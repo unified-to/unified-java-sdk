@@ -23,6 +23,12 @@ public class ListAccountingPurchaseordersRequest {
     private String connectionId;
 
     /**
+     * The contact ID to filter by (reference to AccountingContact)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contact_id")
+    private String contactId;
+
+    /**
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
@@ -74,6 +80,7 @@ public class ListAccountingPurchaseordersRequest {
     @JsonCreator
     public ListAccountingPurchaseordersRequest(
             @Nonnull String connectionId,
+            @Nullable String contactId,
             @Nullable List<ListAccountingPurchaseordersQueryParamFields> fields,
             @Nullable Double limit,
             @Nullable Double offset,
@@ -85,6 +92,7 @@ public class ListAccountingPurchaseordersRequest {
             @Nullable String updatedGte) {
         this.connectionId = Optional.ofNullable(connectionId)
             .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
+        this.contactId = contactId;
         this.fields = fields;
         this.limit = limit;
         this.offset = offset;
@@ -101,7 +109,7 @@ public class ListAccountingPurchaseordersRequest {
         this(connectionId, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     /**
@@ -109,6 +117,13 @@ public class ListAccountingPurchaseordersRequest {
      */
     public String connectionId() {
         return this.connectionId;
+    }
+
+    /**
+     * The contact ID to filter by (reference to AccountingContact)
+     */
+    public Optional<String> contactId() {
+        return Optional.ofNullable(this.contactId);
     }
 
     /**
@@ -175,6 +190,15 @@ public class ListAccountingPurchaseordersRequest {
      */
     public ListAccountingPurchaseordersRequest withConnectionId(@Nonnull String connectionId) {
         this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
+        return this;
+    }
+
+
+    /**
+     * The contact ID to filter by (reference to AccountingContact)
+     */
+    public ListAccountingPurchaseordersRequest withContactId(@Nullable String contactId) {
+        this.contactId = contactId;
         return this;
     }
 
@@ -262,6 +286,7 @@ public class ListAccountingPurchaseordersRequest {
         ListAccountingPurchaseordersRequest other = (ListAccountingPurchaseordersRequest) o;
         return 
             Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
+            Utils.enhancedDeepEquals(this.contactId, other.contactId) &&
             Utils.enhancedDeepEquals(this.fields, other.fields) &&
             Utils.enhancedDeepEquals(this.limit, other.limit) &&
             Utils.enhancedDeepEquals(this.offset, other.offset) &&
@@ -276,16 +301,17 @@ public class ListAccountingPurchaseordersRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            connectionId, fields, limit,
-            offset, order, orgId,
-            query, raw, sort,
-            updatedGte);
+            connectionId, contactId, fields,
+            limit, offset, order,
+            orgId, query, raw,
+            sort, updatedGte);
     }
     
     @Override
     public String toString() {
         return Utils.toString(ListAccountingPurchaseordersRequest.class,
                 "connectionId", connectionId,
+                "contactId", contactId,
                 "fields", fields,
                 "limit", limit,
                 "offset", offset,
@@ -301,6 +327,8 @@ public class ListAccountingPurchaseordersRequest {
     public final static class Builder {
 
         private String connectionId;
+
+        private String contactId;
 
         private List<ListAccountingPurchaseordersQueryParamFields> fields;
 
@@ -329,6 +357,14 @@ public class ListAccountingPurchaseordersRequest {
          */
         public Builder connectionId(@Nonnull String connectionId) {
             this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
+            return this;
+        }
+
+        /**
+         * The contact ID to filter by (reference to AccountingContact)
+         */
+        public Builder contactId(@Nullable String contactId) {
+            this.contactId = contactId;
             return this;
         }
 
@@ -397,10 +433,10 @@ public class ListAccountingPurchaseordersRequest {
 
         public ListAccountingPurchaseordersRequest build() {
             return new ListAccountingPurchaseordersRequest(
-                connectionId, fields, limit,
-                offset, order, orgId,
-                query, raw, sort,
-                updatedGte);
+                connectionId, contactId, fields,
+                limit, offset, order,
+                orgId, query, raw,
+                sort, updatedGte);
         }
 
     }

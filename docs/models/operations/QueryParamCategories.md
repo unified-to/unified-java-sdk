@@ -40,3 +40,4 @@ QueryParamCategories value = QueryParamCategories.PASSTHROUGH;
 | `FORMS`        | forms          |
 | `SHIPPING`     | shipping       |
 | `ASSESSMENT`   | assessment     |
+| `SIGNING`      | signing        |

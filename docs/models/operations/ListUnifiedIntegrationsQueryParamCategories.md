@@ -40,3 +40,4 @@ ListUnifiedIntegrationsQueryParamCategories value = ListUnifiedIntegrationsQuery
 | `FORMS`        | forms          |
 | `SHIPPING`     | shipping       |
 | `ASSESSMENT`   | assessment     |
+| `SIGNING`      | signing        |

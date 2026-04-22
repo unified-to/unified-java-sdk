@@ -43,3 +43,4 @@ PropertyIntegrationCategories custom = PropertyIntegrationCategories.of("custom_
 | `FORMS`        | forms          |
 | `SHIPPING`     | shipping       |
 | `ASSESSMENT`   | assessment     |
+| `SIGNING`      | signing        |

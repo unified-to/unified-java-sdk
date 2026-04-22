@@ -62,6 +62,11 @@ public class AccountingTransaction {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("organization_id")
+    private String organizationId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_method")
     private String paymentMethod;
 
@@ -120,6 +125,7 @@ public class AccountingTransaction {
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("lineitems") @Nullable List<AccountingTransactionLineItem> lineitems,
             @JsonProperty("memo") @Nullable String memo,
+            @JsonProperty("organization_id") @Nullable String organizationId,
             @JsonProperty("payment_method") @Nullable String paymentMethod,
             @JsonProperty("payment_terms") @Nullable String paymentTerms,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
@@ -138,6 +144,7 @@ public class AccountingTransaction {
         this.id = id;
         this.lineitems = lineitems;
         this.memo = memo;
+        this.organizationId = organizationId;
         this.paymentMethod = paymentMethod;
         this.paymentTerms = paymentTerms;
         this.raw = raw;
@@ -156,7 +163,8 @@ public class AccountingTransaction {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     public Optional<String> accountId() {
@@ -189,6 +197,10 @@ public class AccountingTransaction {
 
     public Optional<String> memo() {
         return Optional.ofNullable(this.memo);
+    }
+
+    public Optional<String> organizationId() {
+        return Optional.ofNullable(this.organizationId);
     }
 
     public Optional<String> paymentMethod() {
@@ -284,6 +296,12 @@ public class AccountingTransaction {
     }
 
 
+    public AccountingTransaction withOrganizationId(@Nullable String organizationId) {
+        this.organizationId = organizationId;
+        return this;
+    }
+
+
     public AccountingTransaction withPaymentMethod(@Nullable String paymentMethod) {
         this.paymentMethod = paymentMethod;
         return this;
@@ -362,6 +380,7 @@ public class AccountingTransaction {
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.lineitems, other.lineitems) &&
             Utils.enhancedDeepEquals(this.memo, other.memo) &&
+            Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
             Utils.enhancedDeepEquals(this.paymentMethod, other.paymentMethod) &&
             Utils.enhancedDeepEquals(this.paymentTerms, other.paymentTerms) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
@@ -379,10 +398,11 @@ public class AccountingTransaction {
         return Utils.enhancedHash(
             accountId, contacts, createdAt,
             currency, customerMessage, id,
-            lineitems, memo, paymentMethod,
-            paymentTerms, raw, reference,
-            splitAccountId, subTotalAmount, taxAmount,
-            totalAmount, type, updatedAt);
+            lineitems, memo, organizationId,
+            paymentMethod, paymentTerms, raw,
+            reference, splitAccountId, subTotalAmount,
+            taxAmount, totalAmount, type,
+            updatedAt);
     }
     
     @Override
@@ -396,6 +416,7 @@ public class AccountingTransaction {
                 "id", id,
                 "lineitems", lineitems,
                 "memo", memo,
+                "organizationId", organizationId,
                 "paymentMethod", paymentMethod,
                 "paymentTerms", paymentTerms,
                 "raw", raw,
@@ -426,6 +447,8 @@ public class AccountingTransaction {
         private List<AccountingTransactionLineItem> lineitems;
 
         private String memo;
+
+        private String organizationId;
 
         private String paymentMethod;
 
@@ -491,6 +514,11 @@ public class AccountingTransaction {
             return this;
         }
 
+        public Builder organizationId(@Nullable String organizationId) {
+            this.organizationId = organizationId;
+            return this;
+        }
+
         public Builder paymentMethod(@Nullable String paymentMethod) {
             this.paymentMethod = paymentMethod;
             return this;
@@ -545,10 +573,11 @@ public class AccountingTransaction {
             return new AccountingTransaction(
                 accountId, contacts, createdAt,
                 currency, customerMessage, id,
-                lineitems, memo, paymentMethod,
-                paymentTerms, raw, reference,
-                splitAccountId, subTotalAmount, taxAmount,
-                totalAmount, type, updatedAt);
+                lineitems, memo, organizationId,
+                paymentMethod, paymentTerms, raw,
+                reference, splitAccountId, subTotalAmount,
+                taxAmount, totalAmount, type,
+                updatedAt);
         }
 
     }

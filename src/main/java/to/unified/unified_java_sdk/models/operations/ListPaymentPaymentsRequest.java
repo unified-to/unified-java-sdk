@@ -71,7 +71,7 @@ public class ListPaymentPaymentsRequest {
     private String order;
 
     /**
-     * The org ID to filter by
+     * The org ID to filter by (reference to AccountingOrganization)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=org_id")
     private String orgId;
@@ -224,7 +224,7 @@ public class ListPaymentPaymentsRequest {
     }
 
     /**
-     * The org ID to filter by
+     * The org ID to filter by (reference to AccountingOrganization)
      */
     public Optional<String> orgId() {
         return Optional.ofNullable(this.orgId);
@@ -359,7 +359,7 @@ public class ListPaymentPaymentsRequest {
 
 
     /**
-     * The org ID to filter by
+     * The org ID to filter by (reference to AccountingOrganization)
      */
     public ListPaymentPaymentsRequest withOrgId(@Nullable String orgId) {
         this.orgId = orgId;
@@ -596,7 +596,7 @@ public class ListPaymentPaymentsRequest {
         }
 
         /**
-         * The org ID to filter by
+         * The org ID to filter by (reference to AccountingOrganization)
          */
         public Builder orgId(@Nullable String orgId) {
             this.orgId = orgId;

@@ -52,6 +52,11 @@ public class TaskProject {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("metadata")
+    private List<TaskMetadata> metadata;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
@@ -83,6 +88,7 @@ public class TaskProject {
             @JsonProperty("has_children") @Nullable Boolean hasChildren,
             @JsonProperty("has_tasks") @Nullable Boolean hasTasks,
             @JsonProperty("id") @Nullable String id,
+            @JsonProperty("metadata") @Nullable List<TaskMetadata> metadata,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("parent_id") @Nullable String parentId,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
@@ -94,6 +100,7 @@ public class TaskProject {
         this.hasChildren = hasChildren;
         this.hasTasks = hasTasks;
         this.id = id;
+        this.metadata = metadata;
         this.name = name;
         this.parentId = parentId;
         this.raw = raw;
@@ -105,7 +112,7 @@ public class TaskProject {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<OffsetDateTime> createdAt() {
@@ -130,6 +137,10 @@ public class TaskProject {
 
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
+    }
+
+    public Optional<List<TaskMetadata>> metadata() {
+        return Optional.ofNullable(this.metadata);
     }
 
     public Optional<String> name() {
@@ -193,6 +204,12 @@ public class TaskProject {
     }
 
 
+    public TaskProject withMetadata(@Nullable List<TaskMetadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+
     public TaskProject withName(@Nullable String name) {
         this.name = name;
         return this;
@@ -239,6 +256,7 @@ public class TaskProject {
             Utils.enhancedDeepEquals(this.hasChildren, other.hasChildren) &&
             Utils.enhancedDeepEquals(this.hasTasks, other.hasTasks) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
             Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
@@ -251,8 +269,8 @@ public class TaskProject {
         return Utils.enhancedHash(
             createdAt, description, groupIds,
             hasChildren, hasTasks, id,
-            name, parentId, raw,
-            updatedAt, userIds);
+            metadata, name, parentId,
+            raw, updatedAt, userIds);
     }
     
     @Override
@@ -264,6 +282,7 @@ public class TaskProject {
                 "hasChildren", hasChildren,
                 "hasTasks", hasTasks,
                 "id", id,
+                "metadata", metadata,
                 "name", name,
                 "parentId", parentId,
                 "raw", raw,
@@ -285,6 +304,8 @@ public class TaskProject {
         private Boolean hasTasks;
 
         private String id;
+
+        private List<TaskMetadata> metadata;
 
         private String name;
 
@@ -330,6 +351,11 @@ public class TaskProject {
             return this;
         }
 
+        public Builder metadata(@Nullable List<TaskMetadata> metadata) {
+            this.metadata = metadata;
+            return this;
+        }
+
         public Builder name(@Nullable String name) {
             this.name = name;
             return this;
@@ -359,8 +385,8 @@ public class TaskProject {
             return new TaskProject(
                 createdAt, description, groupIds,
                 hasChildren, hasTasks, id,
-                name, parentId, raw,
-                updatedAt, userIds);
+                metadata, name, parentId,
+                raw, updatedAt, userIds);
         }
 
     }

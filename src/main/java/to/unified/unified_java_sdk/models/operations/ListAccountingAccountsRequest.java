@@ -65,6 +65,12 @@ public class ListAccountingAccountsRequest {
     private String sort;
 
     /**
+     * The type to filter by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
+    private String type;
+
+    /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
@@ -82,6 +88,7 @@ public class ListAccountingAccountsRequest {
             @Nullable String query,
             @Nullable String raw,
             @Nullable String sort,
+            @Nullable String type,
             @Nullable String updatedGte) {
         this.connectionId = Optional.ofNullable(connectionId)
             .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
@@ -93,6 +100,7 @@ public class ListAccountingAccountsRequest {
         this.query = query;
         this.raw = raw;
         this.sort = sort;
+        this.type = type;
         this.updatedGte = updatedGte;
     }
     
@@ -101,7 +109,7 @@ public class ListAccountingAccountsRequest {
         this(connectionId, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     /**
@@ -155,6 +163,13 @@ public class ListAccountingAccountsRequest {
 
     public Optional<String> sort() {
         return Optional.ofNullable(this.sort);
+    }
+
+    /**
+     * The type to filter by
+     */
+    public Optional<String> type() {
+        return Optional.ofNullable(this.type);
     }
 
     /**
@@ -242,6 +257,15 @@ public class ListAccountingAccountsRequest {
 
 
     /**
+     * The type to filter by
+     */
+    public ListAccountingAccountsRequest withType(@Nullable String type) {
+        this.type = type;
+        return this;
+    }
+
+
+    /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
@@ -270,6 +294,7 @@ public class ListAccountingAccountsRequest {
             Utils.enhancedDeepEquals(this.query, other.query) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.sort, other.sort) &&
+            Utils.enhancedDeepEquals(this.type, other.type) &&
             Utils.enhancedDeepEquals(this.updatedGte, other.updatedGte);
     }
     
@@ -279,7 +304,7 @@ public class ListAccountingAccountsRequest {
             connectionId, fields, limit,
             offset, order, orgId,
             query, raw, sort,
-            updatedGte);
+            type, updatedGte);
     }
     
     @Override
@@ -294,6 +319,7 @@ public class ListAccountingAccountsRequest {
                 "query", query,
                 "raw", raw,
                 "sort", sort,
+                "type", type,
                 "updatedGte", updatedGte);
     }
 
@@ -317,6 +343,8 @@ public class ListAccountingAccountsRequest {
         private String raw;
 
         private String sort;
+
+        private String type;
 
         private String updatedGte;
 
@@ -387,6 +415,14 @@ public class ListAccountingAccountsRequest {
         }
 
         /**
+         * The type to filter by
+         */
+        public Builder type(@Nullable String type) {
+            this.type = type;
+            return this;
+        }
+
+        /**
          * Return only results whose updated date is equal or greater to this value (ISO-8601 /
          * YYYY-MM-DDTHH:MM:SSZ format)
          */
@@ -400,7 +436,7 @@ public class ListAccountingAccountsRequest {
                 connectionId, fields, limit,
                 offset, order, orgId,
                 query, raw, sort,
-                updatedGte);
+                type, updatedGte);
         }
 
     }

@@ -257,6 +257,11 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions SHIPPING_TRACKING_READ = new PropertyConnectionPermissions("shipping_tracking_read");
     public static final PropertyConnectionPermissions SHIPPING_RATE_READ = new PropertyConnectionPermissions("shipping_rate_read");
     public static final PropertyConnectionPermissions SHIPPING_CARRIER_READ = new PropertyConnectionPermissions("shipping_carrier_read");
+    public static final PropertyConnectionPermissions SIGNING_DOCUMENT_READ = new PropertyConnectionPermissions("signing_document_read");
+    public static final PropertyConnectionPermissions SIGNING_DOCUMENT_WRITE = new PropertyConnectionPermissions("signing_document_write");
+    public static final PropertyConnectionPermissions SIGNING_SIGNATORY_READ = new PropertyConnectionPermissions("signing_signatory_read");
+    public static final PropertyConnectionPermissions SIGNING_SIGNATORY_WRITE = new PropertyConnectionPermissions("signing_signatory_write");
+    public static final PropertyConnectionPermissions SIGNING_TEMPLATE_READ = new PropertyConnectionPermissions("signing_template_read");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -567,6 +572,11 @@ public class PropertyConnectionPermissions {
         map.put("shipping_tracking_read", SHIPPING_TRACKING_READ);
         map.put("shipping_rate_read", SHIPPING_RATE_READ);
         map.put("shipping_carrier_read", SHIPPING_CARRIER_READ);
+        map.put("signing_document_read", SIGNING_DOCUMENT_READ);
+        map.put("signing_document_write", SIGNING_DOCUMENT_WRITE);
+        map.put("signing_signatory_read", SIGNING_SIGNATORY_READ);
+        map.put("signing_signatory_write", SIGNING_SIGNATORY_WRITE);
+        map.put("signing_template_read", SIGNING_TEMPLATE_READ);
         return map;
     }
 
@@ -809,6 +819,11 @@ public class PropertyConnectionPermissions {
         map.put("shipping_tracking_read", PropertyConnectionPermissionsEnum.SHIPPING_TRACKING_READ);
         map.put("shipping_rate_read", PropertyConnectionPermissionsEnum.SHIPPING_RATE_READ);
         map.put("shipping_carrier_read", PropertyConnectionPermissionsEnum.SHIPPING_CARRIER_READ);
+        map.put("signing_document_read", PropertyConnectionPermissionsEnum.SIGNING_DOCUMENT_READ);
+        map.put("signing_document_write", PropertyConnectionPermissionsEnum.SIGNING_DOCUMENT_WRITE);
+        map.put("signing_signatory_read", PropertyConnectionPermissionsEnum.SIGNING_SIGNATORY_READ);
+        map.put("signing_signatory_write", PropertyConnectionPermissionsEnum.SIGNING_SIGNATORY_WRITE);
+        map.put("signing_template_read", PropertyConnectionPermissionsEnum.SIGNING_TEMPLATE_READ);
         return map;
     }
     
@@ -1051,7 +1066,12 @@ public class PropertyConnectionPermissions {
         SHIPPING_LABEL_WRITE("shipping_label_write"),
         SHIPPING_TRACKING_READ("shipping_tracking_read"),
         SHIPPING_RATE_READ("shipping_rate_read"),
-        SHIPPING_CARRIER_READ("shipping_carrier_read"),;
+        SHIPPING_CARRIER_READ("shipping_carrier_read"),
+        SIGNING_DOCUMENT_READ("signing_document_read"),
+        SIGNING_DOCUMENT_WRITE("signing_document_write"),
+        SIGNING_SIGNATORY_READ("signing_signatory_read"),
+        SIGNING_SIGNATORY_WRITE("signing_signatory_write"),
+        SIGNING_TEMPLATE_READ("signing_template_read"),;
 
         private final String value;
 

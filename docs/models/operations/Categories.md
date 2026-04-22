@@ -40,3 +40,4 @@ Categories value = Categories.PASSTHROUGH;
 | `FORMS`        | forms          |
 | `SHIPPING`     | shipping       |
 | `ASSESSMENT`   | assessment     |
+| `SIGNING`      | signing        |

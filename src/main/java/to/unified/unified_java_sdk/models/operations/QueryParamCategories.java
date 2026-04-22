@@ -35,7 +35,8 @@ public enum QueryParamCategories {
     ADS("ads"),
     FORMS("forms"),
     SHIPPING("shipping"),
-    ASSESSMENT("assessment");
+    ASSESSMENT("assessment"),
+    SIGNING("signing");
 
     @JsonValue
     private final String value;

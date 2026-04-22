@@ -50,6 +50,11 @@ public class PropertyMarketingListAddress {
     @JsonProperty("region")
     private String region;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("region_code")
+    private String regionCode;
+
     @JsonCreator
     public PropertyMarketingListAddress(
             @JsonProperty("address1") @Nullable String address1,
@@ -58,7 +63,8 @@ public class PropertyMarketingListAddress {
             @JsonProperty("country") @Nullable String country,
             @JsonProperty("country_code") @Nullable String countryCode,
             @JsonProperty("postal_code") @Nullable String postalCode,
-            @JsonProperty("region") @Nullable String region) {
+            @JsonProperty("region") @Nullable String region,
+            @JsonProperty("region_code") @Nullable String regionCode) {
         this.address1 = address1;
         this.address2 = address2;
         this.city = city;
@@ -66,12 +72,13 @@ public class PropertyMarketingListAddress {
         this.countryCode = countryCode;
         this.postalCode = postalCode;
         this.region = region;
+        this.regionCode = regionCode;
     }
     
     public PropertyMarketingListAddress() {
         this(null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     public Optional<String> address1() {
@@ -100,6 +107,10 @@ public class PropertyMarketingListAddress {
 
     public Optional<String> region() {
         return Optional.ofNullable(this.region);
+    }
+
+    public Optional<String> regionCode() {
+        return Optional.ofNullable(this.regionCode);
     }
 
     public static Builder builder() {
@@ -149,6 +160,12 @@ public class PropertyMarketingListAddress {
     }
 
 
+    public PropertyMarketingListAddress withRegionCode(@Nullable String regionCode) {
+        this.regionCode = regionCode;
+        return this;
+    }
+
+
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -165,7 +182,8 @@ public class PropertyMarketingListAddress {
             Utils.enhancedDeepEquals(this.country, other.country) &&
             Utils.enhancedDeepEquals(this.countryCode, other.countryCode) &&
             Utils.enhancedDeepEquals(this.postalCode, other.postalCode) &&
-            Utils.enhancedDeepEquals(this.region, other.region);
+            Utils.enhancedDeepEquals(this.region, other.region) &&
+            Utils.enhancedDeepEquals(this.regionCode, other.regionCode);
     }
     
     @Override
@@ -173,7 +191,7 @@ public class PropertyMarketingListAddress {
         return Utils.enhancedHash(
             address1, address2, city,
             country, countryCode, postalCode,
-            region);
+            region, regionCode);
     }
     
     @Override
@@ -185,7 +203,8 @@ public class PropertyMarketingListAddress {
                 "country", country,
                 "countryCode", countryCode,
                 "postalCode", postalCode,
-                "region", region);
+                "region", region,
+                "regionCode", regionCode);
     }
 
     @SuppressWarnings("UnusedReturnValue")
@@ -204,6 +223,8 @@ public class PropertyMarketingListAddress {
         private String postalCode;
 
         private String region;
+
+        private String regionCode;
 
         private Builder() {
           // force use of static builder() method
@@ -244,11 +265,16 @@ public class PropertyMarketingListAddress {
             return this;
         }
 
+        public Builder regionCode(@Nullable String regionCode) {
+            this.regionCode = regionCode;
+            return this;
+        }
+
         public PropertyMarketingListAddress build() {
             return new PropertyMarketingListAddress(
                 address1, address2, city,
                 country, countryCode, postalCode,
-                region);
+                region, regionCode);
         }
 
     }

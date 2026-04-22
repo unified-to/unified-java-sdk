@@ -7,14 +7,30 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
+import to.unified.unified_java_sdk.models.operations.CreateHrisTimeoffRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisTimeoffRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisTimeoffsRequest;
+import to.unified.unified_java_sdk.models.operations.PatchHrisTimeoffRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveHrisTimeoffRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeoffRequest;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisTimeoffRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.CreateHrisTimeoffResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetHrisTimeoffRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetHrisTimeoffResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListHrisTimeoffsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListHrisTimeoffsResponse;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisTimeoffRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.PatchHrisTimeoffResponse;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisTimeoffRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.RemoveHrisTimeoffResponse;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisTimeoffRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.UpdateHrisTimeoffResponse;
+import to.unified.unified_java_sdk.operations.CreateHrisTimeoff;
 import to.unified.unified_java_sdk.operations.GetHrisTimeoff;
 import to.unified.unified_java_sdk.operations.ListHrisTimeoffs;
+import to.unified.unified_java_sdk.operations.PatchHrisTimeoff;
+import to.unified.unified_java_sdk.operations.RemoveHrisTimeoff;
+import to.unified.unified_java_sdk.operations.UpdateHrisTimeoff;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -35,6 +51,29 @@ public class AsyncTimeoff {
      */
     public Timeoff sync() {
         return syncSDK;
+    }
+
+
+    /**
+     * Create a timeoff
+     * 
+     * @return The async call builder
+     */
+    public CreateHrisTimeoffRequestBuilder createHrisTimeoff() {
+        return new CreateHrisTimeoffRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a timeoff
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<CreateHrisTimeoffResponse>} - The async response
+     */
+    public CompletableFuture<CreateHrisTimeoffResponse> createHrisTimeoff(@Nonnull CreateHrisTimeoffRequest request) {
+        AsyncRequestOperation<CreateHrisTimeoffRequest, CreateHrisTimeoffResponse> operation
+              = new CreateHrisTimeoff.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
     }
 
 
@@ -79,6 +118,75 @@ public class AsyncTimeoff {
     public CompletableFuture<ListHrisTimeoffsResponse> listHrisTimeoffs(@Nonnull ListHrisTimeoffsRequest request) {
         AsyncRequestOperation<ListHrisTimeoffsRequest, ListHrisTimeoffsResponse> operation
               = new ListHrisTimeoffs.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update a timeoff
+     * 
+     * @return The async call builder
+     */
+    public PatchHrisTimeoffRequestBuilder patchHrisTimeoff() {
+        return new PatchHrisTimeoffRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a timeoff
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<PatchHrisTimeoffResponse>} - The async response
+     */
+    public CompletableFuture<PatchHrisTimeoffResponse> patchHrisTimeoff(@Nonnull PatchHrisTimeoffRequest request) {
+        AsyncRequestOperation<PatchHrisTimeoffRequest, PatchHrisTimeoffResponse> operation
+              = new PatchHrisTimeoff.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Remove a timeoff
+     * 
+     * @return The async call builder
+     */
+    public RemoveHrisTimeoffRequestBuilder removeHrisTimeoff() {
+        return new RemoveHrisTimeoffRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a timeoff
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<RemoveHrisTimeoffResponse>} - The async response
+     */
+    public CompletableFuture<RemoveHrisTimeoffResponse> removeHrisTimeoff(@Nonnull RemoveHrisTimeoffRequest request) {
+        AsyncRequestOperation<RemoveHrisTimeoffRequest, RemoveHrisTimeoffResponse> operation
+              = new RemoveHrisTimeoff.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Update a timeoff
+     * 
+     * @return The async call builder
+     */
+    public UpdateHrisTimeoffRequestBuilder updateHrisTimeoff() {
+        return new UpdateHrisTimeoffRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a timeoff
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<UpdateHrisTimeoffResponse>} - The async response
+     */
+    public CompletableFuture<UpdateHrisTimeoffResponse> updateHrisTimeoff(@Nonnull UpdateHrisTimeoffRequest request) {
+        AsyncRequestOperation<UpdateHrisTimeoffRequest, UpdateHrisTimeoffResponse> operation
+              = new UpdateHrisTimeoff.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

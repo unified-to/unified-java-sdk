@@ -28,6 +28,7 @@ public enum UpdateAccountingCreditmemoQueryParamFields {
     CURRENCY("currency"),
     NOTES("notes"),
     REFUND_REASON("refund_reason"),
+    ORGANIZATION_ID("organization_id"),
     LINEITEMS("lineitems"),
     STATUS("status"),
     URL("url"),

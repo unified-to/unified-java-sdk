@@ -22,7 +22,7 @@ generation:
   requestBodyFieldName: ""
   versioningStrategy: automatic
   persistentEdits:
-    enabled: "never"
+    enabled: never
   tests:
     generateTests: true
     generateNewTests: false
@@ -30,7 +30,7 @@ generation:
   baseServerURL: ""
   flattenGlobalSecurity: true
 java:
-  version: 0.47.15
+  version: 0.47.16
   additionalDependencies: []
   additionalPlugins: []
   artifactID: unified-java-sdk

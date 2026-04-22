@@ -1464,6 +1464,39 @@ public class UnifiedJavaSDKAutoConfig {
         return unifiedTo.tracking();
     }
     /**
+     * Creates a Signing sub-SDK bean if none exists.
+     *
+     * @param unifiedTo the main SDK instance
+     * @return A configured Signing instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public Signing signing(UnifiedTo unifiedTo) {
+        return unifiedTo.signing();
+    }
+    /**
+     * Creates a Signatory sub-SDK bean if none exists.
+     *
+     * @param unifiedTo the main SDK instance
+     * @return A configured Signatory instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public Signatory signatory(UnifiedTo unifiedTo) {
+        return unifiedTo.signatory();
+    }
+    /**
+     * Creates a Template sub-SDK bean if none exists.
+     *
+     * @param unifiedTo the main SDK instance
+     * @return A configured Template instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public Template template(UnifiedTo unifiedTo) {
+        return unifiedTo.template();
+    }
+    /**
      * Creates a Storage sub-SDK bean if none exists.
      *
      * @param unifiedTo the main SDK instance
@@ -2960,6 +2993,39 @@ public class UnifiedJavaSDKAutoConfig {
     @ConditionalOnMissingBean
     public AsyncTracking asyncTracking(AsyncUnifiedTo asyncUnifiedTo) {
         return asyncUnifiedTo.tracking();
+    }
+    /**
+     * Creates an AsyncSigning sub-SDK bean if none exists.
+     *
+     * @param asyncUnifiedTo the async SDK instance
+     * @return A configured AsyncSigning instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public AsyncSigning asyncSigning(AsyncUnifiedTo asyncUnifiedTo) {
+        return asyncUnifiedTo.signing();
+    }
+    /**
+     * Creates an AsyncSignatory sub-SDK bean if none exists.
+     *
+     * @param asyncUnifiedTo the async SDK instance
+     * @return A configured AsyncSignatory instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public AsyncSignatory asyncSignatory(AsyncUnifiedTo asyncUnifiedTo) {
+        return asyncUnifiedTo.signatory();
+    }
+    /**
+     * Creates an AsyncTemplate sub-SDK bean if none exists.
+     *
+     * @param asyncUnifiedTo the async SDK instance
+     * @return A configured AsyncTemplate instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public AsyncTemplate asyncTemplate(AsyncUnifiedTo asyncUnifiedTo) {
+        return asyncUnifiedTo.template();
     }
     /**
      * Creates an AsyncStorage sub-SDK bean if none exists.

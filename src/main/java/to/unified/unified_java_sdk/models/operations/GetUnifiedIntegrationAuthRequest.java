@@ -59,7 +59,10 @@ public class GetUnifiedIntegrationAuthRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
     private String state;
 
-
+    /**
+     * Optional tenant domain or subdomain for integrations that require it to build the authorize, token,
+     * or API URL. Depending on the integration, this may be a bare subdomain or a full domain/URL.
+     */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subdomain")
     private String subdomain;
 
@@ -161,6 +164,10 @@ public class GetUnifiedIntegrationAuthRequest {
         return Optional.ofNullable(this.state);
     }
 
+    /**
+     * Optional tenant domain or subdomain for integrations that require it to build the authorize, token,
+     * or API URL. Depending on the integration, this may be a bare subdomain or a full domain/URL.
+     */
     public Optional<String> subdomain() {
         return Optional.ofNullable(this.subdomain);
     }
@@ -249,6 +256,10 @@ public class GetUnifiedIntegrationAuthRequest {
     }
 
 
+    /**
+     * Optional tenant domain or subdomain for integrations that require it to build the authorize, token,
+     * or API URL. Depending on the integration, this may be a bare subdomain or a full domain/URL.
+     */
     public GetUnifiedIntegrationAuthRequest withSubdomain(@Nullable String subdomain) {
         this.subdomain = subdomain;
         return this;
@@ -407,6 +418,10 @@ public class GetUnifiedIntegrationAuthRequest {
             return this;
         }
 
+        /**
+         * Optional tenant domain or subdomain for integrations that require it to build the authorize, token,
+         * or API URL. Depending on the integration, this may be a bare subdomain or a full domain/URL.
+         */
         public Builder subdomain(@Nullable String subdomain) {
             this.subdomain = subdomain;
             return this;

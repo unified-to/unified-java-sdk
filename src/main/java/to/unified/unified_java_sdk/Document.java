@@ -9,27 +9,51 @@ import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateAtsDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.CreateAtsDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateAtsDocumentResponse;
+import to.unified.unified_java_sdk.models.operations.CreateSigningDocumentRequest;
+import to.unified.unified_java_sdk.models.operations.CreateSigningDocumentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.CreateSigningDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.GetAtsDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.GetAtsDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetAtsDocumentResponse;
+import to.unified.unified_java_sdk.models.operations.GetSigningDocumentRequest;
+import to.unified.unified_java_sdk.models.operations.GetSigningDocumentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetSigningDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.ListAtsDocumentsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAtsDocumentsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListAtsDocumentsResponse;
+import to.unified.unified_java_sdk.models.operations.ListSigningDocumentsRequest;
+import to.unified.unified_java_sdk.models.operations.ListSigningDocumentsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListSigningDocumentsResponse;
 import to.unified.unified_java_sdk.models.operations.PatchAtsDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAtsDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchAtsDocumentResponse;
+import to.unified.unified_java_sdk.models.operations.PatchSigningDocumentRequest;
+import to.unified.unified_java_sdk.models.operations.PatchSigningDocumentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.PatchSigningDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.RemoveAtsDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveAtsDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.RemoveAtsDocumentResponse;
+import to.unified.unified_java_sdk.models.operations.RemoveSigningDocumentRequest;
+import to.unified.unified_java_sdk.models.operations.RemoveSigningDocumentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.RemoveSigningDocumentResponse;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsDocumentRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsDocumentRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateAtsDocumentResponse;
+import to.unified.unified_java_sdk.models.operations.UpdateSigningDocumentRequest;
+import to.unified.unified_java_sdk.models.operations.UpdateSigningDocumentRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.UpdateSigningDocumentResponse;
 import to.unified.unified_java_sdk.operations.CreateAtsDocument;
+import to.unified.unified_java_sdk.operations.CreateSigningDocument;
 import to.unified.unified_java_sdk.operations.GetAtsDocument;
+import to.unified.unified_java_sdk.operations.GetSigningDocument;
 import to.unified.unified_java_sdk.operations.ListAtsDocuments;
+import to.unified.unified_java_sdk.operations.ListSigningDocuments;
 import to.unified.unified_java_sdk.operations.PatchAtsDocument;
+import to.unified.unified_java_sdk.operations.PatchSigningDocument;
 import to.unified.unified_java_sdk.operations.RemoveAtsDocument;
+import to.unified.unified_java_sdk.operations.RemoveSigningDocument;
 import to.unified.unified_java_sdk.operations.UpdateAtsDocument;
+import to.unified.unified_java_sdk.operations.UpdateSigningDocument;
 import to.unified.unified_java_sdk.utils.Headers;
 
 
@@ -75,6 +99,28 @@ public class Document {
     }
 
     /**
+     * Create a document
+     * 
+     * @return The call builder
+     */
+    public CreateSigningDocumentRequestBuilder createSigningDocument() {
+        return new CreateSigningDocumentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Create a document
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public CreateSigningDocumentResponse createSigningDocument(@Nonnull CreateSigningDocumentRequest request) {
+        RequestOperation<CreateSigningDocumentRequest, CreateSigningDocumentResponse> operation
+              = new CreateSigningDocument.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Retrieve a document
      * 
      * @return The call builder
@@ -93,6 +139,28 @@ public class Document {
     public GetAtsDocumentResponse getAtsDocument(@Nonnull GetAtsDocumentRequest request) {
         RequestOperation<GetAtsDocumentRequest, GetAtsDocumentResponse> operation
               = new GetAtsDocument.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve a document
+     * 
+     * @return The call builder
+     */
+    public GetSigningDocumentRequestBuilder getSigningDocument() {
+        return new GetSigningDocumentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a document
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetSigningDocumentResponse getSigningDocument(@Nonnull GetSigningDocumentRequest request) {
+        RequestOperation<GetSigningDocumentRequest, GetSigningDocumentResponse> operation
+              = new GetSigningDocument.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -119,6 +187,28 @@ public class Document {
     }
 
     /**
+     * List all documents
+     * 
+     * @return The call builder
+     */
+    public ListSigningDocumentsRequestBuilder listSigningDocuments() {
+        return new ListSigningDocumentsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all documents
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListSigningDocumentsResponse listSigningDocuments(@Nonnull ListSigningDocumentsRequest request) {
+        RequestOperation<ListSigningDocumentsRequest, ListSigningDocumentsResponse> operation
+              = new ListSigningDocuments.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Update a document
      * 
      * @return The call builder
@@ -137,6 +227,28 @@ public class Document {
     public PatchAtsDocumentResponse patchAtsDocument(@Nonnull PatchAtsDocumentRequest request) {
         RequestOperation<PatchAtsDocumentRequest, PatchAtsDocumentResponse> operation
               = new PatchAtsDocument.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update a document
+     * 
+     * @return The call builder
+     */
+    public PatchSigningDocumentRequestBuilder patchSigningDocument() {
+        return new PatchSigningDocumentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a document
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public PatchSigningDocumentResponse patchSigningDocument(@Nonnull PatchSigningDocumentRequest request) {
+        RequestOperation<PatchSigningDocumentRequest, PatchSigningDocumentResponse> operation
+              = new PatchSigningDocument.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 
@@ -163,6 +275,28 @@ public class Document {
     }
 
     /**
+     * Remove a document
+     * 
+     * @return The call builder
+     */
+    public RemoveSigningDocumentRequestBuilder removeSigningDocument() {
+        return new RemoveSigningDocumentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Remove a document
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public RemoveSigningDocumentResponse removeSigningDocument(@Nonnull RemoveSigningDocumentRequest request) {
+        RequestOperation<RemoveSigningDocumentRequest, RemoveSigningDocumentResponse> operation
+              = new RemoveSigningDocument.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
      * Update a document
      * 
      * @return The call builder
@@ -181,6 +315,28 @@ public class Document {
     public UpdateAtsDocumentResponse updateAtsDocument(@Nonnull UpdateAtsDocumentRequest request) {
         RequestOperation<UpdateAtsDocumentRequest, UpdateAtsDocumentResponse> operation
               = new UpdateAtsDocument.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Update a document
+     * 
+     * @return The call builder
+     */
+    public UpdateSigningDocumentRequestBuilder updateSigningDocument() {
+        return new UpdateSigningDocumentRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Update a document
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public UpdateSigningDocumentResponse updateSigningDocument(@Nonnull UpdateSigningDocumentRequest request) {
+        RequestOperation<UpdateSigningDocumentRequest, UpdateSigningDocumentResponse> operation
+              = new UpdateSigningDocument.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

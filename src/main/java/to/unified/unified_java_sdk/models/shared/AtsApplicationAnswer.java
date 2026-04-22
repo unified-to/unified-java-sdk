@@ -4,8 +4,11 @@
 package to.unified.unified_java_sdk.models.shared;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
 import java.util.List;
@@ -19,21 +22,38 @@ public class AtsApplicationAnswer {
     private List<String> answers;
 
 
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("question")
+    private String question;
+
+
     @JsonProperty("question_id")
     private String questionId;
 
     @JsonCreator
     public AtsApplicationAnswer(
             @JsonProperty("answers") @Nonnull List<String> answers,
+            @JsonProperty("question") @Nullable String question,
             @JsonProperty("question_id") @Nonnull String questionId) {
         this.answers = Optional.ofNullable(answers)
             .orElseThrow(() -> new IllegalArgumentException("answers cannot be null"));
+        this.question = question;
         this.questionId = Optional.ofNullable(questionId)
             .orElseThrow(() -> new IllegalArgumentException("questionId cannot be null"));
+    }
+    
+    public AtsApplicationAnswer(
+            @Nonnull List<String> answers,
+            @Nonnull String questionId) {
+        this(answers, null, questionId);
     }
 
     public List<String> answers() {
         return this.answers;
+    }
+
+    public Optional<String> question() {
+        return Optional.ofNullable(this.question);
     }
 
     public String questionId() {
@@ -47,6 +67,12 @@ public class AtsApplicationAnswer {
 
     public AtsApplicationAnswer withAnswers(@Nonnull List<String> answers) {
         this.answers = Utils.checkNotNull(answers, "answers");
+        return this;
+    }
+
+
+    public AtsApplicationAnswer withQuestion(@Nullable String question) {
+        this.question = question;
         return this;
     }
 
@@ -68,19 +94,21 @@ public class AtsApplicationAnswer {
         AtsApplicationAnswer other = (AtsApplicationAnswer) o;
         return 
             Utils.enhancedDeepEquals(this.answers, other.answers) &&
+            Utils.enhancedDeepEquals(this.question, other.question) &&
             Utils.enhancedDeepEquals(this.questionId, other.questionId);
     }
     
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            answers, questionId);
+            answers, question, questionId);
     }
     
     @Override
     public String toString() {
         return Utils.toString(AtsApplicationAnswer.class,
                 "answers", answers,
+                "question", question,
                 "questionId", questionId);
     }
 
@@ -88,6 +116,8 @@ public class AtsApplicationAnswer {
     public final static class Builder {
 
         private List<String> answers;
+
+        private String question;
 
         private String questionId;
 
@@ -100,6 +130,11 @@ public class AtsApplicationAnswer {
             return this;
         }
 
+        public Builder question(@Nullable String question) {
+            this.question = question;
+            return this;
+        }
+
         public Builder questionId(@Nonnull String questionId) {
             this.questionId = Utils.checkNotNull(questionId, "questionId");
             return this;
@@ -107,7 +142,7 @@ public class AtsApplicationAnswer {
 
         public AtsApplicationAnswer build() {
             return new AtsApplicationAnswer(
-                answers, questionId);
+                answers, question, questionId);
         }
 
     }

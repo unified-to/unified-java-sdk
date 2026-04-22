@@ -20,6 +20,7 @@ public enum UpdateAccountingJournalQueryParamFields {
     DESCRIPTION("description"),
     POSTED_AT("posted_at"),
     SOURCE("source"),
+    ORGANIZATION_ID("organization_id"),
     RAW("raw");
 
     @JsonValue

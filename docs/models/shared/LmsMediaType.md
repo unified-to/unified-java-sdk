@@ -23,5 +23,4 @@ LmsMediaType custom = LmsMediaType.of("custom_value");
 | `DOCUMENT` | DOCUMENT   |
 | `TEXT`     | TEXT       |
 | `HTML`     | HTML       |
-| `MARKDOWN` | MARKDOWN   |
 | `OTHER`    | OTHER      |

@@ -102,6 +102,11 @@ public class Webhook {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("is_beta")
+    private Boolean isBeta;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_healthy")
     private Boolean isHealthy;
 
@@ -158,6 +163,7 @@ public class Webhook {
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("integration_type") @Nullable String integrationType,
             @JsonProperty("interval") @Nullable Double interval,
+            @JsonProperty("is_beta") @Nullable Boolean isBeta,
             @JsonProperty("is_healthy") @Nullable Boolean isHealthy,
             @JsonProperty("is_paused") @Nullable Boolean isPaused,
             @JsonProperty("object_type") @Nonnull ObjectType objectType,
@@ -184,6 +190,7 @@ public class Webhook {
         this.id = id;
         this.integrationType = integrationType;
         this.interval = interval;
+        this.isBeta = isBeta;
         this.isHealthy = isHealthy;
         this.isPaused = isPaused;
         this.objectType = Optional.ofNullable(objectType)
@@ -204,9 +211,9 @@ public class Webhook {
             null, null, event,
             null, null, null,
             null, null, null,
-            null, null, objectType,
             null, null, null,
-            null, null);
+            objectType, null, null,
+            null, null, null);
     }
 
     public Optional<OffsetDateTime> checkedAt() {
@@ -267,6 +274,10 @@ public class Webhook {
 
     public Optional<Double> interval() {
         return Optional.ofNullable(this.interval);
+    }
+
+    public Optional<Boolean> isBeta() {
+        return Optional.ofNullable(this.isBeta);
     }
 
     public Optional<Boolean> isHealthy() {
@@ -399,6 +410,12 @@ public class Webhook {
     }
 
 
+    public Webhook withIsBeta(@Nullable Boolean isBeta) {
+        this.isBeta = isBeta;
+        return this;
+    }
+
+
     public Webhook withIsHealthy(@Nullable Boolean isHealthy) {
         this.isHealthy = isHealthy;
         return this;
@@ -475,6 +492,7 @@ public class Webhook {
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.integrationType, other.integrationType) &&
             Utils.enhancedDeepEquals(this.interval, other.interval) &&
+            Utils.enhancedDeepEquals(this.isBeta, other.isBeta) &&
             Utils.enhancedDeepEquals(this.isHealthy, other.isHealthy) &&
             Utils.enhancedDeepEquals(this.isPaused, other.isPaused) &&
             Utils.enhancedDeepEquals(this.objectType, other.objectType) &&
@@ -493,9 +511,9 @@ public class Webhook {
             dbUrl, environment, event,
             fields, filters, hookUrl,
             id, integrationType, interval,
-            isHealthy, isPaused, objectType,
-            pageMaxLimit, runs, updatedAt,
-            webhookType, workspaceId);
+            isBeta, isHealthy, isPaused,
+            objectType, pageMaxLimit, runs,
+            updatedAt, webhookType, workspaceId);
     }
     
     @Override
@@ -516,6 +534,7 @@ public class Webhook {
                 "id", id,
                 "integrationType", integrationType,
                 "interval", interval,
+                "isBeta", isBeta,
                 "isHealthy", isHealthy,
                 "isPaused", isPaused,
                 "objectType", objectType,
@@ -558,6 +577,8 @@ public class Webhook {
         private String integrationType;
 
         private Double interval;
+
+        private Boolean isBeta;
 
         private Boolean isHealthy;
 
@@ -654,6 +675,11 @@ public class Webhook {
             return this;
         }
 
+        public Builder isBeta(@Nullable Boolean isBeta) {
+            this.isBeta = isBeta;
+            return this;
+        }
+
         public Builder isHealthy(@Nullable Boolean isHealthy) {
             this.isHealthy = isHealthy;
             return this;
@@ -704,9 +730,9 @@ public class Webhook {
                 dbUrl, environment, event,
                 fields, filters, hookUrl,
                 id, integrationType, interval,
-                isHealthy, isPaused, objectType,
-                pageMaxLimit, runs, updatedAt,
-                webhookType, workspaceId);
+                isBeta, isHealthy, isPaused,
+                objectType, pageMaxLimit, runs,
+                updatedAt, webhookType, workspaceId);
         }
 
 

@@ -12,3 +12,4 @@
 | `countryCode`       | *Optional\<String>* | :heavy_minus_sign:  | N/A                 |
 | `postalCode`        | *Optional\<String>* | :heavy_minus_sign:  | N/A                 |
 | `region`            | *Optional\<String>* | :heavy_minus_sign:  | N/A                 |
+| `regionCode`        | *Optional\<String>* | :heavy_minus_sign:  | N/A                 |

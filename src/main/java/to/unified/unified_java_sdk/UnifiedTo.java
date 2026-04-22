@@ -380,6 +380,15 @@ public class UnifiedTo {
     private final Tracking tracking;
 
 
+    private final Signing signing;
+
+
+    private final Signatory signatory;
+
+
+    private final Template template;
+
+
     private final Storage storage;
 
 
@@ -1011,6 +1020,21 @@ public class UnifiedTo {
     }
 
 
+    public Signing signing() {
+        return signing;
+    }
+
+
+    public Signatory signatory() {
+        return signatory;
+    }
+
+
+    public Template template() {
+        return template;
+    }
+
+
     public Storage storage() {
         return storage;
     }
@@ -1370,6 +1394,9 @@ public class UnifiedTo {
         this.rate = new Rate(sdkConfiguration);
         this.shipment = new Shipment(sdkConfiguration);
         this.tracking = new Tracking(sdkConfiguration);
+        this.signing = new Signing(sdkConfiguration);
+        this.signatory = new Signatory(sdkConfiguration);
+        this.template = new Template(sdkConfiguration);
         this.storage = new Storage(sdkConfiguration);
         this.file = new File(sdkConfiguration);
         this.task = new Task(sdkConfiguration);

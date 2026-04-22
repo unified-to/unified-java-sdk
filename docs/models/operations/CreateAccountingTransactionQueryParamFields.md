@@ -30,4 +30,5 @@ CreateAccountingTransactionQueryParamFields value = CreateAccountingTransactionQ
 | `LINEITEMS`        | lineitems          |
 | `CURRENCY`         | currency           |
 | `CONTACTS`         | contacts           |
+| `ORGANIZATION_ID`  | organization_id    |
 | `RAW`              | raw                |

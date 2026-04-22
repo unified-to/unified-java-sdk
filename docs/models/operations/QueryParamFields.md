@@ -29,6 +29,6 @@ QueryParamFields value = QueryParamFields.ID;
 | `GROUP`                 | group                   |
 | `SUBGROUP`              | subgroup                |
 | `PARENT_ID`             | parent_id               |
-| `ORGANIZATION_ID`       | organization_id         |
 | `TAXONOMY`              | taxonomy                |
+| `ORGANIZATION_ID`       | organization_id         |
 | `RAW`                   | raw                     |

@@ -47,6 +47,11 @@ public class AccountingTaxrate {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("organization_id")
+    private String organizationId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rate")
     private Double rate;
 
@@ -67,6 +72,7 @@ public class AccountingTaxrate {
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_active") @Nullable Boolean isActive,
             @JsonProperty("name") @Nullable String name,
+            @JsonProperty("organization_id") @Nullable String organizationId,
             @JsonProperty("rate") @Nullable Double rate,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
@@ -75,6 +81,7 @@ public class AccountingTaxrate {
         this.id = id;
         this.isActive = isActive;
         this.name = name;
+        this.organizationId = organizationId;
         this.rate = rate;
         this.raw = raw;
         this.updatedAt = updatedAt;
@@ -83,7 +90,7 @@ public class AccountingTaxrate {
     public AccountingTaxrate() {
         this(null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<OffsetDateTime> createdAt() {
@@ -104,6 +111,10 @@ public class AccountingTaxrate {
 
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
+    }
+
+    public Optional<String> organizationId() {
+        return Optional.ofNullable(this.organizationId);
     }
 
     public Optional<Double> rate() {
@@ -153,6 +164,12 @@ public class AccountingTaxrate {
     }
 
 
+    public AccountingTaxrate withOrganizationId(@Nullable String organizationId) {
+        this.organizationId = organizationId;
+        return this;
+    }
+
+
     public AccountingTaxrate withRate(@Nullable Double rate) {
         this.rate = rate;
         return this;
@@ -186,6 +203,7 @@ public class AccountingTaxrate {
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
+            Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
             Utils.enhancedDeepEquals(this.rate, other.rate) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
@@ -195,8 +213,8 @@ public class AccountingTaxrate {
     public int hashCode() {
         return Utils.enhancedHash(
             createdAt, description, id,
-            isActive, name, rate,
-            raw, updatedAt);
+            isActive, name, organizationId,
+            rate, raw, updatedAt);
     }
     
     @Override
@@ -207,6 +225,7 @@ public class AccountingTaxrate {
                 "id", id,
                 "isActive", isActive,
                 "name", name,
+                "organizationId", organizationId,
                 "rate", rate,
                 "raw", raw,
                 "updatedAt", updatedAt);
@@ -224,6 +243,8 @@ public class AccountingTaxrate {
         private Boolean isActive;
 
         private String name;
+
+        private String organizationId;
 
         private Double rate;
 
@@ -260,6 +281,11 @@ public class AccountingTaxrate {
             return this;
         }
 
+        public Builder organizationId(@Nullable String organizationId) {
+            this.organizationId = organizationId;
+            return this;
+        }
+
         public Builder rate(@Nullable Double rate) {
             this.rate = rate;
             return this;
@@ -278,8 +304,8 @@ public class AccountingTaxrate {
         public AccountingTaxrate build() {
             return new AccountingTaxrate(
                 createdAt, description, id,
-                isActive, name, rate,
-                raw, updatedAt);
+                isActive, name, organizationId,
+                rate, raw, updatedAt);
         }
 
     }
