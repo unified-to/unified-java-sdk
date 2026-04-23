@@ -29,6 +29,12 @@ public class ListAccountingInvoicesRequest {
     private String contactId;
 
     /**
+     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_lt")
+    private String endLt;
+
+    /**
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
@@ -70,6 +76,12 @@ public class ListAccountingInvoicesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     private String sort;
 
+    /**
+     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_gte")
+    private String startGte;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     private String type;
@@ -85,6 +97,7 @@ public class ListAccountingInvoicesRequest {
     public ListAccountingInvoicesRequest(
             @Nonnull String connectionId,
             @Nullable String contactId,
+            @Nullable String endLt,
             @Nullable List<ListAccountingInvoicesQueryParamFields> fields,
             @Nullable Double limit,
             @Nullable Double offset,
@@ -93,11 +106,13 @@ public class ListAccountingInvoicesRequest {
             @Nullable String query,
             @Nullable String raw,
             @Nullable String sort,
+            @Nullable String startGte,
             @Nullable String type,
             @Nullable String updatedGte) {
         this.connectionId = Optional.ofNullable(connectionId)
             .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.contactId = contactId;
+        this.endLt = endLt;
         this.fields = fields;
         this.limit = limit;
         this.offset = offset;
@@ -106,6 +121,7 @@ public class ListAccountingInvoicesRequest {
         this.query = query;
         this.raw = raw;
         this.sort = sort;
+        this.startGte = startGte;
         this.type = type;
         this.updatedGte = updatedGte;
     }
@@ -115,7 +131,8 @@ public class ListAccountingInvoicesRequest {
         this(connectionId, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null, null);
     }
 
     /**
@@ -130,6 +147,13 @@ public class ListAccountingInvoicesRequest {
      */
     public Optional<String> contactId() {
         return Optional.ofNullable(this.contactId);
+    }
+
+    /**
+     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    public Optional<String> endLt() {
+        return Optional.ofNullable(this.endLt);
     }
 
     /**
@@ -178,6 +202,13 @@ public class ListAccountingInvoicesRequest {
         return Optional.ofNullable(this.sort);
     }
 
+    /**
+     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    public Optional<String> startGte() {
+        return Optional.ofNullable(this.startGte);
+    }
+
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -209,6 +240,15 @@ public class ListAccountingInvoicesRequest {
      */
     public ListAccountingInvoicesRequest withContactId(@Nullable String contactId) {
         this.contactId = contactId;
+        return this;
+    }
+
+
+    /**
+     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    public ListAccountingInvoicesRequest withEndLt(@Nullable String endLt) {
+        this.endLt = endLt;
         return this;
     }
 
@@ -275,6 +315,15 @@ public class ListAccountingInvoicesRequest {
     }
 
 
+    /**
+     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    public ListAccountingInvoicesRequest withStartGte(@Nullable String startGte) {
+        this.startGte = startGte;
+        return this;
+    }
+
+
     public ListAccountingInvoicesRequest withType(@Nullable String type) {
         this.type = type;
         return this;
@@ -303,6 +352,7 @@ public class ListAccountingInvoicesRequest {
         return 
             Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
             Utils.enhancedDeepEquals(this.contactId, other.contactId) &&
+            Utils.enhancedDeepEquals(this.endLt, other.endLt) &&
             Utils.enhancedDeepEquals(this.fields, other.fields) &&
             Utils.enhancedDeepEquals(this.limit, other.limit) &&
             Utils.enhancedDeepEquals(this.offset, other.offset) &&
@@ -311,6 +361,7 @@ public class ListAccountingInvoicesRequest {
             Utils.enhancedDeepEquals(this.query, other.query) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.sort, other.sort) &&
+            Utils.enhancedDeepEquals(this.startGte, other.startGte) &&
             Utils.enhancedDeepEquals(this.type, other.type) &&
             Utils.enhancedDeepEquals(this.updatedGte, other.updatedGte);
     }
@@ -318,10 +369,11 @@ public class ListAccountingInvoicesRequest {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            connectionId, contactId, fields,
-            limit, offset, order,
-            orgId, query, raw,
-            sort, type, updatedGte);
+            connectionId, contactId, endLt,
+            fields, limit, offset,
+            order, orgId, query,
+            raw, sort, startGte,
+            type, updatedGte);
     }
     
     @Override
@@ -329,6 +381,7 @@ public class ListAccountingInvoicesRequest {
         return Utils.toString(ListAccountingInvoicesRequest.class,
                 "connectionId", connectionId,
                 "contactId", contactId,
+                "endLt", endLt,
                 "fields", fields,
                 "limit", limit,
                 "offset", offset,
@@ -337,6 +390,7 @@ public class ListAccountingInvoicesRequest {
                 "query", query,
                 "raw", raw,
                 "sort", sort,
+                "startGte", startGte,
                 "type", type,
                 "updatedGte", updatedGte);
     }
@@ -347,6 +401,8 @@ public class ListAccountingInvoicesRequest {
         private String connectionId;
 
         private String contactId;
+
+        private String endLt;
 
         private List<ListAccountingInvoicesQueryParamFields> fields;
 
@@ -363,6 +419,8 @@ public class ListAccountingInvoicesRequest {
         private String raw;
 
         private String sort;
+
+        private String startGte;
 
         private String type;
 
@@ -385,6 +443,14 @@ public class ListAccountingInvoicesRequest {
          */
         public Builder contactId(@Nullable String contactId) {
             this.contactId = contactId;
+            return this;
+        }
+
+        /**
+         * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
+        public Builder endLt(@Nullable String endLt) {
+            this.endLt = endLt;
             return this;
         }
 
@@ -442,6 +508,14 @@ public class ListAccountingInvoicesRequest {
             return this;
         }
 
+        /**
+         * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
+        public Builder startGte(@Nullable String startGte) {
+            this.startGte = startGte;
+            return this;
+        }
+
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
@@ -458,10 +532,11 @@ public class ListAccountingInvoicesRequest {
 
         public ListAccountingInvoicesRequest build() {
             return new ListAccountingInvoicesRequest(
-                connectionId, contactId, fields,
-                limit, offset, order,
-                orgId, query, raw,
-                sort, type, updatedGte);
+                connectionId, contactId, endLt,
+                fields, limit, offset,
+                order, orgId, query,
+                raw, sort, startGte,
+                type, updatedGte);
         }
 
     }

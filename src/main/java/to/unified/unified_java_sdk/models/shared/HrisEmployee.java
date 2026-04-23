@@ -213,6 +213,16 @@ public class HrisEmployee {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("timeoff_days_total")
+    private Double timeoffDaysTotal;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("timeoff_days_used")
+    private Double timeoffDaysUsed;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
     private String timezone;
 
@@ -265,6 +275,8 @@ public class HrisEmployee {
             @JsonProperty("telephones") @Nullable List<HrisTelephone> telephones,
             @JsonProperty("terminated_at") @Nullable OffsetDateTime terminatedAt,
             @JsonProperty("termination_reason") @Nullable String terminationReason,
+            @JsonProperty("timeoff_days_total") @Nullable Double timeoffDaysTotal,
+            @JsonProperty("timeoff_days_used") @Nullable Double timeoffDaysUsed,
             @JsonProperty("timezone") @Nullable String timezone,
             @JsonProperty("title") @Nullable String title,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
@@ -305,6 +317,8 @@ public class HrisEmployee {
         this.telephones = telephones;
         this.terminatedAt = terminatedAt;
         this.terminationReason = terminationReason;
+        this.timeoffDaysTotal = timeoffDaysTotal;
+        this.timeoffDaysUsed = timeoffDaysUsed;
         this.timezone = timezone;
         this.title = title;
         this.updatedAt = updatedAt;
@@ -324,7 +338,7 @@ public class HrisEmployee {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null, null);
     }
 
     public Optional<PropertyHrisEmployeeAddress> address() {
@@ -480,6 +494,14 @@ public class HrisEmployee {
 
     public Optional<String> terminationReason() {
         return Optional.ofNullable(this.terminationReason);
+    }
+
+    public Optional<Double> timeoffDaysTotal() {
+        return Optional.ofNullable(this.timeoffDaysTotal);
+    }
+
+    public Optional<Double> timeoffDaysUsed() {
+        return Optional.ofNullable(this.timeoffDaysUsed);
     }
 
     public Optional<String> timezone() {
@@ -728,6 +750,18 @@ public class HrisEmployee {
     }
 
 
+    public HrisEmployee withTimeoffDaysTotal(@Nullable Double timeoffDaysTotal) {
+        this.timeoffDaysTotal = timeoffDaysTotal;
+        return this;
+    }
+
+
+    public HrisEmployee withTimeoffDaysUsed(@Nullable Double timeoffDaysUsed) {
+        this.timeoffDaysUsed = timeoffDaysUsed;
+        return this;
+    }
+
+
     public HrisEmployee withTimezone(@Nullable String timezone) {
         this.timezone = timezone;
         return this;
@@ -793,6 +827,8 @@ public class HrisEmployee {
             Utils.enhancedDeepEquals(this.telephones, other.telephones) &&
             Utils.enhancedDeepEquals(this.terminatedAt, other.terminatedAt) &&
             Utils.enhancedDeepEquals(this.terminationReason, other.terminationReason) &&
+            Utils.enhancedDeepEquals(this.timeoffDaysTotal, other.timeoffDaysTotal) &&
+            Utils.enhancedDeepEquals(this.timeoffDaysUsed, other.timeoffDaysUsed) &&
             Utils.enhancedDeepEquals(this.timezone, other.timezone) &&
             Utils.enhancedDeepEquals(this.title, other.title) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
@@ -813,8 +849,8 @@ public class HrisEmployee {
             raw, relationships, salutation,
             ssnSin, storageQuotaAllocated, storageQuotaAvailable,
             storageQuotaUsed, telephones, terminatedAt,
-            terminationReason, timezone, title,
-            updatedAt);
+            terminationReason, timeoffDaysTotal, timeoffDaysUsed,
+            timezone, title, updatedAt);
     }
     
     @Override
@@ -857,6 +893,8 @@ public class HrisEmployee {
                 "telephones", telephones,
                 "terminatedAt", terminatedAt,
                 "terminationReason", terminationReason,
+                "timeoffDaysTotal", timeoffDaysTotal,
+                "timeoffDaysUsed", timeoffDaysUsed,
                 "timezone", timezone,
                 "title", title,
                 "updatedAt", updatedAt);
@@ -938,6 +976,10 @@ public class HrisEmployee {
         private OffsetDateTime terminatedAt;
 
         private String terminationReason;
+
+        private Double timeoffDaysTotal;
+
+        private Double timeoffDaysUsed;
 
         private String timezone;
 
@@ -1141,6 +1183,16 @@ public class HrisEmployee {
             return this;
         }
 
+        public Builder timeoffDaysTotal(@Nullable Double timeoffDaysTotal) {
+            this.timeoffDaysTotal = timeoffDaysTotal;
+            return this;
+        }
+
+        public Builder timeoffDaysUsed(@Nullable Double timeoffDaysUsed) {
+            this.timeoffDaysUsed = timeoffDaysUsed;
+            return this;
+        }
+
         public Builder timezone(@Nullable String timezone) {
             this.timezone = timezone;
             return this;
@@ -1170,8 +1222,8 @@ public class HrisEmployee {
                 raw, relationships, salutation,
                 ssnSin, storageQuotaAllocated, storageQuotaAvailable,
                 storageQuotaUsed, telephones, terminatedAt,
-                terminationReason, timezone, title,
-                updatedAt);
+                terminationReason, timeoffDaysTotal, timeoffDaysUsed,
+                timezone, title, updatedAt);
         }
 
     }

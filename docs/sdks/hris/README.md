@@ -559,6 +559,7 @@ Create a timeoff
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTimeoffRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTimeoffResponse;
@@ -577,6 +578,7 @@ public class Application {
 
         CreateHrisTimeoffRequest req = CreateHrisTimeoffRequest.builder()
                 .hrisTimeoff(HrisTimeoff.builder()
+                    .startAt(OffsetDateTime.parse("2024-09-03T22:31:51.863Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -2437,6 +2439,7 @@ Update a timeoff
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchHrisTimeoffRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisTimeoffResponse;
@@ -2455,6 +2458,7 @@ public class Application {
 
         PatchHrisTimeoffRequest req = PatchHrisTimeoffRequest.builder()
                 .hrisTimeoff(HrisTimeoff.builder()
+                    .startAt(OffsetDateTime.parse("2024-01-26T05:49:44.056Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3612,6 +3616,7 @@ Update a timeoff
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeoffRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeoffResponse;
@@ -3630,6 +3635,7 @@ public class Application {
 
         UpdateHrisTimeoffRequest req = UpdateHrisTimeoffRequest.builder()
                 .hrisTimeoff(HrisTimeoff.builder()
+                    .startAt(OffsetDateTime.parse("2026-02-26T01:59:20.061Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

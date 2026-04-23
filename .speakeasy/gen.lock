@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: 556f285080267fd6b3d58b8990f5704b
+  docChecksum: 2e65ff785fedef7765dc3a1ace699f58
   docVersion: "1.0"
   speakeasyVersion: 1.761.9
   generationVersion: 2.881.4
-  releaseVersion: 0.47.16
-  configChecksum: d8e9f34c58421ba457a49cb739a49519
+  releaseVersion: 0.47.17
+  configChecksum: 30bcc36cf1b2e99fa8a153edc6d7ac70
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-java-sdk
@@ -689,7 +689,7 @@ trackedFiles:
     pristine_git_object: 69719296db3a0192a0f0aead05943b24093a3edf
   docs/models/operations/CreateHrisEmployeeQueryParamFields.md:
     id: 5ba4f2326c42
-    last_write_checksum: sha1:6bc9e5f5d3c43be58701a2c893b49ba5c0350ffd
+    last_write_checksum: sha1:c42fc65b2bebe9e77a87a567e6bfd6f321cfe1f2
     pristine_git_object: d0a03417c3f0251dbdb27663ff3aa99a4e7e13f3
   docs/models/operations/CreateHrisEmployeeRequest.md:
     id: 7bdaa6d699c3
@@ -1987,7 +1987,7 @@ trackedFiles:
     pristine_git_object: c0a7539412d435dd39ae23ad5e138ba5cdd1ed8a
   docs/models/operations/GetHrisEmployeeQueryParamFields.md:
     id: e7af01db5ee4
-    last_write_checksum: sha1:ebc097380705be9a1d9a37dddb514f47d9b63b5f
+    last_write_checksum: sha1:01d402a5cdfe2b89c7f76f30f19977bff14b8fea
     pristine_git_object: 0fd58c9aae62f191f7d770276364010a00b8697b
   docs/models/operations/GetHrisEmployeeRequest.md:
     id: 4284a585873e
@@ -2781,7 +2781,7 @@ trackedFiles:
     pristine_git_object: 06c7131c096040c8fef45c073dbe8301a5332ecf
   docs/models/operations/ListAccountingInvoicesRequest.md:
     id: fca15664dc17
-    last_write_checksum: sha1:d64f2d48f9d07775fbb4ade4f9810dd70fdc370e
+    last_write_checksum: sha1:37133462db3ef79652b116f0b2736d8643348078
     pristine_git_object: e52203c989f31e8c4fd7c520190096246942509a
   docs/models/operations/ListAccountingInvoicesResponse.md:
     id: 2ecb49f167fb
@@ -3497,7 +3497,7 @@ trackedFiles:
     pristine_git_object: 3f69f3976557edd518f12c8c5ec352997e931f33
   docs/models/operations/ListHrisEmployeesQueryParamFields.md:
     id: cabb12ad4a8a
-    last_write_checksum: sha1:9a797df4c75d4872d2c822260b035f387e53b0b5
+    last_write_checksum: sha1:3ab1b4be54914d97852234e206c64c1b838b6238
     pristine_git_object: 97f6222642f757e4c22fe95e7bb12c97342b0fbb
   docs/models/operations/ListHrisEmployeesRequest.md:
     id: 8a3e8764eb76
@@ -4839,7 +4839,7 @@ trackedFiles:
     pristine_git_object: a87ea9e8480e566146874ad1e3d1178abd972ddb
   docs/models/operations/PatchHrisEmployeeQueryParamFields.md:
     id: 77f973526cea
-    last_write_checksum: sha1:447808128f348439275572a98ea3ef36fb55ad3d
+    last_write_checksum: sha1:48cef954e10cfb218b5fbc60495c7f0d81819802
     pristine_git_object: 9c99ff61ed6550d8339d2b2957eabd739c436044
   docs/models/operations/PatchHrisEmployeeRequest.md:
     id: 388c7e5b3b28
@@ -6861,7 +6861,7 @@ trackedFiles:
     pristine_git_object: 0ad55a743a2d9d4dc8fdc56705164c703c7f2a66
   docs/models/operations/UpdateHrisEmployeeQueryParamFields.md:
     id: f7273ddac689
-    last_write_checksum: sha1:b063d1ae90578913f3d828265de767c3337857d7
+    last_write_checksum: sha1:cc1e1bc9db5f89a10eb803722f473af5a19f22f0
     pristine_git_object: 170d57b8d656791c59f3a56a517ec80dbd2bfd4a
   docs/models/operations/UpdateHrisEmployeeRequest.md:
     id: da6c6be9cab2
@@ -8517,7 +8517,7 @@ trackedFiles:
     pristine_git_object: b41d7447147c81d9b999a31ce133a5ade7856054
   docs/models/shared/HrisEmployee.md:
     id: a3c46b507e62
-    last_write_checksum: sha1:54ac354b652bf61961a625d41c648b0b3f339713
+    last_write_checksum: sha1:1ff4637eec164ef28f220abfd34289c9d6a6e5dc
     pristine_git_object: 8f8047ce71c3479963ad1d56425a5b4fbe47db60
   docs/models/shared/HrisEmployeeEmploymentType.md:
     id: 1618f1793de6
@@ -8601,7 +8601,7 @@ trackedFiles:
     pristine_git_object: c64af12600303463720012a6bf4579f22999fc6d
   docs/models/shared/HrisTimeoff.md:
     id: 58b2bbdd703e
-    last_write_checksum: sha1:846df07ef2c87774da4a49e11aecb5774138c397
+    last_write_checksum: sha1:46dfe0ab6e761a9ccaa5f0f66bbecd7e626ae20d
     pristine_git_object: 65aa003fe51e318a1c7e25b94917061468733c81
   docs/models/shared/HrisTimeoffStatus.md:
     id: 72763cac4c0e
@@ -11097,7 +11097,7 @@ trackedFiles:
     pristine_git_object: 3e04d5e8e4b7e2b57dcbe8dfbc0038ea12167aa4
   docs/sdks/hris/README.md:
     id: 0baa868a038c
-    last_write_checksum: sha1:05d71144bb8574dff774fb7c4bd8b1cf6b477756
+    last_write_checksum: sha1:7c491240c40f0186eed13e69ce0c7441bffa34e6
     pristine_git_object: 284467b98223c1fbb295dc3907bab832b325e413
   docs/sdks/insertionorder/README.md:
     id: 72e4049753b2
@@ -11375,7 +11375,7 @@ trackedFiles:
     pristine_git_object: 5f9ed55c9984cb0777e0fc83bff0f4d59da5fd67
   docs/sdks/timeoff/README.md:
     id: 5dfa0f033e4a
-    last_write_checksum: sha1:48f4562ed4b68a089e32e1183fa40b52acd9104c
+    last_write_checksum: sha1:6cbd6c4d7249568d48afd57ce5c553e7b08a543f
     pristine_git_object: 75bd6d9e929afdc03e8776fbbbe1d4ea3fa9115e
   docs/sdks/timeshift/README.md:
     id: f11112fc9233
@@ -11423,7 +11423,7 @@ trackedFiles:
     pristine_git_object: 14fe7a9e0f20951a7e3ab2752816fbc9b8c41dd3
   gradle.properties:
     id: 2afbb999f001
-    last_write_checksum: sha1:0fa12cd2377f2ece52e35acbcdc61a51d0db2eb4
+    last_write_checksum: sha1:384e82655e952f75e4db323a4d5b6684493c633e
     pristine_git_object: e98f734834a572eee8169e873f8a45f9fe20f9e0
   gradle/wrapper/gradle-wrapper.jar:
     id: ec27dae6e852
@@ -12461,7 +12461,7 @@ trackedFiles:
     pristine_git_object: 2ccb6e90f32063c290e9fa25abf9649b884b4ed0
   src/main/java/to/unified/unified_java_sdk/SDKConfiguration.java:
     id: 42279b7431fa
-    last_write_checksum: sha1:eeb1c22186a4867bdf9c7aef3ac09a3135658461
+    last_write_checksum: sha1:065c0b55ed676bd7fd62cf4988ad21a8f7cf66f9
     pristine_git_object: 17976ce665fb7cd87ed8a727359e17d32feaab3b
   src/main/java/to/unified/unified_java_sdk/Saleschannel.java:
     id: 2dca25153692
@@ -16123,7 +16123,7 @@ trackedFiles:
     pristine_git_object: c2ac12dbb13f9f713f0c08472576d48b30cd0992
   src/main/java/to/unified/unified_java_sdk/models/operations/CreateHrisEmployeeQueryParamFields.java:
     id: 448a7161560c
-    last_write_checksum: sha1:a98ba0af99f24d8e8e1a47d7da40f577bc7e5f85
+    last_write_checksum: sha1:d924ae4f912cae5f9409004edb083f2d6cd4f199
     pristine_git_object: efddfb6e064fae2bd0dc71617a2ef30d73124a59
   src/main/java/to/unified/unified_java_sdk/models/operations/CreateHrisEmployeeRequest.java:
     id: 079b6c11a5aa
@@ -17867,7 +17867,7 @@ trackedFiles:
     pristine_git_object: 8ac83b294cd0aabe69968aab27201cd9f5bf2a4d
   src/main/java/to/unified/unified_java_sdk/models/operations/GetHrisEmployeeQueryParamFields.java:
     id: 4afdbd0b8ed0
-    last_write_checksum: sha1:022a50f380efe3f0986e0ff6d09bde7cda9f3e86
+    last_write_checksum: sha1:5a2abd6e863e96b4417524730a844c4e4393cf1f
     pristine_git_object: 557695d29fb2c036cbc5cc482306305915e44981
   src/main/java/to/unified/unified_java_sdk/models/operations/GetHrisEmployeeRequest.java:
     id: c1997bdf2e83
@@ -18935,7 +18935,7 @@ trackedFiles:
     pristine_git_object: d857c5c2b7327ea3f5f2d9c03c98161d79c5f6a6
   src/main/java/to/unified/unified_java_sdk/models/operations/ListAccountingInvoicesRequest.java:
     id: b326c5237fe3
-    last_write_checksum: sha1:bcdd19571750bf868cb14b28c1552364d412183f
+    last_write_checksum: sha1:8a113a0c58d63f010dd84d5670367d5c5b0a6a40
     pristine_git_object: f71d228e9c67d948f3c7438e982f31bc776e89a6
   src/main/java/to/unified/unified_java_sdk/models/operations/ListAccountingInvoicesRequestBuilder.java:
     id: a31ae9d476c2
@@ -19895,7 +19895,7 @@ trackedFiles:
     pristine_git_object: cc552f2a55821451ed00cdaea6a4ffd602fe690d
   src/main/java/to/unified/unified_java_sdk/models/operations/ListHrisEmployeesQueryParamFields.java:
     id: 434d6129d291
-    last_write_checksum: sha1:c05cedbc5d78df7c9dc6af69ae8127edc8394990
+    last_write_checksum: sha1:c8202725b82ac9093382c0ff35ee0acf55c578df
     pristine_git_object: e80bb27013dcb341c02f0ffaa50012933617da04
   src/main/java/to/unified/unified_java_sdk/models/operations/ListHrisEmployeesRequest.java:
     id: 8db6f394f375
@@ -21699,7 +21699,7 @@ trackedFiles:
     pristine_git_object: 1d0b74c044043011c60d77ccdab32cee051b201e
   src/main/java/to/unified/unified_java_sdk/models/operations/PatchHrisEmployeeQueryParamFields.java:
     id: 1dcc42530d5b
-    last_write_checksum: sha1:32d07771fb3b502aa30203181aa67a774d8be33c
+    last_write_checksum: sha1:ec029a7c9638c6d5d512e6b659452eb695daffa0
     pristine_git_object: 3ebcd47f478b211407491156b036005258746740
   src/main/java/to/unified/unified_java_sdk/models/operations/PatchHrisEmployeeRequest.java:
     id: 057d6443e6a3
@@ -24537,7 +24537,7 @@ trackedFiles:
     pristine_git_object: a733165f8fe98202f731181e963bede2ae79d83e
   src/main/java/to/unified/unified_java_sdk/models/operations/UpdateHrisEmployeeQueryParamFields.java:
     id: 8079cef4146d
-    last_write_checksum: sha1:c21f3630bc6a0f7107b69f50975d70852023be35
+    last_write_checksum: sha1:95534b8bdc35c557e4b80419fae11086b3fd6c92
     pristine_git_object: b8c9a4794011073b10c33a1f48934d164fac023c
   src/main/java/to/unified/unified_java_sdk/models/operations/UpdateHrisEmployeeRequest.java:
     id: ffc907b55182
@@ -29055,7 +29055,7 @@ trackedFiles:
     pristine_git_object: 18fd4ad2740f3c068e9dc4deb4c0a46057292634
   src/main/java/to/unified/unified_java_sdk/models/shared/HrisEmployee.java:
     id: 8a0bae8a2cf8
-    last_write_checksum: sha1:90d439afeae88b6e59ec81aefde889cddc2f8e97
+    last_write_checksum: sha1:01962d921f6798e071e803a7d132b6961c0d3abd
     pristine_git_object: e40bde5cd7106cd5220473e80625d483188b4829
   src/main/java/to/unified/unified_java_sdk/models/shared/HrisEmployeeEmploymentType.java:
     id: 8f5fc37b6a0b
@@ -29139,7 +29139,7 @@ trackedFiles:
     pristine_git_object: 2a0fc429a8a00e53dfca43b2bf32302e58e3363b
   src/main/java/to/unified/unified_java_sdk/models/shared/HrisTimeoff.java:
     id: f23ddecffeed
-    last_write_checksum: sha1:c7cceb7c3068b8c1634118a22e0dd09a5fcdaed4
+    last_write_checksum: sha1:e5449f0fcffc6e02d376a5ba55eb7587f7c3b327
     pristine_git_object: a2b55e099f40528db3f81901135436d183193218
   src/main/java/to/unified/unified_java_sdk/models/shared/HrisTimeoffStatus.java:
     id: 7b4c845e90eb
@@ -36414,7 +36414,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {}
+          application/json: {"start_at": "2025-10-20T08:12:47.408Z"}
   getHrisTimeshift:
     speakeasy-default-get-hris-timeshift:
       parameters:
@@ -40402,10 +40402,10 @@ examples:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {}
+        application/json: {"start_at": "2024-09-03T22:31:51.863Z"}
       responses:
         "200":
-          application/json: {}
+          application/json: {"start_at": "2026-06-15T05:46:27.150Z"}
   patchHrisTimeoff:
     speakeasy-default-patch-hris-timeoff:
       parameters:
@@ -40413,10 +40413,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {}
+        application/json: {"start_at": "2024-01-26T05:49:44.056Z"}
       responses:
         "200":
-          application/json: {}
+          application/json: {"start_at": "2024-11-03T06:01:35.702Z"}
   removeHrisTimeoff:
     speakeasy-default-remove-hris-timeoff:
       parameters:
@@ -40430,10 +40430,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {}
+        application/json: {"start_at": "2026-02-26T01:59:20.061Z"}
       responses:
         "200":
-          application/json: {}
+          application/json: {"start_at": "2025-05-04T04:02:48.766Z"}
   createSigningSignatory:
     speakeasy-default-create-signing-signatory:
       parameters:
@@ -40508,7 +40508,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Java SDK Changes:\n* `unified-to.collection.createLmsCollection()`: \n  *  `request.lmsCollection.media[]` **Changed** (Breaking ⚠️)\n  *  `response.media[]` **Changed** (Breaking ⚠️)\n* `unified-to.course.updateLmsCourse()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.course.patchLmsCourse()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.course.listLmsCourses()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified-to.course.getLmsCourse()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.course.createLmsCourse()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.content.updateLmsContent()`: \n  *  `request.lmsContent` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.content.patchLmsContent()`: \n  *  `request.lmsContent` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.content.listLmsContents()`:  `response.[]` **Changed** (Breaking ⚠️)\n* `unified-to.content.getLmsContent()`:  `response` **Changed** (Breaking ⚠️)\n* `unified-to.content.createLmsContent()`: \n  *  `request.lmsContent` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.class.updateLmsClass()`: \n  *  `request.lmsClass.media[]` **Changed** (Breaking ⚠️)\n  *  `response.media[]` **Changed** (Breaking ⚠️)\n* `unified-to.class.patchLmsClass()`: \n  *  `request.lmsClass.media[]` **Changed** (Breaking ⚠️)\n  *  `response.media[]` **Changed** (Breaking ⚠️)\n* `unified-to.class.listLmsClasses()`:  `response.[].media[]` **Changed** (Breaking ⚠️)\n* `unified-to.class.getLmsClass()`:  `response.media[]` **Changed** (Breaking ⚠️)\n* `unified-to.class.createLmsClass()`: \n  *  `request.lmsClass.media[]` **Changed** (Breaking ⚠️)\n  *  `response.media[]` **Changed** (Breaking ⚠️)\n* `unified-to.lms.updateLmsCourse()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.lms.updateLmsContent()`: \n  *  `request.lmsContent` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.lms.updateLmsCollection()`: \n  *  `request.lmsCollection.media[]` **Changed** (Breaking ⚠️)\n  *  `response.media[]` **Changed** (Breaking ⚠️)\n* `unified-to.lms.updateLmsClass()`: \n  *  `request.lmsClass.media[]` **Changed** (Breaking ⚠️)\n  *  `response.media[]` **Changed** (Breaking ⚠️)\n* `unified-to.lms.patchLmsCourse()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.lms.patchLmsContent()`: \n  *  `request.lmsContent` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.lms.patchLmsCollection()`: \n  *  `request.lmsCollection.media[]` **Changed** (Breaking ⚠️)\n  *  `response.media[]` **Changed** (Breaking ⚠️)\n* `unified-to.lms.patchLmsClass()`: \n  *  `request.lmsClass.media[]` **Changed** (Breaking ⚠️)\n  *  `response.media[]` **Changed** (Breaking ⚠️)\n* `unified-to.lms.listLmsCourses()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified-to.lms.listLmsContents()`:  `response.[]` **Changed** (Breaking ⚠️)\n* `unified-to.lms.listLmsCollections()`:  `response.[].media[]` **Changed** (Breaking ⚠️)\n* `unified-to.lms.listLmsClasses()`:  `response.[].media[]` **Changed** (Breaking ⚠️)\n* `unified-to.lms.getLmsCourse()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.lms.getLmsContent()`:  `response` **Changed** (Breaking ⚠️)\n* `unified-to.lms.getLmsCollection()`:  `response.media[]` **Changed** (Breaking ⚠️)\n* `unified-to.lms.getLmsClass()`:  `response.media[]` **Changed** (Breaking ⚠️)\n* `unified-to.lms.createLmsCourse()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.lms.createLmsContent()`: \n  *  `request.lmsContent` **Changed** (Breaking ⚠️)\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to.lms.createLmsCollection()`: \n  *  `request.lmsCollection.media[]` **Changed** (Breaking ⚠️)\n  *  `response.media[]` **Changed** (Breaking ⚠️)\n* `unified-to.lms.createLmsClass()`: \n  *  `request.lmsClass.media[]` **Changed** (Breaking ⚠️)\n  *  `response.media[]` **Changed** (Breaking ⚠️)\n* `unified-to.collection.updateLmsCollection()`: \n  *  `request.lmsCollection.media[]` **Changed** (Breaking ⚠️)\n  *  `response.media[]` **Changed** (Breaking ⚠️)\n* `unified-to.collection.patchLmsCollection()`: \n  *  `request.lmsCollection.media[]` **Changed** (Breaking ⚠️)\n  *  `response.media[]` **Changed** (Breaking ⚠️)\n* `unified-to.collection.listLmsCollections()`:  `response.[].media[]` **Changed** (Breaking ⚠️)\n* `unified-to.collection.getLmsCollection()`:  `response.media[]` **Changed** (Breaking ⚠️)\n* `unified-to.accounting.patchAccountingBill()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.job.listAtsJobs()`: \n  *  `request.fields` **Changed**\n  *  `response.[].hiringManagers` **Added**\n* `unified-to.accounting.createAccountingSalesorder()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.accounting.createAccountingTaxrate()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.accounting.createAccountingTransaction()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.accounting.getAccountingAccount()`: \n  *  `request.fields` **Changed**\n* `unified-to.accounting.getAccountingBill()`: \n  *  `request.fields` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.accounting.getAccountingContact()`: \n  *  `request.fields` **Changed**\n* `unified-to.accounting.getAccountingCreditmemo()`: \n  *  `request.fields` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.accounting.getAccountingJournal()`: \n  *  `request.fields` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.accounting.getAccountingPurchaseorder()`: \n  *  `request.fields` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.accounting.getAccountingSalesorder()`: \n  *  `request.fields` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.accounting.getAccountingTaxrate()`: \n  *  `request.fields` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.accounting.getAccountingTransaction()`: \n  *  `request.fields` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.accounting.listAccountingAccounts()`:  `request` **Changed**\n* `unified-to.accounting.listAccountingBills()`: \n  *  `request.fields` **Changed**\n  *  `response.[].organizationId` **Added**\n* `unified-to.accounting.listAccountingContacts()`: \n  *  `request.fields` **Changed**\n* `unified-to.accounting.listAccountingCreditmemoes()`: \n  *  `request.fields` **Changed**\n  *  `response.[].organizationId` **Added**\n* `unified-to.accounting.listAccountingJournals()`: \n  *  `request` **Changed**\n  *  `response.[].organizationId` **Added**\n* `unified-to.accounting.listAccountingOrders()`: \n  *  `request.contactId` **Added**\n* `unified-to.accounting.listAccountingPurchaseorders()`: \n  *  `request` **Changed**\n  *  `response.[].organizationId` **Added**\n* `unified-to.accounting.listAccountingSalesorders()`: \n  *  `request` **Changed**\n  *  `response.[].organizationId` **Added**\n* `unified-to.accounting.listAccountingTaxrates()`: \n  *  `request.fields` **Changed**\n  *  `response.[].organizationId` **Added**\n* `unified-to.accounting.listAccountingTransactions()`: \n  *  `request.fields` **Changed**\n  *  `response.[].organizationId` **Added**\n* `unified-to.accounting.patchAccountingAccount()`: \n  *  `request.fields` **Changed**\n* `unified-to.document.createSigningDocument()`: **Added**\n* `unified-to.accounting.patchAccountingContact()`: \n  *  `request.fields` **Changed**\n* `unified-to.accounting.patchAccountingCreditmemo()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.accounting.patchAccountingJournal()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.accounting.patchAccountingPurchaseorder()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.accounting.patchAccountingSalesorder()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.accounting.patchAccountingTaxrate()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.accounting.patchAccountingTransaction()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.accounting.updateAccountingAccount()`: \n  *  `request.fields` **Changed**\n* `unified-to.accounting.updateAccountingBill()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.accounting.updateAccountingContact()`: \n  *  `request.fields` **Changed**\n* `unified-to.accounting.updateAccountingCreditmemo()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.accounting.updateAccountingJournal()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.accounting.updateAccountingPurchaseorder()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.accounting.updateAccountingSalesorder()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.accounting.updateAccountingTaxrate()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.accounting.updateAccountingTransaction()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.account.createAccountingAccount()`: \n  *  `request.fields` **Changed**\n* `unified-to.account.getAccountingAccount()`: \n  *  `request.fields` **Changed**\n* `unified-to.account.listAccountingAccounts()`:  `request` **Changed**\n* `unified-to.account.patchAccountingAccount()`: \n  *  `request.fields` **Changed**\n* `unified-to.account.updateAccountingAccount()`: \n  *  `request.fields` **Changed**\n* `unified-to.bill.createAccountingBill()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.bill.getAccountingBill()`: \n  *  `request.fields` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.bill.listAccountingBills()`: \n  *  `request.fields` **Changed**\n  *  `response.[].organizationId` **Added**\n* `unified-to.bill.patchAccountingBill()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.bill.updateAccountingBill()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.contact.createAccountingContact()`: \n  *  `request.fields` **Changed**\n* `unified-to.contact.getAccountingContact()`: \n  *  `request.fields` **Changed**\n* `unified-to.contact.listAccountingContacts()`: \n  *  `request.fields` **Changed**\n* `unified-to.contact.patchAccountingContact()`: \n  *  `request.fields` **Changed**\n* `unified-to.contact.updateAccountingContact()`: \n  *  `request.fields` **Changed**\n* `unified-to.creditmemo.createAccountingCreditmemo()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.creditmemo.getAccountingCreditmemo()`: \n  *  `request.fields` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.creditmemo.listAccountingCreditmemoes()`: \n  *  `request.fields` **Changed**\n  *  `response.[].organizationId` **Added**\n* `unified-to.creditmemo.patchAccountingCreditmemo()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.creditmemo.updateAccountingCreditmemo()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.journal.createAccountingJournal()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.journal.getAccountingJournal()`: \n  *  `request.fields` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.journal.listAccountingJournals()`: \n  *  `request` **Changed**\n  *  `response.[].organizationId` **Added**\n* `unified-to.journal.patchAccountingJournal()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.journal.updateAccountingJournal()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.order.listAccountingOrders()`: \n  *  `request.contactId` **Added**\n* `unified-to.purchaseorder.createAccountingPurchaseorder()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.purchaseorder.getAccountingPurchaseorder()`: \n  *  `request.fields` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.purchaseorder.listAccountingPurchaseorders()`: \n  *  `request` **Changed**\n  *  `response.[].organizationId` **Added**\n* `unified-to.purchaseorder.patchAccountingPurchaseorder()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.purchaseorder.updateAccountingPurchaseorder()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.salesorder.createAccountingSalesorder()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.salesorder.getAccountingSalesorder()`: \n  *  `request.fields` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.salesorder.listAccountingSalesorders()`: \n  *  `request` **Changed**\n  *  `response.[].organizationId` **Added**\n* `unified-to.salesorder.patchAccountingSalesorder()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.salesorder.updateAccountingSalesorder()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.taxrate.createAccountingTaxrate()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.taxrate.getAccountingTaxrate()`: \n  *  `request.fields` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.taxrate.listAccountingTaxrates()`: \n  *  `request.fields` **Changed**\n  *  `response.[].organizationId` **Added**\n* `unified-to.taxrate.patchAccountingTaxrate()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.taxrate.updateAccountingTaxrate()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.transaction.createAccountingTransaction()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.transaction.getAccountingTransaction()`: \n  *  `request.fields` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.transaction.listAccountingTransactions()`: \n  *  `request.fields` **Changed**\n  *  `response.[].organizationId` **Added**\n* `unified-to.transaction.patchAccountingTransaction()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.transaction.updateAccountingTransaction()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.group.listHrisGroups()`: \n  *  `request.type` **Added**\n* `unified-to.ats.createAtsApplication()`: \n  *  `request.atsApplication.answers[].question` **Added**\n  *  `response.answers[].question` **Added**\n* `unified-to.ats.createAtsJob()`: \n  *  `request` **Changed**\n  *  `response.hiringManagers` **Added**\n* `unified-to.ats.getAtsApplication()`:  `response.answers[].question` **Added**\n* `unified-to.ats.getAtsJob()`: \n  *  `request.fields` **Changed**\n  *  `response.hiringManagers` **Added**\n* `unified-to.ats.listAtsApplications()`:  `response.[].answers[].question` **Added**\n* `unified-to.ats.listAtsJobs()`: \n  *  `request.fields` **Changed**\n  *  `response.[].hiringManagers` **Added**\n* `unified-to.ats.patchAtsApplication()`: \n  *  `request.atsApplication.answers[].question` **Added**\n  *  `response.answers[].question` **Added**\n* `unified-to.ats.patchAtsJob()`: \n  *  `request` **Changed**\n  *  `response.hiringManagers` **Added**\n* `unified-to.ats.updateAtsApplication()`: \n  *  `request.atsApplication.answers[].question` **Added**\n  *  `response.answers[].question` **Added**\n* `unified-to.ats.updateAtsJob()`: \n  *  `request` **Changed**\n  *  `response.hiringManagers` **Added**\n* `unified-to.activity.createLmsActivity()`: \n  *  `request` **Changed**\n  *  `response.assignedGrade` **Added**\n* `unified-to.activity.getLmsActivity()`: \n  *  `request.fields` **Changed**\n  *  `response.assignedGrade` **Added**\n* `unified-to.activity.listLmsActivities()`: \n  *  `request.fields` **Changed**\n  *  `response.[].assignedGrade` **Added**\n* `unified-to.activity.patchLmsActivity()`: \n  *  `request` **Changed**\n  *  `response.assignedGrade` **Added**\n* `unified-to.activity.updateLmsActivity()`: \n  *  `request` **Changed**\n  *  `response.assignedGrade` **Added**\n* `unified-to.application.createAtsApplication()`: \n  *  `request.atsApplication.answers[].question` **Added**\n  *  `response.answers[].question` **Added**\n* `unified-to.application.getAtsApplication()`:  `response.answers[].question` **Added**\n* `unified-to.application.listAtsApplications()`:  `response.[].answers[].question` **Added**\n* `unified-to.application.patchAtsApplication()`: \n  *  `request.atsApplication.answers[].question` **Added**\n  *  `response.answers[].question` **Added**\n* `unified-to.application.updateAtsApplication()`: \n  *  `request.atsApplication.answers[].question` **Added**\n  *  `response.answers[].question` **Added**\n* `unified-to.job.createAtsJob()`: \n  *  `request` **Changed**\n  *  `response.hiringManagers` **Added**\n* `unified-to.job.getAtsJob()`: \n  *  `request.fields` **Changed**\n  *  `response.hiringManagers` **Added**\n* `unified-to.accounting.createAccountingPurchaseorder()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.job.patchAtsJob()`: \n  *  `request` **Changed**\n  *  `response.hiringManagers` **Added**\n* `unified-to.job.updateAtsJob()`: \n  *  `request` **Changed**\n  *  `response.hiringManagers` **Added**\n* `unified-to.accounting.createAccountingJournal()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.accounting.createAccountingCreditmemo()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.accounting.createAccountingContact()`: \n  *  `request.fields` **Changed**\n* `unified-to.accounting.createAccountingBill()`: \n  *  `request` **Changed**\n  *  `response.organizationId` **Added**\n* `unified-to.accounting.createAccountingAccount()`: \n  *  `request.fields` **Changed**\n* `unified-to.genai.createGenaiPrompt()`: \n  *  `request.genaiPrompt.messages[].role.enum(assistant)` **Added**\n  *  `response.messages[].role.enum(assistant)` **Added**\n* `unified-to.prompt.createGenaiPrompt()`: \n  *  `request.genaiPrompt.messages[].role.enum(assistant)` **Added**\n  *  `response.messages[].role.enum(assistant)` **Added**\n* `unified-to.hris.getHrisTimeoff()`:  `response.startAt` **Changed**\n* `unified-to.hris.listHrisDeductions()`:  `request` **Changed**\n* `unified-to.hris.listHrisGroups()`: \n  *  `request.type` **Added**\n* `unified-to.hris.listHrisTimeoffs()`:  `response.[].startAt` **Changed**\n* `unified-to.deduction.listHrisDeductions()`:  `request` **Changed**\n* `unified-to.timeoff.getHrisTimeoff()`:  `response.startAt` **Changed**\n* `unified-to.timeoff.listHrisTimeoffs()`:  `response.[].startAt` **Changed**\n* `unified-to.lms.createLmsActivity()`: \n  *  `request` **Changed**\n  *  `response.assignedGrade` **Added**\n* `unified-to.template.listSigningTemplates()`: **Added**\n* `unified-to.template.getSigningTemplate()`: **Added**\n* `unified-to.signatory.updateSigningSignatory()`: **Added**\n* `unified-to.signatory.removeSigningSignatory()`: **Added**\n* `unified-to.lms.getLmsActivity()`: \n  *  `request.fields` **Changed**\n  *  `response.assignedGrade` **Added**\n* `unified-to.signatory.patchSigningSignatory()`: **Added**\n* `unified-to.signatory.listSigningSignatories()`: **Added**\n* `unified-to.signatory.getSigningSignatory()`: **Added**\n* `unified-to.signatory.createSigningSignatory()`: **Added**\n* `unified-to.lms.listLmsActivities()`: \n  *  `request.fields` **Changed**\n  *  `response.[].assignedGrade` **Added**\n* `unified-to.signing.updateSigningSignatory()`: **Added**\n* `unified-to.signing.updateSigningDocument()`: **Added**\n* `unified-to.signing.removeSigningSignatory()`: **Added**\n* `unified-to.signing.removeSigningDocument()`: **Added**\n* `unified-to.lms.patchLmsActivity()`: \n  *  `request` **Changed**\n  *  `response.assignedGrade` **Added**\n* `unified-to.signing.patchSigningSignatory()`: **Added**\n* `unified-to.signing.patchSigningDocument()`: **Added**\n* `unified-to.signing.listSigningTemplates()`: **Added**\n* `unified-to.signing.listSigningSignatories()`: **Added**\n* `unified-to.lms.updateLmsActivity()`: \n  *  `request` **Changed**\n  *  `response.assignedGrade` **Added**\n* `unified-to.signing.listSigningDocuments()`: **Added**\n* `unified-to.signing.getSigningTemplate()`: **Added**\n* `unified-to.signing.getSigningSignatory()`: **Added**\n* `unified-to.signing.getSigningDocument()`: **Added**\n* `unified-to.signing.createSigningSignatory()`: **Added**\n* `unified-to.signing.createSigningDocument()`: **Added**\n* `unified-to.timeoff.updateHrisTimeoff()`: **Added**\n* `unified-to.timeoff.removeHrisTimeoff()`: **Added**\n* `unified-to.timeoff.patchHrisTimeoff()`: **Added**\n* `unified-to.timeoff.createHrisTimeoff()`: **Added**\n* `unified-to.hris.updateHrisTimeoff()`: **Added**\n* `unified-to.hris.removeHrisTimeoff()`: **Added**\n* `unified-to.hris.patchHrisTimeoff()`: **Added**\n* `unified-to.hris.createHrisTimeoff()`: **Added**\n* `unified-to.document.updateSigningDocument()`: **Added**\n* `unified-to.document.removeSigningDocument()`: **Added**\n* `unified-to.document.patchSigningDocument()`: **Added**\n* `unified-to.document.listSigningDocuments()`: **Added**\n* `unified-to.document.getSigningDocument()`: **Added**\n* `unified-to.martech.createMartechList()`: \n  *  `request.marketingList.address.regionCode` **Added**\n  *  `response.address.regionCode` **Added**\n* `unified-to.martech.getMartechList()`:  `response.address.regionCode` **Added**\n* `unified-to.martech.listMartechLists()`:  `response.[].address.regionCode` **Added**\n* `unified-to.martech.patchMartechList()`: \n  *  `request.marketingList.address.regionCode` **Added**\n  *  `response.address.regionCode` **Added**\n* `unified-to.martech.updateMartechList()`: \n  *  `request.marketingList.address.regionCode` **Added**\n  *  `response.address.regionCode` **Added**\n* `unified-to.list.createMartechList()`: \n  *  `request.marketingList.address.regionCode` **Added**\n  *  `response.address.regionCode` **Added**\n* `unified-to.list.getMartechList()`:  `response.address.regionCode` **Added**\n* `unified-to.list.listMartechLists()`:  `response.[].address.regionCode` **Added**\n* `unified-to.list.patchMartechList()`: \n  *  `request.marketingList.address.regionCode` **Added**\n  *  `response.address.regionCode` **Added**\n* `unified-to.list.updateMartechList()`: \n  *  `request.marketingList.address.regionCode` **Added**\n  *  `response.address.regionCode` **Added**\n* `unified-to.storage.createStorageFile()`: \n  *  `request` **Changed**\n  *  `response.references` **Added**\n* `unified-to.storage.getStorageFile()`: \n  *  `request.fields` **Changed**\n  *  `response.references` **Added**\n* `unified-to.storage.listStorageFiles()`: \n  *  `request` **Changed**\n  *  `response.[].references` **Added**\n* `unified-to.storage.patchStorageFile()`: \n  *  `request` **Changed**\n  *  `response.references` **Added**\n* `unified-to.storage.updateStorageFile()`: \n  *  `request` **Changed**\n  *  `response.references` **Added**\n* `unified-to.file.createStorageFile()`: \n  *  `request` **Changed**\n  *  `response.references` **Added**\n* `unified-to.file.getStorageFile()`: \n  *  `request.fields` **Changed**\n  *  `response.references` **Added**\n* `unified-to.file.listStorageFiles()`: \n  *  `request` **Changed**\n  *  `response.[].references` **Added**\n* `unified-to.file.patchStorageFile()`: \n  *  `request` **Changed**\n  *  `response.references` **Added**\n* `unified-to.file.updateStorageFile()`: \n  *  `request` **Changed**\n  *  `response.references` **Added**\n* `unified-to.task.createTaskProject()`: \n  *  `request` **Changed**\n  *  `response.metadata` **Added**\n* `unified-to.task.getTaskProject()`: \n  *  `request.fields` **Changed**\n  *  `response.metadata` **Added**\n* `unified-to.task.listTaskProjects()`: \n  *  `request.fields` **Changed**\n  *  `response.[].metadata` **Added**\n* `unified-to.task.patchTaskProject()`: \n  *  `request` **Changed**\n  *  `response.metadata` **Added**\n* `unified-to.task.updateTaskProject()`: \n  *  `request` **Changed**\n  *  `response.metadata` **Added**\n* `unified-to.project.createTaskProject()`: \n  *  `request` **Changed**\n  *  `response.metadata` **Added**\n* `unified-to.project.getTaskProject()`: \n  *  `request.fields` **Changed**\n  *  `response.metadata` **Added**\n* `unified-to.project.listTaskProjects()`: \n  *  `request.fields` **Changed**\n  *  `response.[].metadata` **Added**\n* `unified-to.project.patchTaskProject()`: \n  *  `request` **Changed**\n  *  `response.metadata` **Added**\n* `unified-to.project.updateTaskProject()`: \n  *  `request` **Changed**\n  *  `response.metadata` **Added**\n* `unified-to.unified.createUnifiedConnection()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.unified.createUnifiedWebhook()`: \n  *  `request.webhook` **Changed**\n  *  `response` **Changed**\n* `unified-to.unified.getUnifiedConnection()`:  `response` **Changed**\n* `unified-to.unified.getUnifiedWebhook()`:  `response` **Changed**\n* `unified-to.unified.listUnifiedConnections()`: \n  *  `request.categories` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.unified.listUnifiedIntegrationWorkspaces()`: \n  *  `request.categories` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.unified.listUnifiedIntegrations()`: \n  *  `request.categories` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.unified.listUnifiedWebhooks()`:  `response.[]` **Changed**\n* `unified-to.unified.patchUnifiedConnection()`: \n  *  `request.connection` **Changed**\n  *  `response` **Changed**\n* `unified-to.unified.patchUnifiedWebhook()`: \n  *  `request.webhook` **Changed**\n  *  `response` **Changed**\n* `unified-to.unified.updateUnifiedConnection()`: \n  *  `request.connection` **Changed**\n  *  `response` **Changed**\n* `unified-to.unified.updateUnifiedWebhook()`: \n  *  `request.webhook` **Changed**\n  *  `response` **Changed**\n* `unified-to.connection.createUnifiedConnection()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.connection.getUnifiedConnection()`:  `response` **Changed**\n* `unified-to.connection.listUnifiedConnections()`: \n  *  `request.categories` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.connection.patchUnifiedConnection()`: \n  *  `request.connection` **Changed**\n  *  `response` **Changed**\n* `unified-to.connection.updateUnifiedConnection()`: \n  *  `request.connection` **Changed**\n  *  `response` **Changed**\n* `unified-to.integration.listUnifiedIntegrationWorkspaces()`: \n  *  `request.categories` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.integration.listUnifiedIntegrations()`: \n  *  `request.categories` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.webhook.createUnifiedWebhook()`: \n  *  `request.webhook` **Changed**\n  *  `response` **Changed**\n* `unified-to.webhook.getUnifiedWebhook()`:  `response` **Changed**\n* `unified-to.webhook.listUnifiedWebhooks()`:  `response.[]` **Changed**\n* `unified-to.webhook.patchUnifiedWebhook()`: \n  *  `request.webhook` **Changed**\n  *  `response` **Changed**\n* `unified-to.webhook.updateUnifiedWebhook()`: \n  *  `request.webhook` **Changed**\n  *  `response` **Changed**\n"
+releaseNotes: "## Java SDK Changes:\n* `unified-to.hris.patchHrisTimeoff()`: \n  *  `request.hrisTimeoff.startAt` **Changed** (Breaking ⚠️)\n  *  `response.startAt` **Changed**\n* `unified-to.timeoff.updateHrisTimeoff()`: \n  *  `request.hrisTimeoff.startAt` **Changed** (Breaking ⚠️)\n  *  `response.startAt` **Changed**\n* `unified-to.timeoff.patchHrisTimeoff()`: \n  *  `request.hrisTimeoff.startAt` **Changed** (Breaking ⚠️)\n  *  `response.startAt` **Changed**\n* `unified-to.hris.createHrisTimeoff()`: \n  *  `request.hrisTimeoff.startAt` **Changed** (Breaking ⚠️)\n  *  `response.startAt` **Changed**\n* `unified-to.timeoff.createHrisTimeoff()`: \n  *  `request.hrisTimeoff.startAt` **Changed** (Breaking ⚠️)\n  *  `response.startAt` **Changed**\n* `unified-to.hris.updateHrisTimeoff()`: \n  *  `request.hrisTimeoff.startAt` **Changed** (Breaking ⚠️)\n  *  `response.startAt` **Changed**\n* `unified-to.hris.updateHrisEmployee()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.employee.getHrisEmployee()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.hris.patchHrisEmployee()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.hris.listHrisEmployees()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.accounting.listAccountingInvoices()`:  `request` **Changed**\n* `unified-to.hris.getHrisTimeoff()`:  `response.startAt` **Changed**\n* `unified-to.employee.createHrisEmployee()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.hris.listHrisTimeoffs()`:  `response.[].startAt` **Changed**\n* `unified-to.employee.listHrisEmployees()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.employee.patchHrisEmployee()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.employee.updateHrisEmployee()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.hris.getHrisEmployee()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.timeoff.getHrisTimeoff()`:  `response.startAt` **Changed**\n* `unified-to.timeoff.listHrisTimeoffs()`:  `response.[].startAt` **Changed**\n* `unified-to.hris.createHrisEmployee()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.invoice.listAccountingInvoices()`:  `request` **Changed**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md
