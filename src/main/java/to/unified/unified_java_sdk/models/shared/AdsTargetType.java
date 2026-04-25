@@ -20,18 +20,18 @@ import java.util.Optional;
  */
 public class AdsTargetType {
 
-    public static final AdsTargetType INTERESTS = new AdsTargetType("interests");
-    public static final AdsTargetType BEHAVIORS = new AdsTargetType("behaviors");
-    public static final AdsTargetType LOCALES = new AdsTargetType("locales");
-    public static final AdsTargetType COUNTRIES = new AdsTargetType("countries");
-    public static final AdsTargetType REGIONS = new AdsTargetType("regions");
-    public static final AdsTargetType CITIES = new AdsTargetType("cities");
-    public static final AdsTargetType ZIPS = new AdsTargetType("zips");
-    public static final AdsTargetType US_DMAS = new AdsTargetType("us_dmas");
-    public static final AdsTargetType TOPICS = new AdsTargetType("topics");
-    public static final AdsTargetType USER_LISTS = new AdsTargetType("user_lists");
-    public static final AdsTargetType AGE_RANGES = new AdsTargetType("age_ranges");
-    public static final AdsTargetType GENDERS = new AdsTargetType("genders");
+    public static final AdsTargetType INTERESTS = new AdsTargetType("INTERESTS");
+    public static final AdsTargetType BEHAVIORS = new AdsTargetType("BEHAVIORS");
+    public static final AdsTargetType LOCALES = new AdsTargetType("LOCALES");
+    public static final AdsTargetType COUNTRIES = new AdsTargetType("COUNTRIES");
+    public static final AdsTargetType REGIONS = new AdsTargetType("REGIONS");
+    public static final AdsTargetType CITIES = new AdsTargetType("CITIES");
+    public static final AdsTargetType ZIPS = new AdsTargetType("ZIPS");
+    public static final AdsTargetType US_DMAS = new AdsTargetType("US_DMAS");
+    public static final AdsTargetType TOPICS = new AdsTargetType("TOPICS");
+    public static final AdsTargetType USER_LISTS = new AdsTargetType("USER_LISTS");
+    public static final AdsTargetType AGE_RANGES = new AdsTargetType("AGE_RANGES");
+    public static final AdsTargetType GENDERS = new AdsTargetType("GENDERS");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -105,53 +105,53 @@ public class AdsTargetType {
 
     private static final Map<String, AdsTargetType> createValuesMap() {
         Map<String, AdsTargetType> map = new LinkedHashMap<>();
-        map.put("interests", INTERESTS);
-        map.put("behaviors", BEHAVIORS);
-        map.put("locales", LOCALES);
-        map.put("countries", COUNTRIES);
-        map.put("regions", REGIONS);
-        map.put("cities", CITIES);
-        map.put("zips", ZIPS);
-        map.put("us_dmas", US_DMAS);
-        map.put("topics", TOPICS);
-        map.put("user_lists", USER_LISTS);
-        map.put("age_ranges", AGE_RANGES);
-        map.put("genders", GENDERS);
+        map.put("INTERESTS", INTERESTS);
+        map.put("BEHAVIORS", BEHAVIORS);
+        map.put("LOCALES", LOCALES);
+        map.put("COUNTRIES", COUNTRIES);
+        map.put("REGIONS", REGIONS);
+        map.put("CITIES", CITIES);
+        map.put("ZIPS", ZIPS);
+        map.put("US_DMAS", US_DMAS);
+        map.put("TOPICS", TOPICS);
+        map.put("USER_LISTS", USER_LISTS);
+        map.put("AGE_RANGES", AGE_RANGES);
+        map.put("GENDERS", GENDERS);
         return map;
     }
 
     private static final Map<String, AdsTargetTypeEnum> createEnumsMap() {
         Map<String, AdsTargetTypeEnum> map = new HashMap<>();
-        map.put("interests", AdsTargetTypeEnum.INTERESTS);
-        map.put("behaviors", AdsTargetTypeEnum.BEHAVIORS);
-        map.put("locales", AdsTargetTypeEnum.LOCALES);
-        map.put("countries", AdsTargetTypeEnum.COUNTRIES);
-        map.put("regions", AdsTargetTypeEnum.REGIONS);
-        map.put("cities", AdsTargetTypeEnum.CITIES);
-        map.put("zips", AdsTargetTypeEnum.ZIPS);
-        map.put("us_dmas", AdsTargetTypeEnum.US_DMAS);
-        map.put("topics", AdsTargetTypeEnum.TOPICS);
-        map.put("user_lists", AdsTargetTypeEnum.USER_LISTS);
-        map.put("age_ranges", AdsTargetTypeEnum.AGE_RANGES);
-        map.put("genders", AdsTargetTypeEnum.GENDERS);
+        map.put("INTERESTS", AdsTargetTypeEnum.INTERESTS);
+        map.put("BEHAVIORS", AdsTargetTypeEnum.BEHAVIORS);
+        map.put("LOCALES", AdsTargetTypeEnum.LOCALES);
+        map.put("COUNTRIES", AdsTargetTypeEnum.COUNTRIES);
+        map.put("REGIONS", AdsTargetTypeEnum.REGIONS);
+        map.put("CITIES", AdsTargetTypeEnum.CITIES);
+        map.put("ZIPS", AdsTargetTypeEnum.ZIPS);
+        map.put("US_DMAS", AdsTargetTypeEnum.US_DMAS);
+        map.put("TOPICS", AdsTargetTypeEnum.TOPICS);
+        map.put("USER_LISTS", AdsTargetTypeEnum.USER_LISTS);
+        map.put("AGE_RANGES", AdsTargetTypeEnum.AGE_RANGES);
+        map.put("GENDERS", AdsTargetTypeEnum.GENDERS);
         return map;
     }
     
     
     public enum AdsTargetTypeEnum {
 
-        INTERESTS("interests"),
-        BEHAVIORS("behaviors"),
-        LOCALES("locales"),
-        COUNTRIES("countries"),
-        REGIONS("regions"),
-        CITIES("cities"),
-        ZIPS("zips"),
-        US_DMAS("us_dmas"),
-        TOPICS("topics"),
-        USER_LISTS("user_lists"),
-        AGE_RANGES("age_ranges"),
-        GENDERS("genders"),;
+        INTERESTS("INTERESTS"),
+        BEHAVIORS("BEHAVIORS"),
+        LOCALES("LOCALES"),
+        COUNTRIES("COUNTRIES"),
+        REGIONS("REGIONS"),
+        CITIES("CITIES"),
+        ZIPS("ZIPS"),
+        US_DMAS("US_DMAS"),
+        TOPICS("TOPICS"),
+        USER_LISTS("USER_LISTS"),
+        AGE_RANGES("AGE_RANGES"),
+        GENDERS("GENDERS"),;
 
         private final String value;
 
