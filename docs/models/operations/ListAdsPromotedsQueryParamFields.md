@@ -16,3 +16,4 @@ ListAdsPromotedsQueryParamFields value = ListAdsPromotedsQueryParamFields.ID;
 | `ID`   | id     |
 | `NAME` | name   |
 | `TYPE` | type   |
+| `RAW`  | raw    |

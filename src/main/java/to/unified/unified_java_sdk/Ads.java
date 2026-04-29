@@ -42,6 +42,12 @@ import to.unified.unified_java_sdk.models.operations.GetAdsInsertionorderRespons
 import to.unified.unified_java_sdk.models.operations.GetAdsOrganizationRequest;
 import to.unified.unified_java_sdk.models.operations.GetAdsOrganizationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetAdsOrganizationResponse;
+import to.unified.unified_java_sdk.models.operations.GetAdsPromotedRequest;
+import to.unified.unified_java_sdk.models.operations.GetAdsPromotedRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAdsPromotedResponse;
+import to.unified.unified_java_sdk.models.operations.GetAdsTargetRequest;
+import to.unified.unified_java_sdk.models.operations.GetAdsTargetRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAdsTargetResponse;
 import to.unified.unified_java_sdk.models.operations.ListAdsAdsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAdsAdsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListAdsAdsResponse;
@@ -135,6 +141,8 @@ import to.unified.unified_java_sdk.operations.GetAdsCreative;
 import to.unified.unified_java_sdk.operations.GetAdsGroup;
 import to.unified.unified_java_sdk.operations.GetAdsInsertionorder;
 import to.unified.unified_java_sdk.operations.GetAdsOrganization;
+import to.unified.unified_java_sdk.operations.GetAdsPromoted;
+import to.unified.unified_java_sdk.operations.GetAdsTarget;
 import to.unified.unified_java_sdk.operations.ListAdsAds;
 import to.unified.unified_java_sdk.operations.ListAdsCampaigns;
 import to.unified.unified_java_sdk.operations.ListAdsCreatives;
@@ -445,6 +453,50 @@ public class Ads {
     public GetAdsOrganizationResponse getAdsOrganization(@Nonnull GetAdsOrganizationRequest request) {
         RequestOperation<GetAdsOrganizationRequest, GetAdsOrganizationResponse> operation
               = new GetAdsOrganization.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve a promoted
+     * 
+     * @return The call builder
+     */
+    public GetAdsPromotedRequestBuilder getAdsPromoted() {
+        return new GetAdsPromotedRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a promoted
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAdsPromotedResponse getAdsPromoted(@Nonnull GetAdsPromotedRequest request) {
+        RequestOperation<GetAdsPromotedRequest, GetAdsPromotedResponse> operation
+              = new GetAdsPromoted.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve a target
+     * 
+     * @return The call builder
+     */
+    public GetAdsTargetRequestBuilder getAdsTarget() {
+        return new GetAdsTargetRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a target
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAdsTargetResponse getAdsTarget(@Nonnull GetAdsTargetRequest request) {
+        RequestOperation<GetAdsTargetRequest, GetAdsTargetResponse> operation
+              = new GetAdsTarget.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

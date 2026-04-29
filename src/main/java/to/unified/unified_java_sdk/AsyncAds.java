@@ -19,6 +19,8 @@ import to.unified.unified_java_sdk.models.operations.GetAdsCreativeRequest;
 import to.unified.unified_java_sdk.models.operations.GetAdsGroupRequest;
 import to.unified.unified_java_sdk.models.operations.GetAdsInsertionorderRequest;
 import to.unified.unified_java_sdk.models.operations.GetAdsOrganizationRequest;
+import to.unified.unified_java_sdk.models.operations.GetAdsPromotedRequest;
+import to.unified.unified_java_sdk.models.operations.GetAdsTargetRequest;
 import to.unified.unified_java_sdk.models.operations.ListAdsAdsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAdsCampaignsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAdsCreativesRequest;
@@ -70,6 +72,10 @@ import to.unified.unified_java_sdk.models.operations.async.GetAdsInsertionorderR
 import to.unified.unified_java_sdk.models.operations.async.GetAdsInsertionorderResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetAdsOrganizationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetAdsOrganizationResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetAdsPromotedRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetAdsPromotedResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetAdsTargetRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetAdsTargetResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListAdsAdsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListAdsAdsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListAdsCampaignsRequestBuilder;
@@ -136,6 +142,8 @@ import to.unified.unified_java_sdk.operations.GetAdsCreative;
 import to.unified.unified_java_sdk.operations.GetAdsGroup;
 import to.unified.unified_java_sdk.operations.GetAdsInsertionorder;
 import to.unified.unified_java_sdk.operations.GetAdsOrganization;
+import to.unified.unified_java_sdk.operations.GetAdsPromoted;
+import to.unified.unified_java_sdk.operations.GetAdsTarget;
 import to.unified.unified_java_sdk.operations.ListAdsAds;
 import to.unified.unified_java_sdk.operations.ListAdsCampaigns;
 import to.unified.unified_java_sdk.operations.ListAdsCreatives;
@@ -457,6 +465,52 @@ public class AsyncAds {
     public CompletableFuture<GetAdsOrganizationResponse> getAdsOrganization(@Nonnull GetAdsOrganizationRequest request) {
         AsyncRequestOperation<GetAdsOrganizationRequest, GetAdsOrganizationResponse> operation
               = new GetAdsOrganization.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Retrieve a promoted
+     * 
+     * @return The async call builder
+     */
+    public GetAdsPromotedRequestBuilder getAdsPromoted() {
+        return new GetAdsPromotedRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a promoted
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetAdsPromotedResponse>} - The async response
+     */
+    public CompletableFuture<GetAdsPromotedResponse> getAdsPromoted(@Nonnull GetAdsPromotedRequest request) {
+        AsyncRequestOperation<GetAdsPromotedRequest, GetAdsPromotedResponse> operation
+              = new GetAdsPromoted.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Retrieve a target
+     * 
+     * @return The async call builder
+     */
+    public GetAdsTargetRequestBuilder getAdsTarget() {
+        return new GetAdsTargetRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a target
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetAdsTargetResponse>} - The async response
+     */
+    public CompletableFuture<GetAdsTargetResponse> getAdsTarget(@Nonnull GetAdsTargetRequest request) {
+        AsyncRequestOperation<GetAdsTargetRequest, GetAdsTargetResponse> operation
+              = new GetAdsTarget.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

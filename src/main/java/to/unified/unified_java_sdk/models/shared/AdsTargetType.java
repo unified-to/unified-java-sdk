@@ -20,18 +20,21 @@ import java.util.Optional;
  */
 public class AdsTargetType {
 
-    public static final AdsTargetType INTERESTS = new AdsTargetType("INTERESTS");
-    public static final AdsTargetType BEHAVIORS = new AdsTargetType("BEHAVIORS");
-    public static final AdsTargetType LOCALES = new AdsTargetType("LOCALES");
-    public static final AdsTargetType COUNTRIES = new AdsTargetType("COUNTRIES");
-    public static final AdsTargetType REGIONS = new AdsTargetType("REGIONS");
-    public static final AdsTargetType CITIES = new AdsTargetType("CITIES");
-    public static final AdsTargetType ZIPS = new AdsTargetType("ZIPS");
-    public static final AdsTargetType US_DMAS = new AdsTargetType("US_DMAS");
-    public static final AdsTargetType TOPICS = new AdsTargetType("TOPICS");
-    public static final AdsTargetType USER_LISTS = new AdsTargetType("USER_LISTS");
-    public static final AdsTargetType AGE_RANGES = new AdsTargetType("AGE_RANGES");
-    public static final AdsTargetType GENDERS = new AdsTargetType("GENDERS");
+    public static final AdsTargetType INTEREST = new AdsTargetType("INTEREST");
+    public static final AdsTargetType BEHAVIOR = new AdsTargetType("BEHAVIOR");
+    public static final AdsTargetType LOCALE = new AdsTargetType("LOCALE");
+    public static final AdsTargetType COUNTRY = new AdsTargetType("COUNTRY");
+    public static final AdsTargetType REGION = new AdsTargetType("REGION");
+    public static final AdsTargetType CITY = new AdsTargetType("CITY");
+    public static final AdsTargetType ZIP = new AdsTargetType("ZIP");
+    public static final AdsTargetType US_DMA = new AdsTargetType("US_DMA");
+    public static final AdsTargetType TOPIC = new AdsTargetType("TOPIC");
+    public static final AdsTargetType USER_LIST = new AdsTargetType("USER_LIST");
+    public static final AdsTargetType AGE_RANGE = new AdsTargetType("AGE_RANGE");
+    public static final AdsTargetType GENDER = new AdsTargetType("GENDER");
+    public static final AdsTargetType CARRIER = new AdsTargetType("CARRIER");
+    public static final AdsTargetType DEVICE_MODEL = new AdsTargetType("DEVICE_MODEL");
+    public static final AdsTargetType OS_VERSION = new AdsTargetType("OS_VERSION");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -105,53 +108,62 @@ public class AdsTargetType {
 
     private static final Map<String, AdsTargetType> createValuesMap() {
         Map<String, AdsTargetType> map = new LinkedHashMap<>();
-        map.put("INTERESTS", INTERESTS);
-        map.put("BEHAVIORS", BEHAVIORS);
-        map.put("LOCALES", LOCALES);
-        map.put("COUNTRIES", COUNTRIES);
-        map.put("REGIONS", REGIONS);
-        map.put("CITIES", CITIES);
-        map.put("ZIPS", ZIPS);
-        map.put("US_DMAS", US_DMAS);
-        map.put("TOPICS", TOPICS);
-        map.put("USER_LISTS", USER_LISTS);
-        map.put("AGE_RANGES", AGE_RANGES);
-        map.put("GENDERS", GENDERS);
+        map.put("INTEREST", INTEREST);
+        map.put("BEHAVIOR", BEHAVIOR);
+        map.put("LOCALE", LOCALE);
+        map.put("COUNTRY", COUNTRY);
+        map.put("REGION", REGION);
+        map.put("CITY", CITY);
+        map.put("ZIP", ZIP);
+        map.put("US_DMA", US_DMA);
+        map.put("TOPIC", TOPIC);
+        map.put("USER_LIST", USER_LIST);
+        map.put("AGE_RANGE", AGE_RANGE);
+        map.put("GENDER", GENDER);
+        map.put("CARRIER", CARRIER);
+        map.put("DEVICE_MODEL", DEVICE_MODEL);
+        map.put("OS_VERSION", OS_VERSION);
         return map;
     }
 
     private static final Map<String, AdsTargetTypeEnum> createEnumsMap() {
         Map<String, AdsTargetTypeEnum> map = new HashMap<>();
-        map.put("INTERESTS", AdsTargetTypeEnum.INTERESTS);
-        map.put("BEHAVIORS", AdsTargetTypeEnum.BEHAVIORS);
-        map.put("LOCALES", AdsTargetTypeEnum.LOCALES);
-        map.put("COUNTRIES", AdsTargetTypeEnum.COUNTRIES);
-        map.put("REGIONS", AdsTargetTypeEnum.REGIONS);
-        map.put("CITIES", AdsTargetTypeEnum.CITIES);
-        map.put("ZIPS", AdsTargetTypeEnum.ZIPS);
-        map.put("US_DMAS", AdsTargetTypeEnum.US_DMAS);
-        map.put("TOPICS", AdsTargetTypeEnum.TOPICS);
-        map.put("USER_LISTS", AdsTargetTypeEnum.USER_LISTS);
-        map.put("AGE_RANGES", AdsTargetTypeEnum.AGE_RANGES);
-        map.put("GENDERS", AdsTargetTypeEnum.GENDERS);
+        map.put("INTEREST", AdsTargetTypeEnum.INTEREST);
+        map.put("BEHAVIOR", AdsTargetTypeEnum.BEHAVIOR);
+        map.put("LOCALE", AdsTargetTypeEnum.LOCALE);
+        map.put("COUNTRY", AdsTargetTypeEnum.COUNTRY);
+        map.put("REGION", AdsTargetTypeEnum.REGION);
+        map.put("CITY", AdsTargetTypeEnum.CITY);
+        map.put("ZIP", AdsTargetTypeEnum.ZIP);
+        map.put("US_DMA", AdsTargetTypeEnum.US_DMA);
+        map.put("TOPIC", AdsTargetTypeEnum.TOPIC);
+        map.put("USER_LIST", AdsTargetTypeEnum.USER_LIST);
+        map.put("AGE_RANGE", AdsTargetTypeEnum.AGE_RANGE);
+        map.put("GENDER", AdsTargetTypeEnum.GENDER);
+        map.put("CARRIER", AdsTargetTypeEnum.CARRIER);
+        map.put("DEVICE_MODEL", AdsTargetTypeEnum.DEVICE_MODEL);
+        map.put("OS_VERSION", AdsTargetTypeEnum.OS_VERSION);
         return map;
     }
     
     
     public enum AdsTargetTypeEnum {
 
-        INTERESTS("INTERESTS"),
-        BEHAVIORS("BEHAVIORS"),
-        LOCALES("LOCALES"),
-        COUNTRIES("COUNTRIES"),
-        REGIONS("REGIONS"),
-        CITIES("CITIES"),
-        ZIPS("ZIPS"),
-        US_DMAS("US_DMAS"),
-        TOPICS("TOPICS"),
-        USER_LISTS("USER_LISTS"),
-        AGE_RANGES("AGE_RANGES"),
-        GENDERS("GENDERS"),;
+        INTEREST("INTEREST"),
+        BEHAVIOR("BEHAVIOR"),
+        LOCALE("LOCALE"),
+        COUNTRY("COUNTRY"),
+        REGION("REGION"),
+        CITY("CITY"),
+        ZIP("ZIP"),
+        US_DMA("US_DMA"),
+        TOPIC("TOPIC"),
+        USER_LIST("USER_LIST"),
+        AGE_RANGE("AGE_RANGE"),
+        GENDER("GENDER"),
+        CARRIER("CARRIER"),
+        DEVICE_MODEL("DEVICE_MODEL"),
+        OS_VERSION("OS_VERSION"),;
 
         private final String value;
 

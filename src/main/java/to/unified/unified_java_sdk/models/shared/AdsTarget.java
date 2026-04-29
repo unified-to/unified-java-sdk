@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
+import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
@@ -28,8 +29,18 @@ public class AdsTarget {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("is_active")
+    private Boolean isActive;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("parent_id")
+    private String parentId;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -41,39 +52,43 @@ public class AdsTarget {
     @JsonProperty("type")
     private AdsTargetType type;
 
-
-    @JsonProperty("value")
-    private String value;
-
     @JsonCreator
     public AdsTarget(
             @JsonProperty("id") @Nonnull String id,
+            @JsonProperty("is_active") @Nullable Boolean isActive,
             @JsonProperty("name") @Nullable String name,
+            @JsonProperty("parent_id") @Nullable String parentId,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
-            @JsonProperty("type") @Nullable AdsTargetType type,
-            @JsonProperty("value") @Nonnull String value) {
+            @JsonProperty("type") @Nullable AdsTargetType type) {
         this.id = Optional.ofNullable(id)
             .orElseThrow(() -> new IllegalArgumentException("id cannot be null"));
+        this.isActive = isActive;
         this.name = name;
+        this.parentId = parentId;
         this.raw = raw;
         this.type = type;
-        this.value = Optional.ofNullable(value)
-            .orElseThrow(() -> new IllegalArgumentException("value cannot be null"));
     }
     
     public AdsTarget(
-            @Nonnull String id,
-            @Nonnull String value) {
+            @Nonnull String id) {
         this(id, null, null,
-            null, value);
+            null, null, null);
     }
 
     public String id() {
         return this.id;
     }
 
+    public Optional<Boolean> isActive() {
+        return Optional.ofNullable(this.isActive);
+    }
+
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
+    }
+
+    public Optional<String> parentId() {
+        return Optional.ofNullable(this.parentId);
     }
 
     public Optional<Map<String, Object>> raw() {
@@ -82,10 +97,6 @@ public class AdsTarget {
 
     public Optional<AdsTargetType> type() {
         return Optional.ofNullable(this.type);
-    }
-
-    public String value() {
-        return this.value;
     }
 
     public static Builder builder() {
@@ -99,8 +110,20 @@ public class AdsTarget {
     }
 
 
+    public AdsTarget withIsActive(@Nullable Boolean isActive) {
+        this.isActive = isActive;
+        return this;
+    }
+
+
     public AdsTarget withName(@Nullable String name) {
         this.name = name;
+        return this;
+    }
+
+
+    public AdsTarget withParentId(@Nullable String parentId) {
+        this.parentId = parentId;
         return this;
     }
 
@@ -117,12 +140,6 @@ public class AdsTarget {
     }
 
 
-    public AdsTarget withValue(@Nonnull String value) {
-        this.value = Utils.checkNotNull(value, "value");
-        return this;
-    }
-
-
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -134,27 +151,29 @@ public class AdsTarget {
         AdsTarget other = (AdsTarget) o;
         return 
             Utils.enhancedDeepEquals(this.id, other.id) &&
+            Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
+            Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
-            Utils.enhancedDeepEquals(this.type, other.type) &&
-            Utils.enhancedDeepEquals(this.value, other.value);
+            Utils.enhancedDeepEquals(this.type, other.type);
     }
     
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            id, name, raw,
-            type, value);
+            id, isActive, name,
+            parentId, raw, type);
     }
     
     @Override
     public String toString() {
         return Utils.toString(AdsTarget.class,
                 "id", id,
+                "isActive", isActive,
                 "name", name,
+                "parentId", parentId,
                 "raw", raw,
-                "type", type,
-                "value", value);
+                "type", type);
     }
 
     @SuppressWarnings("UnusedReturnValue")
@@ -162,13 +181,15 @@ public class AdsTarget {
 
         private String id;
 
+        private Boolean isActive;
+
         private String name;
+
+        private String parentId;
 
         private Map<String, Object> raw;
 
         private AdsTargetType type;
-
-        private String value;
 
         private Builder() {
           // force use of static builder() method
@@ -179,8 +200,18 @@ public class AdsTarget {
             return this;
         }
 
+        public Builder isActive(@Nullable Boolean isActive) {
+            this.isActive = isActive;
+            return this;
+        }
+
         public Builder name(@Nullable String name) {
             this.name = name;
+            return this;
+        }
+
+        public Builder parentId(@Nullable String parentId) {
+            this.parentId = parentId;
             return this;
         }
 
@@ -194,15 +225,10 @@ public class AdsTarget {
             return this;
         }
 
-        public Builder value(@Nonnull String value) {
-            this.value = Utils.checkNotNull(value, "value");
-            return this;
-        }
-
         public AdsTarget build() {
             return new AdsTarget(
-                id, name, raw,
-                type, value);
+                id, isActive, name,
+                parentId, raw, type);
         }
 
     }

@@ -6,9 +6,13 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import to.unified.unified_java_sdk.models.operations.GetAdsTargetRequest;
+import to.unified.unified_java_sdk.models.operations.GetAdsTargetRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAdsTargetResponse;
 import to.unified.unified_java_sdk.models.operations.ListAdsTargetsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAdsTargetsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListAdsTargetsResponse;
+import to.unified.unified_java_sdk.operations.GetAdsTarget;
 import to.unified.unified_java_sdk.operations.ListAdsTargets;
 import to.unified.unified_java_sdk.utils.Headers;
 
@@ -30,6 +34,28 @@ public class Target {
      */
     public AsyncTarget async() {
         return asyncSDK;
+    }
+
+    /**
+     * Retrieve a target
+     * 
+     * @return The call builder
+     */
+    public GetAdsTargetRequestBuilder getAdsTarget() {
+        return new GetAdsTargetRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a target
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAdsTargetResponse getAdsTarget(@Nonnull GetAdsTargetRequest request) {
+        RequestOperation<GetAdsTargetRequest, GetAdsTargetResponse> operation
+              = new GetAdsTarget.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
     }
 
     /**

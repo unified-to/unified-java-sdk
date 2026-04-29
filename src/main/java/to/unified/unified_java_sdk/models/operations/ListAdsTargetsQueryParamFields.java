@@ -11,8 +11,9 @@ import java.util.Optional;
 public enum ListAdsTargetsQueryParamFields {
     ID("id"),
     NAME("name"),
-    VALUE("value"),
     TYPE("type"),
+    IS_ACTIVE("is_active"),
+    PARENT_ID("parent_id"),
     RAW("raw");
 
     @JsonValue

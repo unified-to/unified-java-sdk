@@ -6,9 +6,13 @@ package to.unified.unified_java_sdk;
 import static to.unified.unified_java_sdk.operations.Operations.RequestOperation;
 
 import jakarta.annotation.Nonnull;
+import to.unified.unified_java_sdk.models.operations.GetAdsPromotedRequest;
+import to.unified.unified_java_sdk.models.operations.GetAdsPromotedRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetAdsPromotedResponse;
 import to.unified.unified_java_sdk.models.operations.ListAdsPromotedsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAdsPromotedsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListAdsPromotedsResponse;
+import to.unified.unified_java_sdk.operations.GetAdsPromoted;
 import to.unified.unified_java_sdk.operations.ListAdsPromoteds;
 import to.unified.unified_java_sdk.utils.Headers;
 
@@ -30,6 +34,28 @@ public class Promoted {
      */
     public AsyncPromoted async() {
         return asyncSDK;
+    }
+
+    /**
+     * Retrieve a promoted
+     * 
+     * @return The call builder
+     */
+    public GetAdsPromotedRequestBuilder getAdsPromoted() {
+        return new GetAdsPromotedRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a promoted
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetAdsPromotedResponse getAdsPromoted(@Nonnull GetAdsPromotedRequest request) {
+        RequestOperation<GetAdsPromotedRequest, GetAdsPromotedResponse> operation
+              = new GetAdsPromoted.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
     }
 
     /**

@@ -29,6 +29,12 @@ public class ListAdsGroupsRequest {
     private String connectionId;
 
     /**
+     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_lt")
+    private String endLt;
+
+    /**
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
@@ -83,6 +89,12 @@ public class ListAdsGroupsRequest {
     private String sort;
 
     /**
+     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_gte")
+    private String startGte;
+
+    /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
@@ -93,6 +105,7 @@ public class ListAdsGroupsRequest {
     public ListAdsGroupsRequest(
             @Nullable String campaignId,
             @Nonnull String connectionId,
+            @Nullable String endLt,
             @Nullable List<ListAdsGroupsQueryParamFields> fields,
             @Nullable String ioId,
             @Nullable Double limit,
@@ -103,10 +116,12 @@ public class ListAdsGroupsRequest {
             @Nullable String query,
             @Nullable String raw,
             @Nullable String sort,
+            @Nullable String startGte,
             @Nullable String updatedGte) {
         this.campaignId = campaignId;
         this.connectionId = Optional.ofNullable(connectionId)
             .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
+        this.endLt = endLt;
         this.fields = fields;
         this.ioId = ioId;
         this.limit = limit;
@@ -117,6 +132,7 @@ public class ListAdsGroupsRequest {
         this.query = query;
         this.raw = raw;
         this.sort = sort;
+        this.startGte = startGte;
         this.updatedGte = updatedGte;
     }
     
@@ -126,7 +142,7 @@ public class ListAdsGroupsRequest {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null, null);
     }
 
     /**
@@ -141,6 +157,13 @@ public class ListAdsGroupsRequest {
      */
     public String connectionId() {
         return this.connectionId;
+    }
+
+    /**
+     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    public Optional<String> endLt() {
+        return Optional.ofNullable(this.endLt);
     }
 
     /**
@@ -204,6 +227,13 @@ public class ListAdsGroupsRequest {
     }
 
     /**
+     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    public Optional<String> startGte() {
+        return Optional.ofNullable(this.startGte);
+    }
+
+    /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
@@ -230,6 +260,15 @@ public class ListAdsGroupsRequest {
      */
     public ListAdsGroupsRequest withConnectionId(@Nonnull String connectionId) {
         this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
+        return this;
+    }
+
+
+    /**
+     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    public ListAdsGroupsRequest withEndLt(@Nullable String endLt) {
+        this.endLt = endLt;
         return this;
     }
 
@@ -315,6 +354,15 @@ public class ListAdsGroupsRequest {
 
 
     /**
+     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     */
+    public ListAdsGroupsRequest withStartGte(@Nullable String startGte) {
+        this.startGte = startGte;
+        return this;
+    }
+
+
+    /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
@@ -336,6 +384,7 @@ public class ListAdsGroupsRequest {
         return 
             Utils.enhancedDeepEquals(this.campaignId, other.campaignId) &&
             Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
+            Utils.enhancedDeepEquals(this.endLt, other.endLt) &&
             Utils.enhancedDeepEquals(this.fields, other.fields) &&
             Utils.enhancedDeepEquals(this.ioId, other.ioId) &&
             Utils.enhancedDeepEquals(this.limit, other.limit) &&
@@ -346,17 +395,18 @@ public class ListAdsGroupsRequest {
             Utils.enhancedDeepEquals(this.query, other.query) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.sort, other.sort) &&
+            Utils.enhancedDeepEquals(this.startGte, other.startGte) &&
             Utils.enhancedDeepEquals(this.updatedGte, other.updatedGte);
     }
     
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            campaignId, connectionId, fields,
-            ioId, limit, offset,
-            order, orgId, parentId,
-            query, raw, sort,
-            updatedGte);
+            campaignId, connectionId, endLt,
+            fields, ioId, limit,
+            offset, order, orgId,
+            parentId, query, raw,
+            sort, startGte, updatedGte);
     }
     
     @Override
@@ -364,6 +414,7 @@ public class ListAdsGroupsRequest {
         return Utils.toString(ListAdsGroupsRequest.class,
                 "campaignId", campaignId,
                 "connectionId", connectionId,
+                "endLt", endLt,
                 "fields", fields,
                 "ioId", ioId,
                 "limit", limit,
@@ -374,6 +425,7 @@ public class ListAdsGroupsRequest {
                 "query", query,
                 "raw", raw,
                 "sort", sort,
+                "startGte", startGte,
                 "updatedGte", updatedGte);
     }
 
@@ -383,6 +435,8 @@ public class ListAdsGroupsRequest {
         private String campaignId;
 
         private String connectionId;
+
+        private String endLt;
 
         private List<ListAdsGroupsQueryParamFields> fields;
 
@@ -404,6 +458,8 @@ public class ListAdsGroupsRequest {
 
         private String sort;
 
+        private String startGte;
+
         private String updatedGte;
 
         private Builder() {
@@ -423,6 +479,14 @@ public class ListAdsGroupsRequest {
          */
         public Builder connectionId(@Nonnull String connectionId) {
             this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
+            return this;
+        }
+
+        /**
+         * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
+        public Builder endLt(@Nullable String endLt) {
+            this.endLt = endLt;
             return this;
         }
 
@@ -497,6 +561,14 @@ public class ListAdsGroupsRequest {
         }
 
         /**
+         * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+         */
+        public Builder startGte(@Nullable String startGte) {
+            this.startGte = startGte;
+            return this;
+        }
+
+        /**
          * Return only results whose updated date is equal or greater to this value (ISO-8601 /
          * YYYY-MM-DDTHH:MM:SSZ format)
          */
@@ -507,11 +579,11 @@ public class ListAdsGroupsRequest {
 
         public ListAdsGroupsRequest build() {
             return new ListAdsGroupsRequest(
-                campaignId, connectionId, fields,
-                ioId, limit, offset,
-                order, orgId, parentId,
-                query, raw, sort,
-                updatedGte);
+                campaignId, connectionId, endLt,
+                fields, ioId, limit,
+                offset, order, orgId,
+                parentId, query, raw,
+                sort, startGte, updatedGte);
         }
 
     }

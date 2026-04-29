@@ -7,9 +7,13 @@ import static to.unified.unified_java_sdk.operations.Operations.AsyncRequestOper
 
 import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
+import to.unified.unified_java_sdk.models.operations.GetAdsPromotedRequest;
 import to.unified.unified_java_sdk.models.operations.ListAdsPromotedsRequest;
+import to.unified.unified_java_sdk.models.operations.async.GetAdsPromotedRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetAdsPromotedResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListAdsPromotedsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListAdsPromotedsResponse;
+import to.unified.unified_java_sdk.operations.GetAdsPromoted;
 import to.unified.unified_java_sdk.operations.ListAdsPromoteds;
 import to.unified.unified_java_sdk.utils.Headers;
 
@@ -31,6 +35,29 @@ public class AsyncPromoted {
      */
     public Promoted sync() {
         return syncSDK;
+    }
+
+
+    /**
+     * Retrieve a promoted
+     * 
+     * @return The async call builder
+     */
+    public GetAdsPromotedRequestBuilder getAdsPromoted() {
+        return new GetAdsPromotedRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a promoted
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetAdsPromotedResponse>} - The async response
+     */
+    public CompletableFuture<GetAdsPromotedResponse> getAdsPromoted(@Nonnull GetAdsPromotedRequest request) {
+        AsyncRequestOperation<GetAdsPromotedRequest, GetAdsPromotedResponse> operation
+              = new GetAdsPromoted.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
     }
 
 

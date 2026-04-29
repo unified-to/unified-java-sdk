@@ -8,16 +8,18 @@ import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 
-public enum ListAdsPromotedsQueryParamFields {
+public enum GetAdsTargetQueryParamFields {
     ID("id"),
     NAME("name"),
     TYPE("type"),
+    IS_ACTIVE("is_active"),
+    PARENT_ID("parent_id"),
     RAW("raw");
 
     @JsonValue
     private final String value;
 
-    ListAdsPromotedsQueryParamFields(String value) {
+    GetAdsTargetQueryParamFields(String value) {
         this.value = value;
     }
     
@@ -25,8 +27,8 @@ public enum ListAdsPromotedsQueryParamFields {
         return value;
     }
     
-    public static Optional<ListAdsPromotedsQueryParamFields> fromValue(String value) {
-        for (ListAdsPromotedsQueryParamFields o: ListAdsPromotedsQueryParamFields.values()) {
+    public static Optional<GetAdsTargetQueryParamFields> fromValue(String value) {
+        for (GetAdsTargetQueryParamFields o: GetAdsTargetQueryParamFields.values()) {
             if (Objects.deepEquals(o.value, value)) {
                 return Optional.of(o);
             }

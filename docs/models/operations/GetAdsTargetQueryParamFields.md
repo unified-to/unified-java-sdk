@@ -1,11 +1,11 @@
-# ListAdsTargetsQueryParamFields
+# GetAdsTargetQueryParamFields
 
 ## Example Usage
 
 ```java
-import to.unified.unified_java_sdk.models.operations.ListAdsTargetsQueryParamFields;
+import to.unified.unified_java_sdk.models.operations.GetAdsTargetQueryParamFields;
 
-ListAdsTargetsQueryParamFields value = ListAdsTargetsQueryParamFields.ID;
+GetAdsTargetQueryParamFields value = GetAdsTargetQueryParamFields.ID;
 ```
 
 

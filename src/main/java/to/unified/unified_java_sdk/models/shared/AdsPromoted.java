@@ -9,8 +9,10 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
+import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
+import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -30,6 +32,11 @@ public class AdsPromoted {
     private String name;
 
 
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("raw")
+    private Map<String, Object> raw;
+
+
     @JsonProperty("type")
     private AdsPromotedType type;
 
@@ -37,10 +44,12 @@ public class AdsPromoted {
     public AdsPromoted(
             @JsonProperty("id") @Nonnull String id,
             @JsonProperty("name") @Nullable String name,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("type") @Nonnull AdsPromotedType type) {
         this.id = Optional.ofNullable(id)
             .orElseThrow(() -> new IllegalArgumentException("id cannot be null"));
         this.name = name;
+        this.raw = raw;
         this.type = Optional.ofNullable(type)
             .orElseThrow(() -> new IllegalArgumentException("type cannot be null"));
     }
@@ -48,7 +57,8 @@ public class AdsPromoted {
     public AdsPromoted(
             @Nonnull String id,
             @Nonnull AdsPromotedType type) {
-        this(id, null, type);
+        this(id, null, null,
+            type);
     }
 
     public String id() {
@@ -57,6 +67,10 @@ public class AdsPromoted {
 
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
+    }
+
+    public Optional<Map<String, Object>> raw() {
+        return Optional.ofNullable(this.raw);
     }
 
     public AdsPromotedType type() {
@@ -80,6 +94,12 @@ public class AdsPromoted {
     }
 
 
+    public AdsPromoted withRaw(@Nullable Map<String, Object> raw) {
+        this.raw = raw;
+        return this;
+    }
+
+
     public AdsPromoted withType(@Nonnull AdsPromotedType type) {
         this.type = Utils.checkNotNull(type, "type");
         return this;
@@ -98,13 +118,15 @@ public class AdsPromoted {
         return 
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
+            Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.type, other.type);
     }
     
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            id, name, type);
+            id, name, raw,
+            type);
     }
     
     @Override
@@ -112,6 +134,7 @@ public class AdsPromoted {
         return Utils.toString(AdsPromoted.class,
                 "id", id,
                 "name", name,
+                "raw", raw,
                 "type", type);
     }
 
@@ -121,6 +144,8 @@ public class AdsPromoted {
         private String id;
 
         private String name;
+
+        private Map<String, Object> raw;
 
         private AdsPromotedType type;
 
@@ -138,6 +163,11 @@ public class AdsPromoted {
             return this;
         }
 
+        public Builder raw(@Nullable Map<String, Object> raw) {
+            this.raw = raw;
+            return this;
+        }
+
         public Builder type(@Nonnull AdsPromotedType type) {
             this.type = Utils.checkNotNull(type, "type");
             return this;
@@ -145,7 +175,8 @@ public class AdsPromoted {
 
         public AdsPromoted build() {
             return new AdsPromoted(
-                id, name, type);
+                id, name, raw,
+                type);
         }
 
     }
