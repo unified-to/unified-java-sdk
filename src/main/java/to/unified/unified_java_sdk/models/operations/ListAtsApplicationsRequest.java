@@ -77,6 +77,12 @@ public class ListAtsApplicationsRequest {
     private String sort;
 
     /**
+     * The status to filter by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    private String status;
+
+    /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
@@ -96,6 +102,7 @@ public class ListAtsApplicationsRequest {
             @Nullable String query,
             @Nullable String raw,
             @Nullable String sort,
+            @Nullable String status,
             @Nullable String updatedGte) {
         this.candidateId = candidateId;
         this.companyId = companyId;
@@ -109,6 +116,7 @@ public class ListAtsApplicationsRequest {
         this.query = query;
         this.raw = raw;
         this.sort = sort;
+        this.status = status;
         this.updatedGte = updatedGte;
     }
     
@@ -117,7 +125,8 @@ public class ListAtsApplicationsRequest {
         this(null, null, connectionId,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     /**
@@ -185,6 +194,13 @@ public class ListAtsApplicationsRequest {
 
     public Optional<String> sort() {
         return Optional.ofNullable(this.sort);
+    }
+
+    /**
+     * The status to filter by
+     */
+    public Optional<String> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -290,6 +306,15 @@ public class ListAtsApplicationsRequest {
 
 
     /**
+     * The status to filter by
+     */
+    public ListAtsApplicationsRequest withStatus(@Nullable String status) {
+        this.status = status;
+        return this;
+    }
+
+
+    /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
@@ -320,6 +345,7 @@ public class ListAtsApplicationsRequest {
             Utils.enhancedDeepEquals(this.query, other.query) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.sort, other.sort) &&
+            Utils.enhancedDeepEquals(this.status, other.status) &&
             Utils.enhancedDeepEquals(this.updatedGte, other.updatedGte);
     }
     
@@ -329,7 +355,8 @@ public class ListAtsApplicationsRequest {
             candidateId, companyId, connectionId,
             fields, jobId, limit,
             offset, order, query,
-            raw, sort, updatedGte);
+            raw, sort, status,
+            updatedGte);
     }
     
     @Override
@@ -346,6 +373,7 @@ public class ListAtsApplicationsRequest {
                 "query", query,
                 "raw", raw,
                 "sort", sort,
+                "status", status,
                 "updatedGte", updatedGte);
     }
 
@@ -373,6 +401,8 @@ public class ListAtsApplicationsRequest {
         private String raw;
 
         private String sort;
+
+        private String status;
 
         private String updatedGte;
 
@@ -459,6 +489,14 @@ public class ListAtsApplicationsRequest {
         }
 
         /**
+         * The status to filter by
+         */
+        public Builder status(@Nullable String status) {
+            this.status = status;
+            return this;
+        }
+
+        /**
          * Return only results whose updated date is equal or greater to this value (ISO-8601 /
          * YYYY-MM-DDTHH:MM:SSZ format)
          */
@@ -472,7 +510,8 @@ public class ListAtsApplicationsRequest {
                 candidateId, companyId, connectionId,
                 fields, jobId, limit,
                 offset, order, query,
-                raw, sort, updatedGte);
+                raw, sort, status,
+                updatedGte);
         }
 
     }

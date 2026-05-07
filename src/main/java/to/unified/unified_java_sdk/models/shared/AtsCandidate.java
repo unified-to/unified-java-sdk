@@ -81,6 +81,11 @@ public class AtsCandidate {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("job_ids")
+    private List<String> jobIds;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_name")
     private String lastName;
 
@@ -166,6 +171,7 @@ public class AtsCandidate {
             @JsonProperty("first_name") @Nullable String firstName,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("image_url") @Nullable String imageUrl,
+            @JsonProperty("job_ids") @Nullable List<String> jobIds,
             @JsonProperty("last_name") @Nullable String lastName,
             @JsonProperty("link_urls") @Nullable List<String> linkUrls,
             @JsonProperty("metadata") @Nullable List<AtsMetadata> metadata,
@@ -192,6 +198,7 @@ public class AtsCandidate {
         this.firstName = firstName;
         this.id = id;
         this.imageUrl = imageUrl;
+        this.jobIds = jobIds;
         this.lastName = lastName;
         this.linkUrls = linkUrls;
         this.metadata = metadata;
@@ -217,7 +224,7 @@ public class AtsCandidate {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<PropertyAtsCandidateAddress> address() {
@@ -266,6 +273,10 @@ public class AtsCandidate {
 
     public Optional<String> imageUrl() {
         return Optional.ofNullable(this.imageUrl);
+    }
+
+    public Optional<List<String>> jobIds() {
+        return Optional.ofNullable(this.jobIds);
     }
 
     public Optional<String> lastName() {
@@ -405,6 +416,12 @@ public class AtsCandidate {
     }
 
 
+    public AtsCandidate withJobIds(@Nullable List<String> jobIds) {
+        this.jobIds = jobIds;
+        return this;
+    }
+
+
     public AtsCandidate withLastName(@Nullable String lastName) {
         this.lastName = lastName;
         return this;
@@ -515,6 +532,7 @@ public class AtsCandidate {
             Utils.enhancedDeepEquals(this.firstName, other.firstName) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.imageUrl, other.imageUrl) &&
+            Utils.enhancedDeepEquals(this.jobIds, other.jobIds) &&
             Utils.enhancedDeepEquals(this.lastName, other.lastName) &&
             Utils.enhancedDeepEquals(this.linkUrls, other.linkUrls) &&
             Utils.enhancedDeepEquals(this.metadata, other.metadata) &&
@@ -538,11 +556,11 @@ public class AtsCandidate {
             createdAt, dateOfBirth, education,
             emails, experiences, externalIdentifier,
             firstName, id, imageUrl,
-            lastName, linkUrls, metadata,
-            name, origin, raw,
-            skills, sources, tags,
-            telephones, title, updatedAt,
-            userId, webUrl);
+            jobIds, lastName, linkUrls,
+            metadata, name, origin,
+            raw, skills, sources,
+            tags, telephones, title,
+            updatedAt, userId, webUrl);
     }
     
     @Override
@@ -560,6 +578,7 @@ public class AtsCandidate {
                 "firstName", firstName,
                 "id", id,
                 "imageUrl", imageUrl,
+                "jobIds", jobIds,
                 "lastName", lastName,
                 "linkUrls", linkUrls,
                 "metadata", metadata,
@@ -602,6 +621,8 @@ public class AtsCandidate {
         private String id;
 
         private String imageUrl;
+
+        private List<String> jobIds;
 
         private String lastName;
 
@@ -695,6 +716,11 @@ public class AtsCandidate {
             return this;
         }
 
+        public Builder jobIds(@Nullable List<String> jobIds) {
+            this.jobIds = jobIds;
+            return this;
+        }
+
         public Builder lastName(@Nullable String lastName) {
             this.lastName = lastName;
             return this;
@@ -775,11 +801,11 @@ public class AtsCandidate {
                 createdAt, dateOfBirth, education,
                 emails, experiences, externalIdentifier,
                 firstName, id, imageUrl,
-                lastName, linkUrls, metadata,
-                name, origin, raw,
-                skills, sources, tags,
-                telephones, title, updatedAt,
-                userId, webUrl);
+                jobIds, lastName, linkUrls,
+                metadata, name, origin,
+                raw, skills, sources,
+                tags, telephones, title,
+                updatedAt, userId, webUrl);
         }
 
     }
