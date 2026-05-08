@@ -81,6 +81,11 @@ public class HrisTimeoff {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("type")
+    private HrisTimeoffType type;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
@@ -103,6 +108,7 @@ public class HrisTimeoff {
             @JsonProperty("reason") @Nullable String reason,
             @JsonProperty("start_at") @Nonnull OffsetDateTime startAt,
             @JsonProperty("status") @Nullable HrisTimeoffStatus status,
+            @JsonProperty("type") @Nullable HrisTimeoffType type,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
             @JsonProperty("user_id") @Nullable String userId) {
         this.approvedAt = approvedAt;
@@ -118,6 +124,7 @@ public class HrisTimeoff {
         this.startAt = Optional.ofNullable(startAt)
             .orElseThrow(() -> new IllegalArgumentException("startAt cannot be null"));
         this.status = status;
+        this.type = type;
         this.updatedAt = updatedAt;
         this.userId = userId;
     }
@@ -128,7 +135,7 @@ public class HrisTimeoff {
             null, null, null,
             null, null, null,
             null, startAt, null,
-            null, null);
+            null, null, null);
     }
 
     public Optional<OffsetDateTime> approvedAt() {
@@ -177,6 +184,10 @@ public class HrisTimeoff {
 
     public Optional<HrisTimeoffStatus> status() {
         return Optional.ofNullable(this.status);
+    }
+
+    public Optional<HrisTimeoffType> type() {
+        return Optional.ofNullable(this.type);
     }
 
     public Optional<OffsetDateTime> updatedAt() {
@@ -264,6 +275,12 @@ public class HrisTimeoff {
     }
 
 
+    public HrisTimeoff withType(@Nullable HrisTimeoffType type) {
+        this.type = type;
+        return this;
+    }
+
+
     public HrisTimeoff withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -298,6 +315,7 @@ public class HrisTimeoff {
             Utils.enhancedDeepEquals(this.reason, other.reason) &&
             Utils.enhancedDeepEquals(this.startAt, other.startAt) &&
             Utils.enhancedDeepEquals(this.status, other.status) &&
+            Utils.enhancedDeepEquals(this.type, other.type) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
             Utils.enhancedDeepEquals(this.userId, other.userId);
     }
@@ -309,7 +327,7 @@ public class HrisTimeoff {
             companyId, createdAt, endAt,
             id, isPaid, raw,
             reason, startAt, status,
-            updatedAt, userId);
+            type, updatedAt, userId);
     }
     
     @Override
@@ -327,6 +345,7 @@ public class HrisTimeoff {
                 "reason", reason,
                 "startAt", startAt,
                 "status", status,
+                "type", type,
                 "updatedAt", updatedAt,
                 "userId", userId);
     }
@@ -357,6 +376,8 @@ public class HrisTimeoff {
         private OffsetDateTime startAt;
 
         private HrisTimeoffStatus status;
+
+        private HrisTimeoffType type;
 
         private OffsetDateTime updatedAt;
 
@@ -426,6 +447,11 @@ public class HrisTimeoff {
             return this;
         }
 
+        public Builder type(@Nullable HrisTimeoffType type) {
+            this.type = type;
+            return this;
+        }
+
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
@@ -442,7 +468,7 @@ public class HrisTimeoff {
                 companyId, createdAt, endAt,
                 id, isPaid, raw,
                 reason, startAt, status,
-                updatedAt, userId);
+                type, updatedAt, userId);
         }
 
     }

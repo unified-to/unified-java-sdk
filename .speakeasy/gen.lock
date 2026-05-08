@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: 711c26f00585a8f5fdc28cc88a86d795
+  docChecksum: b92ae9b53e2fd3c68f3300b3a8bec89d
   docVersion: "1.0"
   speakeasyVersion: 1.762.0
   generationVersion: 2.882.0
-  releaseVersion: 0.47.20
-  configChecksum: 0770c2f43ff6da72552cccc198b5f376
+  releaseVersion: 0.47.21
+  configChecksum: 020e3b93c6abac8ef7bcd76207b1afe8
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-java-sdk
@@ -724,7 +724,7 @@ trackedFiles:
     last_write_checksum: sha1:35f089abc7d2499de6081854710bb0d51c7084bc
     pristine_git_object: 9feaa897ac9507dc992e47ff35bcde8bb88dc91c
   docs/models/operations/CreateHrisTimeoffQueryParamFields.md:
-    last_write_checksum: sha1:2b3ad4fd7c2ff185f488928c05a6556685d9a019
+    last_write_checksum: sha1:ad78ea74a1621e8ebbf4956212e5280b8677904a
   docs/models/operations/CreateHrisTimeoffRequest.md:
     last_write_checksum: sha1:a48ac9200dc4d718bdcea3187565c0ca9ee5823c
   docs/models/operations/CreateHrisTimeoffResponse.md:
@@ -2047,7 +2047,7 @@ trackedFiles:
     pristine_git_object: 8438994015cf366110f3367666f032695e52e211
   docs/models/operations/GetHrisTimeoffQueryParamFields.md:
     id: 00a8ca68d489
-    last_write_checksum: sha1:11fd069c1682d18ac4ad9261c8fa21ce8fac4795
+    last_write_checksum: sha1:5b149f64683e8c52bf9f926d37e80ea228814c56
     pristine_git_object: 0618ec61b173e4aed206de2a9edaa2f90e80f74d
   docs/models/operations/GetHrisTimeoffRequest.md:
     id: 686ab3c51fad
@@ -3557,7 +3557,7 @@ trackedFiles:
     pristine_git_object: 51a46488339bb1dbccfa02245ac09e4a813a61dd
   docs/models/operations/ListHrisTimeoffsQueryParamFields.md:
     id: 967844f3e5c6
-    last_write_checksum: sha1:01ddcccd546a8dc5ce1235dc8f1ab6e24bc20b1b
+    last_write_checksum: sha1:e33e50006c5365afeb67dd0e6b488fd098c29ca3
     pristine_git_object: a15343d97f925c2dd633efd40a6a6c7d08251999
   docs/models/operations/ListHrisTimeoffsRequest.md:
     id: 21575e716ac7
@@ -4886,7 +4886,7 @@ trackedFiles:
     last_write_checksum: sha1:55dda5a8fb4833727d616e8e27793c65600e508f
     pristine_git_object: 48a7e0182171bbc758ca91d2dc6d21efb3fe8a9d
   docs/models/operations/PatchHrisTimeoffQueryParamFields.md:
-    last_write_checksum: sha1:6cd16247b7ca5c8ac0fd35a7b8f40683cf1a2b4b
+    last_write_checksum: sha1:a0aa2380b5d6876e634be4bd56837896756bc633
   docs/models/operations/PatchHrisTimeoffRequest.md:
     last_write_checksum: sha1:0fc6ff4d6738720b65cb1b064146d16c01fa0c37
   docs/models/operations/PatchHrisTimeoffResponse.md:
@@ -6908,7 +6908,7 @@ trackedFiles:
     last_write_checksum: sha1:18f987e91381323fdbb18f681c40427d8c3e3d9a
     pristine_git_object: 3b1a701ecd94e765977bf909975907672a43339e
   docs/models/operations/UpdateHrisTimeoffQueryParamFields.md:
-    last_write_checksum: sha1:851b32bf03f28eceb373543c64b740e019118d8c
+    last_write_checksum: sha1:484f265c093e2d2eba591ed42a228dbdf9bf0b7c
   docs/models/operations/UpdateHrisTimeoffRequest.md:
     last_write_checksum: sha1:34b3963e96c5f07000699509676e7affa98c8e89
   docs/models/operations/UpdateHrisTimeoffResponse.md:
@@ -8613,12 +8613,14 @@ trackedFiles:
     pristine_git_object: c64af12600303463720012a6bf4579f22999fc6d
   docs/models/shared/HrisTimeoff.md:
     id: 58b2bbdd703e
-    last_write_checksum: sha1:46dfe0ab6e761a9ccaa5f0f66bbecd7e626ae20d
+    last_write_checksum: sha1:ec992031f7954f3b9ef4770f7fb9e516c45660a4
     pristine_git_object: 65aa003fe51e318a1c7e25b94917061468733c81
   docs/models/shared/HrisTimeoffStatus.md:
     id: 72763cac4c0e
     last_write_checksum: sha1:e9f53eb2863e4129ef506c880c54e7d8abc5d31e
     pristine_git_object: e6713b1c9522bb31978dde5ac4951e9e83646de8
+  docs/models/shared/HrisTimeoffType.md:
+    last_write_checksum: sha1:dacda0f04076cf136e45e179592c04fa88bce63c
   docs/models/shared/HrisTimeshift.md:
     id: afe3f81c7ff7
     last_write_checksum: sha1:c251407e263374e8c9bf7000af2006588a6c2d33
@@ -11435,7 +11437,7 @@ trackedFiles:
     pristine_git_object: 14fe7a9e0f20951a7e3ab2752816fbc9b8c41dd3
   gradle.properties:
     id: 2afbb999f001
-    last_write_checksum: sha1:64a268729a9b4f4a266e1a2eb5a51eb6d79ef291
+    last_write_checksum: sha1:7435ae61de00fcf209f278385c9693c472b4953a
     pristine_git_object: e98f734834a572eee8169e873f8a45f9fe20f9e0
   gradle/wrapper/gradle-wrapper.jar:
     id: ec27dae6e852
@@ -12473,7 +12475,7 @@ trackedFiles:
     pristine_git_object: 2ccb6e90f32063c290e9fa25abf9649b884b4ed0
   src/main/java/to/unified/unified_java_sdk/SDKConfiguration.java:
     id: 42279b7431fa
-    last_write_checksum: sha1:04e609cd5751a0bbac41766dda96c8718b4fc3de
+    last_write_checksum: sha1:0733b32497e14bdea8780c18dadaf87a166acb3d
     pristine_git_object: 17976ce665fb7cd87ed8a727359e17d32feaab3b
   src/main/java/to/unified/unified_java_sdk/Saleschannel.java:
     id: 2dca25153692
@@ -16186,7 +16188,7 @@ trackedFiles:
     last_write_checksum: sha1:cdc3351373c7f00c967ea148e6eed3b911d7b96e
     pristine_git_object: 2d96072c408474c0b9fd012f7880ff5eb61f0809
   src/main/java/to/unified/unified_java_sdk/models/operations/CreateHrisTimeoffQueryParamFields.java:
-    last_write_checksum: sha1:1c83a438fae667dd1a7109ff57800a35f5543f2b
+    last_write_checksum: sha1:e4445b51f9f5082be92d0259399f01625aab6203
   src/main/java/to/unified/unified_java_sdk/models/operations/CreateHrisTimeoffRequest.java:
     last_write_checksum: sha1:ebda76de3550b91724ddf6fbd09d93490e032f44
   src/main/java/to/unified/unified_java_sdk/models/operations/CreateHrisTimeoffRequestBuilder.java:
@@ -17963,7 +17965,7 @@ trackedFiles:
     pristine_git_object: 49d2f8850f49c13ddddf7e0f96195f7724aa8f0d
   src/main/java/to/unified/unified_java_sdk/models/operations/GetHrisTimeoffQueryParamFields.java:
     id: 7a68583ad7c9
-    last_write_checksum: sha1:edc5594f52d3eb5f6d2b3945c5abc190137b9310
+    last_write_checksum: sha1:16e050ba0639ba16ad13549f7f7e8336dc2074b3
     pristine_git_object: d1c546f9a34cae17833424a1ba25d1517bace37e
   src/main/java/to/unified/unified_java_sdk/models/operations/GetHrisTimeoffRequest.java:
     id: 11a2515ed95f
@@ -19991,7 +19993,7 @@ trackedFiles:
     pristine_git_object: 3619a2b309c020f9fffc69f936c2eaf4c8bc1834
   src/main/java/to/unified/unified_java_sdk/models/operations/ListHrisTimeoffsQueryParamFields.java:
     id: 9903547445a7
-    last_write_checksum: sha1:45dc58a24908873a0efe0bdcd44cc4e57ed4ce62
+    last_write_checksum: sha1:7c68c3e4dcee7a6cbaa3ca22c74ebbb0e8b27962
     pristine_git_object: dfdd2e9a5c4fc6d57f33a9326e1c6ff7fd638203
   src/main/java/to/unified/unified_java_sdk/models/operations/ListHrisTimeoffsRequest.java:
     id: d8228900c245
@@ -21778,7 +21780,7 @@ trackedFiles:
     last_write_checksum: sha1:33f4eac5ae55a027313c302bca9373572376197c
     pristine_git_object: 6e448ef41591717e7927edd303e7491a9ad93589
   src/main/java/to/unified/unified_java_sdk/models/operations/PatchHrisTimeoffQueryParamFields.java:
-    last_write_checksum: sha1:584ddf207b0003a4ef5d1a35a61dc7f1e8a27058
+    last_write_checksum: sha1:e1bcaae3d2f5d09c6cb045a02011caab751dd21f
   src/main/java/to/unified/unified_java_sdk/models/operations/PatchHrisTimeoffRequest.java:
     last_write_checksum: sha1:e6ad54eb9ced7e6bcd99b83271259060b5037944
   src/main/java/to/unified/unified_java_sdk/models/operations/PatchHrisTimeoffRequestBuilder.java:
@@ -24616,7 +24618,7 @@ trackedFiles:
     last_write_checksum: sha1:8c1fe1d37394ca3da902f666e4aa47e0331af049
     pristine_git_object: 14c1d66d18d379e06c15aaeabafdd1d52089c30a
   src/main/java/to/unified/unified_java_sdk/models/operations/UpdateHrisTimeoffQueryParamFields.java:
-    last_write_checksum: sha1:3815f352357e09672d612edfd90d1f61fc090e8c
+    last_write_checksum: sha1:906561f4385c8136acf666dfb06fc81d32ccaa4e
   src/main/java/to/unified/unified_java_sdk/models/operations/UpdateHrisTimeoffRequest.java:
     last_write_checksum: sha1:e5c0d102a708f64448a20ca654c5863ce4c2b74d
   src/main/java/to/unified/unified_java_sdk/models/operations/UpdateHrisTimeoffRequestBuilder.java:
@@ -29175,12 +29177,14 @@ trackedFiles:
     pristine_git_object: 2a0fc429a8a00e53dfca43b2bf32302e58e3363b
   src/main/java/to/unified/unified_java_sdk/models/shared/HrisTimeoff.java:
     id: f23ddecffeed
-    last_write_checksum: sha1:e5449f0fcffc6e02d376a5ba55eb7587f7c3b327
+    last_write_checksum: sha1:43885709329d7d53e1fa8d0c6b24838c426c54a1
     pristine_git_object: a2b55e099f40528db3f81901135436d183193218
   src/main/java/to/unified/unified_java_sdk/models/shared/HrisTimeoffStatus.java:
     id: 7b4c845e90eb
     last_write_checksum: sha1:8535159da04233f2d585ca7b36b67da7bfcfbc23
     pristine_git_object: 145ced2763ae3b8ed2c7fa6f550ff3a21d852a70
+  src/main/java/to/unified/unified_java_sdk/models/shared/HrisTimeoffType.java:
+    last_write_checksum: sha1:5c22190474d43839a8cae446fda9628f7baeae02
   src/main/java/to/unified/unified_java_sdk/models/shared/HrisTimeshift.java:
     id: e0be1d8a423a
     last_write_checksum: sha1:96d19f225bdf7baba952ee09a8e7fe0a6b6f3811
@@ -40566,7 +40570,7 @@ examples:
           application/json: {"id": "<id>"}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Java SDK Changes:\n* `unified-to.ats.createAtsCandidate()`: \n  *  `request` **Changed**\n  *  `response.jobIds` **Added**\n* `unified-to.ats.getAtsCandidate()`: \n  *  `request.fields` **Changed**\n  *  `response.jobIds` **Added**\n* `unified-to.ats.listAtsApplications()`: \n  *  `request.status` **Added**\n* `unified-to.ats.listAtsCandidates()`: \n  *  `request.fields` **Changed**\n  *  `response.[].jobIds` **Added**\n* `unified-to.ats.patchAtsCandidate()`: \n  *  `request` **Changed**\n  *  `response.jobIds` **Added**\n* `unified-to.ats.updateAtsCandidate()`: \n  *  `request` **Changed**\n  *  `response.jobIds` **Added**\n* `unified-to.application.listAtsApplications()`: \n  *  `request.status` **Added**\n* `unified-to.candidate.createAtsCandidate()`: \n  *  `request` **Changed**\n  *  `response.jobIds` **Added**\n* `unified-to.candidate.getAtsCandidate()`: \n  *  `request.fields` **Changed**\n  *  `response.jobIds` **Added**\n* `unified-to.candidate.listAtsCandidates()`: \n  *  `request.fields` **Changed**\n  *  `response.[].jobIds` **Added**\n* `unified-to.candidate.patchAtsCandidate()`: \n  *  `request` **Changed**\n  *  `response.jobIds` **Added**\n* `unified-to.candidate.updateAtsCandidate()`: \n  *  `request` **Changed**\n  *  `response.jobIds` **Added**\n"
+releaseNotes: "## Java SDK Changes:\n* `unified-to.hris.createHrisTimeoff()`: \n  *  `request` **Changed**\n  *  `response.type` **Added**\n* `unified-to.hris.getHrisTimeoff()`: \n  *  `request.fields` **Changed**\n  *  `response.type` **Added**\n* `unified-to.hris.listHrisTimeoffs()`: \n  *  `request.fields` **Changed**\n  *  `response.[].type` **Added**\n* `unified-to.hris.patchHrisTimeoff()`: \n  *  `request` **Changed**\n  *  `response.type` **Added**\n* `unified-to.hris.updateHrisTimeoff()`: \n  *  `request` **Changed**\n  *  `response.type` **Added**\n* `unified-to.timeoff.createHrisTimeoff()`: \n  *  `request` **Changed**\n  *  `response.type` **Added**\n* `unified-to.timeoff.getHrisTimeoff()`: \n  *  `request.fields` **Changed**\n  *  `response.type` **Added**\n* `unified-to.timeoff.listHrisTimeoffs()`: \n  *  `request.fields` **Changed**\n  *  `response.[].type` **Added**\n* `unified-to.timeoff.patchHrisTimeoff()`: \n  *  `request` **Changed**\n  *  `response.type` **Added**\n* `unified-to.timeoff.updateHrisTimeoff()`: \n  *  `request` **Changed**\n  *  `response.type` **Added**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md

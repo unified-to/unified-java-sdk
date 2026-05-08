@@ -21,8 +21,9 @@ public enum PatchHrisTimeoffQueryParamFields {
     APPROVER_USER_ID("approver_user_id"),
     APPROVED_AT("approved_at"),
     COMMENTS("comments"),
-    RAW("raw"),
-    REASON("reason");
+    REASON("reason"),
+    TYPE("type"),
+    RAW("raw");
 
     @JsonValue
     private final String value;
