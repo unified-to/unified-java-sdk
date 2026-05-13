@@ -76,9 +76,7 @@ public class ListAtsDocumentsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     private String sort;
 
-    /**
-     * The type to filter by
-     */
+
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     private String type;
 
@@ -196,9 +194,6 @@ public class ListAtsDocumentsRequest {
         return Optional.ofNullable(this.sort);
     }
 
-    /**
-     * The type to filter by
-     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -305,9 +300,6 @@ public class ListAtsDocumentsRequest {
     }
 
 
-    /**
-     * The type to filter by
-     */
     public ListAtsDocumentsRequest withType(@Nullable String type) {
         this.type = type;
         return this;
@@ -488,9 +480,6 @@ public class ListAtsDocumentsRequest {
             return this;
         }
 
-        /**
-         * The type to filter by
-         */
         public Builder type(@Nullable String type) {
             this.type = type;
             return this;
