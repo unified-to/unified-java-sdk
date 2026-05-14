@@ -162,6 +162,11 @@ public class AtsJob {
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("user_id")
+    private String userId;
+
     @JsonCreator
     public AtsJob(
             @JsonProperty("addresses") @Nullable List<AtsAddress> addresses,
@@ -190,7 +195,8 @@ public class AtsJob {
             @JsonProperty("remote") @Nullable Boolean remote,
             @JsonProperty("skills") @Nullable List<String> skills,
             @JsonProperty("status") @Nullable AtsJobStatus status,
-            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
+            @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
+            @JsonProperty("user_id") @Nullable String userId) {
         this.addresses = addresses;
         this.closedAt = closedAt;
         this.companyId = companyId;
@@ -218,6 +224,7 @@ public class AtsJob {
         this.skills = skills;
         this.status = status;
         this.updatedAt = updatedAt;
+        this.userId = userId;
     }
     
     public AtsJob() {
@@ -229,7 +236,8 @@ public class AtsJob {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     public Optional<List<AtsAddress>> addresses() {
@@ -347,6 +355,10 @@ public class AtsJob {
 
     public Optional<OffsetDateTime> updatedAt() {
         return Optional.ofNullable(this.updatedAt);
+    }
+
+    public Optional<String> userId() {
+        return Optional.ofNullable(this.userId);
     }
 
     public static Builder builder() {
@@ -525,6 +537,12 @@ public class AtsJob {
     }
 
 
+    public AtsJob withUserId(@Nullable String userId) {
+        this.userId = userId;
+        return this;
+    }
+
+
     @Override
     public boolean equals(java.lang.Object o) {
         if (this == o) {
@@ -561,7 +579,8 @@ public class AtsJob {
             Utils.enhancedDeepEquals(this.remote, other.remote) &&
             Utils.enhancedDeepEquals(this.skills, other.skills) &&
             Utils.enhancedDeepEquals(this.status, other.status) &&
-            Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt);
+            Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
+            Utils.enhancedDeepEquals(this.userId, other.userId);
     }
     
     @Override
@@ -575,7 +594,8 @@ public class AtsJob {
             name, numberOfOpenings, openings,
             postings, publicJobUrls, questions,
             raw, recruiterIds, remote,
-            skills, status, updatedAt);
+            skills, status, updatedAt,
+            userId);
     }
     
     @Override
@@ -607,7 +627,8 @@ public class AtsJob {
                 "remote", remote,
                 "skills", skills,
                 "status", status,
-                "updatedAt", updatedAt);
+                "updatedAt", updatedAt,
+                "userId", userId);
     }
 
     @SuppressWarnings("UnusedReturnValue")
@@ -666,6 +687,8 @@ public class AtsJob {
         private AtsJobStatus status;
 
         private OffsetDateTime updatedAt;
+
+        private String userId;
 
         private Builder() {
           // force use of static builder() method
@@ -815,6 +838,11 @@ public class AtsJob {
             return this;
         }
 
+        public Builder userId(@Nullable String userId) {
+            this.userId = userId;
+            return this;
+        }
+
         public AtsJob build() {
             return new AtsJob(
                 addresses, closedAt, companyId,
@@ -825,7 +853,8 @@ public class AtsJob {
                 name, numberOfOpenings, openings,
                 postings, publicJobUrls, questions,
                 raw, recruiterIds, remote,
-                skills, status, updatedAt);
+                skills, status, updatedAt,
+                userId);
         }
 
     }

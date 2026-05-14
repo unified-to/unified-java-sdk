@@ -15,7 +15,7 @@ import to.unified.unified_java_sdk.utils.SpeakeasyMetadata;
 import to.unified.unified_java_sdk.utils.Utils;
 
 
-public class ListKmsPagesRequest {
+public class ListShippingTrackingsRequest {
     /**
      * ID of the connection
      */
@@ -26,7 +26,7 @@ public class ListKmsPagesRequest {
      * Fields to return
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
-    private List<ListKmsPagesQueryParamFields> fields;
+    private List<ListShippingTrackingsQueryParamFields> fields;
 
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
@@ -39,12 +39,6 @@ public class ListKmsPagesRequest {
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     private String order;
-
-    /**
-     * The parent ID to filter by
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parent_id")
-    private String parentId;
 
     /**
      * Query string to search. eg. email address or name
@@ -65,57 +59,38 @@ public class ListKmsPagesRequest {
     private String sort;
 
     /**
-     * The space ID to filter by (reference to KmsSpace)
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=space_id")
-    private String spaceId;
-
-    /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updated_gte")
     private String updatedGte;
 
-    /**
-     * The user/employee ID to filter by (reference to HrisEmployee)
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_id")
-    private String userId;
-
     @JsonCreator
-    public ListKmsPagesRequest(
+    public ListShippingTrackingsRequest(
             @Nonnull String connectionId,
-            @Nullable List<ListKmsPagesQueryParamFields> fields,
+            @Nullable List<ListShippingTrackingsQueryParamFields> fields,
             @Nullable Double limit,
             @Nullable Double offset,
             @Nullable String order,
-            @Nullable String parentId,
             @Nullable String query,
             @Nullable String raw,
             @Nullable String sort,
-            @Nullable String spaceId,
-            @Nullable String updatedGte,
-            @Nullable String userId) {
+            @Nullable String updatedGte) {
         this.connectionId = Optional.ofNullable(connectionId)
             .orElseThrow(() -> new IllegalArgumentException("connectionId cannot be null"));
         this.fields = fields;
         this.limit = limit;
         this.offset = offset;
         this.order = order;
-        this.parentId = parentId;
         this.query = query;
         this.raw = raw;
         this.sort = sort;
-        this.spaceId = spaceId;
         this.updatedGte = updatedGte;
-        this.userId = userId;
     }
     
-    public ListKmsPagesRequest(
+    public ListShippingTrackingsRequest(
             @Nonnull String connectionId) {
         this(connectionId, null, null,
-            null, null, null,
             null, null, null,
             null, null, null);
     }
@@ -130,7 +105,7 @@ public class ListKmsPagesRequest {
     /**
      * Fields to return
      */
-    public Optional<List<ListKmsPagesQueryParamFields>> fields() {
+    public Optional<List<ListShippingTrackingsQueryParamFields>> fields() {
         return Optional.ofNullable(this.fields);
     }
 
@@ -144,13 +119,6 @@ public class ListKmsPagesRequest {
 
     public Optional<String> order() {
         return Optional.ofNullable(this.order);
-    }
-
-    /**
-     * The parent ID to filter by
-     */
-    public Optional<String> parentId() {
-        return Optional.ofNullable(this.parentId);
     }
 
     /**
@@ -174,25 +142,11 @@ public class ListKmsPagesRequest {
     }
 
     /**
-     * The space ID to filter by (reference to KmsSpace)
-     */
-    public Optional<String> spaceId() {
-        return Optional.ofNullable(this.spaceId);
-    }
-
-    /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
     public Optional<String> updatedGte() {
         return Optional.ofNullable(this.updatedGte);
-    }
-
-    /**
-     * The user/employee ID to filter by (reference to HrisEmployee)
-     */
-    public Optional<String> userId() {
-        return Optional.ofNullable(this.userId);
     }
 
     public static Builder builder() {
@@ -203,7 +157,7 @@ public class ListKmsPagesRequest {
     /**
      * ID of the connection
      */
-    public ListKmsPagesRequest withConnectionId(@Nonnull String connectionId) {
+    public ListShippingTrackingsRequest withConnectionId(@Nonnull String connectionId) {
         this.connectionId = Utils.checkNotNull(connectionId, "connectionId");
         return this;
     }
@@ -212,35 +166,26 @@ public class ListKmsPagesRequest {
     /**
      * Fields to return
      */
-    public ListKmsPagesRequest withFields(@Nullable List<ListKmsPagesQueryParamFields> fields) {
+    public ListShippingTrackingsRequest withFields(@Nullable List<ListShippingTrackingsQueryParamFields> fields) {
         this.fields = fields;
         return this;
     }
 
 
-    public ListKmsPagesRequest withLimit(@Nullable Double limit) {
+    public ListShippingTrackingsRequest withLimit(@Nullable Double limit) {
         this.limit = limit;
         return this;
     }
 
 
-    public ListKmsPagesRequest withOffset(@Nullable Double offset) {
+    public ListShippingTrackingsRequest withOffset(@Nullable Double offset) {
         this.offset = offset;
         return this;
     }
 
 
-    public ListKmsPagesRequest withOrder(@Nullable String order) {
+    public ListShippingTrackingsRequest withOrder(@Nullable String order) {
         this.order = order;
-        return this;
-    }
-
-
-    /**
-     * The parent ID to filter by
-     */
-    public ListKmsPagesRequest withParentId(@Nullable String parentId) {
-        this.parentId = parentId;
         return this;
     }
 
@@ -248,7 +193,7 @@ public class ListKmsPagesRequest {
     /**
      * Query string to search. eg. email address or name
      */
-    public ListKmsPagesRequest withQuery(@Nullable String query) {
+    public ListShippingTrackingsRequest withQuery(@Nullable String query) {
         this.query = query;
         return this;
     }
@@ -259,23 +204,14 @@ public class ListKmsPagesRequest {
      * 
      * <p>raw parameters: foo=bar&amp;zoo=bar -&gt; raw=foo%3Dbar%26zoo%3Dbar
      */
-    public ListKmsPagesRequest withRaw(@Nullable String raw) {
+    public ListShippingTrackingsRequest withRaw(@Nullable String raw) {
         this.raw = raw;
         return this;
     }
 
 
-    public ListKmsPagesRequest withSort(@Nullable String sort) {
+    public ListShippingTrackingsRequest withSort(@Nullable String sort) {
         this.sort = sort;
-        return this;
-    }
-
-
-    /**
-     * The space ID to filter by (reference to KmsSpace)
-     */
-    public ListKmsPagesRequest withSpaceId(@Nullable String spaceId) {
-        this.spaceId = spaceId;
         return this;
     }
 
@@ -284,17 +220,8 @@ public class ListKmsPagesRequest {
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
-    public ListKmsPagesRequest withUpdatedGte(@Nullable String updatedGte) {
+    public ListShippingTrackingsRequest withUpdatedGte(@Nullable String updatedGte) {
         this.updatedGte = updatedGte;
-        return this;
-    }
-
-
-    /**
-     * The user/employee ID to filter by (reference to HrisEmployee)
-     */
-    public ListKmsPagesRequest withUserId(@Nullable String userId) {
-        this.userId = userId;
         return this;
     }
 
@@ -307,46 +234,39 @@ public class ListKmsPagesRequest {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        ListKmsPagesRequest other = (ListKmsPagesRequest) o;
+        ListShippingTrackingsRequest other = (ListShippingTrackingsRequest) o;
         return 
             Utils.enhancedDeepEquals(this.connectionId, other.connectionId) &&
             Utils.enhancedDeepEquals(this.fields, other.fields) &&
             Utils.enhancedDeepEquals(this.limit, other.limit) &&
             Utils.enhancedDeepEquals(this.offset, other.offset) &&
             Utils.enhancedDeepEquals(this.order, other.order) &&
-            Utils.enhancedDeepEquals(this.parentId, other.parentId) &&
             Utils.enhancedDeepEquals(this.query, other.query) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.sort, other.sort) &&
-            Utils.enhancedDeepEquals(this.spaceId, other.spaceId) &&
-            Utils.enhancedDeepEquals(this.updatedGte, other.updatedGte) &&
-            Utils.enhancedDeepEquals(this.userId, other.userId);
+            Utils.enhancedDeepEquals(this.updatedGte, other.updatedGte);
     }
     
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
             connectionId, fields, limit,
-            offset, order, parentId,
-            query, raw, sort,
-            spaceId, updatedGte, userId);
+            offset, order, query,
+            raw, sort, updatedGte);
     }
     
     @Override
     public String toString() {
-        return Utils.toString(ListKmsPagesRequest.class,
+        return Utils.toString(ListShippingTrackingsRequest.class,
                 "connectionId", connectionId,
                 "fields", fields,
                 "limit", limit,
                 "offset", offset,
                 "order", order,
-                "parentId", parentId,
                 "query", query,
                 "raw", raw,
                 "sort", sort,
-                "spaceId", spaceId,
-                "updatedGte", updatedGte,
-                "userId", userId);
+                "updatedGte", updatedGte);
     }
 
     @SuppressWarnings("UnusedReturnValue")
@@ -354,7 +274,7 @@ public class ListKmsPagesRequest {
 
         private String connectionId;
 
-        private List<ListKmsPagesQueryParamFields> fields;
+        private List<ListShippingTrackingsQueryParamFields> fields;
 
         private Double limit;
 
@@ -362,19 +282,13 @@ public class ListKmsPagesRequest {
 
         private String order;
 
-        private String parentId;
-
         private String query;
 
         private String raw;
 
         private String sort;
 
-        private String spaceId;
-
         private String updatedGte;
-
-        private String userId;
 
         private Builder() {
           // force use of static builder() method
@@ -391,7 +305,7 @@ public class ListKmsPagesRequest {
         /**
          * Fields to return
          */
-        public Builder fields(@Nullable List<ListKmsPagesQueryParamFields> fields) {
+        public Builder fields(@Nullable List<ListShippingTrackingsQueryParamFields> fields) {
             this.fields = fields;
             return this;
         }
@@ -408,14 +322,6 @@ public class ListKmsPagesRequest {
 
         public Builder order(@Nullable String order) {
             this.order = order;
-            return this;
-        }
-
-        /**
-         * The parent ID to filter by
-         */
-        public Builder parentId(@Nullable String parentId) {
-            this.parentId = parentId;
             return this;
         }
 
@@ -443,14 +349,6 @@ public class ListKmsPagesRequest {
         }
 
         /**
-         * The space ID to filter by (reference to KmsSpace)
-         */
-        public Builder spaceId(@Nullable String spaceId) {
-            this.spaceId = spaceId;
-            return this;
-        }
-
-        /**
          * Return only results whose updated date is equal or greater to this value (ISO-8601 /
          * YYYY-MM-DDTHH:MM:SSZ format)
          */
@@ -459,20 +357,11 @@ public class ListKmsPagesRequest {
             return this;
         }
 
-        /**
-         * The user/employee ID to filter by (reference to HrisEmployee)
-         */
-        public Builder userId(@Nullable String userId) {
-            this.userId = userId;
-            return this;
-        }
-
-        public ListKmsPagesRequest build() {
-            return new ListKmsPagesRequest(
+        public ListShippingTrackingsRequest build() {
+            return new ListShippingTrackingsRequest(
                 connectionId, fields, limit,
-                offset, order, parentId,
-                query, raw, sort,
-                spaceId, updatedGte, userId);
+                offset, order, query,
+                raw, sort, updatedGte);
         }
 
     }

@@ -17,6 +17,7 @@ import to.unified.unified_java_sdk.models.operations.GetShippingTrackingRequest;
 import to.unified.unified_java_sdk.models.operations.ListShippingCarriersRequest;
 import to.unified.unified_java_sdk.models.operations.ListShippingLabelsRequest;
 import to.unified.unified_java_sdk.models.operations.ListShippingShipmentsRequest;
+import to.unified.unified_java_sdk.models.operations.ListShippingTrackingsRequest;
 import to.unified.unified_java_sdk.models.operations.PatchShippingLabelRequest;
 import to.unified.unified_java_sdk.models.operations.PatchShippingShipmentRequest;
 import to.unified.unified_java_sdk.models.operations.RemoveShippingLabelRequest;
@@ -43,6 +44,8 @@ import to.unified.unified_java_sdk.models.operations.async.ListShippingLabelsReq
 import to.unified.unified_java_sdk.models.operations.async.ListShippingLabelsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListShippingShipmentsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListShippingShipmentsResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListShippingTrackingsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListShippingTrackingsResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchShippingLabelRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.PatchShippingLabelResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchShippingShipmentRequestBuilder;
@@ -65,6 +68,7 @@ import to.unified.unified_java_sdk.operations.GetShippingTracking;
 import to.unified.unified_java_sdk.operations.ListShippingCarriers;
 import to.unified.unified_java_sdk.operations.ListShippingLabels;
 import to.unified.unified_java_sdk.operations.ListShippingShipments;
+import to.unified.unified_java_sdk.operations.ListShippingTrackings;
 import to.unified.unified_java_sdk.operations.PatchShippingLabel;
 import to.unified.unified_java_sdk.operations.PatchShippingShipment;
 import to.unified.unified_java_sdk.operations.RemoveShippingLabel;
@@ -319,6 +323,29 @@ public class AsyncShipping {
     public CompletableFuture<ListShippingShipmentsResponse> listShippingShipments(@Nonnull ListShippingShipmentsRequest request) {
         AsyncRequestOperation<ListShippingShipmentsRequest, ListShippingShipmentsResponse> operation
               = new ListShippingShipments.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * List all trackings
+     * 
+     * @return The async call builder
+     */
+    public ListShippingTrackingsRequestBuilder listShippingTrackings() {
+        return new ListShippingTrackingsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all trackings
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListShippingTrackingsResponse>} - The async response
+     */
+    public CompletableFuture<ListShippingTrackingsResponse> listShippingTrackings(@Nonnull ListShippingTrackingsRequest request) {
+        AsyncRequestOperation<ListShippingTrackingsRequest, ListShippingTrackingsResponse> operation
+              = new ListShippingTrackings.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

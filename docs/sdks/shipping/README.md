@@ -14,6 +14,7 @@
 * [listShippingCarriers](#listshippingcarriers) - List all carriers
 * [listShippingLabels](#listshippinglabels) - List all labels
 * [listShippingShipments](#listshippingshipments) - List all shipments
+* [listShippingTrackings](#listshippingtrackings) - List all trackings
 * [patchShippingLabel](#patchshippinglabel) - Update a label
 * [patchShippingShipment](#patchshippingshipment) - Update a shipment
 * [removeShippingLabel](#removeshippinglabel) - Remove a label
@@ -597,6 +598,63 @@ public class Application {
 ### Response
 
 **[ListShippingShipmentsResponse](../../models/operations/ListShippingShipmentsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## listShippingTrackings
+
+List all trackings
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listShippingTrackings" method="get" path="/shipping/{connection_id}/tracking" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListShippingTrackingsRequest;
+import to.unified.unified_java_sdk.models.operations.ListShippingTrackingsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListShippingTrackingsRequest req = ListShippingTrackingsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListShippingTrackingsResponse res = sdk.shipping().listShippingTrackings()
+                .request(req)
+                .call();
+
+        if (res.shippingTrackings().isPresent()) {
+            System.out.println(res.shippingTrackings().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                               | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `request`                                                                               | [ListShippingTrackingsRequest](../../models/operations/ListShippingTrackingsRequest.md) | :heavy_check_mark:                                                                      | The request object to use for the request.                                              |
+
+### Response
+
+**[ListShippingTrackingsResponse](../../models/operations/ListShippingTrackingsResponse.md)**
 
 ### Errors
 

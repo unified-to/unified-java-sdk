@@ -42,6 +42,11 @@ public class AtsActivity {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("company_id")
+    private String companyId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     private OffsetDateTime createdAt;
 
@@ -125,6 +130,7 @@ public class AtsActivity {
             @JsonProperty("bcc") @Nullable List<AtsEmail> bcc,
             @JsonProperty("candidate_id") @Nullable String candidateId,
             @JsonProperty("cc") @Nullable List<AtsEmail> cc,
+            @JsonProperty("company_id") @Nullable String companyId,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("description") @Nullable String description,
             @JsonProperty("document_ids") @Nullable List<String> documentIds,
@@ -144,6 +150,7 @@ public class AtsActivity {
         this.bcc = bcc;
         this.candidateId = candidateId;
         this.cc = cc;
+        this.companyId = companyId;
         this.createdAt = createdAt;
         this.description = description;
         this.documentIds = documentIds;
@@ -168,7 +175,7 @@ public class AtsActivity {
             null, null, null,
             null, null, null,
             null, null, null,
-            null);
+            null, null);
     }
 
     public Optional<String> applicationId() {
@@ -185,6 +192,10 @@ public class AtsActivity {
 
     public Optional<List<AtsEmail>> cc() {
         return Optional.ofNullable(this.cc);
+    }
+
+    public Optional<String> companyId() {
+        return Optional.ofNullable(this.companyId);
     }
 
     public Optional<OffsetDateTime> createdAt() {
@@ -278,6 +289,12 @@ public class AtsActivity {
 
     public AtsActivity withCc(@Nullable List<AtsEmail> cc) {
         this.cc = cc;
+        return this;
+    }
+
+
+    public AtsActivity withCompanyId(@Nullable String companyId) {
+        this.companyId = companyId;
         return this;
     }
 
@@ -392,6 +409,7 @@ public class AtsActivity {
             Utils.enhancedDeepEquals(this.bcc, other.bcc) &&
             Utils.enhancedDeepEquals(this.candidateId, other.candidateId) &&
             Utils.enhancedDeepEquals(this.cc, other.cc) &&
+            Utils.enhancedDeepEquals(this.companyId, other.companyId) &&
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.description, other.description) &&
             Utils.enhancedDeepEquals(this.documentIds, other.documentIds) &&
@@ -413,12 +431,12 @@ public class AtsActivity {
     public int hashCode() {
         return Utils.enhancedHash(
             applicationId, bcc, candidateId,
-            cc, createdAt, description,
-            documentIds, from, id,
-            interviewId, isPrivate, jobId,
-            raw, subType, title,
-            to, type, updatedAt,
-            userIds);
+            cc, companyId, createdAt,
+            description, documentIds, from,
+            id, interviewId, isPrivate,
+            jobId, raw, subType,
+            title, to, type,
+            updatedAt, userIds);
     }
     
     @Override
@@ -428,6 +446,7 @@ public class AtsActivity {
                 "bcc", bcc,
                 "candidateId", candidateId,
                 "cc", cc,
+                "companyId", companyId,
                 "createdAt", createdAt,
                 "description", description,
                 "documentIds", documentIds,
@@ -455,6 +474,8 @@ public class AtsActivity {
         private String candidateId;
 
         private List<AtsEmail> cc;
+
+        private String companyId;
 
         private OffsetDateTime createdAt;
 
@@ -507,6 +528,11 @@ public class AtsActivity {
 
         public Builder cc(@Nullable List<AtsEmail> cc) {
             this.cc = cc;
+            return this;
+        }
+
+        public Builder companyId(@Nullable String companyId) {
+            this.companyId = companyId;
             return this;
         }
 
@@ -594,12 +620,12 @@ public class AtsActivity {
         public AtsActivity build() {
             return new AtsActivity(
                 applicationId, bcc, candidateId,
-                cc, createdAt, description,
-                documentIds, from, id,
-                interviewId, isPrivate, jobId,
-                raw, subType, title,
-                to, type, updatedAt,
-                userIds);
+                cc, companyId, createdAt,
+                description, documentIds, from,
+                id, interviewId, isPrivate,
+                jobId, raw, subType,
+                title, to, type,
+                updatedAt, userIds);
         }
 
     }

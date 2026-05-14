@@ -36,6 +36,9 @@ import to.unified.unified_java_sdk.models.operations.ListShippingLabelsResponse;
 import to.unified.unified_java_sdk.models.operations.ListShippingShipmentsRequest;
 import to.unified.unified_java_sdk.models.operations.ListShippingShipmentsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListShippingShipmentsResponse;
+import to.unified.unified_java_sdk.models.operations.ListShippingTrackingsRequest;
+import to.unified.unified_java_sdk.models.operations.ListShippingTrackingsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListShippingTrackingsResponse;
 import to.unified.unified_java_sdk.models.operations.PatchShippingLabelRequest;
 import to.unified.unified_java_sdk.models.operations.PatchShippingLabelRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.PatchShippingLabelResponse;
@@ -64,6 +67,7 @@ import to.unified.unified_java_sdk.operations.GetShippingTracking;
 import to.unified.unified_java_sdk.operations.ListShippingCarriers;
 import to.unified.unified_java_sdk.operations.ListShippingLabels;
 import to.unified.unified_java_sdk.operations.ListShippingShipments;
+import to.unified.unified_java_sdk.operations.ListShippingTrackings;
 import to.unified.unified_java_sdk.operations.PatchShippingLabel;
 import to.unified.unified_java_sdk.operations.PatchShippingShipment;
 import to.unified.unified_java_sdk.operations.RemoveShippingLabel;
@@ -309,6 +313,28 @@ public class Shipping {
     public ListShippingShipmentsResponse listShippingShipments(@Nonnull ListShippingShipmentsRequest request) {
         RequestOperation<ListShippingShipmentsRequest, ListShippingShipmentsResponse> operation
               = new ListShippingShipments.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all trackings
+     * 
+     * @return The call builder
+     */
+    public ListShippingTrackingsRequestBuilder listShippingTrackings() {
+        return new ListShippingTrackingsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all trackings
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListShippingTrackingsResponse listShippingTrackings(@Nonnull ListShippingTrackingsRequest request) {
+        RequestOperation<ListShippingTrackingsRequest, ListShippingTrackingsResponse> operation
+              = new ListShippingTrackings.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

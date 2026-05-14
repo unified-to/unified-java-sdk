@@ -39,7 +39,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.47.22'
+implementation 'to.unified:unified-java-sdk:0.47.23'
 ```
 
 Maven:
@@ -47,7 +47,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.47.22</version>
+    <version>0.47.23</version>
 </dependency>
 ```
 
@@ -1625,6 +1625,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [listShippingCarriers](docs/sdks/shipping/README.md#listshippingcarriers) - List all carriers
 * [listShippingLabels](docs/sdks/shipping/README.md#listshippinglabels) - List all labels
 * [listShippingShipments](docs/sdks/shipping/README.md#listshippingshipments) - List all shipments
+* [listShippingTrackings](docs/sdks/shipping/README.md#listshippingtrackings) - List all trackings
 * [patchShippingLabel](docs/sdks/shipping/README.md#patchshippinglabel) - Update a label
 * [patchShippingShipment](docs/sdks/shipping/README.md#patchshippingshipment) - Update a shipment
 * [removeShippingLabel](docs/sdks/shipping/README.md#removeshippinglabel) - Remove a label
@@ -1798,6 +1799,7 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 ### [Tracking](docs/sdks/tracking/README.md)
 
 * [getShippingTracking](docs/sdks/tracking/README.md#getshippingtracking) - Retrieve a tracking
+* [listShippingTrackings](docs/sdks/tracking/README.md#listshippingtrackings) - List all trackings
 
 ### [Transaction](docs/sdks/transaction/README.md)
 

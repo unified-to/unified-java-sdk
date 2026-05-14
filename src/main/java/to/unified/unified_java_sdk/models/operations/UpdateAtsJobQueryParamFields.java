@@ -35,6 +35,7 @@ public enum UpdateAtsJobQueryParamFields {
     MINIMUM_DEGREE("minimum_degree"),
     SKILLS("skills"),
     METADATA("metadata"),
+    USER_ID("user_id"),
     RAW("raw");
 
     @JsonValue
