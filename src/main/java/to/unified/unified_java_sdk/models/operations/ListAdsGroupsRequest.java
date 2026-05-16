@@ -95,6 +95,12 @@ public class ListAdsGroupsRequest {
     private String startGte;
 
     /**
+     * The status to filter by
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    private String status;
+
+    /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
@@ -117,6 +123,7 @@ public class ListAdsGroupsRequest {
             @Nullable String raw,
             @Nullable String sort,
             @Nullable String startGte,
+            @Nullable String status,
             @Nullable String updatedGte) {
         this.campaignId = campaignId;
         this.connectionId = Optional.ofNullable(connectionId)
@@ -133,6 +140,7 @@ public class ListAdsGroupsRequest {
         this.raw = raw;
         this.sort = sort;
         this.startGte = startGte;
+        this.status = status;
         this.updatedGte = updatedGte;
     }
     
@@ -142,7 +150,8 @@ public class ListAdsGroupsRequest {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     /**
@@ -231,6 +240,13 @@ public class ListAdsGroupsRequest {
      */
     public Optional<String> startGte() {
         return Optional.ofNullable(this.startGte);
+    }
+
+    /**
+     * The status to filter by
+     */
+    public Optional<String> status() {
+        return Optional.ofNullable(this.status);
     }
 
     /**
@@ -363,6 +379,15 @@ public class ListAdsGroupsRequest {
 
 
     /**
+     * The status to filter by
+     */
+    public ListAdsGroupsRequest withStatus(@Nullable String status) {
+        this.status = status;
+        return this;
+    }
+
+
+    /**
      * Return only results whose updated date is equal or greater to this value (ISO-8601 /
      * YYYY-MM-DDTHH:MM:SSZ format)
      */
@@ -396,6 +421,7 @@ public class ListAdsGroupsRequest {
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.sort, other.sort) &&
             Utils.enhancedDeepEquals(this.startGte, other.startGte) &&
+            Utils.enhancedDeepEquals(this.status, other.status) &&
             Utils.enhancedDeepEquals(this.updatedGte, other.updatedGte);
     }
     
@@ -406,7 +432,8 @@ public class ListAdsGroupsRequest {
             fields, ioId, limit,
             offset, order, orgId,
             parentId, query, raw,
-            sort, startGte, updatedGte);
+            sort, startGte, status,
+            updatedGte);
     }
     
     @Override
@@ -426,6 +453,7 @@ public class ListAdsGroupsRequest {
                 "raw", raw,
                 "sort", sort,
                 "startGte", startGte,
+                "status", status,
                 "updatedGte", updatedGte);
     }
 
@@ -459,6 +487,8 @@ public class ListAdsGroupsRequest {
         private String sort;
 
         private String startGte;
+
+        private String status;
 
         private String updatedGte;
 
@@ -569,6 +599,14 @@ public class ListAdsGroupsRequest {
         }
 
         /**
+         * The status to filter by
+         */
+        public Builder status(@Nullable String status) {
+            this.status = status;
+            return this;
+        }
+
+        /**
          * Return only results whose updated date is equal or greater to this value (ISO-8601 /
          * YYYY-MM-DDTHH:MM:SSZ format)
          */
@@ -583,7 +621,8 @@ public class ListAdsGroupsRequest {
                 fields, ioId, limit,
                 offset, order, orgId,
                 parentId, query, raw,
-                sort, startGte, updatedGte);
+                sort, startGte, status,
+                updatedGte);
         }
 
     }

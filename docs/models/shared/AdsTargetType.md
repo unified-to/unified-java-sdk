@@ -26,8 +26,6 @@ AdsTargetType custom = AdsTargetType.of("custom_value");
 | `US_DMA`       | US_DMA         |
 | `TOPIC`        | TOPIC          |
 | `USER_LIST`    | USER_LIST      |
-| `AGE_RANGE`    | AGE_RANGE      |
-| `GENDER`       | GENDER         |
 | `CARRIER`      | CARRIER        |
 | `DEVICE_MODEL` | DEVICE_MODEL   |
 | `OS_VERSION`   | OS_VERSION     |

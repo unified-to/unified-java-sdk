@@ -30,8 +30,6 @@ public class AdsTargetType {
     public static final AdsTargetType US_DMA = new AdsTargetType("US_DMA");
     public static final AdsTargetType TOPIC = new AdsTargetType("TOPIC");
     public static final AdsTargetType USER_LIST = new AdsTargetType("USER_LIST");
-    public static final AdsTargetType AGE_RANGE = new AdsTargetType("AGE_RANGE");
-    public static final AdsTargetType GENDER = new AdsTargetType("GENDER");
     public static final AdsTargetType CARRIER = new AdsTargetType("CARRIER");
     public static final AdsTargetType DEVICE_MODEL = new AdsTargetType("DEVICE_MODEL");
     public static final AdsTargetType OS_VERSION = new AdsTargetType("OS_VERSION");
@@ -118,8 +116,6 @@ public class AdsTargetType {
         map.put("US_DMA", US_DMA);
         map.put("TOPIC", TOPIC);
         map.put("USER_LIST", USER_LIST);
-        map.put("AGE_RANGE", AGE_RANGE);
-        map.put("GENDER", GENDER);
         map.put("CARRIER", CARRIER);
         map.put("DEVICE_MODEL", DEVICE_MODEL);
         map.put("OS_VERSION", OS_VERSION);
@@ -138,8 +134,6 @@ public class AdsTargetType {
         map.put("US_DMA", AdsTargetTypeEnum.US_DMA);
         map.put("TOPIC", AdsTargetTypeEnum.TOPIC);
         map.put("USER_LIST", AdsTargetTypeEnum.USER_LIST);
-        map.put("AGE_RANGE", AdsTargetTypeEnum.AGE_RANGE);
-        map.put("GENDER", AdsTargetTypeEnum.GENDER);
         map.put("CARRIER", AdsTargetTypeEnum.CARRIER);
         map.put("DEVICE_MODEL", AdsTargetTypeEnum.DEVICE_MODEL);
         map.put("OS_VERSION", AdsTargetTypeEnum.OS_VERSION);
@@ -159,8 +153,6 @@ public class AdsTargetType {
         US_DMA("US_DMA"),
         TOPIC("TOPIC"),
         USER_LIST("USER_LIST"),
-        AGE_RANGE("AGE_RANGE"),
-        GENDER("GENDER"),
         CARRIER("CARRIER"),
         DEVICE_MODEL("DEVICE_MODEL"),
         OS_VERSION("OS_VERSION"),;

@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: d0c51f91b1e66262f9489b66ca8d3b1f
+  docChecksum: 2ec27bf791820bf9fbebce89bdbe69b7
   docVersion: "1.0"
-  speakeasyVersion: 1.763.0
-  generationVersion: 2.884.0
-  releaseVersion: 0.47.23
-  configChecksum: 382ea19367de9c1a1862d21d32eca2f6
+  speakeasyVersion: 1.763.1
+  generationVersion: 2.884.4
+  releaseVersion: 0.47.24
+  configChecksum: aa6bead915472b3e70911dc90927560a
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-java-sdk
@@ -2925,7 +2925,7 @@ trackedFiles:
     pristine_git_object: b6e16ae6f9a8dedc539f5d63b1995d0a1861fb92
   docs/models/operations/ListAdsAdsRequest.md:
     id: 11b876780647
-    last_write_checksum: sha1:09248e7f92500e50fd89a2876db4a95d91346352
+    last_write_checksum: sha1:bffeeebc78deba90798214a6c1accd17ad7499f7
     pristine_git_object: e744408571b532dd8980bf18e2904d612fef08c9
   docs/models/operations/ListAdsAdsResponse.md:
     id: 7cd24a176115
@@ -2937,7 +2937,7 @@ trackedFiles:
     pristine_git_object: 5f34ddb1a268a9f02c9c6df4a8e141367706ed06
   docs/models/operations/ListAdsCampaignsRequest.md:
     id: 65615bfcfc19
-    last_write_checksum: sha1:b7cd29e7b0d89ceeeb32219cca02b6064293759f
+    last_write_checksum: sha1:3e5a4215d7807ba8d0d35d42b3b34cd6ccf60f22
     pristine_git_object: 84977da1db2cc5425b3d482b14a612ad6401a29d
   docs/models/operations/ListAdsCampaignsResponse.md:
     id: 73f957a8af1d
@@ -2949,7 +2949,7 @@ trackedFiles:
     pristine_git_object: 0fb0f06c97c69e32e8d28f59f0ad94382b2adf75
   docs/models/operations/ListAdsCreativesRequest.md:
     id: b02becafabb8
-    last_write_checksum: sha1:1793eb41e8f71a7925388ca2900a0b4025e36fc9
+    last_write_checksum: sha1:f58f3b95e165f2324d7b7b0bf6e7a8936fe4627e
     pristine_git_object: fadae39bb439a1743720e18a761e4ee67b70fbbf
   docs/models/operations/ListAdsCreativesResponse.md:
     id: 44afec9883fd
@@ -2961,7 +2961,7 @@ trackedFiles:
     pristine_git_object: 768b9ac03b17a97f2265c16be544b773588f6381
   docs/models/operations/ListAdsGroupsRequest.md:
     id: a377925c0e4d
-    last_write_checksum: sha1:198188ede5479fc457fb2dda630dc3c4b253e370
+    last_write_checksum: sha1:678b14714377bfbb33414aef3acfcd7f3763dec7
     pristine_git_object: 1cbc8f718c8ab03defeafa3e4965f5a793a416d3
   docs/models/operations/ListAdsGroupsResponse.md:
     id: ae4fb454527c
@@ -7769,7 +7769,7 @@ trackedFiles:
     pristine_git_object: a1e8d205b007eaeeea2fbcd070d75536d3194b86
   docs/models/shared/AdsTargetType.md:
     id: 3540f2af60e1
-    last_write_checksum: sha1:e670d31f23b49c8cbcd0867bdb2ab956ef250c1b
+    last_write_checksum: sha1:a0de65165993525d4eb8b897b300a95188e5f4f0
     pristine_git_object: 0a4306a529d02f196ed58905971b17b91b60e635
   docs/models/shared/AdvertisingChannelType.md:
     id: 379a981fb4d3
@@ -8345,6 +8345,8 @@ trackedFiles:
     id: 232c8a4eb11d
     last_write_checksum: sha1:52b72ee6a862a1195f22da2eadecdfff8c070524
     pristine_git_object: 2e7b9e0dd82108dbf346d9e710dd0270cbc873c2
+  docs/models/shared/DeviceTarget.md:
+    last_write_checksum: sha1:f2a020f2a56d17c0db314ebc7e68edcb194b7e79
   docs/models/shared/DutiesPaidBy.md:
     id: fc84f6a1c7e2
     last_write_checksum: sha1:aa02fc69afeaefa61034c8351a8d193034c23313
@@ -8465,6 +8467,8 @@ trackedFiles:
     id: adc8a775d3fb
     last_write_checksum: sha1:5b0db21b4e4408de2a571af5ca6eae7cdcabfc4c
     pristine_git_object: a13ed38100e6317debdaa18cccc5931ee278aa2a
+  docs/models/shared/GeoTarget.md:
+    last_write_checksum: sha1:b936175391042941e15ae33ba78ce3446cdccd5c
   docs/models/shared/Goal.md:
     id: 9f47bf28bf10
     last_write_checksum: sha1:db09f7da208a0f9c3bacd3de2886dc4714399a9a
@@ -9427,7 +9431,7 @@ trackedFiles:
     pristine_git_object: 08bbbee57ba4c3eef3284acffc1b77be0c1af169
   docs/models/shared/PropertyAdsCampaignTargetingContent.md:
     id: 3df0aaea552e
-    last_write_checksum: sha1:ae5306fe82127d5f0240c2c48387c5f0da1080a3
+    last_write_checksum: sha1:a304a23583b73b5324230f50b051727d4559eb1e
     pristine_git_object: 8acfb2d74bf0a492ec20bdb35a8a7b5788c665c4
   docs/models/shared/PropertyAdsCampaignTargetingContentVideo.md:
     id: 0929e1a8b517
@@ -9451,11 +9455,11 @@ trackedFiles:
     pristine_git_object: df8dbb74205b7577205252a4d92fb4368ea67650
   docs/models/shared/PropertyAdsCampaignTargetingDevice.md:
     id: 21e9d663b2c8
-    last_write_checksum: sha1:4bdd7dfcc3a97a1872464aaa4cf27d4432451c04
+    last_write_checksum: sha1:3a169e28074a581637221c1b241ec6406ece402c
     pristine_git_object: 1cd1399f2e57725a0dbd77a78d0d4634af7af3ae
   docs/models/shared/PropertyAdsCampaignTargetingGeographic.md:
     id: c0c01aba8bf7
-    last_write_checksum: sha1:1bb177f8fff41d5406fc0a8bbf2ce4dd1441d646
+    last_write_checksum: sha1:7c8ba0e7307e27b64379ab5eedbfa6a0aed9e62d
     pristine_git_object: 96669a7d52dd0d952f462c37153f007d0297fb6f
   docs/models/shared/PropertyAdsCampaignTargetingGeographicLocationTypes.md:
     id: 4842507ef417
@@ -9511,7 +9515,7 @@ trackedFiles:
     pristine_git_object: becc57f141ecfa38925562fc189064dcd0f99e3c
   docs/models/shared/PropertyAdsGroupTargetingContent.md:
     id: 5cd0c39703f1
-    last_write_checksum: sha1:1de9af8e4b44e410746e26290bb97f71e0582f83
+    last_write_checksum: sha1:fb75a649356d650d4a5bd583e9529d024f219793
     pristine_git_object: 5e12a49b4d94c05fb8a6d552c9fad8f97d6775d1
   docs/models/shared/PropertyAdsGroupTargetingContentVideo.md:
     id: bb743541e9f3
@@ -9535,11 +9539,11 @@ trackedFiles:
     pristine_git_object: 53101e89fb29ec4f6a94e5c658bf0a85e22633e0
   docs/models/shared/PropertyAdsGroupTargetingDevice.md:
     id: 6a142dc85bf0
-    last_write_checksum: sha1:445f2b854faf6af7e379e7e29cd362814e96ba23
+    last_write_checksum: sha1:bd8ddc3d6ec81c4b7b9ebccd6aeb739df7eb4569
     pristine_git_object: c7ba207eb6bfd106595d9209264911be3d17e0b5
   docs/models/shared/PropertyAdsGroupTargetingGeographic.md:
     id: 8a1ac2ca2918
-    last_write_checksum: sha1:ae5836a422ae787f4a90c557f49489faf7435eed
+    last_write_checksum: sha1:76ed0b87ef11b26a028b74d60342a1d0b97da3dd
     pristine_git_object: 692e1b13e189a6f670ef4ed03a20db5cc219d5d6
   docs/models/shared/PropertyAdsGroupTargetingGeographicLocationTypes.md:
     id: 968214a21aad
@@ -9663,7 +9667,7 @@ trackedFiles:
     pristine_git_object: f53649ffaa027252bf0f1bcb0279402a349edd69
   docs/models/shared/PropertyAdsReportMetricsCampaignTargetingContent.md:
     id: 074220d6eadf
-    last_write_checksum: sha1:3aba7dbeab9e1a86a1c6f2e8cf5638a45070bce8
+    last_write_checksum: sha1:fdfa4131c1287b219f8e77c41458dfcfd0c8b044
     pristine_git_object: a490af30869425b5598384257e6f547f640c61c7
   docs/models/shared/PropertyAdsReportMetricsCampaignTargetingContentVideo.md:
     id: d6ad144ecb02
@@ -9687,11 +9691,11 @@ trackedFiles:
     pristine_git_object: 89ef3fa7b69cd6ccd3d9858bdb867a60232b4ad5
   docs/models/shared/PropertyAdsReportMetricsCampaignTargetingDevice.md:
     id: 4bd7f6f17845
-    last_write_checksum: sha1:5c08c2dae398485c908d09b32bd05e9b1d52d12e
+    last_write_checksum: sha1:c1504e7daa1defff75003a15bfc8e7b42c3d197c
     pristine_git_object: 1d7fa5cedf3db4f53e66518b0f7ab35fb8f20523
   docs/models/shared/PropertyAdsReportMetricsCampaignTargetingGeographic.md:
     id: 515328775ff9
-    last_write_checksum: sha1:cb3d1038cee8a6b42a1531eaeb493c038ebba2e1
+    last_write_checksum: sha1:ea450c7ce9c658071623e5f2787c455228538f31
     pristine_git_object: 7a6c31ccb1340b791e3c1946045b21e104d7be28
   docs/models/shared/PropertyAdsReportMetricsCampaignTargetingGeographicLocationTypes.md:
     id: 3cc0d0c68dd2
@@ -9795,7 +9799,7 @@ trackedFiles:
     pristine_git_object: bb99eac59b3b46386f11a6483793eb6eff2c3097
   docs/models/shared/PropertyAdsReportMetricsGroupTargetingContent.md:
     id: a690d7f8f99b
-    last_write_checksum: sha1:2366b8dd216346d5fa99ba5fb2302ae9efe11e75
+    last_write_checksum: sha1:f3891ab2e40f5a546c605517ce1a882ead5053e3
     pristine_git_object: 40595d238fb23dac771e8c9e9731c1c1ede142eb
   docs/models/shared/PropertyAdsReportMetricsGroupTargetingContentVideo.md:
     id: 278e6405e0dd
@@ -9819,11 +9823,11 @@ trackedFiles:
     pristine_git_object: 3d0d646e5b0362ae27645c7acb625dd07f2fbea6
   docs/models/shared/PropertyAdsReportMetricsGroupTargetingDevice.md:
     id: 5f18472db595
-    last_write_checksum: sha1:a66314aa2a20123208a2bcdef7c4831e452e4f41
+    last_write_checksum: sha1:17776613b01358ce71fa40930dfbb447f82edabc
     pristine_git_object: 581a60f80e3282e1c0719230480f9a796a47d631
   docs/models/shared/PropertyAdsReportMetricsGroupTargetingGeographic.md:
     id: 6c5d04063abf
-    last_write_checksum: sha1:e840744576e1c523c1fc89816baa69415dace4d2
+    last_write_checksum: sha1:17a1e2c4e206158e59732420c5b40a0d68f8de4a
     pristine_git_object: d258514e796e5d5af95709f6869681d0ba1cdea0
   docs/models/shared/PropertyAdsReportMetricsGroupTargetingGeographicLocationTypes.md:
     id: f3f8c638e1b3
@@ -10547,6 +10551,8 @@ trackedFiles:
     id: 928536c6c583
     last_write_checksum: sha1:a1ef210865fe96ca4001121f9596476f6ff4535b
     pristine_git_object: 46ec4b042344b29b45489de95ea59214fda243b1
+  docs/models/shared/TopicTarget.md:
+    last_write_checksum: sha1:db5ae5e1468d76770c4d82a3192eb96ec511d209
   docs/models/shared/Type.md:
     id: 2508f35504ed
     last_write_checksum: sha1:52bbd4f293f20a32f79cd3a07252100ea72d0fc2
@@ -11445,7 +11451,7 @@ trackedFiles:
     pristine_git_object: 14fe7a9e0f20951a7e3ab2752816fbc9b8c41dd3
   gradle.properties:
     id: 2afbb999f001
-    last_write_checksum: sha1:fd1a0c56c7ad14d093cc46d2e5f9e348f255183b
+    last_write_checksum: sha1:7c0a04ebb1ca7e2c4da5d02fb12da268e8213a0e
     pristine_git_object: e98f734834a572eee8169e873f8a45f9fe20f9e0
   gradle/wrapper/gradle-wrapper.jar:
     id: ec27dae6e852
@@ -12483,7 +12489,7 @@ trackedFiles:
     pristine_git_object: 2ccb6e90f32063c290e9fa25abf9649b884b4ed0
   src/main/java/to/unified/unified_java_sdk/SDKConfiguration.java:
     id: 42279b7431fa
-    last_write_checksum: sha1:56fc7d36d77d45230104f32e382953b44e4202b9
+    last_write_checksum: sha1:527d11ae9d4ecb2def6503633631d2a68f0295a4
     pristine_git_object: 17976ce665fb7cd87ed8a727359e17d32feaab3b
   src/main/java/to/unified/unified_java_sdk/Saleschannel.java:
     id: 2dca25153692
@@ -19155,7 +19161,7 @@ trackedFiles:
     pristine_git_object: 4724af7457402a7ce6235b5a423e60595f95168e
   src/main/java/to/unified/unified_java_sdk/models/operations/ListAdsAdsRequest.java:
     id: e1ec9c404448
-    last_write_checksum: sha1:ec2b2e43d7218db9c46fc92e93b25d6d4f1451a3
+    last_write_checksum: sha1:0cef9419f7088ead058c68f602d3f0168472c0fd
     pristine_git_object: 58937d675f3d202c8f64841d918fc334d94d31f6
   src/main/java/to/unified/unified_java_sdk/models/operations/ListAdsAdsRequestBuilder.java:
     id: 63cf12ee559e
@@ -19171,7 +19177,7 @@ trackedFiles:
     pristine_git_object: 4d19559bff83b01159ff8cb669b56739ed442589
   src/main/java/to/unified/unified_java_sdk/models/operations/ListAdsCampaignsRequest.java:
     id: baa574262b8e
-    last_write_checksum: sha1:394145ce89eab56b4c75113212eb06db9165c824
+    last_write_checksum: sha1:207a65bd262c8c71fab960baa38aa320fcdb61a3
     pristine_git_object: 9434b3c0b4648a48f7350a6b45b34e47f816b9d1
   src/main/java/to/unified/unified_java_sdk/models/operations/ListAdsCampaignsRequestBuilder.java:
     id: 494efe79380b
@@ -19187,7 +19193,7 @@ trackedFiles:
     pristine_git_object: 6fd4b66d7a5cc5cad324636a8da9bd63ca9c7321
   src/main/java/to/unified/unified_java_sdk/models/operations/ListAdsCreativesRequest.java:
     id: f18a85e4af3b
-    last_write_checksum: sha1:26962275a5b182aeeb32194ad1d3f6fd4ddfd1c3
+    last_write_checksum: sha1:01f1bddc984bc8c639d64291b4b7d52d661fe2af
     pristine_git_object: bc1d71617aee682cf0bdbbd6e63df2d2c19f2384
   src/main/java/to/unified/unified_java_sdk/models/operations/ListAdsCreativesRequestBuilder.java:
     id: b0e25ec1875d
@@ -19203,7 +19209,7 @@ trackedFiles:
     pristine_git_object: 4859f36314dfeab715e7e5aff3e059c92b4d58f6
   src/main/java/to/unified/unified_java_sdk/models/operations/ListAdsGroupsRequest.java:
     id: ee7053bf2aea
-    last_write_checksum: sha1:c60daf993ae442cb44043906f592a7b60ee2107b
+    last_write_checksum: sha1:4da5d13a0c7a3fc64c66008ca487fee98b7adf22
     pristine_git_object: 0e0d0bb4c65d427caa4c059b519732dbd9f81ed6
   src/main/java/to/unified/unified_java_sdk/models/operations/ListAdsGroupsRequestBuilder.java:
     id: d4ddcdb67554
@@ -28347,7 +28353,7 @@ trackedFiles:
     pristine_git_object: 52778ba52978637b116c1bd9ec4f97a92bc7ddab
   src/main/java/to/unified/unified_java_sdk/models/shared/AdsTargetType.java:
     id: b8d1d9986b2f
-    last_write_checksum: sha1:369517f845bf98b1866a8efb4050b6586dd3a155
+    last_write_checksum: sha1:58d1f295370e656334945e223b6c910b0d57092e
     pristine_git_object: f0ba2da43aa6ccbf93580e88676eaa2fe2d624cb
   src/main/java/to/unified/unified_java_sdk/models/shared/AdvertisingChannelType.java:
     id: c5c0299911fc
@@ -28923,6 +28929,8 @@ trackedFiles:
     id: e3d67bb03100
     last_write_checksum: sha1:c4351fd00521c309c417f86b79efc1f19575dd82
     pristine_git_object: 85d88197b32c85821b56e403e9f85822701f14df
+  src/main/java/to/unified/unified_java_sdk/models/shared/DeviceTarget.java:
+    last_write_checksum: sha1:341a23dadc5bfa7491b5307cfa02390cf9d45ec4
   src/main/java/to/unified/unified_java_sdk/models/shared/DutiesPaidBy.java:
     id: c8890727aaf9
     last_write_checksum: sha1:7b171d4aaabd1c38ef509a081488dd281e5783eb
@@ -29043,6 +29051,8 @@ trackedFiles:
     id: 39b5e387010d
     last_write_checksum: sha1:bc0c40a60d4a4d63e69cd00da8aef8a46aba529d
     pristine_git_object: f3472143ccc0a24cf34528bc88cc3c89b99262dc
+  src/main/java/to/unified/unified_java_sdk/models/shared/GeoTarget.java:
+    last_write_checksum: sha1:9e7f6ba24f6791cd9026b1d33a5f116ac5cd1d00
   src/main/java/to/unified/unified_java_sdk/models/shared/Goal.java:
     id: 108ca8fc546c
     last_write_checksum: sha1:5bbba33e22eed5870c076b78e3de88b0962af7d6
@@ -30005,7 +30015,7 @@ trackedFiles:
     pristine_git_object: 91c19b6f7ba8e81ceafcc0032ba324aa19e8776a
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsCampaignTargetingContent.java:
     id: e548dbc7e29f
-    last_write_checksum: sha1:899b9f442e801cc3738ab1ac085ec374555f636d
+    last_write_checksum: sha1:4cb33e292e54565ce87d6145e366f4bd22b39b7c
     pristine_git_object: 0a111fc1ce6960a5127e99a3e42af936313afe7d
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsCampaignTargetingContentVideo.java:
     id: 2c03fa37ffb6
@@ -30029,11 +30039,11 @@ trackedFiles:
     pristine_git_object: e55125199bab62ad8bf0e0b73a8434fc07e0fc90
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsCampaignTargetingDevice.java:
     id: 69e9080efab5
-    last_write_checksum: sha1:333afd6793305fde61890f784910829c7b08359e
+    last_write_checksum: sha1:be9a3e80294d6032e2702590af0dc29e0efc2383
     pristine_git_object: ed24776b30bb030faa3d64ce3368d0af3e71f7dc
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsCampaignTargetingGeographic.java:
     id: 498e4e0c3210
-    last_write_checksum: sha1:1bec85a1dcd9b89a0be838d759c5039bb2f441ac
+    last_write_checksum: sha1:49d6f0f758a9a719d319e4931588d84afedacef2
     pristine_git_object: 7ab6e3cf3aa1988696ed03c561070be20d5564bc
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsCampaignTargetingGeographicLocationTypes.java:
     id: c7033d3f9e62
@@ -30089,7 +30099,7 @@ trackedFiles:
     pristine_git_object: 73c22959ac7793f0e303241658c04e417e643f89
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsGroupTargetingContent.java:
     id: 66c96b296378
-    last_write_checksum: sha1:116eee8f71761ce2b0b079d27eb2fdbc16e7f839
+    last_write_checksum: sha1:8ded317df7338324cfae3651c8a695331f00dbd8
     pristine_git_object: c0c4a1d813ed7ea3ef9594fa715b633d57206d2b
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsGroupTargetingContentVideo.java:
     id: 6c309b2c80ce
@@ -30113,11 +30123,11 @@ trackedFiles:
     pristine_git_object: eb69b0606720a237704c18254988305ba2404e5c
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsGroupTargetingDevice.java:
     id: cb790eb7ed6f
-    last_write_checksum: sha1:0441a26e227e81ced247e54471a9134fb137b76a
+    last_write_checksum: sha1:3161aa59fabba79ec808d8d9cecd6c4901ffbdfc
     pristine_git_object: e260618c382e8cfe8f89b8a842b4b1b692fccb82
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsGroupTargetingGeographic.java:
     id: c16f413f0526
-    last_write_checksum: sha1:6df7e97a9975f5f18268da956737202579fa3994
+    last_write_checksum: sha1:090a2b26a5b32a4031e231dc755b2a8c86e39281
     pristine_git_object: 8148bdc96602bfd6b9b6d130a9218998f4ddd6d0
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsGroupTargetingGeographicLocationTypes.java:
     id: 455bad19aa48
@@ -30241,7 +30251,7 @@ trackedFiles:
     pristine_git_object: 03b490e0c86b5b688a488b303f9f078fec9fc04e
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsReportMetricsCampaignTargetingContent.java:
     id: 58b97c78be60
-    last_write_checksum: sha1:6f6e585c861604a3d96b0bf9b9cc0ba7623e603e
+    last_write_checksum: sha1:1977802f99c29b5730c9935d664851c0a4fb3f71
     pristine_git_object: 0943d983345ddd7ed67ad29d4c757ff83cc5a439
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsReportMetricsCampaignTargetingContentVideo.java:
     id: 8fa52aca4fbb
@@ -30265,11 +30275,11 @@ trackedFiles:
     pristine_git_object: 400ea0a3408f76eaed6f810883538abd5389ac25
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsReportMetricsCampaignTargetingDevice.java:
     id: f0b4386329fb
-    last_write_checksum: sha1:e571563885487c65d5303ac0d9a387ef9c118bd9
+    last_write_checksum: sha1:c4bf384ca09ccfd0b8b551880a365fc0ce74d2ee
     pristine_git_object: d0fed21469d0e2d225e706a3e1e09e669b29e48a
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsReportMetricsCampaignTargetingGeographic.java:
     id: 02a722504f15
-    last_write_checksum: sha1:881b9551a86d73c9f23a9cce7d34c5746fcc6265
+    last_write_checksum: sha1:a207c9db794a4738d52453c989595279108bee45
     pristine_git_object: c033bcbc71195c4d6764142c8911fa70b2c53095
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsReportMetricsCampaignTargetingGeographicLocationTypes.java:
     id: 1bce480489d3
@@ -30373,7 +30383,7 @@ trackedFiles:
     pristine_git_object: 0e771bfabe6920048ef1cc5fad4c6903590879f7
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsReportMetricsGroupTargetingContent.java:
     id: d7c0a8387964
-    last_write_checksum: sha1:8fbb5add5845bbd959faa875f7dce3ed8a149016
+    last_write_checksum: sha1:b5ff7d6bba336747409388cc58155314287b137d
     pristine_git_object: 5855dc69e71f3ad5d385dd96175a6061f3597601
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsReportMetricsGroupTargetingContentVideo.java:
     id: aadb8e7699f6
@@ -30397,11 +30407,11 @@ trackedFiles:
     pristine_git_object: a913a31b86db5d22722ab5721b105849666bfacb
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsReportMetricsGroupTargetingDevice.java:
     id: 1fff1eb190be
-    last_write_checksum: sha1:2ee4d8d2e9620a278cee5669dde7e9f7acf3c36b
+    last_write_checksum: sha1:aee385ac81578c9eab63b6b321c2a4b710911dc7
     pristine_git_object: b128ce6c32c0bc41be3d9700cb9788ede39f92c0
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsReportMetricsGroupTargetingGeographic.java:
     id: 8cff58a81b42
-    last_write_checksum: sha1:714f1a6df5625533787bdbd156384579cf2aadf4
+    last_write_checksum: sha1:16d49ddae1517fe842e5cd7d22ca7d5b0c322f38
     pristine_git_object: b947ed5b349343c87b00a320816689ae44a85fd5
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyAdsReportMetricsGroupTargetingGeographicLocationTypes.java:
     id: 672a6f4c7a8e
@@ -31125,6 +31135,8 @@ trackedFiles:
     id: 80860bc098cd
     last_write_checksum: sha1:97e021efd1ce518a4e4077dc67c8d8a806004955
     pristine_git_object: 8aede73f88667ed0442b553f5babc2a134931ae1
+  src/main/java/to/unified/unified_java_sdk/models/shared/TopicTarget.java:
+    last_write_checksum: sha1:ce77217e6d6317e393e1196489c8c2f0ef160936
   src/main/java/to/unified/unified_java_sdk/models/shared/Type.java:
     id: 90570b63759e
     last_write_checksum: sha1:c634aba7f77b9462be0e42dabb6b288cae6e9b83
@@ -40594,7 +40606,7 @@ examples:
           application/json: {"id": "<id>"}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Java SDK Changes:\n* `unified-to.shipping.listShippingTrackings()`: **Added**\n* `unified-to.tracking.listShippingTrackings()`: **Added**\n* `unified-to.ats.createAtsActivity()`: \n  *  `request` **Changed**\n  *  `response.companyId` **Added**\n* `unified-to.ats.createAtsJob()`: \n  *  `request` **Changed**\n  *  `response.userId` **Added**\n* `unified-to.ats.getAtsActivity()`: \n  *  `request.fields` **Changed**\n  *  `response.companyId` **Added**\n* `unified-to.ats.getAtsJob()`: \n  *  `request.fields` **Changed**\n  *  `response.userId` **Added**\n* `unified-to.ats.listAtsActivities()`: \n  *  `request.fields` **Changed**\n  *  `response.[].companyId` **Added**\n* `unified-to.ats.listAtsJobs()`: \n  *  `request.fields` **Changed**\n  *  `response.[].userId` **Added**\n* `unified-to.ats.patchAtsActivity()`: \n  *  `request` **Changed**\n  *  `response.companyId` **Added**\n* `unified-to.ats.patchAtsJob()`: \n  *  `request` **Changed**\n  *  `response.userId` **Added**\n* `unified-to.ats.updateAtsActivity()`: \n  *  `request` **Changed**\n  *  `response.companyId` **Added**\n* `unified-to.ats.updateAtsJob()`: \n  *  `request` **Changed**\n  *  `response.userId` **Added**\n* `unified-to.activity.createAtsActivity()`: \n  *  `request` **Changed**\n  *  `response.companyId` **Added**\n* `unified-to.activity.getAtsActivity()`: \n  *  `request.fields` **Changed**\n  *  `response.companyId` **Added**\n* `unified-to.activity.listAtsActivities()`: \n  *  `request.fields` **Changed**\n  *  `response.[].companyId` **Added**\n* `unified-to.activity.patchAtsActivity()`: \n  *  `request` **Changed**\n  *  `response.companyId` **Added**\n* `unified-to.activity.updateAtsActivity()`: \n  *  `request` **Changed**\n  *  `response.companyId` **Added**\n* `unified-to.job.createAtsJob()`: \n  *  `request` **Changed**\n  *  `response.userId` **Added**\n* `unified-to.job.getAtsJob()`: \n  *  `request.fields` **Changed**\n  *  `response.userId` **Added**\n* `unified-to.job.listAtsJobs()`: \n  *  `request.fields` **Changed**\n  *  `response.[].userId` **Added**\n* `unified-to.job.patchAtsJob()`: \n  *  `request` **Changed**\n  *  `response.userId` **Added**\n* `unified-to.job.updateAtsJob()`: \n  *  `request` **Changed**\n  *  `response.userId` **Added**\n* `unified-to.hris.createHrisTimeoff()`: \n  *  `request.hrisTimeoff.startAt` **Changed**\n  *  `response.startAt` **Changed**\n* `unified-to.hris.getHrisTimeoff()`:  `response.startAt` **Changed**\n* `unified-to.hris.listHrisTimeoffs()`:  `response.[].startAt` **Changed**\n* `unified-to.hris.patchHrisTimeoff()`: \n  *  `request.hrisTimeoff.startAt` **Changed**\n  *  `response.startAt` **Changed**\n* `unified-to.hris.updateHrisTimeoff()`: \n  *  `request.hrisTimeoff.startAt` **Changed**\n  *  `response.startAt` **Changed**\n* `unified-to.timeoff.createHrisTimeoff()`: \n  *  `request.hrisTimeoff.startAt` **Changed**\n  *  `response.startAt` **Changed**\n* `unified-to.timeoff.getHrisTimeoff()`:  `response.startAt` **Changed**\n* `unified-to.timeoff.listHrisTimeoffs()`:  `response.[].startAt` **Changed**\n* `unified-to.timeoff.patchHrisTimeoff()`: \n  *  `request.hrisTimeoff.startAt` **Changed**\n  *  `response.startAt` **Changed**\n* `unified-to.timeoff.updateHrisTimeoff()`: \n  *  `request.hrisTimeoff.startAt` **Changed**\n  *  `response.startAt` **Changed**\n* `unified-to.kms.listKmsPages()`: \n  *  `request.userId` **Added**\n* `unified-to.page.listKmsPages()`: \n  *  `request.userId` **Added**\n* `unified-to.unified.listUnifiedIntegrationWorkspaces()`:  `response.[].support.Map<IntegrationSupport>.virtualWebhookAccountId` **Added**\n* `unified-to.unified.listUnifiedIntegrations()`:  `response.[].support.Map<IntegrationSupport>.virtualWebhookAccountId` **Added**\n* `unified-to.integration.listUnifiedIntegrationWorkspaces()`:  `response.[].support.Map<IntegrationSupport>.virtualWebhookAccountId` **Added**\n* `unified-to.integration.listUnifiedIntegrations()`:  `response.[].support.Map<IntegrationSupport>.virtualWebhookAccountId` **Added**\n"
+releaseNotes: "## Java SDK Changes:\n* `unified-to.ads.updateAdsCampaign()`: \n  *  `request.adsCampaign.targeting` **Changed** (Breaking ⚠️)\n  *  `response.targeting` **Changed** (Breaking ⚠️)\n* `unified-to.ads.patchAdsGroup()`: \n  *  `request.adsGroup.targeting` **Changed** (Breaking ⚠️)\n  *  `response.targeting` **Changed** (Breaking ⚠️)\n* `unified-to.ads.createAdsGroup()`: \n  *  `request.adsGroup.targeting` **Changed** (Breaking ⚠️)\n  *  `response.targeting` **Changed** (Breaking ⚠️)\n* `unified-to.ads.getAdsCampaign()`:  `response.targeting` **Changed** (Breaking ⚠️)\n* `unified-to.ads.getAdsGroup()`:  `response.targeting` **Changed** (Breaking ⚠️)\n* `unified-to.ads.getAdsTarget()`:  `response.type` **Changed** (Breaking ⚠️)\n* `unified-to.target.listAdsTargets()`:  `response.[].type` **Changed** (Breaking ⚠️)\n* `unified-to.ads.listAdsCampaigns()`: \n  *  `request.status` **Added**\n  *  `response.[].targeting` **Changed** (Breaking ⚠️)\n* `unified-to.report.listAdsReports()`:  `response.[].metrics[]` **Changed** (Breaking ⚠️)\n* `unified-to.ads.listAdsGroups()`: \n  *  `request.status` **Added**\n  *  `response.[].targeting` **Changed** (Breaking ⚠️)\n* `unified-to.ads.listAdsReports()`:  `response.[].metrics[]` **Changed** (Breaking ⚠️)\n* `unified-to.ads.listAdsTargets()`:  `response.[].type` **Changed** (Breaking ⚠️)\n* `unified-to.ads.patchAdsCampaign()`: \n  *  `request.adsCampaign.targeting` **Changed** (Breaking ⚠️)\n  *  `response.targeting` **Changed** (Breaking ⚠️)\n* `unified-to.group.patchAdsGroup()`: \n  *  `request.adsGroup.targeting` **Changed** (Breaking ⚠️)\n  *  `response.targeting` **Changed** (Breaking ⚠️)\n* `unified-to.ads.createAdsCampaign()`: \n  *  `request.adsCampaign.targeting` **Changed** (Breaking ⚠️)\n  *  `response.targeting` **Changed** (Breaking ⚠️)\n* `unified-to.campaign.patchAdsCampaign()`: \n  *  `request.adsCampaign.targeting` **Changed** (Breaking ⚠️)\n  *  `response.targeting` **Changed** (Breaking ⚠️)\n* `unified-to.target.getAdsTarget()`:  `response.type` **Changed** (Breaking ⚠️)\n* `unified-to.campaign.createAdsCampaign()`: \n  *  `request.adsCampaign.targeting` **Changed** (Breaking ⚠️)\n  *  `response.targeting` **Changed** (Breaking ⚠️)\n* `unified-to.campaign.getAdsCampaign()`:  `response.targeting` **Changed** (Breaking ⚠️)\n* `unified-to.campaign.listAdsCampaigns()`: \n  *  `request.status` **Added**\n  *  `response.[].targeting` **Changed** (Breaking ⚠️)\n* `unified-to.ads.updateAdsGroup()`: \n  *  `request.adsGroup.targeting` **Changed** (Breaking ⚠️)\n  *  `response.targeting` **Changed** (Breaking ⚠️)\n* `unified-to.campaign.updateAdsCampaign()`: \n  *  `request.adsCampaign.targeting` **Changed** (Breaking ⚠️)\n  *  `response.targeting` **Changed** (Breaking ⚠️)\n* `unified-to.group.updateAdsGroup()`: \n  *  `request.adsGroup.targeting` **Changed** (Breaking ⚠️)\n  *  `response.targeting` **Changed** (Breaking ⚠️)\n* `unified-to.group.createAdsGroup()`: \n  *  `request.adsGroup.targeting` **Changed** (Breaking ⚠️)\n  *  `response.targeting` **Changed** (Breaking ⚠️)\n* `unified-to.group.getAdsGroup()`:  `response.targeting` **Changed** (Breaking ⚠️)\n* `unified-to.group.listAdsGroups()`: \n  *  `request.status` **Added**\n  *  `response.[].targeting` **Changed** (Breaking ⚠️)\n* `unified-to.ads.listAdsCreatives()`: \n  *  `request.status` **Added**\n* `unified-to.ad.listAdsAds()`: \n  *  `request.status` **Added**\n* `unified-to.creative.listAdsCreatives()`: \n  *  `request.status` **Added**\n* `unified-to.ads.listAdsAds()`: \n  *  `request.status` **Added**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md
