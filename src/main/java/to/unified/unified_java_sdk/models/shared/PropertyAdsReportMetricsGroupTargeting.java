@@ -50,12 +50,10 @@ public class PropertyAdsReportMetricsGroupTargeting {
     @JsonProperty("geographic")
     private PropertyAdsReportMetricsGroupTargetingGeographic geographic;
 
-    /**
-     * Language targeting (Meta
-     */
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
-    private PropertyAdsReportMetricsGroupTargetingLanguage language;
+    private List<TargetRef> language;
 
     /**
      * Optimization (Meta: targeting_automation; Google: observation vs targeting mode)
@@ -82,7 +80,7 @@ public class PropertyAdsReportMetricsGroupTargeting {
             @JsonProperty("demographic") @Nullable PropertyAdsReportMetricsGroupTargetingDemographic demographic,
             @JsonProperty("device") @Nullable PropertyAdsReportMetricsGroupTargetingDevice device,
             @JsonProperty("geographic") @Nullable PropertyAdsReportMetricsGroupTargetingGeographic geographic,
-            @JsonProperty("language") @Nullable PropertyAdsReportMetricsGroupTargetingLanguage language,
+            @JsonProperty("language") @Nullable List<TargetRef> language,
             @JsonProperty("optimization") @Nullable PropertyAdsReportMetricsGroupTargetingOptimization optimization,
             @JsonProperty("placement") @Nullable PropertyAdsReportMetricsGroupTargetingPlacement placement,
             @JsonProperty("schedule") @Nullable List<AdSchedule> schedule) {
@@ -135,10 +133,7 @@ public class PropertyAdsReportMetricsGroupTargeting {
         return Optional.ofNullable(this.geographic);
     }
 
-    /**
-     * Language targeting (Meta
-     */
-    public Optional<PropertyAdsReportMetricsGroupTargetingLanguage> language() {
+    public Optional<List<TargetRef>> language() {
         return Optional.ofNullable(this.language);
     }
 
@@ -204,10 +199,7 @@ public class PropertyAdsReportMetricsGroupTargeting {
     }
 
 
-    /**
-     * Language targeting (Meta
-     */
-    public PropertyAdsReportMetricsGroupTargeting withLanguage(@Nullable PropertyAdsReportMetricsGroupTargetingLanguage language) {
+    public PropertyAdsReportMetricsGroupTargeting withLanguage(@Nullable List<TargetRef> language) {
         this.language = language;
         return this;
     }
@@ -295,7 +287,7 @@ public class PropertyAdsReportMetricsGroupTargeting {
 
         private PropertyAdsReportMetricsGroupTargetingGeographic geographic;
 
-        private PropertyAdsReportMetricsGroupTargetingLanguage language;
+        private List<TargetRef> language;
 
         private PropertyAdsReportMetricsGroupTargetingOptimization optimization;
 
@@ -343,10 +335,7 @@ public class PropertyAdsReportMetricsGroupTargeting {
             return this;
         }
 
-        /**
-         * Language targeting (Meta
-         */
-        public Builder language(@Nullable PropertyAdsReportMetricsGroupTargetingLanguage language) {
+        public Builder language(@Nullable List<TargetRef> language) {
             this.language = language;
             return this;
         }

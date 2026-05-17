@@ -19,7 +19,7 @@ public class PropertyAdsReportMetricsGroupTargetingAudience {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("behaviors")
-    private List<AudienceSegment> behaviors;
+    private List<TargetRef> behaviors;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -29,27 +29,27 @@ public class PropertyAdsReportMetricsGroupTargetingAudience {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_audiences")
-    private List<AudienceSegment> customAudiences;
+    private List<TargetRef> customAudiences;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excluded_behaviors")
-    private List<AudienceSegment> excludedBehaviors;
+    private List<TargetRef> excludedBehaviors;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excluded_custom_audiences")
-    private List<AudienceSegment> excludedCustomAudiences;
+    private List<TargetRef> excludedCustomAudiences;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excluded_interests")
-    private List<AudienceSegment> excludedInterests;
+    private List<TargetRef> excludedInterests;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interests")
-    private List<AudienceSegment> interests;
+    private List<TargetRef> interests;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -58,13 +58,13 @@ public class PropertyAdsReportMetricsGroupTargetingAudience {
 
     @JsonCreator
     public PropertyAdsReportMetricsGroupTargetingAudience(
-            @JsonProperty("behaviors") @Nullable List<AudienceSegment> behaviors,
+            @JsonProperty("behaviors") @Nullable List<TargetRef> behaviors,
             @JsonProperty("combination_spec") @Nullable List<AudienceCombination> combinationSpec,
-            @JsonProperty("custom_audiences") @Nullable List<AudienceSegment> customAudiences,
-            @JsonProperty("excluded_behaviors") @Nullable List<AudienceSegment> excludedBehaviors,
-            @JsonProperty("excluded_custom_audiences") @Nullable List<AudienceSegment> excludedCustomAudiences,
-            @JsonProperty("excluded_interests") @Nullable List<AudienceSegment> excludedInterests,
-            @JsonProperty("interests") @Nullable List<AudienceSegment> interests,
+            @JsonProperty("custom_audiences") @Nullable List<TargetRef> customAudiences,
+            @JsonProperty("excluded_behaviors") @Nullable List<TargetRef> excludedBehaviors,
+            @JsonProperty("excluded_custom_audiences") @Nullable List<TargetRef> excludedCustomAudiences,
+            @JsonProperty("excluded_interests") @Nullable List<TargetRef> excludedInterests,
+            @JsonProperty("interests") @Nullable List<TargetRef> interests,
             @JsonProperty("lookalike_audiences") @Nullable List<LookalikeAudience> lookalikeAudiences) {
         this.behaviors = behaviors;
         this.combinationSpec = combinationSpec;
@@ -82,7 +82,7 @@ public class PropertyAdsReportMetricsGroupTargetingAudience {
             null, null);
     }
 
-    public Optional<List<AudienceSegment>> behaviors() {
+    public Optional<List<TargetRef>> behaviors() {
         return Optional.ofNullable(this.behaviors);
     }
 
@@ -90,23 +90,23 @@ public class PropertyAdsReportMetricsGroupTargetingAudience {
         return Optional.ofNullable(this.combinationSpec);
     }
 
-    public Optional<List<AudienceSegment>> customAudiences() {
+    public Optional<List<TargetRef>> customAudiences() {
         return Optional.ofNullable(this.customAudiences);
     }
 
-    public Optional<List<AudienceSegment>> excludedBehaviors() {
+    public Optional<List<TargetRef>> excludedBehaviors() {
         return Optional.ofNullable(this.excludedBehaviors);
     }
 
-    public Optional<List<AudienceSegment>> excludedCustomAudiences() {
+    public Optional<List<TargetRef>> excludedCustomAudiences() {
         return Optional.ofNullable(this.excludedCustomAudiences);
     }
 
-    public Optional<List<AudienceSegment>> excludedInterests() {
+    public Optional<List<TargetRef>> excludedInterests() {
         return Optional.ofNullable(this.excludedInterests);
     }
 
-    public Optional<List<AudienceSegment>> interests() {
+    public Optional<List<TargetRef>> interests() {
         return Optional.ofNullable(this.interests);
     }
 
@@ -119,7 +119,7 @@ public class PropertyAdsReportMetricsGroupTargetingAudience {
     }
 
 
-    public PropertyAdsReportMetricsGroupTargetingAudience withBehaviors(@Nullable List<AudienceSegment> behaviors) {
+    public PropertyAdsReportMetricsGroupTargetingAudience withBehaviors(@Nullable List<TargetRef> behaviors) {
         this.behaviors = behaviors;
         return this;
     }
@@ -131,31 +131,31 @@ public class PropertyAdsReportMetricsGroupTargetingAudience {
     }
 
 
-    public PropertyAdsReportMetricsGroupTargetingAudience withCustomAudiences(@Nullable List<AudienceSegment> customAudiences) {
+    public PropertyAdsReportMetricsGroupTargetingAudience withCustomAudiences(@Nullable List<TargetRef> customAudiences) {
         this.customAudiences = customAudiences;
         return this;
     }
 
 
-    public PropertyAdsReportMetricsGroupTargetingAudience withExcludedBehaviors(@Nullable List<AudienceSegment> excludedBehaviors) {
+    public PropertyAdsReportMetricsGroupTargetingAudience withExcludedBehaviors(@Nullable List<TargetRef> excludedBehaviors) {
         this.excludedBehaviors = excludedBehaviors;
         return this;
     }
 
 
-    public PropertyAdsReportMetricsGroupTargetingAudience withExcludedCustomAudiences(@Nullable List<AudienceSegment> excludedCustomAudiences) {
+    public PropertyAdsReportMetricsGroupTargetingAudience withExcludedCustomAudiences(@Nullable List<TargetRef> excludedCustomAudiences) {
         this.excludedCustomAudiences = excludedCustomAudiences;
         return this;
     }
 
 
-    public PropertyAdsReportMetricsGroupTargetingAudience withExcludedInterests(@Nullable List<AudienceSegment> excludedInterests) {
+    public PropertyAdsReportMetricsGroupTargetingAudience withExcludedInterests(@Nullable List<TargetRef> excludedInterests) {
         this.excludedInterests = excludedInterests;
         return this;
     }
 
 
-    public PropertyAdsReportMetricsGroupTargetingAudience withInterests(@Nullable List<AudienceSegment> interests) {
+    public PropertyAdsReportMetricsGroupTargetingAudience withInterests(@Nullable List<TargetRef> interests) {
         this.interests = interests;
         return this;
     }
@@ -211,19 +211,19 @@ public class PropertyAdsReportMetricsGroupTargetingAudience {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private List<AudienceSegment> behaviors;
+        private List<TargetRef> behaviors;
 
         private List<AudienceCombination> combinationSpec;
 
-        private List<AudienceSegment> customAudiences;
+        private List<TargetRef> customAudiences;
 
-        private List<AudienceSegment> excludedBehaviors;
+        private List<TargetRef> excludedBehaviors;
 
-        private List<AudienceSegment> excludedCustomAudiences;
+        private List<TargetRef> excludedCustomAudiences;
 
-        private List<AudienceSegment> excludedInterests;
+        private List<TargetRef> excludedInterests;
 
-        private List<AudienceSegment> interests;
+        private List<TargetRef> interests;
 
         private List<LookalikeAudience> lookalikeAudiences;
 
@@ -231,7 +231,7 @@ public class PropertyAdsReportMetricsGroupTargetingAudience {
           // force use of static builder() method
         }
 
-        public Builder behaviors(@Nullable List<AudienceSegment> behaviors) {
+        public Builder behaviors(@Nullable List<TargetRef> behaviors) {
             this.behaviors = behaviors;
             return this;
         }
@@ -241,27 +241,27 @@ public class PropertyAdsReportMetricsGroupTargetingAudience {
             return this;
         }
 
-        public Builder customAudiences(@Nullable List<AudienceSegment> customAudiences) {
+        public Builder customAudiences(@Nullable List<TargetRef> customAudiences) {
             this.customAudiences = customAudiences;
             return this;
         }
 
-        public Builder excludedBehaviors(@Nullable List<AudienceSegment> excludedBehaviors) {
+        public Builder excludedBehaviors(@Nullable List<TargetRef> excludedBehaviors) {
             this.excludedBehaviors = excludedBehaviors;
             return this;
         }
 
-        public Builder excludedCustomAudiences(@Nullable List<AudienceSegment> excludedCustomAudiences) {
+        public Builder excludedCustomAudiences(@Nullable List<TargetRef> excludedCustomAudiences) {
             this.excludedCustomAudiences = excludedCustomAudiences;
             return this;
         }
 
-        public Builder excludedInterests(@Nullable List<AudienceSegment> excludedInterests) {
+        public Builder excludedInterests(@Nullable List<TargetRef> excludedInterests) {
             this.excludedInterests = excludedInterests;
             return this;
         }
 
-        public Builder interests(@Nullable List<AudienceSegment> interests) {
+        public Builder interests(@Nullable List<TargetRef> interests) {
             this.interests = interests;
             return this;
         }

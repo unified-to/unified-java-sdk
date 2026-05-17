@@ -19,29 +19,29 @@ public class PropertyAdsReportMetricsGroupTargetingDevice {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carriers")
-    private List<DeviceTarget> carriers;
+    private List<TargetRef> carriers;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("types")
-    private List<DeviceTarget> types;
+    private List<TargetRef> types;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_device")
-    private List<DeviceTarget> userDevice;
+    private List<TargetRef> userDevice;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_os")
-    private List<DeviceTarget> userOs;
+    private List<TargetRef> userOs;
 
     @JsonCreator
     public PropertyAdsReportMetricsGroupTargetingDevice(
-            @JsonProperty("carriers") @Nullable List<DeviceTarget> carriers,
-            @JsonProperty("types") @Nullable List<DeviceTarget> types,
-            @JsonProperty("user_device") @Nullable List<DeviceTarget> userDevice,
-            @JsonProperty("user_os") @Nullable List<DeviceTarget> userOs) {
+            @JsonProperty("carriers") @Nullable List<TargetRef> carriers,
+            @JsonProperty("types") @Nullable List<TargetRef> types,
+            @JsonProperty("user_device") @Nullable List<TargetRef> userDevice,
+            @JsonProperty("user_os") @Nullable List<TargetRef> userOs) {
         this.carriers = carriers;
         this.types = types;
         this.userDevice = userDevice;
@@ -53,19 +53,19 @@ public class PropertyAdsReportMetricsGroupTargetingDevice {
             null);
     }
 
-    public Optional<List<DeviceTarget>> carriers() {
+    public Optional<List<TargetRef>> carriers() {
         return Optional.ofNullable(this.carriers);
     }
 
-    public Optional<List<DeviceTarget>> types() {
+    public Optional<List<TargetRef>> types() {
         return Optional.ofNullable(this.types);
     }
 
-    public Optional<List<DeviceTarget>> userDevice() {
+    public Optional<List<TargetRef>> userDevice() {
         return Optional.ofNullable(this.userDevice);
     }
 
-    public Optional<List<DeviceTarget>> userOs() {
+    public Optional<List<TargetRef>> userOs() {
         return Optional.ofNullable(this.userOs);
     }
 
@@ -74,25 +74,25 @@ public class PropertyAdsReportMetricsGroupTargetingDevice {
     }
 
 
-    public PropertyAdsReportMetricsGroupTargetingDevice withCarriers(@Nullable List<DeviceTarget> carriers) {
+    public PropertyAdsReportMetricsGroupTargetingDevice withCarriers(@Nullable List<TargetRef> carriers) {
         this.carriers = carriers;
         return this;
     }
 
 
-    public PropertyAdsReportMetricsGroupTargetingDevice withTypes(@Nullable List<DeviceTarget> types) {
+    public PropertyAdsReportMetricsGroupTargetingDevice withTypes(@Nullable List<TargetRef> types) {
         this.types = types;
         return this;
     }
 
 
-    public PropertyAdsReportMetricsGroupTargetingDevice withUserDevice(@Nullable List<DeviceTarget> userDevice) {
+    public PropertyAdsReportMetricsGroupTargetingDevice withUserDevice(@Nullable List<TargetRef> userDevice) {
         this.userDevice = userDevice;
         return this;
     }
 
 
-    public PropertyAdsReportMetricsGroupTargetingDevice withUserOs(@Nullable List<DeviceTarget> userOs) {
+    public PropertyAdsReportMetricsGroupTargetingDevice withUserOs(@Nullable List<TargetRef> userOs) {
         this.userOs = userOs;
         return this;
     }
@@ -133,34 +133,34 @@ public class PropertyAdsReportMetricsGroupTargetingDevice {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private List<DeviceTarget> carriers;
+        private List<TargetRef> carriers;
 
-        private List<DeviceTarget> types;
+        private List<TargetRef> types;
 
-        private List<DeviceTarget> userDevice;
+        private List<TargetRef> userDevice;
 
-        private List<DeviceTarget> userOs;
+        private List<TargetRef> userOs;
 
         private Builder() {
           // force use of static builder() method
         }
 
-        public Builder carriers(@Nullable List<DeviceTarget> carriers) {
+        public Builder carriers(@Nullable List<TargetRef> carriers) {
             this.carriers = carriers;
             return this;
         }
 
-        public Builder types(@Nullable List<DeviceTarget> types) {
+        public Builder types(@Nullable List<TargetRef> types) {
             this.types = types;
             return this;
         }
 
-        public Builder userDevice(@Nullable List<DeviceTarget> userDevice) {
+        public Builder userDevice(@Nullable List<TargetRef> userDevice) {
             this.userDevice = userDevice;
             return this;
         }
 
-        public Builder userOs(@Nullable List<DeviceTarget> userOs) {
+        public Builder userOs(@Nullable List<TargetRef> userOs) {
             this.userOs = userOs;
             return this;
         }

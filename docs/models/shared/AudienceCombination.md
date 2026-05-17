@@ -3,9 +3,9 @@
 
 ## Fields
 
-| Field                                                            | Type                                                             | Required                                                         | Description                                                      |
-| ---------------------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------- |
-| `behaviors`                                                      | List\<[AudienceSegment](../../models/shared/AudienceSegment.md)> | :heavy_minus_sign:                                               | N/A                                                              |
-| `demographics`                                                   | List\<[AudienceSegment](../../models/shared/AudienceSegment.md)> | :heavy_minus_sign:                                               | N/A                                                              |
-| `interests`                                                      | List\<[AudienceSegment](../../models/shared/AudienceSegment.md)> | :heavy_minus_sign:                                               | N/A                                                              |
-| `lifeEvents`                                                     | List\<[AudienceSegment](../../models/shared/AudienceSegment.md)> | :heavy_minus_sign:                                               | N/A                                                              |
+| Field                                                | Type                                                 | Required                                             | Description                                          |
+| ---------------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------- |
+| `behaviors`                                          | List\<[TargetRef](../../models/shared/TargetRef.md)> | :heavy_minus_sign:                                   | N/A                                                  |
+| `interests`                                          | List\<[TargetRef](../../models/shared/TargetRef.md)> | :heavy_minus_sign:                                   | N/A                                                  |
+| `lifeEvents`                                         | List\<[TargetRef](../../models/shared/TargetRef.md)> | :heavy_minus_sign:                                   | N/A                                                  |
+| `references`                                         | List\<[TargetRef](../../models/shared/TargetRef.md)> | :heavy_minus_sign:                                   | N/A                                                  |

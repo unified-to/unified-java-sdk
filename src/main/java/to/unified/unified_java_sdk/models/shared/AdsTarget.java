@@ -10,6 +10,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
 import java.lang.Boolean;
+import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
@@ -23,6 +24,16 @@ import to.unified.unified_java_sdk.utils.Utils;
  * <p>Targeting search result (for ads_target list endpoint)
  */
 public class AdsTarget {
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("audience_count_max")
+    private Double audienceCountMax;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("audience_count_min")
+    private Double audienceCountMin;
+
 
     @JsonProperty("id")
     private String id;
@@ -54,12 +65,16 @@ public class AdsTarget {
 
     @JsonCreator
     public AdsTarget(
+            @JsonProperty("audience_count_max") @Nullable Double audienceCountMax,
+            @JsonProperty("audience_count_min") @Nullable Double audienceCountMin,
             @JsonProperty("id") @Nonnull String id,
             @JsonProperty("is_active") @Nullable Boolean isActive,
             @JsonProperty("name") @Nullable String name,
             @JsonProperty("parent_id") @Nullable String parentId,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("type") @Nullable AdsTargetType type) {
+        this.audienceCountMax = audienceCountMax;
+        this.audienceCountMin = audienceCountMin;
         this.id = Optional.ofNullable(id)
             .orElseThrow(() -> new IllegalArgumentException("id cannot be null"));
         this.isActive = isActive;
@@ -71,8 +86,17 @@ public class AdsTarget {
     
     public AdsTarget(
             @Nonnull String id) {
-        this(id, null, null,
-            null, null, null);
+        this(null, null, id,
+            null, null, null,
+            null, null);
+    }
+
+    public Optional<Double> audienceCountMax() {
+        return Optional.ofNullable(this.audienceCountMax);
+    }
+
+    public Optional<Double> audienceCountMin() {
+        return Optional.ofNullable(this.audienceCountMin);
     }
 
     public String id() {
@@ -101,6 +125,18 @@ public class AdsTarget {
 
     public static Builder builder() {
         return new Builder();
+    }
+
+
+    public AdsTarget withAudienceCountMax(@Nullable Double audienceCountMax) {
+        this.audienceCountMax = audienceCountMax;
+        return this;
+    }
+
+
+    public AdsTarget withAudienceCountMin(@Nullable Double audienceCountMin) {
+        this.audienceCountMin = audienceCountMin;
+        return this;
     }
 
 
@@ -150,6 +186,8 @@ public class AdsTarget {
         }
         AdsTarget other = (AdsTarget) o;
         return 
+            Utils.enhancedDeepEquals(this.audienceCountMax, other.audienceCountMax) &&
+            Utils.enhancedDeepEquals(this.audienceCountMin, other.audienceCountMin) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.isActive, other.isActive) &&
             Utils.enhancedDeepEquals(this.name, other.name) &&
@@ -161,13 +199,16 @@ public class AdsTarget {
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            id, isActive, name,
-            parentId, raw, type);
+            audienceCountMax, audienceCountMin, id,
+            isActive, name, parentId,
+            raw, type);
     }
     
     @Override
     public String toString() {
         return Utils.toString(AdsTarget.class,
+                "audienceCountMax", audienceCountMax,
+                "audienceCountMin", audienceCountMin,
                 "id", id,
                 "isActive", isActive,
                 "name", name,
@@ -178,6 +219,10 @@ public class AdsTarget {
 
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
+
+        private Double audienceCountMax;
+
+        private Double audienceCountMin;
 
         private String id;
 
@@ -193,6 +238,16 @@ public class AdsTarget {
 
         private Builder() {
           // force use of static builder() method
+        }
+
+        public Builder audienceCountMax(@Nullable Double audienceCountMax) {
+            this.audienceCountMax = audienceCountMax;
+            return this;
+        }
+
+        public Builder audienceCountMin(@Nullable Double audienceCountMin) {
+            this.audienceCountMin = audienceCountMin;
+            return this;
         }
 
         public Builder id(@Nonnull String id) {
@@ -227,8 +282,9 @@ public class AdsTarget {
 
         public AdsTarget build() {
             return new AdsTarget(
-                id, isActive, name,
-                parentId, raw, type);
+                audienceCountMax, audienceCountMin, id,
+                isActive, name, parentId,
+                raw, type);
         }
 
     }

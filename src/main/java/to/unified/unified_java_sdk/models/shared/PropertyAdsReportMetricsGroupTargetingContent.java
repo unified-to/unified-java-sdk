@@ -24,7 +24,7 @@ public class PropertyAdsReportMetricsGroupTargetingContent {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excluded_topics")
-    private List<TopicTarget> excludedTopics;
+    private List<TargetRef> excludedTopics;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -39,7 +39,7 @@ public class PropertyAdsReportMetricsGroupTargetingContent {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topics")
-    private List<TopicTarget> topics;
+    private List<TargetRef> topics;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -54,10 +54,10 @@ public class PropertyAdsReportMetricsGroupTargetingContent {
     @JsonCreator
     public PropertyAdsReportMetricsGroupTargetingContent(
             @JsonProperty("excluded_keywords") @Nullable List<AdsKeyword> excludedKeywords,
-            @JsonProperty("excluded_topics") @Nullable List<TopicTarget> excludedTopics,
+            @JsonProperty("excluded_topics") @Nullable List<TargetRef> excludedTopics,
             @JsonProperty("excluded_urls") @Nullable List<String> excludedUrls,
             @JsonProperty("keywords") @Nullable List<AdsKeyword> keywords,
-            @JsonProperty("topics") @Nullable List<TopicTarget> topics,
+            @JsonProperty("topics") @Nullable List<TargetRef> topics,
             @JsonProperty("urls") @Nullable List<String> urls,
             @JsonProperty("video") @Nullable PropertyAdsReportMetricsGroupTargetingContentVideo video) {
         this.excludedKeywords = excludedKeywords;
@@ -79,7 +79,7 @@ public class PropertyAdsReportMetricsGroupTargetingContent {
         return Optional.ofNullable(this.excludedKeywords);
     }
 
-    public Optional<List<TopicTarget>> excludedTopics() {
+    public Optional<List<TargetRef>> excludedTopics() {
         return Optional.ofNullable(this.excludedTopics);
     }
 
@@ -91,7 +91,7 @@ public class PropertyAdsReportMetricsGroupTargetingContent {
         return Optional.ofNullable(this.keywords);
     }
 
-    public Optional<List<TopicTarget>> topics() {
+    public Optional<List<TargetRef>> topics() {
         return Optional.ofNullable(this.topics);
     }
 
@@ -114,7 +114,7 @@ public class PropertyAdsReportMetricsGroupTargetingContent {
     }
 
 
-    public PropertyAdsReportMetricsGroupTargetingContent withExcludedTopics(@Nullable List<TopicTarget> excludedTopics) {
+    public PropertyAdsReportMetricsGroupTargetingContent withExcludedTopics(@Nullable List<TargetRef> excludedTopics) {
         this.excludedTopics = excludedTopics;
         return this;
     }
@@ -132,7 +132,7 @@ public class PropertyAdsReportMetricsGroupTargetingContent {
     }
 
 
-    public PropertyAdsReportMetricsGroupTargetingContent withTopics(@Nullable List<TopicTarget> topics) {
+    public PropertyAdsReportMetricsGroupTargetingContent withTopics(@Nullable List<TargetRef> topics) {
         this.topics = topics;
         return this;
     }
@@ -194,13 +194,13 @@ public class PropertyAdsReportMetricsGroupTargetingContent {
 
         private List<AdsKeyword> excludedKeywords;
 
-        private List<TopicTarget> excludedTopics;
+        private List<TargetRef> excludedTopics;
 
         private List<String> excludedUrls;
 
         private List<AdsKeyword> keywords;
 
-        private List<TopicTarget> topics;
+        private List<TargetRef> topics;
 
         private List<String> urls;
 
@@ -215,7 +215,7 @@ public class PropertyAdsReportMetricsGroupTargetingContent {
             return this;
         }
 
-        public Builder excludedTopics(@Nullable List<TopicTarget> excludedTopics) {
+        public Builder excludedTopics(@Nullable List<TargetRef> excludedTopics) {
             this.excludedTopics = excludedTopics;
             return this;
         }
@@ -230,7 +230,7 @@ public class PropertyAdsReportMetricsGroupTargetingContent {
             return this;
         }
 
-        public Builder topics(@Nullable List<TopicTarget> topics) {
+        public Builder topics(@Nullable List<TargetRef> topics) {
             this.topics = topics;
             return this;
         }

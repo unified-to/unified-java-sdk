@@ -19,33 +19,33 @@ public class AudienceCombination {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("behaviors")
-    private List<AudienceSegment> behaviors;
-
-
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("demographics")
-    private List<AudienceSegment> demographics;
+    private List<TargetRef> behaviors;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interests")
-    private List<AudienceSegment> interests;
+    private List<TargetRef> interests;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("life_events")
-    private List<AudienceSegment> lifeEvents;
+    private List<TargetRef> lifeEvents;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("references")
+    private List<TargetRef> references;
 
     @JsonCreator
     public AudienceCombination(
-            @JsonProperty("behaviors") @Nullable List<AudienceSegment> behaviors,
-            @JsonProperty("demographics") @Nullable List<AudienceSegment> demographics,
-            @JsonProperty("interests") @Nullable List<AudienceSegment> interests,
-            @JsonProperty("life_events") @Nullable List<AudienceSegment> lifeEvents) {
+            @JsonProperty("behaviors") @Nullable List<TargetRef> behaviors,
+            @JsonProperty("interests") @Nullable List<TargetRef> interests,
+            @JsonProperty("life_events") @Nullable List<TargetRef> lifeEvents,
+            @JsonProperty("references") @Nullable List<TargetRef> references) {
         this.behaviors = behaviors;
-        this.demographics = demographics;
         this.interests = interests;
         this.lifeEvents = lifeEvents;
+        this.references = references;
     }
     
     public AudienceCombination() {
@@ -53,20 +53,20 @@ public class AudienceCombination {
             null);
     }
 
-    public Optional<List<AudienceSegment>> behaviors() {
+    public Optional<List<TargetRef>> behaviors() {
         return Optional.ofNullable(this.behaviors);
     }
 
-    public Optional<List<AudienceSegment>> demographics() {
-        return Optional.ofNullable(this.demographics);
-    }
-
-    public Optional<List<AudienceSegment>> interests() {
+    public Optional<List<TargetRef>> interests() {
         return Optional.ofNullable(this.interests);
     }
 
-    public Optional<List<AudienceSegment>> lifeEvents() {
+    public Optional<List<TargetRef>> lifeEvents() {
         return Optional.ofNullable(this.lifeEvents);
+    }
+
+    public Optional<List<TargetRef>> references() {
+        return Optional.ofNullable(this.references);
     }
 
     public static Builder builder() {
@@ -74,26 +74,26 @@ public class AudienceCombination {
     }
 
 
-    public AudienceCombination withBehaviors(@Nullable List<AudienceSegment> behaviors) {
+    public AudienceCombination withBehaviors(@Nullable List<TargetRef> behaviors) {
         this.behaviors = behaviors;
         return this;
     }
 
 
-    public AudienceCombination withDemographics(@Nullable List<AudienceSegment> demographics) {
-        this.demographics = demographics;
-        return this;
-    }
-
-
-    public AudienceCombination withInterests(@Nullable List<AudienceSegment> interests) {
+    public AudienceCombination withInterests(@Nullable List<TargetRef> interests) {
         this.interests = interests;
         return this;
     }
 
 
-    public AudienceCombination withLifeEvents(@Nullable List<AudienceSegment> lifeEvents) {
+    public AudienceCombination withLifeEvents(@Nullable List<TargetRef> lifeEvents) {
         this.lifeEvents = lifeEvents;
+        return this;
+    }
+
+
+    public AudienceCombination withReferences(@Nullable List<TargetRef> references) {
+        this.references = references;
         return this;
     }
 
@@ -109,66 +109,66 @@ public class AudienceCombination {
         AudienceCombination other = (AudienceCombination) o;
         return 
             Utils.enhancedDeepEquals(this.behaviors, other.behaviors) &&
-            Utils.enhancedDeepEquals(this.demographics, other.demographics) &&
             Utils.enhancedDeepEquals(this.interests, other.interests) &&
-            Utils.enhancedDeepEquals(this.lifeEvents, other.lifeEvents);
+            Utils.enhancedDeepEquals(this.lifeEvents, other.lifeEvents) &&
+            Utils.enhancedDeepEquals(this.references, other.references);
     }
     
     @Override
     public int hashCode() {
         return Utils.enhancedHash(
-            behaviors, demographics, interests,
-            lifeEvents);
+            behaviors, interests, lifeEvents,
+            references);
     }
     
     @Override
     public String toString() {
         return Utils.toString(AudienceCombination.class,
                 "behaviors", behaviors,
-                "demographics", demographics,
                 "interests", interests,
-                "lifeEvents", lifeEvents);
+                "lifeEvents", lifeEvents,
+                "references", references);
     }
 
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private List<AudienceSegment> behaviors;
+        private List<TargetRef> behaviors;
 
-        private List<AudienceSegment> demographics;
+        private List<TargetRef> interests;
 
-        private List<AudienceSegment> interests;
+        private List<TargetRef> lifeEvents;
 
-        private List<AudienceSegment> lifeEvents;
+        private List<TargetRef> references;
 
         private Builder() {
           // force use of static builder() method
         }
 
-        public Builder behaviors(@Nullable List<AudienceSegment> behaviors) {
+        public Builder behaviors(@Nullable List<TargetRef> behaviors) {
             this.behaviors = behaviors;
             return this;
         }
 
-        public Builder demographics(@Nullable List<AudienceSegment> demographics) {
-            this.demographics = demographics;
-            return this;
-        }
-
-        public Builder interests(@Nullable List<AudienceSegment> interests) {
+        public Builder interests(@Nullable List<TargetRef> interests) {
             this.interests = interests;
             return this;
         }
 
-        public Builder lifeEvents(@Nullable List<AudienceSegment> lifeEvents) {
+        public Builder lifeEvents(@Nullable List<TargetRef> lifeEvents) {
             this.lifeEvents = lifeEvents;
+            return this;
+        }
+
+        public Builder references(@Nullable List<TargetRef> references) {
+            this.references = references;
             return this;
         }
 
         public AudienceCombination build() {
             return new AudienceCombination(
-                behaviors, demographics, interests,
-                lifeEvents);
+                behaviors, interests, lifeEvents,
+                references);
         }
 
     }

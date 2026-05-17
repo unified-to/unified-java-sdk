@@ -7,20 +7,16 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
 import java.lang.Override;
 import java.lang.String;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
-/**
- * RegionTarget
- * 
- * <p>states, provinces, regions
- */
-public class RegionTarget {
 
+public class TargetRef {
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
 
@@ -30,21 +26,19 @@ public class RegionTarget {
     private String name;
 
     @JsonCreator
-    public RegionTarget(
-            @JsonProperty("id") @Nonnull String id,
+    public TargetRef(
+            @JsonProperty("id") @Nullable String id,
             @JsonProperty("name") @Nullable String name) {
-        this.id = Optional.ofNullable(id)
-            .orElseThrow(() -> new IllegalArgumentException("id cannot be null"));
+        this.id = id;
         this.name = name;
     }
     
-    public RegionTarget(
-            @Nonnull String id) {
-        this(id, null);
+    public TargetRef() {
+        this(null, null);
     }
 
-    public String id() {
-        return this.id;
+    public Optional<String> id() {
+        return Optional.ofNullable(this.id);
     }
 
     public Optional<String> name() {
@@ -56,13 +50,13 @@ public class RegionTarget {
     }
 
 
-    public RegionTarget withId(@Nonnull String id) {
-        this.id = Utils.checkNotNull(id, "id");
+    public TargetRef withId(@Nullable String id) {
+        this.id = id;
         return this;
     }
 
 
-    public RegionTarget withName(@Nullable String name) {
+    public TargetRef withName(@Nullable String name) {
         this.name = name;
         return this;
     }
@@ -76,7 +70,7 @@ public class RegionTarget {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        RegionTarget other = (RegionTarget) o;
+        TargetRef other = (TargetRef) o;
         return 
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.name, other.name);
@@ -90,7 +84,7 @@ public class RegionTarget {
     
     @Override
     public String toString() {
-        return Utils.toString(RegionTarget.class,
+        return Utils.toString(TargetRef.class,
                 "id", id,
                 "name", name);
     }
@@ -106,8 +100,8 @@ public class RegionTarget {
           // force use of static builder() method
         }
 
-        public Builder id(@Nonnull String id) {
-            this.id = Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
+            this.id = id;
             return this;
         }
 
@@ -116,8 +110,8 @@ public class RegionTarget {
             return this;
         }
 
-        public RegionTarget build() {
-            return new RegionTarget(
+        public TargetRef build() {
+            return new TargetRef(
                 id, name);
         }
 

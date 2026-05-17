@@ -24,7 +24,7 @@ public class PropertyAdsGroupTargetingGeographic {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countries")
-    private List<GeoTarget> countries;
+    private List<TargetRef> countries;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -34,22 +34,22 @@ public class PropertyAdsGroupTargetingGeographic {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excluded_countries")
-    private List<GeoTarget> excludedCountries;
+    private List<TargetRef> excludedCountries;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excluded_postal_codes")
-    private List<GeoTarget> excludedPostalCodes;
+    private List<TargetRef> excludedPostalCodes;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excluded_regions")
-    private List<RegionTarget> excludedRegions;
+    private List<TargetRef> excludedRegions;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excluded_us_dmas")
-    private List<GeoTarget> excludedUsDmas;
+    private List<TargetRef> excludedUsDmas;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -59,7 +59,7 @@ public class PropertyAdsGroupTargetingGeographic {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postal_codes")
-    private List<GeoTarget> postalCodes;
+    private List<TargetRef> postalCodes;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -69,27 +69,27 @@ public class PropertyAdsGroupTargetingGeographic {
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regions")
-    private List<RegionTarget> regions;
+    private List<TargetRef> regions;
 
 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("us_dmas")
-    private List<GeoTarget> usDmas;
+    private List<TargetRef> usDmas;
 
     @JsonCreator
     public PropertyAdsGroupTargetingGeographic(
             @JsonProperty("cities") @Nullable List<CityTarget> cities,
-            @JsonProperty("countries") @Nullable List<GeoTarget> countries,
+            @JsonProperty("countries") @Nullable List<TargetRef> countries,
             @JsonProperty("excluded_cities") @Nullable List<CityTarget> excludedCities,
-            @JsonProperty("excluded_countries") @Nullable List<GeoTarget> excludedCountries,
-            @JsonProperty("excluded_postal_codes") @Nullable List<GeoTarget> excludedPostalCodes,
-            @JsonProperty("excluded_regions") @Nullable List<RegionTarget> excludedRegions,
-            @JsonProperty("excluded_us_dmas") @Nullable List<GeoTarget> excludedUsDmas,
+            @JsonProperty("excluded_countries") @Nullable List<TargetRef> excludedCountries,
+            @JsonProperty("excluded_postal_codes") @Nullable List<TargetRef> excludedPostalCodes,
+            @JsonProperty("excluded_regions") @Nullable List<TargetRef> excludedRegions,
+            @JsonProperty("excluded_us_dmas") @Nullable List<TargetRef> excludedUsDmas,
             @JsonProperty("location_types") @Nullable List<PropertyAdsGroupTargetingGeographicLocationTypes> locationTypes,
-            @JsonProperty("postal_codes") @Nullable List<GeoTarget> postalCodes,
+            @JsonProperty("postal_codes") @Nullable List<TargetRef> postalCodes,
             @JsonProperty("presence_type") @Nullable PropertyAdsGroupTargetingGeographicPresenceType presenceType,
-            @JsonProperty("regions") @Nullable List<RegionTarget> regions,
-            @JsonProperty("us_dmas") @Nullable List<GeoTarget> usDmas) {
+            @JsonProperty("regions") @Nullable List<TargetRef> regions,
+            @JsonProperty("us_dmas") @Nullable List<TargetRef> usDmas) {
         this.cities = cities;
         this.countries = countries;
         this.excludedCities = excludedCities;
@@ -115,7 +115,7 @@ public class PropertyAdsGroupTargetingGeographic {
         return Optional.ofNullable(this.cities);
     }
 
-    public Optional<List<GeoTarget>> countries() {
+    public Optional<List<TargetRef>> countries() {
         return Optional.ofNullable(this.countries);
     }
 
@@ -123,19 +123,19 @@ public class PropertyAdsGroupTargetingGeographic {
         return Optional.ofNullable(this.excludedCities);
     }
 
-    public Optional<List<GeoTarget>> excludedCountries() {
+    public Optional<List<TargetRef>> excludedCountries() {
         return Optional.ofNullable(this.excludedCountries);
     }
 
-    public Optional<List<GeoTarget>> excludedPostalCodes() {
+    public Optional<List<TargetRef>> excludedPostalCodes() {
         return Optional.ofNullable(this.excludedPostalCodes);
     }
 
-    public Optional<List<RegionTarget>> excludedRegions() {
+    public Optional<List<TargetRef>> excludedRegions() {
         return Optional.ofNullable(this.excludedRegions);
     }
 
-    public Optional<List<GeoTarget>> excludedUsDmas() {
+    public Optional<List<TargetRef>> excludedUsDmas() {
         return Optional.ofNullable(this.excludedUsDmas);
     }
 
@@ -143,7 +143,7 @@ public class PropertyAdsGroupTargetingGeographic {
         return Optional.ofNullable(this.locationTypes);
     }
 
-    public Optional<List<GeoTarget>> postalCodes() {
+    public Optional<List<TargetRef>> postalCodes() {
         return Optional.ofNullable(this.postalCodes);
     }
 
@@ -151,11 +151,11 @@ public class PropertyAdsGroupTargetingGeographic {
         return Optional.ofNullable(this.presenceType);
     }
 
-    public Optional<List<RegionTarget>> regions() {
+    public Optional<List<TargetRef>> regions() {
         return Optional.ofNullable(this.regions);
     }
 
-    public Optional<List<GeoTarget>> usDmas() {
+    public Optional<List<TargetRef>> usDmas() {
         return Optional.ofNullable(this.usDmas);
     }
 
@@ -170,7 +170,7 @@ public class PropertyAdsGroupTargetingGeographic {
     }
 
 
-    public PropertyAdsGroupTargetingGeographic withCountries(@Nullable List<GeoTarget> countries) {
+    public PropertyAdsGroupTargetingGeographic withCountries(@Nullable List<TargetRef> countries) {
         this.countries = countries;
         return this;
     }
@@ -182,25 +182,25 @@ public class PropertyAdsGroupTargetingGeographic {
     }
 
 
-    public PropertyAdsGroupTargetingGeographic withExcludedCountries(@Nullable List<GeoTarget> excludedCountries) {
+    public PropertyAdsGroupTargetingGeographic withExcludedCountries(@Nullable List<TargetRef> excludedCountries) {
         this.excludedCountries = excludedCountries;
         return this;
     }
 
 
-    public PropertyAdsGroupTargetingGeographic withExcludedPostalCodes(@Nullable List<GeoTarget> excludedPostalCodes) {
+    public PropertyAdsGroupTargetingGeographic withExcludedPostalCodes(@Nullable List<TargetRef> excludedPostalCodes) {
         this.excludedPostalCodes = excludedPostalCodes;
         return this;
     }
 
 
-    public PropertyAdsGroupTargetingGeographic withExcludedRegions(@Nullable List<RegionTarget> excludedRegions) {
+    public PropertyAdsGroupTargetingGeographic withExcludedRegions(@Nullable List<TargetRef> excludedRegions) {
         this.excludedRegions = excludedRegions;
         return this;
     }
 
 
-    public PropertyAdsGroupTargetingGeographic withExcludedUsDmas(@Nullable List<GeoTarget> excludedUsDmas) {
+    public PropertyAdsGroupTargetingGeographic withExcludedUsDmas(@Nullable List<TargetRef> excludedUsDmas) {
         this.excludedUsDmas = excludedUsDmas;
         return this;
     }
@@ -212,7 +212,7 @@ public class PropertyAdsGroupTargetingGeographic {
     }
 
 
-    public PropertyAdsGroupTargetingGeographic withPostalCodes(@Nullable List<GeoTarget> postalCodes) {
+    public PropertyAdsGroupTargetingGeographic withPostalCodes(@Nullable List<TargetRef> postalCodes) {
         this.postalCodes = postalCodes;
         return this;
     }
@@ -224,13 +224,13 @@ public class PropertyAdsGroupTargetingGeographic {
     }
 
 
-    public PropertyAdsGroupTargetingGeographic withRegions(@Nullable List<RegionTarget> regions) {
+    public PropertyAdsGroupTargetingGeographic withRegions(@Nullable List<TargetRef> regions) {
         this.regions = regions;
         return this;
     }
 
 
-    public PropertyAdsGroupTargetingGeographic withUsDmas(@Nullable List<GeoTarget> usDmas) {
+    public PropertyAdsGroupTargetingGeographic withUsDmas(@Nullable List<TargetRef> usDmas) {
         this.usDmas = usDmas;
         return this;
     }
@@ -291,27 +291,27 @@ public class PropertyAdsGroupTargetingGeographic {
 
         private List<CityTarget> cities;
 
-        private List<GeoTarget> countries;
+        private List<TargetRef> countries;
 
         private List<CityTarget> excludedCities;
 
-        private List<GeoTarget> excludedCountries;
+        private List<TargetRef> excludedCountries;
 
-        private List<GeoTarget> excludedPostalCodes;
+        private List<TargetRef> excludedPostalCodes;
 
-        private List<RegionTarget> excludedRegions;
+        private List<TargetRef> excludedRegions;
 
-        private List<GeoTarget> excludedUsDmas;
+        private List<TargetRef> excludedUsDmas;
 
         private List<PropertyAdsGroupTargetingGeographicLocationTypes> locationTypes;
 
-        private List<GeoTarget> postalCodes;
+        private List<TargetRef> postalCodes;
 
         private PropertyAdsGroupTargetingGeographicPresenceType presenceType;
 
-        private List<RegionTarget> regions;
+        private List<TargetRef> regions;
 
-        private List<GeoTarget> usDmas;
+        private List<TargetRef> usDmas;
 
         private Builder() {
           // force use of static builder() method
@@ -322,7 +322,7 @@ public class PropertyAdsGroupTargetingGeographic {
             return this;
         }
 
-        public Builder countries(@Nullable List<GeoTarget> countries) {
+        public Builder countries(@Nullable List<TargetRef> countries) {
             this.countries = countries;
             return this;
         }
@@ -332,22 +332,22 @@ public class PropertyAdsGroupTargetingGeographic {
             return this;
         }
 
-        public Builder excludedCountries(@Nullable List<GeoTarget> excludedCountries) {
+        public Builder excludedCountries(@Nullable List<TargetRef> excludedCountries) {
             this.excludedCountries = excludedCountries;
             return this;
         }
 
-        public Builder excludedPostalCodes(@Nullable List<GeoTarget> excludedPostalCodes) {
+        public Builder excludedPostalCodes(@Nullable List<TargetRef> excludedPostalCodes) {
             this.excludedPostalCodes = excludedPostalCodes;
             return this;
         }
 
-        public Builder excludedRegions(@Nullable List<RegionTarget> excludedRegions) {
+        public Builder excludedRegions(@Nullable List<TargetRef> excludedRegions) {
             this.excludedRegions = excludedRegions;
             return this;
         }
 
-        public Builder excludedUsDmas(@Nullable List<GeoTarget> excludedUsDmas) {
+        public Builder excludedUsDmas(@Nullable List<TargetRef> excludedUsDmas) {
             this.excludedUsDmas = excludedUsDmas;
             return this;
         }
@@ -357,7 +357,7 @@ public class PropertyAdsGroupTargetingGeographic {
             return this;
         }
 
-        public Builder postalCodes(@Nullable List<GeoTarget> postalCodes) {
+        public Builder postalCodes(@Nullable List<TargetRef> postalCodes) {
             this.postalCodes = postalCodes;
             return this;
         }
@@ -367,12 +367,12 @@ public class PropertyAdsGroupTargetingGeographic {
             return this;
         }
 
-        public Builder regions(@Nullable List<RegionTarget> regions) {
+        public Builder regions(@Nullable List<TargetRef> regions) {
             this.regions = regions;
             return this;
         }
 
-        public Builder usDmas(@Nullable List<GeoTarget> usDmas) {
+        public Builder usDmas(@Nullable List<TargetRef> usDmas) {
             this.usDmas = usDmas;
             return this;
         }

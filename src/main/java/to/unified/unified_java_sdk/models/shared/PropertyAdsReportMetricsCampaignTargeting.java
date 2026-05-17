@@ -50,12 +50,10 @@ public class PropertyAdsReportMetricsCampaignTargeting {
     @JsonProperty("geographic")
     private PropertyAdsReportMetricsCampaignTargetingGeographic geographic;
 
-    /**
-     * Language targeting (Meta
-     */
+
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
-    private PropertyAdsReportMetricsCampaignTargetingLanguage language;
+    private List<TargetRef> language;
 
     /**
      * Optimization (Meta: targeting_automation; Google: observation vs targeting mode)
@@ -82,7 +80,7 @@ public class PropertyAdsReportMetricsCampaignTargeting {
             @JsonProperty("demographic") @Nullable PropertyAdsReportMetricsCampaignTargetingDemographic demographic,
             @JsonProperty("device") @Nullable PropertyAdsReportMetricsCampaignTargetingDevice device,
             @JsonProperty("geographic") @Nullable PropertyAdsReportMetricsCampaignTargetingGeographic geographic,
-            @JsonProperty("language") @Nullable PropertyAdsReportMetricsCampaignTargetingLanguage language,
+            @JsonProperty("language") @Nullable List<TargetRef> language,
             @JsonProperty("optimization") @Nullable PropertyAdsReportMetricsCampaignTargetingOptimization optimization,
             @JsonProperty("placement") @Nullable PropertyAdsReportMetricsCampaignTargetingPlacement placement,
             @JsonProperty("schedule") @Nullable List<AdSchedule> schedule) {
@@ -135,10 +133,7 @@ public class PropertyAdsReportMetricsCampaignTargeting {
         return Optional.ofNullable(this.geographic);
     }
 
-    /**
-     * Language targeting (Meta
-     */
-    public Optional<PropertyAdsReportMetricsCampaignTargetingLanguage> language() {
+    public Optional<List<TargetRef>> language() {
         return Optional.ofNullable(this.language);
     }
 
@@ -204,10 +199,7 @@ public class PropertyAdsReportMetricsCampaignTargeting {
     }
 
 
-    /**
-     * Language targeting (Meta
-     */
-    public PropertyAdsReportMetricsCampaignTargeting withLanguage(@Nullable PropertyAdsReportMetricsCampaignTargetingLanguage language) {
+    public PropertyAdsReportMetricsCampaignTargeting withLanguage(@Nullable List<TargetRef> language) {
         this.language = language;
         return this;
     }
@@ -295,7 +287,7 @@ public class PropertyAdsReportMetricsCampaignTargeting {
 
         private PropertyAdsReportMetricsCampaignTargetingGeographic geographic;
 
-        private PropertyAdsReportMetricsCampaignTargetingLanguage language;
+        private List<TargetRef> language;
 
         private PropertyAdsReportMetricsCampaignTargetingOptimization optimization;
 
@@ -343,10 +335,7 @@ public class PropertyAdsReportMetricsCampaignTargeting {
             return this;
         }
 
-        /**
-         * Language targeting (Meta
-         */
-        public Builder language(@Nullable PropertyAdsReportMetricsCampaignTargetingLanguage language) {
+        public Builder language(@Nullable List<TargetRef> language) {
             this.language = language;
             return this;
         }
