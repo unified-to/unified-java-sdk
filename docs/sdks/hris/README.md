@@ -559,6 +559,7 @@ Create a timeoff
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTimeoffRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTimeoffResponse;
@@ -577,6 +578,7 @@ public class Application {
 
         CreateHrisTimeoffRequest req = CreateHrisTimeoffRequest.builder()
                 .hrisTimeoff(HrisTimeoff.builder()
+                    .startAt(OffsetDateTime.parse("2024-09-03T22:31:51.863Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -619,7 +621,6 @@ Create a timeshift
 package hello.world;
 
 import java.lang.Exception;
-import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTimeshiftRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisTimeshiftResponse;
@@ -639,8 +640,6 @@ public class Application {
         CreateHrisTimeshiftRequest req = CreateHrisTimeshiftRequest.builder()
                 .hrisTimeshift(HrisTimeshift.builder()
                     .employeeUserId("<id>")
-                    .endAt(OffsetDateTime.parse("2025-10-18T00:03:45.822Z"))
-                    .startAt(OffsetDateTime.parse("2024-06-03T05:33:48.715Z"))
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -2437,6 +2436,7 @@ Update a timeoff
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchHrisTimeoffRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisTimeoffResponse;
@@ -2455,6 +2455,7 @@ public class Application {
 
         PatchHrisTimeoffRequest req = PatchHrisTimeoffRequest.builder()
                 .hrisTimeoff(HrisTimeoff.builder()
+                    .startAt(OffsetDateTime.parse("2024-01-26T05:49:44.056Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2498,7 +2499,6 @@ Update a timeshift
 package hello.world;
 
 import java.lang.Exception;
-import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.PatchHrisTimeshiftRequest;
 import to.unified.unified_java_sdk.models.operations.PatchHrisTimeshiftResponse;
@@ -2518,8 +2518,6 @@ public class Application {
         PatchHrisTimeshiftRequest req = PatchHrisTimeshiftRequest.builder()
                 .hrisTimeshift(HrisTimeshift.builder()
                     .employeeUserId("<id>")
-                    .endAt(OffsetDateTime.parse("2023-11-17T18:53:02.172Z"))
-                    .startAt(OffsetDateTime.parse("2023-01-19T02:48:41.002Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3612,6 +3610,7 @@ Update a timeoff
 package hello.world;
 
 import java.lang.Exception;
+import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeoffRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeoffResponse;
@@ -3630,6 +3629,7 @@ public class Application {
 
         UpdateHrisTimeoffRequest req = UpdateHrisTimeoffRequest.builder()
                 .hrisTimeoff(HrisTimeoff.builder()
+                    .startAt(OffsetDateTime.parse("2026-02-26T01:59:20.061Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -3673,7 +3673,6 @@ Update a timeshift
 package hello.world;
 
 import java.lang.Exception;
-import java.time.OffsetDateTime;
 import to.unified.unified_java_sdk.UnifiedTo;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeshiftRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateHrisTimeshiftResponse;
@@ -3693,8 +3692,6 @@ public class Application {
         UpdateHrisTimeshiftRequest req = UpdateHrisTimeshiftRequest.builder()
                 .hrisTimeshift(HrisTimeshift.builder()
                     .employeeUserId("<id>")
-                    .endAt(OffsetDateTime.parse("2025-03-03T22:04:09.340Z"))
-                    .startAt(OffsetDateTime.parse("2024-05-30T21:19:58.772Z"))
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

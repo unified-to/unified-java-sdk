@@ -52,6 +52,7 @@ public class HrisTimeshift {
     private String employeeUserId;
 
 
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     private OffsetDateTime endAt;
 
@@ -86,6 +87,7 @@ public class HrisTimeshift {
     private Map<String, Object> raw;
 
 
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     private OffsetDateTime startAt;
 
@@ -102,14 +104,14 @@ public class HrisTimeshift {
             @JsonProperty("compensation") @Nullable List<HrisCompensation> compensation,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("employee_user_id") @Nonnull String employeeUserId,
-            @JsonProperty("end_at") @Nonnull OffsetDateTime endAt,
+            @JsonProperty("end_at") @Nullable OffsetDateTime endAt,
             @JsonProperty("group_id") @Nullable String groupId,
             @JsonProperty("hours") @Nullable Double hours,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_approved") @Nullable Boolean isApproved,
             @JsonProperty("location_id") @Nullable String locationId,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
-            @JsonProperty("start_at") @Nonnull OffsetDateTime startAt,
+            @JsonProperty("start_at") @Nullable OffsetDateTime startAt,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.approvedAt = approvedAt;
         this.approverUserId = approverUserId;
@@ -118,28 +120,24 @@ public class HrisTimeshift {
         this.createdAt = createdAt;
         this.employeeUserId = Optional.ofNullable(employeeUserId)
             .orElseThrow(() -> new IllegalArgumentException("employeeUserId cannot be null"));
-        this.endAt = Optional.ofNullable(endAt)
-            .orElseThrow(() -> new IllegalArgumentException("endAt cannot be null"));
+        this.endAt = endAt;
         this.groupId = groupId;
         this.hours = hours;
         this.id = id;
         this.isApproved = isApproved;
         this.locationId = locationId;
         this.raw = raw;
-        this.startAt = Optional.ofNullable(startAt)
-            .orElseThrow(() -> new IllegalArgumentException("startAt cannot be null"));
+        this.startAt = startAt;
         this.updatedAt = updatedAt;
     }
     
     public HrisTimeshift(
-            @Nonnull String employeeUserId,
-            @Nonnull OffsetDateTime endAt,
-            @Nonnull OffsetDateTime startAt) {
+            @Nonnull String employeeUserId) {
         this(null, null, null,
             null, null, employeeUserId,
-            endAt, null, null,
             null, null, null,
-            null, startAt, null);
+            null, null, null,
+            null, null, null);
     }
 
     public Optional<OffsetDateTime> approvedAt() {
@@ -166,8 +164,8 @@ public class HrisTimeshift {
         return this.employeeUserId;
     }
 
-    public OffsetDateTime endAt() {
-        return this.endAt;
+    public Optional<OffsetDateTime> endAt() {
+        return Optional.ofNullable(this.endAt);
     }
 
     public Optional<String> groupId() {
@@ -194,8 +192,8 @@ public class HrisTimeshift {
         return Optional.ofNullable(this.raw);
     }
 
-    public OffsetDateTime startAt() {
-        return this.startAt;
+    public Optional<OffsetDateTime> startAt() {
+        return Optional.ofNullable(this.startAt);
     }
 
     public Optional<OffsetDateTime> updatedAt() {
@@ -243,8 +241,8 @@ public class HrisTimeshift {
     }
 
 
-    public HrisTimeshift withEndAt(@Nonnull OffsetDateTime endAt) {
-        this.endAt = Utils.checkNotNull(endAt, "endAt");
+    public HrisTimeshift withEndAt(@Nullable OffsetDateTime endAt) {
+        this.endAt = endAt;
         return this;
     }
 
@@ -285,8 +283,8 @@ public class HrisTimeshift {
     }
 
 
-    public HrisTimeshift withStartAt(@Nonnull OffsetDateTime startAt) {
-        this.startAt = Utils.checkNotNull(startAt, "startAt");
+    public HrisTimeshift withStartAt(@Nullable OffsetDateTime startAt) {
+        this.startAt = startAt;
         return this;
     }
 
@@ -421,8 +419,8 @@ public class HrisTimeshift {
             return this;
         }
 
-        public Builder endAt(@Nonnull OffsetDateTime endAt) {
-            this.endAt = Utils.checkNotNull(endAt, "endAt");
+        public Builder endAt(@Nullable OffsetDateTime endAt) {
+            this.endAt = endAt;
             return this;
         }
 
@@ -456,8 +454,8 @@ public class HrisTimeshift {
             return this;
         }
 
-        public Builder startAt(@Nonnull OffsetDateTime startAt) {
-            this.startAt = Utils.checkNotNull(startAt, "startAt");
+        public Builder startAt(@Nullable OffsetDateTime startAt) {
+            this.startAt = startAt;
             return this;
         }
 
