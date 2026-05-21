@@ -40,7 +40,6 @@ public class Application {
 
         CreateCommerceInventoryRequest req = CreateCommerceInventoryRequest.builder()
                 .commerceInventory(CommerceInventory.builder()
-                    .available(7463.62)
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -216,7 +215,6 @@ public class Application {
 
         PatchCommerceInventoryRequest req = PatchCommerceInventoryRequest.builder()
                 .commerceInventory(CommerceInventory.builder()
-                    .available(7859.84)
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -334,7 +332,6 @@ public class Application {
 
         UpdateCommerceInventoryRequest req = UpdateCommerceInventoryRequest.builder()
                 .commerceInventory(CommerceInventory.builder()
-                    .available(4497.29)
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

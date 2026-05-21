@@ -7,7 +7,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
 import java.lang.Object;
 import java.lang.Override;
@@ -41,6 +40,7 @@ public class AtsCompany {
     private List<AtsMetadata> metadata;
 
 
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
@@ -80,7 +80,7 @@ public class AtsCompany {
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("metadata") @Nullable List<AtsMetadata> metadata,
-            @JsonProperty("name") @Nonnull String name,
+            @JsonProperty("name") @Nullable String name,
             @JsonProperty("parent_id") @Nullable String parentId,
             @JsonProperty("phone") @Nullable String phone,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
@@ -91,8 +91,7 @@ public class AtsCompany {
         this.createdAt = createdAt;
         this.id = id;
         this.metadata = metadata;
-        this.name = Optional.ofNullable(name)
-            .orElseThrow(() -> new IllegalArgumentException("name cannot be null"));
+        this.name = name;
         this.parentId = parentId;
         this.phone = phone;
         this.raw = raw;
@@ -101,10 +100,9 @@ public class AtsCompany {
         this.websiteUrl = websiteUrl;
     }
     
-    public AtsCompany(
-            @Nonnull String name) {
+    public AtsCompany() {
         this(null, null, null,
-            null, name, null,
+            null, null, null,
             null, null, null,
             null, null);
     }
@@ -125,8 +123,8 @@ public class AtsCompany {
         return Optional.ofNullable(this.metadata);
     }
 
-    public String name() {
-        return this.name;
+    public Optional<String> name() {
+        return Optional.ofNullable(this.name);
     }
 
     public Optional<String> parentId() {
@@ -182,8 +180,8 @@ public class AtsCompany {
     }
 
 
-    public AtsCompany withName(@Nonnull String name) {
-        this.name = Utils.checkNotNull(name, "name");
+    public AtsCompany withName(@Nullable String name) {
+        this.name = name;
         return this;
     }
 
@@ -321,8 +319,8 @@ public class AtsCompany {
             return this;
         }
 
-        public Builder name(@Nonnull String name) {
-            this.name = Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
+            this.name = name;
             return this;
         }
 

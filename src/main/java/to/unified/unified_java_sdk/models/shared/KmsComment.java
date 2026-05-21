@@ -7,7 +7,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
 import java.lang.Object;
 import java.lang.Override;
@@ -20,6 +19,7 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 public class KmsComment {
 
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     private String content;
 
@@ -70,7 +70,7 @@ public class KmsComment {
 
     @JsonCreator
     public KmsComment(
-            @JsonProperty("content") @Nonnull String content,
+            @JsonProperty("content") @Nullable String content,
             @JsonProperty("content_type") @Nullable ContentType contentType,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("id") @Nullable String id,
@@ -80,8 +80,7 @@ public class KmsComment {
             @JsonProperty("type") @Nullable KmsCommentType type,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
             @JsonProperty("user_id") @Nullable String userId) {
-        this.content = Optional.ofNullable(content)
-            .orElseThrow(() -> new IllegalArgumentException("content cannot be null"));
+        this.content = content;
         this.contentType = contentType;
         this.createdAt = createdAt;
         this.id = id;
@@ -93,16 +92,15 @@ public class KmsComment {
         this.userId = userId;
     }
     
-    public KmsComment(
-            @Nonnull String content) {
-        this(content, null, null,
+    public KmsComment() {
+        this(null, null, null,
             null, null, null,
             null, null, null,
             null);
     }
 
-    public String content() {
-        return this.content;
+    public Optional<String> content() {
+        return Optional.ofNullable(this.content);
     }
 
     public Optional<ContentType> contentType() {
@@ -146,8 +144,8 @@ public class KmsComment {
     }
 
 
-    public KmsComment withContent(@Nonnull String content) {
-        this.content = Utils.checkNotNull(content, "content");
+    public KmsComment withContent(@Nullable String content) {
+        this.content = content;
         return this;
     }
 
@@ -279,8 +277,8 @@ public class KmsComment {
           // force use of static builder() method
         }
 
-        public Builder content(@Nonnull String content) {
-            this.content = Utils.checkNotNull(content, "content");
+        public Builder content(@Nullable String content) {
+            this.content = content;
             return this;
         }
 

@@ -40,7 +40,6 @@ public class Application {
 
         CreateKmsSpaceRequest req = CreateKmsSpaceRequest.builder()
                 .kmsSpace(KmsSpace.builder()
-                    .name("<value>")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -216,7 +215,6 @@ public class Application {
 
         PatchKmsSpaceRequest req = PatchKmsSpaceRequest.builder()
                 .kmsSpace(KmsSpace.builder()
-                    .name("<value>")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -334,7 +332,6 @@ public class Application {
 
         UpdateKmsSpaceRequest req = UpdateKmsSpaceRequest.builder()
                 .kmsSpace(KmsSpace.builder()
-                    .name("<value>")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

@@ -144,7 +144,6 @@ public class Application {
 
         CreateCommerceInventoryRequest req = CreateCommerceInventoryRequest.builder()
                 .commerceInventory(CommerceInventory.builder()
-                    .available(7463.62)
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -325,7 +324,6 @@ public class Application {
 
         CreateCommerceLocationRequest req = CreateCommerceLocationRequest.builder()
                 .commerceLocation(CommerceLocation.builder()
-                    .name("<value>")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -446,7 +444,6 @@ public class Application {
 
         CreateCommerceReviewRequest req = CreateCommerceReviewRequest.builder()
                 .commerceReview(CommerceReview.builder()
-                    .itemId("<id>")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -1606,7 +1603,6 @@ public class Application {
 
         PatchCommerceInventoryRequest req = PatchCommerceInventoryRequest.builder()
                 .commerceInventory(CommerceInventory.builder()
-                    .available(7859.84)
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1790,7 +1786,6 @@ public class Application {
 
         PatchCommerceLocationRequest req = PatchCommerceLocationRequest.builder()
                 .commerceLocation(CommerceLocation.builder()
-                    .name("<value>")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1913,7 +1908,6 @@ public class Application {
 
         PatchCommerceReviewRequest req = PatchCommerceReviewRequest.builder()
                 .commerceReview(CommerceReview.builder()
-                    .itemId("<id>")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2546,7 +2540,6 @@ public class Application {
 
         UpdateCommerceInventoryRequest req = UpdateCommerceInventoryRequest.builder()
                 .commerceInventory(CommerceInventory.builder()
-                    .available(4497.29)
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2730,7 +2723,6 @@ public class Application {
 
         UpdateCommerceLocationRequest req = UpdateCommerceLocationRequest.builder()
                 .commerceLocation(CommerceLocation.builder()
-                    .name("<value>")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2853,7 +2845,6 @@ public class Application {
 
         UpdateCommerceReviewRequest req = UpdateCommerceReviewRequest.builder()
                 .commerceReview(CommerceReview.builder()
-                    .itemId("<id>")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

@@ -39,7 +39,6 @@ public class Application {
 
         CreateKmsPageRequest req = CreateKmsPageRequest.builder()
                 .kmsPage(KmsPage.builder()
-                    .title("<value>")
                     .type(KmsPageType.TEXT)
                     .build())
                 .connectionId("<id>")
@@ -215,7 +214,6 @@ public class Application {
 
         PatchKmsPageRequest req = PatchKmsPageRequest.builder()
                 .kmsPage(KmsPage.builder()
-                    .title("<value>")
                     .type(KmsPageType.OTHER)
                     .build())
                 .connectionId("<id>")
@@ -333,7 +331,6 @@ public class Application {
 
         UpdateKmsPageRequest req = UpdateKmsPageRequest.builder()
                 .kmsPage(KmsPage.builder()
-                    .title("<value>")
                     .type(KmsPageType.OTHER)
                     .build())
                 .connectionId("<id>")

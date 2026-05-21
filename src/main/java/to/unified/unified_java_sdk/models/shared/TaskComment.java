@@ -7,7 +7,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
 import java.lang.Object;
 import java.lang.Override;
@@ -40,6 +39,7 @@ public class TaskComment {
     private String taskId;
 
 
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     private String text;
 
@@ -64,7 +64,7 @@ public class TaskComment {
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("task_id") @Nullable String taskId,
-            @JsonProperty("text") @Nonnull String text,
+            @JsonProperty("text") @Nullable String text,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
             @JsonProperty("user_id") @Nullable String userId,
             @JsonProperty("user_name") @Nullable String userName) {
@@ -72,17 +72,15 @@ public class TaskComment {
         this.id = id;
         this.raw = raw;
         this.taskId = taskId;
-        this.text = Optional.ofNullable(text)
-            .orElseThrow(() -> new IllegalArgumentException("text cannot be null"));
+        this.text = text;
         this.updatedAt = updatedAt;
         this.userId = userId;
         this.userName = userName;
     }
     
-    public TaskComment(
-            @Nonnull String text) {
+    public TaskComment() {
         this(null, null, null,
-            null, text, null,
+            null, null, null,
             null, null);
     }
 
@@ -102,8 +100,8 @@ public class TaskComment {
         return Optional.ofNullable(this.taskId);
     }
 
-    public String text() {
-        return this.text;
+    public Optional<String> text() {
+        return Optional.ofNullable(this.text);
     }
 
     public Optional<OffsetDateTime> updatedAt() {
@@ -147,8 +145,8 @@ public class TaskComment {
     }
 
 
-    public TaskComment withText(@Nonnull String text) {
-        this.text = Utils.checkNotNull(text, "text");
+    public TaskComment withText(@Nullable String text) {
+        this.text = text;
         return this;
     }
 
@@ -255,8 +253,8 @@ public class TaskComment {
             return this;
         }
 
-        public Builder text(@Nonnull String text) {
-            this.text = Utils.checkNotNull(text, "text");
+        public Builder text(@Nullable String text) {
+            this.text = text;
             return this;
         }
 

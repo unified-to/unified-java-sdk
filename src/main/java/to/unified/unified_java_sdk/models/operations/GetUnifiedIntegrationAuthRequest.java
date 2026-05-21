@@ -49,6 +49,13 @@ public class GetUnifiedIntegrationAuthRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=redirect")
     private Boolean redirect;
 
+    /**
+     * Optional region index (into the integration api.urls array) selected by the end-user. Set
+     * automatically by the auth widget when the workspace integration has prompt_region=true.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=region")
+    private String region;
+
 
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scopes")
     private List<String> scopes;
@@ -87,6 +94,7 @@ public class GetUnifiedIntegrationAuthRequest {
             @Nonnull String integrationType,
             @Nullable String lang,
             @Nullable Boolean redirect,
+            @Nullable String region,
             @Nullable List<String> scopes,
             @Nullable String state,
             @Nullable String subdomain,
@@ -99,6 +107,7 @@ public class GetUnifiedIntegrationAuthRequest {
             .orElseThrow(() -> new IllegalArgumentException("integrationType cannot be null"));
         this.lang = lang;
         this.redirect = redirect;
+        this.region = region;
         this.scopes = scopes;
         this.state = state;
         this.subdomain = subdomain;
@@ -113,7 +122,7 @@ public class GetUnifiedIntegrationAuthRequest {
         this(null, null, null,
             integrationType, null, null,
             null, null, null,
-            null, workspaceId);
+            null, null, workspaceId);
     }
 
     public Optional<String> env() {
@@ -151,6 +160,14 @@ public class GetUnifiedIntegrationAuthRequest {
 
     public Optional<Boolean> redirect() {
         return Optional.ofNullable(this.redirect);
+    }
+
+    /**
+     * Optional region index (into the integration api.urls array) selected by the end-user. Set
+     * automatically by the auth widget when the workspace integration has prompt_region=true.
+     */
+    public Optional<String> region() {
+        return Optional.ofNullable(this.region);
     }
 
     public Optional<List<String>> scopes() {
@@ -241,6 +258,16 @@ public class GetUnifiedIntegrationAuthRequest {
     }
 
 
+    /**
+     * Optional region index (into the integration api.urls array) selected by the end-user. Set
+     * automatically by the auth widget when the workspace integration has prompt_region=true.
+     */
+    public GetUnifiedIntegrationAuthRequest withRegion(@Nullable String region) {
+        this.region = region;
+        return this;
+    }
+
+
     public GetUnifiedIntegrationAuthRequest withScopes(@Nullable List<String> scopes) {
         this.scopes = scopes;
         return this;
@@ -301,6 +328,7 @@ public class GetUnifiedIntegrationAuthRequest {
             Utils.enhancedDeepEquals(this.integrationType, other.integrationType) &&
             Utils.enhancedDeepEquals(this.lang, other.lang) &&
             Utils.enhancedDeepEquals(this.redirect, other.redirect) &&
+            Utils.enhancedDeepEquals(this.region, other.region) &&
             Utils.enhancedDeepEquals(this.scopes, other.scopes) &&
             Utils.enhancedDeepEquals(this.state, other.state) &&
             Utils.enhancedDeepEquals(this.subdomain, other.subdomain) &&
@@ -313,8 +341,8 @@ public class GetUnifiedIntegrationAuthRequest {
         return Utils.enhancedHash(
             env, externalXref, failureRedirect,
             integrationType, lang, redirect,
-            scopes, state, subdomain,
-            successRedirect, workspaceId);
+            region, scopes, state,
+            subdomain, successRedirect, workspaceId);
     }
     
     @Override
@@ -326,6 +354,7 @@ public class GetUnifiedIntegrationAuthRequest {
                 "integrationType", integrationType,
                 "lang", lang,
                 "redirect", redirect,
+                "region", region,
                 "scopes", scopes,
                 "state", state,
                 "subdomain", subdomain,
@@ -347,6 +376,8 @@ public class GetUnifiedIntegrationAuthRequest {
         private String lang;
 
         private Boolean redirect;
+
+        private String region;
 
         private List<String> scopes;
 
@@ -405,6 +436,15 @@ public class GetUnifiedIntegrationAuthRequest {
             return this;
         }
 
+        /**
+         * Optional region index (into the integration api.urls array) selected by the end-user. Set
+         * automatically by the auth widget when the workspace integration has prompt_region=true.
+         */
+        public Builder region(@Nullable String region) {
+            this.region = region;
+            return this;
+        }
+
         public Builder scopes(@Nullable List<String> scopes) {
             this.scopes = scopes;
             return this;
@@ -448,8 +488,8 @@ public class GetUnifiedIntegrationAuthRequest {
             return new GetUnifiedIntegrationAuthRequest(
                 env, externalXref, failureRedirect,
                 integrationType, lang, redirect,
-                scopes, state, subdomain,
-                successRedirect, workspaceId);
+                region, scopes, state,
+                subdomain, successRedirect, workspaceId);
         }
 
     }

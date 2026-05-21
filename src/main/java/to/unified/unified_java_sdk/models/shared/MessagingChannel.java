@@ -7,7 +7,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Object;
@@ -57,6 +56,7 @@ public class MessagingChannel {
     private List<MessagingMember> members;
 
 
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
@@ -89,7 +89,7 @@ public class MessagingChannel {
             @JsonProperty("is_active") @Nullable Boolean isActive,
             @JsonProperty("is_private") @Nullable Boolean isPrivate,
             @JsonProperty("members") @Nullable List<MessagingMember> members,
-            @JsonProperty("name") @Nonnull String name,
+            @JsonProperty("name") @Nullable String name,
             @JsonProperty("parent_id") @Nullable String parentId,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
@@ -101,19 +101,17 @@ public class MessagingChannel {
         this.isActive = isActive;
         this.isPrivate = isPrivate;
         this.members = members;
-        this.name = Optional.ofNullable(name)
-            .orElseThrow(() -> new IllegalArgumentException("name cannot be null"));
+        this.name = name;
         this.parentId = parentId;
         this.raw = raw;
         this.updatedAt = updatedAt;
         this.webUrl = webUrl;
     }
     
-    public MessagingChannel(
-            @Nonnull String name) {
+    public MessagingChannel() {
         this(null, null, null,
             null, null, null,
-            null, name, null,
+            null, null, null,
             null, null, null);
     }
 
@@ -145,8 +143,8 @@ public class MessagingChannel {
         return Optional.ofNullable(this.members);
     }
 
-    public String name() {
-        return this.name;
+    public Optional<String> name() {
+        return Optional.ofNullable(this.name);
     }
 
     public Optional<String> parentId() {
@@ -212,8 +210,8 @@ public class MessagingChannel {
     }
 
 
-    public MessagingChannel withName(@Nonnull String name) {
-        this.name = Utils.checkNotNull(name, "name");
+    public MessagingChannel withName(@Nullable String name) {
+        this.name = name;
         return this;
     }
 
@@ -358,8 +356,8 @@ public class MessagingChannel {
             return this;
         }
 
-        public Builder name(@Nonnull String name) {
-            this.name = Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
+            this.name = name;
             return this;
         }
 

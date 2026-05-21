@@ -42,7 +42,6 @@ public class Application {
 
         CreateFormsFormRequest req = CreateFormsFormRequest.builder()
                 .formsForm(FormsForm.builder()
-                    .name("<value>")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -333,7 +332,6 @@ public class Application {
 
         PatchFormsFormRequest req = PatchFormsFormRequest.builder()
                 .formsForm(FormsForm.builder()
-                    .name("<value>")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -451,7 +449,6 @@ public class Application {
 
         UpdateFormsFormRequest req = UpdateFormsFormRequest.builder()
                 .formsForm(FormsForm.builder()
-                    .name("<value>")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

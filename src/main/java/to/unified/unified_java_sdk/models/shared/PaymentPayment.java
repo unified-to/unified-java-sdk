@@ -58,8 +58,18 @@ public class PaymentPayment {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("link_id")
+    private String linkId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     private String notes;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("organization_id")
+    private String organizationId;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -100,7 +110,9 @@ public class PaymentPayment {
             @JsonProperty("currency") @Nullable String currency,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("invoice_id") @Nullable String invoiceId,
+            @JsonProperty("link_id") @Nullable String linkId,
             @JsonProperty("notes") @Nullable String notes,
+            @JsonProperty("organization_id") @Nullable String organizationId,
             @JsonProperty("payment_method") @Nullable String paymentMethod,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("reference") @Nullable String reference,
@@ -115,7 +127,9 @@ public class PaymentPayment {
             .orElse(Builder._SINGLETON_VALUE_Currency.value());
         this.id = id;
         this.invoiceId = invoiceId;
+        this.linkId = linkId;
         this.notes = notes;
+        this.organizationId = organizationId;
         this.paymentMethod = paymentMethod;
         this.raw = raw;
         this.reference = reference;
@@ -129,7 +143,8 @@ public class PaymentPayment {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null);
+            null, null, null,
+            null);
     }
 
     public Optional<String> accountId() {
@@ -160,8 +175,16 @@ public class PaymentPayment {
         return Optional.ofNullable(this.invoiceId);
     }
 
+    public Optional<String> linkId() {
+        return Optional.ofNullable(this.linkId);
+    }
+
     public Optional<String> notes() {
         return Optional.ofNullable(this.notes);
+    }
+
+    public Optional<String> organizationId() {
+        return Optional.ofNullable(this.organizationId);
     }
 
     public Optional<String> paymentMethod() {
@@ -235,8 +258,20 @@ public class PaymentPayment {
     }
 
 
+    public PaymentPayment withLinkId(@Nullable String linkId) {
+        this.linkId = linkId;
+        return this;
+    }
+
+
     public PaymentPayment withNotes(@Nullable String notes) {
         this.notes = notes;
+        return this;
+    }
+
+
+    public PaymentPayment withOrganizationId(@Nullable String organizationId) {
+        this.organizationId = organizationId;
         return this;
     }
 
@@ -294,7 +329,9 @@ public class PaymentPayment {
             Utils.enhancedDeepEquals(this.currency, other.currency) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
             Utils.enhancedDeepEquals(this.invoiceId, other.invoiceId) &&
+            Utils.enhancedDeepEquals(this.linkId, other.linkId) &&
             Utils.enhancedDeepEquals(this.notes, other.notes) &&
+            Utils.enhancedDeepEquals(this.organizationId, other.organizationId) &&
             Utils.enhancedDeepEquals(this.paymentMethod, other.paymentMethod) &&
             Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.reference, other.reference) &&
@@ -308,9 +345,10 @@ public class PaymentPayment {
         return Utils.enhancedHash(
             accountId, billId, contactId,
             createdAt, currency, id,
-            invoiceId, notes, paymentMethod,
-            raw, reference, totalAmount,
-            type, updatedAt);
+            invoiceId, linkId, notes,
+            organizationId, paymentMethod, raw,
+            reference, totalAmount, type,
+            updatedAt);
     }
     
     @Override
@@ -323,7 +361,9 @@ public class PaymentPayment {
                 "currency", currency,
                 "id", id,
                 "invoiceId", invoiceId,
+                "linkId", linkId,
                 "notes", notes,
+                "organizationId", organizationId,
                 "paymentMethod", paymentMethod,
                 "raw", raw,
                 "reference", reference,
@@ -349,7 +389,11 @@ public class PaymentPayment {
 
         private String invoiceId;
 
+        private String linkId;
+
         private String notes;
+
+        private String organizationId;
 
         private String paymentMethod;
 
@@ -402,8 +446,18 @@ public class PaymentPayment {
             return this;
         }
 
+        public Builder linkId(@Nullable String linkId) {
+            this.linkId = linkId;
+            return this;
+        }
+
         public Builder notes(@Nullable String notes) {
             this.notes = notes;
+            return this;
+        }
+
+        public Builder organizationId(@Nullable String organizationId) {
+            this.organizationId = organizationId;
             return this;
         }
 
@@ -441,9 +495,10 @@ public class PaymentPayment {
             return new PaymentPayment(
                 accountId, billId, contactId,
                 createdAt, currency, id,
-                invoiceId, notes, paymentMethod,
-                raw, reference, totalAmount,
-                type, updatedAt);
+                invoiceId, linkId, notes,
+                organizationId, paymentMethod, raw,
+                reference, totalAmount, type,
+                updatedAt);
         }
 
 

@@ -7,7 +7,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -90,6 +89,7 @@ public class LmsCourse {
     private List<LmsMedia> media;
 
 
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
@@ -155,7 +155,7 @@ public class LmsCourse {
             @JsonProperty("is_private") @Nullable Boolean isPrivate,
             @JsonProperty("languages") @Nullable List<String> languages,
             @JsonProperty("media") @Nullable List<LmsMedia> media,
-            @JsonProperty("name") @Nonnull String name,
+            @JsonProperty("name") @Nullable String name,
             @JsonProperty("price_amount") @Nullable Double priceAmount,
             @JsonProperty("provider_name") @Nullable String providerName,
             @JsonProperty("published_at") @Nullable OffsetDateTime publishedAt,
@@ -178,8 +178,7 @@ public class LmsCourse {
         this.isPrivate = isPrivate;
         this.languages = languages;
         this.media = media;
-        this.name = Optional.ofNullable(name)
-            .orElseThrow(() -> new IllegalArgumentException("name cannot be null"));
+        this.name = name;
         this.priceAmount = priceAmount;
         this.providerName = providerName;
         this.publishedAt = publishedAt;
@@ -191,13 +190,12 @@ public class LmsCourse {
         this.updatedAt = updatedAt;
     }
     
-    public LmsCourse(
-            @Nonnull String name) {
+    public LmsCourse() {
         this(null, null, null,
             null, null, null,
             null, null, null,
             null, null, null,
-            null, name, null,
+            null, null, null,
             null, null, null,
             null, null, null,
             null, null);
@@ -258,8 +256,8 @@ public class LmsCourse {
         return Optional.ofNullable(this.media);
     }
 
-    public String name() {
-        return this.name;
+    public Optional<String> name() {
+        return Optional.ofNullable(this.name);
     }
 
     public Optional<Double> priceAmount() {
@@ -387,8 +385,8 @@ public class LmsCourse {
     }
 
 
-    public LmsCourse withName(@Nonnull String name) {
-        this.name = Utils.checkNotNull(name, "name");
+    public LmsCourse withName(@Nullable String name) {
+        this.name = name;
         return this;
     }
 
@@ -647,8 +645,8 @@ public class LmsCourse {
             return this;
         }
 
-        public Builder name(@Nonnull String name) {
-            this.name = Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
+            this.name = name;
             return this;
         }
 

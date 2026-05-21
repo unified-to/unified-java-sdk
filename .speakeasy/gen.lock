@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: 389d12ddd497f44c9fc1e4755d3d9af5
+  docChecksum: 1b6af68b3f4db0edf5a26e51c3a17b4f
   docVersion: "1.0"
-  speakeasyVersion: 1.763.2
-  generationVersion: 2.884.4
-  releaseVersion: 0.47.26
-  configChecksum: 34fae332b059090ca4a5b76311874fb3
+  speakeasyVersion: 1.763.4
+  generationVersion: 2.884.11
+  releaseVersion: 0.47.27
+  configChecksum: 4fca181c446f2c35fd6720935b589af2
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-java-sdk
@@ -20,7 +20,7 @@ features:
     acceptHeaders: 2.81.2
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.3
-    core: 3.55.24
+    core: 3.55.25
     downloadStreams: 0.1.1
     globalSecurity: 2.83.4
     globalSecurityCallbacks: 0.1.0
@@ -28,7 +28,7 @@ features:
     inputOutputModels: 2.83.0
     openEnums: 0.2.0
     sdkHooks: 1.2.0
-    unions: 0.3.5
+    unions: 0.3.6
     uploadStreams: 0.1.0
 trackedFiles:
   .gitattributes:
@@ -93,7 +93,7 @@ trackedFiles:
     pristine_git_object: efc87fac0f1c2a37afbd1c1745c4be962ba606a0
   docs/models/operations/CreateAccountingCreditmemoQueryParamFields.md:
     id: 9bfa84f9e11b
-    last_write_checksum: sha1:a14e54887fc7439ff802af1389dc98e8c4103d06
+    last_write_checksum: sha1:06021f9d829ea519ebe4ff23b4d6f81d7759256f
     pristine_git_object: 8e94e7fb8fc82bf11281f4b2f25172ce6eadacb3
   docs/models/operations/CreateAccountingCreditmemoRequest.md:
     id: 3611f1a6e1b6
@@ -951,7 +951,7 @@ trackedFiles:
     pristine_git_object: 729a0bdd5697b9d2ac22a28d727a9247d21a4f86
   docs/models/operations/CreatePaymentPaymentQueryParamFields.md:
     id: 0163667c5918
-    last_write_checksum: sha1:42918254ef8538759bc38476524adb38d366e0be
+    last_write_checksum: sha1:a9b53f1a482c91fdee1d003171d3e06baa256b3f
     pristine_git_object: 41de4abed83f7ab18b62481447e7751d5e1c50b7
   docs/models/operations/CreatePaymentPaymentRequest.md:
     id: ddc642c03198
@@ -1331,7 +1331,7 @@ trackedFiles:
     pristine_git_object: 836012857f7978f5ffcb32ed1bd2a21534188e04
   docs/models/operations/GetAccountingCreditmemoQueryParamFields.md:
     id: 8b3af8f1000c
-    last_write_checksum: sha1:bb0521e4fc635e4a4b1a7689f6424feb22cfd7a1
+    last_write_checksum: sha1:047ecd9d431fd05b07ef73eb9ac875ed6bae6c71
     pristine_git_object: 62c2e1bc119c183773a7724175aa02c9c0b8f066
   docs/models/operations/GetAccountingCreditmemoRequest.md:
     id: 47a0eead8486
@@ -2035,7 +2035,7 @@ trackedFiles:
     pristine_git_object: 491a171942de9efb386e652898f212984bce22b8
   docs/models/operations/GetHrisPayslipQueryParamFields.md:
     id: 9eaabc500a3c
-    last_write_checksum: sha1:418eff69eab7fdb844bd6711b92dbfd6b8fda224
+    last_write_checksum: sha1:918a0a1413f982500d7010d77b626d06eb8e4f43
     pristine_git_object: d40731ae8c512349563f11df44f91711f1dcf304
   docs/models/operations/GetHrisPayslipRequest.md:
     id: 8a2940975830
@@ -2275,7 +2275,7 @@ trackedFiles:
     pristine_git_object: 418f86e645abd46eb7410da686de590638bf5215
   docs/models/operations/GetPaymentPaymentQueryParamFields.md:
     id: ada61cad38e9
-    last_write_checksum: sha1:b60ef4773bf85390ed3fe73b56d820f05e0cde96
+    last_write_checksum: sha1:aa4409cf362bc934aea2d9da91f5defcaf9d09f0
     pristine_git_object: b27dce0948e2f01e72efe96e7414e199acdf1deb
   docs/models/operations/GetPaymentPaymentRequest.md:
     id: 74198de6e870
@@ -2637,7 +2637,7 @@ trackedFiles:
     pristine_git_object: e732f89c491330b8a0d566fda3b3ec3473004585
   docs/models/operations/GetUnifiedIntegrationAuthRequest.md:
     id: 7dd2e07de06d
-    last_write_checksum: sha1:44e6a7b9f1fdc35a3bc14f14f65984cc7a17d152
+    last_write_checksum: sha1:1340117832c3a31ae82225b6a30b67396f3035af
     pristine_git_object: d972e5ddd79c0a3ca14bf49a671f992146db554a
   docs/models/operations/GetUnifiedIntegrationAuthResponse.md:
     id: 9d040687b463
@@ -2765,7 +2765,7 @@ trackedFiles:
     pristine_git_object: e50adbd0075d583c713c97987f27e9bbdf0d47c6
   docs/models/operations/ListAccountingCreditmemoesQueryParamFields.md:
     id: 8b4f691d7afe
-    last_write_checksum: sha1:0cee009c8b512cb8d6b88682f784407cc842c615
+    last_write_checksum: sha1:7b28e75d930e1d8804379cf9ac9fc8abfd2e1605
     pristine_git_object: cce0ca2bfbab450ca049d073c22a59c9b9a5a4af
   docs/models/operations/ListAccountingCreditmemoesRequest.md:
     id: 1d5d88881710
@@ -3545,7 +3545,7 @@ trackedFiles:
     pristine_git_object: f88ac15ba021df920f3646ea8cf7264f64d2d397
   docs/models/operations/ListHrisPayslipsQueryParamFields.md:
     id: 76a49bbff9a7
-    last_write_checksum: sha1:6602b4321c49a78b386d655bab46f815582f95f0
+    last_write_checksum: sha1:363c4c5e4b4489c96a47dee221ec5086460675dd
     pristine_git_object: f32bb1215289867ecc818521417e04d5941fa68f
   docs/models/operations/ListHrisPayslipsRequest.md:
     id: 5e65fdc9ea34
@@ -3805,7 +3805,7 @@ trackedFiles:
     pristine_git_object: 5b6089e5ad99b08b2eaf11742462c049f468e03a
   docs/models/operations/ListPaymentPaymentsQueryParamFields.md:
     id: 5d098b1b5782
-    last_write_checksum: sha1:0072befee4b5d74d4d8dbc9a2e2c4b04baff662a
+    last_write_checksum: sha1:30287632520f1f491978e2b46cb01b70f3bc0d42
     pristine_git_object: f7c33c6ddd2893ce1844e72ad0451f5440b2bff8
   docs/models/operations/ListPaymentPaymentsRequest.md:
     id: 104595d54eeb
@@ -4273,7 +4273,7 @@ trackedFiles:
     pristine_git_object: 171ca6c5afde6322277c6f50a93f3fd8cc92d6cf
   docs/models/operations/PatchAccountingCreditmemoQueryParamFields.md:
     id: a5a0df08dc4d
-    last_write_checksum: sha1:dbbe74a862bcc86b613d2a670444117ef4e1d2ed
+    last_write_checksum: sha1:82f63779755480da27f4669d5d5dc837696c006c
     pristine_git_object: d41cd7b8bd90b9ccb6054a1de7dcd76b24f29724
   docs/models/operations/PatchAccountingCreditmemoRequest.md:
     id: 23495ac08222
@@ -5131,7 +5131,7 @@ trackedFiles:
     pristine_git_object: adbad8f56c2727f7ab5c5b7f6a7ee2321de3a041
   docs/models/operations/PatchPaymentPaymentQueryParamFields.md:
     id: bbc583bd9766
-    last_write_checksum: sha1:7ba25a1c5eba63385a847039448c96a9e7d09218
+    last_write_checksum: sha1:53b49e495e64e5095f79a8c88eb47136d0bf14c9
     pristine_git_object: b75c2954389891609ad7fcb3188fcb164caf0b01
   docs/models/operations/PatchPaymentPaymentRequest.md:
     id: 68fce48eb3a2
@@ -6295,7 +6295,7 @@ trackedFiles:
     pristine_git_object: 4e936b1aaa1bf854af468a11472f053ff2451b5d
   docs/models/operations/UpdateAccountingCreditmemoQueryParamFields.md:
     id: 59bd6b666263
-    last_write_checksum: sha1:83c681b91186f6b4f6290981e3d2d7497307a6eb
+    last_write_checksum: sha1:f5a9a5a297b1f51c8be64fa7404729721c049c9c
     pristine_git_object: d66b06f39cabcc5129416266f06982b7be80ca75
   docs/models/operations/UpdateAccountingCreditmemoRequest.md:
     id: 05e40b45116a
@@ -7153,7 +7153,7 @@ trackedFiles:
     pristine_git_object: 0ac1255554a80a68f4552573bc538ee7dd763f39
   docs/models/operations/UpdatePaymentPaymentQueryParamFields.md:
     id: ed8cd2c40585
-    last_write_checksum: sha1:c407c89fde6c3f7d044871eedb47009e25c23f40
+    last_write_checksum: sha1:9d903ce598685ae5a3a5b2fa5808768b20bd2a23
     pristine_git_object: a0749abab35a657fb68c280540a87a844ad05fe7
   docs/models/operations/UpdatePaymentPaymentRequest.md:
     id: "595274027558"
@@ -7813,11 +7813,11 @@ trackedFiles:
     pristine_git_object: 1f8a80ad340b92d3d9f173f458c576950f7ccffe
   docs/models/shared/AssessmentPackage.md:
     id: 83220de52c26
-    last_write_checksum: sha1:02c02528e161a866a43d0382c6c864ba9756bd06
+    last_write_checksum: sha1:29f2f0bb1bbaae2476d1a3959f8acbf0161741e2
     pristine_git_object: 1426ecbcc6042511e5ab823ac1fd8bbee8f2e2ef
   docs/models/shared/AssessmentPackageRegion.md:
     id: bd5f65bfcb7e
-    last_write_checksum: sha1:d2e31d68f21eb3bd09a6adaa640ad0a30892bd3d
+    last_write_checksum: sha1:86300130e29d8aaa18af2999c53862d7c9ec99dc
     pristine_git_object: 46e4e4205f9e3593ae06f219a1b8adfd7f91c6cd
   docs/models/shared/AssessmentPackageType.md:
     id: 3718b56b11a1
@@ -7825,7 +7825,7 @@ trackedFiles:
     pristine_git_object: 9c1bf5ff593b9382df78b7d711a4b1790c57a184
   docs/models/shared/AssessmentParameter.md:
     id: 098c315eead4
-    last_write_checksum: sha1:aa0e5664e7f85d9528906fb7f02fdb766314921a
+    last_write_checksum: sha1:a333a413c4f82f02672d2358c89948fc55c9a644
     pristine_git_object: 52f8b6c613f8e7b339c7d1f57e5687cee9a899c8
   docs/models/shared/AssessmentParameterInput.md:
     id: 3a0b84618317
@@ -7877,7 +7877,7 @@ trackedFiles:
     pristine_git_object: 3af36f9684814d4fedfc2b15d151b783ab864b0e
   docs/models/shared/AtsCompany.md:
     id: d71bcea629ba
-    last_write_checksum: sha1:fe4773382bd1456ac244fbda682e2026139c79f8
+    last_write_checksum: sha1:73524a914b25d45c79227125a0bc430752640c24
     pristine_git_object: 070c0e6de8c4c052782ac4e7be620e057f83952f
   docs/models/shared/AtsCompensation.md:
     id: 34abfe6cd044
@@ -8031,7 +8031,7 @@ trackedFiles:
     pristine_git_object: f322e99ef83ebfc3e8d4b61ce956736f9de662a6
   docs/models/shared/CalendarCalendar.md:
     id: 6547c1994f8c
-    last_write_checksum: sha1:a294bb8fc82406d84079ec22a96886e809eaed3d
+    last_write_checksum: sha1:346f21d97e041fd41a44cedce793a4044b9f42f4
     pristine_git_object: 7130d56cd1c3970906737ea5b83da701a09f3485
   docs/models/shared/CalendarConference.md:
     id: 4442c577bcba
@@ -8107,7 +8107,7 @@ trackedFiles:
     pristine_git_object: f78df03f642d6ac624f6d1cd7660b8dc3d616f04
   docs/models/shared/CommerceInventory.md:
     id: 8a6c36e0ea32
-    last_write_checksum: sha1:5a0c5a6d350f3d3b33e822eb0a30a8599ba3ba48
+    last_write_checksum: sha1:754f926a8f24bd57ef3cdb581e57230d46ba0ac1
     pristine_git_object: e5a12fbab1a45863f6252a8cb756ef8c6fa0936f
   docs/models/shared/CommerceItem.md:
     id: f9c6157d3534
@@ -8139,7 +8139,7 @@ trackedFiles:
     pristine_git_object: 107c3eb5e91d7bb52d8285a6c141afcbbfcc9c86
   docs/models/shared/CommerceLocation.md:
     id: ebf6acd3324f
-    last_write_checksum: sha1:dfb77b91ebc82a08382a2370df817976f81f9d6f
+    last_write_checksum: sha1:0a39f70265c25a58b7594b8f9c07987604aa0d36
     pristine_git_object: 257a229a263bcf671f556687533f68ee6c7e16ea
   docs/models/shared/CommerceMetadata.md:
     id: b7ae805cdd3e
@@ -8187,11 +8187,11 @@ trackedFiles:
     pristine_git_object: 4bc76a9119f733bb0c68fd21a271538bf71e64fd
   docs/models/shared/CommerceReview.md:
     id: 97edf0abaf2a
-    last_write_checksum: sha1:e871fde8699b864e60fac230992ec6419e08ad23
+    last_write_checksum: sha1:6944247e9c2374009aea0bdb9c8088fcc2a5c7c8
     pristine_git_object: e97c0302785b848307f9de802d2720e2c4c9c870
   docs/models/shared/CommerceReviewComment.md:
     id: c2db3dcc8766
-    last_write_checksum: sha1:1a6ac4e8988ba18a8cb2c7c650f244f15c352445
+    last_write_checksum: sha1:fe306f5f37f70c8c999547994efa167ee7f2b65b
     pristine_git_object: c6760def6e9b0172aa989cd60325503681af5b90
   docs/models/shared/CommerceReviewCommentStatus.md:
     id: 569099a2b960
@@ -8423,7 +8423,7 @@ trackedFiles:
     pristine_git_object: ddac376541161f680c39fb2aa21aaf870fe50525
   docs/models/shared/FormsForm.md:
     id: f1333be23a28
-    last_write_checksum: sha1:52280d10c4f3da733345171208de6ff205e679e1
+    last_write_checksum: sha1:7cae026d08d886bed75e4fbfd3edc97386596fb2
     pristine_git_object: 7344d4074be7c4d86da579d64b49abcff2f65ee2
   docs/models/shared/FormsSubmission.md:
     id: 60556bdd336b
@@ -8519,7 +8519,7 @@ trackedFiles:
     pristine_git_object: 1b7eaaa7602ee7822cbfe15002a413c5a62245ce
   docs/models/shared/HrisDevice.md:
     id: a3b27e5c4a5f
-    last_write_checksum: sha1:ff5caf475fb8cc33d9bb0fe13e98f9cbc487a67a
+    last_write_checksum: sha1:b1cefeed9c6aa39e2a2c0bcf8fc8504d7b735c4d
     pristine_git_object: 8960cbbfb5f332feed6a7980fd3a1812f8c26832
   docs/models/shared/HrisEmail.md:
     id: f7c0e72f4fed
@@ -8595,7 +8595,7 @@ trackedFiles:
     pristine_git_object: 0010f4d32e460e14ab90be64ffcc65c23b3a1456
   docs/models/shared/HrisPayslip.md:
     id: 9956c7b25774
-    last_write_checksum: sha1:9158bdddad1fd58204539822f45418de4d18158e
+    last_write_checksum: sha1:b32b3df4bdee224c4d398a15b724be45dd490d5c
     pristine_git_object: ed5daabe7b01e1d3988800874a9bb5d67cf363d1
   docs/models/shared/HrisPayslipDetail.md:
     id: b3ba1e490474
@@ -8615,7 +8615,7 @@ trackedFiles:
     pristine_git_object: c64af12600303463720012a6bf4579f22999fc6d
   docs/models/shared/HrisTimeoff.md:
     id: 58b2bbdd703e
-    last_write_checksum: sha1:ec992031f7954f3b9ef4770f7fb9e516c45660a4
+    last_write_checksum: sha1:3ead57703f0d7c4875b4ffb13370cf29c340158b
     pristine_git_object: 65aa003fe51e318a1c7e25b94917061468733c81
   docs/models/shared/HrisTimeoffStatus.md:
     id: 72763cac4c0e
@@ -8681,7 +8681,7 @@ trackedFiles:
     pristine_git_object: 423d0ca249e62ed26d374c9795f67cd6dbea2e4d
   docs/models/shared/KmsComment.md:
     id: a4b15c0a28c1
-    last_write_checksum: sha1:edbaa46494d20aac02d361c59b303ce51dec02c9
+    last_write_checksum: sha1:14763acbec452ac672c79e579e2972edba46764e
     pristine_git_object: e918498d2eda5c0d1af1c4086fe198f864e748bb
   docs/models/shared/KmsCommentType.md:
     id: 0f0f80a68362
@@ -8689,7 +8689,7 @@ trackedFiles:
     pristine_git_object: 95a1f4cce9dacdfa64da094b9c5b7ccbb3a20fbb
   docs/models/shared/KmsPage.md:
     id: 06d30075caff
-    last_write_checksum: sha1:7724b918ae8f260028686ac252f6d1ed5998130d
+    last_write_checksum: sha1:3f62d557728023c0061204b191f30db0180ec2e7
     pristine_git_object: 1538a510755499c5cfa65cd9196d1340f125b437
   docs/models/shared/KmsPageMetadata.md:
     id: 7a90a3f061c6
@@ -8729,7 +8729,7 @@ trackedFiles:
     pristine_git_object: 2ad20b3b1c22196146301345cc7f7de1694dee57
   docs/models/shared/KmsSpace.md:
     id: 8ce4ab10cabc
-    last_write_checksum: sha1:cd88dc1b7a02ee8a1ce2730c5c24ee3d706e28b1
+    last_write_checksum: sha1:f3db43d75354c547e84b88e8aa2018ea22423f7c
     pristine_git_object: e3ccb33530f493d245670e57143b098c8a5617f9
   docs/models/shared/LabelFormat.md:
     id: 14956c22c8ff
@@ -9041,7 +9041,7 @@ trackedFiles:
     pristine_git_object: 6eb072bd4aa455d4ef2d31dee7255c26563e6bc4
   docs/models/shared/LmsClass.md:
     id: c7029c3fff18
-    last_write_checksum: sha1:68e406c0a8b1e7f22c84b7c7c62813b126c16211
+    last_write_checksum: sha1:d2f5ee03a980a8927e4513bf5634c8cd37e6a724
     pristine_git_object: a8bdf8862a0a370fab81aa1f9cd97fbea81ed553
   docs/models/shared/LmsCollection.md:
     id: 205b74453aee
@@ -9055,7 +9055,7 @@ trackedFiles:
     last_write_checksum: sha1:5d88c5b0aafd84ca745c499dad8648f1774fb57c
   docs/models/shared/LmsCourse.md:
     id: 78641b1a7593
-    last_write_checksum: sha1:25e0498aa4405ec4e1a56817f26a5dbb3c12f995
+    last_write_checksum: sha1:42e65f93056679afa30b6c716d79400f7509f610
     pristine_git_object: 690cac37dec3e55f18be4b3b3c6ea1dc952ddf91
   docs/models/shared/LmsEmail.md:
     id: ed89538c8399
@@ -9147,7 +9147,7 @@ trackedFiles:
     pristine_git_object: 83292f884ca0a0d51307866be22a9e5997f5585e
   docs/models/shared/MessagingChannel.md:
     id: 3dfd52964445
-    last_write_checksum: sha1:6547573001622c7ea4900ab4fb91a0f910662b90
+    last_write_checksum: sha1:b8c2b6c0929eb402e0b9a287d562b2586df91d61
     pristine_git_object: 0c3fb751c4c1380868fb936da7af8786cf2604b1
   docs/models/shared/MessagingEvent.md:
     id: f04f08d2d990
@@ -9299,7 +9299,7 @@ trackedFiles:
     pristine_git_object: fe317f98613c3b60a5c7b978dcc2ad856d567a8b
   docs/models/shared/PaymentPayment.md:
     id: bba55f0a22b7
-    last_write_checksum: sha1:5229f6f2ae533c898db6db30ce1d8532fcfd3768
+    last_write_checksum: sha1:47d6594475a49448f3426a554fb57c81d49669bf
     pristine_git_object: ca3720a81ec6cfd3a2d37d7be6fb0cba5e2a9b75
   docs/models/shared/PaymentPaymentType.md:
     id: 7bce80ba988b
@@ -9307,7 +9307,7 @@ trackedFiles:
     pristine_git_object: ccfebebdde3b1d43ae455e420666a1d9857eed3a
   docs/models/shared/PaymentPayout.md:
     id: e8d58ea7aee1
-    last_write_checksum: sha1:25dbb178f9b664cb7e24375644efbbf95033b66e
+    last_write_checksum: sha1:8a389ceb8d7825f1c8e73789371ebb46adeb09b6
     pristine_git_object: b6e023d68a259803d6fe5faa6e4758b0ebffc22f
   docs/models/shared/PaymentPayoutStatus.md:
     id: b7b8a6a004a3
@@ -9315,7 +9315,7 @@ trackedFiles:
     pristine_git_object: 87887b61e0967f67e1e7e759ec2f7bfcff476392
   docs/models/shared/PaymentRefund.md:
     id: 94eeeabe2ba1
-    last_write_checksum: sha1:7bc0162e72c6ac66c184b512c8cb9765a4aaafde
+    last_write_checksum: sha1:fcd03269330533dcd85ce7b0db170bc5e07157c0
     pristine_git_object: 6f8c26ce745642ce993ab20fc630847247e79f39
   docs/models/shared/PaymentRefundStatus.md:
     id: 70b67ff84654
@@ -10023,7 +10023,7 @@ trackedFiles:
     pristine_git_object: 0bc5871f385c0c5daa648a9d1f0523b769874ddb
   docs/models/shared/PropertyMessagingEventChannel.md:
     id: c53ac64ebdba
-    last_write_checksum: sha1:0d642ce28253933d4664a04f890a2764ef8869ea
+    last_write_checksum: sha1:32881736a7a4fb6f0ed62ee4d734b16bebca9baf
     pristine_git_object: ca1946c1b3cd9dc7ae000a272845c9a0dafff712
   docs/models/shared/PropertyMessagingEventMessage.md:
     id: 6819e5a6ff87
@@ -10427,7 +10427,7 @@ trackedFiles:
     pristine_git_object: 9f0480c42a6d329b94ca16e6c1aef82a49f88f5e
   docs/models/shared/TaskComment.md:
     id: 1de7cb447238
-    last_write_checksum: sha1:3142fe6f3aa0396ddcb1d2d56d9424a352725315
+    last_write_checksum: sha1:0eef33de19c86b934e3efd3c36efb095af00f71c
     pristine_git_object: 5dcd19b3c25f2d8d939594ef4a084a58568dc1e3
   docs/models/shared/TaskMetadata.md:
     id: 9d4a42b4fdbb
@@ -10539,7 +10539,7 @@ trackedFiles:
     pristine_git_object: f73e3f9a4adc9353710ebfa95a57ff37c885c316
   docs/models/shared/UcComment.md:
     id: 9dc87dfbd29a
-    last_write_checksum: sha1:5c7540e968a4b0bb20a925d47a4ddb286c81ce45
+    last_write_checksum: sha1:aa56f35047d8202792fdf7f1f2fa5f14397683b0
     pristine_git_object: 5876527176f6836293b71a5ff14d2841b4597990
   docs/models/shared/UcContact.md:
     id: f445876e152f
@@ -10587,7 +10587,7 @@ trackedFiles:
     pristine_git_object: 00b9d1a955013b3ba12e702b42410e15a874dd39
   docs/models/shared/VerificationPackage.md:
     id: 7fec81438130
-    last_write_checksum: sha1:375d39201aa3a9edd8fc20e6b5fc6be84474d875
+    last_write_checksum: sha1:014dee510287a4f7dce5150f68ffac2bf7d6b7b8
     pristine_git_object: 1bf92bef35cea293c1ad178fa4b7a16380078ccd
   docs/models/shared/VerificationPackageType.md:
     id: 207440dbc49b
@@ -10905,11 +10905,11 @@ trackedFiles:
     pristine_git_object: cbd1e6aa24d9770a8955fea8498ace9c039015dc
   docs/sdks/assessment/README.md:
     id: 54c8061fbed1
-    last_write_checksum: sha1:19f728932e4512795f2b5d4eb85dd3b20768dd3d
+    last_write_checksum: sha1:842898de8b48923ea51714e6d9eab7be3e906ac7
     pristine_git_object: 5b39e53551580b69b0388c49ed9bae1e79dfec8e
   docs/sdks/ats/README.md:
     id: 24fafa267f6c
-    last_write_checksum: sha1:fc9a8c7684f2b9e00b9bef7fd99cf005f1a2bb7f
+    last_write_checksum: sha1:894bf4f516553f13d208e2b243934c8080d02f8b
     pristine_git_object: 8c82afc6d356a3fd7ce923b6de18a7a7b032eb28
   docs/sdks/auth/README.md:
     id: e9724f17945f
@@ -10945,7 +10945,7 @@ trackedFiles:
     pristine_git_object: daf488eb21060bdfc87f4645e7950e97fda92de1
   docs/sdks/calendar/README.md:
     id: b85c3af313ad
-    last_write_checksum: sha1:36b8e0e7776eca78beb2d058334ac9eae669fce1
+    last_write_checksum: sha1:ca8418c5c735f70ff42e3670c400197481a6a0a5
     pristine_git_object: 6ca8635e1b760fc54c55a1986c0112f6ee898758
   docs/sdks/call/README.md:
     id: 63a19d6314f9
@@ -10981,7 +10981,7 @@ trackedFiles:
     pristine_git_object: 380db7033ecd79c7b63693b7d9acce524e4cac7a
   docs/sdks/class/README.md:
     id: 3d83b7f3788f
-    last_write_checksum: sha1:d6262d49f83e8b0037ddf11863ad153024f9472a
+    last_write_checksum: sha1:92d2ec622a5ed45ae5a836083167eaa73d23a184
     pristine_git_object: dcced3be6739c617935de809518f84a7d29817af
   docs/sdks/collection/README.md:
     id: 8e08642c5af2
@@ -10989,11 +10989,11 @@ trackedFiles:
     pristine_git_object: 6534911f43a6e8b1ac42eb8474c525de790e7a19
   docs/sdks/comment/README.md:
     id: e4246f80d976
-    last_write_checksum: sha1:13b0b89d745e5e2d2eb33d240562d211aa9a1c69
+    last_write_checksum: sha1:5ad24af252250692a373a1eb640537d09a54f41a
     pristine_git_object: bf2eeeba408dab4d146fd680d50c105e36ec52ca
   docs/sdks/commerce/README.md:
     id: ec0eedee4bc3
-    last_write_checksum: sha1:3cd408d6452aedfb0e04592775547ffceb36ed83
+    last_write_checksum: sha1:087c4d7dc4b5bb343ebe7a5c59a20e7c04378179
     pristine_git_object: 4db44cfaa7e8a805691c2fbc20ffba24c7a72bb9
   docs/sdks/commit/README.md:
     id: bc22b8348fdb
@@ -11001,7 +11001,7 @@ trackedFiles:
     pristine_git_object: 72bbfa6e28c6f73f303d94521b408c4ee67d6165
   docs/sdks/company/README.md:
     id: e71077841b8e
-    last_write_checksum: sha1:7a7d04de1fe59da9a18ba797465730626d5ce62c
+    last_write_checksum: sha1:7f43f2e99481dbfa479b63ea880fe335d73105dc
     pristine_git_object: 46a652d43591e849d628458a5bb61a13b012a3c6
   docs/sdks/connection/README.md:
     id: f41e4b35daf8
@@ -11017,7 +11017,7 @@ trackedFiles:
     pristine_git_object: 650250db56de8bd930bb4fb048fd40d7e03e8d4b
   docs/sdks/course/README.md:
     id: 80cb1721406a
-    last_write_checksum: sha1:654c0ec4002e3b540b1fc95cf22e9c66c8ebf20b
+    last_write_checksum: sha1:5d813f45caac80974f3979cdc31faf5a7a0bbdb1
     pristine_git_object: 97fbdc554d39831b9fb6411d5a3a883ff8ac9d69
   docs/sdks/creative/README.md:
     id: 9e3fda387788
@@ -11045,7 +11045,7 @@ trackedFiles:
     pristine_git_object: 071603d13c5a693fc9bd968af9d8d26419c93a85
   docs/sdks/device/README.md:
     id: 433bb454e987
-    last_write_checksum: sha1:aa79620270a4f3fd570da2a0ecbea2a755cef824
+    last_write_checksum: sha1:88a590a41b130c62b24e1eadbee8b9f98f7168e5
     pristine_git_object: 1e539e0d125d4656a568fbb43f0fa45744e88ea6
   docs/sdks/document/README.md:
     id: 6a8c24b11248
@@ -11081,11 +11081,11 @@ trackedFiles:
     pristine_git_object: d545c859ca071adcdea6031d196353bd3952c9bb
   docs/sdks/form/README.md:
     id: 9378f360c559
-    last_write_checksum: sha1:12ee7e402ecbf364843dfa97a963a6c42aafd13f
+    last_write_checksum: sha1:5364daa759aafb2de2f234a30cee1e165785bcca
     pristine_git_object: 6a8baf4c37ef8f92a3704fb366032f81cf4a5033
   docs/sdks/forms/README.md:
     id: fbba6f47c69c
-    last_write_checksum: sha1:893e63d6b5b8706c9a80e8b4e5f0a00d83eb0e53
+    last_write_checksum: sha1:5a96fd135e767a68c77cdc4efc6fe660cf224fc7
     pristine_git_object: 9dc3c01262713fea5b41aa38f3785a79ad5b0a8e
   docs/sdks/genai/README.md:
     id: 03644f9125fa
@@ -11097,7 +11097,7 @@ trackedFiles:
     pristine_git_object: 3e04d5e8e4b7e2b57dcbe8dfbc0038ea12167aa4
   docs/sdks/hris/README.md:
     id: 0baa868a038c
-    last_write_checksum: sha1:97685b615588697d824b57379cdfd15d4d8827f6
+    last_write_checksum: sha1:ac3d97b0135ae2209657f6b1dab767d61a5ddc82
     pristine_git_object: 284467b98223c1fbb295dc3907bab832b325e413
   docs/sdks/insertionorder/README.md:
     id: 72e4049753b2
@@ -11117,7 +11117,7 @@ trackedFiles:
     pristine_git_object: a1b6ff438e5964d18b03e23256817816c7501eef
   docs/sdks/inventory/README.md:
     id: b54dd8e030f2
-    last_write_checksum: sha1:2d1ebb5bfc778d478585fd4d7fcfbfaf6bfff578
+    last_write_checksum: sha1:e0b14b6b5a7fa7e50119274c61fa186b088d9ccd
     pristine_git_object: b72d13da1f75be98f2c8f9e2fc5075635e00d3f1
   docs/sdks/invoice/README.md:
     id: 4ba3659502ea
@@ -11145,7 +11145,7 @@ trackedFiles:
     pristine_git_object: 122a0c834ed208fd7220e84887458893a7c5a6c3
   docs/sdks/kms/README.md:
     id: 671e2db6ac3f
-    last_write_checksum: sha1:e307b0e51be30576001f6bb51c1db531a99662a3
+    last_write_checksum: sha1:19a1f0164dbdf1d08d8c11308f2e39b9ed45f3c2
     pristine_git_object: 32aad7a0456f698e276acbe59023ba72bf33c626
   docs/sdks/label/README.md:
     id: 066306770d08
@@ -11165,11 +11165,11 @@ trackedFiles:
     pristine_git_object: bafbb24f195c9b29b70c939ecaf5119589e323c6
   docs/sdks/lms/README.md:
     id: 794550affa22
-    last_write_checksum: sha1:cccf3dd69f13f8742d14f0c72c2ef606c7535d61
+    last_write_checksum: sha1:e4b2bd664e88acfd60f8dcafb054d3c336edf563
     pristine_git_object: 945608121cceb3f8225756b9702c46a3f1e431e7
   docs/sdks/location/README.md:
     id: f174fc17f497
-    last_write_checksum: sha1:6304bccd58ac03c912aa6332a05c71d06e85f3f7
+    last_write_checksum: sha1:71e0d65341a2c97abc71541facf147a6e176712e
     pristine_git_object: f683bf4d09e8852715b273c3f463e65b0b24a6c0
   docs/sdks/login/README.md:
     id: 795cc2a6ce04
@@ -11213,11 +11213,11 @@ trackedFiles:
     pristine_git_object: 9c508b41ef905358e2391d0a8765e693c14a08ef
   docs/sdks/package/README.md:
     id: cc285c509d7c
-    last_write_checksum: sha1:103051c82a8a4d23d0bace77f23ac8c47cec4b8e
+    last_write_checksum: sha1:0991ea3edbde0c1701b5dc1e88b75d3621f9328c
     pristine_git_object: 642cd9de4f1fcbf4d2051944dc85a0d56a5293eb
   docs/sdks/page/README.md:
     id: 68a2042a2ff7
-    last_write_checksum: sha1:9bb7eb9af82bf9bb6f85a8e824afd46db04e4c79
+    last_write_checksum: sha1:5cb7ce2e3f09376b8631c0f95a0e84bea90a6986
     pristine_git_object: cfe7f99c2b7d842d7eefa9211377687a04ffaf39
   docs/sdks/passthrough/README.md:
     id: f02f3e269c40
@@ -11301,7 +11301,7 @@ trackedFiles:
     pristine_git_object: ca7d0d77d4b0e797dbead214a725d799ba96d10a
   docs/sdks/review/README.md:
     id: c8de80641188
-    last_write_checksum: sha1:efa7100d6df91d86322a90df62cf001d16140e05
+    last_write_checksum: sha1:61fd99bc78bb0621808dd1886635cd70ac565689
     pristine_git_object: e47517b97953ec4697442e6bce2555351e616461
   docs/sdks/saleschannel/README.md:
     id: bdd5f4139b27
@@ -11333,7 +11333,7 @@ trackedFiles:
     last_write_checksum: sha1:8ead0cc0a4731cb6edafba21e662afcb0c324fb9
   docs/sdks/space/README.md:
     id: b3ce86241634
-    last_write_checksum: sha1:e75dc0c0d4cf5391731a089ef1587eb9e074a1cf
+    last_write_checksum: sha1:6a491dec615752e70c5adf19fa4d168e618ff55e
     pristine_git_object: a3c69487292a52ba5f2d912fefb73c2c554c19c7
   docs/sdks/storage/README.md:
     id: 36ff94e3114a
@@ -11357,7 +11357,7 @@ trackedFiles:
     pristine_git_object: 034682a38e3afa7249833f71d5b585e6f9785c3b
   docs/sdks/task/README.md:
     id: ae2d0d96ea1f
-    last_write_checksum: sha1:02f1ae663faeab085ecf78d52361a986e56aa186
+    last_write_checksum: sha1:41b391e9d35afd93a7841461c85a1fdbae831d6e
     pristine_git_object: 5ad8ca77b77a013864cea5bd27c8ea963414cfd8
   docs/sdks/taxrate/README.md:
     id: 626e6511cf80
@@ -11375,7 +11375,7 @@ trackedFiles:
     pristine_git_object: 5f9ed55c9984cb0777e0fc83bff0f4d59da5fd67
   docs/sdks/timeoff/README.md:
     id: 5dfa0f033e4a
-    last_write_checksum: sha1:6cbd6c4d7249568d48afd57ce5c553e7b08a543f
+    last_write_checksum: sha1:cdc65364cfd5b2e49cfdec3a85e5327a4e23955d
     pristine_git_object: 75bd6d9e929afdc03e8776fbbbe1d4ea3fa9115e
   docs/sdks/timeshift/README.md:
     id: f11112fc9233
@@ -11395,7 +11395,7 @@ trackedFiles:
     pristine_git_object: 15ee34e49de314d2dfcd91acfce800cf7382a22a
   docs/sdks/uc/README.md:
     id: 959f5612261b
-    last_write_checksum: sha1:d2ca8888c137516fdbefbbf21256d006f0477381
+    last_write_checksum: sha1:388a36549c0585ebb7a253297653ff8e177053a1
     pristine_git_object: c7389847c4738bd756efc51ac9e8d0f025c7aa15
   docs/sdks/unified/README.md:
     id: e15cc6babd27
@@ -11423,7 +11423,7 @@ trackedFiles:
     pristine_git_object: 14fe7a9e0f20951a7e3ab2752816fbc9b8c41dd3
   gradle.properties:
     id: 2afbb999f001
-    last_write_checksum: sha1:4812cae19bd3980388503417435ce06978d28c8b
+    last_write_checksum: sha1:38761de45d57131c0159de2576409f0397b20b7c
     pristine_git_object: e98f734834a572eee8169e873f8a45f9fe20f9e0
   gradle/wrapper/gradle-wrapper.jar:
     id: ec27dae6e852
@@ -12461,7 +12461,7 @@ trackedFiles:
     pristine_git_object: 2ccb6e90f32063c290e9fa25abf9649b884b4ed0
   src/main/java/to/unified/unified_java_sdk/SDKConfiguration.java:
     id: 42279b7431fa
-    last_write_checksum: sha1:a2b2d769b1f5f1572b7fcf9dd049a769a148fb1e
+    last_write_checksum: sha1:46f1ed0a4a7bd0270cb85e919f01521c00518933
     pristine_git_object: 17976ce665fb7cd87ed8a727359e17d32feaab3b
   src/main/java/to/unified/unified_java_sdk/Saleschannel.java:
     id: 2dca25153692
@@ -15333,7 +15333,7 @@ trackedFiles:
     pristine_git_object: 24ae98d16351ec37dba7a45d971d333a5b6515b5
   src/main/java/to/unified/unified_java_sdk/models/operations/CreateAccountingCreditmemoQueryParamFields.java:
     id: 883cd4c872ae
-    last_write_checksum: sha1:56554226e65da057da754a382ab275e0f408ef10
+    last_write_checksum: sha1:47e2974b88c73dcfb101864d76f4343b8a5c8e33
     pristine_git_object: ad8899ab553392518775f614ca9051e5fbcd50dd
   src/main/java/to/unified/unified_java_sdk/models/operations/CreateAccountingCreditmemoRequest.java:
     id: b5f7235ebc53
@@ -16481,7 +16481,7 @@ trackedFiles:
     pristine_git_object: 26dc0260c4c1443fe9ba47f9a01816406a355a73
   src/main/java/to/unified/unified_java_sdk/models/operations/CreatePaymentPaymentQueryParamFields.java:
     id: d01d21617574
-    last_write_checksum: sha1:bc3dc17bee8fcbec9a213f7a6e60b11a67a135f7
+    last_write_checksum: sha1:1cd1649000afe376167b84c19f203d132c5e67bc
     pristine_git_object: bf0fb85a2e44910f5deb300027a0f62dda4a5beb
   src/main/java/to/unified/unified_java_sdk/models/operations/CreatePaymentPaymentRequest.java:
     id: fe5323888c56
@@ -16997,7 +16997,7 @@ trackedFiles:
     pristine_git_object: 0e8af4616e64fdc2d07c7f50207d889f45c807c9
   src/main/java/to/unified/unified_java_sdk/models/operations/GetAccountingCreditmemoQueryParamFields.java:
     id: ccb9a1ced36a
-    last_write_checksum: sha1:461b7e1d6b5ad4735c76dd1b05ed68879e1a401b
+    last_write_checksum: sha1:437a26dc941733fc18c4ae22c4b4841cb44fa0fa
     pristine_git_object: 3739bc25ca27e78a163a58bdd558efbc8b039f51
   src/main/java/to/unified/unified_java_sdk/models/operations/GetAccountingCreditmemoRequest.java:
     id: 9af31d576738
@@ -17937,7 +17937,7 @@ trackedFiles:
     pristine_git_object: eea6fa16d199e25a379e669f161205f1fff48094
   src/main/java/to/unified/unified_java_sdk/models/operations/GetHrisPayslipQueryParamFields.java:
     id: 0f57c74c8bc5
-    last_write_checksum: sha1:218db710359a520471769290a3e2d96a15e3ead6
+    last_write_checksum: sha1:ef8f49b0dd64b0650f1a563d5371869e811d1ac5
     pristine_git_object: 69f3aff94d3c8e7c12ac34646ad0aa94aaff963b
   src/main/java/to/unified/unified_java_sdk/models/operations/GetHrisPayslipRequest.java:
     id: dc00eaebc4ac
@@ -18257,7 +18257,7 @@ trackedFiles:
     pristine_git_object: b9480a2e833d45f30c2e9893b24310f869b28ddc
   src/main/java/to/unified/unified_java_sdk/models/operations/GetPaymentPaymentQueryParamFields.java:
     id: f544bbd92b44
-    last_write_checksum: sha1:35e63ba781a0268fe1f666cdd4020260c078de5c
+    last_write_checksum: sha1:d461a92431303da1aa847a44acd1bbbefa82dfce
     pristine_git_object: c2f5896b7bcc71825c322244ab3ce4187f292762
   src/main/java/to/unified/unified_java_sdk/models/operations/GetPaymentPaymentRequest.java:
     id: a401f8e48e09
@@ -18745,7 +18745,7 @@ trackedFiles:
     pristine_git_object: 20a4c4a843d94711f80db8bfd7bd750496ef64d1
   src/main/java/to/unified/unified_java_sdk/models/operations/GetUnifiedIntegrationAuthRequest.java:
     id: 9ae68ba0a163
-    last_write_checksum: sha1:071455658eb3efe4b0a7fa3b9d10fdb2f320a49a
+    last_write_checksum: sha1:9ffc6abf67e62fe0c263a4337e5fd83837b4fd88
     pristine_git_object: 602327ef71b417cd52bc0af56f04dfbaf17af401
   src/main/java/to/unified/unified_java_sdk/models/operations/GetUnifiedIntegrationAuthRequestBuilder.java:
     id: c2dc09c010f9
@@ -18921,7 +18921,7 @@ trackedFiles:
     pristine_git_object: aeba9fe15f90f316c600c90f98f1e96ecd60ec24
   src/main/java/to/unified/unified_java_sdk/models/operations/ListAccountingCreditmemoesQueryParamFields.java:
     id: 1aaacbe83680
-    last_write_checksum: sha1:07fdfb05e57213a2c26d7da213578dc5add6c299
+    last_write_checksum: sha1:1063dedebca6b0a4cacafeec23ba2b21ef34e423
     pristine_git_object: 7990466b707563b27fdc7fc4767652ff8c3ca5b2
   src/main/java/to/unified/unified_java_sdk/models/operations/ListAccountingCreditmemoesRequest.java:
     id: efe588d7e81b
@@ -19965,7 +19965,7 @@ trackedFiles:
     pristine_git_object: e048f672f51380c0af1ea31e36397632475edeb0
   src/main/java/to/unified/unified_java_sdk/models/operations/ListHrisPayslipsQueryParamFields.java:
     id: 4a32ac2468cd
-    last_write_checksum: sha1:9f14b9a608fcee00517a2f05e7bff0bacabdaab9
+    last_write_checksum: sha1:68d95603f1c1a6c0c0c3f841d928659d7a390a04
     pristine_git_object: a36b8f70de658dfecb2d89758a83e2b9c6ee4b53
   src/main/java/to/unified/unified_java_sdk/models/operations/ListHrisPayslipsRequest.java:
     id: 5390793c672e
@@ -20313,7 +20313,7 @@ trackedFiles:
     pristine_git_object: 8d5eab2489d8ebb9ba266d8ce97c997e0a437818
   src/main/java/to/unified/unified_java_sdk/models/operations/ListPaymentPaymentsQueryParamFields.java:
     id: cc65dd27e78d
-    last_write_checksum: sha1:c42bfedfdbe9a69f2c1cf1bc2a92bc61230bbe66
+    last_write_checksum: sha1:ed8ad1c92697423d8e48b199327d079ec41dca30
     pristine_git_object: b9e663dd86b9a737aa7df846e9e62d58f27c0363
   src/main/java/to/unified/unified_java_sdk/models/operations/ListPaymentPaymentsRequest.java:
     id: b64cdb4f3d8a
@@ -20949,7 +20949,7 @@ trackedFiles:
     pristine_git_object: 2298444eff620d3f3b49e3358b47c98ac4f0a7c3
   src/main/java/to/unified/unified_java_sdk/models/operations/PatchAccountingCreditmemoQueryParamFields.java:
     id: 84a4b19205a5
-    last_write_checksum: sha1:ae69fb38b5e2a4660fbd384f58b8201644d1ad0b
+    last_write_checksum: sha1:483cc606e3551836c32d3d8e4c049680f4ac1896
     pristine_git_object: 0652f5f2985f103bab9814bcb59f0e965057f056
   src/main/java/to/unified/unified_java_sdk/models/operations/PatchAccountingCreditmemoRequest.java:
     id: 9b196d75c10d
@@ -22097,7 +22097,7 @@ trackedFiles:
     pristine_git_object: 56d1f94df8ea5b45bda755bf17a15209e2a0cd58
   src/main/java/to/unified/unified_java_sdk/models/operations/PatchPaymentPaymentQueryParamFields.java:
     id: ddb10e4b33f8
-    last_write_checksum: sha1:a50d6f25fde19a28fbb6010bd7fdebf7cc51f8c8
+    last_write_checksum: sha1:144dd3e6bf9d903a1459b856d1ffb823143e920a
     pristine_git_object: c25dc935a1f6f2c7f5bc2cbd93bd1012d34125b8
   src/main/java/to/unified/unified_java_sdk/models/operations/PatchPaymentPaymentRequest.java:
     id: 7a32e07a9170
@@ -23787,7 +23787,7 @@ trackedFiles:
     pristine_git_object: 2e7fc1740775782ea8f49aa4dd3cf744df988476
   src/main/java/to/unified/unified_java_sdk/models/operations/UpdateAccountingCreditmemoQueryParamFields.java:
     id: 00449ff105ca
-    last_write_checksum: sha1:72bc7fd7abcb38a11e445a694ac610a4a4a64b1d
+    last_write_checksum: sha1:4af9d2dad05b51eb6658292615209ae0e7ee4d81
     pristine_git_object: 92c10c7d69edc3d2d82345fedba4017b521377e7
   src/main/java/to/unified/unified_java_sdk/models/operations/UpdateAccountingCreditmemoRequest.java:
     id: 77bcacc668f9
@@ -24935,7 +24935,7 @@ trackedFiles:
     pristine_git_object: 79aed803b6c2cbb80ba8f14ded19e5e472c341e6
   src/main/java/to/unified/unified_java_sdk/models/operations/UpdatePaymentPaymentQueryParamFields.java:
     id: d3c1e3476f1d
-    last_write_checksum: sha1:3af853170845ddca562c5c5472553b66d4ff289d
+    last_write_checksum: sha1:ada4184061e4d62019b735cea702cab10b54af60
     pristine_git_object: 03bf76e3fbfdfd929e0e293d0f945e5374671e7f
   src/main/java/to/unified/unified_java_sdk/models/operations/UpdatePaymentPaymentRequest.java:
     id: dda64bee3c31
@@ -28369,11 +28369,11 @@ trackedFiles:
     pristine_git_object: f8102832741856d2d621d68e74556429625c53d1
   src/main/java/to/unified/unified_java_sdk/models/shared/AssessmentPackage.java:
     id: 4b942901794f
-    last_write_checksum: sha1:2490ee12c1d2d245ec54aed6f484e1c4d9c07878
+    last_write_checksum: sha1:fe5de502ae2d4cd828b8e1a69d8b43690399c368
     pristine_git_object: 888d054f16e26366e4d1e6c1e75a592b1a7da102
   src/main/java/to/unified/unified_java_sdk/models/shared/AssessmentPackageRegion.java:
     id: 6eafdaf11ece
-    last_write_checksum: sha1:99f0464419b48e4b1c639a402c5a8841914a47e8
+    last_write_checksum: sha1:b3164f18ec571669890ac1110250a0016aafbb4b
     pristine_git_object: fc30a5add052af1ca976a523277688bc3f0d653a
   src/main/java/to/unified/unified_java_sdk/models/shared/AssessmentPackageType.java:
     id: 65392fbf85f9
@@ -28381,7 +28381,7 @@ trackedFiles:
     pristine_git_object: 92a9d9078814ca3883caeb8e21dae4a805788db5
   src/main/java/to/unified/unified_java_sdk/models/shared/AssessmentParameter.java:
     id: 81ac4a3ab162
-    last_write_checksum: sha1:926212fbcca1e7c6db1f237e22e04fad6ed9bb2a
+    last_write_checksum: sha1:9adec32952d6b28d3f0cfecfe5d729a79ba244fe
     pristine_git_object: 5f03e49c9ac20b3387559cffb8f906e507974750
   src/main/java/to/unified/unified_java_sdk/models/shared/AssessmentParameterInput.java:
     id: 0be6d508b742
@@ -28433,7 +28433,7 @@ trackedFiles:
     pristine_git_object: 79c276d5a70a5de2adfe85c327345d5893aa0532
   src/main/java/to/unified/unified_java_sdk/models/shared/AtsCompany.java:
     id: fc2ba9c45483
-    last_write_checksum: sha1:1a55efa9d0fedd83a6308778253b4a1badea6893
+    last_write_checksum: sha1:3a59eb7d73ee666847928f428d2adef5952c0f97
     pristine_git_object: a5ab9f040931d2a52d671dc3c3f160bda319b257
   src/main/java/to/unified/unified_java_sdk/models/shared/AtsCompensation.java:
     id: 9f3a5e726c4f
@@ -28587,7 +28587,7 @@ trackedFiles:
     pristine_git_object: 577c13f87a43a3e2153c68254314a7465764b29c
   src/main/java/to/unified/unified_java_sdk/models/shared/CalendarCalendar.java:
     id: 90dc4d9df982
-    last_write_checksum: sha1:e5ec1a48a8465558762623350684a8f319bd4fd8
+    last_write_checksum: sha1:c64d8ec2e13ea944a75bdf99781543ee794bbe8c
     pristine_git_object: 3e2e880a8fd7f5d4e1b2d7a44df3de280793a434
   src/main/java/to/unified/unified_java_sdk/models/shared/CalendarConference.java:
     id: 5c3cc63016ac
@@ -28663,7 +28663,7 @@ trackedFiles:
     pristine_git_object: dd83d92e9988cc990864ebd8e53b78a5612386b1
   src/main/java/to/unified/unified_java_sdk/models/shared/CommerceInventory.java:
     id: 144e7c6fe9d6
-    last_write_checksum: sha1:25c8ea50a11ad073e80fc8d2d91988eaf1a4fd8b
+    last_write_checksum: sha1:555e09deee814c142a152618b21fc2617d9e95d8
     pristine_git_object: 131117288a4a7385834e02c70989d141f2164139
   src/main/java/to/unified/unified_java_sdk/models/shared/CommerceItem.java:
     id: 73f2c812fe48
@@ -28695,7 +28695,7 @@ trackedFiles:
     pristine_git_object: af6a6d7cd64850a694c17734f5be22cf2db4f6b7
   src/main/java/to/unified/unified_java_sdk/models/shared/CommerceLocation.java:
     id: 60f71485094e
-    last_write_checksum: sha1:ea02f56d954143e94fcf4a2a87c1480fcdd9a5b2
+    last_write_checksum: sha1:d933c4f3527b9137ec1d396661d572827e213dac
     pristine_git_object: 85ba897393bd2025cf5b35556b180775e44a0430
   src/main/java/to/unified/unified_java_sdk/models/shared/CommerceMetadata.java:
     id: 3386b5ba4122
@@ -28743,11 +28743,11 @@ trackedFiles:
     pristine_git_object: 0b8f57eee09602aa7d1a4ef46ac7935f9f869f86
   src/main/java/to/unified/unified_java_sdk/models/shared/CommerceReview.java:
     id: e3b76b02a3f3
-    last_write_checksum: sha1:1ba83ede47b333344ef1a62ac472c965de8f4b3d
+    last_write_checksum: sha1:9ae5a4dcef7da46c18788dd6012372fbd1db33fc
     pristine_git_object: 434dc2c0146e07eebcb4a905adad191897510a4f
   src/main/java/to/unified/unified_java_sdk/models/shared/CommerceReviewComment.java:
     id: ed56dba7c6fb
-    last_write_checksum: sha1:25f6984620c97c1105a7f6c1205943031767d690
+    last_write_checksum: sha1:70c0c9a85160b13698b414cb39ca420fa4fceab7
     pristine_git_object: 35e800b462d5e0184f2a5a8569fddd6be6459ee6
   src/main/java/to/unified/unified_java_sdk/models/shared/CommerceReviewCommentStatus.java:
     id: 195299ac4a44
@@ -28979,7 +28979,7 @@ trackedFiles:
     pristine_git_object: 5a2b6e53c1cac5b5b2174e7582a3181cd62dde9f
   src/main/java/to/unified/unified_java_sdk/models/shared/FormsForm.java:
     id: 90f911def073
-    last_write_checksum: sha1:d17ba03d3678e2865e3ec163afb7975c5afa5164
+    last_write_checksum: sha1:880a14ee6935d8e4eba33e510126212f27b86f00
     pristine_git_object: 15295622e173c9331b12515b7456bb2f3f32aef6
   src/main/java/to/unified/unified_java_sdk/models/shared/FormsSubmission.java:
     id: 5abfdb616515
@@ -29075,7 +29075,7 @@ trackedFiles:
     pristine_git_object: 08dbbfe4e03db5d2615dac870b393ab9381560c1
   src/main/java/to/unified/unified_java_sdk/models/shared/HrisDevice.java:
     id: 889393fb6ca9
-    last_write_checksum: sha1:25f3e224d2b41a95068422ec224f5cb2f6d8acb0
+    last_write_checksum: sha1:e250c2b9711f7a1d1817c7bd4fbdc24aa260d964
     pristine_git_object: 03668b6b5c4864cdb0452e1db606a60998f48cca
   src/main/java/to/unified/unified_java_sdk/models/shared/HrisEmail.java:
     id: bb0280b62266
@@ -29151,7 +29151,7 @@ trackedFiles:
     pristine_git_object: 72745796f83a395f340f3a9969dbfe76ce8ca6ea
   src/main/java/to/unified/unified_java_sdk/models/shared/HrisPayslip.java:
     id: 6caa014858a4
-    last_write_checksum: sha1:abfadf163113889c66483a0dd79a1887f0fbc9a0
+    last_write_checksum: sha1:d8d5511f182b26692903f154a848c076e936d7dd
     pristine_git_object: 52660081a46946ae1c17d1135c2db942952858ed
   src/main/java/to/unified/unified_java_sdk/models/shared/HrisPayslipDetail.java:
     id: a81079f85248
@@ -29171,7 +29171,7 @@ trackedFiles:
     pristine_git_object: 2a0fc429a8a00e53dfca43b2bf32302e58e3363b
   src/main/java/to/unified/unified_java_sdk/models/shared/HrisTimeoff.java:
     id: f23ddecffeed
-    last_write_checksum: sha1:43885709329d7d53e1fa8d0c6b24838c426c54a1
+    last_write_checksum: sha1:e3955cd58cd0c05d3570930011cda9768c4b069a
     pristine_git_object: a2b55e099f40528db3f81901135436d183193218
   src/main/java/to/unified/unified_java_sdk/models/shared/HrisTimeoffStatus.java:
     id: 7b4c845e90eb
@@ -29237,7 +29237,7 @@ trackedFiles:
     pristine_git_object: 8fae4e7a58de9747d17435b56253b18c1b1979d8
   src/main/java/to/unified/unified_java_sdk/models/shared/KmsComment.java:
     id: 963b5350e0b8
-    last_write_checksum: sha1:431f09a1e0c387bf9ee52435c8680559f435c91b
+    last_write_checksum: sha1:4cde13d326ddd852a1df4f397df881da88ed5611
     pristine_git_object: e6203b2f30cc84c2b6fa499e65a09e2c2e04e127
   src/main/java/to/unified/unified_java_sdk/models/shared/KmsCommentType.java:
     id: ceed30fc21a6
@@ -29245,7 +29245,7 @@ trackedFiles:
     pristine_git_object: 5fd896c9cc37a26cc355eb5aaa116eebcb13dc29
   src/main/java/to/unified/unified_java_sdk/models/shared/KmsPage.java:
     id: 9a2ae9b0f07a
-    last_write_checksum: sha1:1cbc7153339af448585faea7ddc4bd09db33d99e
+    last_write_checksum: sha1:292b6932200fd13fa40985b95ed1f3b43a54e3cd
     pristine_git_object: 239e56cd1a0baf5c61b26d1e98726b808c6ed391
   src/main/java/to/unified/unified_java_sdk/models/shared/KmsPageMetadata.java:
     id: 1e311573ef12
@@ -29285,7 +29285,7 @@ trackedFiles:
     pristine_git_object: bdeac4ac6c7f4dbfec295b2adadad203cac0a057
   src/main/java/to/unified/unified_java_sdk/models/shared/KmsSpace.java:
     id: bcbd2ea46c6b
-    last_write_checksum: sha1:63ce8eb88e5f58f83db0babad6ceccc2b3a13fb7
+    last_write_checksum: sha1:51f36fb212dace72cd8554d4076e6f1a8ebd989b
     pristine_git_object: 0b4d46a4badb8a2b8d313b22db5ae2029f316c70
   src/main/java/to/unified/unified_java_sdk/models/shared/LabelFormat.java:
     id: 8f4bed186f95
@@ -29597,7 +29597,7 @@ trackedFiles:
     pristine_git_object: 5486e0f1e56e0d5234241d4144eb7750c92bbf05
   src/main/java/to/unified/unified_java_sdk/models/shared/LmsClass.java:
     id: 9e7343db510b
-    last_write_checksum: sha1:fb06cb31b1be7222a8577f7618cf7b523014e17c
+    last_write_checksum: sha1:39edb3c20cd46294b77fd487ae82a942bc1fdd2c
     pristine_git_object: b09070c988c30c12342e389eaa734df2de859c40
   src/main/java/to/unified/unified_java_sdk/models/shared/LmsCollection.java:
     id: a38b568f73a5
@@ -29611,7 +29611,7 @@ trackedFiles:
     last_write_checksum: sha1:ded8b583de8e8e8f5df9fa0b46a5ab0910743332
   src/main/java/to/unified/unified_java_sdk/models/shared/LmsCourse.java:
     id: 11e03a5c5a0b
-    last_write_checksum: sha1:54f0e15aa3029ef78b35fcd35b8df3ad112a0a3b
+    last_write_checksum: sha1:6c119228109c33f46dd90764e5e66edf7a1dba80
     pristine_git_object: 2550b44995e4a950b9a35e8aad4b0a8be4d531ea
   src/main/java/to/unified/unified_java_sdk/models/shared/LmsEmail.java:
     id: d601475453cc
@@ -29703,7 +29703,7 @@ trackedFiles:
     pristine_git_object: 452022462241245d7ff3845f3a96c480a66c3594
   src/main/java/to/unified/unified_java_sdk/models/shared/MessagingChannel.java:
     id: 5ac252391409
-    last_write_checksum: sha1:c66c531d092dcfd16e762fdeda171394f7850e35
+    last_write_checksum: sha1:3babb8d8d498260a9aee6f00f9cab99664f4ba45
     pristine_git_object: 6ab2d233498ba857dbd92a6c04695eeea2414087
   src/main/java/to/unified/unified_java_sdk/models/shared/MessagingEvent.java:
     id: 09c8c272b755
@@ -29855,7 +29855,7 @@ trackedFiles:
     pristine_git_object: d293abf35a0b8189537465707a92b898d3331dd9
   src/main/java/to/unified/unified_java_sdk/models/shared/PaymentPayment.java:
     id: 8cdbc74f5767
-    last_write_checksum: sha1:4c2073116eb8b214f98016b1f698fa277c4db685
+    last_write_checksum: sha1:e901e08b799af8277a7df673717c62e85782cf2d
     pristine_git_object: dd2a7eb3e4bca016bbc80bbed08f8cefac662ae0
   src/main/java/to/unified/unified_java_sdk/models/shared/PaymentPaymentType.java:
     id: 2c7f5d8abc9d
@@ -29863,7 +29863,7 @@ trackedFiles:
     pristine_git_object: dbf5229bd0731fc5639afd4cfd5cca5155df2225
   src/main/java/to/unified/unified_java_sdk/models/shared/PaymentPayout.java:
     id: fa736d6023d4
-    last_write_checksum: sha1:8b7301dc497d9673943443e730ded605e0a50a81
+    last_write_checksum: sha1:ac170ee188ed6f58741a4974a95358681e7e7f12
     pristine_git_object: 0936a884e6cfe30b8918336398609c4289708028
   src/main/java/to/unified/unified_java_sdk/models/shared/PaymentPayoutStatus.java:
     id: 98ec7677443c
@@ -29871,7 +29871,7 @@ trackedFiles:
     pristine_git_object: 036102513242021b2f969eb9ba59765c0cc6f86c
   src/main/java/to/unified/unified_java_sdk/models/shared/PaymentRefund.java:
     id: 59b1d740bc9b
-    last_write_checksum: sha1:65f0c5fc3e2303ff8c55529a78475b38d08ebdf8
+    last_write_checksum: sha1:10ca08d28a2d7039a17243cf63e19f5bf6d8f322
     pristine_git_object: aa32de0193a4f2bd046a40cf79f39c584b2bd993
   src/main/java/to/unified/unified_java_sdk/models/shared/PaymentRefundStatus.java:
     id: 4ad05bdb43e3
@@ -30579,7 +30579,7 @@ trackedFiles:
     pristine_git_object: deb1c7b3dbdfb896ddf88856c800e591377b87e9
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyMessagingEventChannel.java:
     id: 9414d19ea3e9
-    last_write_checksum: sha1:39926683327b492f883e2888f15e869d53f3d339
+    last_write_checksum: sha1:184d5bee90d49d4dd2044400a95f47b512bd6b28
     pristine_git_object: 42c50ccaa6a5d450bea5750f188f5d3e7090b6c3
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyMessagingEventMessage.java:
     id: d60e7250e3ce
@@ -30983,7 +30983,7 @@ trackedFiles:
     pristine_git_object: 34cad0285d55741eb5e4aabfd3650ec0617a46b8
   src/main/java/to/unified/unified_java_sdk/models/shared/TaskComment.java:
     id: 821e0c789605
-    last_write_checksum: sha1:24199c8197da2dedd5e3497329ab424d4b9df54b
+    last_write_checksum: sha1:c3fcab7bcc2f4cc22f2cba6783a3e57791a9ae98
     pristine_git_object: 08a7f29b678757ea2940b6c670c7ef885ce90fec
   src/main/java/to/unified/unified_java_sdk/models/shared/TaskMetadata.java:
     id: e4d96a6d1197
@@ -31095,7 +31095,7 @@ trackedFiles:
     pristine_git_object: 622e8a378b449b059bd49ef3ca8cd405bf3611d4
   src/main/java/to/unified/unified_java_sdk/models/shared/UcComment.java:
     id: e3e24c939911
-    last_write_checksum: sha1:d9912cf4d90c55e4bcc239eb74cddeaf87071e1c
+    last_write_checksum: sha1:366e7b660bd37f6e9671b78f3fdab51bac82945c
     pristine_git_object: bae660d6f06d7ff6d7744e77e350e5857c8b62fd
   src/main/java/to/unified/unified_java_sdk/models/shared/UcContact.java:
     id: 0e4af1d13c1c
@@ -31143,7 +31143,7 @@ trackedFiles:
     pristine_git_object: c645c060b275d9423f06cae8946c3c8ed2b255dd
   src/main/java/to/unified/unified_java_sdk/models/shared/VerificationPackage.java:
     id: 967cf5c27704
-    last_write_checksum: sha1:b58b5a2512dfb7253af62e00a875bf17bbe177ca
+    last_write_checksum: sha1:6d89b87ac9ea6d6309c930866b17204bcf5c2e51
     pristine_git_object: b4dbb920445f6a33c2635d256ed17330a6c2d6b1
   src/main/java/to/unified/unified_java_sdk/models/shared/VerificationPackageType.java:
     id: 6883175e3f13
@@ -35055,7 +35055,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   getAtsDocument:
     speakeasy-default-get-ats-document:
       parameters:
@@ -35484,10 +35484,10 @@ examples:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {"name": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   createCalendarEvent:
     speakeasy-default-create-calendar-event:
       parameters:
@@ -35516,7 +35516,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   getCalendarEvent:
     speakeasy-default-get-calendar-event:
       parameters:
@@ -35591,10 +35591,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"name": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   patchCalendarEvent:
     speakeasy-default-patch-calendar-event:
       parameters:
@@ -35642,10 +35642,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"name": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   updateCalendarEvent:
     speakeasy-default-update-calendar-event:
       parameters:
@@ -35849,10 +35849,10 @@ examples:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {"available": 7463.62}
+        application/json: {}
       responses:
         "200":
-          application/json: {"available": 6187.04}
+          application/json: {}
   createCommerceItem:
     speakeasy-default-create-commerce-item:
       parameters:
@@ -35869,20 +35869,20 @@ examples:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {"name": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   createCommerceReview:
     speakeasy-default-create-commerce-review:
       parameters:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {"item_id": "<id>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"item_id": "<id>"}
+          application/json: {}
   getCommerceCollection:
     speakeasy-default-get-commerce-collection:
       parameters:
@@ -35900,7 +35900,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"available": 7122.77}
+          application/json: {}
   getCommerceItem:
     speakeasy-default-get-commerce-item:
       parameters:
@@ -35918,7 +35918,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   getCommerceReview:
     speakeasy-default-get-commerce-review:
       parameters:
@@ -35927,7 +35927,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"item_id": "<id>"}
+          application/json: {}
   listCommerceCollections:
     speakeasy-default-list-commerce-collections:
       parameters:
@@ -35986,10 +35986,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"available": 7859.84}
+        application/json: {}
       responses:
         "200":
-          application/json: {"available": 5724.03}
+          application/json: {}
   patchCommerceItem:
     speakeasy-default-patch-commerce-item:
       parameters:
@@ -36008,10 +36008,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"name": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   patchCommerceReview:
     speakeasy-default-patch-commerce-review:
       parameters:
@@ -36019,10 +36019,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"item_id": "<id>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"item_id": "<id>"}
+          application/json: {}
   removeCommerceCollection:
     speakeasy-default-remove-commerce-collection:
       parameters:
@@ -36071,10 +36071,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"available": 4497.29}
+        application/json: {}
       responses:
         "200":
-          application/json: {"available": 2114.08}
+          application/json: {}
   updateCommerceItem:
     speakeasy-default-update-commerce-item:
       parameters:
@@ -36093,10 +36093,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"name": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   updateCommerceReview:
     speakeasy-default-update-commerce-review:
       parameters:
@@ -36104,10 +36104,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"item_id": "<id>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"item_id": "<id>"}
+          application/json: {}
   createHrisLocation:
     speakeasy-default-create-hris-location:
       parameters:
@@ -36360,10 +36360,10 @@ examples:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {"name": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   createHrisEmployee:
     speakeasy-default-create-hris-employee:
       parameters:
@@ -36402,7 +36402,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   getHrisEmployee:
     speakeasy-default-get-hris-employee:
       parameters:
@@ -36429,7 +36429,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"raw": {"key": "<value>"}}
+          application/json: {}
   getHrisTimeoff:
     speakeasy-default-get-hris-timeoff:
       parameters:
@@ -36438,7 +36438,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"start_at": "2025-10-20T08:12:47.408Z"}
+          application/json: {"user_id": "<id>"}
   getHrisTimeshift:
     speakeasy-default-get-hris-timeshift:
       parameters:
@@ -36487,7 +36487,7 @@ examples:
           connection_id: "<id>"
       responses:
         "200":
-          application/json: [{"start_at": "2024-06-17T18:01:36.661Z"}]
+          application/json: [{"start_at": "2024-06-17T18:01:36.661Z", "user_id": "<id>"}]
   listHrisTimeshifts:
     speakeasy-default-list-hris-timeshifts:
       parameters:
@@ -36503,10 +36503,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"name": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   patchHrisEmployee:
     speakeasy-default-patch-hris-employee:
       parameters:
@@ -36571,10 +36571,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"name": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   updateHrisEmployee:
     speakeasy-default-update-hris-employee:
       parameters:
@@ -36669,30 +36669,30 @@ examples:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {"content": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"content": "<value>"}
+          application/json: {}
   createKmsPage:
     speakeasy-default-create-kms-page:
       parameters:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {"title": "<value>", "type": "TEXT"}
+        application/json: {"type": "TEXT"}
       responses:
         "200":
-          application/json: {"title": "<value>", "type": "TEXT"}
+          application/json: {"type": "TEXT"}
   createKmsSpace:
     speakeasy-default-create-kms-space:
       parameters:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {"name": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   getKmsComment:
     speakeasy-default-get-kms-comment:
       parameters:
@@ -36701,7 +36701,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"content": "<value>"}
+          application/json: {}
   getKmsPage:
     speakeasy-default-get-kms-page:
       parameters:
@@ -36710,7 +36710,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"title": "<value>", "type": "HTML"}
+          application/json: {"type": "HTML"}
   getKmsSpace:
     speakeasy-default-get-kms-space:
       parameters:
@@ -36719,7 +36719,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   listKmsComments:
     speakeasy-default-list-kms-comments:
       parameters:
@@ -36751,10 +36751,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"content": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"content": "<value>"}
+          application/json: {}
   patchKmsPage:
     speakeasy-default-patch-kms-page:
       parameters:
@@ -36762,10 +36762,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"title": "<value>", "type": "OTHER"}
+        application/json: {"type": "OTHER"}
       responses:
         "200":
-          application/json: {"title": "<value>", "type": "MARKDOWN"}
+          application/json: {"type": "MARKDOWN"}
   patchKmsSpace:
     speakeasy-default-patch-kms-space:
       parameters:
@@ -36773,10 +36773,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"name": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   removeKmsComment:
     speakeasy-default-remove-kms-comment:
       parameters:
@@ -36802,10 +36802,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"content": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"content": "<value>"}
+          application/json: {}
   updateKmsPage:
     speakeasy-default-update-kms-page:
       parameters:
@@ -36813,10 +36813,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"title": "<value>", "type": "OTHER"}
+        application/json: {"type": "OTHER"}
       responses:
         "200":
-          application/json: {"title": "<value>", "type": "MARKDOWN"}
+          application/json: {"type": "MARKDOWN"}
   updateKmsSpace:
     speakeasy-default-update-kms-space:
       parameters:
@@ -36824,30 +36824,30 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"name": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   createTaskComment:
     speakeasy-default-create-task-comment:
       parameters:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {"text": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"text": "<value>"}
+          application/json: {}
   createUcComment:
     speakeasy-default-create-uc-comment:
       parameters:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {"content": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"content": "<value>"}
+          application/json: {}
   getTaskComment:
     speakeasy-default-get-task-comment:
       parameters:
@@ -36856,7 +36856,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"text": "<value>"}
+          application/json: {}
   getUcComment:
     speakeasy-default-get-uc-comment:
       parameters:
@@ -36865,7 +36865,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"content": "<value>"}
+          application/json: {}
   listTaskComments:
     speakeasy-default-list-task-comments:
       parameters:
@@ -36889,10 +36889,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"text": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"text": "<value>"}
+          application/json: {}
   patchUcComment:
     speakeasy-default-patch-uc-comment:
       parameters:
@@ -36900,10 +36900,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"content": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"content": "<value>"}
+          application/json: {}
   removeTaskComment:
     speakeasy-default-remove-task-comment:
       parameters:
@@ -36923,10 +36923,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"text": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"text": "<value>"}
+          application/json: {}
   updateUcComment:
     speakeasy-default-update-uc-comment:
       parameters:
@@ -36934,30 +36934,30 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"content": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"content": "<value>"}
+          application/json: {}
   createLmsClass:
     speakeasy-default-create-lms-class:
       parameters:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {"course_id": "<id>", "name": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"course_id": "<id>", "name": "<value>"}
+          application/json: {}
   createLmsCourse:
     speakeasy-default-create-lms-course:
       parameters:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {"name": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   createLmsInstructor:
     speakeasy-default-create-lms-instructor:
       parameters:
@@ -36986,7 +36986,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"course_id": "<id>", "name": "<value>"}
+          application/json: {}
   getLmsCourse:
     speakeasy-default-get-lms-course:
       parameters:
@@ -36995,7 +36995,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   getLmsInstructor:
     speakeasy-default-get-lms-instructor:
       parameters:
@@ -37053,10 +37053,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"course_id": "<id>", "name": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"course_id": "<id>", "name": "<value>"}
+          application/json: {}
   patchLmsCourse:
     speakeasy-default-patch-lms-course:
       parameters:
@@ -37064,10 +37064,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"name": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   patchLmsInstructor:
     speakeasy-default-patch-lms-instructor:
       parameters:
@@ -37121,10 +37121,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"course_id": "<id>", "name": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"course_id": "<id>", "name": "<value>"}
+          application/json: {}
   updateLmsCourse:
     speakeasy-default-update-lms-course:
       parameters:
@@ -37132,10 +37132,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"name": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   updateLmsInstructor:
     speakeasy-default-update-lms-instructor:
       parameters:
@@ -37286,7 +37286,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   getMessagingMessage:
     speakeasy-default-get-messaging-message:
       parameters:
@@ -37533,7 +37533,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"total_amount": 2074.25}
+          application/json: {}
   getPaymentRefund:
     speakeasy-default-get-payment-refund:
       parameters:
@@ -37542,7 +37542,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"payment_id": "<id>", "total_amount": 2321.11}
+          application/json: {}
   getPaymentSubscription:
     speakeasy-default-get-payment-subscription:
       parameters:
@@ -38408,10 +38408,10 @@ examples:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {"name": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   patchAtsCompany:
     speakeasy-default-patch-ats-company:
       parameters:
@@ -38419,10 +38419,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"name": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   removeAtsCompany:
     speakeasy-default-remove-ats-company:
       parameters:
@@ -38436,10 +38436,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"name": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   createAccountingBill:
     speakeasy-default-create-accounting-bill:
       parameters:
@@ -38801,7 +38801,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"id": "<id>", "name": "<value>", "type": "EMPLOYMENT_VERIFICATION"}
+          application/json: {"name": "<value>", "type": "EMPLOYMENT_VERIFICATION"}
   getVerificationRequest:
     speakeasy-default-get-verification-request:
       parameters:
@@ -39514,10 +39514,10 @@ examples:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {"name": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   getFormsForm:
     speakeasy-default-get-forms-form:
       parameters:
@@ -39526,7 +39526,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   getFormsSubmission:
     speakeasy-default-get-forms-submission:
       parameters:
@@ -39559,10 +39559,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"name": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   removeFormsForm:
     speakeasy-default-remove-forms-form:
       parameters:
@@ -39576,10 +39576,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"name": "<value>"}
+        application/json: {}
       responses:
         "200":
-          application/json: {"name": "<value>"}
+          application/json: {}
   createShippingLabel:
     speakeasy-default-create-shipping-label:
       parameters:
@@ -40009,10 +40009,10 @@ examples:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {"id": "<id>", "name": "<value>", "type": "REFERENCE_CHECK"}
+        application/json: {"type": "REFERENCE_CHECK"}
       responses:
         "200":
-          application/json: {"id": "<id>", "name": "<value>", "type": "OTHER"}
+          application/json: {"type": "OTHER"}
   getAssessmentPackage:
     speakeasy-default-get-assessment-package:
       parameters:
@@ -40021,7 +40021,7 @@ examples:
           id: "<id>"
       responses:
         "200":
-          application/json: {"id": "<id>", "name": "<value>", "type": "OTHER"}
+          application/json: {"type": "OTHER"}
   listAssessmentPackages:
     speakeasy-default-list-assessment-packages:
       parameters:
@@ -40037,10 +40037,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"id": "<id>", "name": "<value>", "type": "BACKGROUND_CHECK"}
+        application/json: {"type": "BACKGROUND_CHECK"}
       responses:
         "200":
-          application/json: {"id": "<id>", "name": "<value>", "type": "SKILLS_TEST"}
+          application/json: {"type": "SKILLS_TEST"}
   removeAssessmentPackage:
     speakeasy-default-remove-assessment-package:
       parameters:
@@ -40054,10 +40054,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"id": "<id>", "name": "<value>", "type": "OTHER"}
+        application/json: {"type": "OTHER"}
       responses:
         "200":
-          application/json: {"id": "<id>", "name": "<value>", "type": "BEHAVIORAL_ASSESSMENT"}
+          application/json: {"type": "BEHAVIORAL_ASSESSMENT"}
   createLmsActivity:
     speakeasy-default-create-lms-activity:
       parameters:
@@ -40426,10 +40426,10 @@ examples:
         path:
           connection_id: "<id>"
       requestBody:
-        application/json: {"start_at": "2024-09-03T22:31:51.863Z"}
+        application/json: {"user_id": "<id>"}
       responses:
         "200":
-          application/json: {"start_at": "2026-06-15T05:46:27.150Z"}
+          application/json: {"user_id": "<id>"}
   patchHrisTimeoff:
     speakeasy-default-patch-hris-timeoff:
       parameters:
@@ -40437,10 +40437,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"start_at": "2024-01-26T05:49:44.056Z"}
+        application/json: {"user_id": "<id>"}
       responses:
         "200":
-          application/json: {"start_at": "2024-11-03T06:01:35.702Z"}
+          application/json: {"user_id": "<id>"}
   removeHrisTimeoff:
     speakeasy-default-remove-hris-timeoff:
       parameters:
@@ -40454,10 +40454,10 @@ examples:
           connection_id: "<id>"
           id: "<id>"
       requestBody:
-        application/json: {"start_at": "2026-02-26T01:59:20.061Z"}
+        application/json: {"user_id": "<id>"}
       responses:
         "200":
-          application/json: {"start_at": "2025-05-04T04:02:48.766Z"}
+          application/json: {"user_id": "<id>"}
   createSigningSignatory:
     speakeasy-default-create-signing-signatory:
       parameters:
@@ -40550,7 +40550,7 @@ examples:
           application/json: {"id": "<id>"}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Java SDK Changes:\n* `unified-to.hris.patchHrisTimeoff()`: \n  *  `request.hrisTimeoff.startAt` **Changed** (Breaking ⚠️)\n  *  `response.startAt` **Changed**\n* `unified-to.timeoff.updateHrisTimeoff()`: \n  *  `request.hrisTimeoff.startAt` **Changed** (Breaking ⚠️)\n  *  `response.startAt` **Changed**\n* `unified-to.timeoff.patchHrisTimeoff()`: \n  *  `request.hrisTimeoff.startAt` **Changed** (Breaking ⚠️)\n  *  `response.startAt` **Changed**\n* `unified-to.timeoff.createHrisTimeoff()`: \n  *  `request.hrisTimeoff.startAt` **Changed** (Breaking ⚠️)\n  *  `response.startAt` **Changed**\n* `unified-to.hris.updateHrisTimeoff()`: \n  *  `request.hrisTimeoff.startAt` **Changed** (Breaking ⚠️)\n  *  `response.startAt` **Changed**\n* `unified-to.hris.createHrisTimeoff()`: \n  *  `request.hrisTimeoff.startAt` **Changed** (Breaking ⚠️)\n  *  `response.startAt` **Changed**\n* `unified-to.hris.listHrisTimeshifts()`:  `response.[]` **Changed**\n* `unified-to.hris.getHrisTimeoff()`:  `response.startAt` **Changed**\n* `unified-to.hris.listHrisTimeoffs()`:  `response.[].startAt` **Changed**\n* `unified-to.hris.updateHrisTimeshift()`: \n  *  `request.hrisTimeshift` **Changed**\n  *  `response` **Changed**\n* `unified-to.hris.getHrisTimeshift()`:  `response` **Changed**\n* `unified-to.timeoff.getHrisTimeoff()`:  `response.startAt` **Changed**\n* `unified-to.timeoff.listHrisTimeoffs()`:  `response.[].startAt` **Changed**\n* `unified-to.hris.patchHrisTimeshift()`: \n  *  `request.hrisTimeshift` **Changed**\n  *  `response` **Changed**\n* `unified-to.hris.createHrisTimeshift()`: \n  *  `request.hrisTimeshift` **Changed**\n  *  `response` **Changed**\n* `unified-to.timeshift.createHrisTimeshift()`: \n  *  `request.hrisTimeshift` **Changed**\n  *  `response` **Changed**\n* `unified-to.timeshift.getHrisTimeshift()`:  `response` **Changed**\n* `unified-to.timeshift.listHrisTimeshifts()`:  `response.[]` **Changed**\n* `unified-to.timeshift.patchHrisTimeshift()`: \n  *  `request.hrisTimeshift` **Changed**\n  *  `response` **Changed**\n* `unified-to.timeshift.updateHrisTimeshift()`: \n  *  `request.hrisTimeshift` **Changed**\n  *  `response` **Changed**\n"
+releaseNotes: "## Java SDK Changes:\n* `unified-to.hris.createHrisTimeoff()`: \n  *  `request.hrisTimeoff` **Changed** (Breaking ⚠️)\n  *  `response` **Changed**\n* `unified-to.timeoff.updateHrisTimeoff()`: \n  *  `request.hrisTimeoff` **Changed** (Breaking ⚠️)\n  *  `response` **Changed**\n* `unified-to.timeoff.patchHrisTimeoff()`: \n  *  `request.hrisTimeoff` **Changed** (Breaking ⚠️)\n  *  `response` **Changed**\n* `unified-to.timeoff.createHrisTimeoff()`: \n  *  `request.hrisTimeoff` **Changed** (Breaking ⚠️)\n  *  `response` **Changed**\n* `unified-to.hris.updateHrisTimeoff()`: \n  *  `request.hrisTimeoff` **Changed** (Breaking ⚠️)\n  *  `response` **Changed**\n* `unified-to.hris.patchHrisTimeoff()`: \n  *  `request.hrisTimeoff` **Changed** (Breaking ⚠️)\n  *  `response` **Changed**\n* `unified-to.payslip.listHrisPayslips()`: \n  *  `request.fields` **Changed**\n  *  `response.[].raw` **Changed**\n* `unified-to.commerce.createCommerceLocation()`: \n  *  `request.commerceLocation.name` **Changed**\n  *  `response.name` **Changed**\n* `unified-to.creditmemo.patchAccountingCreditmemo()`: \n  *  `request.fields` **Changed**\n* `unified-to.creditmemo.updateAccountingCreditmemo()`: \n  *  `request.fields` **Changed**\n* `unified-to.assessment.createAssessmentPackage()`: \n  *  `request.assessmentPackage` **Changed**\n  *  `response` **Changed**\n* `unified-to.assessment.getAssessmentPackage()`:  `response` **Changed**\n* `unified-to.assessment.listAssessmentPackages()`:  `response.[]` **Changed**\n* `unified-to.assessment.patchAssessmentPackage()`: \n  *  `request.assessmentPackage` **Changed**\n  *  `response` **Changed**\n* `unified-to.assessment.updateAssessmentPackage()`: \n  *  `request.assessmentPackage` **Changed**\n  *  `response` **Changed**\n* `unified-to.package.createAssessmentPackage()`: \n  *  `request.assessmentPackage` **Changed**\n  *  `response` **Changed**\n* `unified-to.package.getAssessmentPackage()`:  `response` **Changed**\n* `unified-to.package.getVerificationPackage()`:  `response.id` **Changed**\n* `unified-to.package.listAssessmentPackages()`:  `response.[]` **Changed**\n* `unified-to.package.listVerificationPackages()`:  `response.[].id` **Changed**\n* `unified-to.package.patchAssessmentPackage()`: \n  *  `request.assessmentPackage` **Changed**\n  *  `response` **Changed**\n* `unified-to.package.updateAssessmentPackage()`: \n  *  `request.assessmentPackage` **Changed**\n  *  `response` **Changed**\n* `unified-to.ats.createAtsCompany()`: \n  *  `request.atsCompany.name` **Changed**\n  *  `response.name` **Changed**\n* `unified-to.ats.getAtsCompany()`:  `response.name` **Changed**\n* `unified-to.ats.listAtsCompanies()`:  `response.[].name` **Changed**\n* `unified-to.ats.patchAtsCompany()`: \n  *  `request.atsCompany.name` **Changed**\n  *  `response.name` **Changed**\n* `unified-to.ats.updateAtsCompany()`: \n  *  `request.atsCompany.name` **Changed**\n  *  `response.name` **Changed**\n* `unified-to.company.createAtsCompany()`: \n  *  `request.atsCompany.name` **Changed**\n  *  `response.name` **Changed**\n* `unified-to.company.getAtsCompany()`:  `response.name` **Changed**\n* `unified-to.company.listAtsCompanies()`:  `response.[].name` **Changed**\n* `unified-to.company.patchAtsCompany()`: \n  *  `request.atsCompany.name` **Changed**\n  *  `response.name` **Changed**\n* `unified-to.company.updateAtsCompany()`: \n  *  `request.atsCompany.name` **Changed**\n  *  `response.name` **Changed**\n* `unified-to.calendar.createCalendarCalendar()`: \n  *  `request.calendarCalendar.name` **Changed**\n  *  `response.name` **Changed**\n* `unified-to.calendar.getCalendarCalendar()`:  `response.name` **Changed**\n* `unified-to.calendar.listCalendarCalendars()`:  `response.[].name` **Changed**\n* `unified-to.calendar.patchCalendarCalendar()`: \n  *  `request.calendarCalendar.name` **Changed**\n  *  `response.name` **Changed**\n* `unified-to.calendar.updateCalendarCalendar()`: \n  *  `request.calendarCalendar.name` **Changed**\n  *  `response.name` **Changed**\n* `unified-to.event.patchMessagingEvent()`: \n  *  `request.messagingEvent.channel.name` **Changed**\n  *  `response.channel.name` **Changed**\n* `unified-to.event.updateMessagingEvent()`: \n  *  `request.messagingEvent.channel.name` **Changed**\n  *  `response.channel.name` **Changed**\n* `unified-to.commerce.createCommerceInventory()`: \n  *  `request.commerceInventory.available` **Changed**\n  *  `response.available` **Changed**\n* `unified-to.accounting.listAccountingCreditmemoes()`: \n  *  `request.fields` **Changed**\n* `unified-to.commerce.createCommerceReview()`: \n  *  `request.commerceReview` **Changed**\n  *  `response` **Changed**\n* `unified-to.commerce.getCommerceInventory()`:  `response.available` **Changed**\n* `unified-to.commerce.getCommerceLocation()`:  `response.name` **Changed**\n* `unified-to.commerce.getCommerceReview()`:  `response` **Changed**\n* `unified-to.commerce.listCommerceInventories()`:  `response.[].available` **Changed**\n* `unified-to.commerce.listCommerceLocations()`:  `response.[].name` **Changed**\n* `unified-to.commerce.listCommerceReviews()`:  `response.[]` **Changed**\n* `unified-to.commerce.patchCommerceInventory()`: \n  *  `request.commerceInventory.available` **Changed**\n  *  `response.available` **Changed**\n* `unified-to.commerce.patchCommerceLocation()`: \n  *  `request.commerceLocation.name` **Changed**\n  *  `response.name` **Changed**\n* `unified-to.commerce.patchCommerceReview()`: \n  *  `request.commerceReview` **Changed**\n  *  `response` **Changed**\n* `unified-to.commerce.updateCommerceInventory()`: \n  *  `request.commerceInventory.available` **Changed**\n  *  `response.available` **Changed**\n* `unified-to.commerce.updateCommerceLocation()`: \n  *  `request.commerceLocation.name` **Changed**\n  *  `response.name` **Changed**\n* `unified-to.commerce.updateCommerceReview()`: \n  *  `request.commerceReview` **Changed**\n  *  `response` **Changed**\n* `unified-to.inventory.createCommerceInventory()`: \n  *  `request.commerceInventory.available` **Changed**\n  *  `response.available` **Changed**\n* `unified-to.inventory.getCommerceInventory()`:  `response.available` **Changed**\n* `unified-to.inventory.listCommerceInventories()`:  `response.[].available` **Changed**\n* `unified-to.inventory.patchCommerceInventory()`: \n  *  `request.commerceInventory.available` **Changed**\n  *  `response.available` **Changed**\n* `unified-to.inventory.updateCommerceInventory()`: \n  *  `request.commerceInventory.available` **Changed**\n  *  `response.available` **Changed**\n* `unified-to.location.createCommerceLocation()`: \n  *  `request.commerceLocation.name` **Changed**\n  *  `response.name` **Changed**\n* `unified-to.location.getCommerceLocation()`:  `response.name` **Changed**\n* `unified-to.location.listCommerceLocations()`:  `response.[].name` **Changed**\n* `unified-to.location.patchCommerceLocation()`: \n  *  `request.commerceLocation.name` **Changed**\n  *  `response.name` **Changed**\n* `unified-to.location.updateCommerceLocation()`: \n  *  `request.commerceLocation.name` **Changed**\n  *  `response.name` **Changed**\n* `unified-to.review.createCommerceReview()`: \n  *  `request.commerceReview` **Changed**\n  *  `response` **Changed**\n* `unified-to.review.getCommerceReview()`:  `response` **Changed**\n* `unified-to.review.listCommerceReviews()`:  `response.[]` **Changed**\n* `unified-to.review.patchCommerceReview()`: \n  *  `request.commerceReview` **Changed**\n  *  `response` **Changed**\n* `unified-to.review.updateCommerceReview()`: \n  *  `request.commerceReview` **Changed**\n  *  `response` **Changed**\n* `unified-to.forms.createFormsForm()`: \n  *  `request.formsForm.name` **Changed**\n  *  `response.name` **Changed**\n* `unified-to.timeoff.listHrisTimeoffs()`:  `response.[]` **Changed**\n* `unified-to.forms.listFormsForms()`:  `response.[].name` **Changed**\n* `unified-to.forms.patchFormsForm()`: \n  *  `request.formsForm.name` **Changed**\n  *  `response.name` **Changed**\n* `unified-to.forms.updateFormsForm()`: \n  *  `request.formsForm.name` **Changed**\n  *  `response.name` **Changed**\n* `unified-to.form.createFormsForm()`: \n  *  `request.formsForm.name` **Changed**\n  *  `response.name` **Changed**\n* `unified-to.form.getFormsForm()`:  `response.name` **Changed**\n* `unified-to.form.listFormsForms()`:  `response.[].name` **Changed**\n* `unified-to.form.patchFormsForm()`: \n  *  `request.formsForm.name` **Changed**\n  *  `response.name` **Changed**\n* `unified-to.accounting.getAccountingCreditmemo()`: \n  *  `request.fields` **Changed**\n* `unified-to.hris.createHrisDevice()`: \n  *  `request.hrisDevice.name` **Changed**\n  *  `response.name` **Changed**\n* `unified-to.creditmemo.getAccountingCreditmemo()`: \n  *  `request.fields` **Changed**\n* `unified-to.hris.getHrisDevice()`:  `response.name` **Changed**\n* `unified-to.hris.getHrisPayslip()`: \n  *  `request.fields` **Changed**\n  *  `response.raw` **Changed**\n* `unified-to.hris.getHrisTimeoff()`:  `response` **Changed**\n* `unified-to.hris.listHrisDevices()`:  `response.[].name` **Changed**\n* `unified-to.hris.listHrisPayslips()`: \n  *  `request.fields` **Changed**\n  *  `response.[].raw` **Changed**\n* `unified-to.hris.listHrisTimeoffs()`:  `response.[]` **Changed**\n* `unified-to.hris.patchHrisDevice()`: \n  *  `request.hrisDevice.name` **Changed**\n  *  `response.name` **Changed**\n* `unified-to.creditmemo.createAccountingCreditmemo()`: \n  *  `request.fields` **Changed**\n* `unified-to.hris.updateHrisDevice()`: \n  *  `request.hrisDevice.name` **Changed**\n  *  `response.name` **Changed**\n* `unified-to.accounting.updateAccountingCreditmemo()`: \n  *  `request.fields` **Changed**\n* `unified-to.device.createHrisDevice()`: \n  *  `request.hrisDevice.name` **Changed**\n  *  `response.name` **Changed**\n* `unified-to.device.getHrisDevice()`:  `response.name` **Changed**\n* `unified-to.device.listHrisDevices()`:  `response.[].name` **Changed**\n* `unified-to.device.patchHrisDevice()`: \n  *  `request.hrisDevice.name` **Changed**\n  *  `response.name` **Changed**\n* `unified-to.device.updateHrisDevice()`: \n  *  `request.hrisDevice.name` **Changed**\n  *  `response.name` **Changed**\n* `unified-to.payslip.getHrisPayslip()`: \n  *  `request.fields` **Changed**\n  *  `response.raw` **Changed**\n* `unified-to.accounting.createAccountingCreditmemo()`: \n  *  `request.fields` **Changed**\n* `unified-to.accounting.patchAccountingCreditmemo()`: \n  *  `request.fields` **Changed**\n* `unified-to.timeoff.getHrisTimeoff()`:  `response` **Changed**\n* `unified-to.forms.getFormsForm()`:  `response.name` **Changed**\n* `unified-to.creditmemo.listAccountingCreditmemoes()`: \n  *  `request.fields` **Changed**\n* `unified-to.form.updateFormsForm()`: \n  *  `request.formsForm.name` **Changed**\n  *  `response.name` **Changed**\n* `unified-to.kms.createKmsComment()`: \n  *  `request.kmsComment.content` **Changed**\n  *  `response.content` **Changed**\n* `unified-to.kms.createKmsPage()`: \n  *  `request.kmsPage.title` **Changed**\n  *  `response.title` **Changed**\n* `unified-to.kms.createKmsSpace()`: \n  *  `request.kmsSpace.name` **Changed**\n  *  `response.name` **Changed**\n* `unified-to.kms.getKmsComment()`:  `response.content` **Changed**\n* `unified-to.kms.getKmsPage()`:  `response.title` **Changed**\n* `unified-to.kms.getKmsSpace()`:  `response.name` **Changed**\n* `unified-to.kms.listKmsComments()`:  `response.[].content` **Changed**\n* `unified-to.kms.listKmsPages()`:  `response.[].title` **Changed**\n* `unified-to.kms.listKmsSpaces()`:  `response.[].name` **Changed**\n* `unified-to.kms.patchKmsComment()`: \n  *  `request.kmsComment.content` **Changed**\n  *  `response.content` **Changed**\n* `unified-to.kms.patchKmsPage()`: \n  *  `request.kmsPage.title` **Changed**\n  *  `response.title` **Changed**\n* `unified-to.kms.patchKmsSpace()`: \n  *  `request.kmsSpace.name` **Changed**\n  *  `response.name` **Changed**\n* `unified-to.kms.updateKmsComment()`: \n  *  `request.kmsComment.content` **Changed**\n  *  `response.content` **Changed**\n* `unified-to.kms.updateKmsPage()`: \n  *  `request.kmsPage.title` **Changed**\n  *  `response.title` **Changed**\n* `unified-to.kms.updateKmsSpace()`: \n  *  `request.kmsSpace.name` **Changed**\n  *  `response.name` **Changed**\n* `unified-to.comment.createKmsComment()`: \n  *  `request.kmsComment.content` **Changed**\n  *  `response.content` **Changed**\n* `unified-to.comment.createTaskComment()`: \n  *  `request.taskComment.text` **Changed**\n  *  `response.text` **Changed**\n* `unified-to.comment.createUcComment()`: \n  *  `request.ucComment.content` **Changed**\n  *  `response.content` **Changed**\n* `unified-to.comment.getKmsComment()`:  `response.content` **Changed**\n* `unified-to.comment.getTaskComment()`:  `response.text` **Changed**\n* `unified-to.comment.getUcComment()`:  `response.content` **Changed**\n* `unified-to.comment.listKmsComments()`:  `response.[].content` **Changed**\n* `unified-to.comment.listTaskComments()`:  `response.[].text` **Changed**\n* `unified-to.comment.listUcComments()`:  `response.[].content` **Changed**\n* `unified-to.comment.patchKmsComment()`: \n  *  `request.kmsComment.content` **Changed**\n  *  `response.content` **Changed**\n* `unified-to.comment.patchTaskComment()`: \n  *  `request.taskComment.text` **Changed**\n  *  `response.text` **Changed**\n* `unified-to.comment.patchUcComment()`: \n  *  `request.ucComment.content` **Changed**\n  *  `response.content` **Changed**\n* `unified-to.comment.updateKmsComment()`: \n  *  `request.kmsComment.content` **Changed**\n  *  `response.content` **Changed**\n* `unified-to.comment.updateTaskComment()`: \n  *  `request.taskComment.text` **Changed**\n  *  `response.text` **Changed**\n* `unified-to.comment.updateUcComment()`: \n  *  `request.ucComment.content` **Changed**\n  *  `response.content` **Changed**\n* `unified-to.page.createKmsPage()`: \n  *  `request.kmsPage.title` **Changed**\n  *  `response.title` **Changed**\n* `unified-to.page.getKmsPage()`:  `response.title` **Changed**\n* `unified-to.page.listKmsPages()`:  `response.[].title` **Changed**\n* `unified-to.page.patchKmsPage()`: \n  *  `request.kmsPage.title` **Changed**\n  *  `response.title` **Changed**\n* `unified-to.page.updateKmsPage()`: \n  *  `request.kmsPage.title` **Changed**\n  *  `response.title` **Changed**\n* `unified-to.space.createKmsSpace()`: \n  *  `request.kmsSpace.name` **Changed**\n  *  `response.name` **Changed**\n* `unified-to.space.getKmsSpace()`:  `response.name` **Changed**\n* `unified-to.space.listKmsSpaces()`:  `response.[].name` **Changed**\n* `unified-to.space.patchKmsSpace()`: \n  *  `request.kmsSpace.name` **Changed**\n  *  `response.name` **Changed**\n* `unified-to.space.updateKmsSpace()`: \n  *  `request.kmsSpace.name` **Changed**\n  *  `response.name` **Changed**\n* `unified-to.lms.createLmsClass()`: \n  *  `request.lmsClass` **Changed**\n  *  `response` **Changed**\n* `unified-to.lms.createLmsCourse()`: \n  *  `request.lmsCourse.name` **Changed**\n  *  `response.name` **Changed**\n* `unified-to.lms.getLmsClass()`:  `response` **Changed**\n* `unified-to.lms.getLmsCourse()`:  `response.name` **Changed**\n* `unified-to.lms.listLmsClasses()`:  `response.[]` **Changed**\n* `unified-to.lms.listLmsCourses()`:  `response.[].name` **Changed**\n* `unified-to.lms.patchLmsClass()`: \n  *  `request.lmsClass` **Changed**\n  *  `response` **Changed**\n* `unified-to.lms.patchLmsCourse()`: \n  *  `request.lmsCourse.name` **Changed**\n  *  `response.name` **Changed**\n* `unified-to.lms.updateLmsClass()`: \n  *  `request.lmsClass` **Changed**\n  *  `response` **Changed**\n* `unified-to.lms.updateLmsCourse()`: \n  *  `request.lmsCourse.name` **Changed**\n  *  `response.name` **Changed**\n* `unified-to.class.createLmsClass()`: \n  *  `request.lmsClass` **Changed**\n  *  `response` **Changed**\n* `unified-to.class.getLmsClass()`:  `response` **Changed**\n* `unified-to.class.listLmsClasses()`:  `response.[]` **Changed**\n* `unified-to.class.patchLmsClass()`: \n  *  `request.lmsClass` **Changed**\n  *  `response` **Changed**\n* `unified-to.class.updateLmsClass()`: \n  *  `request.lmsClass` **Changed**\n  *  `response` **Changed**\n* `unified-to.course.createLmsCourse()`: \n  *  `request.lmsCourse.name` **Changed**\n  *  `response.name` **Changed**\n* `unified-to.course.getLmsCourse()`:  `response.name` **Changed**\n* `unified-to.course.listLmsCourses()`:  `response.[].name` **Changed**\n* `unified-to.course.patchLmsCourse()`: \n  *  `request.lmsCourse.name` **Changed**\n  *  `response.name` **Changed**\n* `unified-to.course.updateLmsCourse()`: \n  *  `request.lmsCourse.name` **Changed**\n  *  `response.name` **Changed**\n* `unified-to.messaging.getMessagingChannel()`:  `response.name` **Changed**\n* `unified-to.messaging.listMessagingChannels()`:  `response.[].name` **Changed**\n* `unified-to.messaging.patchMessagingEvent()`: \n  *  `request.messagingEvent.channel.name` **Changed**\n  *  `response.channel.name` **Changed**\n* `unified-to.messaging.updateMessagingEvent()`: \n  *  `request.messagingEvent.channel.name` **Changed**\n  *  `response.channel.name` **Changed**\n* `unified-to.channel.getMessagingChannel()`:  `response.name` **Changed**\n* `unified-to.channel.listMessagingChannels()`:  `response.[].name` **Changed**\n* `unified-to.payment.createPaymentPayment()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.payment.getPaymentPayment()`: \n  *  `request.fields` **Changed**\n  *  `response` **Changed**\n* `unified-to.payment.getPaymentPayout()`:  `response.totalAmount` **Changed**\n* `unified-to.payment.getPaymentRefund()`:  `response` **Changed**\n* `unified-to.payment.listPaymentPayments()`: \n  *  `request.fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.payment.listPaymentPayouts()`:  `response.[].totalAmount` **Changed**\n* `unified-to.payment.listPaymentRefunds()`:  `response.[]` **Changed**\n* `unified-to.payment.patchPaymentPayment()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.payment.updatePaymentPayment()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.payout.getPaymentPayout()`:  `response.totalAmount` **Changed**\n* `unified-to.payout.listPaymentPayouts()`:  `response.[].totalAmount` **Changed**\n* `unified-to.refund.getPaymentRefund()`:  `response` **Changed**\n* `unified-to.refund.listPaymentRefunds()`:  `response.[]` **Changed**\n* `unified-to.task.createTaskComment()`: \n  *  `request.taskComment.text` **Changed**\n  *  `response.text` **Changed**\n* `unified-to.task.getTaskComment()`:  `response.text` **Changed**\n* `unified-to.task.listTaskComments()`:  `response.[].text` **Changed**\n* `unified-to.task.patchTaskComment()`: \n  *  `request.taskComment.text` **Changed**\n  *  `response.text` **Changed**\n* `unified-to.task.updateTaskComment()`: \n  *  `request.taskComment.text` **Changed**\n  *  `response.text` **Changed**\n* `unified-to.uc.createUcComment()`: \n  *  `request.ucComment.content` **Changed**\n  *  `response.content` **Changed**\n* `unified-to.uc.getUcComment()`:  `response.content` **Changed**\n* `unified-to.uc.listUcComments()`:  `response.[].content` **Changed**\n* `unified-to.uc.patchUcComment()`: \n  *  `request.ucComment.content` **Changed**\n  *  `response.content` **Changed**\n* `unified-to.uc.updateUcComment()`: \n  *  `request.ucComment.content` **Changed**\n  *  `response.content` **Changed**\n* `unified-to.unified.getUnifiedIntegrationAuth()`: \n  *  `request.region` **Added**\n* `unified-to.integration.getUnifiedIntegrationAuth()`: \n  *  `request.region` **Added**\n* `unified-to.auth.getUnifiedIntegrationAuth()`: \n  *  `request.region` **Added**\n* `unified-to.verification.getVerificationPackage()`:  `response.id` **Changed**\n* `unified-to.verification.listVerificationPackages()`:  `response.[].id` **Changed**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md

@@ -7,7 +7,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Object;
@@ -79,6 +78,7 @@ public class HrisPayslip {
     private PaymentType paymentType;
 
 
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     private Map<String, Object> raw;
 
@@ -110,11 +110,10 @@ public class HrisPayslip {
             @JsonProperty("net_amount") @Nullable Double netAmount,
             @JsonProperty("paid_at") @Nullable OffsetDateTime paidAt,
             @JsonProperty("payment_type") @Nullable PaymentType paymentType,
-            @JsonProperty("raw") @Nonnull Map<String, Object> raw,
+            @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("start_at") @Nullable OffsetDateTime startAt,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
             @JsonProperty("user_id") @Nullable String userId) {
-        raw = Utils.emptyMapIfNull(raw);
         this.companyId = companyId;
         this.createdAt = createdAt;
         this.currency = currency;
@@ -126,19 +125,17 @@ public class HrisPayslip {
         this.netAmount = netAmount;
         this.paidAt = paidAt;
         this.paymentType = paymentType;
-        this.raw = Optional.ofNullable(raw)
-            .orElseThrow(() -> new IllegalArgumentException("raw cannot be null"));
+        this.raw = raw;
         this.startAt = startAt;
         this.updatedAt = updatedAt;
         this.userId = userId;
     }
     
-    public HrisPayslip(
-            @Nonnull Map<String, Object> raw) {
+    public HrisPayslip() {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null, null, raw,
+            null, null, null,
             null, null, null);
     }
 
@@ -189,8 +186,8 @@ public class HrisPayslip {
         return Optional.ofNullable(this.paymentType);
     }
 
-    public Map<String, Object> raw() {
-        return this.raw;
+    public Optional<Map<String, Object>> raw() {
+        return Optional.ofNullable(this.raw);
     }
 
     public Optional<OffsetDateTime> startAt() {
@@ -279,8 +276,8 @@ public class HrisPayslip {
     }
 
 
-    public HrisPayslip withRaw(@Nonnull Map<String, Object> raw) {
-        this.raw = Utils.checkNotNull(raw, "raw");
+    public HrisPayslip withRaw(@Nullable Map<String, Object> raw) {
+        this.raw = raw;
         return this;
     }
 
@@ -455,8 +452,8 @@ public class HrisPayslip {
             return this;
         }
 
-        public Builder raw(@Nonnull Map<String, Object> raw) {
-            this.raw = Utils.checkNotNull(raw, "raw");
+        public Builder raw(@Nullable Map<String, Object> raw) {
+            this.raw = raw;
             return this;
         }
 

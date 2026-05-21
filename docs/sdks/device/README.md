@@ -40,7 +40,6 @@ public class Application {
 
         CreateHrisDeviceRequest req = CreateHrisDeviceRequest.builder()
                 .hrisDevice(HrisDevice.builder()
-                    .name("<value>")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -216,7 +215,6 @@ public class Application {
 
         PatchHrisDeviceRequest req = PatchHrisDeviceRequest.builder()
                 .hrisDevice(HrisDevice.builder()
-                    .name("<value>")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -334,7 +332,6 @@ public class Application {
 
         UpdateHrisDeviceRequest req = UpdateHrisDeviceRequest.builder()
                 .hrisDevice(HrisDevice.builder()
-                    .name("<value>")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

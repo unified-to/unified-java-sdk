@@ -136,8 +136,6 @@ public class Application {
 
         CreateLmsClassRequest req = CreateLmsClassRequest.builder()
                 .lmsClass(LmsClass.builder()
-                    .courseId("<id>")
-                    .name("<value>")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -318,7 +316,6 @@ public class Application {
 
         CreateLmsCourseRequest req = CreateLmsCourseRequest.builder()
                 .lmsCourse(LmsCourse.builder()
-                    .name("<value>")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -1365,8 +1362,6 @@ public class Application {
 
         PatchLmsClassRequest req = PatchLmsClassRequest.builder()
                 .lmsClass(LmsClass.builder()
-                    .courseId("<id>")
-                    .name("<value>")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1550,7 +1545,6 @@ public class Application {
 
         PatchLmsCourseRequest req = PatchLmsCourseRequest.builder()
                 .lmsCourse(LmsCourse.builder()
-                    .name("<value>")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2187,8 +2181,6 @@ public class Application {
 
         UpdateLmsClassRequest req = UpdateLmsClassRequest.builder()
                 .lmsClass(LmsClass.builder()
-                    .courseId("<id>")
-                    .name("<value>")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -2372,7 +2364,6 @@ public class Application {
 
         UpdateLmsCourseRequest req = UpdateLmsCourseRequest.builder()
                 .lmsCourse(LmsCourse.builder()
-                    .name("<value>")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

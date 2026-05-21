@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.annotation.Nullable;
+import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
@@ -19,8 +20,9 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 public class CommerceInventory {
 
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("available")
-    private double available;
+    private Double available;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -59,7 +61,7 @@ public class CommerceInventory {
 
     @JsonCreator
     public CommerceInventory(
-            @JsonProperty("available") double available,
+            @JsonProperty("available") @Nullable Double available,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("item_id") @Nullable String itemId,
             @JsonProperty("item_option_id") @Nullable String itemOptionId,
@@ -77,15 +79,14 @@ public class CommerceInventory {
         this.updatedAt = updatedAt;
     }
     
-    public CommerceInventory(
-            double available) {
-        this(available, null, null,
+    public CommerceInventory() {
+        this(null, null, null,
             null, null, null,
             null, null);
     }
 
-    public double available() {
-        return this.available;
+    public Optional<Double> available() {
+        return Optional.ofNullable(this.available);
     }
 
     public Optional<String> id() {
@@ -121,7 +122,7 @@ public class CommerceInventory {
     }
 
 
-    public CommerceInventory withAvailable(double available) {
+    public CommerceInventory withAvailable(@Nullable Double available) {
         this.available = available;
         return this;
     }
@@ -213,7 +214,7 @@ public class CommerceInventory {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private double available;
+        private Double available;
 
         private String id;
 
@@ -233,7 +234,7 @@ public class CommerceInventory {
           // force use of static builder() method
         }
 
-        public Builder available(double available) {
+        public Builder available(@Nullable Double available) {
             this.available = available;
             return this;
         }

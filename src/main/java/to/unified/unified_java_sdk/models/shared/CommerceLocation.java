@@ -7,7 +7,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -88,6 +87,7 @@ public class CommerceLocation {
     private List<CommerceItemMedia> media;
 
 
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
@@ -146,7 +146,7 @@ public class CommerceLocation {
             @JsonProperty("location_type") @Nullable LocationType locationType,
             @JsonProperty("longitude") @Nullable Double longitude,
             @JsonProperty("media") @Nullable List<CommerceItemMedia> media,
-            @JsonProperty("name") @Nonnull String name,
+            @JsonProperty("name") @Nullable String name,
             @JsonProperty("parent_id") @Nullable String parentId,
             @JsonProperty("price_level") @Nullable String priceLevel,
             @JsonProperty("rating") @Nullable Double rating,
@@ -168,8 +168,7 @@ public class CommerceLocation {
         this.locationType = locationType;
         this.longitude = longitude;
         this.media = media;
-        this.name = Optional.ofNullable(name)
-            .orElseThrow(() -> new IllegalArgumentException("name cannot be null"));
+        this.name = name;
         this.parentId = parentId;
         this.priceLevel = priceLevel;
         this.rating = rating;
@@ -180,13 +179,12 @@ public class CommerceLocation {
         this.webUrl = webUrl;
     }
     
-    public CommerceLocation(
-            @Nonnull String name) {
+    public CommerceLocation() {
         this(null, null, null,
             null, null, null,
             null, null, null,
             null, null, null,
-            null, name, null,
+            null, null, null,
             null, null, null,
             null, null, null,
             null);
@@ -244,8 +242,8 @@ public class CommerceLocation {
         return Optional.ofNullable(this.media);
     }
 
-    public String name() {
-        return this.name;
+    public Optional<String> name() {
+        return Optional.ofNullable(this.name);
     }
 
     public Optional<String> parentId() {
@@ -363,8 +361,8 @@ public class CommerceLocation {
     }
 
 
-    public CommerceLocation withName(@Nonnull String name) {
-        this.name = Utils.checkNotNull(name, "name");
+    public CommerceLocation withName(@Nullable String name) {
+        this.name = name;
         return this;
     }
 
@@ -607,8 +605,8 @@ public class CommerceLocation {
             return this;
         }
 
-        public Builder name(@Nonnull String name) {
-            this.name = Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
+            this.name = name;
             return this;
         }
 

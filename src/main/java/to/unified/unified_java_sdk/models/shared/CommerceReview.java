@@ -7,7 +7,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -83,6 +82,7 @@ public class CommerceReview {
     private Boolean isVerified;
 
 
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_id")
     private String itemId;
 
@@ -162,7 +162,7 @@ public class CommerceReview {
             @JsonProperty("is_featured") @Nullable Boolean isFeatured,
             @JsonProperty("is_public") @Nullable Boolean isPublic,
             @JsonProperty("is_verified") @Nullable Boolean isVerified,
-            @JsonProperty("item_id") @Nonnull String itemId,
+            @JsonProperty("item_id") @Nullable String itemId,
             @JsonProperty("item_variant_id") @Nullable String itemVariantId,
             @JsonProperty("location_id") @Nullable String locationId,
             @JsonProperty("media") @Nullable List<CommerceItemMedia> media,
@@ -187,8 +187,7 @@ public class CommerceReview {
         this.isFeatured = isFeatured;
         this.isPublic = isPublic;
         this.isVerified = isVerified;
-        this.itemId = Optional.ofNullable(itemId)
-            .orElseThrow(() -> new IllegalArgumentException("itemId cannot be null"));
+        this.itemId = itemId;
         this.itemVariantId = itemVariantId;
         this.locationId = locationId;
         this.media = media;
@@ -203,13 +202,12 @@ public class CommerceReview {
         this.verifiedPurchase = verifiedPurchase;
     }
     
-    public CommerceReview(
-            @Nonnull String itemId) {
+    public CommerceReview() {
         this(null, null, null,
             null, null, null,
             null, null, null,
             null, null, null,
-            itemId, null, null,
+            null, null, null,
             null, null, null,
             null, null, null,
             null, null, null,
@@ -264,8 +262,8 @@ public class CommerceReview {
         return Optional.ofNullable(this.isVerified);
     }
 
-    public String itemId() {
-        return this.itemId;
+    public Optional<String> itemId() {
+        return Optional.ofNullable(this.itemId);
     }
 
     public Optional<String> itemVariantId() {
@@ -396,8 +394,8 @@ public class CommerceReview {
     }
 
 
-    public CommerceReview withItemId(@Nonnull String itemId) {
-        this.itemId = Utils.checkNotNull(itemId, "itemId");
+    public CommerceReview withItemId(@Nullable String itemId) {
+        this.itemId = itemId;
         return this;
     }
 
@@ -675,8 +673,8 @@ public class CommerceReview {
             return this;
         }
 
-        public Builder itemId(@Nonnull String itemId) {
-            this.itemId = Utils.checkNotNull(itemId, "itemId");
+        public Builder itemId(@Nullable String itemId) {
+            this.itemId = itemId;
             return this;
         }
 

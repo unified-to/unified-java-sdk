@@ -7,7 +7,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
 import java.lang.Double;
 import java.lang.Override;
@@ -19,8 +18,9 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 public class AssessmentPackageRegion {
 
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cost_amount")
-    private double costAmount;
+    private Double costAmount;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -35,31 +35,29 @@ public class AssessmentPackageRegion {
     /**
      * Countryregion codes where this package is available ({country}-{state} or {country})
      */
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regions")
     private List<String> regions;
 
     @JsonCreator
     public AssessmentPackageRegion(
-            @JsonProperty("cost_amount") double costAmount,
+            @JsonProperty("cost_amount") @Nullable Double costAmount,
             @JsonProperty("currency") @Nullable String currency,
             @JsonProperty("processing_time") @Nullable Double processingTime,
-            @JsonProperty("regions") @Nonnull List<String> regions) {
+            @JsonProperty("regions") @Nullable List<String> regions) {
         this.costAmount = costAmount;
         this.currency = currency;
         this.processingTime = processingTime;
-        this.regions = Optional.ofNullable(regions)
-            .orElseThrow(() -> new IllegalArgumentException("regions cannot be null"));
+        this.regions = regions;
     }
     
-    public AssessmentPackageRegion(
-            double costAmount,
-            @Nonnull List<String> regions) {
-        this(costAmount, null, null,
-            regions);
+    public AssessmentPackageRegion() {
+        this(null, null, null,
+            null);
     }
 
-    public double costAmount() {
-        return this.costAmount;
+    public Optional<Double> costAmount() {
+        return Optional.ofNullable(this.costAmount);
     }
 
     public Optional<String> currency() {
@@ -73,8 +71,8 @@ public class AssessmentPackageRegion {
     /**
      * Countryregion codes where this package is available ({country}-{state} or {country})
      */
-    public List<String> regions() {
-        return this.regions;
+    public Optional<List<String>> regions() {
+        return Optional.ofNullable(this.regions);
     }
 
     public static Builder builder() {
@@ -82,7 +80,7 @@ public class AssessmentPackageRegion {
     }
 
 
-    public AssessmentPackageRegion withCostAmount(double costAmount) {
+    public AssessmentPackageRegion withCostAmount(@Nullable Double costAmount) {
         this.costAmount = costAmount;
         return this;
     }
@@ -103,8 +101,8 @@ public class AssessmentPackageRegion {
     /**
      * Countryregion codes where this package is available ({country}-{state} or {country})
      */
-    public AssessmentPackageRegion withRegions(@Nonnull List<String> regions) {
-        this.regions = Utils.checkNotNull(regions, "regions");
+    public AssessmentPackageRegion withRegions(@Nullable List<String> regions) {
+        this.regions = regions;
         return this;
     }
 
@@ -144,7 +142,7 @@ public class AssessmentPackageRegion {
     @SuppressWarnings("UnusedReturnValue")
     public final static class Builder {
 
-        private double costAmount;
+        private Double costAmount;
 
         private String currency;
 
@@ -156,7 +154,7 @@ public class AssessmentPackageRegion {
           // force use of static builder() method
         }
 
-        public Builder costAmount(double costAmount) {
+        public Builder costAmount(@Nullable Double costAmount) {
             this.costAmount = costAmount;
             return this;
         }
@@ -174,8 +172,8 @@ public class AssessmentPackageRegion {
         /**
          * Countryregion codes where this package is available ({country}-{state} or {country})
          */
-        public Builder regions(@Nonnull List<String> regions) {
-            this.regions = Utils.checkNotNull(regions, "regions");
+        public Builder regions(@Nullable List<String> regions) {
+            this.regions = regions;
             return this;
         }
 

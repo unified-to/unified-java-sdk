@@ -7,7 +7,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Object;
@@ -41,6 +40,7 @@ public class CalendarCalendar {
     private Boolean isPrimary;
 
 
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
@@ -65,7 +65,7 @@ public class CalendarCalendar {
             @JsonProperty("description") @Nullable String description,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_primary") @Nullable Boolean isPrimary,
-            @JsonProperty("name") @Nonnull String name,
+            @JsonProperty("name") @Nullable String name,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("timezone") @Nullable String timezone,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
@@ -73,17 +73,15 @@ public class CalendarCalendar {
         this.description = description;
         this.id = id;
         this.isPrimary = isPrimary;
-        this.name = Optional.ofNullable(name)
-            .orElseThrow(() -> new IllegalArgumentException("name cannot be null"));
+        this.name = name;
         this.raw = raw;
         this.timezone = timezone;
         this.updatedAt = updatedAt;
     }
     
-    public CalendarCalendar(
-            @Nonnull String name) {
+    public CalendarCalendar() {
         this(null, null, null,
-            null, name, null,
+            null, null, null,
             null, null);
     }
 
@@ -103,8 +101,8 @@ public class CalendarCalendar {
         return Optional.ofNullable(this.isPrimary);
     }
 
-    public String name() {
-        return this.name;
+    public Optional<String> name() {
+        return Optional.ofNullable(this.name);
     }
 
     public Optional<Map<String, Object>> raw() {
@@ -148,8 +146,8 @@ public class CalendarCalendar {
     }
 
 
-    public CalendarCalendar withName(@Nonnull String name) {
-        this.name = Utils.checkNotNull(name, "name");
+    public CalendarCalendar withName(@Nullable String name) {
+        this.name = name;
         return this;
     }
 
@@ -256,8 +254,8 @@ public class CalendarCalendar {
             return this;
         }
 
-        public Builder name(@Nonnull String name) {
-            this.name = Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
+            this.name = name;
             return this;
         }
 

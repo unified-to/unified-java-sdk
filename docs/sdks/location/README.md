@@ -46,7 +46,6 @@ public class Application {
 
         CreateCommerceLocationRequest req = CreateCommerceLocationRequest.builder()
                 .commerceLocation(CommerceLocation.builder()
-                    .name("<value>")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -397,7 +396,6 @@ public class Application {
 
         PatchCommerceLocationRequest req = PatchCommerceLocationRequest.builder()
                 .commerceLocation(CommerceLocation.builder()
-                    .name("<value>")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -632,7 +630,6 @@ public class Application {
 
         UpdateCommerceLocationRequest req = UpdateCommerceLocationRequest.builder()
                 .commerceLocation(CommerceLocation.builder()
-                    .name("<value>")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

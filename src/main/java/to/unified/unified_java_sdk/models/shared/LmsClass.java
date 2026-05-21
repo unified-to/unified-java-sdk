@@ -7,7 +7,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
 import java.lang.Object;
 import java.lang.Override;
@@ -21,6 +20,7 @@ import to.unified.unified_java_sdk.utils.Utils;
 
 public class LmsClass {
 
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("course_id")
     private String courseId;
 
@@ -55,6 +55,7 @@ public class LmsClass {
     private List<LmsMedia> media;
 
 
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
@@ -75,43 +76,39 @@ public class LmsClass {
 
     @JsonCreator
     public LmsClass(
-            @JsonProperty("course_id") @Nonnull String courseId,
+            @JsonProperty("course_id") @Nullable String courseId,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("description") @Nullable String description,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("instructor_ids") @Nullable List<String> instructorIds,
             @JsonProperty("languages") @Nullable List<String> languages,
             @JsonProperty("media") @Nullable List<LmsMedia> media,
-            @JsonProperty("name") @Nonnull String name,
+            @JsonProperty("name") @Nullable String name,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("student_ids") @Nullable List<String> studentIds,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
-        this.courseId = Optional.ofNullable(courseId)
-            .orElseThrow(() -> new IllegalArgumentException("courseId cannot be null"));
+        this.courseId = courseId;
         this.createdAt = createdAt;
         this.description = description;
         this.id = id;
         this.instructorIds = instructorIds;
         this.languages = languages;
         this.media = media;
-        this.name = Optional.ofNullable(name)
-            .orElseThrow(() -> new IllegalArgumentException("name cannot be null"));
+        this.name = name;
         this.raw = raw;
         this.studentIds = studentIds;
         this.updatedAt = updatedAt;
     }
     
-    public LmsClass(
-            @Nonnull String courseId,
-            @Nonnull String name) {
-        this(courseId, null, null,
+    public LmsClass() {
+        this(null, null, null,
             null, null, null,
-            null, name, null,
+            null, null, null,
             null, null);
     }
 
-    public String courseId() {
-        return this.courseId;
+    public Optional<String> courseId() {
+        return Optional.ofNullable(this.courseId);
     }
 
     public Optional<OffsetDateTime> createdAt() {
@@ -138,8 +135,8 @@ public class LmsClass {
         return Optional.ofNullable(this.media);
     }
 
-    public String name() {
-        return this.name;
+    public Optional<String> name() {
+        return Optional.ofNullable(this.name);
     }
 
     public Optional<Map<String, Object>> raw() {
@@ -159,8 +156,8 @@ public class LmsClass {
     }
 
 
-    public LmsClass withCourseId(@Nonnull String courseId) {
-        this.courseId = Utils.checkNotNull(courseId, "courseId");
+    public LmsClass withCourseId(@Nullable String courseId) {
+        this.courseId = courseId;
         return this;
     }
 
@@ -201,8 +198,8 @@ public class LmsClass {
     }
 
 
-    public LmsClass withName(@Nonnull String name) {
-        this.name = Utils.checkNotNull(name, "name");
+    public LmsClass withName(@Nullable String name) {
+        this.name = name;
         return this;
     }
 
@@ -302,8 +299,8 @@ public class LmsClass {
           // force use of static builder() method
         }
 
-        public Builder courseId(@Nonnull String courseId) {
-            this.courseId = Utils.checkNotNull(courseId, "courseId");
+        public Builder courseId(@Nullable String courseId) {
+            this.courseId = courseId;
             return this;
         }
 
@@ -337,8 +334,8 @@ public class LmsClass {
             return this;
         }
 
-        public Builder name(@Nonnull String name) {
-            this.name = Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
+            this.name = name;
             return this;
         }
 

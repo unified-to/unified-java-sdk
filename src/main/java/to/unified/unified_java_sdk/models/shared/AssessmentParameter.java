@@ -7,7 +7,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Override;
@@ -36,6 +35,7 @@ public class AssessmentParameter {
     private Boolean isRequired;
 
 
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
@@ -68,7 +68,7 @@ public class AssessmentParameter {
             @JsonProperty("file_types") @Nullable List<String> fileTypes,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_required") @Nullable Boolean isRequired,
-            @JsonProperty("name") @Nonnull String name,
+            @JsonProperty("name") @Nullable String name,
             @JsonProperty("options") @Nullable List<String> options,
             @JsonProperty("public_question") @Nullable String publicQuestion,
             @JsonProperty("type") @Nullable AssessmentParameterType type,
@@ -76,18 +76,16 @@ public class AssessmentParameter {
         this.fileTypes = fileTypes;
         this.id = id;
         this.isRequired = isRequired;
-        this.name = Optional.ofNullable(name)
-            .orElseThrow(() -> new IllegalArgumentException("name cannot be null"));
+        this.name = name;
         this.options = options;
         this.publicQuestion = publicQuestion;
         this.type = type;
         this.validRegions = validRegions;
     }
     
-    public AssessmentParameter(
-            @Nonnull String name) {
+    public AssessmentParameter() {
         this(null, null, null,
-            name, null, null,
+            null, null, null,
             null, null);
     }
 
@@ -106,8 +104,8 @@ public class AssessmentParameter {
         return Optional.ofNullable(this.isRequired);
     }
 
-    public String name() {
-        return this.name;
+    public Optional<String> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -158,8 +156,8 @@ public class AssessmentParameter {
     }
 
 
-    public AssessmentParameter withName(@Nonnull String name) {
-        this.name = Utils.checkNotNull(name, "name");
+    public AssessmentParameter withName(@Nullable String name) {
+        this.name = name;
         return this;
     }
 
@@ -276,8 +274,8 @@ public class AssessmentParameter {
             return this;
         }
 
-        public Builder name(@Nonnull String name) {
-            this.name = Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
+            this.name = name;
             return this;
         }
 

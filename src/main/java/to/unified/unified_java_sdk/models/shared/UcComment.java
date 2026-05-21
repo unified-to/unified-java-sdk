@@ -7,7 +7,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
 import java.lang.Object;
 import java.lang.Override;
@@ -24,6 +23,7 @@ public class UcComment {
     private String callId;
 
 
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     private String content;
 
@@ -55,15 +55,14 @@ public class UcComment {
     @JsonCreator
     public UcComment(
             @JsonProperty("call_id") @Nullable String callId,
-            @JsonProperty("content") @Nonnull String content,
+            @JsonProperty("content") @Nullable String content,
             @JsonProperty("created_at") @Nullable String createdAt,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("updated_at") @Nullable String updatedAt,
             @JsonProperty("user_id") @Nullable String userId) {
         this.callId = callId;
-        this.content = Optional.ofNullable(content)
-            .orElseThrow(() -> new IllegalArgumentException("content cannot be null"));
+        this.content = content;
         this.createdAt = createdAt;
         this.id = id;
         this.raw = raw;
@@ -71,9 +70,8 @@ public class UcComment {
         this.userId = userId;
     }
     
-    public UcComment(
-            @Nonnull String content) {
-        this(null, content, null,
+    public UcComment() {
+        this(null, null, null,
             null, null, null,
             null);
     }
@@ -82,8 +80,8 @@ public class UcComment {
         return Optional.ofNullable(this.callId);
     }
 
-    public String content() {
-        return this.content;
+    public Optional<String> content() {
+        return Optional.ofNullable(this.content);
     }
 
     public Optional<String> createdAt() {
@@ -117,8 +115,8 @@ public class UcComment {
     }
 
 
-    public UcComment withContent(@Nonnull String content) {
-        this.content = Utils.checkNotNull(content, "content");
+    public UcComment withContent(@Nullable String content) {
+        this.content = content;
         return this;
     }
 
@@ -218,8 +216,8 @@ public class UcComment {
             return this;
         }
 
-        public Builder content(@Nonnull String content) {
-            this.content = Utils.checkNotNull(content, "content");
+        public Builder content(@Nullable String content) {
+            this.content = content;
             return this;
         }
 

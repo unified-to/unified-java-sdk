@@ -65,6 +65,7 @@ public class VerificationPackage {
     private Boolean hasTargetUrl;
 
 
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
 
@@ -132,7 +133,7 @@ public class VerificationPackage {
             @JsonProperty("description") @Nullable String description,
             @JsonProperty("has_redirect_url") @Nullable Boolean hasRedirectUrl,
             @JsonProperty("has_target_url") @Nullable Boolean hasTargetUrl,
-            @JsonProperty("id") @Nonnull String id,
+            @JsonProperty("id") @Nullable String id,
             @JsonProperty("info_url") @Nullable String infoUrl,
             @JsonProperty("max_score") @Nullable Double maxScore,
             @JsonProperty("name") @Nonnull String name,
@@ -151,8 +152,7 @@ public class VerificationPackage {
         this.description = description;
         this.hasRedirectUrl = hasRedirectUrl;
         this.hasTargetUrl = hasTargetUrl;
-        this.id = Optional.ofNullable(id)
-            .orElseThrow(() -> new IllegalArgumentException("id cannot be null"));
+        this.id = id;
         this.infoUrl = infoUrl;
         this.maxScore = maxScore;
         this.name = Optional.ofNullable(name)
@@ -168,12 +168,11 @@ public class VerificationPackage {
     }
     
     public VerificationPackage(
-            @Nonnull String id,
             @Nonnull String name,
             @Nonnull VerificationPackageType type) {
         this(null, null, null,
             null, null, null,
-            null, null, id,
+            null, null, null,
             null, null, name,
             null, null, null,
             null, type, null,
@@ -215,8 +214,8 @@ public class VerificationPackage {
         return Optional.ofNullable(this.hasTargetUrl);
     }
 
-    public String id() {
-        return this.id;
+    public Optional<String> id() {
+        return Optional.ofNullable(this.id);
     }
 
     public Optional<String> infoUrl() {
@@ -324,8 +323,8 @@ public class VerificationPackage {
     }
 
 
-    public VerificationPackage withId(@Nonnull String id) {
-        this.id = Utils.checkNotNull(id, "id");
+    public VerificationPackage withId(@Nullable String id) {
+        this.id = id;
         return this;
     }
 
@@ -554,8 +553,8 @@ public class VerificationPackage {
             return this;
         }
 
-        public Builder id(@Nonnull String id) {
-            this.id = Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
+            this.id = id;
             return this;
         }
 

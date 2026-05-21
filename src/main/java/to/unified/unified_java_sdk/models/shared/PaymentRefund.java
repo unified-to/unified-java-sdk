@@ -7,8 +7,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
+import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
@@ -40,6 +40,7 @@ public class PaymentRefund {
     private String notes;
 
 
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_id")
     private String paymentId;
 
@@ -59,8 +60,9 @@ public class PaymentRefund {
     private PaymentRefundStatus status;
 
 
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_amount")
-    private double totalAmount;
+    private Double totalAmount;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -73,18 +75,17 @@ public class PaymentRefund {
             @JsonProperty("currency") @Nullable String currency,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("notes") @Nullable String notes,
-            @JsonProperty("payment_id") @Nonnull String paymentId,
+            @JsonProperty("payment_id") @Nullable String paymentId,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("reference") @Nullable String reference,
             @JsonProperty("status") @Nullable PaymentRefundStatus status,
-            @JsonProperty("total_amount") double totalAmount,
+            @JsonProperty("total_amount") @Nullable Double totalAmount,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt) {
         this.createdAt = createdAt;
         this.currency = currency;
         this.id = id;
         this.notes = notes;
-        this.paymentId = Optional.ofNullable(paymentId)
-            .orElseThrow(() -> new IllegalArgumentException("paymentId cannot be null"));
+        this.paymentId = paymentId;
         this.raw = raw;
         this.reference = reference;
         this.status = status;
@@ -92,12 +93,10 @@ public class PaymentRefund {
         this.updatedAt = updatedAt;
     }
     
-    public PaymentRefund(
-            @Nonnull String paymentId,
-            double totalAmount) {
+    public PaymentRefund() {
         this(null, null, null,
-            null, paymentId, null,
-            null, null, totalAmount,
+            null, null, null,
+            null, null, null,
             null);
     }
 
@@ -117,8 +116,8 @@ public class PaymentRefund {
         return Optional.ofNullable(this.notes);
     }
 
-    public String paymentId() {
-        return this.paymentId;
+    public Optional<String> paymentId() {
+        return Optional.ofNullable(this.paymentId);
     }
 
     public Optional<Map<String, Object>> raw() {
@@ -133,8 +132,8 @@ public class PaymentRefund {
         return Optional.ofNullable(this.status);
     }
 
-    public double totalAmount() {
-        return this.totalAmount;
+    public Optional<Double> totalAmount() {
+        return Optional.ofNullable(this.totalAmount);
     }
 
     public Optional<OffsetDateTime> updatedAt() {
@@ -170,8 +169,8 @@ public class PaymentRefund {
     }
 
 
-    public PaymentRefund withPaymentId(@Nonnull String paymentId) {
-        this.paymentId = Utils.checkNotNull(paymentId, "paymentId");
+    public PaymentRefund withPaymentId(@Nullable String paymentId) {
+        this.paymentId = paymentId;
         return this;
     }
 
@@ -194,7 +193,7 @@ public class PaymentRefund {
     }
 
 
-    public PaymentRefund withTotalAmount(double totalAmount) {
+    public PaymentRefund withTotalAmount(@Nullable Double totalAmount) {
         this.totalAmount = totalAmount;
         return this;
     }
@@ -271,7 +270,7 @@ public class PaymentRefund {
 
         private PaymentRefundStatus status;
 
-        private double totalAmount;
+        private Double totalAmount;
 
         private OffsetDateTime updatedAt;
 
@@ -299,8 +298,8 @@ public class PaymentRefund {
             return this;
         }
 
-        public Builder paymentId(@Nonnull String paymentId) {
-            this.paymentId = Utils.checkNotNull(paymentId, "paymentId");
+        public Builder paymentId(@Nullable String paymentId) {
+            this.paymentId = paymentId;
             return this;
         }
 
@@ -319,7 +318,7 @@ public class PaymentRefund {
             return this;
         }
 
-        public Builder totalAmount(double totalAmount) {
+        public Builder totalAmount(@Nullable Double totalAmount) {
             this.totalAmount = totalAmount;
             return this;
         }

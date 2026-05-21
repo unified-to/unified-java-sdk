@@ -7,7 +7,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Object;
@@ -87,6 +86,7 @@ public class HrisDevice {
     private String model;
 
 
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
@@ -137,7 +137,7 @@ public class HrisDevice {
             @JsonProperty("location_id") @Nullable String locationId,
             @JsonProperty("manufacturer") @Nullable String manufacturer,
             @JsonProperty("model") @Nullable String model,
-            @JsonProperty("name") @Nonnull String name,
+            @JsonProperty("name") @Nullable String name,
             @JsonProperty("os") @Nullable String os,
             @JsonProperty("os_version") @Nullable String osVersion,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
@@ -157,8 +157,7 @@ public class HrisDevice {
         this.locationId = locationId;
         this.manufacturer = manufacturer;
         this.model = model;
-        this.name = Optional.ofNullable(name)
-            .orElseThrow(() -> new IllegalArgumentException("name cannot be null"));
+        this.name = name;
         this.os = os;
         this.osVersion = osVersion;
         this.raw = raw;
@@ -167,13 +166,12 @@ public class HrisDevice {
         this.version = version;
     }
     
-    public HrisDevice(
-            @Nonnull String name) {
+    public HrisDevice() {
         this(null, null, null,
             null, null, null,
             null, null, null,
             null, null, null,
-            null, name, null,
+            null, null, null,
             null, null, null,
             null, null);
     }
@@ -230,8 +228,8 @@ public class HrisDevice {
         return Optional.ofNullable(this.model);
     }
 
-    public String name() {
-        return this.name;
+    public Optional<String> name() {
+        return Optional.ofNullable(this.name);
     }
 
     public Optional<String> os() {
@@ -344,8 +342,8 @@ public class HrisDevice {
     }
 
 
-    public HrisDevice withName(@Nonnull String name) {
-        this.name = Utils.checkNotNull(name, "name");
+    public HrisDevice withName(@Nullable String name) {
+        this.name = name;
         return this;
     }
 
@@ -570,8 +568,8 @@ public class HrisDevice {
             return this;
         }
 
-        public Builder name(@Nonnull String name) {
-            this.name = Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
+            this.name = name;
             return this;
         }
 

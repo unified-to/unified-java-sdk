@@ -71,6 +71,7 @@ public class HrisTimeoff {
     private String reason;
 
 
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     private OffsetDateTime startAt;
 
@@ -90,7 +91,6 @@ public class HrisTimeoff {
     private OffsetDateTime updatedAt;
 
 
-    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     private String userId;
 
@@ -106,11 +106,11 @@ public class HrisTimeoff {
             @JsonProperty("is_paid") @Nullable Boolean isPaid,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("reason") @Nullable String reason,
-            @JsonProperty("start_at") @Nonnull OffsetDateTime startAt,
+            @JsonProperty("start_at") @Nullable OffsetDateTime startAt,
             @JsonProperty("status") @Nullable HrisTimeoffStatus status,
             @JsonProperty("type") @Nullable HrisTimeoffType type,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
-            @JsonProperty("user_id") @Nullable String userId) {
+            @JsonProperty("user_id") @Nonnull String userId) {
         this.approvedAt = approvedAt;
         this.approverUserId = approverUserId;
         this.comments = comments;
@@ -121,21 +121,21 @@ public class HrisTimeoff {
         this.isPaid = isPaid;
         this.raw = raw;
         this.reason = reason;
-        this.startAt = Optional.ofNullable(startAt)
-            .orElseThrow(() -> new IllegalArgumentException("startAt cannot be null"));
+        this.startAt = startAt;
         this.status = status;
         this.type = type;
         this.updatedAt = updatedAt;
-        this.userId = userId;
+        this.userId = Optional.ofNullable(userId)
+            .orElseThrow(() -> new IllegalArgumentException("userId cannot be null"));
     }
     
     public HrisTimeoff(
-            @Nonnull OffsetDateTime startAt) {
+            @Nonnull String userId) {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null, startAt, null,
-            null, null, null);
+            null, null, null,
+            null, null, userId);
     }
 
     public Optional<OffsetDateTime> approvedAt() {
@@ -178,8 +178,8 @@ public class HrisTimeoff {
         return Optional.ofNullable(this.reason);
     }
 
-    public OffsetDateTime startAt() {
-        return this.startAt;
+    public Optional<OffsetDateTime> startAt() {
+        return Optional.ofNullable(this.startAt);
     }
 
     public Optional<HrisTimeoffStatus> status() {
@@ -194,8 +194,8 @@ public class HrisTimeoff {
         return Optional.ofNullable(this.updatedAt);
     }
 
-    public Optional<String> userId() {
-        return Optional.ofNullable(this.userId);
+    public String userId() {
+        return this.userId;
     }
 
     public static Builder builder() {
@@ -263,8 +263,8 @@ public class HrisTimeoff {
     }
 
 
-    public HrisTimeoff withStartAt(@Nonnull OffsetDateTime startAt) {
-        this.startAt = Utils.checkNotNull(startAt, "startAt");
+    public HrisTimeoff withStartAt(@Nullable OffsetDateTime startAt) {
+        this.startAt = startAt;
         return this;
     }
 
@@ -287,8 +287,8 @@ public class HrisTimeoff {
     }
 
 
-    public HrisTimeoff withUserId(@Nullable String userId) {
-        this.userId = userId;
+    public HrisTimeoff withUserId(@Nonnull String userId) {
+        this.userId = Utils.checkNotNull(userId, "userId");
         return this;
     }
 
@@ -437,8 +437,8 @@ public class HrisTimeoff {
             return this;
         }
 
-        public Builder startAt(@Nonnull OffsetDateTime startAt) {
-            this.startAt = Utils.checkNotNull(startAt, "startAt");
+        public Builder startAt(@Nullable OffsetDateTime startAt) {
+            this.startAt = startAt;
             return this;
         }
 
@@ -457,8 +457,8 @@ public class HrisTimeoff {
             return this;
         }
 
-        public Builder userId(@Nullable String userId) {
-            this.userId = userId;
+        public Builder userId(@Nonnull String userId) {
+            this.userId = Utils.checkNotNull(userId, "userId");
             return this;
         }
 

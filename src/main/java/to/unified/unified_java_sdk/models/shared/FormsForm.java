@@ -7,7 +7,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -73,6 +72,7 @@ public class FormsForm {
     private Boolean isActive;
 
 
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
@@ -108,7 +108,7 @@ public class FormsForm {
             @JsonProperty("has_shuffle_questions") @Nullable Boolean hasShuffleQuestions,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_active") @Nullable Boolean isActive,
-            @JsonProperty("name") @Nonnull String name,
+            @JsonProperty("name") @Nullable String name,
             @JsonProperty("published_url") @Nullable String publishedUrl,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("response_count") @Nullable Double responseCount,
@@ -123,20 +123,18 @@ public class FormsForm {
         this.hasShuffleQuestions = hasShuffleQuestions;
         this.id = id;
         this.isActive = isActive;
-        this.name = Optional.ofNullable(name)
-            .orElseThrow(() -> new IllegalArgumentException("name cannot be null"));
+        this.name = name;
         this.publishedUrl = publishedUrl;
         this.raw = raw;
         this.responseCount = responseCount;
         this.updatedAt = updatedAt;
     }
     
-    public FormsForm(
-            @Nonnull String name) {
+    public FormsForm() {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null, name, null,
+            null, null, null,
             null, null, null);
     }
 
@@ -180,8 +178,8 @@ public class FormsForm {
         return Optional.ofNullable(this.isActive);
     }
 
-    public String name() {
-        return this.name;
+    public Optional<String> name() {
+        return Optional.ofNullable(this.name);
     }
 
     public Optional<String> publishedUrl() {
@@ -265,8 +263,8 @@ public class FormsForm {
     }
 
 
-    public FormsForm withName(@Nonnull String name) {
-        this.name = Utils.checkNotNull(name, "name");
+    public FormsForm withName(@Nullable String name) {
+        this.name = name;
         return this;
     }
 
@@ -439,8 +437,8 @@ public class FormsForm {
             return this;
         }
 
-        public Builder name(@Nonnull String name) {
-            this.name = Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
+            this.name = name;
             return this;
         }
 

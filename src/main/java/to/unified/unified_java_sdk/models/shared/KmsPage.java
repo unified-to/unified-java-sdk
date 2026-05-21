@@ -67,6 +67,7 @@ public class KmsPage {
     private String spaceId;
 
 
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     private String title;
 
@@ -100,7 +101,7 @@ public class KmsPage {
             @JsonProperty("parent_id") @Nullable String parentId,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("space_id") @Nullable String spaceId,
-            @JsonProperty("title") @Nonnull String title,
+            @JsonProperty("title") @Nullable String title,
             @JsonProperty("type") @Nonnull KmsPageType type,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
             @JsonProperty("user_id") @Nullable String userId,
@@ -114,8 +115,7 @@ public class KmsPage {
         this.parentId = parentId;
         this.raw = raw;
         this.spaceId = spaceId;
-        this.title = Optional.ofNullable(title)
-            .orElseThrow(() -> new IllegalArgumentException("title cannot be null"));
+        this.title = title;
         this.type = Optional.ofNullable(type)
             .orElseThrow(() -> new IllegalArgumentException("type cannot be null"));
         this.updatedAt = updatedAt;
@@ -124,12 +124,11 @@ public class KmsPage {
     }
     
     public KmsPage(
-            @Nonnull String title,
             @Nonnull KmsPageType type) {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            title, type, null,
+            null, type, null,
             null, null);
     }
 
@@ -169,8 +168,8 @@ public class KmsPage {
         return Optional.ofNullable(this.spaceId);
     }
 
-    public String title() {
-        return this.title;
+    public Optional<String> title() {
+        return Optional.ofNullable(this.title);
     }
 
     public KmsPageType type() {
@@ -248,8 +247,8 @@ public class KmsPage {
     }
 
 
-    public KmsPage withTitle(@Nonnull String title) {
-        this.title = Utils.checkNotNull(title, "title");
+    public KmsPage withTitle(@Nullable String title) {
+        this.title = title;
         return this;
     }
 
@@ -413,8 +412,8 @@ public class KmsPage {
             return this;
         }
 
-        public Builder title(@Nonnull String title) {
-            this.title = Utils.checkNotNull(title, "title");
+        public Builder title(@Nullable String title) {
+            this.title = title;
             return this;
         }
 

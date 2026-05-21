@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.annotation.Nullable;
+import java.lang.Double;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
@@ -48,8 +49,9 @@ public class PaymentPayout {
     private PaymentPayoutStatus status;
 
 
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_amount")
-    private double totalAmount;
+    private Double totalAmount;
 
 
     @JsonInclude(Include.NON_ABSENT)
@@ -64,7 +66,7 @@ public class PaymentPayout {
             @JsonProperty("notes") @Nullable String notes,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("status") @Nullable PaymentPayoutStatus status,
-            @JsonProperty("total_amount") double totalAmount,
+            @JsonProperty("total_amount") @Nullable Double totalAmount,
             @JsonProperty("updated_at") @Nullable String updatedAt) {
         this.createdAt = createdAt;
         this.currency = currency;
@@ -76,11 +78,10 @@ public class PaymentPayout {
         this.updatedAt = updatedAt;
     }
     
-    public PaymentPayout(
-            double totalAmount) {
+    public PaymentPayout() {
         this(null, null, null,
             null, null, null,
-            totalAmount, null);
+            null, null);
     }
 
     public Optional<String> createdAt() {
@@ -107,8 +108,8 @@ public class PaymentPayout {
         return Optional.ofNullable(this.status);
     }
 
-    public double totalAmount() {
-        return this.totalAmount;
+    public Optional<Double> totalAmount() {
+        return Optional.ofNullable(this.totalAmount);
     }
 
     public Optional<String> updatedAt() {
@@ -156,7 +157,7 @@ public class PaymentPayout {
     }
 
 
-    public PaymentPayout withTotalAmount(double totalAmount) {
+    public PaymentPayout withTotalAmount(@Nullable Double totalAmount) {
         this.totalAmount = totalAmount;
         return this;
     }
@@ -224,7 +225,7 @@ public class PaymentPayout {
 
         private PaymentPayoutStatus status;
 
-        private double totalAmount;
+        private Double totalAmount;
 
         private String updatedAt;
 
@@ -262,7 +263,7 @@ public class PaymentPayout {
             return this;
         }
 
-        public Builder totalAmount(double totalAmount) {
+        public Builder totalAmount(@Nullable Double totalAmount) {
             this.totalAmount = totalAmount;
             return this;
         }

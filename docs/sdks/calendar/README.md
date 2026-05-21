@@ -61,7 +61,6 @@ public class Application {
 
         CreateCalendarCalendarRequest req = CreateCalendarCalendarRequest.builder()
                 .calendarCalendar(CalendarCalendar.builder()
-                    .name("<value>")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -935,7 +934,6 @@ public class Application {
 
         PatchCalendarCalendarRequest req = PatchCalendarCalendarRequest.builder()
                 .calendarCalendar(CalendarCalendar.builder()
-                    .name("<value>")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1405,7 +1403,6 @@ public class Application {
 
         UpdateCalendarCalendarRequest req = UpdateCalendarCalendarRequest.builder()
                 .calendarCalendar(CalendarCalendar.builder()
-                    .name("<value>")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

@@ -40,7 +40,6 @@ public class Application {
 
         CreateCommerceReviewRequest req = CreateCommerceReviewRequest.builder()
                 .commerceReview(CommerceReview.builder()
-                    .itemId("<id>")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -216,7 +215,6 @@ public class Application {
 
         PatchCommerceReviewRequest req = PatchCommerceReviewRequest.builder()
                 .commerceReview(CommerceReview.builder()
-                    .itemId("<id>")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -334,7 +332,6 @@ public class Application {
 
         UpdateCommerceReviewRequest req = UpdateCommerceReviewRequest.builder()
                 .commerceReview(CommerceReview.builder()
-                    .itemId("<id>")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

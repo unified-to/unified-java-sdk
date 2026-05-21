@@ -7,7 +7,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Object;
@@ -41,6 +40,7 @@ public class KmsSpace {
     private Boolean isActive;
 
 
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
@@ -75,7 +75,7 @@ public class KmsSpace {
             @JsonProperty("description") @Nullable String description,
             @JsonProperty("id") @Nullable String id,
             @JsonProperty("is_active") @Nullable Boolean isActive,
-            @JsonProperty("name") @Nonnull String name,
+            @JsonProperty("name") @Nullable String name,
             @JsonProperty("parent_id") @Nullable String parentId,
             @JsonProperty("parent_page_id") @Nullable String parentPageId,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
@@ -85,8 +85,7 @@ public class KmsSpace {
         this.description = description;
         this.id = id;
         this.isActive = isActive;
-        this.name = Optional.ofNullable(name)
-            .orElseThrow(() -> new IllegalArgumentException("name cannot be null"));
+        this.name = name;
         this.parentId = parentId;
         this.parentPageId = parentPageId;
         this.raw = raw;
@@ -94,10 +93,9 @@ public class KmsSpace {
         this.userId = userId;
     }
     
-    public KmsSpace(
-            @Nonnull String name) {
+    public KmsSpace() {
         this(null, null, null,
-            null, name, null,
+            null, null, null,
             null, null, null,
             null);
     }
@@ -118,8 +116,8 @@ public class KmsSpace {
         return Optional.ofNullable(this.isActive);
     }
 
-    public String name() {
-        return this.name;
+    public Optional<String> name() {
+        return Optional.ofNullable(this.name);
     }
 
     public Optional<String> parentId() {
@@ -171,8 +169,8 @@ public class KmsSpace {
     }
 
 
-    public KmsSpace withName(@Nonnull String name) {
-        this.name = Utils.checkNotNull(name, "name");
+    public KmsSpace withName(@Nullable String name) {
+        this.name = name;
         return this;
     }
 
@@ -300,8 +298,8 @@ public class KmsSpace {
             return this;
         }
 
-        public Builder name(@Nonnull String name) {
-            this.name = Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
+            this.name = name;
             return this;
         }
 

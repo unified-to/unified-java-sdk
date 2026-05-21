@@ -22,8 +22,8 @@ public enum GetHrisPayslipQueryParamFields {
     GROSS_AMOUNT("gross_amount"),
     NET_AMOUNT("net_amount"),
     DETAILS("details"),
-    RAW("raw"),
-    DEDUCTION("deduction");
+    DEDUCTION("deduction"),
+    RAW("raw");
 
     @JsonValue
     private final String value;

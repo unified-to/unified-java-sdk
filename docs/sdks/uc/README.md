@@ -54,7 +54,6 @@ public class Application {
 
         CreateUcCommentRequest req = CreateUcCommentRequest.builder()
                 .ucComment(UcComment.builder()
-                    .content("<value>")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -695,7 +694,6 @@ public class Application {
 
         PatchUcCommentRequest req = PatchUcCommentRequest.builder()
                 .ucComment(UcComment.builder()
-                    .content("<value>")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1047,7 +1045,6 @@ public class Application {
 
         UpdateUcCommentRequest req = UpdateUcCommentRequest.builder()
                 .ucComment(UcComment.builder()
-                    .content("<value>")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

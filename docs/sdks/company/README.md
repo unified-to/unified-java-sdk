@@ -53,7 +53,6 @@ public class Application {
 
         CreateAtsCompanyRequest req = CreateAtsCompanyRequest.builder()
                 .atsCompany(AtsCompany.builder()
-                    .name("<value>")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -636,7 +635,6 @@ public class Application {
 
         PatchAtsCompanyRequest req = PatchAtsCompanyRequest.builder()
                 .atsCompany(AtsCompany.builder()
-                    .name("<value>")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -988,7 +986,6 @@ public class Application {
 
         UpdateAtsCompanyRequest req = UpdateAtsCompanyRequest.builder()
                 .atsCompany(AtsCompany.builder()
-                    .name("<value>")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

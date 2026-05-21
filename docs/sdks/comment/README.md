@@ -52,7 +52,6 @@ public class Application {
 
         CreateKmsCommentRequest req = CreateKmsCommentRequest.builder()
                 .kmsComment(KmsComment.builder()
-                    .content("<value>")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -113,7 +112,6 @@ public class Application {
 
         CreateTaskCommentRequest req = CreateTaskCommentRequest.builder()
                 .taskComment(TaskComment.builder()
-                    .text("<value>")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -174,7 +172,6 @@ public class Application {
 
         CreateUcCommentRequest req = CreateUcCommentRequest.builder()
                 .ucComment(UcComment.builder()
-                    .content("<value>")
                     .build())
                 .connectionId("<id>")
                 .build();
@@ -580,7 +577,6 @@ public class Application {
 
         PatchKmsCommentRequest req = PatchKmsCommentRequest.builder()
                 .kmsComment(KmsComment.builder()
-                    .content("<value>")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -642,7 +638,6 @@ public class Application {
 
         PatchTaskCommentRequest req = PatchTaskCommentRequest.builder()
                 .taskComment(TaskComment.builder()
-                    .text("<value>")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -704,7 +699,6 @@ public class Application {
 
         PatchUcCommentRequest req = PatchUcCommentRequest.builder()
                 .ucComment(UcComment.builder()
-                    .content("<value>")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -934,7 +928,6 @@ public class Application {
 
         UpdateKmsCommentRequest req = UpdateKmsCommentRequest.builder()
                 .kmsComment(KmsComment.builder()
-                    .content("<value>")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -996,7 +989,6 @@ public class Application {
 
         UpdateTaskCommentRequest req = UpdateTaskCommentRequest.builder()
                 .taskComment(TaskComment.builder()
-                    .text("<value>")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")
@@ -1058,7 +1050,6 @@ public class Application {
 
         UpdateUcCommentRequest req = UpdateUcCommentRequest.builder()
                 .ucComment(UcComment.builder()
-                    .content("<value>")
                     .build())
                 .connectionId("<id>")
                 .id("<id>")

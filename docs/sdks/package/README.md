@@ -41,8 +41,6 @@ public class Application {
 
         CreateAssessmentPackageRequest req = CreateAssessmentPackageRequest.builder()
                 .assessmentPackage(AssessmentPackage.builder()
-                    .id("<id>")
-                    .name("<value>")
                     .type(AssessmentPackageType.REFERENCE_CHECK)
                     .build())
                 .connectionId("<id>")
@@ -333,8 +331,6 @@ public class Application {
 
         PatchAssessmentPackageRequest req = PatchAssessmentPackageRequest.builder()
                 .assessmentPackage(AssessmentPackage.builder()
-                    .id("<id>")
-                    .name("<value>")
                     .type(AssessmentPackageType.BACKGROUND_CHECK)
                     .build())
                 .connectionId("<id>")
@@ -452,8 +448,6 @@ public class Application {
 
         UpdateAssessmentPackageRequest req = UpdateAssessmentPackageRequest.builder()
                 .assessmentPackage(AssessmentPackage.builder()
-                    .id("<id>")
-                    .name("<value>")
                     .type(AssessmentPackageType.OTHER)
                     .build())
                 .connectionId("<id>")

@@ -7,7 +7,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -43,6 +42,7 @@ public class CommerceReviewComment {
     private String authorName;
 
 
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     private String content;
 
@@ -102,7 +102,7 @@ public class CommerceReviewComment {
             @JsonProperty("author_email") @Nullable String authorEmail,
             @JsonProperty("author_location") @Nullable String authorLocation,
             @JsonProperty("author_name") @Nullable String authorName,
-            @JsonProperty("content") @Nonnull String content,
+            @JsonProperty("content") @Nullable String content,
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("helpful_votes") @Nullable Double helpfulVotes,
             @JsonProperty("id") @Nullable String id,
@@ -117,8 +117,7 @@ public class CommerceReviewComment {
         this.authorEmail = authorEmail;
         this.authorLocation = authorLocation;
         this.authorName = authorName;
-        this.content = Optional.ofNullable(content)
-            .orElseThrow(() -> new IllegalArgumentException("content cannot be null"));
+        this.content = content;
         this.createdAt = createdAt;
         this.helpfulVotes = helpfulVotes;
         this.id = id;
@@ -131,10 +130,9 @@ public class CommerceReviewComment {
         this.updatedAt = updatedAt;
     }
     
-    public CommerceReviewComment(
-            @Nonnull String content) {
+    public CommerceReviewComment() {
         this(null, null, null,
-            null, content, null,
+            null, null, null,
             null, null, null,
             null, null, null,
             null, null, null);
@@ -156,8 +154,8 @@ public class CommerceReviewComment {
         return Optional.ofNullable(this.authorName);
     }
 
-    public String content() {
-        return this.content;
+    public Optional<String> content() {
+        return Optional.ofNullable(this.content);
     }
 
     public Optional<OffsetDateTime> createdAt() {
@@ -229,8 +227,8 @@ public class CommerceReviewComment {
     }
 
 
-    public CommerceReviewComment withContent(@Nonnull String content) {
-        this.content = Utils.checkNotNull(content, "content");
+    public CommerceReviewComment withContent(@Nullable String content) {
+        this.content = content;
         return this;
     }
 
@@ -409,8 +407,8 @@ public class CommerceReviewComment {
             return this;
         }
 
-        public Builder content(@Nonnull String content) {
-            this.content = Utils.checkNotNull(content, "content");
+        public Builder content(@Nullable String content) {
+            this.content = content;
             return this;
         }
 

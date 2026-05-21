@@ -59,6 +59,7 @@ public class AssessmentPackage {
     private Boolean hasTargetUrl;
 
 
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     private String id;
 
@@ -80,6 +81,7 @@ public class AssessmentPackage {
     private Double maxScore;
 
 
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     private String name;
 
@@ -134,11 +136,11 @@ public class AssessmentPackage {
             @JsonProperty("description") @Nullable String description,
             @JsonProperty("has_redirect_url") @Nullable Boolean hasRedirectUrl,
             @JsonProperty("has_target_url") @Nullable Boolean hasTargetUrl,
-            @JsonProperty("id") @Nonnull String id,
+            @JsonProperty("id") @Nullable String id,
             @JsonProperty("info_url") @Nullable String infoUrl,
             @JsonProperty("integration_types") @Nullable List<String> integrationTypes,
             @JsonProperty("max_score") @Nullable Double maxScore,
-            @JsonProperty("name") @Nonnull String name,
+            @JsonProperty("name") @Nullable String name,
             @JsonProperty("needs_ip_address") @Nullable Boolean needsIpAddress,
             @JsonProperty("parameters") @Nullable List<AssessmentParameter> parameters,
             @JsonProperty("raw") @Nullable Map<String, Object> raw,
@@ -153,13 +155,11 @@ public class AssessmentPackage {
         this.description = description;
         this.hasRedirectUrl = hasRedirectUrl;
         this.hasTargetUrl = hasTargetUrl;
-        this.id = Optional.ofNullable(id)
-            .orElseThrow(() -> new IllegalArgumentException("id cannot be null"));
+        this.id = id;
         this.infoUrl = infoUrl;
         this.integrationTypes = integrationTypes;
         this.maxScore = maxScore;
-        this.name = Optional.ofNullable(name)
-            .orElseThrow(() -> new IllegalArgumentException("name cannot be null"));
+        this.name = name;
         this.needsIpAddress = needsIpAddress;
         this.parameters = parameters;
         this.raw = raw;
@@ -172,13 +172,11 @@ public class AssessmentPackage {
     }
     
     public AssessmentPackage(
-            @Nonnull String id,
-            @Nonnull String name,
             @Nonnull AssessmentPackageType type) {
         this(null, null, null,
             null, null, null,
-            id, null, null,
-            null, name, null,
+            null, null, null,
+            null, null, null,
             null, null, null,
             null, type, null,
             null);
@@ -211,8 +209,8 @@ public class AssessmentPackage {
         return Optional.ofNullable(this.hasTargetUrl);
     }
 
-    public String id() {
-        return this.id;
+    public Optional<String> id() {
+        return Optional.ofNullable(this.id);
     }
 
     public Optional<String> infoUrl() {
@@ -230,8 +228,8 @@ public class AssessmentPackage {
         return Optional.ofNullable(this.maxScore);
     }
 
-    public String name() {
-        return this.name;
+    public Optional<String> name() {
+        return Optional.ofNullable(this.name);
     }
 
     public Optional<Boolean> needsIpAddress() {
@@ -316,8 +314,8 @@ public class AssessmentPackage {
     }
 
 
-    public AssessmentPackage withId(@Nonnull String id) {
-        this.id = Utils.checkNotNull(id, "id");
+    public AssessmentPackage withId(@Nullable String id) {
+        this.id = id;
         return this;
     }
 
@@ -343,8 +341,8 @@ public class AssessmentPackage {
     }
 
 
-    public AssessmentPackage withName(@Nonnull String name) {
-        this.name = Utils.checkNotNull(name, "name");
+    public AssessmentPackage withName(@Nullable String name) {
+        this.name = name;
         return this;
     }
 
@@ -548,8 +546,8 @@ public class AssessmentPackage {
             return this;
         }
 
-        public Builder id(@Nonnull String id) {
-            this.id = Utils.checkNotNull(id, "id");
+        public Builder id(@Nullable String id) {
+            this.id = id;
             return this;
         }
 
@@ -571,8 +569,8 @@ public class AssessmentPackage {
             return this;
         }
 
-        public Builder name(@Nonnull String name) {
-            this.name = Utils.checkNotNull(name, "name");
+        public Builder name(@Nullable String name) {
+            this.name = name;
             return this;
         }
 
