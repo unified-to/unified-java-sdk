@@ -8,12 +8,10 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.annotation.Nullable;
-import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
 import java.time.OffsetDateTime;
 import java.util.List;
-import java.util.Map;
 import java.util.Optional;
 import to.unified.unified_java_sdk.utils.Utils;
 
@@ -53,11 +51,6 @@ public class AtsOffer {
 
 
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("raw")
-    private Map<String, Object> raw;
-
-
-    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rejected_at")
     private OffsetDateTime rejectedAt;
 
@@ -89,7 +82,6 @@ public class AtsOffer {
             @JsonProperty("creator_user_id") @Nullable String creatorUserId,
             @JsonProperty("employee_user_id") @Nullable String employeeUserId,
             @JsonProperty("id") @Nullable String id,
-            @JsonProperty("raw") @Nullable Map<String, Object> raw,
             @JsonProperty("rejected_at") @Nullable OffsetDateTime rejectedAt,
             @JsonProperty("sent_at") @Nullable OffsetDateTime sentAt,
             @JsonProperty("start_at") @Nullable OffsetDateTime startAt,
@@ -101,7 +93,6 @@ public class AtsOffer {
         this.creatorUserId = creatorUserId;
         this.employeeUserId = employeeUserId;
         this.id = id;
-        this.raw = raw;
         this.rejectedAt = rejectedAt;
         this.sentAt = sentAt;
         this.startAt = startAt;
@@ -113,7 +104,7 @@ public class AtsOffer {
         this(null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null);
     }
 
     public Optional<OffsetDateTime> acceptedAt() {
@@ -141,10 +132,6 @@ public class AtsOffer {
 
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
-    }
-
-    public Optional<Map<String, Object>> raw() {
-        return Optional.ofNullable(this.raw);
     }
 
     public Optional<OffsetDateTime> rejectedAt() {
@@ -211,12 +198,6 @@ public class AtsOffer {
     }
 
 
-    public AtsOffer withRaw(@Nullable Map<String, Object> raw) {
-        this.raw = raw;
-        return this;
-    }
-
-
     public AtsOffer withRejectedAt(@Nullable OffsetDateTime rejectedAt) {
         this.rejectedAt = rejectedAt;
         return this;
@@ -263,7 +244,6 @@ public class AtsOffer {
             Utils.enhancedDeepEquals(this.creatorUserId, other.creatorUserId) &&
             Utils.enhancedDeepEquals(this.employeeUserId, other.employeeUserId) &&
             Utils.enhancedDeepEquals(this.id, other.id) &&
-            Utils.enhancedDeepEquals(this.raw, other.raw) &&
             Utils.enhancedDeepEquals(this.rejectedAt, other.rejectedAt) &&
             Utils.enhancedDeepEquals(this.sentAt, other.sentAt) &&
             Utils.enhancedDeepEquals(this.startAt, other.startAt) &&
@@ -276,8 +256,8 @@ public class AtsOffer {
         return Utils.enhancedHash(
             acceptedAt, compensation, createdAt,
             creatorUserId, employeeUserId, id,
-            raw, rejectedAt, sentAt,
-            startAt, status, updatedAt);
+            rejectedAt, sentAt, startAt,
+            status, updatedAt);
     }
     
     @Override
@@ -289,7 +269,6 @@ public class AtsOffer {
                 "creatorUserId", creatorUserId,
                 "employeeUserId", employeeUserId,
                 "id", id,
-                "raw", raw,
                 "rejectedAt", rejectedAt,
                 "sentAt", sentAt,
                 "startAt", startAt,
@@ -311,8 +290,6 @@ public class AtsOffer {
         private String employeeUserId;
 
         private String id;
-
-        private Map<String, Object> raw;
 
         private OffsetDateTime rejectedAt;
 
@@ -361,11 +338,6 @@ public class AtsOffer {
             return this;
         }
 
-        public Builder raw(@Nullable Map<String, Object> raw) {
-            this.raw = raw;
-            return this;
-        }
-
         public Builder rejectedAt(@Nullable OffsetDateTime rejectedAt) {
             this.rejectedAt = rejectedAt;
             return this;
@@ -395,8 +367,8 @@ public class AtsOffer {
             return new AtsOffer(
                 acceptedAt, compensation, createdAt,
                 creatorUserId, employeeUserId, id,
-                raw, rejectedAt, sentAt,
-                startAt, status, updatedAt);
+                rejectedAt, sentAt, startAt,
+                status, updatedAt);
         }
 
     }
