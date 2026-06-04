@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: cfc256ab-f291-4245-b909-5b9e9a6e6803
 management:
-  docChecksum: 9ca4a9cacf171e8ac7c743dfb096d506
+  docChecksum: 1e1eded8b22781b031016e09bbf41ef9
   docVersion: "1.0"
-  speakeasyVersion: 1.764.1
-  generationVersion: 2.885.1
-  releaseVersion: 0.47.28
-  configChecksum: 4e9f7b2ab0835be8217d8f65e417ee46
+  speakeasyVersion: 1.770.0
+  generationVersion: 2.893.0
+  releaseVersion: 0.47.29
+  configChecksum: 999ec413d1793fdc91a24e991f9e3824
   repoURL: https://github.com/unified-to/unified-java-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-java-sdk
@@ -20,7 +20,7 @@ features:
     acceptHeaders: 2.81.2
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.3
-    core: 3.55.25
+    core: 3.55.26
     downloadStreams: 0.1.1
     globalSecurity: 2.83.4
     globalSecurityCallbacks: 0.1.0
@@ -45,7 +45,7 @@ trackedFiles:
     pristine_git_object: 0a8a5bf8fcb388148901fc49a191894f17008129
   docs/models/operations/Categories.md:
     id: f937b846bfe5
-    last_write_checksum: sha1:408c1b90e6152e6662a1c9cac2bd8d0d59c2ad0d
+    last_write_checksum: sha1:f01ceaf11c83219468ee9ec2b8da9638956461da
     pristine_git_object: 3e70694a8720f0651790cddaa4bd5c59801814a0
   docs/models/operations/CreateAccountingAccountRequest.md:
     id: 94be5f315bba
@@ -1733,6 +1733,36 @@ trackedFiles:
     id: c41551082083
     last_write_checksum: sha1:9454d094947dde00c169476c7a084f3fcedb979d
     pristine_git_object: 70e9af51a49d5ee1833f66eb5ce542438ee0e046
+  docs/models/operations/GetClubsActivityQueryParamFields.md:
+    last_write_checksum: sha1:8d2392b823d071bb6132f2d244ae034913f06bc7
+  docs/models/operations/GetClubsActivityRequest.md:
+    last_write_checksum: sha1:e72ad3e08db7d9f8400cc1b0d64d076f77a6ef3b
+  docs/models/operations/GetClubsActivityResponse.md:
+    last_write_checksum: sha1:0c0c85dd2b011f792666b594e6f93d2ce2beb032
+  docs/models/operations/GetClubsEventQueryParamFields.md:
+    last_write_checksum: sha1:2b03f5bb328503630fa9a30e50fabd4e2789c92c
+  docs/models/operations/GetClubsEventRequest.md:
+    last_write_checksum: sha1:c905be7ccd468e95b2d1ec35b1320075dd23d1b5
+  docs/models/operations/GetClubsEventResponse.md:
+    last_write_checksum: sha1:4e75935de6143da7a3c35eeb85731f2c925538af
+  docs/models/operations/GetClubsGroupQueryParamFields.md:
+    last_write_checksum: sha1:aeaf02db8c08268da61deeb9914c01f4d92bfb95
+  docs/models/operations/GetClubsGroupRequest.md:
+    last_write_checksum: sha1:dc25b212afb8d2818c1626b49789c5b22665d324
+  docs/models/operations/GetClubsGroupResponse.md:
+    last_write_checksum: sha1:3353c1d07a954a6157a1e6b56125fe51052cd5eb
+  docs/models/operations/GetClubsLocationQueryParamFields.md:
+    last_write_checksum: sha1:2ef959cd5fae40f8aa87438f19ba6932c71cc7ce
+  docs/models/operations/GetClubsLocationRequest.md:
+    last_write_checksum: sha1:49c6ac1c346dac6e29a321a633c583a091a848ca
+  docs/models/operations/GetClubsLocationResponse.md:
+    last_write_checksum: sha1:5a0f9c5eed8803ba4270545a0a33724b9b2a101f
+  docs/models/operations/GetClubsMemberQueryParamFields.md:
+    last_write_checksum: sha1:6615b0d9c020891d4bb9a7b0604443f928819c0b
+  docs/models/operations/GetClubsMemberRequest.md:
+    last_write_checksum: sha1:5875b209ecc2e279b9371f6de2b2f6878483e05f
+  docs/models/operations/GetClubsMemberResponse.md:
+    last_write_checksum: sha1:68283afc77a47754ad0b8f4881800de25ce7cdcf
   docs/models/operations/GetCommerceCollectionQueryParamFields.md:
     id: 9994c11510c6
     last_write_checksum: sha1:e71eeed4df3d9d8f432829680ce3fc62838f4052
@@ -3215,6 +3245,36 @@ trackedFiles:
     id: 00af3effe574
     last_write_checksum: sha1:979f96fb74d855c9f2ebc7735079ac98326ab6fd
     pristine_git_object: f5d1187802be788e82f9086d04d97a28f76c6b11
+  docs/models/operations/ListClubsActivitiesQueryParamFields.md:
+    last_write_checksum: sha1:6f33b3374a14ad1afec75b7c70c29a9ba5829fd9
+  docs/models/operations/ListClubsActivitiesRequest.md:
+    last_write_checksum: sha1:0234417d00a052d6d7dd346705f6cceb252ae759
+  docs/models/operations/ListClubsActivitiesResponse.md:
+    last_write_checksum: sha1:96d30f7c7b2faa5215ecc6dbf76c2c1429f0907e
+  docs/models/operations/ListClubsEventsQueryParamFields.md:
+    last_write_checksum: sha1:d2a00f43d0cb71d4d1448483f30fdda0a5eaf9fc
+  docs/models/operations/ListClubsEventsRequest.md:
+    last_write_checksum: sha1:8a2f433935f33fc16a1df33b68931168a3c270e2
+  docs/models/operations/ListClubsEventsResponse.md:
+    last_write_checksum: sha1:62fff24db56327ed9cb3730e10bb5145908171e8
+  docs/models/operations/ListClubsGroupsQueryParamFields.md:
+    last_write_checksum: sha1:8e8f58a15877652b097444c03bbcbd4de234c427
+  docs/models/operations/ListClubsGroupsRequest.md:
+    last_write_checksum: sha1:b5c65bb2af19a956f66b20e410154df5038e6f5b
+  docs/models/operations/ListClubsGroupsResponse.md:
+    last_write_checksum: sha1:33fb79aa45208ef63d112433b9f7095fc8f66081
+  docs/models/operations/ListClubsLocationsQueryParamFields.md:
+    last_write_checksum: sha1:ae7606ce1e147b5b799c1b05682199f4f2118cb9
+  docs/models/operations/ListClubsLocationsRequest.md:
+    last_write_checksum: sha1:7283506413d1cebdc9d2a1dca29d77567069e9db
+  docs/models/operations/ListClubsLocationsResponse.md:
+    last_write_checksum: sha1:236e5a02ffba0991930be637824540b41f881beb
+  docs/models/operations/ListClubsMembersQueryParamFields.md:
+    last_write_checksum: sha1:249c07876e966c649f6955b856582dc49b89b069
+  docs/models/operations/ListClubsMembersRequest.md:
+    last_write_checksum: sha1:0fa3e9a9e0478ba786f86b2bcbee5ebd354b1e2f
+  docs/models/operations/ListClubsMembersResponse.md:
+    last_write_checksum: sha1:0d549c2bce41ae288ce515c9781d77daae02d998
   docs/models/operations/ListCommerceAvailabilitiesQueryParamFields.md:
     id: dd70416bce7a
     last_write_checksum: sha1:c4e7d710226adeb1b2a3b950ea8a6036626c9e87
@@ -4173,7 +4233,7 @@ trackedFiles:
     pristine_git_object: cea26fd934f5a0f643ad4db9877ab0a4a1cb31b4
   docs/models/operations/ListUnifiedIntegrationsQueryParamCategories.md:
     id: 8bb781f45ac9
-    last_write_checksum: sha1:3c32d25c493ab184f098cf5abaa98795f98a8c02
+    last_write_checksum: sha1:1c0449241b723f0ff4ffc8918d2ad280a8160bf9
     pristine_git_object: 8a57dea3eee52f71529ffad8848f3a2c573cef92
   docs/models/operations/ListUnifiedIntegrationsRequest.md:
     id: 82912c7bdf96
@@ -5435,7 +5495,7 @@ trackedFiles:
     pristine_git_object: 32f23b53a3c34aa7dcd199c919933410505c7ba5
   docs/models/operations/QueryParamCategories.md:
     id: e700cd4f21ae
-    last_write_checksum: sha1:bc4da3c0f43107dfd1d854cf210e8977ad9450da
+    last_write_checksum: sha1:77f8b29e630bb8ee7b520dfed03bdde066e0a3f8
     pristine_git_object: 92eae60f4cdd6033c81597a67c59414b7d6f4cfa
   docs/models/operations/QueryParamFields.md:
     id: bf0c6671fdc5
@@ -8093,6 +8153,24 @@ trackedFiles:
     id: 3849974e79f4
     last_write_checksum: sha1:268a5618a5b267c58140d27239eda310bf2b067a
     pristine_git_object: 01593d38289a6ec20ba79e95f8a04396da78a0c0
+  docs/models/shared/ClubsActivity.md:
+    last_write_checksum: sha1:f2c9befe597b164d6baca47162c829d52109308d
+  docs/models/shared/ClubsActivityType.md:
+    last_write_checksum: sha1:5ec5fc0029b4183b955e49133cac2492d9982ce2
+  docs/models/shared/ClubsEvent.md:
+    last_write_checksum: sha1:25c964f014cce9e9936d821fbb7c03b3dc0458de
+  docs/models/shared/ClubsEventStatus.md:
+    last_write_checksum: sha1:2db93d56c3de23ee275f4fe5056de8b39acd2fa2
+  docs/models/shared/ClubsEventType.md:
+    last_write_checksum: sha1:1dd06dc6ffbb82d100d5c0e287d51fde8e63241c
+  docs/models/shared/ClubsGroup.md:
+    last_write_checksum: sha1:908089725b323fe615d732c401df83ca5d3b0901
+  docs/models/shared/ClubsLocation.md:
+    last_write_checksum: sha1:705b9a60e6b07a8c90eca805af1966f624da2f4d
+  docs/models/shared/ClubsMember.md:
+    last_write_checksum: sha1:5ee68be90d2be560863ae5321a030c50313ab314
+  docs/models/shared/ClubsMemberMembershipStatus.md:
+    last_write_checksum: sha1:be54f845e6acef1011a959240ab022ae4605ec1f
   docs/models/shared/CommerceAvailability.md:
     id: 0446e9233324
     last_write_checksum: sha1:0b08b2a2e926f762284ba5fb3d706b82d04eaa53
@@ -8215,7 +8293,7 @@ trackedFiles:
     pristine_git_object: 43c771ee3a70f561f3d801103c8962bc248c74c7
   docs/models/shared/Connection.md:
     id: aba68e017b61
-    last_write_checksum: sha1:49912d3ca9098f2741ddfe08bf183bdf6fd65df1
+    last_write_checksum: sha1:45ed73b29bd8a1d0596a8d4683ae0ca227482da4
     pristine_git_object: 9b4e36a457fdfd00f2752f33eb68ba0643ff99ea
   docs/models/shared/ContentType.md:
     id: 320944f97b35
@@ -8465,6 +8543,8 @@ trackedFiles:
     id: 9f47bf28bf10
     last_write_checksum: sha1:db09f7da208a0f9c3bacd3de2886dc4714399a9a
     pristine_git_object: b5f0670ab4b9fad16d89ac6a0cba40c00da6a51d
+  docs/models/shared/GroupType.md:
+    last_write_checksum: sha1:b710974e7c26c5a01311a566690d66b3a5f465b5
   docs/models/shared/HostingSource.md:
     id: 57deec051afb
     last_write_checksum: sha1:6a7b3027d80dddce32ff423c1a01b5a025745414
@@ -9137,6 +9217,8 @@ trackedFiles:
     id: 6c2650ccf374
     last_write_checksum: sha1:524adadb07e2f89bd18d14d73f0c1f4a0c807523
     pristine_git_object: 6be642984a6b148fe88048a0981fd7091769df69
+  docs/models/shared/MembershipStatus.md:
+    last_write_checksum: sha1:65993c48fa1ddd41f4de83d39a34bb6f340a78e4
   docs/models/shared/MessagingAttachment.md:
     id: 18d0ebf937a9
     last_write_checksum: sha1:70c603198a2facf2dd0335b9ea4cb8c9938b69ea
@@ -9263,7 +9345,7 @@ trackedFiles:
     pristine_git_object: bf6554b8234c86503e5249fe348af3299714d3bf
   docs/models/shared/ObjectType.md:
     id: aadea85dc693
-    last_write_checksum: sha1:4691f7eea54bdc973649969829af405ce30e88fd
+    last_write_checksum: sha1:5358c5eb1f4b7e91ab34d0ad5b6968ff13464775
     pristine_git_object: b267501b6394355e328aef8efc64d3bb3aa341a4
   docs/models/shared/One.md:
     id: f77064f6609b
@@ -9881,6 +9963,10 @@ trackedFiles:
     id: 485b3efcef8e
     last_write_checksum: sha1:4502d692a86fd5c421eb317eefba22f46a1ac7ec
     pristine_git_object: bded4aa8ece916133e3b1faaaa60548315b7e734
+  docs/models/shared/PropertyClubsGroupAddress.md:
+    last_write_checksum: sha1:48ae5d332ea698a60b4ea569e515b908d5ad455a
+  docs/models/shared/PropertyClubsLocationAddress.md:
+    last_write_checksum: sha1:70aaa301484f4ff7ee6ea50b7464c3d8a6f07d09
   docs/models/shared/PropertyCommerceLocationAddress.md:
     id: 042aa0ac5566
     last_write_checksum: sha1:1917f79375436c8c354c4bb7e410585dcaf67501
@@ -9891,11 +9977,11 @@ trackedFiles:
     pristine_git_object: c6171cfdf85bef9574cfaa5548707743cf3f4951
   docs/models/shared/PropertyConnectionCategories.md:
     id: ae632886aebd
-    last_write_checksum: sha1:900d36b800b93514ff77644a92ea1961fe133dcb
+    last_write_checksum: sha1:5b226be858399c7d2b4963251c5f23fa11d02952
     pristine_git_object: 470b4428fde8839f3a737bc7364e03b8ab82c0aa
   docs/models/shared/PropertyConnectionPermissions.md:
     id: 8349678e7060
-    last_write_checksum: sha1:0756aaa05dc765a8381475cdb45274bb6ca69fce
+    last_write_checksum: sha1:a592bf14e9bc82ad234509f07b7403c3a1359b99
     pristine_git_object: 612c9aa36f6c81f1233ee5a9d557908da48d261a
   docs/models/shared/PropertyCrmCompanyAddress.md:
     id: 4967e83e2f48
@@ -9991,7 +10077,7 @@ trackedFiles:
     pristine_git_object: c9ec6e8b603372a85989d21435534018c51e39c1
   docs/models/shared/PropertyIntegrationCategories.md:
     id: e2de3b81cadd
-    last_write_checksum: sha1:17000113b96d6f255c523f5bd2bc36719c4d39ff
+    last_write_checksum: sha1:a8bfcc2a5c1965356b7f32ab3870ba017df37be9
     pristine_git_object: 7fed9cf8e221568f0010cec7846a205cf8eedee5
   docs/models/shared/PropertyIntegrationSupportWebhookEvents.md:
     id: c8f555c5456a
@@ -10397,6 +10483,8 @@ trackedFiles:
     id: 9ca415b2c84b
     last_write_checksum: sha1:148dbe76f4d6abdd3e51f59d2324810f7bccb4a9
     pristine_git_object: d6af77b0352cf4916d26ffefb38ffa2720dd8114
+  docs/models/shared/SportType.md:
+    last_write_checksum: sha1:deb225c4ca3796f8217d60e076520980afe25213
   docs/models/shared/Status.md:
     id: 7665c2e93ad9
     last_write_checksum: sha1:c8257d0740041895e7c5588e975b9c81a7461205
@@ -10881,7 +10969,7 @@ trackedFiles:
     pristine_git_object: c5d442f75599e8ae68c9465e170987c90a18a3ba
   docs/sdks/activity/README.md:
     id: f6e8241fca80
-    last_write_checksum: sha1:a46bed200f3dd885ba7cd06768754b814f6f2691
+    last_write_checksum: sha1:bee514272aaf293509a2c52f8c226a8051c60e9a
     pristine_git_object: 0196817345c45666ac4f193da77c9eda8dbcb036
   docs/sdks/ad/README.md:
     id: 4a5f13d72832
@@ -10983,6 +11071,8 @@ trackedFiles:
     id: 3d83b7f3788f
     last_write_checksum: sha1:92d2ec622a5ed45ae5a836083167eaa73d23a184
     pristine_git_object: dcced3be6739c617935de809518f84a7d29817af
+  docs/sdks/clubs/README.md:
+    last_write_checksum: sha1:a783870173459cca08dae4cb467d539239570ccd
   docs/sdks/collection/README.md:
     id: 8e08642c5af2
     last_write_checksum: sha1:f35884c1513fb1821cb9e8cc3c5610b8832211a0
@@ -11069,7 +11159,7 @@ trackedFiles:
     pristine_git_object: 2fb38ab5bf575e26850f0767117cfafe438cb7f8
   docs/sdks/event/README.md:
     id: 38354de266eb
-    last_write_checksum: sha1:6f807af53242e11a7d56bae07d7ebae5b58c7025
+    last_write_checksum: sha1:3dc7bfee15eab535245be250d30a5ddd35beebca
     pristine_git_object: c3f9cd2e7596cc7c4e96be7defadeea70de3ab3e
   docs/sdks/expense/README.md:
     id: 8bba157370c0
@@ -11093,7 +11183,7 @@ trackedFiles:
     pristine_git_object: 1a495882fbeea542bf5d70270ff15dceb3dcb2d9
   docs/sdks/group/README.md:
     id: dd48bfd789de
-    last_write_checksum: sha1:0ac81f6f62cc7caa28e6720ddecbac1440131828
+    last_write_checksum: sha1:4c383cde8969249f91eac918ee4d88fc6feaf95f
     pristine_git_object: 3e04d5e8e4b7e2b57dcbe8dfbc0038ea12167aa4
   docs/sdks/hris/README.md:
     id: 0baa868a038c
@@ -11169,7 +11259,7 @@ trackedFiles:
     pristine_git_object: 945608121cceb3f8225756b9702c46a3f1e431e7
   docs/sdks/location/README.md:
     id: f174fc17f497
-    last_write_checksum: sha1:71e0d65341a2c97abc71541facf147a6e176712e
+    last_write_checksum: sha1:a9fdb6d3d070eb7ec7007abbbe8889bf33ad0e0d
     pristine_git_object: f683bf4d09e8852715b273c3f463e65b0b24a6c0
   docs/sdks/login/README.md:
     id: 795cc2a6ce04
@@ -11181,7 +11271,7 @@ trackedFiles:
     pristine_git_object: 6438e9e171c498e2727081d5d4e22122df639cc7
   docs/sdks/member/README.md:
     id: 699c1c3b93e4
-    last_write_checksum: sha1:0c96e37c89ad12afdb35666a34cbc68943f0f280
+    last_write_checksum: sha1:5ec7ddd33f0c800abf5523997154b0bd2f38155a
     pristine_git_object: 6728e8d55bd49114ae43fbbc76dadf82605d6d94
   docs/sdks/message/README.md:
     id: 0f53e7699429
@@ -11423,7 +11513,7 @@ trackedFiles:
     pristine_git_object: 14fe7a9e0f20951a7e3ab2752816fbc9b8c41dd3
   gradle.properties:
     id: 2afbb999f001
-    last_write_checksum: sha1:c443fc97c9fba4d7d763a176407760d40dce60d5
+    last_write_checksum: sha1:52a8fccde84a0acbeee94379ee1024678eab6856
     pristine_git_object: e98f734834a572eee8169e873f8a45f9fe20f9e0
   gradle/wrapper/gradle-wrapper.jar:
     id: ec27dae6e852
@@ -11463,7 +11553,7 @@ trackedFiles:
     pristine_git_object: ab5e5f144b397313d0470f3309760881f37507b0
   spring/unified-java-sdk-spring-boot-autoconfigure/src/main/java/to/unified/unified_java_sdk/UnifiedJavaSDKAutoConfig.java:
     id: 59d16b6a0f5e
-    last_write_checksum: sha1:6d1e1e909d50977a83e10f20d18edf50834dc300
+    last_write_checksum: sha1:a001b4f5d15f9bbdba50a4bf8fb9892de6ddd31d
     pristine_git_object: d7c9f3f9e643f42ce2f61cf33f8db469d4379920
   ? spring/unified-java-sdk-spring-boot-autoconfigure/src/main/java/to/unified/unified_java_sdk/UnifiedJavaSDKAutoConfigProperties.java
   : id: 3fa7a7e75daf
@@ -11487,7 +11577,7 @@ trackedFiles:
     pristine_git_object: 33ccd11773087d5921f28bbacea7253b1f1b6443
   src/main/java/to/unified/unified_java_sdk/Activity.java:
     id: 00e6eca9ee17
-    last_write_checksum: sha1:7d90d9ce8292fb037c86b99d6081ff059f72400f
+    last_write_checksum: sha1:2aa1fa8264deb1a54ef313e41f01080d772a1cab
     pristine_git_object: c29b090708dcf78052cef24ac0b785449f4e1176
   src/main/java/to/unified/unified_java_sdk/Ad.java:
     id: 544f25d79b9a
@@ -11523,7 +11613,7 @@ trackedFiles:
     pristine_git_object: 8e8adf3fd48e856c2a0eb893ff8629535133fc2c
   src/main/java/to/unified/unified_java_sdk/AsyncActivity.java:
     id: 0e0b98aa5c5c
-    last_write_checksum: sha1:1d989026145b2a40a164e6a10f2d53f0222a9194
+    last_write_checksum: sha1:0421d041759d5cca3aa71eb0f42e74409a130646
     pristine_git_object: 788da0fe14a978b426c44378ae922af5f231ac92
   src/main/java/to/unified/unified_java_sdk/AsyncAd.java:
     id: 84687adca1ad
@@ -11625,6 +11715,8 @@ trackedFiles:
     id: 7852f99dc73e
     last_write_checksum: sha1:c23db452bf2172dc854582019c17dbea024fd0cf
     pristine_git_object: 39d4df5d94996bc56ea48d392000ce90b3d43520
+  src/main/java/to/unified/unified_java_sdk/AsyncClubs.java:
+    last_write_checksum: sha1:0f9a15e2b60def3bec5633ea7367d216273aa00a
   src/main/java/to/unified/unified_java_sdk/AsyncCollection.java:
     id: 3f970c3e114c
     last_write_checksum: sha1:7c5ff63d93d810f4d76d4905ccabdd485c9cdeca
@@ -11711,7 +11803,7 @@ trackedFiles:
     pristine_git_object: 366267e359e6ba71d358348adcbfe940c4bc4d73
   src/main/java/to/unified/unified_java_sdk/AsyncEvent.java:
     id: 06f6e14d5bc5
-    last_write_checksum: sha1:0507c967ba3561eb450ad69d34713be7678d3cbb
+    last_write_checksum: sha1:163b83749ccfd55c049c6afd4eaabce9255da76b
     pristine_git_object: d7a5a584eee20fceef056b6448d8a1eeb57ee71d
   src/main/java/to/unified/unified_java_sdk/AsyncExpense.java:
     id: 978cfaf5eaf1
@@ -11735,7 +11827,7 @@ trackedFiles:
     pristine_git_object: 3b56c9ca6564e47b7bb9866a33ccc1e5ebedff4a
   src/main/java/to/unified/unified_java_sdk/AsyncGroup.java:
     id: ae1833e402d6
-    last_write_checksum: sha1:2584c6aa430c4400f2f73267d369d9887d97f6c1
+    last_write_checksum: sha1:7fe178d40c5783c27a7f2e1cbf2030d8d1da193e
     pristine_git_object: 83f131dadeae7ba6573d91e87b06ea44cb366923
   src/main/java/to/unified/unified_java_sdk/AsyncHris.java:
     id: 69f59f525b52
@@ -11811,7 +11903,7 @@ trackedFiles:
     pristine_git_object: a83e2ab20aac7b3bf91961aadba6add2f760567d
   src/main/java/to/unified/unified_java_sdk/AsyncLocation.java:
     id: 0a8728749a1a
-    last_write_checksum: sha1:97ff34d218531387c8a76c30d318ecd87e9e911c
+    last_write_checksum: sha1:ac84a07f31b71112b0bb2b31fd8e24a16ce97982
     pristine_git_object: 671e2441706d8eada30bff6293464001fb72f466
   src/main/java/to/unified/unified_java_sdk/AsyncLogin.java:
     id: 463dc4501a00
@@ -11823,7 +11915,7 @@ trackedFiles:
     pristine_git_object: 76b3a25f4a95b338d36b7e0291439ad0d9f93319
   src/main/java/to/unified/unified_java_sdk/AsyncMember.java:
     id: 7d65cfa64be1
-    last_write_checksum: sha1:2c9f5f54a65a19b6bde69f1980c5519b7e1abf89
+    last_write_checksum: sha1:84c6db750763cd55886e22a8fd70fc70283324f2
     pristine_git_object: d74c96ef8a8fcf27467035c940903141f9876dc5
   src/main/java/to/unified/unified_java_sdk/AsyncMessage.java:
     id: 349a5fdd0742
@@ -12045,7 +12137,7 @@ trackedFiles:
     pristine_git_object: c478f1d9922c3484d04234718177455677faba01
   src/main/java/to/unified/unified_java_sdk/AsyncUnifiedTo.java:
     id: f122b5de7920
-    last_write_checksum: sha1:b8c234a9169378cb51dc44928adf16b483fb7cad
+    last_write_checksum: sha1:50eed6faf1717428ef83a33bd3802a9252f492a1
     pristine_git_object: 47eb4703e759d71a401f67b3e22baed5d8bfcea2
   src/main/java/to/unified/unified_java_sdk/AsyncUser.java:
     id: cf1cd6c6778a
@@ -12139,6 +12231,8 @@ trackedFiles:
     id: 56a91e5d7ad3
     last_write_checksum: sha1:b4e3ea5a071a7f389c01254ac74d6fe91d5f170d
     pristine_git_object: 719b94531acac86cb7579a309a6efe019ef573cc
+  src/main/java/to/unified/unified_java_sdk/Clubs.java:
+    last_write_checksum: sha1:a9ee09e8597390fcafaba7cb320a909a6e0961b2
   src/main/java/to/unified/unified_java_sdk/Collection.java:
     id: 0e4e4d61b8b6
     last_write_checksum: sha1:2cac287ef237b076707321376c25c3c0f7375d45
@@ -12225,7 +12319,7 @@ trackedFiles:
     pristine_git_object: 7e24b9e9348e9ecb9645519745b773012305309b
   src/main/java/to/unified/unified_java_sdk/Event.java:
     id: 64529efc843c
-    last_write_checksum: sha1:e388e05d76808951f569eb8ae8619a782f4697a3
+    last_write_checksum: sha1:a2cdd1ab00a5f6a56617424c21835df365e50403
     pristine_git_object: fb82b9de6270bf04ebfefcdaa14c3a61d33c28dd
   src/main/java/to/unified/unified_java_sdk/Expense.java:
     id: fdaf9eb80a62
@@ -12249,7 +12343,7 @@ trackedFiles:
     pristine_git_object: 8232263b2e8a7b3a46b3804a238a70cfc6ee7157
   src/main/java/to/unified/unified_java_sdk/Group.java:
     id: e86420c981d9
-    last_write_checksum: sha1:4f1357dc9206ddecbb44a3487681fee5babb713f
+    last_write_checksum: sha1:dcfe31c9ecfa773c53ccb579ee975a19178d5c92
     pristine_git_object: 87e0766f8b3100f52e071c5dbdbfa143a26e29c7
   src/main/java/to/unified/unified_java_sdk/Hris.java:
     id: c511c8bd3536
@@ -12325,7 +12419,7 @@ trackedFiles:
     pristine_git_object: 3d7de1dc5c2b50a2c35ca866ae30092b7e449228
   src/main/java/to/unified/unified_java_sdk/Location.java:
     id: 5b0205d4cdbc
-    last_write_checksum: sha1:b9b84e70a1a8e2001a6c0cf04559623b696c6e43
+    last_write_checksum: sha1:ba3ffaf95e54efa78642279575a86b4e9eee5b8c
     pristine_git_object: a4a0579a76d8bd8a290825abc1a19a0a18a2c88f
   src/main/java/to/unified/unified_java_sdk/Login.java:
     id: 30d07a8565c4
@@ -12337,7 +12431,7 @@ trackedFiles:
     pristine_git_object: 66fbfee952385a4fb186d450a29d03ad6958c20f
   src/main/java/to/unified/unified_java_sdk/Member.java:
     id: 35e2a34cfa1a
-    last_write_checksum: sha1:bef5301ef296de29d6f57a7b863c821144a4936f
+    last_write_checksum: sha1:88136704dc455ae0ce2c6243bcc4c314f36c91f1
     pristine_git_object: 1c95fc53dec00172b51aad0a86ae66d15cdbd99e
   src/main/java/to/unified/unified_java_sdk/Message.java:
     id: 0ad9a54c84e4
@@ -12461,7 +12555,7 @@ trackedFiles:
     pristine_git_object: 2ccb6e90f32063c290e9fa25abf9649b884b4ed0
   src/main/java/to/unified/unified_java_sdk/SDKConfiguration.java:
     id: 42279b7431fa
-    last_write_checksum: sha1:51b2d5d1fc0a74db46406adcda2f4bbcdf7d3f59
+    last_write_checksum: sha1:234779abcf26b089349fef1e21d32340261b05c1
     pristine_git_object: 17976ce665fb7cd87ed8a727359e17d32feaab3b
   src/main/java/to/unified/unified_java_sdk/Saleschannel.java:
     id: 2dca25153692
@@ -12567,7 +12661,7 @@ trackedFiles:
     pristine_git_object: 06f47d4ca31084c6cd61abe2b157eb442e0ba7f9
   src/main/java/to/unified/unified_java_sdk/UnifiedTo.java:
     id: 94ebc6554d08
-    last_write_checksum: sha1:6bd65296c20ac04b27debb726a50eec95661d3c0
+    last_write_checksum: sha1:20fe75ffadcde5d229277183e218deb54d063159
     pristine_git_object: 5575546f21eba1850235fda54e6c1b24a7e16572
   src/main/java/to/unified/unified_java_sdk/User.java:
     id: 43d862dfacba
@@ -13179,6 +13273,16 @@ trackedFiles:
     id: 99eed805d5e4
     last_write_checksum: sha1:31f68c112863a62ce90ecd146bf09f3450e107db
     pristine_git_object: 7f2b242253a8648140dd5b4b3c772560278ec820
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/GetClubsActivityRequestBuilder.java:
+    last_write_checksum: sha1:c7e26b1fce7c0995fc3b512f970c768f0af43d6e
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/GetClubsEventRequestBuilder.java:
+    last_write_checksum: sha1:d7f79c0050ba6ec4db3f7977df652af0b6d1a7d1
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/GetClubsGroupRequestBuilder.java:
+    last_write_checksum: sha1:befcae5db17106f5d53d1708ccf0352e840755ea
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/GetClubsLocationRequestBuilder.java:
+    last_write_checksum: sha1:12be2246c8ea9e5bd2770d23bdd106f50df7b95c
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/GetClubsMemberRequestBuilder.java:
+    last_write_checksum: sha1:da94bddafb02620fbe86328bebe635250f405cb7
   src/main/java/to/unified/unified_java_sdk/models/operations//async/GetCommerceCollectionRequestBuilder.java:
     id: f3c8e93cef9f
     last_write_checksum: sha1:18d5b08d559e5621f4b19ef5b04dd5aed5731319
@@ -13685,6 +13789,16 @@ trackedFiles:
     id: 559d1ec8d82b
     last_write_checksum: sha1:d4434685d31e69bbb93120232236d7396fbebfa9
     pristine_git_object: 25a292aa4d69015d51ce9ac051c9f026f9e88daf
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/ListClubsActivitiesRequestBuilder.java:
+    last_write_checksum: sha1:f86325cf3bb437047fec6b1e3bc57afa6751a0a9
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/ListClubsEventsRequestBuilder.java:
+    last_write_checksum: sha1:b5b0ff47f99dc45dcc6e16d8390de05185c86415
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/ListClubsGroupsRequestBuilder.java:
+    last_write_checksum: sha1:6da90b83b3c87076ddf57871ae993bd180200103
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/ListClubsLocationsRequestBuilder.java:
+    last_write_checksum: sha1:de814a68bd2081606ea56e3d106901b882b47d3f
+  src/main/java/to/unified/unified_java_sdk/models/operations//async/ListClubsMembersRequestBuilder.java:
+    last_write_checksum: sha1:2d9b2a22b54bb3946593776afc39c5a475474b39
   src/main/java/to/unified/unified_java_sdk/models/operations//async/ListCommerceAvailabilitiesRequestBuilder.java:
     id: bdfe9937dd30
     last_write_checksum: sha1:3d30497b060fbf2d990c05dcadfedb8d58a86055
@@ -15269,7 +15383,7 @@ trackedFiles:
     pristine_git_object: eabdb96eaa4bda6dfe2b31e431757cf9b56a419e
   src/main/java/to/unified/unified_java_sdk/models/operations/Categories.java:
     id: c2092fe840da
-    last_write_checksum: sha1:e9893499d723573cc7dabb151bc5169768640ac7
+    last_write_checksum: sha1:ea344850980de1260e66a743b53e3646801dc5f0
     pristine_git_object: 3274f77c65e98aafdd4b6984ebe123b665bffb9f
   src/main/java/to/unified/unified_java_sdk/models/operations/CreateAccountingAccountRequest.java:
     id: 6034270ec3ef
@@ -17535,6 +17649,46 @@ trackedFiles:
     id: 770c224129f4
     last_write_checksum: sha1:d92f6fe46052b51a9dbb7184588bd3bdfd8772f2
     pristine_git_object: 21dcf585e960e5a4683f65e886afe276e61e7d92
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetClubsActivityQueryParamFields.java:
+    last_write_checksum: sha1:01f46b856003f739ab9ced3cf5dc05ce67e211b4
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetClubsActivityRequest.java:
+    last_write_checksum: sha1:34cfad7cbd6d36fd210de8b4d07135cee591c844
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetClubsActivityRequestBuilder.java:
+    last_write_checksum: sha1:64c682171d0573d56de0af80b9d2e71b2c76edbd
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetClubsActivityResponse.java:
+    last_write_checksum: sha1:5a1e9b3ed71c25c1f61aea44d51661e5713c6513
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetClubsEventQueryParamFields.java:
+    last_write_checksum: sha1:b56687acc32f949e1d296821191f329d7321f02e
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetClubsEventRequest.java:
+    last_write_checksum: sha1:af9801a58cdc3e0fba009a6e888eb0ceddd435f6
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetClubsEventRequestBuilder.java:
+    last_write_checksum: sha1:e53bd4280742f5f201ffed2dbc52184a9b0ba6a1
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetClubsEventResponse.java:
+    last_write_checksum: sha1:11e36cac5378fbfcaa621cbfa292ee68134492df
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetClubsGroupQueryParamFields.java:
+    last_write_checksum: sha1:da3607b88e9c6076af213eb4b51be72147815799
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetClubsGroupRequest.java:
+    last_write_checksum: sha1:34237f9dd358b7a9cb454bc3590b9c37e9d58c36
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetClubsGroupRequestBuilder.java:
+    last_write_checksum: sha1:d066a01b29ad648a4ae5f1fa79c885f281c30fef
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetClubsGroupResponse.java:
+    last_write_checksum: sha1:5ade2cec36d31e81f1a39c7dff658e38d95f99de
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetClubsLocationQueryParamFields.java:
+    last_write_checksum: sha1:9d80c32679173cf1aefb3865a84ab3382819fb26
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetClubsLocationRequest.java:
+    last_write_checksum: sha1:6cb6866c16db71aa983b832727a3eafef7bcfe8b
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetClubsLocationRequestBuilder.java:
+    last_write_checksum: sha1:cde725a53f7f52077ed3cf386d2920e5d91a9ae0
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetClubsLocationResponse.java:
+    last_write_checksum: sha1:1cc1f0a40f318974a90077bee1a2384068f39a78
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetClubsMemberQueryParamFields.java:
+    last_write_checksum: sha1:e20c897b0f465fb27ff35bd352828c46adba24da
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetClubsMemberRequest.java:
+    last_write_checksum: sha1:ce1a4dcc598a00767c34771a355ee999197dc752
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetClubsMemberRequestBuilder.java:
+    last_write_checksum: sha1:2bb8a334c3a3db36a2df05734685d3183167ed5e
+  src/main/java/to/unified/unified_java_sdk/models/operations/GetClubsMemberResponse.java:
+    last_write_checksum: sha1:399faefb059977b3a85a6a69943cbb3b3a8d72be
   src/main/java/to/unified/unified_java_sdk/models/operations/GetCommerceCollectionQueryParamFields.java:
     id: 2a6f52294d53
     last_write_checksum: sha1:069f21d5248742b478ec0770035f3fbc32b85ea0
@@ -19523,6 +19677,46 @@ trackedFiles:
     id: 321170367d90
     last_write_checksum: sha1:ef12f5c3a51c9a23807e203bd274fcbd9d2357bb
     pristine_git_object: 384315db007ccd3d0cb8679e13aa48c25fb071f1
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListClubsActivitiesQueryParamFields.java:
+    last_write_checksum: sha1:675df6727aa361a66c3bd5d87bc0c88db31017cf
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListClubsActivitiesRequest.java:
+    last_write_checksum: sha1:29741703ebda6433901b7c315e3331dca3f27af3
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListClubsActivitiesRequestBuilder.java:
+    last_write_checksum: sha1:24494500ed70ff460a74bdeea265e2d627b604c9
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListClubsActivitiesResponse.java:
+    last_write_checksum: sha1:236f976e742d5bb12c8f44dce1287f150fb9b23f
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListClubsEventsQueryParamFields.java:
+    last_write_checksum: sha1:e8a2cf2e2d442ea671a0f3692946c62aa26806fa
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListClubsEventsRequest.java:
+    last_write_checksum: sha1:66fa77efe24fd5fa776ac0e8563e788d03a6327b
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListClubsEventsRequestBuilder.java:
+    last_write_checksum: sha1:1b6c5b51ab4daa26a0f379d598c5909496d1b067
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListClubsEventsResponse.java:
+    last_write_checksum: sha1:3ec9edda6ee4147ecd852dfbfcc3e94224279ae1
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListClubsGroupsQueryParamFields.java:
+    last_write_checksum: sha1:69f283e2c9370b46f2f7ca8f963cf147f53fdfb4
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListClubsGroupsRequest.java:
+    last_write_checksum: sha1:ce48a9c54c5c443901cbdfa01380317ae6e15cd2
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListClubsGroupsRequestBuilder.java:
+    last_write_checksum: sha1:2fdb1e6664e72a9ab65f2f7dbe349435b0ac927e
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListClubsGroupsResponse.java:
+    last_write_checksum: sha1:2b73d4ece64cf778848ded3caa0c98fcc3017d15
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListClubsLocationsQueryParamFields.java:
+    last_write_checksum: sha1:3e1df45d35a2455c5a78c37594ce8db80068c740
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListClubsLocationsRequest.java:
+    last_write_checksum: sha1:ab6038a431af41e2a12a2b1c091b613f45d140c3
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListClubsLocationsRequestBuilder.java:
+    last_write_checksum: sha1:b62ee7889ca74b612a1a2b7bb9a3a9fdf8999079
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListClubsLocationsResponse.java:
+    last_write_checksum: sha1:f57db67727e77af6c6b9e194e5d198a744106d38
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListClubsMembersQueryParamFields.java:
+    last_write_checksum: sha1:698ab1b944cf98a67ba51caf9107c417f93d5606
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListClubsMembersRequest.java:
+    last_write_checksum: sha1:2401f829bfa5e7f847dc512be58a230911c1cbb0
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListClubsMembersRequestBuilder.java:
+    last_write_checksum: sha1:caebaa8da7fdc4d52ddbb75e4ed79860362d312f
+  src/main/java/to/unified/unified_java_sdk/models/operations/ListClubsMembersResponse.java:
+    last_write_checksum: sha1:c84b34e0c322a671d2267861ce221970ef4e4d39
   src/main/java/to/unified/unified_java_sdk/models/operations/ListCommerceAvailabilitiesQueryParamFields.java:
     id: 4a8696b5b4d7
     last_write_checksum: sha1:6a2491531be7d0d73535e5875c3a184695f2be65
@@ -20813,7 +21007,7 @@ trackedFiles:
     pristine_git_object: d27d7a3f03319f75c41da74d3823805db4b23777
   src/main/java/to/unified/unified_java_sdk/models/operations/ListUnifiedIntegrationsQueryParamCategories.java:
     id: 56ebcff9ad36
-    last_write_checksum: sha1:cf320c59bc540fefc174d1c48494e3eaffe760df
+    last_write_checksum: sha1:c1dded57f5c265722a900141972cec2d60951669
     pristine_git_object: 858b8286f3ed76dbf7a7fcdcae036e91a4b586d0
   src/main/java/to/unified/unified_java_sdk/models/operations/ListUnifiedIntegrationsRequest.java:
     id: 9153cd4f1ceb
@@ -22509,7 +22703,7 @@ trackedFiles:
     pristine_git_object: f1c4d640e37ffbad4f9ed38304b6d1fd1022cc93
   src/main/java/to/unified/unified_java_sdk/models/operations/QueryParamCategories.java:
     id: bc7580d1ba05
-    last_write_checksum: sha1:f5da1d026fcb76c71d728bbb44d9979e45e738e8
+    last_write_checksum: sha1:c5938791781baedda65f4aec42f75ba77022c8ff
     pristine_git_object: cdd6d96adafab8a45d7e713f8a2bd3d63816cba1
   src/main/java/to/unified/unified_java_sdk/models/operations/QueryParamFields.java:
     id: b81af9d21440
@@ -25923,6 +26117,16 @@ trackedFiles:
     id: 00239684903b
     last_write_checksum: sha1:ca988961bac4b5a08b36b147eb676f1a63cb0c92
     pristine_git_object: 1a96fc10b89476757ce3022d6b90b3c3da0d7a86
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/GetClubsActivityResponse.java:
+    last_write_checksum: sha1:a2503680b2d3f8e50b9cc64c6ffc10de5bfccf80
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/GetClubsEventResponse.java:
+    last_write_checksum: sha1:66533a67c0999dada16e82e65e1990c1d18cf225
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/GetClubsGroupResponse.java:
+    last_write_checksum: sha1:af5a25f0024416794b59fbc0f3b9e28df4942786
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/GetClubsLocationResponse.java:
+    last_write_checksum: sha1:81c7f3425a73d3d23415326af07533d02a99850e
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/GetClubsMemberResponse.java:
+    last_write_checksum: sha1:60d19d57645f816f29c3fd491b3e6845c7d4832e
   src/main/java/to/unified/unified_java_sdk/models/operations/async/GetCommerceCollectionResponse.java:
     id: d4b0c5ea780a
     last_write_checksum: sha1:c4c5bdb6c5d0d968dd43c67b72844abf22dd4c06
@@ -26429,6 +26633,16 @@ trackedFiles:
     id: 2dd0523c9d1c
     last_write_checksum: sha1:f0dd89cc1fd8977a9fff84aef478882561d837d2
     pristine_git_object: e049fa65591f58b62d2f93ffa24b8f8eb639f755
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/ListClubsActivitiesResponse.java:
+    last_write_checksum: sha1:76d37e2e30d78807cc13e7290dce342de2e011c6
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/ListClubsEventsResponse.java:
+    last_write_checksum: sha1:794dabba38080077bd04df8a30fc7586e670d88c
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/ListClubsGroupsResponse.java:
+    last_write_checksum: sha1:794f3427317cef8244f7c8e49b4275a65fee5216
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/ListClubsLocationsResponse.java:
+    last_write_checksum: sha1:baea8fb9321a3ca9cbb01f71021ba00252efc692
+  src/main/java/to/unified/unified_java_sdk/models/operations/async/ListClubsMembersResponse.java:
+    last_write_checksum: sha1:1180400f46f45ffc692bbdced64be47639c02b78
   src/main/java/to/unified/unified_java_sdk/models/operations/async/ListCommerceAvailabilitiesResponse.java:
     id: 2abbace8c3c8
     last_write_checksum: sha1:e9bf1d09d188c8fb7fed5f238f875dc31e9eec71
@@ -28649,6 +28863,24 @@ trackedFiles:
     id: "028156815364"
     last_write_checksum: sha1:801f31ab1da4b28cdfea97d2734a749b12e8a157
     pristine_git_object: b62b8ec00cff6d61a3b2fb4f8e3f37bcaf91c6e5
+  src/main/java/to/unified/unified_java_sdk/models/shared/ClubsActivity.java:
+    last_write_checksum: sha1:d5740730012fda291e9b5da1eea6c7a010baa810
+  src/main/java/to/unified/unified_java_sdk/models/shared/ClubsActivityType.java:
+    last_write_checksum: sha1:cb33bd86fbb5a8a15ab577914ed4f221c4cf8f45
+  src/main/java/to/unified/unified_java_sdk/models/shared/ClubsEvent.java:
+    last_write_checksum: sha1:cc92a5e4f6b494641202405859f184c72ddc0976
+  src/main/java/to/unified/unified_java_sdk/models/shared/ClubsEventStatus.java:
+    last_write_checksum: sha1:c458a6b8235fa168148dace26b9fc474bd477db9
+  src/main/java/to/unified/unified_java_sdk/models/shared/ClubsEventType.java:
+    last_write_checksum: sha1:94d19dc631bd60022925c28cf12b2602fdb9640f
+  src/main/java/to/unified/unified_java_sdk/models/shared/ClubsGroup.java:
+    last_write_checksum: sha1:a223709aa500641ed3b70f991dee879c36ca2a77
+  src/main/java/to/unified/unified_java_sdk/models/shared/ClubsLocation.java:
+    last_write_checksum: sha1:1caebb8cd012d38ef14d5f340a5b0d7ae286ad30
+  src/main/java/to/unified/unified_java_sdk/models/shared/ClubsMember.java:
+    last_write_checksum: sha1:f82ec49a1b101aef5f33bcd3901a7c0fbb5f8d70
+  src/main/java/to/unified/unified_java_sdk/models/shared/ClubsMemberMembershipStatus.java:
+    last_write_checksum: sha1:3bde6e6cfd41f5098c00652ac2d35d74e4d5c981
   src/main/java/to/unified/unified_java_sdk/models/shared/CommerceAvailability.java:
     id: fe8666b9439b
     last_write_checksum: sha1:82a91af1eea2c6beba6edbafb340d1a927c00cef
@@ -28771,7 +29003,7 @@ trackedFiles:
     pristine_git_object: e1d6e34bcdc1e703e3b983527dc70c5027cf29ef
   src/main/java/to/unified/unified_java_sdk/models/shared/Connection.java:
     id: 4c89d5b9563a
-    last_write_checksum: sha1:51c66515a3a326da9b20a533a66173e7e2e851b9
+    last_write_checksum: sha1:b4e94d649071aea7856b13ed71a92c0abc5060f0
     pristine_git_object: 020818953d44c1da96096293aa7c47cea3dfed62
   src/main/java/to/unified/unified_java_sdk/models/shared/ContentType.java:
     id: 177b6dd2ae36
@@ -29021,6 +29253,8 @@ trackedFiles:
     id: 108ca8fc546c
     last_write_checksum: sha1:5bbba33e22eed5870c076b78e3de88b0962af7d6
     pristine_git_object: 2b4975a6748802ecb6b901b6d25fc317e321dfa6
+  src/main/java/to/unified/unified_java_sdk/models/shared/GroupType.java:
+    last_write_checksum: sha1:c4947b46529add736c638a9f814248844e46bc42
   src/main/java/to/unified/unified_java_sdk/models/shared/HostingSource.java:
     id: 852887719a5f
     last_write_checksum: sha1:e4943fd363c0bca077ed6d6f9861fa0858fcd8ff
@@ -29693,6 +29927,8 @@ trackedFiles:
     id: 73b0cc90b8d9
     last_write_checksum: sha1:cf146df318e61ef813a9b153fb56654a796e2164
     pristine_git_object: 00d2597e494381ba24a040f291300c7eef745f8b
+  src/main/java/to/unified/unified_java_sdk/models/shared/MembershipStatus.java:
+    last_write_checksum: sha1:186f46ae5c4352904e6cb1702ddbeeb70845f67f
   src/main/java/to/unified/unified_java_sdk/models/shared/MessagingAttachment.java:
     id: d16dfd78b0bc
     last_write_checksum: sha1:0cac2b6484a8ad3de880bae9b8d377793b31fa16
@@ -29819,7 +30055,7 @@ trackedFiles:
     pristine_git_object: 797c963e18c7ea6040b13f43c4e016de7b0102d7
   src/main/java/to/unified/unified_java_sdk/models/shared/ObjectType.java:
     id: d20c4867606e
-    last_write_checksum: sha1:438dce8dcdd430ea506725ee69488e61b5dfdb1b
+    last_write_checksum: sha1:58301810c1f07c98d7a6db96f58973f6647b0bd9
     pristine_git_object: df14ea789abf908f34f550eb37cf9a7fd0addb9c
   src/main/java/to/unified/unified_java_sdk/models/shared/One.java:
     id: a92034029840
@@ -30437,6 +30673,10 @@ trackedFiles:
     id: 1612bb5137a2
     last_write_checksum: sha1:79dc7fe7a9a21ee3c0b1cd8bd54702bcd33a2d6f
     pristine_git_object: 187e7f13c7989c178b67aacf9ce563564ac0bedb
+  src/main/java/to/unified/unified_java_sdk/models/shared/PropertyClubsGroupAddress.java:
+    last_write_checksum: sha1:bb1a0e57b1374475b564124b75c8e0ca1f7948f0
+  src/main/java/to/unified/unified_java_sdk/models/shared/PropertyClubsLocationAddress.java:
+    last_write_checksum: sha1:ca711375e953b8a19f292208d4c41393a27aef23
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyCommerceLocationAddress.java:
     id: caacc9cbe7bb
     last_write_checksum: sha1:9e5cfc5a3e4d9efe6ba85c0306e15d04ca0ddaff
@@ -30447,11 +30687,11 @@ trackedFiles:
     pristine_git_object: bd4697c68ccff614ae944df44fa3529f362b2160
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyConnectionCategories.java:
     id: d369930d14ad
-    last_write_checksum: sha1:557ba73da09ee5c2f01d228c78e20e59c494af38
+    last_write_checksum: sha1:b1ff5564408cbf0b3cfc0121e677c8bbda8bbe87
     pristine_git_object: 9d9e92c8874a1fbe812b6a11a6ad42c67fa5b8b7
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyConnectionPermissions.java:
     id: 65db75e56442
-    last_write_checksum: sha1:a6eeb54ff9f118ccba10b7b78606c87b64f4908c
+    last_write_checksum: sha1:89e800a9ec15c91ceeede9f8a74b16b1037b0982
     pristine_git_object: e25953325abc291976da577cc397357248cbb621
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyCrmCompanyAddress.java:
     id: 3141278ac2cc
@@ -30547,7 +30787,7 @@ trackedFiles:
     pristine_git_object: 3f70f9eb1fb946c98bdca7ba816bbf4bdf06ed0f
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyIntegrationCategories.java:
     id: 74ba21797270
-    last_write_checksum: sha1:fe6d29177ff38fa0af290865c56863be236c7394
+    last_write_checksum: sha1:16654fc0a03d09a6faf8f0621f5c92160c1c4636
     pristine_git_object: fc20edf2b5dae01956d439bf5067d2ff63e428b1
   src/main/java/to/unified/unified_java_sdk/models/shared/PropertyIntegrationSupportWebhookEvents.java:
     id: e0231eb3d875
@@ -30953,6 +31193,8 @@ trackedFiles:
     id: 33c67a4c1d51
     last_write_checksum: sha1:1c68fd5213e1beb51a1ae5eaf5316a2b622574af
     pristine_git_object: 61dbfd68fd414d3c46f21c679bd75ecbcf89a948
+  src/main/java/to/unified/unified_java_sdk/models/shared/SportType.java:
+    last_write_checksum: sha1:5bdccb8652bd2b32b39e80c5cfc2f5268852908f
   src/main/java/to/unified/unified_java_sdk/models/shared/Status.java:
     id: eb18b307681d
     last_write_checksum: sha1:d90d47f3219fea120f498de329ee995e3ca22c72
@@ -32005,6 +32247,16 @@ trackedFiles:
     id: 4c1dab27e4f1
     last_write_checksum: sha1:7dc1fd7752dae802ff65878bc305c3a25911506e
     pristine_git_object: 343315f89567ba19d61f3eac7d7ac37ec172ca99
+  src/main/java/to/unified/unified_java_sdk/operations/GetClubsActivity.java:
+    last_write_checksum: sha1:dbeecc08f6fc7a85ebe7384cbdff3ef521df8a89
+  src/main/java/to/unified/unified_java_sdk/operations/GetClubsEvent.java:
+    last_write_checksum: sha1:af8afcc8aaf111f73373936c2d1a57ed37f788d2
+  src/main/java/to/unified/unified_java_sdk/operations/GetClubsGroup.java:
+    last_write_checksum: sha1:4a19e5d66e5c0450753d2fedfdbef53fed813c99
+  src/main/java/to/unified/unified_java_sdk/operations/GetClubsLocation.java:
+    last_write_checksum: sha1:33f043c0266d3a2edaa8f5fa973c4d85832bc8ce
+  src/main/java/to/unified/unified_java_sdk/operations/GetClubsMember.java:
+    last_write_checksum: sha1:2a3060ab034ca1f2309add4c2aa92ec2f93bc231
   src/main/java/to/unified/unified_java_sdk/operations/GetCommerceCollection.java:
     id: aeeec2584f84
     last_write_checksum: sha1:4e0d80d97a7af7115ceec46bd1f884a3e20a580f
@@ -32511,6 +32763,16 @@ trackedFiles:
     id: 6aaaccdbff1b
     last_write_checksum: sha1:c78ea32c1e60e5623d88e3103c139ff0d832bd3d
     pristine_git_object: d6de31b1b5b12776f3c8357f926805b899afae86
+  src/main/java/to/unified/unified_java_sdk/operations/ListClubsActivities.java:
+    last_write_checksum: sha1:559e1caf8b4a91c8da01460d7c9430ded65def55
+  src/main/java/to/unified/unified_java_sdk/operations/ListClubsEvents.java:
+    last_write_checksum: sha1:b6c5627e59456f7fb36159e73b901b77c00c1c50
+  src/main/java/to/unified/unified_java_sdk/operations/ListClubsGroups.java:
+    last_write_checksum: sha1:a5e1fe8d68bac1dd57311aa7a48b35efeea7e3a3
+  src/main/java/to/unified/unified_java_sdk/operations/ListClubsLocations.java:
+    last_write_checksum: sha1:7e8009eb91de61f628ff53fcd3c26c6cbf2a9b9e
+  src/main/java/to/unified/unified_java_sdk/operations/ListClubsMembers.java:
+    last_write_checksum: sha1:957ab2f89913d3e12d20e8f662fb9ca179a6e096
   src/main/java/to/unified/unified_java_sdk/operations/ListCommerceAvailabilities.java:
     id: c8adf5efd265
     last_write_checksum: sha1:9302aae269c90ba54c2b6e02a6babb3e552cde9b
@@ -40548,9 +40810,94 @@ examples:
       responses:
         "200":
           application/json: {"id": "<id>"}
+  getClubsGroup:
+    speakeasy-default-get-clubs-group:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listClubsGroups:
+    speakeasy-default-list-clubs-groups:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  getClubsActivity:
+    speakeasy-default-get-clubs-activity:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listClubsActivities:
+    speakeasy-default-list-clubs-activities:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  getClubsEvent:
+    speakeasy-default-get-clubs-event:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listClubsEvents:
+    speakeasy-default-list-clubs-events:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  getClubsLocation:
+    speakeasy-default-get-clubs-location:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  getClubsMember:
+    speakeasy-default-get-clubs-member:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listClubsLocations:
+    speakeasy-default-list-clubs-locations:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
+  listClubsMembers:
+    speakeasy-default-list-clubs-members:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Java SDK Changes:\n* `unified-to.ats.createAtsApplication()`: \n  *  `request.atsApplication.offers[].raw` **Removed** (Breaking ⚠️)\n  *  `response.offers[].raw` **Removed** (Breaking ⚠️)\n* `unified-to.ats.getAtsApplication()`:  `response.offers[].raw` **Removed** (Breaking ⚠️)\n* `unified-to.ats.listAtsApplications()`:  `response.[].offers[].raw` **Removed** (Breaking ⚠️)\n* `unified-to.ats.patchAtsApplication()`: \n  *  `request.atsApplication.offers[].raw` **Removed** (Breaking ⚠️)\n  *  `response.offers[].raw` **Removed** (Breaking ⚠️)\n* `unified-to.ats.updateAtsApplication()`: \n  *  `request.atsApplication.offers[].raw` **Removed** (Breaking ⚠️)\n  *  `response.offers[].raw` **Removed** (Breaking ⚠️)\n* `unified-to.application.createAtsApplication()`: \n  *  `request.atsApplication.offers[].raw` **Removed** (Breaking ⚠️)\n  *  `response.offers[].raw` **Removed** (Breaking ⚠️)\n* `unified-to.application.getAtsApplication()`:  `response.offers[].raw` **Removed** (Breaking ⚠️)\n* `unified-to.application.listAtsApplications()`:  `response.[].offers[].raw` **Removed** (Breaking ⚠️)\n* `unified-to.application.patchAtsApplication()`: \n  *  `request.atsApplication.offers[].raw` **Removed** (Breaking ⚠️)\n  *  `response.offers[].raw` **Removed** (Breaking ⚠️)\n* `unified-to.application.updateAtsApplication()`: \n  *  `request.atsApplication.offers[].raw` **Removed** (Breaking ⚠️)\n  *  `response.offers[].raw` **Removed** (Breaking ⚠️)\n"
+releaseNotes: "## Java SDK Changes:\n* `unified-to.group.getClubsGroup()`: **Added**\n* `unified-to.group.listClubsGroups()`: **Added**\n* `unified-to.activity.getClubsActivity()`: **Added**\n* `unified-to.activity.listClubsActivities()`: **Added**\n* `unified-to.event.getClubsEvent()`: **Added**\n* `unified-to.event.listClubsEvents()`: **Added**\n* `unified-to.clubs.getClubsActivity()`: **Added**\n* `unified-to.clubs.getClubsEvent()`: **Added**\n* `unified-to.clubs.getClubsGroup()`: **Added**\n* `unified-to.clubs.getClubsLocation()`: **Added**\n* `unified-to.clubs.getClubsMember()`: **Added**\n* `unified-to.clubs.listClubsActivities()`: **Added**\n* `unified-to.clubs.listClubsEvents()`: **Added**\n* `unified-to.clubs.listClubsGroups()`: **Added**\n* `unified-to.clubs.listClubsLocations()`: **Added**\n* `unified-to.clubs.listClubsMembers()`: **Added**\n* `unified-to.location.getClubsLocation()`: **Added**\n* `unified-to.location.listClubsLocations()`: **Added**\n* `unified-to.member.getClubsMember()`: **Added**\n* `unified-to.member.listClubsMembers()`: **Added**\n* `unified-to.unified.createUnifiedConnection()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.unified.createUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n* `unified-to.unified.getUnifiedConnection()`:  `response` **Changed**\n* `unified-to.unified.getUnifiedWebhook()`:  `response.objectType` **Changed**\n* `unified-to.unified.listUnifiedConnections()`: \n  *  `request.categories` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.unified.listUnifiedIntegrationWorkspaces()`: \n  *  `request.categories` **Changed**\n  *  `response.[].categories[].enum(clubs)` **Added**\n* `unified-to.unified.listUnifiedIntegrations()`: \n  *  `request.categories` **Changed**\n  *  `response.[].categories[].enum(clubs)` **Added**\n* `unified-to.unified.listUnifiedWebhooks()`:  `response.[].objectType` **Changed**\n* `unified-to.unified.patchUnifiedConnection()`: \n  *  `request.connection` **Changed**\n  *  `response` **Changed**\n* `unified-to.unified.patchUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n* `unified-to.unified.updateUnifiedConnection()`: \n  *  `request.connection` **Changed**\n  *  `response` **Changed**\n* `unified-to.unified.updateUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n* `unified-to.connection.createUnifiedConnection()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to.connection.getUnifiedConnection()`:  `response` **Changed**\n* `unified-to.connection.listUnifiedConnections()`: \n  *  `request.categories` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to.connection.patchUnifiedConnection()`: \n  *  `request.connection` **Changed**\n  *  `response` **Changed**\n* `unified-to.connection.updateUnifiedConnection()`: \n  *  `request.connection` **Changed**\n  *  `response` **Changed**\n* `unified-to.integration.listUnifiedIntegrationWorkspaces()`: \n  *  `request.categories` **Changed**\n  *  `response.[].categories[].enum(clubs)` **Added**\n* `unified-to.integration.listUnifiedIntegrations()`: \n  *  `request.categories` **Changed**\n  *  `response.[].categories[].enum(clubs)` **Added**\n* `unified-to.webhook.createUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n* `unified-to.webhook.getUnifiedWebhook()`:  `response.objectType` **Changed**\n* `unified-to.webhook.listUnifiedWebhooks()`:  `response.[].objectType` **Changed**\n* `unified-to.webhook.patchUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n* `unified-to.webhook.updateUnifiedWebhook()`: \n  *  `request.webhook.objectType` **Changed**\n  *  `response.objectType` **Changed**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md

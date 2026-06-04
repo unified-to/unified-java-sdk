@@ -41,3 +41,4 @@ QueryParamCategories value = QueryParamCategories.PASSTHROUGH;
 | `SHIPPING`     | shipping       |
 | `ASSESSMENT`   | assessment     |
 | `SIGNING`      | signing        |
+| `CLUBS`        | clubs          |

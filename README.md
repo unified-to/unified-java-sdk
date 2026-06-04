@@ -39,7 +39,7 @@ The samples below show how a published SDK artifact is used:
 
 Gradle:
 ```groovy
-implementation 'to.unified:unified-java-sdk:0.47.28'
+implementation 'to.unified:unified-java-sdk:0.47.29'
 ```
 
 Maven:
@@ -47,7 +47,7 @@ Maven:
 <dependency>
     <groupId>to.unified</groupId>
     <artifactId>unified-java-sdk</artifactId>
-    <version>0.47.28</version>
+    <version>0.47.29</version>
 </dependency>
 ```
 
@@ -275,8 +275,10 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [createAtsActivity](docs/sdks/activity/README.md#createatsactivity) - Create an activity
 * [createLmsActivity](docs/sdks/activity/README.md#createlmsactivity) - Create an activity
 * [getAtsActivity](docs/sdks/activity/README.md#getatsactivity) - Retrieve an activity
+* [getClubsActivity](docs/sdks/activity/README.md#getclubsactivity) - Retrieve an activity
 * [getLmsActivity](docs/sdks/activity/README.md#getlmsactivity) - Retrieve an activity
 * [listAtsActivities](docs/sdks/activity/README.md#listatsactivities) - List all activities
+* [listClubsActivities](docs/sdks/activity/README.md#listclubsactivities) - List all activities
 * [listLmsActivities](docs/sdks/activity/README.md#listlmsactivities) - List all activities
 * [patchAtsActivity](docs/sdks/activity/README.md#patchatsactivity) - Update an activity
 * [patchLmsActivity](docs/sdks/activity/README.md#patchlmsactivity) - Update an activity
@@ -575,6 +577,19 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [patchLmsClass](docs/sdks/class/README.md#patchlmsclass) - Update a class
 * [removeLmsClass](docs/sdks/class/README.md#removelmsclass) - Remove a class
 * [updateLmsClass](docs/sdks/class/README.md#updatelmsclass) - Update a class
+
+### [Clubs](docs/sdks/clubs/README.md)
+
+* [getClubsActivity](docs/sdks/clubs/README.md#getclubsactivity) - Retrieve an activity
+* [getClubsEvent](docs/sdks/clubs/README.md#getclubsevent) - Retrieve an event
+* [getClubsGroup](docs/sdks/clubs/README.md#getclubsgroup) - Retrieve a group
+* [getClubsLocation](docs/sdks/clubs/README.md#getclubslocation) - Retrieve a location
+* [getClubsMember](docs/sdks/clubs/README.md#getclubsmember) - Retrieve a member
+* [listClubsActivities](docs/sdks/clubs/README.md#listclubsactivities) - List all activities
+* [listClubsEvents](docs/sdks/clubs/README.md#listclubsevents) - List all events
+* [listClubsGroups](docs/sdks/clubs/README.md#listclubsgroups) - List all groups
+* [listClubsLocations](docs/sdks/clubs/README.md#listclubslocations) - List all locations
+* [listClubsMembers](docs/sdks/clubs/README.md#listclubsmembers) - List all members
 
 ### [Collection](docs/sdks/collection/README.md)
 
@@ -880,8 +895,10 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [createCalendarEvent](docs/sdks/event/README.md#createcalendarevent) - Create an event
 * [createCrmEvent](docs/sdks/event/README.md#createcrmevent) - Create an event
 * [getCalendarEvent](docs/sdks/event/README.md#getcalendarevent) - Retrieve an event
+* [getClubsEvent](docs/sdks/event/README.md#getclubsevent) - Retrieve an event
 * [getCrmEvent](docs/sdks/event/README.md#getcrmevent) - Retrieve an event
 * [listCalendarEvents](docs/sdks/event/README.md#listcalendarevents) - List all events
+* [listClubsEvents](docs/sdks/event/README.md#listclubsevents) - List all events
 * [listCrmEvents](docs/sdks/event/README.md#listcrmevents) - List all events
 * [patchCalendarEvent](docs/sdks/event/README.md#patchcalendarevent) - Update an event
 * [patchCrmEvent](docs/sdks/event/README.md#patchcrmevent) - Update an event
@@ -943,9 +960,11 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 * [createHrisGroup](docs/sdks/group/README.md#createhrisgroup) - Create a group
 * [createScimGroups](docs/sdks/group/README.md#createscimgroups) - Create group
 * [getAdsGroup](docs/sdks/group/README.md#getadsgroup) - Retrieve a group
+* [getClubsGroup](docs/sdks/group/README.md#getclubsgroup) - Retrieve a group
 * [getHrisGroup](docs/sdks/group/README.md#gethrisgroup) - Retrieve a group
 * [getScimGroups](docs/sdks/group/README.md#getscimgroups) - Get group
 * [listAdsGroups](docs/sdks/group/README.md#listadsgroups) - List all groups
+* [listClubsGroups](docs/sdks/group/README.md#listclubsgroups) - List all groups
 * [listHrisGroups](docs/sdks/group/README.md#listhrisgroups) - List all groups
 * [listScimGroups](docs/sdks/group/README.md#listscimgroups) - List groups
 * [patchAdsGroup](docs/sdks/group/README.md#patchadsgroup) - Update a group
@@ -1227,8 +1246,10 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 
 * [createCommerceLocation](docs/sdks/location/README.md#createcommercelocation) - Create a location
 * [createHrisLocation](docs/sdks/location/README.md#createhrislocation) - Create a location
+* [getClubsLocation](docs/sdks/location/README.md#getclubslocation) - Retrieve a location
 * [getCommerceLocation](docs/sdks/location/README.md#getcommercelocation) - Retrieve a location
 * [getHrisLocation](docs/sdks/location/README.md#gethrislocation) - Retrieve a location
+* [listClubsLocations](docs/sdks/location/README.md#listclubslocations) - List all locations
 * [listCommerceLocations](docs/sdks/location/README.md#listcommercelocations) - List all locations
 * [listHrisLocations](docs/sdks/location/README.md#listhrislocations) - List all locations
 * [patchCommerceLocation](docs/sdks/location/README.md#patchcommercelocation) - Update a location
@@ -1267,7 +1288,9 @@ For full model-specific examples (including Java 11/16/21 variants), see each un
 ### [Member](docs/sdks/member/README.md)
 
 * [createMartechMember](docs/sdks/member/README.md#createmartechmember) - Create a member
+* [getClubsMember](docs/sdks/member/README.md#getclubsmember) - Retrieve a member
 * [getMartechMember](docs/sdks/member/README.md#getmartechmember) - Retrieve a member
+* [listClubsMembers](docs/sdks/member/README.md#listclubsmembers) - List all members
 * [listMartechMembers](docs/sdks/member/README.md#listmartechmembers) - List all members
 * [patchMartechMember](docs/sdks/member/README.md#patchmartechmember) - Update a member
 * [removeMartechMember](docs/sdks/member/README.md#removemartechmember) - Remove a member

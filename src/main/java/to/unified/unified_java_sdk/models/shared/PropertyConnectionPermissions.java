@@ -262,6 +262,16 @@ public class PropertyConnectionPermissions {
     public static final PropertyConnectionPermissions SIGNING_SIGNATORY_READ = new PropertyConnectionPermissions("signing_signatory_read");
     public static final PropertyConnectionPermissions SIGNING_SIGNATORY_WRITE = new PropertyConnectionPermissions("signing_signatory_write");
     public static final PropertyConnectionPermissions SIGNING_TEMPLATE_READ = new PropertyConnectionPermissions("signing_template_read");
+    public static final PropertyConnectionPermissions CLUBS_GROUP_READ = new PropertyConnectionPermissions("clubs_group_read");
+    public static final PropertyConnectionPermissions CLUBS_GROUP_WRITE = new PropertyConnectionPermissions("clubs_group_write");
+    public static final PropertyConnectionPermissions CLUBS_MEMBER_READ = new PropertyConnectionPermissions("clubs_member_read");
+    public static final PropertyConnectionPermissions CLUBS_MEMBER_WRITE = new PropertyConnectionPermissions("clubs_member_write");
+    public static final PropertyConnectionPermissions CLUBS_ACTIVITY_READ = new PropertyConnectionPermissions("clubs_activity_read");
+    public static final PropertyConnectionPermissions CLUBS_ACTIVITY_WRITE = new PropertyConnectionPermissions("clubs_activity_write");
+    public static final PropertyConnectionPermissions CLUBS_LOCATION_READ = new PropertyConnectionPermissions("clubs_location_read");
+    public static final PropertyConnectionPermissions CLUBS_LOCATION_WRITE = new PropertyConnectionPermissions("clubs_location_write");
+    public static final PropertyConnectionPermissions CLUBS_EVENT_READ = new PropertyConnectionPermissions("clubs_event_read");
+    public static final PropertyConnectionPermissions CLUBS_EVENT_WRITE = new PropertyConnectionPermissions("clubs_event_write");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -577,6 +587,16 @@ public class PropertyConnectionPermissions {
         map.put("signing_signatory_read", SIGNING_SIGNATORY_READ);
         map.put("signing_signatory_write", SIGNING_SIGNATORY_WRITE);
         map.put("signing_template_read", SIGNING_TEMPLATE_READ);
+        map.put("clubs_group_read", CLUBS_GROUP_READ);
+        map.put("clubs_group_write", CLUBS_GROUP_WRITE);
+        map.put("clubs_member_read", CLUBS_MEMBER_READ);
+        map.put("clubs_member_write", CLUBS_MEMBER_WRITE);
+        map.put("clubs_activity_read", CLUBS_ACTIVITY_READ);
+        map.put("clubs_activity_write", CLUBS_ACTIVITY_WRITE);
+        map.put("clubs_location_read", CLUBS_LOCATION_READ);
+        map.put("clubs_location_write", CLUBS_LOCATION_WRITE);
+        map.put("clubs_event_read", CLUBS_EVENT_READ);
+        map.put("clubs_event_write", CLUBS_EVENT_WRITE);
         return map;
     }
 
@@ -824,6 +844,16 @@ public class PropertyConnectionPermissions {
         map.put("signing_signatory_read", PropertyConnectionPermissionsEnum.SIGNING_SIGNATORY_READ);
         map.put("signing_signatory_write", PropertyConnectionPermissionsEnum.SIGNING_SIGNATORY_WRITE);
         map.put("signing_template_read", PropertyConnectionPermissionsEnum.SIGNING_TEMPLATE_READ);
+        map.put("clubs_group_read", PropertyConnectionPermissionsEnum.CLUBS_GROUP_READ);
+        map.put("clubs_group_write", PropertyConnectionPermissionsEnum.CLUBS_GROUP_WRITE);
+        map.put("clubs_member_read", PropertyConnectionPermissionsEnum.CLUBS_MEMBER_READ);
+        map.put("clubs_member_write", PropertyConnectionPermissionsEnum.CLUBS_MEMBER_WRITE);
+        map.put("clubs_activity_read", PropertyConnectionPermissionsEnum.CLUBS_ACTIVITY_READ);
+        map.put("clubs_activity_write", PropertyConnectionPermissionsEnum.CLUBS_ACTIVITY_WRITE);
+        map.put("clubs_location_read", PropertyConnectionPermissionsEnum.CLUBS_LOCATION_READ);
+        map.put("clubs_location_write", PropertyConnectionPermissionsEnum.CLUBS_LOCATION_WRITE);
+        map.put("clubs_event_read", PropertyConnectionPermissionsEnum.CLUBS_EVENT_READ);
+        map.put("clubs_event_write", PropertyConnectionPermissionsEnum.CLUBS_EVENT_WRITE);
         return map;
     }
     
@@ -1071,7 +1101,17 @@ public class PropertyConnectionPermissions {
         SIGNING_DOCUMENT_WRITE("signing_document_write"),
         SIGNING_SIGNATORY_READ("signing_signatory_read"),
         SIGNING_SIGNATORY_WRITE("signing_signatory_write"),
-        SIGNING_TEMPLATE_READ("signing_template_read"),;
+        SIGNING_TEMPLATE_READ("signing_template_read"),
+        CLUBS_GROUP_READ("clubs_group_read"),
+        CLUBS_GROUP_WRITE("clubs_group_write"),
+        CLUBS_MEMBER_READ("clubs_member_read"),
+        CLUBS_MEMBER_WRITE("clubs_member_write"),
+        CLUBS_ACTIVITY_READ("clubs_activity_read"),
+        CLUBS_ACTIVITY_WRITE("clubs_activity_write"),
+        CLUBS_LOCATION_READ("clubs_location_read"),
+        CLUBS_LOCATION_WRITE("clubs_location_write"),
+        CLUBS_EVENT_READ("clubs_event_read"),
+        CLUBS_EVENT_WRITE("clubs_event_write"),;
 
         private final String value;
 

@@ -7,8 +7,10 @@
 * [createAtsActivity](#createatsactivity) - Create an activity
 * [createLmsActivity](#createlmsactivity) - Create an activity
 * [getAtsActivity](#getatsactivity) - Retrieve an activity
+* [getClubsActivity](#getclubsactivity) - Retrieve an activity
 * [getLmsActivity](#getlmsactivity) - Retrieve an activity
 * [listAtsActivities](#listatsactivities) - List all activities
+* [listClubsActivities](#listclubsactivities) - List all activities
 * [listLmsActivities](#listlmsactivities) - List all activities
 * [patchAtsActivity](#patchatsactivity) - Update an activity
 * [patchLmsActivity](#patchlmsactivity) - Update an activity
@@ -195,6 +197,64 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## getClubsActivity
+
+Retrieve an activity
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getClubsActivity" method="get" path="/clubs/{connection_id}/activity/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetClubsActivityRequest;
+import to.unified.unified_java_sdk.models.operations.GetClubsActivityResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetClubsActivityRequest req = GetClubsActivityRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetClubsActivityResponse res = sdk.activity().getClubsActivity()
+                .request(req)
+                .call();
+
+        if (res.clubsActivity().isPresent()) {
+            System.out.println(res.clubsActivity().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [GetClubsActivityRequest](../../models/operations/GetClubsActivityRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[GetClubsActivityResponse](../../models/operations/GetClubsActivityResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## getLmsActivity
 
 Retrieve an activity
@@ -303,6 +363,63 @@ public class Application {
 ### Response
 
 **[ListAtsActivitiesResponse](../../models/operations/ListAtsActivitiesResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## listClubsActivities
+
+List all activities
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listClubsActivities" method="get" path="/clubs/{connection_id}/activity" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListClubsActivitiesRequest;
+import to.unified.unified_java_sdk.models.operations.ListClubsActivitiesResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListClubsActivitiesRequest req = ListClubsActivitiesRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListClubsActivitiesResponse res = sdk.activity().listClubsActivities()
+                .request(req)
+                .call();
+
+        if (res.clubsActivities().isPresent()) {
+            System.out.println(res.clubsActivities().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                           | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `request`                                                                           | [ListClubsActivitiesRequest](../../models/operations/ListClubsActivitiesRequest.md) | :heavy_check_mark:                                                                  | The request object to use for the request.                                          |
+
+### Response
+
+**[ListClubsActivitiesResponse](../../models/operations/ListClubsActivitiesResponse.md)**
 
 ### Errors
 

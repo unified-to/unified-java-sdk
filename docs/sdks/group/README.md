@@ -8,9 +8,11 @@
 * [createHrisGroup](#createhrisgroup) - Create a group
 * [createScimGroups](#createscimgroups) - Create group
 * [getAdsGroup](#getadsgroup) - Retrieve a group
+* [getClubsGroup](#getclubsgroup) - Retrieve a group
 * [getHrisGroup](#gethrisgroup) - Retrieve a group
 * [getScimGroups](#getscimgroups) - Get group
 * [listAdsGroups](#listadsgroups) - List all groups
+* [listClubsGroups](#listclubsgroups) - List all groups
 * [listHrisGroups](#listhrisgroups) - List all groups
 * [listScimGroups](#listscimgroups) - List groups
 * [patchAdsGroup](#patchadsgroup) - Update a group
@@ -262,6 +264,64 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## getClubsGroup
+
+Retrieve a group
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getClubsGroup" method="get" path="/clubs/{connection_id}/group/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetClubsGroupRequest;
+import to.unified.unified_java_sdk.models.operations.GetClubsGroupResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetClubsGroupRequest req = GetClubsGroupRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetClubsGroupResponse res = sdk.group().getClubsGroup()
+                .request(req)
+                .call();
+
+        if (res.clubsGroup().isPresent()) {
+            System.out.println(res.clubsGroup().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [GetClubsGroupRequest](../../models/operations/GetClubsGroupRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+
+### Response
+
+**[GetClubsGroupResponse](../../models/operations/GetClubsGroupResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## getHrisGroup
 
 Retrieve a group
@@ -428,6 +488,63 @@ public class Application {
 ### Response
 
 **[ListAdsGroupsResponse](../../models/operations/ListAdsGroupsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## listClubsGroups
+
+List all groups
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listClubsGroups" method="get" path="/clubs/{connection_id}/group" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListClubsGroupsRequest;
+import to.unified.unified_java_sdk.models.operations.ListClubsGroupsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListClubsGroupsRequest req = ListClubsGroupsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListClubsGroupsResponse res = sdk.group().listClubsGroups()
+                .request(req)
+                .call();
+
+        if (res.clubsGroups().isPresent()) {
+            System.out.println(res.clubsGroups().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [ListClubsGroupsRequest](../../models/operations/ListClubsGroupsRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+
+### Response
+
+**[ListClubsGroupsResponse](../../models/operations/ListClubsGroupsResponse.md)**
 
 ### Errors
 

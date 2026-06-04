@@ -36,7 +36,8 @@ public enum ListUnifiedIntegrationsQueryParamCategories {
     FORMS("forms"),
     SHIPPING("shipping"),
     ASSESSMENT("assessment"),
-    SIGNING("signing");
+    SIGNING("signing"),
+    CLUBS("clubs");
 
     @JsonValue
     private final String value;

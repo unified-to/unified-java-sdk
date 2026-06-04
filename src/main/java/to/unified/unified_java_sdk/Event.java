@@ -15,12 +15,18 @@ import to.unified.unified_java_sdk.models.operations.CreateCrmEventResponse;
 import to.unified.unified_java_sdk.models.operations.GetCalendarEventRequest;
 import to.unified.unified_java_sdk.models.operations.GetCalendarEventRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetCalendarEventResponse;
+import to.unified.unified_java_sdk.models.operations.GetClubsEventRequest;
+import to.unified.unified_java_sdk.models.operations.GetClubsEventRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetClubsEventResponse;
 import to.unified.unified_java_sdk.models.operations.GetCrmEventRequest;
 import to.unified.unified_java_sdk.models.operations.GetCrmEventRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetCrmEventResponse;
 import to.unified.unified_java_sdk.models.operations.ListCalendarEventsRequest;
 import to.unified.unified_java_sdk.models.operations.ListCalendarEventsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListCalendarEventsResponse;
+import to.unified.unified_java_sdk.models.operations.ListClubsEventsRequest;
+import to.unified.unified_java_sdk.models.operations.ListClubsEventsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListClubsEventsResponse;
 import to.unified.unified_java_sdk.models.operations.ListCrmEventsRequest;
 import to.unified.unified_java_sdk.models.operations.ListCrmEventsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListCrmEventsResponse;
@@ -51,8 +57,10 @@ import to.unified.unified_java_sdk.models.operations.UpdateMessagingEventRespons
 import to.unified.unified_java_sdk.operations.CreateCalendarEvent;
 import to.unified.unified_java_sdk.operations.CreateCrmEvent;
 import to.unified.unified_java_sdk.operations.GetCalendarEvent;
+import to.unified.unified_java_sdk.operations.GetClubsEvent;
 import to.unified.unified_java_sdk.operations.GetCrmEvent;
 import to.unified.unified_java_sdk.operations.ListCalendarEvents;
+import to.unified.unified_java_sdk.operations.ListClubsEvents;
 import to.unified.unified_java_sdk.operations.ListCrmEvents;
 import to.unified.unified_java_sdk.operations.PatchCalendarEvent;
 import to.unified.unified_java_sdk.operations.PatchCrmEvent;
@@ -155,6 +163,28 @@ public class Event {
      * 
      * @return The call builder
      */
+    public GetClubsEventRequestBuilder getClubsEvent() {
+        return new GetClubsEventRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve an event
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetClubsEventResponse getClubsEvent(@Nonnull GetClubsEventRequest request) {
+        RequestOperation<GetClubsEventRequest, GetClubsEventResponse> operation
+              = new GetClubsEvent.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve an event
+     * 
+     * @return The call builder
+     */
     public GetCrmEventRequestBuilder getCrmEvent() {
         return new GetCrmEventRequestBuilder(sdkConfiguration);
     }
@@ -191,6 +221,28 @@ public class Event {
     public ListCalendarEventsResponse listCalendarEvents(@Nonnull ListCalendarEventsRequest request) {
         RequestOperation<ListCalendarEventsRequest, ListCalendarEventsResponse> operation
               = new ListCalendarEvents.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all events
+     * 
+     * @return The call builder
+     */
+    public ListClubsEventsRequestBuilder listClubsEvents() {
+        return new ListClubsEventsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all events
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListClubsEventsResponse listClubsEvents(@Nonnull ListClubsEventsRequest request) {
+        RequestOperation<ListClubsEventsRequest, ListClubsEventsResponse> operation
+              = new ListClubsEvents.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

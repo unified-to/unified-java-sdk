@@ -12,12 +12,18 @@ import to.unified.unified_java_sdk.models.operations.CreateCommerceLocationRespo
 import to.unified.unified_java_sdk.models.operations.CreateHrisLocationRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisLocationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateHrisLocationResponse;
+import to.unified.unified_java_sdk.models.operations.GetClubsLocationRequest;
+import to.unified.unified_java_sdk.models.operations.GetClubsLocationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetClubsLocationResponse;
 import to.unified.unified_java_sdk.models.operations.GetCommerceLocationRequest;
 import to.unified.unified_java_sdk.models.operations.GetCommerceLocationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetCommerceLocationResponse;
 import to.unified.unified_java_sdk.models.operations.GetHrisLocationRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisLocationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetHrisLocationResponse;
+import to.unified.unified_java_sdk.models.operations.ListClubsLocationsRequest;
+import to.unified.unified_java_sdk.models.operations.ListClubsLocationsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListClubsLocationsResponse;
 import to.unified.unified_java_sdk.models.operations.ListCommerceLocationsRequest;
 import to.unified.unified_java_sdk.models.operations.ListCommerceLocationsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListCommerceLocationsResponse;
@@ -44,8 +50,10 @@ import to.unified.unified_java_sdk.models.operations.UpdateHrisLocationRequestBu
 import to.unified.unified_java_sdk.models.operations.UpdateHrisLocationResponse;
 import to.unified.unified_java_sdk.operations.CreateCommerceLocation;
 import to.unified.unified_java_sdk.operations.CreateHrisLocation;
+import to.unified.unified_java_sdk.operations.GetClubsLocation;
 import to.unified.unified_java_sdk.operations.GetCommerceLocation;
 import to.unified.unified_java_sdk.operations.GetHrisLocation;
+import to.unified.unified_java_sdk.operations.ListClubsLocations;
 import to.unified.unified_java_sdk.operations.ListCommerceLocations;
 import to.unified.unified_java_sdk.operations.ListHrisLocations;
 import to.unified.unified_java_sdk.operations.PatchCommerceLocation;
@@ -125,6 +133,28 @@ public class Location {
      * 
      * @return The call builder
      */
+    public GetClubsLocationRequestBuilder getClubsLocation() {
+        return new GetClubsLocationRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a location
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetClubsLocationResponse getClubsLocation(@Nonnull GetClubsLocationRequest request) {
+        RequestOperation<GetClubsLocationRequest, GetClubsLocationResponse> operation
+              = new GetClubsLocation.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve a location
+     * 
+     * @return The call builder
+     */
     public GetCommerceLocationRequestBuilder getCommerceLocation() {
         return new GetCommerceLocationRequestBuilder(sdkConfiguration);
     }
@@ -161,6 +191,28 @@ public class Location {
     public GetHrisLocationResponse getHrisLocation(@Nonnull GetHrisLocationRequest request) {
         RequestOperation<GetHrisLocationRequest, GetHrisLocationResponse> operation
               = new GetHrisLocation.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all locations
+     * 
+     * @return The call builder
+     */
+    public ListClubsLocationsRequestBuilder listClubsLocations() {
+        return new ListClubsLocationsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all locations
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListClubsLocationsResponse listClubsLocations(@Nonnull ListClubsLocationsRequest request) {
+        RequestOperation<ListClubsLocationsRequest, ListClubsLocationsResponse> operation
+              = new ListClubsLocations.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

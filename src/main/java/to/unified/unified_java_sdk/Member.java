@@ -9,9 +9,15 @@ import jakarta.annotation.Nonnull;
 import to.unified.unified_java_sdk.models.operations.CreateMartechMemberRequest;
 import to.unified.unified_java_sdk.models.operations.CreateMartechMemberRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.CreateMartechMemberResponse;
+import to.unified.unified_java_sdk.models.operations.GetClubsMemberRequest;
+import to.unified.unified_java_sdk.models.operations.GetClubsMemberRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetClubsMemberResponse;
 import to.unified.unified_java_sdk.models.operations.GetMartechMemberRequest;
 import to.unified.unified_java_sdk.models.operations.GetMartechMemberRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetMartechMemberResponse;
+import to.unified.unified_java_sdk.models.operations.ListClubsMembersRequest;
+import to.unified.unified_java_sdk.models.operations.ListClubsMembersRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListClubsMembersResponse;
 import to.unified.unified_java_sdk.models.operations.ListMartechMembersRequest;
 import to.unified.unified_java_sdk.models.operations.ListMartechMembersRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListMartechMembersResponse;
@@ -25,7 +31,9 @@ import to.unified.unified_java_sdk.models.operations.UpdateMartechMemberRequest;
 import to.unified.unified_java_sdk.models.operations.UpdateMartechMemberRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.UpdateMartechMemberResponse;
 import to.unified.unified_java_sdk.operations.CreateMartechMember;
+import to.unified.unified_java_sdk.operations.GetClubsMember;
 import to.unified.unified_java_sdk.operations.GetMartechMember;
+import to.unified.unified_java_sdk.operations.ListClubsMembers;
 import to.unified.unified_java_sdk.operations.ListMartechMembers;
 import to.unified.unified_java_sdk.operations.PatchMartechMember;
 import to.unified.unified_java_sdk.operations.RemoveMartechMember;
@@ -79,6 +87,28 @@ public class Member {
      * 
      * @return The call builder
      */
+    public GetClubsMemberRequestBuilder getClubsMember() {
+        return new GetClubsMemberRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a member
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetClubsMemberResponse getClubsMember(@Nonnull GetClubsMemberRequest request) {
+        RequestOperation<GetClubsMemberRequest, GetClubsMemberResponse> operation
+              = new GetClubsMember.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve a member
+     * 
+     * @return The call builder
+     */
     public GetMartechMemberRequestBuilder getMartechMember() {
         return new GetMartechMemberRequestBuilder(sdkConfiguration);
     }
@@ -93,6 +123,28 @@ public class Member {
     public GetMartechMemberResponse getMartechMember(@Nonnull GetMartechMemberRequest request) {
         RequestOperation<GetMartechMemberRequest, GetMartechMemberResponse> operation
               = new GetMartechMember.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all members
+     * 
+     * @return The call builder
+     */
+    public ListClubsMembersRequestBuilder listClubsMembers() {
+        return new ListClubsMembersRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all members
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListClubsMembersResponse listClubsMembers(@Nonnull ListClubsMembersRequest request) {
+        RequestOperation<ListClubsMembersRequest, ListClubsMembersResponse> operation
+              = new ListClubsMembers.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

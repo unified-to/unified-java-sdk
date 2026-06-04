@@ -41,3 +41,4 @@ ListUnifiedIntegrationsQueryParamCategories value = ListUnifiedIntegrationsQuery
 | `SHIPPING`     | shipping       |
 | `ASSESSMENT`   | assessment     |
 | `SIGNING`      | signing        |
+| `CLUBS`        | clubs          |

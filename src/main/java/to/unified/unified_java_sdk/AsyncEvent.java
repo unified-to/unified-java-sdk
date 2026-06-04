@@ -10,8 +10,10 @@ import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateCalendarEventRequest;
 import to.unified.unified_java_sdk.models.operations.CreateCrmEventRequest;
 import to.unified.unified_java_sdk.models.operations.GetCalendarEventRequest;
+import to.unified.unified_java_sdk.models.operations.GetClubsEventRequest;
 import to.unified.unified_java_sdk.models.operations.GetCrmEventRequest;
 import to.unified.unified_java_sdk.models.operations.ListCalendarEventsRequest;
+import to.unified.unified_java_sdk.models.operations.ListClubsEventsRequest;
 import to.unified.unified_java_sdk.models.operations.ListCrmEventsRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCalendarEventRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCrmEventRequest;
@@ -27,10 +29,14 @@ import to.unified.unified_java_sdk.models.operations.async.CreateCrmEventRequest
 import to.unified.unified_java_sdk.models.operations.async.CreateCrmEventResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetCalendarEventRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetCalendarEventResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetClubsEventRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetClubsEventResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetCrmEventRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetCrmEventResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListCalendarEventsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListCalendarEventsResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListClubsEventsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListClubsEventsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListCrmEventsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListCrmEventsResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchCalendarEventRequestBuilder;
@@ -52,8 +58,10 @@ import to.unified.unified_java_sdk.models.operations.async.UpdateMessagingEventR
 import to.unified.unified_java_sdk.operations.CreateCalendarEvent;
 import to.unified.unified_java_sdk.operations.CreateCrmEvent;
 import to.unified.unified_java_sdk.operations.GetCalendarEvent;
+import to.unified.unified_java_sdk.operations.GetClubsEvent;
 import to.unified.unified_java_sdk.operations.GetCrmEvent;
 import to.unified.unified_java_sdk.operations.ListCalendarEvents;
+import to.unified.unified_java_sdk.operations.ListClubsEvents;
 import to.unified.unified_java_sdk.operations.ListCrmEvents;
 import to.unified.unified_java_sdk.operations.PatchCalendarEvent;
 import to.unified.unified_java_sdk.operations.PatchCrmEvent;
@@ -160,6 +168,29 @@ public class AsyncEvent {
      * 
      * @return The async call builder
      */
+    public GetClubsEventRequestBuilder getClubsEvent() {
+        return new GetClubsEventRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve an event
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetClubsEventResponse>} - The async response
+     */
+    public CompletableFuture<GetClubsEventResponse> getClubsEvent(@Nonnull GetClubsEventRequest request) {
+        AsyncRequestOperation<GetClubsEventRequest, GetClubsEventResponse> operation
+              = new GetClubsEvent.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Retrieve an event
+     * 
+     * @return The async call builder
+     */
     public GetCrmEventRequestBuilder getCrmEvent() {
         return new GetCrmEventRequestBuilder(sdkConfiguration);
     }
@@ -196,6 +227,29 @@ public class AsyncEvent {
     public CompletableFuture<ListCalendarEventsResponse> listCalendarEvents(@Nonnull ListCalendarEventsRequest request) {
         AsyncRequestOperation<ListCalendarEventsRequest, ListCalendarEventsResponse> operation
               = new ListCalendarEvents.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * List all events
+     * 
+     * @return The async call builder
+     */
+    public ListClubsEventsRequestBuilder listClubsEvents() {
+        return new ListClubsEventsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all events
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListClubsEventsResponse>} - The async response
+     */
+    public CompletableFuture<ListClubsEventsResponse> listClubsEvents(@Nonnull ListClubsEventsRequest request) {
+        AsyncRequestOperation<ListClubsEventsRequest, ListClubsEventsResponse> operation
+              = new ListClubsEvents.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

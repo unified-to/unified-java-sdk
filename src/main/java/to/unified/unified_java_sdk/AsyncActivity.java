@@ -10,8 +10,10 @@ import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateAtsActivityRequest;
 import to.unified.unified_java_sdk.models.operations.CreateLmsActivityRequest;
 import to.unified.unified_java_sdk.models.operations.GetAtsActivityRequest;
+import to.unified.unified_java_sdk.models.operations.GetClubsActivityRequest;
 import to.unified.unified_java_sdk.models.operations.GetLmsActivityRequest;
 import to.unified.unified_java_sdk.models.operations.ListAtsActivitiesRequest;
+import to.unified.unified_java_sdk.models.operations.ListClubsActivitiesRequest;
 import to.unified.unified_java_sdk.models.operations.ListLmsActivitiesRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAtsActivityRequest;
 import to.unified.unified_java_sdk.models.operations.PatchLmsActivityRequest;
@@ -25,10 +27,14 @@ import to.unified.unified_java_sdk.models.operations.async.CreateLmsActivityRequ
 import to.unified.unified_java_sdk.models.operations.async.CreateLmsActivityResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetAtsActivityRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetAtsActivityResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetClubsActivityRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetClubsActivityResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetLmsActivityRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetLmsActivityResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListAtsActivitiesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListAtsActivitiesResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListClubsActivitiesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListClubsActivitiesResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListLmsActivitiesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListLmsActivitiesResponse;
 import to.unified.unified_java_sdk.models.operations.async.PatchAtsActivityRequestBuilder;
@@ -46,8 +52,10 @@ import to.unified.unified_java_sdk.models.operations.async.UpdateLmsActivityResp
 import to.unified.unified_java_sdk.operations.CreateAtsActivity;
 import to.unified.unified_java_sdk.operations.CreateLmsActivity;
 import to.unified.unified_java_sdk.operations.GetAtsActivity;
+import to.unified.unified_java_sdk.operations.GetClubsActivity;
 import to.unified.unified_java_sdk.operations.GetLmsActivity;
 import to.unified.unified_java_sdk.operations.ListAtsActivities;
+import to.unified.unified_java_sdk.operations.ListClubsActivities;
 import to.unified.unified_java_sdk.operations.ListLmsActivities;
 import to.unified.unified_java_sdk.operations.PatchAtsActivity;
 import to.unified.unified_java_sdk.operations.PatchLmsActivity;
@@ -152,6 +160,29 @@ public class AsyncActivity {
      * 
      * @return The async call builder
      */
+    public GetClubsActivityRequestBuilder getClubsActivity() {
+        return new GetClubsActivityRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve an activity
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetClubsActivityResponse>} - The async response
+     */
+    public CompletableFuture<GetClubsActivityResponse> getClubsActivity(@Nonnull GetClubsActivityRequest request) {
+        AsyncRequestOperation<GetClubsActivityRequest, GetClubsActivityResponse> operation
+              = new GetClubsActivity.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Retrieve an activity
+     * 
+     * @return The async call builder
+     */
     public GetLmsActivityRequestBuilder getLmsActivity() {
         return new GetLmsActivityRequestBuilder(sdkConfiguration);
     }
@@ -188,6 +219,29 @@ public class AsyncActivity {
     public CompletableFuture<ListAtsActivitiesResponse> listAtsActivities(@Nonnull ListAtsActivitiesRequest request) {
         AsyncRequestOperation<ListAtsActivitiesRequest, ListAtsActivitiesResponse> operation
               = new ListAtsActivities.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * List all activities
+     * 
+     * @return The async call builder
+     */
+    public ListClubsActivitiesRequestBuilder listClubsActivities() {
+        return new ListClubsActivitiesRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all activities
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListClubsActivitiesResponse>} - The async response
+     */
+    public CompletableFuture<ListClubsActivitiesResponse> listClubsActivities(@Nonnull ListClubsActivitiesRequest request) {
+        AsyncRequestOperation<ListClubsActivitiesRequest, ListClubsActivitiesResponse> operation
+              = new ListClubsActivities.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

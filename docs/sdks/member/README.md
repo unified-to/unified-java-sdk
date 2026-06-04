@@ -5,7 +5,9 @@
 ### Available Operations
 
 * [createMartechMember](#createmartechmember) - Create a member
+* [getClubsMember](#getclubsmember) - Retrieve a member
 * [getMartechMember](#getmartechmember) - Retrieve a member
+* [listClubsMembers](#listclubsmembers) - List all members
 * [listMartechMembers](#listmartechmembers) - List all members
 * [patchMartechMember](#patchmartechmember) - Update a member
 * [removeMartechMember](#removemartechmember) - Remove a member
@@ -71,6 +73,64 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## getClubsMember
+
+Retrieve a member
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getClubsMember" method="get" path="/clubs/{connection_id}/member/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetClubsMemberRequest;
+import to.unified.unified_java_sdk.models.operations.GetClubsMemberResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetClubsMemberRequest req = GetClubsMemberRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetClubsMemberResponse res = sdk.member().getClubsMember()
+                .request(req)
+                .call();
+
+        if (res.clubsMember().isPresent()) {
+            System.out.println(res.clubsMember().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                 | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `request`                                                                 | [GetClubsMemberRequest](../../models/operations/GetClubsMemberRequest.md) | :heavy_check_mark:                                                        | The request object to use for the request.                                |
+
+### Response
+
+**[GetClubsMemberResponse](../../models/operations/GetClubsMemberResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## getMartechMember
 
 Retrieve a member
@@ -122,6 +182,63 @@ public class Application {
 ### Response
 
 **[GetMartechMemberResponse](../../models/operations/GetMartechMemberResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## listClubsMembers
+
+List all members
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listClubsMembers" method="get" path="/clubs/{connection_id}/member" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListClubsMembersRequest;
+import to.unified.unified_java_sdk.models.operations.ListClubsMembersResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListClubsMembersRequest req = ListClubsMembersRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListClubsMembersResponse res = sdk.member().listClubsMembers()
+                .request(req)
+                .call();
+
+        if (res.clubsMembers().isPresent()) {
+            System.out.println(res.clubsMembers().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [ListClubsMembersRequest](../../models/operations/ListClubsMembersRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[ListClubsMembersResponse](../../models/operations/ListClubsMembersResponse.md)**
 
 ### Errors
 

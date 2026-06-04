@@ -152,6 +152,11 @@ public class ObjectType {
     public static final ObjectType SIGNING_DOCUMENT = new ObjectType("signing_document");
     public static final ObjectType SIGNING_SIGNATORY = new ObjectType("signing_signatory");
     public static final ObjectType SIGNING_TEMPLATE = new ObjectType("signing_template");
+    public static final ObjectType CLUBS_GROUP = new ObjectType("clubs_group");
+    public static final ObjectType CLUBS_MEMBER = new ObjectType("clubs_member");
+    public static final ObjectType CLUBS_ACTIVITY = new ObjectType("clubs_activity");
+    public static final ObjectType CLUBS_LOCATION = new ObjectType("clubs_location");
+    public static final ObjectType CLUBS_EVENT = new ObjectType("clubs_event");
 
     // This map will grow whenever a Color gets created with a new
     // unrecognized value (a potential memory leak if the user is not
@@ -357,6 +362,11 @@ public class ObjectType {
         map.put("signing_document", SIGNING_DOCUMENT);
         map.put("signing_signatory", SIGNING_SIGNATORY);
         map.put("signing_template", SIGNING_TEMPLATE);
+        map.put("clubs_group", CLUBS_GROUP);
+        map.put("clubs_member", CLUBS_MEMBER);
+        map.put("clubs_activity", CLUBS_ACTIVITY);
+        map.put("clubs_location", CLUBS_LOCATION);
+        map.put("clubs_event", CLUBS_EVENT);
         return map;
     }
 
@@ -494,6 +504,11 @@ public class ObjectType {
         map.put("signing_document", ObjectTypeEnum.SIGNING_DOCUMENT);
         map.put("signing_signatory", ObjectTypeEnum.SIGNING_SIGNATORY);
         map.put("signing_template", ObjectTypeEnum.SIGNING_TEMPLATE);
+        map.put("clubs_group", ObjectTypeEnum.CLUBS_GROUP);
+        map.put("clubs_member", ObjectTypeEnum.CLUBS_MEMBER);
+        map.put("clubs_activity", ObjectTypeEnum.CLUBS_ACTIVITY);
+        map.put("clubs_location", ObjectTypeEnum.CLUBS_LOCATION);
+        map.put("clubs_event", ObjectTypeEnum.CLUBS_EVENT);
         return map;
     }
     
@@ -631,7 +646,12 @@ public class ObjectType {
         SHIPPING_TRACKING("shipping_tracking"),
         SIGNING_DOCUMENT("signing_document"),
         SIGNING_SIGNATORY("signing_signatory"),
-        SIGNING_TEMPLATE("signing_template"),;
+        SIGNING_TEMPLATE("signing_template"),
+        CLUBS_GROUP("clubs_group"),
+        CLUBS_MEMBER("clubs_member"),
+        CLUBS_ACTIVITY("clubs_activity"),
+        CLUBS_LOCATION("clubs_location"),
+        CLUBS_EVENT("clubs_event"),;
 
         private final String value;
 

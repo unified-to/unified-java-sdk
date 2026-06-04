@@ -6,8 +6,10 @@
 
 * [createCommerceLocation](#createcommercelocation) - Create a location
 * [createHrisLocation](#createhrislocation) - Create a location
+* [getClubsLocation](#getclubslocation) - Retrieve a location
 * [getCommerceLocation](#getcommercelocation) - Retrieve a location
 * [getHrisLocation](#gethrislocation) - Retrieve a location
+* [listClubsLocations](#listclubslocations) - List all locations
 * [listCommerceLocations](#listcommercelocations) - List all locations
 * [listHrisLocations](#listhrislocations) - List all locations
 * [patchCommerceLocation](#patchcommercelocation) - Update a location
@@ -137,6 +139,64 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## getClubsLocation
+
+Retrieve a location
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getClubsLocation" method="get" path="/clubs/{connection_id}/location/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetClubsLocationRequest;
+import to.unified.unified_java_sdk.models.operations.GetClubsLocationResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetClubsLocationRequest req = GetClubsLocationRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetClubsLocationResponse res = sdk.location().getClubsLocation()
+                .request(req)
+                .call();
+
+        if (res.clubsLocation().isPresent()) {
+            System.out.println(res.clubsLocation().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                     | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `request`                                                                     | [GetClubsLocationRequest](../../models/operations/GetClubsLocationRequest.md) | :heavy_check_mark:                                                            | The request object to use for the request.                                    |
+
+### Response
+
+**[GetClubsLocationResponse](../../models/operations/GetClubsLocationResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## getCommerceLocation
 
 Retrieve a location
@@ -246,6 +306,63 @@ public class Application {
 ### Response
 
 **[GetHrisLocationResponse](../../models/operations/GetHrisLocationResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## listClubsLocations
+
+List all locations
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listClubsLocations" method="get" path="/clubs/{connection_id}/location" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListClubsLocationsRequest;
+import to.unified.unified_java_sdk.models.operations.ListClubsLocationsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListClubsLocationsRequest req = ListClubsLocationsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListClubsLocationsResponse res = sdk.location().listClubsLocations()
+                .request(req)
+                .call();
+
+        if (res.clubsLocations().isPresent()) {
+            System.out.println(res.clubsLocations().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                         | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `request`                                                                         | [ListClubsLocationsRequest](../../models/operations/ListClubsLocationsRequest.md) | :heavy_check_mark:                                                                | The request object to use for the request.                                        |
+
+### Response
+
+**[ListClubsLocationsResponse](../../models/operations/ListClubsLocationsResponse.md)**
 
 ### Errors
 

@@ -18,6 +18,9 @@ import to.unified.unified_java_sdk.models.operations.CreateScimGroupsResponse;
 import to.unified.unified_java_sdk.models.operations.GetAdsGroupRequest;
 import to.unified.unified_java_sdk.models.operations.GetAdsGroupRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetAdsGroupResponse;
+import to.unified.unified_java_sdk.models.operations.GetClubsGroupRequest;
+import to.unified.unified_java_sdk.models.operations.GetClubsGroupRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetClubsGroupResponse;
 import to.unified.unified_java_sdk.models.operations.GetHrisGroupRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisGroupRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetHrisGroupResponse;
@@ -27,6 +30,9 @@ import to.unified.unified_java_sdk.models.operations.GetScimGroupsResponse;
 import to.unified.unified_java_sdk.models.operations.ListAdsGroupsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAdsGroupsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListAdsGroupsResponse;
+import to.unified.unified_java_sdk.models.operations.ListClubsGroupsRequest;
+import to.unified.unified_java_sdk.models.operations.ListClubsGroupsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListClubsGroupsResponse;
 import to.unified.unified_java_sdk.models.operations.ListHrisGroupsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisGroupsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListHrisGroupsResponse;
@@ -64,9 +70,11 @@ import to.unified.unified_java_sdk.operations.CreateAdsGroup;
 import to.unified.unified_java_sdk.operations.CreateHrisGroup;
 import to.unified.unified_java_sdk.operations.CreateScimGroups;
 import to.unified.unified_java_sdk.operations.GetAdsGroup;
+import to.unified.unified_java_sdk.operations.GetClubsGroup;
 import to.unified.unified_java_sdk.operations.GetHrisGroup;
 import to.unified.unified_java_sdk.operations.GetScimGroups;
 import to.unified.unified_java_sdk.operations.ListAdsGroups;
+import to.unified.unified_java_sdk.operations.ListClubsGroups;
 import to.unified.unified_java_sdk.operations.ListHrisGroups;
 import to.unified.unified_java_sdk.operations.ListScimGroups;
 import to.unified.unified_java_sdk.operations.PatchAdsGroup;
@@ -193,6 +201,28 @@ public class Group {
      * 
      * @return The call builder
      */
+    public GetClubsGroupRequestBuilder getClubsGroup() {
+        return new GetClubsGroupRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a group
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetClubsGroupResponse getClubsGroup(@Nonnull GetClubsGroupRequest request) {
+        RequestOperation<GetClubsGroupRequest, GetClubsGroupResponse> operation
+              = new GetClubsGroup.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve a group
+     * 
+     * @return The call builder
+     */
     public GetHrisGroupRequestBuilder getHrisGroup() {
         return new GetHrisGroupRequestBuilder(sdkConfiguration);
     }
@@ -251,6 +281,28 @@ public class Group {
     public ListAdsGroupsResponse listAdsGroups(@Nonnull ListAdsGroupsRequest request) {
         RequestOperation<ListAdsGroupsRequest, ListAdsGroupsResponse> operation
               = new ListAdsGroups.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all groups
+     * 
+     * @return The call builder
+     */
+    public ListClubsGroupsRequestBuilder listClubsGroups() {
+        return new ListClubsGroupsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all groups
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListClubsGroupsResponse listClubsGroups(@Nonnull ListClubsGroupsRequest request) {
+        RequestOperation<ListClubsGroupsRequest, ListClubsGroupsResponse> operation
+              = new ListClubsGroups.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

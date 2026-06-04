@@ -44,3 +44,4 @@ PropertyConnectionCategories custom = PropertyConnectionCategories.of("custom_va
 | `SHIPPING`     | shipping       |
 | `ASSESSMENT`   | assessment     |
 | `SIGNING`      | signing        |
+| `CLUBS`        | clubs          |

@@ -15,12 +15,18 @@ import to.unified.unified_java_sdk.models.operations.CreateLmsActivityResponse;
 import to.unified.unified_java_sdk.models.operations.GetAtsActivityRequest;
 import to.unified.unified_java_sdk.models.operations.GetAtsActivityRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetAtsActivityResponse;
+import to.unified.unified_java_sdk.models.operations.GetClubsActivityRequest;
+import to.unified.unified_java_sdk.models.operations.GetClubsActivityRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.GetClubsActivityResponse;
 import to.unified.unified_java_sdk.models.operations.GetLmsActivityRequest;
 import to.unified.unified_java_sdk.models.operations.GetLmsActivityRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.GetLmsActivityResponse;
 import to.unified.unified_java_sdk.models.operations.ListAtsActivitiesRequest;
 import to.unified.unified_java_sdk.models.operations.ListAtsActivitiesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListAtsActivitiesResponse;
+import to.unified.unified_java_sdk.models.operations.ListClubsActivitiesRequest;
+import to.unified.unified_java_sdk.models.operations.ListClubsActivitiesRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.ListClubsActivitiesResponse;
 import to.unified.unified_java_sdk.models.operations.ListLmsActivitiesRequest;
 import to.unified.unified_java_sdk.models.operations.ListLmsActivitiesRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.ListLmsActivitiesResponse;
@@ -45,8 +51,10 @@ import to.unified.unified_java_sdk.models.operations.UpdateLmsActivityResponse;
 import to.unified.unified_java_sdk.operations.CreateAtsActivity;
 import to.unified.unified_java_sdk.operations.CreateLmsActivity;
 import to.unified.unified_java_sdk.operations.GetAtsActivity;
+import to.unified.unified_java_sdk.operations.GetClubsActivity;
 import to.unified.unified_java_sdk.operations.GetLmsActivity;
 import to.unified.unified_java_sdk.operations.ListAtsActivities;
+import to.unified.unified_java_sdk.operations.ListClubsActivities;
 import to.unified.unified_java_sdk.operations.ListLmsActivities;
 import to.unified.unified_java_sdk.operations.PatchAtsActivity;
 import to.unified.unified_java_sdk.operations.PatchLmsActivity;
@@ -147,6 +155,28 @@ public class Activity {
      * 
      * @return The call builder
      */
+    public GetClubsActivityRequestBuilder getClubsActivity() {
+        return new GetClubsActivityRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve an activity
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public GetClubsActivityResponse getClubsActivity(@Nonnull GetClubsActivityRequest request) {
+        RequestOperation<GetClubsActivityRequest, GetClubsActivityResponse> operation
+              = new GetClubsActivity.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * Retrieve an activity
+     * 
+     * @return The call builder
+     */
     public GetLmsActivityRequestBuilder getLmsActivity() {
         return new GetLmsActivityRequestBuilder(sdkConfiguration);
     }
@@ -183,6 +213,28 @@ public class Activity {
     public ListAtsActivitiesResponse listAtsActivities(@Nonnull ListAtsActivitiesRequest request) {
         RequestOperation<ListAtsActivitiesRequest, ListAtsActivitiesResponse> operation
               = new ListAtsActivities.Sync(sdkConfiguration, _headers);
+        return operation.handleResponse(operation.doRequest(request));
+    }
+
+    /**
+     * List all activities
+     * 
+     * @return The call builder
+     */
+    public ListClubsActivitiesRequestBuilder listClubsActivities() {
+        return new ListClubsActivitiesRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all activities
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return The response from the API call
+     * @throws RuntimeException subclass if the API call fails
+     */
+    public ListClubsActivitiesResponse listClubsActivities(@Nonnull ListClubsActivitiesRequest request) {
+        RequestOperation<ListClubsActivitiesRequest, ListClubsActivitiesResponse> operation
+              = new ListClubsActivities.Sync(sdkConfiguration, _headers);
         return operation.handleResponse(operation.doRequest(request));
     }
 

@@ -108,6 +108,16 @@ public class Connection {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("secretsmanager_id")
+    private String secretsmanagerId;
+
+
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("secretsmanager_key")
+    private String secretsmanagerKey;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     private OffsetDateTime updatedAt;
 
@@ -134,6 +144,8 @@ public class Connection {
             @JsonProperty("last_healthy_at") @Nullable OffsetDateTime lastHealthyAt,
             @JsonProperty("last_unhealthy_at") @Nullable OffsetDateTime lastUnhealthyAt,
             @JsonProperty("permissions") @Nonnull List<PropertyConnectionPermissions> permissions,
+            @JsonProperty("secretsmanager_id") @Nullable String secretsmanagerId,
+            @JsonProperty("secretsmanager_key") @Nullable String secretsmanagerKey,
             @JsonProperty("updated_at") @Nullable OffsetDateTime updatedAt,
             @JsonProperty("workspace_id") @Nullable String workspaceId) {
         this.auth = auth;
@@ -156,6 +168,8 @@ public class Connection {
         this.lastUnhealthyAt = lastUnhealthyAt;
         this.permissions = Optional.ofNullable(permissions)
             .orElseThrow(() -> new IllegalArgumentException("permissions cannot be null"));
+        this.secretsmanagerId = secretsmanagerId;
+        this.secretsmanagerKey = secretsmanagerKey;
         this.updatedAt = updatedAt;
         this.workspaceId = workspaceId;
     }
@@ -169,7 +183,8 @@ public class Connection {
             null, null, null,
             null, null, integrationType,
             null, null, null,
-            permissions, null, null);
+            permissions, null, null,
+            null, null);
     }
 
     /**
@@ -240,6 +255,14 @@ public class Connection {
 
     public List<PropertyConnectionPermissions> permissions() {
         return this.permissions;
+    }
+
+    public Optional<String> secretsmanagerId() {
+        return Optional.ofNullable(this.secretsmanagerId);
+    }
+
+    public Optional<String> secretsmanagerKey() {
+        return Optional.ofNullable(this.secretsmanagerKey);
     }
 
     public Optional<OffsetDateTime> updatedAt() {
@@ -357,6 +380,18 @@ public class Connection {
     }
 
 
+    public Connection withSecretsmanagerId(@Nullable String secretsmanagerId) {
+        this.secretsmanagerId = secretsmanagerId;
+        return this;
+    }
+
+
+    public Connection withSecretsmanagerKey(@Nullable String secretsmanagerKey) {
+        this.secretsmanagerKey = secretsmanagerKey;
+        return this;
+    }
+
+
     public Connection withUpdatedAt(@Nullable OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -395,6 +430,8 @@ public class Connection {
             Utils.enhancedDeepEquals(this.lastHealthyAt, other.lastHealthyAt) &&
             Utils.enhancedDeepEquals(this.lastUnhealthyAt, other.lastUnhealthyAt) &&
             Utils.enhancedDeepEquals(this.permissions, other.permissions) &&
+            Utils.enhancedDeepEquals(this.secretsmanagerId, other.secretsmanagerId) &&
+            Utils.enhancedDeepEquals(this.secretsmanagerKey, other.secretsmanagerKey) &&
             Utils.enhancedDeepEquals(this.updatedAt, other.updatedAt) &&
             Utils.enhancedDeepEquals(this.workspaceId, other.workspaceId);
     }
@@ -407,7 +444,8 @@ public class Connection {
             createdAt, environment, externalXref,
             id, integrationName, integrationType,
             isPaused, lastHealthyAt, lastUnhealthyAt,
-            permissions, updatedAt, workspaceId);
+            permissions, secretsmanagerId, secretsmanagerKey,
+            updatedAt, workspaceId);
     }
     
     @Override
@@ -429,6 +467,8 @@ public class Connection {
                 "lastHealthyAt", lastHealthyAt,
                 "lastUnhealthyAt", lastUnhealthyAt,
                 "permissions", permissions,
+                "secretsmanagerId", secretsmanagerId,
+                "secretsmanagerKey", secretsmanagerKey,
                 "updatedAt", updatedAt,
                 "workspaceId", workspaceId);
     }
@@ -467,6 +507,10 @@ public class Connection {
         private OffsetDateTime lastUnhealthyAt;
 
         private List<PropertyConnectionPermissions> permissions;
+
+        private String secretsmanagerId;
+
+        private String secretsmanagerKey;
 
         private OffsetDateTime updatedAt;
 
@@ -562,6 +606,16 @@ public class Connection {
             return this;
         }
 
+        public Builder secretsmanagerId(@Nullable String secretsmanagerId) {
+            this.secretsmanagerId = secretsmanagerId;
+            return this;
+        }
+
+        public Builder secretsmanagerKey(@Nullable String secretsmanagerKey) {
+            this.secretsmanagerKey = secretsmanagerKey;
+            return this;
+        }
+
         public Builder updatedAt(@Nullable OffsetDateTime updatedAt) {
             this.updatedAt = updatedAt;
             return this;
@@ -579,7 +633,8 @@ public class Connection {
                 createdAt, environment, externalXref,
                 id, integrationName, integrationType,
                 isPaused, lastHealthyAt, lastUnhealthyAt,
-                permissions, updatedAt, workspaceId);
+                permissions, secretsmanagerId, secretsmanagerKey,
+                updatedAt, workspaceId);
         }
 
 

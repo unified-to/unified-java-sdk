@@ -7,8 +7,10 @@
 * [createCalendarEvent](#createcalendarevent) - Create an event
 * [createCrmEvent](#createcrmevent) - Create an event
 * [getCalendarEvent](#getcalendarevent) - Retrieve an event
+* [getClubsEvent](#getclubsevent) - Retrieve an event
 * [getCrmEvent](#getcrmevent) - Retrieve an event
 * [listCalendarEvents](#listcalendarevents) - List all events
+* [listClubsEvents](#listclubsevents) - List all events
 * [listCrmEvents](#listcrmevents) - List all events
 * [patchCalendarEvent](#patchcalendarevent) - Update an event
 * [patchCrmEvent](#patchcrmevent) - Update an event
@@ -197,6 +199,64 @@ public class Application {
 | ---------------------- | ---------------------- | ---------------------- |
 | models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
 
+## getClubsEvent
+
+Retrieve an event
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="getClubsEvent" method="get" path="/clubs/{connection_id}/event/{id}" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.GetClubsEventRequest;
+import to.unified.unified_java_sdk.models.operations.GetClubsEventResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        GetClubsEventRequest req = GetClubsEventRequest.builder()
+                .connectionId("<id>")
+                .id("<id>")
+                .build();
+
+        GetClubsEventResponse res = sdk.event().getClubsEvent()
+                .request(req)
+                .call();
+
+        if (res.clubsEvent().isPresent()) {
+            System.out.println(res.clubsEvent().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                               | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `request`                                                               | [GetClubsEventRequest](../../models/operations/GetClubsEventRequest.md) | :heavy_check_mark:                                                      | The request object to use for the request.                              |
+
+### Response
+
+**[GetClubsEventResponse](../../models/operations/GetClubsEventResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
 ## getCrmEvent
 
 Retrieve an event
@@ -305,6 +365,63 @@ public class Application {
 ### Response
 
 **[ListCalendarEventsResponse](../../models/operations/ListCalendarEventsResponse.md)**
+
+### Errors
+
+| Error Type             | Status Code            | Content Type           |
+| ---------------------- | ---------------------- | ---------------------- |
+| models/errors/SDKError | 4XX, 5XX               | \*/\*                  |
+
+## listClubsEvents
+
+List all events
+
+### Example Usage
+
+<!-- UsageSnippet language="java" operationID="listClubsEvents" method="get" path="/clubs/{connection_id}/event" -->
+```java
+package hello.world;
+
+import java.lang.Exception;
+import to.unified.unified_java_sdk.UnifiedTo;
+import to.unified.unified_java_sdk.models.operations.ListClubsEventsRequest;
+import to.unified.unified_java_sdk.models.operations.ListClubsEventsResponse;
+import to.unified.unified_java_sdk.models.shared.Security;
+
+public class Application {
+
+    public static void main(String[] args) throws Exception {
+
+        UnifiedTo sdk = UnifiedTo.builder()
+                .security(Security.builder()
+                    .jwt(System.getenv().getOrDefault("JWT", ""))
+                    .build())
+            .build();
+
+        ListClubsEventsRequest req = ListClubsEventsRequest.builder()
+                .connectionId("<id>")
+                .build();
+
+        ListClubsEventsResponse res = sdk.event().listClubsEvents()
+                .request(req)
+                .call();
+
+        if (res.clubsEvents().isPresent()) {
+            System.out.println(res.clubsEvents().get());
+        }
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                   | Type                                                                        | Required                                                                    | Description                                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `request`                                                                   | [ListClubsEventsRequest](../../models/operations/ListClubsEventsRequest.md) | :heavy_check_mark:                                                          | The request object to use for the request.                                  |
+
+### Response
+
+**[ListClubsEventsResponse](../../models/operations/ListClubsEventsResponse.md)**
 
 ### Errors
 

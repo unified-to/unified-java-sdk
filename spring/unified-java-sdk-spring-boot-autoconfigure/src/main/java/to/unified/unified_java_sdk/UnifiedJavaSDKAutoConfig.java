@@ -727,6 +727,39 @@ public class UnifiedJavaSDKAutoConfig {
         return unifiedTo.webinar();
     }
     /**
+     * Creates a Clubs sub-SDK bean if none exists.
+     *
+     * @param unifiedTo the main SDK instance
+     * @return A configured Clubs instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public Clubs clubs(UnifiedTo unifiedTo) {
+        return unifiedTo.clubs();
+    }
+    /**
+     * Creates a Location sub-SDK bean if none exists.
+     *
+     * @param unifiedTo the main SDK instance
+     * @return A configured Location instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public Location location(UnifiedTo unifiedTo) {
+        return unifiedTo.location();
+    }
+    /**
+     * Creates a Member sub-SDK bean if none exists.
+     *
+     * @param unifiedTo the main SDK instance
+     * @return A configured Member instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public Member member(UnifiedTo unifiedTo) {
+        return unifiedTo.member();
+    }
+    /**
      * Creates a Commerce sub-SDK bean if none exists.
      *
      * @param unifiedTo the main SDK instance
@@ -791,17 +824,6 @@ public class UnifiedJavaSDKAutoConfig {
     @ConditionalOnMissingBean
     public Itemvariant itemvariant(UnifiedTo unifiedTo) {
         return unifiedTo.itemvariant();
-    }
-    /**
-     * Creates a Location sub-SDK bean if none exists.
-     *
-     * @param unifiedTo the main SDK instance
-     * @return A configured Location instance
-     */
-    @Bean
-    @ConditionalOnMissingBean
-    public Location location(UnifiedTo unifiedTo) {
-        return unifiedTo.location();
     }
     /**
      * Creates a Reservation sub-SDK bean if none exists.
@@ -1209,17 +1231,6 @@ public class UnifiedJavaSDKAutoConfig {
     @ConditionalOnMissingBean
     public List list(UnifiedTo unifiedTo) {
         return unifiedTo.list();
-    }
-    /**
-     * Creates a Member sub-SDK bean if none exists.
-     *
-     * @param unifiedTo the main SDK instance
-     * @return A configured Member instance
-     */
-    @Bean
-    @ConditionalOnMissingBean
-    public Member member(UnifiedTo unifiedTo) {
-        return unifiedTo.member();
     }
     /**
      * Creates a Messaging sub-SDK bean if none exists.
@@ -2258,6 +2269,39 @@ public class UnifiedJavaSDKAutoConfig {
         return asyncUnifiedTo.webinar();
     }
     /**
+     * Creates an AsyncClubs sub-SDK bean if none exists.
+     *
+     * @param asyncUnifiedTo the async SDK instance
+     * @return A configured AsyncClubs instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public AsyncClubs asyncClubs(AsyncUnifiedTo asyncUnifiedTo) {
+        return asyncUnifiedTo.clubs();
+    }
+    /**
+     * Creates an AsyncLocation sub-SDK bean if none exists.
+     *
+     * @param asyncUnifiedTo the async SDK instance
+     * @return A configured AsyncLocation instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public AsyncLocation asyncLocation(AsyncUnifiedTo asyncUnifiedTo) {
+        return asyncUnifiedTo.location();
+    }
+    /**
+     * Creates an AsyncMember sub-SDK bean if none exists.
+     *
+     * @param asyncUnifiedTo the async SDK instance
+     * @return A configured AsyncMember instance
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public AsyncMember asyncMember(AsyncUnifiedTo asyncUnifiedTo) {
+        return asyncUnifiedTo.member();
+    }
+    /**
      * Creates an AsyncCommerce sub-SDK bean if none exists.
      *
      * @param asyncUnifiedTo the async SDK instance
@@ -2322,17 +2366,6 @@ public class UnifiedJavaSDKAutoConfig {
     @ConditionalOnMissingBean
     public AsyncItemvariant asyncItemvariant(AsyncUnifiedTo asyncUnifiedTo) {
         return asyncUnifiedTo.itemvariant();
-    }
-    /**
-     * Creates an AsyncLocation sub-SDK bean if none exists.
-     *
-     * @param asyncUnifiedTo the async SDK instance
-     * @return A configured AsyncLocation instance
-     */
-    @Bean
-    @ConditionalOnMissingBean
-    public AsyncLocation asyncLocation(AsyncUnifiedTo asyncUnifiedTo) {
-        return asyncUnifiedTo.location();
     }
     /**
      * Creates an AsyncReservation sub-SDK bean if none exists.
@@ -2740,17 +2773,6 @@ public class UnifiedJavaSDKAutoConfig {
     @ConditionalOnMissingBean
     public AsyncList asyncList(AsyncUnifiedTo asyncUnifiedTo) {
         return asyncUnifiedTo.list();
-    }
-    /**
-     * Creates an AsyncMember sub-SDK bean if none exists.
-     *
-     * @param asyncUnifiedTo the async SDK instance
-     * @return A configured AsyncMember instance
-     */
-    @Bean
-    @ConditionalOnMissingBean
-    public AsyncMember asyncMember(AsyncUnifiedTo asyncUnifiedTo) {
-        return asyncUnifiedTo.member();
     }
     /**
      * Creates an AsyncMessaging sub-SDK bean if none exists.

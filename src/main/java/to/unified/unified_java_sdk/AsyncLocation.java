@@ -9,8 +9,10 @@ import jakarta.annotation.Nonnull;
 import java.util.concurrent.CompletableFuture;
 import to.unified.unified_java_sdk.models.operations.CreateCommerceLocationRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisLocationRequest;
+import to.unified.unified_java_sdk.models.operations.GetClubsLocationRequest;
 import to.unified.unified_java_sdk.models.operations.GetCommerceLocationRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisLocationRequest;
+import to.unified.unified_java_sdk.models.operations.ListClubsLocationsRequest;
 import to.unified.unified_java_sdk.models.operations.ListCommerceLocationsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisLocationsRequest;
 import to.unified.unified_java_sdk.models.operations.PatchCommerceLocationRequest;
@@ -23,10 +25,14 @@ import to.unified.unified_java_sdk.models.operations.async.CreateCommerceLocatio
 import to.unified.unified_java_sdk.models.operations.async.CreateCommerceLocationResponse;
 import to.unified.unified_java_sdk.models.operations.async.CreateHrisLocationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.CreateHrisLocationResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetClubsLocationRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetClubsLocationResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetCommerceLocationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetCommerceLocationResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetHrisLocationRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetHrisLocationResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListClubsLocationsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListClubsLocationsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListCommerceLocationsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListCommerceLocationsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListHrisLocationsRequestBuilder;
@@ -45,8 +51,10 @@ import to.unified.unified_java_sdk.models.operations.async.UpdateHrisLocationReq
 import to.unified.unified_java_sdk.models.operations.async.UpdateHrisLocationResponse;
 import to.unified.unified_java_sdk.operations.CreateCommerceLocation;
 import to.unified.unified_java_sdk.operations.CreateHrisLocation;
+import to.unified.unified_java_sdk.operations.GetClubsLocation;
 import to.unified.unified_java_sdk.operations.GetCommerceLocation;
 import to.unified.unified_java_sdk.operations.GetHrisLocation;
+import to.unified.unified_java_sdk.operations.ListClubsLocations;
 import to.unified.unified_java_sdk.operations.ListCommerceLocations;
 import to.unified.unified_java_sdk.operations.ListHrisLocations;
 import to.unified.unified_java_sdk.operations.PatchCommerceLocation;
@@ -129,6 +137,29 @@ public class AsyncLocation {
      * 
      * @return The async call builder
      */
+    public GetClubsLocationRequestBuilder getClubsLocation() {
+        return new GetClubsLocationRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a location
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetClubsLocationResponse>} - The async response
+     */
+    public CompletableFuture<GetClubsLocationResponse> getClubsLocation(@Nonnull GetClubsLocationRequest request) {
+        AsyncRequestOperation<GetClubsLocationRequest, GetClubsLocationResponse> operation
+              = new GetClubsLocation.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Retrieve a location
+     * 
+     * @return The async call builder
+     */
     public GetCommerceLocationRequestBuilder getCommerceLocation() {
         return new GetCommerceLocationRequestBuilder(sdkConfiguration);
     }
@@ -165,6 +196,29 @@ public class AsyncLocation {
     public CompletableFuture<GetHrisLocationResponse> getHrisLocation(@Nonnull GetHrisLocationRequest request) {
         AsyncRequestOperation<GetHrisLocationRequest, GetHrisLocationResponse> operation
               = new GetHrisLocation.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * List all locations
+     * 
+     * @return The async call builder
+     */
+    public ListClubsLocationsRequestBuilder listClubsLocations() {
+        return new ListClubsLocationsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all locations
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListClubsLocationsResponse>} - The async response
+     */
+    public CompletableFuture<ListClubsLocationsResponse> listClubsLocations(@Nonnull ListClubsLocationsRequest request) {
+        AsyncRequestOperation<ListClubsLocationsRequest, ListClubsLocationsResponse> operation
+              = new ListClubsLocations.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

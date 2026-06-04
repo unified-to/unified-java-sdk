@@ -11,9 +11,11 @@ import to.unified.unified_java_sdk.models.operations.CreateAdsGroupRequest;
 import to.unified.unified_java_sdk.models.operations.CreateHrisGroupRequest;
 import to.unified.unified_java_sdk.models.operations.CreateScimGroupsRequest;
 import to.unified.unified_java_sdk.models.operations.GetAdsGroupRequest;
+import to.unified.unified_java_sdk.models.operations.GetClubsGroupRequest;
 import to.unified.unified_java_sdk.models.operations.GetHrisGroupRequest;
 import to.unified.unified_java_sdk.models.operations.GetScimGroupsRequest;
 import to.unified.unified_java_sdk.models.operations.ListAdsGroupsRequest;
+import to.unified.unified_java_sdk.models.operations.ListClubsGroupsRequest;
 import to.unified.unified_java_sdk.models.operations.ListHrisGroupsRequest;
 import to.unified.unified_java_sdk.models.operations.ListScimGroupsRequest;
 import to.unified.unified_java_sdk.models.operations.PatchAdsGroupRequest;
@@ -33,12 +35,16 @@ import to.unified.unified_java_sdk.models.operations.async.CreateScimGroupsReque
 import to.unified.unified_java_sdk.models.operations.async.CreateScimGroupsResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetAdsGroupRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetAdsGroupResponse;
+import to.unified.unified_java_sdk.models.operations.async.GetClubsGroupRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.GetClubsGroupResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetHrisGroupRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetHrisGroupResponse;
 import to.unified.unified_java_sdk.models.operations.async.GetScimGroupsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.GetScimGroupsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListAdsGroupsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListAdsGroupsResponse;
+import to.unified.unified_java_sdk.models.operations.async.ListClubsGroupsRequestBuilder;
+import to.unified.unified_java_sdk.models.operations.async.ListClubsGroupsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListHrisGroupsRequestBuilder;
 import to.unified.unified_java_sdk.models.operations.async.ListHrisGroupsResponse;
 import to.unified.unified_java_sdk.models.operations.async.ListScimGroupsRequestBuilder;
@@ -65,9 +71,11 @@ import to.unified.unified_java_sdk.operations.CreateAdsGroup;
 import to.unified.unified_java_sdk.operations.CreateHrisGroup;
 import to.unified.unified_java_sdk.operations.CreateScimGroups;
 import to.unified.unified_java_sdk.operations.GetAdsGroup;
+import to.unified.unified_java_sdk.operations.GetClubsGroup;
 import to.unified.unified_java_sdk.operations.GetHrisGroup;
 import to.unified.unified_java_sdk.operations.GetScimGroups;
 import to.unified.unified_java_sdk.operations.ListAdsGroups;
+import to.unified.unified_java_sdk.operations.ListClubsGroups;
 import to.unified.unified_java_sdk.operations.ListHrisGroups;
 import to.unified.unified_java_sdk.operations.ListScimGroups;
 import to.unified.unified_java_sdk.operations.PatchAdsGroup;
@@ -199,6 +207,29 @@ public class AsyncGroup {
      * 
      * @return The async call builder
      */
+    public GetClubsGroupRequestBuilder getClubsGroup() {
+        return new GetClubsGroupRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * Retrieve a group
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<GetClubsGroupResponse>} - The async response
+     */
+    public CompletableFuture<GetClubsGroupResponse> getClubsGroup(@Nonnull GetClubsGroupRequest request) {
+        AsyncRequestOperation<GetClubsGroupRequest, GetClubsGroupResponse> operation
+              = new GetClubsGroup.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * Retrieve a group
+     * 
+     * @return The async call builder
+     */
     public GetHrisGroupRequestBuilder getHrisGroup() {
         return new GetHrisGroupRequestBuilder(sdkConfiguration);
     }
@@ -258,6 +289,29 @@ public class AsyncGroup {
     public CompletableFuture<ListAdsGroupsResponse> listAdsGroups(@Nonnull ListAdsGroupsRequest request) {
         AsyncRequestOperation<ListAdsGroupsRequest, ListAdsGroupsResponse> operation
               = new ListAdsGroups.Async(sdkConfiguration, _headers);
+        return operation.doRequest(request)
+            .thenCompose(operation::handleResponse);
+    }
+
+
+    /**
+     * List all groups
+     * 
+     * @return The async call builder
+     */
+    public ListClubsGroupsRequestBuilder listClubsGroups() {
+        return new ListClubsGroupsRequestBuilder(sdkConfiguration);
+    }
+
+    /**
+     * List all groups
+     * 
+     * @param request The request object containing all the parameters for the API call.
+     * @return {@code CompletableFuture<ListClubsGroupsResponse>} - The async response
+     */
+    public CompletableFuture<ListClubsGroupsResponse> listClubsGroups(@Nonnull ListClubsGroupsRequest request) {
+        AsyncRequestOperation<ListClubsGroupsRequest, ListClubsGroupsResponse> operation
+              = new ListClubsGroups.Async(sdkConfiguration, _headers);
         return operation.doRequest(request)
             .thenCompose(operation::handleResponse);
     }

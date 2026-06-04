@@ -105,6 +105,12 @@ public class AsyncUnifiedTo {
 
     private final AsyncWebinar webinar;
 
+    private final AsyncClubs clubs;
+
+    private final AsyncLocation location;
+
+    private final AsyncMember member;
+
     private final AsyncCommerce commerce;
 
     private final AsyncAvailability availability;
@@ -116,8 +122,6 @@ public class AsyncUnifiedTo {
     private final AsyncItem item;
 
     private final AsyncItemvariant itemvariant;
-
-    private final AsyncLocation location;
 
     private final AsyncReservation reservation;
 
@@ -192,8 +196,6 @@ public class AsyncUnifiedTo {
     private final AsyncMartech martech;
 
     private final AsyncList list;
-
-    private final AsyncMember member;
 
     private final AsyncMessaging messaging;
 
@@ -473,6 +475,18 @@ public class AsyncUnifiedTo {
         return webinar;
     }
 
+    public AsyncClubs clubs() {
+        return clubs;
+    }
+
+    public AsyncLocation location() {
+        return location;
+    }
+
+    public AsyncMember member() {
+        return member;
+    }
+
     public AsyncCommerce commerce() {
         return commerce;
     }
@@ -495,10 +509,6 @@ public class AsyncUnifiedTo {
 
     public AsyncItemvariant itemvariant() {
         return itemvariant;
-    }
-
-    public AsyncLocation location() {
-        return location;
     }
 
     public AsyncReservation reservation() {
@@ -647,10 +657,6 @@ public class AsyncUnifiedTo {
 
     public AsyncList list() {
         return list;
-    }
-
-    public AsyncMember member() {
-        return member;
     }
 
     public AsyncMessaging messaging() {
@@ -893,13 +899,15 @@ public class AsyncUnifiedTo {
         this.link = new AsyncLink(syncSDK.link(), sdkConfiguration);
         this.recording = new AsyncRecording(syncSDK.recording(), sdkConfiguration);
         this.webinar = new AsyncWebinar(syncSDK.webinar(), sdkConfiguration);
+        this.clubs = new AsyncClubs(syncSDK.clubs(), sdkConfiguration);
+        this.location = new AsyncLocation(syncSDK.location(), sdkConfiguration);
+        this.member = new AsyncMember(syncSDK.member(), sdkConfiguration);
         this.commerce = new AsyncCommerce(syncSDK.commerce(), sdkConfiguration);
         this.availability = new AsyncAvailability(syncSDK.availability(), sdkConfiguration);
         this.collection = new AsyncCollection(syncSDK.collection(), sdkConfiguration);
         this.inventory = new AsyncInventory(syncSDK.inventory(), sdkConfiguration);
         this.item = new AsyncItem(syncSDK.item(), sdkConfiguration);
         this.itemvariant = new AsyncItemvariant(syncSDK.itemvariant(), sdkConfiguration);
-        this.location = new AsyncLocation(syncSDK.location(), sdkConfiguration);
         this.reservation = new AsyncReservation(syncSDK.reservation(), sdkConfiguration);
         this.review = new AsyncReview(syncSDK.review(), sdkConfiguration);
         this.saleschannel = new AsyncSaleschannel(syncSDK.saleschannel(), sdkConfiguration);
@@ -937,7 +945,6 @@ public class AsyncUnifiedTo {
         this.student = new AsyncStudent(syncSDK.student(), sdkConfiguration);
         this.martech = new AsyncMartech(syncSDK.martech(), sdkConfiguration);
         this.list = new AsyncList(syncSDK.list(), sdkConfiguration);
-        this.member = new AsyncMember(syncSDK.member(), sdkConfiguration);
         this.messaging = new AsyncMessaging(syncSDK.messaging(), sdkConfiguration);
         this.channel = new AsyncChannel(syncSDK.channel(), sdkConfiguration);
         this.message = new AsyncMessage(syncSDK.message(), sdkConfiguration);

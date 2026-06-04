@@ -179,6 +179,15 @@ public class UnifiedTo {
     private final Webinar webinar;
 
 
+    private final Clubs clubs;
+
+
+    private final Location location;
+
+
+    private final Member member;
+
+
     private final Commerce commerce;
 
 
@@ -195,9 +204,6 @@ public class UnifiedTo {
 
 
     private final Itemvariant itemvariant;
-
-
-    private final Location location;
 
 
     private final Reservation reservation;
@@ -309,9 +315,6 @@ public class UnifiedTo {
 
 
     private final List list;
-
-
-    private final Member member;
 
 
     private final Messaging messaging;
@@ -685,6 +688,21 @@ public class UnifiedTo {
     }
 
 
+    public Clubs clubs() {
+        return clubs;
+    }
+
+
+    public Location location() {
+        return location;
+    }
+
+
+    public Member member() {
+        return member;
+    }
+
+
     public Commerce commerce() {
         return commerce;
     }
@@ -712,11 +730,6 @@ public class UnifiedTo {
 
     public Itemvariant itemvariant() {
         return itemvariant;
-    }
-
-
-    public Location location() {
-        return location;
     }
 
 
@@ -902,11 +915,6 @@ public class UnifiedTo {
 
     public List list() {
         return list;
-    }
-
-
-    public Member member() {
-        return member;
     }
 
 
@@ -1327,13 +1335,15 @@ public class UnifiedTo {
         this.link = new Link(sdkConfiguration);
         this.recording = new Recording(sdkConfiguration);
         this.webinar = new Webinar(sdkConfiguration);
+        this.clubs = new Clubs(sdkConfiguration);
+        this.location = new Location(sdkConfiguration);
+        this.member = new Member(sdkConfiguration);
         this.commerce = new Commerce(sdkConfiguration);
         this.availability = new Availability(sdkConfiguration);
         this.collection = new Collection(sdkConfiguration);
         this.inventory = new Inventory(sdkConfiguration);
         this.item = new Item(sdkConfiguration);
         this.itemvariant = new Itemvariant(sdkConfiguration);
-        this.location = new Location(sdkConfiguration);
         this.reservation = new Reservation(sdkConfiguration);
         this.review = new Review(sdkConfiguration);
         this.saleschannel = new Saleschannel(sdkConfiguration);
@@ -1371,7 +1381,6 @@ public class UnifiedTo {
         this.student = new Student(sdkConfiguration);
         this.martech = new Martech(sdkConfiguration);
         this.list = new List(sdkConfiguration);
-        this.member = new Member(sdkConfiguration);
         this.messaging = new Messaging(sdkConfiguration);
         this.channel = new Channel(sdkConfiguration);
         this.message = new Message(sdkConfiguration);
