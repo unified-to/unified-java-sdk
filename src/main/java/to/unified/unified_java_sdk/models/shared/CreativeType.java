@@ -25,7 +25,9 @@ public class CreativeType {
     public static final CreativeType EXPANDABLE = new CreativeType("EXPANDABLE");
     public static final CreativeType VIDEO = new CreativeType("VIDEO");
     public static final CreativeType NATIVE = new CreativeType("NATIVE");
+    public static final CreativeType IMAGE = new CreativeType("IMAGE");
     public static final CreativeType AUDIO = new CreativeType("AUDIO");
+    public static final CreativeType DOCUMENT = new CreativeType("DOCUMENT");
     public static final CreativeType PUBLISHER_HOSTED = new CreativeType("PUBLISHER_HOSTED");
     public static final CreativeType ASSET_BASED = new CreativeType("ASSET_BASED");
 
@@ -106,7 +108,9 @@ public class CreativeType {
         map.put("EXPANDABLE", EXPANDABLE);
         map.put("VIDEO", VIDEO);
         map.put("NATIVE", NATIVE);
+        map.put("IMAGE", IMAGE);
         map.put("AUDIO", AUDIO);
+        map.put("DOCUMENT", DOCUMENT);
         map.put("PUBLISHER_HOSTED", PUBLISHER_HOSTED);
         map.put("ASSET_BASED", ASSET_BASED);
         return map;
@@ -119,7 +123,9 @@ public class CreativeType {
         map.put("EXPANDABLE", CreativeTypeEnum.EXPANDABLE);
         map.put("VIDEO", CreativeTypeEnum.VIDEO);
         map.put("NATIVE", CreativeTypeEnum.NATIVE);
+        map.put("IMAGE", CreativeTypeEnum.IMAGE);
         map.put("AUDIO", CreativeTypeEnum.AUDIO);
+        map.put("DOCUMENT", CreativeTypeEnum.DOCUMENT);
         map.put("PUBLISHER_HOSTED", CreativeTypeEnum.PUBLISHER_HOSTED);
         map.put("ASSET_BASED", CreativeTypeEnum.ASSET_BASED);
         return map;
@@ -133,7 +139,9 @@ public class CreativeType {
         EXPANDABLE("EXPANDABLE"),
         VIDEO("VIDEO"),
         NATIVE("NATIVE"),
+        IMAGE("IMAGE"),
         AUDIO("AUDIO"),
+        DOCUMENT("DOCUMENT"),
         PUBLISHER_HOSTED("PUBLISHER_HOSTED"),
         ASSET_BASED("ASSET_BASED"),;
 

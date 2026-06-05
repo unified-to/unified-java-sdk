@@ -24,6 +24,8 @@ public class PropertyAdsReportMetricsGroupStatus {
     public static final PropertyAdsReportMetricsGroupStatus ACTIVE = new PropertyAdsReportMetricsGroupStatus("ACTIVE");
     public static final PropertyAdsReportMetricsGroupStatus PAUSED = new PropertyAdsReportMetricsGroupStatus("PAUSED");
     public static final PropertyAdsReportMetricsGroupStatus ARCHIVED = new PropertyAdsReportMetricsGroupStatus("ARCHIVED");
+    public static final PropertyAdsReportMetricsGroupStatus PROCESSING = new PropertyAdsReportMetricsGroupStatus("PROCESSING");
+    public static final PropertyAdsReportMetricsGroupStatus PROCESSING_FAILED = new PropertyAdsReportMetricsGroupStatus("PROCESSING_FAILED");
     public static final PropertyAdsReportMetricsGroupStatus DRAFT = new PropertyAdsReportMetricsGroupStatus("DRAFT");
     public static final PropertyAdsReportMetricsGroupStatus SCHEDULED_FOR_DELETION = new PropertyAdsReportMetricsGroupStatus("SCHEDULED_FOR_DELETION");
 
@@ -103,6 +105,8 @@ public class PropertyAdsReportMetricsGroupStatus {
         map.put("ACTIVE", ACTIVE);
         map.put("PAUSED", PAUSED);
         map.put("ARCHIVED", ARCHIVED);
+        map.put("PROCESSING", PROCESSING);
+        map.put("PROCESSING_FAILED", PROCESSING_FAILED);
         map.put("DRAFT", DRAFT);
         map.put("SCHEDULED_FOR_DELETION", SCHEDULED_FOR_DELETION);
         return map;
@@ -114,6 +118,8 @@ public class PropertyAdsReportMetricsGroupStatus {
         map.put("ACTIVE", PropertyAdsReportMetricsGroupStatusEnum.ACTIVE);
         map.put("PAUSED", PropertyAdsReportMetricsGroupStatusEnum.PAUSED);
         map.put("ARCHIVED", PropertyAdsReportMetricsGroupStatusEnum.ARCHIVED);
+        map.put("PROCESSING", PropertyAdsReportMetricsGroupStatusEnum.PROCESSING);
+        map.put("PROCESSING_FAILED", PropertyAdsReportMetricsGroupStatusEnum.PROCESSING_FAILED);
         map.put("DRAFT", PropertyAdsReportMetricsGroupStatusEnum.DRAFT);
         map.put("SCHEDULED_FOR_DELETION", PropertyAdsReportMetricsGroupStatusEnum.SCHEDULED_FOR_DELETION);
         return map;
@@ -126,6 +132,8 @@ public class PropertyAdsReportMetricsGroupStatus {
         ACTIVE("ACTIVE"),
         PAUSED("PAUSED"),
         ARCHIVED("ARCHIVED"),
+        PROCESSING("PROCESSING"),
+        PROCESSING_FAILED("PROCESSING_FAILED"),
         DRAFT("DRAFT"),
         SCHEDULED_FOR_DELETION("SCHEDULED_FOR_DELETION"),;
 

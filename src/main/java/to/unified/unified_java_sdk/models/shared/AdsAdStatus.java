@@ -24,6 +24,8 @@ public class AdsAdStatus {
     public static final AdsAdStatus ACTIVE = new AdsAdStatus("ACTIVE");
     public static final AdsAdStatus PAUSED = new AdsAdStatus("PAUSED");
     public static final AdsAdStatus ARCHIVED = new AdsAdStatus("ARCHIVED");
+    public static final AdsAdStatus PROCESSING = new AdsAdStatus("PROCESSING");
+    public static final AdsAdStatus PROCESSING_FAILED = new AdsAdStatus("PROCESSING_FAILED");
     public static final AdsAdStatus DRAFT = new AdsAdStatus("DRAFT");
     public static final AdsAdStatus SCHEDULED_FOR_DELETION = new AdsAdStatus("SCHEDULED_FOR_DELETION");
 
@@ -103,6 +105,8 @@ public class AdsAdStatus {
         map.put("ACTIVE", ACTIVE);
         map.put("PAUSED", PAUSED);
         map.put("ARCHIVED", ARCHIVED);
+        map.put("PROCESSING", PROCESSING);
+        map.put("PROCESSING_FAILED", PROCESSING_FAILED);
         map.put("DRAFT", DRAFT);
         map.put("SCHEDULED_FOR_DELETION", SCHEDULED_FOR_DELETION);
         return map;
@@ -114,6 +118,8 @@ public class AdsAdStatus {
         map.put("ACTIVE", AdsAdStatusEnum.ACTIVE);
         map.put("PAUSED", AdsAdStatusEnum.PAUSED);
         map.put("ARCHIVED", AdsAdStatusEnum.ARCHIVED);
+        map.put("PROCESSING", AdsAdStatusEnum.PROCESSING);
+        map.put("PROCESSING_FAILED", AdsAdStatusEnum.PROCESSING_FAILED);
         map.put("DRAFT", AdsAdStatusEnum.DRAFT);
         map.put("SCHEDULED_FOR_DELETION", AdsAdStatusEnum.SCHEDULED_FOR_DELETION);
         return map;
@@ -126,6 +132,8 @@ public class AdsAdStatus {
         ACTIVE("ACTIVE"),
         PAUSED("PAUSED"),
         ARCHIVED("ARCHIVED"),
+        PROCESSING("PROCESSING"),
+        PROCESSING_FAILED("PROCESSING_FAILED"),
         DRAFT("DRAFT"),
         SCHEDULED_FOR_DELETION("SCHEDULED_FOR_DELETION"),;
 

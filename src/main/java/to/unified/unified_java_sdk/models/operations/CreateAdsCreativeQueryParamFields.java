@@ -18,6 +18,7 @@ public enum CreateAdsCreativeQueryParamFields {
     ITEM_ID("item_id"),
     ORGANIZATION_ID("organization_id"),
     STATUS("status"),
+    DATA("data"),
     CREATIVE_TYPE("creative_type"),
     HOSTING_SOURCE("hosting_source"),
     WIDTH("width"),

@@ -20,5 +20,7 @@ PropertyAdsReportMetricsCampaignStatus custom = PropertyAdsReportMetricsCampaign
 | `ACTIVE`                 | ACTIVE                   |
 | `PAUSED`                 | PAUSED                   |
 | `ARCHIVED`               | ARCHIVED                 |
+| `PROCESSING`             | PROCESSING               |
+| `PROCESSING_FAILED`      | PROCESSING_FAILED        |
 | `DRAFT`                  | DRAFT                    |
 | `SCHEDULED_FOR_DELETION` | SCHEDULED_FOR_DELETION   |

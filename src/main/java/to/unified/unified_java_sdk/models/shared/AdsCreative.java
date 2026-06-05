@@ -54,6 +54,11 @@ public class AdsCreative {
 
 
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("data")
+    private String data;
+
+
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("external_ad_reference")
     private String externalAdReference;
 
@@ -165,6 +170,7 @@ public class AdsCreative {
             @JsonProperty("created_at") @Nullable OffsetDateTime createdAt,
             @JsonProperty("creative_type") @Nullable CreativeType creativeType,
             @JsonProperty("cta") @Nullable String cta,
+            @JsonProperty("data") @Nullable String data,
             @JsonProperty("external_ad_reference") @Nullable String externalAdReference,
             @JsonProperty("external_creative_reference") @Nullable String externalCreativeReference,
             @JsonProperty("external_placement_reference") @Nullable String externalPlacementReference,
@@ -192,6 +198,7 @@ public class AdsCreative {
         this.createdAt = createdAt;
         this.creativeType = creativeType;
         this.cta = cta;
+        this.data = data;
         this.externalAdReference = externalAdReference;
         this.externalCreativeReference = externalCreativeReference;
         this.externalPlacementReference = externalPlacementReference;
@@ -224,7 +231,8 @@ public class AdsCreative {
             null, null, null,
             null, null, null,
             null, null, null,
-            null, null, null);
+            null, null, null,
+            null);
     }
 
     /**
@@ -252,6 +260,10 @@ public class AdsCreative {
 
     public Optional<String> cta() {
         return Optional.ofNullable(this.cta);
+    }
+
+    public Optional<String> data() {
+        return Optional.ofNullable(this.data);
     }
 
     public Optional<String> externalAdReference() {
@@ -378,6 +390,12 @@ public class AdsCreative {
 
     public AdsCreative withCta(@Nullable String cta) {
         this.cta = cta;
+        return this;
+    }
+
+
+    public AdsCreative withData(@Nullable String data) {
+        this.data = data;
         return this;
     }
 
@@ -524,6 +542,7 @@ public class AdsCreative {
             Utils.enhancedDeepEquals(this.createdAt, other.createdAt) &&
             Utils.enhancedDeepEquals(this.creativeType, other.creativeType) &&
             Utils.enhancedDeepEquals(this.cta, other.cta) &&
+            Utils.enhancedDeepEquals(this.data, other.data) &&
             Utils.enhancedDeepEquals(this.externalAdReference, other.externalAdReference) &&
             Utils.enhancedDeepEquals(this.externalCreativeReference, other.externalCreativeReference) &&
             Utils.enhancedDeepEquals(this.externalPlacementReference, other.externalPlacementReference) &&
@@ -552,13 +571,14 @@ public class AdsCreative {
         return Utils.enhancedHash(
             assetUrls, body, campaignId,
             createdAt, creativeType, cta,
-            externalAdReference, externalCreativeReference, externalPlacementReference,
-            groupId, height, hostingSource,
-            id, itemId, linkUrl,
-            name, organizationId, path1,
-            path2, promoted, raw,
-            status, thirdPartyTag, title,
-            updatedAt, vastTagUrl, width);
+            data, externalAdReference, externalCreativeReference,
+            externalPlacementReference, groupId, height,
+            hostingSource, id, itemId,
+            linkUrl, name, organizationId,
+            path1, path2, promoted,
+            raw, status, thirdPartyTag,
+            title, updatedAt, vastTagUrl,
+            width);
     }
     
     @Override
@@ -570,6 +590,7 @@ public class AdsCreative {
                 "createdAt", createdAt,
                 "creativeType", creativeType,
                 "cta", cta,
+                "data", data,
                 "externalAdReference", externalAdReference,
                 "externalCreativeReference", externalCreativeReference,
                 "externalPlacementReference", externalPlacementReference,
@@ -607,6 +628,8 @@ public class AdsCreative {
         private CreativeType creativeType;
 
         private String cta;
+
+        private String data;
 
         private String externalAdReference;
 
@@ -684,6 +707,11 @@ public class AdsCreative {
 
         public Builder cta(@Nullable String cta) {
             this.cta = cta;
+            return this;
+        }
+
+        public Builder data(@Nullable String data) {
+            this.data = data;
             return this;
         }
 
@@ -796,13 +824,14 @@ public class AdsCreative {
             return new AdsCreative(
                 assetUrls, body, campaignId,
                 createdAt, creativeType, cta,
-                externalAdReference, externalCreativeReference, externalPlacementReference,
-                groupId, height, hostingSource,
-                id, itemId, linkUrl,
-                name, organizationId, path1,
-                path2, promoted, raw,
-                status, thirdPartyTag, title,
-                updatedAt, vastTagUrl, width);
+                data, externalAdReference, externalCreativeReference,
+                externalPlacementReference, groupId, height,
+                hostingSource, id, itemId,
+                linkUrl, name, organizationId,
+                path1, path2, promoted,
+                raw, status, thirdPartyTag,
+                title, updatedAt, vastTagUrl,
+                width);
         }
 
     }
